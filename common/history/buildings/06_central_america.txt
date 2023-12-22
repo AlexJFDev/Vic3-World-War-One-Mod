@@ -1,6 +1,6 @@
 ﻿BUILDINGS={
 	s:STATE_SAN_SALVADOR={
-		region_state:UCA={
+		region_state:ELS={
 			create_building={
 				building="building_government_administration"
 				level=1
@@ -34,7 +34,7 @@
 		}
 	}
 	s:STATE_GUATEMALA={
-		region_state:UCA={
+		region_state:GUA={
 			create_building={
 				building="building_government_administration"
 				level=1
@@ -70,7 +70,7 @@
 		}
 	}
 	s:STATE_HONDURAS={
-		region_state:UCA={
+		region_state:HON={
 			create_building={
 				building="building_maize_farm"
 				level=1
@@ -98,7 +98,7 @@
 		}
 	}
 	s:STATE_NICARAGUA={
-		region_state:UCA={
+		region_state:NIC={
 			create_building={
 				building="building_tobacco_plantation"
 				level=1
@@ -118,23 +118,9 @@
 				activate_production_methods={ "pm_no_organization" }
 			}			
 		}
-		region_state:MKT={
-			create_building={
-				building="building_barracks"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}			
-			create_building={
-				building="building_port"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_anchorage" }
-			}
-		}
 	}
 	s:STATE_COSTA_RICA={
-		region_state:UCA={
+		region_state:COS={
 			create_building={
 				building="building_coffee_plantation"
 				level=1
@@ -150,7 +136,7 @@
 		}
 	}
 	s:STATE_PANAMA={
-		region_state:CLM={
+		region_state:COS={
 			create_building={
 				building="building_coffee_plantation"
 				level=1
