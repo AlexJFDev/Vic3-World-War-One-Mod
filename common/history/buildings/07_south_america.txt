@@ -293,7 +293,7 @@
 		}
 	}
 	s:STATE_PASTAZA={
-		region_state:NPU={
+		region_state:PEU={
 		}
 		region_state:ECU={
 		}
@@ -445,7 +445,7 @@
 		}
 	}
 	s:STATE_CAJAMARCA={
-		region_state:NPU={
+		region_state:PEU={
 			create_building={
 				building="building_government_administration"
 				level=1
@@ -479,7 +479,7 @@
 		}
 	}
 	s:STATE_LIMA={
-		region_state:NPU={
+		region_state:PEU={
 			create_building={
 				building="building_government_administration"
 				level=2
@@ -543,7 +543,7 @@
 		}
 	}
 	s:STATE_ICA={
-		region_state:SPU={
+		region_state:PEU={
 			create_building={
 				building="building_government_administration"
 				level=1
@@ -590,20 +590,6 @@
 				building= "building_machu_picchu"
 			}
 		}
-		region_state:IQU = {
-			create_building={
-				building="building_maize_farm"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_no_secondary" }
-			}
-			create_building={
-				building="building_barracks"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
 	}
 	s:STATE_AREQUIPA={
 		region_state:SPU={
@@ -631,6 +617,8 @@
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}			
+		}
+		region_state:CHL={
 		}
 	}
 	s:STATE_URUGUAY={
