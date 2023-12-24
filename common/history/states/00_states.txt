@@ -960,8 +960,10 @@
     }
     s:STATE_BOSNIA = {
         create_state = {
-            country = c:TUR
-            owned_provinces = { x5F13FD x9021E0 xAC2DD3 x1121E0 x3F67BA xD021A0 x23D67C x19AF6A x51A0A0 xD0A0A0 xDA817B x7C904A xA40356 x50209F x3B7D2B x1E7362 xF06101 }
+            country = c:AUS
+            owned_provinces = { 
+                x5F13FD x9021E0 xAC2DD3 x1121E0 x3F67BA xD021A0 x23D67C x19AF6A x51A0A0 xD0A0A0 xDA817B x7C904A xA40356 x50209F x3B7D2B x1E7362 xF06101 
+            }
         }
         
         add_homeland = cu:bosniak
@@ -3821,7 +3823,7 @@
     }
     s:STATE_SKOPIA = {
         create_state = {
-            country = c:TUR
+            country = c:SER
             owned_provinces = { x11E0A0 x7CF777 x419E6F x800FE7 x596DE2 x494421 xE0118B }
         }
         
@@ -5204,16 +5206,16 @@
     }
     s:STATE_MONTENEGRO = {
         create_state = {
-            country = c:TUR
-            owned_provinces = { xF5F6C2 xA12F82 x446E84 }
-        }
-        create_state = {
             country = c:MON
-            owned_provinces = { x8C6292 }
+            owned_provinces = { 
+                x8C6292 xF5F6C2 xA12F82 x446E84
+            }
         }
         create_state = {
             country = c:AUS
-            owned_provinces = { x90A0E0 }
+            owned_provinces = { 
+                x90A0E0 
+            }
         }
         
         add_homeland = cu:serb
@@ -5223,21 +5225,24 @@
     s:STATE_NORTHERN_SERBIA = {
         create_state = {
             country = c:SER
-            owned_provinces = { x4D115A xF9E78E x10A060 x4B1F45 xEDBA20 x3B6092 x74F1F4 x9061A0 x40AF95 x90A061 }
+            owned_provinces = { 
+                x4D115A xF9E78E x10A060 x4B1F45 xEDBA20 x3B6092 x74F1F4 x9061A0 x40AF95 x90A061 
+            }
         }
         
         add_homeland = cu:serb
     }
     s:STATE_SOUTHERN_SERBIA = {
         create_state = {
-            country = c:TUR
-            owned_provinces = { xA5D3A9 x9DFFAF x334B53 xD021E0 x18B761 x4773E6 xB852BB xD02161 x45E06A x62A730 xAC083C }
+            country = c:SER
+            owned_provinces = { 
+                xA5D3A9 x9DFFAF x334B53 xD021E0 x18B761 x4773E6 xB852BB xD02161 x45E06A x62A730 xAC083C 
+            }
         }
         
         add_homeland = cu:serb
         add_homeland = cu:turkish
         add_homeland = cu:albanian
-        add_claim = c:SER
     }
     s:STATE_HUDAVENDIGAR = {
         create_state = {
@@ -6541,11 +6546,7 @@
     s:STATE_WEST_GALICIA = {
         create_state = {
             country = c:AUS
-            owned_provinces = { x90E060 x1161E0 xC8690C x66DCEE xA63CE6 xFCC35F xC7B7B8 x5F3456 x56599F xA550A9 x9061E0 }
-        }
-        create_state = {
-            country = c:KRA
-            owned_provinces = { x906060 x11E061 }
+            owned_provinces = { x90E060 x1161E0 xC8690C x66DCEE xA63CE6 xFCC35F xC7B7B8 x5F3456 x56599F xA550A9 x9061E0 x906060 x11E061 }
         }
         
         add_homeland = cu:polish
