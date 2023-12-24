@@ -742,7 +742,7 @@
 	}
 
 	s:STATE_EAST_AEGEAN_ISLANDS = {
-		region_state:TUR = {
+		region_state:GRE = {
 			create_pop = {
 				culture = turkish
 				size = 8992
@@ -754,6 +754,12 @@
 			create_pop = {
 				culture = greek
 				size = 82996
+			}
+		}
+		region_state:ITA = {
+			create_pop = {
+				culture = greek
+				size = 10000
 			}
 		}
 	}
@@ -845,7 +851,7 @@
 		}
 	}
 	s:STATE_WESTERN_THRACE = {
-		region_state:TUR = {
+		region_state:GRE = {
 			create_pop = {
 				culture = turkish
 				size = 274808
@@ -868,7 +874,20 @@
 				culture = lacustrine_bantu
 				size = 1500
 			}
-
+		}
+		region_state:BUL={
+			create_pop = {
+				culture = turkish
+				size = 274808
+			}
+			create_pop = {
+				culture = greek
+				size = 376000
+			}
+			create_pop = {
+				culture = bulgarian
+				size = 80000
+			}
 		}
 	}
 	s:STATE_IONIAN_ISLANDS = {
