@@ -1,8 +1,6 @@
-from claus_reader import read_file
+from claus_reader import read_path
 
 FILE_PATH = 'simple.txt'
 
 if __name__ == '__main__':
-    with open(FILE_PATH, 'rt') as file:
-        claus_ob = read_file(file)
-    print(claus_ob)
+    read_path(FILE_PATH)

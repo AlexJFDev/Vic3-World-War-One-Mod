@@ -1,14 +1,16 @@
 ''' Reads a file from the Clausewitz engine into an object '''
 
-def read_file(file):
-    claus_object = []
-    for line in file:
-        line = line.strip().split('#')[0]
+def read_path(path):
+    with open(path, 'rt') as file:
+        return read_file(file)
 
-        if '=' in line:
-            left_side, right_side = line.split('=')
-            left_side = left_side.strip()
-            right_side = right_side.strip()
-            claus_object.append((left_side, right_side))
+def read_file(file):
+    stack = []
+    for line in file:
+        stack.insert(0, line)
+    return read_stack(stack)
         
-    return claus_object
+def read_stack(stack):
+    while(len(stack) != 0):
+        line = stack.pop()
+        print(line)
