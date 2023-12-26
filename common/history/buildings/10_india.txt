@@ -166,38 +166,6 @@
 		}
 	}
 	s:STATE_AWADH={
-		region_state:AWA={
-			create_building={
-				building="building_government_administration"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_simple_organization" }
-			}
-			create_building={
-				building="building_glassworks"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_forest_glass" "pm_merchant_guilds_building_glassworks" "pm_manual_glassblowing" "pm_ceramics" }
-			}
-			create_building={
-				building="building_opium_plantation"
-				level=20
-				reserves=1
-				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_dye_plantation"
-				level=5
-				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=20
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
 		region_state:BIC={
 			create_building={
 				building="building_furniture_manufacturies"
@@ -220,7 +188,7 @@
 		}
 	}
 	s:STATE_GUJARAT={
-		region_state:BER={
+		region_state:BIC={
 			create_building={
 				building="building_government_administration"
 				level=2
@@ -264,57 +232,9 @@
 				activate_production_methods={ "pm_no_organization" }
 			}
 		}
-		region_state:KUT={
-			create_building={
-				building="building_fishing_wharf"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
-			}
-			create_building={
-				building="building_livestock_ranch"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
-			}
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
 	}
 	s:STATE_CENTRAL_INDIA={
-		region_state:IND={
-			create_building={
-				building="building_opium_plantation"
-				level=5
-				reserves=1
-				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=10
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:BUN={
-			create_building={
-				building="building_cotton_plantation"
-				level=1
-				reserves=1
-				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=15
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:GWA={
+		region_state:BIC={
 			create_building={
 				building="building_cotton_plantation"
 				level=1
@@ -334,31 +254,9 @@
 				activate_production_methods={ "pm_no_organization" }
 			}
 		}
-		region_state:BHO={
-			create_building={
-				building="building_opium_plantation"
-				level=2
-				reserves=1
-				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:BIC={
-			create_building={
-				building="building_cotton_plantation"
-				level=1
-				reserves=1
-				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-		}
 	}
 	s:STATE_KASHMIR={
-		region_state:PAN={
+		region_state:BIC={
 			create_building={
 				building="building_government_administration"
 				level=1
@@ -398,7 +296,7 @@
 		}
 	}
 	s:STATE_PUNJAB={
-		region_state:PAN={
+		region_state:BIC={
 			create_building={
 				building="building_government_administration"
 				level=10
@@ -484,27 +382,9 @@
 				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
 			}
 		}
-		region_state:BIC={
-		}
 	}
 	s:STATE_NAGPUR={
-		region_state:BUN={
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:HYD={
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:NAG={
+		region_state:BIC={
 			create_building={
 				building="building_textile_mills"
 				level=2
@@ -526,32 +406,6 @@
 			create_building={
 				building="building_barracks"
 				level=20
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:BAS={
-			create_building={
-				building="building_textile_mills"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_craftsman_sewing" }
-			}
-			create_building={
-				building="building_opium_plantation"
-				level=1
-				reserves=1
-				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_dye_plantation"
-				level=2
-				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=10
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
@@ -628,7 +482,7 @@
 		}
 	}
 	s:STATE_SINDH={
-		region_state:SIN={
+		region_state:BIC={
 			create_building={
 				building="building_fishing_wharf"
 				level=1
@@ -662,45 +516,7 @@
 		}
 	}
 	s:STATE_RAJPUTANA={
-		region_state:BIK={
-			create_building={
-				building="building_barracks"
-				level=10
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:JAS={
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:MEW={
-			create_building={
-				building="building_opium_plantation"
-				level=4
-				reserves=1
-				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=15
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:JOD={
-			create_building={
-				building="building_barracks"
-				level=15
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:JAI={
+		region_state:BIC={
 			create_building={
 				building="building_textile_mills"
 				level=1
@@ -790,15 +606,13 @@
 		}
 	}
 	s:STATE_ORISSA={
-		region_state:ORI={
+		region_state:BIC={
 			create_building={
 				building="building_sugar_plantation"
 				level=4
 				reserves=1
 				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
 			}
-		}
-		region_state:BIC={
 		}
 	}
 	s:STATE_CIRCARS={
@@ -848,25 +662,7 @@
 		}
 	}
 	s:STATE_MYSORE={
-		region_state:MYS={
-			create_building={
-				building="building_textile_mills"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
-			}
-			create_building={
-				building="building_gold_mine"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_gold_mine" }
-			}			
-			create_building={
-				building="building_coffee_plantation"
-				level=4
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
+		region_state:BIC={
 			create_building={
 				building="building_dye_plantation"
 				level=5
@@ -874,13 +670,11 @@
 				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
 			}
 			create_building={
-				building="building_barracks"
-				level=20
+				building="building_textile_mills"
+				level=1
 				reserves=1
-				activate_production_methods={ "pm_no_organization" }
+				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
 			}
-		}
-		region_state:BIC={
 			create_building={
 				building="building_coffee_plantation"
 				level=1
@@ -889,14 +683,14 @@
 			}
 			create_building={
 				building="building_gold_mine"
-				level=2
+				level=4
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_gold_mine" }
 			}			
 		}
 	}
 	s:STATE_TRAVANCORE={
-		region_state:TRA={
+		region_state:BIC={
 			create_building={
 				building="building_tea_plantation"
 				level=3
@@ -909,8 +703,6 @@
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
-		}
-		region_state:BIC={
 			create_building={
 				building="building_coffee_plantation"
 				level=2
@@ -998,7 +790,7 @@
 		}
 	}
 	s:STATE_HYDERABAD={
-		region_state:HYD={
+		region_state:BIC={
 			create_building={
 				building="building_government_administration"
 				level=5

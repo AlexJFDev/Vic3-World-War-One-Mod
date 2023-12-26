@@ -1110,7 +1110,7 @@
 		}
 	}
 	s:STATE_KACHIN = {
-		region_state:BUR = {
+		region_state:BIC = {
 			create_pop = {
 				culture = kachin
 				size = 408000
@@ -1136,7 +1136,7 @@
 		}
 	}
 	s:STATE_SHAN_STATES = {
-		region_state:BUR = {
+		region_state:BIC = {
 			create_pop = {
 				culture = shan
 				size = 553996
@@ -1154,7 +1154,7 @@
 	}
 
 	s:STATE_BURMA = {
-		region_state:BUR = {
+		region_state:BIC = {
 			create_pop = {
 				culture = burmese
 				size = 1059596
@@ -1171,29 +1171,14 @@
 		}
 	}
 	s:STATE_PEGU = {
-		region_state:BUR = {
+		region_state:BIC = {
 			create_pop = {
 				culture = burmese
-				size = 787900
+				size = 880888
 			}
 			create_pop = {
 				culture = mon
 				size = 12400
-			}
-			create_pop = {
-				culture = karen
-				size = 415600
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = burmese
-				size = 40000
-			}
-		}
-		region_state:BIC = {
-			create_pop = {
-				culture = burmese
-				size = 100888
 			}
 			create_pop = {
 				culture = british
@@ -1211,7 +1196,11 @@
 			create_pop = {
 				pop_type = slaves
 				culture = burmese
-				size = 19000
+				size = 59000
+			}
+			create_pop = {
+				culture = karen
+				size = 415600
 			}
 		}
 	}

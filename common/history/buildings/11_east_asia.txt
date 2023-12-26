@@ -1306,7 +1306,7 @@
 		}
 	}
 	s:STATE_KACHIN={
-		region_state:BUR={
+		region_state:BIC={
 			create_building={
 				building="building_rice_farm"
 				level=1
@@ -1328,7 +1328,7 @@
 		}
 	}
 	s:STATE_SHAN_STATES={
-		region_state:BUR={
+		region_state:BIC={
 			create_building={
 				building="building_opium_plantation"
 				level=1
@@ -1344,7 +1344,7 @@
 		}
 	}
 	s:STATE_BURMA={
-		region_state:BUR={
+		region_state:BIC={
 			create_building={
 				building="building_government_administration"
 				level=2
@@ -1378,7 +1378,13 @@
 		}
 	}
 	s:STATE_PEGU={
-		region_state:BUR={
+		region_state:BIC={
+			create_building={
+				building="building_opium_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
 			create_building={
 				building="building_rice_farm"
 				level=1
@@ -1402,20 +1408,6 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=15
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:BIC={
-			create_building={
-				building="building_opium_plantation"
-				level=1
-				reserves=1
-				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
 			}
 		}
 	}
