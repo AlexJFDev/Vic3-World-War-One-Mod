@@ -9,7 +9,7 @@
 			}
 			create_building={
 				building="building_livestock_ranch"
-				level=1
+				level=2
 				reserves=1
 				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
@@ -20,26 +20,12 @@
 				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
 			}
 		}
-		region_state:CHC={
-			create_building={
-				building="building_livestock_ranch"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
-			}
-			create_building={
-				building="building_barracks"
-				level=3
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
 	}
 	s:STATE_KUBAN={
 		region_state:RUS={
 			create_building={
 				building="building_wheat_farm"
-				level=1
+				level=2
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
 			}
@@ -51,21 +37,7 @@
 			}
 			create_building={
 				building="building_livestock_ranch"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
-			}
-		}
-		region_state:CIR={
-			create_building={
-				building="building_wheat_farm"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
-			}
-			create_building={
-				building="building_livestock_ranch"
-				level=1
+				level=2
 				reserves=1
 				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
@@ -210,16 +182,6 @@
 	s:STATE_URALSK={
 		region_state:RUS={
 		}
-		region_state:KZH={
-			create_building={
-				building="building_barracks"
-				level=3
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:OZH={
-		}
 	}
 	s:STATE_KHIVA={
 		region_state:KHI={
@@ -250,7 +212,7 @@
 		}
 	}
 	s:STATE_UZBEKIA={
-		region_state:BUK={
+		region_state:RUS={
 			create_building={
 				building="building_wheat_farm"
 				level=1
@@ -300,10 +262,10 @@
 		}
 	}
 	s:STATE_KIRGHIZIA={
-		region_state:KOK={
+		region_state:RUS={
 			create_building={
 				building="building_wheat_farm"
-				level=1
+				level=2
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
 			}
@@ -326,17 +288,9 @@
 				activate_production_methods={ "pm_no_organization"  }
 			}
 		}
-		region_state:CHI={
-			create_building={
-				building="building_wheat_farm"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
-			}		
-		}
 	}
 	s:STATE_TURKMENIA={
-		region_state:KHI={
+		region_state:RUS={
 			create_building={
 				building="building_livestock_ranch"
 				level=2
@@ -352,42 +306,14 @@
 		}
 	}
 	s:STATE_SEMIRECHE={
-		region_state:OZH={
-			create_building={
-				building="building_barracks"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
+		region_state:RUS={
 		}
-		region_state:UZH={
-			create_building={
-				building="building_barracks"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
+	}
+	s:STATE_JETISY={
 		region_state:RUS={
 		}
 	}
 	s:STATE_AKMOLINSK={
-		region_state:OZH={
-			create_building={
-				building="building_barracks"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-		region_state:KZH={
-			create_building={
-				building="building_barracks"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
 		region_state:RUS={
 		}
 	}
