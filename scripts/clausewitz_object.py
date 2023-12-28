@@ -1,14 +1,18 @@
 class ClausewitzObject:
-    def __init__(self) -> None:
-        self.name_values: dict[str, list] = {}
-        self.anonymous_values = []
+    def __init__(self, name_values:dict[str, list]|None=None, anonymous_values:list|None=None) -> None:
+        self.name_values = name_values
+        self.anonymous_values = anonymous_values
+        if name_values is None:
+            self.name_values: dict[str, list] = {}
+        if anonymous_values is None:
+            self.anonymous_values: list = []
     
     def add_named_value(self, name: str, value) -> None:
         previous_values = self.name_values.get(name, [])
         previous_values.append(value)
         self.name_values[name] = previous_values
 
-    def get_named_value(self, name, index=0):
+    def get_named_value(self, name: str, index=0):
         values = self.name_values.get(name, None)
         if values is None:
             raise KeyError(f'{name} has not been assigned any values.')
@@ -16,7 +20,7 @@ class ClausewitzObject:
             raise IndexError(f'The index {index} is greater than the number of values assigned to {name} ({len(values)}).')
         return values[index]
     
-    def get_named_values(self, name) -> list:
+    def get_named_values(self, name: str) -> list:
         values = self.name_values.get(name, None)
         if values is None:
             raise KeyError(f'{name} has not been assigned any values.')
@@ -55,7 +59,6 @@ class ClausewitzObject:
         named_objects: str = ''
         named_values: str = ''
         for name, values in self.name_values.items():
-            print(name, values)
             for element in values:
                 if isinstance(element, ClausewitzObject):
                     named_objects = f'{named_objects}\n{full_separator}{name} = {element.unparse(depth=depth + 1, separator=separator)}'

@@ -1,9 +1,32 @@
 from clausewitz_object import ClausewitzObject
 
 class ClausewitzRoot(ClausewitzObject):
-    def __init__(self, name):
-        ClausewitzObject.__init__(self)
+    def __init__(self, name, name_values:dict[str, list]|None=None, anonymous_values:list|None=None):
+        if name_values is None:
+            name_values = {}
+        if anonymous_values is None:
+            anonymous_values = []
+        ClausewitzObject.__init__(self, name_values=name_values, anonymous_values=anonymous_values)
         self.name = name
 
     def unparse(self, separator='\t') -> str:
-        return f'{self.name} = {ClausewitzObject.unparse(self, depth=1, separator=separator)}'
+        anonymous_objects: str = ''
+        anonymous_values: str = ''
+        for element in self.anonymous_values:
+            if isinstance(element, ClausewitzObject):
+                anonymous_objects = f'{anonymous_objects}{element.unparse(depth=1, separator=separator)}'
+            else:
+                anonymous_values = f'{anonymous_values}{element} '
+        
+        named_objects: str = ''
+        named_values: str = ''
+        for name, values in self.name_values.items():
+            for element in values:
+                if isinstance(element, ClausewitzObject):
+                    named_objects = f'{named_objects}{name} = {element.unparse(depth=1, separator=separator)}'
+                else:
+                    named_values = f'{named_values}{name} = {element}'
+            pass
+
+        final_form:str = f'{anonymous_objects}{anonymous_values}{named_objects}{named_values}'
+        return final_form
