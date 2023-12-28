@@ -6,7 +6,7 @@ class ClausewitzObject:
     def add_named_value(self, name: str, value) -> None:
         previous_values = self.name_values.get(name, [])
         previous_values.append(value)
-        self.name_values[name] = value
+        self.name_values[name] = previous_values
 
     def get_named_value(self, name, index=0):
         values = self.name_values.get(name, None)
@@ -38,3 +38,30 @@ class ClausewitzObject:
         if len(self.anonymous_values == 0):
             raise IndexError('Cannot pop object with no anonymous values.')
         return self.anonymous_values.pop()
+    
+    def unparse(self, depth=0, separator='\t') -> str:
+        full_separator: str = separator * depth
+
+        anonymous_objects: str = ''
+        anonymous_values: str = ''
+        for element in self.anonymous_values:
+            if isinstance(element, ClausewitzObject):
+                anonymous_objects = f'{anonymous_objects}\n{full_separator}{element.unparse(depth=depth + 1, separator=separator)}'
+            else:
+                anonymous_values = f'{anonymous_values}{element} '
+        if anonymous_values:
+            anonymous_values = f'\n{full_separator}{anonymous_values}'
+        
+        named_objects: str = ''
+        named_values: str = ''
+        for name, values in self.name_values.items():
+            print(name, values)
+            for element in values:
+                if isinstance(element, ClausewitzObject):
+                    named_objects = f'{named_objects}\n{full_separator}{name} = {element.unparse(depth=depth + 1, separator=separator)}'
+                else:
+                    named_values = f'{named_values}\n{full_separator}{name} = {element}'
+            pass
+
+        final_form:str = f'{"{"}{anonymous_objects}{anonymous_values}{named_objects}{named_values}\n{separator * (depth - 1)}{"}"}'
+        return final_form
