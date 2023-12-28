@@ -1,20 +1,15 @@
 from clausewitz_object import ClausewitzObject
 
 class ClausewitzRoot(ClausewitzObject):
-    def __init__(self, name, name_values:dict[str, list]|None=None, anonymous_values:list|None=None):
-        if name_values is None:
-            name_values = {}
-        if anonymous_values is None:
-            anonymous_values = []
+    def __init__(self, name_values:dict[str, list]|None=None, anonymous_values:list|None=None) -> None:
         ClausewitzObject.__init__(self, name_values=name_values, anonymous_values=anonymous_values)
-        self.name = name
 
     def unparse(self, separator='\t') -> str:
         anonymous_objects: str = ''
         anonymous_values: str = ''
         for element in self.anonymous_values:
             if isinstance(element, ClausewitzObject):
-                anonymous_objects = f'{anonymous_objects}{element.unparse(depth=1, separator=separator)}'
+                anonymous_objects = f'{anonymous_objects}{element.unparse(depth=1, separator=separator)}\n'
             else:
                 anonymous_values = f'{anonymous_values}{element} '
         
@@ -23,10 +18,10 @@ class ClausewitzRoot(ClausewitzObject):
         for name, values in self.name_values.items():
             for element in values:
                 if isinstance(element, ClausewitzObject):
-                    named_objects = f'{named_objects}{name} = {element.unparse(depth=1, separator=separator)}'
+                    named_objects = f'{named_objects}{name} = {element.unparse(depth=1, separator=separator)}\n'
                 else:
-                    named_values = f'{named_values}{name} = {element}'
+                    named_values = f'{named_values}{name} = {element}\n'
             pass
 
-        final_form:str = f'{anonymous_objects}{anonymous_values}{named_objects}{named_values}'
+        final_form:str = f'{anonymous_objects}{anonymous_values}\n{named_objects}{named_values}'
         return final_form

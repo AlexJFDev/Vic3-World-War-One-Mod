@@ -1,7 +1,7 @@
 from clausewitz_object import ClausewitzObject
 from clausewitz_root import ClausewitzRoot
 
-root = ClausewitzRoot('', name_values={
+root = ClausewitzRoot(name_values={
     'STATES': [ClausewitzObject(name_values={
         's:STATE_MINSK': [ClausewitzObject(name_values={
             'create_state': [ClausewitzObject(name_values={
