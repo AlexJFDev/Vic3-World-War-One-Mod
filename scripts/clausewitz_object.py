@@ -24,6 +24,12 @@ class ClausewitzObject:
 
     def add_anonymous_value(self, value) -> None:
         self.anonymous_values.append(value)
+
+    def add_anonymous_values(self, *values) -> None:
+        self.anonymous_values += values
+
+    def join_anonymous_values(self, values) -> None:
+        self.anonymous_values += values
     
     def get_anonymous_values(self) -> list:
         return self.anonymous_values
