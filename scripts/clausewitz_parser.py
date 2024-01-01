@@ -6,7 +6,7 @@ import os
 import csv
 
 FILE_PATH = os.path.join('data', '00_states.txt')
-CSV_PATH = os.path.join('data', 'homelands.csv')
+CSV_PATH = os.path.join('data', 'state_regions.csv')
 
 # There is a bug with one line objects
 
@@ -73,8 +73,8 @@ if __name__ == '__main__':
         states: dict[str, ClausewitzObject] = file_as_object.get_named_value('STATES').get_name_values()
 
         for state_name, state_data in states.items():
-            try:
-                homelands = ' '.join(state_data[0].get_named_values('add_homeland'))
-                csv_writer.writerow([state_name, homelands])
-            except KeyError:
-                csv_writer.writerow([state_name, ''])
+            owners: list[ClausewitzObject] = state_data[0].get_named_values("create_state")
+            provinces: list = []
+            for owner in owners:
+                provinces.extend(owner.get_named_value('owned_provinces').get_anonymous_values())
+            csv_writer.writerow([state_name, ' '.join(provinces)])
