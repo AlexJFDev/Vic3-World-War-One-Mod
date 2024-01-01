@@ -2,9 +2,9 @@ STATES = {
     s:STATE_MINSK = {
         create_state = {
             owned_provinces = { 
-                x0161E0 x2B4670 xA16195 xC9C7AF x51F4A4 x26722B x557F9F xC3D50D x21175E x28C9D9 x80E061 x2EB844 xEDA68C x4B3105 xC06C1A xA36969 x0A89D7 x716052 xF05D59 x16A8B5 x80DFDF
-            }
+                x0161E0 x2B4670 xA16195 xC9C7AF x51F4A4 x26722B x557F9F xC3D50D x21175E x28C9D9 x80E061 x2EB844 xEDA68C x4B3105 xC06C1A xA36969 x0A89D7 x716052 xF05D59 x16A8B5 x80DFDF}
             country = c:RUS
+            state_type = unincorporated
         }
         add_homeland = cu:russian
         add_homeland = cu:byelorussian
@@ -12,7 +12,9 @@ STATES = {
     s:STATE_LOUISIANA = {
         create_state = {
             country = c:USA
-            owned_provinces = { x39D7A2 xC51912 x9A7554 x13B0C7 x4FA3C4 x86BC13 xC1273E x371B1B xC0F080 x0CF7A4 x68C793 x216122 x1BF244 x9E96B6 xC62139 xBF79F5 xAC4818 x18D465 xC07080 x131940 x71BEC1 xEE0FAA x7EF4B8 x403095 xEFB99C x2BEBAE xD658E7 xA4EE3C }
+            owned_provinces = { x39D7A2 xC51912 x9A7554 x13B0C7 x4FA3C4 x86BC13 xC1273E x371B1B xC0F080 x0CF7A4 x68C793 x216122 x1BF244 x9E96B6 xC62139 xBF79F5 xAC4818 x18D465 xC07080 x131940 x71BEC1 xEE0FAA x7EF4B8 x403095 xEFB99C x2BEBAE xD658E7 xA4EE3C 
+            }
+            state_type = unincorporated
         }
         
         add_homeland = cu:dixie
@@ -22,27 +24,16 @@ STATES = {
     }
     s:STATE_NEW_YORK = {
         create_state = { country = c:USA
-            owned_provinces = { 
-                x1BAD55 x377E55 xFC18F1
+            owned_provinces = { x1BAD55 x377E55 xFC18F1
                 xDB0967 x99CB10 xB08000 xD534B1 x75F2A6 x300080 x38C881 x260926
                 x9CC56A x4B0747 xBA53D0 x70C080 x195B49 xE217B5 x8C059D xB343E6 x308000 x2CA754 xE7BE2D x01D042 xB00080 xA6BED5 x235E9F xEDC7DA
                 x3CB274
                 
-                x73A16C x42D496 xFCF1BE xA7B5FE x05187E x9484F3 xEC2EAA
-            }
+                x73A16C x42D496 xFCF1BE xA7B5FE x05187E x9484F3 xEC2EAA }
+            state_type = unincorporated
         }
         
         add_homeland = cu:yankee
         add_homeland = cu:iroquoian
-    }
-}
-OTHER = {
-    somevalue = {
-        item1 item2 item3
-    }
-
-    someotherthing = something
-    athirdthing = {
-        item4 item5 item6
     }
 }
