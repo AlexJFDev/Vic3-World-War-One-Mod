@@ -7,6 +7,7 @@ import csv
 
 FILE_PATH = os.path.join('data', '00_states.txt')
 SAVE_PATH = os.path.join('data', 'new_states.txt')
+CSV_PATH = os.path.join('data', 'states.csv')
 
 # There is a bug with one line objects
 
@@ -70,14 +71,21 @@ if __name__ == '__main__':
     
     file_as_object: ClausewitzRoot = parse_file(FILE_PATH)
 
-    states: dict[str, ClausewitzObject] = file_as_object.get_named_value('STATES').get_name_values()
-    for state_name, state_data in states.items():
-        print(state_name)
-        owners: list[ClausewitzObject] = state_data[0].get_named_values("create_state")
-        for owner in owners:
-            tag: str = owner.get_named_value('country')
-            provinces: list[str] = owner.get_named_value('owned_provinces').get_anonymous_values()
-            print(f'    {tag}: {provinces}')
+    
+        
+    with open(CSV_PATH, 'w') as file:
+        csv_writer = csv.writer(file)
+        states: dict[str, ClausewitzObject] = file_as_object.get_named_value('STATES').get_name_values()
+
+        for state_name, state_data in states.items():
+            print(state_name)
+            owners: list[ClausewitzObject] = state_data[0].get_named_values("create_state")
+            for owner in owners:
+                tag: str = owner.get_named_value('country')
+                provinces: str = ' '.join(owner.get_named_value('owned_provinces').get_anonymous_values())
+                print(f'    {tag}: {provinces}')
+                csv_writer.writerow([state_name, tag, provinces])
+        
         
 
     unparsed = file_as_object.unparse(separator='    ')
