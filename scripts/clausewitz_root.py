@@ -23,5 +23,5 @@ class ClausewitzRoot(ClausewitzObject):
                     named_values = f'{named_values}{name} = {element}\n'
             pass
 
-        final_form:str = f'{anonymous_objects}{anonymous_values}\n{named_objects}{named_values}'
+        final_form:str = f'{anonymous_objects}{anonymous_values}\n{named_objects}{named_values}'.strip()
         return final_form

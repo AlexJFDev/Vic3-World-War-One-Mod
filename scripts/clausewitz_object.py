@@ -25,6 +25,9 @@ class ClausewitzObject:
         if values is None:
             raise KeyError(f'{name} has not been assigned any values.')
         return values
+    
+    def get_name_values(self) -> list:
+        return self.name_values
 
     def add_anonymous_value(self, value) -> None:
         self.anonymous_values.append(value)
@@ -49,6 +52,7 @@ class ClausewitzObject:
         anonymous_objects: str = ''
         anonymous_values: str = ''
         for element in self.anonymous_values:
+            
             if isinstance(element, ClausewitzObject):
                 anonymous_objects = f'{anonymous_objects}\n{full_separator}{element.unparse(depth=depth + 1, separator=separator)}'
             else:
