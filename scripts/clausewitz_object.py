@@ -12,18 +12,18 @@ class ClausewitzObject:
         previous_values.append(value)
         self.name_values[name] = previous_values
 
-    def get_named_value(self, name: str, index=0):
+    def get_named_value(self, name: str, index=0, default=None):
         values = self.name_values.get(name, None)
         if values is None:
-            raise KeyError(f'{name} has not been assigned any values.')
+            return default
         if index > len(values) - 1:
             raise IndexError(f'The index {index} is greater than the number of values assigned to {name} ({len(values)}).')
         return values[index]
     
-    def get_named_values(self, name: str) -> list:
+    def get_named_values(self, name: str, default=None) -> list:
         values = self.name_values.get(name, None)
         if values is None:
-            raise KeyError(f'{name} has not been assigned any values.')
+            return default
         return values
     
     def get_name_values(self) -> list:
