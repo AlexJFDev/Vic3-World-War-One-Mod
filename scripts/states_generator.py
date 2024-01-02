@@ -7,7 +7,7 @@ import csv
 OWNERSHIP_FILE: str = os.path.join('data', 'state_ownership.csv')
 REGIONS_FILE: str = os.path.join('data', 'state_regions.csv')
 
-OUTPUT_FILE: str = os.path.join('data', '00_states.txt')
+STATES_FILE: str = os.path.join('data', '00_states.txt')
 
 OWNERSHIP_REGION_TAG_COLUMN = 2
 OWNERSHIP_COUNTRY_TAG_COLUMN = 3
@@ -47,5 +47,5 @@ with open(REGIONS_FILE, 'r') as file:
             state.add_named_value('add_homeland', homeland)
 
 
-with open(OUTPUT_FILE, 'w') as file:
+with open(STATES_FILE, 'w') as file:
     file.write(root.unparse())
