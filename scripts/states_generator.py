@@ -8,31 +8,57 @@ OWNERSHIP_FILE: str = os.path.join('data', 'state_ownership.csv')
 REGIONS_FILE: str = os.path.join('data', 'state_regions.csv')
 
 STATES_FILE: str = os.path.join('data', '00_states.txt')
+POPS_FILE: str = os.path.join('data', '00_pops.txt')
 
 OWNERSHIP_REGION_TAG_COLUMN = 2
 OWNERSHIP_COUNTRY_TAG_COLUMN = 3
 OWNERSHIP_PROVINCES_COLUMN = 4
+OWNERSHIP_POPS_COLUMN = 5
 REGIONS_STATE_TAG_COLUMN = 1
 REGIONS_HOMELANDS_COLUMN = 2
 
-root = ClausewitzRoot()
-root.add_named_value('STATES', ClausewitzObject())
+def split_pops(pops: str) -> list[str]:
+    groups = pops.split(',')
+    pop_list = []
+    for group in groups:
+        size, traits = group.split(':')
+        traits = traits.split(';')
+        new_traits = [['size', size]]
+        for trait in traits:
+            trait_name, value = trait.split('=')
+            new_traits.append([trait_name, value])
+        pop_list.append(new_traits)
+    return pop_list
 
-states: ClausewitzObject = root.get_named_value('STATES')
+states_root = ClausewitzRoot()
+states_root.add_named_value('STATES', ClausewitzObject())
+pops_root = ClausewitzRoot()
+pops_root.add_named_value('POPS', ClausewitzObject())
 
-with open(OWNERSHIP_FILE, 'r') as file:
-    file.readline() # Skip the first line
-    reader = csv.reader(file)
-    for line in reader:
+states: ClausewitzObject = states_root.get_named_value('STATES')
+pops: ClausewitzObject = pops_root.get_named_value('POPS')
+
+with open(OWNERSHIP_FILE, 'r') as ownership_file:
+    ownership_file.readline() # Skip the first line
+    ownership_reader = csv.reader(ownership_file)
+    for line in ownership_reader:
         region_tag: str = line[OWNERSHIP_REGION_TAG_COLUMN]
         owner_tag: str = line[OWNERSHIP_COUNTRY_TAG_COLUMN]
-        provinces: str = line[OWNERSHIP_PROVINCES_COLUMN]
+        provinces: str = line[OWNERSHIP_PROVINCES_COLUMN].split(' ')
+        pop_data: str = line[OWNERSHIP_POPS_COLUMN]
+        if pop_data != '':
+            pop: ClausewitzObject = pops.get_named_value(region_tag)
+            if pop is None:
+                pop = ClausewitzObject()
+                pops.add_named_value(region_tag, pop)
+            pops.add_named_value(region_tag, pop)
+            pop_groups = split_pops(pop_data)
         state: ClausewitzObject = states.get_named_value(region_tag)
         if state is None:
             state = ClausewitzObject()
             states.add_named_value(region_tag, state)
         state.add_named_value('create_state', ClausewitzObject(name_values={
-            'owned_provinces': [ClausewitzObject(anonymous_values=provinces.split(' '))],
+            'owned_provinces': [ClausewitzObject(anonymous_values=provinces)],
             'country': [owner_tag]
         }))
 
@@ -48,4 +74,4 @@ with open(REGIONS_FILE, 'r') as file:
 
 
 with open(STATES_FILE, 'w') as file:
-    file.write(root.unparse())
+    file.write(states_root.unparse())
