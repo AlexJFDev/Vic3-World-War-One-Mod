@@ -1,2 +1,2 @@
-# Vic3-World-War-One-Mod
+# The Gathering Storm
 A world war one mod for Victoria 3
