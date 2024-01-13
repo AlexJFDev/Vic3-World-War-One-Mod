@@ -78,6 +78,8 @@ with open(REGIONS_FILE, 'r') as file:
         homelands = line[REGIONS_HOMELANDS_COLUMN].split(' ')
         state: ClausewitzObject = states.get_named_value(region_tag)
         for homeland in homelands:
+            if homeland == '':
+                continue
             state.add_named_value('add_homeland', homeland)
 
 
