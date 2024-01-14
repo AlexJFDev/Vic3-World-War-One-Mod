@@ -1,12 +1,23 @@
 COUNTRIES = {
-    c:USA = {
-		set_tax_level = low
+	c:CAN = {
+		set_tax_level = medium
 		
-		effect_starting_technology_tier_1_tech = yes
+		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_parliamentary_republic
+	}
+	c:MEX = {
+		set_tax_level = medium
+		
+		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_oligarchy
+	}
+    c:USA = {
+		set_tax_level = medium
 		
 		set_market_capital = STATE_NEW_YORK	
-		
-		set_variable = monroe_doctrine
 		
 		effect_starting_politics_liberal = yes
 		activate_law = law_type:law_public_schools
@@ -36,5 +47,27 @@ COUNTRIES = {
 			institution = institution_police
 			level = 2
 		}
+	}
+	c:GUA = {
+		set_tax_level = medium
+		
+		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_oligarchy
+	}
+	c:BLZ = {
+		set_tax_level = medium
+		
+		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_technocracy
+	}
+	c:HON = {
+		set_tax_level = medium
+		
+		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_oligarchy
 	}
 }
