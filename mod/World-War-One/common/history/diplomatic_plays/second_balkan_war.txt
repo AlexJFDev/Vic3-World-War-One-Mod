@@ -1,0 +1,33 @@
+DIPLOMATIC_PLAYS = {
+    c:BUL = {
+        create_diplomatic_play = {
+            name = second_balkan_war
+
+            target_state = s:STATE_MACEDONIA.region_state:GRE
+
+            type = dp_conquer_state
+
+            escalation = 99
+            
+            add_war_goal = {
+                holder = c:GRE
+                type = conquer_state
+                target_state = s:STATE_WESTERN_THRACE.region_state:BUL
+            }
+            add_war_goal = {
+                holder = c:SER
+                type = conquer_state
+                target_state = s:STATE_SKOPIA.region_state:BUL
+            }
+            add_war_goal = {
+                holder = c:BUL
+                type = conquer_state
+                target_state = s:STATE_SKOPIA.region_state:SER
+            }
+            
+            add_target_backers = {
+                c:SER
+            }
+        }
+    }
+}
