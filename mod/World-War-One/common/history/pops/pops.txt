@@ -1,4 +1,28 @@
 POPS = {
+	s:STATE_ABU_DHABI = {
+		region_state:ABU = {
+			create_pop = {
+				size = 53536
+				culture = bedouin
+			}
+		}
+		region_state:BHN = {
+			create_pop = {
+				size = 91824
+				culture = bedouin
+			}
+		}
+		region_state:OMA = {
+			create_pop = {
+				size = 2000
+				culture = persian
+			}
+			create_pop = {
+				size = 3000
+				culture = bedouin
+			}
+		}
+	}
 	s:STATE_ALBANIA = {
 		region_state:ALB = {
 			create_pop = {
@@ -1740,6 +1764,22 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_CONNAUGHT = {
+		region_state:GBR = {
+			create_pop = {
+				size = 580484
+				culture = irish
+			}
+			create_pop = {
+				size = 16316
+				culture = british
+			}
+			create_pop = {
+				size = 5790
+				culture = scottish
+			}
+		}
+	}
 	s:STATE_EAST_ANGLIA = {
 		region_state:GBR = {
 			create_pop = {
@@ -1764,11 +1804,59 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_LEINSTER = {
+		region_state:GBR = {
+			create_pop = {
+				size = 1118307
+				culture = irish
+			}
+			create_pop = {
+				size = 152384
+				culture = british
+			}
+			create_pop = {
+				size = 54077
+				culture = scottish
+			}
+		}
+	}
 	s:STATE_MIDLANDS = {
 		region_state:GBR = {
 			create_pop = {
 				size = 4700387
 				culture = british
+			}
+		}
+	}
+	s:STATE_MUNSTER = {
+		region_state:GBR = {
+			create_pop = {
+				size = 965602
+				culture = irish
+			}
+			create_pop = {
+				size = 44432
+				culture = british
+			}
+			create_pop = {
+				size = 15768
+				culture = scottish
+			}
+		}
+	}
+	s:STATE_ULSTER = {
+		region_state:GBR = {
+			create_pop = {
+				size = 562570
+				culture = irish
+			}
+			create_pop = {
+				size = 1105556
+				culture = british
+			}
+			create_pop = {
+				size = 392363
+				culture = scottish
 			}
 		}
 	}
@@ -2520,18 +2608,6 @@ POPS = {
 			}
 		}
 	}
-	s:STATE_ABU_DHABI = {
-		region_state:OMA = {
-			create_pop = {
-				size = 2000
-				culture = persian
-			}
-			create_pop = {
-				size = 3000
-				culture = bedouin
-			}
-		}
-	}
 	s:STATE_BALUCHISTAN = {
 		region_state:OMA = {
 			create_pop = {
@@ -2619,7 +2695,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 1328
-				culture = english
+				culture = british
 			}
 		}
 	}
