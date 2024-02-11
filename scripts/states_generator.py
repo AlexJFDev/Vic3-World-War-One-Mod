@@ -70,8 +70,9 @@ with open(OWNERSHIP_FILE, 'r') as ownership_file:
                 'owned_provinces': [ClausewitzObject(anonymous_values=provinces)],
                 'country': [owner_tag]
             }))
-        except:
-            print(f'Error on line {number + 2}')
+        except Exception as error:
+            print(f'Error on line {number + 2} of the file.\n----------------------------------')
+            print(error)
             quit()
 
 with open(REGIONS_FILE, 'r') as file:
