@@ -5,12 +5,12 @@ balkan_war_events.1 = {
 	type = country_event
 	
 	event_image = {
-		video = "southamerica_public_figure_assassination"
+		video = "europenorthamerica_before_the_battle"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	title = balkan_war_events.1.t
 	desc = balkan_war_events.1.d
@@ -18,19 +18,35 @@ balkan_war_events.1 = {
 
 	duration = 3
 
-	trigger = {
-		exists = c:ROM
-		c:ROM = ROOT
-	}
+	trigger = {} # Triggered in global
 
 	immediate = {}
 
-	option = {
+	option = { # Join the war
 		name = balkan_war_events.1.a
         default_option = yes
+		ai_chance = {
+			base = 1
+		}
+
+		every_diplomatic_play = {
+			limit = {
+				is_war = yes
+				is_diplomatic_play_participant = c:GRE
+				is_diplomatic_play_participant = c:SER
+			}
+			add_target_backers = {
+				c:ROM
+			}
+			add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_DOBRUDJA.region_state:BUL
+            }
+		}
 	}
 
-	option = {
+	option = { # Stay out
 		name = balkan_war_events.1.b
 	}
 }
