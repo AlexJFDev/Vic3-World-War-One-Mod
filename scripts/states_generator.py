@@ -10,7 +10,7 @@ REGIONS_FILE: str = os.path.join('data', 'state_regions.csv')
 STATES_FILE: str = os.path.join('data', 'states.txt')
 POPS_FILE: str = os.path.join('data', 'pops.txt')
 
-OWNERSHIP_REGION_TAG_COLUMN = 2
+OWNERSHIP_REGION_TAG_COLUMN = 0
 OWNERSHIP_COUNTRY_TAG_COLUMN = 3
 OWNERSHIP_PROVINCES_COLUMN = 4
 OWNERSHIP_POPS_COLUMN = 5
@@ -82,6 +82,7 @@ with open(REGIONS_FILE, 'r') as file:
         region_tag: str = line[REGIONS_STATE_TAG_COLUMN]
         homelands = line[REGIONS_HOMELANDS_COLUMN].split(' ')
         state: ClausewitzObject = states.get_named_value(region_tag)
+            
         for homeland in homelands:
             if homeland == '':
                 continue
