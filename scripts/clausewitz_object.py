@@ -12,7 +12,7 @@ class ClausewitzObject:
         previous_values.append(value)
         self.name_values[name] = previous_values
 
-    def get_named_value(self, name: str, index=0, default=None):
+    def get_named_value(self, name: str, index=0, default=None) -> 'str|int|ClausewitzObject|None':
         values = self.name_values.get(name, None)
         if values is None:
             return default
@@ -26,7 +26,7 @@ class ClausewitzObject:
             return default
         return values
     
-    def get_name_values(self) -> list:
+    def get_name_values(self) -> dict[str, list]:
         return self.name_values
 
     def add_anonymous_value(self, value) -> None:
