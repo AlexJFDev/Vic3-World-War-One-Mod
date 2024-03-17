@@ -3,13 +3,13 @@ POPS = {
 		region_state:ABU = {
 			create_pop = {
 				size = 53536
-				culture = bedouin
+				culture = arab
 			}
 		}
 		region_state:BHN = {
 			create_pop = {
 				size = 91824
-				culture = bedouin
+				culture = arab
 			}
 		}
 		region_state:OMA = {
@@ -19,7 +19,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 3000
-				culture = bedouin
+				culture = arab
 			}
 		}
 	}
@@ -147,7 +147,7 @@ POPS = {
 		region_state:CHL = {
 			create_pop = {
 				size = 239026
-				culture = south_andean
+				culture = chilean
 			}
 			create_pop = {
 				size = 8996
@@ -1074,6 +1074,16 @@ POPS = {
 				culture = tibetan
 			}
 		}
+		region_state:NEP = {
+			create_pop = {
+				size = 4311438
+				culture = north_indian
+			}
+			create_pop = {
+				size = 1077859
+				culture = tibetan
+			}
+		}
 	}
 	s:STATE_ASSAM = {
 		region_state:BIC = {
@@ -1103,7 +1113,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 16063461
-				culture = central_india
+				culture = central_indian
 			}
 		}
 	}
@@ -1133,7 +1143,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 1000
-				culture = bedouin
+				culture = arab
 			}
 		}
 	}
@@ -1307,7 +1317,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 278400
-				culture = tamil
+				culture = south_indian
 			}
 		}
 	}
@@ -1323,7 +1333,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 7870427
-				culture = north_indian
+				culture = south_indian
 			}
 		}
 	}
@@ -1451,7 +1461,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 1615845
-				culture = central_indian
+				culture = west_indian
 			}
 			create_pop = {
 				size = 441743
@@ -1459,7 +1469,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 1190426
-				culture = west_indian
+				culture = central_indian
 			}
 			create_pop = {
 				size = 198577
@@ -1491,7 +1501,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 4973204
-				culture = british
+				culture = south_indian
 			}
 		}
 	}
@@ -1955,7 +1965,7 @@ POPS = {
 		region_state:CHL = {
 			create_pop = {
 				size = 138569
-				culture = south_andean
+				culture = chilean
 			}
 		}
 	}
@@ -1963,7 +1973,17 @@ POPS = {
 		region_state:CHL = {
 			create_pop = {
 				size = 33097
-				culture = south_andean
+				culture = peruvian
+			}
+		}
+		region_state:PEU = {
+			create_pop = {
+				size = 383741
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 425305
+				culture = peruvian
 			}
 		}
 	}
@@ -1971,7 +1991,7 @@ POPS = {
 		region_state:CHL = {
 			create_pop = {
 				size = 1446153
-				culture = south_andean
+				culture = chilean
 			}
 			create_pop = {
 				size = 93852
@@ -1983,7 +2003,7 @@ POPS = {
 		region_state:CHL = {
 			create_pop = {
 				size = 1445003
-				culture = south_andean
+				culture = chilean
 			}
 		}
 	}
@@ -1995,7 +2015,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 500
-				culture = south_andean
+				culture = chilean
 			}
 		}
 		region_state:FPL = {
@@ -2013,7 +2033,7 @@ POPS = {
 		region_state:CHL = {
 			create_pop = {
 				size = 105979
-				culture = south_andean
+				culture = chilean
 			}
 		}
 	}
@@ -2241,7 +2261,7 @@ POPS = {
 	s:STATE_SUNDA_ISLANDS = {
 		region_state:DEI = {
 			create_pop = {
-				size = 22251077
+				size = 2251077
 				culture = malay
 			}
 			create_pop = {
@@ -2375,6 +2395,48 @@ POPS = {
 			create_pop = {
 				size = 1100000
 				culture = danish
+			}
+		}
+	}
+	s:STATE_SANTO_DOMINGO = {
+		region_state:DOM = {
+			create_pop = {
+				size = 74966
+				culture = afro_caribeno
+			}
+			create_pop = {
+				size = 674689
+				culture = caribeno
+			}
+		}
+	}
+	s:STATE_ECUADOR = {
+		region_state:ECU = {
+			create_pop = {
+				size = 1487136
+				culture = ecuadorian
+			}
+			create_pop = {
+				size = 200000
+				culture = south_amerindian
+			}
+		}
+	}
+	s:STATE_PASTAZA = {
+		region_state:ECU = {
+			create_pop = {
+				size = 52000
+				culture = ecuadorian
+			}
+		}
+		region_state:PEU = {
+			create_pop = {
+				size = 1408
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 99188
+				culture = peruvian
 			}
 		}
 	}
@@ -2567,6 +2629,54 @@ POPS = {
 			create_pop = {
 				size = 3150000
 				culture = french
+			}
+		}
+	}
+	s:STATE_GUAYANA = {
+		region_state:FRA = {
+			create_pop = {
+				size = 45000
+				culture = afro_antillean
+			}
+			create_pop = {
+				size = 5000
+				culture = french
+			}
+		}
+		region_state:GBR = {
+			create_pop = {
+				size = 147832
+				culture = afro_caribbean
+			}
+			create_pop = {
+				size = 118265
+				culture = central_indian
+			}
+			create_pop = {
+				size = 29566
+				culture = south_amerindian
+			}
+		}
+		region_state:NET = {
+			create_pop = {
+				size = 49472
+				culture = afro_caribbean
+			}
+			create_pop = {
+				size = 24736
+				culture = central_indian
+			}
+			create_pop = {
+				size = 9894
+				culture = malay
+			}
+			create_pop = {
+				size = 9894
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 4947
+				culture = dutch
 			}
 		}
 	}
@@ -3146,6 +3256,22 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_BAHAMAS = {
+		region_state:GBR = {
+			create_pop = {
+				size = 43655
+				culture = afro_caribbean
+			}
+			create_pop = {
+				size = 6000
+				culture = british
+			}
+			create_pop = {
+				size = 12000
+				culture = afro_antillean
+			}
+		}
+	}
 	s:STATE_BERMUDA = {
 		region_state:GBR = {
 			create_pop = {
@@ -3281,6 +3407,14 @@ POPS = {
 			create_pop = {
 				size = 15768
 				culture = scottish
+			}
+		}
+	}
+	s:STATE_SOUTH_ATLANTIC_ISLANDS = {
+		region_state:GBR = {
+			create_pop = {
+				size = 2500
+				culture = british
 			}
 		}
 	}
@@ -3664,6 +3798,14 @@ POPS = {
 			create_pop = {
 				size = 133992
 				culture = greek
+			}
+		}
+	}
+	s:STATE_HAITI = {
+		region_state:HAI = {
+			create_pop = {
+				size = 1978804
+				culture = afro_antillean
 			}
 		}
 	}
@@ -4473,7 +4615,7 @@ POPS = {
 		region_state:NGA = {
 			create_pop = {
 				size = 315893
-				culture = bantu
+				culture = equatorial_bantu
 			}
 			create_pop = {
 				size = 301408
@@ -4581,7 +4723,7 @@ POPS = {
 			}
 			create_pop = {
 				size = 55206
-				culture = bantu
+				culture = equatorial_bantu
 			}
 			create_pop = {
 				size = 215656
@@ -4608,11 +4750,11 @@ POPS = {
 	s:STATE_NIGERIA = {
 		region_state:NGA = {
 			create_pop = {
-				size = 490108
-				culture = bantu
+				size = 790108
+				culture = equatorial_bantu
 			}
 			create_pop = {
-				size = 399777
+				size = 699777
 				culture = fulbe
 			}
 			create_pop = {
@@ -4628,7 +4770,7 @@ POPS = {
 				culture = yoruba
 			}
 			create_pop = {
-				size = 1127305
+				size = 527305
 				culture = bambara
 			}
 		}
@@ -4714,7 +4856,43 @@ POPS = {
 		region_state:OMA = {
 			create_pop = {
 				size = 444000
-				culture = bedouin
+				culture = arab
+			}
+		}
+	}
+	s:STATE_CAJAMARCA = {
+		region_state:PEU = {
+			create_pop = {
+				size = 46837
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 1063784
+				culture = peruvian
+			}
+		}
+	}
+	s:STATE_ICA = {
+		region_state:PEU = {
+			create_pop = {
+				size = 921811
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 327449
+				culture = peruvian
+			}
+		}
+	}
+	s:STATE_LIMA = {
+		region_state:PEU = {
+			create_pop = {
+				size = 402818
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 911816
+				culture = peruvian
 			}
 		}
 	}
@@ -6277,7 +6455,7 @@ POPS = {
 		region_state:FMS = {
 			create_pop = {
 				size = 2300000
-				culture = malaya
+				culture = malay
 			}
 			create_pop = {
 				size = 1000
@@ -7395,6 +7573,42 @@ POPS = {
 			create_pop = {
 				size = 928
 				culture = mexican
+			}
+		}
+	}
+	s:STATE_BOLIVAR = {
+		region_state:VNZ = {
+			create_pop = {
+				size = 55231
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 365895
+				culture = venezuelan
+			}
+		}
+	}
+	s:STATE_MIRANDA = {
+		region_state:VNZ = {
+			create_pop = {
+				size = 11609
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 1217154
+				culture = venezuelan
+			}
+		}
+	}
+	s:STATE_ZULIA = {
+		region_state:VNZ = {
+			create_pop = {
+				size = 42075
+				culture = south_amerindian
+			}
+			create_pop = {
+				size = 1396845
+				culture = venezuelan
 			}
 		}
 	}
