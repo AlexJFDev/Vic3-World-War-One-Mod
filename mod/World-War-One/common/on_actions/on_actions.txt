@@ -1,0 +1,17 @@
+on_wargoal_enforced = {
+    effect = {
+        if = {
+            limit = {
+                owner = {
+                    c:GRE ?= this
+                    not = { has_variable = won_second_balkan_war }
+                    owns_entire_state_region = STATE_WESTERN_THRACE
+                }
+            }
+            owner = {
+                set_variable = won_second_balkan_war
+                trigger_event = { id = balkan_war_events.3 days = 0 popup = yes }
+            }
+        }
+    }
+}
