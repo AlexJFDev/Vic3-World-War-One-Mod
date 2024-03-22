@@ -101,28 +101,3 @@ balkan_war_events.2 = {
 		name = balkan_war_events.2.b
 	}
 }
-
-# Splits Eastern Thrace after Greece Wins
-balkan_war_events.3 = {
-	type = country_event
-
-	event_image = {
-		video = "europenorthamerica_before_the_battle"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
-
-	title = balkan_war_events.2.t
-	desc = balkan_war_events.2.d
-	flavor = balkan_war_events.2.f
-
-	duration = 1
-
-	trigger = {} # Triggered in global
-
-	immediate = {}
-
-	option = {}
-}
