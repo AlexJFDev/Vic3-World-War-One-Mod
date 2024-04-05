@@ -43,7 +43,7 @@ with open(LAWS_FILE, 'r') as laws_file:
         domestic_laws.add_named_value(f'c:{country_tag}', tag_object)
         for law in laws:
             if law == '': continue
-            tag_object.add_named_value('activate_law', law)
+            tag_object.add_named_value('activate_law', f'law_type:{law}')
 
 
 with open(INSTITUTIONS_FILE, 'r') as institutions_file:
