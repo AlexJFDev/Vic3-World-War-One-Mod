@@ -22,7 +22,10 @@ def parse_object(chars: list[str]) -> ClausewitzObject:
     while len(chars) > 0:
         current_char = chars.pop(0)
         if current_char == '{':
-            new_object = parse_object(chars)
+            if len(right_data) > 0:
+                new_object = f'{right_data}{parse_typed_object(chars)}'
+            else:
+                new_object = parse_object(chars)
             if (left_of_equals):
                 clausewitz_object.add_anonymous_value(new_object)
             else:
@@ -55,6 +58,14 @@ def parse_object(chars: list[str]) -> ClausewitzObject:
         else:
             right_data += current_char
     return clausewitz_object
+
+def parse_typed_object(chars: list[str]) -> str:
+    data = ''
+    current_char = chars.pop(0)
+    while(current_char != '}'):
+        data += current_char
+        current_char = chars.pop(0)
+    return f'{"{"}{data}{"}"}'
 
 if __name__ == '__main__':
     with open(FILE_PATH, 'rt') as file:
