@@ -33,30 +33,37 @@ def parse_object(chars: list[str]) -> ClausewitzObject:
                 left_of_equals = True
                 left_data = ''
                 right_data = ''
+        
         elif current_char == '}': 
             if left_of_equals:
-                if left_data != '':
+                if len(left_data) > 0:
                     clausewitz_object.add_anonymous_value(left_data)
             else:
                 clausewitz_object.add_named_value(left_data, right_data)
             break
+        
         elif current_char == '=':
             left_of_equals = False
+        
         elif current_char == '\n':
             if left_of_equals:
-                if left_data != '':
+                if len(left_data) > 0:
                     clausewitz_object.add_anonymous_value(left_data)
             else:
                 clausewitz_object.add_named_value(left_data, right_data)
             left_of_equals = True
             left_data = ''
             right_data = ''
+        
         elif current_char.isspace():
             pass
+        
         elif (left_of_equals):
             left_data += current_char
+        
         else:
             right_data += current_char
+        
     return clausewitz_object
 
 def parse_typed_object(chars: list[str]) -> str:
@@ -74,4 +81,4 @@ if __name__ == '__main__':
 
         file_as_object: ClausewitzObject = parse_object(chars)
 
-        print(file_as_object.unparse(separator='*'))
+        print(file_as_object.unparse())
