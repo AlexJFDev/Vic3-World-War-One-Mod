@@ -1,7 +1,7 @@
 from clausewitz_object import ClausewitzObject
 
 class ClausewitzRoot(ClausewitzObject):
-    def __init__(self, name_values:dict[str, list]|None=None, anonymous_values:list|None=None) -> None:
+    def __init__(self, name_values:'dict[str, list]|None'=None, anonymous_values:'list|None'=None) -> None:
         ClausewitzObject.__init__(self, name_values=name_values, anonymous_values=anonymous_values)
 
     def unparse(self, separator='\t') -> str:

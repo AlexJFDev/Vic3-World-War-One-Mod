@@ -1,5 +1,5 @@
 class ClausewitzObject:
-    def __init__(self, name_values:dict[str, list]|None=None, anonymous_values:list|None=None) -> None:
+    def __init__(self, name_values:'dict[str, list]|None'=None, anonymous_values:'list|None'=None) -> None:
         self.name_values = name_values
         self.anonymous_values = anonymous_values
         if name_values is None:
