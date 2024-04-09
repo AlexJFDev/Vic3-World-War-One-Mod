@@ -22,6 +22,12 @@ POPS = {
 				culture = arab
 			}
 		}
+		region_state:TUR = {
+			create_pop = {
+				size = 17262
+				culture = arab
+			}
+		}
 	}
 	s:STATE_EASTERN_AFGHANISTAN = {
 		region_state:AFG = {
@@ -1515,6 +1521,66 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_BURMA = {
+		region_state:BIC = {
+			create_pop = {
+				size = 3187824
+				culture = burmese
+			}
+		}
+	}
+	s:STATE_KACHIN = {
+		region_state:BIC = {
+			create_pop = {
+				size = 1572078
+				culture = burmese
+			}
+			create_pop = {
+				size = 300223
+				culture = thai
+			}
+		}
+	}
+	s:STATE_PEGU = {
+		region_state:BIC = {
+			create_pop = {
+				size = 3389793
+				culture = burmese
+			}
+			create_pop = {
+				size = 33843
+				culture = mon
+			}
+		}
+	}
+	s:STATE_SHAN_STATES = {
+		region_state:BIC = {
+			create_pop = {
+				size = 185593
+				culture = burmese
+			}
+			create_pop = {
+				size = 1591183
+				culture = thai
+			}
+		}
+	}
+	s:STATE_TENASSERIM = {
+		region_state:BIC = {
+			create_pop = {
+				size = 853726
+				culture = burmese
+			}
+			create_pop = {
+				size = 23745
+				culture = mon
+			}
+			create_pop = {
+				size = 98255
+				culture = thai
+			}
+		}
+	}
 	s:STATE_GUATEMALA = {
 		region_state:BLZ = {
 			create_pop = {
@@ -1604,16 +1670,6 @@ POPS = {
 				culture = malay
 			}
 		}
-		region_state:ROS = {
-			create_pop = {
-				size = 600000
-				culture = malay
-			}
-			create_pop = {
-				size = 1000
-				culture = british
-			}
-		}
 		region_state:NBO = {
 			create_pop = {
 				size = 1000
@@ -1626,6 +1682,16 @@ POPS = {
 			create_pop = {
 				size = 5000
 				culture = central_indian
+			}
+		}
+		region_state:ROS = {
+			create_pop = {
+				size = 600000
+				culture = malay
+			}
+			create_pop = {
+				size = 1000
+				culture = british
 			}
 		}
 	}
@@ -1968,6 +2034,60 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_UGANDA = {
+		region_state:BUG = {
+			create_pop = {
+				size = 1649129
+				culture = east_bantu
+			}
+			create_pop = {
+				size = 1023597
+				culture = nilotic
+			}
+			create_pop = {
+				size = 170600
+				culture = sudanese
+			}
+			create_pop = {
+				size = 2216
+				culture = central_indian
+			}
+			create_pop = {
+				size = 1000
+				culture = british
+			}
+		}
+	}
+	s:STATE_UZBEKIA = {
+		region_state:BUK = {
+			create_pop = {
+				size = 1750000
+				culture = steppe_turk
+			}
+			create_pop = {
+				size = 50000
+				culture = tajik
+			}
+			create_pop = {
+				size = 1000
+				culture = russian
+			}
+		}
+		region_state:RUS = {
+			create_pop = {
+				size = 16297
+				culture = russian
+			}
+			create_pop = {
+				size = 1713
+				culture = ashkenazi
+			}
+			create_pop = {
+				size = 1108015
+				culture = steppe_turk
+			}
+		}
+	}
 	s:STATE_BULGARIA = {
 		region_state:BUL = {
 			create_pop = {
@@ -2147,36 +2267,6 @@ POPS = {
 			create_pop = {
 				size = 150000
 				culture = bulgarian
-			}
-		}
-	}
-	s:STATE_UZBEKIA = {
-		region_state:BUK = {
-			create_pop = {
-				size = 1750000
-				culture = steppe_turk
-			}
-			create_pop = {
-				size = 50000
-				culture = tajik
-			}
-			create_pop = {
-				size = 1000
-				culture = russian
-			}
-		}
-		region_state:RUS = {
-			create_pop = {
-				size = 16297
-				culture = russian
-			}
-			create_pop = {
-				size = 1713
-				culture = ashkenazi
-			}
-			create_pop = {
-				size = 1108015
-				culture = steppe_turk
 			}
 		}
 	}
@@ -2389,6 +2479,30 @@ POPS = {
 			create_pop = {
 				size = 5963
 				culture = anglo_canadian
+			}
+		}
+	}
+	s:STATE_CEYLON = {
+		region_state:CEY = {
+			create_pop = {
+				size = 2803040
+				culture = sinhala
+			}
+			create_pop = {
+				size = 1308700
+				culture = south_indian
+			}
+			create_pop = {
+				size = 13080
+				culture = malay
+			}
+			create_pop = {
+				size = 27240
+				culture = british
+			}
+			create_pop = {
+				size = 32760
+				culture = central_indian
 			}
 		}
 	}
@@ -2655,8 +2769,20 @@ POPS = {
 	s:STATE_QINGHAI = {
 		region_state:CHI = {
 			create_pop = {
-				size = 13550205
+				size = 1448481
+				culture = tibetan
+			}
+			create_pop = {
+				size = 2193414
 				culture = han
+			}
+			create_pop = {
+				size = 331081
+				culture = mongol
+			}
+			create_pop = {
+				size = 165541
+				culture = steppe_turk
 			}
 		}
 	}
@@ -2665,6 +2791,26 @@ POPS = {
 			create_pop = {
 				size = 38247900
 				culture = han
+			}
+		}
+		region_state:GBR = {
+			create_pop = {
+				size = 140000
+				culture = han
+			}
+			create_pop = {
+				size = 10000
+				culture = british
+			}
+		}
+		region_state:GER = {
+			create_pop = {
+				size = 165000
+				culture = han
+			}
+			create_pop = {
+				size = 4000
+				culture = german
 			}
 		}
 	}
@@ -2789,34 +2935,6 @@ POPS = {
 			create_pop = {
 				size = 57982
 				culture = tibetan
-			}
-		}
-	}
-	s:STATE_ULIASTAI = {
-		region_state:MGL = {
-			create_pop = {
-				size = 269663
-				culture = mongol
-			}
-			create_pop = {
-				size = 14981
-				culture = han
-			}
-			create_pop = {
-				size = 14981
-				culture = steppe_turk
-			}
-		}
-	}
-	s:STATE_URGA = {
-		region_state:MGL = {
-			create_pop = {
-				size = 402711
-				culture = mongol
-			}
-			create_pop = {
-				size = 21195
-				culture = han
 			}
 		}
 	}
@@ -3467,6 +3585,82 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_EGYPTIAN_DESERT = {
+		region_state:EGY = {
+			create_pop = {
+				size = 261287
+				culture = arab
+			}
+		}
+	}
+	s:STATE_LOWER_EGYPT = {
+		region_state:EGY = {
+			create_pop = {
+				size = 6093305
+				culture = arab
+			}
+			create_pop = {
+				size = 11816
+				culture = british
+			}
+			create_pop = {
+				size = 26503
+				culture = sephardic
+			}
+		}
+	}
+	s:STATE_MATRUH = {
+		region_state:EGY = {
+			create_pop = {
+				size = 1369423
+				culture = arab
+			}
+			create_pop = {
+				size = 1290
+				culture = british
+			}
+			create_pop = {
+				size = 1000
+				culture = sephardic
+			}
+		}
+	}
+	s:STATE_MIDDLE_EGYPT = {
+		region_state:EGY = {
+			create_pop = {
+				size = 1601000
+				culture = arab
+			}
+			create_pop = {
+				size = 23983
+				culture = british
+			}
+			create_pop = {
+				size = 26957
+				culture = sephardic
+			}
+		}
+	}
+	s:STATE_SINAI = {
+		region_state:EGY = {
+			create_pop = {
+				size = 33401
+				culture = arab
+			}
+		}
+	}
+	s:STATE_UPPER_EGYPT = {
+		region_state:EGY = {
+			create_pop = {
+				size = 2300353
+				culture = arab
+			}
+			create_pop = {
+				size = 11987
+				culture = british
+			}
+		}
+	}
 	s:STATE_SAN_SALVADOR = {
 		region_state:ELS = {
 			create_pop = {
@@ -3524,6 +3718,30 @@ POPS = {
 			create_pop = {
 				size = 497593
 				culture = finnish
+			}
+		}
+	}
+	s:STATE_MALAYA = {
+		region_state:FMS = {
+			create_pop = {
+				size = 2300000
+				culture = malay
+			}
+			create_pop = {
+				size = 1000
+				culture = british
+			}
+		}
+	}
+	s:STATE_KANAK = {
+		region_state:FPL = {
+			create_pop = {
+				size = 16000
+				culture = french
+			}
+			create_pop = {
+				size = 31000
+				culture = polynesian
 			}
 		}
 	}
@@ -3732,18 +3950,6 @@ POPS = {
 			create_pop = {
 				size = 165300
 				culture = afro_antillean
-			}
-		}
-	}
-	s:STATE_KANAK = {
-		region_state:FPL = {
-			create_pop = {
-				size = 16000
-				culture = french
-			}
-			create_pop = {
-				size = 31000
-				culture = polynesian
 			}
 		}
 	}
@@ -4299,6 +4505,28 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_BASRA = {
+		region_state:GBR = {
+			create_pop = {
+				size = 108016
+				culture = arab
+			}
+			create_pop = {
+				size = 1000
+				culture = british
+			}
+		}
+		region_state:TUR = {
+			create_pop = {
+				size = 775512
+				culture = arab
+			}
+			create_pop = {
+				size = 10088
+				culture = sephardic
+			}
+		}
+	}
 	s:STATE_BERMUDA = {
 		region_state:GBR = {
 			create_pop = {
@@ -4324,6 +4552,22 @@ POPS = {
 			create_pop = {
 				size = 5790
 				culture = scottish
+			}
+		}
+	}
+	s:STATE_CYPRUS = {
+		region_state:GBR = {
+			create_pop = {
+				size = 221995
+				culture = greek
+			}
+			create_pop = {
+				size = 58405
+				culture = turkish
+			}
+			create_pop = {
+				size = 3312
+				culture = british
 			}
 		}
 	}
@@ -4410,6 +4654,14 @@ POPS = {
 			create_pop = {
 				size = 4427842
 				culture = scottish
+			}
+		}
+	}
+	s:STATE_MALTA = {
+		region_state:GBR = {
+			create_pop = {
+				size = 215092
+				culture = italian
 			}
 		}
 	}
@@ -4516,14 +4768,6 @@ POPS = {
 			create_pop = {
 				size = 30298
 				culture = ashkenazi
-			}
-		}
-	}
-	s:STATE_BOUGAINVILLE = {
-		region_state:NGG = {
-			create_pop = {
-				size = 25690
-				culture = melanesian
 			}
 		}
 	}
@@ -5108,18 +5352,6 @@ POPS = {
 			}
 		}
 	}
-	s:STATE_BUSAN = {
-		region_state:KOR = {
-			create_pop = {
-				size = 3358104
-				culture = korean
-			}
-			create_pop = {
-				size = 70000
-				culture = japanese
-			}
-		}
-	}
 	s:STATE_CHUBU = {
 		region_state:JAP = {
 			create_pop = {
@@ -5188,18 +5420,6 @@ POPS = {
 			}
 		}
 	}
-	s:STATE_PYONGYANG = {
-		region_state:KOR = {
-			create_pop = {
-				size = 3235644
-				culture = korean
-			}
-			create_pop = {
-				size = 70000
-				culture = japanese
-			}
-		}
-	}
 	s:STATE_RYUKYU_ISLANDS = {
 		region_state:JAP = {
 			create_pop = {
@@ -5254,30 +5474,6 @@ POPS = {
 			}
 		}
 	}
-	s:STATE_SARIWON = {
-		region_state:KOR = {
-			create_pop = {
-				size = 1541016
-				culture = korean
-			}
-			create_pop = {
-				size = 40000
-				culture = japanese
-			}
-		}
-	}
-	s:STATE_SEOUL = {
-		region_state:KOR = {
-			create_pop = {
-				size = 2602674
-				culture = korean
-			}
-			create_pop = {
-				size = 40000
-				culture = japanese
-			}
-		}
-	}
 	s:STATE_SHIKOKU = {
 		region_state:JAP = {
 			create_pop = {
@@ -5291,18 +5487,6 @@ POPS = {
 			create_pop = {
 				size = 5617500
 				culture = japanese
-			}
-		}
-	}
-	s:STATE_YANGHO = {
-		region_state:KOR = {
-			create_pop = {
-				size = 180000
-				culture = japanese
-			}
-			create_pop = {
-				size = 4321515
-				culture = korean
 			}
 		}
 	}
@@ -5375,6 +5559,86 @@ POPS = {
 			create_pop = {
 				size = 293802
 				culture = steppe_turk
+			}
+		}
+	}
+	s:STATE_BUSAN = {
+		region_state:KOR = {
+			create_pop = {
+				size = 3358104
+				culture = korean
+			}
+			create_pop = {
+				size = 70000
+				culture = japanese
+			}
+		}
+	}
+	s:STATE_PYONGYANG = {
+		region_state:KOR = {
+			create_pop = {
+				size = 3235644
+				culture = korean
+			}
+			create_pop = {
+				size = 70000
+				culture = japanese
+			}
+		}
+	}
+	s:STATE_SARIWON = {
+		region_state:KOR = {
+			create_pop = {
+				size = 1541016
+				culture = korean
+			}
+			create_pop = {
+				size = 40000
+				culture = japanese
+			}
+		}
+	}
+	s:STATE_SEOUL = {
+		region_state:KOR = {
+			create_pop = {
+				size = 2602674
+				culture = korean
+			}
+			create_pop = {
+				size = 40000
+				culture = japanese
+			}
+		}
+	}
+	s:STATE_YANGHO = {
+		region_state:KOR = {
+			create_pop = {
+				size = 180000
+				culture = japanese
+			}
+			create_pop = {
+				size = 4321515
+				culture = korean
+			}
+		}
+	}
+	s:STATE_LIBERIA = {
+		region_state:LIB = {
+			create_pop = {
+				size = 190286
+				culture = kru
+			}
+			create_pop = {
+				size = 234298
+				culture = mande
+			}
+			create_pop = {
+				size = 70846
+				culture = african_minor
+			}
+			create_pop = {
+				size = 50000
+				culture = afro_american
 			}
 		}
 	}
@@ -5649,6 +5913,34 @@ POPS = {
 			create_pop = {
 				size = 39012
 				culture = mesoamerican
+			}
+		}
+	}
+	s:STATE_ULIASTAI = {
+		region_state:MGL = {
+			create_pop = {
+				size = 269663
+				culture = mongol
+			}
+			create_pop = {
+				size = 14981
+				culture = han
+			}
+			create_pop = {
+				size = 14981
+				culture = steppe_turk
+			}
+		}
+	}
+	s:STATE_URGA = {
+		region_state:MGL = {
+			create_pop = {
+				size = 402711
+				culture = mongol
+			}
+			create_pop = {
+				size = 21195
+				culture = han
 			}
 		}
 	}
@@ -6110,6 +6402,14 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_BOUGAINVILLE = {
+		region_state:NGG = {
+			create_pop = {
+				size = 25690
+				culture = melanesian
+			}
+		}
+	}
 	s:STATE_NICARAGUA = {
 		region_state:NIC = {
 			create_pop = {
@@ -6303,6 +6603,26 @@ POPS = {
 			create_pop = {
 				size = 50000
 				culture = south_amerindian
+			}
+		}
+	}
+	s:STATE_ZAMBEZI = {
+		region_state:RHO = {
+			create_pop = {
+				size = 31471
+				culture = british
+			}
+			create_pop = {
+				size = 837050
+				culture = southern_bantu
+			}
+			create_pop = {
+				size = 1155
+				culture = central_indian
+			}
+			create_pop = {
+				size = 2021
+				culture = coloured
 			}
 		}
 	}
@@ -7864,18 +8184,6 @@ POPS = {
 			}
 		}
 	}
-	s:STATE_MALAYA = {
-		region_state:FMS = {
-			create_pop = {
-				size = 2300000
-				culture = malay
-			}
-			create_pop = {
-				size = 1000
-				culture = british
-			}
-		}
-	}
 	s:STATE_SIERRA_LEONE = {
 		region_state:SIL = {
 			create_pop = {
@@ -8220,7 +8528,7 @@ POPS = {
 		region_state:TUR = {
 			create_pop = {
 				size = 1960651
-				culture = turksih
+				culture = turkish
 			}
 			create_pop = {
 				size = 602041
@@ -8232,6 +8540,26 @@ POPS = {
 			}
 			create_pop = {
 				size = 40660
+				culture = sephardic
+			}
+		}
+	}
+	s:STATE_BAGHDAD = {
+		region_state:TUR = {
+			create_pop = {
+				size = 40000
+				culture = kurdish
+			}
+			create_pop = {
+				size = 5000
+				culture = turkish
+			}
+			create_pop = {
+				size = 1252739
+				culture = arab
+			}
+			create_pop = {
+				size = 62565
 				culture = sephardic
 			}
 		}
@@ -8360,6 +8688,74 @@ POPS = {
 			}
 		}
 	}
+	s:STATE_LEBANON = {
+		region_state:TUR = {
+			create_pop = {
+				size = 10000
+				culture = sephardic
+			}
+			create_pop = {
+				size = 20000
+				culture = greek
+			}
+			create_pop = {
+				size = 27042
+				culture = turkish
+			}
+			create_pop = {
+				size = 27042
+				culture = armenian
+			}
+			create_pop = {
+				size = 591957
+				culture = arab
+			}
+		}
+	}
+	s:STATE_MOSUL = {
+		region_state:TUR = {
+			create_pop = {
+				size = 400000
+				culture = kurdish
+			}
+			create_pop = {
+				size = 20000
+				culture = turkish
+			}
+			create_pop = {
+				size = 268543
+				culture = arab
+			}
+			create_pop = {
+				size = 14835
+				culture = sephardic
+			}
+		}
+	}
+	s:STATE_PALESTINE = {
+		region_state:TUR = {
+			create_pop = {
+				size = 97248
+				culture = sephardic
+			}
+			create_pop = {
+				size = 2000
+				culture = greek
+			}
+			create_pop = {
+				size = 3000
+				culture = armenian
+			}
+			create_pop = {
+				size = 50000
+				culture = turkish
+			}
+			create_pop = {
+				size = 625738
+				culture = arab
+			}
+		}
+	}
 	s:STATE_SYRIA = {
 		region_state:TUR = {
 			create_pop = {
@@ -8397,6 +8793,14 @@ POPS = {
 			create_pop = {
 				size = 115538
 				culture = armenian
+			}
+		}
+	}
+	s:STATE_TRANSJORDAN = {
+		region_state:TUR = {
+			create_pop = {
+				size = 249872
+				culture = arab
 			}
 		}
 	}
@@ -9316,26 +9720,6 @@ POPS = {
 			create_pop = {
 				size = 1396845
 				culture = venezuelan
-			}
-		}
-	}
-	s:STATE_ZAMBEZI = {
-		region_state:RHO = {
-			create_pop = {
-				size = 31471
-				culture = british
-			}
-			create_pop = {
-				size = 837050
-				culture = southern_bantu
-			}
-			create_pop = {
-				size = 1155
-				culture = central_indian
-			}
-			create_pop = {
-				size = 2021
-				culture = coloured
 			}
 		}
 	}

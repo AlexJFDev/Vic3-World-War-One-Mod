@@ -5,7 +5,7 @@ import os
 import csv
 
 DEFINITIONS_FILE: str = os.path.join('data', 'country_definitions.csv')
-COUNTRIES_FILE: str = os.path.join('clausewitz_files', 'countries.txt')
+COUNTRIES_FILE: str = os.path.join('mod_files', 'countries.txt')
 
 TAG_COLUMN = 1
 COLOR_COLUMN = 2
