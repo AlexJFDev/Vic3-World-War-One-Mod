@@ -1,0 +1,52 @@
+STATES = {
+	s:STATE_ABU_DHABI = {
+		create_state = {
+			owned_provinces = { x4D3B30 xD12977 x723F1D xFF7473 x28D126 xC9472E xE8E0A4 xA9240B x65A581 x70D020 x8C6854 x1830A7 x631F32 x69B568 xF0D021 }
+			country = c:ABU
+		}
+		create_state = {
+			owned_provinces = { x2768F8 xEF5020 }
+			country = c:TUR
+		}
+		create_state = { owned_provinces = {
+				x505AE0 
+			} country = c:BHN
+		}
+		create_state = {
+			owned_provinces = {
+				x0DC972 
+			}
+			country = c:OMA
+		}
+		add_homeland = cu:bedouin
+	}
+}
+
+pashtun={
+	color= hsv{ 0.76 0.34 0.60 }
+	religion = sunni
+	traits = { iranian_turanian_culture_group central_asian_heritage }
+	male_common_first_names={
+		Abd_al-Quddus
+		Abd_al-Rahman
+		Abdallah
+		Afzal
+		Ahmad
+		Akbar
+		Akram
+	}
+	female_common_first_names = {
+		Aisha
+		Ghazala
+	}	
+	noble_last_names = {
+		Damani
+	}
+	common_last_names={
+		Arif
+	}
+	ethnicities = {
+		1 = indian
+	}
+	graphics = south_asian
+}

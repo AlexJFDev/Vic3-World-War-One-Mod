@@ -5,76 +5,84 @@ import os
 
 import csv
 
-FILE_PATH = os.path.join('data', '00_states.txt')
-CSV_PATH = os.path.join('data', 'state_regions.csv')
+FILE_PATH = os.path.join('data', 'test.txt')
 
 # There is a bug with one line objects
 
 def parse_file(path: str) -> ClausewitzRoot:
-    root = ClausewitzRoot()
     with open(path, 'rt') as file:
-        lines = file.readlines()
-        if lines[0][0:3] == 'ï»¿':
-            lines[0] = lines[0][3:]
-        lines.reverse()
-        while len(lines) > 0:
-            line = lines.pop().strip()
-            if '=' in line:
-                left_side, right_side = line.split('=', 1)
-                left_side = left_side.strip()
-                right_side = right_side.strip()
-                if right_side[0] == '{':
-                    lines.append(right_side[1:])
-                    root.add_named_value(left_side, parse_object(lines))
-                else:
-                    root.add_named_value(left_side, right_side)
-            elif len(line) > 0:
-                split_line = line.split(' ')
-                if '}' in split_line:
-                    split_line.remove('}')
-                root.join_anonymous_values(split_line)
+        string = file.read()
+    chars = [*string]
+
+    file_as_object = parse_object(chars)
+
+    root = ClausewitzRoot(name_values=file_as_object.get_name_values(), anonymous_values=file_as_object.get_anonymous_values())
     return root
 
-def parse_object(lines: list[str]) -> ClausewitzObject:
+def parse_object(chars: list[str]) -> ClausewitzObject:
     clausewitz_object = ClausewitzObject()
-    while len(lines) > 0:
-        line = lines.pop().strip()
-        if '=' in line:
-            left_side, right_side = line.split('=', 1)
-            left_side = left_side.strip()
-            right_side = right_side.strip()
 
-            if left_side[0] == '}':
-                left_side = left_side[1:]
-            if right_side[-1] == '}':
-                right_side = right_side[:-1]
-            
-            if right_side[0] == '{':
-                lines.append(right_side[1:])
-                clausewitz_object.add_named_value(left_side, parse_object(lines))
+    left_of_equals = True
+    left_data = ['']
+    right_data = ''
+    while len(chars) > 0:
+        current_char = chars.pop(0)
+        if current_char == '{':
+            if len(right_data) > 0:
+                new_object = f'{right_data}{parse_typed_object(chars)}'
             else:
-                clausewitz_object.add_named_value(left_side, right_side)
-        elif len(line) > 0:
-            if line[-1] == '}':
-                split_line = line[:-1].split(' ')
+                new_object = parse_object(chars)
+            if (left_of_equals):
+                clausewitz_object.add_anonymous_value(new_object)
             else:
-                split_line = line.split(' ')
-            if split_line[0] != '':
-                clausewitz_object.join_anonymous_values(split_line)
-        if '}' in line:
-            return clausewitz_object
+                clausewitz_object.add_named_value(left_data[0], new_object)
+                left_of_equals = True
+                left_data = ['']
+                right_data = ''
+        
+        elif current_char == '}': 
+            if left_of_equals:
+                if len(left_data) > 1 or len(left_data[0]) > 0:
+                    clausewitz_object.add_anonymous_values(*left_data)
+            else:
+                clausewitz_object.add_named_value(left_data[0], right_data)
+            break
+        
+        elif current_char == '=':
+            left_of_equals = False
+        
+        elif current_char == '\n':
+            if left_of_equals:
+                if len(left_data) > 1 or len(left_data[0]) > 0:
+                    clausewitz_object.add_anonymous_values(*left_data)
+            else:
+                clausewitz_object.add_named_value(left_data[0], right_data)
+            left_of_equals = True
+            left_data = ['']
+            right_data = ''
+        
+        elif current_char.isspace():
+            if len(left_data[-1]) > 0:
+                left_data.append('')
+        
+        elif (left_of_equals):
+            left_data[-1] += current_char
+        
+        else:
+            right_data += current_char
+        
     return clausewitz_object
 
+def parse_typed_object(chars: list[str]) -> str:
+    data = ''
+    current_char = chars.pop(0)
+    while(current_char != '}'):
+        data += current_char
+        current_char = chars.pop(0)
+    return f'{"{"}{data}{"}"}'
+
 if __name__ == '__main__':
-    file_as_object: ClausewitzRoot = parse_file(FILE_PATH)
+    file_as_object = parse_file(FILE_PATH)
+    print(file_as_object.unparse())
 
-    with open(CSV_PATH, 'w') as file:
-        csv_writer = csv.writer(file)
-        states: dict[str, ClausewitzObject] = file_as_object.get_named_value('STATES').get_name_values()
-
-        for state_name, state_data in states.items():
-            owners: list[ClausewitzObject] = state_data[0].get_named_values("create_state")
-            provinces: list = []
-            for owner in owners:
-                provinces.extend(owner.get_named_value('owned_provinces').get_anonymous_values())
-            csv_writer.writerow([state_name, ' '.join(provinces)])
+        
