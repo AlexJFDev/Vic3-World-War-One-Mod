@@ -1,11 +1,28 @@
 ﻿pmg_base_building_construction_sector = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
 
 	production_methods = {
 		pm_wooden_buildings
-		pm_iron_frame_buildings
 		pm_steel_frame_buildings
-		pm_arc_welded_buildings
+	}
+}
+
+pmg_working_hours_construction_sector = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+
+	production_methods = {
+		pm_10_hour_work_day_construction_sector
+		pm_8_hour_work_day_construction_sector
+		pm_12_hour_work_day_construction_sector
+	}
+}
+
+pmg_centralisation_construction_sector = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+
+	production_methods = {
+		pm_no_priority_construction_sector 
+		pm_prioritise_regional_construction_sector
+		pm_prioritise_state_wide_construction_sector
 	}
 }

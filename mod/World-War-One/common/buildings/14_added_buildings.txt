@@ -1,0 +1,124 @@
+building_synthetic_industry = {
+	building_group = bg_heavy_industry
+	texture = "gfx/interface/icons/building_icons/placeholder Copy.dds"
+	city_type = city
+	levels_per_mesh = 5
+
+		unlocking_technologies = {
+
+	}
+
+	production_method_groups = {
+		pmg_synthetic_oil
+		pmg_synthetic_rubber
+	}
+
+	required_construction = construction_cost_high
+}
+
+building_luxury_textile_mills = {
+	building_group = bg_light_industry
+	texture = "gfx/interface/icons/building_icons/luxury_textile_industry.dds"
+	city_type = city
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_luxury_textile_mills
+		pmg_luxury_building_textile_mills
+		pmg_automation_building_luxury_textile_mills
+		pmg_ownership_capital_building_luxury_textile_mills
+	}
+	
+	required_construction = construction_cost_high
+}
+
+building_luxury_furniture_manufacturies = {
+	building_group = bg_light_industry
+	texture = "gfx/interface/icons/building_icons/luxury_furniture_manufacturies.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		manufacturies
+	}
+
+	production_method_groups = {
+		pmg_base_building_luxury_furniture_manufacturies
+		pmg_luxury_building_luxury_furniture_manufacturies
+		pmg_automation_building_luxury_furniture_manufacturies
+		pmg_ownership_capital_building_furniture_manufacturies
+	}
+
+	required_construction = construction_cost_high
+}
+
+building_ceramic_works = {
+	building_group = bg_light_industry
+	texture = "gfx/interface/icons/building_icons/ceramic_works.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		manufacturies
+	}
+
+	production_method_groups = {
+		pmg_base_building_ceramic_works
+		pmg_luxury_building_ceramic_works
+		pmg_glassblowing_ceramic
+		pmg_ownership_capital_building_glassworks
+	}
+	
+	required_construction = construction_cost_high
+}
+
+building_automobile_industry = {
+	building_group = bg_heavy_industry
+	texture = "gfx/interface/icons/building_icons/automobile_industry.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		atmospheric_engine
+	}
+
+	production_method_groups = {
+		pmg_base_building_automobile_industry
+		pmg_automation_building_automobile_industry
+		pmg_automobile_shift_system_production
+		pmg_ownership_capital_building_motor_industry
+	}
+	
+	required_construction = construction_cost_very_high
+
+	possible = {
+		error_check = {
+			severity = fail
+			this = {
+				owner = { 
+					NOT = { has_law = law_type:law_industry_banned } 
+				}
+			}
+		}
+	}
+}
+
+building_radios_industry = {
+	building_group = bg_heavy_industry
+	texture = "gfx/interface/icons/building_icons/radios_industry.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		radio
+	}
+
+	production_method_groups = {
+		pmg_radios_base
+		pmg_radios_working_hours
+		pmg_radios_shift_system
+		pmg_ownership_capital_building_electrics_industry
+	}
+	
+	required_construction = construction_cost_very_high
+}

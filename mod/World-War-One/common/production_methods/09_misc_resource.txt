@@ -870,37 +870,6 @@ pm_steam_derricks = {
 		workforce_scaled = {
 			# input goods
 			goods_input_engines_add = 5
-			goods_input_coal_add = 10
-			
-			# output goods
-			goods_output_oil_add = 60
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
-		}
-	}
-}
-
-pm_combustion_derricks = {
-	texture = "gfx/interface/icons/production_method_icons/combustion_derricks.dds"
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 15
-		}
-	}
-	
-	unlocking_technologies = {
-		combustion_engine
-	}
-	
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_engines_add = 10
 			
 			# output goods
 			goods_output_oil_add = 100
@@ -909,13 +878,44 @@ pm_combustion_derricks = {
 		level_scaled = {
 			building_employment_laborers_add = 2000
 			building_employment_machinists_add = 2000
-			building_employment_engineers_add = 900
+			building_employment_engineers_add = 1000
+		}
+	}
+}
+
+pm_combustion_derricks = {
+	texture = "gfx/interface/icons/production_method_icons/reckless_oil_extraction.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 10
+			
+			# output goods
+			goods_output_oil_add = 130
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2400
+			building_employment_machinists_add = 2400
+			building_employment_engineers_add = 1200
+		}
+				unscaled = {
+			building_laborers_mortality_mult = 0.15
+			building_machinists_mortality_mult = 0.1
+			building_engineers_mortality_mult = 0.05
 		}
 	}
 }
 
 pm_rail_transport_building_oil_rig = {
-	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+	texture = "gfx/interface/icons/production_method_icons/tanker_cars.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
@@ -931,35 +931,32 @@ pm_rail_transport_building_oil_rig = {
 		workforce_scaled = {
 			goods_input_transportation_add = 5
 		}
-
-		level_scaled = {
-			building_employment_laborers_add = -1000
-		}
+		unscaled = 	{
+			building_throughput_add = 0.2
+					}
 	}
 }
 
 pm_tanker_cars = {
-	texture = "gfx/interface/icons/production_method_icons/tanker_cars.dds"
+	texture = "gfx/interface/icons/production_method_icons/oil_pipeline.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10
+			state_pollution_generation_add = 5
 		}
 	}
-
+	}
 	unlocking_technologies = {
-		steel_railway_cars
-	}
-	
+		railways
+	}	
 	building_modifiers = {
-		workforce_scaled = {
-			goods_input_transportation_add = 10
-		}
-
+		unscaled = 	{
+			building_throughput_add = 0.2
+			}
 		level_scaled = {
-			building_employment_laborers_add = -2000
+			state_infrastructure_add = -2
 		}
-	}
+	
 }
 
 pm_publicly_traded_building_oil_rig = {
