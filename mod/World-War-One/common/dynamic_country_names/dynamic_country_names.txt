@@ -40,3 +40,76 @@ SMA = { # Somalia (British Somaliland)
 		}
 	}
 }
+ICH = { # Indochina (French Indochina)
+	dynamic_country_name = {
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+ZAM = { # Zambia (Northern Rhodesia)
+	dynamic_country_name = {
+		name = dyn_c_northern_rhodesia
+		adjective = dyn_c_northern_rhodesia_adj
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = c:GBR
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:ZAM
+					type = puppet
+				}
+			}
+		}
+	}
+}
+MLA = { # Malaysia (Federated Malay States) TODO: NOT WORKING
+	dynamic_country_name = {
+		name = dyn_c_federated_malay
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = c:GBR
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:MLA
+					type = puppet
+				}
+			}
+		}
+	}
+}
+WAF = { # West Africa (French West Africa)
+	dynamic_country_name = {
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+EQA = { # Equatorial Africa (French Equatorial Africa)
+	dynamic_country_name = {
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
