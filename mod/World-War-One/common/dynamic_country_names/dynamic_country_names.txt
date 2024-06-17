@@ -58,7 +58,7 @@ ZAM = { # Zambia (Northern Rhodesia)
 		adjective = dyn_c_northern_rhodesia_adj
 
 		is_main_tag_only = yes
-		priority = 0
+		priority = 1
 		
 		trigger = {
 			exists = c:GBR
@@ -110,6 +110,49 @@ EQA = { # Equatorial Africa (French Equatorial Africa)
 		
 		trigger = {
 			coa_def_subject_trigger = yes
+		}
+	}
+}
+TAN = { # Tanzania (German East Africa)
+	dynamic_country_name = {
+		name = dyn_c_german_east_africa
+		adjective = dyn_c_german_east_africa_adj
+
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			exists = c:GER
+			c:GER = {
+				has_diplomatic_pact = {
+					who = c:TAN
+					type = puppet
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+ROS = { # Sarawak (Raj of Sarawak) TODO: NOT WORKING
+	dynamic_country_name = {
+		name = dyn_c_raj_sarawak
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
 		}
 	}
 }
