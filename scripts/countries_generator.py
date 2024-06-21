@@ -14,7 +14,7 @@ CULTURES_COLUMN = 4
 CAPITAL_COLUMN = 5
 IS_DYNAMIC_COLUMN = 6
 
-def generate_countries(file_path):
+def generate_countries(file_path: str):
     countries_root = ClausewitzRoot()
 
     with open(file_path, 'r') as definitions_file:

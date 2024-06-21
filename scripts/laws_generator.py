@@ -28,7 +28,7 @@ INSTITUTIONS_COLUMNS = (
 INSTITUTIONS_TAXATION_COLUMN = 9
 INSTITUTIONS_MARKET_CAPITAL_COLUMN = 10
 
-def generate_laws(laws_path, institutions_path):
+def generate_laws(laws_path: str, institutions_path: str) -> ClausewitzRoot:
     domestic_root = ClausewitzRoot()
     domestic_laws = ClausewitzObject()
     domestic_root.add_named_value('COUNTRIES', domestic_laws)

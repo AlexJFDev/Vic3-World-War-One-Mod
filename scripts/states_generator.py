@@ -30,7 +30,7 @@ def split_pops(pops: str) -> list[str]:
         pop_list.append(new_traits)
     return pop_list
 
-def generate_states_and_pops(ownership_path, regions_path):
+def generate_states_and_pops(ownership_path: str, regions_path: str):
     states_root = ClausewitzRoot()
     states_root.add_named_value('STATES', ClausewitzObject())
     pops_root = ClausewitzRoot()

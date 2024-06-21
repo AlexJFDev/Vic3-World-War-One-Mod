@@ -22,10 +22,10 @@ NOBLE_LAST_NAMES_COLUMN = 11
 ETHNICITIES_COLUMN = 12
 GRAPHICS_COLUMN = 13
 
-def generate_cultures(file_path):
+def generate_cultures(file_path: str):
     cultures_root = ClausewitzRoot()
 
-    with open(CULTURE_DEFINITIONS, 'rt') as culture_definitions:
+    with open(file_path, 'rt') as culture_definitions:
         culture_definitions.readline() # Skip header line
         definitions_reader = csv.reader(culture_definitions)
         for line in definitions_reader:
