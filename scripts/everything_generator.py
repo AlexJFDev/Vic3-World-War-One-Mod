@@ -31,7 +31,7 @@ if __name__ == '__main__':
     laws_root = laws_generator.generate_laws(COUNTRY_LAWS_PATH, COUNTRY_INSTITUTIONS_PATH)
     states_root, pops_root = states_generator.generate_states_and_pops(STATE_OWNERSHIP_PATH, STATE_REGIONS_PATH)
 
-    write_object(COMBINED_CULTURES_PATH, laws_root)
+    write_object(COMBINED_CULTURES_PATH, cultures_root)
     write_object(COUNTRIES_PATH, countries_root)
     write_object(DOMESTIC_LAWS_PATH, laws_root)
     write_object(STATES_PATH, states_root)

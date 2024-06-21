@@ -43,7 +43,7 @@ def generate_cultures(file_path: str):
             noble_last_names = line[NOBLE_LAST_NAMES_COLUMN]
             ethnicities = line[ETHNICITIES_COLUMN]
             graphics = line[GRAPHICS_COLUMN]
-        for name, tag, color, religion, traits, obsessions, male_common_names, female_common_names, common_last_names, male_regal_names, female_regal_names, noble_last_names, ethnicities, graphics in definitions_reader:
+            
             culture_object = ClausewitzObject()
 
             if name == '': continue
