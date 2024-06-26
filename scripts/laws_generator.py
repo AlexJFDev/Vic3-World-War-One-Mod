@@ -53,7 +53,7 @@ def generate_laws(laws_path: str, institutions_path: str) -> ClausewitzRoot:
         for row, values in enumerate(institutions_reader):
             country_tag: str = values[INSTITUTIONS_TAG_COLUMN]
 
-            tag_object = domestic_laws.get_named_value(f'c:{country_tag}')
+            tag_object = domestic_laws.get_value_named(f'c:{country_tag}')
 
             if tag_object is None:
                 tag_object = ClausewitzObject()

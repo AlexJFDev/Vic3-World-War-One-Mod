@@ -17,8 +17,8 @@ class ClausewitzObject:
         previous_values.append(value)
         self.name_values[name] = previous_values
 
-    def get_named_value(self, name: str, index=0, default=None) -> 'str|int|ClausewitzObject|None':
-        """Gets a single value assigned to a name. Defaults to index 0 and None if no values are assigned to the name."""
+    def get_value_named(self, name: str, index=0, default=None) -> 'str|int|ClausewitzObject|None':
+        """Gets a single value assigned to name. Because multiple values can be assigned to a name, the `index` can be specified. Returns `default` or None if no values are assigned to name."""
         values = self.name_values.get(name, None)
         if values is None:
             return default
@@ -26,8 +26,8 @@ class ClausewitzObject:
             raise IndexError(f'The index {index} is greater than the number of values assigned to {name} ({len(values)}).')
         return values[index]
     
-    def get_named_values(self, name: str, default=None) -> list:
-        """Gets all values assigned to a name in the form of a list. Returns None if no values are assigned to the name."""
+    def get_values_named(self, name: str, default=None) -> list:
+        """Gets all values assigned to name in the form of a list. Returns None if no values are assigned to the name."""
         values = self.name_values.get(name, None)
         if values is None:
             return default

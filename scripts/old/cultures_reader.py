@@ -34,22 +34,22 @@ if __name__ == '__main__':
             culture_object: ClausewitzObject = culture[0]
             row = [None] * 14
 
-            colors = culture_object.get_named_value('color').get_anonymous_values()
-            traits = culture_object.get_named_value('traits').get_anonymous_values()
-            obsessions = culture_object.get_named_value('obsessions')
-            male_common_names = culture_object.get_named_value('male_common_first_names').get_anonymous_values()
-            female_common_names = culture_object.get_named_value('female_common_first_names').get_anonymous_values()
-            common_last_names = culture_object.get_named_value('common_last_names').get_anonymous_values()
-            male_regal_names = culture_object.get_named_value('male_regal_first_names')
-            female_regal_names = culture_object.get_named_value('female_regal_first_names')
-            noble_last_names = culture_object.get_named_value('noble_last_names').get_anonymous_values()
+            colors = culture_object.get_value_named('color').get_anonymous_values()
+            traits = culture_object.get_value_named('traits').get_anonymous_values()
+            obsessions = culture_object.get_value_named('obsessions')
+            male_common_names = culture_object.get_value_named('male_common_first_names').get_anonymous_values()
+            female_common_names = culture_object.get_value_named('female_common_first_names').get_anonymous_values()
+            common_last_names = culture_object.get_value_named('common_last_names').get_anonymous_values()
+            male_regal_names = culture_object.get_value_named('male_regal_first_names')
+            female_regal_names = culture_object.get_value_named('female_regal_first_names')
+            noble_last_names = culture_object.get_value_named('noble_last_names').get_anonymous_values()
             ethnicities = ''
-            for rate, ethnicity in culture_object.get_named_value('ethnicities').get_name_values().items():
+            for rate, ethnicity in culture_object.get_value_named('ethnicities').get_name_values().items():
                 ethnicities = f'{ethnicities}{rate}={ethnicity[0]};'
 
             row[TAG_COLUMN] = tag
             row[COLOR_COLUMN] = ' '.join(colors)
-            row[RELIGION_COLUMN] = culture_object.get_named_value('religion')
+            row[RELIGION_COLUMN] = culture_object.get_value_named('religion')
             row[TRAITS_COLUMN] = ' '.join(traits)
             if obsessions is not None:
                 row[OBSESSIONS_COLUMN] = ' '.join(obsessions.get_anonymous_values())
@@ -61,6 +61,6 @@ if __name__ == '__main__':
             if female_regal_names is not None:
                 row[FEMALE_REGAL_NAMES] = ' '.join(set(sorted(female_regal_names.get_anonymous_values())))
             row[ETHNICITIES] = ethnicities
-            row[GRAPHICS] = culture_object.get_named_value('graphics')
+            row[GRAPHICS] = culture_object.get_value_named('graphics')
 
             csv_writer.writerow(row)

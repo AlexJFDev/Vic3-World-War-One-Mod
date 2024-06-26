@@ -36,8 +36,8 @@ def generate_states_and_pops(ownership_path: str, regions_path: str):
     pops_root = ClausewitzRoot()
     pops_root.add_named_value('POPS', ClausewitzObject())
 
-    states: ClausewitzObject = states_root.get_named_value('STATES')
-    pops: ClausewitzObject = pops_root.get_named_value('POPS')
+    states: ClausewitzObject = states_root.get_value_named('STATES')
+    pops: ClausewitzObject = pops_root.get_value_named('POPS')
 
     with open(ownership_path, 'r') as ownership_file:
         ownership_file.readline() # Skip the first line
@@ -50,7 +50,7 @@ def generate_states_and_pops(ownership_path: str, regions_path: str):
                 pop_data: str = line[OWNERSHIP_POPS_COLUMN]
 
                 if pop_data != '':
-                    pop: ClausewitzObject = pops.get_named_value(region_tag)
+                    pop: ClausewitzObject = pops.get_value_named(region_tag)
                     if pop is None:
                         pop = ClausewitzObject()
                         pops.add_named_value(region_tag, pop)
@@ -63,7 +63,7 @@ def generate_states_and_pops(ownership_path: str, regions_path: str):
                         for trait, value in pop_group:
                             create_pop.add_named_value(trait, value)
 
-                state: ClausewitzObject = states.get_named_value(region_tag)
+                state: ClausewitzObject = states.get_value_named(region_tag)
                 if state is None:
                     state = ClausewitzObject()
                     states.add_named_value(region_tag, state)
@@ -82,7 +82,7 @@ def generate_states_and_pops(ownership_path: str, regions_path: str):
         for line in reader:
             region_tag: str = line[REGIONS_STATE_TAG_COLUMN]
             homelands = line[REGIONS_HOMELANDS_COLUMN].split(' ')
-            state: ClausewitzObject = states.get_named_value(region_tag)
+            state: ClausewitzObject = states.get_value_named(region_tag)
                 
             for homeland in homelands:
                 if homeland == '':

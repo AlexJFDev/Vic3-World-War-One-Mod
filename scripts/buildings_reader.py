@@ -25,8 +25,8 @@ def unparse_buildings_file(file_path) -> dict[str: list[str]]:
     data = {}
     buildings = buildings_root.get_names()
     for building in buildings:
-        building_object = buildings_root.get_named_value(building)
-        production_groups = building_object.get_named_value('production_method_groups')
+        building_object = buildings_root.get_value_named(building)
+        production_groups = building_object.get_value_named('production_method_groups')
         data[building] = production_groups.get_anonymous_values()
     return data
 
@@ -35,7 +35,7 @@ def unparse_pm_group_file(file_path):
     data = {}
     groups = pm_group_root.get_names()
     for group in groups:
-        production_methods = pm_group_root.get_named_value(group).get_named_value('production_methods').get_anonymous_values()
+        production_methods = pm_group_root.get_value_named(group).get_value_named('production_methods').get_anonymous_values()
         data[group] = production_methods
     return data
 
