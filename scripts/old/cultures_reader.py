@@ -23,7 +23,7 @@ GRAPHICS = 13
 
 
 if __name__ == '__main__':
-    file_as_object = clausewitz_parser.parse_file(FILE_PATH)
+    file_as_object = clausewitz_parser.parse_path(FILE_PATH)
 
     with open(CSV_PATH, 'wt', newline='') as file:
         csv_writer = csv.writer(file)

@@ -9,17 +9,26 @@ FILE_PATH = os.path.join('data', 'test.txt')
 
 # There is a bug with one line objects
 
-def parse_file(path: str) -> ClausewitzRoot:
+def parse_path(path: str) -> ClausewitzRoot:
     with open(path, 'rt') as file:
         string = file.read()
     chars = [*string]
 
-    file_as_object = parse_object(chars)
+    file_as_object = parse_char_list(chars)
 
     root = ClausewitzRoot(name_values=file_as_object.get_name_values(), anonymous_values=file_as_object.get_anonymous_values())
     return root
 
-def parse_object(chars: list[str]) -> ClausewitzObject:
+def parse_file(file) -> ClausewitzRoot:
+    string = file.read()
+    chars = [*string]
+
+    file_as_object = parse_char_list(chars)
+
+    root = ClausewitzRoot(name_values=file_as_object.get_name_values(), anonymous_values=file_as_object.get_anonymous_values())
+    return root
+
+def parse_char_list(chars: list[str]) -> ClausewitzObject:
     clausewitz_object = ClausewitzObject()
 
     left_of_equals = True
@@ -31,7 +40,7 @@ def parse_object(chars: list[str]) -> ClausewitzObject:
             if len(right_data) > 0:
                 new_object = f'{right_data}{parse_typed_object(chars)}'
             else:
-                new_object = parse_object(chars)
+                new_object = parse_char_list(chars)
             if (left_of_equals):
                 clausewitz_object.add_anonymous_value(new_object)
             else:
@@ -82,7 +91,7 @@ def parse_typed_object(chars: list[str]) -> str:
     return f'{"{"}{data}{"}"}'
 
 if __name__ == '__main__':
-    file_as_object = parse_file(FILE_PATH)
+    file_as_object = parse_path(FILE_PATH)
     print(file_as_object.unparse())
 
         

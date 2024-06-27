@@ -71,8 +71,8 @@ def unparse_cultures(cultures_root: ClausewitzObject):
     return data
 
     
-cultures_object: ClausewitzRoot = clausewitz_parser.parse_file(CULTURES_PATH)
-additional_cultures_object: ClausewitzRoot = clausewitz_parser.parse_file(ADDITIONAL_CULTURES_PATH)
+cultures_object: ClausewitzRoot = clausewitz_parser.parse_path(CULTURES_PATH)
+additional_cultures_object: ClausewitzRoot = clausewitz_parser.parse_path(ADDITIONAL_CULTURES_PATH)
 
 with open(DATA_PATH, 'wt', newline='') as data_file:
     data_writer = csv.writer(data_file)

@@ -21,7 +21,7 @@ PM_GROUP_FILE_NAMES = [
 OUT_PATH = os.path.join('game', 'data', 'buildings.csv')
 
 def unparse_buildings_file(file_path) -> dict[str: list[str]]:
-    buildings_root: ClausewitzRoot = clausewitz_parser.parse_file(file_path)
+    buildings_root: ClausewitzRoot = clausewitz_parser.parse_path(file_path)
     data = {}
     buildings = buildings_root.get_names()
     for building in buildings:
@@ -31,7 +31,7 @@ def unparse_buildings_file(file_path) -> dict[str: list[str]]:
     return data
 
 def unparse_pm_group_file(file_path):
-    pm_group_root: ClausewitzRoot = clausewitz_parser.parse_file(file_path)
+    pm_group_root: ClausewitzRoot = clausewitz_parser.parse_path(file_path)
     data = {}
     groups = pm_group_root.get_names()
     for group in groups:
