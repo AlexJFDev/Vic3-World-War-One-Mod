@@ -18,7 +18,7 @@ class ClausewitzObject:
         self.name_values[name] = previous_values
 
     def get_value_named(self, name: str, index=0, default=None) -> 'str|int|ClausewitzObject|None':
-        """Gets a single value assigned to name. Because multiple values can be assigned to a name, the `index` can be specified. Returns `default` or None if no values are assigned to name."""
+        """Gets a single value assigned to `name`. Because multiple values can be assigned to a name, the `index` can be specified. Returns `default` or None if no values are assigned to name."""
         values = self.name_values.get(name, None)
         if values is None:
             return default
@@ -27,7 +27,7 @@ class ClausewitzObject:
         return values[index]
     
     def get_values_named(self, name: str, default=None) -> 'list[str|int|ClausewitzObject|None]':
-        """Gets all values assigned to name in the form of a list. Returns None if no values are assigned to the name."""
+        """Gets all values assigned to `name` in the form of a list. Returns `default` if no values are assigned to the name."""
         values = self.name_values.get(name, None)
         if values is None:
             return default
