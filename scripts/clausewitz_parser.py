@@ -74,9 +74,9 @@ def parse_char_list(chars: list[str]) -> ClausewitzObject:
             if len(left_data[-1]) > 0:
                 left_data.append('')
 
-        elif current_char == '#':
-            while current_char != '\n':
-                current_char = chars.pop(0)
+        #elif current_char == '#':
+        #    while current_char != '\n':
+        #        current_char = chars.pop(0)
         
         elif (left_of_equals):
             left_data[-1] += current_char
