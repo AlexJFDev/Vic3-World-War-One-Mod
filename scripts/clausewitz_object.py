@@ -33,8 +33,8 @@ class ClausewitzObject:
             return default
         return values
     
-    def get_name_values(self) -> dict[str, list]:
-        """Gets all names and their values in the form of a dictionary with names as the keys and lists of values as the values."""
+    def get_name_value_pairs(self) -> dict[str, list]:
+        """Gets all name value pairs in the form of a dictionary. The name is the key and the value is a list of all values assigned to that name."""
         return self.name_values
     
     def get_names(self) -> list:

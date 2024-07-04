@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
         tag: str
         culture: ClausewitzObject
-        for tag, culture in file_as_object.get_name_values().items():
+        for tag, culture in file_as_object.get_name_value_pairs().items():
             culture_object: ClausewitzObject = culture[0]
             row = [None] * 14
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
             female_regal_names = culture_object.get_value_named('female_regal_first_names')
             noble_last_names = culture_object.get_value_named('noble_last_names').get_anonymous_values()
             ethnicities = ''
-            for rate, ethnicity in culture_object.get_value_named('ethnicities').get_name_values().items():
+            for rate, ethnicity in culture_object.get_value_named('ethnicities').get_name_value_pairs().items():
                 ethnicities = f'{ethnicities}{rate}={ethnicity[0]};'
 
             row[TAG_COLUMN] = tag

@@ -43,7 +43,7 @@ def unparse_cultures(cultures_root: ClausewitzObject):
         male_regal_first_names = culture_object.get_value_named('male_regal_first_names', default=ClausewitzObject()).get_anonymous_values()
         female_regal_first_names = culture_object.get_value_named('female_regal_first_names', default=ClausewitzObject()).get_anonymous_values()
         noble_last_names = culture_object.get_value_named('noble_last_names', default=ClausewitzObject()).get_anonymous_values()
-        ethnicities = culture_object.get_value_named('ethnicities', default=ClausewitzObject()).get_name_values()
+        ethnicities = culture_object.get_value_named('ethnicities', default=ClausewitzObject()).get_name_value_pairs()
         graphics = culture_object.get_value_named('graphics')
 
         if isinstance(color, ClausewitzObject):

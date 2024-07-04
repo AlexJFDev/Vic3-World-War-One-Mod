@@ -16,7 +16,7 @@ def parse_path(path: str) -> ClausewitzRoot:
 
     file_as_object = parse_char_list(chars)
 
-    root = ClausewitzRoot(name_values=file_as_object.get_name_values(), anonymous_values=file_as_object.get_anonymous_values())
+    root = ClausewitzRoot(name_values=file_as_object.get_name_value_pairs(), anonymous_values=file_as_object.get_anonymous_values())
     return root
 
 def parse_file(file) -> ClausewitzRoot:
@@ -25,7 +25,7 @@ def parse_file(file) -> ClausewitzRoot:
 
     file_as_object = parse_char_list(chars)
 
-    root = ClausewitzRoot(name_values=file_as_object.get_name_values(), anonymous_values=file_as_object.get_anonymous_values())
+    root = ClausewitzRoot(name_values=file_as_object.get_name_value_pairs(), anonymous_values=file_as_object.get_anonymous_values())
     return root
 
 def parse_char_list(chars: list[str]) -> ClausewitzObject:

@@ -79,4 +79,4 @@ def unparse_regions_file(file_path):
         provinces = state_region.get_value_named('provinces').get_anonymous_values()
         traits = state_region.get_value_named('traits').get_anonymous_values()
         arable_resources = state_region.get_value_named('arable_resources').get_anonymous_values()
-        capped_resources = state_region.get_value_named('capped_resources').get_name_values()
+        capped_resources = state_region.get_value_named('capped_resources').get_name_value_pairs()
