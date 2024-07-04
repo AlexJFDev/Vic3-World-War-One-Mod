@@ -62,13 +62,13 @@ STATE_REGION_PATHS = [os.path.join(STATE_REGIONS_PATH, file_name) for file_name 
 
 STATE_REGIONS_CSV_PATH = os.path.join('game', 'data', 'state_regions.csv')
 
-def unparse_regions_file(file_path):
+def unparse_regions_file(file_path: str):
     state_regions = {}
     regions_root = clausewitz_parser.parse_path(file_path)
     state_region_names = regions_root.get_names()
     for state_region_name in state_region_names:
         state_region: ClausewitzObject = regions_root.get_value_named(state_region_name)
-        id_value = state_region.get_value_named('id') # Id is a reserved keyword
+        id_number = state_region.get_value_named('id') # Id is a reserved keyword
         subsistence_building = state_region.get_value_named('subsistence_building')
         city = state_region.get_value_named('city')
         port = state_region.get_value_named('port')
@@ -80,3 +80,52 @@ def unparse_regions_file(file_path):
         traits = state_region.get_value_named('traits').get_anonymous_values()
         arable_resources = state_region.get_value_named('arable_resources').get_anonymous_values()
         capped_resources = state_region.get_value_named('capped_resources').get_name_value_pairs()
+        undiscovered_resources = [resource.get_name_value_pairs() for resource in state_region.get_values_named('resource')]
+        naval_exit_id = state_region.get_value_named('naval_exit_id')
+        state_regions[state_region_name] = {
+            'id': id_number,
+            'subsistence_building': subsistence_building,
+            'city': city,
+            'port': port,
+            'farm': farm,
+            'mine': mine,
+            'wood': wood,
+            'arable_land': arable_land,
+            'provinces': provinces,
+            'traits': traits,
+            'arable_resources': arable_resources,
+            'capped_resources': capped_resources,
+            'undiscovered_resources': undiscovered_resources,
+            'naval_exit_id': naval_exit_id
+        }
+    return state_regions
+
+def save_regions(regions: dict):
+    with open(STATE_REGIONS_CSV_PATH, 'w', newline='') as file:
+        writer = csv.writer(file)
+        for state_name, region_data in regions.items():
+            id = region_data['id']
+            subsistence_building = region_data['subsistence_building']
+            city = region_data['city']
+            port = region_data['port']
+            farm = region_data['farm']
+            mine = region_data['mine']
+            wood = region_data['wood']
+            arable_land = region_data['arable_land']
+            
+            provinces = ' '.join(region_data['provinces'])
+            traits = ' '.join(region_data['traits'])
+            arable_resources = ' '.join(region_data['arable_resources'])
+            capped_resources = ' '.join(region_data['capped_resources'])
+            undiscovered_resources = region_data['undiscovered_resources']
+
+            naval_exit_id = region_data['naval_exit_id']
+
+            writer.writerow([state_name, id, subsistence_building, city, port, farm, mine, wood, arable_land, provinces, traits, arable_resources, capped_resources, undiscovered_resources, naval_exit_id])
+
+
+if __name__ == '__main__':
+    regions = {}
+    for path in STATE_REGION_PATHS:
+        regions.update(unparse_regions_file(path))
+    save_regions(regions)
