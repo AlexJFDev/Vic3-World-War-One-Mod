@@ -26,7 +26,7 @@ class ClausewitzObject:
             raise IndexError(f'The index {index} is greater than the number of values assigned to {name} ({len(values)}).')
         return values[index]
     
-    def get_values_named(self, name: str, default=None) -> list:
+    def get_values_named(self, name: str, default=None) -> 'list[str|int|ClausewitzObject|None]':
         """Gets all values assigned to name in the form of a list. Returns None if no values are assigned to the name."""
         values = self.name_values.get(name, None)
         if values is None:
