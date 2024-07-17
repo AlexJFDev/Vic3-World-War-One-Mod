@@ -29,6 +29,8 @@ STATE_REGION_PATHS = [os.path.join(STATE_REGIONS_PATH, file_name) for file_name 
 
 STATE_REGIONS_CSV_PATH = os.path.join('game', 'data', 'state_regions.csv')
 
+EMPTY_OBJECT = ClausewitzObject()
+
 def unparse_regions_file(file_path: str):
     state_regions = {}
     regions_root = clausewitz_parser.parse_path(file_path)
@@ -36,19 +38,19 @@ def unparse_regions_file(file_path: str):
     for state_region_name in state_region_names:
         state_region: ClausewitzObject = regions_root.get_value_named(state_region_name)
         id_number = state_region.get_value_named('id') # Id is a reserved keyword
-        subsistence_building = state_region.get_value_named('subsistence_building')
-        city = state_region.get_value_named('city')
-        port = state_region.get_value_named('port')
-        farm = state_region.get_value_named('farm')
-        mine = state_region.get_value_named('mine')
-        wood = state_region.get_value_named('wood')
-        arable_land = state_region.get_value_named('arable_land')
-        provinces = state_region.get_value_named('provinces').get_anonymous_values()
-        traits = state_region.get_value_named('traits').get_anonymous_values()
-        arable_resources = state_region.get_value_named('arable_resources').get_anonymous_values()
-        capped_resources = state_region.get_value_named('capped_resources').get_name_value_pairs()
-        undiscovered_resources = [resource.get_name_value_pairs() for resource in state_region.get_values_named('resource')]
-        naval_exit_id = state_region.get_value_named('naval_exit_id')
+        subsistence_building = state_region.get_value_named('subsistence_building', default='').replace('"', '')
+        city = state_region.get_value_named('city', default='').replace('"', '')
+        port = state_region.get_value_named('port', default='').replace('"', '')
+        farm = state_region.get_value_named('farm', default='').replace('"', '')
+        mine = state_region.get_value_named('mine', default='').replace('"', '')
+        wood = state_region.get_value_named('wood', default='').replace('"', '')
+        arable_land = state_region.get_value_named('arable_land', default='').replace('"', '')
+        provinces = state_region.get_value_named('provinces', default=EMPTY_OBJECT).get_anonymous_values()
+        traits = state_region.get_value_named('traits', default=EMPTY_OBJECT).get_anonymous_values()
+        arable_resources = state_region.get_value_named('arable_resources', default=EMPTY_OBJECT).get_anonymous_values()
+        capped_resources = state_region.get_value_named('capped_resources', default=EMPTY_OBJECT).get_name_value_pairs()
+        undiscovered_resources = [resource.get_name_value_pairs() for resource in state_region.get_values_named('resource', default=[])]
+        naval_exit_id = state_region.get_value_named('naval_exit_id', default='').replace('"', '')
         state_regions[state_region_name] = {
             'id': id_number,
             'subsistence_building': subsistence_building,
@@ -80,10 +82,10 @@ def save_regions(regions: dict):
             wood = region_data['wood']
             arable_land = region_data['arable_land']
             
-            provinces = ' '.join(region_data['provinces'])
-            traits = ' '.join(region_data['traits'])
-            arable_resources = ' '.join(region_data['arable_resources'])
-            capped_resources = ' '.join(region_data['capped_resources'])
+            provinces = ' '.join(region_data['provinces']).replace('"', '')
+            traits = ' '.join(region_data['traits']).replace('"', '')
+            arable_resources = ' '.join(region_data['arable_resources']).replace('"', '')
+            capped_resources = ' '.join(region_data['capped_resources']).replace('"', '')
             undiscovered_resources = region_data['undiscovered_resources']
 
             naval_exit_id = region_data['naval_exit_id']
