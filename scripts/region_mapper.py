@@ -4,9 +4,9 @@ import numpy as np
 from PIL import Image, ImageOps
 import random
 
-PROVINCE_DATA: str = os.path.join('data', 'state_regions.csv')
-INPUT_MAP: str = os.path.join('data', 'provinces.png')
-OUTPUT_MAP: str = os.path.join('data', 'state_regions.png')
+PROVINCE_DATA: str = os.path.join('game', 'data', 'state_regions.csv')
+INPUT_MAP: str = os.path.join('game', 'files', 'map_data', 'provinces.png')
+OUTPUT_MAP: str = os.path.join('game', 'data', 'state_regions.png')
 
 def random_color():
     return np.array([random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)])
@@ -15,6 +15,7 @@ def convert_colors(provinces):
     province_ids = provinces.split(' ')
     colors = []
     for province in province_ids:
+        #print(province)
         red = int(province[1:3], 16)
         blue = int(province[3:5], 16)
         green = int(province[5:7], 16)
@@ -33,7 +34,8 @@ if __name__ == '__main__':
     color_map = {}
     with open(PROVINCE_DATA, 'r') as province_file:
         province_reader = csv.reader(province_file)
-        for state_name, provinces in province_reader:
+        for line in province_reader:
+            provinces = line[9]
             #print(provinces)
             colors = convert_colors(provinces)
             state_color = random_color()
