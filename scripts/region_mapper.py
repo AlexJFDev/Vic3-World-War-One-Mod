@@ -8,9 +8,6 @@ PROVINCE_DATA: str = os.path.join('game', 'data', 'state_regions.csv')
 INPUT_MAP: str = os.path.join('game', 'files', 'map_data', 'provinces.png')
 OUTPUT_MAP: str = os.path.join('game', 'data', 'state_regions2.png')
 
-def random_color():
-    return np.array([random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)])
-
 def convert_colors(provinces: list[str]) -> list[np.ndarray]:
     colors = []
     for province in provinces:
