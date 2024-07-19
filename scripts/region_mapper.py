@@ -36,7 +36,7 @@ if __name__ == '__main__':
         for line in province_reader:
             province_ids = line[9].split(' ')
             province_colors = convert_colors(province_ids)
-            if len(province_ids) == 1: # Is ocean
+            if int(line[1]) >= 3000: # Is ocean
                 state_color = np.array([255, 255, 255])
             else: # Is land
                 state_color = province_colors[0]
@@ -46,7 +46,6 @@ if __name__ == '__main__':
     print('Generating new map')
     for row_num, row in enumerate(map_array):
         print(f'    Row: {row_num}')
-        if row_num > 19: break
         for col_num, col in enumerate(row):
             col_string = str(col)
             new_color = color_map.get(col_string)
