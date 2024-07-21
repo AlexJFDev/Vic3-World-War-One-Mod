@@ -1,0 +1,5 @@
+# Game
+## Data
+Inside the git repo, this folder contains one subfolder called `data`. `data` is intended to hold data files (mostly `.csv`) generated from game files. 
+## Files
+Additionally, various scripts reference a `game/files` folder which is not contained in the git repo. In fact, `game/files` is part of the `.gitignore` file. Developers should create a [symbolic link](https://www.howtogeek.com/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/) from `game/files` to the directory wherever Victoria 3 is located on their computer. This directory can be found by opening up the Steam App, clicking "Library" in the menu bar, finding Victoria 3 in their game library, right clicking the Victoria 3 icon, hovering over "Manage", and then clicking "browse local files". This will open the file browser. In the file browser, copy the path of the `game` folder.
