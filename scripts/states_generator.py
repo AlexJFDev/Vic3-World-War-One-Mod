@@ -4,11 +4,11 @@ from clausewitz_object import ClausewitzObject
 import os
 import csv
 
-OWNERSHIP_FILE: str = os.path.join('data', 'state_ownership.csv')
-REGIONS_FILE: str = os.path.join('data', 'state_regions.csv')
+OWNERSHIP_FILE: str = os.path.join('mod', 'data', 'state_ownership.csv')
+REGIONS_FILE: str = os.path.join('mod', 'data', 'state_regions.csv')
 
-STATES_FILE: str = os.path.join('mod_files', 'states.txt')
-POPS_FILE: str = os.path.join('mod_files', 'pops.txt')
+STATES_FILE: str = os.path.join('mod', 'files', 'states.txt')
+POPS_FILE: str = os.path.join('mod', 'files', 'pops.txt')
 
 OWNERSHIP_REGION_TAG_COLUMN = 0
 OWNERSHIP_COUNTRY_TAG_COLUMN = 3

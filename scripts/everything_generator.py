@@ -9,20 +9,20 @@ from clausewitz_object import ClausewitzObject
 
 import os
 
-COMBINED_CULTURES_PATH = os.path.join('mod_files', 'combined_cultures.txt')
-COUNTRIES_PATH = os.path.join('mod_files', 'countries.txt')
-DOMESTIC_LAWS_PATH = os.path.join('mod_files', 'domestic_laws.txt')
-STATES_PATH = os.path.join('mod_files', 'states.txt')
-POPS_PATH = os.path.join('mod_files', 'pops.txt')
-BUILDINGS_PATH = os.path.join('mod_files', 'buildings.txt')
+COMBINED_CULTURES_PATH = os.path.join('mod', 'files', 'combined_cultures.txt')
+COUNTRIES_PATH = os.path.join('mod', 'files', 'countries.txt')
+DOMESTIC_LAWS_PATH = os.path.join('mod', 'files', 'domestic_laws.txt')
+STATES_PATH = os.path.join('mod', 'files', 'states.txt')
+POPS_PATH = os.path.join('mod', 'files', 'pops.txt')
+BUILDINGS_PATH = os.path.join('mod', 'files', 'buildings.txt')
 
-COUNTRY_DEFINITIONS_PATH = os.path.join('data', 'country_definitions.csv')
-COUNTRY_LAWS_PATH = os.path.join('data', 'country_laws.csv')
-COUNTRY_INSTITUTIONS_PATH = os.path.join('data', 'country_institutions.csv')
-CULTURES_PATH = os.path.join('data', 'cultures.csv')
-STATE_OWNERSHIP_PATH = os.path.join('data', 'state_ownership.csv')
-STATE_REGIONS_PATH = os.path.join('data', 'state_regions.csv')
-BUILDINGS_DATA_PATH = os.path.join('data', 'state_buildings.csv')
+COUNTRY_DEFINITIONS_PATH = os.path.join('mod', 'data', 'country_definitions.csv')
+COUNTRY_LAWS_PATH = os.path.join('mod', 'data', 'country_laws.csv')
+COUNTRY_INSTITUTIONS_PATH = os.path.join('mod', 'data', 'country_institutions.csv')
+CULTURES_PATH = os.path.join('mod', 'data', 'cultures.csv')
+STATE_OWNERSHIP_PATH = os.path.join('mod', 'data', 'state_ownership.csv')
+STATE_REGIONS_PATH = os.path.join('mod', 'data', 'state_regions.csv')
+BUILDINGS_DATA_PATH = os.path.join('mod', 'data', 'state_buildings.csv')
 
 def write_object(path: str, clausewitzObject: ClausewitzObject):
     with open(path, 'w') as file:

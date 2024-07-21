@@ -6,7 +6,7 @@ from clausewitz_object import ClausewitzObject
 from clausewitz_root import ClausewitzRoot
 
 NEW_STATES_PATH = os.path.join('game', 'files', 'new_states.txt')
-MOD_STATES_PATH = os.path.join('mod_files', 'states.txt')
+MOD_STATES_PATH = os.path.join('mod', 'files', 'states.txt')
 NEW_STATES_CSV = os.path.join('game', 'data', 'new_states.csv')
 
 OWNERSHIP_REGION_TAG_COLUMN = 0

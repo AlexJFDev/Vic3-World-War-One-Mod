@@ -4,8 +4,8 @@ import csv
 import clausewitz_parser
 from clausewitz_object import ClausewitzObject
 
-FILE_PATH = os.path.join('data', 'combined_cultures.txt')
-CSV_PATH = os.path.join('data', 'cultures.csv')
+FILE_PATH = os.path.join('mod', 'data', 'combined_cultures.txt')
+CSV_PATH = os.path.join('mod', 'data', 'cultures.csv')
 
 TAG_COLUMN = 1
 COLOR_COLUMN = 2

@@ -4,10 +4,10 @@ from clausewitz_object import ClausewitzObject
 import os
 import csv
 
-LAWS_FILE: str = os.path.join('data', 'country_laws.csv')
-INSTITUTIONS_FILE: str = os.path.join('data', 'country_institutions.csv')
+LAWS_FILE: str = os.path.join('mod', 'data', 'country_laws.csv')
+INSTITUTIONS_FILE: str = os.path.join('mod', 'data', 'country_institutions.csv')
 
-DOMESTIC_LAWS_FILE: str = os.path.join('mod_files', 'domestic_laws.txt')
+DOMESTIC_LAWS_FILE: str = os.path.join('mod', 'files', 'domestic_laws.txt')
 
 LAWS_COUNTRY_COLUMN = 0
 LAWS_TAG_COLUMN = 1

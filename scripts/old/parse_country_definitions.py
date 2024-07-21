@@ -5,8 +5,8 @@ from clausewitz_root import ClausewitzRoot
 from clausewitz_object import ClausewitzObject
 from clausewitz_parser import parse_path
 
-DEFINITIONS_PATH: str = os.path.join('data', 'countries.txt')
-CSV_OUT_PATH: str = os.path.join('data', 'definitions.csv')
+DEFINITIONS_PATH: str = os.path.join('mod', 'data', 'countries.txt')
+CSV_OUT_PATH: str = os.path.join('mod', 'data', 'definitions.csv')
 
 definitions_root: ClausewitzRoot = parse_path(DEFINITIONS_PATH)
 

@@ -4,8 +4,8 @@ from clausewitz_object import ClausewitzObject
 import os
 import csv
 
-CULTURE_DEFINITIONS = os.path.join('data', 'cultures.csv')
-CULTURES_FILE = os.path.join('mod_files', 'combined_cultures.txt')
+CULTURE_DEFINITIONS = os.path.join('mod', 'data', 'cultures.csv')
+CULTURES_FILE = os.path.join('mod', 'files', 'combined_cultures.txt')
 
 NAME_COLUMN = 0
 TAG_COLUMN = 1

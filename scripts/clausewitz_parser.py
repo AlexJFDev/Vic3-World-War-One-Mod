@@ -5,7 +5,7 @@ import os
 
 import csv
 
-FILE_PATH = os.path.join('data', 'test.txt')
+FILE_PATH = os.path.join('mod', 'data', 'test.txt')
 
 # There is a bug with one line objects
 

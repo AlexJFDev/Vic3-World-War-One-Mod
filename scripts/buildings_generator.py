@@ -6,8 +6,8 @@ import csv
 
 PRODUCTION_METHODS_PATH = os.path.join('game', 'data', 'production_methods.csv')
 
-BUILDINGS_CSV_PATH = os.path.join('data', 'state_buildings.csv')
-BUILDINGS_OUT_PATH = os.path.join('mod_files', 'buildings.txt')
+BUILDINGS_CSV_PATH = os.path.join('mod', 'data', 'state_buildings.csv')
+BUILDINGS_OUT_PATH = os.path.join('mod', 'files', 'buildings.txt')
 
 STATE_TAG_COLUMN = 0
 REGION_NAME_COLUMN = 1
