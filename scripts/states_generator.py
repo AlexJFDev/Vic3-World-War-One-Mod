@@ -76,18 +76,18 @@ def generate_states_and_pops(ownership_path: str, regions_path: str):
                 print(error)
                 quit()
 
-    #with open(regions_path, 'r') as regions_file:
-    #    regions_file.readline() # Skip the first line
-    #    reader = csv.reader(regions_file)
-    #    for line in reader:
-    #        region_tag: str = line[REGIONS_STATE_TAG_COLUMN]
-    #        homelands = line[REGIONS_HOMELANDS_COLUMN].split(' ')
-    #        state: ClausewitzObject = states.get_value_named(region_tag)
-    #            
-    #        for homeland in homelands:
-    #            if homeland == '':
-    #                continue
-    #            state.add_named_value('add_homeland', homeland)
+    with open(regions_path, 'r') as regions_file:
+        regions_file.readline() # Skip the first line
+        reader = csv.reader(regions_file)
+        for line in reader:
+            region_tag: str = line[REGIONS_STATE_TAG_COLUMN]
+            homelands = line[REGIONS_HOMELANDS_COLUMN].split(' ')
+            state: ClausewitzObject = states.get_value_named(region_tag)
+                
+            for homeland in homelands:
+                if homeland == '':
+                    continue
+                state.add_named_value('add_homeland', homeland)
     return states_root, pops_root
 
 if __name__ == '__main__':
