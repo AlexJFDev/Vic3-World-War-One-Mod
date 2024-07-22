@@ -11,7 +11,7 @@ FILE_PATH = os.path.join('mod', 'data', 'test.txt')
 
 def parse_path(path: str) -> ClausewitzRoot:
     with open(path, 'rt') as file:
-        string = file.read()
+        string = file.read().replace('ï»¿', '')
     chars = [*string]
 
     file_as_object = parse_char_list(chars)

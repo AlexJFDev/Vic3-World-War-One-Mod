@@ -6,19 +6,19 @@ from clausewitz_root import ClausewitzRoot
 import os
 import csv
 
-BUILDING_FOLDER_PATH = os.path.join('game', 'files', 'buildings')
+BUILDING_FOLDER_PATH = os.path.join('game', 'files', 'common', 'buildings')
 BUILDING_FILE_NAMES = [
     '01_industry.txt', '02_agro.txt', '03_mines.txt', '04_plantations.txt', '05_military.txt', '06_urban_center.txt', '07_government.txt',
     '08_monuments.txt', '09_misc_resource.txt', '10_canals.txt', '11_private_infrastructure.txt', '12_subsistence.txt', '13_construction.txt'
 ]
 
-PM_GROUP_FOLDER_PATH = os.path.join('game', 'files', 'production_method_groups')
+PM_GROUP_FOLDER_PATH = os.path.join('game', 'files', 'common', 'production_method_groups')
 PM_GROUP_FILE_NAMES = [
     '00_dummy.txt', '01_industry.txt', '02_agro.txt', '03_mines.txt', '04_plantations.txt', '05_military.txt', '06_urban_center.txt', '07_government.txt',
     '08_monuments.txt', '09_misc_resource.txt', '10_canals.txt', '11_private_infrastructure.txt', '12_subsistence.txt', '13_construction.txt'
 ]
 
-OUT_PATH = os.path.join('game', 'data', 'buildings.csv')
+OUT_PATH = os.path.join('game', 'data', 'production_methods.csv')
 
 def unparse_buildings_file(file_path) -> dict[str: list[str]]:
     buildings_root: ClausewitzRoot = clausewitz_parser.parse_path(file_path)
@@ -50,7 +50,7 @@ if __name__ == '__main__':
             pm_group_data = unparse_pm_group_file(file_path)
             for group, production_methods in pm_group_data.items():
                 pm_groups[group] = production_methods
-        print(pm_groups)
+        #print(pm_groups)
         for file_path in building_file_paths:
             building_data = unparse_buildings_file(file_path)
             for building, production_method_groups in building_data.items():
