@@ -77,7 +77,7 @@ for province, (old_region_tag, owner_tag) in old_provinces.items():
             'pop_data' : pop_data,
             'incorporation' : incorporation
         })
-        new_state['provinces'].update(provinces)
+        new_state['provinces'].add(province)
         new_states[combo_tag] = new_state
     else:
         new_state = new_states.get(combo_tag, {
@@ -87,7 +87,7 @@ for province, (old_region_tag, owner_tag) in old_provinces.items():
             'pop_data' : '',
             'incorporation' : ''
         })
-        new_state['provinces'].update(provinces)
+        new_state['provinces'].add(province)
         new_states[combo_tag] = new_state
 
 lines = []
