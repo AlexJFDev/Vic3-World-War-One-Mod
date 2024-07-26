@@ -25,7 +25,7 @@ STATE_REGIONS_PATH = os.path.join('mod', 'data', 'state_regions.csv')
 BUILDINGS_DATA_PATH = os.path.join('mod', 'data', 'state_buildings.csv')
 
 def write_object(path: str, clausewitzObject: ClausewitzObject):
-    with open(path, 'w') as file:
+    with open(path, 'w', encoding='utf-8-sig') as file:
         file.write(clausewitzObject.unparse())
 
 if __name__ == '__main__':
