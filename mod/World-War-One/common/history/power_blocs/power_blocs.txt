@@ -1,0 +1,28 @@
+﻿POWER_BLOCS = {
+	c:GBR = {
+		create_power_bloc = {
+			name = ALLIED_POWERS
+			map_color = hsv{ 0.99  0.7  0.9 }
+
+			founding_date = 1784.5.12
+			identity = identity_military_treaty_organization
+			principle = principle_defensive_cooperation_3
+
+			member = c:FRA
+		}
+	}
+
+	c:GER = {
+		create_power_bloc = {
+			name = AXIS_POWERS
+
+			map_color = { 219 211 157 }
+
+			founding_date = 1815.6.9
+			identity = identity_military_treaty_organization
+			principle = principle_defensive_cooperation_3
+
+			member = c:AUS
+		}
+	}
+}
