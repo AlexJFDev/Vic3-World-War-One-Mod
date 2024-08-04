@@ -85,12 +85,26 @@ def save_regions(regions: dict):
             provinces = ' '.join(region_data['provinces']).replace('"', '')
             traits = ' '.join(region_data['traits']).replace('"', '')
             arable_resources = ' '.join(region_data['arable_resources']).replace('"', '')
-            capped_resources = ' '.join(region_data['capped_resources']).replace('"', '')
-            undiscovered_resources = region_data['undiscovered_resources']
+
+            capped_resources: dict[str: list[str]] = region_data['capped_resources']
+            for resource in region_data['undiscovered_resources']:
+                resource_type = resource.get('type', [''])[0].replace('"', '')
+                depleted_type = resource.get('depleted_type', [''])[0].replace('"', '')
+                undiscovered_amount = int(resource.get('undiscovered_amount', ['0'])[0].replace('"', ''))
+                discovered_amount = int(resource.get('discovered_amount', ['0'])[0].replace('"', ''))
+
+                if depleted_type != '':
+                    capped_amount = int(capped_resources.get(depleted_type, ['0'])[0].replace('"', ''))
+                    total_amount = undiscovered_amount + discovered_amount + capped_amount
+                    capped_resources[depleted_type] = [str(total_amount)]
+                else:
+                    capped_resources[resource_type] = [str(undiscovered_amount + discovered_amount)]
+            capped_resources = [f'{resource}={amount[0]}' for resource, amount in capped_resources.items()]
+            capped_resources = ' '.join(capped_resources)
 
             naval_exit_id = region_data['naval_exit_id']
 
-            writer.writerow([state_name, id, subsistence_building, city, port, farm, mine, wood, arable_land, provinces, traits, arable_resources, capped_resources, undiscovered_resources, naval_exit_id])
+            writer.writerow([state_name, id, subsistence_building, city, port, farm, mine, wood, arable_land, provinces, traits, arable_resources, capped_resources, naval_exit_id])
 
 
 if __name__ == '__main__':
