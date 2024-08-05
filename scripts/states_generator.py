@@ -158,7 +158,7 @@ def generate_regions(regions_path: str):
                     capped_resources_object.add_named_value(resource, quantity)
                 region_object.add_named_value('capped_resources', capped_resources_object)
             if (naval_exit != ''):
-                region_object.add_named_value('naval_exit', naval_exit)
+                region_object.add_named_value('naval_exit_id', naval_exit)
 
             regions_root.add_named_value(region_tag, region_object)
     return regions_root
