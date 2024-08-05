@@ -15,6 +15,7 @@ DOMESTIC_LAWS_PATH = os.path.join('mod', 'files', 'domestic_laws.txt')
 STATES_PATH = os.path.join('mod', 'files', 'states.txt')
 POPS_PATH = os.path.join('mod', 'files', 'pops.txt')
 BUILDINGS_PATH = os.path.join('mod', 'files', 'buildings.txt')
+STATE_REGIONS_OUT_PATH = os.path.join('mod', 'files', 'state_regions.txt')
 
 COUNTRY_DEFINITIONS_PATH = os.path.join('mod', 'data', 'country_definitions.csv')
 COUNTRY_LAWS_PATH = os.path.join('mod', 'data', 'country_laws.csv')
@@ -34,6 +35,7 @@ if __name__ == '__main__':
     laws_root = laws_generator.generate_laws(COUNTRY_LAWS_PATH, COUNTRY_INSTITUTIONS_PATH)
     states_root, pops_root = states_generator.generate_states_and_pops(STATE_OWNERSHIP_PATH, STATE_REGIONS_PATH)
     buildings_root = buildings_generator.generate_buildings(BUILDINGS_DATA_PATH)
+    regions_root = states_generator.generate_regions(STATE_REGIONS_PATH)
 
     write_object(COMBINED_CULTURES_PATH, cultures_root)
     write_object(COUNTRIES_PATH, countries_root)
