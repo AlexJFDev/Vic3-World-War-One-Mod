@@ -7,11 +7,56 @@ CHARACTERS = {
             culture = cu:german
             ruler = yes
             ig_leader = yes
+            noble = yes
             interest_group = ig_landowners
-            ideology = ideology_
-            birth_date = 1830.08.18
+            ideology = ideology_traditionalist
+            birth_date = 1830.8.18
+            death_date = 1916.11.21
             traits = {
                 
+            }
+            set_character_immortal = yes
+            on_created = {
+                set_variable = {
+                    name = is_franz_josef
+                }               
+            }
+        }
+        create_character = {
+            first_name = Franz_Ferdinand
+            last_name = von_Habsburg
+            historical = yes
+            culture = cu:german
+            heir = yes
+            noble = yes
+            interest_group = ig_landowners
+            ideology = ideology_traditionalist
+            birth_date = 1863.12.18
+            traits = {
+                
+            }
+            on_created = {
+                set_variable = {
+                    name = is_franz_ferdinand
+                }               
+            }
+        }
+        create_character = {
+            first_name = Charles
+            last_name = von_Habsburg
+            historical = yes
+            noble = yes
+            culture = cu:german
+            interest_group = ig_landowners
+            ideology = ideology_traditionalist
+            birth_date = 1887.8.17
+            traits = {
+                
+            }
+            on_created = {
+                set_variable = {
+                    name = is_charles_habsburg
+                }               
             }
         }
     }
