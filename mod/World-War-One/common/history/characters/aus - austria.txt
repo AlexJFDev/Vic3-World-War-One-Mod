@@ -15,11 +15,11 @@ CHARACTERS = {
             traits = {
                 
             }
-            set_character_immortal = yes
             on_created = {
                 set_variable = {
                     name = is_franz_josef
-                }               
+                }
+                set_character_immortal = yes           
             }
         }
         create_character = {
@@ -41,23 +41,6 @@ CHARACTERS = {
                 }               
             }
         }
-        create_character = {
-            first_name = Charles
-            last_name = von_Habsburg
-            historical = yes
-            noble = yes
-            culture = cu:german
-            interest_group = ig_landowners
-            ideology = ideology_traditionalist
-            birth_date = 1887.8.17
-            traits = {
-                
-            }
-            on_created = {
-                set_variable = {
-                    name = is_charles_habsburg
-                }               
-            }
-        }
+
     }
 }

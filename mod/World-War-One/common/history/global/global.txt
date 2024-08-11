@@ -1,8 +1,4 @@
 GLOBAL = {
-    every_country = {
-		effect_starting_technology_advanced_tech = yes
-	}
-
 	c:ROM = {
 		trigger_event = {
 			id = balkan_war_events.1
@@ -17,4 +13,10 @@ GLOBAL = {
 		}
 	}
 	
+	c:AUS = {
+		trigger_event = {
+			id = great_war_initiation_events.1
+			days = 365
+		}
+	}
 }

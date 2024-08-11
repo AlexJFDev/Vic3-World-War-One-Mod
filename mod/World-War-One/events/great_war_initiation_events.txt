@@ -1,0 +1,83 @@
+namespace = great_war_initiation_events
+
+# Austrian Event
+great_war_initiation_events.1 = {
+    type = country_event
+    placement = root
+
+    event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+
+    title = great_war_initiation_events.1.title
+	desc = great_war_initiation_events.1.desc
+	flavor = great_war_initiation_events.1.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        random_scope_character = {
+            limit = { has_variable = is_franz_ferdinand }
+            kill_character = yes
+        }
+
+        random_scope_character = {
+            limit = { has_variable = is_franz_josef }
+            set_character_immortal = yes   
+        }
+
+        create_character = {
+            first_name = Charles
+            last_name = von_Habsburg
+            historical = yes
+            noble = yes
+            culture = cu:german
+            interest_group = ig_landowners
+            ideology = ideology_traditionalist
+            birth_date = 1887.8.17
+            heir = yes
+            traits = {
+                
+            }
+            on_created = {
+                set_variable = {
+                    name = is_charles_habsburg
+                }               
+            }
+        }
+
+        every_country = {
+            limit = {
+                is_player = yes
+            }
+            trigger_event = { id = great_war_initiation_events.2 }
+        }
+    }
+
+    option = {
+        name = great_war_initiation_events.1.a
+        default_option = yes
+        ai_chance = {
+			base = 1
+		}
+    }
+}
+# Global Version of the Assassination
+great_war_initiation_events.2 = {
+    type = country_event
+
+    event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+
+    title = great_war_initiation_events.2.title
+	desc = great_war_initiation_events.2.desc
+	flavor = great_war_initiation_events.2.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = {
+        name = great_war_initiation_events.2.a
+        default_option = yes
+    }
+}
