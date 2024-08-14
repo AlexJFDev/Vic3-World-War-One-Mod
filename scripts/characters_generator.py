@@ -33,7 +33,7 @@ IDEOLOGIES = {
     'ideology_abolitionist', 'ideology_market_liberal', 'ideology_orleanist'
 }
 YES_VALUES = {
-    'ruler', 'ig_leader', 'historical', 'woman'
+    'ruler', 'ig_leader', 'historical', 'woman', 'noble'
 }
 
 FULL_NAME_COLUMN = 0
@@ -133,9 +133,10 @@ def generate_characters_objects(countries_with_characters: dict):
             characterObject.add_named_value('birth_date', character['birth_date'])
             for value in character['yes_values']:
                 characterObject.add_named_value(value, 'yes')
+            characterObject.add_named_value('historical', 'yes')
             traitsObject = ClausewitzObject()
             for trait in character['character_traits']:
-                traitsObject.add_named_value(trait, 'yes')
+                traitsObject.add_anonymous_value(trait)
             characterObject.add_named_value('traits', traitsObject)
 
             countryObject.add_named_value(f'create_character', characterObject)
