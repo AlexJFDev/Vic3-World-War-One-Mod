@@ -8,7 +8,7 @@ import re
 
 CHARACTER_DATA_PATH = os.path.join('mod', 'data', 'character_definitions.csv')
 
-CHARACTER_MOD_FILE_PATH = os.path.join('mod', 'files', 'characters')
+CHARACTER_MOD_FILE_PATH = os.path.join('mod', 'files', 'generated_characters.txt')
 CHARACTER_MOD_FILE_NAME = 'generated characters.txt'
 
 INTEREST_GROUPS = {
@@ -116,13 +116,11 @@ def parse_character_data(data_path: str):
     return countries_with_characters
 
 def generate_characters_objects(countries_with_characters: dict):
-    countries = []
+    root = ClausewitzRoot()
+    charactersObject = ClausewitzObject()
+    root.add_named_value('CHARACTERS', charactersObject)
     for country_tag, characters in countries_with_characters.items():
-        root = ClausewitzRoot()
-        charactersObject = ClausewitzObject()
-        root.add_named_value('CHARACTERS', charactersObject)
         countryObject = ClausewitzObject()
-        charactersObject.add_named_value(f'c:{country_tag}', countryObject)
         for character in characters:
             characterObject = ClausewitzObject()
             characterObject.add_named_value('first_name', character['first_name'])
@@ -140,18 +138,14 @@ def generate_characters_objects(countries_with_characters: dict):
             characterObject.add_named_value('traits', traitsObject)
 
             countryObject.add_named_value(f'create_character', characterObject)
+        charactersObject.add_named_value(f'c:{country_tag}', countryObject)
 
-        countries.append((country_tag, root))
-
-    return countries
+    return root
 
 if __name__ == '__main__':
     countries_with_characters = parse_character_data(CHARACTER_DATA_PATH)
     countries = generate_characters_objects(countries_with_characters)
-    for country in countries:
-        country_tag, root = country
-        file_path = os.path.join(CHARACTER_MOD_FILE_PATH, f'{country_tag} - {CHARACTER_MOD_FILE_NAME}')
-        with open(file_path, 'w') as file:
-            file.write(root.unparse())
+    with open(CHARACTER_MOD_FILE_PATH, 'w') as file:
+        file.write(countries.unparse())
 
             
