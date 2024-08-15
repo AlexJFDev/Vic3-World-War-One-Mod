@@ -142,10 +142,14 @@ def generate_characters_objects(countries_with_characters: dict):
 
     return root
 
+def generate_characters(data_path: str):
+    countries_with_characters = parse_character_data(data_path)
+    characters = generate_characters_objects(countries_with_characters)
+    return characters
+
 if __name__ == '__main__':
-    countries_with_characters = parse_character_data(CHARACTER_DATA_PATH)
-    countries = generate_characters_objects(countries_with_characters)
+    characters = generate_characters(CHARACTER_DATA_PATH)
     with open(CHARACTER_MOD_FILE_PATH, 'w') as file:
-        file.write(countries.unparse())
+        file.write(characters.unparse())
 
             
