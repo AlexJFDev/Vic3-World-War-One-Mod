@@ -1,0 +1,72 @@
+namespace = federal_reserve_event
+
+# Federal Reserve Event
+federal_reserve_event.1 = {
+
+	type = country_event
+
+	title = federal_reserve_event.1.t
+
+	desc = federal_reserve_event.1.d
+
+	flavor = federal_reserve_event.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/federal_reserve_events.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	trigger = {
+		# triggered by 
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = federal_reserve_event.1.a
+		trigger = {
+			NOT = { has_variable = federal_reserve_event
+        _fail }
+		}
+		default_option = yes
+		custom_tooltip = austria_hungary_tt
+		add_primary_culture = cu:hungarian
+		add_loyalists = {
+			culture = cu:hungarian
+			value = 0.2
+		}
+		ig:ig_landowners = {
+			remove_ideology = ideology_austrian_hegemony
+			hidden_effect = {
+				set_interest_group_name = ig_landowners
+			}
+		}
+	}
+
+    option = {
+		name = federal_reserve_event.1.b
+		trigger = {
+			NOT = { has_variable = federal_reserve_event
+        _fail }
+		}
+		default_option = no
+		custom_tooltip = austria_hungary_tt
+		add_primary_culture = cu:hungarian
+		add_loyalists = {
+			culture = cu:hungarian
+			value = 0.2
+		}
+		ig:ig_landowners = {
+			remove_ideology = ideology_austrian_hegemony
+			hidden_effect = {
+				set_interest_group_name = ig_landowners
+			}
+		}
+	}
+}
