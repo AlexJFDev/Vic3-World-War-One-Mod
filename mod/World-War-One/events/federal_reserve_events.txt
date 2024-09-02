@@ -1,72 +1,113 @@
 namespace = federal_reserve_event
 
 # Federal Reserve Event
-federal_reserve_event.1 = {
+event = {
+    id = federal_reserve_event.1
+    type = country_event
 
-	type = country_event
+    title = federal_reserve_event.1.t
+    desc = federal_reserve_event.1.d
+    flavor = federal_reserve_event.1.f
 
-	title = federal_reserve_event.1.t
+    event_image = {
+        video = "gfx/event_pictures/federal_reserve_events.bk2"
+    }
 
-	desc = federal_reserve_event.1.d
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	flavor = federal_reserve_event.1.f
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	event_image = {
-		video = "gfx/event_pictures/federal_reserve_events.bk2"
-	}
+    duration = 3
 
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    is_triggered_only = yes
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    trigger = {
+        date >= 1913.10.23
+        date < 1913.10.24
+    }
 
-	duration = 3
-
-	trigger = {
-		# triggered by 
-	}
-
-	immediate = {
-	}
-
-	option = {
-		name = federal_reserve_event.1.a
-		trigger = {
-			NOT = { has_variable = federal_reserve_event
-        _fail }
-		}
-		default_option = yes
-		custom_tooltip = austria_hungary_tt
-		add_primary_culture = cu:hungarian
-		add_loyalists = {
-			culture = cu:hungarian
-			value = 0.2
-		}
-		ig:ig_landowners = {
-			remove_ideology = ideology_austrian_hegemony
-			hidden_effect = {
-				set_interest_group_name = ig_landowners
-			}
-		}
-	}
+    immediate = {
+        # Any immediate effects upon event creation can be placed here
+    }
 
     option = {
-		name = federal_reserve_event.1.b
-		trigger = {
-			NOT = { has_variable = federal_reserve_event
-        _fail }
-		}
-		default_option = no
-		custom_tooltip = austria_hungary_tt
-		add_primary_culture = cu:hungarian
-		add_loyalists = {
-			culture = cu:hungarian
-			value = 0.2
-		}
-		ig:ig_landowners = {
-			remove_ideology = ideology_austrian_hegemony
-			hidden_effect = {
-				set_interest_group_name = ig_landowners
-			}
-		}
-	}
+        default_option = yes
+        name = federal_reserve_event.1.a
+        effect = {
+            # Reduce the standard of living for accepted lower class pops by 0.5 points
+            every_accepted_pop = {
+                limit = {
+                    social_strata = str_lower_strata
+                }
+                reduce_standard_of_living = 0.5
+            }
+
+            # Reduce the standard of living for accepted middle class pops by 0.2 points
+            every_accepted_pop = {
+                limit = {
+                    social_strata = str_middle_strata
+                }
+                reduce_standard_of_living = 0.2
+            }
+
+            # Give a +10% minting bonus to the USA
+            add_country_modifier = {
+                name = "minting_bonus"
+                duration = -1  # Permanent effect
+                modifier = {
+                    minting = 0.10
+                }
+            }
+
+            # Give +8% Investment pool contribution bonus for the capitalists
+            add_country_modifier = {
+                name = "investment_pool_contribution_bonus"
+                duration = -1  # Permanent effect
+                modifier = {
+                    investment_pool_contribution = 0.08
+                }
+            }
+
+            # Give +10% political strength to capitalists
+            add_country_modifier = {
+                name = "capitalist_political_strength_bonus"
+                duration = -1  # Permanent effect
+                modifier = {
+                    political_strength = {
+                        add = 0.10
+                        social_strata = str_capitalist
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = federal_reserve_event.1.b
+        effect = {
+            # Give +15% political strength to the Petite Bourgeoisie
+            add_country_modifier = {
+                name = "petite_bourgeoisie_political_strength_bonus"
+                duration = -1  # Permanent effect
+                modifier = {
+                    political_strength = {
+                        add = 0.15
+                        social_strata = str_petite_bourgeoisie
+                    }
+                }
+            }
+
+            # Give +10% political strength to the Trade Unions
+            add_country_modifier = {
+                name = "trade_unions_political_strength_bonus"
+                duration = -1  # Permanent effect
+                modifier = {
+                    political_strength = {
+                        add = 0.10
+                        social_strata = str_trade_unions
+                    }
+                }
+            }
+        }
+    }
 }
