@@ -1,5 +1,6 @@
 modifier: {
     key = "british_market_opium_regulation"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
     scope = country
     potential = {
         OR = {
@@ -21,6 +22,6 @@ modifier: {
     }
 
     effects = {
-        reduce_opium_consumption = 0.95
+        opium_desirability = -100 
     }
 }
