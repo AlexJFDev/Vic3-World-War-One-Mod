@@ -1,0 +1,18 @@
+decision = {
+    id = "close_the_federal_reserve_decision"
+    icon = "gfx/interface/icons/decision_icon.dds"  
+    is_available = {
+        has_country_modifier = "federal_reserve_established_modifier"
+    }
+    effect = {
+        # 1. Remove the federal_reserve_established_modifier
+        remove_country_modifier = "federal_reserve_established_modifier"
+
+        add_interest_group_approval = {
+            interest_group = ig_industrialists
+            add = -15
+        }
+
+        add_decision = "establish_the_federal_reserve_decision"
+    }
+}

@@ -1,6 +1,5 @@
 namespace = federal_reserve_event
 
-# Federal Reserve Event
 event = {
     id = federal_reserve_event.1
     type = country_event
@@ -10,7 +9,7 @@ event = {
     flavor = federal_reserve_event.1.f
 
     event_image = {
-        video = "gfx/event_pictures/federal_reserve_events.bk2"
+        picture = "gfx/event_pictures/Federal_reserve_event_cropped.dds"
     }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds"
@@ -28,87 +27,32 @@ event = {
     }
 
     immediate = {
-        # Any immediate effects upon event creation can be placed here
     }
 
     option = {
         default_option = yes
         name = federal_reserve_event.1.a
         effect = {
-            # Reduce the standard of living for accepted lower class pops by 0.5 points
-            every_accepted_pop = {
-                limit = {
-                    social_strata = str_lower_strata
-                }
-                reduce_standard_of_living = 0.5
-            }
-
-            # Reduce the standard of living for accepted middle class pops by 0.2 points
-            every_accepted_pop = {
-                limit = {
-                    social_strata = str_middle_strata
-                }
-                reduce_standard_of_living = 0.2
-            }
-
-            # Give a +10% minting bonus to the USA
+            
             add_country_modifier = {
-                name = "minting_bonus"
-                duration = -1  # Permanent effect
-                modifier = {
-                    minting = 0.10
-                }
+                name = "federal_reserve_established_modifier"
+                duration = -1  # Permanent modifier
             }
 
-            # Give +8% Investment pool contribution bonus for the capitalists
-            add_country_modifier = {
-                name = "investment_pool_contribution_bonus"
-                duration = -1  # Permanent effect
-                modifier = {
-                    investment_pool_contribution = 0.08
-                }
-            }
-
-            # Give +10% political strength to capitalists
-            add_country_modifier = {
-                name = "capitalist_political_strength_bonus"
-                duration = -1  # Permanent effect
-                modifier = {
-                    political_strength = {
-                        add = 0.10
-                        social_strata = str_capitalist
-                    }
-                }
-            }
+            add_decision = "close_the_federal_reserve_decision"
         }
     }
 
     option = {
         name = federal_reserve_event.1.b
         effect = {
-            # Give +15% political strength to the Petite Bourgeoisie
+            
             add_country_modifier = {
-                name = "petite_bourgeoisie_political_strength_bonus"
-                duration = -1  # Permanent effect
-                modifier = {
-                    political_strength = {
-                        add = 0.15
-                        social_strata = str_petite_bourgeoisie
-                    }
-                }
+                name = "no_federal_reserve_modifier"
+                duration = -1  # Permanent modifier
             }
 
-            # Give +10% political strength to the Trade Unions
-            add_country_modifier = {
-                name = "trade_unions_political_strength_bonus"
-                duration = -1  # Permanent effect
-                modifier = {
-                    political_strength = {
-                        add = 0.10
-                        social_strata = str_trade_unions
-                    }
-                }
-            }
+            add_decision = "establish_the_federal_reserve_decision"
         }
     }
 }

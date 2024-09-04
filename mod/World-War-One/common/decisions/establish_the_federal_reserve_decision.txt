@@ -1,0 +1,31 @@
+decision = {
+    id = "establish_the_federal_reserve_decision"
+    icon = "gfx/interface/icons/decision_icon.dds"  # Replace with an appropriate icon
+    is_available = {
+        NOT = {
+            has_country_modifier = "federal_reserve_established_modifier"
+        }
+    }
+    effect = {
+        # 1. Add the federal_reserve_established_modifier to the USA
+        add_country_modifier = {
+            name = "federal_reserve_established_modifier"
+            duration = -1  # Permanent
+        }
+
+        # 2. Decrease the approval of the trade unions by 3 points
+        add_interest_group_approval = {
+            interest_group = ig_trade_unions
+            add = -3
+        }
+
+        # 3. Decrease the approval of the petite bourgeoisie by 1 point
+        add_interest_group_approval = {
+            interest_group = ig_petite_bourgeoisie
+            add = -1
+        }
+
+        # 4. Add the close_the_federal_reserve_decision
+        add_decision = "close_the_federal_reserve_decision"
+    }
+}

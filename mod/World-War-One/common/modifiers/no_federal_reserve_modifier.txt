@@ -1,0 +1,19 @@
+no_federal_reserve_modifier = {
+    # 1. Gives +12% political strength to the petite bourgeoisie
+    political_strength = {
+        add = 0.12
+        interest_group = ig_petite_bourgeoisie
+    }
+
+    # 2. Gives +5% political strength to the trade unions
+    political_strength = {
+        add = 0.05
+        interest_group = ig_trade_unions
+    }
+
+    # 3. Decreases the approval of the industrialists by 8 points
+    add_interest_group_approval = {
+        interest_group = ig_industrialists
+        add = -8
+    }
+}
