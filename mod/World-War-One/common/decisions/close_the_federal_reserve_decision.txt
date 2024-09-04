@@ -1,6 +1,7 @@
+# Close the Federal Reserve Decision
 decision = {
     id = "close_the_federal_reserve_decision"
-    icon = "gfx/interface/icons/decision_icon.dds"  
+    icon = "gfx/interface/icons/decision_icon.dds"  # Replace with your icon path
     is_available = {
         has_country_modifier = "federal_reserve_established_modifier"
     }
@@ -8,11 +9,18 @@ decision = {
         # 1. Remove the federal_reserve_established_modifier
         remove_country_modifier = "federal_reserve_established_modifier"
 
+        # 2. Decrease the approval of the industrialists by 15 points
         add_interest_group_approval = {
             interest_group = ig_industrialists
             add = -15
         }
 
+        # 3. Add the establish_the_federal_reserve_decision
         add_decision = "establish_the_federal_reserve_decision"
     }
+
+    # Localized strings
+    title = close_the_federal_reserve_decision
+    desc = close_the_federal_reserve_decision_desc
+    tooltip = close_the_federal_reserve_decision_tooltip
 }

@@ -1,6 +1,7 @@
+# Establish the Federal Reserve Decision
 decision = {
     id = "establish_the_federal_reserve_decision"
-    icon = "gfx/interface/icons/decision_icon.dds"  # Replace with an appropriate icon
+    icon = "gfx/interface/icons/decision_icon.dds"  # Replace with your icon path
     is_available = {
         NOT = {
             has_country_modifier = "federal_reserve_established_modifier"
@@ -28,4 +29,9 @@ decision = {
         # 4. Add the close_the_federal_reserve_decision
         add_decision = "close_the_federal_reserve_decision"
     }
+
+    # Localized strings
+    title = establish_the_federal_reserve_decision
+    desc = establish_the_federal_reserve_decision_desc
+    tooltip = establish_the_federal_reserve_decision_tooltip
 }
