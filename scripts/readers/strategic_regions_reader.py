@@ -1,6 +1,4 @@
-#C:\Users\Alex\Desktop\Projects\Vic3-World-War-One-Mod\scripts\game\files\common\strategic_regions
 import clausewitz_parser
-from clausewitz_object import ClausewitzObject
 from clausewitz_root import ClausewitzRoot
 
 import os
