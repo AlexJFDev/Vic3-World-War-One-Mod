@@ -1,0 +1,26 @@
+modifier: {
+    key = "british_market_opium_regulation"
+    scope = country
+    potential = {
+        OR = {
+            tag = ENG
+            tag = NEW
+            tag = CAN
+            tag = AST
+            tag = SIL 
+            tag = GHA
+            tag = NGA
+            tag = SAF
+            tag = KEN
+            tag = NZL
+        }
+    }
+
+    trigger = {
+        always = yes
+    }
+
+    effects = {
+        reduce_opium_consumption = 0.95
+    }
+}
