@@ -1,6 +1,6 @@
 ﻿NGame = {
 	START_DATE = "1913.6.28"
-	END_DATE = "1936.1.1"
+	END_DATE = "1946.1.1"
 	SAVE_VERSION = 0
 	MP_LAG_TICKS_BOUNDS = 28 # Host will advance up to a week ahead of players ( 7 * 4 )
 	DEAD_OBJ_UNDESTROYED_DAYS = 22	# number of days "killed"/removed objects will persist in memory before ultimately destroyed as they are referenced by events etc. Needs to be bigger than MESSAGE_FEED_NUMBER_OF_DAYS_SHOWN in order to not risk notifications regarding dead people etc returning null_objs.
@@ -519,7 +519,7 @@ NMilitary = {
 	MIN_MANPOWER_CASUALTY_PER_ROUND = 5					# Minimum manpower losses per round
 	CASUALTY_MULTIPLIER_FOR_HIGHEST_PAID = 0.5		# Pops that are not the lowest paid profession in the building (e.g. officers) will have its casualties moderated by this multiplier (between 0-1)
 	MIN_USABLE_MANPOWER = 100						# Lowest manpower engaged in a battle limit (otherwise determined by combat width)
-	COMBAT_UNITS_PER_LEVEL = 1						# Number of combat units each level of military building can support. Must be the same for all recruitable buildings (barracks/conscription centers/naval bases)
+	COMBAT_UNITS_PER_LEVEL = 10						# Number of combat units each level of military building can support. Must be the same for all recruitable buildings (barracks/conscription centers/naval bases)
 	BASE_MORALE_RECOVERED_PER_DAY = 0.03			# Default morale recovered is 3% per day
 	BASE_MORALE_RECOVERED_PER_DAY_SLOW_RATE = 0.1	# If current morale exceeds formation supply, multiply the excess gained by this value
 	BASE_MORALE_LOST_PER_DAY = 0.05					# Default morale lost when out of supply is 5%
