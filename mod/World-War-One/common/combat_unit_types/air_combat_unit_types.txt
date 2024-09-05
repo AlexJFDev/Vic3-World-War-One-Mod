@@ -1,0 +1,149 @@
+﻿###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Infantry
+
+combat_unit_type_fighter  = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+	
+
+	
+	
+        goods_input_aeroplanes_add = 3
+        goods_input_small_arms_add = 2
+	goods_input_ammunition_add = 4
+	goods_input_oil_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 10
+        unit_morale_loss_add = -10
+	unit_advancement_speed_mult =1
+	unit_occupation_mult = 0.3
+	
+	
+        #should get modifiers to mobile/surprise battle conditions appearing
+    }
+
+	unlocking_technologies = { military_aviation }
+
+    
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/fighter.dds"
+    }
+
+    upgrades = {
+        
+    }
+}
+
+combat_unit_type_close_air_support  = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+	
+
+
+	goods_input_aeroplanes_add = 3
+        goods_input_small_arms_add = 2
+	goods_input_artillery_add = 2
+	goods_input_ammunition_add = 4
+	goods_input_oil_add = 3
+	goods_input_radios_add = 1
+ 	
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 10
+	unit_morale_loss_add = -10
+	unit_advancement_speed_mult =1
+	
+        
+       
+        #should get modifiers to mobile/surprise battle conditions appearing
+    }
+
+	unlocking_technologies = { military_aviation }
+
+    
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/close_air_support.dds"
+    }
+
+    upgrades = {
+        
+    }
+}
+
+combat_unit_type_bomber  = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+	
+
+
+	goods_input_aeroplanes_add = 6
+	goods_input_artillery_add = 3
+	goods_input_ammunition_add = 3
+	goods_input_explosives_add = 12
+	goods_input_oil_add = 6
+	goods_input_radios_add = 1
+ 	
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 10
+ 	unit_kill_rate_add = 0.2
+        unit_devastation_mult = 0.3
+	unit_morale_loss_add = -10
+	unit_advancement_speed_mult =1
+
+       
+        #should get modifiers to mobile/surprise battle conditions appearing
+    }
+
+	unlocking_technologies = { military_aviation }
+
+    
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/bomber.dds"
+    }
+
+    upgrades = {
+        
+    }
+}
+
