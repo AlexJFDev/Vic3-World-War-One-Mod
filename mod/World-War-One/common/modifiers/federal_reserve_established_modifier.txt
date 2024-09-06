@@ -1,34 +1,11 @@
 federal_reserve_established_modifier = {
-    # 1. Reduces the standard of living of the lower class by -0.5 points
-    pop_standard_of_living_add = {
-        value = -0.5
-        social_strata = str_lower_strata
-    }
+    
+ state_poor_standard_of_living_add = 0.5
 
-    # 2. Reduces the standard of living of the middle class by -0.2 points
-    pop_standard_of_living_add = {
-        value = -0.2
-        social_strata = str_middle_strata
-    }
 
-    # 3. Grants a bonus of 10% minting to the USA
-    minting = 0.10  # +10% minting
 
-    # 4. Increases the investment pool contribution efficiency of capitalists by 15%
-    investment_pool_contribution_efficiency = {
-        add = 0.15
-        social_strata = str_capitalists
-    }
 
-    # 5. Adds 8 approval points to the industrialists
-    add_interest_group_approval = {
-        interest_group = ig_industrialists
-        add = 8
-    }
 
-    # 6. Gives +15% political strength to the industrialists
-    political_strength = {
-        add = 0.15
-        interest_group = ig_industrialists
-    }
+
+
 }
