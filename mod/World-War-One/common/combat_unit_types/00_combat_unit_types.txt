@@ -9,7 +9,6 @@
 
 combat_unit_type_irregular_infantry = {
     group = combat_unit_group_infantry
-    manpower_max = 20000
 
     battle_modifier = {
         unit_offense_add = 10
@@ -77,7 +76,6 @@ combat_unit_type_irregular_infantry = {
 
 combat_unit_type_line_infantry = {
     group = combat_unit_group_infantry
-    manpower_max = 20000
 
     upkeep_modifier = {
         goods_input_small_arms_add = 20
@@ -134,7 +132,6 @@ combat_unit_type_line_infantry = {
 
 combat_unit_type_skirmish_infantry = {
     group = combat_unit_group_infantry
-    manpower_max = 20000
 
     upkeep_modifier = {
         goods_input_small_arms_add = 40
@@ -191,7 +188,6 @@ combat_unit_type_skirmish_infantry = {
 
 combat_unit_type_trench_infantry = {
     group = combat_unit_group_infantry
-    manpower_max = 20000
 
     upkeep_modifier = {
         goods_input_small_arms_add = 60
@@ -247,7 +243,6 @@ combat_unit_type_trench_infantry = {
 
 combat_unit_type_squad_infantry = {
     group = combat_unit_group_infantry
-    manpower_max = 20000
 
     upkeep_modifier = {
         goods_input_small_arms_add = 60
@@ -303,8 +298,6 @@ combat_unit_type_squad_infantry = {
 
 combat_unit_type_mechanized_infantry = {
     group = combat_unit_group_infantry
-    manpower_max = 20000
-
 
     can_build_conscript = {
         NOT = {
@@ -367,7 +360,6 @@ combat_unit_type_mechanized_infantry = {
 
 combat_unit_type_cannon_artillery = {
     group = combat_unit_group_artillery
-    manpower_max = 20000
 	
     can_build_conscript = {
         NOT = {
@@ -436,7 +428,6 @@ combat_unit_type_cannon_artillery = {
 
 combat_unit_type_mobile_artillery = {
     group = combat_unit_group_artillery
-    manpower_max = 20000
 	
     can_build_conscript = {
         NOT = {
@@ -504,7 +495,6 @@ combat_unit_type_mobile_artillery = {
 
 combat_unit_type_shrapnel_artillery = {
     group = combat_unit_group_artillery
-    manpower_max = 20000
 
     can_build_conscript = {
         NOT = {
@@ -572,7 +562,6 @@ combat_unit_type_shrapnel_artillery = {
 
 combat_unit_type_siege_artillery = {
     group = combat_unit_group_artillery
-    manpower_max = 20000
 
     can_build_conscript = {
         NOT = {
@@ -637,7 +626,6 @@ combat_unit_type_siege_artillery = {
 
 combat_unit_type_heavy_tank = {
     group = combat_unit_group_artillery
-    manpower_max = 20000
 
     can_build_conscript = {
         NOT = {
@@ -678,7 +666,6 @@ combat_unit_type_heavy_tank = {
 
 combat_unit_type_hussars = {
     group = combat_unit_group_cavalry
-    manpower_max = 20000
 	
     can_build_conscript = {
         NOT = {
@@ -745,7 +732,6 @@ combat_unit_type_hussars = {
 
 combat_unit_type_dragoons = {
     group = combat_unit_group_cavalry
-    manpower_max = 20000
 
     can_build_conscript = {
         NOT = {
@@ -809,7 +795,6 @@ combat_unit_type_dragoons = {
 
 combat_unit_type_cuirassiers = {
     group = combat_unit_group_cavalry
-    manpower_max = 20000
 	
     can_build_conscript = {
         NOT = {
@@ -872,7 +857,6 @@ combat_unit_type_cuirassiers = {
 
 combat_unit_type_lancers = {
     group = combat_unit_group_cavalry
-    manpower_max = 20000
 	
     can_build_conscript = {
         NOT = {
@@ -936,9 +920,93 @@ combat_unit_type_lancers = {
     }
 }
 
+combat_unit_type_fighter  = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_aeroplanes_add = 60
+        goods_input_small_arms_add = 40
+	    goods_input_ammunition_add = 80
+	    goods_input_oil_add = 60
+        goods_input_radios_add = 20
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 10
+        unit_morale_loss_add = -10
+	    unit_advancement_speed_mult =1
+	    unit_occupation_mult = 0.3
+	
+	
+        #should get modifiers to mobile/surprise battle conditions appearing
+    }
+
+	unlocking_technologies = { military_aviation }
+
+    
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/fighter.dds"
+    }
+
+    upgrades = {
+        
+    }
+}
+
+combat_unit_type_bomber  = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+	goods_input_aeroplanes_add = 120
+	goods_input_ammunition_add = 60
+	goods_input_explosives_add = 240
+	goods_input_oil_add = 120
+	goods_input_radios_add = 20
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 10
+ 	    unit_kill_rate_add = 0.2
+        unit_devastation_mult = 0.3
+	    unit_morale_loss_add = -10
+	    unit_advancement_speed_mult =1
+
+       
+        #should get modifiers to mobile/surprise battle conditions appearing
+    }
+
+	unlocking_technologies = { military_aviation }
+
+    
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/bomber.dds"
+    }
+
+    upgrades = {
+        
+    }
+}
+
 combat_unit_type_light_tanks = {
     group = combat_unit_group_cavalry
-    manpower_max = 20000
 
     can_build_conscript = {
         NOT = {
@@ -970,6 +1038,49 @@ combat_unit_type_light_tanks = {
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/cavalry_light_tank.dds"
+    }
+}
+
+combat_unit_type_close_air_support  = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+	goods_input_aeroplanes_add = 60
+    goods_input_small_arms_add = 40
+	goods_input_explosives_add = 40
+	goods_input_ammunition_add = 40
+	goods_input_oil_add = 60
+	goods_input_radios_add = 20
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 10
+	    unit_morale_loss_add = -10
+	    unit_advancement_speed_mult =1
+	
+        
+       
+        #should get modifiers to mobile/surprise battle conditions appearing
+    }
+
+	unlocking_technologies = { aerial_ground_support }
+
+    
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/close_air_support.dds"
+    }
+
+    upgrades = {
+        
     }
 }
 
@@ -1283,138 +1394,5 @@ combat_unit_type_carrier = {
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/support_ships_carrier.dds"
-    }
-}
-
-### Warplanes
-
-combat_unit_type_fighter  = {
-    group = combat_unit_group_cavalry
-    manpower_max = 20000
-
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
-    upkeep_modifier = {
-        goods_input_aeroplanes_add = 60
-        goods_input_small_arms_add = 40
-	    goods_input_ammunition_add = 80
-	    goods_input_oil_add = 60
-        goods_input_radios_add = 20
-    }
-
-    battle_modifier = {
-        unit_offense_add = 30
-        unit_defense_add = 10
-        unit_morale_loss_add = -10
-	    unit_advancement_speed_mult =1
-	    unit_occupation_mult = 0.3
-	
-	
-        #should get modifiers to mobile/surprise battle conditions appearing
-    }
-
-	unlocking_technologies = { military_aviation }
-
-    
-
-    combat_unit_image = {
-        # fallback
-        texture = "gfx/unit_illustrations/fighter.dds"
-    }
-
-    upgrades = {
-        
-    }
-}
-
-combat_unit_type_bomber  = {
-    group = combat_unit_group_cavalry
-    manpower_max = 20000
-
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
-    upkeep_modifier = {
-	goods_input_aeroplanes_add = 120
-	goods_input_ammunition_add = 60
-	goods_input_explosives_add = 240
-	goods_input_oil_add = 120
-	goods_input_radios_add = 20
-    }
-
-    battle_modifier = {
-        unit_offense_add = 50
-        unit_defense_add = 10
- 	    unit_kill_rate_add = 0.2
-        unit_devastation_mult = 0.3
-	    unit_morale_loss_add = -10
-	    unit_advancement_speed_mult =1
-
-       
-        #should get modifiers to mobile/surprise battle conditions appearing
-    }
-
-	unlocking_technologies = { military_aviation }
-
-    
-
-    combat_unit_image = {
-        # fallback
-        texture = "gfx/unit_illustrations/bomber.dds"
-    }
-
-    upgrades = {
-        
-    }
-}
-
-combat_unit_type_close_air_support  = {
-    group = combat_unit_group_cavalry
-    manpower_max = 20000
-
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
-    upkeep_modifier = {
-	goods_input_aeroplanes_add = 60
-    goods_input_small_arms_add = 40
-	goods_input_explosives_add = 40
-	goods_input_ammunition_add = 40
-	goods_input_oil_add = 60
-	goods_input_radios_add = 20
-    }
-
-    battle_modifier = {
-        unit_offense_add = 50
-        unit_defense_add = 10
-	    unit_morale_loss_add = -10
-	    unit_advancement_speed_mult =1
-	
-        
-       
-        #should get modifiers to mobile/surprise battle conditions appearing
-    }
-
-	unlocking_technologies = { aerial_ground_support }
-
-    
-
-    combat_unit_image = {
-        # fallback
-        texture = "gfx/unit_illustrations/close_air_support.dds"
-    }
-
-    upgrades = {
-        
     }
 }
