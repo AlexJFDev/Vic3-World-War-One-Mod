@@ -1132,3 +1132,61 @@ aerial_ground_support = {
 		value = 1
 	}
 }
+
+blitzkrieg_tech = {
+	#Enables the Blitzkrieg Battle Modifier
+    era = era_5
+    texture = "gfx/interface/icons/invention_icons/blitzkrieg_tech.dds"
+    category = military
+
+    unlocking_technologies = {
+        aerial_ground_support
+		mobile_armor
+    }
+
+    modifier = {
+		
+	}
+
+    ai_weight = {
+		value = 1
+	}
+}
+
+fire_fighting_drills = {
+	#Gives a recovery rate bonus to all warships and convoys
+    era = era_5
+    texture = "gfx/interface/icons/invention_icons/fire_fighting_drills.dds"
+    category = military
+
+    unlocking_technologies = {
+        battleship_tech
+    }
+
+    modifier = {
+		
+	}
+
+    ai_weight = {
+		value = 1
+	}
+}
+
+smoke_generator = {
+	#Gives a recovery rate bonus to all warships and convoys
+    era = era_5
+    texture = "gfx/interface/icons/invention_icons/smoke_generator.dds"
+    category = military
+
+    unlocking_technologies = {
+        battleship_tech
+    }
+
+    modifier = {
+		
+	}
+
+    ai_weight = {
+		value = 1
+	}
+}
