@@ -30,29 +30,25 @@ event = {
     }
 
     option = {
-        default_option = yes
         name = federal_reserve_event.1.a
-        effect = {
-            
+        default_option = yes
+
             add_country_modifier = {
-                name = "federal_reserve_established_modifier"
-                duration = -1  # Permanent modifier
+                name = federal_reserve_established_modifier
+                duration = -1
             }
 
-            add_decision = "close_the_federal_reserve_decision"
-        }
+            add_decision = close_the_federal_reserve_decision
     }
 
     option = {
         name = federal_reserve_event.1.b
-        effect = {
-            
+
             add_country_modifier = {
-                name = "no_federal_reserve_modifier"
-                duration = -1  # Permanent modifier
+                name = no_federal_reserve_modifier
+                duration = -1
             }
 
-            add_decision = "establish_the_federal_reserve_decision"
-        }
+            add_decision = establish_the_federal_reserve_decision     
     }
 }
