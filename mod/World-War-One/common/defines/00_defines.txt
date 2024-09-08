@@ -1,6 +1,6 @@
 ﻿NGame = {
-	START_DATE = "1913.6.28"
-	END_DATE = "1943.1.1"
+	START_DATE = "1836.1.1"
+	END_DATE = "1936.1.1"
 	SAVE_VERSION = 0
 	MP_LAG_TICKS_BOUNDS = 28 # Host will advance up to a week ahead of players ( 7 * 4 )
 	DEAD_OBJ_UNDESTROYED_DAYS = 22	# number of days "killed"/removed objects will persist in memory before ultimately destroyed as they are referenced by events etc. Needs to be bigger than MESSAGE_FEED_NUMBER_OF_DAYS_SHOWN in order to not risk notifications regarding dead people etc returning null_objs.
@@ -504,8 +504,8 @@ NEconomy = {
 
 NMilitary = {
 	POWER_PROJECTION_DIVISOR = 1000 				# Average of Offense and Defense is multiplied by manpower and divided by this to determine a unit's power projection
-	INITIAL_MANPOWER_COST_MULTIPLIER = 2 			# there is an extra cost for training new recruits, compared to maintenence of said recruits
-	MANPOWER_DIVISOR = 200000 						# the strategic goods needed by soldiers are counted in sets of
+	INITIAL_MANPOWER_COST_MULTIPLIER = 10 			# there is an extra cost for training new recruits, compared to maintenence of said recruits
+	MANPOWER_DIVISOR = 10000 						# the strategic goods needed by soldiers are counted in sets of
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.04 	# The minimum percentage of manpower a unit can lose each week due to attrition
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
 	MIN_VARIABLE_DISTRIBUTION_PER_POP = 0
