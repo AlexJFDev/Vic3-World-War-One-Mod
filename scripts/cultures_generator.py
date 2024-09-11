@@ -6,6 +6,7 @@ import csv
 
 CULTURE_DEFINITIONS = os.path.join('mod', 'data', 'cultures.csv')
 CULTURES_FILE = os.path.join('mod', 'files', 'combined_cultures.txt')
+STANDARD_OF_LIVING_FILE = os.path.join('mod', 'files', 'standard_of_living.txt')
 
 NAME_COLUMN = 0
 TAG_COLUMN = 1
@@ -109,6 +110,26 @@ def generate_cultures(file_path: str):
                 print(f'Error on line {line_number}: {e}')
     return cultures_root
 
+def generate_standard_of_living(file_path: str):
+    standard_of_living_root = ClausewitzRoot()
+    with open(file_path, 'r') as standard_of_living_file:
+        standard_of_living_file.readline()
+        standard_of_living_reader = csv.reader(standard_of_living_file)
+        for line in standard_of_living_reader:
+            tag = line[TAG_COLUMN]
+            positive_standard = ClausewitzObject()
+            positive_standard.add_named_value('icon', 'gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds')
+            positive_standard.add_named_value(f'state_{tag}_standard_of_living_add', '1')
+            negative_standard = ClausewitzObject()
+            negative_standard.add_named_value('icon', 'gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds')
+            negative_standard.add_named_value(f'state_{tag}_standard_of_living_add', '1')
+            standard_of_living_root.add_named_value(f'{tag}_standard_of_living_modifier_positive', positive_standard)
+            standard_of_living_root.add_named_value(f'{tag}_standard_of_living_modifier_negative', negative_standard)
+
+    return standard_of_living_root
+
 if __name__ == '__main__':
     cultures_root = generate_cultures(CULTURE_DEFINITIONS)
     cultures_root.write(CULTURES_FILE)
+    standard_of_living_root = generate_standard_of_living(CULTURE_DEFINITIONS)
+    standard_of_living_root.write(STANDARD_OF_LIVING_FILE)

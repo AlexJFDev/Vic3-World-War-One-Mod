@@ -26,6 +26,7 @@ POPS_PATH = os.path.join(HISTORY_PATH, 'pops', 'pops.txt')
 BUILDINGS_PATH = os.path.join(HISTORY_PATH, 'buildings', 'buildings.txt')
 CHARACTER_MOD_FILE_PATH = os.path.join(HISTORY_PATH, 'characters', 'generated_characters.txt')
 MILITARY_FORMATIONS_OUT_PATH = os.path.join(HISTORY_PATH, 'military_formations', 'military_formations.txt')
+CULTURE_STANDARD_OF_LIVING_PATH = os.path.join(COMMON_PATH, 'static_modifiers', 'culture_standard_of_living.txt')
 
 COUNTRY_DEFINITIONS_PATH = os.path.join('mod', 'data', 'country_definitions.csv')
 COUNTRY_LAWS_PATH = os.path.join('mod', 'data', 'country_laws.csv')
@@ -44,6 +45,7 @@ def write_object(path: str, clausewitzObject: ClausewitzObject):
 if __name__ == '__main__':
     countries_root = countries_generator.generate_countries(COUNTRY_DEFINITIONS_PATH)
     cultures_root = cultures_generator.generate_cultures(CULTURES_PATH)
+    culture_soi_root = cultures_generator.generate_standard_of_living(CULTURES_PATH)
     laws_root = laws_generator.generate_laws(COUNTRY_LAWS_PATH, COUNTRY_INSTITUTIONS_PATH)
     states_root, pops_root = states_generator.generate_states_and_pops(STATE_OWNERSHIP_PATH, STATE_REGIONS_PATH)
     buildings_root = buildings_generator.generate_buildings(BUILDINGS_DATA_PATH)
@@ -52,6 +54,7 @@ if __name__ == '__main__':
     military_root = military_generator.generate_military_object(MILITARY_DATA_PATH)
 
     write_object(COMBINED_CULTURES_PATH, cultures_root)
+    write_object(CULTURE_STANDARD_OF_LIVING_PATH, culture_soi_root)
     write_object(COUNTRIES_PATH, countries_root)
     write_object(DOMESTIC_LAWS_PATH, laws_root)
     write_object(STATES_PATH, states_root)
