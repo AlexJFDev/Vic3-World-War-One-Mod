@@ -11,15 +11,21 @@ from clausewitz_object import ClausewitzObject
 
 import os
 
-COMBINED_CULTURES_PATH = os.path.join('mod', 'files', 'combined_cultures.txt')
-COUNTRIES_PATH = os.path.join('mod', 'files', 'countries.txt')
-DOMESTIC_LAWS_PATH = os.path.join('mod', 'files', 'domestic_laws.txt')
-STATES_PATH = os.path.join('mod', 'files', 'states.txt')
-POPS_PATH = os.path.join('mod', 'files', 'pops.txt')
-BUILDINGS_PATH = os.path.join('mod', 'files', 'buildings.txt')
-STATE_REGIONS_OUT_PATH = os.path.join('mod', 'files', 'state_regions.txt')
-CHARACTER_MOD_FILE_PATH = os.path.join('mod', 'files', 'generated_characters.txt')
-MILITARY_FORMATIONS_OUT_PATH = os.path.join('mod', 'files', 'military_formations.txt')
+CURRENT_DIRECTORY = os.path.dirname(__file__)
+PARENT_DIRECTORY = os.path.split(CURRENT_DIRECTORY)[0]
+
+MOD_PATH = os.path.join(PARENT_DIRECTORY, 'mod', 'World-War-One')
+COMMON_PATH = os.path.join(MOD_PATH, 'common')
+HISTORY_PATH = os.path.join(COMMON_PATH, 'history')
+
+COMBINED_CULTURES_PATH = os.path.join(COMMON_PATH, 'cultures', 'combined_cultures.txt')
+COUNTRIES_PATH = os.path.join(COMMON_PATH, 'country_definitions', 'countries.txt')
+DOMESTIC_LAWS_PATH = os.path.join(HISTORY_PATH, 'countries', 'domestic_laws.txt')
+STATES_PATH = os.path.join(HISTORY_PATH, 'states', 'states.txt')
+POPS_PATH = os.path.join(HISTORY_PATH, 'pops', 'pops.txt')
+BUILDINGS_PATH = os.path.join(HISTORY_PATH, 'buildings', 'buildings.txt')
+CHARACTER_MOD_FILE_PATH = os.path.join(HISTORY_PATH, 'characters', 'generated_characters.txt')
+MILITARY_FORMATIONS_OUT_PATH = os.path.join(HISTORY_PATH, 'military_formations', 'military_formations.txt')
 
 COUNTRY_DEFINITIONS_PATH = os.path.join('mod', 'data', 'country_definitions.csv')
 COUNTRY_LAWS_PATH = os.path.join('mod', 'data', 'country_laws.csv')
