@@ -25,3 +25,7 @@ class ClausewitzRoot(ClausewitzObject):
 
         final_form:str = f'{anonymous_objects}{anonymous_values}\n{named_objects}{named_values}'.strip()
         return final_form
+
+    def write(self, path: str):
+        with open(path, 'w', encoding='utf-8-sig') as file:
+            file.write(self.unparse())

@@ -111,5 +111,4 @@ def generate_cultures(file_path: str):
 
 if __name__ == '__main__':
     cultures_root = generate_cultures(CULTURE_DEFINITIONS)
-    with open(CULTURES_FILE, 'w') as file:
-        file.write(cultures_root.unparse())
+    cultures_root.write(CULTURES_FILE)
