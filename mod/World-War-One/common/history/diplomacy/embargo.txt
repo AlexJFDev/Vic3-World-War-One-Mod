@@ -1,0 +1,26 @@
+DIPLOMACY = {
+	c:SER = {
+		create_diplomatic_pact = {
+			country = c:BUL
+			type = embargo
+		}	
+	}
+    c:GRE = {
+		create_diplomatic_pact = {
+			country = c:BUL
+			type = embargo
+		}	
+	}
+    c:BUL = {
+		create_diplomatic_pact = {
+			country = c:SER
+			type = embargo
+		}	
+	}
+    c:BUL = {
+		create_diplomatic_pact = {
+			country = c:GRE
+			type = embargo
+		}	
+	}
+}

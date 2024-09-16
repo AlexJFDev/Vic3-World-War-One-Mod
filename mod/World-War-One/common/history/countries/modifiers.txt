@@ -1,8 +1,33 @@
 ﻿COUNTRIES = {
-	c:JAP ?= {
+
+    c:BUL = {
+    
+    #ADD MONEY TO BULGARIA TO REPRESENT FRENCH AND GERMAN LOANS
+    
+    change_infamy = 50
+
+    add_taxed_goods = g:grain
+    add_taxed_goods = g:liquor
+    add_taxed_goods = g:groceries
+
+    }
+    
+    c:GBR = {
+       ig:ig_Intelligentsia = {
+			add_ruling_interest_group = yes
+		}
+	}	
+    
+    c:JAP ?= {
         set_variable = {
             name = meiji_var
             value = 0
         }
+	}	
+    
+    c:TUR = {
+       ig:ig_Petite_Bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
 	}	
 }
