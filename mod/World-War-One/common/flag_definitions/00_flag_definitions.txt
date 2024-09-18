@@ -3551,6 +3551,7 @@ GER = { # Germany
 						OR = {
 							has_law = law_type:law_autocracy
 							has_law = law_type:law_technocracy
+							has_law = law_type:law_oligarchy
 						}
 						ruler ?= {
 							OR = {
@@ -3582,7 +3583,17 @@ GER = { # Germany
 			coa_def_fascist_flag_trigger = yes
 		}
 	}
-
+    flag_definition = {
+		coa = GER
+		subject_canton = GER
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
 ### country-specific Germany variants ###
 
 	flag_definition = {
