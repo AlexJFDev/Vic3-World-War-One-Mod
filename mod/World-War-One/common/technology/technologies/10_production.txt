@@ -1109,13 +1109,18 @@ compression_ignition = {
 }
 
 mechanical_computing_tech = {
-	#Unlocks Computers PM in Electrics Industries
+	#Beta = research bonus
+	#On release = Unlocks Computers PM in Electrics Industries
     era = era_5
 	texture = "gfx/interface/icons/invention_icons/mechanical_computing_tech.dds"
 	category = production
 	
 	unlocking_technologies = {
 		radio
+	}
+    
+    modifier = {
+	    country_tech_research_speed_mult= 0.1
 	}
 
 	ai_weight = {
