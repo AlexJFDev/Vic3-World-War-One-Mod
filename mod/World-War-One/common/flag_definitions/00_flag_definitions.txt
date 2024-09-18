@@ -1944,6 +1944,7 @@ CHI = { # China
 		trigger = { 
 			has_law = law_type:law_presidential_republic
 			has_law = law_type:law_parliamentary_republic
+			coa_def_republic_flag_trigger = yes
 		}
 	}	
 	flag_definition = {
@@ -1954,6 +1955,7 @@ CHI = { # China
 			has_law = law_type:law_presidential_republic
 			has_law = law_type:law_parliamentary_republic
 			has_law = law_type:law_autocracy
+			coa_def_republic_flag_trigger = yes
 		}
 	}	
 	flag_definition = {
@@ -6957,7 +6959,7 @@ PER = { # Persia
 		subject_canton = PER_republic
 		priority = 10
 		trigger = { 
-			law_type:law_monarchy
+			has_law = law_type:law_monarchy
 		}
 	}	
 	flag_definition = {
