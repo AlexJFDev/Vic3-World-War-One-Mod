@@ -1134,7 +1134,8 @@ aerial_ground_support = {
 }
 
 blitzkrieg_tech = {
-	#Enables the Blitzkrieg Battle Modifier
+	#Beta = Offense bonus for land units
+	#On release = Enables the Blitzkrieg Battle Modifier 
     era = era_5
     texture = "gfx/interface/icons/invention_icons/blitzkrieg_tech.dds"
     category = military
@@ -1145,7 +1146,8 @@ blitzkrieg_tech = {
     }
 
     modifier = {
-		
+		unit_combat_unit_type_mechanized_infantry_offense_add = 10
+		unit_combat_unit_type_heavy_tank_offense_mult= 0.05
 	}
 
     ai_weight = {
@@ -1164,7 +1166,7 @@ fire_fighting_drills = {
     }
 
     modifier = {
-	
+	    unit_navy_defense_mult = 0.1
 	}
 
     ai_weight = {
@@ -1183,7 +1185,7 @@ smoke_generator = {
     }
 
     modifier = {
-		
+	    unit_navy_defense_mult = 0.1
 	}
 
     ai_weight = {
