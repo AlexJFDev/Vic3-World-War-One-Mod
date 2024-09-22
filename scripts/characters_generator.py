@@ -33,7 +33,7 @@ IDEOLOGIES = {
     'ideology_abolitionist', 'ideology_market_liberal', 'ideology_orleanist'
 }
 YES_VALUES = {
-    'ruler', 'ig_leader', 'historical', 'woman', 'noble', 'is_admiral', 'is_general', 'is_agitator'
+    'ruler', 'ig_leader', 'historical', 'woman', 'noble', 'is_admiral', 'is_general', 'is_agitator', 'heir'
 }
 
 FULL_NAME_COLUMN = 0
@@ -68,7 +68,7 @@ def parse_character_data(data_path: str):
                 character_traits = set()
             
             if first_name == '' or last_name == '':
-                break
+                continue
 
             if interest_group not in INTEREST_GROUPS:
                 print(f'Unknown interest group: {interest_group} on line {line_num}')
