@@ -33,7 +33,7 @@ IDEOLOGIES = {
     'ideology_abolitionist', 'ideology_market_liberal', 'ideology_orleanist'
 }
 YES_VALUES = {
-    'ruler', 'ig_leader', 'historical', 'woman', 'noble'
+    'ruler', 'ig_leader', 'historical', 'woman', 'noble', 'is_admiral', 'is_general', 'is_agitator'
 }
 
 FULL_NAME_COLUMN = 0
