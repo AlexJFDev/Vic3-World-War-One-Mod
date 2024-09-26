@@ -912,9 +912,9 @@ combat_unit_type_fighter  = {
     }
 
     battle_modifier = {
-        unit_offense_add = 30
-        unit_defense_add = 10
-        unit_morale_loss_add = -10
+    unit_offense_add = 35
+    unit_defense_add = 20
+    unit_morale_loss_add = -10
 	unit_advancement_speed_mult =1
 	unit_occupation_mult = 0.3
 	
@@ -959,10 +959,10 @@ combat_unit_type_bomber  = {
     }
 
     battle_modifier = {
-        unit_offense_add = 50
-        unit_defense_add = 10
- 	unit_kill_rate_add = 0.2
-        unit_devastation_mult = 0.3
+    unit_offense_add = 50
+    unit_defense_add = 10
+ 	unit_kill_rate_add = 0.05
+    unit_devastation_mult = 0.4
 	unit_morale_loss_add = -10
 	unit_advancement_speed_mult =1
 
@@ -1034,7 +1034,7 @@ combat_unit_type_close_air_support  = {
 
 
 	goods_input_aeroplanes_add = 3
-        goods_input_small_arms_add = 2
+    goods_input_small_arms_add = 2
 	goods_input_artillery_add = 2
 	goods_input_ammunition_add = 4
 	goods_input_oil_add = 3
@@ -1043,8 +1043,9 @@ combat_unit_type_close_air_support  = {
     }
 
     battle_modifier = {
-        unit_offense_add = 50
-        unit_defense_add = 10
+    unit_offense_add = 50
+    unit_defense_add = 25
+    unit_kill_rate_add = 0.15
 	unit_morale_loss_add = -10
 	unit_advancement_speed_mult =1
 	
@@ -1154,34 +1155,32 @@ combat_unit_type_destroyer = {
 	}
 }
 
-combat_unit_type_torpedo_boat = {
-    group = combat_unit_group_light_ship
+combat_unit_type_submarine = {
+    group = combat_unit_group_support_ship
 
     upkeep_modifier = {
         goods_input_ironclads_add = 2
-        goods_input_explosives_add = 4
+        goods_input_artillery_add = 2
+        goods_input_ammunition_add = 2
+		goods_input_radios_add = 1
     }
 
     battle_modifier = {
-        unit_offense_add = 40
-        unit_defense_add = 30
+        unit_offense_add = 60
+        unit_defense_add = 20
         unit_morale_loss_add = 8
-        unit_convoy_raiding_mult = 0.25
+        unit_convoy_raiding_mult = 1.0
     }
 
     formation_modifier = {
         military_formation_movement_speed_mult = 0.2
     }
 
-	unlocking_technologies = { self_propelled_torpedoes }
+	unlocking_technologies = { submarine }
 
     combat_unit_image = {
-        texture = "gfx/unit_illustrations/light_ships_torpedo_boat.dds"
+        texture = "gfx/unit_illustrations/support_ships_submarine.dds"
     }
-	
-	upgrades = {
-		combat_unit_type_destroyer
-	}
 }
 
 combat_unit_type_scout_cruiser = {
@@ -1324,32 +1323,34 @@ combat_unit_type_battleship = {
 
 ### Support Ship group
 
-combat_unit_type_submarine = {
-    group = combat_unit_group_support_ship
+combat_unit_type_torpedo_boat = {
+    group = combat_unit_group_light_ship
 
     upkeep_modifier = {
         goods_input_ironclads_add = 2
-        goods_input_artillery_add = 2
-        goods_input_ammunition_add = 2
-		goods_input_radios_add = 1
+        goods_input_explosives_add = 4
     }
 
     battle_modifier = {
-        unit_offense_add = 60
-        unit_defense_add = 20
+        unit_offense_add = 40
+        unit_defense_add = 30
         unit_morale_loss_add = 8
-        unit_convoy_raiding_mult = 1.0
+        unit_convoy_raiding_mult = 0.25
     }
 
     formation_modifier = {
         military_formation_movement_speed_mult = 0.2
     }
 
-	unlocking_technologies = { submarine }
+	unlocking_technologies = { self_propelled_torpedoes }
 
     combat_unit_image = {
-        texture = "gfx/unit_illustrations/support_ships_submarine.dds"
+        texture = "gfx/unit_illustrations/light_ships_torpedo_boat.dds"
     }
+	
+	upgrades = {
+		combat_unit_type_destroyer
+	}
 }
 
 combat_unit_type_carrier = {
