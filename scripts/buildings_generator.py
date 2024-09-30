@@ -19,6 +19,8 @@ BULDING_TYPE_INDEX = 0
 BUILDING_LEVEL_INDEX = 1
 BUILDING_PRODUCTION_METHOD_INDEX = 2
 
+SKIP_URBAN_CENTERS = True
+
 def fetch_production_methods(file_path: str):
     with open(file_path, 'r') as production_methods_file:
         production_methods_reader = csv.reader(production_methods_file)
@@ -36,6 +38,9 @@ def generate_region_object(owner_tag: str, buildings: list[tuple[str, str, str]]
         building_type = building[BULDING_TYPE_INDEX]
         building_level = building[BUILDING_LEVEL_INDEX]
         production_methods = set(building[BUILDING_PRODUCTION_METHOD_INDEX].strip().split(' '))
+
+        if building_type == 'urban_center' and SKIP_URBAN_CENTERS:
+            continue
 
         if building_type not in building_types:
             raise ValueError(f'type', building_type)
@@ -55,6 +60,8 @@ def generate_region_object(owner_tag: str, buildings: list[tuple[str, str, str]]
     return region_object
 
 def generate_buildings(file_path: str):
+    if SKIP_URBAN_CENTERS:
+        print('Skipping Urban Centers')
     buildings_root = ClausewitzRoot()
     buildings_object = ClausewitzObject()
     buildings_root.add_named_value('BUILDINGS', buildings_object)

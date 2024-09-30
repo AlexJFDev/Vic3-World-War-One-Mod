@@ -42,7 +42,8 @@ def generate_countries(file_path: str):
                 cultures_object.add_anonymous_value(culture)
 
             country_object.add_named_value('tier', tier)
-            country_object.add_named_value('capital', capital)
+            if capital != '':
+                country_object.add_named_value('capital', capital)
             country_object.add_named_value('country_type', 'recognized')
             country_object.add_named_value('color', color_object)
             country_object.add_named_value('cultures', cultures_object)
