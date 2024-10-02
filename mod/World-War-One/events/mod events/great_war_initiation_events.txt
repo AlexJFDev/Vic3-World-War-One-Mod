@@ -1,11 +1,12 @@
 ﻿namespace = great_war_initiation_events
 
-# Austrian Event
+# Archduke Assassinated
+## Austrian Event
 great_war_initiation_events.1 = {
     type = country_event
     placement = root
 
-    event_image = {
+    event_image = { # TODO: Replace with actual image
 		video = "southamerica_public_figure_assassination"
 	}
 
@@ -23,7 +24,7 @@ great_war_initiation_events.1 = {
 
         random_scope_character = {
             limit = { has_variable = is_franz_josef }
-            set_character_immortal = yes   
+            set_character_immortal = no   
         }
 
         create_character = {
@@ -60,13 +61,19 @@ great_war_initiation_events.1 = {
         ai_chance = {
 			base = 1
 		}
+        c:AUS {
+            trigger_event = { 
+                id = great_war_initiation_events.3
+                days = 7
+            }
+        }
     }
 }
-# Global Version of the Assassination
+## Global Version of the Assassination
 great_war_initiation_events.2 = {
     type = country_event
 
-    event_image = {
+    event_image = { # TODO: Replace with actual image
 		video = "southamerica_public_figure_assassination"
 	}
 
@@ -80,4 +87,89 @@ great_war_initiation_events.2 = {
         name = great_war_initiation_events.2.a
         default_option = yes
     }
+}
+
+# The Ultimatum; TODO: Add localizations
+great_war_initiation_events.3 = {
+    type = country_event
+
+    event_image = { # TODO: Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.3.title
+    desc = great_war_initiation_events.3.desc
+    flavor = great_war_initiation_events.3.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Demand an investigation
+        name = great_war_initiation_events.3.a
+        default_option = yes
+        ai_chance = {
+			base = 1
+		}
+        c:SER {
+            trigger_event = { id = great_war_initiation_events.4 }
+        }
+        
+    }
+    option = { # Demand an apology
+        name = great_war_initiation_events.3.b
+        ai_chance = {
+            base = 0
+        }
+        c:SER {
+            trigger_event = { id = great_war_initiation_events.5 }
+        }
+    }
+}
+
+# Vienna demands an investigation; TODO: Add localizations
+great_war_initiation_events.4 = {
+    type = country_event
+
+    event_image = { # TODO: Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.4.title
+    desc = great_war_initiation_events.4.desc
+    flavor = great_war_initiation_events.4.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Reject the investigation
+        name = great_war_initiation_events.4.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        c:AUS {
+            create_diplomatic_play = {
+                name = world_war
+
+                target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
+
+                type = dp_make_protectorate
+
+                add_war_goal = {
+                    holder = c:AUS
+                    type = war_reparations
+                    target_country = c:SER
+                }
+            }
+        }
+    }
+    option = { # Let the investigation proceed
+        name = great_war_initiation_events.4.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# Vienna demands an apology; TODO: Add localizations
+great_war_initiation_events.5 = {
+    
 }
