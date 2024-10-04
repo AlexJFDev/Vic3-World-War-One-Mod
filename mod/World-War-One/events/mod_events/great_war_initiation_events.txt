@@ -43,13 +43,14 @@ great_war_initiation_events.1 = {
             on_created = {
                 set_variable = {
                     name = is_charles_habsburg
-                }               
+                }
             }
         }
 
         every_country = {
             limit = {
                 is_player = yes
+                NOT = { c:AUS = ROOT }
             }
             trigger_event = { id = great_war_initiation_events.2 }
         }
@@ -61,11 +62,9 @@ great_war_initiation_events.1 = {
         ai_chance = {
 			base = 1
 		}
-        c:AUS {
-            trigger_event = { 
-                id = great_war_initiation_events.3
-                days = 7
-            }
+        trigger_event = { 
+            id = great_war_initiation_events.3
+            days = 7
         }
     }
 }
@@ -109,17 +108,16 @@ great_war_initiation_events.3 = {
         ai_chance = {
 			base = 1
 		}
-        c:SER {
+        every_country = {
             trigger_event = { id = great_war_initiation_events.4 }
         }
-        
     }
     option = { # Demand an apology
         name = great_war_initiation_events.3.b
         ai_chance = {
             base = 0
         }
-        c:SER {
+        every_country = {
             trigger_event = { id = great_war_initiation_events.5 }
         }
     }
@@ -128,6 +126,10 @@ great_war_initiation_events.3 = {
 # Vienna demands an investigation; TODO: Add localizations
 great_war_initiation_events.4 = {
     type = country_event
+
+    trigger = {
+        c:SER = ROOT
+    }
 
     event_image = { # TODO: Replace with relevant image
         video = "southamerica_public_figure_assassination"
@@ -145,7 +147,7 @@ great_war_initiation_events.4 = {
         ai_chance = {
             base = 1
         }
-        c:AUS {
+        c:AUS = {
             create_diplomatic_play = {
                 name = world_war
 
@@ -158,10 +160,16 @@ great_war_initiation_events.4 = {
                     type = war_reparations
                     target_country = c:SER
                 }
+                add_war_goal = {
+                    holder = c:SER
+                    type = war_reparations
+                    target_country = c:AUS
+                }
             }
         }
+        # TODO: Trigger next event
     }
-    option = { # Let the investigation proceed
+    option = { # Let the investigation proceed; TODO: Add effects
         name = great_war_initiation_events.4.b
         ai_chance = {
             base = 0
@@ -171,5 +179,54 @@ great_war_initiation_events.4 = {
 
 # Vienna demands an apology; TODO: Add localizations
 great_war_initiation_events.5 = {
-    
+    type = country_event
+
+    trigger = {
+        c:SER = ROOT
+    }
+
+    event_image = { # TODO: Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.5.title
+    desc = great_war_initiation_events.5.desc
+    flavor = great_war_initiation_events.5.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Refuse to apologize
+        name = great_war_initiation_events.5.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        c:AUS = {
+            create_diplomatic_play = {
+                name = world_war
+
+                target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
+
+                type = dp_make_protectorate
+
+                add_war_goal = {
+                    holder = c:AUS
+                    type = war_reparations
+                    target_country = c:SER
+                }
+                add_war_goal = {
+                    holder = c:SER
+                    type = war_reparations
+                    target_country = c:AUS
+                }
+            }
+        }
+        # TODO: Trigger next event
+    }
+    option = { # Make an apology; TODO: Add effects
+        name = great_war_initiation_events.5.b
+        ai_chance = {
+            base = 0
+        }
+    }
 }
