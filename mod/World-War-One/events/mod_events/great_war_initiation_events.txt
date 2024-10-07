@@ -6,7 +6,7 @@ great_war_initiation_events.1 = {
     type = country_event
     placement = root
 
-    event_image = { # TODO: Replace with actual image
+    event_image = { # TODO:LOW Replace with actual image
 		video = "southamerica_public_figure_assassination"
 	}
 
@@ -72,7 +72,7 @@ great_war_initiation_events.1 = {
 great_war_initiation_events.2 = {
     type = country_event
 
-    event_image = { # TODO: Replace with actual image
+    event_image = { # TODO:LOW Replace with actual image
 		video = "southamerica_public_figure_assassination"
 	}
 
@@ -88,11 +88,11 @@ great_war_initiation_events.2 = {
     }
 }
 
-# The Ultimatum; TODO: Add localizations
+# The Ultimatum
 great_war_initiation_events.3 = {
     type = country_event
 
-    event_image = { # TODO: Replace with relevant image
+    event_image = { # TODO:LOW Replace with relevant image
         video = "southamerica_public_figure_assassination"
     }
 
@@ -123,7 +123,7 @@ great_war_initiation_events.3 = {
     }
 }
 
-# Vienna demands an investigation; TODO: Add localizations
+# Vienna demands an investigation
 great_war_initiation_events.4 = {
     type = country_event
 
@@ -131,7 +131,7 @@ great_war_initiation_events.4 = {
         c:SER = ROOT
     }
 
-    event_image = { # TODO: Replace with relevant image
+    event_image = { # TODO:LOW Replace with relevant image
         video = "southamerica_public_figure_assassination"
     }
 
@@ -167,9 +167,11 @@ great_war_initiation_events.4 = {
                 }
             }
         }
-        # TODO: Trigger next event
+        c:RUS = {
+            trigger_event = { id = great_war_initiation_events.6 }
+        }
     }
-    option = { # Let the investigation proceed; TODO: Add effects
+    option = { # Let the investigation proceed; TODO:MID Add effects
         name = great_war_initiation_events.4.b
         ai_chance = {
             base = 0
@@ -177,7 +179,7 @@ great_war_initiation_events.4 = {
     }
 }
 
-# Vienna demands an apology; TODO: Add localizations
+# Vienna demands an apology
 great_war_initiation_events.5 = {
     type = country_event
 
@@ -185,7 +187,7 @@ great_war_initiation_events.5 = {
         c:SER = ROOT
     }
 
-    event_image = { # TODO: Replace with relevant image
+    event_image = { # TODO:LOW Replace with relevant image
         video = "southamerica_public_figure_assassination"
     }
 
@@ -221,10 +223,373 @@ great_war_initiation_events.5 = {
                 }
             }
         }
-        # TODO: Trigger next event
+        c:RUS = {
+            trigger_event = { id = great_war_initiation_events.6 }
+        }
     }
-    option = { # Make an apology; TODO: Add effects
+    option = { # Make an apology; TODO:MID Add effects
         name = great_war_initiation_events.5.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# Serbia needs help
+great_war_initiation_events.6 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.6.title
+    desc = great_war_initiation_events.6.desc
+    flavor = great_war_initiation_events.6.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Threaten Austria
+        name = great_war_initiation_events.6.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        c:GER = {
+            trigger_event = { id = great_war_initiation_events.7 }
+        }
+    }
+    option = { # Do nothing; TODO:MID Add effects
+        name = great_war_initiation_events.6.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# Russian Threats!
+great_war_initiation_events.7 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.7.title
+    desc = great_war_initiation_events.7.desc
+    flavor = great_war_initiation_events.7.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Pressure Russia
+        name = great_war_initiation_events.7.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        c:RUS = {
+            trigger_event = { id = great_war_initiation_events.8 }
+        }
+    }
+    option = { # Do nothing
+        name = great_war_initiation_events.7.b
+        ai_chance = {
+            base = 0
+        }
+        c:AUS = {
+            trigger_event = { id = great_war_initiation_events.9 }
+        }
+        # TODO:MID Add side effects
+    }
+}
+
+# German Pressure
+great_war_initiation_events.8 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    title = great_war_initiation_events.8.title
+    desc = great_war_initiation_events.8.desc
+    flavor = great_war_initiation_events.8.flavor
+
+    option = {
+        name = great_war_initiation_events.8.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+
+        c:FRA = {
+            trigger_event = { id = great_war_initiation_events.10 }
+        }
+        c:TUR = {
+            trigger_event = { id = great_war_initiation_events.11 }
+        }
+        c:ITA = {
+            trigger_event = { id = great_war_initiation_events.12 }
+        }
+        # TODO:HIGH Add Russia to war, Add Germany to war
+    }
+    option = {
+        name = great_war_initiation_events.8.b
+        ai_chance = {
+            base = 0
+        }
+        # TODO:MID Add side effects
+    }
+}
+
+# Abandoned by Germany
+great_war_initiation_events.9 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.9.title
+    desc = great_war_initiation_events.9.desc
+    flavor = great_war_initiation_events.9.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Back down
+        name = great_war_initiation_events.9.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }        
+        # TODO:MID Add side effects
+        # TODO:HIGH Back down the diplomatic play
+    }
+    option = { # Fight alone
+        name = great_war_initiation_events.9.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# War in the East
+great_war_initiation_events.10 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.10.title
+    desc = great_war_initiation_events.10.desc
+    flavor = great_war_initiation_events.10.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # pursue diplomacy
+        name = great_war_initiation_events.10.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        c:GER = {
+            trigger_event = { id = great_war_initiation_events.13 }
+        }
+    }
+    option = { # support Russia
+        name = great_war_initiation_events.10.b
+        ai_chance = {
+            base = 0
+        }
+        c:GER = {
+            trigger_event = { id = great_war_initiation_events.14 }
+        }
+        # TODO:HIGH Add France to the war
+    }
+}
+
+# Intervene against Russia?
+great_war_initiation_events.11 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.11.title
+    desc = great_war_initiation_events.11.desc
+    flavor = great_war_initiation_events.11.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Intervene
+        name = great_war_initiation_events.11.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        # TODO:HIGH Add Ottomans to the war
+    }
+    option = { # Do nothing
+        name = great_war_initiation_events.11.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# Help our Allies?
+great_war_initiation_events.12 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.12.title
+    desc = great_war_initiation_events.12.desc
+    flavor = great_war_initiation_events.12.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Intervene
+        name = great_war_initiation_events.12.a
+        default_option = yes
+        ai_chance = {
+            base = 0
+        }
+        # TODO:HIGH Add Italy to the war
+    }
+    option = { # Do nothing
+        name = great_war_initiation_events.12.b
+        ai_chance = {
+            base = 1
+        }
+        default_option = yes
+    }
+}
+
+
+# Neutral France
+great_war_initiation_events.13 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.13.title
+    desc = great_war_initiation_events.13.desc
+    flavor = great_war_initiation_events.13.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # support Russia
+        name = great_war_initiation_events.13.b
+        default_option = yes
+        ai_chance = {
+            base = 0
+        }
+        c:GER = {
+            trigger_event = { id = great_war_initiation_events.14 }
+        }
+        # TODO:HIGH Add France to the war
+    }
+    option = { # Leave France alone
+        name = great_war_initiation_events.13.a
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# A plan of attack
+great_war_initiation_events.14 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.14.title
+    desc = great_war_initiation_events.14.desc
+    flavor = great_war_initiation_events.14.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Intervene
+        name = great_war_initiation_events.14.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        # TODO:HIGH Add Belgium to the war
+    }
+    option = { # Do nothing
+        name = great_war_initiation_events.14.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# The invasion of Belgium
+great_war_initiation_events.15 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.15.title
+    desc = great_war_initiation_events.15.desc
+    flavor = great_war_initiation_events.15.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Intervene
+        name = great_war_initiation_events.15.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        # TODO:HIGH Add Britain to the war
+    }
+    option = { # Do nothing
+        name = great_war_initiation_events.15.b
+        ai_chance = {
+            base = 0
+        }
+        # TODO:MID Add negative modifiers
+    }
+}
+
+# The British Offer
+great_war_initiation_events.16 = {
+    type = country_event
+
+    event_image = { # TODO:LOW Replace with relevant image
+        video = "southamerica_public_figure_assassination"
+    }
+
+    title = great_war_initiation_events.16.title
+    desc = great_war_initiation_events.16.desc
+    flavor = great_war_initiation_events.16.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Intervene
+        name = great_war_initiation_events.16.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        # TODO:HIGH Add Ottomans to the war
+    }
+    option = { # Do nothing
+        name = great_war_initiation_events.16.b
         ai_chance = {
             base = 0
         }
