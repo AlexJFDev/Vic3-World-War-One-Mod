@@ -2,7 +2,7 @@
 
 # Archduke Assassinated
 ## Austrian Event
-great_war_initiation_events.1 = {
+great_war_initiation_events.1 = { # Triggered by global on June 28th.
     type = country_event
     placement = root
 
@@ -54,18 +54,15 @@ great_war_initiation_events.1 = {
             }
             trigger_event = { id = great_war_initiation_events.2 }
         }
+        trigger_event = { 
+            id = great_war_initiation_events.3
+            days = 7
+        }
     }
 
     option = {
         name = great_war_initiation_events.1.a
         default_option = yes
-        ai_chance = {
-			base = 1
-		}
-        trigger_event = { 
-            id = great_war_initiation_events.3
-            days = 7
-        }
     }
 }
 ## Global Version of the Assassination
@@ -89,7 +86,7 @@ great_war_initiation_events.2 = {
 }
 
 # The Ultimatum
-great_war_initiation_events.3 = {
+great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
     type = country_event
 
     event_image = { # TODO:LOW Replace with relevant image
@@ -109,7 +106,10 @@ great_war_initiation_events.3 = {
 			base = 1
 		}
         c:SER = {
-            trigger_event = { id = great_war_initiation_events.4 }
+            trigger_event = { 
+                id = great_war_initiation_events.4
+                days = 7
+            }
         }
     }
     option = { # Demand an apology
@@ -118,7 +118,10 @@ great_war_initiation_events.3 = {
             base = 0
         }
         c:SER = {
-            trigger_event = { id = great_war_initiation_events.5 }
+            trigger_event = { 
+                id = great_war_initiation_events.5 
+                days = 7
+            }
         }
     }
 }
@@ -148,11 +151,10 @@ great_war_initiation_events.4 = {
             base = 1
         }
         c:AUS = {
-            create_diplomatic_play = {
-                name = world_war
-
+            create_diplomatic_play = { # c:SER is target, c:AUS is initiator
+                name = the_great_war
+                escalation = 85
                 target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
-
                 type = dp_make_protectorate
 
                 add_war_goal = {
@@ -167,8 +169,13 @@ great_war_initiation_events.4 = {
                 }
             }
         }
+        set_variable = austria_participating_in_great_war
+        set_variable = serbia_participating_in_great_war
         c:RUS = {
-            trigger_event = { id = great_war_initiation_events.6 }
+            trigger_event = { 
+                id = great_war_initiation_events.6
+                days = 3
+            }
         }
     }
     option = { # Let the investigation proceed; TODO:MID Add effects
@@ -206,9 +213,8 @@ great_war_initiation_events.5 = {
         c:AUS = {
             create_diplomatic_play = { # c:SER is target, c:AUS is initiator
                 name = the_great_war
-
+                escalation = 85
                 target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
-
                 type = dp_make_protectorate
 
                 add_war_goal = {
@@ -223,8 +229,13 @@ great_war_initiation_events.5 = {
                 }
             }
         }
+        set_variable = austria_participating_in_great_war
+        set_variable = serbia_participating_in_great_war
         c:RUS = {
-            trigger_event = { id = great_war_initiation_events.6 }
+            trigger_event = {
+                id = great_war_initiation_events.6
+                days = 3
+            }
         }
     }
     option = { # Make an apology; TODO:MID Add effects
@@ -256,7 +267,10 @@ great_war_initiation_events.6 = {
             base = 1
         }
         c:GER = {
-            trigger_event = { id = great_war_initiation_events.7 }
+            trigger_event = { 
+                id = great_war_initiation_events.7 
+                days = 3
+            }
         }
     }
     option = { # Do nothing; TODO:MID Add effects
@@ -288,7 +302,10 @@ great_war_initiation_events.7 = {
             base = 1
         }
         c:RUS = {
-            trigger_event = { id = great_war_initiation_events.8 }
+            trigger_event = { 
+                id = great_war_initiation_events.8
+                days = 3
+            }
         }
     }
     option = { # Do nothing
@@ -297,9 +314,15 @@ great_war_initiation_events.7 = {
             base = 0
         }
         c:AUS = {
-            trigger_event = { id = great_war_initiation_events.9 }
+            trigger_event = { 
+                id = great_war_initiation_events.9
+                days = 3
+            }
         }
         # TODO:MID Add side effects
+        # TODO:MID Add Russia to war 
+        # Russian wargoals: east/west galicia, east prussia
+        # Austrian wargoals: volhynia kyiv
     }
 }
 
@@ -332,7 +355,7 @@ great_war_initiation_events.8 = {
         c:ITA = {
             trigger_event = { id = great_war_initiation_events.12 }
         }
-        every_diplomatic_play = { # TODO:MID add wargoals
+        every_diplomatic_play = { 
 			limit = {
                 initiator = c:AUS
                 target = c:SER
@@ -343,7 +366,12 @@ great_war_initiation_events.8 = {
             add_initiator_backers = {
                 c:GER
             }
+            # TODO:MID German wargoals: poland
+            # TODO:MID Austrian wargoals: volhynia, kyiv
+            # TODO:MID Russian wargoals: east/west galicia, east prussia
 		}
+        set_variable = germany_participating_in_great_war
+        set_variable = russia_participating_in_great_war
     }
     option = {
         name = great_war_initiation_events.8.b
@@ -375,7 +403,14 @@ great_war_initiation_events.9 = {
             base = 1
         }        
         # TODO:MID Add side effects
-        # TODO:HIGH Back down the diplomatic play
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+            end_play = true
+		}
+        set_variable = war_cancelled
     }
     option = { # Fight alone
         name = great_war_initiation_events.9.b
@@ -406,7 +441,10 @@ great_war_initiation_events.10 = {
             base = 1
         }
         c:GER = {
-            trigger_event = { id = great_war_initiation_events.13 }
+            trigger_event = { 
+                id = great_war_initiation_events.13
+                days = 3
+            }
         }
     }
     option = { # support Russia
@@ -415,9 +453,12 @@ great_war_initiation_events.10 = {
             base = 0
         }
         c:GER = {
-            trigger_event = { id = great_war_initiation_events.14 }
+            trigger_event = {
+                id = great_war_initiation_events.14
+                days = 3
+            }
         }
-        every_diplomatic_play = { # TODO:MID add war goals
+        every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
                 target = c:SER
@@ -425,7 +466,10 @@ great_war_initiation_events.10 = {
 			add_target_backers = {
 				c:FRA
 			}
+            # TODO:MID wargoals france: Alsace-Lorraine + war reparations
+            # TODO:MID wargoals germany: war reps from france
 		}
+        set_variable = france_participating_in_great_war
     }
 }
 
@@ -449,7 +493,7 @@ great_war_initiation_events.11 = {
         ai_chance = {
             base = 1
         }
-        every_diplomatic_play = { # TODO:MID add war goals
+        every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
                 target = c:SER
@@ -457,7 +501,10 @@ great_war_initiation_events.11 = {
             add_initiator_backers = {
                 c:TUR
             }
+            # TODO:MID wargoals turkey: Kars, Armenia, Tiflis, Elizavetpol, Baku
+            # TODO:MID wargoals russia: war reparations, eastern thrace
 		}
+        set_variable = ottomans_participating_in_great_war
     }
     option = { # Do nothing
         name = great_war_initiation_events.11.b
@@ -487,7 +534,7 @@ great_war_initiation_events.12 = {
         ai_chance = {
             base = 0
         }
-        every_diplomatic_play = { # TODO:MID add war goals
+        every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
                 target = c:SER
@@ -495,7 +542,10 @@ great_war_initiation_events.12 = {
             add_initiator_backers = {
                 c:ITA
             }
+            # TODO:MID wargoals italy: corsica, savoy
+            # TODO:MID wargoals france: war reps from italy
 		}
+        set_variable = italy_participating_in_great_war
     }
     option = { # Do nothing
         name = great_war_initiation_events.12.b
@@ -521,16 +571,19 @@ great_war_initiation_events.13 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    option = { # support Russia
+    option = { # Strike first
         name = great_war_initiation_events.13.b
         default_option = yes
         ai_chance = {
             base = 0
         }
         c:GER = {
-            trigger_event = { id = great_war_initiation_events.14 }
+            trigger_event = {
+                id = great_war_initiation_events.14
+                days = 3
+            }
         }
-        every_diplomatic_play = { # TODO:MID add war goals
+        every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
                 target = c:SER
@@ -538,7 +591,11 @@ great_war_initiation_events.13 = {
 			add_target_backers = {
 				c:FRA
 			}
+            # TODO:MID wargoals france: Alsace-Lorraine + war reps from germany and italy
+            # TODO:MID wargoals germany: war reps from france
+            # TODO:MID wargoals italy: corsica, savoy
 		}
+        set_variable = france_participating_in_great_war
     }
     option = { # Leave France alone
         name = great_war_initiation_events.13.a
@@ -569,9 +626,12 @@ great_war_initiation_events.14 = {
             base = 1
         }
         c:GBR = {
-            trigger_event = { id = great_war_initiation_events.15 }
+            trigger_event = { 
+                id = great_war_initiation_events.15
+                days = 3
+            }
         }
-        every_diplomatic_play = { # TODO:MID add war goals
+        every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
                 target = c:SER
@@ -579,7 +639,14 @@ great_war_initiation_events.14 = {
 			add_target_backers = {
 				c:BEL
 			}
+            add_target_backers = {
+				c:LUX
+			}
+            # TODO:MID wargoals belgium: war reps from germany
+            # TODO:MID wargoals luxembourg: war reps from germany
+            # TODO:MID wargoals germany: wallonia, flanders
 		}
+        set_variable = belgium_participating_in_great_war
     }
     option = { # Do nothing
         name = great_war_initiation_events.14.b
@@ -612,7 +679,7 @@ great_war_initiation_events.15 = {
         c:JAP = {
             trigger_event = { id = great_war_initiation_events.16 }
         }
-        every_diplomatic_play = { # TODO:MID add war goals
+        every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
                 target = c:SER
@@ -620,7 +687,10 @@ great_war_initiation_events.15 = {
 			add_target_backers = {
 				c:GBR
 			}
+            # TODO:MID wargoals germany: britain colonies? war reps from 
+            # TODO:MID wargoals britain: war reps from germany, african german colonies
 		}
+        set_variable = britain_participating_in_great_war
     }
     option = { # Do nothing
         name = great_war_initiation_events.15.b
@@ -651,7 +721,7 @@ great_war_initiation_events.16 = {
         ai_chance = {
             base = 1
         }
-        every_diplomatic_play = { # TODO:MID add war goals
+        every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
                 target = c:SER
@@ -659,7 +729,10 @@ great_war_initiation_events.16 = {
 			add_target_backers = {
 				c:JAP
 			}
+            # TODO:MID wargoals japan: german colonies in asia
+            # TODO:MID wargoals germany: taiwan??
 		}
+        set_variable = japan_participating_in_great_war
     }
     option = { # Do nothing
         name = great_war_initiation_events.16.b
