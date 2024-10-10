@@ -204,8 +204,8 @@ great_war_initiation_events.5 = {
             base = 1
         }
         c:AUS = {
-            create_diplomatic_play = {
-                name = world_war
+            create_diplomatic_play = { # c:SER is target, c:AUS is initiator
+                name = the_great_war
 
                 target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
 
@@ -332,7 +332,18 @@ great_war_initiation_events.8 = {
         c:ITA = {
             trigger_event = { id = great_war_initiation_events.12 }
         }
-        # TODO:HIGH Add Russia to war, Add Germany to war
+        every_diplomatic_play = { # TODO:MID add wargoals
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+			add_target_backers = {
+				c:RUS
+			}
+            add_initiator_backers = {
+                c:GER
+            }
+		}
     }
     option = {
         name = great_war_initiation_events.8.b
@@ -406,7 +417,15 @@ great_war_initiation_events.10 = {
         c:GER = {
             trigger_event = { id = great_war_initiation_events.14 }
         }
-        # TODO:HIGH Add France to the war
+        every_diplomatic_play = { # TODO:MID add war goals
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+			add_target_backers = {
+				c:FRA
+			}
+		}
     }
 }
 
@@ -430,7 +449,15 @@ great_war_initiation_events.11 = {
         ai_chance = {
             base = 1
         }
-        # TODO:HIGH Add Ottomans to the war
+        every_diplomatic_play = { # TODO:MID add war goals
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+            add_initiator_backers = {
+                c:TUR
+            }
+		}
     }
     option = { # Do nothing
         name = great_war_initiation_events.11.b
@@ -460,7 +487,15 @@ great_war_initiation_events.12 = {
         ai_chance = {
             base = 0
         }
-        # TODO:HIGH Add Italy to the war
+        every_diplomatic_play = { # TODO:MID add war goals
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+            add_initiator_backers = {
+                c:ITA
+            }
+		}
     }
     option = { # Do nothing
         name = great_war_initiation_events.12.b
@@ -495,7 +530,15 @@ great_war_initiation_events.13 = {
         c:GER = {
             trigger_event = { id = great_war_initiation_events.14 }
         }
-        # TODO:HIGH Add France to the war
+        every_diplomatic_play = { # TODO:MID add war goals
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+			add_target_backers = {
+				c:FRA
+			}
+		}
     }
     option = { # Leave France alone
         name = great_war_initiation_events.13.a
@@ -525,7 +568,18 @@ great_war_initiation_events.14 = {
         ai_chance = {
             base = 1
         }
-        # TODO:HIGH Add Belgium to the war
+        c:GBR = {
+            trigger_event = { id = great_war_initiation_events.15 }
+        }
+        every_diplomatic_play = { # TODO:MID add war goals
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+			add_target_backers = {
+				c:BEL
+			}
+		}
     }
     option = { # Do nothing
         name = great_war_initiation_events.14.b
@@ -555,7 +609,18 @@ great_war_initiation_events.15 = {
         ai_chance = {
             base = 1
         }
-        # TODO:HIGH Add Britain to the war
+        c:JAP = {
+            trigger_event = { id = great_war_initiation_events.16 }
+        }
+        every_diplomatic_play = { # TODO:MID add war goals
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+			add_target_backers = {
+				c:GBR
+			}
+		}
     }
     option = { # Do nothing
         name = great_war_initiation_events.15.b
@@ -586,7 +651,15 @@ great_war_initiation_events.16 = {
         ai_chance = {
             base = 1
         }
-        # TODO:HIGH Add Ottomans to the war
+        every_diplomatic_play = { # TODO:MID add war goals
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+			add_target_backers = {
+				c:JAP
+			}
+		}
     }
     option = { # Do nothing
         name = great_war_initiation_events.16.b
