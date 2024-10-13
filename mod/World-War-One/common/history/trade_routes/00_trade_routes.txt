@@ -168,7 +168,7 @@
 		}		
         create_trade_route = {
 			goods = grain
-			level = 42
+			level = 50
 			direction = import
 			target = c:AUS.market
 		}	
@@ -186,7 +186,7 @@
 		}	
 		create_trade_route = {
 			goods = grain
-			level = 21
+			level = 30
 			direction = import
 			target = c:ARG.market
 		}						
@@ -207,7 +207,19 @@
 			level = 10
 			direction = import
 			target = c:RUS.market
-		}			
+		}		
+		create_trade_route = {
+			goods = grain
+			level = 30
+			direction = import
+			target = c:USA.market
+		}	
+		create_trade_route = {
+			goods = grain
+			level = 20
+			direction = import
+			target = c:CHI.market
+		}						
 	}	
 
     # Italy
@@ -829,6 +841,12 @@
 			level = 5
 			direction = export
 			target = c:GER.market
+		}	
+		create_trade_route = {
+			goods = engines
+			level = 24
+			direction = export
+			target = c:GBR.market
 		}	
     }
 }
