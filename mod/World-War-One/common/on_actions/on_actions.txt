@@ -1,0 +1,26 @@
+﻿on_wargoal_enforced = {
+    effect = {
+        if = { # Splits Western Thrace historically after Greece wins it from Bulgaria
+            limit = {
+                owner = {
+                    c:GRE ?= this
+                    not = { has_variable = won_second_balkan_war }
+                    owns_entire_state_region = STATE_WESTERN_THRACE
+                }
+            }
+            owner = {
+                set_variable = won_second_balkan_war
+            }
+            s:STATE_WESTERN_THRACE = {
+                set_owner_of_provinces = {
+                    country = c:GRE
+                    provinces = { x6181D2 xEDECFB x702020 xB2249C  }
+                }
+                set_owner_of_provinces = {
+                    country = c:BUL
+                    provinces = { xF02020 x0261AB xBE51B7  }
+                }
+            }
+        }
+    }
+}
