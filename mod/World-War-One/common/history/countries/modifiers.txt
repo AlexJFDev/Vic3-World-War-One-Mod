@@ -5,4 +5,15 @@
             value = 0
         }
 	}	
+    c:USA ?= {
+		set_variable = panama_survey_complete
+		s:STATE_PANAMA = {
+			save_scope_as = panama_state
+			random_scope_state = {
+				owner = {
+					save_scope_as = panama_owner
+				}
+			}
+		}
+	}
 }
