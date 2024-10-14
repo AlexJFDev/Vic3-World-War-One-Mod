@@ -78,7 +78,7 @@ combat_unit_type_line_infantry = {
     group = combat_unit_group_infantry
 
     upkeep_modifier = {
-        goods_input_small_arms_add = 1
+        goods_input_small_arms_add = 0.5
     }
 
     battle_modifier = {
@@ -134,8 +134,8 @@ combat_unit_type_skirmish_infantry = {
     group = combat_unit_group_infantry
 
     upkeep_modifier = {
-        goods_input_small_arms_add = 2
-        goods_input_ammunition_add = 1
+        goods_input_small_arms_add = 1
+        goods_input_ammunition_add = 0.5
     }
 
     battle_modifier = {
@@ -190,8 +190,8 @@ combat_unit_type_trench_infantry = {
     group = combat_unit_group_infantry
 
     upkeep_modifier = {
-        goods_input_small_arms_add = 3
-        goods_input_ammunition_add = 2
+        goods_input_small_arms_add = 1.5
+        goods_input_ammunition_add = 1
     }
     
     battle_modifier = {
@@ -245,8 +245,8 @@ combat_unit_type_squad_infantry = {
     group = combat_unit_group_infantry
 
     upkeep_modifier = {
-        goods_input_small_arms_add = 3
-        goods_input_ammunition_add = 3
+        goods_input_small_arms_add = 1.5
+        goods_input_ammunition_add = 1.5
         goods_input_radios_add = 1
     }
     
@@ -306,8 +306,8 @@ combat_unit_type_mechanized_infantry = {
     }
 
     upkeep_modifier = {
-        goods_input_small_arms_add = 3
-        goods_input_ammunition_add = 3
+        goods_input_small_arms_add = 1.5
+        goods_input_ammunition_add = 1.5
         goods_input_oil_add = 1
         goods_input_radios_add = 1
         goods_input_tanks_add = 1
@@ -339,7 +339,7 @@ combat_unit_type_cannon_artillery = {
     }	
 
     upkeep_modifier = {
-        goods_input_artillery_add = 1
+        goods_input_artillery_add = 0.5
     }
     
     battle_modifier = {
@@ -407,7 +407,7 @@ combat_unit_type_mobile_artillery = {
     }	
 
     upkeep_modifier = {
-        goods_input_artillery_add = 2
+        goods_input_artillery_add = 1
     }
     
     battle_modifier = {
@@ -474,8 +474,8 @@ combat_unit_type_shrapnel_artillery = {
     }
     
     upkeep_modifier = {
-        goods_input_artillery_add = 3
-        goods_input_ammunition_add = 3
+        goods_input_artillery_add = 1.5
+        goods_input_ammunition_add = 1.5
     }
 
     battle_modifier = {
@@ -541,8 +541,8 @@ combat_unit_type_siege_artillery = {
     }
     
     upkeep_modifier = {
-        goods_input_artillery_add = 4
-        goods_input_ammunition_add = 4
+        goods_input_artillery_add = 2
+        goods_input_ammunition_add = 2
 		goods_input_radios_add = 1
     }
 
@@ -551,7 +551,8 @@ combat_unit_type_siege_artillery = {
         unit_defense_add = 30
         unit_morale_loss_add = 6
         unit_kill_rate_add = 0.25
-        unit_devastation_mult = 0.2
+        unit_morale_damage_mult = 0.08
+        unit_devastation_mult = 0.25
     }
 
     formation_modifier = {
@@ -606,8 +607,7 @@ combat_unit_type_heavy_tank = {
     
     upkeep_modifier = {
         goods_input_tanks_add = 3
-        goods_input_artillery_add = 4
-		goods_input_ammunition_add = 4
+		goods_input_ammunition_add = 2
         goods_input_radios_add = 1
         goods_input_oil_add = 3
     }
@@ -618,7 +618,7 @@ combat_unit_type_heavy_tank = {
         unit_morale_loss_add = 4
         unit_kill_rate_add = 0.25
         unit_morale_damage_mult = 0.15
-        unit_devastation_mult = 0.2
+        unit_devastation_mult = 0.15
     }
 
     formation_modifier = {
@@ -645,7 +645,7 @@ combat_unit_type_hussars = {
     }	
     
     upkeep_modifier = {
-        goods_input_grain_add = 1
+        goods_input_grain_add = 0.5
     }
 
     battle_modifier = {
@@ -711,8 +711,8 @@ combat_unit_type_dragoons = {
     }
     
     upkeep_modifier = {
-        goods_input_grain_add = 1
-        goods_input_small_arms_add = 2
+        goods_input_grain_add = 0.5
+        goods_input_small_arms_add = 1
     }
 
     battle_modifier = {
@@ -774,8 +774,8 @@ combat_unit_type_cuirassiers = {
     }
     
     upkeep_modifier = {
-        goods_input_grain_add = 1
-        goods_input_small_arms_add = 2
+        goods_input_grain_add = 0.5
+        goods_input_small_arms_add = 1
     }
 
     battle_modifier = {
@@ -836,9 +836,9 @@ combat_unit_type_lancers = {
     }
     
     upkeep_modifier = {
-        goods_input_grain_add = 2
-        goods_input_small_arms_add = 2
-		goods_input_iron_add = 2
+        goods_input_grain_add = 1
+        goods_input_small_arms_add = 1
+		goods_input_iron_add = 1
     }
 
     battle_modifier = {
@@ -901,14 +901,11 @@ combat_unit_type_fighter  = {
     }
     
     upkeep_modifier = {
-	
-
-	
-	
-        goods_input_aeroplanes_add = 3
-        goods_input_small_arms_add = 2
-	goods_input_ammunition_add = 4
-	goods_input_oil_add = 3
+	goods_input_aeroplanes_add = 2
+    goods_input_small_arms_add = 1
+	goods_input_ammunition_add = 2
+	goods_input_oil_add = 2
+    goods_input_radio_add = 1
     }
 
     battle_modifier = {
@@ -932,7 +929,7 @@ combat_unit_type_fighter  = {
     }
 
     upgrades = {
-        
+        combat_unit_type_close_air_support
     }
 }
 
@@ -946,16 +943,10 @@ combat_unit_type_bomber  = {
     }
     
     upkeep_modifier = {
-	
-
-
-	goods_input_aeroplanes_add = 6
-	goods_input_artillery_add = 3
-	goods_input_ammunition_add = 3
-	goods_input_explosives_add = 12
-	goods_input_oil_add = 6
+	goods_input_aeroplanes_add = 4
+	goods_input_ammunition_add = 4
+	goods_input_oil_add = 3
 	goods_input_radios_add = 1
- 	
     }
 
     battle_modifier = {
@@ -995,10 +986,9 @@ combat_unit_type_light_tanks = {
     
     upkeep_modifier = {
         goods_input_tanks_add = 2
-        goods_input_artillery_add = 2
         goods_input_oil_add = 2
         goods_input_ammunition_add = 2
-        goods_input_radios_add = 2
+        goods_input_radios_add = 1
     }
 
     battle_modifier = {
@@ -1030,14 +1020,10 @@ combat_unit_type_close_air_support  = {
     }
     
     upkeep_modifier = {
-	
-
-
-	goods_input_aeroplanes_add = 3
-    goods_input_small_arms_add = 2
-	goods_input_artillery_add = 2
+	goods_input_aeroplanes_add = 2
+    goods_input_small_arms_add = 1
 	goods_input_ammunition_add = 4
-	goods_input_oil_add = 3
+	goods_input_oil_add = 2
 	goods_input_radios_add = 1
  	
     }
@@ -1328,7 +1314,7 @@ combat_unit_type_torpedo_boat = {
 
     upkeep_modifier = {
         goods_input_ironclads_add = 2
-        goods_input_explosives_add = 4
+        goods_input_ammunition_add = 4
     }
 
     battle_modifier = {
