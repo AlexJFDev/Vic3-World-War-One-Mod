@@ -1,0 +1,28 @@
+﻿DIPLOMACY = {
+    c:FRA ?= { # France
+        set_relations = { country = c:GBR value = 50 }
+        set_relations = { country = c:RUS value = 50 }
+        set_relations = { country = c:GER value = -50 }
+        set_relations = { country = c:AUS value = -50 }
+        set_relations = { country = c:ITA value = 30 }
+    }
+    c:RUS ?= { # Russia
+        set_relations = { country = c:GBR value = 50 }
+        set_relations = { country = c:GER value = -50 }
+        set_relations = { country = c:AUS value = -50 }
+        set_relations = { country = c:SER value = 100 }
+    }
+    c:GER ?= { # Germany
+        set_relations = { country = c:AUS value = 70 }
+        set_relations = { country = c:ITA value = 50 }
+    }
+    c:SER ?= { # Serbia
+        set_relations = { country = c:GRE value = 50 }
+    }
+    c:BUL ?= { # Bulgaria
+        set_relations = { country = c:TUR value = -30 }
+        set_relations = { country = c:GRE value = -30 }
+        set_relations = { country = c:SER value = -30 }
+        set_relations = { country = c:ROM value = -30 }
+    }
+}
