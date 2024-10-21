@@ -16,6 +16,9 @@
         set_relations = { country = c:AUS value = 70 }
         set_relations = { country = c:ITA value = 50 }
     }
+    c:AUS ?= { # Austria-Hungary
+        set_relations = { country = c:ITA value = 50 }
+    }
     c:SER ?= { # Serbia
         set_relations = { country = c:GRE value = 50 }
     }
