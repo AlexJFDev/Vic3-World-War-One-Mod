@@ -13,17 +13,16 @@ class ClausewitzRoot(ClausewitzObject):
             else:
                 anonymous_values = f'{anonymous_values}{element} '
         
-        named_objects: str = ''
         named_values: str = ''
         for name, values in self.name_values.items():
             for element in values:
                 if isinstance(element, ClausewitzObject):
-                    named_objects = f'{named_objects}{name} = {element.unparse(depth=1, separator=separator)}\n'
+                    named_values = f'{named_values}{name} = {element.unparse(depth=1, separator=separator)}\n'
                 else:
                     named_values = f'{named_values}{name} = {element}\n'
             pass
 
-        final_form:str = f'{anonymous_objects}{anonymous_values}\n{named_objects}{named_values}'.strip()
+        final_form:str = f'{anonymous_objects}{anonymous_values}\n{named_values}'.strip()
         return final_form
 
     def write(self, path: str):

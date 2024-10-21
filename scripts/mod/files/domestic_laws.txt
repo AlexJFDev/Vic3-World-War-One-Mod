@@ -1,35 +1,7 @@
-﻿COUNTRIES = {
+COUNTRIES = {
 	c:AUS = {
-		set_institution_investment_level = {
-			institution = institution_colonial_affairs
-			level = 0
-		}
-		set_institution_investment_level = {
-			institution = institution_social_security
-			level = 0
-		}
-		set_institution_investment_level = {
-			institution = institution_workplace_safety
-			level = 0
-		}
-		set_institution_investment_level = {
-			institution = institution_schools
-			level = 0
-		}
-		set_institution_investment_level = {
-			institution = institution_police
-			level = 0
-		}
-		set_institution_investment_level = {
-			institution = institution_health_system
-			level = 0
-		}
-		set_institution_investment_level = {
-			institution = institution_home_affairs
-			level = 0
-		}
 		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_universal_suffrage
+		activate_law = law_type:law_wealth_voting
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
@@ -49,6 +21,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 2
+		}
 	}
 	c:BEL = {
 		activate_law = law_type:law_monarchy
@@ -72,8 +72,6 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_no_migration_controls
-	}
-	c:CAN = {
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs
 			level = 0
@@ -84,11 +82,11 @@
 		}
 		set_institution_investment_level = {
 			institution = institution_workplace_safety
-			level = 0
+			level = 1
 		}
 		set_institution_investment_level = {
 			institution = institution_schools
-			level = 2
+			level = 4
 		}
 		set_institution_investment_level = {
 			institution = institution_police
@@ -100,13 +98,15 @@
 		}
 		set_institution_investment_level = {
 			institution = institution_home_affairs
-			level = 2
+			level = 1
 		}
+	}
+	c:CAN = {
 		activate_law = law_type:law_parliamentary_republic
 		activate_law = law_type:law_census_voting
-		activate_law = law_type:law_cultural_exclusion
-		activate_law = law_type:law_total_separation
-		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_hereditary_bureaucrats
 		activate_law = law_type:law_national_militia
 		activate_law = law_type:law_national_guard
 		activate_law = law_type:law_laissez_faire
@@ -123,12 +123,36 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_migration_controls
-	}
-	c:FRA = {
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 1
+		}
 		set_institution_investment_level = {
 			institution = institution_schools
-			level = 4
+			level = 3
 		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
+	}
+	c:FRA = {
 		activate_law = law_type:law_parliamentary_republic
 		activate_law = law_type:law_universal_suffrage
 		activate_law = law_type:law_cultural_exclusion
@@ -150,10 +174,38 @@
 		activate_law = law_type:law_women_in_the_workplace
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 4
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
 	}
 	c:GER = {
 		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_wealth_voting
 		activate_law = law_type:law_national_supremacy
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
@@ -173,6 +225,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 2
+		}
 	}
 	c:GBR = {
 		activate_law = law_type:law_monarchy
@@ -196,6 +276,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 2
+		}
 	}
 	c:ITA = {
 		activate_law = law_type:law_monarchy
@@ -219,100 +327,6 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_wage_subsidies
 		activate_law = law_type:law_no_migration_controls
-	}
-	c:JAP = {
-		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_oligarchy
-		activate_law = law_type:law_ethnostate
-		activate_law = law_type:law_freedom_of_conscience
-		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_mass_conscription
-		activate_law = law_type:law_national_guard
-		activate_law = law_type:law_interventionism
-		activate_law = law_type:law_mercantilism
-		activate_law = law_type:law_proportional_taxation
-		activate_law = law_type:law_tenant_farmers
-		activate_law = law_type:law_no_colonial_affairs
-		activate_law = law_type:law_dedicated_police
-		activate_law = law_type:law_public_schools
-		activate_law = law_type:law_charitable_health_system
-		activate_law = law_type:law_right_of_assembly
-		activate_law = law_type:law_no_workers_rights
-		activate_law = law_type:law_restricted_child_labor
-		activate_law = law_type:law_women_own_property
-		activate_law = law_type:law_poor_laws
-		activate_law = law_type:law_migration_controls
-	}
-	c:ROM = {
-		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_census_voting
-		activate_law = law_type:law_national_supremacy
-		activate_law = law_type:law_freedom_of_conscience
-		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_mass_conscription
-		activate_law = law_type:law_national_guard
-		activate_law = law_type:law_interventionism
-		activate_law = law_type:law_protectionism
-		activate_law = law_type:law_per_capita_based_taxation
-		activate_law = law_type:law_tenant_farmers
-		activate_law = law_type:law_no_colonial_affairs
-		activate_law = law_type:law_dedicated_police
-		activate_law = law_type:law_public_schools
-		activate_law = law_type:law_charitable_health_system
-		activate_law = law_type:law_right_of_assembly
-		activate_law = law_type:law_no_workers_rights
-		activate_law = law_type:law_restricted_child_labor
-		activate_law = law_type:law_women_own_property
-		activate_law = law_type:law_poor_laws
-		activate_law = law_type:law_migration_controls
-	}
-	c:RUS = {
-		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_landed_voting
-		activate_law = law_type:law_racial_segregation
-		activate_law = law_type:law_freedom_of_conscience
-		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_mass_conscription
-		activate_law = law_type:law_secret_police
-		activate_law = law_type:law_interventionism
-		activate_law = law_type:law_protectionism
-		activate_law = law_type:law_per_capita_based_taxation
-		activate_law = law_type:law_commercialized_agriculture
-		activate_law = law_type:law_no_colonial_affairs
-		activate_law = law_type:law_local_police
-		activate_law = law_type:law_religious_schools
-		activate_law = law_type:law_charitable_health_system
-		activate_law = law_type:law_censorship
-		activate_law = law_type:law_regulatory_bodies
-		activate_law = law_type:law_restricted_child_labor
-		activate_law = law_type:law_women_own_property
-		activate_law = law_type:law_poor_laws
-		activate_law = law_type:law_migration_controls
-	}
-	c:SER = {
-		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_census_voting
-		activate_law = law_type:law_national_supremacy
-		activate_law = law_type:law_freedom_of_conscience
-		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_mass_conscription
-		activate_law = law_type:law_national_guard
-		activate_law = law_type:law_interventionism
-		activate_law = law_type:law_protectionism
-		activate_law = law_type:law_per_capita_based_taxation
-		activate_law = law_type:law_tenant_farmers
-		activate_law = law_type:law_no_colonial_affairs
-		activate_law = law_type:law_dedicated_police
-		activate_law = law_type:law_public_schools
-		activate_law = law_type:law_charitable_health_system
-		activate_law = law_type:law_protected_speech
-		activate_law = law_type:law_no_workers_rights
-		activate_law = law_type:law_restricted_child_labor
-		activate_law = law_type:law_women_own_property
-		activate_law = law_type:law_poor_laws
-		activate_law = law_type:law_migration_controls
-	}
-	c:USA = {
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs
 			level = 0
@@ -341,6 +355,188 @@
 			institution = institution_home_affairs
 			level = 2
 		}
+	}
+	c:JAP = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_proportional_taxation
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_restricted_child_labor
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 3
+		}
+	}
+	c:ROM = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_restricted_child_labor
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
+	}
+	c:RUS = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_commercialized_agriculture
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_regulatory_bodies
+		activate_law = law_type:law_restricted_child_labor
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_no_social_security
+		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+	}
+	c:SER = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_protected_speech
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_restricted_child_labor
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
+	}
+	c:USA = {
 		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_universal_suffrage
 		activate_law = law_type:law_racial_segregation
@@ -362,6 +558,35 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 2
+		}
+		set_market_capital = STATE_NEW_YORK
 	}
 	c:AFG = {
 		activate_law = law_type:law_monarchy
@@ -385,6 +610,10 @@
 		activate_law = law_type:law_no_womens_rights
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:ALB = {
 		activate_law = law_type:law_monarchy
@@ -408,6 +637,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
 	}
 	c:ARG = {
 		activate_law = law_type:law_presidential_republic
@@ -431,6 +688,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:AST = {
 		activate_law = law_type:law_parliamentary_republic
@@ -454,6 +739,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:BLZ = {
 		activate_law = law_type:law_presidential_republic
@@ -477,6 +790,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:BOL = {
 		activate_law = law_type:law_presidential_republic
@@ -500,6 +817,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
 	}
 	c:BRZ = {
 		activate_law = law_type:law_presidential_republic
@@ -523,6 +868,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
 	}
 	c:BIC = {
 		activate_law = law_type:law_presidential_republic
@@ -546,6 +919,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:NEP = {
 		activate_law = law_type:law_monarchy
@@ -569,6 +946,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:BHU = {
 		activate_law = law_type:law_monarchy
@@ -592,10 +973,14 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:BUL = {
 		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_landed_voting
 		activate_law = law_type:law_national_supremacy
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
@@ -615,6 +1000,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:CHL = {
 		activate_law = law_type:law_parliamentary_republic
@@ -638,12 +1051,12 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:CHI = {
-		set_institution_investment_level = {
-			institution = institution_home_affairs
-			level = 1
-		}
 		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_single_party_state
 		activate_law = law_type:law_cultural_exclusion
@@ -665,6 +1078,34 @@
 		activate_law = law_type:law_no_womens_rights
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:CLM = {
 		activate_law = law_type:law_presidential_republic
@@ -688,6 +1129,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:COS = {
 		activate_law = law_type:law_presidential_republic
@@ -711,6 +1180,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
 	}
 	c:DEN = {
 		activate_law = law_type:law_monarchy
@@ -734,6 +1231,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 4
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
 	}
 	c:DEI = {
 		activate_law = law_type:law_presidential_republic
@@ -757,12 +1282,36 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
-	}
-	c:ECU = {
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
 		set_institution_investment_level = {
 			institution = institution_schools
-			level = 3
+			level = 0
 		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
+	}
+	c:ECU = {
 		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_universal_suffrage
 		activate_law = law_type:law_cultural_exclusion
@@ -784,6 +1333,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
 	}
 	c:ELS = {
 		activate_law = law_type:law_presidential_republic
@@ -807,6 +1384,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 0
+		}
 	}
 	c:FIN = {
 		activate_law = law_type:law_monarchy
@@ -830,6 +1435,10 @@
 		activate_law = law_type:law_womens_suffrage
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:GRE = {
 		activate_law = law_type:law_monarchy
@@ -853,6 +1462,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 2
+		}
 	}
 	c:GUA = {
 		activate_law = law_type:law_presidential_republic
@@ -876,6 +1513,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:HON = {
 		activate_law = law_type:law_presidential_republic
@@ -899,6 +1540,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:JOH = {
 		activate_law = law_type:law_monarchy
@@ -922,29 +1567,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
-	}
-	c:KOR = {
-		activate_law = law_type:law_presidential_republic
-		activate_law = law_type:law_autocracy
-		activate_law = law_type:law_national_supremacy
-		activate_law = law_type:law_freedom_of_conscience
-		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_mass_conscription
-		activate_law = law_type:law_national_guard
-		activate_law = law_type:law_interventionism
-		activate_law = law_type:law_mercantilism
-		activate_law = law_type:law_proportional_taxation
-		activate_law = law_type:law_tenant_farmers
-		activate_law = law_type:law_no_colonial_affairs
-		activate_law = law_type:law_dedicated_police
-		activate_law = law_type:law_public_schools
-		activate_law = law_type:law_charitable_health_system
-		activate_law = law_type:law_outlawed_dissent
-		activate_law = law_type:law_no_workers_rights
-		activate_law = law_type:law_restricted_child_labor
-		activate_law = law_type:law_women_own_property
-		activate_law = law_type:law_no_social_security
-		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:LUX = {
 		activate_law = law_type:law_monarchy
@@ -968,6 +1594,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:MEX = {
 		activate_law = law_type:law_presidential_republic
@@ -991,10 +1621,14 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:MON = {
 		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_autocracy
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
@@ -1014,6 +1648,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:NET = {
 		activate_law = law_type:law_monarchy
@@ -1037,6 +1699,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:NZL = {
 		activate_law = law_type:law_parliamentary_republic
@@ -1060,6 +1750,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:NEW = {
 		activate_law = law_type:law_parliamentary_republic
@@ -1083,6 +1777,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:NIC = {
 		activate_law = law_type:law_presidential_republic
@@ -1106,6 +1828,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:OMA = {
 		activate_law = law_type:law_monarchy
@@ -1129,10 +1855,14 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:TUR = {
 		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
@@ -1152,6 +1882,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 2
+		}
 	}
 	c:PNM = {
 		activate_law = law_type:law_presidential_republic
@@ -1175,6 +1933,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:PRG = {
 		activate_law = law_type:law_presidential_republic
@@ -1198,6 +1960,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:PER = {
 		activate_law = law_type:law_monarchy
@@ -1221,6 +1987,34 @@
 		activate_law = law_type:law_no_womens_rights
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 2
+		}
 	}
 	c:PEU = {
 		activate_law = law_type:law_presidential_republic
@@ -1244,6 +2038,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:POR = {
 		activate_law = law_type:law_parliamentary_republic
@@ -1267,6 +2065,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 2
+		}
 	}
 	c:DOM = {
 		activate_law = law_type:law_presidential_republic
@@ -1290,6 +2116,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:SIA = {
 		activate_law = law_type:law_monarchy
@@ -1313,6 +2143,10 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:SPA = {
 		activate_law = law_type:law_monarchy
@@ -1336,6 +2170,34 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:SWI = {
 		activate_law = law_type:law_parliamentary_republic
@@ -1359,16 +2221,12 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_old_age_pension
 		activate_law = law_type:law_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c:URU = {
-		set_institution_investment_level = {
-			institution = institution_social_security
-			level = 3
-		}
-		set_institution_investment_level = {
-			institution = institution_schools
-			level = 3
-		}
 		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_universal_suffrage
 		activate_law = law_type:law_cultural_exclusion
@@ -1390,6 +2248,18 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_wage_subsidies
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
 	}
 	c:VNZ = {
 		activate_law = law_type:law_presidential_republic
@@ -1534,7 +2404,7 @@
 		activate_law = law_type:law_autocracy
 		activate_law = law_type:law_racial_segregation
 		activate_law = law_type:law_state_religion
-		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_hereditary_bureaucrats
 		activate_law = law_type:law_peasant_levies
 		activate_law = law_type:law_no_home_affairs
 		activate_law = law_type:law_agrarianism
@@ -1643,6 +2513,10 @@
 		activate_law = law_type:law_no_womens_rights
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 	c: = {
 		activate_law = law_type:law_monarchy
@@ -2540,5 +3414,55 @@
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_no_migration_controls
+	}
+	c:PHI = {
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_proportional_taxation
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_no_health_system
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_child_labor_allowed
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_no_social_security
+		activate_law = law_type:law_no_migration_controls
+	}
+	c:KOR = {
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_peasant_levies
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_no_health_system
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_child_labor_allowed
+		activate_law = law_type:law_no_womens_rights
+		activate_law = law_type:law_no_social_security
+		activate_law = law_type:law_no_migration_controls
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 0
+		}
 	}
 }

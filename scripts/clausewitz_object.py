@@ -78,15 +78,14 @@ class ClausewitzObject:
         if anonymous_values:
             anonymous_values = f'\n{full_separator}{anonymous_values}'
         
-        named_objects: str = ''
         named_values: str = ''
         for name, values in self.name_values.items():
             for element in values:
                 if isinstance(element, ClausewitzObject):
-                    named_objects = f'{named_objects}\n{full_separator}{name} = {element.unparse(depth=depth + 1, separator=separator)}'
+                    named_values = f'{named_values}\n{full_separator}{name} = {element.unparse(depth=depth + 1, separator=separator)}'
                 else:
                     named_values = f'{named_values}\n{full_separator}{name} = {element}'
             pass
-
-        final_form:str = f'{"{"}{anonymous_objects}{anonymous_values}{named_objects}{named_values}\n{separator * (depth - 1)}{"}"}'
+        
+        final_form:str = f'{"{"}{anonymous_objects}{anonymous_values}{named_values}\n{separator * (depth - 1)}{"}"}'
         return final_form
