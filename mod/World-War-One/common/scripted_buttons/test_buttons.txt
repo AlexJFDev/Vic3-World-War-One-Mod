@@ -1,0 +1,109 @@
+﻿test_button_money = {
+    name = money
+    desc = money_desc
+
+    visible = { always = yes }
+
+    possible = { 
+        NOT = { has_variable = button_money_cooldown }
+    }
+
+    effect = {
+        set_variable = {
+            name = button_money_cooldown
+            days = 1
+        }
+        add_modifier = {
+            name = modifier_test_button_money
+            months = 12
+        }
+    }
+}
+
+test_button_bureaucracy = {
+    name = bureaucracy
+    desc = bureaucracy_desc
+
+    visible = { always = yes }
+
+    possible = { 
+        NOT = { has_variable = button_bureaucracy_cooldown }
+    }
+
+    effect = {
+        set_variable = {
+            name = button_bureaucracy_cooldown
+            days = 1
+        }
+        add_modifier = {
+            name = modifier_test_button_bureaucracy
+            months = 12
+        }
+    }
+}
+
+test_button_authority = {
+    name = authority
+    desc = authority_desc
+
+    visible = { always = yes }
+
+    possible = { 
+        NOT = { has_variable = button_authority_cooldown }
+    }
+
+    effect = {
+        set_variable = {
+            name = button_authority_cooldown
+            days = 1
+        }
+        add_modifier = {
+            name = modifier_test_button_authority
+            months = 12
+        }
+    }
+}
+
+test_button_influence = {
+    name = influence
+    desc = influence_desc
+
+    visible = { always = yes }
+
+    possible = { 
+        NOT = { has_variable = button_influence_cooldown }
+    }
+
+    effect = {
+        set_variable = {
+            name = button_influence_cooldown
+            days = 1
+        }
+        add_modifier = {
+            name = modifier_test_button_influence
+            months = 12
+        }
+    }
+}
+
+test_button_happy_catholics = {
+    name = happy_catholics
+    desc = happy_catholics_desc
+
+    visible = { always = yes }
+
+    possible = { 
+        NOT = { has_variable = button_happy_catholics_cooldown }
+    }
+
+    effect = {
+        set_variable = {
+            name = button_happy_catholics_cooldown
+            days = 1
+        }
+        add_modifier = {
+            name = catholic_standard_of_living_modifier_positive
+            months = 12
+        }
+    }
+}
