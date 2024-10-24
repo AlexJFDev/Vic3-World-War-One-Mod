@@ -1,27 +1,27 @@
 ﻿je_test = {
- 	icon = "gfx/interface/icons/event_icons/event_military.dds"
-	
-	group = je_group_great_war
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    
+    group = je_group_great_war
 
- 	is_shown_when_inactive = {
+    is_shown_when_inactive = {
         OR = {
             ROOT = c:ITA
             ROOT = c:AUS
             ROOT = c:GER
         }
- 	}
+    }
 
- 	possible = {
- 		ROOT = c:ITA
- 	}
+    possible = {
+        ROOT = c:ITA
+    }
 
- 	complete = {
+    complete = {
         always = no
- 	}
+    }
 
- 	immediate = {
- 		trigger_event = { id = naval_tech_events.4 }
- 	}
+    immediate = {
+        trigger_event = { id = naval_tech_events.4 }
+    }
 
     scripted_button = test_button_money
     scripted_button = test_button_bureaucracy
@@ -30,4 +30,6 @@
     scripted_button = test_button_happy_catholics
 
     progressbar = yes
+
+    should_be_pinned_by_default = yes
 }
