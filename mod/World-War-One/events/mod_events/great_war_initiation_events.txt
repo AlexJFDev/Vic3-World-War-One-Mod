@@ -169,8 +169,9 @@ great_war_initiation_events.4 = {
                 }
             }
         }
-        set_variable = austria_participating_in_great_war
-        set_variable = serbia_participating_in_great_war
+        
+        c:AUS = { set_variable = central_powers_participant }
+        c:SER = { set_variable = entente_participant }
         c:RUS = {
             trigger_event = { 
                 id = great_war_initiation_events.6
@@ -229,8 +230,8 @@ great_war_initiation_events.5 = {
                 }
             }
         }
-        set_variable = austria_participating_in_great_war
-        set_variable = serbia_participating_in_great_war
+        c:AUS = { set_variable = central_powers_participant }
+        c:SER = { set_variable = entente_participant }
         c:RUS = {
             trigger_event = {
                 id = great_war_initiation_events.6
@@ -370,8 +371,8 @@ great_war_initiation_events.8 = {
             # TODO:MID Austrian wargoals: volhynia, kyiv
             # TODO:MID Russian wargoals: east/west galicia, east prussia
 		}
-        set_variable = germany_participating_in_great_war
-        set_variable = russia_participating_in_great_war
+        c:GER = { set_variable = central_powers_participant }
+        c:RUS = { set_variable = entente_participant }
     }
     option = {
         name = great_war_initiation_events.8.b
@@ -469,7 +470,7 @@ great_war_initiation_events.10 = {
             # TODO:MID wargoals france: Alsace-Lorraine + war reparations
             # TODO:MID wargoals germany: war reps from france
 		}
-        set_variable = france_participating_in_great_war
+        c:FRA = { set_variable = entente_participant }
     }
 }
 
@@ -504,7 +505,7 @@ great_war_initiation_events.11 = {
             # TODO:MID wargoals turkey: Kars, Armenia, Tiflis, Elizavetpol, Baku
             # TODO:MID wargoals russia: war reparations, eastern thrace
 		}
-        set_variable = ottomans_participating_in_great_war
+        c:TUR = { set_variable = central_powers_participant }
     }
     option = { # Do nothing
         name = great_war_initiation_events.11.b
@@ -545,7 +546,7 @@ great_war_initiation_events.12 = {
             # TODO:MID wargoals italy: corsica, savoy
             # TODO:MID wargoals france: war reps from italy
 		}
-        set_variable = italy_participating_in_great_war
+        c:ITA = { set_variable = central_powers_participant }
     }
     option = { # Do nothing
         name = great_war_initiation_events.12.b
@@ -553,6 +554,7 @@ great_war_initiation_events.12 = {
             base = 1
         }
         default_option = yes
+        c:ITA = { set_variable = neutral }
     }
 }
 
@@ -595,7 +597,7 @@ great_war_initiation_events.13 = {
             # TODO:MID wargoals germany: war reps from france
             # TODO:MID wargoals italy: corsica, savoy
 		}
-        set_variable = france_participating_in_great_war
+        c:FRA = { set_variable = entente_participant }
     }
     option = { # Leave France alone
         name = great_war_initiation_events.13.a
@@ -646,7 +648,8 @@ great_war_initiation_events.14 = {
             # TODO:MID wargoals luxembourg: war reps from germany
             # TODO:MID wargoals germany: wallonia, flanders
 		}
-        set_variable = belgium_participating_in_great_war
+        c:BEL = { set_variable = entente_participant }
+        c:LUX = { set_variable = entente_participant }
     }
     option = { # Do nothing
         name = great_war_initiation_events.14.b
@@ -690,7 +693,7 @@ great_war_initiation_events.15 = {
             # TODO:MID wargoals germany: britain colonies? war reps from 
             # TODO:MID wargoals britain: war reps from germany, african german colonies
 		}
-        set_variable = britain_participating_in_great_war
+        c:GBR = { set_variable = entente_participant }
     }
     option = { # Do nothing
         name = great_war_initiation_events.15.b
@@ -732,7 +735,7 @@ great_war_initiation_events.16 = {
             # TODO:MID wargoals japan: german colonies in asia
             # TODO:MID wargoals germany: taiwan??
 		}
-        set_variable = japan_participating_in_great_war
+        c:JAP = { set_variable = entente_participant }
     }
     option = { # Do nothing
         name = great_war_initiation_events.16.b
