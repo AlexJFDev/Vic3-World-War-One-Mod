@@ -93,19 +93,35 @@ def generate_states_and_pops(ownership_path: str, regions_path: str):
                 print(error)
                 quit()
 
-    with open(regions_path, 'r') as regions_file:
-        regions_file.readline() # Skip the first line
-        reader = csv.reader(regions_file)
-        for line in reader:
-            region_tag: str = f's:{line[REGIONS_REGION_TAG_COLUMN]}'
-            homelands = line[REGIONS_HOMELANDS_COLUMN].split(' ')
-            state = states.get_value_named(region_tag)
-            if state is None:
+    # This iterates over the pop data per entire state. It calculates the total number of pops in a state and the total number per culture in a state.
+    # States that have more than 10% of their total population in a culture are considered homelands for that culture.
+    for region_tag, state_data in pops.get_name_value_pairs().items():
+        state_size = 0
+        culture_sizes = {}
+        homelands = []
+
+        state_regions:list[list[ClausewitzObject]] = state_data[0].get_name_value_pairs().values()
+        for state_region in state_regions:
+            create_pops: ClausewitzObject = state_region[0].get_values_named('create_pop')
+            for create_pop in create_pops:
+                size = int(create_pop.get_value_named('size'))
+                culture = create_pop.get_value_named('culture')
+
+                state_size += size
+                culture_sizes[culture] = culture_sizes.get(culture, 0) + size
+
+        for culture, size in culture_sizes.items():
+            if size > state_size / 10:
+                homelands.append(f'cu:{culture}')
+
+        state_object = states.get_value_named(region_tag)
+        if state_object is None:
+            continue
+        for homeland in homelands:
+            if homeland == '':
                 continue
-            for homeland in homelands:
-                if homeland == '':
-                    continue
-                state.add_named_value('add_homeland', homeland)
+            state_object.add_named_value('add_homeland', homeland)
+
     return states_root, pops_root
 
 def generate_regions(regions_path: str):
