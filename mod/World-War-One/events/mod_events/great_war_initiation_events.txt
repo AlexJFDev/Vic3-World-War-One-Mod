@@ -321,9 +321,6 @@ great_war_initiation_events.7 = {
             }
         }
         # TODO:MID Add side effects
-        # TODO:MID Add Russia to war 
-        # Russian wargoals: east/west galicia, east prussia
-        # Austrian wargoals: volhynia kyiv
     }
 }
 
@@ -353,9 +350,6 @@ great_war_initiation_events.8 = {
         c:TUR = {
             trigger_event = { id = great_war_initiation_events.11 }
         }
-        c:ITA = {
-            trigger_event = { id = great_war_initiation_events.12 }
-        }
         every_diplomatic_play = { 
 			limit = {
                 initiator = c:AUS
@@ -367,9 +361,81 @@ great_war_initiation_events.8 = {
             add_initiator_backers = {
                 c:GER
             }
-            # TODO:MID German wargoals: poland
-            # TODO:MID Austrian wargoals: volhynia, kyiv
-            # TODO:MID Russian wargoals: east/west galicia, east prussia
+            add_war_goal = {
+                    holder = c:RUS
+                    type = conquer_state
+                    target_state = s:STATE_EAST_GALICIA.region_state:AUS
+                }
+            add_war_goal = {
+                    holder = c:RUS
+                    type = conquer_state
+                    target_state = s:STATE_WEST_GALICIA.region_state:AUS
+                }
+            add_war_goal = {
+                    holder = c:RUS
+                    type = conquer_state
+                    target_state = s:STATE_EAST_PRUSSIA.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:RUS
+                    type = conquer_state
+                    target_state = s:STATE_MOLDAVIA.region_state:AUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_VOLHYNIA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_KIEV.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_BESSARABIA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_CHERSON.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_GREATER_POLAND.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_MAZOVIA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_LESSER_POLAND.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_BREST.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_VILNIUS.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_KAUNAS.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:RUS
+                }
 		}
         c:GER = { set_variable = central_powers_participant }
         c:RUS = { set_variable = entente_participant }
@@ -459,6 +525,9 @@ great_war_initiation_events.10 = {
                 days = 3
             }
         }
+        c:ITA = {
+            trigger_event = { id = great_war_initiation_events.12 }
+        }
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
@@ -467,6 +536,26 @@ great_war_initiation_events.10 = {
 			add_target_backers = {
 				c:FRA
 			}
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:GBR
+                    type = transfer_subject
+                    target_country: c:CMR
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = war_reparations
+                    target_country = c:GER
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:FRA
+                }
             # TODO:MID wargoals france: Alsace-Lorraine + war reparations
             # TODO:MID wargoals germany: war reps from france
 		}
@@ -502,8 +591,36 @@ great_war_initiation_events.11 = {
             add_initiator_backers = {
                 c:TUR
             }
-            # TODO:MID wargoals turkey: Kars, Armenia, Tiflis, Elizavetpol, Baku
-            # TODO:MID wargoals russia: war reparations, eastern thrace
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_KARS.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_ARMENIA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_GREATER_CAUCASUS.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_ELIZAVETPOL.region_state:RUS
+                }        
+            add_war_goal = {
+                    holder = c:RUS
+                    type = conquer_state
+                    target_state = s:STATE_ERZURUM.region_state:TUR
+                }           
+            add_war_goal = {
+                    holder = c:RUS
+                    type = conquer_state
+                    target_state = s:STATE_TRABZON.region_state:TUR
+                }              
 		}
         c:TUR = { set_variable = central_powers_participant }
     }
@@ -543,8 +660,24 @@ great_war_initiation_events.12 = {
             add_initiator_backers = {
                 c:ITA
             }
-            # TODO:MID wargoals italy: corsica, savoy
-            # TODO:MID wargoals france: war reps from italy
+            add_target_backers = {
+				c:TUN
+			}
+            add_war_goal = {
+                    holder = c:ITA
+                    type = conquer_state
+                    target_state = s:STATE_CORSICA.region_state:FRA
+                }
+            add_war_goal = {
+                    holder = c:ITA
+                    type = conquer_state
+                    target_state = s:STATE_SAVOY.region_state:FRA
+                }
+            add_war_goal = {
+                    holder = c:ITA
+                    type = transfer_subject
+                    target_country: c:TUN
+                }
 		}
         c:ITA = { set_variable = central_powers_participant }
     }
@@ -585,6 +718,9 @@ great_war_initiation_events.13 = {
                 days = 3
             }
         }
+        c:ITA = {
+            trigger_event = { id = great_war_initiation_events.12 }
+        }
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
@@ -593,9 +729,38 @@ great_war_initiation_events.13 = {
 			add_target_backers = {
 				c:FRA
 			}
-            # TODO:MID wargoals france: Alsace-Lorraine + war reps from germany and italy
-            # TODO:MID wargoals germany: war reps from france
-            # TODO:MID wargoals italy: corsica, savoy
+            add_target_backers = {
+                c:WAF
+            }
+            add_target_backers = {
+                c:EQA
+            }
+            add_initiator_backers = {
+				c:TOG
+			}
+            add_initiator_backers = {
+                c:CMR
+            }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:GBR
+                    type = transfer_subject
+                    target_country: c:CMR
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = war_reparations
+                    target_country = c:GER
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:FRA
+                }
 		}
         c:FRA = { set_variable = entente_participant }
     }
@@ -644,9 +809,6 @@ great_war_initiation_events.14 = {
             add_target_backers = {
 				c:LUX
 			}
-            # TODO:MID wargoals belgium: war reps from germany
-            # TODO:MID wargoals luxembourg: war reps from germany
-            # TODO:MID wargoals germany: wallonia, flanders
 		}
         c:BEL = { set_variable = entente_participant }
         c:LUX = { set_variable = entente_participant }
@@ -688,10 +850,68 @@ great_war_initiation_events.15 = {
                 target = c:SER
 			}
 			add_target_backers = {
-				c:GBR
+				c:GBR 
 			}
-            # TODO:MID wargoals germany: britain colonies? war reps from 
-            # TODO:MID wargoals britain: war reps from germany, african german colonies
+            add_target_backers = {
+				c:BIC
+			}
+            add_target_backers = {
+				c:KEN
+			}
+            add_target_backers = {
+				c:SUD
+			}
+            add_target_backers = {
+				c:SAF
+			}
+            add_target_backers = {
+				c:EGY
+			}
+            add_target_backers = {
+				c:GHA
+			}
+            add_target_backers = {
+				c:NGA
+			}
+            add_initiator_backers = {
+				c:TOG
+			}
+            add_initiator_backers = {
+				c:NAM
+			}
+            add_initiator_backers = {
+				c:TAN
+			}
+            add_war_goal = {
+                    holder = c:GBR
+                    type = transfer_subject
+                    target_country: c:TOG
+                }
+            add_war_goal = {
+                    holder = c:GBR
+                    type = transfer_subject
+                    target_country: c:NAM
+                }
+            add_war_goal = {
+                    holder = c:GBR
+                    type = transfer_subject
+                    target_country: c:TAN
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = transfer_subject
+                    target_country: c:NGA
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = transfer_subject
+                    target_country: c:GHA
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = transfer_subject
+                    target_country: c:EGY
+                }
 		}
         c:GBR = { set_variable = entente_participant }
     }
@@ -732,8 +952,29 @@ great_war_initiation_events.16 = {
 			add_target_backers = {
 				c:JAP
 			}
-            # TODO:MID wargoals japan: german colonies in asia
-            # TODO:MID wargoals germany: taiwan??
+            add_initiator_backers = {
+				c:NGG
+			}
+            add_war_goal = {
+                    holder = c:JAP
+                    type = conquer_state
+                    target_state = s:STATE_SHANDONG.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:JAP
+                    type = transfer_subject
+                    target_country: c:NGG
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state: s:STATE_FORMOSA.region_state:JAP
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state: s:STATE_SHENGJING.region_state:JAP
+                }
 		}
         c:JAP = { set_variable = entente_participant }
     }
