@@ -15,9 +15,11 @@ OWNER_NAME_COLUMN = 2
 OWNER_TAG_COLUMN = 3
 BUILDINGS_START_COLUMN = 4
 
-BULDING_TYPE_INDEX = 0
+BUILDING_TYPE_INDEX = 0
 BUILDING_LEVEL_INDEX = 1
 BUILDING_PRODUCTION_METHOD_INDEX = 2
+BUILDING_OWNER_TYPE_INDEX = 3
+BUILDING_OWNER_INDEX = 4
 
 SKIP_URBAN_CENTERS = True
 
@@ -31,13 +33,15 @@ def fetch_production_methods(file_path: str):
     
 production_methods_map = fetch_production_methods(PRODUCTION_METHODS_PATH)
 building_types = production_methods_map.keys()
-def generate_region_object(owner_tag: str, buildings: list[tuple[str, str, str]]):
+def generate_region_object(country_tag: str, state_tag: str, buildings: list[tuple[str, str, str, str, str]]):
     region_object = ClausewitzObject()
     for building in buildings:
         building_object = ClausewitzObject()
-        building_type = building[BULDING_TYPE_INDEX]
+        building_type = building[BUILDING_TYPE_INDEX]
         building_level = building[BUILDING_LEVEL_INDEX]
         production_methods = set(building[BUILDING_PRODUCTION_METHOD_INDEX].strip().split(' '))
+        owner_type = building[BUILDING_OWNER_TYPE_INDEX]
+        owner = building[BUILDING_OWNER_INDEX]
 
         if building_type == 'urban_center' and SKIP_URBAN_CENTERS:
             continue
@@ -48,9 +52,27 @@ def generate_region_object(owner_tag: str, buildings: list[tuple[str, str, str]]
             raise ValueError(f'production', building_type, production_methods.difference(production_methods_map[building_type]))
 
         ownership_object = ClausewitzObject()
-        ownership_object.add_named_value('country', ClausewitzObject())
-        ownership_object.get_value_named('country').add_named_value('country', f'c:{owner_tag}')
-        ownership_object.get_value_named('country').add_named_value('levels', building_level)
+        if owner_type == 'country':
+            ownership_object.add_named_value('country', ClausewitzObject())
+            ownership_object.get_value_named('country').add_named_value('country', f'c:{owner}')
+            ownership_object.get_value_named('country').add_named_value('levels', building_level)
+        elif owner_type == '':
+            ownership_object.add_named_value('country', ClausewitzObject())
+            ownership_object.get_value_named('country').add_named_value('country', f'c:{country_tag}')
+            ownership_object.get_value_named('country').add_named_value('levels', building_level)
+        elif owner_type == 'local':
+            ownership_object.add_named_value('building', ClausewitzObject())
+            ownership_object.get_value_named('building').add_named_value('type', building_type)
+            ownership_object.get_value_named('building').add_named_value('country', f'c:{country_tag}')
+            ownership_object.get_value_named('building').add_named_value('levels', building_level)
+            ownership_object.get_value_named('building').add_named_value('region', state_tag.split(':')[1])
+        else:
+            owner_region, owner_country = owner.split('.')
+            ownership_object.add_named_value('building', ClausewitzObject())
+            ownership_object.get_value_named('building').add_named_value('type', owner_type)
+            ownership_object.get_value_named('building').add_named_value('country', f'c:{owner_country}')
+            ownership_object.get_value_named('building').add_named_value('levels', building_level)
+            ownership_object.get_value_named('building').add_named_value('region', owner_region)
 
         building_object.add_named_value('building', building_type)
         building_object.add_named_value('add_ownership', ownership_object)
@@ -74,8 +96,8 @@ def generate_buildings(file_path: str):
             owner_tag = line[OWNER_TAG_COLUMN]
             raw_buildings = line[BUILDINGS_START_COLUMN:]
             buildings = [
-                (raw_buildings[i], raw_buildings[i+1], raw_buildings[i+2]) 
-                for i in range(0, len(raw_buildings), 3) 
+                (raw_buildings[i], raw_buildings[i+1], raw_buildings[i+2], raw_buildings[i+3], raw_buildings[i+4]) 
+                for i in range(0, len(raw_buildings), 5) 
                 if raw_buildings[i] != '' and raw_buildings[i+1] != '' and raw_buildings[i+2] != ''
             ]
 
@@ -86,7 +108,7 @@ def generate_buildings(file_path: str):
                 state_object = ClausewitzObject()
                 buildings_object.add_named_value(state_tag, state_object)
             try:
-                region_object = generate_region_object(owner_tag, buildings)
+                region_object = generate_region_object(owner_tag, state_tag, buildings)
                 state_object.add_named_value(f'region_state:{owner_tag}', region_object)
             except ValueError as e:
                 if e.args[0] == 'type':
@@ -95,7 +117,7 @@ def generate_buildings(file_path: str):
                     print(f'Error on line {line_number + 2}: Unknown production method {e.args[2]} for type {e.args[1]}')
                 else:
                     print(f'Unknown error on line {line_number + 2}: {e.args[0]}')
-                i = input('Press enter to continue... or type "q" to quit')
+                i = input('Press enter to continue or type "q" to quit')
                 if i == 'q':
                     exit()
             
