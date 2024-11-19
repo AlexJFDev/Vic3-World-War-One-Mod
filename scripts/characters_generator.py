@@ -26,14 +26,16 @@ TRAITS = {
     'plains_commander', 'charismatic', 'traditionalist_commander', 'opium_addiction', 'shellshocked', 'basic_defensive_strategist'
 }
 IDEOLOGIES = {
-    'ideology_land_reformer', 'ideology_jingoist_leader', 'ideology_radical', 'ideology_royalist', 'ideology_atheist', 'ideology_reformer', 'ideology_feminist', 'ideology_pacifist', 'ideology_slaver',
-    'ideology_vanguardist', 'ideology_legitimist', 'ideology_republican_leader', 'ideology_bonapartist', 'ideology_humanitarian', 'ideology_jacksonian_democrat', 'ideology_corporatist_leader', 
-    'ideology_despotic_utopian', 'ideology_positivist', 'ideology_moderate', 'ideology_anarchist', 'ideology_ethno_nationalist', 'ideology_liberal_leader', 'ideology_fascist', 'ideology_social_democrat', 
-    'ideology_humanitarian_royalist', 'ideology_luddite', 'ideology_traditionalist', 'ideology_integralist', 'ideology_theocrat', 'ideology_authoritarian', 'ideology_communist', 'ideology_protectionist', 
-    'ideology_abolitionist', 'ideology_market_liberal', 'ideology_orleanist'
+    'ideology_moderate', 'ideology_traditionalist', 'ideology_atheist', 'ideology_republican_leader', 'ideology_radical', 'ideology_abolitionist', 'ideology_slaver', 'ideology_feminist', 'ideology_reformer', 
+    'ideology_pacifist', 'ideology_jingoist_leader', 'ideology_royalist', 'ideology_social_democrat', 'ideology_communist', 'ideology_vanguardist', 'ideology_fascist', 'ideology_anarchist', 'ideology_ethno_nationalist', 
+    'ideology_theocrat', 'ideology_market_liberal', 'ideology_liberal_leader', 'ideology_republican_paternalistic', 'ideology_scholar_paternalistic', 'ideology_junker_paternalistic', 'ideology_papal_paternalistic', 
+    'ideology_confucian', 'ideology_bakufu', 'ideology_shinto_moralist', 'ideology_caudillismo', 'ideology_heavenly_kingdom_theocratic', 'ideology_papal_moralist', 'ideology_liberal_modern', 'ideology_egalitarian_modern', 
+    'ideology_luddite', 'ideology_jacksonian_democrat', 'ideology_authoritarian', 'ideology_socialist', 'ideology_humanitarian', 'ideology_protectionist', 'ideology_humanitarian_royalist', 'ideology_positivist', 
+    'ideology_corporatist_leader', 'ideology_land_reformer', 'ideology_integralist'
 }
+
 YES_VALUES = {
-    'ruler', 'ig_leader', 'historical', 'woman', 'noble', 'is_admiral', 'is_general', 'is_agitator', 'heir'
+    'ruler', 'ig_leader', 'historical', 'female', 'noble', 'is_admiral', 'is_general', 'is_agitator', 'heir'
 }
 
 FULL_NAME_COLUMN = 0
@@ -59,12 +61,12 @@ def parse_character_data(data_path: str):
             culture = line[CULTURE_COLUMN]
             interest_group = line[INTEREST_GROUP_COLUMN]
             ideology = line[IDEOLOGY_COLUMN]
-            yes_values = set(re.split(r'[;]\s*', line[YES_VALUES_COLUMN]))
-            if len(yes_values - {''}) == 0:
+            yes_values = set(re.split(r'[;]\s*', line[YES_VALUES_COLUMN].lower())) - {''}
+            if len(yes_values) == 0:
                 yes_values = set()
             birth_date = line[BIRTH_DATE_COLUMN]
-            character_traits = set(re.split(r'[;]\s*', line[CHARACTER_TRAITS_COLUMN]))
-            if len(character_traits - {''}) == 0:
+            character_traits = set(re.split(r'[;]\s*', line[CHARACTER_TRAITS_COLUMN].lower())) - {''}
+            if len(character_traits) == 0:
                 character_traits = set()
             
             if first_name == '' or last_name == '':
