@@ -114,10 +114,17 @@ def generate_buildings(file_path: str):
             raw_buildings = line[BUILDINGS_START_COLUMN:]
             buildings = []
             for i in range(0, len(raw_buildings), 5):
-                if raw_buildings[i] == '' or raw_buildings[i+1] == '' or raw_buildings[i+2] == '':
-                    buildings.append(('', '', '', '', ''))
+                building_type = raw_buildings[i]
+                building_quantity = raw_buildings[i+1]
+                production_method = raw_buildings[i+2]
+                if i + 3 >= len(raw_buildings):
+                    owner_type = ''
+                    owner = ''
                 else:
-                    buildings.append((raw_buildings[i], raw_buildings[i+1], raw_buildings[i+2], raw_buildings[i+3], raw_buildings[i+4]))
+                    owner_type = raw_buildings[i+3]
+                    owner = raw_buildings[i+4]
+                
+                buildings.append((building_type, building_quantity, production_method, owner_type, owner))
 
             state_object = buildings_object.get_value_named(state_tag)
             if state_object is None:
