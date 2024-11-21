@@ -31,7 +31,7 @@ red_scare.1 = {
 		default_option = yes
 		add_loyalists = {
 			value = small_radicals
-			strata = rich
+			strata = upper
 		}
 		every_interest_group = {
 			limit = {
@@ -50,7 +50,7 @@ red_scare.1 = {
 		name = red_scare.1.b
 		add_loyalists = {
 			value = small_radicals
-			strata = poor
+			strata = lower
 		}
 		every_interest_group = {
 			limit = {
@@ -149,7 +149,7 @@ red_scare.2 = {
 		}
 		add_radicals = {
 			value = small_radicals
-			strata = poor
+			strata = lower
 		}
 	}
 	option = {
@@ -239,7 +239,7 @@ red_scare.3 = {
 		change_relations = { country = scope:red_scare_target_nation value = -25 }
 		add_loyalists = {
 			value = small_radicals
-			strata = rich
+			strata = upper
 		}
 	}
 	option = {
@@ -752,7 +752,7 @@ red_scare.8 = {
 		scope:capital_scope = {
 			add_radicals_in_state = {
 				value = medium_radicals
-				strata = poor
+				strata = lower
 			}
 		}
 	}
@@ -767,7 +767,7 @@ red_scare.8 = {
 		scope:capital_scope = {
 			add_radicals_in_state = {
 				value = medium_radicals
-				strata = rich
+				strata = upper
 			}
 		}
 	}
@@ -818,11 +818,11 @@ red_scare.9 = {
 		scope:communist_uprising_state = {
 			add_loyalists_in_state = {
 				value = small_radicals
-				strata = rich
+				strata = upper
 			}
 			add_radicals_in_state = {
 				value = small_radicals
-				strata = poor
+				strata = lower
 			}
 			add_modifier = {
 				name = modifier_overpoliced_state
@@ -991,7 +991,7 @@ red_scare.11 = {
 		name = red_scare.11.b
 		add_radicals = {
 			value = small_radicals
-			strata = rich
+			strata = upper
 		}
 		scope:progressive_ig = {
 			add_modifier = {
@@ -1099,7 +1099,7 @@ red_scare.12 = {
 		name = red_scare.12.b
 		add_radicals = {
 			value = small_radicals
-			strata = rich
+			strata = upper
 		}
 	}
 }
@@ -1154,7 +1154,7 @@ red_scare.13 = {
 		}
 		add_radicals = {
 			value = small_radicals
-			strata = poor
+			strata = lower
 		}
 	}
 	option = {
@@ -1220,7 +1220,7 @@ red_scare.14 = {
 			is_incorporated = yes
 			radical_fraction = {
 				value > 0.15
-				strata = poor
+				strata = lower
 			}
 			any_scope_pop = {
 				pop_is_discriminated = yes
@@ -1246,7 +1246,7 @@ red_scare.14 = {
 				is_incorporated = yes
 				radical_fraction = {
 					value > 0.15
-					strata = poor
+					strata = lower
 				}
 				any_scope_pop = {
 					pop_is_discriminated = yes
@@ -1372,7 +1372,7 @@ red_scare.15 = {
 		scope:red_scare_victim_state = {
 			add_radicals_in_state = {
 				value = small_radicals
-				strata = rich
+				strata = upper
 			}
 		}
 	}

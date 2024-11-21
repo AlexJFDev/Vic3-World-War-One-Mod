@@ -153,7 +153,7 @@ great_war_initiation_events.4 = {
         c:AUS = {
             create_diplomatic_play = { # c:SER is target, c:AUS is initiator
                 name = the_great_war
-                escalation = 85
+                escalation = 99
                 target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
                 type = dp_make_protectorate
 
@@ -214,7 +214,7 @@ great_war_initiation_events.5 = {
         c:AUS = {
             create_diplomatic_play = { # c:SER is target, c:AUS is initiator
                 name = the_great_war
-                escalation = 85
+                escalation = 99
                 target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
                 type = dp_make_protectorate
 
@@ -809,6 +809,16 @@ great_war_initiation_events.14 = {
             add_target_backers = {
 				c:LUX
 			}
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_LUXEMBOURG.region_state:LUX
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = make_protectorate
+                    target_country = c:BEL
+                }
 		}
         c:BEL = { set_variable = entente_participant }
         c:LUX = { set_variable = entente_participant }
@@ -911,6 +921,16 @@ great_war_initiation_events.15 = {
                     holder = c:GER
                     type = transfer_subject
                     target_country: c:EGY
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country: c:GBR
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state: s:STATE_SINAI.region_state:EGY
                 }
 		}
         c:GBR = { set_variable = entente_participant }
