@@ -57,6 +57,8 @@ great_war_initiation_events.1 = { # Triggered by global on June 28th.
             id = great_war_initiation_events.3
             days = 7
         }
+
+        set_global_variable = great_war_starting
     }
 
     option = {
@@ -149,6 +151,12 @@ great_war_initiation_events.4 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+    immediate = {
+        set_global_variable = {
+            name = great_war_starting value = no
+        }
+    }
+
     option = { # Reject the investigation
         name = great_war_initiation_events.4.a
         default_option = yes
@@ -202,6 +210,12 @@ great_war_initiation_events.5 = {
 
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    immediate = {
+        set_global_variable = {
+            name = great_war_starting value = no
+        }
     }
 
     title = great_war_initiation_events.5.title
@@ -266,6 +280,12 @@ great_war_initiation_events.6 = {
     flavor = great_war_initiation_events.6.flavor
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        set_global_variable = {
+            name = great_war_starting value = no
+        }
+    }
 
     option = { # Threaten Austria
         name = great_war_initiation_events.6.a
@@ -670,20 +690,20 @@ great_war_initiation_events.12 = {
 				c:TUN
 			}
             add_war_goal = {
-                    holder = c:ITA
-                    type = conquer_state
-                    target_state = s:STATE_CORSICA.region_state:FRA
-                }
+                holder = c:ITA
+                type = conquer_state
+                target_state = s:STATE_CORSICA.region_state:FRA
+            }
             add_war_goal = {
-                    holder = c:ITA
-                    type = conquer_state
-                    target_state = s:STATE_SAVOY.region_state:FRA
-                }
+                holder = c:ITA
+                type = conquer_state
+                target_state = s:STATE_SAVOY.region_state:FRA
+            }
             add_war_goal = {
-                    holder = c:ITA
-                    type = transfer_subject
-                    target_country: c:TUN
-                }
+                holder = c:ITA
+                type = transfer_subject
+                target_country: c:TUN
+            }
 		}
         c:ITA = { set_variable = central_powers_participant }
     }
@@ -693,7 +713,7 @@ great_war_initiation_events.12 = {
             base = 1
         }
         default_option = yes
-        c:ITA = { set_variable = neutral }
+        c:ITA = { set_variable = is_neutral }
     }
 }
 
@@ -899,45 +919,45 @@ great_war_initiation_events.15 = {
 				c:TAN
 			}
             add_war_goal = {
-                    holder = c:GBR
-                    type = transfer_subject
-                    target_country: c:TOG
-                }
+                holder = c:GBR
+                type = transfer_subject
+                target_country: c:TOG
+            }
             add_war_goal = {
-                    holder = c:GBR
-                    type = transfer_subject
-                    target_country: c:NAM
-                }
+                holder = c:GBR
+                type = transfer_subject
+                target_country: c:NAM
+            }
             add_war_goal = {
-                    holder = c:GBR
-                    type = transfer_subject
-                    target_country: c:TAN
-                }
+                holder = c:GBR
+                type = transfer_subject
+                target_country: c:TAN
+            }
             add_war_goal = {
-                    holder = c:GER
-                    type = transfer_subject
-                    target_country: c:NGA
-                }
+                holder = c:GER
+                type = transfer_subject
+                target_country: c:NGA
+            }
             add_war_goal = {
-                    holder = c:GER
-                    type = transfer_subject
-                    target_country: c:GHA
-                }
+                holder = c:GER
+                type = transfer_subject
+                target_country: c:GHA
+            }
             add_war_goal = {
-                    holder = c:GER
-                    type = transfer_subject
-                    target_country: c:EGY
-                }
+                holder = c:GER
+                type = transfer_subject
+                target_country: c:EGY
+            }
             add_war_goal = {
-                    holder = c:GER
-                    type = war_reparations
-                    target_country: c:GBR
-                }
+                holder = c:GER
+                type = war_reparations
+                target_country: c:GBR
+            }
             add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state: s:STATE_SINAI.region_state:EGY
-                }
+                holder = c:GER
+                type = conquer_state
+                target_state: s:STATE_SINAI.region_state:EGY
+            }
 		}
         c:GBR = { set_variable = entente_participant }
     }
