@@ -50,7 +50,6 @@ great_war_initiation_events.1 = { # Triggered by global on June 28th.
         every_country = {
             limit = {
                 is_player = yes
-                NOT = { c:AUS = ROOT }
             }
             trigger_event = { id = great_war_initiation_events.2 }
         }
@@ -69,6 +68,12 @@ great_war_initiation_events.1 = { # Triggered by global on June 28th.
 great_war_initiation_events.2 = {
     type = country_event
 
+    trigger = {
+        NOT = {
+            c:AUS = ROOT
+        }
+    }
+
     event_image = { 
 		texture = "gfx/event_pictures/franz_ferdinand_assasination.dds"
 	}
@@ -85,7 +90,7 @@ great_war_initiation_events.2 = {
     }
 }
 
-# The Ultimatum
+# Austria-Hungary Chooses an ultimatum
 great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
     type = country_event
 
@@ -169,7 +174,7 @@ great_war_initiation_events.4 = {
                 }
             }
         }
-        
+        set_global_variable = great_war_active
         c:AUS = { set_variable = central_powers_participant }
         c:SER = { set_variable = entente_participant }
         c:RUS = {
@@ -230,6 +235,7 @@ great_war_initiation_events.5 = {
                 }
             }
         }
+        set_global_variable = great_war_active
         c:AUS = { set_variable = central_powers_participant }
         c:SER = { set_variable = entente_participant }
         c:RUS = {
@@ -247,7 +253,7 @@ great_war_initiation_events.5 = {
     }
 }
 
-# Serbia needs help
+# Serbia needs help from Russia
 great_war_initiation_events.6 = {
     type = country_event
 
@@ -282,7 +288,7 @@ great_war_initiation_events.6 = {
     }
 }
 
-# Russian Threats!
+# Russia is threatening Austria, how should Germany respond?
 great_war_initiation_events.7 = {
     type = country_event
 
@@ -324,7 +330,7 @@ great_war_initiation_events.7 = {
     }
 }
 
-# German Pressure
+# Germany is pressuring Russia.
 great_war_initiation_events.8 = {
     type = country_event
 
@@ -449,7 +455,7 @@ great_war_initiation_events.8 = {
     }
 }
 
-# Abandoned by Germany
+# Germany Abandoned Austria.
 great_war_initiation_events.9 = {
     type = country_event
 
@@ -487,7 +493,7 @@ great_war_initiation_events.9 = {
     }
 }
 
-# War in the East
+# War in the East, France option to respond
 great_war_initiation_events.10 = {
     type = country_event
 
@@ -563,7 +569,7 @@ great_war_initiation_events.10 = {
     }
 }
 
-# Intervene against Russia?
+# Intervene against Russia?, how Ottomans respond
 great_war_initiation_events.11 = {
     type = country_event
 
@@ -632,7 +638,7 @@ great_war_initiation_events.11 = {
     }
 }
 
-# Help our Allies?
+# Help our Allies? Italy choice to help.
 great_war_initiation_events.12 = {
     type = country_event
 
@@ -692,7 +698,7 @@ great_war_initiation_events.12 = {
 }
 
 
-# Neutral France
+# Neutral France, Germany choice to attack France or wait
 great_war_initiation_events.13 = {
     type = country_event
 
@@ -772,7 +778,7 @@ great_war_initiation_events.13 = {
     }
 }
 
-# A plan of attack
+# A plan of attack, Germany choosing to invade France through Belgium
 great_war_initiation_events.14 = {
     type = country_event
 
@@ -831,7 +837,7 @@ great_war_initiation_events.14 = {
     }
 }
 
-# The invasion of Belgium
+# The invasion of Belgium, Britain choosing whether or not to protect Belgium
 great_war_initiation_events.15 = {
     type = country_event
 
@@ -944,7 +950,7 @@ great_war_initiation_events.15 = {
     }
 }
 
-# The British Offer
+# The British Offer, Japan choosing whether or not to intervene
 great_war_initiation_events.16 = {
     type = country_event
 
@@ -976,25 +982,25 @@ great_war_initiation_events.16 = {
 				c:NGG
 			}
             add_war_goal = {
-                    holder = c:JAP
-                    type = conquer_state
-                    target_state = s:STATE_SHANDONG.region_state:GER
-                }
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_SHANDONG.region_state:GER
+            }
             add_war_goal = {
-                    holder = c:JAP
-                    type = transfer_subject
-                    target_country: c:NGG
-                }
+                holder = c:JAP
+                type = transfer_subject
+                target_country: c:NGG
+            }
             add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state: s:STATE_FORMOSA.region_state:JAP
-                }
+                holder = c:GER
+                type = conquer_state
+                target_state: s:STATE_FORMOSA.region_state:JAP
+            }
             add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state: s:STATE_SHENGJING.region_state:JAP
-                }
+                holder = c:GER
+                type = conquer_state
+                target_state: s:STATE_SHENGJING.region_state:JAP
+            }
 		}
         c:JAP = { set_variable = entente_participant }
     }
