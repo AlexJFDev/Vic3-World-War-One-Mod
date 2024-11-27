@@ -747,7 +747,7 @@ great_war_initiation_events.13 = {
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
-                    holder = c:GBR
+                    holder = c:FRA
                     type = transfer_subject
                     target_country: c:CMR
                 }
@@ -797,6 +797,10 @@ great_war_initiation_events.14 = {
                 id = great_war_initiation_events.15
                 days = 3
             }
+        }
+        add_modifier = {
+            name = schlieffen_plan_modifier
+            months = 5
         }
         every_diplomatic_play = {
 			limit = {

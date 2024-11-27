@@ -1,0 +1,109 @@
+﻿namespace = balkan_war_events
+
+# Romanian Intervention
+balkan_war_events.1 = {
+	type = country_event
+	
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	title = balkan_war_events.1.t
+	desc = balkan_war_events.1.d
+	flavor = balkan_war_events.1.f
+
+	duration = 1
+
+	trigger = {} # Triggered in global
+
+	immediate = {}
+
+	option = { # Join the war
+		name = balkan_war_events.1.a
+        default_option = yes
+		ai_chance = {
+			base = 1
+		}
+
+		every_diplomatic_play = {
+			limit = {
+				is_war = yes
+				initiator = c:BUL
+                target = c:GRE
+			}
+			add_target_backers = {
+				c:ROM
+			}
+			add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_DOBRUDJA.region_state:BUL
+            }
+		}
+	}
+
+	option = { # Stay out
+		name = balkan_war_events.1.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Ottoman Intervention
+balkan_war_events.2 = {
+	type = country_event
+	
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	title = balkan_war_events.2.t
+	desc = balkan_war_events.2.d
+	flavor = balkan_war_events.2.f
+
+	duration = 1
+
+	trigger = {} # Triggered in global
+
+	immediate = {}
+
+	option = { # Join the war
+		name = balkan_war_events.2.a
+        default_option = yes
+		ai_chance = {
+			base = 1
+		}
+
+		every_diplomatic_play = {
+			limit = {
+				is_war = yes
+				initiator = c:BUL
+                target = c:GRE
+			}
+			add_target_backers = {
+				c:TUR
+			}
+			add_war_goal = {
+                holder = c:TUR
+                type = conquer_state
+                target_state = s:STATE_EASTERN_THRACE.region_state:BUL
+            }
+		}
+	}
+
+	option = { # Stay out
+		name = balkan_war_events.2.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}

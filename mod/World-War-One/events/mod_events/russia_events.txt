@@ -1,0 +1,28 @@
+namespace = russia_events
+
+russia_events.1 = { 
+    type = country_event
+
+    title = russia_events.1.t
+    desc = russia_events.1.d
+    flavor = russia_events.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/we_remember_1905.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = russia_events.1.a
+
+        add_modifier = {
+			name = colossus_with_feet_of_clay_modifier
+            duration = -1
+		}
+    }
+}

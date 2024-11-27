@@ -6,15 +6,20 @@
     tooltip = establish_the_federal_reserve_decision_tooltip
 
     is_shown = {
-        has_country_modifier = "no_federal_reserve_modifier"
-        tag : USA
+        exists = c:USA
+		this = c:USA
     }
     
-    effect = {
-        add_country_modifier = {
+    possible = {
+        has_modifier = no_federal_reserve_modifier
+    }
+
+    when_taken = {
+        add_modifier = {
             name = federal_reserve_established_modifier
             duration = -1
         }
+        remove_modifier = no_federal_reserve_modifier
         add_decision = "close_the_federal_reserve_decision"
     }
 }

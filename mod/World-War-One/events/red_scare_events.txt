@@ -1053,7 +1053,9 @@ red_scare.12 = {
 			is_incorporated = yes
 			any_scope_pop = {
 				culture = {
-					culture_is_discriminated_in = root
+					ROOT = {
+						cultural_acceptance_base = { target = prev value < acceptance_status_5 }
+					}
 				}
 			}
 		}
@@ -1065,8 +1067,8 @@ red_scare.12 = {
 			limit = {
 				is_incorporated = yes
 				any_scope_pop = {
-					culture = {
-						culture_is_discriminated_in = root
+					ROOT = {
+						cultural_acceptance_base = { target = prev.culture value < acceptance_status_5 }
 					}
 				}
 			}
@@ -1074,8 +1076,8 @@ red_scare.12 = {
 			save_scope_as = red_scare_victim_state		
 			random_scope_pop = {
 				limit = {
-					culture = {
-						culture_is_discriminated_in = root
+					ROOT = {
+						cultural_acceptance_base = { target = prev.culture value < acceptance_status_5 }
 					}
 				}
 				culture = {
@@ -1223,7 +1225,7 @@ red_scare.14 = {
 				strata = lower
 			}
 			any_scope_pop = {
-				pop_is_discriminated = yes
+				pop_acceptance < acceptance_status_4
 			}
 		}
 		scope:red_scare_target_nation = {
@@ -1249,12 +1251,12 @@ red_scare.14 = {
 					strata = lower
 				}
 				any_scope_pop = {
-					pop_is_discriminated = yes
+					pop_acceptance < acceptance_status_4
 				}
 			}
 			random_scope_pop = {
 				limit = {
-					pop_is_discriminated = yes
+					pop_acceptance < acceptance_status_4
 				}
 				save_scope_as = deported_pop
 			}
