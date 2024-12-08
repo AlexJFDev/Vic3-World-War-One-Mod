@@ -1,0 +1,57 @@
+﻿namespace = canal_events
+
+# Panama Survey complete
+canal_events.101 = {
+	type = country_event
+
+	title = expedition_events.410.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = expedition_events.410.d
+				trigger = {
+					any_scope_state = { state_region = s:STATE_PANAMA }
+				}
+			}
+			triggered_desc = {
+				desc = canal_events.101.d
+				trigger = {
+					NOT = { any_scope_state = { state_region = s:STATE_PANAMA } }
+				}
+			}
+		}
+	}
+	flavor = expedition_events.410.f
+
+	event_image = {
+        texture = "gfx/event_pictures/panama_canal.dds"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	trigger = { }
+
+	immediate = {
+		set_variable = panama_survey_complete
+		s:STATE_PANAMA = {
+			save_scope_as = panama_state
+			random_scope_state = {
+				owner = {
+					save_scope_as = panama_owner
+				}
+			}
+		}
+	}
+
+	option = { # we should build the canal
+		name = canal_events.100.c
+		trigger = {
+			any_scope_state = { state_region = s:STATE_PANAMA }
+		}
+		custom_tooltip = panama_canal_construction_available
+	}
+}
