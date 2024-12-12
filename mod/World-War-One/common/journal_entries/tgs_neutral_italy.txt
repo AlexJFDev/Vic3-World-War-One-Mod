@@ -18,6 +18,10 @@
     complete = {
         c:ITA.var:is_neutral = no
     }
+
+    should_be_pinned_by_default = yes
+
+    scripted_progress_bar = neutral_italy_progress_bar
 }
 
 je_neutral_italy_entente = { # Journal Entry for the Entente while Italy is Neutral
@@ -37,13 +41,15 @@ je_neutral_italy_entente = { # Journal Entry for the Entente while Italy is Neut
         root.var:entente_participant = yes
     }
     possible = {
-        ROOT = c:ITA
+        root.var:entente_participant = yes
         global_var:great_war_active = yes
         c:ITA.var:is_neutral = yes
     }
     complete = {
         c:ITA.var:is_neutral = no
     }
+
+    scripted_progress_bar = neutral_italy_progress_bar
 }
 
 je_neutral_italy_central = { # Journal Entry for the Central Powers while Italy is Neutral
@@ -63,11 +69,13 @@ je_neutral_italy_central = { # Journal Entry for the Central Powers while Italy 
         root.var:central_powers_participant = yes
     }
     possible = {
-        ROOT = c:ITA
+        root.var:central_powers_participant = yes
         global_var:great_war_active = yes
         c:ITA.var:is_neutral = yes
     }
     complete = {
         c:ITA.var:is_neutral = no
     }
+
+    scripted_progress_bar = neutral_italy_progress_bar
 }
