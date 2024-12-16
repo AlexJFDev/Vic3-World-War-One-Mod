@@ -143,6 +143,19 @@
 		}
     }	
 
+	c:RUS = {
+        create_political_lobby = {  
+			type = lobby_anti_country 
+			target = c:TUR
+			add_interest_group = ig:ig_devout
+		}
+		create_political_lobby = {  
+			type = lobby_anti_country 
+			target = c:AUS
+			add_interest_group = ig:ig_armed_forces
+		}
+    }	
+
 	c:USA = {
         create_political_lobby = {  
 			type = lobby_pro_country 
@@ -153,6 +166,24 @@
 			type = lobby_anti_country 
 			target = c:JAP
 			add_interest_group = ig:ig_armed_forces
+		}	
+    }	
+
+	c:JAP = {
+		create_political_lobby = {  
+			type = lobby_anti_country 
+			target = c:CHI
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_petty_bourgeoisie
+		}	
+    }	
+
+	c:CHI = {
+		create_political_lobby = {  
+			type = lobby_anti_country 
+			target = c:JAP
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_petty_bourgeoisie
 		}	
     }	
 }

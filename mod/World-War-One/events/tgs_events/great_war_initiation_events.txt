@@ -5,6 +5,8 @@
 great_war_initiation_events.1 = { # Triggered by global on June 28th.
     type = country_event
     placement = root
+    
+    duration = 1
 
     event_image = { 
 		texture = "gfx/event_pictures/franz_ferdinand_assasination.dds"
@@ -66,9 +68,12 @@ great_war_initiation_events.1 = { # Triggered by global on June 28th.
         default_option = yes
     }
 }
+
 ## Global Version of the Assassination
 great_war_initiation_events.2 = {
     type = country_event
+    
+    duration = 1
 
     trigger = {
         NOT = {
@@ -95,6 +100,8 @@ great_war_initiation_events.2 = {
 # Austria-Hungary Chooses an ultimatum
 great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
     type = country_event
+
+    duration = 1
 
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
@@ -136,6 +143,8 @@ great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
 # Vienna demands an investigation
 great_war_initiation_events.4 = {
     type = country_event
+
+    duration = 1
 
     trigger = {
         c:SER = ROOT
@@ -204,6 +213,8 @@ great_war_initiation_events.4 = {
 great_war_initiation_events.5 = {
     type = country_event
 
+    duration = 1
+
     trigger = {
         c:SER = ROOT
     }
@@ -271,6 +282,8 @@ great_war_initiation_events.5 = {
 great_war_initiation_events.6 = {
     type = country_event
 
+    duration = 1
+
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
     }
@@ -311,6 +324,8 @@ great_war_initiation_events.6 = {
 # Russia is threatening Austria, how should Germany respond?
 great_war_initiation_events.7 = {
     type = country_event
+
+    duration = 1
 
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
@@ -353,6 +368,8 @@ great_war_initiation_events.7 = {
 # Germany is pressuring Russia.
 great_war_initiation_events.8 = {
     type = country_event
+
+    duration = 1
 
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
@@ -479,6 +496,8 @@ great_war_initiation_events.8 = {
 great_war_initiation_events.9 = {
     type = country_event
 
+    duration = 1
+
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
     }
@@ -516,6 +535,8 @@ great_war_initiation_events.9 = {
 # War in the East, France option to respond
 great_war_initiation_events.10 = {
     type = country_event
+    
+    duration = 1
 
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
@@ -722,6 +743,8 @@ great_war_initiation_events.12 = {
 great_war_initiation_events.13 = {
     type = country_event
 
+    duration = 1
+
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
     }
@@ -801,6 +824,8 @@ great_war_initiation_events.13 = {
 # A plan of attack, Germany choosing to invade France through Belgium
 great_war_initiation_events.14 = {
     type = country_event
+
+    duration = 1
 
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"

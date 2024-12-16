@@ -16,15 +16,14 @@ federal_reserve_events = {
     duration = 3
     is_triggered_only = yes
 
-    trigger = {
+    trigger = { 
         game_date = 1913.9.23
-        tag = USA
+        tag = USA  
     }
 
     option = {
         name = federal_reserve_event.1.a
         default_option = yes
-
         add_country_modifier = {
             name = federal_reserve_established_modifier
             duration = -1
@@ -34,7 +33,6 @@ federal_reserve_events = {
 
     option = {
         name = federal_reserve_event.1.b
-
         add_country_modifier = {
             name = no_federal_reserve_modifier
             duration = -1
