@@ -11,7 +11,8 @@ OUTPUT_MAP: str = os.path.join('game', 'data', 'state_regions2.png')
 def convert_colors(provinces: list[str]):
     colors = []
     for province in provinces:
-        #print(province)
+        if len(province) != 7:
+            continue
         red = int(province[1:3], 16)
         blue = int(province[3:5], 16)
         green = int(province[5:7], 16)
