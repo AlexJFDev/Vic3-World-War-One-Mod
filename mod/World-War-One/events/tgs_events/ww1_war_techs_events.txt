@@ -1,0 +1,45 @@
+namespace = ww1_war_techs_events
+
+ww1_war_techs_events = {
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/military_parade.dds"
+    }
+
+    title = ww1_war_techs_events.1.t
+    desc = ww1_war_techs_events.1.d
+    flavor = ww1_war_techs_events.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+        has_variable = entente_participant 
+        has_variable = central_powers_participant
+        }
+    }
+    
+    option = {
+        name = ww1_war_techs_events.1.a
+        add_technology_progress = { progress = 8000 technology = stormtroopers } 
+    }
+
+    option = {
+        name = ww1_war_techs_events.1.b
+        add_technology_progress = { progress = 8000 technology = concrete_fortifications } 
+    }
+    
+    option = {
+        name = ww1_war_techs_events.1.c
+        default_option = yes
+        add_technology_progress = { progress = 8000 technology = flamethrowers } 
+    }
+
+    option = {
+        name = ww1_war_techs_events.1.d
+        add_technology_progress = { progress = 8000 technology = chemical_warfare } 
+    }
+}

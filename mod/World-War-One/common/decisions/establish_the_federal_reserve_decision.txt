@@ -12,14 +12,27 @@
     
     possible = {
         has_modifier = no_federal_reserve_modifier
+        scope:journal_entry = {
+			not = {
+				custom_tooltip = {
+					text = fed_decision_taken_var
+					has_variable = fed_decision_taken_var
+				}
+			}
+		}
     }
 
     when_taken = {
+        
         add_modifier = {
             name = federal_reserve_established_modifier
             duration = -1
         }
         remove_modifier = no_federal_reserve_modifier
         add_decision = "close_the_federal_reserve_decision"
+        scope:journal_entry = {
+			custom_tooltip = fed_decision_taken_var
+			set_variable = { name = fed_decision_taken_var years = 10 }
+		}
     }
 }

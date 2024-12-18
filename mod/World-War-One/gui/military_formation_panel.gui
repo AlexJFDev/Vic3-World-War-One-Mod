@@ -41,6 +41,16 @@ types military_formation_change_name
 
 		blockoverride "entire_scrollarea"
 		{
+			scrollarea = {
+				name = "military_formation_change_name_mod_scrollarea"
+				size = { 435 600 }
+				scrollbarpolicy_horizontal = always_off
+				
+				scrollwidget = {
+			
+			flowcontainer = {
+				direction = vertical
+			
 			flowcontainer = {
 				direction = vertical
 
@@ -113,7 +123,7 @@ types military_formation_change_name
 				divider_clean = {}
 
 					widget = {
-								size = { 0 8 }
+								size = { 0 7 }
 								}
 
 
@@ -123,7 +133,7 @@ types military_formation_change_name
 
 					textbox = {
 						multiline = no
-						size = { 70 60 }
+						size = { 70 40 }
 						text = "BASE_ON"
 						align = left|nobaseline
 						margin_right = 10
@@ -191,7 +201,7 @@ types military_formation_change_name
 				}
 	
 				widget = {
-					size = { 420 10 }
+					size = { 420 2 }
 				}
 			}
 
@@ -218,13 +228,13 @@ types military_formation_change_name
 					dynamicgridbox = {
 						visible = "[MilitaryFormation.IsArmy]"
 						datamodel = "[MilitaryFormationChangeNamePopup.GetArmyFormationFlags]"
-						datamodel_wrap = 5
+						datamodel_wrap = 8
 						flipdirection = yes
 						parentanchor = hcenter
 
 						item = {
 							widget = {
-								size = { 85 95 }
+								size = { 52 52 }
 
 								set_level_bar_item = {
 									
@@ -234,19 +244,19 @@ types military_formation_change_name
 									}
 
 									blockoverride "size" {
-										size = { 85 95 }
+										size = { 52 52 }
 									}
 
 									blockoverride "button_size" {
-										size = { 80 80 }
+										size = { 50 50 }
 									}
 
 									blockoverride "texture_size" {
-										size = { 70 70 }
+										size = { 44 44 }
 									}
 
 									blockoverride "selected_frame_size" {
-										size = { 80 80 }
+										size = { 50 50 }
 									}
 
 									blockoverride "selected_texture_size" {
@@ -254,7 +264,7 @@ types military_formation_change_name
 									}
 
 									blockoverride "selected_arrow_size" {	
-										size = { 30 17 }
+										size = { 0 0 }
 									}
 
 									blockoverride "click" {
@@ -279,12 +289,12 @@ types military_formation_change_name
 					dynamicgridbox = {
 						visible = "[MilitaryFormation.IsFleet]"
 						datamodel = "[MilitaryFormationChangeNamePopup.GetFleetFormationFlags]"
-						datamodel_wrap = 5
+						datamodel_wrap = 8
 						flipdirection = yes
 
 						item = {
 							widget = {
-								size = { 85 95 }
+								size = { 52 52 }
 
 								set_level_bar_item = {
 									blockoverride "button_texture" {
@@ -293,27 +303,27 @@ types military_formation_change_name
 									}
 
 									blockoverride "size" {
-										size = { 85 95 }
+										size = { 52 52 }
 									}
 
 									blockoverride "button_size" {
-										size = { 80 80 }
+										size = { 50 50 }
 									}
 
 									blockoverride "texture_size" {
-										size = { 70 70 }
+										size = { 44 44 }
 									}
 
 									blockoverride "selected_frame_size" {
-										size = { 80 80 }
+										size = { 50 50 }
 									}
 
 									blockoverride "selected_texture_size" {
-										size = { 70 70 }
+										size = { 65 65 }
 									}
 
 									blockoverride "selected_arrow_size" {	
-										size = { 30 17 }
+										size = { 0 0 }
 									}
 
 									blockoverride "click" {
@@ -353,13 +363,13 @@ types military_formation_change_name
 					dynamicgridbox = {
 						visible = "[MilitaryFormation.IsArmy]"
 						datamodel = "[MilitaryFormationChangeNamePopup.GetArmyFormationColors]"
-						datamodel_wrap = 7
+						datamodel_wrap = 14
 						flipdirection = yes
 						parentanchor = hcenter
 
 						item = {
 							widget = {
-								size = { 61 75 }
+								size = { 29 29 }
 
 								set_level_bar_item = {
 									blockoverride "button_texture" {
@@ -368,27 +378,27 @@ types military_formation_change_name
 									}
 
 									blockoverride "size" {
-										size = { 60 75 }
+										size = { 30 30 }
 									}
 
 									blockoverride "button_size" {
-										size = { 56 56 }
+										size = { 28 28 }
 									}
 
 									blockoverride "texture_size" {
-										size = { 50 50 }
+										size = { 25 25 }
 									}
 
 									blockoverride "selected_frame_size" {
-										size = { 56 56 }
+										size = { 28 28 }
 									}
 
 									blockoverride "selected_texture_size" {
-										size = { 50 50 }
+										size = { 25 25 }
 									}
 
 									blockoverride "selected_arrow_size" {	
-										size = { 30 17 }
+										size = { 20 11 }
 									}
 
 									blockoverride "click" {
@@ -413,13 +423,13 @@ types military_formation_change_name
 					dynamicgridbox = {
 						visible = "[MilitaryFormation.IsFleet]"
 						datamodel = "[MilitaryFormationChangeNamePopup.GetFleetFormationColors]"
-						datamodel_wrap = 7
+						datamodel_wrap = 14
 						flipdirection = yes
 						parentanchor = hcenter
 
 						item = {
 							widget = {
-								size = { 61 75 }
+								size = { 29 29 }
 
 								set_level_bar_item = {
 									blockoverride "button_texture" {
@@ -428,27 +438,27 @@ types military_formation_change_name
 									}
 
 									blockoverride "size" {
-										size = { 60 75 }
+										size = { 30 30 }
 									}
 
 									blockoverride "button_size" {
-										size = { 56 56 }
+										size = { 28 28 }
 									}
 
 									blockoverride "texture_size" {
-										size = { 40 40 }
+										size = { 25 25 }
 									}
 
 									blockoverride "selected_frame_size" {
-										size = { 56 56 }
+										size = { 28 28 }
 									}
 
 									blockoverride "selected_texture_size" {
-										size = { 43 43 }
+										size = { 25 25 }
 									}
 
 									blockoverride "selected_arrow_size" {	
-										size = { 30 17 }
+										size = { 20 11 }
 									}
 
 									blockoverride "click" {
@@ -476,7 +486,12 @@ types military_formation_change_name
 				}
 			}
 		}
-
+		}
+		scrollbar_vertical = {
+			using = vertical_scrollbar
+		}
+		}
+		}
 		blockoverride "fixed_bottom"
 		{
 			# Formation button
