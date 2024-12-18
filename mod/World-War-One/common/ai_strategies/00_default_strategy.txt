@@ -4336,7 +4336,7 @@ ai_strategy_default = {
 					exists = c:RUS
 					c:RUS ?= {
 						any_scope_state = {
-							region = sr:region_manchuria
+							region = sr:region_china
 							OR = {
 								any_scope_building = {
 									is_building_type = building_port
@@ -4353,10 +4353,8 @@ ai_strategy_default = {
 						country_rank >= rank_value:unrecognized_major_power
 						OR = {
 							capital.region = sr:region_japan
-							capital.region = sr:region_manchuria
-							capital.region = sr:region_north_china
-							capital.region = sr:region_south_china
-							capital.region = sr:region_indonesia
+							capital.region = sr:region_china
+							capital.region = sr:region_southeast_asia
 						}
 					}
 				}
