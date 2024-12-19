@@ -73,6 +73,7 @@ def unparse_regions_file(file_path: str):
 
 def save_regions(regions: dict):
     with open(STATE_REGIONS_CSV_PATH, 'w', newline='') as file:
+        file.write('Region Tag,ID Number,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit,Prime Land')
         writer = csv.writer(file)
         for state_name, region_data in regions.items():
             id = region_data['id']
@@ -106,10 +107,9 @@ def save_regions(regions: dict):
 
             naval_exit_id = region_data['naval_exit_id']
 
-            #prime_land = ' '.join(region_data['prime_land']).replace('"', '')
+            prime_land = ' '.join(region_data['prime_land']).replace('"', '')
 
-            #writer.writerow([state_name, id, subsistence_building, city, port, farm, mine, wood, arable_land, provinces, traits, arable_resources, capped_resources, naval_exit_id, prime_land])
-            writer.writerow([state_name, id, subsistence_building, city, port, farm, mine, wood, arable_land, provinces, traits, arable_resources, capped_resources, naval_exit_id])
+            writer.writerow([state_name, id, subsistence_building, city, port, farm, mine, wood, arable_land, provinces, traits, arable_resources, capped_resources, naval_exit_id, prime_land])
 
 
 if __name__ == '__main__':
