@@ -461,27 +461,18 @@ great_war_initiation_events.8 = {
                 }
             add_war_goal = {
                     holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_BREST.region_state:RUS
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_VILNIUS.region_state:RUS
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_KAUNAS.region_state:RUS
-                }
-            add_war_goal = {
-                    holder = c:GER
                     type = war_reparations
                     target_country = c:RUS
                 }
 		}
         c:GER = { set_variable = central_powers_participant }
         c:RUS = { set_variable = entente_participant }
+        c:GER = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+        }
     }
     option = {
         name = great_war_initiation_events.8.b
@@ -607,6 +598,12 @@ great_war_initiation_events.10 = {
             # TODO:MID wargoals germany: war reps from france
 		}
         c:FRA = { set_variable = entente_participant }
+        c:FRA = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+        }
     }
 }
 
@@ -738,7 +735,6 @@ great_war_initiation_events.12 = {
     }
 }
 
-
 # Neutral France, Germany choice to attack France or wait
 great_war_initiation_events.13 = {
     type = country_event
@@ -812,6 +808,12 @@ great_war_initiation_events.13 = {
                 }
 		}
         c:FRA = { set_variable = entente_participant }
+        c:FRA = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+        }
     }
     option = { # Leave France alone
         name = great_war_initiation_events.13.a
@@ -989,6 +991,12 @@ great_war_initiation_events.15 = {
             }
 		}
         c:GBR = { set_variable = entente_participant }
+        c:GBR = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+        }
     }
     option = { # Do nothing
         name = great_war_initiation_events.15.b
