@@ -45,21 +45,78 @@ GAME_REGION_CAPED_RESOURCES_COLUMN = 12
 GAME_REGION_NAVAL_EXIT_COLUMN = 13
 GAME_REGION_PRIME_LAND_COLUMN = 14
 
+def split_provinces(provinces: str) -> set[str]:
+    """
+    Take a string of space separated province IDs and return a set of strings
+    with the 'x' prefix and the ID in uppercase.
+
+    :param provinces: A string of space separated province IDs
+    :return: A set of strings with the 'x' prefix and the ID in uppercase
+    """
+    return {'x' + province[1:].upper() for province in provinces.split()}
+
 # First iterate through the old mod regions
-old_mod_regions = {}
+old_mod_regions = {} # region_tag -> region data
+old_mod_provinces = {} # province -> region_tag
 with open(OLD_MOD_REGIONS_DATA_PATH, 'r') as file:
     file.readline() # Skip first line
     reader = csv.reader(file)
     for line in reader:
-        pass
+        region_tag = line[MOD_REGION_TAG_COLUMN]
+        provinces = split_provinces(line[MOD_REGION_PROVINCES_COLUMN])
+        old_mod_regions[region_tag] = provinces
+        for province in provinces:
+            old_mod_provinces[province] = region_tag
 
 # Then iterate through the new game regions
 new_game_regions = {}
+new_game_provinces = {}
 with open(NEW_GAME_REGIONS_DATA_PATH, 'r') as file:
     file.readline() # Skip first line
     reader = csv.reader(file)
     for line in reader:
-        pass
+        region_tag = line[GAME_REGION_TAG_COLUMN]
+        provinces = split_provinces(line[GAME_REGION_PROVINCES_COLUMN])
+        new_game_regions[region_tag] = provinces
+        for province in provinces:
+            new_game_provinces[province] = region_tag
+
+# Then combine
+new_regions = {}
+removed_regions = {}
+modified_regions = {}
+for region_tag, provinces in new_game_regions.items():
+    if region_tag not in old_mod_regions:
+        new_regions[region_tag] = set()
+    elif provinces != old_mod_regions[region_tag]:
+        modified_regions[region_tag] = set()
+
+for region_tag in old_mod_regions.keys():
+    if region_tag not in new_game_regions:
+        removed_regions[region_tag] = set()
+
+print(f'New regions: {new_regions}')
+print(f'Removed regions: {removed_regions}')
+print(f'Modified regions: {modified_regions}')
+print(new_game_provinces.keys() - old_mod_provinces.keys())
+
+for province, new_game_region in new_game_provinces.items():
+    old_mod_region = old_mod_provinces[province]
+    if old_mod_region in removed_regions.keys():
+        removed_regions[old_mod_region].add(new_game_region)
+    if old_mod_region in modified_regions.keys():
+        modified_regions[old_mod_region].add(new_game_region)
+print('\nDeleted:')
+for removed_region, new_regions in removed_regions.items():
+    print(f'Split region {removed_region} into:')
+    for new_region in new_regions:
+        print(f'  {new_region}')
+print('\nModified:')
+for modified_region, new_regions in modified_regions.items():
+    print(f'Split region {modified_region} into:')
+    for new_region in new_regions:
+        print(f'  {new_region}')
+
 
 # with open(NEW_MOD_REGIONS_DATA_PATH, 'w', newline='') as regions_file:
 #     writer = csv.writer(regions_file, quoting=csv.QUOTE_ALL)
