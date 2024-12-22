@@ -64,7 +64,8 @@ with open(OLD_MOD_REGIONS_DATA_PATH, 'r') as file:
     for line in reader:
         region_tag = line[MOD_REGION_TAG_COLUMN]
         provinces = split_provinces(line[MOD_REGION_PROVINCES_COLUMN])
-        old_mod_regions[region_tag] = provinces
+        old_mod_regions[region_tag] = line
+        old_mod_regions[region_tag][MOD_REGION_PROVINCES_COLUMN] = provinces # Correct the provinces
         for province in provinces:
             old_mod_provinces[province] = region_tag
 
@@ -77,7 +78,8 @@ with open(NEW_GAME_REGIONS_DATA_PATH, 'r') as file:
     for line in reader:
         region_tag = line[GAME_REGION_TAG_COLUMN]
         provinces = split_provinces(line[GAME_REGION_PROVINCES_COLUMN])
-        new_game_regions[region_tag] = provinces
+        new_game_regions[region_tag] = line
+        new_game_regions[region_tag][GAME_REGION_PROVINCES_COLUMN] = provinces
         for province in provinces:
             new_game_provinces[province] = region_tag
 
@@ -85,10 +87,11 @@ with open(NEW_GAME_REGIONS_DATA_PATH, 'r') as file:
 new_regions = {}
 removed_regions = {}
 modified_regions = {}
-for region_tag, provinces in new_game_regions.items():
+for region_tag, region_data in new_game_regions.items():
+    provinces = region_data[GAME_REGION_PROVINCES_COLUMN]
     if region_tag not in old_mod_regions:
         new_regions[region_tag] = set()
-    elif provinces != old_mod_regions[region_tag]:
+    elif provinces != old_mod_regions[region_tag][MOD_REGION_PROVINCES_COLUMN]:
         modified_regions[region_tag] = set()
 
 for region_tag in old_mod_regions.keys():
