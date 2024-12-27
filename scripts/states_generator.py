@@ -31,6 +31,7 @@ REGIONS_TRAITS_COLUMN = 11
 REGIONS_ARABLE_RESOURCES_COLUMN = 12
 REGIONS_CAPPED_RESOURCES_COLUMN = 13
 REGIONS_NAVAL_EXIT_COLUMN = 14
+REGIONS_PRIME_LAND_COLUMN = 15
 
 ENCODING = 'utf-8-sig'
 
@@ -140,15 +141,26 @@ def generate_regions(regions_path: str):
             mine_province = line[REGIONS_MINE_COLUMN]
             wood_province = line[REGIONS_WOOD_COLUMN]
             arable_land = line[REGIONS_ARABLE_LAND_COLUMN]
-            provinces = line[REGIONS_PROVINCES_COLUMN].split(' ')
+            provinces = sorted(line[REGIONS_PROVINCES_COLUMN].split(' '))
             traits = line[REGIONS_TRAITS_COLUMN].split(' ')
             arable_resources = line[REGIONS_ARABLE_RESOURCES_COLUMN].split(' ')
             capped_resources = line[REGIONS_CAPPED_RESOURCES_COLUMN].split(' ')
             naval_exit = line[REGIONS_NAVAL_EXIT_COLUMN]
+            prime_land = line[REGIONS_PRIME_LAND_COLUMN]
 
             region_object = ClausewitzObject()
-            region_object.add_named_value('id', region_id)
             region_object.add_named_value('provinces', ClausewitzObject(anonymous_values=provinces))
+            if (traits[0] != ''):
+                region_object.add_named_value('traits', ClausewitzObject(anonymous_values=traits))
+            if (arable_resources[0] != ''):
+                region_object.add_named_value('arable_resources', ClausewitzObject(anonymous_values=arable_resources))
+            if (capped_resources[0] != ''):
+                capped_resources_object = ClausewitzObject()
+                for capped_resource in capped_resources:
+                    resource, quantity = capped_resource.split('=')
+                    capped_resources_object.add_named_value(resource, quantity)
+                region_object.add_named_value('capped_resources', capped_resources_object)
+            region_object.add_named_value('id', region_id)
             if (subsistence_building_type != ''):
                 region_object.add_named_value('subsistence_building', subsistence_building_type)
             if (city_province != ''):
@@ -163,18 +175,10 @@ def generate_regions(regions_path: str):
                 region_object.add_named_value('wood', wood_province)
             if (arable_land != ''):
                 region_object.add_named_value('arable_land', arable_land)
-            if (traits[0] != ''):
-                region_object.add_named_value('traits', ClausewitzObject(anonymous_values=traits))
-            if (arable_resources[0] != ''):
-                region_object.add_named_value('arable_resources', ClausewitzObject(anonymous_values=arable_resources))
-            if (capped_resources[0] != ''):
-                capped_resources_object = ClausewitzObject()
-                for capped_resource in capped_resources:
-                    resource, quantity = capped_resource.split('=')
-                    capped_resources_object.add_named_value(resource, quantity)
-                region_object.add_named_value('capped_resources', capped_resources_object)
             if (naval_exit != ''):
                 region_object.add_named_value('naval_exit_id', naval_exit)
+            if (prime_land != ''):
+                region_object.add_named_value('prime_land', prime_land)
 
             regions_root.add_named_value(region_tag, region_object)
     return regions_root
