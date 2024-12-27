@@ -146,7 +146,7 @@ def generate_regions(regions_path: str):
             arable_resources = line[REGIONS_ARABLE_RESOURCES_COLUMN].split(' ')
             capped_resources = line[REGIONS_CAPPED_RESOURCES_COLUMN].split(' ')
             naval_exit = line[REGIONS_NAVAL_EXIT_COLUMN]
-            prime_land = line[REGIONS_PRIME_LAND_COLUMN]
+            prime_land = line[REGIONS_PRIME_LAND_COLUMN].split(' ')
 
             region_object = ClausewitzObject()
             region_object.add_named_value('provinces', ClausewitzObject(anonymous_values=provinces))
@@ -177,8 +177,8 @@ def generate_regions(regions_path: str):
                 region_object.add_named_value('arable_land', arable_land)
             if (naval_exit != ''):
                 region_object.add_named_value('naval_exit_id', naval_exit)
-            if (prime_land != ''):
-                region_object.add_named_value('prime_land', prime_land)
+            if (prime_land[0] != ''):
+                region_object.add_named_value('prime_land', ClausewitzObject(anonymous_values=prime_land))
 
             regions_root.add_named_value(region_tag, region_object)
     return regions_root
