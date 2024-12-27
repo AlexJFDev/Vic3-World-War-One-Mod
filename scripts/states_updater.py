@@ -18,8 +18,8 @@ STATE_REGIONS_ID_COLUMN = 1
 STATE_REGIONS_PROVINCES_COLUMN = 9
 
 # Provinces are the smallest geographic unit
-# Regions are a set of provinces
-# States have owners and are a subset of a region
+# State Regions are a set of provinces
+# States have owners and are a subset of a region. States also include pop and building data.
 
 def fix_province_id(province: str) -> str:
     return f'x{province[1:].upper()}'

@@ -39,6 +39,9 @@ STATE_ABU_DHABI = {
 	wood = x0DC972
 	arable_land = 5
 	naval_exit_id = 3046
+	prime_land = {
+		x505AE0 x2768F8 xEF5020  
+	}
 }
 STATE_ACEH = {
 	provinces = {
@@ -112,6 +115,30 @@ STATE_ADANA = {
 	arable_land = 15
 	naval_exit_id = 3034
 }
+STATE_AGRA = {
+	provinces = {
+		x037AF5 x03A411 x048AD9 x117021 x11EE65 x13E50E x49337F x4B6538 x4E8563 x51177D x53EF28 x5432BC x584C9B x61F0A0 x63AA19 x6738CF x6B646E x733AB7 x7D8325 x8E6FE7 x98BACD x99FE9A xA4A19F xAD283F xB050DF xB4FE19 xBF1DC0 xC26B82 xCF1974 xDC471F xDCAA17 xE3A5A5 xE77282 xF15B70 xF37EE6 xFB8F08 xFBA109 
+	}
+	traits = {
+		state_trait_ganges_river 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tea_plantations bg_dye_plantations bg_tobacco_plantations bg_sugar_plantations 
+	}
+	capped_resources = {
+		bg_monuments = 1
+		bg_logging = 6
+		bg_coal_mining = 4
+		bg_iron_mining = 2
+	}
+	id = 918
+	subsistence_building = building_subsistence_rice_paddies
+	city = xB050DF
+	farm = xB050DF
+	mine = xB050DF
+	wood = xB050DF
+	arable_land = 483
+}
 STATE_AKMOLINSK = {
 	provinces = {
 		x009AFB x0247E4 x03BFF0 x070100 x088EB3 x0B7B06 x0D0584 x0F3769 x0FD218 x10826C x13726D x14B050 x150D99 x16BD3B x17D1C0 x18C6D4 x19A49F x1A71CF x1A7E98 x1D2D82 x1DA260 x1DEC38 x1F0AF5 x21D84A x22943A x24E7BC x269596 x29FA4D x2B23E1 x2B67C3 x2B7FB8 x30D2E4 x3154C8 x31EE81 x3299A2 x32B0B3 x32DF16 x34539E x391054 x3CDF40 x3E305E x3F2C07 x3F5871 x41E1DD x449AF9 x46471E x4656DC x470E92 x479525 x47C1E9 x48B3B4 x48D8BA x4ED6F6 x4F50D7 x51D935 x550CEC x55E19C x5893D1 x58B50A x59D3C7 x5A0540 x5A266D x5A6F67 x5B695B x5C89AC x61AE1D x620AEB x6218AA x621D95 x62C592 x664C01 x66D355 x67CF5B x682506 x69A7AA x69FDFC x6A7D45 x6AE98E x6B01A9 x6B4727 x6CFC96 x6D5852 x6D870C x6E5F2D x6F506B x705C49 x70A175 x70B0AF x71A9B4 x7249E9 x740C85 x757C9F x761E18 x765568 x781A57 x782B38 x7AF58E x7D3F89 x7DE085 x7DFF0D x7E565C x82A6B7 x836C58 x84B1C2 x87A6EF x87A869 x880372 x880425 x892B04 x8DFD0D x8EF6A9 x910A48 x91E4E7 x94084B x94DDF7 x988B95 x98E638 x991324 x999089 x9A571F x9A64D0 x9ADA98 x9B172B x9B36FE x9B3BE4 x9C66DA x9D7F99 x9E26DF x9EC33F xA07396 xA10863 xA17DAB xA25277 xA43FC8 xA57492 xA59D8C xA736F0 xABED3D xAC21A9 xAC7D02 xAD892E xB045AC xB0BB12 xB1D6DB xB39433 xB39E7A xB5C4E0 xB67625 xB67BAF xB8E2AC xB8F274 xBA1AA8 xBA579D xBCAB02 xBDA876 xC28E75 xC2CAA0 xC2FB53 xC47A4C xC5C445 xC5E6AF xC790DB xC7DA51 xCEF3B7 xCF0490 xCF86EF xD0064B xD2D2D7 xD37222 xD44E92 xD500B5 xD74258 xD7671E xD8D66C xD99CCE xDB1996 xDC6CAE xDF3E66 xDF6D72 xE1015F xE2B9E9 xE34CC4 xE3B80A xE53DD7 xE59BDA xE61F0A xE62636 xE6663B xE6DF2E xE7BFB9 xE9FACA xEB6D45 xEC78FD xEF2568 xF2637F xF2D776 xF39F86 xF5E136 xF5E8B2 xF6F868 xF726E8 xF79B38 xF8C594 xFA13C2 xFBD692 xFC1EC1 xFC6389 xFCED24 xFD5390 xFE06ED xFED025 xFF3849 
@@ -130,9 +157,9 @@ STATE_AKMOLINSK = {
 	id = 448
 	subsistence_building = building_subsistence_pastures
 	city = xD7671E
-	farm = xDF3E66
-	mine = x5929A2
-	wood = x0CCA19
+	farm = x9C66DA
+	mine = xFA13C2
+	wood = xDF3E66
 	arable_land = 45
 }
 STATE_AKTOBE = {
@@ -157,28 +184,6 @@ STATE_AKTOBE = {
 	mine = x5DCF1A
 	wood = x62EE42
 	arable_land = 24
-}
-STATE_AL_RIF = {
-	provinces = {
-		x20B0C0 x75DC50 x8FBBB6 x9BC3AC xA0B0C0 xCA9F75 xDFB040 xE6D43C xE95985 xF05E87 xFA1C92 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_sugar_plantations bg_banana_plantations bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_logging = 6
-		bg_fishing = 7
-		bg_coal_mining = 6
-	}
-	id = 188
-	subsistence_building = building_subsistence_farms
-	city = x20B0C0
-	port = xCA9F75
-	farm = xF05E87
-	mine = x9BC3AC
-	wood = x20B0C0
-	arable_land = 50
-	naval_exit_id = 3032
 }
 STATE_ALABAMA = {
 	provinces = {
@@ -377,6 +382,9 @@ STATE_ALGIERS = {
 	wood = xA75E78
 	arable_land = 82
 	naval_exit_id = 3032
+	prime_land = {
+		x713C2F  
+	}
 }
 STATE_ALSACE_LORRAINE = {
 	provinces = {
@@ -466,6 +474,28 @@ STATE_ALXA = {
 	wood = x53E07B
 	arable_land = 11
 }
+STATE_AL_RIF = {
+	provinces = {
+		x20B0C0 x75DC50 x8FBBB6 x9BC3AC xA0B0C0 xCA9F75 xDFB040 xE6D43C xE95985 xF05E87 xFA1C92 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_sugar_plantations bg_banana_plantations bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_logging = 6
+		bg_fishing = 7
+		bg_coal_mining = 6
+	}
+	id = 188
+	subsistence_building = building_subsistence_farms
+	city = x20B0C0
+	port = xCA9F75
+	farm = xF05E87
+	mine = x9BC3AC
+	wood = x20B0C0
+	arable_land = 50
+	naval_exit_id = 3032
+}
 STATE_AMAZONAS = {
 	provinces = {
 		x01084B x01FB64 x03487B x038CB0 x06C624 x06E0E9 x073FDE x081A73 x08B908 x0A49A7 x0C14D1 x0C34F7 x0C80D5 x0DD209 x0DE918 x0E6BAF x109595 x137A16 x14EE0B x18AF1A x196415 x1A3B8F x1BCE49 x1BE381 x1F175F x1F56AE x206CC6 x20B9B2 x20EFD3 x210144 x211F43 x228F62 x22964C x23699F x237C27 x23EFD7 x2404C7 x24AC59 x2629FF x2811A6 x2906D5 x2994F2 x2A5962 x2AF127 x2B8C6E x2C2C20 x2CA8CA x2E7EBF x2EE626 x2F15DF x2F2B09 x2F69F7 x3116DB x31B106 x328B67 x328FFE x329800 x333FE5 x34C294 x35728C x36D9EF x36E83E x378065 x379D54 x3A4B20 x3B3011 x3B31BD x3C83DF x3D6A7B x3D7B8F x3DCCEA x3FA0FB x3FF111 x402E72 x40AB15 x40C090 x41C051 x4216B3 x4315D5 x4370B4 x43D729 x446753 x450DE4 x45EED6 x46A9DE x46E2D3 x4751E8 x47BA4D x47D460 x47D820 x47ED24 x48171B x48B190 x48E330 x49A43E x4A16EA x4A8664 x4C2A62 x4CA6CC x4D1CA6 x4D62D6 x50FD51 x5285F9 x54AC8C x54CC99 x54D63A x554D04 x569250 x5755E4 x575E56 x57DC7A x5820C3 x58BD7A x597DD7 x5A3090 x5A47CA x5A4946 x5C2AA8 x5C39FF x5DB7DF x60FF01 x610A61 x62493B x6407BA x645927 x64E682 x67CDD3 x6809E1 x681E21 x682823 x6831AB x69C874 x6A1760 x6BE64A x6C2ED1 x6FC2D0 x6FE8D5 x702F8B x705239 x717A55 x71D3B4 x71E84F x72DE57 x73E176 x74AF3A x74BC05 x756755 x75E887 x7697B7 x77399A x775279 x79D4B1 x7A431A x7B89C9 x7CD52C x7CDC0B x7F0E49 x7FB6F1 x8062F4 x80FA90 x817AFB x831427 x83B1BA x840034 x84E5E0 x8653EE x87087A x871D4A x87F2F9 x8899C3 x894577 x8976AD x8A52D2 x8A5A62 x8B5A01 x8BD00A x8C4707 x8E80DF x8F231D x8F6B32 x8F758B x8F7DE4 x8F7F6F x8FFEA0 x90539F x918579 x91C728 x929F4C x94F9C8 x950AF3 x95BF58 x9752DF x9778E0 x989CB7 x992895 x9AE5DE x9C3270 x9DA6FA x9DD475 x9E3C4B x9FA745 x9FC0FE xA11526 xA12EB0 xA19E99 xA23B8A xA2F845 xA30817 xA58C2D xA5AF12 xA837D2 xA88280 xA88EBF xA8E4E8 xA92523 xA9FD52 xAA5F0C xAA63FA xAB3298 xABA7B1 xACEB79 xADB7B9 xAE4F84 xAFB883 xB241C1 xB29291 xB2C542 xB374FD xB43B72 xB43F4F xB4DB5E xB62AF0 xB711DF xB76ECB xB8747C xB9D5AE xBB6578 xBB7948 xBC7468 xBD1800 xBD9F17 xBEBFA7 xBF2FEF xBF360F xC04090 xC04151 xC3136F xC45530 xC46825 xC49B34 xC51963 xC53B26 xC599F6 xC5CD94 xC886E3 xCC99C2 xCCF73F xCEDA54 xCF9E9F xD068EF xD122E9 xD246CD xD34BA0 xD6AD0C xD7092A xD740E9 xD75909 xD7EC39 xD9B51B xDABCDD xDBADFE xDBC4C9 xDBEA3D xDC716A xDCD7C9 xDDEE22 xDE68CB xDF91C1 xE00111 xE08090 xE0A9E2 xE14B14 xE18840 xE2754D xE2A941 xE2B050 xE2B0B7 xE379B6 xE3CC7D xE3F904 xE5EF82 xE60BF7 xE67742 xE73BE7 xE856C1 xE8D3C3 xE8E12A xE921FB xE95326 xEA0BD4 xEA0EB1 xEA326C xEA5BE9 xEC140B xED3292 xEDAC7C xEE058F xEE6521 xEECA78 xF00CED xF02823 xF0A42C xF0A6D7 xF192D6 xF3946E xF3E4CF xF47364 xF5AEBE xF62EBB xF7FD32 xF83090 xF8A947 xF9125F xF97E89 xFC221C xFC29D0 xFCD456 xFDC3C4 xFE1511 xFE4759 xFE9E78 xFF4650 xFF5E63 xFF6FE1 xFFE4C1 xFFF6EE 
@@ -510,6 +540,9 @@ STATE_AMHARA = {
 	mine = x5D4889
 	wood = xFE53F8
 	arable_land = 140
+	prime_land = {
+		xC4CB68  
+	}
 }
 STATE_AMUR = {
 	provinces = {
@@ -561,6 +594,24 @@ STATE_ANDALUSIA = {
 	arable_land = 40
 	naval_exit_id = 3031
 }
+STATE_ANDAMAN_SEA = {
+	provinces = {
+		x61C8C8 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3051
+}
+STATE_ANGOLAN_SEA = {
+	provinces = {
+		x51B8B8 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3104
+}
 STATE_ANHALT = {
 	provinces = {
 		x12694A x34386E x3C9B93 x618061 x8A448C xA080E0 xA51232 xCBA4A5 xCF5D8E xE0C0A0 xED8F7B 
@@ -582,6 +633,9 @@ STATE_ANHALT = {
 	mine = xCF5D8E
 	wood = xA51232
 	arable_land = 75
+	prime_land = {
+		xE0C0A0 xA080E0 xA51232  
+	}
 }
 STATE_ANKARA = {
 	provinces = {
@@ -727,6 +781,24 @@ STATE_AQUITAINE = {
 	arable_land = 90
 	naval_exit_id = 3029
 }
+STATE_ARABIAN_SEA = {
+	provinces = {
+		x54FAFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3048
+}
+STATE_ARAFURA_SEA = {
+	provinces = {
+		x21C9C9 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3126
+}
 STATE_ARAGON = {
 	provinces = {
 		x076DE0 x202982 x2555A4 x30A080 x339B06 x3CBF9E x45B331 x506040 x5FB607 x9060C0 xA603C7 
@@ -747,6 +819,28 @@ STATE_ARAGON = {
 	mine = x45B331
 	wood = x339B06
 	arable_land = 25
+}
+STATE_ARAKAN = {
+	provinces = {
+		x6305C9 x9A018D xB316F6 xD5DB0B xE85BF0 xF691D2 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tobacco_plantations bg_dye_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_logging = 21
+		bg_fishing = 10
+		bg_oil_extraction = 7
+	}
+	id = 919
+	subsistence_building = building_subsistence_rice_paddies
+	city = xE85BF0
+	port = xD5DB0B
+	farm = x9A018D
+	mine = xD5DB0B
+	wood = x6305C9
+	arable_land = 32
+	naval_exit_id = 3050
 }
 STATE_ARAUCANIA = {
 	provinces = {
@@ -775,6 +869,60 @@ STATE_ARAUCANIA = {
 	arable_land = 10
 	naval_exit_id = 3151
 }
+STATE_ARCTIC_OCEAN_01 = {
+	provinces = {
+		x39CACA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3037
+}
+STATE_ARCTIC_OCEAN_02 = {
+	provinces = {
+		x70FBFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3038
+}
+STATE_ARCTIC_OCEAN_04 = {
+	provinces = {
+		x0D61A4 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3040
+}
+STATE_ARCTIC_OCEAN_05 = {
+	provinces = {
+		x20CCE0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3041
+}
+STATE_ARCTIC_OCEAN_06 = {
+	provinces = {
+		x43DDFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3042
+}
+STATE_ARCTIC_OCEAN_07 = {
+	provinces = {
+		x13CCFE 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3043
+}
 STATE_AREQUIPA = {
 	provinces = {
 		x007035 x2E3791 x3BC37F x451783 x67EC55 x72698B x79A3B0 x7C1054 x89775D x8EC087 x923040 x96798E x96AB5D xB077B0 xBB02B0 xBED190 xC16B62 xC72B01 xD619E0 xD66487 xDF23D0 xDFC0B0 xE326BA xF6869A 
@@ -800,6 +948,15 @@ STATE_AREQUIPA = {
 	wood = xBB02B0
 	arable_land = 25
 	naval_exit_id = 3152
+}
+STATE_ARGENTINE_SEA = {
+	provinces = {
+		x1FDEFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3065
 }
 STATE_ARIZONA = {
 	provinces = {
@@ -891,10 +1048,10 @@ STATE_ARMENIA = {
 }
 STATE_ASSAM = {
 	provinces = {
-		x0BB5E2 x12647B x17E33F x1B997A x1D0302 x30B15A x337820 x344BF5 x3D8CD6 x3FD07D x408BEB x4803C7 x4CCA97 x5D1160 x6030DF x70069E x86D527 x8C53B3 x8C6C79 x8F90F5 x9419F5 x954C46 x9700B9 x9A1864 xA030E0 xA17DC4 xA458FC xA77996 xB03121 xB238B2 xC6301B xCB0893 xCC2DA0 xD9940E xE101DA xF3B09A xF71958 xF9B21B xFB1561 
+		x0BB5E2 x12647B x17E33F x1B997A x1D0302 x30B15A x337820 x344BF5 x3D8CD6 x3FD07D x408BEB x4803C7 x4CCA97 x5D1160 x6030DF x673438 x70069E x7DC31D x86D527 x8C53B3 x8C6C79 x8F90F5 x9419F5 x954C46 x9700B9 x9A1864 xA030E0 xA17DC4 xA458FC xA77996 xB03121 xB238B2 xC6301B xCB0893 xCC2DA0 xD9940E xDF30DF xE101DA xEE6A3D xF3B09A xF71958 xF9B21B xFB1561 
 	}
 	traits = {
-		state_trait_brahmaputra_river 
+		state_trait_brahmaputra_river state_trait_himalayan_foothills state_trait_digboi 
 	}
 	arable_resources = {
 		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_opium_plantations bg_tea_plantations 
@@ -906,11 +1063,14 @@ STATE_ASSAM = {
 	}
 	id = 458
 	subsistence_building = building_subsistence_rice_paddies
-	city = xC6301B
+	city = xFB1561
 	farm = x30B15A
 	mine = x3FD07D
 	wood = x9A1864
-	arable_land = 75
+	arable_land = 105
+	prime_land = {
+		x344BF5 xF71958 x3FD07D x9700B9 xCC2DA0 x6030DF x8C53B3 xCB0893 xB03121 xA17DC4 xB238B2  
+	}
 }
 STATE_ASTRAKHAN = {
 	provinces = {
@@ -962,6 +1122,60 @@ STATE_ASTURIAS = {
 	wood = x5060C0
 	arable_land = 30
 	naval_exit_id = 3029
+}
+STATE_ATLANTIC_OCEAN_01 = {
+	provinces = {
+		xD55EAD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3083
+}
+STATE_ATLANTIC_OCEAN_02 = {
+	provinces = {
+		xC25EAE 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3084
+}
+STATE_ATLANTIC_OCEAN_03 = {
+	provinces = {
+		x9137A4 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3085
+}
+STATE_ATLANTIC_OCEAN_04 = {
+	provinces = {
+		x9F5EAE 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3086
+}
+STATE_ATLANTIC_OCEAN_05 = {
+	provinces = {
+		x9F5CAE 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3087
+}
+STATE_ATLANTIC_SEABOARD = {
+	provinces = {
+		xA3CEF4 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3067
 }
 STATE_ATTICA = {
 	provinces = {
@@ -1033,7 +1247,7 @@ STATE_AUVERGNE_LIMOUSIN = {
 }
 STATE_AWADH = {
 	provinces = {
-		x048AD9 x0CE121 x117021 x1405D1 x26284F x277419 x337F6C x4020A0 x41D87C x4333C1 x43F651 x4AAE9F x4E84EF x52F672 x564B78 x61F0A0 x63A78D x63AA19 x669ECB x6738CF x7D8325 x7D9692 x7F01B0 x923D4D x9EA436 xA03160 xA3C721 xACD960 xB4FE19 xBBC0A2 xBEE076 xBF1DC0 xC8BC69 xD0B0A0 xD99008 xDC471F xE070A0 xEC8496 xFD9E2F 
+		x0CE121 x1405D1 x26284F x337F6C x4020A0 x41D87C x4333C1 x43F651 x4AAE9F x4E84EF x564B78 x63A78D x669ECB x7D9692 x7F01B0 x923D4D x9EA436 xA03160 xA3C721 xACD960 xBBC0A2 xBEE076 xC8BC69 xD0B0A0 xD99008 xE070A0 xEC8496 xFD9E2F 
 	}
 	traits = {
 		state_trait_ganges_river 
@@ -1046,11 +1260,11 @@ STATE_AWADH = {
 	}
 	id = 460
 	subsistence_building = building_subsistence_rice_paddies
-	city = x117021
-	farm = xB4FE19
+	city = x7D9692
+	farm = xEC8496
 	mine = xD99008
 	wood = x7D9692
-	arable_land = 250
+	arable_land = 371
 }
 STATE_AYDIN = {
 	provinces = {
@@ -1116,6 +1330,15 @@ STATE_AZORES = {
 	wood = x90A080
 	arable_land = 6
 	naval_exit_id = 3069
+}
+STATE_AZORES_SEA = {
+	provinces = {
+		x3DCACA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3069
 }
 STATE_BADAJOZ = {
 	provinces = {
@@ -1325,6 +1548,15 @@ STATE_BALKH = {
 	wood = xB7ed78
 	arable_land = 40
 }
+STATE_BALTIC_SEA = {
+	provinces = {
+		x08FAFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3000
+}
 STATE_BALUCHISTAN = {
 	provinces = {
 		x0279A0 x0BAF8C x109CC0 x113E0B x1161D9 x17D8AB x1D0224 x1EF53E x2B7441 x2E7961 x2FF46D x35754E x3C9B5F x3EFD1E x407060 x4070E0 x43F4B8 x4529BD x45F2DD x4B2EAD x4DC3FF x4E09C5 x4F800F x556C63 x56CF62 x5CBA3C x61D696 x626396 x62BEAA x675BCE x6D6D6B x782112 x7D60E7 x7FE584 x8DC922 x8ED831 x951063 x954C12 x968562 x978421 x97C017 x9EED5C xA3655B xA55509 xB0F79E xB2AAA7 xB7B2BD xBAE3D2 xBB836E xC070E0 xC6D9E8 xC6E602 xCD77FD xD4EC50 xD575B0 xD6DD8A xDEE571 xDF30A0 xE712E1 xE7A309 xE87BBF xE92A58 xEC696F xF1414C xF78D0D xF9577D 
@@ -1347,6 +1579,9 @@ STATE_BALUCHISTAN = {
 	wood = x675BCE
 	arable_land = 63
 	naval_exit_id = 3048
+	prime_land = {
+		x978421 x4E09C5 xF9577D x45F2DD x113E0B x7FE584 xC070E0  
+	}
 }
 STATE_BANAT = {
 	provinces = {
@@ -1394,31 +1629,14 @@ STATE_BANGKOK = {
 	arable_land = 50
 	naval_exit_id = 3053
 }
-STATE_BAS_CONGO = {
+STATE_BARENTS_SEA = {
 	provinces = {
-		x08302D x0CD600 x0E91BE x0F73A9 x11911A x13596E x24A658 x2B6E1D x30731F x35C8F2 x42B7B8 x45360F x464D82 x4901C3 x5FBF03 x649428 x65FACF x68D265 x70E55C x71AE65 x7F1954 x811426 x852DC3 x928FE6 x92BFB2 x95DB92 x961734 x9A6D48 x9B40FC xA13978 xA2D384 xA98DF0 xADA9E9 xB0403C xB477E9 xB593B6 xB5970C xB8838B xBC72E9 xC6CC3A xD0721B xDD3D05 xE20520 xF0276A xF15FC0 xF29F28 xF4AA39 xFA0904 xFAB5FE xFDCF01 
-	}
-	traits = {
-		state_trait_severe_malaria state_trait_congo_river state_trait_congo_forest 
-	}
-	arable_resources = {
-		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_sugar_plantations bg_banana_plantations 
+		x0EC8FA 
 	}
 	capped_resources = {
-		bg_iron_mining = 36
-		bg_logging = 23
-		bg_fishing = 7
-		bg_rubber = 32
+		bg_oil_extraction = 40
 	}
-	id = 245
-	subsistence_building = building_subsistence_farms
-	city = xF4AA39
-	port = x811426
-	farm = x0F73A9
-	mine = xF15FC0
-	wood = xF29F28
-	arable_land = 50
-	naval_exit_id = 3104
+	id = 3039
 }
 STATE_BASRA = {
 	provinces = {
@@ -1445,6 +1663,35 @@ STATE_BASRA = {
 	arable_land = 30
 	naval_exit_id = 3046
 }
+STATE_BAS_CONGO = {
+	provinces = {
+		x08302D x0CD600 x0E91BE x0F73A9 x11911A x13596E x24A658 x2B6E1D x30731F x35C8F2 x42B7B8 x45360F x464D82 x4901C3 x5FBF03 x649428 x65FACF x68D265 x70E55C x71AE65 x7F1954 x811426 x852DC3 x928FE6 x92BFB2 x95DB92 x961734 x9A6D48 x9B40FC xA13978 xA2D384 xA98DF0 xADA9E9 xB0403C xB477E9 xB593B6 xB5970C xB8838B xBC72E9 xC6CC3A xD0721B xDD3D05 xE20520 xF0276A xF15FC0 xF29F28 xF4AA39 xFA0904 xFAB5FE xFDCF01 
+	}
+	traits = {
+		state_trait_severe_malaria state_trait_congo_river state_trait_congo_forest 
+	}
+	arable_resources = {
+		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 36
+		bg_logging = 23
+		bg_fishing = 7
+		bg_rubber = 32
+	}
+	id = 245
+	subsistence_building = building_subsistence_farms
+	city = xF4AA39
+	port = x811426
+	farm = x0F73A9
+	mine = xF15FC0
+	wood = xF29F28
+	arable_land = 50
+	naval_exit_id = 3104
+	prime_land = {
+		xB0403C xADA9E9 xA13978 xBC72E9 x71AE65 x08302D xB593B6 x24A658  
+	}
+}
 STATE_BAVARIA = {
 	provinces = {
 		x010AD7 x18A2E1 x3101A0 x318021 x565185 x68CE1C x6EA29B x704A5F x82F4B9 x8C26DD xA7094D xB00121 xB08021 xC347B1 xE75868 xE76994 xFE59E7 
@@ -1468,6 +1715,24 @@ STATE_BAVARIA = {
 	mine = xE75868
 	wood = xC347B1
 	arable_land = 65
+}
+STATE_BAY_OF_BENGAL = {
+	provinces = {
+		x5CFAFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3050
+}
+STATE_BAY_OF_BISCAY = {
+	provinces = {
+		x2A95FA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3029
 }
 STATE_BEIJING = {
 	provinces = {
@@ -1566,6 +1831,15 @@ STATE_BENIN = {
 	arable_land = 100
 	naval_exit_id = 3091
 }
+STATE_BERING_SEA = {
+	provinces = {
+		x22CBFD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3128
+}
 STATE_BERMUDA = {
 	provinces = {
 		x169E2D xE55147 
@@ -1610,7 +1884,7 @@ STATE_BIHAR = {
 		x01F1CD x04D4E4 x11F020 x172E64 x1C310A x1DE14C x21B060 x2DDA9A x303EFE x3521C5 x3DDDBF x48B87D x4B33C1 x50B0A0 x534D04 x590FA7 x5F1E9B x5FCB1C x66A6A3 x70BE78 x79438B x7FC191 x8079C0 x8B9115 x93C09D x951929 x9B7C7A xA462B0 xABBB11 xAC9392 xAEDA4D xBA3A4F xCEC816 xD3AFD6 xD5188D xE0B0A0 xE3326D xF4E206 xF767B3 
 	}
 	traits = {
-		state_trait_ganges_river 
+		state_trait_ganges_river state_trait_jharia_dhanbad_coalfield 
 	}
 	arable_resources = {
 		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_opium_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations 
@@ -1625,7 +1899,16 @@ STATE_BIHAR = {
 	farm = xAC9392
 	mine = x9B7C7A
 	wood = xAEDA4D
-	arable_land = 275
+	arable_land = 375
+}
+STATE_BLACK_SEA = {
+	provinces = {
+		x48FAFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3036
 }
 STATE_BLUE_NILE = {
 	provinces = {
@@ -1700,7 +1983,7 @@ STATE_BOMBAY = {
 		x052B29 x1131A0 x11B0A0 x187C37 x195332 x1B071A x1C8B97 x2D4B90 x33E560 x3E5505 x405FB4 x40CE40 x42ACA6 x47EE55 x4D118A x4F5C91 x51F0A0 x53A379 x5B30D1 x6CC5CE x7629BF x9031A0 x90B021 xB0D0E0 xB863FE xC9CD8E xCC722D xCF3817 xD04F5D xD070A0 xD4CACE xD6660F xDDFDE6 xE01853 xE73C3C xEBD7BE xEBE18C xED0654 xF8B0CF 
 	}
 	traits = {
-		state_trait_natural_harbors 
+		state_trait_natural_harbors state_trait_western_ghats 
 	}
 	arable_resources = {
 		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
@@ -1716,8 +1999,11 @@ STATE_BOMBAY = {
 	farm = x4D118A
 	mine = xEBD7BE
 	wood = x42ACA6
-	arable_land = 350
+	arable_land = 400
 	naval_exit_id = 3048
+	prime_land = {
+		x51F0A0  
+	}
 }
 STATE_BORNU = {
 	provinces = {
@@ -1827,6 +2113,24 @@ STATE_BRANDENBURG = {
 	wood = x514C51
 	arable_land = 50
 }
+STATE_BRAZILIAN_SEA_NORTH = {
+	provinces = {
+		x1ACAFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3063
+}
+STATE_BRAZILIAN_SEA_SOUTH = {
+	provinces = {
+		x4499CD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3064
+}
 STATE_BREST = {
 	provinces = {
 		x157352 x18020B x1917E9 x241A22 x406020 x66FB56 x6D7F7E x75F1B4 x7E7F58 x806161 x84294C x84FE3D x862F77 x8ABE62 x936BF9 xA201E3 xA6BED3 xA93262 xAB3AC5 xAC6FAE xB338E8 xBCB94C xBFDF20 xC15AD8 xC1D9C0 xC3FA73 xCB21FD xCCD197 xDE471E xE06176 xE87D11 xF02643 
@@ -1917,6 +2221,9 @@ STATE_BRUNSWICK = {
 	mine = xA61E6E
 	wood = xA61E6E
 	arable_land = 30
+	prime_land = {
+		x2180E0 xA61E6E  
+	}
 }
 STATE_BUENOS_AIRES = {
 	provinces = {
@@ -1966,6 +2273,26 @@ STATE_BULGARIA = {
 	arable_land = 35
 	naval_exit_id = 3036
 }
+STATE_BUNDELKHAND = {
+	provinces = {
+		x0E5FEA x114EAE x277419 x355332 x4605A8 x52001D x5272B3 x52F672 x5CBFF7 x6170A0 x618D5B x66337F x6B7184 x7884D6 x845EA7 x907021 x9E6DB9 xBC06E9 xD0B021 xD0F986 xD64336 xE81D4F xEB50A4 xFE11FD 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_dye_plantations bg_sugar_plantations bg_silk_plantations 
+	}
+	capped_resources = {
+		bg_logging = 18
+		bg_coal_mining = 12
+		bg_iron_mining = 8
+	}
+	id = 916
+	subsistence_building = building_subsistence_farms
+	city = x5272B3
+	farm = x5272B3
+	mine = x5272B3
+	wood = x5272B3
+	arable_land = 174
+}
 STATE_BURGUNDY = {
 	provinces = {
 		x09BB96 x10DF00 x380D42 x6D7896 x7000E0 x708060 x79B85C x8329EC x8C3297 x999D4B xC69235 xF08060 
@@ -1987,29 +2314,6 @@ STATE_BURGUNDY = {
 	mine = x708060
 	wood = xF08060
 	arable_land = 80
-}
-STATE_BURMA = {
-	provinces = {
-		x118ECF x212FE8 x2497E7 x26A2E9 x2FF9BD x397139 x3DB5A9 x546B18 x60CBBF x620442 x6E8FA2 x75BE27 x9070DF xA17AB8 xA6F4C3 xB7E202 xD2F36A xD5035C xDA0253 xE2C923 xF5193B 
-	}
-	traits = {
-		state_trait_burmese_teak 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tea_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 36
-		bg_logging = 20
-		bg_rubber = 20
-	}
-	id = 2000
-	subsistence_building = building_subsistence_rice_paddies
-	city = x620442
-	farm = xB7E202
-	mine = x118ECF
-	wood = x212FE8
-	arable_land = 35
 }
 STATE_BURYATIA = {
 	provinces = {
@@ -2225,6 +2529,15 @@ STATE_CAPE_COLONY = {
 	arable_land = 50
 	naval_exit_id = 3105
 }
+STATE_CAPE_OF_GOOD_HOPE = {
+	provinces = {
+		x56C9FB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3105
+}
 STATE_CAPE_VERDE = {
 	provinces = {
 		x4B7FA5 xA2C3E8 xA2E8C5 xE8E7A2 
@@ -2245,6 +2558,15 @@ STATE_CAPE_VERDE = {
 	wood = xA2C3E8
 	arable_land = 6
 	naval_exit_id = 3088
+}
+STATE_CARIBBEAN_SEA = {
+	provinces = {
+		x0DCACA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3061
 }
 STATE_CASTILE = {
 	provinces = {
@@ -2366,6 +2688,15 @@ STATE_CELEBES = {
 	arable_land = 40
 	naval_exit_id = 3125
 }
+STATE_CENTRAL_ATLANTIC_OCEAN = {
+	provinces = {
+		x6DC9F4 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3090
+}
 STATE_CENTRAL_HIGHLANDS = {
 	provinces = {
 		x04B03F x09828D x0EE28B x18B003 x27FE11 x2F26B8 x4414C8 x4F1DA7 x548EAA x5C6E60 x60B0A0 x68901F x6DBF4A x6F8118 x7AA1D1 x7FED21 x8831D3 x8FACBC x938A92 x99A835 xA45DA0 xAD7935 xAF1A31 xB6EB52 xDB584F xDC008F xE8122E 
@@ -2380,10 +2711,10 @@ STATE_CENTRAL_HIGHLANDS = {
 	}
 	id = 450
 	subsistence_building = building_subsistence_farms
-	city = x58040A
-	farm = x8C7935
-	mine = x138C13
-	wood = x138C13
+	city = xAD7935
+	farm = x68901F
+	mine = x0EE28B
+	wood = x99A835
 	arable_land = 40
 }
 STATE_CENTRAL_HUNGARY = {
@@ -2408,27 +2739,6 @@ STATE_CENTRAL_HUNGARY = {
 	mine = xC97829
 	wood = x93A8CA
 	arable_land = 110
-}
-STATE_CENTRAL_INDIA = {
-	provinces = {
-		x0A05FF x0D7633 x0E199B x0E5FEA x10B021 x114EAE x14EB25 x19F551 x1A0456 x1E9A75 x26C3A2 x2A9BFB x346A50 x355332 x4CA2A3 x51E979 x5272B3 x585F79 x58E042 x5FEE46 x6170A0 x618D5B x650D91 x68D277 x6A8538 x6D9182 x6E192A x70D0E0 x746A39 x82DEEF x845EA7 x87DE7B x897F27 x903020 x907021 x983C0D x987B84 x9D79AD x9E6DB9 xA06520 xA14BC3 xA9E591 xAA246A xAAE528 xAD6D79 xB8A7B3 xBC06E9 xC0F1B9 xC4F4E4 xC77D13 xCD2556 xD0B021 xD0F986 xD93D0D xDB0DEC xDCAFE4 xE3AF55 xE81D4F xE9D03F xEB362A xEB50A4 xEFD0DF xF6BCF1 xFA701B xFBDCC9 xFE11FD 
-	}
-	traits = {
-		state_trait_good_soils 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_opium_plantations bg_tea_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_logging = 6
-	}
-	id = 462
-	subsistence_building = building_subsistence_rice_paddies
-	city = x585F79
-	farm = xFBDCC9
-	mine = xBC06E9
-	wood = x51E979
-	arable_land = 300
 }
 STATE_CENTRAL_JAVA = {
 	provinces = {
@@ -2456,6 +2766,47 @@ STATE_CENTRAL_JAVA = {
 	arable_land = 80
 	naval_exit_id = 3052
 }
+STATE_CENTRAL_MEDITERRANEAN_SEA = {
+	provinces = {
+		x3BDCFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3033
+}
+STATE_CENTRAL_PROVINCES = {
+	provinces = {
+		x013159 x015F11 x03614F x0D7633 x0E41BA x10B021 x1170A0 x19F551 x1A0456 x20BC2C x26C3A2 x274E94 x2F70FB x471CDC x4A2157 x4B7422 x51B021 x53D2AE x58E042 x5FEE46 x650D91 x66F24C x68D277 x6D9182 x6E192A x745647 x78E85C x8B8B4D x8ECE82 x903020 x90F020 x9473DC x958AC3 x96CDBD x987B84 x9B0E9E x9C673D x9CDEF7 x9D79AD xA06520 xA11B88 xA14BC3 xA939B9 xAAE528 xAD6D79 xB56E8E xBDB272 xBE1F55 xC38F66 xCC1F79 xD03120 xD42EF4 xD51B8A xD93D0D xDA84A6 xDB0DEC xE167A8 xE1911A xE67BF6 xE9111A xEB362A xED9802 xF036D0 xF09DA1 xFE794D 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_dye_plantations bg_opium_plantations bg_sugar_plantations bg_banana_plantations bg_silk_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 22
+		bg_coal_mining = 21
+		bg_logging = 12
+	}
+	id = 465
+	subsistence_building = building_subsistence_rice_paddies
+	city = xA939B9
+	farm = x5FEE46
+	mine = x9473DC
+	wood = x987B84
+	arable_land = 205
+	prime_land = {
+		x03614F x745647 x9CDEF7 xD42EF4 xDA84A6 xFE794D xE167A8 xE67BF6 xCC1F79 x9C673D x4B7422 x8B8B4D x9B0E9E x958AC3 xF036D0 x015F11 xA939B9 xA11B88 xD51B8A xD03120 x96CDBD xBDB272 x53D2AE x9473DC xBE1F55 x90F020  
+	}
+}
+STATE_CENTROAMERICAN_SEA = {
+	provinces = {
+		x2BDEFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3155
+}
 STATE_CEYLON = {
 	provinces = {
 		x1DA090 x23CE5A x47B038 x5B5C22 x602050 x8A707A x8D6FA8 x95AAA3 x967CCE xA0A0D0 xA0EFCC xC18817 xC23350 xDAB923 xDF2050 
@@ -2480,6 +2831,9 @@ STATE_CEYLON = {
 	wood = xC23350
 	arable_land = 30
 	naval_exit_id = 3049
+	prime_land = {
+		x95AAA3  
+	}
 }
 STATE_CHACO = {
 	provinces = {
@@ -2522,6 +2876,9 @@ STATE_CHAD = {
 	mine = x4EECCF
 	wood = x815967
 	arable_land = 30
+	prime_land = {
+		x815967 xD09021 x08D310 x0DD2DC xABB7F4 x60CA92 x84AC70 xD87F94 x954978 xB1C7E4 x8E3D25 xFFF16A xE59A76 x37C0E7 x143523 xA2B329 x7B24F4 xAF7729 xEEA556 x4432CD x2A39EC x3A1CAC x693080 x721F62 x356A3D x49D8EA x58241A x0B50CD  
+	}
 }
 STATE_CHAMPAGNE = {
 	provinces = {
@@ -2685,6 +3042,15 @@ STATE_CHIHUAHUA = {
 	wood = x10C6B4
 	arable_land = 40
 }
+STATE_CHILEAN_SEA = {
+	provinces = {
+		x26CAFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3151
+}
 STATE_CHONGQING = {
 	provinces = {
 		x0CEE46 x108674 x129329 x192C0F x243438 x283D57 x4A9929 x509000 x5C003D x5C0A38 x645EEC x690CD4 x6C2938 x6CAE25 x7B51C8 x7D0C5B x901000 x901080 x92D298 x939CA3 x97F6FB x98D5B2 x98EF3E xAF5569 xB52752 xBD8F39 xBE05F5 xC35036 xC54CCD xC64D28 xC8F378 xCE5914 xD09000 xD5B480 xDBB445 xDBFEDF xE0F0E0 xE88BF8 xF9B015 xFBD426 
@@ -2805,7 +3171,7 @@ STATE_CHUVASHIA = {
 }
 STATE_CIRCARS = {
 	provinces = {
-		x063403 x0AC82E x0F1912 x11F0A0 x180640 x207C4F x338BFB x34BB3B x35AB0E x365CC3 x3EC5D1 x42F4F2 x461A00 x477063 x5170A0 x54D463 x59BBE1 x669373 x6B15F1 x7166FA x73B187 x84EE56 x8B1F32 x9070A0 x9193B1 xB00B6B xB3DED5 xC744F9 xCDFBE6 xCFF020 xD19AD8 xE2CF64 xE9BCE7 xEBBB7A xF2F82A xF46AEC xF8BB81 xF91482 
+		x0AC82E x11F0A0 x180640 x207C4F x365CC3 x3EC5D1 x42F4F2 x477063 x6B15F1 x7166FA x73B187 x8B1F32 x9070A0 x9193B1 xB00B6B xB3DED5 xC744F9 xCDFBE6 xCFF020 xD19AD8 xE2CF64 xE9BCE7 xEBBB7A xF8BB81 
 	}
 	arable_resources = {
 		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
@@ -2818,13 +3184,25 @@ STATE_CIRCARS = {
 	}
 	id = 472
 	subsistence_building = building_subsistence_rice_paddies
-	city = x59BBE1
+	city = x477063
 	port = x477063
-	farm = xF46AEC
-	mine = xF8BB81
-	wood = x9193B1
-	arable_land = 250
+	farm = x0AC82E
+	mine = x7166FA
+	wood = x9070A0
+	arable_land = 181
 	naval_exit_id = 3050
+	prime_land = {
+		x6B15F1 x7166FA xC744F9  
+	}
+}
+STATE_COAST_OF_SAINT_HELENA = {
+	provinces = {
+		x79CBFD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3103
 }
 STATE_COLORADO = {
 	provinces = {
@@ -2899,6 +3277,9 @@ STATE_CONGO_ORIENTALE = {
 	mine = xC8B71B
 	wood = x26A8CE
 	arable_land = 80
+	prime_land = {
+		x223F0E x782089 xDA13AB xE3A90C x67535D xDC7664 x040C3C x19DDCD xEECA6C x21A030 xE3A90C xBDBDF3 x9C9DF0 x28D2E7 x153063 x563D5E xC6AF9F x66D104  
+	}
 }
 STATE_CONNAUGHT = {
 	provinces = {
@@ -2974,6 +3355,18 @@ STATE_CONSTANTINE = {
 	wood = x3A0E38
 	arable_land = 99
 	naval_exit_id = 3032
+	prime_land = {
+		x8090DF x0050A0 x1AF7B7 xFCF985 xB04F35  
+	}
+}
+STATE_CORAL_SEA = {
+	provinces = {
+		x0DFEE0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3124
 }
 STATE_CORRIENTES = {
 	provinces = {
@@ -3273,6 +3666,15 @@ STATE_DALMATIA = {
 	arable_land = 20
 	naval_exit_id = 3033
 }
+STATE_DANISH_STRAITS = {
+	provinces = {
+		x0AC8FA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3019
+}
 STATE_DARFUR = {
 	provinces = {
 		x010112 x011B9B x04709D x077DC4 x084452 x0BA549 x0D82D5 x10E778 x11D060 x148DA5 x14FA53 x17D9A6 x18E2B5 x19839D x1D37F3 x2E3B87 x2F8CDB x305FFB x30C844 x35FA3C x3621AB x36EF31 x37D51A x38F470 x3B2BDC x3D369E x41753A x442107 x4586BC x46840A x46ED52 x485733 x489122 x4EB670 x4EF5BA x4FC3BD x505160 x513188 x527CA4 x55777E x5AE385 x5C6F68 x5E7EEA x5E802B x646AA7 x72ACD5 x7A5770 x7C6AEF x7E47BC x81C138 x8373D4 x83E20C x85CCF5 x88AA5B x89EB91 x8C8A7D x9396AE x93A35B x93B32F x94ED1A x960309 x96E1C9 x9AB09C x9C55FE xAA0224 xAB96CA xAF05DC xAF1E1F xB319F8 xB504CF xB6298D xBC054B xBD58DE xBEFBD1 xCAC2D6 xCC7B24 xCD6EAD xCF1CDF xD0C01E xD157C6 xD58989 xD5BA32 xD6250A xD6AF7B xD84C2A xDA1631 xDAD586 xDE9636 xE1085B xE8B9DA xE9857F xE9E506 xEA728B xF0883A xF1FBFF xF43EA4 
@@ -3293,6 +3695,15 @@ STATE_DARFUR = {
 	mine = xF0883A
 	wood = x3B2BDC
 	arable_land = 20
+}
+STATE_DAVIS_STRAIT = {
+	provinces = {
+		x6DFBFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3023
 }
 STATE_DEIR_EZ_ZOR = {
 	provinces = {
@@ -3336,7 +3747,7 @@ STATE_DELAWARE = {
 }
 STATE_DELHI = {
 	provinces = {
-		x037AF5 x03A411 x11EE65 x13E50E x1DC68F x1EA5F8 x45756F x49337F x4B6538 x4E70D0 x4E8563 x51177D x53EF28 x5432BC x584C9B x6B646E x733AB7 x8E6FE7 x945283 x947B18 x98BACD x99FE9A xA4A19F xAD283F xB050DF xB39D42 xB949B4 xC26B82 xCF1974 xDCAA17 xE07020 xE0EFA0 xE3A5A5 xE4F817 xE77282 xF15B70 xF37EE6 xFB8F08 xFBA109 
+		x1DC68F x1EA5F8 x45756F x4E70D0 x945283 x947B18 xB39D42 xB949B4 xE07020 xE0EFA0 xE4F817 
 	}
 	traits = {
 		state_trait_ganges_river 
@@ -3352,10 +3763,13 @@ STATE_DELHI = {
 	id = 459
 	subsistence_building = building_subsistence_farms
 	city = xE0EFA0
-	farm = x98BACD
-	mine = xB050DF
-	wood = x13E50E
-	arable_land = 800
+	farm = x1DC68F
+	mine = xE4F817
+	wood = x45756F
+	arable_land = 252
+	prime_land = {
+		xE0EFA0 x945283  
+	}
 }
 STATE_DELVIDEK = {
 	provinces = {
@@ -3512,6 +3926,236 @@ STATE_DZUNGARIA = {
 	wood = x23E045
 	arable_land = 30
 }
+STATE_EASTERN_CAPE = {
+	provinces = {
+		x1A6FE4 x1CB5AB x2282A0 x23F468 x2A2EAD x3073EF x30E0CF x3160D0 x37E0C8 x3DB9B6 x527410 x641309 x678D6E x6E36BF x706050 x708ADB x7524D4 x7CEA40 x7F00DE x8B9EB1 x910230 x91C345 x9DBF3E xA25B89 xA3B602 xA66043 xAEA56B xB060CF xB0DFD0 xC57FEF xC84364 xCA8474 xCE073B xD8C05A xE60DC5 xFBBD05 xFC7DA6 xFEA452 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_tea_plantations bg_banana_plantations bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 56
+		bg_logging = 9
+		bg_fishing = 8
+	}
+	id = 260
+	subsistence_building = building_subsistence_farms
+	city = xC84364
+	port = x8B9EB1
+	farm = xA25B89
+	mine = x8B9EB1
+	wood = x3DB9B6
+	arable_land = 60
+	naval_exit_id = 3106
+}
+STATE_EASTERN_CARIBBEAN_SEA = {
+	provinces = {
+		xA3CDF4 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3025
+}
+STATE_EASTERN_HIMALAYAS = {
+	provinces = {
+		x01C109 x186F38 x28F81E x373402 x388D2C x4CBB7C x4F99DC x525CC9 x60B0DF x665E5B x83DFE3 x84F73C x8FE067 xA1341A xA5D54A xADDE52 xBC0BCD xD10C8F xD2139B xD238D2 xD2C34D xDA7F32 xE0B0E0 xE5D3E0 xEB2EA9 xF5C0FC xF8346B 
+	}
+	traits = {
+		state_trait_himalayas_mountains 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_opium_plantations bg_tea_plantations 
+	}
+	capped_resources = {
+		bg_logging = 3
+		bg_coal_mining = 1
+	}
+	id = 921
+	subsistence_building = building_subsistence_rice_paddies
+	city = xDA7F32
+	port = xDA7F32
+	farm = xDA7F32
+	mine = xDA7F32
+	wood = xDA7F32
+	arable_land = 30
+	prime_land = {
+		x388D2C xDA7F32 x665E5B x01C109 xD10C8F x4F99DC x84F73C xE5D3E0 x60B0DF xE0B0E0  
+	}
+}
+STATE_EASTERN_HUBEI = {
+	provinces = {
+		x101040 x2B8AD9 x3B0DA8 x509040 x7957D8 x802B45 x901040 x948269 x9A9CE3 xA6A054 xB84488 xC62E6F xD0D080 xD14310 xE122C5 xFE78B5 
+	}
+	traits = {
+		state_trait_yangtze_river 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tea_plantations bg_tobacco_plantations 
+	}
+	capped_resources = {
+		bg_logging = 8
+	}
+	id = 508
+	subsistence_building = building_subsistence_rice_paddies
+	city = xA6A054
+	farm = xFE78B5
+	mine = xA6A054
+	wood = x101040
+	arable_land = 320
+}
+STATE_EASTERN_MALI = {
+	provinces = {
+		x060DC8 x06D19A x086975 x0EA985 x109020 x1221EE x19D3F5 x232DFA x25ABF3 x273CD4 x29246C x2A6A2D x320EE8 x3F69A9 x460EA2 x4B74E2 x578B75 x67D3E7 x688F7B x690C93 x6AF386 x70AF40 x845355 x852260 x8CA2B5 x8CCD97 x8DC430 x9090A0 x941ED5 x98DE99 xA08311 xA41A10 xA8CAD8 xAAB26B xD5F34F xD7C2F6 xD94440 xE87985 xF0EFBF xFDB5F3 xFEB176 
+	}
+	traits = {
+		state_trait_malaria state_trait_niger_river 
+	}
+	arable_resources = {
+		bg_millet_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tobacco_plantations 
+	}
+	capped_resources = {
+		bg_monuments = 1
+	}
+	id = 199
+	subsistence_building = building_subsistence_orchards
+	city = x320EE8
+	farm = x2A6A2D
+	mine = xA08311
+	wood = xD5F34F
+	arable_land = 70
+}
+STATE_EASTERN_MEDITERRANEAN_SEA = {
+	provinces = {
+		x46C8FA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3034
+}
+STATE_EASTERN_NEW_GUINEA = {
+	provinces = {
+		x071EFB x09E796 x0BF948 x104090 x10C090 x16403B x19E120 x1E1C1E x203BC2 x26A798 x318B7B x34E353 x36076B x37312C x3779A1 x37A04B x3BBE48 x3F9623 x44454B x459277 x45CE87 x46CE7D x47A347 x51173D x5475FF x565E21 x56DA8C x5779B1 x5CB0C9 x5F7475 x5FAB3F x61F645 x64ED4C x686A28 x6B52DF x6CE5CC x719040 x75B70D x7CF0A5 x7D3A30 x80BAE9 x84D755 x854391 x8641E9 x8911A4 x8AEFF9 x8C0F91 x8FFC12 x904090 x9ACD2A x9D11EA x9DCD67 xA054CD xA28ED1 xA3C163 xA61876 xA6DD0C xA95FFF xA9E11D xAABA77 xAB408F xB3C1C3 xB6A316 xB6A59D xB9E7DF xC02D48 xC0F58B xC1716D xC9167B xCD3B1A xCD473D xD2799B xD97577 xDDB6D3 xDE6B8C xDF122B xE341AE xE3D5C3 xE8CE3B xEECD03 xF5408C xF69700 xF87B6B xF8C709 xF8FBAC 
+	}
+	traits = {
+		state_trait_severe_malaria 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 24
+		bg_sulfur_mining = 32
+		bg_logging = 16
+		bg_fishing = 10
+		bg_whaling = 2
+		bg_rubber = 12
+		bg_oil_extraction = 10
+	}
+	id = 550
+	subsistence_building = building_subsistence_farms
+	city = xA95FFF
+	port = x686A28
+	farm = xAB408F
+	mine = x26A798
+	wood = x9ACD2A
+	arable_land = 30
+	naval_exit_id = 3129
+}
+STATE_EASTERN_NORWAY = {
+	provinces = {
+		x01EB0A x0844FB x12548F x1255CC x2080A0 x2AAFE1 x2F2504 x35369F x3AE094 x43B12C x49B529 x4D0D24 x549C3A x5710E5 x6000A0 x60BE85 x673DA2 x6AC2AF x777860 x8277CF x85F71F x8F7F39 x8FC6B4 x907B35 x95A154 x9DB9F4 xA32B85 xA57AFC xAEEE54 xB182B1 xB88734 xB9763B xBA99BA xC041E0 xC9D63F xDE9061 xE12212 xE3582F xE8E297 xFE44C9 
+	}
+	traits = {
+		state_trait_christianiafjorden state_trait_kongsberg_silver_mine 
+	}
+	arable_resources = {
+		bg_rye_farms bg_livestock_ranches 
+	}
+	capped_resources = {
+		bg_iron_mining = 18
+		bg_logging = 11
+		bg_fishing = 5
+	}
+	id = 10
+	subsistence_building = building_subsistence_farms
+	city = xC041E0
+	port = xC041E0
+	farm = x95A154
+	mine = x49B529
+	wood = x1255CC
+	arable_land = 20
+	naval_exit_id = 3019
+}
+STATE_EASTERN_POLYNESIA = {
+	provinces = {
+		x81A0D2 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3150
+}
+STATE_EASTERN_THRACE = {
+	provinces = {
+		x115006 x194E90 x2073F0 x608BB0 xF02082 xF0A020 xFCF160 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tobacco_plantations bg_opium_plantations bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 18
+		bg_logging = 4
+		bg_fishing = 10
+		bg_monuments = 1
+	}
+	id = 108
+	subsistence_building = building_subsistence_farms
+	city = xF0A020
+	port = x2073F0
+	farm = x115006
+	mine = xFCF160
+	wood = x608BB0
+	arable_land = 30
+	naval_exit_id = 3035
+}
+STATE_EASTER_ISLAND = {
+	provinces = {
+		x91FFFF 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3149
+}
+STATE_EASTER_ISLAND_LANE_1 = {
+	provinces = {
+		xDB3CA3 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3005
+}
+STATE_EASTER_ISLAND_LANE_2 = {
+	provinces = {
+		x6644E1 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3006
+}
+STATE_EASTER_ISLAND_LANE_3 = {
+	provinces = {
+		xDB3C7F 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3007
+}
 STATE_EAST_AEGEAN_ISLANDS = {
 	provinces = {
 		x2190A0 xC56452 xE011A0 
@@ -3582,6 +4226,31 @@ STATE_EAST_ANGOLA = {
 	wood = x7F002D
 	arable_land = 60
 }
+STATE_EAST_BENGAL = {
+	provinces = {
+		x025A94 x0C82AB x117060 x1E0385 x30B0A0 x3C68C9 x3E5D45 x40F5CE x4123FE x474C54 x475FC4 x55F631 x6F1170 x71E2DE x92DA2C x93E9F4 xA605E3 xAC2CB6 xB06FC2 xC81678 xCA47BA xCB5C0A xD06FA1 xD28E5F xD2E951 xDA53DA xDFA414 xE6CD14 xF04684 xF3A964 
+	}
+	traits = {
+		state_trait_bengal_delta state_trait_natural_harbors 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_banana_plantations bg_dye_plantations bg_tobacco_plantations bg_tea_plantations bg_sugar_plantations bg_silk_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 4
+		bg_logging = 23
+		bg_fishing = 11
+	}
+	id = 466
+	subsistence_building = building_subsistence_rice_paddies
+	city = xD2E951
+	port = x3C68C9
+	farm = xC81678
+	mine = x93E9F4
+	wood = xCA47BA
+	arable_land = 601
+	naval_exit_id = 3050
+}
 STATE_EAST_BORNEO = {
 	provinces = {
 		x018070 x0596C2 x0A7250 x0A8175 x0E858D x0ED6AA x0FFCAE x10645D x13DD1D x1DF499 x1F6009 x2695FB x2D539F x330B36 x3631B8 x3660F5 x38416A x3BE572 x3E96AF x3EE142 x413B50 x496AEF x4D4D9B x4F7415 x527DD4 x672606 x6728CB x69AF77 x6A70EA x718F24 x71A232 x7BA8AD x88A1EC x8B8321 x8B9E4E x8BD8AF x8D8D4A x8F8FDE x952BEE x9B7A4D x9C48FE x9ED038 x9F4941 xA57C37 xAC440F xB8D3B7 xC03A53 xC72ED3 xC7410C xCC69E2 xD5155A xD6E8B0 xDB778E xDF0BCF xDFE51D xE49DDE xE9E984 xEA35E9 xF6BB4E xF8DD56 xFBB6C2 xFD2E40 xFF0B89 
@@ -3608,6 +4277,15 @@ STATE_EAST_BORNEO = {
 	wood = xF6BB4E
 	arable_land = 40
 	naval_exit_id = 3125
+}
+STATE_EAST_CHINA_SEA = {
+	provinces = {
+		x0FDDFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3058
 }
 STATE_EAST_GALICIA = {
 	provinces = {
@@ -3770,6 +4448,9 @@ STATE_EAST_SAHARA = {
 	mine = xD08147
 	wood = x873702
 	arable_land = 10
+	prime_land = {
+		x92685C x40C34C x3C36A2 x17B5D5 xD0827C xB9AF30 x4050A0 xB80798 xCD4F3F x35846A xBAD421  
+	}
 }
 STATE_EAST_SLOVAKIA = {
 	provinces = {
@@ -3813,147 +4494,6 @@ STATE_EAST_SWITZERLAND = {
 	mine = x90C0E0
 	wood = xD00161
 	arable_land = 40
-}
-STATE_EASTERN_CAPE = {
-	provinces = {
-		x1A6FE4 x1CB5AB x2282A0 x23F468 x2A2EAD x3073EF x30E0CF x3160D0 x37E0C8 x3DB9B6 x527410 x641309 x678D6E x6E36BF x706050 x708ADB x7524D4 x7CEA40 x7F00DE x8B9EB1 x910230 x91C345 x9DBF3E xA25B89 xA3B602 xA66043 xAEA56B xB060CF xB0DFD0 xC57FEF xC84364 xCA8474 xCE073B xD8C05A xE60DC5 xFBBD05 xFC7DA6 xFEA452 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_tea_plantations bg_banana_plantations bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 56
-		bg_logging = 9
-		bg_fishing = 8
-	}
-	id = 260
-	subsistence_building = building_subsistence_farms
-	city = xC84364
-	port = x8B9EB1
-	farm = xA25B89
-	mine = x8B9EB1
-	wood = x3DB9B6
-	arable_land = 60
-	naval_exit_id = 3106
-}
-STATE_EASTERN_HUBEI = {
-	provinces = {
-		x101040 x2B8AD9 x3B0DA8 x509040 x7957D8 x802B45 x901040 x948269 x9A9CE3 xA6A054 xB84488 xC62E6F xD0D080 xD14310 xE122C5 xFE78B5 
-	}
-	traits = {
-		state_trait_yangtze_river 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tea_plantations bg_tobacco_plantations 
-	}
-	capped_resources = {
-		bg_logging = 8
-	}
-	id = 508
-	subsistence_building = building_subsistence_rice_paddies
-	city = xA6A054
-	farm = xFE78B5
-	mine = xA6A054
-	wood = x101040
-	arable_land = 320
-}
-STATE_EASTERN_MALI = {
-	provinces = {
-		x060DC8 x06D19A x086975 x0EA985 x109020 x1221EE x19D3F5 x232DFA x25ABF3 x273CD4 x29246C x2A6A2D x320EE8 x3F69A9 x460EA2 x4B74E2 x578B75 x67D3E7 x688F7B x690C93 x6AF386 x70AF40 x845355 x852260 x8CA2B5 x8CCD97 x8DC430 x9090A0 x941ED5 x98DE99 xA08311 xA41A10 xA8CAD8 xAAB26B xD5F34F xD7C2F6 xD94440 xE87985 xF0EFBF xFDB5F3 xFEB176 
-	}
-	traits = {
-		state_trait_malaria state_trait_niger_river 
-	}
-	arable_resources = {
-		bg_millet_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tobacco_plantations 
-	}
-	capped_resources = {
-		bg_monuments = 1
-	}
-	id = 199
-	subsistence_building = building_subsistence_orchards
-	city = x320EE8
-	farm = x2A6A2D
-	mine = xA08311
-	wood = xD5F34F
-	arable_land = 70
-}
-STATE_EASTERN_NEW_GUINEA = {
-	provinces = {
-		x071EFB x09E796 x0BF948 x104090 x10C090 x16403B x19E120 x1E1C1E x203BC2 x26A798 x318B7B x34E353 x36076B x37312C x3779A1 x37A04B x3BBE48 x3F9623 x44454B x459277 x45CE87 x46CE7D x47A347 x51173D x5475FF x565E21 x56DA8C x5779B1 x5CB0C9 x5F7475 x5FAB3F x61F645 x64ED4C x686A28 x6B52DF x6CE5CC x719040 x75B70D x7CF0A5 x7D3A30 x80BAE9 x84D755 x854391 x8641E9 x8911A4 x8AEFF9 x8C0F91 x8FFC12 x904090 x9ACD2A x9D11EA x9DCD67 xA054CD xA28ED1 xA3C163 xA61876 xA6DD0C xA95FFF xA9E11D xAABA77 xAB408F xB3C1C3 xB6A316 xB6A59D xB9E7DF xC02D48 xC0F58B xC1716D xC9167B xCD3B1A xCD473D xD2799B xD97577 xDDB6D3 xDE6B8C xDF122B xE341AE xE3D5C3 xE8CE3B xEECD03 xF5408C xF69700 xF87B6B xF8C709 xF8FBAC 
-	}
-	traits = {
-		state_trait_severe_malaria 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 24
-		bg_sulfur_mining = 32
-		bg_logging = 16
-		bg_fishing = 10
-		bg_whaling = 2
-		bg_rubber = 12
-		bg_oil_extraction = 10
-	}
-	id = 550
-	subsistence_building = building_subsistence_farms
-	city = xA95FFF
-	port = x686A28
-	farm = xAB408F
-	mine = x26A798
-	wood = x9ACD2A
-	arable_land = 30
-	naval_exit_id = 3129
-}
-STATE_EASTERN_NORWAY = {
-	provinces = {
-		x01EB0A x0844FB x12548F x1255CC x2080A0 x2AAFE1 x2F2504 x35369F x3AE094 x43B12C x49B529 x4D0D24 x549C3A x5710E5 x6000A0 x60BE85 x673DA2 x6AC2AF x777860 x8277CF x85F71F x8F7F39 x8FC6B4 x907B35 x95A154 x9DB9F4 xA32B85 xA57AFC xAEEE54 xB182B1 xB88734 xB9763B xBA99BA xC041E0 xC9D63F xDE9061 xE12212 xE3582F xE8E297 xFE44C9 
-	}
-	traits = {
-		state_trait_christianiafjorden state_trait_kongsberg_silver_mine 
-	}
-	arable_resources = {
-		bg_rye_farms bg_livestock_ranches 
-	}
-	capped_resources = {
-		bg_iron_mining = 18
-		bg_logging = 11
-		bg_fishing = 5
-	}
-	id = 10
-	subsistence_building = building_subsistence_farms
-	city = xC041E0
-	port = xC041E0
-	farm = x95A154
-	mine = x49B529
-	wood = x1255CC
-	arable_land = 20
-	naval_exit_id = 3019
-}
-STATE_EASTERN_THRACE = {
-	provinces = {
-		x115006 x194E90 x2073F0 x608BB0 xF02082 xF0A020 xFCF160 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tobacco_plantations bg_opium_plantations bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 18
-		bg_logging = 4
-		bg_fishing = 10
-		bg_monuments = 1
-	}
-	id = 108
-	subsistence_building = building_subsistence_farms
-	city = xF0A020
-	port = x2073F0
-	farm = x115006
-	mine = xFCF160
-	wood = x608BB0
-	arable_land = 30
-	naval_exit_id = 3035
 }
 STATE_ECUADOR = {
 	provinces = {
@@ -4025,6 +4565,9 @@ STATE_ELBE = {
 	wood = xA5E2E8
 	arable_land = 30
 	naval_exit_id = 3027
+	prime_land = {
+		xC080E0  
+	}
 }
 STATE_ELIZAVETPOL = {
 	provinces = {
@@ -4066,6 +4609,18 @@ STATE_EMILIA = {
 	wood = x700120
 	arable_land = 60
 	naval_exit_id = 3032
+	prime_land = {
+		xF08021 x0B3B43  
+	}
+}
+STATE_ENGLISH_CHANNEL = {
+	provinces = {
+		x15C8C8 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3028
 }
 STATE_EQUATEUR = {
 	provinces = {
@@ -4088,6 +4643,9 @@ STATE_EQUATEUR = {
 	mine = xC99932
 	wood = xCD3705
 	arable_land = 50
+	prime_land = {
+		xD8927C xB858B9 xB3697B xB27626 xC060F0 x73084C xD8927C  
+	}
 }
 STATE_EQUATORIA = {
 	provinces = {
@@ -4110,6 +4668,9 @@ STATE_EQUATORIA = {
 	mine = x6808DA
 	wood = x512903
 	arable_land = 60
+	prime_land = {
+		xF9F832  
+	}
 }
 STATE_ERITREA = {
 	provinces = {
@@ -4176,6 +4737,15 @@ STATE_ESTREMADURA = {
 	arable_land = 30
 	naval_exit_id = 3029
 }
+STATE_FAROE_BANK = {
+	provinces = {
+		x709ACF 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3016
+}
 STATE_FARS = {
 	provinces = {
 		x00B0DF x0130E0 x01B060 x01F0A0 x20B506 x35A806 x3C79B5 x4AB629 x626618 x6375B3 x759BE2 x8030DF x80B060 x80F0A0 x879264 x89054E x898FBC x8A4184 x8C28A6 x8D9D57 x95EAC4 xA194C3 xAFE8A5 xB2B395 xB5A598 xB9E770 xC83D18 xE622E5 xE816BC xEB15EE xEB8219 xF033FA xF58FBD xFDAFF4 
@@ -4197,7 +4767,7 @@ STATE_FARS = {
 	subsistence_building = building_subsistence_orchards
 	city = x95EAC4
 	port = x0130E0
-	farm = x517637
+	farm = xEB8219
 	mine = xB5A598
 	wood = x8030DF
 	arable_land = 70
@@ -4468,6 +5038,18 @@ STATE_GABON = {
 	wood = x271A16
 	arable_land = 40
 	naval_exit_id = 3091
+	prime_land = {
+		x8D20C0 x8FE687 xB323FD  
+	}
+}
+STATE_GALAPAGOS_RISE = {
+	provinces = {
+		x0D61DC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3024
 }
 STATE_GALICH = {
 	provinces = {
@@ -4538,6 +5120,9 @@ STATE_GAMBIA = {
 	wood = x307041
 	arable_land = 100
 	naval_exit_id = 3088
+	prime_land = {
+		x9933B7 x146701 x04FDE5 x7486F1 xB07040 x7B561C  
+	}
 }
 STATE_GANSU = {
 	provinces = {
@@ -4790,6 +5375,15 @@ STATE_GREATER_POLAND = {
 	wood = xC0E0A0
 	arable_land = 132
 }
+STATE_GREAT_AUSTRALIAN_BIGHT = {
+	provinces = {
+		x28FBFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3121
+}
 STATE_GREENLAND = {
 	provinces = {
 		x000A19 x019043 x045371 x046A22 x0489D2 x04C479 x09BEF7 x0A0235 x0B75AA x0B820F x0BAB3C x0BEE23 x0C2B43 x0C3790 x0C8FC6 x0E081D x1096C5 x10B739 x10C9E8 x1164D0 x1187D1 x1213E4 x12A0C8 x135194 x1376E8 x137F78 x1440C6 x15354C x15940C x15AE5B x173BCB x17C50A x18434C x18820A x189543 x191E0A x1A4267 x1A5496 x1A9422 x1AB55E x1AE570 x1AE7EA x1B77ED x1BAA4F x1BAB17 x1D11A0 x1E0CB2 x1F1EB4 x20083F x20228B x20B5F6 x2204E2 x228995 x22C365 x23A0CB x28EBA7 x28EF12 x293D01 x294234 x2A33C0 x2AC988 x2BE17D x2CEF5A x2D621B x2DDD74 x2E8797 x2EB6AA x2F4B10 x2F616A x2FF14B x315E14 x31DEF7 x31F2A9 x325620 x32DBED x345503 x35427B x35EC65 x36A036 x3792E7 x3A4F58 x3B33B6 x3BEA40 x3C81BD x3DBEF4 x3E0F09 x3E3DBE x3E6BD8 x3E78C3 x3ED2BE x3EF6DB x4061C4 x42DF86 x4352D2 x441330 x451A6D x4602D4 x46BDE7 x47B719 x47C1F2 x485920 x49E5F6 x4A237A x4ACC4E x4BF6A9 x4C6F83 x4D0DB5 x4D34C9 x4D47A2 x4D4904 x50748E x510F90 x51A97F x51FFBC x52511D x52B22D x54716A x550BBD x554C3D x586D77 x59A50C x59D1D2 x5AC0B5 x5B326C x5B3F42 x5B4806 x5D1EE3 x5D9349 x5E2FCE x5E7A77 x5F273C x5FA68A x5FD6D3 x5FF2CC x60AA49 x60CF04 x6190CF x62B357 x63B507 x64794B x664F9B x665F61 x66D327 x67D4D9 x67E452 x680BB5 x6817F7 x698B9B x6BB73A x6CF4E2 x6DB5A6 x6F8095 x6FAF4D x6FFF74 x7023CA x705ADB x71D436 x71E0AB x721C60 x7447EA x74D66A x751C4C x7538BF x75E8EC x76C842 x7847B1 x78CFED x79AB30 x7A1E26 x7AC814 x7B8C27 x7C04E8 x7C9625 x7CA3C1 x7E24C2 x7E458B x8032F6 x80C4C8 x813BEC x816E36 x8225B4 x82F13A x830E78 x832740 x833619 x8391B2 x83A8EE x85BAD0 x86622C x881F10 x884170 x899222 x89E717 x8A3761 x8AC169 x8AD1E9 x8B0F28 x8B199B x8C09AE x8C64F5 x8CC82F x8D1714 x8D72FA x8DAC9C x8E8368 x8EAFCB x8F4B96 x93F601 x949AD5 x9541C5 x96E540 x972E69 x97C242 x992454 x999944 x9A14C0 x9CDC3F x9CEA48 x9D6298 x9DE8E1 x9F438F x9FE3D7 xA0EFE7 xA1E0B3 xA2CFEA xA2EC4A xA4966B xA6199A xA62EAA xA6CE70 xA72096 xA80537 xA9AF29 xA9FDAD xAAE5ED xAB9A68 xABB8A9 xAC5EF8 xACC160 xAD5556 xAD6F70 xAE3205 xAE77E8 xAE86F9 xAE8D8C xB35AD6 xB38065 xB3F025 xB41450 xB460E8 xB52B26 xB63F36 xB6A165 xB736D5 xB944BE xB95090 xBB6ADF xBD5DCF xBD889C xBDA0F3 xBDCB6F xBEBDBB xBFD228 xC06CEF xC12C04 xC13204 xC20A82 xC52DC4 xC6A074 xC6C6EB xC84380 xC9A105 xCB0338 xCBAA78 xCBFA01 xCC0322 xCD02DA xCD8B06 xCDB076 xD0D788 xD20A8F xD274AC xD2DC36 xD353DD xD5115E xD5C48E xD5E317 xD788E8 xD78CF2 xD8B192 xDA4CED xDA8974 xDBB478 xDD4B17 xDDC889 xDE68A4 xDF058C xDF9239 xDFB6F4 xE002A0 xE0DCFA xE12026 xE174E4 xE200D5 xE28564 xE289BC xE3E358 xE43391 xE43641 xE4FA88 xE56D29 xE5B709 xE7C441 xE7CC7E xE83E6C xE917CD xE9617F xE98F5C xEB5453 xEB7FCA xEB9A78 xEBEA77 xEC5065 xED815B xEFAE70 xF0F8D5 xF1014B xF162C2 xF1D239 xF2A511 xF2FD47 xF51FF4 xF5DF93 xF5ED80 xF68608 xF68FCE xF6C505 xF8FE89 xFAC3E4 xFB2EF8 xFB37DA xFC7F77 xFC86C6 xFD03D4 xFEE1AC xFEF0A7 xFEF851 xFF51DC xFFD9F4 
@@ -4962,6 +5556,15 @@ STATE_GUERRERO = {
 	arable_land = 120
 	naval_exit_id = 3155
 }
+STATE_GUIANA_SEA = {
+	provinces = {
+		x18FCFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3062
+}
 STATE_GUINEA = {
 	provinces = {
 		x08502B x08E1DB x0E47FB x12A380 x14D406 x168505 x17E20B x181E0E x18F33E x1CBF4C x2000D0 x227115 x29C6D0 x2BB939 x3070C0 x324AE0 x339CE8 x366D0F x37ABFC x380214 x3D0B76 x482B8D x5512AF x5CB7F3 x5D1375 x63F919 x6B6FCF x6C8F72 x7062D6 x7EFED6 x8140A0 x83B875 x8F0D6B x91AD7F x91E57E xA04050 xA4C378 xAAA0DE xAEF471 xAFBE88 xB7BFEE xCB2DDE xCC84F1 xD00D92 xD52D82 xE02F10 xEE9F2D xF4618A xF57E66 
@@ -4987,6 +5590,9 @@ STATE_GUINEA = {
 	wood = x380214
 	arable_land = 80
 	naval_exit_id = 3088
+	prime_land = {
+		x37ABFC x5512AF xD52D82  
+	}
 }
 STATE_GUIZHOU = {
 	provinces = {
@@ -5026,14 +5632,80 @@ STATE_GUJARAT = {
 		bg_oil_extraction = 10
 	}
 	id = 461
-	subsistence_building = building_subsistence_rice_paddies
-	city = x3151E0
+	subsistence_building = building_subsistence_farms
+	city = xF87E91
 	port = xB3D1CD
-	farm = x31D0E0
+	farm = x90B589
 	mine = x164DBB
 	wood = xB05060
-	arable_land = 185
+	arable_land = 335
 	naval_exit_id = 3048
+	prime_land = {
+		x31D0E0 xB0D060 xADD2A3 xCC1D23 xF87E91 xC7C3FD x3151E0 x128888 xD31590 x3FFA53 x30D060 x075A8E xB3D1CD xB11F7B xBBB2BD x3151E0 x73656F xEB1229 xD8CEF7 xECB4F5 x90B589 x03C674 x30E365 x31D0E0 x9C8D06 xCC1D23  
+	}
+}
+STATE_GULF_OF_ALASKA = {
+	provinces = {
+		x36CAFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3119
+}
+STATE_GULF_OF_GUINEA = {
+	provinces = {
+		x386DCD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3091
+}
+STATE_GULF_OF_MAINE = {
+	provinces = {
+		x0ECACA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3017
+}
+STATE_GULF_OF_MEXICO = {
+	provinces = {
+		x0D74CA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3060
+}
+STATE_GULF_OF_SAINT_LAWRENCE = {
+	provinces = {
+		x74FBFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3045
+}
+STATE_GULF_OF_SIAM = {
+	provinces = {
+		x74FAFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3053
+}
+STATE_GULF_OF_TONKIN = {
+	provinces = {
+		x75C8C8 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3054
 }
 STATE_GUYENNE = {
 	provinces = {
@@ -5075,6 +5747,9 @@ STATE_HAIL = {
 	wood = x920B4A
 	arable_land = 5
 	naval_exit_id = 3046
+	prime_land = {
+		x4C5D5F x705120 x920B4A xCB2408 xEF8A47 x16AA3B x1BC279 x2BAA0A x4B8848 x90E0EA x3E4014 x7DA074 x2BCAA5 xDD5764 x28C1E8 x83A8BC xCCA55B  
+	}
 }
 STATE_HAITI = {
 	provinces = {
@@ -5167,6 +5842,15 @@ STATE_HAWAIIAN_ISLANDS = {
 	farm = x6090C0
 	arable_land = 15
 	naval_exit_id = 3001
+}
+STATE_HAWAIIAN_SEAMOUNT_CHAIN = {
+	provinces = {
+		x340EEC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3001
 }
 STATE_HEDJAZ = {
 	provinces = {
@@ -5279,6 +5963,9 @@ STATE_HESSE = {
 	mine = x8B7C67
 	wood = xD04121
 	arable_land = 80
+	prime_land = {
+		x1141A0 x8B7C67 xD04121 x1357DB  
+	}
 }
 STATE_HIGHLANDS = {
 	provinces = {
@@ -5305,9 +5992,34 @@ STATE_HIGHLANDS = {
 	arable_land = 30
 	naval_exit_id = 3027
 }
+STATE_HILL_PUNJAB = {
+	provinces = {
+		x0003C6 x0C25D9 x251424 x280F05 x3264B7 x394B7F x45AF2E x572FB9 x59BBCE x5A5F96 x607020 x66C9D9 x8FF69F x96E54B xA07020 xA0F0A0 xA98EF8 xD52082 xDB91D3 xDEFFE6 xE0C455 xE31B4E xE60F80 xF202E0 xF4C868 
+	}
+	traits = {
+		state_trait_indus_river state_trait_himalayan_foothills 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_silk_plantations 
+	}
+	capped_resources = {
+		bg_logging = 9
+		bg_iron_mining = 12
+	}
+	id = 920
+	subsistence_building = building_subsistence_farms
+	city = xDEFFE6
+	farm = xA0F0A0
+	mine = xA0F0A0
+	wood = xA0F0A0
+	arable_land = 182
+	prime_land = {
+		xDEFFE6 x251424 x280F05 x3264B7 x572FB9 x59BBCE x8FF69F x96E54B xA07020 xA98EF8 xD52082 xE0C455 xE31B4E xF202E0 xA0F0A0 x66C9D9 x0C25D9 x394B7F xE60F80  
+	}
+}
 STATE_HIMALAYAS = {
 	provinces = {
-		x01C109 x11C815 x1619ED x1C3876 x2070E0 x213060 x218FFE x23C36A x25994F x29576A x388D2C x4874D9 x4D5FC1 x4DE9D5 x4F99DC x515E66 x605021 x60B0DF x665E5B x6E233E x73C2C6 x812FBE x833D63 x84F73C x920B51 xA228F8 xA2C234 xA5D1EB xAF11F0 xAF5B29 xBCD18E xC13072 xC1C87A xC1DA32 xC6179B xC6D4A8 xCE4DAE xD10C8F xDA7F32 xDA8130 xE0B0E0 xE18F72 xE51929 xE5D3E0 
+		x11C815 x1619ED x1C3876 x213060 x218FFE x23C36A x25994F x29576A x4874D9 x4D5FC1 x4DE9D5 x515E66 x605021 x6E233E x73C2C6 x812FBE x833D63 x920B51 xA228F8 xA2C234 xA5D1EB xAF11F0 xAF5B29 xBCD18E xC13072 xC1C87A xC1DA32 xC6179B xC6D4A8 xCE4DAE xDA8130 xE18F72 xE51929 
 	}
 	traits = {
 		state_trait_himalayas_mountains 
@@ -5321,10 +6033,10 @@ STATE_HIMALAYAS = {
 	id = 455
 	subsistence_building = building_subsistence_rice_paddies
 	city = x1619ED
-	farm = x29576A
-	mine = x4DE9D5
-	wood = xE0B0E0
-	arable_land = 60
+	farm = xA228F8
+	mine = x29576A
+	wood = xC6D4A8
+	arable_land = 41
 }
 STATE_HINGGAN = {
 	provinces = {
@@ -5376,8 +6088,11 @@ STATE_HOKKAIDO = {
 	farm = x5F2A24
 	mine = x413F60
 	wood = x86757A
-	arable_land = 20
+	arable_land = 25
 	naval_exit_id = 3059
+	prime_land = {
+		xA090C0 x40BDB8 xF17C01  
+	}
 }
 STATE_HOLLAND = {
 	provinces = {
@@ -5454,6 +6169,15 @@ STATE_HONDURAS = {
 	arable_land = 35
 	naval_exit_id = 3026
 }
+STATE_HORN_OF_AFRICA = {
+	provinces = {
+		x2B5CB8 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3018
+}
 STATE_HUDAVENDIGAR = {
 	provinces = {
 		x13886D x2F78D7 x3020E0 x30A060 x31CD7B x34C810 x3F1505 x809000 xB0A060 xB4D60B xB8FEBB 
@@ -5474,6 +6198,15 @@ STATE_HUDAVENDIGAR = {
 	wood = xB4D60B
 	arable_land = 40
 	naval_exit_id = 3035
+}
+STATE_HUDSON_BAY = {
+	provinces = {
+		x6FDDFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3044
 }
 STATE_HUNAN = {
 	provinces = {
@@ -5534,8 +6267,8 @@ STATE_ICA = {
 	id = 368
 	subsistence_building = building_subsistence_farms
 	city = x98E058
-	port = x32863F
-	farm = x25CF2A
+	port = xE5E702
+	farm = xDF00B0
 	mine = x52BF37
 	wood = xBDFBD1
 	arable_land = 50
@@ -5632,28 +6365,6 @@ STATE_ILLINOIS = {
 	wood = xAD5337
 	arable_land = 270
 }
-STATE_INDIAN_OCEAN_TERRITORY = {
-	provinces = {
-		x60E0B0 xD0E090 xD690E0 
-	}
-	traits = {
-		state_trait_mascarene_plateau 
-	}
-	arable_resources = {
-		bg_rice_farms bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_whaling = 5
-		bg_fishing = 10
-	}
-	id = 470
-	subsistence_building = building_subsistence_farms
-	city = xD690E0
-	port = xD0E090
-	farm = xD0E090
-	arable_land = 15
-	naval_exit_id = 3111
-}
 STATE_INDIANA = {
 	provinces = {
 		x005339 x26B0DF x27EF03 x285A9A x2A554C x30D889 x4BAF24 x5DA55B x708040 x71AF12 x73BE17 x886CA2 x89D198 x9977A5 x9CE5F6 xC02000 xC72917 xC9A306 xE12B89 xE236DD xE2E68F xE36812 xED4D2B xF04080 xF13865 
@@ -5675,6 +6386,91 @@ STATE_INDIANA = {
 	mine = x708040
 	wood = x4BAF24
 	arable_land = 220
+}
+STATE_INDIAN_OCEAN_01 = {
+	provinces = {
+		x65CDFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3108
+}
+STATE_INDIAN_OCEAN_02 = {
+	provinces = {
+		x405B94 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3109
+}
+STATE_INDIAN_OCEAN_03 = {
+	provinces = {
+		x49C9C9 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3110
+}
+STATE_INDIAN_OCEAN_LANE_01 = {
+	provinces = {
+		x6F4CE0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3112
+}
+STATE_INDIAN_OCEAN_LANE_02 = {
+	provinces = {
+		x924CE0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3113
+}
+STATE_INDIAN_OCEAN_LANE_05 = {
+	provinces = {
+		xDB38A3 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3116
+}
+STATE_INDIAN_OCEAN_LANE_06 = {
+	provinces = {
+		x6640E1 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3117
+}
+STATE_INDIAN_OCEAN_TERRITORY = {
+	provinces = {
+		x60E0B0 xD0E090 xD690E0 
+	}
+	traits = {
+		state_trait_mascarene_plateau 
+	}
+	arable_resources = {
+		bg_rice_farms bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_whaling = 5
+		bg_fishing = 10
+	}
+	id = 470
+	subsistence_building = building_subsistence_farms
+	city = xD690E0
+	port = xD0E090
+	farm = xD0E090
+	arable_land = 15
+	naval_exit_id = 3111
 }
 STATE_INGRIA = {
 	provinces = {
@@ -5808,8 +6604,17 @@ STATE_IRAKAJEMI = {
 	city = xC0F0A0
 	farm = x4030E0
 	mine = x41B060
-	wood = x9DE783
+	wood = x2E8EE8
 	arable_land = 50
+}
+STATE_IRISH_SEA = {
+	provinces = {
+		x1B77CD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3030
 }
 STATE_IRKUTSK = {
 	provinces = {
@@ -5835,6 +6640,15 @@ STATE_IRKUTSK = {
 	wood = x982F85
 	arable_land = 30
 }
+STATE_IRMINGER_SEA = {
+	provinces = {
+		x16FAFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3022
+}
 STATE_ISFAHAN = {
 	provinces = {
 		x077437 x124E8C x24A57B x2657C9 x2A39A6 x31DF75 x362C14 x37295A x4C1CD8 x4E9FD1 x527229 x5FE0AF x616406 x672217 x6C648A x6F0F7C x7AE349 x7CCE94 x803160 x89719E x8D9CEC x8DDEC3 x95A3F5 xB1591C xB75FFC xC03160 xC07020 xC5AECF xD35B7E xE9B06D xED39D0 xF17A7A xF29735 
@@ -5853,10 +6667,10 @@ STATE_ISFAHAN = {
 	}
 	id = 419
 	subsistence_building = building_subsistence_orchards
-	city = xED39D0
-	farm = xA37A77
-	mine = xE9B06D
-	wood = xE679AF
+	city = xE9B06D
+	farm = xED39D0
+	mine = x8D9CEC
+	wood = x527229
 	arable_land = 90
 }
 STATE_ISTRIA = {
@@ -5959,6 +6773,15 @@ STATE_JAMAICA = {
 	arable_land = 20
 	naval_exit_id = 3061
 }
+STATE_JAVA_SEA = {
+	provinces = {
+		x63DCFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3052
+}
 STATE_JETISY = {
 	provinces = {
 		x035206 x044CEE x0A9C71 x0C60A8 x0F4A4F x1004AA x118BC6 x1240CA x15F123 x1887C4 x19F1CB x1A2E18 x1C9A02 x229B00 x24F910 x256890 x28B231 x295540 x2DB6E2 x2F10B2 x2F16F4 x306B91 x325906 x331ECB x344B19 x3474BD x38169F x3ACAE1 x440348 x45C325 x4CC425 x4CD277 x4F6CDC x4F8C3D x5102BF x52FA86 x547AA8 x5A8261 x5A9E8C x5B8BFF x61B92A x637318 x6553C3 x65BE3F x68C7DD x6931D0 x69B828 x6E7F2F x70597F x7346A2 x742F14 x79664D x7986B0 x7B06D5 x7DE8B0 x7EA9D6 x7FD208 x857576 x8894ED x8906CC x8DD955 x8E5320 x909B40 x90AC3F x91FBF0 x920F69 x94FC5E x973A2F x98ACB8 x993E65 x99A8F8 x9BCBF6 x9BD721 x9C18B1 x9C3361 xA09695 xA0F1B0 xA6B8D6 xAC9F95 xADB740 xB1B8A1 xBA71FD xBC62A4 xBCAEB2 xC0C277 xC1618F xC81449 xCB6F7C xCDD44E xCFB9C8 xD09114 xD1A1E7 xD1AA85 xD2CDDB xD31E1A xD36B34 xD3A389 xD4315B xD5FE94 xD60BAE xD64CDA xD86973 xDA1203 xDE02C4 xDE3216 xEA83EB xEB876D xEC73FF xEDB303 xEFE78E xF27401 xF31E37 xF4D61A xF87D30 xF9138D xFB9D9F xFC3EE9 xFC7740 xFC90DA xFCF4A7 xFFA9D4 
@@ -6043,7 +6866,7 @@ STATE_JUJUY = {
 	city = x5CCB77
 	farm = xDF80F0
 	mine = x245987
-	wood = x9319AA
+	wood = xC9249D
 	arable_land = 50
 }
 STATE_JUTLAND = {
@@ -6085,14 +6908,14 @@ STATE_KABUL = {
 	id = 451
 	subsistence_building = building_subsistence_farms
 	city = xEF9ECA
-	farm = x401B5D
-	mine = x3ACBE0
-	wood = xB1300D
+	farm = x885677
+	mine = x70FE4E
+	wood = x401B5D
 	arable_land = 80
 }
 STATE_KACHIN = {
 	provinces = {
-		x077F7F x096B34 x0BDB4D x0F9164 x234C64 x3002EA x319B9E x363A85 x3E75FA x3E79B6 x401054 x47B561 x47C5A9 x4D31CA x634D79 x675150 x695CD8 x6CF865 x7D320E x81E012 x8E1E5B x90EF60 x9339DC x964B33 x9AA00A x9D320D x9DE9F6 xB46F84 xB51155 xB8B1D2 xC1940E xCD31D0 xCFEFDF xD18BAA xD7A648 xDEFDA8 xE0645B xE15EF6 xECACD2 xF212BD xF84302 xFB1A2B xFE971F 
+		x077F7F x096B34 x0BDB4D x0F9164 x118ECF x3002EA x319B9E x363A85 x3DB5A9 x3E79B6 x401054 x47B561 x4D31CA x60CBBF x675150 x695CD8 x6CF865 x7D320E x81E012 x8E1E5B x9339DC x964B33 x9AA00A x9D320D x9DE9F6 xA6F4C3 xB46F84 xB51155 xB8B1D2 xC1940E xCD31D0 xCFEFDF xD18BAA xD7A648 xDA0253 xE0645B xECACD2 xF212BD xF5193B xF84302 xFE971F 
 	}
 	traits = {
 		state_trait_burmese_teak 
@@ -6109,7 +6932,7 @@ STATE_KACHIN = {
 	farm = x319B9E
 	mine = xCD31D0
 	wood = x077F7F
-	arable_land = 30
+	arable_land = 38
 }
 STATE_KALMYKIA = {
 	provinces = {
@@ -6194,10 +7017,10 @@ STATE_KANDAHAR = {
 	}
 	id = 2010
 	subsistence_building = building_subsistence_farms
-	city = x99A835
-	farm = x99A835
-	mine = x99A835
-	wood = x99A835
+	city = xF1FBC5
+	farm = x55B1FD
+	mine = xBBE7A9
+	wood = x3991B0
 	arable_land = 50
 }
 STATE_KANSAI = {
@@ -6318,6 +7141,9 @@ STATE_KASAI = {
 	mine = xEA13E1
 	wood = xEFFCF7
 	arable_land = 70
+	prime_land = {
+		x3F2E16 xE392E2  
+	}
 }
 STATE_KASHMIR = {
 	provinces = {
@@ -6334,12 +7160,15 @@ STATE_KASHMIR = {
 		bg_logging = 14
 	}
 	id = 463
-	subsistence_building = building_subsistence_farms
+	subsistence_building = building_subsistence_rice_paddies
 	city = x6326A6
 	farm = xB637A4
 	mine = xF28F90
 	wood = x9666D9
 	arable_land = 85
+	prime_land = {
+		x217021 x24EF26 x3FDA5A x808216 x874936 x964219 xA875F3 xD107A3 xF469BC xFD692B  
+	}
 }
 STATE_KASTAMONU = {
 	provinces = {
@@ -6402,7 +7231,7 @@ STATE_KAUNAS = {
 	port = xBFE867
 	farm = xE0B943
 	mine = x0980C8
-	wood = xA916E3
+	wood = xC0A0A0
 	arable_land = 56
 	naval_exit_id = 3000
 }
@@ -6791,7 +7620,7 @@ STATE_KUBAN = {
 	city = x80D080
 	port = x9809B7
 	farm = x405000
-	mine = x1ED727
+	mine = x2CF115
 	wood = xD9CD9D
 	arable_land = 105
 	naval_exit_id = 3036
@@ -6818,6 +7647,28 @@ STATE_KUOPIO = {
 	wood = xED8DC6
 	arable_land = 25
 	naval_exit_id = 3000
+}
+STATE_KURNOOL = {
+	provinces = {
+		x063403 x0F1912 x338BFB x34BB3B x35AB0E x461A00 x5170A0 x54D463 x59BBE1 x669373 x84EE56 xF2F82A xF46AEC xF91482 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_tobacco_plantations bg_sugar_plantations bg_dye_plantations bg_banana_plantations bg_silk_plantations 
+	}
+	capped_resources = {
+		bg_logging = 9
+		bg_iron_mining = 15
+	}
+	id = 915
+	subsistence_building = building_subsistence_rice_paddies
+	city = x59BBE1
+	farm = x338BFB
+	mine = xF46AEC
+	wood = x34BB3B
+	arable_land = 63
+	prime_land = {
+		x84EE56 xF91482  
+	}
 }
 STATE_KURSK = {
 	provinces = {
@@ -6869,44 +7720,32 @@ STATE_KYUSHU = {
 	arable_land = 100
 	naval_exit_id = 3058
 }
-STATE_LA_PAMPA = {
+STATE_LABRADOR_SEA = {
 	provinces = {
-		x008C72 x02454E x056575 x05B0FE x0BAC41 x20BF71 x236485 x2D53E4 x31058F x33F60A x3EDCA2 x3F05DB x41303C x4B8DCF x5625B7 x6A7C85 x6CB61C x6D8C54 x6F875E x6FD2C8 x700090 x708090 x71796D x766A95 x7A3CE9 x7B3596 x7BF818 x7C6219 x7D5593 x7E58AD x7ED632 x88F9B3 x8C3F3B x8C72BB x95DAD0 x9B19FC x9C4EE3 xA1069A xA7889F xA7B670 xAEEA79 xB0D16A xB74055 xB8A863 xC11A96 xC347D2 xC60A9F xCA7105 xCD2F84 xDA28FF xDC526D xDF6BB7 xE1E756 xE3B67F xEDB33D xEF8010 xF08090 xF1A586 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_dye_plantations bg_sugar_plantations bg_vineyard_plantations 
+		x69C9C9 
 	}
 	capped_resources = {
-		bg_logging = 13
+		bg_oil_extraction = 40
 	}
-	id = 377
-	subsistence_building = building_subsistence_farms
-	city = x02454E
-	farm = x700090
-	mine = x6F875E
-	wood = x9C4EE3
-	arable_land = 150
+	id = 3021
 }
-STATE_LA_PAZ = {
+STATE_LACCADIVE_SEA = {
 	provinces = {
-		x045D66 x07D111 x0A51AC x0AAAAC x0CD27A x0D584B x11DE6C x12108F x131739 x1A8BA1 x1F3664 x20F378 x22BE37 x23D4CF x2410B7 x253E79 x2815D0 x2CBF49 x32FA5C x4040D0 x42895F x451DFA x46BCB9 x4721A4 x4758AE x49B0BF x49B3A4 x4B6AB8 x4C4D63 x4F58C9 x4F8420 x542F50 x57125B x59B309 x627358 x677249 x678125 x6B8F1E x725B6B x72B0FA x735E45 x7B4D37 x7B95EA x84F56A x88E8DC x8FE404 x9084FB x913574 x931FDA x959B26 x95A83A x969B22 x9E207E xA00788 xA04030 xA0C0F0 xA2A5FA xB127BC xB19B32 xB4F357 xB5966F xB94EE4 xBF0E01 xC0524B xC29D17 xC4AA63 xC8FBC2 xCECD40 xCF0442 xD08CB2 xD6FCA4 xDBFFFF xDE2B7D xDEA235 xDEDC30 xDFF14D xE00010 xE1BCCE xE26287 xE527E3 xE74282 xEB3580 xED0E96 xF1BD3D xF3EEF0 xF4D455 xF79A14 xF940B8 xFBAC56 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations bg_vineyard_plantations 
+		x6FDEFC 
 	}
 	capped_resources = {
-		bg_logging = 20
-		bg_gold_mining = 4
-		bg_rubber = 8
-		bg_oil_extraction = 30
+		bg_oil_extraction = 40
 	}
-	id = 364
-	subsistence_building = building_subsistence_rice_paddies
-	city = xDE2B7D
-	farm = x95A83A
-	mine = x23D4CF
-	wood = x2815D0
-	arable_land = 120
+	id = 3049
+}
+STATE_LAKE_NICARAGUA = {
+	provinces = {
+		x18FDFD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3160
 }
 STATE_LANCASHIRE = {
 	provinces = {
@@ -7000,8 +7839,8 @@ STATE_LARISTAN = {
 	subsistence_building = building_subsistence_farms
 	city = xA54E11
 	port = x350DED
-	farm = x01F020
-	mine = x6DDC3B
+	farm = x36F270
+	mine = x407020
 	wood = x8070A0
 	arable_land = 30
 	naval_exit_id = 3046
@@ -7027,6 +7866,45 @@ STATE_LAZIO = {
 	wood = xB040A0
 	arable_land = 60
 	naval_exit_id = 3032
+}
+STATE_LA_PAMPA = {
+	provinces = {
+		x008C72 x02454E x056575 x05B0FE x0BAC41 x20BF71 x236485 x2D53E4 x31058F x33F60A x3EDCA2 x3F05DB x41303C x4B8DCF x5625B7 x6A7C85 x6CB61C x6D8C54 x6F875E x6FD2C8 x700090 x708090 x71796D x766A95 x7A3CE9 x7B3596 x7BF818 x7C6219 x7D5593 x7E58AD x7ED632 x88F9B3 x8C3F3B x8C72BB x95DAD0 x9B19FC x9C4EE3 xA1069A xA7889F xA7B670 xAEEA79 xB0D16A xB74055 xB8A863 xC11A96 xC347D2 xC60A9F xCA7105 xCD2F84 xDA28FF xDC526D xDF6BB7 xE1E756 xE3B67F xEDB33D xEF8010 xF08090 xF1A586 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_dye_plantations bg_sugar_plantations bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_logging = 13
+	}
+	id = 377
+	subsistence_building = building_subsistence_farms
+	city = x02454E
+	farm = x700090
+	mine = x6F875E
+	wood = x9C4EE3
+	arable_land = 150
+}
+STATE_LA_PAZ = {
+	provinces = {
+		x045D66 x07D111 x0A51AC x0AAAAC x0CD27A x0D584B x11DE6C x12108F x131739 x1A8BA1 x1F3664 x20F378 x22BE37 x23D4CF x2410B7 x253E79 x2815D0 x2CBF49 x32FA5C x4040D0 x42895F x451DFA x46BCB9 x4721A4 x4758AE x49B0BF x49B3A4 x4B6AB8 x4C4D63 x4F58C9 x4F8420 x542F50 x57125B x59B309 x627358 x677249 x678125 x6B8F1E x725B6B x72B0FA x735E45 x7B4D37 x7B95EA x84F56A x88E8DC x8FE404 x9084FB x913574 x931FDA x959B26 x95A83A x969B22 x9E207E xA00788 xA04030 xA0C0F0 xA2A5FA xB127BC xB19B32 xB4F357 xB5966F xB94EE4 xBF0E01 xC0524B xC29D17 xC4AA63 xC8FBC2 xCECD40 xCF0442 xD08CB2 xD6FCA4 xDBFFFF xDE2B7D xDEA235 xDEDC30 xDFF14D xE00010 xE1BCCE xE26287 xE527E3 xE74282 xEB3580 xED0E96 xF1BD3D xF3EEF0 xF4D455 xF79A14 xF940B8 xFBAC56 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_logging = 20
+		bg_gold_mining = 4
+		bg_rubber = 8
+		bg_oil_extraction = 30
+	}
+	id = 364
+	subsistence_building = building_subsistence_rice_paddies
+	city = xDE2B7D
+	farm = x95A83A
+	mine = x23D4CF
+	wood = x2815D0
+	arable_land = 120
 }
 STATE_LEBANON = {
 	provinces = {
@@ -7092,14 +7970,14 @@ STATE_LESSER_POLAND = {
 	id = 157
 	subsistence_building = building_subsistence_farms
 	city = xE0BB00
-	farm = xAB3C62
-	mine = x9FEDC5
+	farm = x51A0E0
+	mine = x9444C9
 	wood = x51A0E0
 	arable_land = 60
 }
 STATE_LHASA = {
 	provinces = {
-		x03644A x06698A x082947 x095F32 x099AD7 x0A6115 x0BCE33 x0FA96A x1371AA x15C347 x186F38 x1A5F8B x1A87DA x1B383B x1E3E6C x207060 x20F060 x216771 x256241 x25DC9E x286514 x28F81E x2BB5C6 x2CC414 x2CE40E x2CE52F x2CFED9 x373402 x3A3E53 x3B96A1 x3DD93C x422487 x445E17 x466F9F x4A0FD0 x4B57BE x4C1EF6 x4CBB7C x4E1FF2 x4E8A60 x4F2329 x4FD34F x503FF4 x50C058 x525CC9 x527BB9 x5327D3 x54B9E5 x5B12BD x5C42DC x5CB50A x5E58A8 x61CFD5 x63DA08 x644AF9 x6464CF x656DDC x672210 x673438 x67344F x6E4FEF x71143F x72C382 x737CBB x75AFE7 x76E336 x79D100 x7B33F1 x7C0E53 x7DC31D x80DA49 x83DFE3 x85295B x891526 x892162 x8A8982 x8BB70D x8D0D90 x8FE067 x92480A x934A5C x9640C8 x9BEF82 x9F73DC xA07060 xA1341A xA21042 xA5D54A xA78672 xAC5C8D xADDE52 xADFAA4 xB02837 xB2F3ED xB5B0EE xB5EF16 xBAB31D xBC0BCD xBD45E4 xBDF268 xC17AA1 xC268D2 xC3B349 xCA11A0 xCCCA27 xCE3261 xCEA5FB xD06F1B xD2139B xD238D2 xD2C34D xD2D422 xD73CA3 xDD2AAD xDE11E9 xDF30DF xE0BE04 xE2D3FC xE47ADC xE701F3 xEB2EA9 xEC7BB2 xEE6A3D xEEE60B xF520AD xF5C0FC xF658E0 xF8346B xFC33A4 xFE3A7A 
+		x03644A x06698A x082947 x095F32 x099AD7 x0A6115 x0BCE33 x0FA96A x1371AA x15C347 x1A5F8B x1A87DA x1B383B x1E3E6C x207060 x2070E0 x20F060 x216771 x256241 x25DC9E x286514 x2BB5C6 x2CC414 x2CE40E x2CE52F x2CFED9 x3A3E53 x3B96A1 x3DD93C x422487 x445E17 x466F9F x4A0FD0 x4B57BE x4C1EF6 x4E1FF2 x4E8A60 x4F2329 x4FD34F x503FF4 x50C058 x527BB9 x5327D3 x54B9E5 x5B12BD x5C42DC x5CB50A x5E58A8 x61CFD5 x63DA08 x644AF9 x6464CF x656DDC x672210 x67344F x6E4FEF x71143F x72C382 x737CBB x75AFE7 x76E336 x79D100 x7B33F1 x7C0E53 x80DA49 x85295B x891526 x892162 x8A8982 x8BB70D x8D0D90 x92480A x934A5C x9640C8 x9BEF82 x9F73DC xA07060 xA21042 xA78672 xAC5C8D xADFAA4 xB02837 xB2F3ED xB5B0EE xB5EF16 xBAB31D xBD45E4 xBDF268 xC17AA1 xC268D2 xC3B349 xCA11A0 xCCCA27 xCE3261 xCEA5FB xD06F1B xD2D422 xD73CA3 xDD2AAD xDE11E9 xE0BE04 xE2D3FC xE47ADC xE701F3 xEC7BB2 xEEE60B xF520AD xF658E0 xFC33A4 xFE3A7A 
 	}
 	traits = {
 		state_trait_himalayas_mountains 
@@ -7209,7 +8087,7 @@ STATE_LIMA = {
 	city = x928ED8
 	port = x6BEF27
 	farm = x9E0F14
-	mine = xF333CF
+	mine = xC64601
 	wood = xA3F17B
 	arable_land = 40
 	naval_exit_id = 3024
@@ -7434,7 +8312,7 @@ STATE_LURISTAN = {
 	subsistence_building = building_subsistence_orchards
 	city = x38B60D
 	farm = xBDD368
-	mine = x141ABA
+	mine = xC82A67
 	wood = x2EA8EE
 	arable_land = 40
 }
@@ -7463,6 +8341,15 @@ STATE_LUZON = {
 	wood = xEB310E
 	arable_land = 80
 	naval_exit_id = 3056
+}
+STATE_MACARONESIAN_SEA = {
+	provinces = {
+		x5FDDFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3089
 }
 STATE_MACEDONIA = {
 	provinces = {
@@ -7509,7 +8396,7 @@ STATE_MADRAS = {
 		x0559B3 x07104C x0E2990 x10B060 x1FF7C6 x20A050 x2D75FD x2EAD15 x486310 x56456B x5AF5BE x61FE06 x620762 x6A381C x7CCE50 x99B424 x9A2EF3 x9E4F00 xA02050 xA021D0 xA3158E xA63901 xABADB1 xAEAE4C xB278DD xEC1945 
 	}
 	traits = {
-		state_trait_cauvery_delta state_trait_natural_harbors 
+		state_trait_cauvery_delta state_trait_natural_harbors state_trait_western_ghats 
 	}
 	arable_resources = {
 		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
@@ -7621,6 +8508,57 @@ STATE_MALTA = {
 	arable_land = 5
 	naval_exit_id = 3033
 }
+STATE_MALWA = {
+	provinces = {
+		x0A05FF x0E199B x14EB25 x1E9A75 x2A9BFB x346A50 x4CA2A3 x51E979 x585F79 x6A8538 x70D0E0 x746A39 x82DEEF x87DE7B x897F27 x983C0D xA9E591 xAA246A xB8A7B3 xC0F1B9 xC4F4E4 xC77D13 xCD2556 xDCAFE4 xE3AF55 xE9D03F xEFD0DF xF6BCF1 xFA701B xFBDCC9 
+	}
+	traits = {
+		state_trait_good_soils 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_dye_plantations bg_opium_plantations bg_sugar_plantations bg_tobacco_plantations bg_silk_plantations 
+	}
+	capped_resources = {
+		bg_logging = 8
+		bg_iron_mining = 11
+		bg_coal_mining = 4
+	}
+	id = 462
+	subsistence_building = building_subsistence_farms
+	city = xFBDCC9
+	farm = xB8A7B3
+	mine = x51E979
+	wood = x746A39
+	arable_land = 131
+	prime_land = {
+		x51E979  
+	}
+}
+STATE_MANDALAY = {
+	provinces = {
+		x212FE8 x234C64 x2497E7 x26A2E9 x2FF9BD x397139 x3E75FA x47C5A9 x546B18 x620442 x634D79 x6E8FA2 x75BE27 x9070DF x90EF60 xA17AB8 xB7E202 xD2F36A xD5035C xDEFDA8 xE15EF6 xE2C923 xFB1A2B 
+	}
+	traits = {
+		state_trait_burmese_teak state_trait_yenangyaung 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_tea_plantations bg_sugar_plantations bg_dye_plantations bg_banana_plantations bg_silk_plantations 
+	}
+	capped_resources = {
+		bg_gold_mining = 2
+		bg_iron_mining = 16
+		bg_logging = 20
+		bg_rubber = 20
+		bg_oil_extraction = 26
+	}
+	id = 2000
+	subsistence_building = building_subsistence_rice_paddies
+	city = x620442
+	farm = x212FE8
+	mine = x2FF9BD
+	wood = xB7E202
+	arable_land = 48
+}
 STATE_MANITOBA = {
 	provinces = {
 		x002497 x006FF6 x00A040 x00F433 x03240F x044B0B x04F2AC x0782F1 x0791F2 x08045E x09454B x09CCBB x0B8443 x0C1436 x0C2C81 x0C5FF1 x0C6FD7 x0CDFEF x0DB4CA x0E6ED3 x0E7E40 x0F245D x12C464 x131829 x1328F8 x13FC0F x1510B9 x165B36 x16B6ED x174627 x180D7A x187C58 x18F5EE x1A0E35 x1C140F x1CA16D x1CA447 x1E6E7B x1EE51C x21166D x21A006 x2256CE x2275DF x24DF1C x253E84 x2B9E9F x2C03AA x30C051 x30DB4E x32CE68 x3612F5 x38D2B3 x395554 x39C944 x3A6B83 x3B6E83 x3E3E84 x3E8475 x3EB341 x3EC4D4 x3F7017 x40E000 x40E52D x42F2E2 x42F582 x43B793 x43ECF0 x44CCA9 x44EF6B x4503E6 x45D044 x464F48 x4676BD x46B922 x4992A9 x4A8ED2 x4C1D1A x4D0581 x4EEC4B x4F4505 x4FF4D0 x521E7C x528228 x542639 x544568 x54C371 x553C99 x555BAD x55E100 x563D7F x56A6C4 x57AFC4 x590948 x594F3C x5A1A92 x5B4E49 x5B87F0 x5B8F90 x5BE5BF x5CC4C6 x5D7496 x5E3093 x5E806D x5F1F9D x5F7D84 x5FC402 x6137EA x6219BB x65F69E x67745A x68C879 x6911E2 x6A73E3 x6B748E x6C06D8 x6D49FC x6DE48C x6E8C90 x6F9DBE x708B11 x70D5D4 x70F127 x7122B4 x71E534 x75F292 x76718F x78225B x788EF7 x7A3E48 x7A790A x7A8DC0 x7A8FAA x7B9C23 x7BCE24 x7CE9E2 x7EE88A x7F8573 x8020C0 x80A040 x80D06A x813C7A x82D3D9 x832EB1 x8521AB x857DD7 x85F1EA x85F6FB x86229F x86D18A x89C7F6 x8A7316 x8B9E21 x8BE8B5 x8C94F5 x8E2E54 x8F1029 x9237CC x92E099 x93CAEB x93F868 x9455F5 x956F56 x9A54DD x9AB469 x9B2805 x9CB866 x9D05EB x9E3DC0 xA0231C xA03446 xA182AB xA57384 xA9C5C0 xAA5D63 xAB2CD1 xAD40B0 xAE76E5 xB0F3C2 xB1C965 xB448A4 xB4ABAC xB4CF1F xB5C055 xB6B0DF xB7B9D2 xB84746 xB8AB1D xB8B41C xB8E561 xB9B479 xBA7439 xBB5EA2 xBE34C5 xC02FED xC036EC xC0E000 xC0EDB2 xC2D264 xC587CD xC61E9B xC80B9F xC8467F xC923B4 xC9790E xC9870B xC99667 xCA15A3 xCA95EA xCB7964 xCCA2C5 xD0913B xD0D2B7 xD1F715 xD41B85 xD48023 xD4B179 xD4D86F xD7CE04 xD81024 xD93231 xDAB83F xDBBC41 xDC2B47 xDD60F3 xE0A3A3 xE0F215 xE11EC4 xE15693 xE19213 xE1CA38 xE25D1F xE5081D xE58D80 xE63FEA xE6B251 xE6D78F xE7CB96 xE7CF1B xE857DC xE9FE5B xEA8D91 xEB9647 xED0D09 xEED579 xEF1E85 xF2AD8F xF2B4CE xF2DEBD xF3596D xF4A9F1 xF5931B xF66D8E xF73080 xF73FF8 xF770E6 xF779D9 xF7AF04 xF8510F xF88DC6 xF91E7E xF9BB2E xFA5FA2 xFA6F32 xFB1B79 xFCF1D9 xFD8B0C xFF1988 
@@ -7710,6 +8648,15 @@ STATE_MARYLAND = {
 	wood = x708080
 	arable_land = 25
 	naval_exit_id = 3067
+}
+STATE_MASCARENES = {
+	provinces = {
+		x6EDBDB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3111
 }
 STATE_MASSACHUSETTS = {
 	provinces = {
@@ -7809,6 +8756,9 @@ STATE_MAURITANIA = {
 	wood = xB070C0
 	arable_land = 30
 	naval_exit_id = 3088
+	prime_land = {
+		xB070C0 x8E8C95 xB03040 x313645  
+	}
 }
 STATE_MAZANDARAN = {
 	provinces = {
@@ -7847,9 +8797,9 @@ STATE_MAZOVIA = {
 	}
 	id = 154
 	subsistence_building = building_subsistence_farms
-	city = xA3A3A9
+	city = xE165F5
 	farm = xC17590
-	mine = x9444C9
+	mine = xDC58D0
 	wood = x4969E4
 	arable_land = 75
 }
@@ -7873,6 +8823,9 @@ STATE_MECKLENBURG = {
 	wood = x12E54F
 	arable_land = 25
 	naval_exit_id = 3019
+	prime_land = {
+		xE080A0 x12E54F  
+	}
 }
 STATE_MEKONG = {
 	provinces = {
@@ -7964,6 +8917,15 @@ STATE_MICHIGAN = {
 	mine = xFDA0D8
 	wood = xC1AE21
 	arable_land = 180
+}
+STATE_MICRONESIAN_SEA = {
+	provinces = {
+		x341ABA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3002
 }
 STATE_MIDDLE_EGYPT = {
 	provinces = {
@@ -8100,9 +9062,9 @@ STATE_MINSK = {
 	id = 148
 	subsistence_building = building_subsistence_farms
 	city = xA16195
-	farm = xCB21FD
-	mine = x0A89D7
-	wood = x016161
+	farm = x2EB844
+	mine = x80E0A0
+	wood = x26722B
 	arable_land = 90
 }
 STATE_MIRANDA = {
@@ -8265,6 +9227,15 @@ STATE_MOLUCCAS = {
 	arable_land = 20
 	naval_exit_id = 3125
 }
+STATE_MOLUCCA_SEA = {
+	provinces = {
+		x16C9FB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3125
+}
 STATE_MONTANA = {
 	provinces = {
 		x006080 x05E469 x092B19 x0A4987 x0A9E2B x0AABD3 x0D3B73 x0F89B6 x11EFF8 x14A4F8 x1508A0 x15CA79 x19D061 x1A505E x1C5277 x1C7988 x2619FF x265A51 x299FC0 x2BAD69 x358AB3 x39D379 x3AAFA5 x3ABADD x3AC323 x3DCC7B x3DF911 x3E174B x40E4CF x41AC27 x4AA6B6 x4CD299 x4F5A4D x508080 x50B493 x51B9BC x5392DD x554220 x5551A1 x55C41A x571800 x575CCC x5CCA79 x5DA006 x5EC3DB x60CAD8 x63252A x64283A x664C79 x68D8FB x68E0D2 x6BD915 x6BDFF3 x6C53BA x6FE354 x743F41 x771CB3 x796B16 x7C58BC x7E7783 x7F2867 x7F3DF1 x7F5540 x860DD4 x89BC19 x8B47B7 x9025C8 x904080 x90FB3B x91670D x944E30 x946CC7 x99CB13 x9A73C7 x9A8A93 x9C13D9 x9EA705 xA4DCB6 xA56B00 xA6F6FD xACF621 xAD3A6B xAED236 xAF7CB4 xB2AFD1 xB2DF51 xB3A111 xB891F3 xB963F3 xB9C113 xB9F872 xBAAB60 xBD9D59 xBE9808 xC02080 xC0696D xC6BBD4 xC7106E xC89BA4 xC964E5 xCA5BE4 xCA8E9D xCAC122 xD51888 xD56340 xD5A752 xD80B74 xDAEDDD xDAF79D xDE27DA xE29E7C xE2ABA8 xE340DC xE3FA4D xE979D9 xE9D326 xEA0263 xEA36A6 xEB65F5 xEC1DF2 xECA315 xEDD51C xEEE91D xF17880 xF29AB7 xF3DCE7 xF78700 xF88E77 xFA2355 xFB2578 xFE4B26 
@@ -8306,12 +9277,15 @@ STATE_MONTENEGRO = {
 	id = 119
 	subsistence_building = building_subsistence_farms
 	city = x446E84
-	port = x446E84
-	farm = xA12F82
+	port = x90A0E0
+	farm = x8C6292
 	mine = xA12F82
 	wood = xA12F82
 	arable_land = 13
 	naval_exit_id = 3033
+	prime_land = {
+		xA12F82  
+	}
 }
 STATE_MORAVIA = {
 	provinces = {
@@ -8378,6 +9352,15 @@ STATE_MOSUL = {
 	wood = x4BE9F1
 	arable_land = 30
 }
+STATE_MOZAMBIQUE_CHANNEL = {
+	provinces = {
+		x4FDDFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3107
+}
 STATE_MUNSTER = {
 	provinces = {
 		x02061B x849939 x969279 xA0E0C0 xBDAB32 xD9BB34 xE06040 xECB3A5 xEF3F71 xF53F9B 
@@ -8407,6 +9390,9 @@ STATE_MYSORE = {
 	provinces = {
 		x102D8B x16AA78 x189045 x1B7225 x25CBCC x2A60B3 x696049 x8E3C9D x903060 x9FE13F xA26314 xB4ABD5 xBFDC26 xD0F0A0 xE5A1AC xEDFC06 
 	}
+	traits = {
+		state_trait_western_ghats 
+	}
 	arable_resources = {
 		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
 	}
@@ -8423,27 +9409,11 @@ STATE_MYSORE = {
 	farm = x2A60B3
 	mine = x102D8B
 	wood = x9FE13F
-	arable_land = 100
+	arable_land = 210
 	naval_exit_id = 3049
-}
-STATE_NAGPUR = {
-	provinces = {
-		x013159 x015F11 x03614F x0E41BA x1170A0 x20BC2C x274E94 x2F70FB x4605A8 x471CDC x4A2157 x4B7422 x51B021 x52001D x53D2AE x5CBFF7 x66337F x66F24C x6B7184 x745647 x7884D6 x78E85C x8B8B4D x8ECE82 x90F020 x9473DC x958AC3 x96CDBD x9B0E9E x9C673D x9CDEF7 xA11B88 xA939B9 xB56E8E xBDB272 xBE1F55 xC38F66 xCC1F79 xD03120 xD42EF4 xD51B8A xD64336 xDA84A6 xE167A8 xE1911A xE67BF6 xE9111A xED9802 xF036D0 xF09DA1 xFE794D 
+	prime_land = {
+		xD0F0A0 x189045  
 	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_opium_plantations bg_tea_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 18
-		bg_logging = 9
-	}
-	id = 465
-	subsistence_building = building_subsistence_rice_paddies
-	city = xA939B9
-	farm = x013159
-	mine = x4605A8
-	wood = x9CDEF7
-	arable_land = 200
 }
 STATE_NAKHON_RATCHASIMA = {
 	provinces = {
@@ -8514,6 +9484,15 @@ STATE_NANJING = {
 	mine = x0A91BF
 	wood = xADEC31
 	arable_land = 360
+}
+STATE_NATAL_COAST = {
+	provinces = {
+		x78FCFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3106
 }
 STATE_NAURU = {
 	provinces = {
@@ -8659,6 +9638,33 @@ STATE_NEVADA = {
 	mine = xA7D253
 	wood = xBB8631
 	arable_land = 40
+}
+STATE_NEWFOUNDLAND = {
+	provinces = {
+		x0060C0 x0064C5 x021E3A x032662 x03D1C9 x04819F x06F38C x07F4FB x087678 x0A4A4C x0BC8C1 x0C0CCC x0C6598 x0CC129 x0DB516 x10A000 x1253C5 x171ACD x177AE0 x188A1D x1A3E3D x1BAAF2 x1DC31A x1E71F4 x1FA5AC x2345D0 x23500D x24AD62 x28520D x29399E x29924F x2C9384 x2CCABA x2D3204 x326D52 x365C92 x37D0BC x38B630 x3B17A5 x3BFC08 x3E0978 x3E5986 x40777E x4192EE x433B03 x43CF86 x484DEC x48C5E0 x48F357 x4B3D6E x4BCBC3 x515BA4 x543388 x563A89 x56E072 x581057 x59020C x5B7DBA x5BE06B x5C5DE8 x5CA682 x5EF6EB x5F3317 x5FE782 x65B146 x68F55E x6A488F x6C9CAE x7046BA x73BF8D x74E14D x773701 x77EF94 x781F7B x793CFE x798C8E x79AB95 x7A4A5E x7C0D56 x7C4AAC x7E85FA x7EE516 x7FA89F x818D9D x84A349 x8588BF x8AB607 x8B0AB0 x8BC7DA x8C6B34 x8CD97A x8D480C x8D49CD x8D790B x8E933E x9056EC x908155 x943CA5 x9D9919 xA148A8 xA1628C xA2094F xA4445F xA82803 xA8774F xA9CE06 xAA1E16 xAD6639 xB19217 xB35FC1 xB378BB xB54ED1 xB83486 xB8FE88 xB9B943 xBACEF7 xBC9D94 xBCB8D9 xBEBEFA xBFC7D9 xC0DD8B xC1A729 xC53CD1 xC6E552 xCB2F2F xCB412F xCB5A8F xCBBE16 xD1A6A0 xD1D79F xD6143F xD81BB8 xD9C831 xDB0704 xDBAC6B xDCDD4E xDD4CEB xDDA6FC xDE7BE8 xDE7D17 xE0CBAB xE29640 xE6783B xE6AAB9 xE888D6 xEB2540 xECE49F xEE4F4F xEF77D5 xF3C2BB xF7CF7E xFC3A5F xFE4F9F xFF4C93 
+	}
+	traits = {
+		state_trait_grand_banks_fisheries 
+	}
+	arable_resources = {
+		bg_livestock_ranches 
+	}
+	capped_resources = {
+		bg_iron_mining = 24
+		bg_lead_mining = 24
+		bg_logging = 8
+		bg_whaling = 6
+		bg_fishing = 10
+	}
+	id = 313
+	subsistence_building = building_subsistence_farms
+	city = xD1D79F
+	port = xD1D79F
+	farm = xA82803
+	mine = x6A488F
+	wood = x74E14D
+	arable_land = 20
+	naval_exit_id = 3045
 }
 STATE_NEW_BRUNSWICK = {
 	provinces = {
@@ -8811,33 +9817,6 @@ STATE_NEW_YORK = {
 	arable_land = 120
 	naval_exit_id = 3067
 }
-STATE_NEWFOUNDLAND = {
-	provinces = {
-		x0060C0 x0064C5 x021E3A x032662 x03D1C9 x04819F x06F38C x07F4FB x087678 x0A4A4C x0BC8C1 x0C0CCC x0C6598 x0CC129 x0DB516 x10A000 x1253C5 x171ACD x177AE0 x188A1D x1A3E3D x1BAAF2 x1DC31A x1E71F4 x1FA5AC x2345D0 x23500D x24AD62 x28520D x29399E x29924F x2C9384 x2CCABA x2D3204 x326D52 x365C92 x37D0BC x38B630 x3B17A5 x3BFC08 x3E0978 x3E5986 x40777E x4192EE x433B03 x43CF86 x484DEC x48C5E0 x48F357 x4B3D6E x4BCBC3 x515BA4 x543388 x563A89 x56E072 x581057 x59020C x5B7DBA x5BE06B x5C5DE8 x5CA682 x5EF6EB x5F3317 x5FE782 x65B146 x68F55E x6A488F x6C9CAE x7046BA x73BF8D x74E14D x773701 x77EF94 x781F7B x793CFE x798C8E x79AB95 x7A4A5E x7C0D56 x7C4AAC x7E85FA x7EE516 x7FA89F x818D9D x84A349 x8588BF x8AB607 x8B0AB0 x8BC7DA x8C6B34 x8CD97A x8D480C x8D49CD x8D790B x8E933E x9056EC x908155 x943CA5 x9D9919 xA148A8 xA1628C xA2094F xA4445F xA82803 xA8774F xA9CE06 xAA1E16 xAD6639 xB19217 xB35FC1 xB378BB xB54ED1 xB83486 xB8FE88 xB9B943 xBACEF7 xBC9D94 xBCB8D9 xBEBEFA xBFC7D9 xC0DD8B xC1A729 xC53CD1 xC6E552 xCB2F2F xCB412F xCB5A8F xCBBE16 xD1A6A0 xD1D79F xD6143F xD81BB8 xD9C831 xDB0704 xDBAC6B xDCDD4E xDD4CEB xDDA6FC xDE7BE8 xDE7D17 xE0CBAB xE29640 xE6783B xE6AAB9 xE888D6 xEB2540 xECE49F xEE4F4F xEF77D5 xF3C2BB xF7CF7E xFC3A5F xFE4F9F xFF4C93 
-	}
-	traits = {
-		state_trait_grand_banks_fisheries 
-	}
-	arable_resources = {
-		bg_livestock_ranches 
-	}
-	capped_resources = {
-		bg_iron_mining = 24
-		bg_lead_mining = 24
-		bg_logging = 8
-		bg_whaling = 6
-		bg_fishing = 10
-	}
-	id = 313
-	subsistence_building = building_subsistence_farms
-	city = xD1D79F
-	port = xD1D79F
-	farm = xA82803
-	mine = x6A488F
-	wood = x74E14D
-	arable_land = 20
-	naval_exit_id = 3045
-}
 STATE_NGARI = {
 	provinces = {
 		x020A13 x068080 x06C5A5 x079122 x0A15CB x0AF6C3 x0C63E4 x0CA02F x0DDF07 x0E1739 x0E4CEA x10A70E x11E671 x14902D x18089F x181275 x1AA558 x1CFF92 x1D347B x1EE05B x1F1D7F x1F7ABA x1FF09F x20771F x245D66 x26D4BC x2D753F x2DCE44 x2EED68 x319D88 x3242A4 x347CA5 x3673C3 x376EF5 x390A85 x3ABF14 x3B2A91 x3CB9E1 x3ED427 x3F45B6 x3F866E x41CAED x466E81 x46B9A4 x47086E x48393E x48F15F x49DA7A x4CA3AB x4E0F52 x4EA762 x4F7572 x5118D9 x519C2B x51AF41 x55DF74 x57E79A x59FA24 x5B57ED x5D87C2 x5F0A6B x5F0C75 x5FCA48 x606587 x63CF7D x69B840 x6A1D9E x6C636E x6DC955 x6E1A6F x712371 x757EC9 x76854B x79ACD9 x7E6B07 x7F19F5 x7F8A68 x805380 x821542 x834650 x85C67F x87A015 x8847CC x8A52C8 x8F8A0A x91C023 x92D428 x93B8A1 x95F294 x971123 x98B829 x9DADD1 xA070A0 xA16534 xA2DDBC xA45941 xABBEE1 xAD3B3E xAD51C7 xAE2370 xAF48A8 xAFCD47 xB02EEE xB1FB06 xB3B12D xB48B92 xB53246 xB9B797 xBA5131 xBB32F7 xBF3208 xBFC102 xC26410 xC2996A xC39437 xC46618 xC5F98E xC66B24 xC7C56B xC8A273 xCA37D3 xCA8101 xCB9F59 xCC4CCB xCE4141 xD0DEBB xD131AF xDAA8C5 xDAE696 xDB00C4 xDB6487 xDCB233 xDE0FA1 xE03D5D xE1C6E3 xE4D2EB xE6122E xE89BB3 xEC07F3 xEC346C xEC6359 xEC796C xEC9086 xF0E6C2 xF2DD04 xF33F0A xF43E98 xF52146 xF7AD84 xFB8251 xFC7168 xFF92B9 
@@ -8908,6 +9887,30 @@ STATE_NIGER = {
 	wood = xD090E0
 	arable_land = 40
 }
+STATE_NIGERIA = {
+	provinces = {
+		x0031D6 x07034A x143779 x1873FD x2601BC x324153 x3DD80C x406090 x40F92C x573ACD x582803 x598F55 x6ABA17 x6CB8C2 x7892A0 x7AE469 x842780 x88CF46 x8E79E2 x9011E0 x9090E0 xA2698C xA41E3B xA591CC xADFC7B xB6B564 xB6CC2E xB99D24 xC06090 xC0E011 xC89CB8 xD0E560 xD98B12 xD99196 xE43BE6 xE58343 xEB4453 xF4C138 xF8AD48 
+	}
+	traits = {
+		state_trait_malaria 
+	}
+	arable_resources = {
+		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 45
+		bg_lead_mining = 45
+		bg_logging = 20
+		bg_rubber = 24
+	}
+	id = 217
+	subsistence_building = building_subsistence_farms
+	city = xF8AD48
+	farm = xB99D24
+	mine = x0031D6
+	wood = xA591CC
+	arable_land = 60
+}
 STATE_NIGER_DELTA = {
 	provinces = {
 		x016090 x01A050 x1B328B x255D8A x337660 x4D3C3A x553813 x80A090 x8B459B x90B6CB x93634A x938816 xA8A592 xC82CCC xD16652 xD8056B 
@@ -8932,30 +9935,6 @@ STATE_NIGER_DELTA = {
 	wood = x4D3C3A
 	arable_land = 120
 	naval_exit_id = 3091
-}
-STATE_NIGERIA = {
-	provinces = {
-		x0031D6 x07034A x143779 x1873FD x2601BC x324153 x3DD80C x406090 x40F92C x573ACD x582803 x598F55 x6ABA17 x6CB8C2 x7892A0 x7AE469 x842780 x88CF46 x8E79E2 x9011E0 x9090E0 xA2698C xA41E3B xA591CC xADFC7B xB6B564 xB6CC2E xB99D24 xC06090 xC0E011 xC89CB8 xD0E560 xD98B12 xD99196 xE43BE6 xE58343 xEB4453 xF4C138 xF8AD48 
-	}
-	traits = {
-		state_trait_malaria 
-	}
-	arable_resources = {
-		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 45
-		bg_lead_mining = 45
-		bg_logging = 20
-		bg_rubber = 24
-	}
-	id = 217
-	subsistence_building = building_subsistence_farms
-	city = xF8AD48
-	farm = xB99D24
-	mine = x0031D6
-	wood = xA591CC
-	arable_land = 60
 }
 STATE_NINGXIA = {
 	provinces = {
@@ -9050,274 +10029,6 @@ STATE_NORRLAND = {
 	wood = x420C00
 	arable_land = 22
 	naval_exit_id = 3000
-}
-STATE_NORTH_ANGOLA = {
-	provinces = {
-		x087B9D x15BBB9 x32E90E x4764A5 x491B8B x6FD2F7 x78C387 x82C47B x8C112B x8F94AF xA71792 xADC6D4 xBF65DC xC02050 xC7F9BD xC93845 xCE457C xCFA0E7 xCFF013 xD30F2F xDAA27C xDAAC09 xF00017 
-	}
-	traits = {
-		state_trait_malaria 
-	}
-	arable_resources = {
-		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tobacco_plantations 
-	}
-	capped_resources = {
-		bg_logging = 13
-		bg_fishing = 8
-		bg_whaling = 4
-		bg_rubber = 22
-	}
-	id = 247
-	subsistence_building = building_subsistence_farms
-	city = xC93845
-	port = x6FD2F7
-	farm = xCFA0E7
-	mine = x32E90E
-	wood = x087B9D
-	arable_land = 50
-	naval_exit_id = 3104
-}
-STATE_NORTH_BENGAL = {
-	provinces = {
-		x0C82AB x117060 x13A493 x1DBB94 x272AEE x2FF791 x30B0A0 x397092 x3E5D45 x475FC4 x71E2DE x82150A x844FCF x89538D x8F846C xAC2CB6 xBF385A xCB5C0A xD06FA1 xD28E5F xD2E951 xD2FEA1 xDA53DA xE2E92B xE6CD14 xEF5060 xF04684 xF3A964 
-	}
-	traits = {
-		state_trait_ganges_river 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_silk_plantations bg_dye_plantations bg_opium_plantations bg_tea_plantations bg_tobacco_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 30
-		bg_logging = 29
-	}
-	id = 457
-	subsistence_building = building_subsistence_rice_paddies
-	city = x89538D
-	farm = xE6CD14
-	mine = xE6CD14
-	wood = x30B0A0
-	arable_land = 600
-}
-STATE_NORTH_BORNEO = {
-	provinces = {
-		x002310 x0141B0 x0F01DC x1C6623 x242519 x26DE63 x278E1E x2EE734 x3CCBAA x461E0E x61FE7A x6D3CF9 x6FEE71 x75D5D2 x762FBA x763646 x800170 x8041B0 x808070 x821B67 x905338 x91B40F x965EF0 x9E0616 xB689E6 xC0B7FD xC531AE xC65120 xCED863 xD0AC5F xD78953 xDD9CFE xE66512 xE9FB27 xEF6FBE xF2BC79 xF61121 xFB18B8 xFC8025 
-	}
-	traits = {
-		state_trait_sarawak_river state_trait_borneo_rainforest 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 24
-		bg_sulfur_mining = 36
-		bg_logging = 20
-		bg_fishing = 8
-		bg_gold_mining = 8
-		bg_rubber = 16
-	}
-	id = 541
-	subsistence_building = building_subsistence_farms
-	city = x800170
-	port = xC531AE
-	farm = x91B40F
-	mine = xC0B7FD
-	wood = xC65120
-	arable_land = 20
-	naval_exit_id = 3055
-}
-STATE_NORTH_CAMEROON = {
-	provinces = {
-		x00D6BF x06670A x09FC06 x0BFE68 x0C2F5E x0FCB7F x2DF456 x361F6A x385429 x406C11 x459F5A x47CD3B x53F87C x566A89 x5B8020 x5E04F9 x5EF062 x62BA14 x68BB93 x6B5679 x7E1438 x7ECE9E x802050 x881185 x8A07D7 x93AA9A x9611CE xA09A5A xA14C83 xCCEC29 xCED54E xD24292 xD338DE xD9DF55 xDE478C xE0307A xE9EC59 xEA982F xEFC390 xF24DEA xF9A3A7 xFFD43F 
-	}
-	traits = {
-		state_trait_malaria 
-	}
-	arable_resources = {
-		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_logging = 18
-	}
-	id = 239
-	subsistence_building = building_subsistence_farms
-	city = xCCEC29
-	farm = x2DF456
-	mine = x459F5A
-	wood = xE0307A
-	arable_land = 70
-}
-STATE_NORTH_CAROLINA = {
-	provinces = {
-		x007040 x00F040 x0F9A00 x1B47BD x228851 x338BD7 x3C4F8A x3EA432 x4DC66C x58A1C9 x5961F9 x5B809B x644A75 x6FBF63 x711CB6 x7342E7 x758494 x785402 x7BF507 x7DE315 x7F5918 x807040 x8070C0 x81AAED xA59977 xABF402 xC58DAF xD01C13 xD8D851 xDBBF9F xE5DA13 xF3C9D3 
-	}
-	traits = {
-		state_trait_appalachian_coal 
-	}
-	arable_resources = {
-		bg_maize_farms bg_livestock_ranches bg_cotton_plantations bg_tobacco_plantations bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 32
-		bg_logging = 15
-		bg_fishing = 6
-	}
-	id = 306
-	subsistence_building = building_subsistence_farms
-	city = xA59977
-	port = x00F040
-	farm = x7342E7
-	mine = x7BF507
-	wood = x0F9A00
-	arable_land = 180
-	naval_exit_id = 3067
-}
-STATE_NORTH_CAUCASUS = {
-	provinces = {
-		x019041 x0BDBDA x205781 x23F98B x2790A8 x27E9C3 x2C776A x405080 x41D080 x56FD87 x5C32EA x668A47 x676C0E x83F33B x9A6A44 xC05001 xDA8EF4 xEE9B40 
-	}
-	traits = {
-		state_trait_caucasus_mountains 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches 
-	}
-	capped_resources = {
-		bg_coal_mining = 16
-		bg_iron_mining = 12
-		bg_logging = 25
-		bg_oil_extraction = 25
-		bg_gold_mining = 4
-	}
-	id = 811
-	subsistence_building = building_subsistence_farms
-	city = x9A6A44
-	farm = xEE9B40
-	mine = x0BDBDA
-	wood = x2790A8
-	arable_land = 25
-}
-STATE_NORTH_DAKOTA = {
-	provinces = {
-		x0020C0 x002DE6 x080BEC x0EADCE x17235E x17983F x17EF0F x184A57 x18D7A9 x198845 x20A1FA x224996 x298347 x2D7D62 x30BADD x3160D9 x329C17 x3816BA x3EB1F2 x43E5A3 x5080C0 x5BED05 x647FB6 x6B9ADF x746873 x76F55B x7A9921 x8C905E x8F0750 x913BCB x9255F2 x96B71E x96D61E x98A328 x9D100E x9EA3FF x9FB4C1 xA4C2F6 xA5970F xA5A929 xAA3B6E xAB458E xAB7707 xAF6E5B xB5FEC3 xB7F25B xBB73D1 xBD89ED xBEFC85 xC1C5C5 xCDE122 xCE5B60 xD000C0 xDD5888 xE24F6E xE5FDC3 xEE82BD xEF51A8 xF03169 xF3479B xF3C4FA xF3EC53 xFAD908 
-	}
-	traits = {
-		state_trait_the_great_plains 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches 
-	}
-	capped_resources = {
-		bg_coal_mining = 48
-		bg_logging = 11
-		bg_oil_extraction = 5
-	}
-	id = 276
-	subsistence_building = building_subsistence_farms
-	city = x17EF0F
-	farm = xA4C2F6
-	mine = x6B9ADF
-	wood = x17235E
-	arable_land = 240
-}
-STATE_NORTH_ISLAND = {
-	provinces = {
-		x08E83A x0A9415 x0AA01A x0FDAD6 x1000F0 x1080F0 x160E3F x29C0BA x2C2C24 x2C3A6E x2D6E8E x3BCC0A x4D3C57 x59DF28 x810EEB x8659F7 x8CEFDA x9000F0 x9080F0 x91D53E x9FCCD9 xAFF43A xB0BC94 xB2E71F xB48ED2 xB6642B xC25D9D xC4FF1C xC8EC59 xCCD9EE xD0B89C xE59D9C xEBB583 xF3D71B xFBC4F4 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches 
-	}
-	capped_resources = {
-		bg_coal_mining = 28
-		bg_iron_mining = 27
-		bg_logging = 11
-		bg_whaling = 3
-		bg_fishing = 8
-		bg_gold_mining = 4
-	}
-	id = 564
-	subsistence_building = building_subsistence_farms
-	city = x1000F0
-	port = x0A9415
-	farm = xEBB583
-	mine = x59DF28
-	wood = x0AA01A
-	arable_land = 30
-	naval_exit_id = 3122
-}
-STATE_NORTH_MADAGASCAR = {
-	provinces = {
-		x00D7F5 x054C46 x069F1A x0B558A x0F6E52 x1032DF x11F67B x215769 x2240CA x25C5DC x2625B9 x285C26 x3450FE x3465B6 x35CC6B x3619E0 x3732E1 x392CDC x4A0895 x50A090 x50BAA2 x678DC5 x6A1582 x6B56F5 x6CC56F x724867 x7D2FD8 x7F2785 x84B32B x88A889 x8CF7D2 x8E25F6 x9C3835 xA0D0B6 xA11116 xA67461 xA99E28 xB1EDB4 xB27647 xB92804 xBB70FE xBD43D8 xBEC58A xC2E62D xC3722C xC3F681 xC67F91 xC89FD5 xC9BB37 xD3049A xD4E1D7 xDB635D xDF60B0 xE0C530 xEFBDB7 xF41FD5 xF7C90E xF7F009 xF9D98C xFFB457 
-	}
-	traits = {
-		state_trait_malaria 
-	}
-	arable_resources = {
-		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_logging = 20
-		bg_whaling = 6
-		bg_fishing = 10
-		bg_rubber = 16
-	}
-	id = 234
-	subsistence_building = building_subsistence_farms
-	city = xBEC58A
-	port = x00D7F5
-	farm = x8E25F6
-	mine = xC3722C
-	wood = x2625B9
-	arable_land = 80
-	naval_exit_id = 3107
-}
-STATE_NORTH_RHINE = {
-	provinces = {
-		x29CCD6 x486F6A x518021 x8001E0 x834B66 x9F4072 
-	}
-	traits = {
-		state_trait_rhine_river state_trait_ruhr_coalfield 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 25
-		bg_iron_mining = 20
-		bg_logging = 7
-	}
-	id = 64
-	subsistence_building = building_subsistence_farms
-	city = x9F4072
-	farm = x518021
-	mine = x834B66
-	wood = x486F6A
-	arable_land = 77
-}
-STATE_NORTH_SUMATRA = {
-	provinces = {
-		x01317D x01C030 x257D2C x339E85 x35213F x3F7EA0 x48428B x4E9BC1 x5157D3 x5BE3D2 x6021D0 x677AA6 x6ED39E x79A66E x7AC280 x7C7431 x8171EA x85B004 x87F7B6 x8A3E15 x8B7A14 x91B001 x9377DF x983FEB x9D4BD1 xA0CEED xA1341F xA2F773 xAE71B4 xD2D88C xD3A66E xDA82F4 xDC4677 xE0A0F0 xE4C2D6 xEAF2DC xEC5DEA 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 40
-		bg_sulfur_mining = 48
-		bg_logging = 29
-		bg_fishing = 13
-		bg_rubber = 28
-	}
-	id = 546
-	subsistence_building = building_subsistence_farms
-	city = xAE71B4
-	port = x8A3E15
-	farm = x87F7B6
-	mine = x8B7A14
-	wood = xD3A66E
-	arable_land = 60
-	naval_exit_id = 3120
 }
 STATE_NORTHERN_ANHUI = {
 	provinces = {
@@ -9472,6 +10183,9 @@ STATE_NORTHERN_TERRITORY = {
 	wood = xA4B8B3
 	arable_land = 10
 	naval_exit_id = 3126
+	prime_land = {
+		xFE32CD x6C71E5 xFA3609 xAB7482  
+	}
 }
 STATE_NORTHERN_THRACE = {
 	provinces = {
@@ -9537,6 +10251,501 @@ STATE_NORTHWEST_TERRITORIES = {
 	wood = xDA9366
 	arable_land = 20
 }
+STATE_NORTH_ANGOLA = {
+	provinces = {
+		x087B9D x15BBB9 x32E90E x4764A5 x491B8B x6FD2F7 x78C387 x82C47B x8C112B x8F94AF xA71792 xADC6D4 xBF65DC xC02050 xC7F9BD xC93845 xCE457C xCFA0E7 xCFF013 xD30F2F xDAA27C xDAAC09 xF00017 
+	}
+	traits = {
+		state_trait_malaria 
+	}
+	arable_resources = {
+		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tobacco_plantations 
+	}
+	capped_resources = {
+		bg_logging = 13
+		bg_fishing = 8
+		bg_whaling = 4
+		bg_rubber = 22
+	}
+	id = 247
+	subsistence_building = building_subsistence_farms
+	city = xC93845
+	port = x6FD2F7
+	farm = xCFA0E7
+	mine = x32E90E
+	wood = x087B9D
+	arable_land = 50
+	naval_exit_id = 3104
+}
+STATE_NORTH_ATLANTIC_01 = {
+	provinces = {
+		xC64499 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3076
+}
+STATE_NORTH_ATLANTIC_02 = {
+	provinces = {
+		xDA6DF6 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3077
+}
+STATE_NORTH_ATLANTIC_03 = {
+	provinces = {
+		x6643E1 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3078
+}
+STATE_NORTH_ATLANTIC_04 = {
+	provinces = {
+		xA05EB0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3079
+}
+STATE_NORTH_ATLANTIC_05 = {
+	provinces = {
+		xB14DEF 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3080
+}
+STATE_NORTH_ATLANTIC_06 = {
+	provinces = {
+		xCF4DEF 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3081
+}
+STATE_NORTH_ATLANTIC_07 = {
+	provinces = {
+		x9F5EB0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3082
+}
+STATE_NORTH_ATLANTIC_OCEAN_01 = {
+	provinces = {
+		x2DAEF1 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3070
+}
+STATE_NORTH_ATLANTIC_OCEAN_02 = {
+	provinces = {
+		x837BBA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3071
+}
+STATE_NORTH_ATLANTIC_OCEAN_03 = {
+	provinces = {
+		x807D97 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3072
+}
+STATE_NORTH_ATLANTIC_OCEAN_04 = {
+	provinces = {
+		x807D98 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3073
+}
+STATE_NORTH_ATLANTIC_OCEAN_05 = {
+	provinces = {
+		x807D99 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3074
+}
+STATE_NORTH_ATLANTIC_OCEAN_06 = {
+	provinces = {
+		x6C8AB3 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3075
+}
+STATE_NORTH_BORNEO = {
+	provinces = {
+		x002310 x0141B0 x0F01DC x1C6623 x242519 x26DE63 x278E1E x2EE734 x3CCBAA x461E0E x61FE7A x6D3CF9 x6FEE71 x75D5D2 x762FBA x763646 x800170 x8041B0 x808070 x821B67 x905338 x91B40F x965EF0 x9E0616 xB689E6 xC0B7FD xC531AE xC65120 xCED863 xD0AC5F xD78953 xDD9CFE xE66512 xE9FB27 xEF6FBE xF2BC79 xF61121 xFB18B8 xFC8025 
+	}
+	traits = {
+		state_trait_sarawak_river state_trait_borneo_rainforest 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 24
+		bg_sulfur_mining = 36
+		bg_logging = 20
+		bg_fishing = 8
+		bg_gold_mining = 8
+		bg_rubber = 16
+	}
+	id = 541
+	subsistence_building = building_subsistence_farms
+	city = x800170
+	port = xC531AE
+	farm = x91B40F
+	mine = xC0B7FD
+	wood = xC65120
+	arable_land = 20
+	naval_exit_id = 3055
+}
+STATE_NORTH_CAMEROON = {
+	provinces = {
+		x00D6BF x06670A x09FC06 x0BFE68 x0C2F5E x0FCB7F x2DF456 x361F6A x385429 x406C11 x459F5A x47CD3B x53F87C x566A89 x5B8020 x5E04F9 x5EF062 x62BA14 x68BB93 x6B5679 x7E1438 x7ECE9E x802050 x881185 x8A07D7 x93AA9A x9611CE xA09A5A xA14C83 xCCEC29 xCED54E xD24292 xD338DE xD9DF55 xDE478C xE0307A xE9EC59 xEA982F xEFC390 xF24DEA xF9A3A7 xFFD43F 
+	}
+	traits = {
+		state_trait_malaria 
+	}
+	arable_resources = {
+		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_logging = 18
+	}
+	id = 239
+	subsistence_building = building_subsistence_farms
+	city = xCCEC29
+	farm = x2DF456
+	mine = x459F5A
+	wood = xE0307A
+	arable_land = 70
+}
+STATE_NORTH_CAROLINA = {
+	provinces = {
+		x007040 x00F040 x0F9A00 x1B47BD x228851 x338BD7 x3C4F8A x3EA432 x4DC66C x58A1C9 x5961F9 x5B809B x644A75 x6FBF63 x711CB6 x7342E7 x758494 x785402 x7BF507 x7DE315 x7F5918 x807040 x8070C0 x81AAED xA59977 xABF402 xC58DAF xD01C13 xD8D851 xDBBF9F xE5DA13 xF3C9D3 
+	}
+	traits = {
+		state_trait_appalachian_coal 
+	}
+	arable_resources = {
+		bg_maize_farms bg_livestock_ranches bg_cotton_plantations bg_tobacco_plantations bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 32
+		bg_logging = 15
+		bg_fishing = 6
+	}
+	id = 306
+	subsistence_building = building_subsistence_farms
+	city = xA59977
+	port = x00F040
+	farm = x7342E7
+	mine = x7BF507
+	wood = x0F9A00
+	arable_land = 180
+	naval_exit_id = 3067
+}
+STATE_NORTH_CAUCASUS = {
+	provinces = {
+		x019041 x0BDBDA x205781 x23F98B x2790A8 x27E9C3 x2C776A x405080 x41D080 x56FD87 x5C32EA x668A47 x676C0E x83F33B x9A6A44 xC05001 xDA8EF4 xEE9B40 
+	}
+	traits = {
+		state_trait_caucasus_mountains 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches 
+	}
+	capped_resources = {
+		bg_coal_mining = 16
+		bg_iron_mining = 12
+		bg_logging = 25
+		bg_oil_extraction = 25
+		bg_gold_mining = 4
+	}
+	id = 811
+	subsistence_building = building_subsistence_farms
+	city = x9A6A44
+	farm = xEE9B40
+	mine = x0BDBDA
+	wood = x2790A8
+	arable_land = 25
+}
+STATE_NORTH_DAKOTA = {
+	provinces = {
+		x0020C0 x002DE6 x080BEC x0EADCE x17235E x17983F x17EF0F x184A57 x18D7A9 x198845 x20A1FA x224996 x298347 x2D7D62 x30BADD x3160D9 x329C17 x3816BA x3EB1F2 x43E5A3 x5080C0 x5BED05 x647FB6 x6B9ADF x746873 x76F55B x7A9921 x8C905E x8F0750 x913BCB x9255F2 x96B71E x96D61E x98A328 x9D100E x9EA3FF x9FB4C1 xA4C2F6 xA5970F xA5A929 xAA3B6E xAB458E xAB7707 xAF6E5B xB5FEC3 xB7F25B xBB73D1 xBD89ED xBEFC85 xC1C5C5 xCDE122 xCE5B60 xD000C0 xDD5888 xE24F6E xE5FDC3 xEE82BD xEF51A8 xF03169 xF3479B xF3C4FA xF3EC53 xFAD908 
+	}
+	traits = {
+		state_trait_the_great_plains 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches 
+	}
+	capped_resources = {
+		bg_coal_mining = 48
+		bg_logging = 11
+		bg_oil_extraction = 5
+	}
+	id = 276
+	subsistence_building = building_subsistence_farms
+	city = x17EF0F
+	farm = xA4C2F6
+	mine = x6B9ADF
+	wood = x17235E
+	arable_land = 240
+}
+STATE_NORTH_ISLAND = {
+	provinces = {
+		x08E83A x0A9415 x0AA01A x0FDAD6 x1000F0 x1080F0 x160E3F x29C0BA x2C2C24 x2C3A6E x2D6E8E x3BCC0A x4D3C57 x59DF28 x810EEB x8659F7 x8CEFDA x9000F0 x9080F0 x91D53E x9FCCD9 xAFF43A xB0BC94 xB2E71F xB48ED2 xB6642B xC25D9D xC4FF1C xC8EC59 xCCD9EE xD0B89C xE59D9C xEBB583 xF3D71B xFBC4F4 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches 
+	}
+	capped_resources = {
+		bg_coal_mining = 28
+		bg_iron_mining = 27
+		bg_logging = 11
+		bg_whaling = 3
+		bg_fishing = 8
+		bg_gold_mining = 4
+	}
+	id = 564
+	subsistence_building = building_subsistence_farms
+	city = x1000F0
+	port = x0A9415
+	farm = xEBB583
+	mine = x59DF28
+	wood = x0AA01A
+	arable_land = 30
+	naval_exit_id = 3122
+	prime_land = {
+		x1000F0  
+	}
+}
+STATE_NORTH_MADAGASCAR = {
+	provinces = {
+		x00D7F5 x054C46 x069F1A x0B558A x0F6E52 x1032DF x11F67B x215769 x2240CA x25C5DC x2625B9 x285C26 x3450FE x3465B6 x35CC6B x3619E0 x3732E1 x392CDC x4A0895 x50A090 x50BAA2 x678DC5 x6A1582 x6B56F5 x6CC56F x724867 x7D2FD8 x7F2785 x84B32B x88A889 x8CF7D2 x8E25F6 x9C3835 xA0D0B6 xA11116 xA67461 xA99E28 xB1EDB4 xB27647 xB92804 xBB70FE xBD43D8 xBEC58A xC2E62D xC3722C xC3F681 xC67F91 xC89FD5 xC9BB37 xD3049A xD4E1D7 xDB635D xDF60B0 xE0C530 xEFBDB7 xF41FD5 xF7C90E xF7F009 xF9D98C xFFB457 
+	}
+	traits = {
+		state_trait_malaria 
+	}
+	arable_resources = {
+		bg_millet_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_logging = 20
+		bg_whaling = 6
+		bg_fishing = 10
+		bg_rubber = 16
+	}
+	id = 234
+	subsistence_building = building_subsistence_farms
+	city = xBEC58A
+	port = x00D7F5
+	farm = x8E25F6
+	mine = xC3722C
+	wood = x2625B9
+	arable_land = 80
+	naval_exit_id = 3107
+}
+STATE_NORTH_PACIFIC_OCEAN_01 = {
+	provinces = {
+		x405D92 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3130
+}
+STATE_NORTH_PACIFIC_OCEAN_02 = {
+	provinces = {
+		x80C2E0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3131
+}
+STATE_NORTH_PACIFIC_OCEAN_03 = {
+	provinces = {
+		x405B92 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3132
+}
+STATE_NORTH_PACIFIC_OCEAN_04 = {
+	provinces = {
+		x5684CF 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3133
+}
+STATE_NORTH_PACIFIC_OCEAN_05 = {
+	provinces = {
+		x6147C1 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3134
+}
+STATE_NORTH_PACIFIC_OCEAN_06 = {
+	provinces = {
+		xBD2C99 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3135
+}
+STATE_NORTH_PACIFIC_OCEAN_07 = {
+	provinces = {
+		x755BD2 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3136
+}
+STATE_NORTH_PACIFIC_OCEAN_08 = {
+	provinces = {
+		x721B9A 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3137
+}
+STATE_NORTH_PACIFIC_OCEAN_09 = {
+	provinces = {
+		xA63FD5 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3138
+}
+STATE_NORTH_PACIFIC_OCEAN_10 = {
+	provinces = {
+		x9A1B99 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3139
+}
+STATE_NORTH_PACIFIC_OCEAN_11 = {
+	provinces = {
+		x85A2D7 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3140
+}
+STATE_NORTH_PHILIPPINES_SEA = {
+	provinces = {
+		x3D6A6A 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3157
+}
+STATE_NORTH_RHINE = {
+	provinces = {
+		x29CCD6 x486F6A x518021 x8001E0 x834B66 x9F4072 
+	}
+	traits = {
+		state_trait_rhine_river state_trait_ruhr_coalfield 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 25
+		bg_iron_mining = 20
+		bg_logging = 7
+	}
+	id = 64
+	subsistence_building = building_subsistence_farms
+	city = x9F4072
+	farm = x518021
+	mine = x834B66
+	wood = x486F6A
+	arable_land = 77
+}
+STATE_NORTH_SEA = {
+	provinces = {
+		x14FAFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3027
+}
+STATE_NORTH_SUMATRA = {
+	provinces = {
+		x01317D x01C030 x257D2C x339E85 x35213F x3F7EA0 x48428B x4E9BC1 x5157D3 x5BE3D2 x6021D0 x677AA6 x6ED39E x79A66E x7AC280 x7C7431 x8171EA x85B004 x87F7B6 x8A3E15 x8B7A14 x91B001 x9377DF x983FEB x9D4BD1 xA0CEED xA1341F xA2F773 xAE71B4 xD2D88C xD3A66E xDA82F4 xDC4677 xE0A0F0 xE4C2D6 xEAF2DC xEC5DEA 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 40
+		bg_sulfur_mining = 48
+		bg_logging = 29
+		bg_fishing = 13
+		bg_rubber = 28
+	}
+	id = 546
+	subsistence_building = building_subsistence_farms
+	city = xAE71B4
+	port = x8A3E15
+	farm = x87F7B6
+	mine = x8B7A14
+	wood = xD3A66E
+	arable_land = 60
+	naval_exit_id = 3120
+	prime_land = {
+		x01317D x3F7EA0 x677AA6 x87F7B6 x8171EA x48428B x6021D0 x5BE3D2 x8B7A14 x35213F  
+	}
+}
+STATE_NORWEGIAN_SEA = {
+	provinces = {
+		x0FDCFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3020
+}
 STATE_NOVGOROD = {
 	provinces = {
 		x03F85A x04598A x05F14E x0AE75F x0BB972 x0BBA97 x0C0B91 x16B74D x1A2B02 x20B928 x2FA786 x3988B7 x3CBDA1 x3E0E98 x3ECBC8 x4020DF x42C9C5 x4394A5 x4706A4 x4BA77A x4C6679 x5357F0 x54C324 x559AAA x57940A x60DEEE x62D485 x64C8B4 x68E99E x6D9FEE x6F52F8 x6F7ECE x704EB0 x7D5607 x7EFD2D x7F6E38 x80AA34 x834B21 x8399C9 x867ADD x88E955 x89E2E6 x8A28DB x8B9F17 x952176 xA00000 xA90928 xAB60B3 xABC7C5 xAE2050 xB69A40 xB6FE8B xC1B0C9 xC4D5AC xC617F1 xC7C158 xCDE8A8 xCE92C5 xD2A34C xD2AF21 xD34803 xD475F6 xD7127A xDA4154 xE2021A xE35415 xE7DAD6 xF2F837 xF42F56 xF69FA2 
@@ -9553,10 +10762,10 @@ STATE_NOVGOROD = {
 	}
 	id = 141
 	subsistence_building = building_subsistence_farms
-	city = x40FEDE
-	farm = x9AA8A6
-	mine = x7EFD2D
-	wood = x6DD07A
+	city = xCDE8A8
+	farm = x834B21
+	mine = x68E99E
+	wood = xA90928
 	arable_land = 70
 }
 STATE_NUNAVUT = {
@@ -9745,6 +10954,9 @@ STATE_ONTARIO = {
 	mine = x313BB2
 	wood = x1E31A0
 	arable_land = 200
+	prime_land = {
+		x0D2971 x1C432A xC0110A xB08040 x337ECF x24691A x3344F6 xD5B4A4 x308040 x515254 xB00040 x206622 xC1233A x9A44C7 x2BCBC7 x343E89 x744A7A x729349 x0B249E x80F104 x123762 x0137A1 xB080C0 xE6C706 x8D6CB1 x1E31A0 x6AEBC5 x41E621 xB1A86D x9B27B9 x20E92A xB000C0 x232DBD x0183A1 xA4CD73 x08C8AF x4D24AC x480B4B xC95021 x263F77 xCA480F x65F177 x117C95 x0538F5 x7A5E12 x724F63 x2B36A1 xEAEBD8 x313BB2 x82492B xF03811 x93ACBB x48E362 x5E776D x8F87B9 x26EF2A x993ABF x7B1AE4 xA7B9EE xBAB329 x520BF5 x4C056C x4020C0 x56A6FD xEA4FC0 x90A5C2 xC0A0C0 x676E1E xA794C1 xA07380 x51A9EA xD389DE x5F5F99 x3EBFED xD2B39A xB2D5DC xBA1406 xC134A4 x54F237 xFF5559 x2AD0E3 x1F0D15 x9577B0 x3CB77D x9DBFA5 xDE7B99 x780AAA xC5041F x5D7155 x9CC0D0 x24171D xD319EB x99F3C4 x64970E  
+	}
 }
 STATE_ORAN = {
 	provinces = {
@@ -9770,6 +10982,9 @@ STATE_ORAN = {
 	wood = x3E6888
 	arable_land = 53
 	naval_exit_id = 3032
+	prime_land = {
+		xDFB0C0 xB735DB  
+	}
 }
 STATE_OREGON = {
 	provinces = {
@@ -9809,13 +11024,16 @@ STATE_ORISSA = {
 	}
 	id = 471
 	subsistence_building = building_subsistence_rice_paddies
-	city = x5BC5C8
+	city = x597E99
 	port = xBB9552
 	farm = x597E99
 	mine = x22B96B
 	wood = xB07FDD
-	arable_land = 50
+	arable_land = 83
 	naval_exit_id = 3050
+	prime_land = {
+		xD031A0 x597E99 xA2EF24 xFFBC41 x38A6E6 xBB9552  
+	}
 }
 STATE_ORLEANS = {
 	provinces = {
@@ -9860,6 +11078,9 @@ STATE_OROMIA = {
 	mine = x869C8E
 	wood = xCE40EE
 	arable_land = 130
+	prime_land = {
+		xE04093 x1A441F x0FBF6B x5FDD08 x41E0D0 x91C70C x435967 x4CE17E x9D5DFC xC77DDF xE7D29C xD6B588 xD033B3 xA8A20B x98F62E x35C9A6 xC7AA4B  
+	}
 }
 STATE_ORYOL = {
 	provinces = {
@@ -9982,6 +11203,78 @@ STATE_OUTER_MANCHURIA = {
 	wood = x7D6986
 	arable_land = 25
 	naval_exit_id = 3059
+}
+STATE_PACIFIC_LANE_01 = {
+	provinces = {
+		xA685CF 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3008
+}
+STATE_PACIFIC_LANE_02 = {
+	provinces = {
+		x561AA0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3009
+}
+STATE_PACIFIC_LANE_03 = {
+	provinces = {
+		xD26392 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3010
+}
+STATE_PACIFIC_LANE_04 = {
+	provinces = {
+		xA87DDC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3011
+}
+STATE_PACIFIC_LANE_05 = {
+	provinces = {
+		xA63565 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3012
+}
+STATE_PACIFIC_LANE_06 = {
+	provinces = {
+		x982455 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3013
+}
+STATE_PACIFIC_SEABOARD_01 = {
+	provinces = {
+		x31CACA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3153
+}
+STATE_PACIFIC_SEABOARD_02 = {
+	provinces = {
+		x16FCFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3154
 }
 STATE_PALESTINE = {
 	provinces = {
@@ -10179,9 +11472,18 @@ STATE_PATAGONIA = {
 	arable_land = 150
 	naval_exit_id = 3066
 }
+STATE_PATAGONIAN_LAKES = {
+	provinces = {
+		x20E0CC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3159
+}
 STATE_PEGU = {
 	provinces = {
-		x020CFE x02F3AF x1070E0 x11F060 x1FD921 x2906F0 x2BD769 x2D91EF x2F9F98 x595BB6 x6305C9 x67520F x81D108 x9A018D xA85E24 xB030A0 xB0B0A0 xB13330 xB316F6 xC0E31F xC2EA2C xC9BBA0 xCF7060 xD5DB0B xE85BF0 xF0F78C xF691D2 
+		x020CFE x02F3AF x1070E0 x11F060 x1FD921 x2906F0 x2BD769 x2D91EF x2F9F98 x595BB6 x67520F x81D108 xA85E24 xB030A0 xB0B0A0 xB13330 xC0E31F xC2EA2C xC9BBA0 xCF7060 xF0F78C 
 	}
 	traits = {
 		state_trait_irrwaddy_delta state_trait_burmese_teak 
@@ -10197,10 +11499,10 @@ STATE_PEGU = {
 	id = 526
 	subsistence_building = building_subsistence_rice_paddies
 	city = xB0B0A0
-	port = xE85BF0
-	farm = xF0F78C
-	mine = xB316F6
-	wood = xB0B0A0
+	port = xB13330
+	farm = x11F060
+	mine = xC9BBA0
+	wood = x02F3AF
 	arable_land = 40
 	naval_exit_id = 3050
 }
@@ -10299,6 +11601,15 @@ STATE_PERNAMBUCO = {
 	arable_land = 60
 	naval_exit_id = 3063
 }
+STATE_PERSIAN_GULF = {
+	provinces = {
+		x56C8FA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3046
+}
 STATE_PERSIAN_KURDISTAN = {
 	provinces = {
 		x2D2CC8 x4A1B9A x51BDFA x6B83E1 x6F8D9F x80F060 x928FFD xB25FAE xC186BC xD7D07C xE050A0 
@@ -10321,6 +11632,24 @@ STATE_PERSIAN_KURDISTAN = {
 	mine = x51BDFA
 	wood = x80F060
 	arable_land = 50
+}
+STATE_PERUVIAN_SEA = {
+	provinces = {
+		x29CACA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3152
+}
+STATE_PHILIPPINES_SEA = {
+	provinces = {
+		x19C9C9 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3127
 }
 STATE_PIAUI = {
 	provinces = {
@@ -10366,7 +11695,7 @@ STATE_PICARDY = {
 	subsistence_building = building_subsistence_farms
 	city = x10A0C0
 	port = xE0A624
-	farm = x106000
+	farm = xC4C61A
 	mine = xC4C61A
 	wood = xC4C61A
 	arable_land = 80
@@ -10526,9 +11855,9 @@ STATE_PSKOV = {
 	id = 820
 	subsistence_building = building_subsistence_farms
 	city = xA981B3
-	farm = x0153E3
-	mine = x3D1AAA
-	wood = xEF4591
+	farm = x6859CA
+	mine = x3266DE
+	wood = x89D566
 	arable_land = 52
 }
 STATE_PUERTO_RICO = {
@@ -10556,7 +11885,7 @@ STATE_PUERTO_RICO = {
 }
 STATE_PUNJAB = {
 	provinces = {
-		x0003C6 x022D2B x051899 x0C25D9 x0EC528 x12D43A x19E5C0 x1D3609 x251424 x280F05 x2DBD82 x30122F x3264B7 x3631C3 x36E637 x394B7F x402C84 x45AF2E x4E722C x50D414 x572FB9 x59BBCE x5A5F96 x607020 x61F7C9 x66C9D9 x67DD93 x6C44CE x706940 x7074E3 x713583 x767A66 x80F0E0 x8F5440 x8FF69F x918140 x91DEAB x94A5A8 x96E54B x97232F x9AB208 x9B38C0 x9CEEC1 xA07020 xA0B0A0 xA0F0A0 xA1CA4A xA6DAD0 xA98EF8 xAA60D3 xB4E322 xB94359 xCA516D xCA5BC1 xCD3942 xCD3E9A xCEAF5E xCF602F xD458B6 xD52082 xD597DC xD921CB xDB08EC xDB91D3 xDEFFE6 xE03121 xE0C455 xE0C4D2 xE2230E xE31B4E xE3CCA0 xE60F80 xEFC3B4 xF202E0 xF4C868 xF58253 xF8614B 
+		x022D2B x051899 x0EC528 x12D43A x19E5C0 x1D3609 x2DBD82 x30122F x3631C3 x36E637 x402C84 x4E722C x50D414 x61F7C9 x67DD93 x6C44CE x706940 x7074E3 x713583 x767A66 x80F0E0 x8F5440 x918140 x91DEAB x94A5A8 x97232F x9AB208 x9B38C0 x9CEEC1 xA0B0A0 xA1CA4A xA6DAD0 xAA60D3 xB4E322 xB94359 xCA516D xCA5BC1 xCD3942 xCD3E9A xCEAF5E xCF602F xD458B6 xD597DC xD921CB xDB08EC xE03121 xE0C4D2 xE2230E xE3CCA0 xEFC3B4 xF58253 xF8614B 
 	}
 	traits = {
 		state_trait_indus_river state_trait_indus_valley 
@@ -10573,7 +11902,10 @@ STATE_PUNJAB = {
 	farm = x19E5C0
 	mine = xA0B0A0
 	wood = xA6DAD0
-	arable_land = 650
+	arable_land = 505
+	prime_land = {
+		x9CEEC1 xF58253 x713583 xE3CCA0 xA6DAD0 x3631C3 x80F0E0 x50D414 xE03121 xD921CB x91DEAB xAA60D3 xE2230E x918140 x9B38C0 xCD3942 x67DD93 xCD3E9A xB94359 xE0C4D2 x4E722C x0EC528 x9AB208 xA0B0A0 xCA5BC1 x97232F x051899 xDB08EC x1D3609 x7074E3 xD458B6 x61F7C9 x767A66 x36E637 x12D43A xA1CA4A xF8614B x6C44CE x8F5440 x402C84 x94A5A8 xCEAF5E  
+	}
 }
 STATE_PYONGYANG = {
 	provinces = {
@@ -10711,7 +12043,19 @@ STATE_RAJPUTANA = {
 	farm = xBD1F80
 	mine = x6E01FB
 	wood = x53A30A
-	arable_land = 300
+	arable_land = 199
+	prime_land = {
+		xE0F021 x82B440 x0A43D0 x0710F5 x604D2F xC7EF85 x0170B1 x67EA54 xA2025E xE95A9E xE27278 x40881F xF051DF  
+	}
+}
+STATE_RED_SEA = {
+	provinces = {
+		x4FDCFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3047
 }
 STATE_RHINELAND = {
 	provinces = {
@@ -10805,6 +12149,9 @@ STATE_RIFT_VALLEY = {
 	mine = x63C8FD
 	wood = xF6B009
 	arable_land = 60
+	prime_land = {
+		x787130 x935F28  
+	}
 }
 STATE_RIGA = {
 	provinces = {
@@ -11124,31 +12471,6 @@ STATE_SAMARA = {
 	wood = x1C1FB7
 	arable_land = 95
 }
-STATE_SAN_SALVADOR = {
-	provinces = {
-		x107040 x3DB036 xB0D0C7 xCC1FCA 
-	}
-	traits = {
-		state_trait_central_american_cordilleras 
-	}
-	arable_resources = {
-		bg_maize_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_logging = 7
-		bg_fishing = 4
-		bg_rubber = 10
-	}
-	id = 338
-	subsistence_building = building_subsistence_farms
-	city = xB0D0C7
-	port = xB0D0C7
-	farm = xB0D0C7
-	mine = xB0D0C7
-	wood = x107040
-	arable_land = 25
-	naval_exit_id = 3155
-}
 STATE_SANTA_CATARINA = {
 	provinces = {
 		x02483B x06999F x09803F x2DA91C x3066EF x4538A5 x600573 x8A5C63 x8D6AA3 x9937ED x9DE26B xA57238 xA88387 xC550DC xC7B370 xDF5E13 xEB0D5F xEDCD15 xF3F10A xF6A625 
@@ -11273,6 +12595,31 @@ STATE_SANTO_DOMINGO = {
 	arable_land = 30
 	naval_exit_id = 3061
 }
+STATE_SAN_SALVADOR = {
+	provinces = {
+		x107040 x3DB036 xB0D0C7 xCC1FCA 
+	}
+	traits = {
+		state_trait_central_american_cordilleras 
+	}
+	arable_resources = {
+		bg_maize_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_logging = 7
+		bg_fishing = 4
+		bg_rubber = 10
+	}
+	id = 338
+	subsistence_building = building_subsistence_farms
+	city = xB0D0C7
+	port = xB0D0C7
+	farm = xB0D0C7
+	mine = xB0D0C7
+	wood = x107040
+	arable_land = 25
+	naval_exit_id = 3155
+}
 STATE_SAO_PAULO = {
 	provinces = {
 		x09198A x1870F2 x21316A x23A418 x27403E x283F5F x298D6C x317917 x31F83B x479986 x53877A x53CD89 x544559 x567C72 x5C09B3 x5C709E x66900C x67A607 x68DC5F x6AE592 x6D7A94 x727D50 x78C1FA x7EE747 x803B36 x81DA8F x8D426B x8FB3D6 x94E2E8 x9C9A53 x9D3688 x9EAC59 x9FCD15 xA03AAD xA0E429 xA1C66C xB450CA xB57BC4 xB854DD xB9F859 xBF9DEB xC06C0B xC59376 xC5C85C xC87548 xCD7B15 xCF1240 xD2EC89 xD35977 xD62837 xD7EC24 xDA0243 xDA3977 xE0C50E xEF2FE4 xFCB8BC 
@@ -11323,6 +12670,15 @@ STATE_SARDINIA = {
 	wood = xA61F49
 	arable_land = 15
 	naval_exit_id = 3032
+}
+STATE_SARGASSO_SEA = {
+	provinces = {
+		x43DEFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3068
 }
 STATE_SARIWON = {
 	provinces = {
@@ -11418,6 +12774,9 @@ STATE_SAXONY = {
 	mine = x917939
 	wood = x31E0C0
 	arable_land = 100
+	prime_land = {
+		x31E0C0 xC00A37 xD0C021 x66FE0A x169073 x614121 xAFDFBF x917939 x43CE26  
+	}
 }
 STATE_SCANIA = {
 	provinces = {
@@ -11465,6 +12824,42 @@ STATE_SCHLESWIG_HOLSTEIN = {
 	arable_land = 40
 	naval_exit_id = 3019
 }
+STATE_SCOTIA_SEA = {
+	provinces = {
+		x858CBF 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3066
+}
+STATE_SEA_OF_JAPAN = {
+	provinces = {
+		x00FBFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3059
+}
+STATE_SEA_OF_MARMARA = {
+	provinces = {
+		x47DCFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3035
+}
+STATE_SEA_OF_OKHOTSK = {
+	provinces = {
+		x03DDFB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3118
+}
 STATE_SEMIRECHE = {
 	provinces = {
 		x0262FE x02DF90 x05BD27 x0990E1 x0B48F9 x0CCA19 x103091 x127785 x1416CB x145EE2 x17631D x189DA9 x19C964 x1CE293 x1DC340 x1FD20C x21AA2E x22FBC7 x2364BC x23E0DF x2477C7 x252E81 x25DC1F x28A6EA x2AE81D x31961B x3270A4 x33F767 x364688 x3654FD x368C92 x38CB07 x3AA215 x3BB602 x3CF0EA x3EE400 x400B80 x401D30 x41AB85 x45582E x45DFDC x49A5B5 x4A2889 x4A475F x4B61E6 x4E6636 x50A114 x50B0E8 x52067C x54131D x56B464 x56B714 x574A12 x59E5CE x5A1C47 x5D882C x605A9C x60A3FF x60AE44 x6303A7 x63C79A x650F60 x651D0C x6A7D1F x6BEE56 x6D1821 x713216 x734BA8 x738664 x73AFA9 x74C286 x75B459 x769A37 x770159 x77B4A7 x785445 x787024 x7CE303 x7D13F1 x7E72F2 x85E4AE x87C29F x89A1F4 x8BC24A x8E28FC x8E8AB6 x8F8F1F x8F9B9C x919A76 x91F95B x92F484 x975F4D x97C0DA x9975FC x998F61 x9B348C xA251D4 xA32776 xA46BBE xA52F92 xA6311A xAD9B01 xAEA7A5 xB1EE41 xB4017B xB5640B xB6001C xB63030 xB8D094 xB925A0 xB94D3A xB9AE9B xBA66D8 xBB3913 xC09120 xC2B8F7 xC2E8CE xC7B7A6 xCB162A xCDE7C0 xCFF7E5 xD1F5E6 xDA9342 xDF8AFA xE1DDD3 xE3EEFE xE43A4E xE4CF4B xE76139 xE80E1A xE81971 xE8398F xEB97EF xEF0C75 xEF11DE xF158B9 xF1BD02 xF1EF2F xF29C97 xF2BDE8 xF5FD0D xFC86E2 xFD4F55 xFDCF9F 
@@ -11482,7 +12877,7 @@ STATE_SEMIRECHE = {
 	}
 	id = 447
 	subsistence_building = building_subsistence_pastures
-	city = xDC6CAE
+	city = x2477C7
 	farm = x02DF90
 	mine = x7D13F1
 	wood = x25DC1F
@@ -11558,30 +12953,6 @@ STATE_SEOUL = {
 	arable_land = 70
 	naval_exit_id = 3057
 }
-STATE_SHAN_STATES = {
-	provinces = {
-		x1D8BBD x2414D9 x26A4FC x27DBA6 x2C8D05 x334200 x34E09D x36C9CC x375F42 x39659E x422870 x4D639B x5116F0 x5745FF x66C0CA x70292A x747429 x766EA5 x772D64 x7D71CA x887519 x90EFDF x97D55A x9F7026 xA125B4 xAFC613 xB09BEA xC20B31 xD04A7B xD9D4B0 xDF2487 xE7608F xEAF30B xF1F906 xF65E92 xF6A5C7 
-	}
-	traits = {
-		state_trait_burmese_teak 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tea_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 20
-		bg_lead_mining = 27
-		bg_logging = 17
-		bg_rubber = 2
-	}
-	id = 525
-	subsistence_building = building_subsistence_rice_paddies
-	city = x66C0CA
-	farm = xA125B4
-	mine = x26A4FC
-	wood = xD04A7B
-	arable_land = 20
-}
 STATE_SHANDONG = {
 	provinces = {
 		x115180 x16E6F3 x175EC6 x1ABD79 x1D4C25 x2EF696 x32CFB2 x33490F x38A73B x39F708 x41FB70 x4724A9 x483CDB x498F0D x50D040 x55944E x599BC4 x6B8F67 x6BFF52 x6DA6F9 x71C085 x798677 x8064F0 x83EC09 x90D001 x9D1474 xA0CF65 xAB53A3 xAC24A6 xAEDF9B xB33A36 xBAA1D3 xC13552 xC14ECA xC55E74 xCF50BF xE01180 xE19708 xF07810 xF2D180 
@@ -11632,6 +13003,30 @@ STATE_SHANXI = {
 	mine = x2BAB5F
 	wood = x2E331F
 	arable_land = 375
+}
+STATE_SHAN_STATES = {
+	provinces = {
+		x1D8BBD x2414D9 x26A4FC x27DBA6 x2C8D05 x334200 x34E09D x36C9CC x375F42 x39659E x422870 x4D639B x5116F0 x5745FF x66C0CA x70292A x747429 x766EA5 x772D64 x7D71CA x887519 x90EFDF x97D55A x9F7026 xA125B4 xAFC613 xB09BEA xC20B31 xD04A7B xD9D4B0 xDF2487 xE7608F xEAF30B xF1F906 xF65E92 xF6A5C7 
+	}
+	traits = {
+		state_trait_burmese_teak 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tea_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 20
+		bg_lead_mining = 27
+		bg_logging = 17
+		bg_rubber = 2
+	}
+	id = 525
+	subsistence_building = building_subsistence_rice_paddies
+	city = xD04A7B
+	farm = xA125B4
+	mine = x26A4FC
+	wood = xD04A7B
+	arable_land = 33
 }
 STATE_SHAOZHOU = {
 	provinces = {
@@ -11877,7 +13272,7 @@ STATE_SINDH = {
 	farm = xAE1ED1
 	mine = x882A58
 	wood = x02BBA0
-	arable_land = 100
+	arable_land = 75
 	naval_exit_id = 3048
 }
 STATE_SISTAN = {
@@ -11982,9 +13377,9 @@ STATE_SMOLENSK = {
 	id = 137
 	subsistence_building = building_subsistence_farms
 	city = xECBC4D
-	farm = x205800
-	mine = xC0DF60
-	wood = x6859CA
+	farm = xD8537A
+	mine = x93DF31
+	wood = x9692BD
 	arable_land = 62
 }
 STATE_SOLOMON_ISLANDS = {
@@ -12011,6 +13406,15 @@ STATE_SOLOMON_ISLANDS = {
 	wood = x2B5E69
 	arable_land = 5
 	naval_exit_id = 3129
+}
+STATE_SOLOMON_SEA = {
+	provinces = {
+		x39C9C9 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3129
 }
 STATE_SOMALILAND = {
 	provinces = {
@@ -12062,6 +13466,108 @@ STATE_SONORA = {
 	arable_land = 40
 	naval_exit_id = 3153
 }
+STATE_SOUTHERN_ANHUI = {
+	provinces = {
+		x02C8C0 x109080 x329B9F x36029B x467DE2 x49873B x549051 x61A7A8 x6ECE83 x7030A0 x905157 x905180 xA5D78B xD5C59C xE585CC xFF11E6 xFF7C49 
+	}
+	traits = {
+		state_trait_yangtze_river 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tea_plantations bg_tobacco_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 40
+		bg_logging = 14
+	}
+	id = 505
+	subsistence_building = building_subsistence_rice_paddies
+	city = x36029B
+	farm = x49873B
+	mine = x6ECE83
+	wood = x329B9F
+	arable_land = 550
+}
+STATE_SOUTHERN_MANCHURIA = {
+	provinces = {
+		x031AD1 x03AD32 x03E1AF x06053B x08DC34 x09233D x129A7C x13A54F x158FFA x174290 x1BD261 x1E8BA3 x220872 x265F85 x292695 x2C04E5 x301D5F x30FE34 x35396E x385E45 x38C135 x3B5528 x3F61E8 x484F86 x4CA710 x4FB11C x50B15B x5496F2 x54B71E x54C0A3 x54DA79 x559CBD x5BA3EB x5D6142 x5E4035 x5EDEC1 x67F10C x6AA436 x6C9779 x6DA92B x6F8CA9 x733A27 x7486DB x74C59F x76800C x778CFB x78B1C2 x7A9295 x7CDF50 x7D7703 x7F7474 x80A14D x83F3FD x840BF0 x842782 x867862 x8908A3 x8BA6E3 x8CAF49 x8D3DE0 x912C9D x92D43D x9B511F x9F89D1 xA05162 xA05180 xA05646 xA0D225 xA107B9 xA13E33 xA495CD xA638A8 xA7C578 xA83478 xA8ABC1 xABD7B4 xBAD550 xBE86F0 xBF39F0 xC3FFC1 xC4B939 xC8415B xCD1CCD xCD5324 xD0B04D xD44AC1 xD5000E xD5886D xD6BB53 xD8BB0E xDA5747 xDB90DD xDD15CE xDF828B xE2D5E0 xE43B63 xEB92A2 xEBCD20 xEC981A xEE0F4A xF0D8D0 xF2E062 xF471D5 xF6B0F3 xF7C217 xF956C5 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 60
+		bg_iron_mining = 75
+		bg_lead_mining = 45
+		bg_logging = 25
+		bg_fishing = 8
+	}
+	id = 489
+	subsistence_building = building_subsistence_rice_paddies
+	city = x09233D
+	farm = x385E45
+	mine = x7D7703
+	wood = xD0B04D
+	arable_land = 200
+}
+STATE_SOUTHERN_OCEAN_01 = {
+	provinces = {
+		x6FB3DE 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3014
+}
+STATE_SOUTHERN_OCEAN_02 = {
+	provinces = {
+		x316868 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3015
+}
+STATE_SOUTHERN_SERBIA = {
+	provinces = {
+		x18B761 x334B53 x45E06A x4773E6 x62A730 x9DFFAF xA5D3A9 xAC083C xB852BB xD02161 xD021E0 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 40
+		bg_lead_mining = 36
+		bg_logging = 14
+	}
+	id = 121
+	subsistence_building = building_subsistence_farms
+	city = x45E06A
+	farm = xD02161
+	mine = x334B53
+	wood = xD021E0
+	arable_land = 45
+}
+STATE_SOUTHERN_TRANSYLVANIA = {
+	provinces = {
+		x10E29E x306060 x457B5F x51E0A0 x7686F7 x90E5C8 xC17759 xD061A0 xD0E021 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_silk_plantations bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 45
+		bg_lead_mining = 45
+		bg_logging = 17
+	}
+	id = 170
+	subsistence_building = building_subsistence_farms
+	city = xC17759
+	farm = xD061A0
+	mine = x51E0A0
+	wood = x90E5C8
+	arable_land = 50
+}
 STATE_SOUTH_ANGOLA = {
 	provinces = {
 		x006BF0 x00B95C x00DFF0 x02B371 x0446CA x068F41 x07C3F2 x08DF25 x09AA46 x0DFBDB x1B547C x1E1A18 x2DAC68 x32FB24 x3C4D7A x42FC7B x4856DD x4B8072 x50C030 x57F834 x688ED0 x68FADF x6D0491 x795FC5 x7A69EF x7CB2EC x8060F0 x80A69F x85CF92 x8DAA24 x8F380E x8FD44C x933C39 x962E67 x97FF10 x9AE2DA x9CA3E4 x9E59EC x9EDE02 xA216A0 xA95021 xB85B10 xBAF0E0 xC6BBE8 xC86852 xCAB778 xCB3588 xD189C0 xD2D8A2 xD2F7C4 xD6C96D xD891B2 xDCF6C9 xDD5B59 xDDC690 xE10AC9 xE41930 xEB49D5 xF0DC05 xFC5809 
@@ -12112,6 +13618,87 @@ STATE_SOUTH_ATLANTIC_ISLANDS = {
 	arable_land = 10
 	naval_exit_id = 3066
 }
+STATE_SOUTH_ATLANTIC_OCEAN_01 = {
+	provinces = {
+		x2897CB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3092
+}
+STATE_SOUTH_ATLANTIC_OCEAN_02 = {
+	provinces = {
+		x2861CB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3093
+}
+STATE_SOUTH_ATLANTIC_OCEAN_03 = {
+	provinces = {
+		x405E94 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3094
+}
+STATE_SOUTH_ATLANTIC_OCEAN_04 = {
+	provinces = {
+		x65CBFC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3095
+}
+STATE_SOUTH_ATLANTIC_OCEAN_05 = {
+	provinces = {
+		x72CBFD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3096
+}
+STATE_SOUTH_ATLANTIC_OCEAN_06 = {
+	provinces = {
+		x6AC3EC 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3097
+}
+STATE_SOUTH_ATLANTIC_SEA_LANE_01 = {
+	provinces = {
+		x8ADE90 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3098
+}
+STATE_SOUTH_ATLANTIC_SEA_LANE_02 = {
+	provinces = {
+		x9F2781 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3099
+}
+STATE_SOUTH_ATLANTIC_SEA_LANE_05 = {
+	provinces = {
+		xB56DB4 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3102
+}
 STATE_SOUTH_AUSTRALIA = {
 	provinces = {
 		x000A74 x034AED x0387DD x04FFCF x0515C9 x056D19 x06EBA8 x082F85 x0A244B x0ADA39 x0C8D77 x0CA414 x0D95D3 x0F120F x0F611D x0FB84C x10255F x109D07 x11283A x11D74E x11DFCF x1202AB x13F69B x13FCCF x14788A x1544D6 x1622EC x16ADA2 x170D7B x1A3774 x1AD5E0 x1BC7E5 x1BE550 x1E1B36 x21C18C x239C93 x27B268 x2A72BE x2AB1CA x2CEDD8 x2DD2D5 x3138C1 x31B22C x320892 x329F07 x3458BA x365482 x365B98 x36CF71 x3811BC x385E6B x39A6C9 x39DBC4 x3B4AD8 x3BEF21 x3DF472 x3E5829 x3EADD5 x3FACBE x4064E2 x413343 x45A37A x46F3D1 x488015 x4B8A2B x4C87B3 x4CE2E1 x4DAD39 x4ED3E7 x4FC069 x502784 x540341 x54AE30 x552F74 x55DD2E x55E395 x56C7FA x57BC85 x5A10AA x5AD224 x5B668E x5C62A7 x5CDC4E x5D7E2A x5F3699 x621622 x62253A x62317E x658155 x65BB95 x667BD0 x668EAE x66EEA6 x6AE1B7 x6B189C x6E4619 x6EEB36 x6F472E x7091EC x74D3E6 x767440 x76FE54 x78527F x799A39 x7BBC20 x7C42A3 x7D6AE4 x7D830B x7E80AE x7EEBE6 x7F5004 x7FE76C x81E539 x83A20F x847715 x854A14 x85A009 x8F794B x9060CF x90DF50 x95B9BE x95EBE6 x9660AF x971496 x980FFD x983247 x985058 x994222 x9EB5BD xA0BAD0 xA14937 xA26F58 xA674B5 xA70984 xA94B9B xADB94A xAF3598 xB0FA82 xB13E10 xB20855 xB4A4CB xB67EC8 xB6EF7D xBA3367 xBA50D8 xBAA4BE xBCF86D xBD0F2C xBDFC34 xC0038F xC15F2D xC52B90 xC53983 xC58F87 xC69F69 xC6BF06 xC6D0A0 xC7963D xC79752 xC9E461 xCBE0D5 xCCB60A xCD012B xCE5663 xCE802D xD05EAC xD0A0D0 xD18B39 xD471D4 xD4AFDA xD53092 xD590F3 xD5D3B9 xD67B75 xD8FB8A xDA95EF xDAAAF4 xDAC75B xDFDDC7 xE02385 xE0ACA2 xE53516 xE5B909 xE5CBE7 xE7E1E0 xE7E32B xEA6027 xEB1C69 xEB5A47 xED145F xEEF3B9 xF01D20 xF0DDF6 xF11F8E xF19096 xF21007 xF2D053 xF5F6E0 xF683D5 xF6D69D xF8A76F xF921FF xF95672 xFA184F xFE8162 
@@ -12139,31 +13726,6 @@ STATE_SOUTH_AUSTRALIA = {
 	arable_land = 30
 	naval_exit_id = 3121
 }
-STATE_SOUTH_BENGAL = {
-	provinces = {
-		x025A94 x0A2277 x1E0385 x3C68C9 x40F5CE x4123FE x474C54 x55F631 x6F1170 x802A5E x89D769 x92DA2C x93E9F4 xA605E3 xB06FC2 xC81678 xCA47BA xD0B0DF xDFA414 
-	}
-	traits = {
-		state_trait_bengal_delta state_trait_natural_harbors 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_silk_plantations bg_dye_plantations bg_opium_plantations bg_tea_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_logging = 23
-		bg_fishing = 20
-		bg_oil_extraction = 20
-	}
-	id = 466
-	subsistence_building = building_subsistence_rice_paddies
-	city = x0A2277
-	port = x3C68C9
-	farm = xC81678
-	mine = x93E9F4
-	wood = xCA47BA
-	arable_land = 400
-	naval_exit_id = 3050
-}
 STATE_SOUTH_CAMEROON = {
 	provinces = {
 		x09AFA8 x0C9C74 x12739C x23EF22 x342080 x41CFC6 x4B1338 x57C64A x58E5DA x5A24D5 x6BA6FD x711E13 x733140 x8021D0 x80692A x809F50 x8AAF69 x902089 x9B9430 x9BBCBB x9D619B xA1D098 xA4D2D9 xA6E723 xAFC4E7 xBA78B7 xBCF4E2 xC6087A xC72921 xC9C5B7 xCAACB2 xCABC41 xD0C4D5 xE015A7 xE321D4 xEB43CA xF72F4B 
@@ -12188,6 +13750,9 @@ STATE_SOUTH_CAMEROON = {
 	wood = x5A24D5
 	arable_land = 70
 	naval_exit_id = 3091
+	prime_land = {
+		xF72F4B xD0C4D5 x809F50 xCABC41 xC6087A x342080  
+	}
 }
 STATE_SOUTH_CAROLINA = {
 	provinces = {
@@ -12209,6 +13774,15 @@ STATE_SOUTH_CAROLINA = {
 	wood = x31E5D4
 	arable_land = 100
 	naval_exit_id = 3067
+}
+STATE_SOUTH_CHINA_SEA = {
+	provinces = {
+		x7BDCFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3056
 }
 STATE_SOUTH_DAKOTA = {
 	provinces = {
@@ -12284,6 +13858,114 @@ STATE_SOUTH_MADAGASCAR = {
 	arable_land = 80
 	naval_exit_id = 3107
 }
+STATE_SOUTH_PACIFIC_LANE_1 = {
+	provinces = {
+		xA729A6 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3003
+}
+STATE_SOUTH_PACIFIC_LANE_2 = {
+	provinces = {
+		xE10DAD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3004
+}
+STATE_SOUTH_PACIFIC_OCEAN_01 = {
+	provinces = {
+		x445572 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3141
+}
+STATE_SOUTH_PACIFIC_OCEAN_02 = {
+	provinces = {
+		x3B70B1 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3142
+}
+STATE_SOUTH_PACIFIC_OCEAN_03 = {
+	provinces = {
+		x2D4F87 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3143
+}
+STATE_SOUTH_PACIFIC_OCEAN_04 = {
+	provinces = {
+		x2863CB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3144
+}
+STATE_SOUTH_PACIFIC_OCEAN_05 = {
+	provinces = {
+		x80C3E0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3145
+}
+STATE_SOUTH_PACIFIC_OCEAN_06 = {
+	provinces = {
+		x340EED 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3146
+}
+STATE_SOUTH_PACIFIC_OCEAN_07 = {
+	provinces = {
+		x92AED0 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3147
+}
+STATE_SOUTH_PACIFIC_OCEAN_08 = {
+	provinces = {
+		x80C3E1 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3148
+}
+STATE_SOUTH_PACIFIC_OCEAN_09 = {
+	provinces = {
+		x48FDFD 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3156
+}
+STATE_SOUTH_PHILIPPINES_SEA = {
+	provinces = {
+		xB6CECE 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3158
+}
 STATE_SOUTH_SUMATRA = {
 	provinces = {
 		x00F15A x03CEC7 x067967 x0D0BEB x0F65F5 x174432 x27FD1C x3099D2 x31E5B1 x3441E9 x42D05B x4CF770 x74812B x7945C0 x7A4DC8 x7D6D54 x7FFD6B x847F76 x8527A9 x8FBCF4 xA97585 xB0F538 xCC1A24 xD10CCE xD2193E xDBE794 xE226FB xE49A2F xE962F4 xFB099E 
@@ -12330,90 +14012,6 @@ STATE_SOUTH_TYROL = {
 	wood = xD040E0
 	arable_land = 15
 }
-STATE_SOUTHERN_ANHUI = {
-	provinces = {
-		x02C8C0 x109080 x329B9F x36029B x467DE2 x49873B x549051 x61A7A8 x6ECE83 x7030A0 x905157 x905180 xA5D78B xD5C59C xE585CC xFF11E6 xFF7C49 
-	}
-	traits = {
-		state_trait_yangtze_river 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tea_plantations bg_tobacco_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 40
-		bg_logging = 14
-	}
-	id = 505
-	subsistence_building = building_subsistence_rice_paddies
-	city = x36029B
-	farm = x49873B
-	mine = x6ECE83
-	wood = x329B9F
-	arable_land = 550
-}
-STATE_SOUTHERN_MANCHURIA = {
-	provinces = {
-		x031AD1 x03AD32 x03E1AF x06053B x08DC34 x09233D x129A7C x13A54F x158FFA x174290 x1BD261 x1E8BA3 x220872 x265F85 x292695 x2C04E5 x301D5F x30FE34 x35396E x385E45 x38C135 x3B5528 x3F61E8 x484F86 x4CA710 x4FB11C x50B15B x5496F2 x54B71E x54C0A3 x54DA79 x559CBD x5BA3EB x5D6142 x5E4035 x5EDEC1 x67F10C x6AA436 x6C9779 x6DA92B x6F8CA9 x733A27 x7486DB x74C59F x76800C x778CFB x78B1C2 x7A9295 x7CDF50 x7D7703 x7F7474 x80A14D x83F3FD x840BF0 x842782 x867862 x8908A3 x8BA6E3 x8CAF49 x8D3DE0 x912C9D x92D43D x9B511F x9F89D1 xA05162 xA05180 xA05646 xA0D225 xA107B9 xA13E33 xA495CD xA638A8 xA7C578 xA83478 xA8ABC1 xABD7B4 xBAD550 xBE86F0 xBF39F0 xC3FFC1 xC4B939 xC8415B xCD1CCD xCD5324 xD0B04D xD44AC1 xD5000E xD5886D xD6BB53 xD8BB0E xDA5747 xDB90DD xDD15CE xDF828B xE2D5E0 xE43B63 xEB92A2 xEBCD20 xEC981A xEE0F4A xF0D8D0 xF2E062 xF471D5 xF6B0F3 xF7C217 xF956C5 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 60
-		bg_iron_mining = 75
-		bg_lead_mining = 45
-		bg_logging = 25
-		bg_fishing = 8
-	}
-	id = 489
-	subsistence_building = building_subsistence_rice_paddies
-	city = x09233D
-	farm = x385E45
-	mine = x7D7703
-	wood = xD0B04D
-	arable_land = 200
-}
-STATE_SOUTHERN_SERBIA = {
-	provinces = {
-		x18B761 x334B53 x45E06A x4773E6 x62A730 x9DFFAF xA5D3A9 xAC083C xB852BB xD02161 xD021E0 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 40
-		bg_lead_mining = 36
-		bg_logging = 14
-	}
-	id = 121
-	subsistence_building = building_subsistence_farms
-	city = x45E06A
-	farm = xD02161
-	mine = x334B53
-	wood = xD021E0
-	arable_land = 45
-}
-STATE_SOUTHERN_TRANSYLVANIA = {
-	provinces = {
-		x10E29E x306060 x457B5F x51E0A0 x7686F7 x90E5C8 xC17759 xD061A0 xD0E021 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_silk_plantations bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 45
-		bg_lead_mining = 45
-		bg_logging = 17
-	}
-	id = 170
-	subsistence_building = building_subsistence_farms
-	city = xC17759
-	farm = xD061A0
-	mine = x51E0A0
-	wood = x90E5C8
-	arable_land = 50
-}
 STATE_STAVROPOL = {
 	provinces = {
 		x1ED727 x32FEBA x3E954F x565E50 x6B2515 x7685A4 x76C012 x793FDE x796017 x891792 x929AC4 x9A43C9 x9B5EC8 x9BAE11 x9CDC20 xA4B654 xAA6E62 xB3593A xBC214C xC0D001 xD7EDE7 xE0E16A xE2E1EB xF7D005 xF88EA3 
@@ -12431,6 +14029,15 @@ STATE_STAVROPOL = {
 	id = 835
 	subsistence_building = building_subsistence_farms
 	arable_land = 100
+}
+STATE_STRAIT_OF_GIBRALTAR = {
+	provinces = {
+		x2CFAFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3031
 }
 STATE_STYRIA = {
 	provinces = {
@@ -12456,6 +14063,24 @@ STATE_STYRIA = {
 	wood = x86FD73
 	arable_land = 40
 }
+STATE_SULU_SEA = {
+	provinces = {
+		x76C8FA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3055
+}
+STATE_SUMATRA_SEA = {
+	provinces = {
+		x66C8FA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3120
+}
 STATE_SUNDA_ISLANDS = {
 	provinces = {
 		x100090 x108090 x28EC3F x3CCE91 x4CFCE1 x4EE71E x5ABA94 x5F978F x699245 x7D205E x7F4592 x900090 x908090 x929145 xCF8A98 xE90740 
@@ -12479,6 +14104,9 @@ STATE_SUNDA_ISLANDS = {
 	wood = x3CCE91
 	arable_land = 60
 	naval_exit_id = 3052
+	prime_land = {
+		x5ABA94 x100090  
+	}
 }
 STATE_SURGUT = {
 	provinces = {
@@ -12724,6 +14352,9 @@ STATE_TANGANYIKA = {
 	mine = x16915A
 	wood = x0E2596
 	arable_land = 150
+	prime_land = {
+		x5093DF x16915A xD8B2ED x80DF50 x5954AA x34EFF0 x662B31  
+	}
 }
 STATE_TARAPACA = {
 	provinces = {
@@ -12822,6 +14453,15 @@ STATE_TASMANIA = {
 	wood = xBB312B
 	arable_land = 15
 	naval_exit_id = 3122
+}
+STATE_TASMAN_SEA = {
+	provinces = {
+		x32C9FB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3122
 }
 STATE_TAURIDA = {
 	provinces = {
@@ -12981,6 +14621,18 @@ STATE_TIMBUKTU = {
 	mine = x05A3BA
 	wood = xAAC756
 	arable_land = 40
+	prime_land = {
+		xF070C0 x761045 xA6DB06 xD5D6D7 x61700A xB86B73 x6F19B8 xAAC756 x7D424A xD802D5  
+	}
+}
+STATE_TIMOR_SEA = {
+	provinces = {
+		x6BDCFA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3123
 }
 STATE_TOBOLSK = {
 	provinces = {
@@ -13001,8 +14653,8 @@ STATE_TOBOLSK = {
 	id = 568
 	subsistence_building = building_subsistence_farms
 	city = x0C4124
-	farm = xBA2BBE
-	mine = x1434F4
+	farm = x3D8542
+	mine = xB50B04
 	wood = xC2DCCF
 	arable_land = 53
 }
@@ -13031,6 +14683,9 @@ STATE_TOGO = {
 	wood = xE8CC9C
 	arable_land = 80
 	naval_exit_id = 3091
+	prime_land = {
+		x802111 x406D9B  
+	}
 }
 STATE_TOHOKU = {
 	provinces = {
@@ -13170,29 +14825,6 @@ STATE_TRABZON = {
 	arable_land = 40
 	naval_exit_id = 3036
 }
-STATE_TRANS_BAIKAL = {
-	provinces = {
-		x007CB1 x015D3E x0193EB x0785CD x079C60 x0A0222 x0A9836 x0D5A58 x0DD590 x0E43FB x0FB4F9 x129FC3 x12A585 x12C1B9 x15176F x17343A x17B7F0 x18DAD3 x196293 x1A14E3 x1A85FA x203C34 x222BD1 x231C81 x238292 x2587A1 x262BEF x27CC46 x281740 x28D73C x299FBD x2AF1A1 x2AF6B7 x2B1B82 x2C68A2 x2C83FA x2D2871 x2D8D7D x2DF268 x2F1F11 x2F99B4 x3008E8 x306B72 x31EE56 x321602 x32A60B x334BC7 x33C121 x35BB1D x3600A2 x360802 x3638B1 x375FC7 x377AED x37F7EC x385068 x386B9A x39063E x3B025B x40517F x4082D7 x40A1F8 x40A34C x413B4A x41B4AB x4484C0 x450E0D x4583AE x46C5BE x478B74 x49496F x4B9672 x4C164A x4CD386 x4D5F71 x4E6D3D x521AC8 x53E0FC x53E72A x58333F x58F7E5 x5B9012 x5C7106 x5FDB68 x60A060 x6223EC x6241AE x636B73 x689A52 x699B92 x6A90B6 x6B2A19 x6DE254 x6F59BE x700B03 x710287 x7233C3 x7363D2 x7434D4 x74D6A2 x7576FE x7672C4 x767619 x780268 x786709 x793F5C x7DDFA2 x830B6C x833260 x83533A x8466E3 x869F8F x886485 x8A469F x8ADFB0 x8BE912 x8CE5DE x8D7523 x8FE8EC x909DF3 x924751 x93613A x939A3D x93B2E4 x94E41C x96884E x970AC1 x97F16E x984260 x9C5C2F x9D6D42 x9D9238 x9D9BBB x9E1215 x9E9631 x9F45E2 xA020E0 xA6509C xA69301 xA6A2F2 xA7B855 xA7C776 xA944CE xAA2BA4 xAC0180 xAE0A5E xAF5EFA xAFE5C5 xB0199F xB0FB2E xB2F582 xB53EF2 xB59836 xB72204 xB76034 xBE03E4 xBE8D3C xBEF71E xC10FBF xC182EA xC1FDB4 xC27061 xC4A89D xC59393 xC5F113 xC9D496 xCA5F31 xD1F104 xD25675 xD5E8C5 xD60F82 xD74BFF xD8668E xD90A8B xD9FD1A xDAE639 xDB015F xDC46E4 xDCA85C xDCF84B xDD7F1A xDED63A xE1A9C5 xE2BC2E xE4FDF4 xE55291 xE5BCB2 xE8E454 xE93002 xEA60AE xED1D33 xED45BE xEF3B8E xEFE513 xF30B59 xF31CFB xF4607C xF4A738 xFB064D xFB2114 xFD5BBE xFDA4A4 
-	}
-	arable_resources = {
-		bg_rye_farms bg_livestock_ranches 
-	}
-	capped_resources = {
-		bg_coal_mining = 80
-		bg_iron_mining = 33
-		bg_lead_mining = 28
-		bg_sulfur_mining = 44
-		bg_logging = 24
-		bg_oil_extraction = 10
-	}
-	id = 582
-	subsistence_building = building_subsistence_farms
-	city = x15176F
-	farm = x7576FE
-	mine = x2C83FA
-	wood = x521AC8
-	arable_land = 36
-}
 STATE_TRANSDANUBIA = {
 	provinces = {
 		x124D73 x1CAC04 x2668FB x27F483 x30A020 x3C6913 x6F8D2A x715F5D x716180 x906A5F xA709B7 xB02121 xC139B7 xCACEBC xCF2020 xCFDFDF xF0E001 
@@ -13259,9 +14891,35 @@ STATE_TRANSVAAL = {
 	wood = xCBC63D
 	arable_land = 50
 }
+STATE_TRANS_BAIKAL = {
+	provinces = {
+		x007CB1 x015D3E x0193EB x0785CD x079C60 x0A0222 x0A9836 x0D5A58 x0DD590 x0E43FB x0FB4F9 x129FC3 x12A585 x12C1B9 x15176F x17343A x17B7F0 x18DAD3 x196293 x1A14E3 x1A85FA x203C34 x222BD1 x231C81 x238292 x2587A1 x262BEF x27CC46 x281740 x28D73C x299FBD x2AF1A1 x2AF6B7 x2B1B82 x2C68A2 x2C83FA x2D2871 x2D8D7D x2DF268 x2F1F11 x2F99B4 x3008E8 x306B72 x31EE56 x321602 x32A60B x334BC7 x33C121 x35BB1D x3600A2 x360802 x3638B1 x375FC7 x377AED x37F7EC x385068 x386B9A x39063E x3B025B x40517F x4082D7 x40A1F8 x40A34C x413B4A x41B4AB x4484C0 x450E0D x4583AE x46C5BE x478B74 x49496F x4B9672 x4C164A x4CD386 x4D5F71 x4E6D3D x521AC8 x53E0FC x53E72A x58333F x58F7E5 x5B9012 x5C7106 x5FDB68 x60A060 x6223EC x6241AE x636B73 x689A52 x699B92 x6A90B6 x6B2A19 x6DE254 x6F59BE x700B03 x710287 x7233C3 x7363D2 x7434D4 x74D6A2 x7576FE x7672C4 x767619 x780268 x786709 x793F5C x7DDFA2 x830B6C x833260 x83533A x8466E3 x869F8F x886485 x8A469F x8ADFB0 x8BE912 x8CE5DE x8D7523 x8FE8EC x909DF3 x924751 x93613A x939A3D x93B2E4 x94E41C x96884E x970AC1 x97F16E x984260 x9C5C2F x9D6D42 x9D9238 x9D9BBB x9E1215 x9E9631 x9F45E2 xA020E0 xA6509C xA69301 xA6A2F2 xA7B855 xA7C776 xA944CE xAA2BA4 xAC0180 xAE0A5E xAF5EFA xAFE5C5 xB0199F xB0FB2E xB2F582 xB53EF2 xB59836 xB72204 xB76034 xBE03E4 xBE8D3C xBEF71E xC10FBF xC182EA xC1FDB4 xC27061 xC4A89D xC59393 xC5F113 xC9D496 xCA5F31 xD1F104 xD25675 xD5E8C5 xD60F82 xD74BFF xD8668E xD90A8B xD9FD1A xDAE639 xDB015F xDC46E4 xDCA85C xDCF84B xDD7F1A xDED63A xE1A9C5 xE2BC2E xE4FDF4 xE55291 xE5BCB2 xE8E454 xE93002 xEA60AE xED1D33 xED45BE xEF3B8E xEFE513 xF30B59 xF31CFB xF4607C xF4A738 xFB064D xFB2114 xFD5BBE xFDA4A4 
+	}
+	arable_resources = {
+		bg_rye_farms bg_livestock_ranches 
+	}
+	capped_resources = {
+		bg_coal_mining = 80
+		bg_iron_mining = 33
+		bg_lead_mining = 28
+		bg_sulfur_mining = 44
+		bg_logging = 24
+		bg_oil_extraction = 10
+	}
+	id = 582
+	subsistence_building = building_subsistence_farms
+	city = x15176F
+	farm = x7576FE
+	mine = x2C83FA
+	wood = x521AC8
+	arable_land = 36
+}
 STATE_TRAVANCORE = {
 	provinces = {
 		x2121D0 x21A0D0 xA0A050 xA11A79 xB0934C xCCDC34 xE4EB67 xEC8405 xFD0A78 
+	}
+	traits = {
+		state_trait_western_ghats 
 	}
 	arable_resources = {
 		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_cotton_plantations bg_dye_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
@@ -13277,8 +14935,11 @@ STATE_TRAVANCORE = {
 	farm = x2121D0
 	mine = xA11A79
 	wood = xA0A050
-	arable_land = 80
+	arable_land = 120
 	naval_exit_id = 3049
+	prime_land = {
+		xA0A050 xB0934C xE4EB67  
+	}
 }
 STATE_TRIPOLI = {
 	provinces = {
@@ -13433,10 +15094,10 @@ STATE_TVER = {
 	}
 	id = 145
 	subsistence_building = building_subsistence_farms
-	city = x834B21
-	farm = x065E68
-	mine = xAD3522
-	wood = xABC7C5
+	city = x9AA8A6
+	farm = xBA8413
+	mine = x9A12DD
+	wood = x391276
 	arable_land = 68
 }
 STATE_TYROL = {
@@ -13531,6 +15192,9 @@ STATE_UGANDA = {
 	mine = x7CE297
 	wood = xA09C30
 	arable_land = 100
+	prime_land = {
+		x6530A0 x7183F2 x7183C4 xD13A93 xEA2372 xA9859E x42EDCA xFB4215 x55FC3E x17F11F xA09C30 x5C340A  
+	}
 }
 STATE_ULIASTAI = {
 	provinces = {
@@ -13665,9 +15329,9 @@ STATE_URAL = {
 	id = 566
 	subsistence_building = building_subsistence_farms
 	city = x79430B
-	farm = x2FE367
+	farm = x665888
 	mine = x492819
-	wood = x09B346
+	wood = x317252
 	arable_land = 60
 }
 STATE_URALSK = {
@@ -13686,8 +15350,8 @@ STATE_URALSK = {
 	}
 	id = 441
 	subsistence_building = building_subsistence_pastures
-	city = x86A90A
-	farm = x56279A
+	city = x0A5203
+	farm = x77E944
 	mine = xD1364F
 	wood = xEFFD2B
 	arable_land = 35
@@ -14078,7 +15742,7 @@ STATE_VOLHYNIA = {
 	}
 	id = 134
 	subsistence_building = building_subsistence_farms
-	city = x46B48F
+	city = x5A26AE
 	farm = x5A26AE
 	mine = x8201CF
 	wood = xAC3079
@@ -14171,6 +15835,9 @@ STATE_WADDAI = {
 	mine = x736C1E
 	wood = x7B31F9
 	arable_land = 40
+	prime_land = {
+		x2A283A  
+	}
 }
 STATE_WALES = {
 	provinces = {
@@ -14272,6 +15939,196 @@ STATE_WASHINGTON = {
 	arable_land = 180
 	naval_exit_id = 3154
 }
+STATE_WESTERN_AUSTRALIA = {
+	provinces = {
+		x0054BE x012091 x014F3C x01D4D4 x01E1CA x0272A3 x028A41 x02A390 x02C2F2 x030E6E x032B24 x03B26C x044F96 x056E33 x05E9A3 x0605C1 x0663FD x068EEF x084C37 x084DA5 x08A271 x09245C x0995B2 x0A596B x0BC60B x0BD4F3 x0C1FE4 x0C6867 x0C9C8D x0CBB91 x0CE4E6 x0D1965 x0DF415 x0E09B6 x0F1DD1 x0F866A x10304F x104005 x108379 x114406 x11D6C6 x1210D5 x12D179 x13B802 x13E0B6 x143599 x144C03 x14C151 x154243 x154426 x155E62 x15D1EB x15F5F9 x183A1F x194524 x19AA40 x1B2E41 x1B443D x1BF848 x1C77E8 x1C83B2 x1CD314 x1CEB93 x1D08B4 x1D8BC3 x1DBFA7 x1DD64D x1E2FF7 x1EA03F x1EBE7A x1F4A13 x205223 x213F7C x218BBD x220D4E x233910 x2387F1 x23885D x24AC00 x25124E x2525CB x257DB3 x25A197 x25EE74 x26317C x276F7C x277237 x278D9B x283CC9 x284007 x2936D5 x295344 x29FEE7 x2A57EB x2B4652 x2C8519 x2D0B8D x2D2CB5 x2E4285 x2EF98E x2F445C x3036B4 x30CE5D x30CF22 x31015A x31CB62 x321392 x3281E7 x331CEC x33BA16 x33CB5F x33D287 x3402BF x34A8F2 x350FB8 x357BF0 x35FC10 x3623BB x3627C6 x3629E1 x36B60E x36CCB2 x36F14D x37048E x373D37 x37918F x3792B5 x37C5DC x3860A0 x3864A0 x38E1A0 x3956AF x39961A x39C49D x3AC495 x3B8960 x3BB29D x3BC659 x3BF61B x3C120C x3C4EEC x3C5E27 x3C8900 x3CBBDF x3CE576 x3D8DC4 x3DC542 x3DFB08 x3EE357 x3FF3E9 x4074D0 x41338B x415873 x417A4D x419CCF x438608 x453652 x4556D7 x46B4A2 x46F374 x481DF5 x482DC8 x485C96 x48D70F x48DAE0 x495A84 x496FA5 x4971FB x498C4D x4A919E x4B40E4 x4B4AFE x4B85E9 x4C08C4 x4CAA7B x4D0B06 x4D5E6F x4E9152 x4EEA59 x4F83AE x4FC929 x4FD5E0 x503691 x507AE8 x509F50 x51112B x5121D0 x516F90 x51884E x51A0D0 x52500D x52706E x52FC69 x53C09A x540320 x5418FA x542F98 x5523AE x5592F8 x55C26A x569B91 x56EAC5 x573CC3 x576738 x57A2F9 x57D4B4 x584506 x58815F x591A6B x59C38A x5CB6A6 x5DE8A7 x5DE8D3 x5FDD52 x602930 x61287F x61E781 x636A4B x63B9AD x659543 x65BEE3 x661864 x66C92E x67064F x67649C x67B9F6 x6839AE x696F26 x69ADDC x6B5B55 x6C62F6 x6C7FEE x6C9985 x6CACF6 x6D3800 x6E8591 x6E9D7E x6FE500 x6FF0BB x7009CA x72E965 x73F842 x73F91E x74551C x74664F x74DC69 x755549 x75F34C x77AAC9 x7816AE x79C4FB x79DB16 x7A2159 x7A49FA x7B0287 x7B06CF x7B4749 x7B9D91 x7BFC4F x7C135B x7C3478 x7C6804 x7C8379 x7E10D2 x7E235E x7E4A92 x7F5F60 x7F5F9E x7F8010 x801F5D x815A1E x8243B6 x833528 x83420A x8353FE x835810 x8405E9 x84222A x84BD99 x853586 x85C28A x8631B0 x863D3A x86480B x867863 x8698B5 x86E23B x870746 x873C4B x877EB7 x87A766 x87D86F x87F7DC x8801DC x8815CD x88377F x886388 x893B0F x89745D x898700 x89905C x89D116 x89D49C x8AF782 x8B2C89 x8B93A1 x8C50CE x8C686E x8CADA4 x8D829F x8D9F50 x8E388F x8E874D x8FABAE x904D0E x90A049 x92408E x931760 x93816D x93C0A3 x943C0A x944AD9 x94B17B x9549B5 x95B9BD x960633 x960E36 x96CF17 x974764 x974FBE x97EA84 x9850A6 x98FA26 x996F74 x9A4EC8 x9ACC1E x9B47E9 x9BB90C x9BCAA1 x9C763A x9CE386 x9CE43F x9DAD1C x9DD644 x9DEAB9 x9E23AD x9ECECF x9EDC21 x9EF9EC x9F3E78 x9F8D50 x9FFF57 xA00125 xA01FD3 xA0F944 xA1A7D7 xA33DDE xA35749 xA42007 xA433B3 xA4447F xA4673C xA5176D xA536D2 xA555E2 xA62873 xA79A53 xA8C32D xAB1D74 xAB5D53 xAB7F06 xABA067 xABDCF1 xAD5FB0 xAD76C8 xAE2DAC xAE9278 xAF2FA3 xAF8AED xB08392 xB0B14F xB0CF98 xB1D916 xB22D3C xB36017 xB371BA xB3A58A xB3B830 xB4684F xB4DB27 xB51C26 xB63314 xB706D3 xB71B01 xB722B2 xB77E71 xB7E9D7 xB828E8 xB938DB xB99F16 xBBC1EA xBC825C xBCFFEB xBD1290 xBDEEFE xBE02BF xBE3FCE xBE68E8 xBEECD3 xBF4CC1 xBFE517 xC04F4C xC13DF2 xC21D6E xC284C1 xC2AE36 xC30E24 xC36A88 xC47E44 xC49303 xC50D40 xC5CAFA xC5EAAF xC61B3B xC6C641 xC7969F xC7C1A8 xC83EA2 xC84F3C xC9A151 xC9B5D0 xCA0C39 xCA456A xCBAACD xCC421F xCD18DF xCD2C52 xCD9EE2 xCE5FFE xCE9CDA xD00B01 xD020D0 xD0A051 xD0BD98 xD0BFE1 xD0D4AC xD1D428 xD26EE0 xD2CCCA xD40581 xD4581D xD4BD14 xD514AB xD5E673 xD6300D xD6461D xD66BDD xD68CD6 xD68DC4 xD72D53 xD7BB7E xD7EF8D xD919FA xD98837 xDA5D0D xDA5EA8 xDB670E xDB6CF9 xDC9825 xDD39F0 xDE68FF xDF065E xDF63CF xDFA754 xE013EA xE05AB9 xE0B43D xE0E536 xE13AEF xE18E27 xE2581E xE2DB48 xE37129 xE3A476 xE3DE71 xE3F266 xE425DB xE47E30 xE4CE91 xE5ACDB xE6161D xE70D7F xE763BC xE769EA xE7EDAB xE80050 xE87A5A xE895D3 xE8B7F7 xE9FEAE xEAE670 xEBDA66 xEC6893 xECE8A2 xED6C3A xEDC1F2 xEFD2A3 xF06D7F xF099F1 xF0B35F xF0D3A9 xF0FDB8 xF19FA2 xF1AC0C xF292E5 xF2D452 xF2F598 xF3C44C xF4ECE3 xF52936 xF545E7 xF54ED3 xF59CE1 xF64312 xF68A34 xF7CD9A xF7EB57 xF88453 xF8AFCE xF93942 xF9A2FF xF9A92C xFA96C2 xFAD69E xFB0A6A xFB270B xFB41E8 xFC2727 xFCF08A xFD3E4C xFD5004 xFD5F13 xFD9276 xFDEEFC xFE1601 xFE7A75 xFEE57D xFFC788 xFFDC67 
+	}
+	traits = {
+		state_trait_australian_desert 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 40
+		bg_iron_mining = 30
+		bg_logging = 4
+		bg_whaling = 3
+		bg_fishing = 9
+		bg_gold_mining = 8
+	}
+	id = 562
+	subsistence_building = building_subsistence_pastures
+	city = x835810
+	port = x79C4FB
+	farm = x98FA26
+	mine = x8D829F
+	wood = x74551C
+	arable_land = 30
+	naval_exit_id = 3123
+}
+STATE_WESTERN_CARIBBEAN_SEA = {
+	provinces = {
+		x1FC9E5 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3026
+}
+STATE_WESTERN_HUBEI = {
+	provinces = {
+		x0E1020 x0FEACA x11842D x221AD2 x23C577 x31BFBF x5010C0 x5090C0 x55BE82 x5D79E9 x696991 x69DE2D x7A1E2B x7AE005 x7BBC58 x7C235D x801938 x9010C0 xA4108C xA5038F xAD0438 xB03113 xB83702 xCF4BD3 xD01040 xE1F3D0 xEA2081 xEDF688 xF1A50B 
+	}
+	traits = {
+		state_trait_yangtze_river 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tea_plantations bg_tobacco_plantations 
+	}
+	capped_resources = {
+		bg_logging = 9
+	}
+	id = 507
+	subsistence_building = building_subsistence_rice_paddies
+	city = x696991
+	farm = xA4108C
+	mine = x5D79E9
+	wood = x9010C0
+	arable_land = 320
+}
+STATE_WESTERN_MALI = {
+	provinces = {
+		x01A2B7 x02FB90 x0322A4 x048EAE x04C1C5 x09666E x0AFF49 x0FDAC9 x10FA1F x141811 x160C3E x1BDBF0 x297B38 x2F1C8E x31D8DF x383F16 x39453E x412C1C x48A057 x53BACF x5F189B x6190B1 x7070BF x7169E0 x726410 x743198 x7DAAE9 x901121 x9EC2C1 xBAA7F0 xBC3771 xC44C6E xC4B6B4 xC88528 xCBB152 xD87B61 xE0BEAB xE0C64B xE4FDFA xEAE72D xEFB040 xF82E42 
+	}
+	traits = {
+		state_trait_malaria state_trait_niger_river 
+	}
+	arable_resources = {
+		bg_millet_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tobacco_plantations 
+	}
+	capped_resources = {
+		bg_oil_extraction = 5
+	}
+	id = 200
+	subsistence_building = building_subsistence_orchards
+	city = x10FA1F
+	farm = xC4B6B4
+	mine = xEAE72D
+	wood = x901121
+	arable_land = 50
+}
+STATE_WESTERN_MEDITERRANEAN_SEA = {
+	provinces = {
+		x40D9DB 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3032
+}
+STATE_WESTERN_NEW_GUINEA = {
+	provinces = {
+		x059DEC x0A9EBC x0DC0D2 x12A1F1 x1650EE x17B500 x185D9A x1C9F62 x1EFBC7 x300043 x30EFC8 x35E1AE x39DD3B x3E2E8C x3ECEED x3F6260 x4013C3 x42EB5E x43C265 x459264 x4BE0B0 x4FDEFE x4FF4F9 x51BE37 x51FF7F x524F67 x54B094 x5541DA x5A8ABF x5C88B7 x66C85A x706C6E x817083 x822774 x83923F x8611C3 x8A6BB0 x8EFC0A x918FAF x95939C x9769DB x97A569 x9B4105 x9CD217 x9D6313 x9E801B xA2083C xA5F7BC xA8E93D xAFF001 xB324A4 xB40E08 xB41206 xB4957C xB4F5FA xB4FAF7 xBA1AF0 xBAE381 xC0D7B0 xC153E3 xC28486 xC6416E xC7965B xC8615D xC8A7EB xCC9AB1 xCD7250 xD34DF4 xD3B54D xD729BB xDBA9DB xDF8B88 xE8222C xE87A71 xFC62DC 
+	}
+	traits = {
+		state_trait_severe_malaria 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 18
+		bg_logging = 20
+		bg_fishing = 9
+		bg_whaling = 2
+		bg_rubber = 8
+		bg_oil_extraction = 10
+	}
+	id = 548
+	subsistence_building = building_subsistence_farms
+	city = x0DC0D2
+	port = x39DD3B
+	farm = x1C9F62
+	mine = xAFF001
+	wood = xC6416E
+	arable_land = 40
+	naval_exit_id = 3125
+}
+STATE_WESTERN_NORWAY = {
+	provinces = {
+		x054DDE x07973A x087559 x0E3D86 x12FF9E x130906 x14B28C x1AE434 x25D82F x261C75 x279380 x2803F8 x281240 x3B7813 x3FCBD3 x43D0DD x4427D4 x4E1EF2 x4F31B0 x600120 x608020 x639BE2 x68D218 x68D9BA x698566 x6C9016 x713F62 x71D161 x79D41F x7F0C6C x7F0E9A x818B5C x902BE5 x95773A xA68FB9 xBD2765 xBDB05B xC32D3B xCD61E8 xCF56A8 xD26499 xD32538 xD5D1BC xDBDCD5 xE08020 xE37D01 xE5E38E xE75551 xF0F6EC xF68E1F xFB677C 
+	}
+	traits = {
+		state_trait_north_sea_fishing state_trait_hardangerfjorden 
+	}
+	arable_resources = {
+		bg_rye_farms bg_livestock_ranches 
+	}
+	capped_resources = {
+		bg_sulfur_mining = 20
+		bg_logging = 14
+		bg_fishing = 15
+	}
+	id = 8
+	subsistence_building = building_subsistence_farms
+	city = x130906
+	port = x68D9BA
+	farm = x0E3D86
+	mine = x608020
+	wood = x608020
+	arable_land = 20
+	naval_exit_id = 3027
+}
+STATE_WESTERN_THRACE = {
+	provinces = {
+		x0261AB x6181D2 x702020 xB2249C xBE51B7 xEDECFB xF02020 
+	}
+	arable_resources = {
+		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tobacco_plantations bg_vineyard_plantations 
+	}
+	capped_resources = {
+		bg_iron_mining = 27
+		bg_logging = 5
+		bg_fishing = 10
+	}
+	id = 128
+	subsistence_building = building_subsistence_farms
+	city = xEDECFB
+	port = xF02020
+	farm = xBE51B7
+	mine = xB2249C
+	wood = xBE51B7
+	arable_land = 20
+	naval_exit_id = 3035
+}
+STATE_WESTPHALIA = {
+	provinces = {
+		x1BA4F6 x1DD141 x218061 x4101A0 x418021 x910095 x9F0060 xA08061 
+	}
+	traits = {
+		state_trait_ruhr_coalfield 
+	}
+	arable_resources = {
+		bg_rye_farms bg_livestock_ranches 
+	}
+	capped_resources = {
+		bg_coal_mining = 80
+		bg_iron_mining = 36
+		bg_sulfur_mining = 32
+		bg_logging = 24
+	}
+	id = 61
+	subsistence_building = building_subsistence_farms
+	city = xA08061
+	farm = x1DD141
+	mine = x218061
+	wood = x1DD141
+	arable_land = 60
+	prime_land = {
+		x418021 xA08061 x218061 x1DD141  
+	}
+}
 STATE_WEST_AEGEAN_ISLANDS = {
 	provinces = {
 		x6090A0 x6960A0 
@@ -14292,6 +16149,41 @@ STATE_WEST_AEGEAN_ISLANDS = {
 	farm = x6090A0
 	arable_land = 5
 	naval_exit_id = 3034
+}
+STATE_WEST_AFRICAN_COAST = {
+	provinces = {
+		x4989FF 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3088
+}
+STATE_WEST_BENGAL = {
+	provinces = {
+		x0A2277 x13A493 x1DBB94 x272AEE x2FF791 x397092 x802A5E x82150A x844FCF x89538D x89D769 x8F846C xBF385A xD0B0DF xD2FEA1 xE2E92B xEF5060 
+	}
+	traits = {
+		state_trait_bengal_delta state_trait_natural_harbors state_trait_raniganj_coalfield 
+	}
+	arable_resources = {
+		bg_rice_farms bg_livestock_ranches bg_silk_plantations bg_dye_plantations bg_opium_plantations bg_tea_plantations bg_tobacco_plantations bg_sugar_plantations bg_banana_plantations 
+	}
+	capped_resources = {
+		bg_coal_mining = 80
+		bg_iron_mining = 9
+		bg_logging = 29
+		bg_fishing = 9
+	}
+	id = 457
+	subsistence_building = building_subsistence_rice_paddies
+	city = x89538D
+	port = x13A493
+	farm = x89538D
+	mine = x272AEE
+	wood = x2FF791
+	arable_land = 553
+	naval_exit_id = 3050
 }
 STATE_WEST_BORNEO = {
 	provinces = {
@@ -14319,6 +16211,9 @@ STATE_WEST_BORNEO = {
 	wood = x6D4CDF
 	arable_land = 22
 	naval_exit_id = 3052
+	prime_land = {
+		xE02CB6 x60FDC2 x42973E  
+	}
 }
 STATE_WEST_COUNTRY = {
 	provinces = {
@@ -14365,6 +16260,9 @@ STATE_WEST_GALICIA = {
 	mine = x5F3456
 	wood = x9061E0
 	arable_land = 145
+	prime_land = {
+		x5F3456 xFCC35F  
+	}
 }
 STATE_WEST_INDIES = {
 	provinces = {
@@ -14386,6 +16284,9 @@ STATE_WEST_INDIES = {
 	wood = x33895B
 	arable_land = 30
 	naval_exit_id = 3025
+	prime_land = {
+		x9C52CA x33895B  
+	}
 }
 STATE_WEST_JAVA = {
 	provinces = {
@@ -14584,175 +16485,6 @@ STATE_WEST_VIRGINIA = {
 	wood = xAD371C
 	arable_land = 50
 }
-STATE_WESTERN_AUSTRALIA = {
-	provinces = {
-		x0054BE x012091 x014F3C x01D4D4 x01E1CA x0272A3 x028A41 x02A390 x02C2F2 x030E6E x032B24 x03B26C x044F96 x056E33 x05E9A3 x0605C1 x0663FD x068EEF x084C37 x084DA5 x08A271 x09245C x0995B2 x0A596B x0BC60B x0BD4F3 x0C1FE4 x0C6867 x0C9C8D x0CBB91 x0CE4E6 x0D1965 x0DF415 x0E09B6 x0F1DD1 x0F866A x10304F x104005 x108379 x114406 x11D6C6 x1210D5 x12D179 x13B802 x13E0B6 x143599 x144C03 x14C151 x154243 x154426 x155E62 x15D1EB x15F5F9 x183A1F x194524 x19AA40 x1B2E41 x1B443D x1BF848 x1C77E8 x1C83B2 x1CD314 x1CEB93 x1D08B4 x1D8BC3 x1DBFA7 x1DD64D x1E2FF7 x1EA03F x1EBE7A x1F4A13 x205223 x213F7C x218BBD x220D4E x233910 x2387F1 x23885D x24AC00 x25124E x2525CB x257DB3 x25A197 x25EE74 x26317C x276F7C x277237 x278D9B x283CC9 x284007 x2936D5 x295344 x29FEE7 x2A57EB x2B4652 x2C8519 x2D0B8D x2D2CB5 x2E4285 x2EF98E x2F445C x3036B4 x30CE5D x30CF22 x31015A x31CB62 x321392 x3281E7 x331CEC x33BA16 x33CB5F x33D287 x3402BF x34A8F2 x350FB8 x357BF0 x35FC10 x3623BB x3627C6 x3629E1 x36B60E x36CCB2 x36F14D x37048E x373D37 x37918F x3792B5 x37C5DC x3860A0 x3864A0 x38E1A0 x3956AF x39961A x39C49D x3AC495 x3B8960 x3BB29D x3BC659 x3BF61B x3C120C x3C4EEC x3C5E27 x3C8900 x3CBBDF x3CE576 x3D8DC4 x3DC542 x3DFB08 x3EE357 x3FF3E9 x4074D0 x41338B x415873 x417A4D x419CCF x438608 x453652 x4556D7 x46B4A2 x46F374 x481DF5 x482DC8 x485C96 x48D70F x48DAE0 x495A84 x496FA5 x4971FB x498C4D x4A919E x4B40E4 x4B4AFE x4B85E9 x4C08C4 x4CAA7B x4D0B06 x4D5E6F x4E9152 x4EEA59 x4F83AE x4FC929 x4FD5E0 x503691 x507AE8 x509F50 x51112B x5121D0 x516F90 x51884E x51A0D0 x52500D x52706E x52FC69 x53C09A x540320 x5418FA x542F98 x5523AE x5592F8 x55C26A x569B91 x56EAC5 x573CC3 x576738 x57A2F9 x57D4B4 x584506 x58815F x591A6B x59C38A x5CB6A6 x5DE8A7 x5DE8D3 x5FDD52 x602930 x61287F x61E781 x636A4B x63B9AD x659543 x65BEE3 x661864 x66C92E x67064F x67649C x67B9F6 x6839AE x696F26 x69ADDC x6B5B55 x6C62F6 x6C7FEE x6C9985 x6CACF6 x6D3800 x6E8591 x6E9D7E x6FE500 x6FF0BB x7009CA x72E965 x73F842 x73F91E x74551C x74664F x74DC69 x755549 x75F34C x77AAC9 x7816AE x79C4FB x79DB16 x7A2159 x7A49FA x7B0287 x7B06CF x7B4749 x7B9D91 x7BFC4F x7C135B x7C3478 x7C6804 x7C8379 x7E10D2 x7E235E x7E4A92 x7F5F60 x7F5F9E x7F8010 x801F5D x815A1E x8243B6 x833528 x83420A x8353FE x835810 x8405E9 x84222A x84BD99 x853586 x85C28A x8631B0 x863D3A x86480B x867863 x8698B5 x86E23B x870746 x873C4B x877EB7 x87A766 x87D86F x87F7DC x8801DC x8815CD x88377F x886388 x893B0F x89745D x898700 x89905C x89D116 x89D49C x8AF782 x8B2C89 x8B93A1 x8C50CE x8C686E x8CADA4 x8D829F x8D9F50 x8E388F x8E874D x8FABAE x904D0E x90A049 x92408E x931760 x93816D x93C0A3 x943C0A x944AD9 x94B17B x9549B5 x95B9BD x960633 x960E36 x96CF17 x974764 x974FBE x97EA84 x9850A6 x98FA26 x996F74 x9A4EC8 x9ACC1E x9B47E9 x9BB90C x9BCAA1 x9C763A x9CE386 x9CE43F x9DAD1C x9DD644 x9DEAB9 x9E23AD x9ECECF x9EDC21 x9EF9EC x9F3E78 x9F8D50 x9FFF57 xA00125 xA01FD3 xA0F944 xA1A7D7 xA33DDE xA35749 xA42007 xA433B3 xA4447F xA4673C xA5176D xA536D2 xA555E2 xA62873 xA79A53 xA8C32D xAB1D74 xAB5D53 xAB7F06 xABA067 xABDCF1 xAD5FB0 xAD76C8 xAE2DAC xAE9278 xAF2FA3 xAF8AED xB08392 xB0B14F xB0CF98 xB1D916 xB22D3C xB36017 xB371BA xB3A58A xB3B830 xB4684F xB4DB27 xB51C26 xB63314 xB706D3 xB71B01 xB722B2 xB77E71 xB7E9D7 xB828E8 xB938DB xB99F16 xBBC1EA xBC825C xBCFFEB xBD1290 xBDEEFE xBE02BF xBE3FCE xBE68E8 xBEECD3 xBF4CC1 xBFE517 xC04F4C xC13DF2 xC21D6E xC284C1 xC2AE36 xC30E24 xC36A88 xC47E44 xC49303 xC50D40 xC5CAFA xC5EAAF xC61B3B xC6C641 xC7969F xC7C1A8 xC83EA2 xC84F3C xC9A151 xC9B5D0 xCA0C39 xCA456A xCBAACD xCC421F xCD18DF xCD2C52 xCD9EE2 xCE5FFE xCE9CDA xD00B01 xD020D0 xD0A051 xD0BD98 xD0BFE1 xD0D4AC xD1D428 xD26EE0 xD2CCCA xD40581 xD4581D xD4BD14 xD514AB xD5E673 xD6300D xD6461D xD66BDD xD68CD6 xD68DC4 xD72D53 xD7BB7E xD7EF8D xD919FA xD98837 xDA5D0D xDA5EA8 xDB670E xDB6CF9 xDC9825 xDD39F0 xDE68FF xDF065E xDF63CF xDFA754 xE013EA xE05AB9 xE0B43D xE0E536 xE13AEF xE18E27 xE2581E xE2DB48 xE37129 xE3A476 xE3DE71 xE3F266 xE425DB xE47E30 xE4CE91 xE5ACDB xE6161D xE70D7F xE763BC xE769EA xE7EDAB xE80050 xE87A5A xE895D3 xE8B7F7 xE9FEAE xEAE670 xEBDA66 xEC6893 xECE8A2 xED6C3A xEDC1F2 xEFD2A3 xF06D7F xF099F1 xF0B35F xF0D3A9 xF0FDB8 xF19FA2 xF1AC0C xF292E5 xF2D452 xF2F598 xF3C44C xF4ECE3 xF52936 xF545E7 xF54ED3 xF59CE1 xF64312 xF68A34 xF7CD9A xF7EB57 xF88453 xF8AFCE xF93942 xF9A2FF xF9A92C xFA96C2 xFAD69E xFB0A6A xFB270B xFB41E8 xFC2727 xFCF08A xFD3E4C xFD5004 xFD5F13 xFD9276 xFDEEFC xFE1601 xFE7A75 xFEE57D xFFC788 xFFDC67 
-	}
-	traits = {
-		state_trait_australian_desert 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_coal_mining = 40
-		bg_iron_mining = 30
-		bg_logging = 4
-		bg_whaling = 3
-		bg_fishing = 9
-		bg_gold_mining = 8
-	}
-	id = 562
-	subsistence_building = building_subsistence_pastures
-	city = x835810
-	port = x79C4FB
-	farm = x98FA26
-	mine = x8D829F
-	wood = x74551C
-	arable_land = 30
-	naval_exit_id = 3123
-}
-STATE_WESTERN_HUBEI = {
-	provinces = {
-		x0E1020 x0FEACA x11842D x221AD2 x23C577 x31BFBF x5010C0 x5090C0 x55BE82 x5D79E9 x696991 x69DE2D x7A1E2B x7AE005 x7BBC58 x7C235D x801938 x9010C0 xA4108C xA5038F xAD0438 xB03113 xB83702 xCF4BD3 xD01040 xE1F3D0 xEA2081 xEDF688 xF1A50B 
-	}
-	traits = {
-		state_trait_yangtze_river 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tea_plantations bg_tobacco_plantations 
-	}
-	capped_resources = {
-		bg_logging = 9
-	}
-	id = 507
-	subsistence_building = building_subsistence_rice_paddies
-	city = x696991
-	farm = xA4108C
-	mine = x5D79E9
-	wood = x9010C0
-	arable_land = 320
-}
-STATE_WESTERN_MALI = {
-	provinces = {
-		x01A2B7 x02FB90 x0322A4 x048EAE x04C1C5 x09666E x0AFF49 x0FDAC9 x10FA1F x141811 x160C3E x1BDBF0 x297B38 x2F1C8E x31D8DF x383F16 x39453E x412C1C x48A057 x53BACF x5F189B x6190B1 x7070BF x7169E0 x726410 x743198 x7DAAE9 x901121 x9EC2C1 xBAA7F0 xBC3771 xC44C6E xC4B6B4 xC88528 xCBB152 xD87B61 xE0BEAB xE0C64B xE4FDFA xEAE72D xEFB040 xF82E42 
-	}
-	traits = {
-		state_trait_malaria state_trait_niger_river 
-	}
-	arable_resources = {
-		bg_millet_farms bg_livestock_ranches bg_cotton_plantations bg_opium_plantations bg_tobacco_plantations 
-	}
-	capped_resources = {
-		bg_oil_extraction = 5
-	}
-	id = 200
-	subsistence_building = building_subsistence_orchards
-	city = x10FA1F
-	farm = xC4B6B4
-	mine = xEAE72D
-	wood = x901121
-	arable_land = 50
-}
-STATE_WESTERN_NEW_GUINEA = {
-	provinces = {
-		x059DEC x0A9EBC x0DC0D2 x12A1F1 x1650EE x17B500 x185D9A x1C9F62 x1EFBC7 x300043 x30EFC8 x35E1AE x39DD3B x3E2E8C x3ECEED x3F6260 x4013C3 x42EB5E x43C265 x459264 x4BE0B0 x4FDEFE x4FF4F9 x51BE37 x51FF7F x524F67 x54B094 x5541DA x5A8ABF x5C88B7 x66C85A x706C6E x817083 x822774 x83923F x8611C3 x8A6BB0 x8EFC0A x918FAF x95939C x9769DB x97A569 x9B4105 x9CD217 x9D6313 x9E801B xA2083C xA5F7BC xA8E93D xAFF001 xB324A4 xB40E08 xB41206 xB4957C xB4F5FA xB4FAF7 xBA1AF0 xBAE381 xC0D7B0 xC153E3 xC28486 xC6416E xC7965B xC8615D xC8A7EB xCC9AB1 xCD7250 xD34DF4 xD3B54D xD729BB xDBA9DB xDF8B88 xE8222C xE87A71 xFC62DC 
-	}
-	traits = {
-		state_trait_severe_malaria 
-	}
-	arable_resources = {
-		bg_rice_farms bg_livestock_ranches bg_coffee_plantations bg_dye_plantations bg_sugar_plantations bg_banana_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 18
-		bg_logging = 20
-		bg_fishing = 9
-		bg_whaling = 2
-		bg_rubber = 8
-		bg_oil_extraction = 10
-	}
-	id = 548
-	subsistence_building = building_subsistence_farms
-	city = x0DC0D2
-	port = x39DD3B
-	farm = x1C9F62
-	mine = xAFF001
-	wood = xC6416E
-	arable_land = 40
-	naval_exit_id = 3125
-}
-STATE_WESTERN_NORWAY = {
-	provinces = {
-		x054DDE x07973A x087559 x0E3D86 x12FF9E x130906 x14B28C x1AE434 x25D82F x261C75 x279380 x2803F8 x281240 x3B7813 x3FCBD3 x43D0DD x4427D4 x4E1EF2 x4F31B0 x600120 x608020 x639BE2 x68D218 x68D9BA x698566 x6C9016 x713F62 x71D161 x79D41F x7F0C6C x7F0E9A x818B5C x902BE5 x95773A xA68FB9 xBD2765 xBDB05B xC32D3B xCD61E8 xCF56A8 xD26499 xD32538 xD5D1BC xDBDCD5 xE08020 xE37D01 xE5E38E xE75551 xF0F6EC xF68E1F xFB677C 
-	}
-	traits = {
-		state_trait_north_sea_fishing state_trait_hardangerfjorden 
-	}
-	arable_resources = {
-		bg_rye_farms bg_livestock_ranches 
-	}
-	capped_resources = {
-		bg_sulfur_mining = 20
-		bg_logging = 14
-		bg_fishing = 15
-	}
-	id = 8
-	subsistence_building = building_subsistence_farms
-	city = x130906
-	port = x68D9BA
-	farm = x0E3D86
-	mine = x608020
-	wood = x608020
-	arable_land = 20
-	naval_exit_id = 3027
-}
-STATE_WESTERN_THRACE = {
-	provinces = {
-		x0261AB x6181D2 x702020 xB2249C xBE51B7 xEDECFB xF02020 
-	}
-	arable_resources = {
-		bg_wheat_farms bg_livestock_ranches bg_cotton_plantations bg_silk_plantations bg_tobacco_plantations bg_vineyard_plantations 
-	}
-	capped_resources = {
-		bg_iron_mining = 27
-		bg_logging = 5
-		bg_fishing = 10
-	}
-	id = 128
-	subsistence_building = building_subsistence_farms
-	city = xEDECFB
-	port = xF02020
-	farm = xBE51B7
-	mine = xB2249C
-	wood = xBE51B7
-	arable_land = 20
-	naval_exit_id = 3035
-}
-STATE_WESTPHALIA = {
-	provinces = {
-		x1BA4F6 x1DD141 x218061 x4101A0 x418021 x910095 x9F0060 xA08061 
-	}
-	traits = {
-		state_trait_ruhr_coalfield 
-	}
-	arable_resources = {
-		bg_rye_farms bg_livestock_ranches 
-	}
-	capped_resources = {
-		bg_coal_mining = 80
-		bg_iron_mining = 36
-		bg_sulfur_mining = 32
-		bg_logging = 24
-	}
-	id = 61
-	subsistence_building = building_subsistence_farms
-	city = xA08061
-	farm = x1DD141
-	mine = x218061
-	wood = x1DD141
-	arable_land = 60
-}
 STATE_WINDWARD_COAST = {
 	provinces = {
 		x002050 x14F5B1 x1FB6E1 x2040D0 x21F036 x24BC7F x26FAEA x33CB39 x445584 x563E62 x6ADBC0 x6BCF19 x6D828F x77E7F8 x7864CD x7D3EA7 x85E930 x8A1594 x8D740C x8DE591 x8F42EF x93D980 x9E735D x9F40D0 xA0BF50 xB322E7 xB75AF3 xBD503A xC9B112 xE04050 xE847EF xEBEEEF xF3164C xFA2C26 
@@ -14822,6 +16554,9 @@ STATE_WURTTEMBERG = {
 	mine = xDBB84C
 	wood = xC541D2
 	arable_land = 70
+	prime_land = {
+		x118060 x100060 xC541D2  
+	}
 }
 STATE_WYOMING = {
 	provinces = {
@@ -14944,6 +16679,15 @@ STATE_YAROSLAVL = {
 	wood = x130A3E
 	arable_land = 185
 }
+STATE_YELLOW_SEA = {
+	provinces = {
+		x7EC8FA 
+	}
+	capped_resources = {
+		bg_oil_extraction = 40
+	}
+	id = 3057
+}
 STATE_YEMEN = {
 	provinces = {
 		x00E3EF x02B35C x02F9FF x034B03 x075453 x0B9A27 x0C7E0C x1A7BB0 x1C7B77 x2197EF x2576C1 x2975A3 x299C0F x2A9E89 x2BD409 x308FDF x30A3E2 x314190 x319060 x346541 x37058F x3D1674 x3D7345 x3D86FC x49FCAB x54840B x567A83 x5C91FE x5DF9FC x5F3582 x60DFF9 x625380 x6290E6 x657048 x672267 x68B524 x6BD0A9 x6D2F95 x75D341 x7C3EA9 x7EC879 x8436FE x843C65 x84FA60 x872CEB x895FE6 x8B1488 x8BF4B8 x8D121D x8D6307 x8E96A7 x90602A x95D64E x9D6547 x9D8A78 x9E941B x9EDF3C xA0540A xA05CB5 xA1AAB0 xA2FDFA xAD1CE2 xB010DF xB08F60 xB090E0 xB79DED xB8A8D2 xBAA208 xBB387A xBDEA27 xC09525 xC790E8 xCF401E xCF61E1 xCF6C49 xD3F276 xD6CC22 xDD033C xDD732E xDFA579 xE5892F xE5DF3B xEF2E43 xF385EB xF86F58 xFA0283 xFE5027 
@@ -14965,6 +16709,9 @@ STATE_YEMEN = {
 	wood = x034B03
 	arable_land = 70
 	naval_exit_id = 3047
+	prime_land = {
+		x567A83 xE5892F x02F9FF x7EC879 x625380 x9D8A78 xEF2E43 xBB387A xCF6C49 x7C3EA9 xFE5027 x68B524 xE5DF3B x1A7BB0 x2576C1 xCF401E x49FCAB x6290E6 xF86F58 x84FA60 x8B1488 x075453 x00E3EF xB79DED x9E941B x034B03 x8436FE  
+	}
 }
 STATE_YORKSHIRE = {
 	provinces = {
@@ -15329,1417 +17076,4 @@ STATE_ZULULAND = {
 	wood = x41C070
 	arable_land = 40
 	naval_exit_id = 3106
-}
-STATE_BALTIC_SEA = {
-	provinces = {
-		x08FAFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3000
-}
-STATE_HAWAIIAN_SEAMOUNT_CHAIN = {
-	provinces = {
-		x340EEC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3001
-}
-STATE_MICRONESIAN_SEA = {
-	provinces = {
-		x341ABA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3002
-}
-STATE_SOUTH_PACIFIC_LANE_1 = {
-	provinces = {
-		xA729A6 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3003
-}
-STATE_SOUTH_PACIFIC_LANE_2 = {
-	provinces = {
-		xE10DAD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3004
-}
-STATE_EASTER_ISLAND_LANE_1 = {
-	provinces = {
-		xDB3CA3 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3005
-}
-STATE_EASTER_ISLAND_LANE_2 = {
-	provinces = {
-		x6644E1 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3006
-}
-STATE_EASTER_ISLAND_LANE_3 = {
-	provinces = {
-		xDB3C7F 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3007
-}
-STATE_PACIFIC_LANE_01 = {
-	provinces = {
-		xA685CF 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3008
-}
-STATE_PACIFIC_LANE_02 = {
-	provinces = {
-		x561AA0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3009
-}
-STATE_PACIFIC_LANE_03 = {
-	provinces = {
-		xD26392 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3010
-}
-STATE_PACIFIC_LANE_04 = {
-	provinces = {
-		xA87DDC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3011
-}
-STATE_PACIFIC_LANE_05 = {
-	provinces = {
-		xA63565 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3012
-}
-STATE_PACIFIC_LANE_06 = {
-	provinces = {
-		x982455 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3013
-}
-STATE_SOUTHERN_OCEAN_01 = {
-	provinces = {
-		x6FB3DE 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3014
-}
-STATE_SOUTHERN_OCEAN_02 = {
-	provinces = {
-		x316868 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3015
-}
-STATE_FAROE_BANK = {
-	provinces = {
-		x709ACF 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3016
-}
-STATE_GULF_OF_MAINE = {
-	provinces = {
-		x0ECACA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3017
-}
-STATE_HORN_OF_AFRICA = {
-	provinces = {
-		x2B5CB8 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3018
-}
-STATE_DANISH_STRAITS = {
-	provinces = {
-		x0AC8FA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3019
-}
-STATE_NORWEGIAN_SEA = {
-	provinces = {
-		x0FDCFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3020
-}
-STATE_LABRADOR_SEA = {
-	provinces = {
-		x69C9C9 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3021
-}
-STATE_IRMINGER_SEA = {
-	provinces = {
-		x16FAFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3022
-}
-STATE_DAVIS_STRAIT = {
-	provinces = {
-		x6DFBFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3023
-}
-STATE_GALAPAGOS_RISE = {
-	provinces = {
-		x0D61DC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3024
-}
-STATE_EASTERN_CARIBBEAN_SEA = {
-	provinces = {
-		xA3CDF4 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3025
-}
-STATE_WESTERN_CARIBBEAN_SEA = {
-	provinces = {
-		x1FC9E5 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3026
-}
-STATE_NORTH_SEA = {
-	provinces = {
-		x14FAFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3027
-}
-STATE_ENGLISH_CHANNEL = {
-	provinces = {
-		x15C8C8 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3028
-}
-STATE_BAY_OF_BISCAY = {
-	provinces = {
-		x2A95FA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3029
-}
-STATE_IRISH_SEA = {
-	provinces = {
-		x1B77CD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3030
-}
-STATE_STRAIT_OF_GIBRALTAR = {
-	provinces = {
-		x2CFAFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3031
-}
-STATE_WESTERN_MEDITERRANEAN_SEA = {
-	provinces = {
-		x40D9DB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3032
-}
-STATE_CENTRAL_MEDITERRANEAN_SEA = {
-	provinces = {
-		x3BDCFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3033
-}
-STATE_EASTERN_MEDITERRANEAN_SEA = {
-	provinces = {
-		x46C8FA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3034
-}
-STATE_SEA_OF_MARMARA = {
-	provinces = {
-		x47DCFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3035
-}
-STATE_BLACK_SEA = {
-	provinces = {
-		x48FAFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3036
-}
-STATE_ARCTIC_OCEAN_01 = {
-	provinces = {
-		x39CACA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3037
-}
-STATE_ARCTIC_OCEAN_02 = {
-	provinces = {
-		x70FBFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3038
-}
-STATE_BARENTS_SEA = {
-	provinces = {
-		x0EC8FA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3039
-}
-STATE_ARCTIC_OCEAN_04 = {
-	provinces = {
-		x0D61A4 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3040
-}
-STATE_ARCTIC_OCEAN_05 = {
-	provinces = {
-		x20CCE0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3041
-}
-STATE_ARCTIC_OCEAN_06 = {
-	provinces = {
-		x43DDFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3042
-}
-STATE_ARCTIC_OCEAN_07 = {
-	provinces = {
-		x13CCFE 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3043
-}
-STATE_HUDSON_BAY = {
-	provinces = {
-		x6FDDFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3044
-}
-STATE_GULF_OF_SAINT_LAWRENCE = {
-	provinces = {
-		x74FBFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3045
-}
-STATE_PERSIAN_GULF = {
-	provinces = {
-		x56C8FA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3046
-}
-STATE_RED_SEA = {
-	provinces = {
-		x4FDCFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3047
-}
-STATE_ARABIAN_SEA = {
-	provinces = {
-		x54FAFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3048
-}
-STATE_LACCADIVE_SEA = {
-	provinces = {
-		x6FDEFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3049
-}
-STATE_BAY_OF_BENGAL = {
-	provinces = {
-		x5CFAFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3050
-}
-STATE_ANDAMAN_SEA = {
-	provinces = {
-		x61C8C8 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3051
-}
-STATE_JAVA_SEA = {
-	provinces = {
-		x63DCFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3052
-}
-STATE_GULF_OF_SIAM = {
-	provinces = {
-		x74FAFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3053
-}
-STATE_GULF_OF_TONKIN = {
-	provinces = {
-		x75C8C8 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3054
-}
-STATE_SULU_SEA = {
-	provinces = {
-		x76C8FA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3055
-}
-STATE_SOUTH_CHINA_SEA = {
-	provinces = {
-		x7BDCFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3056
-}
-STATE_YELLOW_SEA = {
-	provinces = {
-		x7EC8FA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3057
-}
-STATE_EAST_CHINA_SEA = {
-	provinces = {
-		x0FDDFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3058
-}
-STATE_SEA_OF_JAPAN = {
-	provinces = {
-		x00FBFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3059
-}
-STATE_GULF_OF_MEXICO = {
-	provinces = {
-		x0D74CA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3060
-}
-STATE_CARIBBEAN_SEA = {
-	provinces = {
-		x0DCACA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3061
-}
-STATE_GUIANA_SEA = {
-	provinces = {
-		x18FCFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3062
-}
-STATE_BRAZILIAN_SEA_NORTH = {
-	provinces = {
-		x1ACAFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3063
-}
-STATE_BRAZILIAN_SEA_SOUTH = {
-	provinces = {
-		x4499CD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3064
-}
-STATE_ARGENTINE_SEA = {
-	provinces = {
-		x1FDEFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3065
-}
-STATE_SCOTIA_SEA = {
-	provinces = {
-		x858CBF 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3066
-}
-STATE_ATLANTIC_SEABOARD = {
-	provinces = {
-		xA3CEF4 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3067
-}
-STATE_SARGASSO_SEA = {
-	provinces = {
-		x43DEFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3068
-}
-STATE_AZORES_SEA = {
-	provinces = {
-		x3DCACA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3069
-}
-STATE_NORTH_ATLANTIC_OCEAN_01 = {
-	provinces = {
-		x2DAEF1 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3070
-}
-STATE_NORTH_ATLANTIC_OCEAN_02 = {
-	provinces = {
-		x837BBA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3071
-}
-STATE_NORTH_ATLANTIC_OCEAN_03 = {
-	provinces = {
-		x807D97 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3072
-}
-STATE_NORTH_ATLANTIC_OCEAN_04 = {
-	provinces = {
-		x807D98 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3073
-}
-STATE_NORTH_ATLANTIC_OCEAN_05 = {
-	provinces = {
-		x807D99 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3074
-}
-STATE_NORTH_ATLANTIC_OCEAN_06 = {
-	provinces = {
-		x6C8AB3 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3075
-}
-STATE_NORTH_ATLANTIC_01 = {
-	provinces = {
-		xC64499 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3076
-}
-STATE_NORTH_ATLANTIC_02 = {
-	provinces = {
-		xDA6DF6 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3077
-}
-STATE_NORTH_ATLANTIC_03 = {
-	provinces = {
-		x6643E1 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3078
-}
-STATE_NORTH_ATLANTIC_04 = {
-	provinces = {
-		xA05EB0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3079
-}
-STATE_NORTH_ATLANTIC_05 = {
-	provinces = {
-		xB14DEF 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3080
-}
-STATE_NORTH_ATLANTIC_06 = {
-	provinces = {
-		xCF4DEF 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3081
-}
-STATE_NORTH_ATLANTIC_07 = {
-	provinces = {
-		x9F5EB0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3082
-}
-STATE_ATLANTIC_OCEAN_01 = {
-	provinces = {
-		xD55EAD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3083
-}
-STATE_ATLANTIC_OCEAN_02 = {
-	provinces = {
-		xC25EAE 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3084
-}
-STATE_ATLANTIC_OCEAN_03 = {
-	provinces = {
-		x9137A4 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3085
-}
-STATE_ATLANTIC_OCEAN_04 = {
-	provinces = {
-		x9F5EAE 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3086
-}
-STATE_ATLANTIC_OCEAN_05 = {
-	provinces = {
-		x9F5CAE 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3087
-}
-STATE_WEST_AFRICAN_COAST = {
-	provinces = {
-		x4989FF 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3088
-}
-STATE_MACARONESIAN_SEA = {
-	provinces = {
-		x5FDDFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3089
-}
-STATE_CENTRAL_ATLANTIC_OCEAN = {
-	provinces = {
-		x6DC9F4 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3090
-}
-STATE_GULF_OF_GUINEA = {
-	provinces = {
-		x386DCD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3091
-}
-STATE_SOUTH_ATLANTIC_OCEAN_01 = {
-	provinces = {
-		x2897CB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3092
-}
-STATE_SOUTH_ATLANTIC_OCEAN_02 = {
-	provinces = {
-		x2861CB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3093
-}
-STATE_SOUTH_ATLANTIC_OCEAN_03 = {
-	provinces = {
-		x405E94 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3094
-}
-STATE_SOUTH_ATLANTIC_OCEAN_04 = {
-	provinces = {
-		x65CBFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3095
-}
-STATE_SOUTH_ATLANTIC_OCEAN_05 = {
-	provinces = {
-		x72CBFD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3096
-}
-STATE_SOUTH_ATLANTIC_OCEAN_06 = {
-	provinces = {
-		x6AC3EC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3097
-}
-STATE_SOUTH_ATLANTIC_SEA_LANE_01 = {
-	provinces = {
-		x8ADE90 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3098
-}
-STATE_SOUTH_ATLANTIC_SEA_LANE_02 = {
-	provinces = {
-		x9F2781 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3099
-}
-STATE_SOUTH_ATLANTIC_SEA_LANE_05 = {
-	provinces = {
-		xB56DB4 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3102
-}
-STATE_COAST_OF_SAINT_HELENA = {
-	provinces = {
-		x79CBFD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3103
-}
-STATE_ANGOLAN_SEA = {
-	provinces = {
-		x51B8B8 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3104
-}
-STATE_CAPE_OF_GOOD_HOPE = {
-	provinces = {
-		x56C9FB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3105
-}
-STATE_NATAL_COAST = {
-	provinces = {
-		x78FCFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3106
-}
-STATE_MOZAMBIQUE_CHANNEL = {
-	provinces = {
-		x4FDDFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3107
-}
-STATE_INDIAN_OCEAN_01 = {
-	provinces = {
-		x65CDFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3108
-}
-STATE_INDIAN_OCEAN_02 = {
-	provinces = {
-		x405B94 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3109
-}
-STATE_INDIAN_OCEAN_03 = {
-	provinces = {
-		x49C9C9 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3110
-}
-STATE_MASCARENES = {
-	provinces = {
-		x6EDBDB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3111
-}
-STATE_INDIAN_OCEAN_LANE_01 = {
-	provinces = {
-		x6F4CE0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3112
-}
-STATE_INDIAN_OCEAN_LANE_02 = {
-	provinces = {
-		x924CE0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3113
-}
-STATE_INDIAN_OCEAN_LANE_05 = {
-	provinces = {
-		xDB38A3 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3116
-}
-STATE_INDIAN_OCEAN_LANE_06 = {
-	provinces = {
-		x6640E1 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3117
-}
-STATE_SEA_OF_OKHOTSK = {
-	provinces = {
-		x03DDFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3118
-}
-STATE_GULF_OF_ALASKA = {
-	provinces = {
-		x36CAFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3119
-}
-STATE_SUMATRA_SEA = {
-	provinces = {
-		x66C8FA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3120
-}
-STATE_GREAT_AUSTRALIAN_BIGHT = {
-	provinces = {
-		x28FBFB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3121
-}
-STATE_TASMAN_SEA = {
-	provinces = {
-		x32C9FB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3122
-}
-STATE_TIMOR_SEA = {
-	provinces = {
-		x6BDCFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3123
-}
-STATE_CORAL_SEA = {
-	provinces = {
-		x0DFEE0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3124
-}
-STATE_MOLUCCA_SEA = {
-	provinces = {
-		x16C9FB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3125
-}
-STATE_ARAFURA_SEA = {
-	provinces = {
-		x21C9C9 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3126
-}
-STATE_PHILIPPINES_SEA = {
-	provinces = {
-		x19C9C9 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3127
-}
-STATE_BERING_SEA = {
-	provinces = {
-		x22CBFD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3128
-}
-STATE_SOLOMON_SEA = {
-	provinces = {
-		x39C9C9 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3129
-}
-STATE_NORTH_PACIFIC_OCEAN_01 = {
-	provinces = {
-		x405D92 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3130
-}
-STATE_NORTH_PACIFIC_OCEAN_02 = {
-	provinces = {
-		x80C2E0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3131
-}
-STATE_NORTH_PACIFIC_OCEAN_03 = {
-	provinces = {
-		x405B92 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3132
-}
-STATE_NORTH_PACIFIC_OCEAN_04 = {
-	provinces = {
-		x5684CF 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3133
-}
-STATE_NORTH_PACIFIC_OCEAN_05 = {
-	provinces = {
-		x6147C1 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3134
-}
-STATE_NORTH_PACIFIC_OCEAN_06 = {
-	provinces = {
-		xBD2C99 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3135
-}
-STATE_NORTH_PACIFIC_OCEAN_07 = {
-	provinces = {
-		x755BD2 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3136
-}
-STATE_NORTH_PACIFIC_OCEAN_08 = {
-	provinces = {
-		x721B9A 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3137
-}
-STATE_NORTH_PACIFIC_OCEAN_09 = {
-	provinces = {
-		xA63FD5 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3138
-}
-STATE_NORTH_PACIFIC_OCEAN_10 = {
-	provinces = {
-		x9A1B99 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3139
-}
-STATE_NORTH_PACIFIC_OCEAN_11 = {
-	provinces = {
-		x85A2D7 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3140
-}
-STATE_SOUTH_PACIFIC_OCEAN_01 = {
-	provinces = {
-		x445572 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3141
-}
-STATE_SOUTH_PACIFIC_OCEAN_02 = {
-	provinces = {
-		x3B70B1 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3142
-}
-STATE_SOUTH_PACIFIC_OCEAN_03 = {
-	provinces = {
-		x2D4F87 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3143
-}
-STATE_SOUTH_PACIFIC_OCEAN_04 = {
-	provinces = {
-		x2863CB 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3144
-}
-STATE_SOUTH_PACIFIC_OCEAN_05 = {
-	provinces = {
-		x80C3E0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3145
-}
-STATE_SOUTH_PACIFIC_OCEAN_06 = {
-	provinces = {
-		x340EED 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3146
-}
-STATE_SOUTH_PACIFIC_OCEAN_07 = {
-	provinces = {
-		x92AED0 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3147
-}
-STATE_SOUTH_PACIFIC_OCEAN_08 = {
-	provinces = {
-		x80C3E1 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3148
-}
-STATE_EASTER_ISLAND = {
-	provinces = {
-		x91FFFF 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3149
-}
-STATE_EASTERN_POLYNESIA = {
-	provinces = {
-		x81A0D2 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3150
-}
-STATE_CHILEAN_SEA = {
-	provinces = {
-		x26CAFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3151
-}
-STATE_PERUVIAN_SEA = {
-	provinces = {
-		x29CACA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3152
-}
-STATE_PACIFIC_SEABOARD_01 = {
-	provinces = {
-		x31CACA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3153
-}
-STATE_PACIFIC_SEABOARD_02 = {
-	provinces = {
-		x16FCFA 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3154
-}
-STATE_CENTROAMERICAN_SEA = {
-	provinces = {
-		x2BDEFC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3155
-}
-STATE_SOUTH_PACIFIC_OCEAN_09 = {
-	provinces = {
-		x48FDFD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3156
-}
-STATE_NORTH_PHILIPPINES_SEA = {
-	provinces = {
-		x3D6A6A 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3157
-}
-STATE_SOUTH_PHILIPPINES_SEA = {
-	provinces = {
-		xB6CECE 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3158
-}
-STATE_PATAGONIAN_LAKES = {
-	provinces = {
-		x20E0CC 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3159
-}
-STATE_LAKE_NICARAGUA = {
-	provinces = {
-		x18FDFD 
-	}
-	capped_resources = {
-		bg_oil_extraction = 40
-	}
-	id = 3160
 }
