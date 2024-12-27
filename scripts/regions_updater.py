@@ -11,6 +11,8 @@ NEW_GAME_REGIONS_DATA_PATH = os.path.join('game', 'data', 'state_regions.csv')
 # Region Tag,ID Number,Homelands,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit,Prime Land
 NEW_MOD_REGIONS_DATA_PATH = os.path.join('mod', 'data', 'state_regions.csv')
 
+STATE_OWNERSHIP_DATA_PATH = os.path.join('mod', 'data', 'state_ownership.csv')
+
 MOD_REGION_TAG_COLUMN = 0
 MOD_REGION_ID_COLUMN = 1
 MOD_REGION_HOMELANDS_COLUMN = 2
@@ -43,6 +45,15 @@ GAME_REGION_ARABLE_RESOURCES_COLUMN = 11
 GAME_REGION_CAPED_RESOURCES_COLUMN = 12
 GAME_REGION_NAVAL_EXIT_COLUMN = 13
 GAME_REGION_PRIME_LAND_COLUMN = 14
+
+# State Region Tag,State Name,Owner,Owner Tag,Provinces,Pops,Incorporated
+STATE_OWNERSHIP_REGION_TAG_COLUMN = 0
+STATE_OWNERSHIP_STATE_NAME_COLUMN = 1 # Human name for the state. Not always the same as the region tag.
+STATE_OWNERSHIP_OWNER_COLUMN = 2 # Human name for the owner. Not the same as the owner tag.
+STATE_OWNERSHIP_OWNER_TAG_COLUMN = 3
+STATE_OWNERSHIP_PROVINCES_COLUMN = 4
+STATE_OWNERSHIP_POPS_COLUMN = 5
+STATE_OWNERSHIP_INCORPORATED_COLUMN = 6
 
 def split_provinces(provinces: str) -> set[str]:
     """
@@ -126,11 +137,71 @@ def update_regions(old_mod_regions_path, new_game_regions_path) -> dict[str, lis
 
     return combined_mod_regions
 
+def update_owners(region_data: dict[str, list], state_ownership_path) -> dict[str, list]:
+    """
+    This function is intended to update the state_ownership file.
+
+    :param region_data: A dictionary, region_tag -> region data. It should be provided from `update_regions`
+    :param state_ownership_path: The path to the state_ownership file
+    :return: TBD
+    """
+    new_province_assignments = {} # Map provinces to their new region tag
+    for region_tag, region_data in region_data.items():
+        provinces = region_data[MOD_REGION_PROVINCES_COLUMN]
+        region_id = region_data[MOD_REGION_ID_COLUMN]
+        if int(region_id) >= 3000: # An ID of 3000 or higher is an ocean region and is unowned
+            continue
+        for province in provinces:
+            new_province_assignments[province] = f's:{region_tag}'
+    province_owners = {} # Map provinces to their owners
+    state_records = {} # We want to save state name, pops, etc.
+    with open(state_ownership_path, 'r') as file:
+        file.readline() # Skip first line
+        reader = csv.reader(file)
+        for line in reader:
+            region_tag = line[STATE_OWNERSHIP_REGION_TAG_COLUMN]
+            owner_tag = line[STATE_OWNERSHIP_OWNER_TAG_COLUMN]
+            provinces = line[STATE_OWNERSHIP_PROVINCES_COLUMN].split(' ')
+            for province in provinces:
+                province_owners[province] = owner_tag
+            state_records[f'{owner_tag}!{region_tag}'] = line
+            state_records[f'{owner_tag}!{region_tag}'][STATE_OWNERSHIP_PROVINCES_COLUMN] = set()
+    #print(state_data)
+    for province, region_tag in new_province_assignments.items():
+        owner_tag = province_owners[province]
+        state_tag = f'{owner_tag}!{region_tag}'
+        state_record = state_records.get(state_tag)
+        if state_record is None:
+            state_records[state_tag] = [region_tag, '', '', owner_tag, set(), '', '']
+            state_record = state_records[state_tag]
+        state_record[STATE_OWNERSHIP_PROVINCES_COLUMN].add(province)
+
+    empty_states = []
+    for state_tag in state_records.keys(): # Remove states with no provinces
+        state_record = state_records[state_tag]
+        if state_record[STATE_OWNERSHIP_PROVINCES_COLUMN] == set():
+            empty_states.append(state_tag)
+    for state_tag in empty_states:
+        del state_records[state_tag]
+
+    return state_records
+
 if __name__ == '__main__':
     combined_mod_regions = update_regions(OLD_MOD_REGIONS_DATA_PATH, NEW_GAME_REGIONS_DATA_PATH)
+    state_records = update_owners(combined_mod_regions, STATE_OWNERSHIP_DATA_PATH)
     with open(NEW_MOD_REGIONS_DATA_PATH, 'w', newline='') as regions_file:
         regions_file.write('Region Tag,ID Number,Homelands,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit,Prime Land\n')
         writer = csv.writer(regions_file)
-        for region_tag, region_data in combined_mod_regions.items():
-            region_data[MOD_REGION_PROVINCES_COLUMN] = ' '.join(region_data[MOD_REGION_PROVINCES_COLUMN])
+        region_tags = sorted(combined_mod_regions.keys())
+        for region_tag in region_tags:
+            region_data = combined_mod_regions[region_tag]
+            region_data[MOD_REGION_PROVINCES_COLUMN] = ' '.join(sorted(region_data[MOD_REGION_PROVINCES_COLUMN]))
             writer.writerow(region_data)
+    with open(STATE_OWNERSHIP_DATA_PATH, 'w', newline='') as ownership_file:
+        ownership_file.write('State Region Tag,State Name,Owner,Owner Tag,Provinces,Pops,Incorporated\n')
+        writer = csv.writer(ownership_file)
+        state_tags = sorted(state_records.keys())
+        for state_tag in state_tags:
+            state_record = state_records[state_tag]
+            state_record[STATE_OWNERSHIP_PROVINCES_COLUMN] = ' '.join(sorted(state_record[STATE_OWNERSHIP_PROVINCES_COLUMN]))
+            writer.writerow(state_record)
