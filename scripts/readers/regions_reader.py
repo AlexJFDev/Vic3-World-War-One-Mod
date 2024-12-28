@@ -51,6 +51,7 @@ def unparse_regions_file(file_path: str):
         capped_resources = state_region.get_value_named('capped_resources', default=EMPTY_OBJECT).get_name_value_pairs()
         undiscovered_resources = [resource.get_name_value_pairs() for resource in state_region.get_values_named('resource', default=[])]
         naval_exit_id = state_region.get_value_named('naval_exit_id', default='').replace('"', '')
+        prime_land = state_region.get_value_named('prime_land', default=EMPTY_OBJECT).get_anonymous_values()
         state_regions[state_region_name] = {
             'id': id_number,
             'subsistence_building': subsistence_building,
@@ -65,13 +66,15 @@ def unparse_regions_file(file_path: str):
             'arable_resources': arable_resources,
             'capped_resources': capped_resources,
             'undiscovered_resources': undiscovered_resources,
-            'naval_exit_id': naval_exit_id
+            'naval_exit_id': naval_exit_id,
+            'prime_land': prime_land
         }
     return state_regions
 
 def save_regions(regions: dict):
     with open(STATE_REGIONS_CSV_PATH, 'w', newline='') as file:
         writer = csv.writer(file)
+        writer.writerow(['Region Tag', 'ID Number', 'Subsistence Building', 'City', 'Port', 'Farm', 'Mine', 'Wood', 'Arable Land', 'Provinces', 'Traits', 'Arable Resources', 'Caped Resources', 'Naval Exit', 'Prime Land'])
         for state_name, region_data in regions.items():
             id = region_data['id']
             subsistence_building = region_data['subsistence_building']
@@ -104,7 +107,9 @@ def save_regions(regions: dict):
 
             naval_exit_id = region_data['naval_exit_id']
 
-            writer.writerow([state_name, id, subsistence_building, city, port, farm, mine, wood, arable_land, provinces, traits, arable_resources, capped_resources, naval_exit_id])
+            prime_land = ' '.join(region_data['prime_land']).replace('"', '')
+
+            writer.writerow([state_name, id, subsistence_building, city, port, farm, mine, wood, arable_land, provinces, traits, arable_resources, capped_resources, naval_exit_id, prime_land])
 
 
 if __name__ == '__main__':
