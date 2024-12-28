@@ -201,10 +201,20 @@ great_war_initiation_events.4 = {
             }
         }
     }
-    option = { # Let the investigation proceed; TODO:MID Add effects
+    option = { # Let the investigation proceed
         name = great_war_initiation_events.4.b
         ai_chance = {
             base = 0
+        }
+        c:AUS.power_bloc ?= {
+		add_leverage = { target = SER value = 200 }
+	    }
+        c:SER = {
+        add_country_modifier = {
+            name = angry_elites_1_modifier
+            years = 5
+            is_decaying = yes
+        }
         }
     }
 }
@@ -269,11 +279,24 @@ great_war_initiation_events.5 = {
                 days = 3
             }
         }
+        c:MON = {
+            trigger_event = {
+                id = great_war_initiation_events.17
+                days = 3
+            }
+        }
     }
-    option = { # Make an apology; TODO:MID Add effects
+    option = { # Make an apology
         name = great_war_initiation_events.5.b
         ai_chance = {
             base = 0
+        }
+        c:AUS = {
+        add_country_modifier = {
+            name = angry_elites_1_modifier
+            years = 5
+            is_decaying = yes
+        }
         }
     }
 }
@@ -313,10 +336,17 @@ great_war_initiation_events.6 = {
             }
         }
     }
-    option = { # Do nothing; TODO:MID Add effects
+    option = { # Do nothing
         name = great_war_initiation_events.6.b
         ai_chance = {
             base = 0
+        }
+        c:RUS = {
+        add_country_modifier = {
+            name = angry_elites_2_modifier
+            years = 5
+            is_decaying = yes
+        }
         }
     }
 }
@@ -361,7 +391,19 @@ great_war_initiation_events.7 = {
                 days = 3
             }
         }
-        # TODO:MID Add side effects
+        c:GER = {
+        add_country_modifier = {
+            name = angry_elites_3_modifier
+            years = 5
+            is_decaying = yes
+        }
+        }
+        C:AUS = {
+        change_relations = { 
+				country = c:GER
+				value = -50
+			}
+        }
     }
 }
 
@@ -479,7 +521,13 @@ great_war_initiation_events.8 = {
         ai_chance = {
             base = 0
         }
-        # TODO:MID Add side effects
+        c:RUS = {
+        add_country_modifier = {
+            name = angry_elites_2_modifier
+            years = 5
+            is_decaying = yes
+        }
+        }
     }
 }
 
@@ -514,6 +562,13 @@ great_war_initiation_events.9 = {
             end_play = true
 		}
         set_variable = war_cancelled
+        c:AUS = {
+        add_country_modifier = {
+            name = angry_elites_1_modifier
+            years = 5
+            is_decaying = yes
+        }
+        }
     }
     option = { # Fight alone
         name = great_war_initiation_events.9.b
@@ -810,6 +865,13 @@ great_war_initiation_events.13 = {
         ai_chance = {
             base = 0
         }
+        c:GER = {
+        add_country_modifier = {
+            name = angry_military_modifier
+            years = 5
+            is_decaying = yes
+        }
+        }
     }
 }
 
@@ -874,6 +936,13 @@ great_war_initiation_events.14 = {
         name = great_war_initiation_events.14.b
         ai_chance = {
             base = 0
+        }
+        c:GER = {
+        add_country_modifier = {
+            name = angry_military_modifier
+            years = 5
+            is_decaying = yes
+        }
         }
     }
 }
@@ -993,7 +1062,13 @@ great_war_initiation_events.15 = {
         ai_chance = {
             base = 0
         }
-        # TODO:MID Add negative modifiers
+        c:GBR = {
+        add_country_modifier = {
+            name = angry_elites_1_modifier
+            years = 5
+            is_decaying = yes
+        }
+        }
     }
 }
 
@@ -1053,6 +1128,45 @@ great_war_initiation_events.16 = {
     }
     option = { # Do nothing
         name = great_war_initiation_events.16.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# Montenegro decides to join or not
+great_war_initiation_events.17 = {
+    type = country_event
+
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.17.title
+    desc = great_war_initiation_events.17.desc
+    flavor = great_war_initiation_events.17.flavor
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Intervene
+        name = great_war_initiation_events.17.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+			add_target_backers = {
+				c:MON
+			}
+        c:MON = { set_variable = entente_participant }
+    }
+    }
+    option = { # Do nothing
+        name = great_war_initiation_events.17.b
         ai_chance = {
             base = 0
         }
