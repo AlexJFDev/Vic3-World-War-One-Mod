@@ -32,6 +32,7 @@ REGIONS_ARABLE_RESOURCES_COLUMN = 12
 REGIONS_CAPPED_RESOURCES_COLUMN = 13
 REGIONS_NAVAL_EXIT_COLUMN = 14
 REGIONS_PRIME_LAND_COLUMN = 15
+REGIONS_IMPASSABLE_COLUMN = 16
 
 ENCODING = 'utf-8-sig'
 
@@ -147,6 +148,7 @@ def generate_regions(regions_path: str):
             capped_resources = line[REGIONS_CAPPED_RESOURCES_COLUMN].split(' ')
             naval_exit = line[REGIONS_NAVAL_EXIT_COLUMN]
             prime_land = line[REGIONS_PRIME_LAND_COLUMN].split(' ')
+            impassable = line[REGIONS_IMPASSABLE_COLUMN].split(' ')
 
             region_object = ClausewitzObject()
             region_object.add_named_value('provinces', ClausewitzObject(anonymous_values=provinces))
@@ -179,6 +181,8 @@ def generate_regions(regions_path: str):
                 region_object.add_named_value('naval_exit_id', naval_exit)
             if (prime_land[0] != ''):
                 region_object.add_named_value('prime_land', ClausewitzObject(anonymous_values=prime_land))
+            if (impassable[0] != ''):
+                region_object.add_named_value('impassable', ClausewitzObject(anonymous_values=impassable))
 
             regions_root.add_named_value(region_tag, region_object)
     return regions_root

@@ -4,11 +4,11 @@ import csv
 
 # The format of the file
 # The file path
-# Region Tag,ID Number,Homelands,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit
-OLD_MOD_REGIONS_DATA_PATH = os.path.join('mod', 'data', 'old_state_regions.csv')
-# Region Tag,ID Number,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit,Prime Land
-NEW_GAME_REGIONS_DATA_PATH = os.path.join('game', 'data', 'state_regions.csv')
 # Region Tag,ID Number,Homelands,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit,Prime Land
+OLD_MOD_REGIONS_DATA_PATH = os.path.join('mod', 'data', 'old_state_regions.csv')
+# Region Tag,ID Number,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit,Prime Land,Impassible
+NEW_GAME_REGIONS_DATA_PATH = os.path.join('game', 'data', 'state_regions.csv')
+# Region Tag,ID Number,Homelands,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit,Prime Land,Impassible
 NEW_MOD_REGIONS_DATA_PATH = os.path.join('mod', 'data', 'state_regions.csv')
 
 STATE_OWNERSHIP_DATA_PATH = os.path.join('mod', 'data', 'state_ownership.csv')
@@ -29,6 +29,7 @@ MOD_REGION_ARABLE_RESOURCES_COLUMN = 12
 MOD_REGION_CAPED_RESOURCES_COLUMN = 13
 MOD_REGION_NAVAL_EXIT_COLUMN = 14
 MOD_REGION_PRIME_LAND_COLUMN = 15
+MOD_REGION_IMPASSABLE_COLUMN = 16
 
 GAME_REGION_TAG_COLUMN = 0
 GAME_REGION_ID_COLUMN = 1
@@ -45,6 +46,7 @@ GAME_REGION_ARABLE_RESOURCES_COLUMN = 11
 GAME_REGION_CAPED_RESOURCES_COLUMN = 12
 GAME_REGION_NAVAL_EXIT_COLUMN = 13
 GAME_REGION_PRIME_LAND_COLUMN = 14
+GAME_REGION_IMPASSABLE_COLUMN = 14
 
 # State Region Tag,State Name,Owner,Owner Tag,Provinces,Pops,Incorporated
 STATE_OWNERSHIP_REGION_TAG_COLUMN = 0
@@ -129,7 +131,8 @@ def update_regions(old_mod_regions_path, new_game_regions_path) -> dict[str, lis
     combined_mod_regions = {}
     for region_tag, region_data in new_game_regions.items():
         region_data.insert(MOD_REGION_HOMELANDS_COLUMN, '')
-        if region_tag in old_mod_regions: # If the state existed previously then keep the homelands, arable resources, and caped resources
+        region_id = int(region_data[GAME_REGION_ID_COLUMN])
+        if region_tag in old_mod_regions and region_id <= 3000: # If the state existed previously then keep the homelands, arable resources, and caped resources
             region_data[MOD_REGION_HOMELANDS_COLUMN] = old_mod_regions[region_tag][MOD_REGION_HOMELANDS_COLUMN]
             region_data[MOD_REGION_ARABLE_RESOURCES_COLUMN] = old_mod_regions[region_tag][MOD_REGION_ARABLE_RESOURCES_COLUMN]
             region_data[MOD_REGION_CAPED_RESOURCES_COLUMN] = old_mod_regions[region_tag][MOD_REGION_CAPED_RESOURCES_COLUMN]
