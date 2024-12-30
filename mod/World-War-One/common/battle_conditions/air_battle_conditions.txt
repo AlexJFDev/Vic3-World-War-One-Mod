@@ -1,7 +1,5 @@
 ﻿battle_condition_pure_airforce = {
 	icon = "gfx/interface/icons/battle_conditions/battle_condition_pursuit.dds"
-	
-	
 
 	modifier = {
 		unit_recovery_rate_add=2
@@ -9,9 +7,7 @@
 		unit_occupation_mult = -1
 	}
 
-
 	instant_switch = {
-
 		exists = scope:character
 		our_side_is_pure_airforce = yes
 		enermy_side_no_frighter = yes
@@ -22,7 +18,6 @@
 
 battle_condition_air_superiority = {
 	icon = "gfx/interface/icons/battle_conditions/battle_condition_pursuit.dds"
-
 	
 	modifier = {
 		unit_morale_recovery_mult = 0.3
@@ -30,15 +25,10 @@ battle_condition_air_superiority = {
 	}
 
 	possible = {
-
-
 		exists = scope:character
 		our_side_is_mix_airforce = yes
 		enermy_side_no_frighter = yes
-
-		
 	}
-
 
 	weight = 20
 }
@@ -46,7 +36,6 @@ battle_condition_air_superiority = {
 battle_condition_bombing = {
 	icon = "gfx/interface/icons/battle_conditions/battle_condition_pursuit.dds"
 
-	
 	modifier = {
 		unit_morale_recovery_mult = 0.1
 		unit_morale_damage_mult = 0.3
@@ -56,15 +45,10 @@ battle_condition_bombing = {
 	}
 
 	possible = {
-
-
 		exists = scope:character
 		our_side_is_mix_bomber = yes
-		enermy_side_no_frighter = yes
-
-		
+		enermy_side_no_frighter = yes	
 	}
-
 
 	weight = 10
 }

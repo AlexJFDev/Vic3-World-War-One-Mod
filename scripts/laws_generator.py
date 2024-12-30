@@ -60,7 +60,7 @@ def generate_laws(laws_path: str, institutions_path: str) -> ClausewitzRoot:
                 domestic_laws.add_named_value(f'c:{country_tag}', tag_object)
             for column, institution in INSTITUTIONS_COLUMNS:
                 level = values[column]
-                if level == '': continue
+                if level == '' or level == '0': continue
 
                 institution_object = ClausewitzObject()
                 institution_object.add_named_value('institution', institution)

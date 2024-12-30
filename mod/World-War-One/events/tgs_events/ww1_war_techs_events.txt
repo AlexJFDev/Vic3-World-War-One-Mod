@@ -1,12 +1,12 @@
 namespace = ww1_war_techs_events
 
-ww1_war_techs_events = {
+ww1_war_techs_events.1 = {
     type = country_event
 
     event_image = {
         texture = "gfx/event_pictures/military_parade.dds"
     }
-
+ 
     title = ww1_war_techs_events.1.t
     desc = ww1_war_techs_events.1.d
     flavor = ww1_war_techs_events.1.f
@@ -14,13 +14,9 @@ ww1_war_techs_events = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     is_triggered_only = yes
+    duration = 3
 
-    trigger = {
-        OR = {
-        has_variable = entente_participant 
-        has_variable = central_powers_participant
-        }
-    }
+    trigger = { }
     
     option = {
         name = ww1_war_techs_events.1.a

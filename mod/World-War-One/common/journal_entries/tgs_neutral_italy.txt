@@ -6,20 +6,20 @@
     is_shown_when_inactive = {
         ROOT = c:ITA
         OR = {
-            global_var:great_war_active = yes
-            global_var:great_war_starting = yes
+            global_var:great_war_active ?= yes
+            global_var:great_war_starting ?= yes
         }
     }
     possible = {
         ROOT = c:ITA
-        global_var:great_war_active = yes
-        c:ITA.var:is_neutral = yes
+        global_var:great_war_active ?= yes
+        c:ITA.var:is_neutral ?= yes
     }
     complete = {
-        c:ITA.var:is_neutral = no
+        c:ITA.var:is_neutral ?= no
     }
 
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default ?= yes
 
     scripted_progress_bar = neutral_italy_progress_bar
 }
@@ -33,20 +33,20 @@ je_neutral_italy_entente = { # Journal Entry for the Entente while Italy is Neut
         NOT = {
             c:ITA = ROOT
         }
-        c:ITA.var:is_neutral = yes
+        c:ITA.var:is_neutral ?= yes
         OR = {
-            global_var:great_war_active = yes
-            global_var:great_war_starting = yes
+            global_var:great_war_active ?= yes
+            global_var:great_war_starting ?= yes
         }
-        root.var:entente_participant = yes
+        root.var:entente_participant ?= yes
     }
     possible = {
-        root.var:entente_participant = yes
-        global_var:great_war_active = yes
-        c:ITA.var:is_neutral = yes
+        root.var:entente_participant ?= yes
+        global_var:great_war_active ?= yes
+        c:ITA.var:is_neutral ?= yes
     }
     complete = {
-        c:ITA.var:is_neutral = no
+        c:ITA.var:is_neutral ?= no
     }
 
     scripted_progress_bar = neutral_italy_progress_bar
@@ -61,20 +61,20 @@ je_neutral_italy_central = { # Journal Entry for the Central Powers while Italy 
         NOT = {
             c:ITA = ROOT
         }
-        c:ITA.var:is_neutral = yes
+        c:ITA.var:is_neutral ?= yes
         OR = {
-            global_var:great_war_active = yes
-            global_var:great_war_starting = yes
+            global_var:great_war_active ?= yes
+            global_var:great_war_starting ?= yes
         }
-        root.var:central_powers_participant = yes
+        root.var:central_powers_participant ?= yes
     }
     possible = {
-        root.var:central_powers_participant = yes
-        global_var:great_war_active = yes
-        c:ITA.var:is_neutral = yes
+        root.var:central_powers_participant ?= yes
+        global_var:great_war_active ?= yes
+        c:ITA.var:is_neutral ?= yes
     }
     complete = {
-        c:ITA.var:is_neutral = no
+        c:ITA.var:is_neutral ?= no
     }
 
     scripted_progress_bar = neutral_italy_progress_bar
