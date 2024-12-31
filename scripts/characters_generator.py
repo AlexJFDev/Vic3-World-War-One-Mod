@@ -31,7 +31,9 @@ IDEOLOGIES = {
     'ideology_theocrat', 'ideology_market_liberal', 'ideology_liberal_leader', 'ideology_republican_paternalistic', 'ideology_scholar_paternalistic', 'ideology_junker_paternalistic', 'ideology_papal_paternalistic', 
     'ideology_confucian', 'ideology_bakufu', 'ideology_shinto_moralist', 'ideology_caudillismo', 'ideology_heavenly_kingdom_theocratic', 'ideology_papal_moralist', 'ideology_liberal_modern', 'ideology_egalitarian_modern', 
     'ideology_luddite', 'ideology_jacksonian_democrat', 'ideology_authoritarian', 'ideology_socialist', 'ideology_humanitarian', 'ideology_protectionist', 'ideology_humanitarian_royalist', 'ideology_positivist', 
-    'ideology_corporatist_leader', 'ideology_land_reformer', 'ideology_integralist'
+    'ideology_corporatist_leader', 'ideology_land_reformer', 'ideology_integralist',
+    # Mod Ideologies
+    'ideology_rooseveltian_progressivism', 'ideology_wilsonian_progressivism'
 }
 
 YES_VALUES = {
