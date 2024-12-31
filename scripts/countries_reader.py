@@ -16,7 +16,9 @@ COUNTRY_DEFINITION_FILE_NAMES = [
 ]
 COUNTRY_DEFINITION_FILEPATHS = [os.path.join(COUNTRY_DEFINITIONS_PATH, file_name) for file_name in COUNTRY_DEFINITION_FILE_NAMES]
 
-COUNTRY_DEFINITIONS_CSV_FILEPATH = os.path.join('game', 'data', 'countries.csv')
+GAME_COUNTRY_DEFINITIONS_CSV_FILEPATH = os.path.join('game', 'data', 'countries.csv')
+
+MOD_COUNTRY_DEFINITIONS_CSV_FILEPATH = os.path.join('mod', 'data', 'country_definitions.csv')
 
 COUNTRY_NAME_COLUMN = 0
 COUNTRY_TAG_COLUMN = 1
@@ -110,9 +112,27 @@ def write_countries_csv(countries: dict[str, list[str]], filepath: str):
         for tag, country in countries.items():
             csv_writer.writerow(country)
 
-if __name__ == '__main__':
+def read_countries_csv(filepath: str) -> dict[str, list[str]]:
     countries = {}
+    with open(filepath, 'r') as file:
+        file.readline() # skip header
+        csv_reader = csv.reader(file)
+        for row in csv_reader:
+            countries[row[COUNTRY_TAG_COLUMN]] = row
+    return countries
+
+if __name__ == '__main__':
+    game_countries = {}
     for filepath in COUNTRY_DEFINITION_FILEPATHS:
-        countries.update(unparse_country_file(filepath))
-    write_countries_csv(countries, COUNTRY_DEFINITIONS_CSV_FILEPATH)
-    write_countries_csv(countries, COUNTRY_DEFINITIONS_CSV_FILEPATH)
+        game_countries.update(unparse_country_file(filepath))
+    write_countries_csv(game_countries, GAME_COUNTRY_DEFINITIONS_CSV_FILEPATH)
+
+    mod_countries = read_countries_csv(MOD_COUNTRY_DEFINITIONS_CSV_FILEPATH)
+    print(mod_countries)
+
+    for tag, country in game_countries.items():
+        if tag not in mod_countries.keys():
+            print(tag)
+            mod_countries[tag] = country
+
+    write_countries_csv(mod_countries, MOD_COUNTRY_DEFINITIONS_CSV_FILEPATH)
