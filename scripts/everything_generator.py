@@ -50,7 +50,7 @@ if __name__ == '__main__':
     laws_root = laws_generator.generate_laws(COUNTRY_LAWS_PATH, COUNTRY_INSTITUTIONS_PATH)
     states_root, pops_root = states_generator.generate_states_and_pops(STATE_OWNERSHIP_PATH, STATE_REGIONS_PATH)
     buildings_root = buildings_generator.generate_buildings(BUILDINGS_DATA_PATH)
-    regions_root = states_generator.generate_regions(STATE_REGIONS_PATH)
+    #regions_root = states_generator.generate_regions(STATE_REGIONS_PATH)
     characters_root = characters_generator.generate_characters(CHARACTER_DATA_PATH)
     military_root = military_generator.generate_military_object(MILITARY_DATA_PATH)
 
@@ -61,6 +61,6 @@ if __name__ == '__main__':
     write_object(STATES_PATH, states_root)
     write_object(POPS_PATH, pops_root)
     write_object(BUILDINGS_PATH, buildings_root)
-    write_object(REGIONS_PATH, regions_root)
+    #write_object(REGIONS_PATH, regions_root)
     write_object(CHARACTER_MOD_FILE_PATH, characters_root)
     write_object(MILITARY_FORMATIONS_OUT_PATH, military_root)
