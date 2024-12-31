@@ -93,9 +93,9 @@ def unparse_country_file(filepath: str) -> dict:
 
         country = [''] * COUNTRY_NUMBER_COLUMNS
         country[COUNTRY_TAG_COLUMN] = tag
-        country[COUNTRY_COLOR_COLUMN] = color
+        country[COUNTRY_COLOR_COLUMN] = f'{color[0]} {color[1]} {color[2]}'
         country[COUNTRY_TIER_COLUMN] = tier
-        country[COUNTRY_CULTURES_COLUMN] = cultures
+        country[COUNTRY_CULTURES_COLUMN] = ' '.join(cultures)
         country[COUNTRY_RELIGION_COLUMN] = religion
         country[COUNTRY_CAPITAL_COLUMN] = capital
         country[COUNTRY_NAMED_FROM_CAPITAL_COLUMN] = is_named_from_capital
@@ -128,11 +128,10 @@ if __name__ == '__main__':
     write_countries_csv(game_countries, GAME_COUNTRY_DEFINITIONS_CSV_FILEPATH)
 
     mod_countries = read_countries_csv(MOD_COUNTRY_DEFINITIONS_CSV_FILEPATH)
-    print(mod_countries)
 
     for tag, country in game_countries.items():
         if tag not in mod_countries.keys():
-            print(tag)
             mod_countries[tag] = country
+        mod_countries[tag][COUNTRY_NAMED_FROM_CAPITAL_COLUMN] = country[COUNTRY_NAMED_FROM_CAPITAL_COLUMN]
 
     write_countries_csv(mod_countries, MOD_COUNTRY_DEFINITIONS_CSV_FILEPATH)

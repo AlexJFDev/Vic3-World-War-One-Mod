@@ -7,12 +7,20 @@ import csv
 DEFINITIONS_FILE: str = os.path.join('mod', 'data', 'country_definitions.csv')
 COUNTRIES_FILE: str = os.path.join('mod', 'files', 'countries.txt')
 
+NAME_COLUMN = 0
 TAG_COLUMN = 1
 COLOR_COLUMN = 2
 TIER_COLUMN = 3
 CULTURES_COLUMN = 4
-CAPITAL_COLUMN = 5
-IS_DYNAMIC_COLUMN = 6
+REGION_COLUMN = 5
+CAPITAL_COLUMN = 6
+IS_NAMED_FROM_CAPITAL_COLUMN = 7
+IS_DYNAMIC_COLUMN = 8
+
+BOOLEAN_VALUES = {
+    True : 'yes',
+    False : 'no'
+}
 
 def generate_countries(file_path: str):
     countries_root = ClausewitzRoot()
@@ -27,9 +35,10 @@ def generate_countries(file_path: str):
             cultures = line[CULTURES_COLUMN]
             capital = line[CAPITAL_COLUMN]
             is_dynamic = line[IS_DYNAMIC_COLUMN]
+            named_from_capital = line[IS_NAMED_FROM_CAPITAL_COLUMN]
 
             country_object = ClausewitzObject()
-            if is_dynamic == 'TRUE':
+            if is_dynamic.lower() == 'true':
                 country_object.add_named_value('dynamic_country_definition', 'yes')
                 countries_root.add_named_value(tag, country_object)
                 continue
@@ -47,6 +56,8 @@ def generate_countries(file_path: str):
             country_object.add_named_value('country_type', 'recognized')
             country_object.add_named_value('color', color_object)
             country_object.add_named_value('cultures', cultures_object)
+            if named_from_capital.lower() == 'true':
+                country_object.add_named_value('is_named_from_capital', 'yes')
 
             countries_root.add_named_value(tag, country_object)
     return countries_root
