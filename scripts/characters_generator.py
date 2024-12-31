@@ -55,6 +55,7 @@ def parse_character_data(data_path: str):
         data_file.readline() # Skip first line
         reader = csv.reader(data_file)
         for line_num, line in enumerate(reader, 2):
+            full_name = line[FULL_NAME_COLUMN]
             first_name = line[FIRST_NAME_COLUMN]
             last_name = line[LAST_NAME_COLUMN]
             country_tag = line[COUNTRY_TAG_COLUMN]
@@ -69,6 +70,8 @@ def parse_character_data(data_path: str):
             if len(character_traits) == 0:
                 character_traits = set()
             
+            if full_name[0] == '#':
+                continue
             if first_name == '' or last_name == '':
                 continue
 
