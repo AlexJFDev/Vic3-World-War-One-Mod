@@ -108,6 +108,9 @@ def parse_character_data(data_path: str):
 
             character = {}
 
+            yes_values = sorted(list(yes_values))
+            character_traits = sorted(list(character_traits))
+
             character['first_name'] = first_name
             character['last_name'] = last_name
             character['culture'] = culture

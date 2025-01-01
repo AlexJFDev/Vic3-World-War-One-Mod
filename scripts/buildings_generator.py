@@ -85,6 +85,8 @@ def generate_region_object(country_tag: str, state_tag: str, buildings: list[tup
             ownership_object.get_value_named('building').add_named_value('levels', building_level)
             ownership_object.get_value_named('building').add_named_value('region', owner_region)
 
+        production_methods = sorted(list(production_methods))
+
         building_object.add_named_value('building', building_type)
         building_object.add_named_value('add_ownership', ownership_object)
         building_object.add_named_value('reserves', '1')
@@ -110,6 +112,8 @@ def generate_buildings(file_path: str):
         buildings_reader = csv.reader(buildings_file)
         for line in buildings_reader:
             state_tag = line[STATE_TAG_COLUMN]
+            if state_tag[0] == '#':
+                continue
             owner_tag = line[OWNER_TAG_COLUMN]
             raw_buildings = line[BUILDINGS_START_COLUMN:]
             buildings = []
