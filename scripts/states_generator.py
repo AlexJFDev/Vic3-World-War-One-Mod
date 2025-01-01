@@ -151,18 +151,8 @@ def generate_regions(regions_path: str):
             impassable = line[REGIONS_IMPASSABLE_COLUMN].split(' ')
 
             region_object = ClausewitzObject()
-            region_object.add_named_value('provinces', ClausewitzObject(anonymous_values=provinces))
-            if (traits[0] != ''):
-                region_object.add_named_value('traits', ClausewitzObject(anonymous_values=traits))
-            if (arable_resources[0] != ''):
-                region_object.add_named_value('arable_resources', ClausewitzObject(anonymous_values=arable_resources))
-            if (capped_resources[0] != ''):
-                capped_resources_object = ClausewitzObject()
-                for capped_resource in capped_resources:
-                    resource, quantity = capped_resource.split('=')
-                    capped_resources_object.add_named_value(resource, quantity)
-                region_object.add_named_value('capped_resources', capped_resources_object)
             region_object.add_named_value('id', region_id)
+            region_object.add_named_value('provinces', ClausewitzObject(anonymous_values=provinces))
             if (subsistence_building_type != ''):
                 region_object.add_named_value('subsistence_building', subsistence_building_type)
             if (city_province != ''):
@@ -177,6 +167,16 @@ def generate_regions(regions_path: str):
                 region_object.add_named_value('wood', wood_province)
             if (arable_land != ''):
                 region_object.add_named_value('arable_land', arable_land)
+            if (traits[0] != ''):
+                region_object.add_named_value('traits', ClausewitzObject(anonymous_values=traits))
+            if (arable_resources[0] != ''):
+                region_object.add_named_value('arable_resources', ClausewitzObject(anonymous_values=arable_resources))
+            if (capped_resources[0] != ''):
+                capped_resources_object = ClausewitzObject()
+                for capped_resource in capped_resources:
+                    resource, quantity = capped_resource.split('=')
+                    capped_resources_object.add_named_value(resource, quantity)
+                region_object.add_named_value('capped_resources', capped_resources_object)
             if (naval_exit != ''):
                 region_object.add_named_value('naval_exit_id', naval_exit)
             if (prime_land[0] != ''):
