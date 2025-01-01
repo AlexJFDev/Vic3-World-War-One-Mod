@@ -16,6 +16,7 @@ REGION_COLUMN = 5
 CAPITAL_COLUMN = 6
 IS_NAMED_FROM_CAPITAL_COLUMN = 7
 IS_DYNAMIC_COLUMN = 8
+COUNTRY_TYPE_COLUMN = 9
 
 BOOLEAN_VALUES = {
     True : 'yes',
@@ -36,6 +37,7 @@ def generate_countries(file_path: str):
             capital = line[CAPITAL_COLUMN]
             is_dynamic = line[IS_DYNAMIC_COLUMN]
             named_from_capital = line[IS_NAMED_FROM_CAPITAL_COLUMN]
+            country_type = line[COUNTRY_TYPE_COLUMN]
 
             country_object = ClausewitzObject()
             if is_dynamic.lower() == 'true':
@@ -53,11 +55,15 @@ def generate_countries(file_path: str):
             country_object.add_named_value('tier', tier)
             if capital != '':
                 country_object.add_named_value('capital', capital)
-            country_object.add_named_value('country_type', 'recognized')
+            if country_type != '':
+                country_object.add_named_value('country_type', country_type)
+            else:
+                country_object.add_named_value('country_type', 'recognized')
             country_object.add_named_value('color', color_object)
             country_object.add_named_value('cultures', cultures_object)
             if named_from_capital.lower() == 'true':
                 country_object.add_named_value('is_named_from_capital', 'yes')
+            
 
             countries_root.add_named_value(tag, country_object)
     return countries_root
