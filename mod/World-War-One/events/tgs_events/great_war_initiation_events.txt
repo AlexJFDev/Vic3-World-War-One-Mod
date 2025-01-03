@@ -200,6 +200,12 @@ great_war_initiation_events.4 = {
                 days = 3
             }
         }
+        c:MON = {
+            trigger_event = {
+                id = great_war_initiation_events.17
+                days = 3
+            }
+        }
     }
     option = { # Let the investigation proceed
         name = great_war_initiation_events.4.b
@@ -1162,8 +1168,8 @@ great_war_initiation_events.17 = {
 			add_target_backers = {
 				c:MON
 			}
+        }    
         c:MON = { set_variable = entente_participant }
-    }
     }
     option = { # Do nothing
         name = great_war_initiation_events.17.b
