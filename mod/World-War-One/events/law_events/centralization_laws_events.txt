@@ -1,0 +1,525 @@
+﻿namespace = centralization_laws
+
+# Confederated Law Events
+
+# Advance Event for Confederated Law
+centralization_laws.1 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.1.t
+    desc = centralization_laws.1.d
+    flavor = centralization_laws.1.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_confederated
+        NOT = { has_modifier = confederation_cooperation }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = confederation_cooperation
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_confederated }
+    }
+
+    option = {
+        name = centralization_laws.1.a
+        add_enactment_modifier = {
+            name = confederation_progress
+        }
+    }
+}
+
+# Debate Event for Confederated Law
+centralization_laws.2 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.2.t
+    desc = centralization_laws.2.d
+    flavor = centralization_laws.2.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_confederated
+        NOT = { has_modifier = confederation_divisions }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = confederation_divisions
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_confederated }
+    }
+
+    option = {
+        name = centralization_laws.2.a
+        add_enactment_modifier = {
+            name = confederation_compromise
+        }
+    }
+}
+
+# Stall Event for Confederated Law
+centralization_laws.3 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.3.t
+    desc = centralization_laws.3.d
+    flavor = centralization_laws.3.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_confederated
+        NOT = { has_modifier = confederation_gridlock }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = confederation_gridlock
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_confederated }
+    }
+
+    option = {
+        name = centralization_laws.3.a
+    }
+}
+
+# Federated Law Events
+
+# Advance Event for Federated Law
+centralization_laws.4 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.4.t
+    desc = centralization_laws.4.d
+    flavor = centralization_laws.4.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_federated
+        NOT = { has_modifier = federal_cooperation }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = federal_cooperation
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_federated }
+    }
+
+    option = {
+        name = centralization_laws.4.a
+        add_enactment_modifier = {
+            name = federal_progress
+        }
+    }
+}
+
+# Debate Event for Federated Law
+centralization_laws.5 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.5.t
+    desc = centralization_laws.5.d
+    flavor = centralization_laws.5.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_federated
+        NOT = { has_modifier = federal_divisions }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = federal_divisions
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_federated }
+    }
+
+    option = {
+        name = centralization_laws.5.a
+        add_enactment_modifier = {
+            name = federal_compromise
+        }
+    }
+}
+
+# Stall Event for Federated Law
+centralization_laws.6 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.6.t
+    desc = centralization_laws.6.d
+    flavor = centralization_laws.6.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_federated
+        NOT = { has_modifier = federal_gridlock }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = federal_gridlock
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_federated }
+    }
+
+    option = {
+        name = centralization_laws.6.a
+    }
+}
+
+# Devolved Law Events
+
+# Advance Event for Devolved Law
+centralization_laws.7 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.7.t
+    desc = centralization_laws.7.d
+    flavor = centralization_laws.7.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/politics_europe.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_devolved
+        NOT = { has_modifier = devolution_progress }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = devolution_progress
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_devolved }
+    }
+
+    option = {
+        name = centralization_laws.7.a
+        add_enactment_modifier = {
+            name = devolved_success
+        }
+    }
+}
+
+# Debate Event for Devolved Law
+centralization_laws.8 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.8.t
+    desc = centralization_laws.8.d
+    flavor = centralization_laws.8.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_devolved
+        NOT = { has_modifier = devolution_tensions }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = devolution_tensions
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_devolved }
+    }
+
+    option = {
+        name = centralization_laws.8.a
+        add_enactment_modifier = {
+            name = devolved_compromise
+        }
+    }
+}
+
+# Stall Event for Devolved Law
+centralization_laws.9 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.9.t
+    desc = centralization_laws.9.d
+    flavor = centralization_laws.9.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_devolved
+        NOT = { has_modifier = devolution_stall }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = devolution_stall
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_devolved }
+    }
+
+    option = {
+        name = centralization_laws.9.a
+    }
+}
+
+# Unitary Law Events
+
+# Advance Event for Unitary Law
+centralization_laws.10 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.10.t
+    desc = centralization_laws.10.d
+    flavor = centralization_laws.10.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_unitary
+        NOT = { has_modifier = unitary_efficiency }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = unitary_efficiency
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_unitary }
+    }
+
+    option = {
+        name = centralization_laws.10.a
+        add_enactment_modifier = {
+            name = unitary_progress
+        }
+    }
+}
+
+# Debate Event for Unitary Law
+centralization_laws.11 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.11.t
+    desc = centralization_laws.11.d
+    flavor = centralization_laws.11.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_unitary
+        NOT = { has_modifier = unitary_pushback }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = unitary_pushback
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_unitary }
+    }
+
+    option = {
+        name = centralization_laws.11.a
+        add_enactment_modifier = {
+            name = unitary_compromise
+        }
+    }
+}
+
+# Stall Event for Unitary Law
+centralization_laws.12 = {
+    type = country_event
+    placement = root
+
+    title = centralization_laws.12.t
+    desc = centralization_laws.12.d
+    flavor = centralization_laws.12.f
+
+    category = enactment
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+
+    cooldown = { months = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_unitary
+        NOT = { has_modifier = unitary_stall }
+    }
+
+    immediate = {
+        add_modifier = {
+            name = unitary_stall
+            months = normal_modifier_time
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_unitary }
+    }
+
+    option = {
+        name = centralization_laws.12.a
+    }
+}

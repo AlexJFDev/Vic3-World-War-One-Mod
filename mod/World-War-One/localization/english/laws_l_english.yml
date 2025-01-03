@@ -286,6 +286,20 @@
  law_professional_army:0 "Professional Army"
  law_professional_army_desc:0 "The army consists of well-trained, professional regulars."
   
+  #BPM Centralization
+ lawgroup_centralization:0 "Centralization"
+ lawgroup_centralization_desc:0 "Laws that dictate the power balance between the central government and regional governments."
+ law_unitary:0 "Unitary"
+ law_unitary_desc:0 "The central state has the monopole over every aspect of the country’s organization."
+ law_devolved:0 "Devolved"
+ law_devolved_desc:0 "The central states hold the power, but delegates some of the decision making and organization to the regional entities."
+ law_federated:0 "Federated"
+ law_federated_desc:0 "The regional entities are granted the right to decide most of their legislation. The federal state holds the executive powers, but must rules with the regions’ approbation."
+ law_confederated:0 "Confederated"
+ law_confederated_desc:0 "The country is bounded by the union of regional and independent political states. The central state only manages the essential policies of the union."
+ law_ad_hoc_centralization:0 "Patchwork Governance"
+ law_ad_hoc_centralization_desc:0 "This polity's administration has an inconsistent, sometimes contradictory set of policies regarding the autonomy and privileges of various regions."
+
   # Distribution of Power group
  lawgroup_distribution_of_power:0 "Distribution of Power"
  lawgroup_distribution_of_power_desc:0 "How political power is distributed. Determines who the Head of State is accountable to."
@@ -589,6 +603,119 @@
  pm_privately_owned_plantation: "Privately Owned"
  pm_publicly_traded_plantation: "Publicly Traded"
  pm_government_run_plantation: "Government Run"
+
+ # Localization for Confederated Law Events
+ # Advance Event
+ centralization_laws.1.t:0 "To ensure stability"
+ centralization_laws.1.d:0 "Troubling times require ambitious changes"
+ centralization_laws.1.f:0 "To stabilize our regime, it is nescessary to let the power reside over regionnal entities. A central state often draws the wrath of his people. Regionnal entities better knows and provides for them, letting the people choose their local policies. By allowing this, we will greatly limit the possibilies of armed insurections in our nation."
+ centralization_laws.1.a:0 "The best way to pacify"
+
+ # Debate Event
+ centralization_laws.2.t:0 "Maybe a less radical approach ?"
+ centralization_laws.2.d:0 "A confederation seems a bit excessive"
+ centralization_laws.2.f:0 "The high degree of decentralization promised by a confederation is worrying many in the nation. Perhaphs a more balanced approach would ensure the satisfaction of many and avoid dangerous systemic restructurations of our nation's organisation. The governement should consider other degrees of decentralization, otherwise this law is unlikely to bear fruits."
+ centralization_laws.2.a:0 "We need to better our arguments"
+
+ # Stall Event
+ centralization_laws.3.t:0 "A weaken state"
+ centralization_laws.3.d:0 "A confederation will fragilise us !"
+ centralization_laws.3.f:0 "The high degree of decentralization promised by a confederation is worrying many in the nation. How could we assure the well effectivness of our economy if all states have different legislations. More importantly, how could we make all the states agreed on vital matters like war ?"
+ centralization_laws.3.a:0 "Their concerns are spreading like wildfires"
+
+ # Localization for Federated Law Events
+ # Advance Event
+ centralization_laws.4.t:0 "Regionnal politics"
+ centralization_laws.4.d:0 "The state must recognize regionnal politics"
+ centralization_laws.4.f:0 "As debates are ongoing, many regionnal figures have stated the importance of respecting the nation's regionnal political particularities. The centralised legislation often overlook important regionnal traditions. A Federation would grant more liberties to the regions, and ensure more stability."
+ centralization_laws.4.a:0 "It is a necessity"
+
+ # Debate Event
+ centralization_laws.5.t:0 "Power's repartition"
+ centralization_laws.5.d:0 "Distribution of power among regionnal entities is causing problems"
+ centralization_laws.5.f:0 "As the text progress, regionnal figures are now accusing the central states to favouring some of them, while forsaking others. The new political organisation revolving must be fair in power's repartition, but this process will take a while. Mistrust between the regionnal figures and regarding the states have only worsen since."
+ centralization_laws.5.a:0 "We can only propose new distribution's alternatives"
+
+ # Stall Event
+ centralization_laws.6.t:0 "Power's repartition"
+ centralization_laws.6.d:0 "Distribution of power among regionnal entities is causing problems"
+ centralization_laws.6.f:0 "A regionnal figure has been caught briding politicians to favour their regions in the process of power distribution. This has caused havoc in our political sphere, and will greatly harm our efforts. Many politicians are now wondering if that pratice has become widespread. Mistrust between the regionnal figures and regarding the states have only worsen since."
+ centralization_laws.6.a:0 "One men can screw everything"
+
+ # Localization for Devolved Law Events
+ # Advance Event
+ centralization_laws.7.t:0 "A balanced approch"
+ centralization_laws.7.d:0 "The state must deleguate"
+ centralization_laws.7.f:0 "The central state cannot realistically bear all it's pregoratives alone. It must shared it's workload with some regionnal entities, which knows how to better administrate their territories than the central governement. This balanced approach will ensure that most of the interest groups are satisfied."
+ centralization_laws.7.a:0 "The Leviathan must rest"
+
+ # Debate Event
+ centralization_laws.8.t:0 "A difficult reorganisation"
+ centralization_laws.8.d:0 "The systemic reorganisation of our state is more complicated than expected"
+ centralization_laws.8.f:0 "The very complex process regarding this law is provoking reluctance among political spheres. For many, it goes into contradiction with the political traditions of our nation, and is requesting too many efforts and ressources. Such changes in our nation's organization will clearly need more time to be adopted."
+ centralization_laws.8.a:0 "We need to convince them"
+
+ # Stall Event
+ centralization_laws.9.t:0 "A difficult reorganisation"
+ centralization_laws.9.d:0 "The systemic reorganisation of our state is more complicated than expected"
+ centralization_laws.9.f:0 "The very complex process regarding this law is provoking reluctance among political spheres. For many, it goes into contradiction with the political traditions of our nation, and is requesting too many efforts and ressources. Such changes in our nation's organization will clearly need more time to be adopted."
+ centralization_laws.9.a:0 "We'll retry next time"
+
+ # Localization for Unitary Law Events
+ # Advance Event
+ centralization_laws.10.t:0 "The Leviathan must rule"
+ centralization_laws.10.d:0 "The nation requires a more powerfull state in case of trouble times"
+ centralization_laws.10.f:0 "To concentrate the power in the hands of the central state will allow it to operate more effectivly for long-term planning and legislation changes. This concentration is nescessary for better advancements regarding economy, politics and foreign policies. When troubling times arise, we will be better prepared united than divided."
+ centralization_laws.10.a:0 "The regions will follow the lead"
+
+ # Debate Event
+ centralization_laws.11.t:0 "Regionnal cultural arguments"
+ centralization_laws.11.d:0 "Regions are contesting their political losses"
+ centralization_laws.11.f:0 "Provincial leaders are voicing concerns about the loss of regional autonomy, leading to debates about their roles in the new system. They demand written gurantees that certain extends of their pregoratives are kept under the new legislation. If their demands are not met, they threathen to keep sabotating the law's advancement."
+ centralization_laws.11.a:0 "We must find a balance to move ahead."
+
+ # Stall Event
+ centralization_laws.12.t:0 "Administrative Overload"
+ centralization_laws.12.d:0 "A government burdened by its own ambition"
+ centralization_laws.12.f:0 "The central government is struggling to edify the new organisation of the state's apparatus, stalling the progress of the law. The new planned hierarchy requires precise implementation, or it could create instabilities. This process is greatly concerning our politicians, which have rejected our current law's proposal."
+ centralization_laws.12.a:0 "We need to present a clear plan"
+
+ # Localization for Centralization Laws Modifiers
+ confederation_cooperation:0 "Confederation Cooperation"
+ confederation_cooperation.desc:0 "Cooperation among member states is improving, facilitating the enactment of the Confederated law."
+
+ confederation_divisions:0 "Confederation Divisions"
+ confederation_divisions.desc:0 "Disagreements among member states are delaying progress on the Confederated law."
+
+ confederation_gridlock:0 "Confederation Gridlock"
+ confederation_gridlock.desc:0 "Member states are unable to reach consensus, stalling the enactment of the Confederated law."
+
+ federal_cooperation:0 "Federal Cooperation"
+ federal_cooperation.desc:0 "Regions are cooperating to create a federal framework."
+
+ federal_divisions:0 "Federal Divisions"
+ federal_divisions.desc:0 "Regional disputes over representation and authority are slowing the Federated law."
+
+ federal_gridlock:0 "Federal Gridlock"
+ federal_gridlock.desc:0 "Disagreements have caused a standstill in progress toward the Federated law."
+ 
+ devolution_progress:0 "Regional Autonomy Celebrated"
+ devolution_progress.desc:0 "Regional autonomy celebrations are advancing the Devolved law."
+
+ devolution_tensions:0 "Unequal Benefits"
+ devolution_tensions.desc:0 "Concerns about uneven benefits are causing tensions over the Devolved law."
+
+ devolution_stall:0 "Central Resistance"
+ devolution_stall.desc:0 "The central government's resistance is stalling progress on the Devolved law."
+
+ unitary_efficiency:0 "Efficient Centralization"
+ unitary_efficiency.desc:0 "Efforts to centralize governance are improving efficiency, accelerating the Unitary law."
+
+ unitary_pushback:0 "Provincial Discontent"
+ unitary_pushback.desc:0 "Provincial resistance to centralization is delaying the Unitary law."
+
+ unitary_stall:0 "Administrative Overload"
+ unitary_stall.desc:0 "Administrative challenges are stalling progress on the Unitary law."
 
  # Jacksonian Democrat
  ideology_jacksonian_democrat: "Jacksonian Democrat"
