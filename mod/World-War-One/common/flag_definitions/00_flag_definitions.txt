@@ -2854,7 +2854,7 @@ EGY = { # Egypt
 	flag_definition = {
 		coa = EGY_absolute_monarchy
 		subject_canton = EGY_absolute_monarchy
-		allow_overlord_canton = yes	
+		allow_overlord_canton = no
 		coa_with_overlord_canton = EGY_subject			
 		priority = 20
 		trigger = { 
@@ -2876,15 +2876,7 @@ EGY = { # Egypt
 		trigger = {
 			coa_def_dictatorship_flag_trigger = yes
 		}
-	}	
-	flag_definition = {
-		coa = EGY_subject_GBR
-		allow_overlord_canton = yes		
-		priority = 50
-		trigger = { 
-			coa_def_british_ensign_trigger = yes
-		}
-	}		
+	}			
 }
 
 ELS = { # El Salvador
@@ -6401,15 +6393,6 @@ NZL = { # New Zealand
 		}
 	}
 	flag_definition = {
-		coa = NZL_republic
-		priority = 10
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.25 0.25 }			
-		trigger = { 
-			coa_def_republic_flag_trigger = yes
-		}
-	}
-	flag_definition = {
 		coa = NZL_dictatorship
 		subject_canton = NZL_dictatorship
 		allow_overlord_canton = yes
@@ -7192,7 +7175,7 @@ POR = { # Portugal
 	}			
 }
 
-PPU = { # Papua
+NGG = { # Papua
 	flag_definition = {
 		coa = PPU
 		subject_canton = PPU
@@ -7206,6 +7189,21 @@ PPU = { # Papua
 		priority = 50
 		trigger = { 
 			coa_def_british_ensign_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = TOG_subject_GER
+		allow_overlord_canton = no	
+		priority = 50
+		trigger = {
+			exists = c:GER
+			c:GER = {
+				has_diplomatic_pact = {
+					who = c:NGG
+					type = colony
+					is_initiator = yes
+				}
+			}
 		}
 	}	
 }
@@ -10097,7 +10095,7 @@ TRI = {
 			c:ITA = {
 				has_diplomatic_pact = {
 					who = c:TRI
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10135,7 +10133,7 @@ CYR = { #TODO
 			c:ITA = {
 				has_diplomatic_pact = {
 					who = c:CYR
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10143,49 +10141,49 @@ CYR = { #TODO
 	}
 }
 
-# ERT = {
-# 	flag_definition = {
-# 		coa = ERI		
-# 		subject_canton = ERI
-# 		priority = 1
-# 	}
-# 	flag_definition = {
-# 		coa = ERI_subject_ITA
-# 		priority = 20
-# 		trigger = {
-# 			exists = c:ITA
-# 			c:ITA = {
-# 				has_diplomatic_pact = {
-# 					who = c:ERI
-# 					type = puppet
-# 					is_initiator = yes
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+ERT = {
+ 	flag_definition = {
+ 		coa = ERI		
+ 		subject_canton = ERI
+ 		priority = 1
+ 	}
+ 	flag_definition = {
+ 		coa = ERI_subject_ITA
+ 		priority = 20
+ 		trigger = {
+ 			exists = c:ITA
+ 			c:ITA = {
+ 				has_diplomatic_pact = {
+ 					who = c:ERT
+ 					type = colony
+ 					is_initiator = yes
+ 				}
+ 			}
+ 		}
+ 	}
+}
 
-# SMA = {
-# 	flag_definition = {
-# 		coa = SOL		
-# 		subject_canton = SOL
-# 		priority = 1
-# 	}
-# 	flag_definition = {
-# 		coa = SOL_subject_ITA
-# 		priority = 20
-# 		trigger = {
-# 			exists = c:ITA
-# 			c:ITA = {
-# 				has_diplomatic_pact = {
-# 					who = c:SOL
-# 					type = puppet
-# 					is_initiator = yes
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+SMA = {
+ 	flag_definition = {
+ 		coa = SOL		
+		subject_canton = SOL
+ 		priority = 1
+ 	}
+ 	flag_definition = {
+		coa = SOL_subject_ITA
+ 		priority = 20
+ 		trigger = {
+			exists = c:ITA
+			c:ITA = {
+				has_diplomatic_pact = {
+					who = c:SMA
+					type = colony
+					is_initiator = yes
+ 				}
+ 			}
+ 		}
+ 	}
+ }
 
 SOM = {
 	flag_definition = {
@@ -10203,27 +10201,27 @@ SOM = {
 	}
 }
 
-# KON = {
-# 	flag_definition = {
-# 		coa = TCO		
-# 		subject_canton = TCO
-# 		priority = 1
-# 	}
-# 	flag_definition = {
-# 		coa = TCO_subject_BEL
-# 		priority = 20
-# 		trigger = {
-# 			exists = c:BEL
-# 			c:BEL = {
-# 				has_diplomatic_pact = {
-# 					who = c:TCO
-# 					type = puppet
-# 					is_initiator = yes
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+KON = {
+ 	flag_definition = {
+ 		coa = TCO		
+ 		subject_canton = TCO
+ 		priority = 1
+ 	}
+ 	flag_definition = {
+ 		coa = TCO_subject_BEL
+ 		priority = 20
+ 		trigger = {
+ 			exists = c:BEL
+ 			c:BEL = {
+ 				has_diplomatic_pact = {
+ 					who = c:KON
+ 					type = colony
+ 					is_initiator = yes
+				}
+ 			}
+ 		}
+ 	}
+}
 
 ANG = {
 	flag_definition = {
@@ -10240,7 +10238,7 @@ ANG = {
 			c:POR = {
 				has_diplomatic_pact = {
 					who = c:ANG
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10262,7 +10260,7 @@ MOZ = {
 			c:POR = {
 				has_diplomatic_pact = {
 					who = c:MOZ
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10478,7 +10476,7 @@ ZAM = {
 	}
 }
 
-ZIM = { 
+RHO = { 
 	flag_definition = {
 	    coa = ZIM		
 		subject_canton = ZIM
@@ -10535,7 +10533,7 @@ MAD = {
 			c:FRA = {
 				has_diplomatic_pact = {
 					who = c:MAD
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10575,23 +10573,30 @@ EQA = {
 	}
 }
 
-MAL = {
+WAF = {
 	flag_definition = {
 		coa = MAL		
 		subject_canton = MAL
 		priority = 1
 	}
 	flag_definition = {
-		coa = MAL_subject_FRA
+		coa = FRA
 		allow_overlord_canton = no		
 		priority = 50
-		trigger = { 
-			coa_def_french_ensign_trigger = yes
+		trigger = {
+			exists = c:FRA
+			c:FRA = {
+				has_diplomatic_pact = {
+					who = c:WAF
+					type = colony
+					is_initiator = yes
+				}
+			}
 		}
 	}
 }
 
-COG = {
+EQA = {
 	flag_definition = {
 		coa = COG		
 		subject_canton = COG
@@ -10601,8 +10606,15 @@ COG = {
 		coa = COG_subject_FRA
 		allow_overlord_canton = no		
 		priority = 50
-		trigger = { 
-			coa_def_french_ensign_trigger = yes
+		trigger = {
+			exists = c:FRA
+			c:FRA = {
+				has_diplomatic_pact = {
+					who = c:EQA
+					type = colony
+					is_initiator = yes
+				}
+			}
 		}
 	}
 }
@@ -10617,8 +10629,15 @@ TAN = {
 		coa = GEA_subject_GER
 		allow_overlord_canton = yes		
 		priority = 50
-		trigger = { 
-			coa_def_german_ensign_trigger = yes
+		trigger = {
+			exists = c:GER
+			c:GER = {
+				has_diplomatic_pact = {
+					who = c:TAN
+					type = colony
+					is_initiator = yes
+				}
+			}
 		}
 	}
 }
@@ -10657,11 +10676,18 @@ SWZ = {
 
 ICH = {
 	flag_definition = {
-		coa = DAI_subject_FRA
+		coa = FRA
 		allow_overlord_canton = no		
 		priority = 55
-		trigger = { 
-			coa_def_french_ensign_trigger = yes
+		trigger = {
+			exists = c:FRA
+			c:FRA = {
+				has_diplomatic_pact = {
+					who = c:ICH
+					type = colony
+					is_initiator = yes
+				}
+			}
 		}
 	}
 }
@@ -10784,92 +10810,42 @@ KEN = {
 	}
 }
 
-# CMR = {
-# 	flag_definition = {
-# 		coa = CMU		
-# 		subject_canton = CMU
-# 		priority = 1
-# 	}
-# 	flag_definition = {
-# 		coa = CMU_subject_GER
-# 		allow_overlord_canton = no		
-# 		priority = 150
-# 		trigger = {
-# 			exists = c:GER
-# 			c:GER = {
-# 				has_diplomatic_pact = {
-# 					who = c:CMR
-# 					type = puppet
-# 					is_initiator = yes
-# 				}
-# 			}
-# 		}
-# 	}
-# 	flag_definition = {
-# 		coa = CMU_subject_FRA
-# 		allow_overlord_canton = no		
-# 		priority = 150
-# 		trigger = {
-# 			exists = c:FRA
-# 			c:FRA = {
-# 				has_diplomatic_pact = {
-# 					who = c:CMU
-# 					type = puppet
-# 					is_initiator = yes
-# 				}
-# 			}
-# 		}
-# 	}
-# }
-
-NAI = {
-	flag_definition = {
-		coa = NAI		
-		subject_canton = NAI
-		priority = 1
-	}
-	flag_definition = {
-		coa = NAI_subject_SAF
-		priority = 150
-		trigger = {
-			exists = c:SAF
-			c:SAF = {
-				has_diplomatic_pact = {
-					who = c:NAI
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}
-	}
-	flag_definition = {
-		coa = NAI_subject_GBR
-		priority = 150
-		trigger = {
-			exists = c:GBR
-			c:GBR = {
-				has_diplomatic_pact = {
-					who = c:NAI
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}
-	}
-	flag_definition = {
-		coa = NAI_subject_GER
-		priority = 150
-		trigger = {
-			exists = c:GER
-			c:GER = {
-				has_diplomatic_pact = {
-					who = c:NAI
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}
-	}
+CMR = {
+ 	flag_definition = {
+ 		coa = CMU		
+ 		subject_canton = CMU
+ 		priority = 1
+ 	}
+ 	flag_definition = {
+ 		coa = CMU_subject_GER
+ 		allow_overlord_canton = no		
+ 		priority = 150
+ 		trigger = {
+ 			exists = c:GER
+ 			c:GER = {
+ 				has_diplomatic_pact = {
+ 					who = c:CMR
+ 					type = colony
+ 					is_initiator = yes
+ 				}
+ 			}
+ 		}
+ 	}
+ 	flag_definition = {
+ 		coa = CMU_subject_FRA
+ 		allow_overlord_canton = no		
+ 		priority = 150
+ 		trigger = {
+ 			exists = c:FRA
+ 			c:FRA = {
+ 				has_diplomatic_pact = {
+ 					who = c:CMR
+ 					type = colony
+ 					is_initiator = yes
+ 				}
+ 			}
+ 		}
+ 	}
 }
 
 TAN = {
@@ -10888,7 +10864,7 @@ TAN = {
 			c:GBR = {
 				has_diplomatic_pact = {
 					who = c:TAN
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10902,7 +10878,7 @@ TAN = {
 			c:GER = {
 				has_diplomatic_pact = {
 					who = c:TAN
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10928,7 +10904,7 @@ TOG = {
 			c:GER = {
 				has_diplomatic_pact = {
 					who = c:TOG
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10943,7 +10919,7 @@ TOG = {
 			c:FRA = {
 				has_diplomatic_pact = {
 					who = c:TOG
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -10980,5 +10956,73 @@ TNG = {
 		coa_with_overlord_canton = NRU_subject_GBR
 		allow_overlord_canton = yes
 		priority = 50
+	}
+}
+
+DJB = {
+    flag_definition = {
+		coa = FRA
+		allow_overlord_canton = no
+		priority = 50
+		trigger = {
+			exists = c:FRA
+			c:FRA = {
+				has_diplomatic_pact = {
+					who = c:DJB
+					type = colony
+					is_initiator = yes
+				}
+			}
+		}
+	}
+}
+
+NAM = {
+	flag_definition = {
+		coa = NAI		
+		subject_canton = NAI
+		priority = 1
+	}
+	flag_definition = {
+		coa = NAI_subject_SAF
+		priority = 150
+		trigger = {
+			exists = c:SAF
+			c:SAF = {
+				has_diplomatic_pact = {
+					who = c:NAM
+					type = colony
+					is_initiator = yes
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = NAI_subject_GBR
+		priority = 150
+		trigger = {
+			exists = c:GBR
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:NAM
+					type = colony
+					is_initiator = yes
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = NAI_subject_GER
+		priority = 150
+		trigger = {
+			exists = c:GER
+			c:GER = {
+				has_diplomatic_pact = {
+					who = c:NAM
+					type = colony
+					is_initiator = yes
+				}
+			}
+		}
 	}
 }
