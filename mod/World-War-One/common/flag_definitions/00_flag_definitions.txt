@@ -10143,49 +10143,49 @@ CYR = { #TODO
 	}
 }
 
-ERT = {
-	flag_definition = {
-		coa = ERI		
-		subject_canton = ERI
-		priority = 1
-	}
-	flag_definition = {
-		coa = ERI_subject_ITA
-		priority = 20
-		trigger = {
-			exists = c:ITA
-			c:ITA = {
-				has_diplomatic_pact = {
-					who = c:ERI
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}
-	}
-}
+# ERT = {
+# 	flag_definition = {
+# 		coa = ERI		
+# 		subject_canton = ERI
+# 		priority = 1
+# 	}
+# 	flag_definition = {
+# 		coa = ERI_subject_ITA
+# 		priority = 20
+# 		trigger = {
+# 			exists = c:ITA
+# 			c:ITA = {
+# 				has_diplomatic_pact = {
+# 					who = c:ERI
+# 					type = puppet
+# 					is_initiator = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
-SMA = {
-	flag_definition = {
-		coa = SOL		
-		subject_canton = SOL
-		priority = 1
-	}
-	flag_definition = {
-		coa = SOL_subject_ITA
-		priority = 20
-		trigger = {
-			exists = c:ITA
-			c:ITA = {
-				has_diplomatic_pact = {
-					who = c:SOL
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}
-	}
-}
+# SMA = {
+# 	flag_definition = {
+# 		coa = SOL		
+# 		subject_canton = SOL
+# 		priority = 1
+# 	}
+# 	flag_definition = {
+# 		coa = SOL_subject_ITA
+# 		priority = 20
+# 		trigger = {
+# 			exists = c:ITA
+# 			c:ITA = {
+# 				has_diplomatic_pact = {
+# 					who = c:SOL
+# 					type = puppet
+# 					is_initiator = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 SOM = {
 	flag_definition = {
@@ -10203,27 +10203,27 @@ SOM = {
 	}
 }
 
-KON = {
-	flag_definition = {
-		coa = TCO		
-		subject_canton = TCO
-		priority = 1
-	}
-	flag_definition = {
-		coa = TCO_subject_BEL
-		priority = 20
-		trigger = {
-			exists = c:BEL
-			c:BEL = {
-				has_diplomatic_pact = {
-					who = c:TCO
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}
-	}
-}
+# KON = {
+# 	flag_definition = {
+# 		coa = TCO		
+# 		subject_canton = TCO
+# 		priority = 1
+# 	}
+# 	flag_definition = {
+# 		coa = TCO_subject_BEL
+# 		priority = 20
+# 		trigger = {
+# 			exists = c:BEL
+# 			c:BEL = {
+# 				has_diplomatic_pact = {
+# 					who = c:TCO
+# 					type = puppet
+# 					is_initiator = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 ANG = {
 	flag_definition = {
@@ -10784,43 +10784,43 @@ KEN = {
 	}
 }
 
-CMR = {
-	flag_definition = {
-		coa = CMU		
-		subject_canton = CMU
-		priority = 1
-	}
-	flag_definition = {
-		coa = CMU_subject_GER
-		allow_overlord_canton = no		
-		priority = 150
-		trigger = {
-			exists = c:GER
-			c:GER = {
-				has_diplomatic_pact = {
-					who = c:CMR
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}
-	}
-	flag_definition = {
-		coa = CMU_subject_FRA
-		allow_overlord_canton = no		
-		priority = 150
-		trigger = {
-			exists = c:FRA
-			c:FRA = {
-				has_diplomatic_pact = {
-					who = c:CMU
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}
-	}
-}
+# CMR = {
+# 	flag_definition = {
+# 		coa = CMU		
+# 		subject_canton = CMU
+# 		priority = 1
+# 	}
+# 	flag_definition = {
+# 		coa = CMU_subject_GER
+# 		allow_overlord_canton = no		
+# 		priority = 150
+# 		trigger = {
+# 			exists = c:GER
+# 			c:GER = {
+# 				has_diplomatic_pact = {
+# 					who = c:CMR
+# 					type = puppet
+# 					is_initiator = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# 	flag_definition = {
+# 		coa = CMU_subject_FRA
+# 		allow_overlord_canton = no		
+# 		priority = 150
+# 		trigger = {
+# 			exists = c:FRA
+# 			c:FRA = {
+# 				has_diplomatic_pact = {
+# 					who = c:CMU
+# 					type = puppet
+# 					is_initiator = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 NAI = {
 	flag_definition = {
