@@ -6,32 +6,32 @@
     tooltip = close_the_federal_reserve_decision_tooltip
 
     is_shown = {
-		exists = c:USA
-		this = c:USA
-	}
+      exists = c:USA
+      this = c:USA
+    }
     
     possible = {
         has_modifier = federal_reserve_established_modifier
-        scope:journal_entry = {
-			not = {
-				custom_tooltip = {
-					text = fed_decision_taken_var
-					has_variable = fed_decision_taken_var
-				}
-			}
-		}
+        # scope:journal_entry = {
+        #   not = {
+        #     custom_tooltip = {
+        #       text = fed_decision_taken_var
+        #       has_variable = fed_decision_taken_var
+        #     }
+        #   }
+        # }
     }
 
     when_taken = {
-		add_modifier = {
-            name = no_federal_reserve_modifier
-            duration = -1
-        }
-        remove_modifier = federal_reserve_established_modifier
-        add_decision = "establish_the_federal_reserve_decision"
-        scope:journal_entry = {
-			custom_tooltip = fed_decision_taken_var
-			set_variable = { name = fed_decision_taken_var years = 10 }
-		}
-	}
+      add_modifier = {
+              name = no_federal_reserve_modifier
+              duration = -1
+          }
+          remove_modifier = federal_reserve_established_modifier
+          add_decision = "establish_the_federal_reserve_decision"
+          scope:journal_entry = {
+        custom_tooltip = fed_decision_taken_var
+        set_variable = { name = fed_decision_taken_var years = 10 }
+      }
+	  }
 }
