@@ -18,21 +18,22 @@ OWNERSHIP_POPS_COLUMN = 5
 
 REGIONS_REGION_TAG_COLUMN = 0
 REGIONS_ID_COLUMN = 1
-REGIONS_HOMELANDS_COLUMN = 2
-REGIONS_SUBSISTENCE_BUILDING_COLUMN = 3
-REGIONS_CITY_COLUMN = 4
-REGIONS_PORT_COLUMN = 5
-REGIONS_FARM_COLUMN = 6
-REGIONS_MINE_COLUMN = 7
-REGIONS_WOOD_COLUMN = 8
-REGIONS_ARABLE_LAND_COLUMN = 9
-REGIONS_PROVINCES_COLUMN = 10
-REGIONS_TRAITS_COLUMN = 11
-REGIONS_ARABLE_RESOURCES_COLUMN = 12
-REGIONS_CAPPED_RESOURCES_COLUMN = 13
-REGIONS_NAVAL_EXIT_COLUMN = 14
-REGIONS_PRIME_LAND_COLUMN = 15
-REGIONS_IMPASSABLE_COLUMN = 16
+REGIONS_SUBSISTENCE_BUILDING_COLUMN = 2
+REGIONS_CITY_COLUMN = 3
+REGIONS_PORT_COLUMN = 4
+REGIONS_FARM_COLUMN = 5
+REGIONS_MINE_COLUMN = 6
+REGIONS_WOOD_COLUMN = 7
+REGIONS_ARABLE_LAND_COLUMN = 8
+REGIONS_PROVINCES_COLUMN = 9
+REGIONS_TRAITS_COLUMN = 10
+REGIONS_ARABLE_RESOURCES_COLUMN = 11
+REGIONS_CAPPED_RESOURCES_COLUMN = 12
+REGIONS_NAVAL_EXIT_COLUMN = 13
+REGIONS_PRIME_LAND_COLUMN = 14
+REGIONS_IMPASSABLE_COLUMN = 15
+
+#Region Tag,ID Number,Subsistence Building,City,Port,Farm,Mine,Wood,Arable Land,Provinces,Traits,Arable Resources,Caped Resources,Naval Exit,Prime Land,Impassable
 
 ENCODING = 'utf-8-sig'
 
@@ -151,18 +152,8 @@ def generate_regions(regions_path: str):
             impassable = line[REGIONS_IMPASSABLE_COLUMN].split(' ')
 
             region_object = ClausewitzObject()
-            region_object.add_named_value('provinces', ClausewitzObject(anonymous_values=provinces))
-            if (traits[0] != ''):
-                region_object.add_named_value('traits', ClausewitzObject(anonymous_values=traits))
-            if (arable_resources[0] != ''):
-                region_object.add_named_value('arable_resources', ClausewitzObject(anonymous_values=arable_resources))
-            if (capped_resources[0] != ''):
-                capped_resources_object = ClausewitzObject()
-                for capped_resource in capped_resources:
-                    resource, quantity = capped_resource.split('=')
-                    capped_resources_object.add_named_value(resource, quantity)
-                region_object.add_named_value('capped_resources', capped_resources_object)
             region_object.add_named_value('id', region_id)
+            region_object.add_named_value('provinces', ClausewitzObject(anonymous_values=provinces))
             if (subsistence_building_type != ''):
                 region_object.add_named_value('subsistence_building', subsistence_building_type)
             if (city_province != ''):
@@ -177,6 +168,16 @@ def generate_regions(regions_path: str):
                 region_object.add_named_value('wood', wood_province)
             if (arable_land != ''):
                 region_object.add_named_value('arable_land', arable_land)
+            if (traits[0] != ''):
+                region_object.add_named_value('traits', ClausewitzObject(anonymous_values=traits))
+            if (arable_resources[0] != ''):
+                region_object.add_named_value('arable_resources', ClausewitzObject(anonymous_values=arable_resources))
+            if (capped_resources[0] != ''):
+                capped_resources_object = ClausewitzObject()
+                for capped_resource in capped_resources:
+                    resource, quantity = capped_resource.split('=')
+                    capped_resources_object.add_named_value(resource, quantity)
+                region_object.add_named_value('capped_resources', capped_resources_object)
             if (naval_exit != ''):
                 region_object.add_named_value('naval_exit_id', naval_exit)
             if (prime_land[0] != ''):
