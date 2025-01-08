@@ -616,7 +616,7 @@ combat_unit_type_heavy_tank = {
         unit_offense_add = 70
         unit_defense_add = 35
         unit_morale_loss_add = 4
-        unit_kill_rate_add = 0.25
+        unit_kill_rate_add = 0.3
         unit_morale_damage_mult = 0.15
         unit_devastation_mult = 0.15
     }
@@ -905,12 +905,12 @@ combat_unit_type_fighter  = {
     goods_input_small_arms_add = 1
 	goods_input_ammunition_add = 2
 	goods_input_oil_add = 1
-    goods_input_radio_add = 1
+    goods_input_radios_add = 1
     }
 
     battle_modifier = {
     unit_offense_add = 35
-    unit_defense_add = 20
+    unit_defense_add = 40
     unit_morale_loss_add = -10
 	unit_advancement_speed_mult =1
 	unit_occupation_mult = 0.3
@@ -944,7 +944,7 @@ combat_unit_type_bomber  = {
     
     upkeep_modifier = {
 	goods_input_aeroplanes_add = 4
-	goods_input_ammunition_add = 4
+	goods_input_ammunition_add = 6
 	goods_input_oil_add = 2
 	goods_input_radios_add = 1
     }
@@ -1025,12 +1025,11 @@ combat_unit_type_close_air_support  = {
 	goods_input_ammunition_add = 4
 	goods_input_oil_add = 1
 	goods_input_radios_add = 1
- 	
     }
 
     battle_modifier = {
-    unit_offense_add = 50
-    unit_defense_add = 25
+    unit_offense_add = 65
+    unit_defense_add = 40
     unit_kill_rate_add = 0.15
 	unit_morale_loss_add = -10
 	unit_advancement_speed_mult =1

@@ -1,59 +1,61 @@
-﻿battle_condition_pure_airforce = {
-	icon = "gfx/interface/icons/battle_conditions/battle_condition_pursuit.dds"
+﻿battle_condition_allied_air_superiority = {
+	icon = "gfx/interface/icons/battle_conditions/allied_air_superiority.dds"
 
 	modifier = {
-		unit_recovery_rate_add=2
-		unit_morale_loss_add = -50
-		unit_occupation_mult = -1
+		unit_army_offense_mult = 0.3
+		unit_army_defense_mult = 0.2
+	}
+
+	possible = {
+		exists = scope:character
+		allied_air_dominance > ennemy_air_dominance
+	}
+ 
+    instant_switch = {
+        opposite_battle_side = {
+				has_battle_condition = battle_condition_ennemy_air_superiority
+			}
+		NOR = { 
+			has_battle_condition = battle_condition_pursuit
+			has_battle_condition = battle_condition_panicked_retreat
+		    has_battle_condition = battle_condition_controlled_retreat	
+			opposite_battle_side = {
+				OR = {
+				has_battle_condition = battle_condition_panicked_retreat
+			    has_battle_condition = battle_condition_controlled_retreat	
+				}
+			}
+		}
+	}
+    
+	weight = 30
+}
+
+battle_condition_ennemy_air_superiority = {
+	icon = "gfx/interface/icons/battle_conditions/ennemy_air_superiority.dds"
+
+	modifier = {
+		unit_morale_loss_mult = 0.2
+	}
+
+	possible = {
+		exists = scope:character
+		allied_air_dominance < ennemy_air_dominance
 	}
 
 	instant_switch = {
-		exists = scope:character
-		our_side_is_pure_airforce = yes
-		enermy_side_no_frighter = yes
+        opposite_battle_side = {
+				has_battle_condition = battle_condition_allied_air_superiority
+			}
+		NOR = { 
+			has_battle_condition = battle_condition_panicked_retreat
+			has_battle_condition = battle_condition_controlled_retreat
+			has_battle_condition = battle_condition_pursuit
+			opposite_battle_side = {
+				has_battle_condition = battle_condition_pursuit
+			}
+		}
 	}
 
-	weight = 5
+	weight = 30
 }
-
-battle_condition_air_superiority = {
-	icon = "gfx/interface/icons/battle_conditions/battle_condition_pursuit.dds"
-	
-	modifier = {
-		unit_morale_recovery_mult = 0.3
-		unit_morale_damage_mult = 0.3
-	}
-
-	possible = {
-		exists = scope:character
-		our_side_is_mix_airforce = yes
-		enermy_side_no_frighter = yes
-	}
-
-	weight = 20
-}
-
-battle_condition_bombing = {
-	icon = "gfx/interface/icons/battle_conditions/battle_condition_pursuit.dds"
-
-	modifier = {
-		unit_morale_recovery_mult = 0.1
-		unit_morale_damage_mult = 0.3
-		unit_kill_rate_add = 0.2
-        	unit_devastation_mult = 0.2
-		combat_unit_type_bomber_offense_mult=1.5
-	}
-
-	possible = {
-		exists = scope:character
-		our_side_is_mix_bomber = yes
-		enermy_side_no_frighter = yes	
-	}
-
-	weight = 10
-}
-
-
-
-
-

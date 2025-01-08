@@ -927,12 +927,11 @@ nco_training = {
 	category = military
 	
 	unlocking_technologies = {
-		wargaming
-		trench_works
+		stormtroopers
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 5
 	}
 }
 
@@ -1002,13 +1001,11 @@ mobile_armor = {
 	category = military
 	
 	unlocking_technologies = {	
-		military_aviation
-		concrete_fortifications
-		nco_training
+		automatic_machine_guns
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 5
 	}
 }
 
@@ -1025,11 +1022,11 @@ military_aviation = {
 	}
 	
 	unlocking_technologies = {	
-		defense_in_depth
+		automatic_machine_guns
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 5
 	}
 }
 
@@ -1129,7 +1126,7 @@ aerial_ground_support = {
     }
 
     ai_weight = {
-		value = 1
+		value = 5
 	}
 }
 
@@ -1143,6 +1140,7 @@ blitzkrieg_tech = {
     unlocking_technologies = {
         aerial_ground_support
 		mobile_armor
+		nco_training
     }
 
     modifier = {
