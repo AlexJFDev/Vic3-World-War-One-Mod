@@ -934,6 +934,17 @@ great_war_initiation_events.14 = {
 		}
         c:BEL = { set_variable = entente_participant }
         c:LUX = { set_variable = entente_participant }
+        random_diplomatic_play = {
+				limit = {
+					c:AUS = {
+						is_diplomatic_play_initiator = yes
+					}
+					c:SER = {
+						is_diplomatic_play_target = yes
+					}
+				}
+				add_diplomatic_play_war_support = { target = c:LUX value = -200 }
+		}
     }
     option = { # Do nothing
         name = great_war_initiation_events.14.b
