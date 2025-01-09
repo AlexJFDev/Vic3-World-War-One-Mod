@@ -121,7 +121,11 @@ building_skyscraper = {
 	override_centerpiece_mesh = yes
 	centerpiece_mesh_weight = 2
 
-	expandable = no
+    unlocking_technologies = {
+		elevator
+	}
+
+	expandable = yes
 
 	downsizeable = no
 
@@ -134,17 +138,22 @@ building_skyscraper = {
 
 	required_construction = construction_cost_monument
 
-	can_build_government = {
-		custom_tooltip = {
-			text = skyscraper_can_construct_tt
-			has_modifier = skyscraper_site
+    possible = {
+		OR = { 
+			is_incorporated = yes 
+			is_treaty_port = yes 
+		}
+		any_scope_building = {
+			is_building_type = building_urban_center
+				level >= 200
 		}
 	}
+	
 	can_build_private = {
 		always = no
 	}	
 	
-	ai_value = 50000
+	ai_value = 200
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
