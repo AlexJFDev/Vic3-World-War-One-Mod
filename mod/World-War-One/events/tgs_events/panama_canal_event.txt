@@ -1,0 +1,23 @@
+namespace = panama_canal_event
+
+panama_canal_event.1 = {
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/panama_canal.dds"
+    }
+
+    title = panama_canal_event.1.t
+    desc = panama_canal_event.1.d
+    flavor = panama_canal_event.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    option = {
+        name = panama_canal_event.1.a
+		custom_tooltip = panama_canal_construction_available
+        set_variable = panama_survey_complete
+    }
+}
