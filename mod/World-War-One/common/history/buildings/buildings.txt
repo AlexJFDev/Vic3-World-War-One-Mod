@@ -6249,6 +6249,21 @@
 					pm_industrial_port 
 				}
 			}
+			create_building = {
+				building = building_fishing_wharf
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:BHN
+						levels = 1
+						region = STATE_ABU_DHABI
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_simple_fishing pm_unrefrigerated 
+				}
+			}
 		}
 		region_state:OMA = {
 			create_building = {
@@ -11474,6 +11489,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_anchorage 
+				}
+			}
+			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:BRU
+						levels = 1
+						region = STATE_NORTH_BORNEO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_hardwood pm_road_carts pm_saw_mills pm_steam_donkey_building_logging_camp 
 				}
 			}
 		}
@@ -23948,7 +23978,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_modern_port 
+					pm_industrial_port 
 				}
 			}
 			create_building = {
@@ -55210,6 +55240,21 @@
 				}
 			}
 			create_building = {
+				building = building_military_shipyards
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 3
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_military_shipbuilding_steam 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -56329,7 +56374,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 6
+						levels = 4
 						region = STATE_KANTO
 					}
 				}
@@ -56503,7 +56548,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 4
+						levels = 3
 						region = STATE_KANTO
 					}
 				}
