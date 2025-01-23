@@ -15731,36 +15731,6 @@
 				}
 			}
 			create_building = {
-				building = building_arms_industry
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:BUL
-						levels = 8
-						region = STATE_NORTHERN_THRACE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
-				}
-			}
-			create_building = {
-				building = building_artillery_foundries
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:BUL
-						levels = 6
-						region = STATE_NORTHERN_THRACE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
-				}
-			}
-			create_building = {
 				building = building_construction_sector
 				add_ownership = {
 					country = {
@@ -16820,7 +16790,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BUL
-						levels = 15
+						levels = 8
 						region = STATE_NORTHERN_THRACE
 					}
 				}
@@ -16835,7 +16805,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BUL
-						levels = 25
+						levels = 12
 						region = STATE_NORTHERN_THRACE
 					}
 				}
@@ -72330,7 +72300,7 @@
 					building = {
 						type = building_financial_district
 						country = c:ROM
-						levels = 12
+						levels = 10
 						region = STATE_WALLACHIA
 					}
 				}
@@ -72345,7 +72315,7 @@
 					building = {
 						type = building_financial_district
 						country = c:ROM
-						levels = 10
+						levels = 8
 						region = STATE_WALLACHIA
 					}
 				}
@@ -72360,7 +72330,7 @@
 					building = {
 						type = building_financial_district
 						country = c:ROM
-						levels = 15
+						levels = 10
 						region = STATE_WALLACHIA
 					}
 				}
@@ -79430,7 +79400,7 @@
 					building = {
 						type = building_financial_district
 						country = c:FRA
-						levels = 1
+						levels = 4
 						region = STATE_ILE_DE_FRANCE
 					}
 				}
@@ -79563,165 +79533,13 @@
 					building = {
 						type = building_financial_district
 						country = c:SER
-						levels = 5
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_rotary_valve_engine_building_tooling_workshops pm_steel 
-				}
-			}
-			create_building = {
-				building = building_arms_industry
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 5
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
-				}
-			}
-			create_building = {
-				building = building_artillery_foundries
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 3
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
-				}
-			}
-			create_building = {
-				building = building_munition_plants
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 6
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
-				}
-			}
-			create_building = {
-				building = building_barracks
-				add_ownership = {
-					country = {
-						country = c:SER
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_training_streamlining 
-				}
-			}
-		}
-	}
-	s:STATE_SOUTHERN_SERBIA = {
-		region_state:SER = {
-			create_building = {
-				building = building_railway
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 3
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_steam_trains pm_wooden_passenger_carriages 
-				}
-			}
-			create_building = {
-				building = building_paper_mills
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 2
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_bleached_paper pm_watertube_boiler_building_paper_mills 
-				}
-			}
-			create_building = {
-				building = building_tooling_workshops
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 6
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_rotary_valve_engine_building_tooling_workshops pm_steel 
-				}
-			}
-			create_building = {
-				building = building_motor_industry
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 5
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
-				}
-			}
-			create_building = {
-				building = building_furniture_manufacturies
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
 						levels = 12
 						region = STATE_SOUTHERN_SERBIA
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_mechanized_workshops pm_precision_tools pm_rotary_valve_engine_building_furniture_manufacturies 
-				}
-			}
-			create_building = {
-				building = building_logging_camp
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 5
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_rotary_valve_engine_building_tooling_workshops pm_steel 
 				}
 			}
 			create_building = {
@@ -79785,6 +79603,158 @@
 				}
 			}
 			create_building = {
+				building = building_arms_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 8
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_artillery_foundries
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 7
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_munition_plants
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 8
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
+				}
+			}
+			create_building = {
+				building = building_synthetics_plants
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 1
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_dye_production pm_rayon 
+				}
+			}
+			create_building = {
+				building = building_barracks
+				add_ownership = {
+					country = {
+						country = c:SER
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_training_streamlining 
+				}
+			}
+		}
+	}
+	s:STATE_SOUTHERN_SERBIA = {
+		region_state:SER = {
+			create_building = {
+				building = building_railway
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 3
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steam_trains pm_wooden_passenger_carriages 
+				}
+			}
+			create_building = {
+				building = building_paper_mills
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 2
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bleached_paper pm_watertube_boiler_building_paper_mills 
+				}
+			}
+			create_building = {
+				building = building_tooling_workshops
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 4
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_rotary_valve_engine_building_tooling_workshops pm_steel 
+				}
+			}
+			create_building = {
+				building = building_furniture_manufacturies
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 2
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_mechanized_workshops pm_precision_tools pm_rotary_valve_engine_building_furniture_manufacturies 
+				}
+			}
+			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 5
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
 				building = building_arts_academy
 				add_ownership = {
 					building = {
@@ -79828,51 +79798,6 @@
 				}
 			}
 			create_building = {
-				building = building_arms_industry
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 10
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
-				}
-			}
-			create_building = {
-				building = building_artillery_foundries
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 10
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
-				}
-			}
-			create_building = {
-				building = building_munition_plants
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 8
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
-				}
-			}
-			create_building = {
 				building = building_coal_mine
 				add_ownership = {
 					building = {
@@ -79906,7 +79831,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SER
-						levels = 10
+						levels = 2
 						region = STATE_SOUTHERN_SERBIA
 					}
 				}
@@ -79928,21 +79853,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_fertilization pm_no_secondary pm_steam_threshers 
-				}
-			}
-			create_building = {
-				building = building_synthetics_plants
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SER
-						levels = 1
-						region = STATE_SOUTHERN_SERBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_dye_production pm_rayon 
 				}
 			}
 			create_building = {

@@ -18,11 +18,15 @@ no_federal_reserve_modifier = {
 colossus_with_feet_of_clay_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     country_prestige_mult = -0.3
-    state_radicals_from_political_movements_mult = 0.5
-    interest_group_ig_trade_unions_pol_str_mult = 0.2
-    interest_group_ig_rural_folk_pol_str_mult = 0.2
-    interest_group_ig_intelligentsia_pol_str_mult = 0.1
-    unit_army_offense_mult = -0.2
+    political_movement_radicalism_add = 0.25
+    state_pop_support_movement_communist_mult = 0.8
+    state_pop_support_movement_anarchist_mult = -2
+    state_pop_support_movement_socialist_mult = 0.6
+    state_pop_support_movement_labor_mult = 1
+    interest_group_ig_trade_unions_pol_str_mult = 1.2
+    interest_group_ig_rural_folk_pol_str_mult = 0.6
+    interest_group_ig_intelligentsia_pol_str_mult = 0.2
+    unit_army_offense_mult = -0.25
     unit_army_defense_mult = -0.1
     military_formation_organization_gain_mult = -0.2
 }
@@ -63,7 +67,57 @@ angry_military_modifier = {
 
 stabilization_buff_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    political_movement_radicalism_add = -0.5
+    political_movement_radicalism_add = -0.8
+}
+
+army_buff_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    unit_army_offense_mult = 0.3
+    unit_army_defense_mult = 0.5
+    military_formation_mobilization_speed_mult = 0.7
+    unit_occupation_mult = 0.7
+}
+
+mobilization_buff_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    military_formation_mobilization_speed_mult = 2.5
+}
+
+destabilization_nerf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+    political_movement_radicalism_add = 0.4
+    state_pop_support_movement_communist_mult = 0.8
+    state_pop_support_movement_anarchist_mult = -2
+    state_pop_support_movement_socialist_mult = 0.6
+    state_pop_support_movement_labor_mult = 1
+}
+
+minting_buff_1_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_minting_mult = 0.2
+}
+
+minting_buff_2_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_minting_mult = 0.5
+}
+
+minting_buff_3_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_minting_mult = 0.5
+}
+
+research_buff_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_military_tech_research_speed_mult = 0.3
+}
+
+war_propaganda_buff_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_war_exhaustion_casualties_mult = -0.6
+    interest_group_ig_armed_forces_pol_str_mult = 0.3
+    country_authority_mult = 0.3
+    military_formation_mobilization_speed_mult = 0.5
 }
 
 #Centralization Laws Events Modifiers

@@ -12,9 +12,9 @@ great_war_initiation_events.1 = { # Triggered by global on June 28th.
 		texture = "gfx/event_pictures/franz_ferdinand_assasination.dds"
 	}
 
-    title = great_war_initiation_events.1.title
-	desc = great_war_initiation_events.1.desc
-	flavor = great_war_initiation_events.1.flavor
+    title = great_war_initiation_events.1.t
+	desc = great_war_initiation_events.1.d
+	flavor = great_war_initiation_events.1.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -85,9 +85,9 @@ great_war_initiation_events.2 = {
 		texture = "gfx/event_pictures/franz_ferdinand_assasination.dds"
 	}
 
-    title = great_war_initiation_events.2.title
-	desc = great_war_initiation_events.2.desc
-	flavor = great_war_initiation_events.2.flavor
+    title = great_war_initiation_events.2.t
+	desc = great_war_initiation_events.2.d
+	flavor = great_war_initiation_events.2.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -107,9 +107,9 @@ great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.3.title
-    desc = great_war_initiation_events.3.desc
-    flavor = great_war_initiation_events.3.flavor
+    title = great_war_initiation_events.3.t
+    desc = great_war_initiation_events.3.d
+    flavor = great_war_initiation_events.3.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -154,9 +154,9 @@ great_war_initiation_events.4 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.4.title
-    desc = great_war_initiation_events.4.desc
-    flavor = great_war_initiation_events.4.flavor
+    title = great_war_initiation_events.4.t
+    desc = great_war_initiation_events.4.d
+    flavor = great_war_initiation_events.4.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -174,16 +174,11 @@ great_war_initiation_events.4 = {
         }
         c:AUS = {
             create_diplomatic_play = { # c:SER is target, c:AUS is initiator
-                name = the_great_war
+                initiator = c:AUS
+                target = c:SER
                 escalation = 99
                 target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
                 type = dp_make_protectorate
-
-                add_war_goal = {
-                    holder = c:AUS
-                    type = war_reparations
-                    target_country = c:SER
-                }
                 add_war_goal = {
                     holder = c:SER
                     type = war_reparations
@@ -206,6 +201,12 @@ great_war_initiation_events.4 = {
                 days = 3
             }
         }
+        c:BUL = {
+            trigger_event = {
+                id = great_war_initiation_events.19
+                days = 450
+            }
+        }
     }
     option = { # Let the investigation proceed
         name = great_war_initiation_events.4.b
@@ -213,7 +214,7 @@ great_war_initiation_events.4 = {
             base = 0
         }
         c:SER = {
-        add_country_modifier = {
+        add_modifier = {
             name = angry_elites_1_modifier
             years = 5
             is_decaying = yes
@@ -242,9 +243,9 @@ great_war_initiation_events.5 = {
         }
     }
 
-    title = great_war_initiation_events.5.title
-    desc = great_war_initiation_events.5.desc
-    flavor = great_war_initiation_events.5.flavor
+    title = great_war_initiation_events.5.t
+    desc = great_war_initiation_events.5.d
+    flavor = great_war_initiation_events.5.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -256,16 +257,11 @@ great_war_initiation_events.5 = {
         }
         c:AUS = {
             create_diplomatic_play = { # c:SER is target, c:AUS is initiator
-                name = the_great_war
+                initiator = c:AUS
+                target = c:SER
                 escalation = 99
                 target_state = s:STATE_NORTHERN_SERBIA.region_state:SER
                 type = dp_make_protectorate
-
-                add_war_goal = {
-                    holder = c:AUS
-                    type = war_reparations
-                    target_country = c:SER
-                }
                 add_war_goal = {
                     holder = c:SER
                     type = war_reparations
@@ -295,7 +291,7 @@ great_war_initiation_events.5 = {
             base = 0
         }
         c:AUS = {
-        add_country_modifier = {
+        add_modifier = {
             name = angry_elites_1_modifier
             years = 5
             is_decaying = yes
@@ -314,9 +310,9 @@ great_war_initiation_events.6 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.6.title
-    desc = great_war_initiation_events.6.desc
-    flavor = great_war_initiation_events.6.flavor
+    title = great_war_initiation_events.6.t
+    desc = great_war_initiation_events.6.d
+    flavor = great_war_initiation_events.6.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -345,7 +341,7 @@ great_war_initiation_events.6 = {
             base = 0
         }
         c:RUS = {
-        add_country_modifier = {
+        add_modifier = {
             name = angry_elites_2_modifier
             years = 5
             is_decaying = yes
@@ -364,9 +360,9 @@ great_war_initiation_events.7 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.7.title
-    desc = great_war_initiation_events.7.desc
-    flavor = great_war_initiation_events.7.flavor
+    title = great_war_initiation_events.7.t
+    desc = great_war_initiation_events.7.d
+    flavor = great_war_initiation_events.7.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -395,7 +391,7 @@ great_war_initiation_events.7 = {
             }
         }
         c:GER = {
-        add_country_modifier = {
+        add_modifier = {
             name = angry_elites_3_modifier
             years = 5
             is_decaying = yes
@@ -421,9 +417,9 @@ great_war_initiation_events.8 = {
     }
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    title = great_war_initiation_events.8.title
-    desc = great_war_initiation_events.8.desc
-    flavor = great_war_initiation_events.8.flavor
+    title = great_war_initiation_events.8.t
+    desc = great_war_initiation_events.8.d
+    flavor = great_war_initiation_events.8.f
 
     option = {
         name = great_war_initiation_events.8.a
@@ -436,7 +432,10 @@ great_war_initiation_events.8 = {
             trigger_event = { id = great_war_initiation_events.10 }
         }
         c:TUR = {
-            trigger_event = { id = great_war_initiation_events.11 }
+            trigger_event = { 
+                id = great_war_initiation_events.11 
+                days = 90
+            }
         }
         every_diplomatic_play = { 
 			limit = {
@@ -457,17 +456,7 @@ great_war_initiation_events.8 = {
             add_war_goal = {
                     holder = c:RUS
                     type = conquer_state
-                    target_state = s:STATE_WEST_GALICIA.region_state:AUS
-                }
-            add_war_goal = {
-                    holder = c:RUS
-                    type = conquer_state
                     target_state = s:STATE_EAST_PRUSSIA.region_state:GER
-                }
-            add_war_goal = {
-                    holder = c:RUS
-                    type = conquer_state
-                    target_state = s:STATE_MOLDAVIA.region_state:AUS
                 }
             add_war_goal = {
                     holder = c:AUS
@@ -480,16 +469,6 @@ great_war_initiation_events.8 = {
                     target_state = s:STATE_KIEV.region_state:RUS
                 }
             add_war_goal = {
-                    holder = c:AUS
-                    type = conquer_state
-                    target_state = s:STATE_BESSARABIA.region_state:RUS
-                }
-            add_war_goal = {
-                    holder = c:AUS
-                    type = conquer_state
-                    target_state = s:STATE_CHERSON.region_state:RUS
-                }
-            add_war_goal = {
                     holder = c:GER
                     type = conquer_state
                     target_state = s:STATE_GREATER_POLAND.region_state:RUS
@@ -499,16 +478,6 @@ great_war_initiation_events.8 = {
                     type = conquer_state
                     target_state = s:STATE_MAZOVIA.region_state:RUS
                 }
-            add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_LESSER_POLAND.region_state:RUS
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = war_reparations
-                    target_country = c:RUS
-                }
 		}
         c:GER = { set_variable = central_powers_participant }
         c:RUS = { set_variable = entente_participant }
@@ -516,6 +485,42 @@ great_war_initiation_events.8 = {
             trigger_event = {
                 id = ww1_war_techs_events.1
                 days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
+        c:AUS = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
+        c:RUS = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
+        c:ROM = {
+            trigger_event = {
+                id = great_war_initiation_events.20
+                days = 720
+            }
+        }
+        c:GRE = {
+            trigger_event = {
+                id = great_war_initiation_events.21
+                days = 1080
             }
         }
     }
@@ -525,7 +530,7 @@ great_war_initiation_events.8 = {
             base = 0
         }
         c:RUS = {
-        add_country_modifier = {
+        add_modifier = {
             name = angry_elites_2_modifier
             years = 5
             is_decaying = yes
@@ -544,9 +549,9 @@ great_war_initiation_events.9 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.9.title
-    desc = great_war_initiation_events.9.desc
-    flavor = great_war_initiation_events.9.flavor
+    title = great_war_initiation_events.9.t
+    desc = great_war_initiation_events.9.d
+    flavor = great_war_initiation_events.9.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -566,7 +571,7 @@ great_war_initiation_events.9 = {
 		}
         set_variable = war_cancelled
         c:AUS = {
-        add_country_modifier = {
+        add_modifier = {
             name = angry_elites_1_modifier
             years = 5
             is_decaying = yes
@@ -591,9 +596,9 @@ great_war_initiation_events.10 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.10.title
-    desc = great_war_initiation_events.10.desc
-    flavor = great_war_initiation_events.10.flavor
+    title = great_war_initiation_events.10.t
+    desc = great_war_initiation_events.10.d
+    flavor = great_war_initiation_events.10.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -638,7 +643,7 @@ great_war_initiation_events.10 = {
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
-                    holder = c:GBR
+                    holder = c:FRA
                     type = transfer_subject
                     target_country: c:CMR
                 }
@@ -652,14 +657,16 @@ great_war_initiation_events.10 = {
                     type = war_reparations
                     target_country = c:FRA
                 }
-            # TODO:MID wargoals france: Alsace-Lorraine + war reparations
-            # TODO:MID wargoals germany: war reps from france
 		}
         c:FRA = { set_variable = entente_participant }
         c:FRA = {
             trigger_event = {
                 id = ww1_war_techs_events.1
                 days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
             }
         }
     }
@@ -673,9 +680,9 @@ great_war_initiation_events.11 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.11.title
-    desc = great_war_initiation_events.11.desc
-    flavor = great_war_initiation_events.11.flavor
+    title = great_war_initiation_events.11.t
+    desc = great_war_initiation_events.11.d
+    flavor = great_war_initiation_events.11.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -697,17 +704,7 @@ great_war_initiation_events.11 = {
                     holder = c:TUR
                     type = conquer_state
                     target_state = s:STATE_KARS.region_state:RUS
-                }
-            add_war_goal = {
-                    holder = c:TUR
-                    type = conquer_state
-                    target_state = s:STATE_ARMENIA.region_state:RUS
-                }   
-            add_war_goal = {
-                    holder = c:RUS
-                    type = conquer_state
-                    target_state = s:STATE_ERZURUM.region_state:TUR
-                }           
+                }         
             add_war_goal = {
                     holder = c:RUS
                     type = conquer_state
@@ -715,6 +712,16 @@ great_war_initiation_events.11 = {
                 }              
 		}
         c:TUR = { set_variable = central_powers_participant }
+        c:TUR = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
     }
     option = { # Do nothing
         name = great_war_initiation_events.11.b
@@ -732,9 +739,9 @@ great_war_initiation_events.12 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.12.title
-    desc = great_war_initiation_events.12.desc
-    flavor = great_war_initiation_events.12.flavor
+    title = great_war_initiation_events.12.t
+    desc = great_war_initiation_events.12.d
+    flavor = great_war_initiation_events.12.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -765,13 +772,18 @@ great_war_initiation_events.12 = {
                 type = conquer_state
                 target_state = s:STATE_SAVOY.region_state:FRA
             }
-            add_war_goal = {
-                holder = c:ITA
-                type = transfer_subject
-                target_country: c:TUN
-            }
 		}
         c:ITA = { set_variable = central_powers_participant }
+        c:ITA = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
     }
     option = { # Do nothing
         name = great_war_initiation_events.12.b
@@ -780,6 +792,30 @@ great_war_initiation_events.12 = {
         }
         default_option = yes
         c:ITA = { set_variable = is_neutral }
+        c:ITA = {
+            trigger_event = {
+                id = great_war_initiation_events.18
+                days = 300
+            }
+        }
+        c:ITA = {
+        create_bidirectional_truce = { 
+            country = c:GBR 
+            months = 120 
+        }
+        create_bidirectional_truce = { 
+            country = c:FRA
+            months = 120 
+        }
+        remove_diplomatic_pact = {
+			country = c:GER
+			type = defensive_pact
+		}
+        remove_diplomatic_pact = {
+			country = c:AUS
+			type = defensive_pact
+		}
+        }
     }
 }
 
@@ -793,9 +829,9 @@ great_war_initiation_events.13 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.13.title
-    desc = great_war_initiation_events.13.desc
-    flavor = great_war_initiation_events.13.flavor
+    title = great_war_initiation_events.13.t
+    desc = great_war_initiation_events.13.d
+    flavor = great_war_initiation_events.13.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -861,6 +897,10 @@ great_war_initiation_events.13 = {
                 id = ww1_war_techs_events.1
                 days = 15
             }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
         }
     }
     option = { # Leave France alone
@@ -869,7 +909,7 @@ great_war_initiation_events.13 = {
             base = 0
         }
         c:GER = {
-        add_country_modifier = {
+        add_modifier = {
             name = angry_military_modifier
             years = 5
             is_decaying = yes
@@ -888,9 +928,9 @@ great_war_initiation_events.14 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.14.title
-    desc = great_war_initiation_events.14.desc
-    flavor = great_war_initiation_events.14.flavor
+    title = great_war_initiation_events.14.t
+    desc = great_war_initiation_events.14.d
+    flavor = great_war_initiation_events.14.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -906,60 +946,49 @@ great_war_initiation_events.14 = {
                 days = 3
             }
         }
+        c:LUX = {
+            trigger_event = { 
+                id = great_war_initiation_events.24
+                days = 2
+            }
+        }
         add_modifier = {
             name = schlieffen_plan_modifier
             months = 5
         }
+        
         every_diplomatic_play = {
-			limit = {
+            limit = {
                 initiator = c:AUS
                 target = c:SER
-			}
-			add_target_backers = {
-				c:BEL
-			}
-            add_target_backers = {
-				c:LUX
-			}
+            }
+            add_target_backers = { c:BEL }
+            add_target_backers = { c:LUX }
             add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_LUXEMBOURG.region_state:LUX
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = make_protectorate
-                    target_country = c:BEL
-                }
-		}
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:BEL
+            }
+        }
         c:BEL = { set_variable = entente_participant }
         c:LUX = { set_variable = entente_participant }
-        random_diplomatic_play = {
-				limit = {
-					c:AUS = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:SER = {
-						is_diplomatic_play_target = yes
-					}
-				}
-				add_diplomatic_play_war_support = { target = c:LUX value = -200 }
-		}
     }
+
     option = { # Do nothing
         name = great_war_initiation_events.14.b
         ai_chance = {
             base = 0
         }
         c:GER = {
-        add_country_modifier = {
-            name = angry_military_modifier
-            years = 5
-            is_decaying = yes
-        }
+            add_modifier = {
+                name = angry_military_modifier
+                years = 5
+                is_decaying = yes
+            }
         }
     }
 }
+
 
 # The invasion of Belgium, Britain choosing whether or not to protect Belgium
 great_war_initiation_events.15 = {
@@ -969,9 +998,9 @@ great_war_initiation_events.15 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.15.title
-    desc = great_war_initiation_events.15.desc
-    flavor = great_war_initiation_events.15.flavor
+    title = great_war_initiation_events.15.t
+    desc = great_war_initiation_events.15.d
+    flavor = great_war_initiation_events.15.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1023,44 +1052,9 @@ great_war_initiation_events.15 = {
 				c:TAN
 			}
             add_war_goal = {
-                holder = c:GBR
-                type = transfer_subject
-                target_country: c:TOG
-            }
-            add_war_goal = {
-                holder = c:GBR
-                type = transfer_subject
-                target_country: c:NAM
-            }
-            add_war_goal = {
-                holder = c:GBR
-                type = transfer_subject
-                target_country: c:TAN
-            }
-            add_war_goal = {
-                holder = c:GER
-                type = transfer_subject
-                target_country: c:NGA
-            }
-            add_war_goal = {
-                holder = c:GER
-                type = transfer_subject
-                target_country: c:GHA
-            }
-            add_war_goal = {
-                holder = c:GER
-                type = transfer_subject
-                target_country: c:EGY
-            }
-            add_war_goal = {
                 holder = c:GER
                 type = war_reparations
-                target_country: c:GBR
-            }
-            add_war_goal = {
-                holder = c:GER
-                type = conquer_state
-                target_state: s:STATE_SINAI.region_state:EGY
+                target_country = c:GBR
             }
 		}
         c:GBR = { set_variable = entente_participant }
@@ -1069,15 +1063,32 @@ great_war_initiation_events.15 = {
                 id = ww1_war_techs_events.1
                 days = 15
             }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
+        c:USA = {
+            trigger_event = {
+                id = great_war_initiation_events.22
+                days = 1000
+            }
+        }
+        c:POR = {
+            trigger_event = {
+                id = great_war_initiation_events.23
+                days = 700
+            }
         }
     }
+    
     option = { # Do nothing
         name = great_war_initiation_events.15.b
         ai_chance = {
             base = 0
         }
         c:GBR = {
-        add_country_modifier = {
+        add_modifier = {
             name = angry_elites_1_modifier
             years = 5
             is_decaying = yes
@@ -1094,9 +1105,9 @@ great_war_initiation_events.16 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.16.title
-    desc = great_war_initiation_events.16.desc
-    flavor = great_war_initiation_events.16.flavor
+    title = great_war_initiation_events.16.t
+    desc = great_war_initiation_events.16.d
+    flavor = great_war_initiation_events.16.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1108,35 +1119,43 @@ great_war_initiation_events.16 = {
         }
         every_diplomatic_play = {
 			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+                }
+            }
 			add_target_backers = {
 				c:JAP
 			}
             add_initiator_backers = {
 				c:NGG
 			}
-            add_war_goal = {
-                holder = c:JAP
-                type = conquer_state
-                target_state = s:STATE_SHANDONG.region_state:GER
-            }
-            add_war_goal = {
-                holder = c:JAP
-                type = transfer_subject
-                target_country: c:NGG
-            }
-            add_war_goal = {
-                holder = c:GER
-                type = conquer_state
-                target_state: s:STATE_FORMOSA.region_state:JAP
-            }
-            add_war_goal = {
-                holder = c:GER
-                type = conquer_state
-                target_state: s:STATE_SHENGJING.region_state:JAP
-            }
 		}
         c:JAP = { set_variable = entente_participant }
     }
@@ -1156,9 +1175,9 @@ great_war_initiation_events.17 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    title = great_war_initiation_events.17.title
-    desc = great_war_initiation_events.17.desc
-    flavor = great_war_initiation_events.17.flavor
+    title = great_war_initiation_events.17.t
+    desc = great_war_initiation_events.17.d
+    flavor = great_war_initiation_events.17.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1171,8 +1190,37 @@ great_war_initiation_events.17 = {
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
-                target = c:SER
-			}
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+                }
+            }
 			add_target_backers = {
 				c:MON
 			}
@@ -1184,5 +1232,501 @@ great_war_initiation_events.17 = {
         ai_chance = {
             base = 0
         }
+    }
+}
+
+#Italy decides to join or not in 1915
+great_war_initiation_events.18 = {
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.18.t
+    desc = great_war_initiation_events.18.d
+    flavor = great_war_initiation_events.18.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Join the war
+        name = great_war_initiation_events.18.b
+        default_option = yes
+        ai_chance = {
+            base = 0
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }                
+			}
+			add_target_backers = {
+				c:ITA
+			}
+            add_war_goal = {
+                    holder = c:ITA
+                    type = conquer_state
+                    target_state = s:STATE_SOUTH_TYROL.region_state:AUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_EMILIA.region_state:ITA
+                }
+        }
+        c:ITA = { set_variable = entente_participant }
+        c:ITA = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
+    }
+    option = { # Stay Neutral
+        name = great_war_initiation_events.13.a
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+#Bulgaria decides to join or not in 1915
+great_war_initiation_events.19 = {
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.19.t
+    desc = great_war_initiation_events.19.d
+    flavor = great_war_initiation_events.19.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Join the war
+        name = great_war_initiation_events.19.b
+        default_option = yes
+        ai_chance = {
+            base = 0
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_initiator_backers = {
+				c:BUL
+			}
+        }
+        c:BUL = { set_variable = central_powers_participant }
+    }
+    option = { # Stay Neutral
+        name = great_war_initiation_events.19.a
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+#Romania decides to join or not in 1915
+great_war_initiation_events.20 = {
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.20.t
+    desc = great_war_initiation_events.20.d
+    flavor = great_war_initiation_events.20.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Join the war
+        name = great_war_initiation_events.20.b
+        default_option = yes
+        ai_chance = {
+            base = 0
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:ROM
+			}
+        }
+        c:ROM = { set_variable = entente_participant }
+    }
+    option = { # Stay Neutral
+        name = great_war_initiation_events.20.a
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+#Greece decides to join or not in 1915
+great_war_initiation_events.21 = {
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.21.t
+    desc = great_war_initiation_events.21.d
+    flavor = great_war_initiation_events.21.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Join the war
+        name = great_war_initiation_events.21.b
+        default_option = yes
+        ai_chance = {
+            base = 0
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:GRE
+			}
+        }
+        c:GRE = { set_variable = entente_participant }
+    }
+    option = { # Stay Neutral
+        name = great_war_initiation_events.21.a
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+#USA decides to join or not in 1917
+great_war_initiation_events.22 = {
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.22.t
+    desc = great_war_initiation_events.22.d
+    flavor = great_war_initiation_events.22.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Join the war
+        name = great_war_initiation_events.22.b
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:USA
+			}
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:USA
+                }
+            add_war_goal = {
+                    holder = c:USA
+                    type = regime_change
+                    target_country = c:GER
+                }
+        }
+        c:USA = { set_variable = entente_participant }
+        c:USA = {
+            trigger_event = {
+                id = stabilization_buff_events.3
+                days = 5
+            }
+        }
+        c:GER = {
+            trigger_event = {
+                id = stabilization_buff_events.4
+                days = 5
+            }
+        }
+    }
+    option = { # Stay Neutral
+        name = great_war_initiation_events.22.a
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+#Portugal decides to join or not in 1916
+great_war_initiation_events.23 = {
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.23.t
+    desc = great_war_initiation_events.23.d
+    flavor = great_war_initiation_events.23.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Join the war
+        name = great_war_initiation_events.23.b
+        default_option = yes
+        ai_chance = {
+            base = 0
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:POR
+			}
+        }
+        c:POR = { set_variable = entente_participant }
+    }
+    option = { # Stay Neutral
+        name = great_war_initiation_events.22.a
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+#Luxembourg receives instant capitulation
+great_war_initiation_events.24 = {
+    type = country_event
+
+    duration = 0.1
+
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.24.t
+    desc = great_war_initiation_events.24.d
+    flavor = great_war_initiation_events.24.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { #Capitulate
+        name = great_war_initiation_events.24.a
+        default_option = yes
+        ai_chance = {
+            base = 0
+        }
+
+        random_diplomatic_play = {
+				limit = {
+					c:AUS = {
+						is_diplomatic_play_initiator = yes
+					}
+					c:SER = {
+						is_diplomatic_play_target = yes
+					}
+				}
+			add_diplomatic_play_war_support = { target = c:LUX value = -200 }
+		}
     }
 }

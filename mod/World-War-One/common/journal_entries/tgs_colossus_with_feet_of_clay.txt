@@ -28,10 +28,11 @@ je_colossus_with_feet_of_clay = {
     }
 
     on_complete = {
-        c:RUS = {
             remove_modifier = colossus_with_feet_of_clay_modifier
-        }
-        set_variable = russian_reforms_completed
+            set_variable = russian_reforms_completed
+        trigger_event = {
+			id = 
+		}
     }
 
     timeout = -1
