@@ -451,17 +451,12 @@ great_war_initiation_events.8 = {
             add_war_goal = {
                     holder = c:RUS
                     type = conquer_state
-                    target_state = s:STATE_EAST_GALICIA.region_state:AUS
+                    target_state = s:STATE_EAST_PRUSSIA.region_state:GER
                 }
             add_war_goal = {
                     holder = c:RUS
                     type = conquer_state
-                    target_state = s:STATE_EAST_PRUSSIA.region_state:GER
-                }
-            add_war_goal = {
-                    holder = c:AUS
-                    type = conquer_state
-                    target_state = s:STATE_VOLHYNIA.region_state:RUS
+                    target_state = s:STATE_EAST_GALICIA.region_state:AUS
                 }
             add_war_goal = {
                     holder = c:AUS
@@ -472,11 +467,6 @@ great_war_initiation_events.8 = {
                     holder = c:GER
                     type = conquer_state
                     target_state = s:STATE_GREATER_POLAND.region_state:RUS
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_MAZOVIA.region_state:RUS
                 }
 		}
         c:GER = { set_variable = central_powers_participant }
@@ -643,16 +633,6 @@ great_war_initiation_events.10 = {
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
-                    holder = c:FRA
-                    type = transfer_subject
-                    target_country: c:CMR
-                }
-            add_war_goal = {
-                    holder = c:FRA
-                    type = war_reparations
-                    target_country = c:GER
-                }
-            add_war_goal = {
                     holder = c:GER
                     type = war_reparations
                     target_country = c:FRA
@@ -707,9 +687,14 @@ great_war_initiation_events.11 = {
                 }         
             add_war_goal = {
                     holder = c:RUS
-                    type = conquer_state
-                    target_state = s:STATE_TRABZON.region_state:TUR
-                }              
+                    type = war_reparations
+                    target_country = c:TUR
+                }  
+            add_war_goal = {
+                    holder = c:GBR
+                    type = contain_threat
+                    target_country = c:TUR
+                }          
 		}
         c:TUR = { set_variable = central_powers_participant }
         c:TUR = {
@@ -876,16 +861,6 @@ great_war_initiation_events.13 = {
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
-                    holder = c:FRA
-                    type = transfer_subject
-                    target_country: c:CMR
-                }
-            add_war_goal = {
-                    holder = c:FRA
-                    type = war_reparations
-                    target_country = c:GER
-                }
-            add_war_goal = {
                     holder = c:GER
                     type = war_reparations
                     target_country = c:FRA
@@ -943,13 +918,21 @@ great_war_initiation_events.14 = {
         c:GBR = {
             trigger_event = { 
                 id = great_war_initiation_events.15
-                days = 3
+                days = 5
             }
         }
         c:LUX = {
             trigger_event = { 
                 id = great_war_initiation_events.24
-                days = 2
+                days = 5
+            }
+            trigger_event = { 
+                id = great_war_initiation_events.24
+                days = 6
+            }
+            trigger_event = { 
+                id = great_war_initiation_events.24
+                days = 7
             }
         }
         add_modifier = {
@@ -1297,8 +1280,8 @@ great_war_initiation_events.18 = {
             add_war_goal = {
                     holder = c:ITA
                     type = conquer_state
-                    target_state = s:STATE_SOUTH_TYROL.region_state:AUS
-                }
+                    target_state = s:STATE_AUSTRIA.region_state:AUS
+                }    
             add_war_goal = {
                     holder = c:AUS
                     type = conquer_state
@@ -1384,6 +1367,11 @@ great_war_initiation_events.19 = {
 			add_initiator_backers = {
 				c:BUL
 			}
+            add_war_goal = {
+                    holder = c:GBR
+                    type = war_reparations
+                    target_country = c:BUL
+                }
         }
         c:BUL = { set_variable = central_powers_participant }
     }
@@ -1454,6 +1442,11 @@ great_war_initiation_events.20 = {
 			add_target_backers = {
 				c:ROM
 			}
+            add_war_goal = {
+                    holder = c:AUS
+                    type = war_reparations
+                    target_country = c:ROM
+                }
         }
         c:ROM = { set_variable = entente_participant }
     }
@@ -1524,6 +1517,11 @@ great_war_initiation_events.21 = {
 			add_target_backers = {
 				c:GRE
 			}
+            add_war_goal = {
+                    holder = c:AUS
+                    type = war_reparations
+                    target_country = c:GRE
+                }
         }
         c:GRE = { set_variable = entente_participant }
     }
@@ -1595,11 +1593,6 @@ great_war_initiation_events.22 = {
                     holder = c:GER
                     type = war_reparations
                     target_country = c:USA
-                }
-            add_war_goal = {
-                    holder = c:USA
-                    type = regime_change
-                    target_country = c:GER
                 }
         }
         c:USA = { set_variable = entente_participant }
@@ -1683,6 +1676,11 @@ great_war_initiation_events.23 = {
 			add_target_backers = {
 				c:POR
 			}
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:POR
+                }
         }
         c:POR = { set_variable = entente_participant }
     }
@@ -1699,7 +1697,6 @@ great_war_initiation_events.24 = {
     type = country_event
 
     duration = 0.1
-
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
     }
@@ -1716,7 +1713,7 @@ great_war_initiation_events.24 = {
         ai_chance = {
             base = 0
         }
-
+        
         random_diplomatic_play = {
 				limit = {
 					c:AUS = {

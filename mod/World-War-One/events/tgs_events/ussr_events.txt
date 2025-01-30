@@ -1,0 +1,71 @@
+﻿namespace = ussr_events
+
+ussr_events.1 = { #Soviets decides to continue war with central powers or not
+    type = country_event
+
+    title = ussr_events.1.t
+    desc = ussr_events.1.d
+    flavor = ussr_events.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/russian_revolution.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = ussr_events.1.a
+        default_option = yes
+        remove_modifier = war_protests_1_modifier
+        remove_modifier = war_protests_2_modifier
+         every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+            add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
+        }
+    }
+
+    option = {
+        name = ussr_events.1.b
+        add_modifier = {
+			name = war_protests_2_modifier
+            years = 3
+		}
+    }
+}
