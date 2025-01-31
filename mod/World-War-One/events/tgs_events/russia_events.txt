@@ -172,6 +172,11 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         ig:ig_petty_bourgeoisie = {
 			add_ruling_interest_group = yes
 		}
+		add_modifier = {
+        name = minting_buff_3_modifier
+        months = 6
+        is_decaying = yes
+        } 
     }
 
     option = {
@@ -362,6 +367,11 @@ russia_events.7 = { #Soviet uprising
           years = 5
           is_decaying = yes
         }
+	 add_modifier = {
+        name = minting_buff_3_modifier
+        years = 10
+        is_decaying = yes
+        } 
       c:RUS = {
          trigger_event = {
           id = russia_events.8
