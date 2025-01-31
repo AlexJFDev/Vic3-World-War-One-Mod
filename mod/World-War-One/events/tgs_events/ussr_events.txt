@@ -59,8 +59,417 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 			}
             add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
         }
+        create_country = { #Estonia
+			origin = root
+			tag = EST
+			state = s:STATE_TALINN.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+                every_diplomatic_play = {
+			     limit = {
+                 initiator = c:AUS
+                 target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:SIB								
+						this = c:SIB						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			        }
+			      }
+                   add_diplomatic_play_war_support = { target = c:EST value = -200 }   
+                }
+			}
+		}
+        s:STATE_TARTU = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:EST
+            }
+        }
+        create_country = { #Latvia
+			origin = root
+			tag = LAT
+			state = s:STATE_RIGA.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+                every_diplomatic_play = {
+			     limit = {
+                 initiator = c:AUS
+                 target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:SIB								
+						this = c:SIB						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			        }
+			      }
+                   add_diplomatic_play_war_support = { target = c:LAT value = -200 }   
+                }
+			}
+		}
+        s:STATE_COURLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:LAT
+            }
+        }
+        create_country = { #Lithuania
+			origin = root
+			tag = LIT
+			state = s:STATE_KAUNAS.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+                every_diplomatic_play = {
+			     limit = {
+                 initiator = c:AUS
+                 target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:SIB								
+						this = c:SIB						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			        }
+			      }
+                   add_diplomatic_play_war_support = { target = c:LIT value = -200 }   
+                }
+			}
+		}
+        create_country = { #Poland
+			origin = root
+			tag = POL
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_monarchy
+                activate_law = law_type:law_oligarchy
+                activate_law = law_type:law_mass_conscription	
+                every_diplomatic_play = {
+			     limit = {
+                 initiator = c:AUS
+                 target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:SIB								
+						this = c:SIB						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			        }
+			      }
+                   add_diplomatic_play_war_support = { target = c:POL value = -200 }   
+                }
+			}
+		}
+        s:STATE_LESSER_POLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_MAZOVIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_VILNIUS = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_BREST = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_VOLHYNIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:SIB
+			    owner = {
+				  OR = {
+					c:SIB = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        create_country = { #Ukraine
+			origin = root
+			tag = UKR
+			state = s:STATE_KIEV.region_state:SIB
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+                every_diplomatic_play = {
+			     limit = {
+                 initiator = c:AUS
+                 target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:SIB								
+						this = c:SIB						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			        }
+			      }
+                   add_diplomatic_play_war_support = { target = c:UKR value = -200 }   
+                }
+			}
+		}
+        s:STATE_CHERSON = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:SIB
+			    owner = {
+				  OR = {
+					c:SIB = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_CHERNIHIV = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:SIB
+			    owner = {
+				  OR = {
+					c:SIB = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_KHARKOV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:SIB
+			    owner = {
+				  OR = {
+					c:SIB = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_TAURIDA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:SIB
+			    owner = {
+				  OR = {
+					c:SIB = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_BESSARABIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:SIB
+			    owner = {
+				  OR = {
+					c:SIB = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+        c:GER = {
+		create_diplomatic_pact = {
+			country = c:EST
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:LAT
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:LIT
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:POL
+			type = protectorate
+		}	
+	    }
+        c:AUS = {
+		create_diplomatic_pact = {
+			country = c:UKR
+			type = protectorate
+		}	
+        }
+        ai_chance = {
+			base = 100
+		}
     }
-
+        
     option = {
         name = ussr_events.1.b
         add_modifier = {

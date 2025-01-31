@@ -38,6 +38,7 @@ je_colossus_with_feet_of_clay = {
 				is_political_movement_type = movement_socialist
 				is_political_movement_type = movement_communist
 				is_political_movement_type = movement_anarchist
+                is_political_movement_type = movement_labor
 			}
             is_insurrectionary = yes
 			civil_war ?= {
@@ -56,23 +57,19 @@ je_colossus_with_feet_of_clay = {
                 id = russia_events.3
                 days = 5
             }
-        }
-      c:RUS = {
             trigger_event = {
                 id = russia_events.4
-                days = 15
+                days = 30
             }
-        }
-        add_modifier = {
-          name = revolution_stabilization_buff_1
-          months = 3
-          is_decaying = yes
         }
         add_modifier = {
           name = defeated_elites_modifier
           years = 20
         }
         set_variable = russian_revolution_1
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
     }
 
     on_complete = {
@@ -98,7 +95,7 @@ je_soviet_threat = {
     }
     
     possible = {
-        has_variable = russian_revolution_1
+        has_modifier = war_protests_2_modifier
     }
 
     complete = {
@@ -116,6 +113,9 @@ je_soviet_threat = {
             OR = {
 				is_political_movement_type = movement_socialist
 				is_political_movement_type = movement_communist
+                is_political_movement_type = movement_anarchist
+                is_political_movement_type = movement_radical
+                is_political_movement_type = movement_labor
 			}
             is_insurrectionary = yes
 			civil_war ?= {
@@ -135,10 +135,10 @@ je_soviet_threat = {
                 days = 5
             }
         }
-      c:SOV = {
+      c:RUS = {
             trigger_event = {
                 id = ussr_events.1
-                days = 60
+                days = 20
             }
         }
       add_modifier = {
@@ -148,6 +148,9 @@ je_soviet_threat = {
         }
       remove_variable = russian_revolution_1
       set_variable = russian_revolution_2
+      random_civil_war = {
+			add_civil_war_progress = -100
+		}
     }
 
     timeout = -1

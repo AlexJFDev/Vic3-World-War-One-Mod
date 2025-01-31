@@ -44,54 +44,11 @@ russia_events.2 = { #Russian empire decides to continue the war or not
         texture = "gfx/event_pictures/russian_revolution.dds"
     }
 
-    trigger = {
-       every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
-            c:RUS = {
-                has_war_support = { value < 5 }
-            }
-        }
-    }
+    trigger = {}
 
     option = {
         name = russia_events.2.a
         default_option = yes
-        add_modifier = {
-			name = war_protests_1_modifier
-            years = 3
-		}
     }
 
     option = {
@@ -177,26 +134,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         months = 6
         is_decaying = yes
         } 
-    }
-
-    option = {
-        name = russia_events.3.b
-        remove_modifier = colossus_with_feet_of_clay_modifier
-        activate_law = law_type:law_presidential_republic
-        activate_law = law_type:law_universal_suffrage
-        activate_law = law_type:law_right_of_assembly
-        activate_law = law_type:law_wage_subsidies
-        activate_law = law_type:law_public_schools
-        activate_law = law_type:law_dedicated_police
-        c:GER = {
-            trigger_event = {
-                id = russia_events.5
-                days = 5
-            }
-        }
-        ig:ig_petty_bourgeoisie = {
-			add_ruling_interest_group = yes
-		}
+		remove_modifier = war_protests_1_modifier
     }
 }
 
@@ -228,11 +166,13 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         create_character = {
 			template = rus_leon_trotsky_character_template
         }
+		ai_chance = {
+			base = 100
+		}
     }
 
     option = {
         name = russia_events.4.b
-        remove_modifier = war_protests_1_modifier
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
@@ -299,11 +239,14 @@ russia_events.5 = { #Germany decides to send Lenin to Russia
                 days = 5
             }
         }  
+		ai_chance = {
+			base = 100
+		}
     }
 
-    #option = {
-    #    name = russia_events.5.b
-    #}
+	option = {
+        name = russia_events.5.a
+    }
 }
 
 russia_events.6 = { #Lenin returns to Russia
@@ -334,7 +277,7 @@ russia_events.6 = { #Lenin returns to Russia
         }
     }
 }
-
+ 
 russia_events.7 = { #Soviet uprising
     type = country_event
 
@@ -363,11 +306,6 @@ russia_events.7 = { #Soviet uprising
 				set_character_as_ruler = yes
 			}
 	 add_modifier = {
-          name = army_buff_modifier
-          years = 5
-          is_decaying = yes
-        }
-	 add_modifier = {
         name = minting_buff_3_modifier
         years = 10
         is_decaying = yes
@@ -389,6 +327,14 @@ russia_events.7 = { #Soviet uprising
 		set_relations = { country = c:USA value = -80 }
 		set_relations = { country = c:JAP value = -80 }
         }
+		remove_diplomatic_pact = {
+			country = c:FRA
+			type = alliance
+		}
+        remove_diplomatic_pact = {
+			country = c:GBR
+			type = alliance
+		}
     }
 }
 
@@ -412,7 +358,7 @@ russia_events.8 = { #The civil war begins
 
     option = {
         name = russia_events.8.a 
-        create_country = { #White Russia
+        create_country = {
 	       tag = SIB
 	       origin = this
 	       state = s:STATE_TOMSK.region_state:RUS
@@ -445,21 +391,17 @@ russia_events.8 = { #The civil war begins
 	          NOT = {
 			   region = sr:region_belarus 
 			   region = sr:region_russia 
+			   region = sr:region_poland
+			   region = sr:region_baltic_states
 		       }
 		    }
           }
 	        set_state_owner = c:SIB
         }
-        c:RUS = {
-         trigger_event = {
-          id = russia_events.9
-          days = 5
-            }
-        }   
     }
 }
 
-russia_events.9 = { #Regions break free
+russia_events.9 = { #JE colossus completion
     type = country_event
 
     title = russia_events.9.t
@@ -479,444 +421,6 @@ russia_events.9 = { #Regions break free
 
     option = {
         name = russia_events.9.a
-        create_country = { #Estonia
-			origin = root
-			tag = EST
-			state = s:STATE_TALINN.region_state:SIB
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-                every_diplomatic_play = {
-			     limit = {
-                 initiator = c:AUS
-                 target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:SIB								
-						this = c:SIB						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			        }
-			      }
-                   add_diplomatic_play_war_support = { target = c:EST value = -200 }   
-                }
-			}
-		}
-        s:STATE_TARTU = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:EST
-            }
-        }
-        create_country = { #Latvia
-			origin = root
-			tag = LAT
-			state = s:STATE_RIGA.region_state:SIB
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-                every_diplomatic_play = {
-			     limit = {
-                 initiator = c:AUS
-                 target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:SIB								
-						this = c:SIB						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			        }
-			      }
-                   add_diplomatic_play_war_support = { target = c:LAT value = -200 }   
-                }
-			}
-		}
-        s:STATE_COURLAND = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:LAT
-            }
-        }
-        create_country = { #Lithuania
-			origin = root
-			tag = LIT
-			state = s:STATE_KAUNAS.region_state:SIB
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-                every_diplomatic_play = {
-			     limit = {
-                 initiator = c:AUS
-                 target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:SIB								
-						this = c:SIB						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			        }
-			      }
-                   add_diplomatic_play_war_support = { target = c:LIT value = -200 }   
-                }
-			}
-		}
-        create_country = { #Poland
-			origin = root
-			tag = POL
-			state = s:STATE_GREATER_POLAND.region_state:SIB
-			on_created = {
-				activate_law = law_type:law_monarchy
-                activate_law = law_type:law_oligarchy
-                activate_law = law_type:law_mass_conscription	
-                create_diplomatic_play = {
-		          target_country = c:RUS
-		          type = dp_regime_change
-	              war = yes
-	              add_war_goal = {
-		            holder = c:RUS
-		            type = regime_change
-		            target_country = c:POL
-                   }
-	            }
-                every_diplomatic_play = {
-			     limit = {
-                 initiator = c:AUS
-                 target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:SIB								
-						this = c:SIB						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			        }
-			      }
-                   add_diplomatic_play_war_support = { target = c:POL value = -200 }   
-                }
-			}
-		}
-        s:STATE_LESSER_POLAND = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:POL
-            }
-        }
-        s:STATE_MAZOVIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:POL
-            }
-        }
-        s:STATE_VILNIUS = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:POL
-            }
-        }
-        s:STATE_BREST = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:POL
-            }
-        }
-        s:STATE_VOLHYNIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:POL
-            }
-        }
-        create_country = { #Ukraine
-			origin = root
-			tag = UKR
-			state = s:STATE_KIEV.region_state:SIB
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-                create_diplomatic_play = {
-		          target_country = c:RUS
-		          type = dp_regime_change
-	              war = yes
-	              add_war_goal = {
-		            holder = c:RUS
-		            type = annex_country
-		            target_country = c:UKR
-                   }
-	            }
-                every_diplomatic_play = {
-			     limit = {
-                 initiator = c:AUS
-                 target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:SIB								
-						this = c:SIB						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			        }
-			      }
-                   add_diplomatic_play_war_support = { target = c:UKR value = -200 }   
-                }
-			}
-		}
-        s:STATE_CHERSON = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:UKR
-            }
-        }
-        s:STATE_CHERNIHIV = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:UKR
-            }
-        }
-        s:STATE_KHARKOV = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:UKR
-            }
-        }
-        s:STATE_TAURIDA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:UKR
-            }
-        }
-        s:STATE_VOLHYNIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:UKR
-            }
-        }
-        s:STATE_BESSARABIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SIB
-			    owner = {
-				  OR = {
-					c:SIB = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ROM
-            }
-        }
-    }
-}
-
-rusia_events.10 = { #JE colossus completion
-    type = country_event
-
-    title = rusia_events.10.t
-    desc = russia_events.10.d
-    flavor = russia_events.10.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    event_image = {
-        texture = "gfx/event_pictures/russian_revolution.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = russia_events.10.a
         default_option = yes
         remove_modifier = colossus_with_feet_of_clay_modifier
         add_modifier = {
