@@ -34,11 +34,12 @@ je_colossus_with_feet_of_clay = {
     fail = { 
         any_political_movement = {
             OR = {
-				is_political_movement_type = movement_radical
 				is_political_movement_type = movement_socialist
 				is_political_movement_type = movement_communist
-				is_political_movement_type = movement_anarchist
+                is_political_movement_type = movement_anarchist
+                is_political_movement_type = movement_radical
                 is_political_movement_type = movement_labor
+                is_political_movement_type = movement_nihilist
 			}
             is_insurrectionary = yes
 			civil_war ?= {
@@ -46,7 +47,7 @@ je_colossus_with_feet_of_clay = {
                   is_civil_war_type = revolution
                   is_civil_war_type = secession
                 }
-				civil_war_progress >= 0.75
+				civil_war_progress >= 0.8
 			}
         }
     }
@@ -66,13 +67,17 @@ je_colossus_with_feet_of_clay = {
           name = defeated_elites_modifier
           years = 20
         }
-        set_variable = russian_revolution_1
         random_civil_war = {
 			add_civil_war_progress = -100
 		}
+        remove_modifier = war_protests_1_modifier
+        remove_modifier = colossus_with_feet_of_clay_modifier
+        remove_variable = no_reform_russia
+        set_variable = russian_revolution_1
     }
 
     on_complete = {
+        remove_variable = no_reform_russia
         set_variable = russian_reforms_completed
         trigger_event = {
 			id = russia_events.9
@@ -116,6 +121,7 @@ je_soviet_threat = {
                 is_political_movement_type = movement_anarchist
                 is_political_movement_type = movement_radical
                 is_political_movement_type = movement_labor
+                is_political_movement_type = movement_nihilist
 			}
             is_insurrectionary = yes
 			civil_war ?= {
@@ -123,7 +129,7 @@ je_soviet_threat = {
                   is_civil_war_type = revolution
                   is_civil_war_type = secession
                 }
-				civil_war_progress >= 0.75
+				civil_war_progress >= 0.8
 			}
         }
     }
@@ -138,7 +144,7 @@ je_soviet_threat = {
       c:RUS = {
             trigger_event = {
                 id = ussr_events.1
-                days = 20
+                days = 50
             }
         }
       add_modifier = {
@@ -146,11 +152,11 @@ je_soviet_threat = {
           months = 24
           is_decaying = yes
         }
-      remove_variable = russian_revolution_1
-      set_variable = russian_revolution_2
       random_civil_war = {
 			add_civil_war_progress = -100
 		}
+      remove_variable = russian_revolution_1
+      set_variable = russian_revolution_2
     }
 
     timeout = -1

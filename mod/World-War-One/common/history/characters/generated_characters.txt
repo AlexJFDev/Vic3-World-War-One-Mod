@@ -1896,68 +1896,6 @@
 				charismatic honorable 
 			}
 		}
-		create_character = {
-			first_name = Aristide
-			last_name = Briand
-			culture = cu:french
-			interest_group = ig_intelligentsia
-			ideology = ideology_republican_leader
-			birth_date = 1862.03.28
-			ig_leader = yes
-			historical = yes
-			traits = {
-				masterful_diplomat 
-			}
-		}
-		create_character = {
-			first_name = Charles
-			last_name = de_Gaulle
-			culture = cu:french
-			interest_group = ig_armed_forces
-			ideology = ideology_moderate
-			birth_date = 1890.11.22
-			is_general = yes
-			historical = yes
-			traits = {
-				brave experienced_artillery_commander experienced_political_operator firebrand imposing 
-			}
-		}
-		create_character = {
-			first_name = Maurice
-			last_name = Gamelin
-			culture = cu:french
-			interest_group = ig_armed_forces
-			ideology = ideology_moderate
-			birth_date = 1872.09.20
-			is_general = yes
-			historical = yes
-			traits = {
-			}
-		}
-		create_character = {
-			first_name = Albert
-			last_name = Thomas
-			culture = cu:french
-			interest_group = ig_armed_forces
-			ideology = ideology_jingoist_leader
-			birth_date = 1878.06.16
-			ig_leader = yes
-			historical = yes
-			traits = {
-			}
-		}
-		create_character = {
-			first_name = Joseph
-			last_name = Gallieni
-			culture = cu:french
-			interest_group = ig_armed_forces
-			ideology = ideology_jingoist_leader
-			birth_date = 1849.04.24
-			is_general = yes
-			historical = yes
-			traits = {
-			}
-		}
 	}
 	c:GBR = {
 		create_character = {
@@ -3535,7 +3473,7 @@
 			}
 		}
 	}
-	c:ruler = {
+	c:SWE = {
 		create_character = {
 			first_name = Oscar
 			last_name = Gustaf_Adolf
@@ -3550,13 +3488,88 @@
 				charismatic 
 			}
 		}
+		create_character = {
+			first_name = Karl
+			last_name = Albert_Staaff
+			culture = cu:swedish
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_market_liberal
+			birth_date = 1860.01.21
+			ruler = yes
+			historical = yes
+			traits = {
+				ambitious experienced_political_operator persistent 
+			}
+		}
 	}
 	c:RUS = {
+		create_character = {
+			first_name = Nikolai
+			last_name = Romanov
+			culture = cu:russian
+			interest_group = ig_landowners
+			ideology = ideology_authoritarian
+			birth_date = 1868-05-18
+			ruler = yes
+			historical = yes
+			traits = {
+				arrogant bigoted cruel expensive_tastes reckless 
+			}
+		}
+		create_character = {
+			first_name = Alexei
+			last_name = Romanov
+			culture = cu:russian
+			interest_group = ig_landowners
+			ideology = ideology_authoritarian
+			birth_date = 1904-08-12
+			heir = yes
+			historical = yes
+			traits = {
+				sickly trait_child 
+			}
+		}
+		create_character = {
+			first_name = Mikhail 
+			last_name = Vladimirovich Rodzianko
+			culture = cu:russian
+			interest_group = ig_landowners
+			ideology = ideology_royalist
+			birth_date = 1859.02.21
+			ig_leader = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Vladimir
+			last_name = Kokovtsov
+			culture = cu:russian
+			interest_group = ig_landowners
+			ideology = ideology_protectionist
+			birth_date = 1853.04.18
+			ig_leader = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Felix
+			last_name = Yusupov
+			culture = cu:russian
+			interest_group = ig_landowners
+			ideology = ideology_reformer
+			birth_date = 1887.03.24
+			is_agitator = yes
+			historical = yes
+			traits = {
+			}
+		}
 		create_character = {
 			first_name = Nicholas 
 			last_name = Nikolaevich
 			culture = cu:russian
-			interest_group = ig_landowners
+			interest_group = ig_armed_forces
 			ideology = ideology_authoritarian
 			birth_date = 1856.11.18
 			ig_leader = yes
@@ -3566,15 +3579,16 @@
 			}
 		}
 		create_character = {
-			first_name = Pavel
-			last_name = Milyukov
+			first_name = Aleksei
+			last_name = Alekseyevich Brusilov
 			culture = cu:russian
-			interest_group = ig_intelligentsia
-			ideology = ideology_republican_leader
-			birth_date = 1859.01.27
-			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			birth_date = 1853.08.31
+			is_general = yes
 			historical = yes
 			traits = {
+				expert_offensive_planner 
 			}
 		}
 		create_character = {
@@ -3602,13 +3616,86 @@
 			}
 		}
 		create_character = {
-			first_name = Felix
-			last_name = Yusupov
+			first_name = Vladimir
+			last_name = Bogoyavlensky
 			culture = cu:russian
-			interest_group = ig_landowners
-			ideology = ideology_reformer
-			birth_date = 1887.03.24
+			interest_group = ig_devout
+			ideology = ideology_traditionalist
+			birth_date = 1848.01.1
+			ig_leader = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Alexander
+			last_name = Kerensky
+			culture = cu:russian
+			interest_group = ig_rural_folk
+			ideology = ideology_social_democrat
+			birth_date = 1881.05.4
+			ig_leader = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Viktor
+			last_name = Mikhailovich Chernov
+			culture = cu:russian
+			interest_group = ig_rural_folk
+			ideology = ideology_land_reformer
+			birth_date = 1873.12.7
 			is_agitator = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Pavel
+			last_name = Pavel
+			culture = cu:russian
+			interest_group = ig_industrialists
+			ideology = ideology_market_liberal
+			birth_date = 1871.06.17
+			ig_leader = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Maxim
+			last_name = Gorky
+			culture = cu:russian
+			interest_group = ig_intelligentsia
+			ideology = ideology_social_democrat
+			birth_date = 1868.03.28
+			ig_leader = yes
+			historical = yes
+			traits = {
+				literary 
+			}
+		}
+		create_character = {
+			first_name = Peter
+			last_name = Kropotkin
+			culture = cu:russian
+			interest_group = ig_intelligentsia
+			ideology = ideology_anarchist
+			birth_date = 1842.12.9
+			is_agitator = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Pavel
+			last_name = Milyukov
+			culture = cu:russian
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_republican_leader
+			birth_date = 1859.01.27
+			ig_leader = yes
 			historical = yes
 			traits = {
 			}
@@ -3623,45 +3710,6 @@
 			is_agitator = yes
 			historical = yes
 			traits = {
-			}
-		}
-		create_character = {
-			first_name = Vladimir
-			last_name = Nikolayevich_Kokovtsov
-			culture = cu:russian
-			interest_group = ig_landowners
-			ideology = ideology_royalist
-			birth_date = 1853.03.18
-			ig_leader = yes
-			historical = yes
-			traits = {
-				brave expensive_tastes honorable master_bureaucrat 
-			}
-		}
-		create_character = {
-			first_name = Nikolai
-			last_name = Romanov
-			culture = cu:russian
-			interest_group = ig_landowners
-			ideology = ideology_authoritarian
-			birth_date = 1868-05-18
-			ruler = yes
-			historical = yes
-			traits = {
-				arrogant bigoted cruel expensive_tastes reckless 
-			}
-		}
-		create_character = {
-			first_name = Alexei
-			last_name = Romanov
-			culture = cu:russian
-			interest_group = ig_landowners
-			ideology = ideology_authoritarian
-			birth_date = 1904-08-12
-			heir = yes
-			historical = yes
-			traits = {
-				sickly trait_child 
 			}
 		}
 	}
@@ -3929,21 +3977,6 @@
 			historical = yes
 			traits = {
 				basic_colonial_administrator charismatic expert_offensive_planner 
-			}
-		}
-	}
-	c:SWE = {
-		create_character = {
-			first_name = Karl
-			last_name = Albert_Staaff
-			culture = cu:swedish
-			interest_group = ig_petty_bourgeoisie
-			ideology = ideology_market_liberal
-			birth_date = 1860.01.21
-			ruler = yes
-			historical = yes
-			traits = {
-				ambitious experienced_political_operator persistent 
 			}
 		}
 	}

@@ -468,6 +468,12 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
         ai_chance = {
 			base = 100
 		}
+		ig:ig_trade_unions = {
+				leader = {
+					set_character_as_ruler = yes
+				}
+				add_ruling_interest_group = yes
+			}
     }
         
     option = {
@@ -476,5 +482,11 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 			name = war_protests_2_modifier
             years = 3
 		}
+		ig:ig_trade_unions = {
+				leader = {
+					set_character_as_ruler = yes
+				}
+				add_ruling_interest_group = yes
+			}
     }
 }

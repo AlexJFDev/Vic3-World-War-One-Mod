@@ -26,8 +26,8 @@ colossus_with_feet_of_clay_modifier = {
     interest_group_ig_trade_unions_pol_str_mult = 1.2
     interest_group_ig_rural_folk_pol_str_mult = 0.6
     interest_group_ig_intelligentsia_pol_str_mult = 0.2
-    unit_army_offense_mult = -0.25
-    unit_army_defense_mult = -0.1
+    unit_army_offense_mult = -0.3
+    unit_army_defense_mult = -0.15
     military_formation_organization_gain_mult = -0.2
 }
 
@@ -62,10 +62,12 @@ angry_elites_3_modifier = {
 
 war_protests_1_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    political_movement_radicalism_add = 0.1
-    interest_group_ig_rural_folk_approval_add = -3
-    interest_group_ig_armed_forces_approval_add = -3
-    interest_group_ig_trade_unions_approval_add = -3
+    political_movement_radicalism_add = 0.15
+    interest_group_ig_rural_folk_approval_add = -4
+    interest_group_ig_armed_forces_approval_add = -4
+    interest_group_ig_trade_unions_approval_add = -4
+    unit_army_offense_mult = -0.3
+    unit_army_defense_mult = -0.15
 }
 
 war_protests_2_modifier = {
@@ -73,9 +75,12 @@ war_protests_2_modifier = {
     interest_group_ig_rural_folk_approval_add = -8
     interest_group_ig_armed_forces_approval_add = -8
     interest_group_ig_trade_unions_approval_add = -8
-    political_movement_radicalism_add = 0.25
+    political_movement_radicalism_add = 0.35
     interest_group_ig_trade_unions_pol_str_mult = 0.5
     state_pop_support_movement_communist_mult = 1.5
+    country_revolution_progress_mult = 0.5
+    unit_army_offense_mult = -0.3
+    unit_army_defense_mult = -0.15
 }
 
 revolution_stabilization_buff_1 = {
@@ -87,9 +92,8 @@ revolution_stabilization_buff_1 = {
 
 revolution_stabilization_buff_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    country_revolution_progress_mult = -9
+    country_revolution_progress_mult = -1
     political_movement_radicalism_add = -0.5
-    state_pop_support_movement_communist_mult = -5
 }
 
 defeated_elites_modifier = {
@@ -144,6 +148,11 @@ minting_buff_2_modifier = {
 minting_buff_3_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_minting_mult = 0.5
+}
+
+minting_buff_4_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_minting_mult = 1.5
 }
 
 research_buff_modifier = {
