@@ -322,6 +322,8 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_outlawed_dissent
      activate_law = law_type:law_command_economy
      activate_law = law_type:law_collectivized_agriculture
+     activate_law = law_type:law_womens_suffrage
+     activate_law = law_type:law_state_religion
 	 ig:ig_trade_unions = {
 				leader = {
 					set_character_as_ruler = yes
@@ -384,7 +386,6 @@ russia_events.8 = { #The civil war begins
            activate_law = law_type:law_monarchy
            activate_law = law_type:law_oligarchy
            activate_law = law_type:law_mass_conscription
-           activate_law = law_type:law_oligarchy
            activate_law = law_type:law_racial_segregation
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
@@ -400,8 +401,7 @@ russia_events.8 = { #The civil war begins
 		        target_country = c:SIB
               }
 	        }
-	        change_infamy = -100
-          }
+           }
         }
         every_state = {
 	      limit = {
@@ -422,10 +422,16 @@ russia_events.8 = { #The civil war begins
           }
 	        set_state_owner = c:SIB
         }
+        c:RUS = {
+            change_infamy = -100
+        }
+        c:SIB = {
+            change_infamy = -100
+        }
     }
 }
 
-russia_events.9 = { #JE colossus completion
+russia_events.9 = { #Reforms success
     type = country_event
 
     title = russia_events.9.t

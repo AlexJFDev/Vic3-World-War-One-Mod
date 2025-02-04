@@ -1,33 +1,35 @@
-je_colossus_with_feet_of_clay = {
+je_war_fatigue = {
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
-        exists = c:RUS
-        THIS = c:RUS
-        NOT = { has_variable = russian_reforms_completed }
+        exists = c:GER
+        THIS = c:GER
     }
     
     possible = {
-        has_technology_researched = socialism
-        has_technology_researched = anarchism
+        has_variable = central_powers_participant
+        any_scope_war = {
+		    has_war_support = {
+		        target = ROOT
+		        value < 5
+		    }
+		}
     }
 
     immediate = {
-       trigger_event = { id = russia_events.1 popup = yes }
+       trigger_event = { id = germany_events.1 popup = yes }
     }
 
     complete = {
-        OR = {
-            has_law = law_type:law_census_voting
-            has_law = law_type:law_universal_suffrage
-            has_law = law_type:law_anarchy
-            has_law = law_type:law_council_republic
-            has_law = law_type:law_homesteading
-            c:RUS = {
-              standard_of_living > 8
-			  strata = lower
-            }
+      OR = {
+          c:GER = {
+            is_at_war = no 
+          }
+          c:GER = {
+            standard_of_living > 8
+		    strata = lower
+          }
         }
     }
     
@@ -60,59 +62,50 @@ je_colossus_with_feet_of_clay = {
     }
 
     on_fail = { 
-      c:RUS = {
-            trigger_event = {
-                id = russia_events.3
-                days = 5
-            }
-            trigger_event = {
-                id = russia_events.4
-                days = 30
-            }
-        }
-        add_modifier = {
-          name = defeated_elites_modifier
-          years = 20
-        }
-        random_civil_war = {
+      random_civil_war = {
 			add_civil_war_progress = -100
 		}
-        remove_modifier = war_protests_1_modifier
-        remove_modifier = colossus_with_feet_of_clay_modifier
-        remove_variable = no_reform_russia
-        set_variable = russian_revolution_1
+      c:GER = {
+            trigger_event = {
+                id = germany_events.2
+                days = 5
+            }
+        }
+      remove_modifer = war_fatigue_1
+      set_variable = german_revolution_1
     }
 
     timeout = -1
     should_be_pinned_by_default = yes
 }
 
-je_soviet_threat = {
+je_socialists_split = {
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
-        exists = c:RUS
-        THIS = c:RUS
-        NOT = { has_variable = russian_reforms_completed }
+        exists = c:GER
+        THIS = c:GER
     }
     
     possible = {
-        has_modifier = war_protests_2_modifier
+      has_variable = german_revolution_1
+      NOT = {
+        has_law = law_type:law_council_republic
+		has_law = law_type:law_command_economy
+        has_law = law_type:law_collectivized_agriculture
+      }
     }
 
     complete = {
-        OR = {
-            has_law = law_type:law_council_republic
-            c:RUS = {
-              standard_of_living > 8
-			  strata = lower
-            }
-        }
+        ig:ig_trade_unions  = {
+					ig_approval > 8
+			    }	
     }
     
     fail = { 
-        any_political_movement = {
+      OR = {
+          any_political_movement = {
             OR = {
 				is_political_movement_type = movement_socialist
 				is_political_movement_type = movement_communist
@@ -129,39 +122,35 @@ je_soviet_threat = {
                 }
 				civil_war_progress >= 0.8
 			}
+            }
+            ig:ig_trade_unions  = {
+					ig_approval < -2
+			    }	
         }
     }
 
     on_complete = {
         trigger_event = {
-			id = germany_events.3
+			id = germany_events.5
             days = 5
 		}
     }
- 
+
     on_fail = { 
-      c:RUS = {
-            trigger_event = {
-                id = russia_events.7
-                days = 5
-            }
-        }
-      c:RUS = {
-            trigger_event = {
-                id = ussr_events.1
-                days = 50
-            }
-        }
-      add_modifier = {
-          name = revolution_stabilization_buff_2
-          months = 24
-          is_decaying = yes
-        }
       random_civil_war = {
 			add_civil_war_progress = -100
 		}
-      remove_variable = russian_revolution_1
-      set_variable = russian_revolution_2
+      add_modifier = {
+        name = revolution_stabilization_buff_3
+        months = 24
+        is_decaying = yes
+       } 
+      c:GER = {
+            trigger_event = {
+                id = germany_events.4
+                days = 5
+            }
+        }
     }
 
     timeout = -1

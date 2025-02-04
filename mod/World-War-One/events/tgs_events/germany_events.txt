@@ -1,0 +1,255 @@
+﻿namespace = germany_events
+
+germany_events.1 = { #Je war fatigue initiator
+    type = country_event
+
+    title = germany_events.1.t
+    desc = germany_events.1.d
+    flavor = germany_events.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/_____.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.1.a
+        add_modifier = {
+        name = war_fatigue_1
+        duration = -1
+        } 
+    }
+}
+
+germany_events.2 = { #November Revolution
+    type = country_event
+
+    title = germany_events.2.t
+    desc = germany_events.2.d
+    flavor = germany_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 2
+    
+    event_image = {
+        texture = "gfx/event_pictures/_____.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.2.a
+        remove_modifer = war_fatigue_1
+        activate_law = law_type:law_parliamentary_republic
+        activate_law = law_type:law_universal_suffrage
+        activate_law = law_type:law_womens_suffrage
+        activate_law = law_type:law_right_of_assembly
+        activate_law = law_type:law_racial_segregation
+        every_diplomatic_play = {
+			limit = {
+                initiator = {
+                    or = {
+						exists = c:GER								
+						this = c:GER								
+				    }
+                    or = {
+						exists = c:AUS							
+						this = c:AUS						
+				    }
+                    or = {
+						exists = c:TUR						
+						this = c:TUR						
+				    }
+                }
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+            add_diplomatic_play_war_support = { target = c:GER value = -200 }   
+        }
+    }
+}
+
+germany_events.3 = { #German people supports the war
+    type = country_event
+
+    title = germany_events.3.t
+    desc = germany_events.3.d
+    flavor = germany_events.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 2
+    
+    event_image = {
+        texture = "gfx/event_pictures/_____.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.3.a
+        remove_modifer = war_fatigue_1
+    }
+}
+
+germany_events.4 = { #Communist uprising
+    type = country_event
+
+    title = germany_events.4.t
+    desc = germany_events.4.d
+    flavor = germany_events.4.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/_____.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.4.a
+        create_country = { 
+			origin = root
+			tag = BAV
+			state = s:STATE_BAVARIA.region_state:GER
+			on_created = {
+				activate_law = law_type:law_council_republic
+                activate_law = law_type:law_universal_suffrage
+                activate_law = law_type:law_right_of_assembly
+                activate_law = law_type:law_command_economy
+                activate_law = law_type:law_collectivized_agriculture
+                activate_law = law_type:law_womens_suffrage
+                activate_law = law_type:law_state_religion	
+                create_diplomatic_play = {
+		           target_country = c:GER
+		           type = dp_annex_war
+	               war = yes
+	                add_war_goal = {
+		               holder = c:GER
+		               type = annex_country
+		               target_country = c:BAV
+                    }
+	            }
+			}
+		}
+        c:GER = {
+            change_infamy = -100
+        }
+        c:BAV = {
+            change_infamy = -100
+        }
+        s:STATE_FRANCONIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BAV
+            }
+        }
+        s:STATE_SAXONY = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BAV
+            }
+        }
+        s:STATE_BRANDENBURG = {
+			set_owner_of_provinces = {
+				country = c:BAV
+				provinces = { x83B1A8 xF8D457 xA040A0 }
+			}
+		}
+        s:STATE_ELBE = {
+			set_owner_of_provinces = {
+				country = c:BAV
+				provinces = { xC08061 }
+			}
+		}
+        s:STATE_RUHR = {
+			set_owner_of_provinces = {
+				country = c:BAV
+				provinces = { x5101A0 }
+			}
+		}
+    }
+}
+
+germany_events.5 = { #Socialists reconcilates
+    type = country_event
+
+    title = germany_events.5.t
+    desc = germany_events.5.d
+    flavor = germany_events.5.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 2
+    
+    event_image = {
+        texture = "gfx/event_pictures/_____.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.5.a
+        add_modifier = {
+        name = 
+        years = 5
+        is_decaying = yes
+        } 
+    }
+}

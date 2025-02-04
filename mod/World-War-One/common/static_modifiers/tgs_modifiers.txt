@@ -96,6 +96,13 @@ revolution_stabilization_buff_2 = {
     political_movement_radicalism_add = -0.5
 }
 
+revolution_stabilization_buff_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    country_revolution_progress_mult = -1
+    political_movement_radicalism_add = -0.5
+    interest_group_ig_trade_unions_pol_str_mult = -0.5
+}
+
 defeated_elites_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
     interest_group_ig_landowners_pol_str_mult = -2
@@ -126,13 +133,17 @@ mobilization_buff_modifier = {
     military_formation_mobilization_speed_mult = 2.5
 }
 
-destabilization_nerf = {
+war_fatigue_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-    political_movement_radicalism_add = 0.4
+    political_movement_radicalism_add = 0.3
+    state_radicals_from_sol_change_mult = 0.3
     state_pop_support_movement_communist_mult = 0.8
-    state_pop_support_movement_anarchist_mult = -2
+    state_pop_support_movement_anarchist_mult = 0.3
     state_pop_support_movement_socialist_mult = 0.6
     state_pop_support_movement_labor_mult = 1
+    interest_group_ig_intelligentsia_approval_add = -6
+    interest_group_ig_trade_unions_approval_add = -6
+    interest_group_ig_rural_folk_approval_add = -6
 }
 
 minting_buff_1_modifier = {
