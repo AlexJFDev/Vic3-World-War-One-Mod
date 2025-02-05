@@ -66,8 +66,8 @@ war_protests_1_modifier = {
     interest_group_ig_rural_folk_approval_add = -4
     interest_group_ig_armed_forces_approval_add = -4
     interest_group_ig_trade_unions_approval_add = -4
-    unit_army_offense_mult = -0.3
-    unit_army_defense_mult = -0.15
+    unit_army_offense_mult = -0.1
+    unit_army_defense_mult = -0.05
 }
 
 war_protests_2_modifier = {
@@ -75,12 +75,12 @@ war_protests_2_modifier = {
     interest_group_ig_rural_folk_approval_add = -8
     interest_group_ig_armed_forces_approval_add = -8
     interest_group_ig_trade_unions_approval_add = -8
-    political_movement_radicalism_add = 0.35
+    political_movement_radicalism_add = 0.4
     interest_group_ig_trade_unions_pol_str_mult = 0.5
     state_pop_support_movement_communist_mult = 1.5
     country_revolution_progress_mult = 0.5
-    unit_army_offense_mult = -0.3
-    unit_army_defense_mult = -0.15
+    unit_army_offense_mult = -0.1
+    unit_army_defense_mult = -0.05
 }
 
 revolution_stabilization_buff_1 = {
@@ -120,12 +120,20 @@ stabilization_buff_modifier = {
     political_movement_radicalism_add = -0.8
 }
 
-army_buff_modifier = {
+army_buff_modifier_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     unit_army_offense_mult = 0.3
     unit_army_defense_mult = 0.5
     military_formation_mobilization_speed_mult = 0.7
     unit_occupation_mult = 0.7
+}
+
+army_buff_modifier_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    unit_army_offense_mult = 0.15
+    unit_army_defense_mult = 0.05
+    military_formation_mobilization_speed_mult = 0.1
+    unit_occupation_mult = 0.2
 }
 
 mobilization_buff_modifier = {
@@ -135,15 +143,19 @@ mobilization_buff_modifier = {
 
 war_fatigue_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-    political_movement_radicalism_add = 0.3
-    state_radicals_from_sol_change_mult = 0.3
+    political_movement_radicalism_add = 0.5
     state_pop_support_movement_communist_mult = 0.8
     state_pop_support_movement_anarchist_mult = 0.3
     state_pop_support_movement_socialist_mult = 0.6
     state_pop_support_movement_labor_mult = 1
-    interest_group_ig_intelligentsia_approval_add = -6
-    interest_group_ig_trade_unions_approval_add = -6
-    interest_group_ig_rural_folk_approval_add = -6
+    interest_group_ig_intelligentsia_approval_add = -12
+    interest_group_ig_trade_unions_approval_add = -12
+    interest_group_ig_rural_folk_approval_add = -12
+}
+
+political_movement_nerf_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+    political_movement_radicalism_add = -1
 }
 
 minting_buff_1_modifier = {

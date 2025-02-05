@@ -48,7 +48,18 @@ stabilization_buff_events.2 = {
         default_option = yes
         trigger = { is_player = no }
         add_modifier = {
-			name = army_buff_modifier
+			name = army_buff_modifier_1
+            years = 6
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = stabilization_buff_events.2.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+			name = army_buff_modifier_2
             years = 6
             is_decaying = yes
 		}

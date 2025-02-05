@@ -172,3 +172,177 @@ BAV = { # German Soviet Republic
 		}
 	}
 }
+GER = { # Germany
+	dynamic_country_name = {
+		name = dyn_c_german_empire
+		adjective = GER_ADJ
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= { 
+				country_rank >= rank_value:major_power
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = nihilist_germany_name
+		adjective = nihilist_germany_name_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			coa_def_nihilist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_german_reich
+        adjective = GER_ADJ
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			c:GER = {
+			   has_law = law_type:law_presidential_republic
+				OR = {
+				 has_law = law_type:law_autocracy
+				 has_law = law_type:law_single_party_state
+				 has_law = law_type:law_type:law_corporate_state
+				}
+			}
+		}
+	}
+}
+CHI = { # China
+	dynamic_country_name = {
+		name = dyn_republic_of_china
+        adjective = CHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			c:CHI = {
+				OR = {
+				 has_law = law_type:law_presidential_republic
+				 has_law = law_type:law_parliamentary_republic
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_great_qing
+		adjective = dyn_c_great_qing_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				country_has_primary_culture = cu:manchu
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_empire_of_china
+		adjective = dyn_c_empire_of_china_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				NOT = { country_has_primary_culture = cu:manchu }
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_peoples_republic_of_china
+		adjective = CHI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+RUS = { # Russia
+	dynamic_country_name = {
+		name = dyn_russian_empire
+        adjective = RUS_ADJ
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			c:RUS = {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_russian_republic
+		adjective = dyn_c_russian_republic_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_rsfsr
+		adjective = dyn_c_rsfsr_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_union_of_new_people
+		adjective = dyn_c_union_of_new_people_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			coa_def_nihilist_flag_trigger = yes
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_soviet_union
+		adjective = dyn_c_soviet_union_adj
+		
+		is_main_tag_only = yes
+		priority = 25
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			scope:actor = {
+				OR = {
+					any_scope_state = {
+						state_region = {
+							NOT = {
+								is_homeland = cu:russian
+							}
+						}
+						count >= 15
+					}
+				}
+			}
+		}
+	}	
+}

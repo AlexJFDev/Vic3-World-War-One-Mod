@@ -12,8 +12,17 @@ germany_events.1 = { #Je war fatigue initiator
     
     duration = 1
     
+    immediate = {
+		random_political_movement = {
+			limit = {
+                is_political_movement_type = movement_cultural_minority
+			}
+			save_scope_as = polish_movement
+        }
+    }
+
     event_image = {
-        texture = "gfx/event_pictures/_____.dds"
+        texture = "gfx/event_pictures/german_revolution.dds"
     }
 
     trigger = {}
@@ -24,6 +33,12 @@ germany_events.1 = { #Je war fatigue initiator
         name = war_fatigue_1
         duration = -1
         } 
+        scope:polish_movement = {
+			add_modifier = {
+				name = political_movement_nerf_1
+				years = 6
+			}
+		}
     }
 }
 
@@ -37,10 +52,10 @@ germany_events.2 = { #November Revolution
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 2
+    duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/_____.dds"
+        texture = "gfx/event_pictures/weimar_republic.dds"
     }
 
     trigger = {}
@@ -105,7 +120,7 @@ germany_events.2 = { #November Revolution
     }
 }
 
-germany_events.3 = { #German people supports the war
+germany_events.3 = { #Test event for fascist Germany 
     type = country_event
 
     title = germany_events.3.t
@@ -115,7 +130,7 @@ germany_events.3 = { #German people supports the war
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 2
+    duration = 1
     
     event_image = {
         texture = "gfx/event_pictures/_____.dds"
@@ -125,7 +140,11 @@ germany_events.3 = { #German people supports the war
 
     option = {
         name = germany_events.3.a
-        remove_modifer = war_fatigue_1
+        activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_single_party_state
+        create_character = {
+			template = agitator_ernst_rohm
+		}
     }
 }
 
@@ -136,13 +155,13 @@ germany_events.4 = { #Communist uprising
     desc = germany_events.4.d
     flavor = germany_events.4.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/red_star.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/_____.dds"
+        texture = "gfx/event_pictures/german_revolution.dds"
     }
 
     trigger = {}
@@ -233,13 +252,13 @@ germany_events.5 = { #Socialists reconcilates
     desc = germany_events.5.d
     flavor = germany_events.5.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_election.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 2
+    duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/_____.dds"
+        texture = "gfx/event_pictures/weimar_government.dds"
     }
 
     trigger = {}
@@ -249,6 +268,34 @@ germany_events.5 = { #Socialists reconcilates
         add_modifier = {
         name = 
         years = 5
+        is_decaying = yes
+        } 
+    }
+}
+
+germany_events.6 = { #Rise of fascism
+    type = country_event
+
+    title = germany_events.6.t
+    desc = germany_events.6.d
+    flavor = germany_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/early_nazi.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.6.a
+        add_modifier = {
+        name = 
+        years = 6
         is_decaying = yes
         } 
     }

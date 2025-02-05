@@ -15,7 +15,7 @@ russia_events.1 = { #Je colossus initiator
     event_image = {
         texture = "gfx/event_pictures/we_remember_1905.dds"
     }
-
+    
     trigger = {}
 
     option = {
@@ -44,21 +44,21 @@ russia_events.2 = { #Russian empire decides to continue the war or not
         texture = "gfx/event_pictures/russian_revolution.dds"
     }
 
-    trigger = {
-        NOT = {
-            has_variable = russian_revolution_1
-        }
-    }
+    trigger = {}
 
     option = {
         name = russia_events.2.a
         default_option = yes
+        trigger = { 
+            has_variable = entente_participant
+            is_at_war = yes 
+        }
         ai_chance = {
 			base = 100
 		}
         add_modifier = {
         name = war_protests_1_modifier
-        years = 1
+        years = 3
         is_decaying = yes
         } 
     }
@@ -111,7 +111,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
     desc = russia_events.3.d
     flavor = russia_events.3.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_election.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
@@ -176,6 +176,10 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
     option = {
         name = russia_events.4.a
         default_option = yes
+        trigger = { 
+            has_variable = entente_participant
+            is_at_war = yes 
+        }
         remove_modifier = war_protests_1_modifier
         add_modifier = {
 			name = war_protests_2_modifier
@@ -304,7 +308,7 @@ russia_events.7 = { #Soviet uprising
     desc = russia_events.7.d
     flavor = russia_events.7.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/red_star.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
@@ -365,7 +369,7 @@ russia_events.8 = { #The civil war begins
     desc = russia_events.8.d
     flavor = russia_events.8.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
@@ -438,7 +442,7 @@ russia_events.9 = { #Reforms success
     desc = russia_events.9.d
     flavor = russia_events.9.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1

@@ -1,0 +1,210 @@
+je_war_fatigue = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:GER
+        THIS = c:GER
+    }
+    
+    possible = {
+        has_variable = central_powers_participant
+        any_scope_war = {
+		    has_war_support = {
+		        target = ROOT
+		        value < 5
+		    }
+		}
+    }
+
+    immediate = {
+       trigger_event = { id = germany_events.1 popup = yes }
+    }
+
+    complete = {
+      OR = {
+          c:GER = {
+            is_at_war = no 
+          }
+          c:GER = {
+            standard_of_living > 8
+		    strata = lower
+          }
+        }
+    }
+    
+    fail = { 
+        any_political_movement = {
+            OR = {
+				is_political_movement_type = movement_socialist
+				is_political_movement_type = movement_communist
+                is_political_movement_type = movement_anarchist
+                is_political_movement_type = movement_radical
+                is_political_movement_type = movement_labor
+                is_political_movement_type = movement_nihilist
+			}
+            is_insurrectionary = yes
+			civil_war ?= {
+                OR = {
+                  is_civil_war_type = revolution
+                  is_civil_war_type = secession
+                }
+				civil_war_progress >= 0.75
+			}
+        }
+    }
+
+    on_complete = {
+        remove_modifer = war_fatigue_1
+    }
+
+    on_fail = { 
+      random_civil_war = {
+			add_civil_war_progress = -100
+		}
+      c:GER = {
+            trigger_event = {
+                id = germany_events.2
+                days = 5
+            }
+        }
+      remove_modifer = war_fatigue_1
+      set_variable = german_revolution_1
+    }
+
+    timeout = -1
+    should_be_pinned_by_default = yes
+}
+
+je_socialist_split = {
+    icon = "gfx/interface/icons/event_icons/red_star.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:GER
+        THIS = c:GER
+    }
+    
+    possible = {
+      has_variable = german_revolution_1
+      NOT = {
+        OR = {
+         has_law = law_type:law_council_republic
+		 has_law = law_type:law_command_economy
+         has_law = law_type:law_collectivized_agriculture
+        }
+      }
+    }
+
+    complete = {
+        ig:ig_trade_unions  = {
+					ig_approval > 8
+			    }	
+    }
+    
+    fail = { 
+      OR = {
+          any_political_movement = {
+            OR = {
+				is_political_movement_type = movement_socialist
+				is_political_movement_type = movement_communist
+                is_political_movement_type = movement_anarchist
+                is_political_movement_type = movement_radical
+                is_political_movement_type = movement_labor
+                is_political_movement_type = movement_nihilist
+			}
+            is_insurrectionary = yes
+			civil_war ?= {
+                OR = {
+                  is_civil_war_type = revolution
+                  is_civil_war_type = secession
+                }
+				civil_war_progress >= 0.75
+			}
+            }
+            ig:ig_trade_unions  = {
+					ig_approval < -2
+			    }	
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+			id = germany_events.5
+            days = 5
+		}
+    }
+
+    on_fail = { 
+      random_civil_war = {
+			add_civil_war_progress = -100
+		}
+      add_modifier = {
+        name = revolution_stabilization_buff_3
+        months = 24
+        is_decaying = yes
+       } 
+      c:GER = {
+            trigger_event = {
+                id = germany_events.4
+                days = 5
+            }
+        }
+    }
+
+    timeout = -1
+    should_be_pinned_by_default = yes
+}
+
+je_fascist_threat = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:GER
+        THIS = c:GER
+    }
+    
+    possible = {
+      has_variable = 
+      NOT = {
+        OR = {
+         has_law = law_type:
+		 has_law = law_type:
+         has_law = law_type:
+        }
+      }
+    }
+
+    immediate = {
+       trigger_event = { id = germany_events.6 popup = yes }
+    }
+ 
+    complete = {}
+    
+    fail = { 
+      OR = {
+          any_political_movement = {
+            OR = {
+				is_political_movement_type = movement_fascist
+				is_political_movement_type = movement_reactionnary
+			}
+            is_insurrectionary = yes
+			civil_war ?= {
+                OR = {
+                  is_civil_war_type = revolution
+                  is_civil_war_type = secession
+                }
+				civil_war_progress >= 0.75
+			}
+            }
+        }
+    }
+
+    on_complete = {}
+
+    on_fail = {}
+      
+    timeout = -1
+    should_be_pinned_by_default = yes
+}
