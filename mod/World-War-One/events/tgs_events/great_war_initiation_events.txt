@@ -913,9 +913,59 @@ great_war_initiation_events.14 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    option = { # Intervene
+    option = { # Intervene - Player
         name = great_war_initiation_events.14.a
         default_option = yes
+        trigger = { is_player = yes }
+        ai_chance = {
+            base = 1
+        }
+        c:GBR = {
+            trigger_event = { 
+                id = great_war_initiation_events.15
+                days = 5
+            }
+        }
+        c:LUX = {
+            trigger_event = { 
+                id = great_war_initiation_events.24
+                days = 5
+            }
+            trigger_event = { 
+                id = great_war_initiation_events.24
+                days = 6
+            }
+            trigger_event = { 
+                id = great_war_initiation_events.24
+                days = 7
+            }
+        }
+        add_modifier = {
+            name = schlieffen_plan_modifier
+            months = 5
+        }
+        
+        every_diplomatic_play = {
+            limit = {
+                initiator = c:AUS
+                target = c:SER
+            }
+            add_target_backers = { c:BEL }
+            add_target_backers = { c:LUX }
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:BEL
+            }
+        }
+        c:BEL = { set_variable = entente_participant }
+        c:LUX = { set_variable = entente_participant }
+    }
+
+    option = { # Intervene - AI
+        name = great_war_initiation_events.14.b
+        default_option = yes
+        trigger = { is_player = no }
         ai_chance = {
             base = 1
         }
@@ -962,7 +1012,7 @@ great_war_initiation_events.14 = {
     }
 
     option = { # Do nothing
-        name = great_war_initiation_events.14.b
+        name = great_war_initiation_events.14.c
         ai_chance = {
             base = 0
         }
