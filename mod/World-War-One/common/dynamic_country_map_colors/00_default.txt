@@ -715,12 +715,16 @@ german_soviet_republic = {
 	}
 }
 
-nazi_germany = {
-    color = "nazi_germany_black"
+unpleasant_germany = {
+	color = "feldgrau"
 
 	possible = {
 		exists = c:GER
 		THIS = c:GER
-		coa_def_fascist_flag_trigger = yes
+		OR = {
+			has_law = law_type:law_single_party_state
+			has_law = law_type:law_autocracy
+		}
+		has_law = law_type:law_presidential_republic
 	}
 }

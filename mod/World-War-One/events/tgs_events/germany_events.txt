@@ -120,7 +120,7 @@ germany_events.2 = { #November Revolution
     }
 }
 
-germany_events.3 = { #Test event for fascist Germany 
+germany_events.3 = { 
     type = country_event
 
     title = germany_events.3.t
@@ -140,11 +140,6 @@ germany_events.3 = { #Test event for fascist Germany
 
     option = {
         name = germany_events.3.a
-        activate_law = law_type:law_presidential_republic
-        activate_law = law_type:law_single_party_state
-        create_character = {
-			template = agitator_ernst_rohm
-		}
     }
 }
 
