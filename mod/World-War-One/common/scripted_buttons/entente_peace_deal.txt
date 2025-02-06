@@ -1,4 +1,6 @@
-﻿partition_1_button = {
+﻿#Round 1
+
+partition_1_button = {
 	name = partition_1_button
 	desc = partition_1_button_desc
 
@@ -11,7 +13,6 @@
 	}
 
     effect = {
-		custom_tooltip = partition_1_button_desc
 		set_variable = partition_1_button_var
 		change_global_variable = {
 			name = entente_deal_round_1_germany_dislocation_prop_1
@@ -37,7 +38,6 @@ partition_2_button = {
 	}
 
     effect = {
-		custom_tooltip = partition_2_button_desc
 		set_variable = partition_2_button_var
 		change_global_variable = {
 			name = entente_deal_round_1_germany_dislocation_prop_2
@@ -63,7 +63,6 @@ partition_3_button = {
 	}
 
     effect = {
-		custom_tooltip = partition_3_button_desc
 		set_variable = partition_3_button_var
 		change_global_variable = {
 			name = entente_deal_round_1_germany_dislocation_prop_3
@@ -73,5 +72,313 @@ partition_3_button = {
 
     ai_chance = {
 		base = 100
+	}
+}
+
+#Round 2
+
+war_rep_1_button = {
+	name = war_rep_1_button
+	desc = war_rep_1_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = war_rep_1_button_var
+			has_variable = war_rep_2_button_var
+			has_variable = war_rep_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = war_rep_1_button_var
+		change_global_variable = {
+			name = entente_deal_round_2_germany_war_rep_prop_1
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+war_rep_2_button = {
+	name = war_rep_2_button
+	desc = war_rep_2_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = war_rep_1_button_var
+			has_variable = war_rep_2_button_var
+			has_variable = war_rep_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = war_rep_2_button_var
+		change_global_variable = {
+			name = entente_deal_round_2_germany_war_rep_prop_2
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 100
+	}
+}
+
+war_rep_3_button = {
+	name = war_rep_3_button
+	desc = war_rep_3_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = war_rep_1_button_var
+			has_variable = war_rep_2_button_var
+			has_variable = war_rep_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = war_rep_3_button_var
+		change_global_variable = {
+			name = entente_deal_round_2_germany_war_rep_prop_3
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+#Round 3
+
+how_big_poland_1_button = {
+	name = how_big_poland_1_button
+	desc = how_big_poland_1_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = how_big_poland_1_button_var
+			has_variable = how_big_poland_2_button_var
+			has_variable = how_big_poland_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = how_big_poland_1_button_var
+		change_global_variable = {
+			name = entente_deal_round_3_how_big_poland_prop_1
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+how_big_poland_2_button = {
+	name = how_big_poland_2_button
+	desc = how_big_poland_2_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = how_big_poland_1_button_var
+			has_variable = how_big_poland_2_button_var
+			has_variable = how_big_poland_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = how_big_poland_2_button_var
+		change_global_variable = {
+			name = entente_deal_round_3_germany_how_big_poland_prop_2
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 100
+	}
+}
+
+how_big_poland_3_button = {
+	name = how_big_poland_3_button
+	desc = how_big_poland_3_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = how_big_poland_1_button_var
+			has_variable = how_big_poland_2_button_var
+			has_variable = how_big_poland_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = how_big_poland_3_button_var
+		change_global_variable = {
+			name = entente_deal_round_3_germany_how_big_poland_prop_3
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+#Round 4
+
+italy_iredentist_1_button = {
+	name = italy_iredentist_1_button
+	desc = italy_iredentist_1_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = italy_iredentist_1_button_var
+			has_variable = italy_iredentist_2_button_var
+			has_variable = italy_iredentist_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = italy_iredentist_1_button_var
+		change_global_variable = {
+			name = entente_deal_round_4_italy_iredentist_prop_1
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+italy_iredentist_2_button = {
+	name = italy_iredentist_2_button
+	desc = italy_iredentist_2_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = italy_iredentist_1_button_var
+			has_variable = italy_iredentist_2_button_var
+			has_variable = italy_iredentist_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = italy_iredentist_2_button_var
+		change_global_variable = {
+			name = entente_deal_round_4_italy_iredentist_prop_2
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+italy_iredentist_3_button = {
+	name = italy_iredentist_3_button
+	desc = italy_iredentist_3_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = italy_iredentist_1_button_var
+			has_variable = italy_iredentist_2_button_var
+			has_variable = italy_iredentist_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = italy_iredentist_3_button_var
+		change_global_variable = {
+			name = entente_deal_round_4_italy_iredentist_prop_3
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 100
+	}
+}
+
+#Round 5
+
+italy_defeat_1_button = {
+	name = italy_defeat_1_button
+	desc = italy_defeat_1_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = italy_defeat_1_button_var
+			has_variable = italy_defeat_2_button_var
+			has_variable = italy_defeat_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = italy_defeat_1_button_var
+		change_global_variable = {
+			name = entente_deal_round_5_italy_defeat_prop_1
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 100
+	}
+}
+
+italy_defeat_2_button = {
+	name = italy_defeat_2_button
+	desc = italy_defeat_2_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = italy_defeat_1_button_var
+			has_variable = italy_defeat_2_button_var
+			has_variable = italy_defeat_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = italy_defeat_2_button_var
+		change_global_variable = {
+			name = entente_deal_round_5_italy_defeat_prop_2
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+italy_defeat_3_button = {
+	name = italy_defeat_3_button
+	desc = italy_defeat_3_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = italy_defeat_1_button_var
+			has_variable = italy_defeat_2_button_var
+			has_variable = italy_defeat_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = italy_defeat_3_button_var
+		change_global_variable = {
+			name = entente_deal_round_5_italy_defeat_prop_3
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
 	}
 }

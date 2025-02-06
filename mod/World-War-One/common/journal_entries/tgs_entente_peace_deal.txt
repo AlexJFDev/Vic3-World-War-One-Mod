@@ -73,7 +73,7 @@
 			}
 			set_global_variable = {
 				name = entente_peace_deal_timer
-				value = 1
+				value = 12
 			}
 		}
     }
@@ -88,7 +88,7 @@
 
     on_complete = {
         set_global_variable = entente_deal_round_1_complete
-        c:FRA = {
+        c:GER = {
             trigger_event = {
                 id = entente_peace_deal.2
                 days = 5
@@ -152,13 +152,620 @@
 	should_be_pinned_by_default = yes 
 }
 
+je_entente_peace_deal_round_2 = { #Round 2: how big is German war reparation
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+    
+	is_shown_when_inactive = {
+	  has_variable = entente_participant
+	  NOT = {
+			has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
+            has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
+            has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
+		}
+	}
+
+    possible = { 
+	   has_global_variable = entente_deal_round_1_complete
+	   has_variable = entente_participant
+	   country_rank >= rank_value:great_power
+	    NOT = {
+		    OR = {
+			 has_law = law_type:law_council_republic
+			 country_has_primary_culture = cu:japanese
+			 country_has_primary_culture = cu:han
+			 has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
+             has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
+             has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
+		    }
+	    }
+	}
+    
+    scripted_button = war_rep_1_button 
+    scripted_button = war_rep_2_button 
+    scripted_button = war_rep_3_button 
+
+    immediate = {
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_2_germany_war_rep_prop_1 }
+			}
+			set_global_variable = {
+				name = entente_deal_round_2_germany_war_rep_prop_1
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_2_germany_war_rep_prop_2 }
+			} 
+			set_global_variable = {
+				name = entente_deal_round_2_germany_war_rep_prop_2
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_2_germany_war_rep_prop_3 }
+			}
+			set_global_variable = {
+				name = entente_deal_round_2_germany_war_rep_prop_3
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_peace_deal_timer }
+			}
+			set_global_variable = {
+				name = entente_peace_deal_timer
+				value = 12
+			}
+		}
+    }
+
+    complete = {
+        OR = {
+         has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
+         has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
+         has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
+        }
+    }
+
+    on_complete = {
+        set_global_variable = entente_deal_round_2_complete
+        c:GER = {
+            trigger_event = {
+                id = entente_peace_deal.3
+                days = 5
+            }
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            if = {
+				limit = { 
+					c:FRA ?= this
+					global_var:entente_peace_deal_timer >= 1
+				}
+				change_global_variable = {
+					name = entente_peace_deal_timer
+					add = -1
+				}
+			}
+			if = {
+				limit = {
+					c:FRA ?= this
+					global_var:entente_peace_deal_timer <= 0
+				}
+				if = {
+					limit = {
+						NOT = {
+							 has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
+                             has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
+                             has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
+						}
+					}
+					if = {
+						limit = {
+							global_var:entente_deal_round_2_germany_war_rep_prop_1 > global_var:entente_deal_round_2_germany_war_rep_prop_2
+							global_var:entente_deal_round_2_germany_war_rep_prop_1 > global_var:entente_deal_round_2_germany_war_rep_prop_3
+						}
+						set_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
+					}
+					else_if = {
+						limit = {
+							global_var:entente_deal_round_2_germany_war_rep_prop_2 > global_var:entente_deal_round_2_germany_war_rep_prop_1
+							global_var:entente_deal_round_2_germany_war_rep_prop_2 > global_var:entente_deal_round_2_germany_war_rep_prop_3
+						}
+						set_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
+					}
+					else_if = {
+						limit = {
+							global_var:entente_deal_round_2_germany_war_rep_prop_3 > global_var:entente_deal_round_2_germany_war_rep_prop_1
+							global_var:entente_deal_round_2_germany_war_rep_prop_3 > global_var:entente_deal_round_2_germany_war_rep_prop_2
+						}
+						set_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
+					}
+				}
+			}
+        }
+    }
+
+    weight = 100
+
+	should_be_pinned_by_default = yes 
+}
+
+je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+    
+	is_shown_when_inactive = {
+	  has_variable = entente_participant
+	  NOT = {
+			has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
+            has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
+            has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
+		}
+	}
+
+    possible = { 
+	   has_global_variable = russian_revolution_2
+	   has_global_variable = entente_deal_round_2_complete
+	   has_variable = entente_participant
+	   country_rank >= rank_value:great_power
+	    NOT = {
+		    OR = {
+			 has_law = law_type:law_council_republic
+			 country_has_primary_culture = cu:japanese
+			 country_has_primary_culture = cu:han
+			 has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
+             has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
+             has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
+		    }
+	    }
+		
+	}
+    
+    scripted_button = how_big_poland_1_button 
+    scripted_button = how_big_poland_2_button 
+    scripted_button = how_big_poland_3_button 
+
+    immediate = {
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_3_how_big_poland_prop_1 }
+			}
+			set_global_variable = {
+				name = entente_deal_round_3_how_big_poland_prop_1
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_3_how_big_poland_prop_2 }
+			} 
+			set_global_variable = {
+				name = entente_deal_round_3_how_big_poland_prop_2
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_3_how_big_poland_prop_3 }
+			}
+			set_global_variable = {
+				name = entente_deal_round_3_how_big_poland_prop_3
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_peace_deal_timer }
+			}
+			set_global_variable = {
+				name = entente_peace_deal_timer
+				value = 12
+			}
+		}
+    }
+
+    complete = {
+        OR = {
+         has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
+         has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
+         has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
+        }
+    }
+
+    on_complete = {
+        set_global_variable = entente_deal_round_3_complete
+        c:SWI = {
+            trigger_event = {
+                id = entente_peace_deal.4
+                days = 5
+            }
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            if = {
+				limit = { 
+					c:FRA ?= this
+					global_var:entente_peace_deal_timer >= 1
+				}
+				change_global_variable = {
+					name = entente_peace_deal_timer
+					add = -1
+				}
+			}
+			if = {
+				limit = {
+					c:FRA ?= this
+					global_var:entente_peace_deal_timer <= 0
+				}
+				if = {
+					limit = {
+						NOT = {
+							 has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
+                             has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
+                             has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
+						}
+					}
+					if = {
+						limit = {
+							global_var:entente_deal_round_3_how_big_poland_prop_1 > global_var:entente_deal_round_3_how_big_poland_prop_2
+							global_var:entente_deal_round_3_how_big_poland_prop_1 > global_var:entente_deal_round_3_how_big_poland_prop_3
+						}
+						set_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
+					}
+					else_if = {
+						limit = {
+							global_var:entente_deal_round_3_how_big_poland_prop_2 > global_var:entente_deal_round_3_how_big_poland_prop_1
+							global_var:entente_deal_round_3_how_big_poland_prop_2 > global_var:entente_deal_round_3_how_big_poland_prop_3
+						}
+						set_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
+					}
+					else_if = {
+						limit = {
+							global_var:entente_deal_round_3_how_big_poland_prop_3 > global_var:entente_deal_round_3_how_big_poland_prop_1
+							global_var:entente_deal_round_3_how_big_poland_prop_3 > global_var:entente_deal_round_3_how_big_poland_prop_2
+						}
+						set_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
+					}
+				}
+			}
+        }
+    }
+
+    weight = 100
+
+	should_be_pinned_by_default = yes 
+}
+
+je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states from Austria ?
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+    
+	is_shown_when_inactive = {
+	  has_variable = entente_participant
+	  NOT = {
+			has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
+            has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
+            has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
+		}
+		c:ITA = {
+          has_variable = entente_participant
+		}
+	}
+
+    possible = { 
+	   has_global_variable = entente_deal_round_2_complete
+	   has_variable = entente_participant
+	   country_rank >= rank_value:great_power
+	    NOT = {
+		    OR = {
+			 has_law = law_type:law_council_republic
+			 country_has_primary_culture = cu:japanese
+			 country_has_primary_culture = cu:han
+			 has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
+             has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
+             has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
+		    }
+	    }
+		c:ITA = {
+          has_variable = entente_participant
+		}	
+	}
+    
+    scripted_button = italy_iredentist_1_button 
+    scripted_button = italy_iredentist_2_button 
+    scripted_button = italy_iredentist_3_button 
+
+    immediate = {
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_4_italy_iredentist_prop_1 }
+			}
+			set_global_variable = {
+				name = entente_deal_round_4_italy_iredentist_prop_1
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_4_italy_iredentist_prop_2 }
+			} 
+			set_global_variable = {
+				name = entente_deal_round_4_italy_iredentist_prop_2
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_4_italy_iredentist_prop_3 }
+			}
+			set_global_variable = {
+				name = entente_deal_round_4_italy_iredentist_prop_3
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_peace_deal_timer }
+			}
+			set_global_variable = {
+				name = entente_peace_deal_timer
+				value = 12
+			}
+		}
+    }
+
+    complete = {
+        OR = {
+         has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
+         has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
+         has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
+        }
+    }
+
+    on_complete = {
+        set_global_variable = entente_deal_round_4_complete
+        c:SWI = {
+            trigger_event = {
+                id = entente_peace_deal.5
+                days = 5
+            }
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            if = {
+				limit = { 
+					c:FRA ?= this
+					global_var:entente_peace_deal_timer >= 1
+				}
+				change_global_variable = {
+					name = entente_peace_deal_timer
+					add = -1
+				}
+			}
+			if = {
+				limit = {
+					c:FRA ?= this
+					global_var:entente_peace_deal_timer <= 0
+				}
+				if = {
+					limit = {
+						NOT = {
+							 has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
+                             has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
+                             has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
+						}
+					}
+					if = {
+						limit = {
+							global_var:entente_deal_round_4_italy_iredentist_prop_1 > global_var:entente_deal_round_4_italy_iredentist_prop_2
+							global_var:entente_deal_round_4_italy_iredentist_prop_1 > global_var:entente_deal_round_4_italy_iredentist_prop_3
+						}
+						set_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
+					}
+					else_if = {
+						limit = {
+							global_var:entente_deal_round_4_italy_iredentist_prop_2 > global_var:entente_deal_round_4_italy_iredentist_prop_1
+							global_var:entente_deal_round_4_italy_iredentist_prop_2 > global_var:entente_deal_round_4_italy_iredentist_prop_3
+						}
+						set_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
+					}
+					else_if = {
+						limit = {
+							global_var:entente_deal_round_4_italy_iredentist_prop_3 > global_var:entente_deal_round_4_italy_iredentist_prop_1
+							global_var:entente_deal_round_4_italy_iredentist_prop_3 > global_var:entente_deal_round_4_italy_iredentist_prop_2
+						}
+						set_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
+					}
+				}
+			}
+        }
+    }
+
+    weight = 100
+
+	should_be_pinned_by_default = yes 
+}
+
+je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+    
+	is_shown_when_inactive = {
+	  has_variable = entente_participant
+	  NOT = {
+			has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
+            has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
+            has_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
+		}
+	  c:ITA = {
+          has_variable = central_powers_participant
+		}
+	}
+
+    possible = { 
+	   has_global_variable = entente_deal_round_2_complete
+	   has_variable = entente_participant
+	   country_rank >= rank_value:great_power
+	    NOT = {
+		    OR = {
+			 has_law = law_type:law_council_republic
+			 country_has_primary_culture = cu:japanese
+			 country_has_primary_culture = cu:han
+			 has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
+             has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
+             has_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
+		    }
+	    }
+		c:ITA = {
+          has_variable = central_powers_participant
+		}	
+	}
+    
+    scripted_button = italy_defeat_1_button 
+    scripted_button = italy_defeat_2_button 
+    scripted_button = italy_defeat_3_button 
+
+    immediate = {
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_5_italy_defeat_prop_1 }
+			}
+			set_global_variable = {
+				name = entente_deal_round_5_italy_defeat_prop_1
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_5_italy_defeat_prop_2 }
+			} 
+			set_global_variable = {
+				name = entente_deal_round_5_italy_defeat_prop_2
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_deal_round_5_italy_defeat_prop_3 }
+			}
+			set_global_variable = {
+				name = entente_deal_round_5_italy_defeat_prop_3
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:entente_peace_deal_timer }
+			}
+			set_global_variable = {
+				name = entente_peace_deal_timer
+				value = 12
+			}
+		}
+    }
+
+    complete = {
+        OR = {
+         has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
+         has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
+         has_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
+        }
+    }
+
+    on_complete = {
+        set_global_variable = entente_deal_round_5_complete
+        c:SWI = {
+            trigger_event = {
+                id = entente_peace_deal.6
+                days = 5
+            }
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            if = {
+				limit = { 
+					c:FRA ?= this
+					global_var:entente_peace_deal_timer >= 1
+				}
+				change_global_variable = {
+					name = entente_peace_deal_timer
+					add = -1
+				}
+			}
+			if = {
+				limit = {
+					c:FRA ?= this
+					global_var:entente_peace_deal_timer <= 0
+				}
+				if = {
+					limit = {
+						NOT = {
+							 has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
+                             has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
+                             has_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
+						}
+					}
+					if = {
+						limit = {
+							global_var:entente_deal_round_5_italy_defeat_prop_1 > global_var:entente_deal_round_5_italy_defeat_prop_2
+							global_var:entente_deal_round_5_italy_defeat_prop_1 > global_var:entente_deal_round_5_italy_defeat_prop_3
+						}
+						set_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
+					}
+					else_if = {
+						limit = {
+							global_var:entente_deal_round_5_italy_defeat_prop_2 > global_var:entente_deal_round_5_italy_defeat_prop_1
+							global_var:entente_deal_round_5_italy_defeat_prop_2 > global_var:entente_deal_round_5_italy_defeat_prop_3
+						}
+						set_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
+					}
+					else_if = {
+						limit = {
+							global_var:entente_deal_round_5_italy_defeat_prop_3 > global_var:entente_deal_round_5_italy_defeat_prop_1
+							global_var:entente_deal_round_5_italy_defeat_prop_3 > global_var:entente_deal_round_5_italy_defeat_prop_2
+						}
+						set_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
+					}
+				}
+			}
+        }
+    }
+
+    weight = 100
+
+	should_be_pinned_by_default = yes 
+}
+
 #Round 1: is Germany dislocated ?
 #Round 2: how big is German war reparation
 #Round 3: how big Poland becomes ?
 #Round 4: does Italy takes iredentist states from Austria ?
-#Round 5: what Greece takes from Turkey
-#Round 6: does an unified arab states froms or not ?
-#Round 7: who gets the arab states ?
-#Round 8: who gets which central power colonies ?
-#Round 9: what Japan gets from german colonies in asia
-#Round 10: what Russia gets (if Russia is not communist)
+#Round 5: what is taken from Italy
+#Round 6: what Greece takes from Turkey
+#Round 7: does an unified arab states froms or not ?
+#Round 8: who gets the arab states ?
+#Round 9: who gets which central power colonies ?
+#Round 10: what Japan gets from german colonies in asia
+#Round 11: what Russia gets 
