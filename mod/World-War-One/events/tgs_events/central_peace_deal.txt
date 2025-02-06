@@ -1,0 +1,26 @@
+namespace = central_peace_deal
+
+central_peace_deal.1 = { #Peace deal conference initiation
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/central_victory.dds"
+	}
+
+    title = central_peace_deal.1.t
+	desc = central_peace_deal.1.d
+	flavor = central_peace_deal.1.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = {
+        name = central_peace_deal.1.a
+        trigger = { has_variable = central_powers_participant }
+    }
+
+    option = {
+        name = central_peace_deal.1.b
+    }
+}

@@ -1,0 +1,30 @@
+﻿l_english:
+
+ entente_peace_deal.1.t:0 "The Entente has won !"
+ entente_peace_deal.1.d:0 "The peace conference will be held soon."
+ entente_peace_deal.1.f:0 "The many sacrifices we have done have finally paid of. Our ennemies have recognized our superiority, and their threat is gone. Now we have to discuss the peace deal clauses, and the future of the world."
+ entente_peace_deal.1.a:0 "Victory at last !"
+
+ entente_peace_deal.2.t:0 "The 1st round ends"
+ entente_peace_deal.2.d:0 "The matter of Germany's dislocation"
+ entente_peace_deal.2.f:0 "The victors of the Entente have set their decision regarding the first round."
+ entente_peace_deal.2.a:0 "Germany is completly dislocated"
+ entente_peace_deal.2.b:0 "Germany is partially discolated"
+ entente_peace_deal.2.b:0 "The german states remains united, only Rhineland get's occupied"
+
+ entente_peace_deal.3.t:0 
+ entente_peace_deal.3.d:0 
+ entente_peace_deal.3.f:0 
+ entente_peace_deal.3.a:0 
+ entente_peace_deal.3.b:0 
+
+ je_entente_peace_deal_round_1:0 "Entente Peace Deal - Round 1"
+ je_entente_peace_deal_round_1_name:0 "Entente Peace Deal - Round 1"
+ je_entente_peace_deal_round_1_reason:0 "The victors of the Entente have sent their delegations to Versailles to decide on the peace deal clauses. \n\n#variable [GetGlobalVariable( 'je_entente_peace_deal_participants_var' ).GetValue]#! [Concept('concept_great_power', '$concept_great_powers$')] are participating in the Conference.\n#bold #tooltippable #tooltip:partition_1_button_desc $favour_belgium_button$#!#!#! has received #variable [GetGlobalVariable( 'entente_deal_round_1_germany_dislocation_prop_1' ).GetValue]#! votes\n#bold #tooltippable #tooltip:partition_2_button_desc $favour_netherlands_button$#!#!#! has received #variable [GetGlobalVariable( 'entente_deal_round_1_germany_dislocation_prop_2' ).GetValue]#! votes\n#bold #tooltippable #tooltip:partition_3_button_desc $partition_compromise_button$#!#!#! has received #variable [GetGlobalVariable( 'entente_deal_round_1_germany_dislocation_prop_3' ).GetValue]#! votes\n\nThe conference will conclude in #variable [GetGlobalVariable('entente_peace_deal_timer').GetValue]#! months. The proposal with the most votes then be selected as the resolution of the current negotiation's round."
+ je_entente_peace_deal_round_1_tt_1:0 "The conference will decide the fate of the defeated countries."
+ partition_1_button:0 "Major dislocation"
+ partition_1_button_desc:0 "Westphalia, Hanover, Bavaria and Saxony will gain independance from Germany's rule."
+ partition_2_button:0 "Limited disclocation"
+ partition_2_button_desc:0 "Westphalia, Hanover, Bavaria and Saxony will be released as puppet states of Germany."
+ partition_3_button:0 "No disclocation"
+ partition_3_button_desc:0 "None of the german states will break free from Germany."

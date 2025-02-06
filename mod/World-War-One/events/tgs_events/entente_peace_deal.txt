@@ -1,0 +1,517 @@
+﻿namespace = entente_peace_deal
+
+entente_peace_deal.1 = { #Entente victory
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_victory.dds"
+	}
+
+    title = entente_peace_deal.1.t
+	desc = entente_peace_deal.1.d
+	flavor = entente_peace_deal.1.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    option = {
+		name = entente_peace_deal.1.a
+        trigger = {}
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = global_var:je_entente_peace_deal_participants_var
+				}
+			}
+			set_global_variable = {
+				name = je_entente_peace_deal_participants_var
+				value = 1
+			}
+		}
+		else = {
+			change_global_variable = {
+				name = je_entente_peace_deal_participants_var
+				add = 1
+			}
+		}
+	}
+}
+
+entente_peace_deal.2 = { #Round 1 result
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+    title = entente_peace_deal.2.t
+	desc = entente_peace_deal.2.d
+	flavor = entente_peace_deal.2.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.2.a
+        trigger = {
+         has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+        }
+        create_country = { #Rhineland
+	       tag = RHE
+	       origin = this
+	       state = s:STATE_NORTH_RHINE.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        s:STATE_RHINELAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        s:STATE_RHUR = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        s:STATE_WESTPHALIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        s:STATE_HESSE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        create_country = { #Bavaria
+	       tag = BAV
+	       origin = this
+	       state = s:STATE_BAVARIA.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        s:STATE_WURTTEMBERG = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BVA
+            }
+        }
+        s:STATE_BADEN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BVA
+            }
+        }
+        s:STATE_FRANCONIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BVA
+            }
+        }
+        create_country = { #Saxony
+	       tag = SAX
+	       origin = this
+	       state = s:STATE_SAXONY.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        create_country = { #Anhlat
+	       tag = ANH
+	       origin = this
+	       state = s:STATE_ANHALT.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        create_country = { #Hanover
+	       tag = HAN
+	       origin = this
+	       state = s:STATE_HANOVER.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        s:STATE_BRUNSWICK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+        }
+        s:STATE_ELBE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+        }
+        create_country = { #Holstein
+	       tag = HOL
+	       origin = this
+	       state = s:STATE_SCHLESWIG_HOLSTEIN.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }        
+    }
+
+    option = {
+        name = entente_peace_deal.2.b
+        trigger = {
+         has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+        }
+        create_country = { #Rhineland
+	       tag = RHE
+	       origin = this
+	       state = s:STATE_NORTH_RHINE.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        s:STATE_RHINELAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        s:STATE_RHUR = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        s:STATE_WESTPHALIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        s:STATE_HESSE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        create_country = { #Bavaria
+	       tag = BAV
+	       origin = this
+	       state = s:STATE_BAVARIA.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        s:STATE_WURTTEMBERG = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BVA
+            }
+        }
+        s:STATE_BADEN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BVA
+            }
+        }
+        s:STATE_FRANCONIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BVA
+            }
+        }
+        create_country = { #Saxony
+	       tag = SAX
+	       origin = this
+	       state = s:STATE_SAXONY.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        create_country = { #Anhlat
+	       tag = ANH
+	       origin = this
+	       state = s:STATE_ANHALT.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        create_country = { #Hanover
+	       tag = HAN
+	       origin = this
+	       state = s:STATE_HANOVER.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        s:STATE_BRUNSWICK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+        }
+        s:STATE_ELBE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+        }
+        create_country = { #Holstein
+	       tag = HOL
+	       origin = this
+	       state = s:STATE_SCHLESWIG_HOLSTEIN.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        } 
+        c:GER = {
+		create_diplomatic_pact = {
+			country = c:RHE
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:BAV
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:SAX
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:ANH
+			type = protectorate
+		}	 
+        create_diplomatic_pact = {
+			country = c:HAN
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:HOL
+			type = protectorate
+		}	
+        }       
+    }
+
+    option = {
+        name = entente_peace_deal.2.c
+        trigger = {
+         has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
+        }
+
+        create_country = { #Rhineland
+	       tag = RHE
+	       origin = this
+	       state = s:STATE_NORTH_RHINE.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+        }
+        s:STATE_RHINELAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        c:FRA = {
+		create_diplomatic_pact = {
+			country = c:RHE
+			type = protectorate
+		}	
+        }
+    }
+}

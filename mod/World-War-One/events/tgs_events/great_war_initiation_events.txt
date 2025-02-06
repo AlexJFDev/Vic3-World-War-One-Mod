@@ -450,23 +450,28 @@ great_war_initiation_events.8 = {
             }
             add_war_goal = {
                     holder = c:RUS
-                    type = conquer_state
-                    target_state = s:STATE_EAST_PRUSSIA.region_state:GER
+                    type = humiliation
+                    target_country = c:GER
                 }
             add_war_goal = {
                     holder = c:RUS
-                    type = conquer_state
-                    target_state = s:STATE_EAST_GALICIA.region_state:AUS
+                    type = humiliation
+                    target_country = c:AUS
                 }
             add_war_goal = {
                     holder = c:AUS
-                    type = conquer_state
-                    target_state = s:STATE_KIEV.region_state:RUS
+                    type = liberate_subject
+                    target_country = c:UKR
                 }
             add_war_goal = {
                     holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_GREATER_POLAND.region_state:RUS
+                    type = liberate_subject
+                    target_country = c:POL
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = liberate_subject
+                    target_country = c:UBD
                 }
 		}
         c:GER = { set_variable = central_powers_participant }
@@ -637,8 +642,13 @@ great_war_initiation_events.10 = {
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
+                    holder = c:FRA
+                    type = humiliation
+                    target_country = c:GER
+                }
+            add_war_goal = {
                     holder = c:GER
-                    type = war_reparations
+                    type = humiliation
                     target_country = c:FRA
                 }
 		}
@@ -691,12 +701,12 @@ great_war_initiation_events.11 = {
                 }         
             add_war_goal = {
                     holder = c:RUS
-                    type = war_reparations
+                    type = humiliation
                     target_country = c:TUR
                 }  
             add_war_goal = {
                     holder = c:GBR
-                    type = contain_threat
+                    type = humiliation
                     target_country = c:TUR
                 }          
 		}
@@ -865,8 +875,13 @@ great_war_initiation_events.13 = {
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
+                    holder = c:FRA
+                    type = humiliation
+                    target_country = c:GER
+                }
+            add_war_goal = {
                     holder = c:GER
-                    type = war_reparations
+                    type = humiliation
                     target_country = c:FRA
                 }
 		}
@@ -954,7 +969,7 @@ great_war_initiation_events.14 = {
             add_target_backers = { c:LUX }
             add_war_goal = {
                 holder = c:GER
-                type = make_protectorate
+                type = annex_country
                 target_country = c:BEL
             }
         }
@@ -1003,7 +1018,7 @@ great_war_initiation_events.14 = {
             add_target_backers = { c:LUX }
             add_war_goal = {
                 holder = c:GER
-                type = make_protectorate
+                type = annex_country
                 target_country = c:BEL
             }
         }
@@ -1333,8 +1348,8 @@ great_war_initiation_events.18 = {
 			}
             add_war_goal = {
                     holder = c:ITA
-                    type = conquer_state
-                    target_state = s:STATE_AUSTRIA.region_state:AUS
+                    type = humiliation
+                    target_country = c:AUS
                 }    
             add_war_goal = {
                     holder = c:AUS
