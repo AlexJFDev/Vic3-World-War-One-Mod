@@ -180,7 +180,6 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             has_variable = entente_participant
             is_at_war = yes 
         }
-        remove_modifier = war_protests_1_modifier
         add_modifier = {
 			name = war_protests_2_modifier
             years = 3
@@ -195,7 +194,6 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 
     option = {
         name = russia_events.4.b
-        remove_modifier = war_protests_1_modifier
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS

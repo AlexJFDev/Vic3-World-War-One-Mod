@@ -706,9 +706,9 @@ great_war_initiation_events.11 = {
                 }  
             add_war_goal = {
                     holder = c:GBR
-                    type = humiliation
-                    target_country = c:TUR
-                }          
+                    type = conquer_state
+                    target_state = s:STATE_HUDAVENDIGAR.region_state:TUR
+                }       
 		}
         c:TUR = { set_variable = central_powers_participant }
         c:TUR = {
@@ -956,7 +956,7 @@ great_war_initiation_events.14 = {
             }
         }
         add_modifier = {
-            name = schlieffen_plan_modifier
+            name = schlieffen_plan_1_modifier
             months = 5
         }
         
@@ -1005,7 +1005,7 @@ great_war_initiation_events.14 = {
             }
         }
         add_modifier = {
-            name = schlieffen_plan_modifier
+            name = schlieffen_plan_2_modifier
             months = 8
         }
         
@@ -1348,8 +1348,8 @@ great_war_initiation_events.18 = {
 			}
             add_war_goal = {
                     holder = c:ITA
-                    type = humiliation
-                    target_country = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_AUSTRIA.region_state:AUS
                 }    
             add_war_goal = {
                     holder = c:AUS

@@ -38,6 +38,134 @@ entente_peace_deal.1 = { #Entente victory
 				add = 1
 			}
 		}
+        c:GER = {
+        remove_diplomatic_pact = {
+			country = c:POL
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:LIT
+			type = protectorate
+		}
+		remove_diplomatic_pact = {
+			country = c:LAT
+			type = protectorate
+		}
+		remove_diplomatic_pact = {
+			country = c:EST
+			type = protectorate
+		}
+		}
+		c:AUS = {
+        remove_diplomatic_pact = {
+			country = c:UKR
+			type = protectorate
+		}
+		remove_diplomatic_pact = {
+			country = c:SER
+			type = protectorate
+		}
+		}
+		s:STATE_HUDAVENDIGAR = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GBR
+			    owner = {
+				  OR = {
+					c:GBR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:TUR
+            }
+        }
+		s:STATE_AUSTRIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:AUS
+            }
+        }
+		If = {
+           limit = {
+			 NOT = {
+               exists = c:BEL
+			}
+		   }
+           create_country = {
+	       tag = BEL
+	       origin = this
+	       state = s:STATE_FLANDERS.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+           }
+           s:STATE_WALLONIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BEL
+            }
+            }
+        }
+		c:POL = {
+		create_diplomatic_play = {
+		      target_country = c:RUS
+		      type = dp_annex_war
+	          war = yes
+	          add_war_goal = {
+		        holder = c:RUS
+		        type = humiliation
+		        target_country = c:POL
+              }
+	        }
+		}
+		c:UKR = {
+		create_diplomatic_play = {
+		      target_country = c:RUS
+		      type = dp_annex_war
+	          war = yes
+	          add_war_goal = {
+		        holder = c:RUS
+		        type = annex_country
+		        target_country = c:UKR
+              }
+	        }
+		}
+		c:GER = {
+        create_bidirectional_truce = { 
+            country = c:GBR 
+            months = 500
+        }
+        create_bidirectional_truce = { 
+            country = c:FRA
+            months = 500
+        }
+		create_bidirectional_truce = { 
+            country = c:AUS
+            months = 500
+        }
+		create_bidirectional_truce = { 
+            country = c:POL
+            months = 500
+        }
+		}
 	}
 }
 

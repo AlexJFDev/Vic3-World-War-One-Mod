@@ -80,7 +80,7 @@ je_colossus_with_feet_of_clay = {
         remove_modifier = war_protests_1_modifier
         remove_modifier = colossus_with_feet_of_clay_modifier
         remove_variable = no_reform_russia
-        set_variable = russian_revolution_1
+        set_global_variable = russian_revolution_1
     }
 
     timeout = -1
@@ -161,8 +161,8 @@ je_soviet_threat = {
       random_civil_war = {
 			add_civil_war_progress = -100
 		}
-      remove_variable = russian_revolution_1
-      set_variable = russian_revolution_2
+      remove_global_variable = russian_revolution_1
+      set_global_variable = russian_revolution_2
     }
 
     timeout = -1

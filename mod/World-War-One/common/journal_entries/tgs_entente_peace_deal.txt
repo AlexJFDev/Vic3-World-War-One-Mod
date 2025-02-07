@@ -168,7 +168,6 @@ je_entente_peace_deal_round_2 = { #Round 2: how big is German war reparation
 	}
 
     possible = { 
-	   has_global_variable = entente_deal_round_1_complete
 	   has_variable = entente_participant
 	   country_rank >= rank_value:great_power
 	    NOT = {
@@ -176,11 +175,15 @@ je_entente_peace_deal_round_2 = { #Round 2: how big is German war reparation
 			 has_law = law_type:law_council_republic
 			 country_has_primary_culture = cu:japanese
 			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
-             has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
-             has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
+			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 		    }
 	    }
+	  c:GER = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
 	}
     
     scripted_button = war_rep_1_button 
@@ -317,7 +320,6 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 
     possible = { 
 	   has_global_variable = russian_revolution_2
-	   has_global_variable = entente_deal_round_2_complete
 	   has_variable = entente_participant
 	   country_rank >= rank_value:great_power
 	    NOT = {
@@ -325,12 +327,15 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 			 has_law = law_type:law_council_republic
 			 country_has_primary_culture = cu:japanese
 			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
-             has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
-             has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
+			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 		    }
 	    }
-		
+	  c:GER = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
 	}
     
     scripted_button = how_big_poland_1_button 
@@ -469,7 +474,6 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 	}
 
     possible = { 
-	   has_global_variable = entente_deal_round_2_complete
 	   has_variable = entente_participant
 	   country_rank >= rank_value:great_power
 	    NOT = {
@@ -477,12 +481,16 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 			 has_law = law_type:law_council_republic
 			 country_has_primary_culture = cu:japanese
 			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
-             has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
-             has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
+			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 		    }
 	    }
-		c:ITA = {
+	  c:GER = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
+	  c:ITA = {
           has_variable = entente_participant
 		}	
 	}
@@ -623,7 +631,6 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 	}
 
     possible = { 
-	   has_global_variable = entente_deal_round_2_complete
 	   has_variable = entente_participant
 	   country_rank >= rank_value:great_power
 	    NOT = {
@@ -631,11 +638,15 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 			 has_law = law_type:law_council_republic
 			 country_has_primary_culture = cu:japanese
 			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
-             has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
-             has_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
+			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 		    }
 	    }
+	  c:GER = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
 		c:ITA = {
           has_variable = central_powers_participant
 		}	
