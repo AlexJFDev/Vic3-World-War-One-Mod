@@ -166,6 +166,183 @@ entente_peace_deal.1 = { #Entente victory
             months = 500
         }
 		}
+		If = {
+           limit = {
+			  c:BUL = {
+				has_variable = central_powers_participant
+			  }
+			}
+           s:STATE_WESTERN_THRACE = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:BUL
+			    owner = {
+				  OR = {
+					c:BUL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GRE
+            }
+            }
+		}
+		If = {
+           limit = {
+			  c:ROM = {
+				has_variable = entente_participant
+			  }
+			}
+           s:STATE_MOLDAVIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+            }
+		   s:STATE_NORTHERN_TRANSYLVANIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+            }
+		   s:STATE_SOUTHERN_TRANSYLVANIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+            }
+		   s:STATE_BANAT = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+            }
+		   s:STATE_BEKES = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+            }
+		}
+		If = {
+           limit = {
+			  c:JAP = {
+				has_variable = entente_participant
+			  }
+			}
+          s:STATE_EASTERN_NEW_GUINEA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+           }
+		  s:STATE_BOUGAINVILLE = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+          }
+		  s:STATE_WEST_MICRONESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+          }
+		  s:STATE_EAST_MICRONESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+         }
+		  s:STATE_NAURU = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+          }
+		  s:STATE_TONGA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+           }
+	    }		
 	}
 }
 
@@ -1365,6 +1542,1121 @@ entente_peace_deal.6 = { #Round 5 result
 		        }
 		      set_state_owner = c:GBR
             }
+        }
+	}
+}
+
+entente_peace_deal.7 = { #Round 6 result
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+    title = entente_peace_deal.7.t
+	desc = entente_peace_deal.7.d
+	flavor = entente_peace_deal.7.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    option = {
+		name = entente_peace_deal.7.a
+        trigger = {
+			has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
+		}
+		ai_chance = {
+			base = 100
+		}
+		s:STATE_EASTERN_THRACE = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GRE
+            }
+        }
+		s:STATE_HUDAVENDIGAR = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GRE
+            }
+        }
+		s:STATE_AYDIN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GRE
+            }
+        }
+	}
+
+	option = {
+		name = entente_peace_deal.7.b
+        trigger = {
+			has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
+		}
+		ai_chance = {
+			base = 100
+		}
+		s:STATE_AYDIN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GRE
+            }
+        }
+	}
+
+	option = {
+		name = entente_peace_deal.7.c
+        trigger = {
+			has_global_variable = entente_deal_round_6_how_big_greece_prop_3_won
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+entente_peace_deal.8 = { #Round 7 result
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+    title = entente_peace_deal.8.t
+	desc = entente_peace_deal.8.d
+	flavor = entente_peace_deal.8.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    option = {
+		name = entente_peace_deal.8.a
+        trigger = {
+			has_global_variable = entente_deal_round_7_arab_states_prop_1_won
+		}
+		ai_chance = {
+			base = 100
+		}
+        create_country = {
+	       tag = HDJ
+	       origin = this
+	       state = s:STATE_HEDJAZ.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		s:STATE_ALEPPO = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_SYRIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_LEBANON = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_TRANSJORDAN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_PALESTINE = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_DEIR_EZ_ZOR = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_MOSUL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_BAGHDAD = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_BASRA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_HAIL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAB
+			    owner = {
+				  OR = {
+					c:JAB = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_HAIL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NEJ
+			    owner = {
+				  OR = {
+					c:NEJ = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_NEJD = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NEJ
+			    owner = {
+				  OR = {
+					c:NEJ = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_ABU_DHABI = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+		s:STATE_ABU_DHABI = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:BHN
+			    owner = {
+				  OR = {
+					c:BHN = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
+	}
+
+	option = {
+		name = entente_peace_deal.8.b
+        trigger = {
+			has_global_variable = entente_deal_round_7_arab_states_prop_2_won
+		}
+		ai_chance = {
+			base = 100
+		}
+		create_country = {
+	       tag = SYR
+	       origin = this
+	       state = s:STATE_SYRIA.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		s:STATE_ALEPPO = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SYR
+            }
+        }
+		s:STATE_SYRIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SYR
+            }
+        }
+        create_country = {
+	       tag = LEB
+	       origin = this
+	       state = s:STATE_LEBANON.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		create_country = {
+	       tag = PAL
+	       origin = this
+	       state = s:STATE_PALESTINE.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_total_separation
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		s:STATE_TRANSJORDAN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PAL
+            }
+        }
+		create_country = {
+	       tag = HDJ
+	       origin = this
+	       state = s:STATE_HEDJAZ.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		create_country = {
+	       tag = IRQ
+	       origin = this
+	       state = s:STATE_BAGHDAD.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+        s:STATE_DEIR_EZ_ZOR = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SYR
+            }
+        }
+		s:STATE_MOSUL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRQ
+            }
+        }
+		s:STATE_BASRA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRQ
+            }
+        }
+		s:STATE_ABU_DHABI = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BHN
+            }
+        }
+	}
+
+	option = {
+		name = entente_peace_deal.8.c
+        trigger = {
+			has_global_variable = entente_deal_round_7_arab_states_prop_3_won
+		}
+		ai_chance = {
+			base = 100
+		}
+        create_country = {
+	       tag = SYR
+	       origin = this
+	       state = s:STATE_SYRIA.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		s:STATE_ALEPPO = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SYR
+            }
+        }
+		s:STATE_SYRIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SYR
+            }
+        }
+        create_country = {
+	       tag = LEB
+	       origin = this
+	       state = s:STATE_LEBANON.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		create_country = {
+	       tag = PAL
+	       origin = this
+	       state = s:STATE_PALESTINE.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_total_separation
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		s:STATE_TRANSJORDAN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PAL
+            }
+        }
+		create_country = {
+	       tag = HDJ
+	       origin = this
+	       state = s:STATE_HEDJAZ.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		create_country = {
+	       tag = IRQ
+	       origin = this
+	       state = s:STATE_BAGHDAD.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+        s:STATE_DEIR_EZ_ZOR = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SYR
+            }
+        }
+		s:STATE_MOSUL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRQ
+            }
+        }
+		s:STATE_BASRA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRQ
+            }
+        }
+		s:STATE_ABU_DHABI = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BHN
+            }
+        }
+        c:FRA = {
+		create_diplomatic_pact = {
+			country = c:SYR
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:LEB
+			type = protectorate
+		}	
+        }   
+		c:GBR = {
+		create_diplomatic_pact = {
+			country = c:PAL
+			type = protectorate
+		}	
+        create_diplomatic_pact = {
+			country = c:IRQ
+			type = protectorate
+		}	
+        }  
+	}
+}
+
+entente_peace_deal.9 = { #Round 8 result
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+    title = entente_peace_deal.9.t
+	desc = entente_peace_deal.9.d
+	flavor = entente_peace_deal.9.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.9.a
+        trigger = {
+         has_global_variable = entente_deal_round_8_how_big_russia_prop_1_won
+		 NOT = {
+			has_global_variable = russia_refuse_round_8_prop
+		  }
+        }
+        s:STATE_EAST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_WEST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_POSEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_SILESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_WEST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+	}
+
+	option = {
+        name = entente_peace_deal.9.b
+        trigger = {
+         has_global_variable = entente_deal_round_8_how_big_russia_prop_2_won
+		 NOT = {
+			has_global_variable = russia_refuse_round_8_prop
+		  }
+        }
+        s:STATE_EAST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_WEST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_POSEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+	}
+
+	option = {
+        name = entente_peace_deal.9.c
+        trigger = {
+         has_global_variable = entente_deal_round_8_how_big_russia_prop_3_won
+		 NOT = {
+			has_global_variable = russia_refuse_round_8_prop
+		  }
+        }
+        s:STATE_EAST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+	}
+
+	option = { #Refuse the decisions
+        name = entente_peace_deal.9.e
+        trigger = {
+		 OR = {
+            has_global_variable = entente_deal_round_8_how_big_russia_prop_2_won
+			has_global_variable = entente_deal_round_8_how_big_russia_prop_3_won
+		  }
+		  NOT = {
+			has_global_variable = russia_refuse_round_8_prop
+		  }
+        }
+		set_global_variable = russia_refuse_round_8_prop
+        s:STATE_EAST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_WEST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_POSEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_SILESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_WEST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+	}
+}
+
+entente_peace_deal.10 = { #Round 9 result
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+    title = entente_peace_deal.10.t
+	desc = entente_peace_deal.10.d
+	flavor = entente_peace_deal.10.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.10.a
+        trigger = {
+         has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
+		 NOT = {
+			has_global_variable = japan_refuse_round_9_prop
+		  }
+        }
+	}
+
+	option = {
+        name = entente_peace_deal.10.b
+        trigger = {
+         has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
+		 NOT = {
+			has_global_variable = japan_refuse_round_9_prop
+		  }
+        }
+        s:STATE_SHANDONG = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CHI
+            }
+        }
+		s:STATE_EAST_MICRONESIA = {
+           set_owner_of_provinces = {
+				country = c:USA
+				provinces = { x527F6C x808011 }
+			}
+        }
+	}
+
+	option = {
+        name = entente_peace_deal.10.c
+        trigger = {
+         has_global_variable = entente_deal_round_9_how_big_japan_prop_3_won
+		 NOT = {
+			has_global_variable = japan_refuse_round_9_prop
+		  }
+        }
+        s:STATE_SHANDONG = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CHI
+            }
+        }
+
+		s:STATE_BOUGAINVILLE = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:USA
+            }
+          }
+		s:STATE_WEST_MICRONESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:USA
+            }
+          }
+		s:STATE_EAST_MICRONESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:USA
+            }
+         }
+		s:STATE_NAURU = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:USA
+            }
+          }
+		s:STATE_TONGA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:USA
+            }
+        }
+	}
+
+	option = { #Refuse the decisions
+        name = entente_peace_deal.10.e
+        trigger = {
+		 OR = {
+            has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
+			has_global_variable = entente_deal_round_9_how_big_japan_prop_3_won
+		  }
+		  NOT = {
+			has_global_variable = russia_refuse_round_9_prop
+		  }
         }
 	}
 }
