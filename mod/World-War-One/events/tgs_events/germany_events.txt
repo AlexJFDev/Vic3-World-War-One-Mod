@@ -280,7 +280,7 @@ germany_events.5 = { #Socialists reconcilates
     }
 }
 
-germany_events.6 = { #Rise of fascism
+germany_events.6 = { #Austria-Hungary decides to continue the fight alone or not
     type = country_event
 
     title = germany_events.6.t
@@ -300,10 +300,64 @@ germany_events.6 = { #Rise of fascism
 
     option = {
         name = germany_events.6.a
-        add_modifier = {
-        name = 
-        years = 6
-        is_decaying = yes
-        } 
+         ai_chance = {
+            base = 100
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = {
+                    or = {
+						exists = c:GER								
+						this = c:GER								
+				    }
+                    or = {
+						exists = c:AUS							
+						this = c:AUS						
+				    }
+                    or = {
+						exists = c:TUR						
+						this = c:TUR						
+				    }
+                }
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+            add_diplomatic_play_war_support = { target = c:AUS value = -200 }   
+        }
+    }
+
+    option = {
+        name = germany_events.6.b
+         ai_chance = {
+            base = 0
+        }
     }
 }

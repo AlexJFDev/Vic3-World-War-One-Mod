@@ -194,7 +194,7 @@ how_big_poland_2_button = {
     effect = {
 		set_variable = how_big_poland_2_button_var
 		change_global_variable = {
-			name = entente_deal_round_3_germany_how_big_poland_prop_2
+			name = entente_deal_round_3_how_big_poland_prop_2
 			add = 1
 		}
     }
@@ -219,7 +219,7 @@ how_big_poland_3_button = {
     effect = {
 		set_variable = how_big_poland_3_button_var
 		change_global_variable = {
-			name = entente_deal_round_3_germany_how_big_poland_prop_3
+			name = entente_deal_round_3_how_big_poland_prop_3
 			add = 1
 		}
     }
@@ -682,6 +682,83 @@ how_big_japan_3_button = {
 		set_variable = how_big_japan_3_button_var
 		change_global_variable = {
 			name = entente_deal_round_9_how_big_japan_prop_3
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+#Round 10
+
+german_colonies_1_button = {
+	name = german_colonies_1_button
+	desc = german_colonies_1_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = german_colonies_1_button_var
+			has_variable = german_colonies_2_button_var
+			has_variable = german_colonies_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = german_colonies_1_button_var
+		change_global_variable = {
+			name = entente_deal_round_10_german_colonies_prop_1
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 100
+	}
+}
+
+german_colonies_2_button = {
+	name = german_colonies_2_button
+	desc = german_colonies_2_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = german_colonies_1_button_var
+			has_variable = german_colonies_2_button_var
+			has_variable = german_colonies_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = german_colonies_2_button_var
+		change_global_variable = {
+			name = entente_deal_round_10_german_colonies_prop_2
+			add = 1
+		}
+    }
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+german_colonies_3_button = {
+	name = german_colonies_3_button
+	desc = german_colonies_3_button_desc
+
+    possible = {
+		NOR = {
+			has_variable = german_colonies_1_button_var
+			has_variable = german_colonies_2_button_var
+			has_variable = german_colonies_3_button_var
+		}
+	}
+
+    effect = {
+		set_variable = german_colonies_3_button_var
+		change_global_variable = {
+			name = entente_deal_round_10_german_colonies_prop_3
 			add = 1
 		}
     }

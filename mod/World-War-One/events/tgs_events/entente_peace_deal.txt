@@ -342,7 +342,259 @@ entente_peace_deal.1 = { #Entente victory
 		      set_state_owner = c:JAP
             }
            }
-	    }		
+	    }
+		c:GER = {
+        remove_diplomatic_pact = {
+			country = c:TOG
+			type = colony
+		}
+        remove_diplomatic_pact = {
+			country = c:CMR
+			type = colony
+		}
+		remove_diplomatic_pact = {
+			country = c:NAM
+			type = colony
+		}
+		remove_diplomatic_pact = {
+			country = c:TAN
+			type = colony
+		}
+		}
+		c:FRA = {
+		create_diplomatic_pact = {
+			country = c:TOG
+			type = colony
+		}	
+        create_diplomatic_pact = {
+			country = c:CMR
+			type = colony
+		}	
+		}
+		c:GBR = {
+		create_diplomatic_pact = {
+			country = c:NAM
+			type = colony
+		}	
+        create_diplomatic_pact = {
+			country = c:TAN
+			type = colony
+		}	
+		}
+		c:TOG = {
+			remove_primary_culture = cu:german
+			add_primary_culture = cu:french
+			set_state_religion = rel:catholic
+		}
+		c:CMR = {
+			remove_primary_culture = cu:german
+			add_primary_culture = cu:french
+			set_state_religion = rel:catholic
+		}
+		c:NAM = {
+			remove_primary_culture = cu:german
+			add_primary_culture = cu:british
+		}
+		c:TAN = {
+			remove_primary_culture = cu:german
+			add_primary_culture = cu:british
+		}
+		create_country = { #Czechoslovakia
+			origin = root
+			tag = CZH
+			state = s:STATE_BOHEMIA.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+        s:STATE_MORAVIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_WEST_SLOVAKIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_EAST_SLOVAKIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		create_country = { #Hungary
+			origin = root
+			tag = HUN
+			state = s:STATE_CENTRAL_HUNGARY.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_monarchy
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+        s:STATE_TRANSDANUBIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HUN
+            }
+        }
+		s:STATE_DELVIDEK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_SLAVONIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_BOSNIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_MONTENEGRO = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_MONTENEGRO = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:MON
+			    owner = {
+				  OR = {
+					c:MON = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_DALMATIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_CROATIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_SLOVENIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }  
+		create_country = { #Galicia
+			origin = root
+			tag = GAL
+			state = s:STATE_EAST_GALICIA.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_monarchy
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+        s:STATE_WEST_GALICIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GAL
+            }
+        }
 	}
 }
 
@@ -946,10 +1198,10 @@ entente_peace_deal.4 = { #Round 3 result
 		s:STATE_WEST_GALICIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GAL
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GAL = THIS
 				    }
 			    }
 		        }
@@ -1037,10 +1289,10 @@ entente_peace_deal.4 = { #Round 3 result
 		s:STATE_WEST_GALICIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GAL
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GAL = THIS
 				    }
 			    }
 		        }
@@ -1157,10 +1409,10 @@ entente_peace_deal.5 = { #Round 4 result
 		s:STATE_SLOVENIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:SER
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:SER = THIS
 				    }
 			    }
 		        }
@@ -1183,10 +1435,10 @@ entente_peace_deal.5 = { #Round 4 result
 		s:STATE_CROATIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:SER
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:SER = THIS
 				    }
 			    }
 		        }
@@ -1196,10 +1448,10 @@ entente_peace_deal.5 = { #Round 4 result
 		s:STATE_DALMATIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:SER
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:SER = THIS
 				    }
 			    }
 		        }
@@ -1242,10 +1494,10 @@ entente_peace_deal.5 = { #Round 4 result
 		s:STATE_DALMATIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:SER
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:SER = THIS
 				    }
 			    }
 		        }
@@ -2286,10 +2538,10 @@ entente_peace_deal.9 = { #Round 8 result
 		s:STATE_EAST_GALICIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GAL
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GAL = THIS
 				    }
 			    }
 		        }
@@ -2299,10 +2551,10 @@ entente_peace_deal.9 = { #Round 8 result
 		s:STATE_WEST_GALICIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GAL
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GAL = THIS
 				    }
 			    }
 		        }
@@ -2361,10 +2613,10 @@ entente_peace_deal.9 = { #Round 8 result
 		s:STATE_EAST_GALICIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GAL
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GAL = THIS
 				    }
 			    }
 		        }
@@ -2397,10 +2649,10 @@ entente_peace_deal.9 = { #Round 8 result
 		s:STATE_EAST_GALICIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GAL
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GAL = THIS
 				    }
 			    }
 		        }
@@ -2476,10 +2728,10 @@ entente_peace_deal.9 = { #Round 8 result
 		s:STATE_EAST_GALICIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GAL
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GAL = THIS
 				    }
 			    }
 		        }
@@ -2489,10 +2741,10 @@ entente_peace_deal.9 = { #Round 8 result
 		s:STATE_WEST_GALICIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GAL
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GAL = THIS
 				    }
 			    }
 		        }
@@ -2658,5 +2910,101 @@ entente_peace_deal.10 = { #Round 9 result
 			has_global_variable = russia_refuse_round_9_prop
 		  }
         }
+	}
+}
+
+entente_peace_deal.11 = { #Round 10 result
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+    title = entente_peace_deal.11.t
+	desc = entente_peace_deal.11.d
+	flavor = entente_peace_deal.11.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.11.a
+        trigger = {
+         has_global_variable = entente_deal_round_10_german_colonies_prop_1_won
+        }
+	}
+
+	option = {
+        name = entente_peace_deal.11.b
+        trigger = {
+         has_global_variable = entente_deal_round_10_german_colonies_prop_2_won
+        }
+	    c:GBR = {
+        remove_diplomatic_pact = {
+			country = c:TAN
+			type = colony
+		}
+		}
+        c:ITA = {
+		create_diplomatic_pact = {
+			country = c:TAN
+			type = colony
+		}		
+		}
+		c:TAN = {
+			remove_primary_culture = cu:english
+			add_primary_culture = cu:italian
+		}
+	}
+
+	option = {
+        name = entente_peace_deal.11.b
+        trigger = {
+         has_global_variable = entente_deal_round_10_german_colonies_prop_3_won
+        }
+	    c:FRA = {
+        remove_diplomatic_pact = {
+			country = c:TOG
+			type = colony
+		}
+		remove_diplomatic_pact = {
+			country = c:CMR
+			type = colony
+		}
+		}
+		c:GBR = {
+        remove_diplomatic_pact = {
+			country = c:NAM
+			type = colony
+		}
+		remove_diplomatic_pact = {
+			country = c:TAN
+			type = colony
+		}
+		}
+		c:TOG = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:gbe
+			add_primary_culture = cu:african_minor
+			add_primary_culture = cu:akan
+		}
+		c:CMR = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:western_bantu
+			add_primary_culture = cu:central_bantu
+			add_primary_culture = cu:hausa
+		}
+		c:NAM = {
+			remove_primary_culture = cu:english
+			add_primary_culture = cu:southern_bantu
+			add_primary_culture = cu:khoisan
+		}
+		c:TAN = {
+			remove_primary_culture = cu:english
+			add_primary_culture = cu:eastern_bantu
+		}
 	}
 }

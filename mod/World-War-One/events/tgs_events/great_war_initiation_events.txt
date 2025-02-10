@@ -1360,7 +1360,12 @@ great_war_initiation_events.18 = {
                     holder = c:ITA
                     type = conquer_state
                     target_state = s:STATE_AUSTRIA.region_state:AUS
-                }    
+                }   
+            add_war_goal = {
+                    holder = c:AUS
+                    type = humiliation
+                    target_country = c:ITA
+                } 
             add_war_goal = {
                     holder = c:AUS
                     type = conquer_state
