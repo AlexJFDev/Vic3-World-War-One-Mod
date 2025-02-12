@@ -38,6 +38,10 @@ entente_peace_deal.1 = { #Entente victory
 				add = 1
 			}
 		}
+		if = {
+			limit = {
+				c:FRA = THIS
+			}
         c:GER = {
         remove_diplomatic_pact = {
 			country = c:POL
@@ -124,22 +128,10 @@ entente_peace_deal.1 = { #Entente victory
             }
             }
         }
-		c:POL = {
-		create_diplomatic_play = {
-		      target_country = c:RUS
-		      type = dp_annex_war
-	          war = yes
-	          add_war_goal = {
-		        holder = c:RUS
-		        type = humiliation
-		        target_country = c:POL
-              }
-	        }
-		}
 		c:UKR = {
 		create_diplomatic_play = {
 		      target_country = c:RUS
-		      type = dp_annex_war
+		      type = dp_regime_change
 	          war = yes
 	          add_war_goal = {
 		        holder = c:RUS
@@ -148,6 +140,30 @@ entente_peace_deal.1 = { #Entente victory
               }
 	        }
 		}
+		c:UKR = {
+         trigger_event = {
+          id = stabilization_buff_events.2
+          days = 5
+            }
+        }
+		c:POL = {
+		create_diplomatic_play = {
+		      target_country = c:RUS
+		      type = dp_regime_change
+	          war = yes
+	          add_war_goal = {
+		        holder = c:RUS
+		        type = humiliation
+		        target_country = c:POL
+              }
+	        }
+		}
+		c:POL = {
+         trigger_event = {
+          id = stabilization_buff_events.2
+          days = 5
+            }
+        }
 		c:GER = {
         create_bidirectional_truce = { 
             country = c:GBR 
@@ -264,6 +280,19 @@ entente_peace_deal.1 = { #Entente victory
 				has_variable = entente_participant
 			  }
 			}
+		  s:STATE_SHANDONG = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+            }
           s:STATE_EASTERN_NEW_GUINEA = {
            random_scope_state = {
 		      limit = {
@@ -596,6 +625,7 @@ entente_peace_deal.1 = { #Entente victory
             }
         }
 	}
+	}
 }
 
 entente_peace_deal.2 = { #Round 1 result
@@ -630,9 +660,7 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
-           }
-        }
-        s:STATE_RHINELAND = {
+           s:STATE_RHINELAND = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -644,8 +672,8 @@ entente_peace_deal.2 = { #Round 1 result
 		        }
 		      set_state_owner = c:RHE
             }
-        }
-        s:STATE_RHUR = {
+            }
+           s:STATE_RUHR = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -683,7 +711,9 @@ entente_peace_deal.2 = { #Round 1 result
 		        }
 		      set_state_owner = c:RHE
             }
+         }
         }
+       }
         create_country = { #Bavaria
 	       tag = BAV
 	       origin = this
@@ -694,9 +724,7 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
-           }
-        }
-        s:STATE_WURTTEMBERG = {
+           s:STATE_WURTTEMBERG = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -734,7 +762,9 @@ entente_peace_deal.2 = { #Round 1 result
 		        }
 		      set_state_owner = c:BVA
             }
+            }
         }
+       }
         create_country = { #Saxony
 	       tag = SAX
 	       origin = this
@@ -769,33 +799,33 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
+           s:STATE_BRUNSWICK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+            }
+           s:STATE_ELBE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+            }
            }
-        }
-        s:STATE_BRUNSWICK = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:HAN
-            }
-        }
-        s:STATE_ELBE = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:HAN
-            }
         }
         create_country = { #Holstein
 	       tag = HOL
@@ -808,7 +838,13 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
            }
-        }        
+        }  
+		c:SWI = {
+            trigger_event = {
+                id = entente_peace_deal.12
+                days = 5
+            }
+        }      
     }
 
     option = {
@@ -826,9 +862,7 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
-           }
-        }
-        s:STATE_RHINELAND = {
+             s:STATE_RHINELAND = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -879,7 +913,9 @@ entente_peace_deal.2 = { #Round 1 result
 		        }
 		      set_state_owner = c:RHE
             }
+         }
         }
+       }
         create_country = { #Bavaria
 	       tag = BAV
 	       origin = this
@@ -890,9 +926,7 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
-           }
-        }
-        s:STATE_WURTTEMBERG = {
+             s:STATE_WURTTEMBERG = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -930,7 +964,9 @@ entente_peace_deal.2 = { #Round 1 result
 		        }
 		      set_state_owner = c:BVA
             }
+            }
         }
+       }
         create_country = { #Saxony
 	       tag = SAX
 	       origin = this
@@ -965,33 +1001,33 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
+           s:STATE_BRUNSWICK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+            }
+            s:STATE_ELBE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+            }
            }
-        }
-        s:STATE_BRUNSWICK = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:HAN
-            }
-        }
-        s:STATE_ELBE = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:HAN
-            }
         }
         create_country = { #Holstein
 	       tag = HOL
@@ -1030,7 +1066,13 @@ entente_peace_deal.2 = { #Round 1 result
 			country = c:HOL
 			type = protectorate
 		}	
-        }       
+        } 
+		c:SWI = {
+            trigger_event = {
+                id = entente_peace_deal.12
+                days = 5
+            }
+        }        
     }
 
     option = {
@@ -1208,6 +1250,19 @@ entente_peace_deal.4 = { #Round 3 result
 		      set_state_owner = c:POL
             }
         }
+		s:STATE_EAST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GAL
+			    owner = {
+				  OR = {
+					c:GAL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
 		s:STATE_WEST_PRUSSIA = {
            random_scope_state = {
 		      limit = {
@@ -1224,10 +1279,10 @@ entente_peace_deal.4 = { #Round 3 result
 		s:STATE_EAST_PRUSSIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:AUS
+			   exists = c:GER
 			    owner = {
 				  OR = {
-					c:AUS = THIS
+					c:GER = THIS
 				    }
 			    }
 		        }
@@ -1247,6 +1302,12 @@ entente_peace_deal.4 = { #Round 3 result
 		      set_state_owner = c:POL
             }
         }
+		c:SWI = {
+            trigger_event = {
+                id = entente_peace_deal.13
+                days = 5
+            }
+        }   
 	}
 
 	option = {
@@ -1299,12 +1360,31 @@ entente_peace_deal.4 = { #Round 3 result
 		      set_state_owner = c:POL
             }
         }
+		s:STATE_EAST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GAL
+			    owner = {
+				  OR = {
+					c:GAL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
 		s:STATE_WEST_PRUSSIA = {
 			set_owner_of_provinces = {
 				country = c:POL
 				provinces = { xD180A0 x3E3572 x945000 x178C99 xBAF66D x7CB839 x611F2F }
 			}
 		}
+		c:SWI = {
+            trigger_event = {
+                id = entente_peace_deal.13
+                days = 5
+            }
+        }   
 	}
 
 	option = {
@@ -1344,6 +1424,12 @@ entente_peace_deal.4 = { #Round 3 result
 		      set_state_owner = c:POL
             }
         }
+		c:SWI = {
+            trigger_event = {
+                id = entente_peace_deal.13
+                days = 5
+            }
+        } 
 	}
 }
 
@@ -2454,6 +2540,10 @@ entente_peace_deal.8 = { #Round 7 result
 			country = c:IRQ
 			type = protectorate
 		}	
+		create_diplomatic_pact = {
+			country = c:JAB
+			type = protectorate
+		}	
         }  
 	}
 }
@@ -2782,7 +2872,7 @@ entente_peace_deal.10 = { #Round 9 result
 	}
 
 	option = {
-        name = entente_peace_deal.10.b
+        name = entente_peace_deal.10.b 
         trigger = {
          has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
 		 NOT = {
@@ -2898,19 +2988,6 @@ entente_peace_deal.10 = { #Round 9 result
             }
         }
 	}
-
-	option = { #Refuse the decisions
-        name = entente_peace_deal.10.e
-        trigger = {
-		 OR = {
-            has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
-			has_global_variable = entente_deal_round_9_how_big_japan_prop_3_won
-		  }
-		  NOT = {
-			has_global_variable = russia_refuse_round_9_prop
-		  }
-        }
-	}
 }
 
 entente_peace_deal.11 = { #Round 10 result
@@ -2955,7 +3032,7 @@ entente_peace_deal.11 = { #Round 10 result
 		}		
 		}
 		c:TAN = {
-			remove_primary_culture = cu:english
+			remove_primary_culture = cu:british
 			add_primary_culture = cu:italian
 		}
 	}
@@ -2998,13 +3075,287 @@ entente_peace_deal.11 = { #Round 10 result
 			add_primary_culture = cu:hausa
 		}
 		c:NAM = {
-			remove_primary_culture = cu:english
+			remove_primary_culture = cu:british
 			add_primary_culture = cu:southern_bantu
 			add_primary_culture = cu:khoisan
 		}
 		c:TAN = {
-			remove_primary_culture = cu:english
+			remove_primary_culture = cu:british
 			add_primary_culture = cu:eastern_bantu
 		}
+	}
+}
+
+entente_peace_deal.12 = { #Germany's partititon fix
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+    title = entente_peace_deal.11.t
+	desc = entente_peace_deal.11.d
+	flavor = entente_peace_deal.11.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.12.a
+		s:STATE_RUHR = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        s:STATE_WESTPHALIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+        s:STATE_HESSE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RHE
+            }
+        }
+		s:STATE_BADEN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BVA
+            }
+        }
+        s:STATE_FRANCONIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BVA
+            }
+        }
+		create_country = { #Hanover
+	       tag = HAN
+	       origin = this
+	       state = s:STATE_HANOVER.region_state:GER
+           on_created = { 
+           activate_law = law_type:law_parliamentary_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           s:STATE_BRUNSWICK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+            }
+           s:STATE_ELBE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HAN
+            }
+            }
+           }
+        }
+	}
+}
+
+entente_peace_deal.13 = { #Poland's expansion fix
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+    title = entente_peace_deal.13.t
+	desc = entente_peace_deal.13.d
+	flavor = entente_peace_deal.13.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.13.a
+		 trigger = {  
+           has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
+		}
+		s:STATE_POSEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+		s:STATE_WEST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GAL
+			    owner = {
+				  OR = {
+					c:GAL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+		s:STATE_WEST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+		s:STATE_EAST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+		s:STATE_SILESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+	}
+
+	option = {
+        name = entente_peace_deal.13.b
+		trigger = { 
+          has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
+		}
+        s:STATE_POSEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+		s:STATE_WEST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GAL
+			    owner = {
+				  OR = {
+					c:GAL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+		s:STATE_WEST_PRUSSIA = {
+			set_owner_of_provinces = {
+				country = c:POL
+				provinces = { xD180A0 x3E3572 x945000 x178C99 xBAF66D x7CB839 x611F2F }
+			}
+		}
+	}
+
+    option = {
+        name = entente_peace_deal.13.c
+	    trigger = { 
+          has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
+		}
+		s:STATE_POSEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
 	}
 }

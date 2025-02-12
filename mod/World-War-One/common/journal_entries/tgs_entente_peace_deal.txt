@@ -74,11 +74,11 @@
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_1 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_1
+				value = 2
 			}
 		}
     }
@@ -93,12 +93,17 @@
 
     on_complete = {
         set_global_variable = entente_deal_round_1_complete
-        c:SWI = {
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:SWI = {
             trigger_event = {
                 id = entente_peace_deal.2
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -106,17 +111,17 @@
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_1 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_1
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_1 <= 0
 				}
 				if = {
 					limit = {
@@ -238,11 +243,11 @@ je_entente_peace_deal_round_2 = { #Round 2: how big is German war reparation
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_2 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_2
+				value = 2
 			}
 		}
     }
@@ -257,12 +262,17 @@ je_entente_peace_deal_round_2 = { #Round 2: how big is German war reparation
 
     on_complete = {
         set_global_variable = entente_deal_round_2_complete
-        c:SWI = {
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:SWI = {
             trigger_event = {
                 id = entente_peace_deal.3
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -270,17 +280,17 @@ je_entente_peace_deal_round_2 = { #Round 2: how big is German war reparation
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_2 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_2
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_2 <= 0
 				}
 				if = {
 					limit = {
@@ -403,11 +413,11 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_3 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_3
+				value = 2
 			}
 		}
     }
@@ -423,12 +433,17 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 
     on_complete = {
         set_global_variable = entente_deal_round_3_complete
-        c:SWI = {
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:SWI = {
             trigger_event = {
                 id = entente_peace_deal.4
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -436,17 +451,17 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_3 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_3
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_3 <= 0
 				}
 				if = {
 					limit = {
@@ -574,11 +589,11 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_4 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_4
+				value = 2
 			}
 		}
     }
@@ -593,12 +608,17 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 
     on_complete = {
         set_global_variable = entente_deal_round_4_complete
-        c:SWI = {
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:SWI = {
             trigger_event = {
                 id = entente_peace_deal.5
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -606,17 +626,17 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_4 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_4
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_4 <= 0
 				}
 				if = {
 					limit = {
@@ -744,11 +764,11 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_5 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_5
+				value = 2
 			}
 		}
     }
@@ -763,12 +783,17 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 
     on_complete = {
         set_global_variable = entente_deal_round_5_complete
-        c:SWI = {
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:SWI = {
             trigger_event = {
                 id = entente_peace_deal.6
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -776,17 +801,17 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_5 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_5
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_5 <= 0
 				}
 				if = {
 					limit = {
@@ -920,11 +945,11 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_6 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_6
+				value = 2
 			}
 		}
     }
@@ -939,12 +964,17 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 
     on_complete = {
         set_global_variable = entente_deal_round_6_complete
-        c:SWI = {
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:SWI = {
             trigger_event = {
                 id = entente_peace_deal.7
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -952,17 +982,17 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_6 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_6
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_6 <= 0
 				}
 				if = {
 					limit = {
@@ -1090,11 +1120,11 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_7 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_7
+				value = 2
 			}
 		}
     }
@@ -1109,12 +1139,17 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
 
     on_complete = {
         set_global_variable = entente_deal_round_7_complete
-        c:SWI = {
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:SWI = {
             trigger_event = {
                 id = entente_peace_deal.8
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -1122,17 +1157,17 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_7 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_7
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_7 <= 0
 				}
 				if = {
 					limit = {
@@ -1221,7 +1256,9 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 		  has_modifier = country_humiliated
         } 
 	  c:RUS = {
-          has_law = law_type:law_council_republic
+		  NOT = {
+			has_law = law_type:law_council_republic
+		  }
 		}
 	}
     
@@ -1259,11 +1296,11 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_8 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_8
+				value = 2
 			}
 		}
     }
@@ -1278,12 +1315,17 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 
     on_complete = {
         set_global_variable = entente_deal_round_8_complete
-        c:RUS = {
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		  c:RUS = {
             trigger_event = {
                 id = entente_peace_deal.9
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -1291,17 +1333,17 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_8 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_8
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_8 <= 0
 				}
 				if = {
 					limit = {
@@ -1434,11 +1476,11 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_9 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_9
+				value = 2
 			}
 		}
     }
@@ -1452,13 +1494,18 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
     }
 
     on_complete = {
-        set_global_variable = entente_deal_round_8_complete
-        c:JAP = {
+        set_global_variable = entente_deal_round_9_complete
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:JAP = {
             trigger_event = {
-                id = entente_peace_deal.9
+                id = entente_peace_deal.10
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -1466,17 +1513,17 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_9 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_9
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_9 <= 0
 				}
 				if = {
 					limit = {
@@ -1604,11 +1651,11 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
 		}
 		if = {
 			limit = {
-				NOT = { exists = global_var:entente_peace_deal_timer }
+				NOT = { exists = global_var:entente_peace_deal_timer_round_10 }
 			}
 			set_global_variable = {
-				name = entente_peace_deal_timer
-				value = 12
+				name = entente_peace_deal_timer_round_10
+				value = 2
 			}
 		}
     }
@@ -1622,13 +1669,18 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
     }
 
     on_complete = {
-        set_global_variable = entente_deal_round_8_complete
-        c:SWI = {
+        set_global_variable = entente_deal_round_10_complete
+        If = { 
+		  limit = { 
+			c:FRA ?= this
+		  }
+		   c:SWI = {
             trigger_event = {
-                id = entente_peace_deal.9
+                id = entente_peace_deal.11
                 days = 5
             }
-        }
+           }
+		}
     }
 
     on_monthly_pulse = {
@@ -1636,17 +1688,17 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
             if = {
 				limit = { 
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer >= 1
+					global_var:entente_peace_deal_timer_round_10 >= 1
 				}
 				change_global_variable = {
-					name = entente_peace_deal_timer
+					name = entente_peace_deal_timer_round_10
 					add = -1
 				}
 			}
 			if = {
 				limit = {
 					c:FRA ?= this
-					global_var:entente_peace_deal_timer <= 0
+					global_var:entente_peace_deal_timer_round_10 <= 0
 				}
 				if = {
 					limit = {
