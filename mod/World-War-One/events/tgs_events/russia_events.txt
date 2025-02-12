@@ -430,6 +430,12 @@ russia_events.8 = { #The civil war begins
         c:SIB = {
             change_infamy = -100
         }
+        c:SIB = {
+         trigger_event = {
+          id = stabilization_buff_events.2
+          days = 5
+            }
+        }
     }
 }
 
