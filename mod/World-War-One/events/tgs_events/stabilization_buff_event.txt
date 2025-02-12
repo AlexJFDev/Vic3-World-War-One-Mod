@@ -121,3 +121,90 @@ stabilization_buff_events.4 = {
 		}
     }
 }
+
+stabilization_buff_events.5 = { 
+    type = country_event
+
+    title = stabilization_buff_events.5.t
+    desc = stabilization_buff_events.5.d
+    flavor = stabilization_buff_events.5.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.5.a
+        default_option = yes
+        s:STATE_BUSAN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KOR
+			    owner = {
+				  OR = {
+					c:KOR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+        }
+        s:STATE_PYONGYANG = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KOR
+			    owner = {
+				  OR = {
+					c:KOR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+        }
+        s:STATE_SARIWON = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KOR
+			    owner = {
+				  OR = {
+					c:KOR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+        }
+        s:STATE_SEOUL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KOR
+			    owner = {
+				  OR = {
+					c:KOR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+        }
+        s:STATE_YANGHO = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KOR
+			    owner = {
+				  OR = {
+					c:KOR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+        }
+    }
+}
