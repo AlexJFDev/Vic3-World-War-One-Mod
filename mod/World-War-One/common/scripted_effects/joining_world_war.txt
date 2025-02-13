@@ -1,0 +1,209 @@
+﻿
+joining_world_war_set_variables = { 
+
+    set_variable = { name = entente_progress_from_diplomacy value = 0 } 
+    set_variable = { name = entente_progress_from_lobbies value = 0 }
+
+    set_variable = { name = central_powers_progress_from_diplomacy value = 0 } 
+    set_variable = { name = central_powers_progress_from_lobbies value = 0 }
+
+}
+
+weekly_pulse_entente_progress = {
+     
+    set_variable = { name = entente_progress_from_diplomacy value = 0 } 
+    set_variable = { name = entente_progress_from_lobbies value = 0 }
+
+ #From diplomacy
+
+	if = { 
+        limit = {
+            every_country = {
+			has_variable = entente_participant
+            country_rank >= rank_value:great_power
+            has_diplomatic_pact = {
+				who = root
+				type = trade_agreement
+			}	
+            }
+		   }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 1  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+		}
+    }
+    if = {
+        limit = {
+            every_country = {
+			has_variable = entente_participant
+            country_rank >= rank_value:great_power
+            has_diplomatic_pact = {
+				who = root
+				type = foreign_investment_agreement
+			}	
+            }
+		   }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 1  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+		}
+    }
+    if = {
+        limit = {
+            every_country = {
+			has_variable = entente_participant
+            has_diplomatic_pact = {
+				who = root
+				type = defensive_pact
+			}	
+            }
+		   }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 3  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -3  }
+		}
+    }
+    if = {
+        limit = {
+            every_country = {
+			has_variable = entente_participant
+            has_diplomatic_pact = {
+				who = root
+				type = alliance
+			}	
+            }
+		   }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 5  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+		}
+    }
+ 
+ #From lobbies
+
+    every_political_lobby = {
+		limit = {
+			is_political_lobby_type = lobby_pro_country
+			target = {
+                has_variable = entente_participant
+            }
+	    }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 3  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -3  }
+		}
+    }
+
+    every_political_lobby = {
+		limit = {
+			is_political_lobby_type = lobby_anti_country
+			target = {
+                has_variable = central_powers_participant
+            }
+	    }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 3  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -3  }
+		}
+    }
+
+}
+
+weekly_pulse_central_powers_progress = {
+     
+    set_variable = { name = central_powers_progress_from_diplomacy value = 0 } 
+    set_variable = { name = central_powers_progress_from_lobbies value = 0 }
+
+ #From diplomacy
+
+	if = { 
+        limit = {
+            every_country = {
+			has_variable = central_powers_participant
+            country_rank >= rank_value:great_power
+            has_diplomatic_pact = {
+				who = root
+				type = trade_agreement
+			}	
+            }
+		   }
+        ROOT = {
+			change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+            change_variable = { name = entente_progress_from_diplomacy add = -1  }
+		}
+    }
+    if = {
+        limit = {
+            every_country = {
+			has_variable = central_powers_participant
+            country_rank >= rank_value:great_power
+            has_diplomatic_pact = {
+				who = root
+				type = foreign_investment_agreement
+			}	
+            }
+		   }
+        ROOT = {
+			change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+            change_variable = { name = entente_progress_from_diplomacy add = -1  }
+		}
+    }
+    if = {
+        limit = {
+            every_country = {
+			has_variable = central_powers_participant
+            has_diplomatic_pact = {
+				who = root
+				type = defensive_pact
+			}	
+            }
+		   }
+        ROOT = {
+			change_variable = { name = central_powers_progress_from_diplomacy add = 3  }
+            change_variable = { name = entente_progress_from_diplomacy add = -3  }
+		}
+    }
+    if = {
+        limit = {
+            every_country = {
+			has_variable = entente_participant
+            has_diplomatic_pact = {
+				who = root
+				type = alliance
+			}	
+            }
+		   }
+        ROOT = {
+			change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+            change_variable = { name = entente_progress_from_diplomacy add = -5  }
+		}
+    }
+ 
+ #From lobbies
+
+    every_political_lobby = {
+		limit = {
+			is_political_lobby_type = lobby_pro_country
+			target = {
+                has_variable = central_powers_participant
+            }
+	    }
+        ROOT = {
+			change_variable = { name = central_powers_progress_from_diplomacy add = 3  }
+            change_variable = { name = entente_progress_from_diplomacy add = -3  }
+		}
+    }
+
+    every_political_lobby = {
+		limit = {
+			is_political_lobby_type = lobby_anti_country
+			target = {
+                has_variable = entente_participant
+            }
+	    }
+        ROOT = {
+			change_variable = { name = central_powers_from_diplomacy add = 3  }
+            change_variable = { name = entente_progress_from_diplomacy add = -3  }
+		}
+    }
+}

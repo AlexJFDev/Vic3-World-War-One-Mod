@@ -1,0 +1,74 @@
+﻿support_entente_button = {
+	name = support_entente_button
+	desc = support_entente_button_desc
+
+    possible = {}
+
+    effect = {
+        set_variable = supporting_entente_var
+        remove_variable = maintain_neutrality_var
+        remove_variable = supporting_central_powers_var
+        je:je_joining_world_war = {
+			add_progress = { value = 30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+    }
+
+    selected = {
+		has_variable = supporting_entente_var
+	}
+
+    ai_chance = {
+		base = 0
+	}
+}
+
+maintain_neutrality_button = {
+	name = maintain_neutrality_button
+	desc = maintain_neutrality_button_desc
+
+    possible = {}
+
+    effect = {
+        set_variable = maintain_neutrality_var
+        remove_variable = supporting_central_powers_var
+		remove_variable = supporting_entente_var
+        je:je_joining_world_war = {
+			add_progress = { value = -30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+    }
+
+    selected = {
+		has_variable = maintain_neutrality_var
+	}
+
+    ai_chance = {
+		base = 100
+	}
+}
+
+support_central_powers_button = {
+	name = support_central_powers_button
+	desc = support_central_powers_button_desc
+
+    possible = {}
+
+    effect = {
+        set_variable = supporting_central_powers_var
+		remove_variable = supporting_entente_var
+		remove_variable = maintain_neutrality_var
+        je:je_joining_world_war = {
+			add_progress = { value = -30 name = join_entente_progress_bar }
+            add_progress = { value = 30 name = join_central_powers_progress_bar }
+		}
+    }
+
+    selected = {
+		has_variable = supporting_central_powers_var
+	}
+
+    ai_chance = {
+		base = 0
+	}
+}

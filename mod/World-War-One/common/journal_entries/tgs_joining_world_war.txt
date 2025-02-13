@@ -1,0 +1,44 @@
+﻿je_joining_world_war = { 
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_historical_content
+    
+	is_shown_when_inactive = {
+	  has_global_variable = world_war_1_ongoing
+      is_country_type = recognized
+      is_subject = no
+      NOT = {
+        has_global_variable = world_war_1_over
+        has_variable = warlord_state
+      }
+	}
+
+    possible = { 
+	   is_at_war = no
+       is_revolutionnary = no
+	}
+
+    immediate = {
+		trigger_event = { id = joining_world_war_events.1 popup = yes }
+    }
+
+    complete = {
+        OR = {
+            has_variable = entente_participant
+            has_variable = central_powers_participant
+            has_global_variable = world_war_1_over
+        }
+    }
+
+    scripted_progress_bar = join_entente_progress_bar
+	scripted_progress_bar = join_central_powers_progress_bar
+
+    scripted_button = support_entente_button
+	scripted_button = maintain_neutrality_button
+	scripted_button = support_central_powers_button
+
+    
+
+
+}

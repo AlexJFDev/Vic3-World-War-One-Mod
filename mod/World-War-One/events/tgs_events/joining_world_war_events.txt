@@ -1,0 +1,26 @@
+﻿namespace = joining_world_war_events
+
+joining_world_war_events.1 = { #Debate initiation
+    type = country_event
+
+    title = joining_world_war_events.1.t
+    desc = joining_world_war_events.1.d
+    flavor = joining_world_war_events.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = joining_world_war_events.1.a
+        default_option = yes
+
+    }
+}

@@ -1,0 +1,57 @@
+﻿#je_joining_world_war
+
+join_entente_progress_bar = {
+	name = "join_entente_progress_bar"
+	desc = "join_entente_progress_bar_desc"
+
+	default_green = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				is_at_war = no
+                is_revolutionnary = no
+			}
+			add = {
+				desc = "entente_progress_from_diplomacy"
+				value = owner.var:entente_progress_from_diplomacy
+			}
+			add = {
+				desc = "entente_progress_from_lobbies"
+				value = owner.var:entente_progress_from_lobbies
+			}
+		}
+	}
+
+    start_value = 1
+	min_value = 0
+	max_value = 100
+}
+
+join_central_powers_progress_bar = {
+	name = "join_central_powers_progress_bar"
+	desc = "join_central_powers_progress_bar_desc"
+
+	default_bad = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				is_at_war = no
+                is_revolutionnary = no
+			}
+			add = {
+				desc = "central_powers_progress_from_diplomacy"
+				value = owner.var:
+			}
+			add = {
+				desc = "central_powers_progress_from_lobbies"
+				value = owner.var:central_powers_progress_from_lobbies
+			}
+		}
+	}
+
+    start_value = 1
+	min_value = 0
+	max_value = 100
+}
