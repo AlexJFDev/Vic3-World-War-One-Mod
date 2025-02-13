@@ -947,6 +947,7 @@ great_war_initiation_events.14 = {
 
     option = { # Intervene - Player
         name = great_war_initiation_events.14.a
+        set_global_variable = german_invasion_of_belgium
         default_option = yes
         trigger = { is_player = yes }
         ai_chance = {
@@ -996,6 +997,7 @@ great_war_initiation_events.14 = {
 
     option = { # Intervene - AI
         name = great_war_initiation_events.14.b
+        set_global_variable = german_invasion_of_belgium
         default_option = yes
         trigger = { is_player = no }
         ai_chance = {

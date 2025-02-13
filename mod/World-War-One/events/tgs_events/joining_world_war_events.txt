@@ -20,7 +20,6 @@ joining_world_war_events.1 = { #Debate initiation
 
     option = {
         name = joining_world_war_events.1.a
-        default_option = yes
     }
 }
 
@@ -34,7 +33,7 @@ joining_world_war_events.2 = { #Joining the Entente
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
@@ -44,6 +43,7 @@ joining_world_war_events.2 = { #Joining the Entente
 
     option = {
         name = joining_world_war_events.2.a
+        default_option = yes
         set_variable = entente_participant
         every_diplomatic_play = {
 			limit = {
@@ -83,6 +83,13 @@ joining_world_war_events.2 = { #Joining the Entente
 				who = root
 			}
         }
+        ai_chance = {
+		base = 100
+	    }
+    }
+
+    option = {
+        name = joining_world_war_events.2.b
     }
 }
 
@@ -96,7 +103,7 @@ joining_world_war_events.3 = { #Joining the Central Powers
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
@@ -106,6 +113,7 @@ joining_world_war_events.3 = { #Joining the Central Powers
 
     option = {
         name = joining_world_war_events.3.a
+        default_option = yes
         set_variable = central_powers_participant
         every_diplomatic_play = {
 			limit = {
@@ -145,6 +153,13 @@ joining_world_war_events.3 = { #Joining the Central Powers
                 who = root
             }   
         }
+        ai_chance = {
+		base = 100
+	    }
+    }
+
+    option = {
+        name = joining_world_war_events.3.b
     }
 }
 
@@ -155,7 +170,89 @@ joining_world_war_events.4 = { #Anti-War protests
     desc = joining_world_war_events.4.d
     flavor = joining_world_war_events.4.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        NOT = {
+            has_variable = maintain_neutrality_var
+        }
+        OR = {
+            has_variable = supporting_entente_var
+            has_variable = supporting_central_powers_var
+        }
+    }
+
+    option = { #accept the demands
+        name = joining_world_war_events.4.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+    }
+
+    option = { #repress the protest
+        name = joining_world_war_events.4.b
+        add_modifier = {
+            name = war_protests_4_modifier
+            duration = 12
+            is_decaying = yes
+        }
+        
+    }
+}
+
+joining_world_war_events.5 = { #Minister's blunder
+    type = country_event
+
+    title = joining_world_war_events.5.t
+    desc = joining_world_war_events.5.d
+    flavor = joining_world_war_events.5.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        NOT = {
+            has_variable = maintain_neutrality_var
+        }
+        OR = {
+            has_variable = supporting_entente_var
+            has_variable = supporting_central_powers_var
+        }
+    }
+
+    option = {
+        name = joining_world_war_events.5.a
+        add_modifier = {
+            name = war_protests_3_modifier
+            duration = 12
+            is_decaying = yes
+        }
+    }
+}
+
+joining_world_war_events.6 = { #Anti-british rethoric
+    type = country_event
+
+    title = joining_world_war_events.6.t
+    desc = joining_world_war_events.6.d
+    flavor = joining_world_war_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
@@ -166,8 +263,58 @@ joining_world_war_events.4 = { #Anti-War protests
 
     trigger = {}
 
-    option = {
-        name = joining_world_war_events.1.a
+    option = { #do not encourage this rethoric
+        name = joining_world_war_events.6.a
         default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -12 name = join_entente_progress_bar }
+            add_progress = { value = 5 name = join_central_powers_progress_bar }
+		}
+    }
+
+    option = { #encourage this rethoric
+        name = joining_world_war_events.6.b
+        je:je_joining_world_war = {
+			add_progress = { value = -25 name = join_entente_progress_bar }
+            add_progress = { value = 15 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.7 = { #Anti-german rethoric
+    type = country_event
+
+    title = joining_world_war_events.7.t
+    desc = joining_world_war_events.7.d
+    flavor = joining_world_war_events.7.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        has_global_variable = german_invasion_of_belgium
+    }
+
+    option = { #do not encourage this rethoric
+        name = joining_world_war_events.7.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = 8 name = join_entente_progress_bar }
+            add_progress = { value = -12 name = join_central_powers_progress_bar }
+		}
+    }
+
+    option = { #encourage this rethoric
+        name = joining_world_war_events.7.b
+        je:je_joining_world_war = {
+			add_progress = { value = 15 name = join_entente_progress_bar }
+            add_progress = { value = -25 name = join_central_powers_progress_bar }
+		}
     }
 }
