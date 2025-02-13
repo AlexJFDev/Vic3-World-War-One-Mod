@@ -9,8 +9,8 @@
         remove_variable = maintain_neutrality_var
         remove_variable = supporting_central_powers_var
         je:je_joining_world_war = {
-			add_progress = { value = 30 name = join_entente_progress_bar }
-            add_progress = { value = -30 name = join_central_powers_progress_bar }
+			add_progress = { value = 100 name = join_entente_progress_bar }
+            add_progress = { value = -100 name = join_central_powers_progress_bar }
 		}
     }
 
@@ -34,8 +34,8 @@ maintain_neutrality_button = {
         remove_variable = supporting_central_powers_var
 		remove_variable = supporting_entente_var
         je:je_joining_world_war = {
-			add_progress = { value = -30 name = join_entente_progress_bar }
-            add_progress = { value = -30 name = join_central_powers_progress_bar }
+			add_progress = { value = -100 name = join_entente_progress_bar }
+            add_progress = { value = -100 name = join_central_powers_progress_bar }
 		}
     }
 
@@ -59,8 +59,8 @@ support_central_powers_button = {
 		remove_variable = supporting_entente_var
 		remove_variable = maintain_neutrality_var
         je:je_joining_world_war = {
-			add_progress = { value = -30 name = join_entente_progress_bar }
-            add_progress = { value = 30 name = join_central_powers_progress_bar }
+			add_progress = { value = -100 name = join_entente_progress_bar }
+            add_progress = { value = 100 name = join_central_powers_progress_bar }
 		}
     }
 

@@ -21,6 +21,153 @@ joining_world_war_events.1 = { #Debate initiation
     option = {
         name = joining_world_war_events.1.a
         default_option = yes
+    }
+}
 
+joining_world_war_events.2 = { #Joining the Entente
+    type = country_event
+
+    title = joining_world_war_events.2.t
+    desc = joining_world_war_events.2.d
+    flavor = joining_world_war_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = joining_world_war_events.2.a
+        set_variable = entente_participant
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+          add_target_backers = {
+				who = root
+			}
+        }
+    }
+}
+
+joining_world_war_events.3 = { #Joining the Central Powers
+    type = country_event
+
+    title = joining_world_war_events.3.t
+    desc = joining_world_war_events.3.d
+    flavor = joining_world_war_events.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = joining_world_war_events.3.a
+        set_variable = central_powers_participant
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+          add_initiator_backers = {
+                who = root
+            }   
+        }
+    }
+}
+
+joining_world_war_events.4 = { #Anti-War protests
+    type = country_event
+
+    title = joining_world_war_events.4.t
+    desc = joining_world_war_events.4.d
+    flavor = joining_world_war_events.4.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = joining_world_war_events.1.a
+        default_option = yes
     }
 }

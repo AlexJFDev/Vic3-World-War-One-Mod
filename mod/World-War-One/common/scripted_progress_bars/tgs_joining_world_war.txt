@@ -23,9 +23,9 @@ join_entente_progress_bar = {
 		}
 	}
 
-    start_value = 1
+    start_value = 0
 	min_value = 0
-	max_value = 100
+	max_value = 200
 }
 
 join_central_powers_progress_bar = {
@@ -42,7 +42,7 @@ join_central_powers_progress_bar = {
 			}
 			add = {
 				desc = "central_powers_progress_from_diplomacy"
-				value = owner.var:
+				value = owner.var:central_powers_progress_from_diplomacy
 			}
 			add = {
 				desc = "central_powers_progress_from_lobbies"
@@ -51,7 +51,7 @@ join_central_powers_progress_bar = {
 		}
 	}
 
-    start_value = 1
+    start_value = 0
 	min_value = 0
-	max_value = 100
+	max_value = 200
 }

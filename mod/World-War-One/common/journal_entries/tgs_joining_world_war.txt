@@ -2,7 +2,7 @@
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-	group = je_group_historical_content
+	group = je_group_crises
     
 	is_shown_when_inactive = {
 	  has_global_variable = world_war_1_ongoing
@@ -23,14 +23,6 @@
 		trigger_event = { id = joining_world_war_events.1 popup = yes }
     }
 
-    complete = {
-        OR = {
-            has_variable = entente_participant
-            has_variable = central_powers_participant
-            has_global_variable = world_war_1_over
-        }
-    }
-
     scripted_progress_bar = join_entente_progress_bar
 	scripted_progress_bar = join_central_powers_progress_bar
 
@@ -38,7 +30,42 @@
 	scripted_button = maintain_neutrality_button
 	scripted_button = support_central_powers_button
 
-    
+    complete = {
+        scope:journal_entry = {
+			"scripted_bar_progress(join_entente_progress_bar)" >= 199
+        } 	
+    }
 
+    on_complete = {
+        trigger_event = { id = joining_world_war_events.2 popup = yes}
+    }
 
+    fail = {
+        scope:journal_entry = {
+			"scripted_bar_progress(join_central_powers_progress_bar)" >= 199
+        } 
+    }
+
+    on_fail = {
+        trigger_event = { id = joining_world_war_events.3 popup = yes}
+    }
+ 
+    on_weekly_pulse = {
+		effect = {
+		 weekly_pulse_entente_progress = yes 
+		 weekly_pulse_central_powers_progress = yes  	
+		}
+	}
+
+    on_monthly_pulse = {
+      random_events = {
+			400 = 0
+			10 = 
+			10 = 
+			10 = 
+			10 = 
+		}      	  
+    }
+
+    should_be_pinned_by_default = yes
 }
