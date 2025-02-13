@@ -21,6 +21,8 @@ entente_peace_deal.1 = { #Entente victory
 		ai_chance = {
 			base = 100
 		}
+		remove_global_variable = world_war_1_ongoing
+		set_global_variable = world_war_1_over
 		if = {
 			limit = {
 				NOT = {
@@ -182,7 +184,7 @@ entente_peace_deal.1 = { #Entente victory
             months = 500
         }
 		}
-		If = {
+		if = {
            limit = {
 			  c:BUL = {
 				has_variable = central_powers_participant

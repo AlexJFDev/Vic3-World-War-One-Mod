@@ -1,0 +1,124 @@
+﻿ je_central_peace_deal_round_1 = { 
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+    
+	is_shown_when_inactive = {
+	  has_variable = central_powers_participant
+	  exists = c:GER
+      THIS = c:GER
+	}
+
+    possible = { 
+	   has_variable = central_powers_participant
+	   country_rank >= rank_value:great_power
+	    NOT = {
+		    OR = {
+			 has_law = law_type:law_council_republic
+		    }
+	    }
+	  c:FRA = {
+          has_variable = entente_participant
+		  has_modifier = country_humiliated
+        } 
+      c:ITA = {
+          has_variable = entente_participant
+		  has_modifier = country_humiliated
+        } 
+	}
+
+    immediate = {
+		trigger_event = { id = central_peace_deal.1 popup = yes }
+    }
+
+    complete = {
+        has_global_variable = central_powers_partial_victory
+    }
+
+    on_complete = {}
+
+}
+
+je_central_peace_deal_round_2 = { 
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+    
+	is_shown_when_inactive = {
+	  has_variable = central_powers_participant
+	  exists = c:GER
+      THIS = c:GER
+	}
+
+    possible = { 
+	   has_variable = central_powers_participant
+	   country_rank >= rank_value:great_power
+	    NOT = {
+		    OR = {
+			 has_law = law_type:law_council_republic
+		    }
+	    }
+	  c:RUS = {
+          has_variable = entente_participant
+		  has_modifier = country_humiliated
+        } 
+	}
+
+    immediate = {
+		trigger_event = { id = central_peace_deal.2 popup = yes }
+    }
+
+    complete = {
+        has_global_variable = russia_surrenders
+    }
+
+    on_complete = {}
+
+}
+
+je_central_peace_deal_round_3 = { 
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+    
+	is_shown_when_inactive = {
+	  has_variable = central_powers_participant
+	  exists = c:GER
+      THIS = c:GER
+	}
+
+    possible = { 
+	   has_variable = central_powers_participant
+	   country_rank >= rank_value:great_power
+	    NOT = {
+		    OR = {
+			 has_law = law_type:law_council_republic
+		    }
+	    }
+	  c:GBR = {
+          has_variable = entente_participant
+		  has_modifier = country_humiliated
+        } 
+	}
+
+    immediate = {
+		trigger_event = { id = central_peace_deal.3 popup = yes }
+    }
+
+    complete = {
+        has_global_variable = central_powers_complete_victory
+    }
+
+    on_complete = {
+		c:TUR = {
+            trigger_event = {
+                id = central_peace_deal.5
+                days = 40
+            }
+        }
+	}
+
+}

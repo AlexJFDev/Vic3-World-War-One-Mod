@@ -454,6 +454,11 @@ great_war_initiation_events.8 = {
                     target_country = c:GER
                 }
             add_war_goal = {
+                    holder = c:GER
+                    type = humiliation
+                    target_country = c:RUS
+                }
+            add_war_goal = {
                     holder = c:RUS
                     type = humiliation
                     target_country = c:AUS
@@ -668,6 +673,7 @@ great_war_initiation_events.10 = {
                 days = 30
             }
         }
+        set_global_variable = world_war_1_ongoing
     }
 }
 
@@ -906,6 +912,7 @@ great_war_initiation_events.13 = {
                 days = 30
             }
         }
+        set_global_variable = world_war_1_ongoing
     }
     option = { # Leave France alone
         name = great_war_initiation_events.13.a
@@ -1115,7 +1122,7 @@ great_war_initiation_events.15 = {
 			}
             add_war_goal = {
                 holder = c:GER
-                type = war_reparations
+                type = humiliation
                 target_country = c:GBR
             }
 		}
@@ -1365,6 +1372,11 @@ great_war_initiation_events.18 = {
                     holder = c:AUS
                     type = humiliation
                     target_country = c:ITA
+                } 
+            add_war_goal = {
+                    holder = c:ITA
+                    type = humiliation
+                    target_country = c:AUS
                 } 
             add_war_goal = {
                     holder = c:AUS
