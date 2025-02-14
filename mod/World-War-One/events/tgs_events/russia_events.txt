@@ -147,7 +147,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 			remove_ruling_interest_group = yes
 		}
 		add_modifier = {
-        name = minting_buff_3_modifier
+        name = minting_buff_4_modifier
         years = 10
         is_decaying = yes
         } 
@@ -467,5 +467,34 @@ russia_events.9 = { #Reforms success
 			name = 
             years = 5
 		}
+    }
+}
+
+russia_events.10 = { #Peace deal
+    type = country_event
+
+    title = russia_events.10.t
+    desc = russia_events.10.d
+    flavor = russia_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/russian_revolution.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = russia_events.10.a
+        default_option = yes
+        remove_modifier = war_protests_1_modifier
+        remove_modifier = war_protests_2_modifier 
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}  
     }
 }
