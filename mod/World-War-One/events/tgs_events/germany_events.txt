@@ -19,12 +19,6 @@ germany_events.1 = { #Je war fatigue initiator
 			}
 			save_scope_as = polish_movement
         }
-        random_political_movement = {
-			limit = {
-                is_political_movement_type = movement_cultural_minority
-			}
-			save_scope_as = belgian_movement
-        }
     }
 
     event_image = {
@@ -45,12 +39,20 @@ germany_events.1 = { #Je war fatigue initiator
 				years = 6
 			}
 		}
-        scope:belgian_movement = {
-			add_modifier = {
-				name = political_movement_nerf_1
-				years = 6
-			}
-		}
+        c:GER = {
+            trigger_event = {
+                id = germany_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = germany_events.7
+                days = 15
+            }
+            trigger_event = {
+                id = germany_events.7
+                days = 20
+            }
+        }
     }
 }
 
@@ -132,7 +134,7 @@ germany_events.2 = { #November Revolution
     }
 }
 
-germany_events.3 = { 
+germany_events.3 = { #Fascist threat je initiation
     type = country_event
 
     title = germany_events.3.t
@@ -145,7 +147,7 @@ germany_events.3 = {
     duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/_____.dds"
+        texture = "gfx/event_pictures/early_nazi.dds"
     }
 
     trigger = {}
@@ -280,7 +282,7 @@ germany_events.5 = { #Socialists reconcilates
     }
 }
 
-germany_events.6 = { #Austria-Hungary decides to continue the fight alone or not
+germany_events.6 = { #Austria-Hungary capitulates
     type = country_event
 
     title = germany_events.6.t
@@ -293,7 +295,7 @@ germany_events.6 = { #Austria-Hungary decides to continue the fight alone or not
     duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/early_nazi.dds"
+        texture = "gfx/event_pictures/protest.dds"
     }
 
     trigger = {}
@@ -359,5 +361,43 @@ germany_events.6 = { #Austria-Hungary decides to continue the fight alone or not
          ai_chance = {
             base = 0
         }
+    }
+}
+
+germany_events.7 = { #Belgium movement nerf
+    type = country_event
+
+    title = germany_events.7.t
+    desc = germany_events.7.d
+    flavor = germany_events.7.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {
+        random_political_movement = {
+			limit = {
+                is_political_movement_type = movement_cultural_minority
+			}
+			save_scope_as = belgian_movement
+        }
+    }
+
+    event_image = {
+        texture = "gfx/event_pictures/german_revolution.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.7.a
+        scope:belgian_movement = {
+			add_modifier = {
+				name = political_movement_nerf_1
+				years = 6
+			}
+		}
     }
 }

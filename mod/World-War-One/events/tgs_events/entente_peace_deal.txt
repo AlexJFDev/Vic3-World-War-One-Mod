@@ -98,6 +98,16 @@ entente_peace_deal.1 = { #Entente victory
 		      set_state_owner = c:AUS
             }
         }
+		c:AUS = {
+		   activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_universal_suffrage
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+		}
+		c:AUS = {
+		   remove_primary_culture = hungarian
+		}
 		If = {
            limit = {
 			 NOT = {

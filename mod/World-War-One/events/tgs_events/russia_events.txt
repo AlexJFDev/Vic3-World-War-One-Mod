@@ -58,8 +58,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		}
         add_modifier = {
         name = war_protests_1_modifier
-        years = 3
-        is_decaying = yes
+        duration = -1
         } 
     }
 
@@ -182,7 +181,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         }
         add_modifier = {
 			name = war_protests_2_modifier
-            years = 3
+            duration = -1
 		}
         create_character = {
 			template = rus_leon_trotsky_character_template
