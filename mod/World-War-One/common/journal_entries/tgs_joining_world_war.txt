@@ -11,6 +11,8 @@
       NOT = {
         has_global_variable = world_war_1_over
         has_variable = warlord_state
+		has_variable = entente_participant
+		has_variable = central_powers_participant
       }
 	}
 
@@ -50,6 +52,10 @@
         trigger_event = { id = joining_world_war_events.3 popup = yes}
     }
  
+    invalid = {
+        has_global_variable = world_war_1_over
+    }
+
     on_weekly_pulse = {
 		effect = {
 		 weekly_pulse_entente_progress = yes 
@@ -64,9 +70,6 @@
 			10 = joining_world_war_events.5
 			10 = joining_world_war_events.6
 			10 = joining_world_war_events.7
-            10 =
-            10 =
-            10 =
 		}      	  
     }
 

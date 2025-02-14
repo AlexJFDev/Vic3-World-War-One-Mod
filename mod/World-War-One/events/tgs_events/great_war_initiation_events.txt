@@ -1127,6 +1127,11 @@ great_war_initiation_events.15 = {
                 type = humiliation
                 target_country = c:GBR
             }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_HOME_COUNTIES.region_state:GBR
+                }
 		}
         c:GBR = { set_variable = entente_participant }
         c:GBR = {

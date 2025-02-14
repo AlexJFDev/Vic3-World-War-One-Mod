@@ -74,7 +74,6 @@ germany_events.2 = { #November Revolution
 
     option = {
         name = germany_events.2.a
-        remove_modifer = war_fatigue_1
         activate_law = law_type:law_parliamentary_republic
         activate_law = law_type:law_universal_suffrage
         activate_law = law_type:law_womens_suffrage
@@ -129,6 +128,7 @@ germany_events.2 = { #November Revolution
 			}
             add_diplomatic_play_war_support = { target = c:GER value = -200 }   
         }
+        remove_modifier = war_fatigue_1
     }
 }
 

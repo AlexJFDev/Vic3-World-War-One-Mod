@@ -1264,6 +1264,19 @@ central_peace_deal.3 = { #Great Britain
 		      set_state_owner = c:GER
             }
             }
+			s:STATE_HOME_COUNTIES = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GBR
+            }
+            }
            if = { 
            limit = {
 			  c:POR = { 
