@@ -318,3 +318,1074 @@ joining_world_war_events.7 = { #Anti-german rethoric
 		}
     }
 }
+
+joining_world_war_events.8 = { #Not enough money
+    type = country_event
+
+    title = joining_world_war_events.8.t
+    desc = joining_world_war_events.8.d
+    flavor = joining_world_war_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        
+    }
+
+    option = {
+        name = joining_world_war_events.8.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -20 name = join_entente_progress_bar }
+            add_progress = { value = -20 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.9 = { #TODO
+    type = country_event
+
+    title = joining_world_war_events.9.t
+    desc = joining_world_war_events.9.d
+    flavor = joining_world_war_events.9.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        
+    }
+
+    option = {
+        name = joining_world_war_events.9.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -20 name = join_entente_progress_bar }
+            add_progress = { value = -20 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.10 = { #TODO
+    type = country_event
+
+    title = joining_world_war_events.10.t
+    desc = joining_world_war_events.10.d
+    flavor = joining_world_war_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        
+    }
+
+    option = {
+        name = joining_world_war_events.10.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -20 name = join_entente_progress_bar }
+            add_progress = { value = -20 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.10 = { #TODO
+    type = country_event
+
+    title = joining_world_war_events.10.t
+    desc = joining_world_war_events.10.d
+    flavor = joining_world_war_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        
+    }
+
+    option = {
+        name = joining_world_war_events.10.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -20 name = join_entente_progress_bar }
+            add_progress = { value = -20 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.11 = { #TODO
+    type = country_event
+
+    title = joining_world_war_events.11.t
+    desc = joining_world_war_events.11.d
+    flavor = joining_world_war_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        
+    }
+
+    option = {
+        name = joining_world_war_events.11.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -20 name = join_entente_progress_bar }
+            add_progress = { value = -20 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.12 = { #TODO
+    type = country_event
+
+    title = joining_world_war_events.12.t
+    desc = joining_world_war_events.12.d
+    flavor = joining_world_war_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        
+    }
+
+    option = {
+        name = joining_world_war_events.12.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -20 name = join_entente_progress_bar }
+            add_progress = { value = -20 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.13 = { #Ottoman Empire joins
+    type = country_event
+
+    title = joining_world_war_events.13.t
+    desc = joining_world_war_events.13.d
+    flavor = joining_world_war_events.13.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_middle_east.dds"
+    }
+
+    trigger = {}
+
+    option = { #Join directly
+        name = joining_world_war_events.13.a
+        default_option = yes
+        add_treasury = 3000000
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+            add_initiator_backers = {
+                c:TUR
+            }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_KARS.region_state:RUS
+                }         
+            add_war_goal = {
+                    holder = c:RUS
+                    type = humiliation
+                    target_country = c:TUR
+                }  
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_HUDAVENDIGAR.region_state:TUR
+                }       
+		}
+        c:TUR = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
+        c:TUR = { set_variable = central_powers_participant }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.13.b
+        je:je_joining_world_war = {
+			add_progress = { value = -30 name = join_entente_progress_bar }
+            add_progress = { value = 30 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.13.c
+        je:je_joining_world_war = {
+            add_progress = { value = -15 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+joining_world_war_events.14 = { #Italy joins
+    type = country_event
+
+    title = joining_world_war_events.14.t
+    desc = joining_world_war_events.14.d
+    flavor = joining_world_war_events.14.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = { #Join directly
+        name = joining_world_war_events.14.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }                
+			}
+			add_target_backers = {
+				c:ITA
+			}
+            add_war_goal = {
+                    holder = c:ITA
+                    type = conquer_state
+                    target_state = s:STATE_AUSTRIA.region_state:AUS
+                }   
+            add_war_goal = {
+                    holder = c:AUS
+                    type = humiliation
+                    target_country = c:ITA
+                } 
+            add_war_goal = {
+                    holder = c:ITA
+                    type = humiliation
+                    target_country = c:AUS
+                } 
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_EMILIA.region_state:ITA
+                }
+        }
+        c:ITA = { set_variable = entente_participant }
+        c:ITA = {
+            trigger_event = {
+                id = ww1_war_techs_events.1
+                days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.1 
+                days = 30
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.14.b
+        je:je_joining_world_war = {
+			add_progress = { value = 30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.14.c
+        je:je_joining_world_war = {
+            add_progress = { value = -15 name = join_entente_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+joining_world_war_events.15 = { #Bulgaria joins
+    type = country_event
+
+    title = joining_world_war_events.15.t
+    desc = joining_world_war_events.15.d
+    flavor = joining_world_war_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = { #Join directly
+        name = joining_world_war_events.15.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_initiator_backers = {
+				c:BUL
+			}
+            add_war_goal = {
+                    holder = c:FRA
+                    type = war_reparations
+                    target_country = c:BUL
+                }
+        }
+        c:BUL = { set_variable = central_powers_participant }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.15.b
+        je:je_joining_world_war = {
+			add_progress = { value = -30 name = join_entente_progress_bar }
+            add_progress = { value = 30 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.15.c
+        je:je_joining_world_war = {
+            add_progress = { value = -15 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+joining_world_war_events.16 = { #Romania joins
+    type = country_event
+
+    title = joining_world_war_events.16.t
+    desc = joining_world_war_events.16.d
+    flavor = joining_world_war_events.16.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = { #Join directly
+        name = joining_world_war_events.16.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:ROM
+			}
+            add_war_goal = {
+                    holder = c:AUS
+                    type = war_reparations
+                    target_country = c:ROM
+                }
+        }
+        c:ROM = { set_variable = entente_participant }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.16.b
+        je:je_joining_world_war = {
+			add_progress = { value = 30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.16.c
+        je:je_joining_world_war = {
+            add_progress = { value = -15 name = join_entente_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+joining_world_war_events.17 = { #Greece joins
+    type = country_event
+
+    title = joining_world_war_events.17.t
+    desc = joining_world_war_events.17.d
+    flavor = joining_world_war_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = { #Join directly
+        name = joining_world_war_events.17.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:GRE
+			}
+            add_war_goal = {
+                    holder = c:AUS
+                    type = war_reparations
+                    target_country = c:GRE
+                }
+        }
+        c:GRE = { set_variable = entente_participant }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.17.b
+        je:je_joining_world_war = {
+			add_progress = { value = 30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.17.c
+        je:je_joining_world_war = {
+            add_progress = { value = -15 name = join_entente_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+joining_world_war_events.18 = { #USA joins
+    type = country_event
+
+    title = joining_world_war_events.18.t
+    desc = joining_world_war_events.18.d
+    flavor = joining_world_war_events.18.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/zimmermann_telegram.dds"
+    }
+
+    trigger = {}
+
+    option = { #Join directly
+        name = joining_world_war_events.18.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:USA
+			}
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:USA
+                }
+        }
+        c:USA = { set_variable = entente_participant }
+        c:USA = {
+            trigger_event = {
+                id = stabilization_buff_events.3
+                days = 5
+            }
+        }
+        c:BRZ = {
+            trigger_event = {
+                id = joining_world_war_events.20
+                days = 210
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.18.b
+        je:je_joining_world_war = {
+			add_progress = { value = 30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.18.c
+        je:je_joining_world_war = {
+            add_progress = { value = -15 name = join_entente_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+joining_world_war_events.19 = { #Portugal joins
+    type = country_event
+
+    title = joining_world_war_events.19.t
+    desc = joining_world_war_events.19.d
+    flavor = joining_world_war_events.19.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = { #Join directly
+        name = joining_world_war_events.19.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:POR
+			}
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:POR
+                }
+        }
+        c:POR = { set_variable = entente_participant }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.19.b
+        je:je_joining_world_war = {
+			add_progress = { value = 30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.19.c
+        je:je_joining_world_war = {
+            add_progress = { value = -15 name = join_entente_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+joining_world_war_events.20 = { #Brazil joins
+    type = country_event
+
+    title = joining_world_war_events.20.t
+    desc = joining_world_war_events.20.d
+    flavor = joining_world_war_events.20.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = { #Join directly
+        name = joining_world_war_events.20.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:BRZ
+			}
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:BRZ
+                }
+        }
+        c:BRZ = { set_variable = entente_participant }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.20.b
+        je:je_joining_world_war = {
+			add_progress = { value = 30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.20.c
+        je:je_joining_world_war = {
+            add_progress = { value = -15 name = join_entente_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+joining_world_war_events.21 = { #Persia joins
+    type = country_event
+
+    title = joining_world_war_events.21.t
+    desc = joining_world_war_events.21.d
+    flavor = joining_world_war_events.21.f
+    
+    icon = "gfx/interface/icons/event_icons/military_parade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {
+        c:TUR = {
+            has_variable = central_powers_participant
+        }
+    }
+
+    option = { #Uk and Russia invades and forces Persia into the war
+        name = joining_world_war_events.21.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:PER
+			}
+            add_war_goal = {
+                    holder = c:GER
+                    type = war_reparations
+                    target_country = c:PER
+                }
+        }
+        c:PER = { set_variable = entente_participant }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    option = { #Ask central powers for help
+        name = joining_world_war_events.21.b
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_initiator_backers = {
+				c:PER
+			}
+            add_war_goal = {
+                    holder = c:GBR
+                    type = war_reparations
+                    target_country = c:PER
+                }
+        }
+        c:PER = { set_variable = central_powers_participant }
+        ai_chance = {
+            base = 0
+        }
+    }
+}

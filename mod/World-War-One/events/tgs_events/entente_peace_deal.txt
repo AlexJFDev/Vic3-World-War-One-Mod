@@ -75,10 +75,10 @@ entente_peace_deal.1 = { #Entente victory
 		s:STATE_HUDAVENDIGAR = {
 	       random_scope_state = {
 		      limit = {
-			   exists = c:GBR
+			   exists = c:FRA
 			    owner = {
 				  OR = {
-					c:GBR = THIS
+					c:FRA = THIS
 				    }
 			    }
 		        }
@@ -1152,54 +1152,29 @@ entente_peace_deal.3 = { #Round 2 result
 		name = entente_peace_deal.3.a
         trigger = {  
          has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
-		 NOT = {
-			has_variable = ger_fra_war_reps
-		 }
+		}
+		c:GER = {
+			
 		}
 		c:FRA = {
-		create_diplomatic_pact = {
-				country = c:GER
-				type = war_reparations
-				years = 5
-			}	
+			
 		}
-		set_variable = ger_fra_war_reps
 	}
 
 	option = {
 		name = entente_peace_deal.3.b
         trigger = { 
          has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
-		 NOT = {
-			has_variable = ger_fra_war_reps
-		 }
 		}
-		c:FRA = {
-		create_diplomatic_pact = {
-				country = c:GER
-				type = war_reparations
-				years = 10
-			}	
-		}
-		set_variable = ger_fra_war_reps
+		
 	}
 
 	option = {
 		name = entente_peace_deal.3.c
         trigger = { 
          has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
-		 NOT = {
-			has_variable = ger_fra_war_reps
-		 }
 		}
-		c:FRA = {
-		create_diplomatic_pact = {
-				country = c:GER
-				type = war_reparations
-				years = 20
-			}	
-		}
-		set_variable = ger_fra_war_reps
+		
 	}
 }
 
