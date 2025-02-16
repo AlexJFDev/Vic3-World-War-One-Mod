@@ -65,7 +65,7 @@ ZAM = { # Zambia (Northern Rhodesia)
 			c:GBR = {
 				has_diplomatic_pact = {
 					who = c:ZAM
-					type = puppet
+					type = chartered_company
 				}
 			}
 		}
@@ -84,7 +84,7 @@ MLA = { # Malaysia (Federated Malay States)
 			c:GBR = {
 				has_diplomatic_pact = {
 					who = c:MLA
-					type = puppet
+					type = colony
 				}
 			}
 		}
@@ -127,7 +127,7 @@ TAN = { # Tanzania (German East Africa)
 			c:GER = {
 				has_diplomatic_pact = {
 					who = c:TAN
-					type = puppet
+					type = colony
 				}
 			}
 		}
@@ -345,4 +345,68 @@ RUS = { # Russia
 			}
 		}
 	}	
+}
+
+AUS = { # Austria
+	dynamic_country_name = {
+		name = dyn_c_austria-hungary
+		adjective = dyn_c_austria-hungary_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { country_has_primary_culture = cu:hungarian }
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_small_austria
+        adjective = dyn_small_austria_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			scope:actor ?= {
+				has_variable = small_austria
+			}
+		}
+	}
+}
+
+SER = { #Yugoslavia
+	dynamic_country_name = {
+		name = dyn_yugoslavia
+        adjective = dyn_yugoslavia_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			scope:actor ?= {
+				owns_entire_state_region = STATE_SLAVONIA
+				owns_entire_state_region = STATE_BOSNIA
+				owns_entire_state_region = STATE_NORTHERN_SERBIA
+				owns_entire_state_region = STATE_SOUTHERN_SERBIA
+				owns_entire_state_region = STATE_SKOPIA
+			}
+		}
+	}
+}
+
+PER = { Persia
+	dynamic_country_name = {
+		name = dyn_c_iran
+		adjective = dyn_c_iran_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			scope:actor = {
+				has_variable = 
+			}
+		}
+	}
 }
