@@ -395,6 +395,19 @@ central_peace_deal.1 = { #France and Italy surrenders
             set_state_religion = rel:protestant
 		   }
 		   }
+		   s:STATE_ILE_DE_FRANCE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FRA
+            }
+            }
         }
     }
 }
@@ -843,6 +856,19 @@ central_peace_deal.2 = { #Russia surrenders
 			country = c:UKR
 			type = protectorate
 		}	
+        }
+		s:STATE_INGRIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
         }
         }
     }
