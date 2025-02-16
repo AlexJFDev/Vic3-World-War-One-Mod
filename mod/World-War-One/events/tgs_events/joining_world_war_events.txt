@@ -556,6 +556,19 @@ joining_world_war_events.13 = { #Ottoman Empire joins
             }
         }
         c:TUR = { set_variable = central_powers_participant }
+        if = {
+          limit = {
+            c:GBR = {
+                has_variable = entente_participant
+            } 
+          }
+          c:PER = {
+            trigger_event = {
+                id = joining_world_war_events.21
+                days = 20
+            }
+           }
+        }
         ai_chance = {
             base = 100
         }
@@ -1280,11 +1293,7 @@ joining_world_war_events.21 = { #Persia joins
         texture = "gfx/event_pictures/politics_europe.dds"
     }
 
-    trigger = {
-        c:TUR = {
-            has_variable = central_powers_participant
-        }
-    }
+    trigger = {}
 
     option = { #Uk and Russia invades and forces Persia into the war
         name = joining_world_war_events.21.a

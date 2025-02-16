@@ -2205,6 +2205,31 @@ entente_peace_deal.8 = { #Round 7 result
 		      set_state_owner = c:HDJ
             }
         }
+		create_country = {
+	       tag = ARM
+	       origin = this
+	       state = s:STATE_ERZURUM.region_state:TUR
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_census_voting
+           activate_law = law_type:law_freedom_of_conscience
+           activate_law = law_type:law_interventionism
+           activate_law = law_type:law_right_of_assembly
+           }
+		}
+		s:STATE_TRABZON = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ARM
+            }
+        }
 	}
 
 	option = {

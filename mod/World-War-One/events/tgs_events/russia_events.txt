@@ -533,9 +533,11 @@ russia_events.9 = { #Reforms success
     option = {
         name = russia_events.9.a
         default_option = yes
+		remove_modifier = war_protests_1_modifier
+		remove_modifier = war_protests_2_modifier
         remove_modifier = colossus_with_feet_of_clay_modifier
         add_modifier = {
-			name = 
+			name = a_new_russia_modifier
             years = 5
 		}
     }

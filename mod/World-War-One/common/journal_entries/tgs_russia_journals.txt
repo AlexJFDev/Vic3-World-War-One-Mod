@@ -109,6 +109,7 @@ je_soviet_threat = {
               standard_of_living > 8
 			  strata = lower
             }
+            is_at_war = no
         }
     }
     
@@ -136,9 +137,14 @@ je_soviet_threat = {
 
     on_complete = {
         set_global_variable = russian_revolution_2
+        remove_modifier = war_protests_1_modifier
+        remove_modifier = war_protests_2_modifier
         trigger_event = {
 			id = russia_events.9
             days = 5
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
 		}
     }
  
@@ -163,6 +169,8 @@ je_soviet_threat = {
       random_civil_war = {
 			add_civil_war_progress = -100
 		}
+      remove_modifier = war_protests_1_modifier
+      remove_modifier = war_protests_2_modifier
       remove_global_variable = russian_revolution_1
       set_global_variable = russian_revolution_2
     }

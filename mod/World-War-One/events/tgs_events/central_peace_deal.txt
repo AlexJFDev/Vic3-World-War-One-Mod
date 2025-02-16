@@ -416,7 +416,11 @@ central_peace_deal.2 = { #Russia surrenders
 
     option = {
         name = central_peace_deal.2.a
-        if = {
+        c:RUS = {
+			remove_modifier = war_protests_1_modifier
+			remove_modifier = war_protests_2_modifier
+		}
+		if = {
 			limit = {
 				c:GER = THIS
 			}

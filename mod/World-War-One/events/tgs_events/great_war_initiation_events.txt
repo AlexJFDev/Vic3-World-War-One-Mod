@@ -449,6 +449,11 @@ great_war_initiation_events.8 = {
                 c:GER
             }
             add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_TARTU.region_state:RUS
+                }
+            add_war_goal = {
                     holder = c:RUS
                     type = humiliation
                     target_country = c:GER
@@ -462,21 +467,6 @@ great_war_initiation_events.8 = {
                     holder = c:RUS
                     type = humiliation
                     target_country = c:AUS
-                }
-            add_war_goal = {
-                    holder = c:AUS
-                    type = liberate_subject
-                    target_country = c:UKR
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = liberate_subject
-                    target_country = c:POL
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = liberate_subject
-                    target_country = c:UBD
                 }
 		}
         c:GER = { set_variable = central_powers_participant }
