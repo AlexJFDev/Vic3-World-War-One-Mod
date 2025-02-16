@@ -182,13 +182,13 @@ entente_peace_deal.1 = { #Entente victory
         }
 		c:UKR = {
             add_modifier = {
-			name = army_buff_modifier_2
+			name = army_buff_modifier_1
             years = 5
             }
         }
 		c:POL = {
             add_modifier = {
-			name = army_buff_modifier_2
+			name = army_buff_modifier_1
             years = 5
             }
         }
@@ -2562,6 +2562,19 @@ entente_peace_deal.8 = { #Round 7 result
 			    }
 		        }
 		      set_state_owner = c:BHN
+            }
+        }
+		s:STATE_YEMEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:YEM
             }
         }
         c:FRA = {

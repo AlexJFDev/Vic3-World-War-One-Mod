@@ -694,9 +694,12 @@ AUS = { # Austria
 		subject_canton = KUK
 		priority = 100
 		trigger = { 
+			scope:actor ?= {
 			owns_entire_state_region = STATE_AUSTRIA
 			owns_entire_state_region = STATE_TRANSDANUBIA
 			owns_entire_state_region = STATE_CENTRAL_HUNGARY
+			country_has_primary_culture = cu:hungarian 
+			}
 		}
 	}
 	flag_definition = {

@@ -147,7 +147,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 		}
 		add_modifier = {
         name = minting_buff_4_modifier
-        years = 10
+        years = 20
         is_decaying = yes
         } 
 		remove_modifier = war_protests_1_modifier
@@ -325,6 +325,9 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_collectivized_agriculture
      activate_law = law_type:law_womens_suffrage
      activate_law = law_type:law_state_atheism
+     activate_law = law_type:law_public_health_insurance
+     activate_law = law_type:law_public_schools
+     activate_law = law_type:law_compulsory_primary_school
 	 ig:ig_trade_unions = {
 				leader = {
 					set_character_as_ruler = yes
@@ -511,7 +514,7 @@ russia_events.8 = { #The civil war begins
         }
         c:SIB = {
             add_modifier = {
-			name = army_buff_modifier_2
+			name = army_buff_modifier_1
             years = 5
             }
         }
