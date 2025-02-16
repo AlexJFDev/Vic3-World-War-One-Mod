@@ -415,8 +415,8 @@ russia_events.8 = { #The civil war begins
 		   OR = {
 	          NOT = {
 			   region = sr:region_belarus 
-			   region = sr:region_russia 
 			   region = sr:region_poland
+               region = sr:region_russia
 			   region = sr:region_baltic_states
                region = sr:region_dnieper
                region = sr:region_danubia
@@ -425,17 +425,89 @@ russia_events.8 = { #The civil war begins
           }
 	        set_state_owner = c:SIB
         }
+        s:STATE_YAROSLAVL = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SIB
+            }
+        }
+        s:STATE_RYAZAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SIB
+            }
+        }
+        s:STATE_NIZHNY_NOVGOROD = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SIB
+            }
+        }
+        s:STATE_CHUVASHIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SIB
+            }
+        }
+        s:STATE_TARTARIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SIB
+            }
+        }
+        s:STATE_TAMBOV = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SIB
+            }
+        }
         c:RUS = {
             change_infamy = -100
         }
         c:SIB = {
             change_infamy = -100
-        }
-        c:SIB = {
-         trigger_event = {
-          id = stabilization_buff_events.2
-          days = 5
-            }
         }
     }
 }
