@@ -1,0 +1,48 @@
+je_nationalist_threat = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:TUR
+        THIS = c:TUR
+        has_variable = central_powers_participant
+        OR = {
+            has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
+            has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
+        }
+    }
+    
+    possible = {
+        has_variable = central_powers_participant
+        OR = {
+        has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
+        has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
+        }
+    }
+
+    immediate = {
+       trigger_event = { id = turkey_events.4 popup = yes }
+    }
+
+    complete = {
+       owns_entire_state_region = STATE_EASTERN_THRACE
+	   owns_entire_state_region = STATE_HUDAVENDIGAR
+       owns_entire_state_region = STATE_AYDIN
+       owns_entire_state_region = STATE_TRABZON
+       owns_entire_state_region = STATE_ERZURUM
+    }
+
+    on_complete = {
+        add_modifier = {
+           name = revolution_stabilization_buff_2
+           years = 2
+        }
+    }
+
+    on_timeout = { 
+       trigger_event = { id = turkey_events.5 popup = yes }
+    }
+
+    timeout = 365
+    should_be_pinned_by_default = yes
+}
