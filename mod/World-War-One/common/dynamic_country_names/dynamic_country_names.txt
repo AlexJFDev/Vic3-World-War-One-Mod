@@ -410,3 +410,20 @@ PER = { Persia
 		}
 	}
 }
+
+ITA = { # Italy
+	dynamic_country_name = { 
+		name = dyn_kingdom_of_italy
+		adjective = dyn_kingdom_of_italy_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_monarchy 
+			}
+		}
+	}
+}
