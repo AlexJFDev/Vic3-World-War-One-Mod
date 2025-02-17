@@ -3563,32 +3563,12 @@
 		}
 	}
 	c:RUS = {
-		create_character = {
-			first_name = Nikolai
-			last_name = Romanov
-			culture = cu:russian
-			interest_group = ig_landowners
-			ideology = ideology_authoritarian
-			birth_date = 1868-05-18
-			ruler = yes
-			historical = yes
-			traits = {
-				arrogant bigoted cruel expensive_tastes reckless 
-			}
-		}
-		create_character = {
-			first_name = Alexei
-			last_name = Romanov
-			culture = cu:russian
-			interest_group = ig_landowners
-			ideology = ideology_authoritarian
-			birth_date = 1904-08-12
-			heir = yes
-			historical = yes
-			traits = {
-				sickly trait_child 
-			}
-		}
+       create_character = {
+		template = RUS_nicholas_ii 
+	   }
+	   create_character = {
+		template = RUS_alexei_ii
+	   }
 		create_character = {
 			first_name = Mikhail 
 			last_name = Vladimirovich Rodzianko
