@@ -25,14 +25,19 @@
 
     complete = {
         OR = {
-			c:KOR = {
-			   exists = c:KOR
-			   is_subject = no
+			AND = {
+				owns_entire_state_region = STATE_SHENGJING
+				owns_entire_state_region = STATE_BEIJING
+				owns_entire_state_region = STATE_ZHILI
+				owns_entire_state_region = STATE_SHANDONG
+				owns_entire_state_region = STATE_JIANGSU
+				owns_entire_state_region = STATE_SUZHOU
+				owns_entire_state_region = STATE_ZHEJIANG
+				owns_entire_state_region = STATE_FUJIAN
+				owns_entire_state_region = STATE_SHAOZHOU
+				owns_entire_state_region = STATE_GUANGDONG
 			}
-			c:ICH = {
-			   exists = c:ICH
-			   is_subject = no
-			}
+			owns_entire_state_region = STATE_FORMOSA
 			has_law = law_type:law_census_voting
             has_law = law_type:law_universal_suffrage
             has_law = law_type:law_anarchy
@@ -50,15 +55,24 @@
     fail = {
 	  OR = {
 		has_variable = yuan_shikai_abdication
-		civil_war ?= {
-            is_civil_war_type = revolution
-			civil_war_progress >= 0.75
-		}
+		any_political_movement = {
+            is_insurrectionary = yes
+			civil_war ?= {
+                OR = {
+                  is_civil_war_type = revolution
+                  is_civil_war_type = secession
+                }
+				civil_war_progress >= 0.75
+			}
+        }
 	  }
     }
 
 	on_fail = {
-		trigger_event = { id = warlord_china_events.1912 }
+		trigger_event = { id = china_events.5 }
+		random_civil_war = {
+			add_civil_war_progress = -100
+		}
 	}
 
 	weight = 10000

@@ -427,3 +427,102 @@ ITA = { # Italy
 		}
 	}
 }
+
+GBR = { # Great Britain of United Kingdom
+	dynamic_country_name = {
+		name = dyn_c_british_empire
+		adjective = GBR_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			scope:actor ?= { 
+                country_rank >= rank_value:great_power
+			}
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_british_republic
+		adjective = GBR_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			scope:actor ?= { NOT = { capital = { state_region = s:STATE_LANCASHIRE } } }
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_british_commonwealth
+		adjective = dyn_c_british_commonwealth_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_greater_manchester
+		adjective = dyn_c_greater_manchester_adj
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			NOT = { has_game_rule = plausible_formable_nations }
+			scope:actor ?= { 
+				NOT = { has_law = law_type:law_council_republic }
+				exists = capital
+				capital = { state_region = s:STATE_LANCASHIRE } 
+			}
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_mancunian_commune
+		adjective = dyn_c_mancunian_commune_adj
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			scope:actor ?= { 
+				exists = capital
+				capital = { state_region = s:STATE_LANCASHIRE } 
+			}
+		}
+	}
+}
+
+SPA = { # Spain
+	dynamic_country_name = {
+		name = dyn_c_spanish_empire
+		adjective = SPA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			scope:actor ?= { 
+                country_rank >= rank_value:great_power
+				has_law = law_type:law_monarchy 
+			}
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_spanish_kingdom
+		adjective = SPA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			scope:actor ?= { 
+				has_law = law_type:law_monarchy 
+			}
+		}
+	}
+}

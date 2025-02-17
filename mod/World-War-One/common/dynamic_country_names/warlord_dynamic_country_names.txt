@@ -1,0 +1,2480 @@
+﻿### Try to keep tags in alphabetical order if it's not too far gone, please.
+
+################################################################
+## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
+################################################################
+#这是军阀混战MOD的内容
+
+FRS = { # Min
+	dynamic_country_name = {
+		name = FRS_warlord
+		adjective = FRS_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = FRS_warlord_great
+		adjective = FRS_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				has_law = law_type:law_peasant_levies
+				any_scope_state = {
+					OR = { #Maybe theres a better trigger?
+						region = sr:region_manchuria #满洲
+						region = sr:region_north_china #华北
+						region = sr:region_south_china #华南
+						region = sr:region_central_asia #中亚
+					}
+					count >= 5
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = FRS_republic
+		adjective = FRS_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { has_law = law_type:law_monarchy }
+					country_has_voting_franchise = yes
+				}
+				coa_def_communist_flag_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = FRS_imperial
+		adjective = FRS_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = FRS_qing_governor
+		adjective = FRS_ADJ
+   
+		is_main_tag_only = yes
+		priority = 10
+   
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				NOR = {
+					AND = {
+						exists = c:CHI
+						is_subject_of = c:CHI
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+					AND = {
+						exists = c:ROC
+						is_subject_of = c:ROC
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+YUN = { # Dian
+	dynamic_country_name = {
+		name = YUN_warlord
+		adjective = YUN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUN_warlord_qian
+		adjective = YUN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+				was_formed_from = GUI
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUN_warlord_great
+		adjective = YUN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUN_imperial
+		adjective = YUN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUN_qing_governor
+		adjective = YUN_ADJ
+   
+		is_main_tag_only = yes
+		priority = 10
+   
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				OR = {
+					AND = {
+						exists = c:CHI
+						is_subject_of = c:CHI
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+					AND = {
+						exists = c:ROC
+						is_subject_of = c:ROC
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_warlord_united
+		adjective = adj_south_warlord_united
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+					has_law = law_type:law_autocracy 
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_soviet
+		adjective = adj_south_soviet
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+				is_unification_candidate = ROC
+			}
+		}
+	}
+}
+
+
+YUE = { # Yue
+	dynamic_country_name = {
+		name = YUE_warlord
+		adjective = YUE_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				has_law = law_type:law_peasant_levies
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_warlord_gui
+		adjective = GNG_ADJ
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				has_law = law_type:law_peasant_levies
+				was_formed_from = GNG
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_warlord_great
+		adjective = YUE_ADJ
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_peasant_levies
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_warlord_new
+		adjective = YUE_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_warlord_new_gui
+		adjective = GUI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+				was_formed_from = GNG
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				any_scope_state = {
+					state_region = s:STATE_GUANGDONG
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = HNA_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				any_scope_state = {
+					state_region = s:STATE_EASTERN_HUBEI
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = ZHE_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 2000
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				any_scope_state = {
+					state_region = s:STATE_NANJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_imperial
+		adjective = YUE_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_qing_governor
+		adjective = YUE_ADJ
+   
+		is_main_tag_only = yes
+		priority = 10
+   
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				OR = {
+					AND = {
+						exists = c:CHI
+						is_subject_of = c:CHI
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+					AND = {
+						exists = c:ROC
+						is_subject_of = c:ROC
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_warlord_united
+		adjective = adj_south_warlord_united
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_peasant_levies
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_communism
+		adjective = YUE_ADJ
+		is_main_tag_only = yes
+		priority = 100
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = south_soviet
+		adjective = adj_south_soviet
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+				is_unification_candidate = ROC
+			}
+		}
+	}
+}
+
+
+MCH = { # Feng
+	dynamic_country_name = {#动态国家名字
+		name = MCH_imperial
+		adjective = MCH_ADJ	#形容词
+
+		is_main_tag_only = yes	#是否只有主标签
+		priority = 50
+		
+		trigger = {	#触发器
+		has_global_variable = ww2_jiuyibashibian_yiwancheng #全局变量建立满洲
+		}
+	}
+	dynamic_country_name = {
+		name = MCH_warlord
+		adjective = MCH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				has_law = law_type:law_peasant_levies
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = MCH_warlord_new
+		adjective = MCH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = MCH_qing_governor
+		adjective = MCH_ADJ
+   
+		is_main_tag_only = yes
+		priority = 10
+   
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				OR = {
+					AND = {
+						exists = c:CHI
+						is_subject_of = c:CHI
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+					AND = {
+						exists = c:ROC
+						is_subject_of = c:ROC
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+				}
+			}
+		}
+   }
+	dynamic_country_name = {
+		name = MCH_republic
+		adjective = MCH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 200
+		
+		trigger = {
+			scope:actor ?= {
+				NOT = { has_law = law_type:law_monarchy }
+				country_has_voting_franchise = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = MCH_communism
+		adjective = MCH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 200
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = MCH_warlord_uniter
+		adjective = MCH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = MCH_warlord_greater
+		adjective = MCH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 150
+		
+		trigger = {
+			scope:actor ?= {
+				AND = {
+					NOR = {
+					h	as_law = law_type:law_monarchy
+						coa_def_communist_flag_trigger = yes
+					}
+					any_scope_state = {
+						state_region = s:STATE_BEIJING
+						is_incorporated = yes
+					}
+					is_unification_candidate = ROC
+				}
+			}
+		}
+	}
+}
+
+
+GNG = { # Gui
+	dynamic_country_name = {
+		name = GNG_warlord
+		adjective = GNG_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				has_law = law_type:law_peasant_levies
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = GNG_warlord_new
+		adjective = GNG_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_warlord_great
+		adjective = GUI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				has_law = law_type:law_peasant_levies
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				any_scope_state = {
+					state_region = s:STATE_GUANGDONG
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SHN_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				any_scope_state = {
+					state_region = s:STATE_BEIJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = YUE_nanjing
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 2000
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				any_scope_state = {
+					state_region = s:STATE_NANJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = GNG_imperial
+		adjective = GNG_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_warlord_united
+		adjective = adj_south_warlord_united
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_soviet
+		adjective = adj_south_soviet
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = GNG_autonomous
+		adjective = GNG_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					AND = {
+						exists = c:CHI
+						c:CHI = {
+							coa_communist_trigger = yes
+						}
+						is_subject_of = c:CHI
+					}
+					AND = {
+						exists = c:ROC
+						c:ROC = {
+							coa_communist_trigger = yes
+						}
+						is_subject_of = c:ROC
+					}
+				}
+			}
+		}
+	}
+}
+
+
+HNA = { # Xiang
+	dynamic_country_name = {
+		name = HNA_warlord
+		adjective = HNA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = HNA_warlord_great
+		adjective = HNA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+				any_scope_state = {
+					state_region = s:STATE_EASTERN_HUBEI
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = HNA_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				OR = {
+					country_has_voting_franchise = yes
+					is_unification_candidate = ROC
+				}
+				any_scope_state = {
+					state_region = s:STATE_EASTERN_HUBEI
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = HNA_imperial
+		adjective = HNA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = HNA_qing_governor
+		adjective = HNA_ADJ
+   
+		is_main_tag_only = yes
+		priority = 10
+   
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				OR = {
+					AND = {
+						exists = c:CHI
+						is_subject_of = c:CHI
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+					AND = {
+						exists = c:ROC
+						is_subject_of = c:ROC
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = HNA_prussia
+		adjective = PRU_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_autocracy 
+				has_law = law_type:law_freedom_of_conscience
+				has_law = law_type:law_women_own_property
+				has_law = law_type:law_per_capita_based_taxation
+				has_law = law_type:law_appointed_bureaucrats
+				has_law = law_type:law_national_supremacy # Poles were even excluded from Landrat posts in 1832. Germanization policies were in full swing by the mid-1830s
+				has_law = law_type:law_mercantilism
+				has_law = law_type:law_interventionism
+				has_law = law_type:law_public_schools
+				has_law = law_type:law_local_police
+				has_law = law_type:law_per_capita_based_taxation
+				has_law = law_type:law_professional_army
+				has_law = law_type:law_censorship	
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = HNA_sparta
+		adjective = HNA_sparta
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_autocracy 
+				has_law = law_type:law_ethnostate
+				has_law = law_type:law_command_economy
+				has_law = law_type:law_outlawed_dissent
+				has_law = law_type:law_secret_police
+				has_law = law_type:law_closed_borders
+				has_law = law_type:law_militarized_police
+				has_law = law_type:law_isolationism
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_warlord_united
+		adjective = adj_south_warlord_united
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_soviet
+		adjective = adj_south_soviet
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+				is_unification_candidate = ROC
+			}
+		}
+	}
+}
+
+
+AHU = { # Wan
+	dynamic_country_name = {
+		name = AHU_warlord
+		adjective = AHU_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = AHU_warlord_great
+		adjective = AHU_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+				any_scope_state = {
+					state_region = s:STATE_BEIJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = AHU_warlord_greater
+		adjective = adj_beiyang
+		
+		is_main_tag_only = yes
+		priority = 20
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_BEIJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = AHU_warlord_uniter
+		adjective = AHU_ADJ
+		
+		is_main_tag_only = yes
+		priority = 15
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = AHU_imperial
+		adjective = AHU_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = AHU_qing_governor
+		adjective = AHU_ADJ
+	   
+		is_main_tag_only = yes
+		priority = 10
+	   
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				OR = {
+					AND = {
+						exists = c:CHI
+						is_subject_of = c:CHI
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+					AND = {
+						exists = c:ROC
+						is_subject_of = c:ROC
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = AHU_communism
+		adjective = AHU_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+			}
+		}
+	}
+}
+
+
+ZHI = { # Zhi
+	dynamic_country_name = {
+		name = ZHI_warlord
+		adjective = ZHI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = ZHI_warlord_greater
+		adjective = adj_beiyang
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+				any_scope_state = {
+					state_region = s:STATE_BEIJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = ZHI_warlord_uniter
+		adjective = ZHI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = ZHI_imperial
+		adjective = ZHI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = ZHI_communism
+		adjective = ZHI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+			}
+		}
+	}
+}
+
+
+SHN = { # Jin
+	dynamic_country_name = {
+		name = SHN_warlord
+		adjective = SHN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SHN_warlord_great
+		adjective = SHN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+				any_scope_state = {
+					state_region = s:STATE_HINGGAN
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SHN_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				any_scope_state = {
+					state_region = s:STATE_BEIJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SHN_imperial
+		adjective = SHN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SHN_communism
+		adjective = SHN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+			}
+		}
+	}
+}
+
+
+GUI = { # Qian
+	dynamic_country_name = {
+		name = GUI_warlord
+		adjective = GUI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = GUI_imperial
+		adjective = GUI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_warlord_united
+		adjective = adj_south_warlord_united
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_soviet
+		adjective = adj_south_soviet
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+				is_unification_candidate = ROC
+			}
+		}
+	}
+}
+
+
+SIH = { # Chuan
+	dynamic_country_name = {
+		name = SIH_warlord
+		adjective = SIH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SIH_warlord_han
+		adjective = adj_han
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_national_supremacy
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SIH_imperial
+		adjective = SIH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SIH_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				OR = {
+					country_has_voting_franchise = yes
+					is_unification_candidate = ROC
+				}
+				any_scope_state = {
+					state_region = s:STATE_CHONGQING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_warlord_united
+		adjective = adj_south_warlord_united
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_soviet
+		adjective = adj_south_soviet
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+				is_unification_candidate = ROC
+			}
+		}
+	}
+}
+
+XIK = { # Chuanbian
+	dynamic_country_name = {
+		name = XIK_warlord
+		adjective = XIK_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIK_imperial
+		adjective = XIK_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_warlord_united
+		adjective = adj_south_warlord_united
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = south_soviet
+		adjective = adj_south_soviet
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+				is_unification_candidate = ROC
+			}
+		}
+	}
+}
+
+
+SHA = { # Lu
+	dynamic_country_name = {
+		name = SHA_warlord
+		adjective = SHA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SHA_warlord_great
+		adjective = adj_han
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+				any_scope_state = {
+					state_region = s:STATE_ZHILI
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SHA_imperial
+		adjective = SHA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = SHA_communism
+		adjective = SHA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				coa_def_communist_flag_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = MCH_warlord_uniter
+		adjective = SHA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				NOR = {
+					has_law = law_type:law_monarchy
+					coa_def_communist_flag_trigger = yes
+				}
+				is_unification_candidate = ROC
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = MCH_warlord_greater
+		adjective = SHA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 150
+		
+		trigger = {
+			scope:actor ?= {
+				AND = {
+					NOR = {
+						has_law = law_type:law_monarchy
+						coa_def_communist_flag_trigger = yes
+					}
+					any_scope_state = {
+						state_region = s:STATE_BEIJING
+						is_incorporated = yes
+					}
+					is_unification_candidate = ROC
+				}
+			}
+		}
+	}
+}
+
+
+XIB = { # Xibei
+	dynamic_country_name = {
+		name = XIB_warlord
+		adjective = XIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_professional_army
+					has_law = law_type:law_mass_conscription
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIB_warlord_new
+		adjective = XIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					any_scope_state = {
+						state_region = s:STATE_BEIJING
+						is_incorporated = yes
+					}
+					NOT = {
+						has_law = law_type:law_autocracy 
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIB_warlord_han
+		adjective = XIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_national_supremacy
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIB_warlord_greater
+		adjective = XIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 110
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_BEIJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIB_imperial
+		adjective = XIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIB_qing_governor
+		adjective = XIB_ADJ
+   
+		is_main_tag_only = yes
+		priority = 10
+   
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				OR = {
+					AND = {
+						exists = c:CHI
+						is_subject_of = c:CHI
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+					AND = {
+						exists = c:ROC
+						is_subject_of = c:ROC
+						c:CHI = {
+							has_law = law_type:law_monarchy
+							country_has_primary_culture = cu:manchu
+						}
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIB_communism
+		adjective = XIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = XIB_mongol
+		adjective = MGL_ADJ
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			scope:actor ?= {
+				any_scope_state = {
+					state_region = s:STATE_ULIASTAI
+					is_incorporated = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_URGA
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = XIB_ma_warlord
+		adjective = XIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 500
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					was_formed_from = QIH
+					was_formed_from = NIX
+				}
+			}
+		}
+	}
+}
+
+QIH = { # Qingma
+	dynamic_country_name = {
+		name = QIH_ultra_nationalism
+		adjective = adj_hui
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_national_supremacy
+					has_law = law_type:law_state_religion
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = QIH_warlord
+		adjective = QIH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = QIH_warlord_ma
+		adjective = QIH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+			}
+			NOT = {
+				exists = c:NIX
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = QIH_imperial
+		adjective = QIH_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = QIH_communism
+		adjective = adj_hui
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+NIX = { # Ningma
+	dynamic_country_name = {
+		name = NIX_ultra_nationalism
+		adjective = adj_hui
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_national_supremacy
+					has_law = law_type:law_state_religion
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NIX_warlord
+		adjective = NIX_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NIX_warlord_ma
+		adjective = NIX_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+			}
+			NOT = {
+				exists = c:QIH
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NIX_imperial
+		adjective = NIX_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = NIX_communism
+		adjective = NIX_ADJ
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = NIX_autonomous
+		adjective = NIX_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					AND = {
+						exists = c:CHI
+						c:CHI = {
+							coa_communist_trigger = yes
+						}
+						is_subject_of = c:CHI
+					}
+					AND = {
+						exists = c:ROC
+						c:ROC = {
+							coa_communist_trigger = yes
+						}
+						is_subject_of = c:ROC
+					}
+				}
+			}
+		}
+	}
+}
+
+XIN = { # Xinjiang
+	dynamic_country_name = {
+		name = XIN_ultra_nationalism
+		adjective = adj_hui
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_national_supremacy
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIN_warlord
+		adjective = XIN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIN_imperial
+		adjective = XIN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = XIN_communism
+		adjective = XIN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = XIN_autonomous
+		adjective = XIN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					AND = {
+						exists = c:CHI
+						c:CHI = {
+							coa_communist_trigger = yes
+						}
+						is_subject_of = c:CHI
+					}
+					AND = {
+						exists = c:ROC
+						c:ROC = {
+							coa_communist_trigger = yes
+						}
+						is_subject_of = c:ROC
+					}
+				}
+			}
+		}
+	}
+}
+
+HEN = { # Henan
+	dynamic_country_name = {
+		name = HEN_warlord
+		adjective = HEN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+}
+
+HEN = { # Henan
+	dynamic_country_name = {
+		name = HEN_warlord
+		adjective = HEN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+}
+
+HUB = { # Hubei
+	dynamic_country_name = {
+		name = HUB_warlord
+		adjective = HUB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+}
+
+JXI = { # Jiangxi
+	dynamic_country_name = {
+		name = JXI_warlord
+		adjective = JXI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+}
+
+JSU = { # Jiangsu
+	dynamic_country_name = {
+		name = JSU_warlord
+		adjective = JSU_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+}
+
+ZHE = { # Zhejiang
+	dynamic_country_name = {
+		name = ZHE_warlord
+		adjective = ZHE_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = ZHE_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 2000
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				OR = {
+					is_unification_candidate = ROC
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_law = law_type:law_peasant_levies
+				}
+				any_scope_state = {
+					state_region = s:STATE_NANJING
+					is_incorporated = yes
+				}
+			}
+		}
+	}
+}
+
+QIN = { # Shanxi
+	dynamic_country_name = {
+		name = QIN_warlord
+		adjective = QIN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+}
+
+GAN = { # Gansu
+	dynamic_country_name = {
+		name = GAN_warlord
+		adjective = GAN_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy 
+				OR = {
+					has_law = law_type:law_peasant_levies
+					has_law = law_type:law_mass_conscription
+					has_law = law_type:law_professional_army
+				}
+			}
+		}
+	}
+}
+
+TIB = { # Xizang
+	dynamic_country_name = {
+		name = TIB_tradional
+		adjective = TIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					AND = {
+						exists = c:CHI
+						is_subject_of = c:CHI
+						c:CHI = {
+							coa_def_communist_flag_trigger = no
+						}
+					}
+					AND = {
+						exists = c:ROC
+						is_subject_of = c:ROC
+						c:ROC = {
+							coa_def_communist_flag_trigger = no
+						}
+					}
+					AND = {
+						has_law = law_type:law_theocracy
+						NOR = {
+							country_rank >= rank_value:major_power
+							country_rank >= rank_value:unrecognized_major_power
+						}
+						has_law = law_type:law_hereditary_bureaucrats
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = TIB_imperial
+		adjective = TIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			scope:actor ?= {
+				is_subject = no
+				AND = {
+					country_rank >= rank_value:major_power
+					OR = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_monarchy
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = TIB_autonomous
+		adjective = TIB_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					AND = {
+						exists = c:CHI
+						c:CHI = {
+							coa_communist_trigger = yes
+						}
+						is_subject_of = c:CHI
+					}
+					AND = {
+						exists = c:ROC
+						c:ROC = {
+							coa_communist_trigger = yes
+						}
+						is_subject_of = c:ROC
+					}
+				}
+			}
+		}
+	}
+}
+
+BEI = {
+	dynamic_country_name = {
+		name = dyn_c_beiyang_government
+		adjective = CHI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 15
+		
+		trigger = {
+			scope:actor = {
+				has_global_variable = china_shatters
+				global_var:chinese_central_government ?= THIS
+				capital = {
+					OR = {
+						state_region = s:STATE_BEIJING
+						state_region = s:STATE_ZHILI
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_empire_of_china
+		adjective = dyn_c_empire_of_china_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				NOT = { country_has_primary_culture = cu:manchu }
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_peoples_republic_of_china
+		adjective = CHI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
