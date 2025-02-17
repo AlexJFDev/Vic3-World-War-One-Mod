@@ -179,11 +179,11 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             has_variable = entente_participant
             is_at_war = yes 
         }
+        remove_modifier = war_protests_1_modifier
         add_modifier = {
 			name = war_protests_2_modifier
             duration = -1
 		}
-        remove_modifier = war_protests_1_modifier
         create_character = {
 			template = rus_leon_trotsky_character_template
         }
@@ -507,17 +507,24 @@ russia_events.8 = { #The civil war begins
 		      set_state_owner = c:SIB
             }
         }
+        s:STATE_KURSK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SIB
+            }
+        }
         c:RUS = {
             change_infamy = -100
         }
         c:SIB = {
             change_infamy = -100
-        }
-        c:SIB = {
-            add_modifier = {
-			name = army_buff_modifier_1
-            years = 5
-            }
         }
     }
 }
