@@ -52,6 +52,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
         trigger = { 
             has_variable = entente_participant
             is_at_war = yes 
+            NOT = {
+                has_modifier = war_protests_2_modifier
+            }
         }
         ai_chance = {
 			base = 100
@@ -64,6 +67,13 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 
     option = { 
         name = russia_events.2.b
+        trigger = { 
+            has_variable = entente_participant
+            is_at_war = yes 
+            NOT = {
+                has_modifier = war_protests_2_modifier
+            }
+        }
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
