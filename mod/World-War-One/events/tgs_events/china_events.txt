@@ -75,10 +75,142 @@ china_events.5 = { #China collapse
 
     trigger = {}
 
-    
+    option = {
+        name = china_events.5.a
+        set_global_variable = china_shatters
+        c:CHI = {
+		remove_diplomatic_pact = {
+			country = c:XIN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:QIH
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:GAN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:SIH
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:YUN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:GUI
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:GNG
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:YUE
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:HNA
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:JXI
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:FRS
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:ZHE
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:JSU
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:QIN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:SHN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:MCH
+			type = puppet
+		}
+	    }
+        create_country = { #Shandong
+	       tag = SHA
+	       origin = this
+	       state = s:STATE_SHANDONG.region_state:CHI
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
+        }
+        create_country = { #Zhili
+	       tag = ZHI
+	       origin = this
+	       state = s:STATE_HEBEI.region_state:CHI
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
+        }
+        create_country = { #Henan
+	       tag = HEN
+	       origin = this
+	       state = s:STATE_HENAN.region_state:CHI
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
+        }
+        s:STATE_NORTHERN_ANHUI = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:CHI
+			    owner = {
+				  OR = {
+					c:CHI = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HEN
+            }
+        }
+        c:ZHI = {
+            trigger_event = {
+                id = china_events.6
+                days = 500
+            }
+        }
+        c:YUE = {
+            trigger_event = {
+                id = china_events.7
+                days = 600
+            }
+        }
+        c:MCH = {
+            trigger_event = {
+                id = china_events.8
+                days = 1400
+            }
+        }
+        change_tag = BEI
+		set_global_variable = { name = chinese_central_government value = c:BEI }
+    }
 }
 
-china_events.6 = { #Wan attacks Jingsu
+china_events.6 = { #Zhili attacks Henan
     type = country_event
 
     title = china_events.6.t
@@ -102,23 +234,13 @@ china_events.6 = { #Wan attacks Jingsu
             is_player = no
         }
         create_diplomatic_play = {
-		      target_country = c:JSU
+		      target_country = c:HEN
 		      type = dp_annex_war
 	          war = yes
 	          add_war_goal = {
-		        holder = c:JSU
+		        holder = c:HEN
 		        type = annex_country
-		        target_country = c:AHU
-            }
-	    }
-        create_diplomatic_play = {
-		      target_country = c:SHN
-		      type = dp_annex_war
-	          war = yes
-	          add_war_goal = {
-		        holder = c:SHN
-		        type = annex_country
-		        target_country = c:AHU
+		        target_country = c:ZHI
             }
 	    }
 	}
@@ -174,7 +296,7 @@ china_events.7 = { #Yue attacks Gui
     }
 }
 
-china_events.8 = { #Feng attacks Bei
+china_events.8 = { #Fengtian attacks Bei
     type = country_event
 
     title = china_events.8.t
@@ -199,7 +321,8 @@ china_events.8 = { #Feng attacks Bei
         }
         create_diplomatic_play = {
 		      target_country = c:BEI
-		      type = dp_annex_war
+		      type = dp_conquer_state
+              target_state = s:STATE_BEIJING.region_state:BEI
 	          war = yes
 	          add_war_goal = {
 		        holder = c:BEI
