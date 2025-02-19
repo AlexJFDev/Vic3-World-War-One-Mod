@@ -230,26 +230,30 @@ china_events.6 = { #Zhili attacks Henan
 
     option = {
         name = china_events.6.a
-        trigger = {
-            is_player = no
-        }
+        default_option = yes
+        escalation = 30
         create_diplomatic_play = {
 		      target_country = c:HEN
 		      type = dp_annex_war
-	          war = yes
 	          add_war_goal = {
 		        holder = c:HEN
 		        type = annex_country
 		        target_country = c:ZHI
             }
 	    }
+        ai_chance = {
+		base = 100
+	    }
+        c:ZHI = {
+		trigger_event = {
+			id = china_events.9
+			days = 360
+		}
+	    }
 	}
 
     option = {
         name = china_events.6.b
-        trigger = {
-            is_player = yes
-        }
     }
 }
 
@@ -273,26 +277,24 @@ china_events.7 = { #Yue attacks Gui
 
     option = {
         name = china_events.7.a
-        trigger = {
-            is_player = no
-        }
+        default_option = yes
+        escalation = 30
         create_diplomatic_play = {
 		      target_country = c:GNG
 		      type = dp_annex_war
-	          war = yes
 	          add_war_goal = {
 		        holder = c:GNG
 		        type = annex_country
 		        target_country = c:YUE
             }
 	    }
+        ai_chance = {
+		base = 100
+	    }
 	}
 
     option = {
         name = china_events.7.b
-        trigger = {
-            is_player = yes
-        }
     }
 }
 
@@ -316,26 +318,118 @@ china_events.8 = { #Fengtian attacks Bei
 
     option = {
         name = china_events.8.a
-        trigger = {
-            is_player = no
-        }
+        default_option = yes
+        escalation = 30
         create_diplomatic_play = {
 		      target_country = c:BEI
-		      type = dp_conquer_state
               target_state = s:STATE_BEIJING.region_state:BEI
-	          war = yes
+		      type = dp_conquer_state
 	          add_war_goal = {
 		        holder = c:BEI
 		        type = annex_country
 		        target_country = c:MCH
             }
 	    }
+        ai_chance = {
+		base = 100
+	    }
 	}
 
     option = {
         name = china_events.8.b
-        trigger = {
-            is_player = yes
-        }
+    }
+}
+
+china_events.9 = { #Zhili attacks Jiangsu
+    type = country_event
+
+    title = china_events.9.t
+    desc = china_events.9.d
+    flavor = china_events.9.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.9.a
+        default_option = yes
+        escalation = 30
+        create_diplomatic_play = {
+		      target_country = c:JSU
+		      type = dp_annex_war
+	          add_war_goal = {
+		        holder = c:JSU
+		        type = annex_country
+		        target_country = c:ZHI
+            }
+	    }
+        ai_chance = {
+		base = 100
+	    }
+        c:ZHI = {
+		trigger_event = {
+			id = china_events.10
+			days = 415
+		}
+	    }
+	}
+
+    option = {
+        name = china_events.9.b
+    }
+}
+
+china_events.10 = { #Zhili attacks Bei
+    type = country_event
+
+    title = china_events.10.t
+    desc = china_events.10.d
+    flavor = china_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.10.a
+        default_option = yes
+        escalation = 30
+        create_diplomatic_play = {
+		      target_country = c:BEI
+              target_state = s:STATE_EASTERN_HUBEI.region_state:BEI
+		      type = dp_conquer_state
+              add_war_goal = {
+		        holder = c:BEI
+		        type = conquer_state
+		        target_state = s:STATE_WESTERN_HUBEI.region_state:BEI
+              }
+	          add_war_goal = {
+		        holder = c:BEI
+		        type = annex_country
+		        target_country = c:ZHI
+              }
+	        }
+        ai_chance = {
+		base = 100
+	    }
+	}
+
+    option = {
+        name = china_events.9.b
     }
 }
