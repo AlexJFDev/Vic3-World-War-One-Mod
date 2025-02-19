@@ -26,6 +26,24 @@ SLD = { # Somaliland (British Somaliland)
 		}
 	}
 }
+SUD = { # Anglo-Egyptian Sudan
+	dynamic_country_name = {
+		name = dyn_c_anglo_egyptian_sudan
+		adjective = SUD_ADJ
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:SUD
+					type = protectorate
+				}
+			}
+		}
+	}
+}
 SMA = { # Somalia (British Somaliland)
 	dynamic_country_name = {
 		name = dyn_c_somaliland
