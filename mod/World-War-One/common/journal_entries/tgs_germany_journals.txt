@@ -83,6 +83,30 @@ je_war_fatigue = {
       set_variable = german_revolution_1
     }
 
+    invalid = {
+       OR = {
+        c:GER = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
+        NOT = {
+            owns_entire_state_region = STATE_ALSACE_LORRAINE
+        }
+       }
+    }
+
+    on_invalid = {
+		remove_modifier = war_fatigue_1
+        set_variable = german_revolution_1
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        trigger_event = {
+			id = germany_events.2
+            days = 5
+		}
+	}
+
     timeout = -1
     should_be_pinned_by_default = yes
 }
