@@ -141,6 +141,10 @@ stabilization_buff_events.5 = {
     option = {
         name = stabilization_buff_events.5.a
         default_option = yes
-        
+        add_modifier = {
+			name = starting_minting_buff_modifier
+            years = 10
+            is_decaying = yes
+		}
     }
 }
