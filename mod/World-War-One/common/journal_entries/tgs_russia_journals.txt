@@ -175,6 +175,36 @@ je_soviet_threat = {
       set_global_variable = russian_revolution_2
     }
 
+    invalid = {
+        OR = {
+        c:GER = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
+        c:AUS = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
+        }
+    }
+
+    on_invalid = {
+		remove_modifier = war_protests_1_modifier
+		remove_modifier = war_protests_2_modifier
+        add_modifier = {
+        name = revolution_stabilization_buff_2
+        years = 5
+        is_decaying = yes
+        } 
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        trigger_event = {
+			id = russia_events.9
+            days = 5
+		}
+	}
+
     timeout = -1
     should_be_pinned_by_default = yes
 }
