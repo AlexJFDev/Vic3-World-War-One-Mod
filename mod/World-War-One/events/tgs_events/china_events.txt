@@ -164,16 +164,6 @@ china_events.5 = { #China collapse
            activate_law = law_type:law_censorship
            }
         }
-        create_country = { #Henan
-	       tag = HEN
-	       origin = this
-	       state = s:STATE_HENAN.region_state:CHI
-           on_created = { 
-           activate_law = law_type:law_presidential_republic
-           activate_law = law_type:law_autocracy
-           activate_law = law_type:law_censorship
-           }
-        }
         s:STATE_NORTHERN_ANHUI = {
 	       random_scope_state = {
 		      limit = {
@@ -184,13 +174,23 @@ china_events.5 = { #China collapse
 				    }
 			    }
 		        }
-		      set_state_owner = c:HEN
+		      set_state_owner = c:ZHI
             }
+        }
+        create_country = { #Henan
+	       tag = HEN
+	       origin = this
+	       state = s:STATE_HENAN.region_state:CHI
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
         }
         c:ZHI = {
             trigger_event = {
                 id = china_events.6
-                days = 500
+                days = 400
             }
         }
         c:YUE = {
@@ -210,7 +210,7 @@ china_events.5 = { #China collapse
     }
 }
 
-china_events.6 = { #Zhili attacks Henan
+china_events.6 = { #Zhili attacks Jiangsu
     type = country_event
 
     title = china_events.6.t
@@ -233,10 +233,10 @@ china_events.6 = { #Zhili attacks Henan
         default_option = yes
         escalation = 30
         create_diplomatic_play = {
-		      target_country = c:HEN
+		      target_country = c:JSU
 		      type = dp_annex_war
 	          add_war_goal = {
-		        holder = c:HEN
+		        holder = c:JSU
 		        type = annex_country
 		        target_country = c:ZHI
             }
@@ -247,7 +247,7 @@ china_events.6 = { #Zhili attacks Henan
         c:ZHI = {
 		trigger_event = {
 			id = china_events.9
-			days = 360
+			days = 415
 		}
 	    }
 	}
@@ -340,7 +340,7 @@ china_events.8 = { #Fengtian attacks Bei
     }
 }
 
-china_events.9 = { #Zhili attacks Jiangsu
+china_events.9 = { #Zhili attacks Henan
     type = country_event
 
     title = china_events.9.t
@@ -363,10 +363,10 @@ china_events.9 = { #Zhili attacks Jiangsu
         default_option = yes
         escalation = 30
         create_diplomatic_play = {
-		      target_country = c:JSU
+		      target_country = c:HEN
 		      type = dp_annex_war
 	          add_war_goal = {
-		        holder = c:JSU
+		        holder = c:HEN
 		        type = annex_country
 		        target_country = c:ZHI
             }
@@ -377,7 +377,7 @@ china_events.9 = { #Zhili attacks Jiangsu
         c:ZHI = {
 		trigger_event = {
 			id = china_events.10
-			days = 415
+			days = 450
 		}
 	    }
 	}
@@ -430,6 +430,6 @@ china_events.10 = { #Zhili attacks Bei
 	}
 
     option = {
-        name = china_events.9.b
+        name = china_events.10.b
     }
 }
