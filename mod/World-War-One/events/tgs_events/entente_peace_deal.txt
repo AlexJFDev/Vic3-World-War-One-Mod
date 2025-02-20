@@ -2958,7 +2958,7 @@ entente_peace_deal.10 = { #Round 9 result
 				    }
 			    }
 		        }
-		      set_state_owner = c:SHA
+		      set_state_owner = c:BEI
             }
         }
 		s:STATE_EAST_MICRONESIA = {
@@ -2990,7 +2990,19 @@ entente_peace_deal.10 = { #Round 9 result
 		      set_state_owner = c:CHI
             }
         }
-
+		s:STATE_SHANDONG = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BEI
+            }
+        }
 		s:STATE_BOUGAINVILLE = {
            random_scope_state = {
 		      limit = {
