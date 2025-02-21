@@ -22997,6 +22997,21 @@
 				}
 			}
 			create_building = {
+				building = building_textile_mills
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:CHI
+						levels = 3
+						region = STATE_SUZHOU
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_craftsman_sewing pm_mechanized_looms pm_sewing_machines 
+				}
+			}
+			create_building = {
 				building = building_naval_base
 				add_ownership = {
 					country = {
@@ -32936,7 +32951,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 10
+						levels = 16
 					}
 				}
 				reserves = 1
@@ -34044,7 +34059,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 8
+						levels = 18
 					}
 				}
 				reserves = 1
@@ -35131,7 +35146,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 3
+						levels = 12
 					}
 				}
 				reserves = 1
@@ -36149,7 +36164,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 5
+						levels = 18
 					}
 				}
 				reserves = 1
@@ -44588,6 +44603,51 @@
 				}
 			}
 			create_building = {
+				building = building_arms_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 15
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_artillery_foundries
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 8
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_munition_plants
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 10
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
+				}
+			}
+			create_building = {
 				building = building_government_administration
 				add_ownership = {
 					country = {
@@ -47546,7 +47606,7 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 16
+						levels = 25
 					}
 				}
 				reserves = 1
@@ -48059,7 +48119,7 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 14
+						levels = 23
 					}
 				}
 				reserves = 1
@@ -49956,7 +50016,7 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 10
+						levels = 18
 					}
 				}
 				reserves = 1
@@ -55856,7 +55916,7 @@
 				add_ownership = {
 					country = {
 						country = c:JAP
-						levels = 10
+						levels = 18
 					}
 				}
 				reserves = 1
@@ -66861,7 +66921,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -73013,7 +73073,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 5
+						levels = 6
 						region = STATE_MOSCOW
 					}
 				}
@@ -75600,6 +75660,36 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_dye_production pm_rayon 
+				}
+			}
+			create_building = {
+				building = building_iron_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:RUS
+						levels = 20
+						region = STATE_MOSCOW
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+				}
+			}
+			create_building = {
+				building = building_coal_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:RUS
+						levels = 12
+						region = STATE_MOSCOW
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -85648,7 +85738,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 2
+						levels = 4
 					}
 				}
 				reserves = 1
@@ -86388,7 +86478,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 15
+						levels = 20
 					}
 				}
 				reserves = 1
@@ -86729,7 +86819,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 2
+						levels = 4
 					}
 				}
 				reserves = 1
@@ -86858,7 +86948,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -88854,7 +88944,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 2
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -89058,7 +89148,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 3
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -89279,7 +89369,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 2
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -89457,7 +89547,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 2
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -90062,7 +90152,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -90748,7 +90838,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 1
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -91070,7 +91160,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 4
+						levels = 12
 					}
 				}
 				reserves = 1
@@ -91617,7 +91707,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 23
+						levels = 40
 					}
 				}
 				reserves = 1
@@ -93219,7 +93309,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -93815,7 +93905,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 4
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -94647,7 +94737,7 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 2
+						levels = 4
 					}
 				}
 				reserves = 1
