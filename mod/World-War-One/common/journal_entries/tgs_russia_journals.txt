@@ -17,6 +17,10 @@ je_colossus_with_feet_of_clay = {
        trigger_event = { id = russia_events.1 popup = yes }
     }
 
+    modifiers_while_active = {
+	   colossus_with_feet_of_clay_modifier
+	}
+
     complete = {
         OR = {
             has_law = law_type:law_census_voting
@@ -120,7 +124,7 @@ je_colossus_with_feet_of_clay = {
 }
 
 je_soviet_threat = {
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/red_star.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -130,8 +134,12 @@ je_soviet_threat = {
     }
     
     possible = {
-        has_modifier = war_protests_2_modifier
+        has_variable = russian_rep_continues_war
     }
+
+    modifiers_while_active = {
+	    war_protests_2_modifier
+	}
 
     complete = {
         OR = {
@@ -169,7 +177,6 @@ je_soviet_threat = {
     on_complete = {
         set_global_variable = russian_revolution_2
         remove_modifier = war_protests_1_modifier
-        remove_modifier = war_protests_2_modifier
         trigger_event = {
 			id = russia_events.9
             days = 5

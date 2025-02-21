@@ -160,7 +160,6 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         years = 20
         is_decaying = yes
         } 
-		remove_modifier = war_protests_1_modifier
     }
 }
 
@@ -190,10 +189,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             is_at_war = yes 
         }
         remove_modifier = war_protests_1_modifier
-        add_modifier = {
-			name = war_protests_2_modifier
-            duration = -1
-		}
+        set_variable = russian_rep_continues_war
         create_character = {
 			template = rus_leon_trotsky_character_template
         }
@@ -560,9 +556,6 @@ russia_events.9 = { #Reforms success
     option = {
         name = russia_events.9.a
         default_option = yes
-		remove_modifier = war_protests_1_modifier
-		remove_modifier = war_protests_2_modifier
-        remove_modifier = colossus_with_feet_of_clay_modifier
         add_modifier = {
 			name = a_new_russia_modifier
             years = 5
@@ -591,8 +584,6 @@ russia_events.10 = { #Peace deal
     option = {
         name = russia_events.10.a
         default_option = yes
-        remove_modifier = war_protests_1_modifier
-        remove_modifier = war_protests_2_modifier 
         random_civil_war = {
 			add_civil_war_progress = -100
 		}  

@@ -15,13 +15,22 @@ je_war_fatigue = {
 		        value < 5
 		    }
 		}
+        market_capital.market = {
+        mg:grain = { 
+				market_goods_pricier > 0.20 
+			}
+        }
+    }
+
+    modifiers_while_active = {
+        war_fatigue_1
     }
 
     immediate = {
        c:GER = {
             trigger_event = {
                 id = germany_events.1
-                days = 360
+                days = 5
             }
         }
     }
@@ -31,9 +40,13 @@ je_war_fatigue = {
           c:GER = {
             is_at_war = no 
           }
-          c:GER = {
-            standard_of_living > 12
-		    strata = lower
+          market_capital.market = {
+          mg:grain = { 
+				market_goods_pricier < 0.05 
+			}
+          mg:clothes = { 
+				market_goods_pricier < 0.2 
+			}
           }
         }
     }
@@ -59,10 +72,6 @@ je_war_fatigue = {
         }
     }
 
-    on_complete = {
-        remove_modifier = war_fatigue_1
-    }
-
     on_fail = { 
       random_civil_war = {
 			add_civil_war_progress = -100
@@ -79,7 +88,6 @@ je_war_fatigue = {
                 days = 15
             }
         }
-      remove_modifier = war_fatigue_1
       set_variable = german_revolution_1
     }
 
@@ -96,7 +104,6 @@ je_war_fatigue = {
     }
 
     on_invalid = {
-		remove_modifier = war_fatigue_1
         set_variable = german_revolution_1
         random_civil_war = {
 			add_civil_war_progress = -100
