@@ -53,6 +53,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
             has_variable = entente_participant
             is_at_war = yes 
             NOT = {
+                has_global_variable = russian_revolution_1
                 has_modifier = war_protests_2_modifier
             }
         }
@@ -71,6 +72,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
             has_variable = entente_participant
             is_at_war = yes 
             NOT = {
+                has_global_variable = russian_revolution_1
                 has_modifier = war_protests_2_modifier
             }
         }
@@ -521,6 +523,11 @@ russia_events.8 = { #The civil war begins
 		      set_state_owner = c:SIB
             }
         }
+        add_modifier = {
+         name = minting_buff_4_modifier
+         years = 5
+         is_decaying = yes
+        } 
         c:RUS = {
             change_infamy = -100
         }
