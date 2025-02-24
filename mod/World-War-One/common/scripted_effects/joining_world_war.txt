@@ -67,8 +67,8 @@ weekly_pulse_entente_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = 5  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+			change_variable = { name = entente_progress_from_diplomacy add = 6  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -6  }
 		}
     }
 
@@ -83,6 +83,36 @@ weekly_pulse_entente_progress = {
         ROOT = {
 			change_variable = { name = entente_progress_from_diplomacy add = 5  }
             change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+		}
+    }
+
+    every_country = {
+		limit = {
+            has_variable = entente_participant
+            country_rank >= rank_value:great_power
+            has_diplomatic_pact = {
+				who = root
+				type = bankroll
+			}	
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 5  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+		}
+    }
+
+    every_country = {
+		limit = {
+            has_variable = entente_participant
+            country_rank >= rank_value:great_power
+            has_diplomatic_pact = {
+				who = root
+				type = fund_lobbies
+			}	
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 1  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
 		}
     }
 
@@ -171,8 +201,8 @@ weekly_pulse_central_powers_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = -5  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+			change_variable = { name = entente_progress_from_diplomacy add = -6  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = 6  }
 		}
     }
 
@@ -187,6 +217,36 @@ weekly_pulse_central_powers_progress = {
         ROOT = {
 			change_variable = { name = entente_progress_from_diplomacy add = -5  }
             change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+		}
+    }
+    
+    every_country = {
+		limit = {
+            has_variable = central_powers_participant
+            country_rank >= rank_value:great_power
+            has_diplomatic_pact = {
+				who = root
+				type = bankroll
+			}	
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = -5  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+		}
+    }
+
+    every_country = {
+		limit = {
+            has_variable = central_powers_participant
+            country_rank >= rank_value:great_power
+            has_diplomatic_pact = {
+				who = root
+				type = fund_lobbies
+			}	
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = -1  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
 		}
     }
 

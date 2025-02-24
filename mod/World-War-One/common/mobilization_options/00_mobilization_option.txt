@@ -780,9 +780,6 @@ mobilization_option_field_hospitals = {
 	possible = {
 		NOT = { scope:military_formation = { has_mobilization_option = mobilization_option:mobilization_option_first_aid } }
 		market ?= {
-			mg:opium ?= {
-				market_goods_sell_orders > 0
-			}
 			mg:tools ?= {
 				market_goods_sell_orders > 0
 			}
@@ -814,8 +811,8 @@ mobilization_option_field_hospitals = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_opium_add = 1
-		goods_input_liquor_add = 2
+		goods_input_liquor_add = 3
+		goods_input_fabric_add = 1
 		goods_input_tools_add = 1
 	}
 	unit_modifier = {
