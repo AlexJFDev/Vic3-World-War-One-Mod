@@ -22993,7 +22993,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -30715,19 +30715,6 @@
 				}
 			}
 			create_building = {
-				building = building_suez_canal
-				add_ownership = {
-					country = {
-						country = c:GBR
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_canal 
-				}
-			}
-			create_building = {
 				building = building_wheat_farm
 				add_ownership = {
 					building = {
@@ -30753,6 +30740,34 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+		}
+		region_state:GBR = {
+			create_building = {
+				building = building_port
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_suez_canal
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_canal 
 				}
 			}
 		}
@@ -46639,7 +46654,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -46682,7 +46697,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -46697,7 +46712,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -46907,7 +46922,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -46922,7 +46937,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -47023,7 +47038,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -47287,7 +47302,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -47302,7 +47317,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_whaling_ships pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_whaling_station pm_steam_whaling_ships 
 				}
 			}
 			create_building = {
@@ -47345,7 +47360,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -47459,7 +47474,7 @@
 					building = {
 						type = building_manor_house
 						country = c:GBR
-						levels = 20
+						levels = 35
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -47570,7 +47585,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -47684,7 +47699,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -47742,7 +47757,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -48051,7 +48066,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -48066,7 +48081,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -48081,7 +48096,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -48111,7 +48126,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -48227,7 +48242,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -48345,7 +48360,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -48431,7 +48446,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -48577,7 +48592,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -48592,7 +48607,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -48607,7 +48622,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -48695,7 +48710,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -48946,7 +48961,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -48961,7 +48976,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -48976,7 +48991,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -48991,7 +49006,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -49165,7 +49180,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -49208,7 +49223,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -49223,7 +49238,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -49315,7 +49330,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -49401,7 +49416,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -49491,7 +49506,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -49506,7 +49521,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -49742,7 +49757,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -49830,7 +49845,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -49963,7 +49978,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -49978,7 +49993,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -49993,7 +50008,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -50109,7 +50124,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_combustion_derricks pm_road_carts 
+					pm_combustion_derricks pm_tanker_cars 
 				}
 			}
 			create_building = {
@@ -85715,7 +85730,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -85904,7 +85919,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -86174,7 +86189,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -86354,7 +86369,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -86674,7 +86689,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -87766,7 +87781,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -87931,7 +87946,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -88441,7 +88456,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -88906,7 +88921,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -89125,7 +89140,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -89816,7 +89831,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -90007,7 +90022,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -90361,7 +90376,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -90556,7 +90571,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -90871,7 +90886,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -91699,7 +91714,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -91946,7 +91961,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -92109,7 +92124,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -92274,7 +92289,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -92692,7 +92707,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -93029,7 +93044,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -93492,7 +93507,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -93655,7 +93670,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -94279,7 +94294,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -94444,7 +94459,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -94654,7 +94669,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -94892,7 +94907,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -95057,7 +95072,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -95207,7 +95222,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
