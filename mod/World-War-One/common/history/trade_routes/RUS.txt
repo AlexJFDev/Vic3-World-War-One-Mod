@@ -1,0 +1,60 @@
+﻿TRADE_ROUTES = {
+
+    #Russia
+	c:RUS ?= {
+		create_trade_route = {
+			goods = explosives
+			level = 42
+			direction = import
+			target = c:USA.market
+		}	
+        create_trade_route = {
+			goods = explosives
+			level = 12
+			direction = import
+			target = c:FRA.market
+		}	
+		create_trade_route = {
+			goods = fertilizer
+			level = 10
+			direction = import
+			target = c:USA.market
+		}	
+		create_trade_route = {
+			goods = fertilizer
+			level = 10
+			direction = import
+			target = c:FRA.market
+		}	
+		create_trade_route = {
+			goods = dye
+			level = 25
+			direction = import
+			target = c:GBR.market
+		}	
+		create_trade_route = {
+			goods = engines
+			level = 25
+			direction = import
+			target = c:FRA.market
+		}	
+		create_trade_route = {
+			goods = telephones
+			level = 10
+			direction = import
+			target = c:SWE.market
+		}	
+		create_trade_route = {
+			goods = iron
+			level = 35
+			direction = export
+			target = c:USA.market
+		}	
+		create_trade_route = {
+			goods = iron
+			level = 35
+			direction = export
+			target = c:SPA.market
+		}	
+    }
+}

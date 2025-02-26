@@ -1,0 +1,66 @@
+﻿TRADE_ROUTES = {
+
+    #Argentine
+	c:ARG ?= {
+		create_trade_route = {
+			goods = radios
+			level = 1
+			direction = import
+			target = c:USA.market
+		}	
+		create_trade_route = {
+			goods = telephones
+			level = 1
+			direction = import
+			target = c:USA.market
+		}	
+		create_trade_route = {
+			goods = automobiles
+			level = 1
+			direction = import
+			target = c:USA.market
+		}	
+		create_trade_route = {
+			goods = grain
+			level = 3
+			direction = import
+			target = c:USA.market
+		}	
+        create_trade_route = {
+			goods = tools
+			level = 12
+			direction = import
+			target = c:GBR.market
+		}	
+		create_trade_route = {
+			goods = tobacco
+			level = 8
+			direction = import
+			target = c:PRG.market
+		}	
+		create_trade_route = {
+			goods = tobacco
+			level = 8
+			direction = import
+			target = c:MEX.market
+		}	
+		create_trade_route = {
+			goods = paper
+			level = 8
+			direction = import
+			target = c:FRA.market
+		}	
+		create_trade_route = {
+			goods = fertilizer
+			level = 5
+			direction = import
+			target = c:GER.market
+		}	
+		create_trade_route = {
+			goods = tea
+			level = 5
+			direction = import
+			target = c:FRA.market
+		}	
+	}
+}
