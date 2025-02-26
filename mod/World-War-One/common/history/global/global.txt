@@ -1,12 +1,26 @@
 ﻿GLOBAL = {
-    c:FRA = {
+    c:GBR = {
 		trigger_event = {
 			id = stabilization_buff_events.5
 			days = 15
 		}
 	}
+	
+	c:FRA = {
+		trigger_event = {
+			id = stabilization_buff_events.8
+			days = 15
+		}
+	}
 
 	c:ITA = {
+		trigger_event = {
+			id = stabilization_buff_events.6
+			days = 15
+		}
+	}
+
+	c:RUS = {
 		trigger_event = {
 			id = stabilization_buff_events.5
 			days = 15
@@ -19,7 +33,11 @@
 			days = 5
 		}
 		trigger_event = {
-			id = stabilization_buff_events.5
+			id = balkan_war_events.2
+			days = 14
+		}
+		trigger_event = {
+			id = stabilization_buff_events.8
 			days = 15
 		}
 	}
@@ -54,30 +72,24 @@
 			id = stabilization_buff_events.2
 			days = 5
 		}
-	}
-
-	c:USA = {
 		trigger_event = {
-			id = panama_canal_event.1
-			days = 5
+			id = stabilization_buff_events.5
+			days = 15
 		}
 	}
-	
+
 	c:ROM = {
 		trigger_event = {
 			id = balkan_war_events.1
 			days = 7
 		}
 	}
-    
-	c:TUR = {
-		trigger_event = {
-			id = balkan_war_events.2
-			days = 14
-		}
-	}
 
     c:USA = {
+		trigger_event = {
+			id = panama_canal_event.1
+			days = 5
+		}
 		trigger_event = {
 			id = federal_reserve_events.1
 			days = 150
@@ -88,6 +100,10 @@
 		trigger_event = {
 			id = great_war_initiation_events.1
 			days = 365
+		}
+		trigger_event = {
+			id = stabilization_buff_events.6
+			days = 15
 		}
 	}
     
