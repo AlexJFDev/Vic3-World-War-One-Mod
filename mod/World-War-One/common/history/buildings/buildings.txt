@@ -32358,7 +32358,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -33522,7 +33522,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -34719,7 +34719,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 65
+						levels = 55
 					}
 				}
 				reserves = 1
@@ -35421,7 +35421,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -36930,7 +36930,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -42001,7 +42001,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -42046,7 +42046,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -42179,7 +42179,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -42269,7 +42269,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -42344,7 +42344,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -42353,13 +42353,13 @@
 					building = {
 						type = building_manor_house
 						country = c:GER
-						levels = 2
+						levels = 8
 						region = STATE_ANHALT
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -42507,7 +42507,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -42523,6 +42523,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_baking_powder pm_patent_stills pm_vacuum_canning 
+				}
+			}
+			create_building = {
+				building = building_livestock_ranch
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:GER
+						levels = 5
+						region = STATE_BADEN
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -42657,7 +42672,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -42681,13 +42696,13 @@
 					building = {
 						type = building_manor_house
 						country = c:GER
-						levels = 3
+						levels = 12
 						region = STATE_BAVARIA
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -42702,7 +42717,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -42710,7 +42725,7 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 12
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -42776,6 +42791,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_rotary_valve_engine_building_tooling_workshops pm_rubber_grips 
+				}
+			}
+			create_building = {
+				building = building_lead_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 6
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -42858,7 +42888,7 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 55
+						levels = 35
 					}
 				}
 				reserves = 1
@@ -42996,7 +43026,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -43187,7 +43217,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -43320,7 +43350,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -43357,13 +43387,13 @@
 					building = {
 						type = building_fishing_wharf
 						country = c:GER
-						levels = 1
+						levels = 3
 						region = STATE_EAST_PRUSSIA
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -43505,13 +43535,13 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:GER
-						levels = 1
+						levels = 5
 						region = STATE_ELBE
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -43526,7 +43556,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -43550,13 +43580,13 @@
 					building = {
 						type = building_manor_house
 						country = c:GER
-						levels = 3
+						levels = 5
 						region = STATE_ELBE
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -43582,7 +43612,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_combustion_derricks pm_road_carts 
+					pm_combustion_derricks pm_tanker_cars 
 				}
 			}
 			create_building = {
@@ -43715,7 +43745,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -43754,13 +43784,13 @@
 					building = {
 						type = building_manor_house
 						country = c:GER
-						levels = 2
+						levels = 3
 						region = STATE_FRANCONIA
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -43949,13 +43979,13 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:GER
-						levels = 1
+						levels = 3
 						region = STATE_HANNOVER
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -43985,7 +44015,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -44007,13 +44037,13 @@
 					building = {
 						type = building_financial_district
 						country = c:GER
-						levels = 7
+						levels = 4
 						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -44039,7 +44069,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_combustion_derricks pm_road_carts 
+					pm_combustion_derricks pm_tanker_cars 
 				}
 			}
 			create_building = {
@@ -44187,7 +44217,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -44389,13 +44419,13 @@
 					building = {
 						type = building_fishing_wharf
 						country = c:GER
-						levels = 1
+						levels = 3
 						region = STATE_MECKLENBURG
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -44539,7 +44569,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -44584,7 +44614,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -44790,7 +44820,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_no_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -44799,13 +44829,13 @@
 					building = {
 						type = building_manor_house
 						country = c:GER
-						levels = 3
+						levels = 6
 						region = STATE_POMERANIA
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -44820,7 +44850,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -44966,7 +44996,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -44975,13 +45005,13 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:GER
-						levels = 2
+						levels = 3
 						region = STATE_POSEN
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -45114,7 +45144,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -45262,7 +45292,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -45277,7 +45307,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -45339,6 +45369,51 @@
 				}
 			}
 			create_building = {
+				building = building_textile_mills
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 20
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automatic_power_looms pm_electric_sewing_machines pm_no_luxury_clothes 
+				}
+			}
+			create_building = {
+				building = building_furniture_manufacturies
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 25
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_mechanized_workshops pm_no_luxuries pm_rotary_valve_engine_building_furniture_manufacturies 
+				}
+			}
+			create_building = {
+				building = building_explosives_factory
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 25
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_brine_electrolysis 
+				}
+			}
+			create_building = {
 				building = building_government_administration
 				add_ownership = {
 					country = {
@@ -45395,7 +45470,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -45410,7 +45485,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -45528,7 +45603,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -45670,13 +45745,13 @@
 					building = {
 						type = building_fishing_wharf
 						country = c:GER
-						levels = 1
+						levels = 2
 						region = STATE_SCHLESWIG_HOLSTEIN
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -45777,7 +45852,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -45786,13 +45861,13 @@
 					building = {
 						type = building_financial_district
 						country = c:GER
-						levels = 20
+						levels = 50
 						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -45822,7 +45897,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_no_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -45837,7 +45912,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -45852,7 +45927,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -45955,7 +46030,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -45970,7 +46045,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trawlers pm_unrefrigerated 
+					pm_refrigerated_rail_cars_building_fishing_wharf pm_steam_trawlers 
 				}
 			}
 			create_building = {
@@ -46009,13 +46084,13 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:GER
-						levels = 2
+						levels = 3
 						region = STATE_WEST_PRUSSIA
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {
@@ -46144,7 +46219,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -46159,7 +46234,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_rail_transport_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -46204,7 +46279,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -46339,7 +46414,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+					pm_electric_saw_mills pm_no_hardwood pm_rail_transport_building_logging_camp pm_steam_donkey_building_logging_camp 
 				}
 			}
 			create_building = {
@@ -46369,7 +46444,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_rail_cars_building_livestock_ranch pm_sheep_farms 
 				}
 			}
 			create_building = {

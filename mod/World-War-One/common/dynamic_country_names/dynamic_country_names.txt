@@ -161,6 +161,63 @@ TAN = { # Tanzania (German East Africa)
 		}
 	}
 }
+NAM = { # Namibia (German South West Africa)
+	dynamic_country_name = {
+		name = dyn_c_german_namibia
+		adjective = dyn_c_german_namibia_adj
+
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			exists = c:GER
+			c:GER = {
+				has_diplomatic_pact = {
+					who = c:NAM
+					type = colony
+				}
+			}
+		}
+	}
+}
+TOG = { # Togoland
+	dynamic_country_name = {
+		name = dyn_c_german_togo
+		adjective = dyn_c_german_togo_adj
+
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			exists = c:GER
+			c:GER = {
+				has_diplomatic_pact = {
+					who = c:TOG
+					type = colony
+				}
+			}
+		}
+	}
+}
+CMR = { # Kamerun
+	dynamic_country_name = {
+		name = dyn_c_german_cameroun
+		adjective = dyn_c_german_cameroun_adj
+
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			exists = c:GER
+			c:GER = {
+				has_diplomatic_pact = {
+					who = c:CMR
+					type = colony
+				}
+			}
+		}
+	}
+}
 ROS = { # Sarawak (Raj of Sarawak)
 	dynamic_country_name = {
 		name = dyn_c_raj_sarawak
