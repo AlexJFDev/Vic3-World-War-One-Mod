@@ -169,7 +169,7 @@ YUN = { # Dian
 					has_law = law_type:law_mass_conscription
 					has_law = law_type:law_professional_army
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -231,7 +231,7 @@ YUN = { # Dian
 					coa_def_communist_flag_trigger = yes
 					has_law = law_type:law_autocracy 
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -245,7 +245,7 @@ YUN = { # Dian
 		trigger = {
 			scope:actor ?= {
 				coa_def_communist_flag_trigger = yes
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -296,7 +296,7 @@ YUE = { # Yue
 				has_law = law_type:law_presidential_republic
 				has_law = law_type:law_peasant_levies
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 			}
@@ -350,7 +350,7 @@ YUE = { # Yue
 			scope:actor ?= {
 				has_law = law_type:law_presidential_republic
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				NOT = {
@@ -374,7 +374,7 @@ YUE = { # Yue
 			scope:actor ?= {
 				has_law = law_type:law_presidential_republic
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				NOT = {
@@ -398,7 +398,7 @@ YUE = { # Yue
 			scope:actor ?= {
 				has_law = law_type:law_presidential_republic
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				NOT = {
@@ -469,7 +469,7 @@ YUE = { # Yue
 					has_law = law_type:law_peasant_levies
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -492,7 +492,7 @@ YUE = { # Yue
 		trigger = {
 			scope:actor ?= {
 				coa_def_communist_flag_trigger = yes
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -613,7 +613,7 @@ MCH = { # Feng
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -635,7 +635,7 @@ MCH = { # Feng
 						state_region = s:STATE_BEIJING
 						is_incorporated = yes
 					}
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 				}
 			}
 		}
@@ -690,7 +690,7 @@ GNG = { # Gui
 				has_law = law_type:law_autocracy 
 				has_law = law_type:law_peasant_levies
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 			}
@@ -707,7 +707,7 @@ GNG = { # Gui
 			scope:actor ?= {
 				has_law = law_type:law_presidential_republic
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				NOT = {
@@ -730,7 +730,7 @@ GNG = { # Gui
 		trigger = {
 			scope:actor ?= {
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				NOT = {
@@ -754,7 +754,7 @@ GNG = { # Gui
 			scope:actor ?= {
 				has_law = law_type:law_presidential_republic
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				NOT = {
@@ -793,7 +793,7 @@ GNG = { # Gui
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -807,7 +807,7 @@ GNG = { # Gui
 		trigger = {
 			scope:actor ?= {
 				coa_def_communist_flag_trigger = yes
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -899,7 +899,7 @@ HNA = { # Xiang
 				}
 				OR = {
 					country_has_voting_franchise = yes
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 				}
 				any_scope_state = {
 					state_region = s:STATE_EASTERN_HUBEI
@@ -1010,7 +1010,7 @@ HNA = { # Xiang
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1024,7 +1024,7 @@ HNA = { # Xiang
 		trigger = {
 			scope:actor ?= {
 				coa_def_communist_flag_trigger = yes
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1084,7 +1084,7 @@ AHU = { # Wan
 		trigger = {
 			scope:actor ?= {
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				any_scope_state = {
@@ -1107,7 +1107,7 @@ AHU = { # Wan
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1226,7 +1226,7 @@ ZHI = { # Zhi
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1311,7 +1311,7 @@ SHN = { # Jin
 		trigger = {
 			scope:actor ?= {
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				NOT = {
@@ -1399,7 +1399,7 @@ GUI = { # Qian
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1413,7 +1413,7 @@ GUI = { # Qian
 		trigger = {
 			scope:actor ?= {
 				coa_def_communist_flag_trigger = yes
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1486,7 +1486,7 @@ SIH = { # Chuan
 				}
 				OR = {
 					country_has_voting_franchise = yes
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 				}
 				any_scope_state = {
 					state_region = s:STATE_CHONGQING
@@ -1508,7 +1508,7 @@ SIH = { # Chuan
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1522,7 +1522,7 @@ SIH = { # Chuan
 		trigger = {
 			scope:actor ?= {
 				coa_def_communist_flag_trigger = yes
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1574,7 +1574,7 @@ XIK = { # Chuanbian
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1588,7 +1588,7 @@ XIK = { # Chuanbian
 		trigger = {
 			scope:actor ?= {
 				coa_def_communist_flag_trigger = yes
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1677,7 +1677,7 @@ SHA = { # Lu
 					has_law = law_type:law_monarchy
 					coa_def_communist_flag_trigger = yes
 				}
-				is_unification_candidate = ROC
+				is_unification_candidate = CHI
 			}
 		}
 	}
@@ -1699,7 +1699,7 @@ SHA = { # Lu
 						state_region = s:STATE_BEIJING
 						is_incorporated = yes
 					}
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 				}
 			}
 		}
@@ -1777,7 +1777,7 @@ XIB = { # Xibei
 		trigger = {
 			scope:actor ?= {
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				any_scope_state = {
@@ -2285,7 +2285,7 @@ ZHE = { # Zhejiang
 			scope:actor ?= {
 				has_law = law_type:law_presidential_republic
 				OR = {
-					is_unification_candidate = ROC
+					is_unification_candidate = CHI
 					country_has_voting_franchise = yes
 				}
 				NOT = {

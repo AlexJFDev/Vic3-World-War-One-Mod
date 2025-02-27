@@ -610,3 +610,24 @@ SPA = { # Spain
 		}
 	}
 }
+
+KMT = {
+   dynamic_country_name = {
+		name = dyn_c_kuomintang
+		adjective = adj_kuomintang
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			scope:actor ?= { 
+               NOT = {
+				  has_law = law_type:law_monarchy
+				  has_law = law_type:law_council_republic
+				  has_law = law_type:law_theocracy
+			   }
+			}
+		}
+	}	
+
+}

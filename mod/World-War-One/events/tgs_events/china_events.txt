@@ -20,10 +20,21 @@ china_events.1 = { #Je warlord china initiator
 
     option = {
         name = china_events.1.a
+        every_scope_character = {
+				limit = {
+					culture = cu:han
+					ruler = yes
+				}
+			save_scope_as = yuan_shikai
+		}
+        change_infamy = -1000
+        c:KMT = {
+            change_infamy = -1000
+        }
     }
 }
 
-china_events.4 = { #Yuan Shikai abdication
+china_events.4 = { #Yuan Shikai abdication 
     type = country_event
 
     title = china_events.4.t
@@ -47,6 +58,9 @@ china_events.4 = { #Yuan Shikai abdication
             is_player = no
         }
         set_variable = yuan_shikai_abdication
+        scope:yuan_shikai = {
+			kill_character = yes
+		}
     }
 
     option = {
@@ -54,6 +68,9 @@ china_events.4 = { #Yuan Shikai abdication
         trigger = {
             is_player = yes
         }
+        scope:yuan_shikai = {
+			kill_character = yes
+		}
     }
 }
 
@@ -81,63 +98,59 @@ china_events.5 = { #China collapse
         c:CHI = {
 		remove_diplomatic_pact = {
 			country = c:XIN
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:QIH
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:GAN
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:SIH
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:YUN
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:GUI
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:GNG
-			type = puppet
-		}
-		remove_diplomatic_pact = {
-			country = c:YUE
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:HNA
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:JXI
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:FRS
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:ZHE
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:JSU
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:QIN
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:SHN
-			type = puppet
+			type = protectorate
 		}
 		remove_diplomatic_pact = {
 			country = c:MCH
@@ -164,18 +177,25 @@ china_events.5 = { #China collapse
            activate_law = law_type:law_censorship
            }
         }
-        s:STATE_NORTHERN_ANHUI = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:CHI
-			    owner = {
-				  OR = {
-					c:CHI = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ZHI
-            }
+        create_country = { #Hubei
+	       tag = HUB
+	       origin = this
+	       state = s:STATE_WESTERN_HUBEI.region_state:chi
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
+        }
+        create_country = { #Anhui
+	       tag = AHU
+	       origin = this
+	       state = s:STATE_NORTHERN_ANHUI.region_state:chi
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
         }
         create_country = { #Henan
 	       tag = HEN
@@ -189,8 +209,8 @@ china_events.5 = { #China collapse
         }
         c:ZHI = {
             trigger_event = {
-                id = china_events.6
-                days = 400
+                id = 
+                days = 
             }
         }
         c:YUE = {
@@ -199,18 +219,12 @@ china_events.5 = { #China collapse
                 days = 600
             }
         }
-        c:MCH = {
-            trigger_event = {
-                id = china_events.8
-                days = 1400
-            }
-        }
         change_tag = BEI
 		set_global_variable = { name = chinese_central_government value = c:BEI }
     }
 }
 
-china_events.6 = { #Zhili attacks Jiangsu
+china_events.6 = { #Bei offers presidency to a clique
     type = country_event
 
     title = china_events.6.t
@@ -231,29 +245,45 @@ china_events.6 = { #Zhili attacks Jiangsu
     option = {
         name = china_events.6.a
         default_option = yes
-        escalation = 30
-        create_diplomatic_play = {
-		      target_country = c:JSU
-		      type = dp_annex_war
-	          add_war_goal = {
-		        holder = c:JSU
-		        type = annex_country
-		        target_country = c:ZHI
-            }
-	    }
-        ai_chance = {
-		base = 100
-	    }
-        c:ZHI = {
-		trigger_event = {
-			id = china_events.9
-			days = 415
+        c:AHU = {
+			create_diplomatic_pact = {
+				country = c:BEI
+				type = puppet
+			}
 		}
-	    }
+        c:AHU = {
+           has_variable = choosen_clique
+        }
 	}
 
     option = {
         name = china_events.6.b
+        c:ZHI = {
+			create_diplomatic_pact = {
+				country = c:BEI
+				type = puppet
+			}
+		}
+        c:ZHI = {
+           has_variable = choosen_clique
+        }
+    }
+
+    option = {
+        name = china_events.6.c
+        c:HUB = {
+			create_diplomatic_pact = {
+				country = c:BEI
+				type = puppet
+			}
+		}
+        c:HUB = {
+           has_variable = choosen_clique
+        }
+    }
+
+    option = {
+        name = china_events.6.e
     }
 }
 
@@ -431,5 +461,58 @@ china_events.10 = { #Zhili attacks Bei
 
     option = {
         name = china_events.10.b
+    }
+}
+
+china_events.11 = { #Japan formulate it's demands
+    type = country_event
+
+    title = china_events.11.t
+    desc = china_events.11.d
+    flavor = china_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.11.a
+        c:GBR = {
+            trigger_event = {
+                id = 
+                days = 5
+            }
+        }
+    }
+
+    option = {
+        name = china_events.11.b
+        c:GBR = {
+            trigger_event = {
+                id = 
+                days = 5
+            }
+        }
+    }
+
+    option = {
+        name = china_events.11.c
+        c:GBR = {
+            trigger_event = {
+                id = 
+                days = 5
+            }
+        }
+    }
+
+    option = {
+        name = china_events.11.e   
     }
 }
