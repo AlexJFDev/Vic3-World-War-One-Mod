@@ -83,76 +83,105 @@ china_events.2 = { #The Empire's restoration
 	        }
            }
         }
+        create_country = { #Yue
+	       tag = YUE
+	       origin = this
+	       state = s:STATE_GUANGDONG.region_state:CHI
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
+        }
+        s:STATE_SHAOZHOU = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:CHI
+			    owner = {
+				  OR = {
+					c:CHI = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:YUE
+            }
+        }
         c:YUN = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:GUI = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:SIH = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:HNA = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:JSU = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:JXI = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:ZHE = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:GNG = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:FRS = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:SHN = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
             }
         }
         c:SIH = {
             trigger_event = {
                 id = china_events.3
-                days = 30
+                days = 5
+            }
+        }
+        c:YUE = {
+            trigger_event = {
+                id = china_events.3
+                days = 5
             }
         }
         c:CHI = {
             trigger_event = {
                 id = china_events.4
-                days = 60
+                days = 180
             }
         }
         ai_chance = {

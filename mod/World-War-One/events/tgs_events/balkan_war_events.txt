@@ -140,10 +140,6 @@ balkan_war_events.3 = {
 	option = { # Give up the fight
 		name = balkan_war_events.3.a
         default_option = yes
-		ai_chance = {
-			base = 100
-		}
-
 		random_diplomatic_play = {
 				limit = {
 					c:BUL = {
@@ -153,7 +149,10 @@ balkan_war_events.3 = {
 						is_diplomatic_play_target = yes
 					}
 				}
-				add_diplomatic_play_war_support = { target = c:BUL value = -200 }
+			add_diplomatic_play_war_support = { target = c:BUL value = -200 }
+		}
+		ai_chance = {
+			base = 100
 		}
 	}
 	

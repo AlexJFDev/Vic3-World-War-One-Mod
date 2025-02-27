@@ -17360,18 +17360,68 @@
 	}
 	c:KMT = {
 		create_military_formation = {
+			name = Nanjing_Jun
+			type = army
+			hq_region = sr:region_south_china
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_NANJING
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_SOUTHERN_ANHUI
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_SUZHOU
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_NANJING
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SOUTHERN_ANHUI
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SUZHOU
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_NANJING
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_SOUTHERN_ANHUI
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_SUZHOU
+				count = 4
+			}
+		}
+		create_military_formation = {
 			name = Guangdong_Jun
 			type = army
 			hq_region = sr:region_south_china
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_GUANGDONG
-				count = 35
+				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_SHAOZHOU
-				count = 35
+				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons

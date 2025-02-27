@@ -251,19 +251,6 @@ republican_china = { # Beiyang Government stays yellow
 	}
 }
 
-kuomintang = {
-	color = "azure"
-
-	possible = {
-		exists = c:KMT
-		THIS = c:KMT
-		OR = {
-			has_law = law_type:law_parliamentary_republic
-			has_law = law_type:law_presidential_republic
-		}
-	}
-}
-
 han_imperial_china = {
 	color = "red_china"
 
