@@ -220,11 +220,10 @@ china_events.3 = { #The National Protection War
         default_option = yes
         every_diplomatic_play = {
 			limit = {
-				is_war = yes
 				initiator = c:ZHI
                 target = c:CHI
 			}
-			add_target_backers = {
+			add_initiator_backers = {
 				who = root
 			}
 		}
