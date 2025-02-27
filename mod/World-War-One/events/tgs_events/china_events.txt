@@ -27,11 +27,186 @@ china_events.1 = { #Je warlord china initiator
 				}
 			save_scope_as = yuan_shikai
 		}
-        change_infamy = -1000
-        c:KMT = {
-            change_infamy = -1000
+        change_infamy = -150
+        c:CHI = {
+            trigger_event = {
+                id = china_events.2
+                days = 800
+            }
         }
+    } 
+}
+
+china_events.2 = { #The Empire's restoration
+    type = country_event
+
+    title = china_events.2.t
+    desc = china_events.2.d
+    flavor = china_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
     }
+
+    trigger = {}
+
+    option = {
+        name = china_events.2.a
+        default_option = yes
+        activate_law = law_type:law_monarchy
+        create_country = { #Zhili
+	       tag = ZHI
+	       origin = this
+	       state = s:STATE_ZHILI.region_state:CHI
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           create_diplomatic_play = {
+		      target_country = c:CHI
+		      type = dp_regime_change
+	            add_war_goal = {
+		          holder = c:CHI
+		          type = annex_country
+		          target_country = c:ZHI
+                }
+                add_war_goal = {
+		          holder = c:ZHI
+		          type = humiliation
+		          target_country = c:CHI
+                }
+	        }
+           }
+        }
+        c:YUN = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:GUI = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:SIH = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:HNA = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:JSU = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:JXI = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:ZHE = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:GNG = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:FRS = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:SHN = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:SIH = {
+            trigger_event = {
+                id = china_events.3
+                days = 30
+            }
+        }
+        c:CHI = {
+            trigger_event = {
+                id = china_events.4
+                days = 60
+            }
+        }
+        ai_chance = {
+		base = 100
+	    }
+    } 
+
+    option = {
+        name = china_events.2.b
+        ai_chance = {
+		base = 0
+	    }
+    } 
+}
+
+china_events.3 = { #The National Protection War
+    type = country_event
+
+    title = china_events.3.t
+    desc = china_events.3.d
+    flavor = china_events.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.3.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+				is_war = yes
+				initiator = c:ZHI
+                target = c:CHI
+			}
+			add_target_backers = {
+				who = root
+			}
+		}
+        ai_chance = {
+		base = 100
+	    }
+    } 
+
+    option = {
+        name = china_events.3.b
+    } 
 }
 
 china_events.4 = { #Yuan Shikai abdication 
@@ -54,20 +229,18 @@ china_events.4 = { #Yuan Shikai abdication
 
     option = {
         name = china_events.4.a
-        trigger = {
-            is_player = no
-        }
-        set_variable = yuan_shikai_abdication
+        default_option = yes
+        set_variable = central_government_collapse
         scope:yuan_shikai = {
 			kill_character = yes
 		}
+        ai_chance = {
+		base = 100
+	    }
     }
 
     option = {
         name = china_events.4.b
-        trigger = {
-            is_player = yes
-        }
         scope:yuan_shikai = {
 			kill_character = yes
 		}
@@ -207,10 +380,33 @@ china_events.5 = { #China collapse
            activate_law = law_type:law_censorship
            }
         }
-        c:ZHI = {
+        create_country = { #Yue
+	       tag = YUE
+	       origin = this
+	       state = s:STATE_GUANGDONG.region_state:CHI
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
+        }
+        s:STATE_SHAOZHOU = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:CHI
+			    owner = {
+				  OR = {
+					c:CHI = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:YUE
+            }
+        }
+        c:BEI = {
             trigger_event = {
-                id = 
-                days = 
+                id = china_events.6
+                days = 5
             }
         }
         c:YUE = {
@@ -252,8 +448,35 @@ china_events.6 = { #Bei offers presidency to a clique
 			}
 		}
         c:AHU = {
-           has_variable = choosen_clique
+           set_variable = choosen_clique
         }
+        ai_chance = {
+		base = 50
+	    }
+        c:AHU = {
+		create_diplomatic_pact = {
+			country = c:ZHI
+			type = rivalry
+		}
+	    }
+        c:ZHI = {
+		create_diplomatic_pact = {
+			country = c:AHU
+			type = rivalry
+		}
+	    }
+        c:AHU = {
+		create_diplomatic_pact = {
+			country = c:HUB
+			type = rivalry
+		}
+	    }
+        c:HUB = {
+		create_diplomatic_pact = {
+			country = c:AHU
+			type = rivalry
+		}
+	    }
 	}
 
     option = {
@@ -265,8 +488,35 @@ china_events.6 = { #Bei offers presidency to a clique
 			}
 		}
         c:ZHI = {
-           has_variable = choosen_clique
+           set_variable = choosen_clique
         }
+        ai_chance = {
+		base = 30
+	    }
+        c:AHU = {
+		create_diplomatic_pact = {
+			country = c:ZHI
+			type = rivalry
+		}
+	    }
+        c:ZHI = {
+		create_diplomatic_pact = {
+			country = c:AHU
+			type = rivalry
+		}
+	    }
+        c:ZHI = {
+		create_diplomatic_pact = {
+			country = c:HUB
+			type = rivalry
+		}
+	    }
+        c:HUB = {
+		create_diplomatic_pact = {
+			country = c:ZHI
+			type = rivalry
+		}
+	    }
     }
 
     option = {
@@ -278,8 +528,35 @@ china_events.6 = { #Bei offers presidency to a clique
 			}
 		}
         c:HUB = {
-           has_variable = choosen_clique
+           set_variable = choosen_clique
         }
+        ai_chance = {
+		base = 20
+	    }
+        c:HUB = {
+		create_diplomatic_pact = {
+			country = c:AHU
+			type = rivalry
+		}
+	    }
+        c:AHU = {
+		create_diplomatic_pact = {
+			country = c:HUB
+			type = rivalry
+		}
+	    }
+        c:ZHI = {
+		create_diplomatic_pact = {
+			country = c:HUB
+			type = rivalry
+		}
+	    }
+        c:HUB = {
+		create_diplomatic_pact = {
+			country = c:ZHI
+			type = rivalry
+		}
+	    }   
     }
 
     option = {
@@ -308,11 +585,11 @@ china_events.7 = { #Yue attacks Gui
     option = {
         name = china_events.7.a
         default_option = yes
-        escalation = 30
         create_diplomatic_play = {
-		      target_country = c:GNG
-		      type = dp_annex_war
-	          add_war_goal = {
+		  target_country = c:GNG
+          escalation = 30
+		  type = dp_annex_war
+	        add_war_goal = {
 		        holder = c:GNG
 		        type = annex_country
 		        target_country = c:YUE
@@ -325,194 +602,5 @@ china_events.7 = { #Yue attacks Gui
 
     option = {
         name = china_events.7.b
-    }
-}
-
-china_events.8 = { #Fengtian attacks Bei
-    type = country_event
-
-    title = china_events.8.t
-    desc = china_events.8.d
-    flavor = china_events.8.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-
-    event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = china_events.8.a
-        default_option = yes
-        escalation = 30
-        create_diplomatic_play = {
-		      target_country = c:BEI
-              target_state = s:STATE_BEIJING.region_state:BEI
-		      type = dp_conquer_state
-	          add_war_goal = {
-		        holder = c:BEI
-		        type = annex_country
-		        target_country = c:MCH
-            }
-	    }
-        ai_chance = {
-		base = 100
-	    }
-	}
-
-    option = {
-        name = china_events.8.b
-    }
-}
-
-china_events.9 = { #Zhili attacks Henan
-    type = country_event
-
-    title = china_events.9.t
-    desc = china_events.9.d
-    flavor = china_events.9.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-
-    event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = china_events.9.a
-        default_option = yes
-        escalation = 30
-        create_diplomatic_play = {
-		      target_country = c:HEN
-		      type = dp_annex_war
-	          add_war_goal = {
-		        holder = c:HEN
-		        type = annex_country
-		        target_country = c:ZHI
-            }
-	    }
-        ai_chance = {
-		base = 100
-	    }
-        c:ZHI = {
-		trigger_event = {
-			id = china_events.10
-			days = 450
-		}
-	    }
-	}
-
-    option = {
-        name = china_events.9.b
-    }
-}
-
-china_events.10 = { #Zhili attacks Bei
-    type = country_event
-
-    title = china_events.10.t
-    desc = china_events.10.d
-    flavor = china_events.10.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-
-    event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = china_events.10.a
-        default_option = yes
-        escalation = 30
-        create_diplomatic_play = {
-		      target_country = c:BEI
-              target_state = s:STATE_EASTERN_HUBEI.region_state:BEI
-		      type = dp_conquer_state
-              add_war_goal = {
-		        holder = c:BEI
-		        type = conquer_state
-		        target_state = s:STATE_WESTERN_HUBEI.region_state:BEI
-              }
-	          add_war_goal = {
-		        holder = c:BEI
-		        type = annex_country
-		        target_country = c:ZHI
-              }
-	        }
-        ai_chance = {
-		base = 100
-	    }
-	}
-
-    option = {
-        name = china_events.10.b
-    }
-}
-
-china_events.11 = { #Japan formulate it's demands
-    type = country_event
-
-    title = china_events.11.t
-    desc = china_events.11.d
-    flavor = china_events.11.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-
-    event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = china_events.11.a
-        c:GBR = {
-            trigger_event = {
-                id = 
-                days = 5
-            }
-        }
-    }
-
-    option = {
-        name = china_events.11.b
-        c:GBR = {
-            trigger_event = {
-                id = 
-                days = 5
-            }
-        }
-    }
-
-    option = {
-        name = china_events.11.c
-        c:GBR = {
-            trigger_event = {
-                id = 
-                days = 5
-            }
-        }
-    }
-
-    option = {
-        name = china_events.11.e   
     }
 }
