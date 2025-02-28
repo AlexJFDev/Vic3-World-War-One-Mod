@@ -6,16 +6,18 @@
 	is_shown_when_inactive = {
         exists = c:CHI
         THIS = c:CHI
-        NOT = { has_global_variable = china_shatters }
+        NOT = { has_global_variable = china_central_government_collapse }
     }
     
     possible = {
         exists = c:CHI
         THIS = c:CHI
-        NOT = { has_global_variable = china_shatters }
+        NOT = { has_global_variable = china_central_government_collapse }
     }
 
-    immediate = {}
+    immediate = {
+        trigger_event = { id = china_events.1 popup = yes }
+    }
 
     modifiers_while_active = {
 		fragile_unity_modifier
@@ -28,6 +30,7 @@
             has_law = law_type:law_anarchy
             has_law = law_type:law_council_republic
             has_law = law_type:law_homesteading
+            has_law = law_type:law_collectivized_agriculture
 			has_law = law_type:law_proportional_taxation
 			has_law = law_type:law_graduated_taxation 
 		}
@@ -40,17 +43,11 @@
     fail = {
 	  OR = {
         has_modifier = country_humiliated
-		has_variable = central_government_collapse
-		any_political_movement = {
-            is_insurrectionary = yes
-			civil_war ?= {
-                OR = {
-                  is_civil_war_type = revolution
-                  is_civil_war_type = secession
-                }
-				civil_war_progress >= 0.75
-			}
-        }
+		has_global_variable = china_central_government_collapse
+		any_civil_war = {
+			civil_war_progress >= 0.75
+			is_civil_war_type = revolution
+		}
 	  }
     }
 
