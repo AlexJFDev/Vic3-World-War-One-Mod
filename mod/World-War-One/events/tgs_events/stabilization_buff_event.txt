@@ -305,3 +305,54 @@ stabilization_buff_events.11 = {
         }
     }
 }
+
+stabilization_buff_events.12 = { 
+    type = country_event
+
+    title = stabilization_buff_events.12.t
+    desc = stabilization_buff_events.12.d
+    flavor = stabilization_buff_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.12.a
+        default_option = yes
+        s:STATE_GUANGDONG = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:YUE
+			    owner = {
+				  OR = {
+					c:YUE = THIS
+				    }
+			    }
+		        }
+		      remove_modifier = recently_conquered_state
+            }
+        }
+        s:STATE_SHAOZHOU = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:YUE
+			    owner = {
+				  OR = {
+					c:YUE = THIS
+				    }
+			    }
+		        }
+		      remove_modifier = recently_conquered_state
+            }
+        }
+        add_radicals = {
+			value = -0.1
+		}
+    }
+}
