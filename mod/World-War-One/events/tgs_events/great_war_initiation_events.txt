@@ -864,6 +864,18 @@ great_war_initiation_events.13 = {
             is_decaying = yes
         }
         }
+        c:GER = {
+            trigger_event = { 
+                id = great_war_initiation_events.26
+                days = 30
+            }
+        }
+        c:FRA = {
+            trigger_event = { 
+                id = great_war_initiation_events.25
+                days = 30
+            }
+        }
     }
 }
 
@@ -1299,7 +1311,7 @@ great_war_initiation_events.23 = {
         name = great_war_initiation_events.23.b
         default_option = yes
         ai_chance = {
-            base = 0
+            base = 1
         }
         every_diplomatic_play = {
 			limit = {
@@ -1397,5 +1409,225 @@ great_war_initiation_events.24 = {
 				}
 			add_diplomatic_play_war_support = { target = c:LUX value = -200 }
 		}
+    }
+}
+
+#France decides to join again
+great_war_initiation_events.25 = {
+    type = country_event
+
+    duration = 6
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.25.t
+    desc = great_war_initiation_events.25.d
+    flavor = great_war_initiation_events.25.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Join the war
+        name = great_war_initiation_events.25.b
+        trigger = {
+           NOT = { has_global_variable = world_war_1_ongoing }
+        }
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:FRA
+			}
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_ILE_DE_FRANCE.region_state:FRA
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = humiliation
+                    target_country = c:GER
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = humiliation
+                    target_country = c:FRA
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = humiliation
+                    target_country = c:AUS
+                }
+        }
+        c:GER = {
+            trigger_event = {
+                id = great_war_initiation_events.14
+                days = 3
+            }
+        }
+        c:FRA = { set_variable = entente_participant }
+        c:FRA = {
+        create_bidirectional_truce = { 
+            country = c:GBR
+            months = 120
+        }
+        }
+    }
+
+    option = { # Stay Neutral
+        name = great_war_initiation_events.25.a
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+#Germany decides to attack France again
+great_war_initiation_events.26 = {
+    type = country_event
+
+    duration = 6
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.26.t
+    desc = great_war_initiation_events.26.d
+    flavor = great_war_initiation_events.26.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Join the war
+        name = great_war_initiation_events.26.b
+        default_option = yes
+        trigger = {
+           NOT = { has_global_variable = world_war_1_ongoing }
+        }
+        ai_chance = {
+            base = 1
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+			add_target_backers = {
+				c:FRA
+			}
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_ILE_DE_FRANCE.region_state:FRA
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = humiliation
+                    target_country = c:GER
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = humiliation
+                    target_country = c:FRA
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = humiliation
+                    target_country = c:AUS
+                }
+        }
+        c:GER = {
+            trigger_event = {
+                id = great_war_initiation_events.14
+                days = 3
+            }
+        }
+        c:FRA = { set_variable = entente_participant }
+        c:FRA = {
+        create_bidirectional_truce = { 
+            country = c:GBR
+            months = 120
+        }
+        }
+    }
+
+    option = { # Stay Neutral
+        name = great_war_initiation_events.26.a
+        ai_chance = {
+            base = 0
+        }
     }
 }
