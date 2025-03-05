@@ -1066,6 +1066,16 @@ joining_world_war_events.18 = { #USA joins
                 days = 210
             }
         }
+        c:USA = {
+        create_bidirectional_truce = { 
+            country = c:GBR
+            months = 120
+        }
+        create_bidirectional_truce = { 
+            country = c:FRA
+            months = 120
+        }
+        }
         ai_chance = {
             base = 100
         }

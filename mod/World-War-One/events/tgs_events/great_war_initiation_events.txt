@@ -742,11 +742,11 @@ great_war_initiation_events.12 = {
         c:ITA = {
         create_bidirectional_truce = { 
             country = c:GBR 
-            months = 120 
+            months = 12 
         }
         create_bidirectional_truce = { 
             country = c:FRA
-            months = 120 
+            months = 12
         }
         remove_diplomatic_pact = {
 			country = c:GER
@@ -1098,6 +1098,12 @@ great_war_initiation_events.15 = {
                 days = 200
             }
         }
+        c:GBR = {
+        create_bidirectional_truce = { 
+            country = c:FRA
+            months = 120
+        }
+        }
     }
     
     option = { # Do nothing
@@ -1176,6 +1182,16 @@ great_war_initiation_events.16 = {
 			}
 		}
         c:JAP = { set_variable = entente_participant }
+        c:JAP = {
+        create_bidirectional_truce = { 
+            country = c:GBR
+            months = 120
+        }
+        create_bidirectional_truce = { 
+            country = c:FRA
+            months = 120
+        }
+        }
     }
     option = { # Do nothing
         name = great_war_initiation_events.16.b
@@ -1319,6 +1335,16 @@ great_war_initiation_events.23 = {
                 }
         }
         c:POR = { set_variable = entente_participant }
+        c:POR = {
+        create_bidirectional_truce = { 
+            country = c:GBR
+            months = 120
+        }
+        create_bidirectional_truce = { 
+            country = c:FRA
+            months = 120
+        }
+        }
     }
     option = { # Stay Neutral
         name = great_war_initiation_events.22.a
