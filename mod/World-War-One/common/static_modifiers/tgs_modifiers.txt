@@ -316,6 +316,49 @@ warlord_policy_communism = {
     building_government_administration_throughput_add = 0.15
 }
 
+great_depression_effect_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_minting_mult = -0.5
+    country_loan_interest_rate_mult = 0.3
+    state_aristocrats_investment_pool_efficiency_mult = -3
+    state_capitalists_investment_pool_efficiency_mult = -5
+    state_shopkeepers_investment_pool_efficiency_mult = -7
+    state_clergymen_investment_pool_efficiency_mult = -7
+    state_farmers_investment_pool_efficiency_mult = -9
+    state_dependent_wage_mult = -0.1
+    country_state_religion_wages_mult = -0.2
+	country_non_state_religion_wages_mult = -0.2
+    state_lower_strata_standard_of_living_add = -2
+    state_middle_strata_standard_of_living_add = -1
+    state_upper_strata_standard_of_living_add = -0.5
+}
+
+banks_saved_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_loan_interest_rate_mult = -0.1
+    state_dependent_wage_mult = 0.05
+    country_state_religion_wages_mult = 0.1
+	country_non_state_religion_wages_mult = 0.05
+}
+
+angry_industrialists_1_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    interest_group_ig_industrialists_approval_add = -5
+}
+
+angry_population_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    political_movement_radicalism_add = 0.15
+    interest_group_ig_industrialists_approval_add = 5
+}
+
+smoot_hawley_tariff = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    tariff_modifier_no_priority = { tariff_import_add = 0.05 }	
+    tariff_modifier_export_priority = { tariff_import_add = 0.10 }
+    interest_group_ig_rural_folk_approval_add = 3
+}
+
 #Centralization Laws Events Modifiers
 
 # Confederated Law Modifiers

@@ -1,0 +1,159 @@
+﻿namespace = usa_events
+
+usa_events.1 = { #Finish the Panama Canal 
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/panama_canal.dds"
+    }
+
+    title = usa_events.1.t
+    desc = usa_events.1.d
+    flavor = usa_events.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    option = {
+        name = usa_events.1.a
+		custom_tooltip = panama_canal_construction_available
+        set_variable = panama_survey_complete
+    }
+}
+
+usa_events.2 = { #The Federal Reserve
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/federal_reserve.dds"
+    }
+
+    title = usa_events.2.t
+    desc = usa_events.2.d
+    flavor = usa_events.2.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.2.a
+        default_option = yes
+        add_modifier = {
+            name = federal_reserve_established_modifier
+            duration = -1
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = usa_events.2.b
+        add_modifier = {
+            name = no_federal_reserve_modifier
+            duration = -1
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+usa_events.6 = { #Black Tuesday
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.6.t
+    desc = usa_events.6.d
+    flavor = usa_events.6.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.6.a
+        default_option = yes
+        add_modifier = {
+            name = angry_population_modifier
+            years = 5
+            is_decaying = yes
+        }
+        trigger_event = {
+                id = usa_events.7
+                days = 60
+            }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = usa_events.6.b
+        add_treasury = -5000000
+        add_modifier = {
+            name = banks_saved_modifier
+            years = 3
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = angry_industrialists_1_modifier
+            years = 3
+            is_decaying = yes
+        }
+        trigger_event = {
+                id = usa_events.7
+                days = 60
+            }
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+usa_events.7 = { #Smoot–Hawley Tariff
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.7.t
+    desc = usa_events.7.d
+    flavor = usa_events.7.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.7.a
+        default_option = yes
+        add_modifier = {
+            name = smoot_hawley_tariff
+            years = 2
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = usa_events.7.a
+        ai_chance = {
+			base = 0
+		}
+    }
+}
