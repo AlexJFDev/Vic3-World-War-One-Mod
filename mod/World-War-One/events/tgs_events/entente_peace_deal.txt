@@ -3466,10 +3466,17 @@ entente_peace_deal.14 = { #Serbia changes to Yugoslavia
 
     option = {
         name = entente_peace_deal.14.a
+		default_option = yes
 		change_tag = YUG
+		ai_chance = {
+			base = 10
+		}
 	}
 
 	option = {
         name = entente_peace_deal.14.b
+		ai_chance = {
+			base = 0
+		}
 	}
 }

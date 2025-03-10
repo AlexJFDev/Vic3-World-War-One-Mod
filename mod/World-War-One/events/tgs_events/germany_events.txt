@@ -433,6 +433,88 @@ germany_events.8 = { #Cultural minority movement nerf
     }
 }
 
+germany_events.9 = { #Ottoman Empire capitulates
+    type = country_event
+
+    title = germany_events.9.t
+    desc = germany_events.9.d
+    flavor = germany_events.9.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/protest.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.9.a
+         ai_chance = {
+            base = 100
+        }
+        every_diplomatic_play = {
+			limit = {
+                initiator = {
+                    or = {
+						exists = c:GER								
+						this = c:GER								
+				    }
+                    or = {
+						exists = c:AUS							
+						this = c:AUS						
+				    }
+                    or = {
+						exists = c:TUR						
+						this = c:TUR						
+				    }
+                }
+                target = {	
+					or = {
+						exists = c:SER								
+						this = c:SER								
+				    }
+                    or = {
+						exists = c:RUS								
+						this = c:RUS						
+				    }
+                    or = {
+						exists = c:FRA							
+						this = c:FRA							
+				    }
+                    or = {
+						exists = c:GBR								
+						this = c:GBR							
+				    }
+                    or = {
+						exists = c:ITA							
+						this = c:ITA								
+				    }
+                    or = {
+						exists = c:ROM						
+						this = c:ROM								
+				    }
+                    or = {
+						exists = c:GRE					
+						this = c:GRE								
+				    }
+			    }
+			}
+            add_diplomatic_play_war_support = { target = c:TUR value = -200 }   
+        }
+    }
+
+    option = {
+        name = germany_events.9.b
+         ai_chance = {
+            base = 0
+        }
+    }
+}
+
 germany_events.20 = { #Avoided fascist threat
     type = country_event
 

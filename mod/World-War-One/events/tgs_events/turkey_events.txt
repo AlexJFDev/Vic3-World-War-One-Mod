@@ -88,7 +88,7 @@ turkey_events.4 = { #Mustapha Kemal denounces the Sultan
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/turkish_revolution"
+        texture = "gfx/event_pictures/turkish_revolution.dds"
     }
 
     trigger = {}
@@ -112,7 +112,7 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/turkish_revolution"
+        texture = "gfx/event_pictures/turkish_revolution.dds"
     }
 
     trigger = {}
@@ -124,43 +124,40 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_right_of_assembly
         add_modifier = {
-			name = army_buff_modifier_1
+			name = army_buff_modifier_2
             years = 3
             is_decaying = yes
 		}
         add_modifier = {
-			name = minting_buff_4_modifier
-            years = 5
+			name = minting_buff_5_modifier
+            years = 3
             is_decaying = yes
 		}
-        c:TUR = {
 		create_diplomatic_play = {
-              escalation = 80
-		      target_country = c:GRE
-		      type = humiliation
-	          war = yes
-	          add_war_goal = {
+		    target_country = c:GRE
+		    type = dp_humiliation
+            escalation = 80
+	        add_war_goal = {
                     holder = c:TUR
                     type = conquer_state
                     target_state = s:STATE_EASTERN_THRACE.region_state:GRE
                 }
-              add_war_goal = {
+            add_war_goal = {
                     holder = c:TUR
                     type = conquer_state
                     target_state = s:STATE_HUDAVENDIGAR.region_state:GRE
                 }
-              add_war_goal = {
+            add_war_goal = {
                     holder = c:TUR
                     type = conquer_state
                     target_state = s:STATE_AYDIN.region_state:GRE
                 }
-              add_war_goal = {
+            add_war_goal = {
                     holder = c:GRE
                     type = war_reparations
-                    target_country: c:TUR
+                    target_country = c:TUR
                 }
-	        }
-        } 
+	    }
         c:GBR = {
             trigger_event = {
                 id = turkey_events.6
@@ -178,9 +175,15 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                 id = turkey_events.6
                 days = 5
             }
-        }  
-    }
-}
+        } 
+        c:GRE = {
+            trigger_event = {
+                id = turkey_events.7
+                days = 100
+            }
+        } 
+    } 
+}   
 
 turkey_events.6 = { #Countries react to revolution
     type = country_event
@@ -195,7 +198,7 @@ turkey_events.6 = { #Countries react to revolution
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/turkish_revolution"
+        texture = "gfx/event_pictures/turkish_revolution.dds"
     }
 
     trigger = {}
@@ -239,7 +242,7 @@ turkey_events.7 = { #Countries refrain from intervening furthermore
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/turkish_revolution"
+        texture = "gfx/event_pictures/turkish_revolution.dds"
     }
 
     trigger = {}

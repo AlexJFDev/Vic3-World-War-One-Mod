@@ -15,7 +15,7 @@
 		        value < 5
 		    }
 		}
-        root.average_sol <= 13
+        average_sol < average_expected_sol
         market_capital.market = {
 			   mg:grain = { 
 				 market_goods_pricier > 0.1
@@ -38,8 +38,7 @@
 
     complete = {
       OR = {
-           is_at_war = no
-           root.average_sol >= 14
+           root.average_sol >= 15
            market_capital.market = {
 			   mg:grain = { 
 				 market_goods_pricier < 0.05
@@ -85,6 +84,12 @@
                 days = 15
             }
         }
+      c:TUR = {
+            trigger_event = {
+                id = germany_events.9
+                days = 15
+            }
+        }
       set_variable = german_revolution_1
     }
 
@@ -109,6 +114,18 @@
 			id = germany_events.2
             days = 5
 		}
+        c:AUS = {
+            trigger_event = {
+                id = germany_events.6
+                days = 15
+            }
+        }
+        c:TUR = {
+            trigger_event = {
+                id = germany_events.9
+                days = 15
+            }
+        }
 	}
 
     timeout = -1
