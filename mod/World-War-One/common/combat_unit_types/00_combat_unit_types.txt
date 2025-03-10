@@ -698,6 +698,10 @@ combat_unit_type_hussars = {
         combat_unit_type_dragoons
         combat_unit_type_cuirassiers
         combat_unit_type_lancers
+        combat_unit_type_fighter
+        combat_unit_type_bomber
+        combat_unit_type_close_air_support
+        combat_unit_type_light_tanks
     }
 }
 
@@ -823,6 +827,10 @@ combat_unit_type_cuirassiers = {
     upgrades = {
         combat_unit_type_dragoons
         combat_unit_type_lancers
+        combat_unit_type_fighter
+        combat_unit_type_bomber
+        combat_unit_type_close_air_support
+        combat_unit_type_light_tanks
     }
 }
 
@@ -888,10 +896,14 @@ combat_unit_type_lancers = {
     upgrades = {
         combat_unit_type_dragoons
         combat_unit_type_cuirassiers
+        combat_unit_type_fighter
+        combat_unit_type_bomber
+        combat_unit_type_close_air_support
+        combat_unit_type_light_tanks
     }
 }
 
-combat_unit_type_fighter  = {
+combat_unit_type_fighter = {
     group = combat_unit_group_cavalry
 
     can_build_conscript = {
@@ -921,8 +933,6 @@ combat_unit_type_fighter  = {
 
 	unlocking_technologies = { military_aviation }
 
-    
-
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/fighter.dds"
@@ -933,7 +943,7 @@ combat_unit_type_fighter  = {
     }
 }
 
-combat_unit_type_bomber  = {
+combat_unit_type_bomber = {
     group = combat_unit_group_cavalry
 
     can_build_conscript = {
@@ -963,16 +973,12 @@ combat_unit_type_bomber  = {
 
 	unlocking_technologies = { military_aviation }
 
-    
-
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/bomber.dds"
     }
 
-    upgrades = {
-        
-    }
+    upgrades = {}
 }
 
 combat_unit_type_light_tanks = {
@@ -1010,7 +1016,7 @@ combat_unit_type_light_tanks = {
     }
 }
 
-combat_unit_type_close_air_support  = {
+combat_unit_type_close_air_support = {
     group = combat_unit_group_cavalry
 
     can_build_conscript = {
@@ -1041,15 +1047,13 @@ combat_unit_type_close_air_support  = {
 
 	unlocking_technologies = { aerial_ground_support } 
 
-    
-
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/close_air_support.dds"
     }
 
-    upgrades = {
-        
+    upgrades = { 
+        combat_unit_type_fighter
     }
 }
 
