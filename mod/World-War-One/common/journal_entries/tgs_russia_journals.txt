@@ -27,7 +27,6 @@
             has_law = law_type:law_universal_suffrage
             has_law = law_type:law_anarchy
             has_law = law_type:law_council_republic
-            has_law = law_type:law_homesteading
             root.average_sol >= 10
         }
     }
@@ -80,7 +79,6 @@
 			add_civil_war_progress = -100
 		}
         remove_modifier = war_protests_1_modifier
-        remove_modifier = colossus_with_feet_of_clay_modifier
         remove_variable = no_reform_russia
         set_global_variable = russian_revolution_1
     }
@@ -209,16 +207,18 @@ je_soviet_threat = {
     }
 
     invalid = {
-        has_variable = entente_participant
-        OR = {
-        c:GER = {
-          has_variable = central_powers_participant
-		  has_modifier = country_humiliated
-        } 
-        c:AUS = {
-          has_variable = central_powers_participant
-		  has_modifier = country_humiliated
-        } 
+        AND = {
+          has_variable = entente_participant
+           OR = {
+             c:GER = {
+                 has_variable = central_powers_participant
+		         has_modifier = country_humiliated
+                } 
+             c:AUS = {
+                 has_variable = central_powers_participant
+		         has_modifier = country_humiliated
+                } 
+            }
         }
     }
 

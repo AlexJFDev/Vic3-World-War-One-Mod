@@ -2740,6 +2740,17 @@ ideology_fascist = {
 			}
 			multiply = 1.25
 		}
+		# Fascist threat JE causes an uptick in fascism
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_journal_entry = je_fascist_threat
+					}
+				}
+			}
+			multiply = 1.25
+		}
 		if = { #Brazil has Integralists instead
 			limit = {
 				owner = {

@@ -432,3 +432,64 @@ germany_events.8 = { #Cultural minority movement nerf
 		}
     }
 }
+
+germany_events.20 = { #Avoided fascist threat
+    type = country_event
+
+    title = germany_events.20.t
+    desc = germany_events.20.d
+    flavor = germany_events.20.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/german_revolution.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.20.a
+        
+    }
+}
+
+germany_events.21 = { #Fascist takeover
+    type = country_event
+
+    title = germany_events.21.t
+    desc = germany_events.21.d
+    flavor = germany_events.21.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/german_revolution.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.21.a
+        activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_censorship
+        activate_law = law_type:law_national_supremacy
+        activate_law = law_type:law_secret_police
+        activate_law = law_type:law_unitary
+    }
+
+    option = {
+        name = germany_events.21.b
+    }
+}
