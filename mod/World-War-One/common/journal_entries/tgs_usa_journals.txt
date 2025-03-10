@@ -8,7 +8,7 @@
     }
     
     possible = {
-        investment_pool_gross_income > 10000000
+        investment_pool_net_income >= 2000000
         NOT = {
            OR = {
               has_global_variable = central_powers_partial_victory
@@ -41,15 +41,7 @@
     }
 
     complete = {
-        c:USA = {
-           lower_strata_pops = {
-              standard_of_living > 12
-            }
-           middle_strata_pops = {
-              standard_of_living > 15
-            }
-        }
-        has_variable = new_deal
+        root.average_sol >= 20
     }
 
     on_complete = {}

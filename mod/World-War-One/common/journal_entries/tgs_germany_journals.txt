@@ -15,11 +15,7 @@
 		        value < 5
 		    }
 		}
-        market_capital.market = {
-        mg:grain = { 
-				market_goods_pricier > 0.15 
-			}
-        }
+        root.average_sol =< 12
     }
 
     modifiers_while_active = {
@@ -37,17 +33,8 @@
 
     complete = {
       OR = {
-          c:GER = {
-            is_at_war = no 
-          }
-          market_capital.market = {
-          mg:grain = { 
-				market_goods_pricier < 0.05 
-			}
-          mg:clothes = { 
-				market_goods_pricier < 0.2 
-			}
-          }
+           is_at_war = no
+           root.average_sol >= 15
         }
     }
     
