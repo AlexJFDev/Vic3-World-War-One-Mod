@@ -91,12 +91,11 @@ turkey_events.4 = { #Mustapha Kemal denounces the Sultan
         texture = "gfx/event_pictures/turkish_revolution"
     }
 
-     trigger = {}
+    trigger = {}
 
     option = { 
         name = turkey_events.4.a
         default_option = yes
-        
     }
 }
 
@@ -136,6 +135,7 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 		}
         c:TUR = {
 		create_diplomatic_play = {
+              escalation = 80
 		      target_country = c:GRE
 		      type = humiliation
 	          war = yes
