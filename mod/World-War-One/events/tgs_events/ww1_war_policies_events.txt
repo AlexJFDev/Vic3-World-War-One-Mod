@@ -46,3 +46,105 @@ ww1_war_policies_events.1 = {
         } 
     }
 }
+
+ww1_war_policies_events.2 = {
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/military_parade.dds"
+    }
+ 
+    title = ww1_war_policies_events.2.t
+    desc = ww1_war_policies_events.2.d
+    flavor = ww1_war_policies_events.2.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    is_triggered_only = yes
+    duration = 3
+
+    trigger = { }
+    
+    option = {
+        name = ww1_war_policies_events.2.a
+        default_option = yes
+        add_technology_progress = { progress = 8000 technology = military_aviation } 
+    }
+
+    option = {
+        name = ww1_war_policies_events.2.b
+        add_technology_progress = { progress = 8000 technology = concrete_fortifications } 
+    }
+    
+    option = {
+        name = ww1_war_policies_events.2.c
+        add_technology_progress = { progress = 8000 technology = flamethrowers } 
+    }
+
+    option = {
+        name = ww1_war_policies_events.2.e
+        add_technology_progress = { progress = 8000 technology = chemical_warfare } 
+    }
+
+    option = {
+        name = ww1_war_policies_events.2.g
+        add_technology_progress = { progress = 8000 technology = mobile_armor } 
+    }
+
+    option = {
+        name = ww1_war_policies_events.2.h
+        add_technology_progress = { progress = 8000 technology = stormtroopers } 
+    }
+}
+
+ww1_war_policies_events.3 = {
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/battleship.dds"
+    }
+ 
+    title = ww1_war_policies_events.2.t
+    desc = ww1_war_policies_events.2.d
+    flavor = ww1_war_policies_events.2.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    is_triggered_only = yes
+    duration = 3
+
+    trigger = { }
+    
+    option = {
+        name = ww1_war_policies_events.3.a #Submarine warfare
+        default_option = yes
+        add_modifier = {
+        name = submarine_focus_modifier
+        years = 6
+        is_decaying = yes
+        } 
+        ai_chance = {
+		  base = 2
+	    }
+    }
+
+    option = {
+        name = ww1_war_policies_events.3.b #Production
+        add_modifier = {
+        name = naval_production_focus_modifier
+        years = 6
+        is_decaying = yes
+        } 
+        ai_chance = {
+		  base = 1
+	    }
+    }
+    
+    option = {
+        name = ww1_war_policies_events.3.c #Science effort
+        add_technology_progress = { progress = 8000 technology = battleship }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+}

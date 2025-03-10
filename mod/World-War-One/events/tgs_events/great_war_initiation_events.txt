@@ -473,7 +473,7 @@ great_war_initiation_events.8 = {
         c:RUS = { set_variable = entente_participant }
         c:GER = {
             trigger_event = {
-                id = ww1_war_techs_events.1
+                id = ww1_war_policies_events.2
                 days = 15
             }
             trigger_event = {
@@ -483,7 +483,7 @@ great_war_initiation_events.8 = {
         }
         c:AUS = {
             trigger_event = {
-                id = ww1_war_techs_events.1
+                id = ww1_war_policies_events.2
                 days = 15
             }
             trigger_event = {
@@ -493,7 +493,7 @@ great_war_initiation_events.8 = {
         }
         c:RUS = {
             trigger_event = {
-                id = ww1_war_techs_events.1
+                id = ww1_war_policies_events.2
                 days = 15
             }
             trigger_event = {
@@ -660,7 +660,7 @@ great_war_initiation_events.10 = {
         c:FRA = { set_variable = entente_participant }
         c:FRA = {
             trigger_event = {
-                id = ww1_war_techs_events.1
+                id = ww1_war_policies_events.2
                 days = 15
             }
             trigger_event = {
@@ -719,7 +719,7 @@ great_war_initiation_events.12 = {
         c:ITA = { set_variable = central_powers_participant }
         c:ITA = {
             trigger_event = {
-                id = ww1_war_techs_events.1
+                id = ww1_war_policies_events.2
                 days = 15
             }
             trigger_event = {
@@ -842,7 +842,7 @@ great_war_initiation_events.13 = {
         c:FRA = { set_variable = entente_participant }
         c:FRA = {
             trigger_event = {
-                id = ww1_war_techs_events.1
+                id = ww1_war_policies_events.2
                 days = 15
             }
             trigger_event = {
@@ -927,7 +927,12 @@ great_war_initiation_events.14 = {
             name = schlieffen_plan_1_modifier
             months = 5
         }
-        
+        c:GER = {
+            trigger_event = {
+                id = ww1_war_policies_events.3
+                days = 3
+            }
+        }
         every_diplomatic_play = {
             limit = {
                 initiator = c:AUS
@@ -977,7 +982,12 @@ great_war_initiation_events.14 = {
             name = schlieffen_plan_2_modifier
             months = 8
         }
-        
+        c:GER = {
+            trigger_event = {
+                id = ww1_war_policies_events.3
+                days = 3
+            }
+        }
         every_diplomatic_play = {
             limit = {
                 initiator = c:AUS
@@ -1005,6 +1015,12 @@ great_war_initiation_events.14 = {
                 name = angry_military_modifier
                 years = 5
                 is_decaying = yes
+            }
+        }
+        c:GER = {
+            trigger_event = {
+                id = ww1_war_policies_events.3
+                days = 3
             }
         }
     }
@@ -1088,7 +1104,7 @@ great_war_initiation_events.15 = {
         c:GBR = { set_variable = entente_participant }
         c:GBR = {
             trigger_event = {
-                id = ww1_war_techs_events.1
+                id = ww1_war_policies_events.2
                 days = 15
             }
             trigger_event = {
@@ -1283,93 +1299,6 @@ great_war_initiation_events.17 = {
     }
     option = { # Do nothing
         name = great_war_initiation_events.17.b
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-#Portugal decides to join or not in 1916
-great_war_initiation_events.23 = {
-    type = country_event
-
-    duration = 3
-
-    duration = 1
-
-    event_image = { 
-        texture = "gfx/event_pictures/july_crisis.dds"
-    }
-
-    title = great_war_initiation_events.23.t
-    desc = great_war_initiation_events.23.d
-    flavor = great_war_initiation_events.23.f
-
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-    option = { # Join the war
-        name = great_war_initiation_events.23.b
-        default_option = yes
-        ai_chance = {
-            base = 1
-        }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
-			add_target_backers = {
-				c:POR
-			}
-            add_war_goal = {
-                    holder = c:GER
-                    type = war_reparations
-                    target_country = c:POR
-                }
-        }
-        c:POR = { set_variable = entente_participant }
-        c:POR = {
-        create_bidirectional_truce = { 
-            country = c:GBR
-            months = 120
-        }
-        create_bidirectional_truce = { 
-            country = c:FRA
-            months = 120
-        }
-        }
-    }
-    option = { # Stay Neutral
-        name = great_war_initiation_events.22.a
         ai_chance = {
             base = 0
         }
