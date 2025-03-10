@@ -95,7 +95,7 @@ ww1_war_policies_events.2 = {
         name = ww1_war_policies_events.2.h
         add_technology_progress = { progress = 8000 technology = stormtroopers } 
     }
-}
+} 
 
 ww1_war_policies_events.3 = {
     type = country_event
@@ -104,9 +104,9 @@ ww1_war_policies_events.3 = {
         texture = "gfx/event_pictures/battleship.dds"
     }
  
-    title = ww1_war_policies_events.2.t
-    desc = ww1_war_policies_events.2.d
-    flavor = ww1_war_policies_events.2.f
+    title = ww1_war_policies_events.3.t
+    desc = ww1_war_policies_events.3.d
+    flavor = ww1_war_policies_events.3.f
 
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -142,7 +142,7 @@ ww1_war_policies_events.3 = {
     
     option = {
         name = ww1_war_policies_events.3.c #Science effort
-        add_technology_progress = { progress = 8000 technology = battleship }
+        add_technology_progress = { progress = 5000 technology = battleship_tech }
         ai_chance = {
 		  base = 1
 	    }

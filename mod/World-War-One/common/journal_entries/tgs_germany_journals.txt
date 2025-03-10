@@ -15,7 +15,12 @@
 		        value < 5
 		    }
 		}
-        root.average_sol =< 12
+        root.average_sol <= 13
+        market_capital.market = {
+			   mg:grain = { 
+				 market_goods_pricier > 0.1
+			    }
+		    }
     }
 
     modifiers_while_active = {
@@ -34,7 +39,12 @@
     complete = {
       OR = {
            is_at_war = no
-           root.average_sol >= 15
+           root.average_sol >= 14
+           market_capital.market = {
+			   mg:grain = { 
+				 market_goods_pricier < 0.05
+			    }
+		    }
         }
     }
     
