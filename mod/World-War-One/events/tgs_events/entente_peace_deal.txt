@@ -657,6 +657,12 @@ entente_peace_deal.1 = { #Entente victory
                 days = 5
             }
         } 
+		c:SER = {
+            trigger_event = {
+                id = entente_peace_deal.14
+                days = 5
+            }
+        } 
 	}
 	}
 }
@@ -3438,5 +3444,32 @@ entente_peace_deal.13 = { #Poland's expansion fix
 		      set_state_owner = c:POL
             }
         }
+	}
+}
+
+entente_peace_deal.14 = { #Serbia changes to Yugoslavia
+    type = country_event
+    
+    duration = 3
+
+    event_image = { 
+		texture = "gfx/event_pictures/politics_europe.dds"
+	}
+
+    title = entente_peace_deal.14.t
+	desc = entente_peace_deal.14.d
+	flavor = entente_peace_deal.14.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.14.a
+		change_tag = YUG
+	}
+
+	option = {
+        name = entente_peace_deal.14.b
 	}
 }

@@ -459,26 +459,6 @@ AUS = { # Austria
 	}
 }
 
-SER = { #Yugoslavia
-	dynamic_country_name = {
-		name = dyn_yugoslavia
-        adjective = dyn_yugoslavia_adj
-
-		is_main_tag_only = yes
-		priority = 100
-
-		trigger = {
-			scope:actor ?= {
-				owns_entire_state_region = STATE_SLAVONIA
-				owns_entire_state_region = STATE_BOSNIA
-				owns_entire_state_region = STATE_NORTHERN_SERBIA
-				owns_entire_state_region = STATE_SOUTHERN_SERBIA
-				owns_entire_state_region = STATE_SKOPIA
-			}
-		}
-	}
-}
-
 PER = { Persia
 	dynamic_country_name = {
 		name = dyn_c_iran
