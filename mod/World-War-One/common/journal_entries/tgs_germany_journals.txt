@@ -159,7 +159,7 @@ je_socialist_split = {
     immediate = {
        c:GER = {
             trigger_event = {
-                id = germany_events.21
+                id = germany_events.22
                 days = 5
             }
         }
@@ -230,7 +230,8 @@ je_fascist_threat = {
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
-        
+        exists = c:GER
+        THIS = c:GER
     }
     
     possible = {
@@ -257,44 +258,17 @@ je_fascist_threat = {
     complete = {}
     
     fail = { 
-      OR = {
-          any_political_movement = {
-            OR = {
-				is_political_movement_type = movement_fascist
-				is_political_movement_type = movement_reactionary
-                is_political_movement_type = movement_cultural_majority
+        any_interest_group = {
+            is_powerful = yes  
+			leader = {
+				has_fascist_ideology = yes
+				has_reactionnary_ideology = yes
+                has_authoritarien_ideology = yes
+				has_ethno_nationalist_ideology = yes
+                has_integralist_ideology = yes
 			}
-            is_insurrectionary = yes
-			civil_war ?= {
-                OR = {
-                  is_civil_war_type = revolution
-                  is_civil_war_type = secession
-                }
-				civil_war_progress >= 0.75
-			}
-            }
-            any_interest_group = {
-                AND = {
-                  is_in_government = yes
-				  is_strongest_ig_in_government = yes
-                }
-				OR = {
-					has_ideology = ideology:ideology_fascist
-                    has_ideology = ideology:ideology_reactionary
-                    has_ideology = ideology:ideology_authoritarian
-                    has_ideology = ideology:ideology_ethno_nationalist
-                    has_ideology = ideology:ideology_integralist
-				  leader = {
-						has_fascist_ideology = yes
-						has_reactionnary_ideology = yes
-                        has_authoritarien_ideology = yes
-						has_ethno_nationalist_ideology = yes
-                        has_integralist_ideology = yes
-					}
-				}
-			}
-        }
-    }
+		}
+	}
 
     on_complete = {
         trigger_event = { id = germany_events.20 popup = yes }

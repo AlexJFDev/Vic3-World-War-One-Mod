@@ -125,7 +125,7 @@ germany_events.2 = { #November Revolution
     }
 }
 
-germany_events.3 = { #Fascist threat je initiation
+germany_events.3 = { #Nazi threat je initiation
     type = country_event
 
     title = germany_events.3.t
@@ -145,6 +145,35 @@ germany_events.3 = { #Fascist threat je initiation
 
     option = {
         name = germany_events.3.a
+        create_character = {
+            first_name = Adolf
+	        last_name = Hitler
+	        historical = yes
+            birth_date = 1889.20.4
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+		     cruel
+             cocaine_addiction
+             firebrand
+             wrathful
+	        }
+	        on_created = {
+               set_variable = {
+                  name = adolf_hitler
+                }                
+            }
+        }
+        c:GER = {
+            trigger_event = {
+                id = germany_events.23
+                years = 10
+            }
+        }
     }
 }
 
@@ -515,7 +544,7 @@ germany_events.9 = { #Ottoman Empire capitulates
     }
 }
 
-germany_events.20 = { #Avoided fascist threat
+germany_events.20 = { #Invite fascists to governement
     type = country_event
 
     title = germany_events.20.t
@@ -530,13 +559,39 @@ germany_events.20 = { #Avoided fascist threat
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/german_revolution.dds"
+        texture = "gfx/event_pictures/fascist_leader.dds"
     }
 
     trigger = {}
 
     option = {
         name = germany_events.20.a
+        c:GER = {
+            trigger_event = {
+                id = germany_events.21
+                days = 90
+            }
+        }
+        any_interest_group = {
+          limit = {
+            is_powerful = yes  
+			leader = {
+				has_fascist_ideology = yes
+				has_reactionnary_ideology = yes
+                has_authoritarien_ideology = yes
+				has_ethno_nationalist_ideology = yes
+                has_integralist_ideology = yes
+			}
+            }
+            leader = {
+				set_character_as_ruler = yes
+			}
+			add_ruling_interest_group = yes
+		}
+    }
+
+    option = {
+        name = germany_events.20.b
         
     }
 }
@@ -556,7 +611,7 @@ germany_events.21 = { #Fascist takeover
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/german_revolution.dds"
+        texture = "gfx/event_pictures/fascist_leader.dds"
     }
 
     trigger = {}
@@ -570,18 +625,14 @@ germany_events.21 = { #Fascist takeover
         activate_law = law_type:law_secret_police
         activate_law = law_type:law_unitary
     }
-
-    option = {
-        name = germany_events.21.b
-    }
 }
 
-germany_events.21 = { #Negotiation with Communists
+germany_events.22 = { #Negotiation with Communists
     type = country_event
 
-    title = germany_events.21.t
-    desc = germany_events.21.d
-    flavor = germany_events.21.f
+    title = germany_events.22.t
+    desc = germany_events.22.d
+    flavor = germany_events.22.f
     
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -597,7 +648,7 @@ germany_events.21 = { #Negotiation with Communists
     trigger = {}
 
     option = {
-        name = germany_events.21.a
+        name = germany_events.22.a
         default_option = yes
         add_modifier = {
           name = angry_communists_2_modifier
@@ -610,7 +661,7 @@ germany_events.21 = { #Negotiation with Communists
     }
 
     option = {
-        name = germany_events.21.b
+        name = germany_events.22.b
         activate_law = law_type:law_graduated_taxation
         ai_chance = {
             base = 1
@@ -618,7 +669,7 @@ germany_events.21 = { #Negotiation with Communists
     }
 
     option = {
-        name = germany_events.21.c
+        name = germany_events.22.c
         activate_law = law_type:law_collectivized_agriculture
         ai_chance = {
             base = 0
@@ -626,7 +677,7 @@ germany_events.21 = { #Negotiation with Communists
     }
 
     option = {
-        name = germany_events.21.e
+        name = germany_events.22.e
         activate_law = law_type:law_command_economy
         ai_chance = {
             base = 0
@@ -634,12 +685,57 @@ germany_events.21 = { #Negotiation with Communists
     }
 
     option = {
-        name = germany_events.21.g
+        name = germany_events.22.g
         activate_law = law_type:law_command_economy
         activate_law = law_type:law_collectivized_agriculture
         activate_law = law_type:law_graduated_taxation
         ai_chance = {
             base = 0
+        }
+    }
+}
+
+germany_events.23 = { #Hitler becomes leader of the Petite Bourgeoisie
+    type = country_event
+
+    title = germany_events.23.t
+    desc = germany_events.23.d
+    flavor = germany_events.23.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.23.a
+        if = {
+			random_scope_character =  {
+				limit = {
+					has_variable = adolf_hitler
+				}
+				remove_character_role = agitator
+		        add_character_role = politician
+                set_as_interest_group_leader = yes
+			}
+		}
+    }
+
+    option = {
+        name = germany_events.23.b
+        trigger = {
+            NOT = {
+                has_law = law_type:law_right_of_assembly
+				has_law = law_type:law_protected_speech
+            }
         }
     }
 }
