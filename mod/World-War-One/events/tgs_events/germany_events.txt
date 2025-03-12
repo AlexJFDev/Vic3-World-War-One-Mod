@@ -293,7 +293,7 @@ germany_events.6 = { #Austria-Hungary capitulates
 
     option = {
         name = germany_events.6.a
-         ai_chance = {
+        ai_chance = {
             base = 100
         }
         set_variable = small_austria
@@ -573,5 +573,73 @@ germany_events.21 = { #Fascist takeover
 
     option = {
         name = germany_events.21.b
+    }
+}
+
+germany_events.21 = { #Negotiation with Communists
+    type = country_event
+
+    title = germany_events.21.t
+    desc = germany_events.21.d
+    flavor = germany_events.21.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/german_communism.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.21.a
+        default_option = yes
+        add_modifier = {
+          name = angry_communists_2_modifier
+          years = 5
+          is_decaying = yes
+        } 
+        ai_chance = {
+            base = 9
+        }
+    }
+
+    option = {
+        name = germany_events.21.b
+        activate_law = law_type:law_graduated_taxation
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = germany_events.21.c
+        activate_law = law_type:law_collectivized_agriculture
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = germany_events.21.e
+        activate_law = law_type:law_command_economy
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = germany_events.21.g
+        activate_law = law_type:law_command_economy
+        activate_law = law_type:law_collectivized_agriculture
+        activate_law = law_type:law_graduated_taxation
+        ai_chance = {
+            base = 0
+        }
     }
 }

@@ -369,6 +369,20 @@ naval_production_focus_modifier = {
     building_military_shipyards_throughput_add = 0.15
 }
 
+angry_communists_1_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+    state_pop_support_movement_labor_mult = 0.8
+    state_pop_support_movement_communist_mult = 0.3
+    state_pop_support_movement_socialist_mult = 0.5
+    interest_group_ig_trade_unions_approval_add = -5
+    interest_group_ig_trade_unions_pol_str_mult = 0.5
+}
+
+angry_communists_2_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+    interest_group_ig_trade_unions_approval_add = -8
+}
+
 fascist_threat_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.2

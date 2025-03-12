@@ -215,10 +215,6 @@ turkey_events.6 = { #Countries react to revolution
 				who = root
 			}
         }
-        trigger_event = {
-                id = turkey_events.7
-                days = 90
-            }
         ai_chance = {
 		  base = 100
 	    }
@@ -229,7 +225,7 @@ turkey_events.6 = { #Countries react to revolution
     }
 }
 
-turkey_events.7 = { #Countries refrain from intervening furthermore
+turkey_events.7 = { #Countries refrain from intervening furthermore (Not activated ATM)
     type = country_event
 
     title = turkey_events.7.t
@@ -250,13 +246,17 @@ turkey_events.7 = { #Countries refrain from intervening furthermore
     option = { 
         name = turkey_events.7.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:TUR
-                target = c:GRE
-			}
-            add_diplomatic_play_war_support = { who = root value = -200 }
-        }
+        random_diplomatic_play = {
+				limit = {
+					c:TUR = {
+						is_diplomatic_play_initiator = yes
+					}
+					c:GRE = {
+						is_diplomatic_play_target = yes
+					}
+				}
+			add_diplomatic_play_war_support = { target = root value = -200 }
+		}
         ai_chance = {
 		base = 100
 		modifier = {

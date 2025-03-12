@@ -152,6 +152,19 @@ je_socialist_split = {
       }
     }
 
+    modifiers_while_active = {
+        angry_communists_1_modifier
+    }
+
+    immediate = {
+       c:GER = {
+            trigger_event = {
+                id = germany_events.21
+                days = 5
+            }
+        }
+    }
+
     complete = {
         ig:ig_trade_unions  = {
 			ig_approval > 8
@@ -179,7 +192,7 @@ je_socialist_split = {
 			}
             }
             ig:ig_trade_unions  = {
-				ig_approval < -4
+				ig_approval < -10
 			}	
         }
     }
@@ -217,17 +230,7 @@ je_fascist_threat = {
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
-        exists = c:GER
-        THIS = c:GER
-        OR = {
-         has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
-         has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
-         has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
-        }
-        OR = {
-         has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
-         has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
-        }
+        
     }
     
     possible = {
@@ -258,9 +261,8 @@ je_fascist_threat = {
           any_political_movement = {
             OR = {
 				is_political_movement_type = movement_fascist
-				is_political_movement_type = movement_reactionnary
+				is_political_movement_type = movement_reactionary
                 is_political_movement_type = movement_cultural_majority
-                is_political_movement_type = movement_integralist
 			}
             is_insurrectionary = yes
 			civil_war ?= {
@@ -272,11 +274,13 @@ je_fascist_threat = {
 			}
             }
             any_interest_group = {
-				is_in_government = yes
-				is_strongest_ig_in_government = yes
+                AND = {
+                  is_in_government = yes
+				  is_strongest_ig_in_government = yes
+                }
 				OR = {
 					has_ideology = ideology:ideology_fascist
-                    has_ideology = ideology:ideology_reactionnary
+                    has_ideology = ideology:ideology_reactionary
                     has_ideology = ideology:ideology_authoritarian
                     has_ideology = ideology:ideology_ethno_nationalist
                     has_ideology = ideology:ideology_integralist
