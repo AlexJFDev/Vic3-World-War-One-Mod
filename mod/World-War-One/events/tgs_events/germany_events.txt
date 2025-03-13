@@ -168,10 +168,117 @@ germany_events.3 = { #Nazi threat je initiation
                 }                
             }
         }
+        create_character = {
+            first_name = Ernst
+	        last_name = Rohm
+	        historical = yes
+            birth_date = 1887.11.28
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_general = yes
+            is_agitator = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_fascist
+	        traits = {
+		     cruel
+             bigoted
+	        }
+	        on_created = {
+               set_variable = {
+                  name = ernst_rohm
+                }                
+            }
+        }
+        create_character = {
+            first_name = Joseph
+	        last_name = Goebbels
+	        historical = yes
+            birth_date = 1897.10.29
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+             expert_political_operator
+             demagogue
+             firebrand
+             experienced_diplomat
+	        }
+	        on_created = {
+               set_variable = {
+                  name = joseph_goebbels
+                }                
+            }
+        }
+        create_character = {
+            first_name = Rudolf
+	        last_name = Hess
+	        historical = yes
+            birth_date = 1894.04.26
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+             firebrand
+	        }
+	        on_created = {
+               set_variable = {
+                  name = rudolf_hess
+                }                
+            }
+        }
+        create_character = {
+            first_name = Heinrich
+	        last_name = Himler
+	        historical = yes
+            birth_date = 1900.10.07
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+             cruel
+             master_bureaucrat
+	        }
+	        on_created = {
+               set_variable = {
+                  name = heinrich_himler
+                }                
+            }
+        }
+        create_character = {
+            first_name = Heinz
+	        last_name = Guderian
+	        historical = yes
+            birth_date = 1888.06.17
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_fascist
+	        traits = {
+              expert_offensive_planner
+              innovative
+	        }
+	        on_created = {
+               set_variable = {
+                  name = heinz_guderian
+                }                
+            }
+        }
         c:GER = {
             trigger_event = {
                 id = germany_events.23
-                years = 10
+                years = 13
             }
         }
     }
@@ -554,9 +661,15 @@ germany_events.20 = { #Invite fascists to governement
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
-    immediate = {}
+    immediate = {
+        scope:fascist_2_ig = {
+            leader = {
+			  set_variable = fascist_leader_2
+			}
+		}
+    }
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
@@ -566,33 +679,21 @@ germany_events.20 = { #Invite fascists to governement
 
     option = {
         name = germany_events.20.a
+        default_option = yes
         c:GER = {
             trigger_event = {
                 id = germany_events.21
                 days = 90
             }
         }
-        any_interest_group = {
-          limit = {
-            is_powerful = yes  
-			leader = {
-				has_fascist_ideology = yes
-				has_reactionnary_ideology = yes
-                has_authoritarien_ideology = yes
-				has_ethno_nationalist_ideology = yes
-                has_integralist_ideology = yes
-			}
-            }
-            leader = {
-				set_character_as_ruler = yes
-			}
-			add_ruling_interest_group = yes
+        random_scope_character = {
+            limit = { has_variable = fascist_leader_2 }
+            set_character_as_ruler = yes
 		}
     }
 
     option = {
         name = germany_events.20.b
-        
     }
 }
 
@@ -606,7 +707,7 @@ germany_events.21 = { #Fascist takeover
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     immediate = {}
 
@@ -620,10 +721,17 @@ germany_events.21 = { #Fascist takeover
         name = germany_events.21.a
         activate_law = law_type:law_presidential_republic
         activate_law = law_type:law_single_party_state
-        activate_law = law_type:law_censorship
+        activate_law = law_type:law_outlawed_dissent
         activate_law = law_type:law_national_supremacy
         activate_law = law_type:law_secret_police
         activate_law = law_type:law_unitary
+        activate_law = law_type:law_no_colonial_affairs
+        c:AUS = {
+            trigger_event = {
+                id = germany_events.25
+                years = 5
+            }
+        }
     }
 }
 
@@ -637,7 +745,7 @@ germany_events.22 = { #Negotiation with Communists
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     immediate = {}
 
@@ -705,7 +813,7 @@ germany_events.23 = { #Hitler becomes leader of the Petite Bourgeoisie
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     immediate = {}
 
@@ -736,6 +844,105 @@ germany_events.23 = { #Hitler becomes leader of the Petite Bourgeoisie
                 has_law = law_type:law_right_of_assembly
 				has_law = law_type:law_protected_speech
             }
+        }
+    }
+}
+
+germany_events.24 = { #Rhineland Renegotiation
+    type = country_event
+
+    title = germany_events.24.t
+    desc = germany_events.24.d
+    flavor = germany_events.24.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/political_agreement.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.24.a
+        s:STATE_NORTH_RHINE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RHE
+			    owner = {
+				  OR = {
+					c:RHE = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GER
+            }
+        }
+        s:STATE_RHINELAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RHE
+			    owner = {
+				  OR = {
+					c:RHE = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GER
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.24.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+germany_events.25 = { #Anschluss
+    type = country_event
+
+    title = germany_events.25.t
+    desc = germany_events.25.d
+    flavor = germany_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/political_agreement.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.25.a
+        c:GER = {
+            annex = c:AUS
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.25.b
+        ai_chance = {
+            base = 0
         }
     }
 }

@@ -36,15 +36,13 @@
         }
     }
 
-    complete = {
-      OR = {
-           root.average_sol >= 15
-           market_capital.market = {
-			   mg:grain = { 
-				 market_goods_pricier < 0.05
-			    }
-		    }
-        }
+    complete = { 
+        average_sol > average_expected_sol
+        market_capital.market = {
+			mg:grain = { 
+				market_goods_pricier < 0.05
+			}
+		}
     }
     
     fail = { 
@@ -261,21 +259,36 @@ je_fascist_threat = {
         any_interest_group = {
             is_powerful = yes  
 			leader = {
-				has_fascist_ideology = yes
-				has_reactionnary_ideology = yes
-                has_authoritarien_ideology = yes
-				has_ethno_nationalist_ideology = yes
-                has_integralist_ideology = yes
+				OR = {
+				    has_ideology = ideology:ideology_fascist
+				    has_ideology = ideology:ideology_reactionary
+                    has_ideology = ideology:ideology_integralist
+                    has_ideology = ideology:ideology_authoritarian
+                }
 			}
 		}
 	}
 
     on_complete = {
-        trigger_event = { id = germany_events.20 popup = yes }
+        trigger_event = { id =  popup = yes }
     }
 
     on_fail = {
-        trigger_event = { id = germany_events.21 popup = yes }
+        trigger_event = { id = germany_events.20 popup = yes }
+        any_interest_group = {
+          limit = {
+              is_powerful = yes  
+			  leader = {
+                 OR = {
+				     has_ideology = ideology:ideology_facist
+				     has_ideology = ideology:ideology_reactionary
+                     has_ideology = ideology:ideology_integralist
+                     has_ideology = ideology:ideology_authoritarian
+                    }
+			    }
+            }
+            save_scope_as = fascist_2_ig
+		}
     }
       
     timeout = -1
