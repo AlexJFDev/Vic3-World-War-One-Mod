@@ -1,24 +1,36 @@
 ﻿DIPLOMATIC_PLAYS = {
-    c:KMT = {
+    c:CHI = {
         create_diplomatic_play = {
             name = second_revolution
 
-            target_country = c:CHI
+            target_state = s:STATE_SUZHOU.region_state:KMT
 
-            type = dp_annex_war
+            type = dp_conquer_state
 
             escalation = 80
 
             add_war_goal = {
                 holder = c:CHI
-                type = annex_country
-				target_country = c:KMT
+                type = conquer_state
+                target_state = s:STATE_NANJING.region_state:KMT
+            }
+
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_SOUTHERN_ANHUI.region_state:KMT
+            }
+
+            add_war_goal = {
+                holder = c:SIH
+                type = conquer_state
+                target_state = s:STATE_CHONGQING.region_state:KMT
             }
 
             add_war_goal = {
                 holder = c:CHI
                 type = make_protectorate
-				target_country = c:JSU
+				target_country = c:KMT
             }
 
             add_war_goal = {
@@ -36,62 +48,17 @@
             add_war_goal = {
                 holder = c:CHI
                 type = make_protectorate
-				target_country = c:JXI
-            }
-
-            add_war_goal = {
-                holder = c:CHI
-                type = make_protectorate
 				target_country = c:HNA
             }
-
-            add_war_goal = {
-                holder = c:CHI
-                type = make_protectorate
-				target_country = c:GNG
-            }
-
-            add_war_goal = {
-                holder = c:CHI
-                type = make_protectorate
-				target_country = c:GUI
-            }
-
-            add_war_goal = {
-                holder = c:CHI
-                type = make_protectorate
-				target_country = c:YUN
-            }
-
-            add_war_goal = {
-                holder = c:CHI
-                type = make_protectorate
-				target_country = c:SIH
-            }
             
-            add_initiator_backers = {
-                c:JSU
-            }
-            add_initiator_backers = {
+            add_target_backers = {
                 c:ZHE
             }
-            add_initiator_backers = {
+            add_target_backers = {
                 c:FRS
             }
-            add_initiator_backers = {
-                c:JXI
-            }
-            add_initiator_backers = {
+            add_target_backers = {
                 c:HNA
-            }
-            add_initiator_backers = {
-                c:GNG
-            }
-            add_initiator_backers = {
-                c:GUI
-            }
-            add_initiator_backers = {
-                c:YUN
             }
             add_initiator_backers = {
                 c:SIH

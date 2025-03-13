@@ -31,6 +31,12 @@ china_events.1 = { #Je warlord china initiator
                 days = 900
             }
         }
+        c:KMT = {
+            trigger_event = {
+                id = china_events.9
+                days = 120
+            }
+        }
     } 
 }
 
@@ -66,33 +72,20 @@ china_events.2 = { #Imperial restoration
            activate_law = law_type:law_censorship
            }
         }
-        create_country = { #Yue
-	       tag = YUE
+        create_country = { #Hubei
+	       tag = HUB
 	       origin = this
-	       state = s:STATE_GUANGDONG.region_state:CHI
+	       state = s:STATE_WESTERN_HUBEI.region_state:CHI
            on_created = { 
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_autocracy
            activate_law = law_type:law_censorship
            }
         }
-        s:STATE_SHAOZHOU = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:CHI
-			    owner = {
-				  OR = {
-					c:CHI = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:YUE
-            }
-        }
-        create_country = { #Hubei
-	       tag = HUB
+        create_country = { #Jiangsu
+	       tag = JSU
 	       origin = this
-	       state = s:STATE_WESTERN_HUBEI.region_state:CHI
+	       state = s:STATE_JIANGSU.region_state:CHI
            on_created = { 
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_autocracy
@@ -129,6 +122,19 @@ china_events.2 = { #Imperial restoration
            activate_law = law_type:law_censorship
            }
         }
+        s:STATE_HINGGAN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:CHI
+			    owner = {
+				  OR = {
+					c:CHI = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:MCH
+            }
+        }
         c:YUN = {
           create_diplomatic_play = {
 		    target_country = c:CHI
@@ -153,6 +159,10 @@ china_events.2 = { #Imperial restoration
 		    }
             create_diplomatic_pact = {
 			  country = c:SHA
+			  type = protectorate
+		    }
+            create_diplomatic_pact = {
+			  country = c:JSU
 			  type = protectorate
 		    }
 		    create_diplomatic_pact = {
@@ -600,6 +610,19 @@ china_events.5 = { #China collapse
 		      set_state_owner = c:YUE
             }
         }
+        s:STATE_HINGGAN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:CHI
+			    owner = {
+				  OR = {
+					c:CHI = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:MCH
+            }
+        }
         c:CHI = {
             trigger_event = {
                 id = china_events.6
@@ -1024,4 +1047,109 @@ china_events.8 = { #Yue attacks Gui
     option = {
         name = china_events.8.b
     }
+}
+
+china_events.9 = { #Kuomintang decides to capitulate or not
+    type = country_event
+
+    title = china_events.9.t
+    desc = china_events.9.d
+    flavor = china_events.9.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.9.a
+        default_option = yes
+        every_diplomatic_play = {
+				limit = {
+					c:CHI = {
+						is_diplomatic_play_initiator = yes
+					}
+					c:KMT = {
+						is_diplomatic_play_target = yes
+					}
+				}
+			add_diplomatic_play_war_support = { target = c:KMT value = -200 }
+		}
+        c:CHI = {
+            trigger_event = {
+                id = china_events.10
+                days = 10
+            }
+        }
+        change_tag = YUE
+        ai_chance = {
+		base = 10
+	    }
+	}
+
+    option = {
+        name = china_events.9.b
+        c:CHI = {
+            trigger_event = {
+                id = china_events.10
+                days = 60
+            }
+        }
+        ai_chance = {
+		base = 0
+	    }
+    }
+}
+
+china_events.10 = { #Post revolution states repartition
+    type = country_event
+
+    title = china_events.10.t
+    desc = china_events.10.d
+    flavor = china_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.10.a
+        default_option = yes
+        create_country = { #Jiangxi
+	       tag = JXI
+	       origin = this
+	       state = s:STATE_JIANGXI.region_state:YUE
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           activate_law = law_type:law_autocracy
+           activate_law = law_type:law_censorship
+           }
+        }
+        c:CHI = {
+            create_diplomatic_pact = {
+			  country = c:YUE
+			  type = protectorate
+		    }
+            create_diplomatic_pact = {
+			  country = c:JXI
+			  type = protectorate
+		    }
+        }
+        ai_chance = {
+		base = 10
+	    }
+	}
 }

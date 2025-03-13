@@ -14790,7 +14790,7 @@
 	}
 	c:TAN = {
 		create_military_formation = {
-			name = Tanga_Garnison
+			name = Askari_Armee
 			type = army
 			hq_region = sr:region_zanj
 			combat_unit = {
@@ -17479,6 +17479,16 @@
 				count = 1
 			}
 		}
+		create_military_formation = {
+			name = Jiangxi_Jun
+			type = army
+			hq_region = sr:region_south_china
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_JIANGXI
+				count = 35
+			}
+		}
 	}
 	c:HNA = {
 		create_military_formation = {
@@ -17489,18 +17499,6 @@
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_HUNAN
 				count = 20
-			}
-		}
-	}
-	c:JXI = {
-		create_military_formation = {
-			name = Jiangxi_Jun
-			type = army
-			hq_region = sr:region_south_china
-			combat_unit = {
-				type = unit_type:combat_unit_type_skirmish_infantry
-				state_region = s:STATE_JIANGXI
-				count = 35
 			}
 		}
 	}
