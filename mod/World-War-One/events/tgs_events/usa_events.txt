@@ -83,15 +83,60 @@ usa_events.6 = { #Black Tuesday
     option = {
         name = usa_events.6.a
         default_option = yes
+        add_investment_pool = -9999999999
         add_modifier = {
             name = angry_population_modifier
             years = 5
             is_decaying = yes
         }
-        trigger_event = {
+        c:USA = {
+           trigger_event = {
                 id = usa_events.7
                 days = 60
             }
+        }
+        c:BRZ = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:CAN = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:GBR = {
+           trigger_event = {
+                id = usa_events.9
+                days = 30
+            }
+        }
+        c:FRA = {
+           trigger_event = {
+                id = usa_events.9
+                days = 30
+            }
+        }
+        c:GER = {
+           trigger_event = {
+                id = usa_events.10
+                days = 30
+            }
+        }
+        c:ITA = {
+           trigger_event = {
+                id = usa_events.9
+                days = 30
+            }
+        }
+        c:JAP = {
+           trigger_event = {
+                id = usa_events.9
+                days = 30
+            }
+        }
         ai_chance = {
 			base = 10
 		}
@@ -100,6 +145,7 @@ usa_events.6 = { #Black Tuesday
     option = {
         name = usa_events.6.b
         add_treasury = -10000000
+        add_investment_pool = -9999999999
         add_modifier = {
             name = banks_saved_modifier
             years = 3
@@ -110,10 +156,54 @@ usa_events.6 = { #Black Tuesday
             years = 3
             is_decaying = yes
         }
-        trigger_event = {
+        c:USA = {
+           trigger_event = {
                 id = usa_events.7
                 days = 60
             }
+        }
+        c:BRZ = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:CAN = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:GBR = {
+           trigger_event = {
+                id = usa_events.9
+                days = 30
+            }
+        }
+        c:FRA = {
+           trigger_event = {
+                id = usa_events.9
+                days = 30
+            }
+        }
+        c:GER = {
+           trigger_event = {
+                id = usa_events.10
+                days = 30
+            }
+        }
+        c:ITA = {
+           trigger_event = {
+                id = usa_events.9
+                days = 30
+            }
+        }
+        c:JAP = {
+           trigger_event = {
+                id = usa_events.9
+                days = 30
+            }
+        }
         ai_chance = {
 			base = 0
 		}
@@ -145,6 +235,7 @@ usa_events.7 = { #Smoot–Hawley Tariff
             years = 2
             is_decaying = yes
         }
+        set_variable = great_depression_started
         ai_chance = {
 			base = 10
 		}
@@ -152,8 +243,103 @@ usa_events.7 = { #Smoot–Hawley Tariff
 
     option = {
         name = usa_events.7.a
+        set_variable = great_depression_started
         ai_chance = {
 			base = 0
+		}
+    }
+}
+
+usa_events.8 = { #Countries with international connection
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.8.t
+    desc = usa_events.8.d
+    flavor = usa_events.8.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.8.a
+        default_option = yes
+        add_modifier = {
+            name = great_depression_effect_2
+            years = 5
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+}
+
+usa_events.9 = { #Countries with us loans
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.9.t
+    desc = usa_events.9.d
+    flavor = usa_events.9.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.9.a
+        default_option = yes
+        add_modifier = {
+            name = great_depression_effect_2
+            years = 10
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+}
+
+usa_events.10 = { #Germany's crash
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.10.t
+    desc = usa_events.10.d
+    flavor = usa_events.10.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.10.a
+        default_option = yes
+        add_investment_pool = -9999999999
+        add_modifier = {
+            name = great_depression_effect_3
+            years = 10
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 10
 		}
     }
 }

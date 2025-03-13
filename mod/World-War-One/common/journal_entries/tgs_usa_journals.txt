@@ -8,7 +8,7 @@
     }
     
     possible = {
-        investment_pool_net_income >= 2000000
+        gdp > 630000000
         NOT = {
            OR = {
               has_global_variable = central_powers_partial_victory
@@ -27,24 +27,21 @@
         }
     }
 
+    immediate = {
+        trigger_event = {
+            id = usa_events.6
+            days = 5
+        }
+    }
+
     modifiers_while_active = {
         great_depression_effect_1
     }
 
-    immediate = {
-       c:USA = {
-            trigger_event = {
-                id = usa_events.6
-                days = 5
-            }
-        }
-    }
-
     complete = {
-        root.average_sol >= 20
+        average_sol > average_expected_sol
+        has_variable = great_depression_started
     }
-
-    on_complete = {}
 
     timeout = -1
     should_be_pinned_by_default = yes
