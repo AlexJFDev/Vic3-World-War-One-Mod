@@ -356,3 +356,26 @@ stabilization_buff_events.12 = {
 		}
     }
 }
+
+stabilization_buff_events.13 = { 
+    type = country_event
+
+    title = stabilization_buff_events.13.t
+    desc = stabilization_buff_events.13.d
+    flavor = stabilization_buff_events.13.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.13.a
+        default_option = yes
+        set_state_religion = rel:catholic
+    }
+}
