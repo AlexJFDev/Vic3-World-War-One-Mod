@@ -667,6 +667,12 @@ entente_peace_deal.1 = { #Entente victory
                 days = 5
             }
         } 
+		c:USA = {
+         trigger_event = {
+              id = usa_events.9
+              days = 60
+            }
+        }
 	}
 	}
 }
@@ -1157,8 +1163,8 @@ entente_peace_deal.2 = { #Round 1 result
         }
 		c:FRA = {
          trigger_event = {
-          id = germany_events.24
-          years = 12
+              id = germany_events.24
+              years = 12
             }
         }
     }
@@ -2311,7 +2317,7 @@ entente_peace_deal.8 = { #Round 7 result
 	       origin = this
 	       state = s:STATE_LEBANON.region_state:TUR
            on_created = { 
-           activate_law = law_type:law_monarchy
+           activate_law = law_type:law_parliamentary_republic
            activate_law = law_type:law_census_voting
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism

@@ -101,6 +101,18 @@ usa_events.6 = { #Black Tuesday
                 days = 30
             }
         }
+        c:ARG = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:MEX = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
         c:CAN = {
            trigger_event = {
                 id = usa_events.8
@@ -109,31 +121,55 @@ usa_events.6 = { #Black Tuesday
         }
         c:GBR = {
            trigger_event = {
-                id = usa_events.9
+                id = usa_events.8
                 days = 30
             }
         }
         c:FRA = {
            trigger_event = {
-                id = usa_events.9
+                id = usa_events.8
                 days = 30
             }
         }
         c:GER = {
            trigger_event = {
-                id = usa_events.10
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:NET = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:BEL = {
+           trigger_event = {
+                id = usa_events.8
                 days = 30
             }
         }
         c:ITA = {
            trigger_event = {
-                id = usa_events.9
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:SPA = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:POR = {
+           trigger_event = {
+                id = usa_events.8
                 days = 30
             }
         }
         c:JAP = {
            trigger_event = {
-                id = usa_events.9
+                id = usa_events.8
                 days = 30
             }
         }
@@ -168,6 +204,18 @@ usa_events.6 = { #Black Tuesday
                 days = 30
             }
         }
+        c:ARG = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:MEX = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
         c:CAN = {
            trigger_event = {
                 id = usa_events.8
@@ -176,31 +224,55 @@ usa_events.6 = { #Black Tuesday
         }
         c:GBR = {
            trigger_event = {
-                id = usa_events.9
+                id = usa_events.8
                 days = 30
             }
         }
         c:FRA = {
            trigger_event = {
-                id = usa_events.9
+                id = usa_events.8
                 days = 30
             }
         }
         c:GER = {
            trigger_event = {
-                id = usa_events.10
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:NET = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:BEL = {
+           trigger_event = {
+                id = usa_events.8
                 days = 30
             }
         }
         c:ITA = {
            trigger_event = {
-                id = usa_events.9
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:SPA = {
+           trigger_event = {
+                id = usa_events.8
+                days = 30
+            }
+        }
+        c:POR = {
+           trigger_event = {
+                id = usa_events.8
                 days = 30
             }
         }
         c:JAP = {
            trigger_event = {
-                id = usa_events.9
+                id = usa_events.8
                 days = 30
             }
         }
@@ -250,7 +322,7 @@ usa_events.7 = { #Smoot–Hawley Tariff
     }
 }
 
-usa_events.8 = { #Countries with international connection
+usa_events.8 = { #Others countries gets Great Depression repercussions
     type = country_event
 
     event_image = {
@@ -269,7 +341,14 @@ usa_events.8 = { #Countries with international connection
 
     option = {
         name = usa_events.8.a
-        default_option = yes
+        trigger = { 
+            NOT = {
+                OR = {
+                  has_variable = has_received_usa_loans
+                  has_variable = has_received_dawes_plan
+                }
+            }
+        }
         add_modifier = {
             name = great_depression_effect_2
             years = 5
@@ -279,9 +358,43 @@ usa_events.8 = { #Countries with international connection
 			base = 10
 		}
     }
+
+    option = {
+        name = usa_events.8.b
+        trigger = { 
+            has_variable = has_received_usa_loans
+            NOT = {
+                has_variable = has_received_dawes_plan
+            }
+        }
+        add_modifier = {
+            name = great_depression_effect_2
+            years = 10
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = usa_events.8.b
+        trigger = { 
+            has_variable = has_received_dawes_plan
+        }
+        add_investment_pool = -9999999999
+        add_modifier = {
+            name = great_depression_effect_3
+            years = 10
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
 }
 
-usa_events.9 = { #Countries with us loans
+usa_events.9 = { #Post war loans
     type = country_event
 
     event_image = {
@@ -301,18 +414,109 @@ usa_events.9 = { #Countries with us loans
     option = {
         name = usa_events.9.a
         default_option = yes
-        add_modifier = {
-            name = great_depression_effect_2
-            years = 10
-            is_decaying = yes
+        c:USA = {
+		   add_treasury = -100000000
+		}
+		c:GBR = {
+		   add_treasury = 35000000
+           set_variable = has_received_usa_loans
+		}
+        c:BEL = {
+		   add_treasury = 15000000
+           set_variable = has_received_usa_loans
+		}
+        c:FRA = {
+		   add_treasury = 35000000
+           set_variable = has_received_usa_loans
+		}
+        c:ITA = {
+		   add_treasury = 15000000
+           set_variable = has_received_usa_loans
+		}
+        c:USA = {
+           trigger_event = {
+                id = usa_events.10
+                years = 5
+            }
         }
         ai_chance = {
-			base = 10
+			base = 7
+		}
+    }
+
+    option = {
+        name = usa_events.9.b
+        c:USA = {
+		   add_treasury = -70000000
+		}
+		c:GBR = {
+		   add_treasury = 25000000
+           set_variable = has_received_usa_loans
+		}
+        c:BEL = {
+		   add_treasury = 10000000
+           set_variable = has_received_usa_loans
+		}
+        c:FRA = {
+		   add_treasury = 25000000
+           set_variable = has_received_usa_loans
+		}
+        c:ITA = {
+		   add_treasury = 10000000
+           set_variable = has_received_usa_loans
+		}
+        c:USA = {
+           trigger_event = {
+                id = usa_events.10
+                years = 5
+            }
+        }
+        ai_chance = {
+			base = 3
+		}
+    }
+
+    option = {
+        name = usa_events.9.c
+        c:USA = {
+		   add_treasury = -50000000
+		}
+		c:GBR = {
+		   add_treasury = 20000000
+           set_variable = has_received_usa_loans
+		}
+        c:BEL = {
+		   add_treasury = 5000000
+           set_variable = has_received_usa_loans
+		}
+        c:FRA = {
+		   add_treasury = 20000000
+           set_variable = has_received_usa_loans
+		}
+        c:ITA = {
+		   add_treasury = 5000000
+           set_variable = has_received_usa_loans
+		}
+        c:USA = {
+           trigger_event = {
+                id = usa_events.10
+                years = 5
+            }
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.9.e
+        ai_chance = {
+			base = 0
 		}
     }
 }
 
-usa_events.10 = { #Germany's crash
+usa_events.10 = { #Dawes Plan
     type = country_event
 
     event_image = {
@@ -332,14 +536,52 @@ usa_events.10 = { #Germany's crash
     option = {
         name = usa_events.10.a
         default_option = yes
-        add_investment_pool = -9999999999
-        add_modifier = {
-            name = great_depression_effect_3
-            years = 10
-            is_decaying = yes
-        }
+        c:USA = {
+		   add_treasury = -50000000
+		}
+		c:GER = {
+		   add_treasury = 50000000
+           set_variable = has_received_dawes_plan
+		}
         ai_chance = {
 			base = 10
+		}
+    }
+
+    option = {
+        name = usa_events.10.b
+        default_option = yes
+        c:USA = {
+		   add_treasury = -25000000
+		}
+		c:GER = {
+		   add_treasury = 25000000
+           set_variable = has_received_usa_loans
+		}
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.10.c
+        default_option = yes
+        c:USA = {
+		   add_treasury = -15000000
+		}
+		c:GER = {
+		   add_treasury = 15000000
+           set_variable = has_received_usa_loans
+		}
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.10.e
+        ai_chance = {
+			base = 0
 		}
     }
 }
