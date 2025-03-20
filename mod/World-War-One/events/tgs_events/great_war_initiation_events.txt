@@ -1339,10 +1339,12 @@ great_war_initiation_events.24 = {
 			add_diplomatic_play_war_support = { target = c:LUX value = -200 }
 		}
         
-        create_diplomatic_pact = {
-			country = c:LUX
-			type = puppet
-		}
+        c:GER = {
+           create_diplomatic_pact = {
+			  country = c:LUX
+			  type = puppet
+		    }
+        }
     }
 }
 
