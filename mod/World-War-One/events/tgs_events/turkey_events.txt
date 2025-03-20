@@ -66,12 +66,16 @@ turkey_events.3 = {
         texture = "gfx/event_pictures/"
     }
 
-     trigger = {}
+    trigger = {}
 
     option = {
         name = turkey_events.3.a
         default_option = yes
-        
+        add_modifier = {
+			name = minting_buff_5_modifier
+            years = 3
+            is_decaying = yes
+		}
     }
 }
 
@@ -125,11 +129,6 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 		activate_law = law_type:law_right_of_assembly
         add_modifier = {
 			name = army_buff_modifier_2
-            years = 3
-            is_decaying = yes
-		}
-        add_modifier = {
-			name = minting_buff_5_modifier
             years = 3
             is_decaying = yes
 		}
