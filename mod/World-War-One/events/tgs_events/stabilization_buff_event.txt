@@ -379,3 +379,67 @@ stabilization_buff_events.13 = {
         set_state_religion = rel:catholic
     }
 }
+
+stabilization_buff_events.14 = { 
+    type = country_event
+
+    title = stabilization_buff_events.14.t
+    desc = stabilization_buff_events.14.d
+    flavor = stabilization_buff_events.14.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.14.a
+        default_option = yes
+        trigger = { 
+            NOT = { exists = c:BAV }
+        }
+        s:STATE_SAXONY = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_type = incorporated
+            }
+        }
+        s:STATE_FRANCONIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_type = incorporated
+            }
+        }
+        s:STATE_BAVARIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_type = incorporated
+            }
+        }
+    }
+}

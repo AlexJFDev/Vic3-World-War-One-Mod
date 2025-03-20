@@ -319,13 +319,9 @@ germany_events.4 = { #Communist uprising
                 activate_law = law_type:law_state_religion	
                 create_diplomatic_play = {
 		           target_country = c:GER
-		           type = dp_annex_war
+		           type = dp_revolution
 	               war = yes
-	                add_war_goal = {
-		               holder = c:GER
-		               type = annex_country
-		               target_country = c:BAV
-                    }
+	               annex_as_civil_war = yes
 	            }
 			}
 		}
@@ -379,6 +375,12 @@ germany_events.4 = { #Communist uprising
 				provinces = { x5101A0 }
 			}
 		}
+        c:GER = {
+            trigger_event = {
+                id = 
+                years = 90
+            }
+        }
     }
 }
 
