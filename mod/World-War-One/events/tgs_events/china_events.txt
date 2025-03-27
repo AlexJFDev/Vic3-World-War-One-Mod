@@ -963,9 +963,27 @@ china_events.7 = { #Policy choice
         default_option = yes
         add_modifier = {
         name = warlord_policy_military
-        years = 10
+        years = 20
         is_decaying = yes
         } 
+        every_state_region = {
+			limit = {
+				NOT = {
+					any_scope_state = {
+						owner = root
+					}
+				}
+				OR = {
+					is_homeland = cu:han
+					is_homeland = cu:manchu
+					is_homeland = cu:tibetan
+					is_homeland = cu:uighur
+					is_homeland = cu:tuvan
+					is_homeland = cu:mongol
+				}
+			}
+			add_claim = ROOT
+		}
         ai_chance = {
 		  base = 50
 	    }
@@ -975,9 +993,27 @@ china_events.7 = { #Policy choice
         name = china_events.7.b #Economic effort
         add_modifier = {
         name = warlord_policy_economy
-        years = 10
+        years = 20
         is_decaying = yes
         } 
+        every_state_region = {
+			limit = {
+				NOT = {
+					any_scope_state = {
+						owner = root
+					}
+				}
+				OR = {
+					is_homeland = cu:han
+					is_homeland = cu:manchu
+					is_homeland = cu:tibetan
+					is_homeland = cu:uighur
+					is_homeland = cu:tuvan
+					is_homeland = cu:mongol
+				}
+			}
+			add_claim = ROOT
+		}
         ai_chance = {
 		  base = 20
 	    }
@@ -987,9 +1023,27 @@ china_events.7 = { #Policy choice
         name = china_events.7.c #Political effort
         add_modifier = {
         name = warlord_policy_politics
-        years = 10
+        years = 20
         is_decaying = yes
         } 
+        every_state_region = {
+			limit = {
+				NOT = {
+					any_scope_state = {
+						owner = root
+					}
+				}
+				OR = {
+					is_homeland = cu:han
+					is_homeland = cu:manchu
+					is_homeland = cu:tibetan
+					is_homeland = cu:uighur
+					is_homeland = cu:tuvan
+					is_homeland = cu:mongol
+				}
+			}
+			add_claim = ROOT
+		}
         ai_chance = {
 		  base = 20
 	    }
@@ -999,9 +1053,27 @@ china_events.7 = { #Policy choice
         name = china_events.7.e #Communist effort
         add_modifier = {
         name = warlord_policy_communism
-        years = 10
+        years = 20
         is_decaying = yes
         } 
+        every_state_region = {
+			limit = {
+				NOT = {
+					any_scope_state = {
+						owner = root
+					}
+				}
+				OR = {
+					is_homeland = cu:han
+					is_homeland = cu:manchu
+					is_homeland = cu:tibetan
+					is_homeland = cu:uighur
+					is_homeland = cu:tuvan
+					is_homeland = cu:mongol
+				}
+			}
+			add_claim = ROOT
+		}
         ai_chance = {
 		  base = 10
 	    }
@@ -1150,6 +1222,64 @@ china_events.10 = { #Post revolution states repartition
         }
         ai_chance = {
 		base = 10
+	    }
+	}
+}
+
+china_events.11 = { #China reunification
+	type = country_event
+	placement = root
+	duration = 3
+
+	title = warlord_china_events.11.t
+	desc = warlord_china_events.11.d
+	flavor = warlord_china_events.11.f
+
+	event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	trigger = {
+		# Triggered by JE
+	}
+
+	immediate = {
+		
+	}
+
+    option = {
+		name = warlord_china_events.11.a
+        default_option = yes
+		add_modifier = {
+			name = modifier_century_of_triumph_technology
+			years = 20
+            is_decaying = yes
+		}
+		add_loyalists = {
+			value = large_radicals
+		}
+        ai_chance = {
+		 base = 10
+	    }
+	}
+
+	option = {
+		default_option = yes
+		name = warlord_china_events.11.b
+		add_modifier = {
+			name = modifier_century_of_triumph_politics
+			years = 20
+            is_decaying = yes
+		}
+		add_loyalists = {
+			value = large_radicals
+		}
+        ai_chance = {
+		 base = 0
 	    }
 	}
 }
