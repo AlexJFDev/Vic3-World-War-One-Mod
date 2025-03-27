@@ -335,9 +335,13 @@ russia_events.7 = { #Soviet uprising
 				add_ruling_interest_group = yes
 			}
       c:RUS = {
-         trigger_event = {
-          id = russia_events.8
-          days = 5
+            trigger_event = {
+             id = russia_events.8
+             days = 5
+            }
+            trigger_event = {
+             id = stabilization_buff_events.16
+             days = 5
             }
         }    
 	  c:RUS ?= { 
@@ -358,12 +362,7 @@ russia_events.7 = { #Soviet uprising
         remove_diplomatic_pact = {
 			country = c:GBR
 			type = alliance
-		}
-        add_modifier = {
-          name = minting_buff_5_modifier
-          years = 3
-          is_decaying = yes
-        } 
+		}        
         set_capital = STATE_MOSCOW
     }
 }
