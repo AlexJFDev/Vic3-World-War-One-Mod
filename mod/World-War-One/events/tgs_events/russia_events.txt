@@ -511,6 +511,19 @@ russia_events.8 = { #The civil war begins
 		      set_state_owner = c:SIB
             }
         }
+        s:STATE_BESSARABIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
         c:RUS = {
             change_infamy = -100
         }
