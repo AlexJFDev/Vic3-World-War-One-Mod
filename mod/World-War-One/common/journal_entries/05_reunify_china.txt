@@ -25,12 +25,13 @@
 	}
 
 	complete = {
-		country_rank >= rank_value:great_power
+		country_rank >= rank_value:major_power
 		owns_entire_state_region = STATE_NANJING
 	}
 	
 	on_complete = {
-		trigger_event = { id = warlord_china_events.11 popup = yes }
+		trigger_event = { id = china_events.11 popup = yes }
+		remove_global_variable = china_shatters
 	}
 		
 	weight = 1000

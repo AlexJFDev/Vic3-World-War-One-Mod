@@ -1231,9 +1231,9 @@ china_events.11 = { #China reunification
 	placement = root
 	duration = 3
 
-	title = warlord_china_events.11.t
-	desc = warlord_china_events.11.d
-	flavor = warlord_china_events.11.f
+	title = china_events.11.t
+	desc = china_events.11.d
+	flavor = china_events.11.f
 
 	event_image = {
         texture = "gfx/event_pictures/warlord_china.dds"
@@ -1252,7 +1252,7 @@ china_events.11 = { #China reunification
 	}
 
     option = {
-		name = warlord_china_events.11.a
+		name = china_events.11.a
         default_option = yes
 		add_modifier = {
 			name = modifier_century_of_triumph_technology
@@ -1262,6 +1262,11 @@ china_events.11 = { #China reunification
 		add_loyalists = {
 			value = large_radicals
 		}
+        every_scope_state = {
+			limit = { owner = ROOT }
+			set_state_type = incorporated
+        }
+        change_tag = CHI
         ai_chance = {
 		 base = 10
 	    }
@@ -1269,7 +1274,7 @@ china_events.11 = { #China reunification
 
 	option = {
 		default_option = yes
-		name = warlord_china_events.11.b
+		name = china_events.11.b
 		add_modifier = {
 			name = modifier_century_of_triumph_politics
 			years = 20
@@ -1278,6 +1283,11 @@ china_events.11 = { #China reunification
 		add_loyalists = {
 			value = large_radicals
 		}
+        every_scope_state = {
+			limit = { owner = ROOT }
+			set_state_type = incorporated
+        }
+        change_tag = CHI
         ai_chance = {
 		 base = 0
 	    }
