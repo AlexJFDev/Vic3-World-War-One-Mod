@@ -125,160 +125,6 @@ germany_events.2 = { #November Revolution
     }
 }
 
-germany_events.3 = { #Nazi threat je initiation
-    type = country_event
-
-    title = germany_events.3.t
-    desc = germany_events.3.d
-    flavor = germany_events.3.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    event_image = {
-        texture = "gfx/event_pictures/early_nazi.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.3.a
-        create_character = {
-            first_name = Adolf
-	        last_name = Hitler
-	        historical = yes
-            birth_date = 1889.20.4
-	        culture = cu:german
-	        religion = rel:atheist
-	        female = no
-            is_agitator = yes
-	        interest_group = ig_petty_bourgeoisie
-	        ideology = ideology_fascist
-	        traits = {
-		     cruel
-             cocaine_addiction
-             firebrand
-             wrathful
-	        }
-	        on_created = {
-               set_variable = {
-                  name = adolf_hitler
-                }                
-            }
-        }
-        create_character = {
-            first_name = Ernst
-	        last_name = Rohm
-	        historical = yes
-            birth_date = 1887.11.28
-	        culture = cu:german
-	        religion = rel:atheist
-	        female = no
-            is_general = yes
-            is_agitator = yes
-	        interest_group = ig_armed_forces
-	        ideology = ideology_fascist
-	        traits = {
-		     cruel
-             bigoted
-	        }
-	        on_created = {
-               set_variable = {
-                  name = ernst_rohm
-                }                
-            }
-        }
-        create_character = {
-            first_name = Joseph
-	        last_name = Goebbels
-	        historical = yes
-            birth_date = 1897.10.29
-	        culture = cu:german
-	        religion = rel:atheist
-	        female = no
-            is_agitator = yes
-	        interest_group = ig_petty_bourgeoisie
-	        ideology = ideology_fascist
-	        traits = {
-             expert_political_operator
-             demagogue
-             firebrand
-             experienced_diplomat
-	        }
-	        on_created = {
-               set_variable = {
-                  name = joseph_goebbels
-                }                
-            }
-        }
-        create_character = {
-            first_name = Rudolf
-	        last_name = Hess
-	        historical = yes
-            birth_date = 1894.04.26
-	        culture = cu:german
-	        religion = rel:atheist
-	        female = no
-            is_agitator = yes
-	        interest_group = ig_petty_bourgeoisie
-	        ideology = ideology_fascist
-	        traits = {
-             firebrand
-	        }
-	        on_created = {
-               set_variable = {
-                  name = rudolf_hess
-                }                
-            }
-        }
-        create_character = {
-            first_name = Heinrich
-	        last_name = Himler
-	        historical = yes
-            birth_date = 1900.10.07
-	        culture = cu:german
-	        religion = rel:atheist
-	        female = no
-            is_agitator = yes
-	        interest_group = ig_petty_bourgeoisie
-	        ideology = ideology_fascist
-	        traits = {
-             cruel
-             master_bureaucrat
-	        }
-	        on_created = {
-               set_variable = {
-                  name = heinrich_himler
-                }                
-            }
-        }
-        create_character = {
-            first_name = Heinz
-	        last_name = Guderian
-	        historical = yes
-            birth_date = 1888.06.17
-	        culture = cu:german
-	        religion = rel:atheist
-	        female = no
-            is_general = yes
-	        interest_group = ig_armed_forces
-	        ideology = ideology_fascist
-	        traits = {
-              expert_offensive_planner
-              innovative
-	        }
-	        on_created = {
-               set_variable = {
-                  name = heinz_guderian
-                }                
-            }
-        }
-        add_technology_researched = political_agitation
-    }
-}
-
 germany_events.4 = { #Communist uprising
     type = country_event
 
@@ -648,106 +494,6 @@ germany_events.9 = { #Ottoman Empire capitulates
     }
 }
 
-germany_events.20 = { #Invite fascists to governement
-    type = country_event
-
-    title = germany_events.20.t
-    desc = germany_events.20.d
-    flavor = germany_events.20.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {
-        any_interest_group = {
-          limit = {
-              is_powerful = yes  
-			  leader = {
-                 OR = {
-				     has_ideology = ideology:ideology_facist
-				     has_ideology = ideology:ideology_reactionary
-                     has_ideology = ideology:ideology_integralist
-                     has_ideology = ideology:ideology_authoritarian
-                    }
-			    }
-            }
-            leader = {
-			  set_variable = fascist_leader_2
-			}
-		}
-    }
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.20.a
-        default_option = yes
-        c:GER = {
-            trigger_event = {
-                id = germany_events.21
-                days = 90
-            }
-        }
-        random_scope_character = {
-            limit = { has_variable = fascist_leader_2 }
-            set_character_as_ruler = yes
-		}
-    }
-
-    option = {
-        name = germany_events.20.b
-        add_modifier = {
-          name = angry_fascists_1_modifier
-          years = 5
-          is_decaying = yes
-        }
-    }
-}
-
-germany_events.21 = { #Fascist takeover
-    type = country_event
-
-    title = germany_events.21.t
-    desc = germany_events.21.d
-    flavor = germany_events.21.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.21.a
-        activate_law = law_type:law_presidential_republic
-        activate_law = law_type:law_single_party_state
-        activate_law = law_type:law_outlawed_dissent
-        activate_law = law_type:law_national_supremacy
-        activate_law = law_type:law_secret_police
-        activate_law = law_type:law_unitary
-        activate_law = law_type:law_no_colonial_affairs
-        c:AUS = {
-            trigger_event = {
-                id = germany_events.25
-                years = 5
-            }
-        }
-    }
-}
-
 germany_events.22 = { #Negotiation with Communists
     type = country_event
 
@@ -816,51 +562,6 @@ germany_events.22 = { #Negotiation with Communists
     }
 }
 
-germany_events.23 = { #Hitler becomes leader of the Petite Bourgeoisie
-    type = country_event
-
-    title = germany_events.23.t
-    desc = germany_events.23.d
-    flavor = germany_events.23.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.23.a
-        if = {
-			random_scope_character =  {
-				limit = {
-					has_variable = adolf_hitler
-				}
-				remove_character_role = agitator
-		        add_character_role = politician
-                set_as_interest_group_leader = yes
-			}
-		}
-    }
-
-    option = {
-        name = germany_events.23.b
-        trigger = {
-            NOT = {
-                has_law = law_type:law_right_of_assembly
-				has_law = law_type:law_protected_speech
-            }
-        }
-    }
-}
-
 germany_events.24 = { #Rhineland Renegotiation
     type = country_event
 
@@ -922,12 +623,313 @@ germany_events.24 = { #Rhineland Renegotiation
     }
 }
 
-germany_events.25 = { #Anschluss
+
+
+
+germany_events.25 = { #Nazi threat je initiation
     type = country_event
 
     title = germany_events.25.t
     desc = germany_events.25.d
     flavor = germany_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/early_nazi.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.25.a
+        create_character = {
+            first_name = Adolf
+	        last_name = Hitler
+	        historical = yes
+            birth_date = 1889.20.4
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+		     cruel
+             cocaine_addiction
+             firebrand
+             wrathful
+	        }
+	        on_created = {
+               set_variable = {
+                  name = adolf_hitler
+                }                
+            }
+        }
+        create_character = {
+            first_name = Ernst
+	        last_name = Rohm
+	        historical = yes
+            birth_date = 1887.11.28
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_general = yes
+            is_agitator = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_fascist
+	        traits = {
+		     cruel
+             bigoted
+	        }
+	        on_created = {
+               set_variable = {
+                  name = ernst_rohm
+                }                
+            }
+        }
+        create_character = {
+            first_name = Joseph
+	        last_name = Goebbels
+	        historical = yes
+            birth_date = 1897.10.29
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+             expert_political_operator
+             demagogue
+             firebrand
+             experienced_diplomat
+	        }
+	        on_created = {
+               set_variable = {
+                  name = joseph_goebbels
+                }                
+            }
+        }
+        create_character = {
+            first_name = Rudolf
+	        last_name = Hess
+	        historical = yes
+            birth_date = 1894.04.26
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+             firebrand
+	        }
+	        on_created = {
+               set_variable = {
+                  name = rudolf_hess
+                }                
+            }
+        }
+        create_character = {
+            first_name = Heinrich
+	        last_name = Himler
+	        historical = yes
+            birth_date = 1900.10.07
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+             cruel
+             master_bureaucrat
+	        }
+	        on_created = {
+               set_variable = {
+                  name = heinrich_himler
+                }                
+            }
+        }
+        create_character = {
+            first_name = Heinz
+	        last_name = Guderian
+	        historical = yes
+            birth_date = 1888.06.17
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_fascist
+	        traits = {
+              expert_offensive_planner
+              innovative
+	        }
+	        on_created = {
+               set_variable = {
+                  name = heinz_guderian
+                }                
+            }
+        }
+        add_technology_researched = political_agitation
+    }
+}
+
+germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
+    type = country_event
+
+    title = germany_events.26.t
+    desc = germany_events.26.d
+    flavor = germany_events.26.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.26.a
+        if = {
+			random_scope_character =  {
+				limit = {
+					has_variable = adolf_hitler
+				}
+				remove_character_role = agitator
+		        add_character_role = politician
+                set_as_interest_group_leader = yes
+			}
+		}
+    }
+
+    option = {
+        name = germany_events.26.b
+        trigger = {
+            NOT = {
+                has_law = law_type:law_right_of_assembly
+				has_law = law_type:law_protected_speech
+            }
+        }
+    }
+}
+
+germany_events.27 = { #Invite fascists to governement
+    type = country_event
+
+    title = germany_events.27.t
+    desc = germany_events.27.d
+    flavor = germany_events.27.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {
+        any_interest_group = {
+          limit = {
+              is_powerful = yes  
+			  leader = {
+                 OR = {
+				     has_ideology = ideology:ideology_facist
+				     has_ideology = ideology:ideology_reactionary
+                     has_ideology = ideology:ideology_integralist
+                     has_ideology = ideology:ideology_authoritarian
+                    }
+			    }
+            }
+            leader = {
+			  set_variable = fascist_leader_2
+			}
+		}
+    }
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.27.a
+        default_option = yes
+        c:GER = {
+            trigger_event = {
+                id = germany_events.28
+                days = 90
+            }
+        }
+        random_scope_character = {
+            limit = { has_variable = fascist_leader_2 }
+            set_character_as_ruler = yes
+		}
+    }
+
+    option = {
+        name = germany_events.27.b
+        add_modifier = {
+          name = angry_fascists_1_modifier
+          years = 5
+          is_decaying = yes
+        }
+    }
+}
+
+germany_events.28 = { #Fascist takeover
+    type = country_event
+
+    title = germany_events.28.t
+    desc = germany_events.28.d
+    flavor = germany_events.28.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.21.a
+        activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_outlawed_dissent
+        activate_law = law_type:law_national_supremacy
+        activate_law = law_type:law_secret_police
+        activate_law = law_type:law_unitary
+        c:AUS = {
+            trigger_event = {
+                id = germany_events.29
+                years = 5
+            }
+        }
+    }
+}
+
+germany_events.29 = { #Anschluss
+    type = country_event
+
+    title = germany_events.29.t
+    desc = germany_events.29.d
+    flavor = germany_events.29.f
     
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -943,7 +945,7 @@ germany_events.25 = { #Anschluss
     trigger = {}
 
     option = {
-        name = germany_events.25.a
+        name = germany_events.29.a
         c:GER = {
             annex = c:AUS
         }
@@ -953,7 +955,7 @@ germany_events.25 = { #Anschluss
     }
 
     option = {
-        name = germany_events.25.b
+        name = germany_events.29.b
         ai_chance = {
             base = 0
         }
