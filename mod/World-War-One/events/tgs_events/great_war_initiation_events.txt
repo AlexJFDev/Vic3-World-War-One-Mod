@@ -1323,10 +1323,6 @@ great_war_initiation_events.24 = {
     option = { #Capitulate
         name = great_war_initiation_events.24.a
         default_option = yes
-        ai_chance = {
-            base = 0
-        }
-        
         random_diplomatic_play = {
 				limit = {
 					c:AUS = {
@@ -1338,6 +1334,15 @@ great_war_initiation_events.24 = {
 				}
 			add_diplomatic_play_war_support = { target = c:LUX value = -200 }
 		}
+        c:LUX = {
+            trigger_event = {
+                id = great_war_initiation_events.27
+                days = 60
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
     }
 }
 
@@ -1557,6 +1562,36 @@ great_war_initiation_events.26 = {
         name = great_war_initiation_events.26.a
         ai_chance = {
             base = 0
+        }
+    }
+}
+
+#Luxembourg becomes puppet
+great_war_initiation_events.27 = {
+    type = country_event
+
+    duration = 0.1
+    event_image = { 
+        texture = "gfx/event_pictures/july_crisis.dds"
+    }
+
+    title = great_war_initiation_events.27.t
+    desc = great_war_initiation_events.27.d
+    flavor = great_war_initiation_events.27.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = {
+        name = great_war_initiation_events.27.a
+        default_option = yes
+        c:GER = {
+		   create_diplomatic_pact = {
+			  country = c:LUX
+			  type = puppet
+		    }
+        }
+        ai_chance = {
+            base = 10
         }
     }
 }
