@@ -515,3 +515,44 @@ stabilization_buff_events.16 = {
     }
 }
 
+stabilization_buff_events.17 = { 
+    type = country_event
+
+    title = stabilization_buff_events.17.t
+    desc = stabilization_buff_events.17.d
+    flavor = stabilization_buff_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 10000000
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 5
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = stabilization_buff_events.17.b
+        default_option = yes
+        trigger = { is_player = yes }
+        add_treasury = 5000000
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 5
+            is_decaying = yes
+		}
+    }
+}
+
