@@ -1190,6 +1190,57 @@ entente_peace_deal.3 = { #Round 2 result
 		c:FRA = {
 		   add_treasury = 20000000
 		}
+		every_scope_state = {
+			    if = {
+					limit = {
+						has_building = building_barracks
+						is_capital = no
+					}
+					remove_building = building_barracks
+				}
+				if = {
+					limit = {
+						has_building = building_naval_base
+						is_capital = no
+					}
+					remove_building = building_naval_base
+				}
+				if = {
+					limit = {
+						has_building = building_arms_industry
+						is_capital = no
+					}
+					remove_building = building_arms_industry
+				}
+				if = {
+					limit = {
+						has_building = building_artillery_foundries
+						is_capital = no
+					}
+					remove_building = building_artillery_foundries
+				}
+				if = {
+					limit = {
+						has_building = building_munition_plants
+						is_capital = no
+					}
+					remove_building = building_munition_plants
+				}
+				if = {
+					limit = {
+						has_building = building_war_machine_industry
+						is_capital = no
+					}
+					remove_building = building_war_machine_industry
+				}
+				if = {
+					limit = {
+						has_building = building_military_shipyards
+						is_capital = no
+					}
+					remove_building = building_military_shipyards
+				}	
+		}
 	}
 
 	option = {
@@ -1203,6 +1254,57 @@ entente_peace_deal.3 = { #Round 2 result
 		c:FRA = {
 		   add_treasury = 40000000
 		}
+		every_scope_state = {
+			    if = {
+					limit = {
+						has_building = building_barracks
+						is_capital = no
+					}
+					remove_building = building_barracks
+				}
+				if = {
+					limit = {
+						has_building = building_naval_base
+						is_capital = no
+					}
+					remove_building = building_naval_base
+				}
+				if = {
+					limit = {
+						has_building = building_arms_industry
+						is_capital = no
+					}
+					remove_building = building_arms_industry
+				}
+				if = {
+					limit = {
+						has_building = building_artillery_foundries
+						is_capital = no
+					}
+					remove_building = building_artillery_foundries
+				}
+				if = {
+					limit = {
+						has_building = building_munition_plants
+						is_capital = no
+					}
+					remove_building = building_munition_plants
+				}
+				if = {
+					limit = {
+						has_building = building_war_machine_industry
+						is_capital = no
+					}
+					remove_building = building_war_machine_industry
+				}
+				if = {
+					limit = {
+						has_building = building_military_shipyards
+						is_capital = no
+					}
+					remove_building = building_military_shipyards
+				}	
+		}
 	}
 
 	option = {
@@ -1215,6 +1317,57 @@ entente_peace_deal.3 = { #Round 2 result
 		}
 		c:FRA = {
 		   add_treasury = 60000000
+		}
+		every_scope_state = {
+			    if = {
+					limit = {
+						has_building = building_barracks
+						is_capital = no
+					}
+					remove_building = building_barracks
+				}
+				if = {
+					limit = {
+						has_building = building_naval_base
+						is_capital = no
+					}
+					remove_building = building_naval_base
+				}
+				if = {
+					limit = {
+						has_building = building_arms_industry
+						is_capital = no
+					}
+					remove_building = building_arms_industry
+				}
+				if = {
+					limit = {
+						has_building = building_artillery_foundries
+						is_capital = no
+					}
+					remove_building = building_artillery_foundries
+				}
+				if = {
+					limit = {
+						has_building = building_munition_plants
+						is_capital = no
+					}
+					remove_building = building_munition_plants
+				}
+				if = {
+					limit = {
+						has_building = building_war_machine_industry
+						is_capital = no
+					}
+					remove_building = building_war_machine_industry
+				}
+				if = {
+					limit = {
+						has_building = building_military_shipyards
+						is_capital = no
+					}
+					remove_building = building_military_shipyards
+				}	
 		}
 	}
 }
@@ -1529,10 +1682,10 @@ entente_peace_deal.5 = { #Round 4 result
 		s:STATE_SLOVENIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:SER
+			   exists = c:YUG
 			    owner = {
 				  OR = {
-					c:SER = THIS
+					c:YUG = THIS
 				    }
 			    }
 		        }
@@ -1555,10 +1708,10 @@ entente_peace_deal.5 = { #Round 4 result
 		s:STATE_CROATIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:SER
+			   exists = c:YUG
 			    owner = {
 				  OR = {
-					c:SER = THIS
+					c:YUG = THIS
 				    }
 			    }
 		        }
@@ -1568,10 +1721,10 @@ entente_peace_deal.5 = { #Round 4 result
 		s:STATE_DALMATIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:SER
+			   exists = c:YUG
 			    owner = {
 				  OR = {
-					c:SER = THIS
+					c:YUG = THIS
 				    }
 			    }
 		        }
@@ -1614,10 +1767,10 @@ entente_peace_deal.5 = { #Round 4 result
 		s:STATE_DALMATIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:SER
+			   exists = c:YUG
 			    owner = {
 				  OR = {
-					c:SER = THIS
+					c:YUG = THIS
 				    }
 			    }
 		        }
