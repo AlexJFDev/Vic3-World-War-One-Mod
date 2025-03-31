@@ -80,22 +80,13 @@ weekly_pulse_nazi_ascension_progress = {
             has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
         }
         ROOT = {
-			change_variable = { name = nazi_progress_from_war_reps add = 2 }
-		}
-    }
-
-    if = {
-        limit = {
-            has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
-        }
-        ROOT = {
 			change_variable = { name = nazi_progress_from_war_reps add = 1 }
 		}
     }
 
     if = {
         limit = {
-            has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
+            has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
         }
         ROOT = {
 			change_variable = { name = nazi_progress_from_war_reps add = 0.5 }
@@ -107,7 +98,7 @@ weekly_pulse_nazi_ascension_progress = {
             average_sol < average_expected_sol
         }
         ROOT = {
-			change_variable = { name = nazi_progress_from_sol add = 10 }
+			change_variable = { name = nazi_progress_from_sol add = 5 }
 		}
     }
 
@@ -120,17 +111,17 @@ weekly_pulse_nazi_ascension_progress = {
 		}
     }
 
-    every_political_movement =  {
+    any_political_movement = {
         limit = {
             OR = {
 				is_political_movement_type = movement_fascist
 				is_political_movement_type = movement_reactionary
                 is_political_movement_type = movement_cultural_majority
 			}
-            political_movement_radicalism >= 0.5
+            political_movement_radicalism >= 0.4
         }
         ROOT = {
-			change_variable = { name = nazi_progress_from_political_movement add = 1 }
+			change_variable = { name = nazi_progress_from_political_movement add = 0.5 }
 		}
     }
 }

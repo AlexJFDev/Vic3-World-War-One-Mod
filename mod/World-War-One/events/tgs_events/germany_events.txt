@@ -810,24 +810,7 @@ germany_events.27 = { #Invite fascists to governement
     
     duration = 3
     
-    immediate = {
-        any_interest_group = {
-          limit = {
-              is_powerful = yes  
-			  leader = {
-                 OR = {
-				     has_ideology = ideology:ideology_facist
-				     has_ideology = ideology:ideology_reactionary
-                     has_ideology = ideology:ideology_integralist
-                     has_ideology = ideology:ideology_authoritarian
-                    }
-			    }
-            }
-            leader = {
-			  set_variable = fascist_leader_2
-			}
-		}
-    }
+    immediate = {}
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
@@ -844,8 +827,8 @@ germany_events.27 = { #Invite fascists to governement
                 days = 90
             }
         }
-        random_scope_character = {
-            limit = { has_variable = fascist_leader_2 }
+        random_scope_character = { 
+			limit = { has_variable = adolf_hitler }
             set_character_as_ruler = yes
 		}
         ai_chance = {
@@ -887,13 +870,14 @@ germany_events.28 = { #Fascist takeover
     trigger = {}
 
     option = {
-        name = germany_events.21.a
+        name = germany_events.28.a
         activate_law = law_type:law_presidential_republic
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_outlawed_dissent
         activate_law = law_type:law_national_supremacy
         activate_law = law_type:law_secret_police
         activate_law = law_type:law_unitary
+        set_strategy = ai_strategy_territorial_expansion
         c:AUS = {
             trigger_event = {
                 id = germany_events.29

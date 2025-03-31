@@ -273,7 +273,11 @@ je_nazi_threat = {
 	}
 
     on_fail = {
-        trigger_event = { id = germany_events.26 popup = yes }
+        trigger_event = { 
+            id = germany_events.26 
+            days = 60
+            popup = yes 
+        }
     }
       
     timeout = -1

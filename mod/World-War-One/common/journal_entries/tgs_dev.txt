@@ -1,0 +1,26 @@
+﻿je_usa_loans_verification = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        country_rank >= rank_value:great_power
+    }
+    
+    possible = {
+       has_variable = has_received_usa_loans 
+       has_variable = has_received_dawes_plan
+    }
+
+    immediate = { }
+
+    complete = {
+       has_variable = usa_loans_verification
+    }
+
+    on_complete = {}
+
+    on_timeout = {}
+
+    timeout = -1
+    should_be_pinned_by_default = yes
+}
