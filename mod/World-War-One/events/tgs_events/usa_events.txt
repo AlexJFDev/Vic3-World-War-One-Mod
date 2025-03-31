@@ -262,26 +262,6 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
             years = 10
             is_decaying = yes
         }
-        trigger_event = {
-            id = germany_events.26
-            years = 3
-        }
-        ai_chance = {
-			base = 10
-		}
-    }
-
-    option = {
-        name = usa_events.8.e
-        trigger = { 
-            OR = 
-        }
-        add_investment_pool = -9999999999
-        add_modifier = {
-            name = great_depression_effect_3
-            years = 10
-            is_decaying = yes
-        }
         ai_chance = {
 			base = 10
 		}
