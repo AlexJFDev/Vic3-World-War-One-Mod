@@ -1,0 +1,136 @@
+﻿
+nazi_ascension_set_variables = { 
+
+    set_variable = { name = nazi_progress_from_global_fascism value = 0 }
+    set_variable = { name = nazi_progress_from_global_communism value = 0 } 
+    set_variable = { name = nazi_progress_from_lost_land value = 0 }
+    set_variable = { name = nazi_progress_from_war_reps value = 0 }
+    set_variable = { name = nazi_progress_from_sol value = 0 }
+    set_variable = { name = nazi_progress_from_political_movement value = 0 }
+   
+}
+
+weekly_pulse_nazi_ascension_progress = {
+     
+    set_variable = { name = nazi_progress_from_global_fascism value = 0 }
+    set_variable = { name = nazi_progress_from_global_communism value = 0 } 
+    set_variable = { name = nazi_progress_from_lost_land value = 0 }
+    set_variable = { name = nazi_progress_from_war_reps value = 0 }
+    set_variable = { name = nazi_progress_from_sol value = 0 }
+    
+    every_country = {
+		limit = {
+            country_rank >= rank_value:great_power
+            ruler = {
+                OR = {
+				    has_ideology = ideology:ideology_fascist
+				    has_ideology = ideology:ideology_reactionary
+                    has_ideology = ideology:ideology_integralist
+                }
+            }
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_global_fascism add = 1 }
+		}
+    }
+
+    every_country = {
+		limit = {
+            country_rank >= rank_value:great_power
+            OR = {
+                has_law = law_type:law_council_republic
+                has_law = law_type:law_anarchism
+                has_law = law_type:law_cooperative_ownership
+            }
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_global_communism add = 1 }
+		}
+    }
+
+    if = {
+        limit = {
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_lost_land add = 6 }
+		}
+    }
+
+    if = {
+        limit = {
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_lost_land add = 3 }
+		}
+    }
+
+    if = {
+        limit = {
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_lost_land add = 1 }
+		}
+    }
+
+    if = {
+        limit = {
+            has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_war_reps add = 2 }
+		}
+    }
+
+    if = {
+        limit = {
+            has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_war_reps add = 1 }
+		}
+    }
+
+    if = {
+        limit = {
+            has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_war_reps add = 0.5 }
+		}
+    }
+
+    if = {
+        limit = {
+            average_sol < average_expected_sol
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_sol add = 10 }
+		}
+    }
+
+    if = {
+        limit = {
+            average_sol > average_expected_sol
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_sol add = -3 }
+		}
+    }
+
+    every_political_movement =  {
+        limit = {
+            OR = {
+				is_political_movement_type = movement_fascist
+				is_political_movement_type = movement_reactionary
+                is_political_movement_type = movement_cultural_majority
+			}
+            political_movement_radicalism >= 0.5
+        }
+        ROOT = {
+			change_variable = { name = nazi_progress_from_political_movement add = 1 }
+		}
+    }
+}

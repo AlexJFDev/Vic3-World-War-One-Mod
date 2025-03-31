@@ -224,7 +224,7 @@ je_socialist_split = {
     should_be_pinned_by_default = yes
 }
 
-je_fascist_threat = {
+je_nazi_threat = {
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     group = je_group_internal_affairs
 
@@ -234,14 +234,10 @@ je_fascist_threat = {
     }
     
     possible = {
-      OR = {
+        OR = {
          has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
          has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
          has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
-        }
-        OR = {
-         has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
-         has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
         }
     }
 
@@ -254,28 +250,30 @@ je_fascist_threat = {
 	    fascist_threat_modifier
 	}
 
-    complete = {}
-    
-    fail = { 
-        any_interest_group = {
-            is_powerful = yes  
-			leader = {
-				OR = {
-				    has_ideology = ideology:ideology_fascist
-				    has_ideology = ideology:ideology_reactionary
-                    has_ideology = ideology:ideology_integralist
-                    has_ideology = ideology:ideology_authoritarian
-                }
-			}
+    scripted_progress_bar = nazi_ascension_progress_bar
+
+    on_weekly_pulse = {
+		effect = {
+		  weekly_pulse_nazi_ascension_progress = yes 	
 		}
 	}
 
-    on_complete = {
-        trigger_event = { id =  popup = yes }
+    on_monthly_pulse = {
+      random_events = {
+			
+		}      	  
     }
 
+    complete = {}
+    
+    fail = { 
+        scope:journal_entry = {
+			"scripted_bar_progress(nazi_ascension_progress_bar)" >= 499
+        } 
+	}
+
     on_fail = {
-        trigger_event = { id = germany_events.27 popup = yes }
+        trigger_event = { id = germany_events.26 popup = yes }
     }
       
     timeout = -1
