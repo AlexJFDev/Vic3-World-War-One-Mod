@@ -3,24 +3,29 @@
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
-       
+       country_rank >= rank_value:major_power
+       has_technology_researched = trench_works
     }
     
     possible = {
-        
+        country_rank >= rank_value:major_power
+        has_technology_researched = military_aviation
     }
 
-    immediate = {
-       trigger_event = { id = popup = yes }
-    }
+    immediate = {}
 
     complete = {
-       
+        country_army_unit_type_fraction = {  
+            target = unit_type:combat_unit_type_fighter 
+            value >= 0.08
+        }
+        country_army_unit_type_fraction = {  
+            target = unit_type:combat_unit_type_bomber 
+            value >= 0.02
+        }
     }
 
-    on_complete = {
-        
-    }
+    on_complete = {}
 
     weight = 1000
     timeout = -1
