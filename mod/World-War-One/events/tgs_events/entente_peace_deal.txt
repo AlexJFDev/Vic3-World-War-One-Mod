@@ -1626,7 +1626,7 @@ entente_peace_deal.5 = { #Round 4 result
     duration = 1
 
     event_image = { 
-		texture = "gfx/event_pictures/entente_victory.dds"
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
 	}
 
     title = entente_peace_deal.5.t
@@ -1810,6 +1810,12 @@ entente_peace_deal.5 = { #Round 4 result
 		      set_state_owner = c:ITA
             }
         }
+		c:ITA = {
+            trigger_event = {
+                id = italy_events.10
+                days = 30
+            }
+        }
 	}
 }
 
@@ -1819,7 +1825,7 @@ entente_peace_deal.6 = { #Round 5 result
     duration = 1
 
     event_image = { 
-		texture = "gfx/event_pictures/entente_victory.dds"
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
 	}
 
     title = entente_peace_deal.6.t
@@ -1911,6 +1917,12 @@ entente_peace_deal.6 = { #Round 5 result
 		      set_state_owner = c:GBR
             }
         }
+		c:ITA = {
+            trigger_event = {
+                id = italy_events.10
+                days = 30
+            }
+        }
 	}
 
 	option = {
@@ -1996,6 +2008,12 @@ entente_peace_deal.6 = { #Round 5 result
 		      set_state_owner = c:GBR
             }
         }
+		c:ITA = {
+            trigger_event = {
+                id = italy_events.10
+                days = 30
+            }
+        }
 	}
 
 	option = {
@@ -2066,6 +2084,12 @@ entente_peace_deal.6 = { #Round 5 result
 			    }
 		        }
 		      set_state_owner = c:GBR
+            }
+        }
+		c:ITA = {
+            trigger_event = {
+                id = italy_events.10
+                days = 30
             }
         }
 	}

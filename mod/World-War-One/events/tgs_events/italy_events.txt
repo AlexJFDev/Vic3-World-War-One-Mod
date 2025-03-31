@@ -1,0 +1,135 @@
+﻿namespace = italy_events
+
+italy_events.1 = {
+    type = country_event
+
+    title = italy_events.1.t
+    desc = italy_events.1.d
+    flavor = italy_events.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = italy_events.1.a
+        
+    }
+}
+
+italy_events.10 = {
+    type = country_event
+
+    title = italy_events.10.t
+    desc = italy_events.10.d
+    flavor = italy_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/benito_mussolini.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = italy_events.10.a
+        create_character = {
+            first_name = Benito
+	        last_name = Mussolini
+	        historical = yes
+            birth_date = 1883.07.29
+	        culture = cu:italian
+	        religion = rel:atheist
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+             imposing
+             demagogue
+             expert_political_operator
+	        }
+	        on_created = {
+               set_variable = {
+                  name = benito_mussolini
+                }                
+            }
+        }
+        create_political_movement = { type = movement_fascist }
+        c:ITA = {
+            trigger_event = {
+                id = italy_events.11
+                years = 3
+            }
+        }
+    }
+}
+
+italy_events.11 = {
+    type = country_event
+
+    title = italy_events.11.t
+    desc = italy_events.11.d
+    flavor = italy_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/march_on_rome.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = italy_events.11.a
+        default_option = yes
+        random_scope_character =  {
+				limit = {
+					has_variable = benito_mussolini
+				}
+			remove_character_role = agitator
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+		}
+        random_scope_character =  {
+				limit = {
+					is_ruler = yes
+				}
+			set_ideology = ideology:ideology_fascist
+		}
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = italy_events.11.b
+        add_modifier = {
+			name = political_movement_buff_1
+			years = 10
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
