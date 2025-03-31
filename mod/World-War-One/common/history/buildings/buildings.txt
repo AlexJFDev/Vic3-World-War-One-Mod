@@ -85831,7 +85831,7 @@
 					building = {
 						type = building_manor_house
 						country = c:USA
-						levels = 4
+						levels = 8
 						region = STATE_ALABAMA
 					}
 				}
@@ -86155,7 +86155,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 5
+						levels = 12
 						region = STATE_ARIZONA
 					}
 				}
@@ -86290,7 +86290,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 3
+						levels = 25
 						region = STATE_ARKANSAS
 					}
 				}
@@ -86470,7 +86470,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 4
+						levels = 10
 						region = STATE_CALIFORNIA
 					}
 				}
@@ -86775,7 +86775,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 3
+						levels = 28
 						region = STATE_COLORADO
 					}
 				}
@@ -87601,7 +87601,7 @@
 					building = {
 						type = building_manor_house
 						country = c:USA
-						levels = 3
+						levels = 15
 						region = STATE_GEORGIA
 					}
 				}
@@ -87937,6 +87937,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 30
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_power_plant
 				add_ownership = {
 					building = {
@@ -88017,7 +88030,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 5
+						levels = 38
 						region = STATE_ILLINOIS
 					}
 				}
@@ -88107,7 +88120,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 5
+						levels = 85
 						region = STATE_NEW_YORK
 					}
 				}
@@ -88332,7 +88345,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 5
+						levels = 45
 						region = STATE_INDIANA
 					}
 				}
@@ -88542,7 +88555,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 5
+						levels = 65
 						region = STATE_IOWA
 					}
 				}
@@ -88707,7 +88720,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 8
+						levels = 75
 						region = STATE_KANSAS
 					}
 				}
@@ -88729,6 +88742,34 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
+				}
+			}
+			create_building = {
+				building = building_food_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:USA
+						levels = 35
+						region = STATE_NEW_YORK
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_baking_powder pm_disabled_distillery pm_vacuum_canning 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -88940,6 +88981,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 10
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -89092,6 +89146,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 10
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_power_plant
 				add_ownership = {
 					building = {
@@ -89130,6 +89197,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 10
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -89837,6 +89917,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -89962,7 +90055,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 15
+						levels = 35
 						region = STATE_NEW_YORK
 					}
 				}
@@ -89984,6 +90077,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 30
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -90123,7 +90229,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 2
+						levels = 18
 						region = STATE_MINNESOTA
 					}
 				}
@@ -90175,6 +90281,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -90338,6 +90457,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 10
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -90507,7 +90639,7 @@
 					building = {
 						type = building_manor_house
 						country = c:USA
-						levels = 4
+						levels = 18
 						region = STATE_MISSOURI
 					}
 				}
@@ -90807,7 +90939,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 20
+						levels = 35
 						region = STATE_CALIFORNIA
 					}
 				}
@@ -90822,7 +90954,7 @@
 					building = {
 						type = building_food_industry
 						country = c:USA
-						levels = 3
+						levels = 15
 						region = STATE_NEBRASKA
 					}
 				}
@@ -90952,6 +91084,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -91039,6 +91184,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -91609,7 +91767,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 35
+						levels = 45
 						region = STATE_NEW_YORK
 					}
 				}
@@ -92253,7 +92411,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 5
+						levels = 8
 						region = STATE_NORTH_DAKOTA
 					}
 				}
@@ -92373,7 +92531,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 6
+						levels = 12
 						region = STATE_OHIO
 					}
 				}
@@ -92624,7 +92782,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 18
+						levels = 35
 						region = STATE_NEW_YORK
 					}
 				}
@@ -92821,7 +92979,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 3
+						levels = 32
 						region = STATE_OREGON
 					}
 				}
@@ -92876,6 +93034,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 30
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_power_plant
 				add_ownership = {
 					building = {
@@ -92916,6 +93087,19 @@
 				reserves = 1
 				activate_production_methods = {
 					default_building_vineyard_plantation pm_steam_rail_transport 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 10
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -92984,7 +93168,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 3
+						levels = 8
 						region = STATE_PENNSYLVANIA
 					}
 				}
@@ -93074,7 +93258,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 42
+						levels = 58
 						region = STATE_NEW_YORK
 					}
 				}
@@ -93539,6 +93723,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -93673,6 +93870,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 30
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -93989,6 +94199,21 @@
 				}
 			}
 			create_building = {
+				building = building_livestock_ranch
+				add_ownership = {
+					building = {
+						type = building_livestock_ranch
+						country = c:USA
+						levels = 12
+						region = STATE_TENNESSEE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_fencing pm_mechanized_slaughtering pm_refrigerated_storage_building_livestock_ranch pm_sheep_farms 
+				}
+			}
+			create_building = {
 				building = building_power_plant
 				add_ownership = {
 					building = {
@@ -94127,7 +94352,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 38
+						levels = 185
 						region = STATE_NEW_YORK
 					}
 				}
@@ -94215,7 +94440,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 15
+						levels = 25
 						region = STATE_NEW_YORK
 					}
 				}
@@ -94460,6 +94685,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_electric_saw_mills pm_log_carts pm_no_hardwood pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 8
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -95076,6 +95314,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 30
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_power_plant
 				add_ownership = {
 					building = {
@@ -95366,7 +95617,7 @@
 					building = {
 						type = building_livestock_ranch
 						country = c:USA
-						levels = 3
+						levels = 20
 						region = STATE_WYOMING
 					}
 				}
