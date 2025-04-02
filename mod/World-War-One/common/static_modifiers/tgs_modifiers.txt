@@ -142,6 +142,7 @@ angry_military_modifier = {
 angry_fascists_1_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     interest_group_ig_petty_bourgeoisie_approval_add = -15
+    political_movement_radicalism_add = 0.5
 }
 
 stabilization_buff_modifier = {
@@ -444,6 +445,28 @@ fascist_threat_modifier = {
     state_pop_support_movement_fascist_mult = 0.8
     state_pop_support_movement_reactionnary_mult = 0.8
     state_pop_support_movement_cultural_majority_mult = 0.8
+}
+
+nazi_germany_politics_land_army = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    building_arms_industry_throughput_add = 0.1
+	building_artillery_foundries_throughput_add = 0.1
+    building_war_machine_industry_throughput_add = 0.1
+    state_construction_mult = 0.15
+}
+
+nazi_germany_politics_navy = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    building_military_shipyards_throughput_add = 0.2
+    state_construction_mult = 0.15
+}
+
+nazi_germany_politics_heavy_industry = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    building_steel_mills_throughput_add = 0.1
+    building_motor_industry_throughput_add = 0.1
+    building_oil_rig_industry_throughput_add = 0.1
+    state_construction_mult = 0.15
 }
 
 #Centralization Laws Events Modifiers

@@ -798,7 +798,7 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
     }
 }
 
-germany_events.27 = { #Invite fascists to governement
+germany_events.27 = { #Invite fascists to government
     type = country_event
 
     title = germany_events.27.t
@@ -831,6 +831,7 @@ germany_events.27 = { #Invite fascists to governement
 			limit = { has_variable = adolf_hitler }
             set_character_as_ruler = yes
 		}
+        set_global_variable = hitler_rise_to_power
         ai_chance = {
             base = 10
         }
@@ -877,17 +878,16 @@ germany_events.28 = { #Fascist takeover
         activate_law = law_type:law_national_supremacy
         activate_law = law_type:law_secret_police
         activate_law = law_type:law_unitary
-        set_strategy = ai_strategy_territorial_expansion
         c:AUS = {
             trigger_event = {
-                id = germany_events.29
+                id = germany_events.31
                 years = 5
             }
         }
     }
 }
 
-germany_events.29 = { #Anschluss
+germany_events.29 = { #Final war je initiation
     type = country_event
 
     title = germany_events.29.t
@@ -902,13 +902,166 @@ germany_events.29 = { #Anschluss
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/political_agreement.dds"
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = { #
+        name = germany_events.29.a
+        add_modifier = {
+			name = nazi_germany_politics_land_army
+			years = 5
+            is_decaying = yes
+		}
+        every_country = {
+            limit = {
+                OR = {
+                    country_is_in_north_america = yes
+					country_is_in_europe = yes
+                }
+                country_rank >= rank_value:minor_power
+                ruler = {
+				    has_ideology = ideology:ideology_fascist
+                }
+                NOT = {
+                    c:GER ?= this
+                }
+            } 
+            trigger_event = {
+                id = germany_events.30
+                days = 30
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.29.b
+        add_modifier = {
+			name = nazi_germany_politics_navy
+			years = 5
+            is_decaying = yes
+		}
+        every_country = {
+            limit = {
+                OR = {
+                    country_is_in_north_america = yes
+					country_is_in_europe = yes
+                }
+                country_rank >= rank_value:minor_power
+                ruler = {
+				    has_ideology = ideology:ideology_fascist
+                }
+                NOT = {
+                    c:GER ?= this
+                }
+            } 
+            trigger_event = {
+                id = germany_events.30
+                days = 30
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = germany_events.29.c
+        add_modifier = {
+			name = nazi_germany_politics_heavy_industry
+			years = 5
+            is_decaying = yes
+		}
+        every_country = {
+            limit = {
+                OR = {
+                    country_is_in_north_america = yes
+					country_is_in_europe = yes
+                }
+                country_rank >= rank_value:minor_power
+                ruler = {
+				    has_ideology = ideology:ideology_fascist
+                }
+                NOT = {
+                    c:GER ?= this
+                }
+            } 
+            trigger_event = {
+                id = germany_events.30
+                days = 30
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+germany_events.30 = { #Germany proposes an alliance
+    type = country_event
+
+    title = germany_events.30.t
+    desc = germany_events.30.d
+    flavor = germany_events.30.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
     }
 
     trigger = {}
 
     option = {
-        name = germany_events.29.a
+        name = germany_events.30.a
+        create_diplomatic_pact = {
+			country = c:GER
+			type = alliance
+		}
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.30.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+germany_events.31 = { #Anschluss
+    type = country_event
+
+    title = germany_events.31.t
+    desc = germany_events.31.d
+    flavor = germany_events.31.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.31.a
         c:GER = {
             annex = c:AUS
         }
@@ -918,7 +1071,56 @@ germany_events.29 = { #Anschluss
     }
 
     option = {
-        name = germany_events.29.b
+        name = germany_events.31.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+germany_events.35 = { #Invasion of Poland
+    type = country_event
+
+    title = germany_events.35.t
+    desc = germany_events.35.d
+    flavor = germany_events.35.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.35.a
+        set_strategy = ai_strategy_territorial_expansion
+        create_diplomatic_play = {
+	        target_state = s:STATE_WEST_PRUSSIA.region_state:POL
+            type = dp_conquer_state
+	    }
+        trigger_event = {
+            id = stabilization_buff_events.2
+            days = 5
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.35.b
+        set_strategy = ai_strategy_territorial_expansion
+        trigger_event = {
+            id = stabilization_buff_events.2
+            days = 5
+        }
         ai_chance = {
             base = 0
         }

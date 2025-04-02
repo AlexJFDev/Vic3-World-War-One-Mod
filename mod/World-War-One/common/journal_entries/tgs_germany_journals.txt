@@ -283,3 +283,72 @@ je_nazi_threat = {
     timeout = -1
     should_be_pinned_by_default = yes
 }
+
+je_the_final_war = {
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:GER
+        THIS = c:GER
+    }
+    
+    possible = {
+       has_global_variable = hitler_rise_to_power
+    }
+
+    immediate = {
+        trigger_event = {
+            id = germany_events.29
+            days = 5
+        }
+    }
+
+    complete = {
+        NOT = {
+            any_political_movement = {
+                is_insurrectionary = yes
+            }
+            c:GBR = {
+			  has_truce_with = root
+            }
+            c:FRA = {
+			  has_truce_with = root
+            }
+            c:POL = {
+			  has_truce_with = root
+            }
+        }
+        any_scope_building = {
+			is_building_type = building_barracks
+			count >= 800
+		}
+        any_scope_building = {
+			is_building_type = building_naval_base
+			count >= 150
+		}
+        any_country = {
+		    limit = {
+              country_rank >= rank_value:great_power
+            }
+            has_diplomatic_pact = {
+				who = root
+				type = alliance
+			}	
+        }
+        has_technology_researched = blitzkrieg_tech
+        average_sol > average_expected_sol
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = germany_events.35
+            days = 90
+        }
+    }
+
+    on_timeout = {}
+
+    timeout = -1
+    should_be_pinned_by_default = yes
+}
