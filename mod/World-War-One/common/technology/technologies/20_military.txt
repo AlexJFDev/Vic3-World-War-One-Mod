@@ -1064,7 +1064,7 @@ carrier_tech = {
 		
 		# Important for naval powers
 		if = {
-			limit = { navy_size >= 20 }
+			limit = { navy_size >= 30 }
 			add = 0.5
 		}			
 	}
@@ -1170,6 +1170,12 @@ fire_fighting_drills = {
 
     ai_weight = {
 		value = 1
+
+		# Important for naval powers
+		if = {
+			limit = { navy_size >= 30 }
+			add = 0.5
+		}	
 	}
 }
 
@@ -1189,5 +1195,35 @@ smoke_generator = {
 
     ai_weight = {
 		value = 1
+
+		# Important for naval powers
+		if = {
+			limit = { navy_size >= 30 }
+			add = 0.5
+		}	
+	}
+}
+
+passive_sonar = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/passive_sonar.dds"
+	category = military
+	
+	modifier = {
+		unit_convoy_defense_mult = 0.1
+	}
+	
+	unlocking_technologies = {
+		battleship_tech
+	}
+	
+	ai_weight = {
+		value = 1
+
+		# Important for naval powers
+		if = {
+			limit = { navy_size >= 30 }
+			add = 0.5
+		}	
 	}
 }
