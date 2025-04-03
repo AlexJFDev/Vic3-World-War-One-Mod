@@ -12,16 +12,18 @@
         has_technology_researched = military_aviation
     }
 
-    immediate = {}
+    immediate = {
+        trigger_event = { id =  popup = yes }
+    }
 
     complete = {
         country_army_unit_type_fraction = {  
             target = unit_type:combat_unit_type_fighter 
-            value >= 0.08
+            value >= 0.15
         }
         country_army_unit_type_fraction = {  
             target = unit_type:combat_unit_type_bomber 
-            value >= 0.02
+            value >= 0.05
         }
     }
 

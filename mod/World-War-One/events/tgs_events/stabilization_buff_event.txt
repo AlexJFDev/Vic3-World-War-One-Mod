@@ -686,3 +686,52 @@ stabilization_buff_events.21 = {
 		} 
     }
 }
+
+stabilization_buff_events.22 = { 
+    type = country_event
+
+    title = stabilization_buff_events.22.t
+    desc = stabilization_buff_events.22.d
+    flavor = stabilization_buff_events.22.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.22.a
+        trigger = { is_player = no }
+        default_option = yes
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_war_machine_industry
+				level = 3
+            }		
+		}
+        create_military_formation = {
+			type = army
+			hq_region = scope:root.capital.region
+			name = ai_planes_spawn
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = scope:root.capital.state_region
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_bomber
+				state_region = scope:root.capital.state_region
+				count = 5
+			}
+		}
+    }
+}

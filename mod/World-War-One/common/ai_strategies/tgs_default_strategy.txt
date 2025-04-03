@@ -3633,6 +3633,10 @@ ai_strategy_default = {
 				limit = { has_technology_researched = mobile_armor }
 				add = 10
 			}
+			if = {
+				limit = { has_technology_researched = military_aviation }
+				add = 30
+			}
 			
 			if = {
 				limit = { has_law = law_type:law_national_militia }
