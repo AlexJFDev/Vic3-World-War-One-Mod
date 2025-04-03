@@ -627,3 +627,62 @@ stabilization_buff_events.19 = {
 		}     
     }
 }
+
+stabilization_buff_events.20 = { 
+    type = country_event
+
+    title = stabilization_buff_events.20.t
+    desc = stabilization_buff_events.20.d
+    flavor = stabilization_buff_events.20.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.20.a
+        default_option = yes
+		add_modifier = {
+			name = austria_multilingual_army
+			years = 3
+            is_decaying = yes
+		} 
+        add_modifier = {
+			name = austria_disorganized_railway_network
+			years = 5
+            is_decaying = yes
+		}  
+    }
+}
+
+stabilization_buff_events.21 = { 
+    type = country_event
+
+    title = stabilization_buff_events.21.t
+    desc = stabilization_buff_events.21.d
+    flavor = stabilization_buff_events.21.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.21.a
+        default_option = yes
+        add_modifier = {
+			name = france_outdated_tactics
+			years = 1
+            is_decaying = yes
+		} 
+    }
+}
