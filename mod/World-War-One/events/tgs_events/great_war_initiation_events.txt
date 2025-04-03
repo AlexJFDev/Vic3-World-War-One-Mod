@@ -427,9 +427,17 @@ great_war_initiation_events.8 = {
         ai_chance = {
             base = 1
         }
-
+        c:GER = {
+            trigger_event = {
+			   id = stabilization_buff_events.2
+			   days = 5
+		    }
+        }
         c:FRA = {
-            trigger_event = { id = great_war_initiation_events.10 }
+            trigger_event = { 
+                id = great_war_initiation_events.10 
+                days = 5
+            }
         }
         c:TUR = {
             trigger_event = { 

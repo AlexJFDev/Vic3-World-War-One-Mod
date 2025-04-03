@@ -483,6 +483,7 @@ germany_events.22 = { #Negotiation with Communists
     option = {
         name = germany_events.22.a
         default_option = yes
+        set_variable = socialist_negotiations_over
         add_modifier = {
           name = angry_communists_2_modifier
           years = 5
@@ -494,6 +495,7 @@ germany_events.22 = { #Negotiation with Communists
     }
 
     option = {
+        set_variable = socialist_negotiations_over
         name = germany_events.22.b
         activate_law = law_type:law_graduated_taxation
         ai_chance = {
@@ -502,6 +504,7 @@ germany_events.22 = { #Negotiation with Communists
     }
 
     option = {
+        set_variable = socialist_negotiations_over
         name = germany_events.22.c
         activate_law = law_type:law_collectivized_agriculture
         ai_chance = {
@@ -510,6 +513,7 @@ germany_events.22 = { #Negotiation with Communists
     }
 
     option = {
+        set_variable = socialist_negotiations_over
         name = germany_events.22.e
         activate_law = law_type:law_command_economy
         ai_chance = {
@@ -518,6 +522,7 @@ germany_events.22 = { #Negotiation with Communists
     }
 
     option = {
+        set_variable = socialist_negotiations_over
         name = germany_events.22.g
         activate_law = law_type:law_command_economy
         activate_law = law_type:law_collectivized_agriculture
