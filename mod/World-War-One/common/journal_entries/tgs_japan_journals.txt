@@ -1,0 +1,37 @@
+﻿je_japan_expansion = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:JAP
+        THIS = c:JAP
+    }
+    
+    possible = {
+        has_modifier = great_depression_effect_2
+        ruler = {
+            OR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_reactionary
+                has_ideology = ideology:ideology_authoritarian
+                has_ideology = ideology:ideology_jingoist_leader
+            }
+        }
+    }
+
+    immediate = {}
+
+    complete = {
+       
+    }
+
+    on_complete = {
+        trigger_event = { 
+           id =
+           days = 5
+        }
+    }
+
+    timeout = -1
+    should_be_pinned_by_default = yes
+}

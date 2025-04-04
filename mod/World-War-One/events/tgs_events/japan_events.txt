@@ -1,0 +1,42 @@
+﻿namespace = japan_events
+
+japan_events.20 = { 
+    type = country_event
+
+    title = japan_events.20.t
+    desc = japan_events.20.d
+    flavor = japan_events.20.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/"
+    }
+
+    trigger = {}
+
+    option = {
+        name = japan_events.20.a
+        default_option = yes
+        trigger = { is_player = no }
+        create_diplomatic_play = {
+		  target_country = c:MCH
+          escalation = 30
+		  type = dp_make_protectorate
+	    }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = japan_events.20.b
+        trigger = { is_player = no }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
