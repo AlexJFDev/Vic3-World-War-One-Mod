@@ -635,8 +635,8 @@ china_events.5 = { #China collapse
         }
         c:YUE = {
             trigger_event = {
-                id = china_events.8
-                days = 600
+                id = china_events.12
+                years = 2
             }
             trigger_event = {
                 id = china_events.7
@@ -648,6 +648,10 @@ china_events.5 = { #China collapse
             }
         }
         c:ZHI = {
+            trigger_event = {
+                id = china_events.13
+                years = 3
+            }
             trigger_event = {
                 id = china_events.7
                 days = 5
@@ -738,6 +742,10 @@ china_events.5 = { #China collapse
             }
         }
         c:MCH = {
+            trigger_event = {
+                id = china_events.14
+                years = 5
+            }
             trigger_event = {
                 id = china_events.7
                 days = 5
@@ -1080,47 +1088,6 @@ china_events.7 = { #Policy choice
     }
 }
 
-china_events.8 = { #Yue attacks Gui
-    type = country_event
-
-    title = china_events.8.t
-    desc = china_events.8.d
-    flavor = china_events.8.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-
-    event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = china_events.8.a
-        default_option = yes
-        create_diplomatic_play = {
-		  target_country = c:GNG
-          escalation = 30
-		  type = dp_annex_war
-	        add_war_goal = {
-		        holder = c:GNG
-		        type = annex_country
-		        target_country = c:YUE
-            }
-	    }
-        ai_chance = {
-		base = 100
-	    }
-	}
-
-    option = {
-        name = china_events.8.b
-    }
-}
-
 china_events.9 = { #Kuomintang decides to capitulate or not
     type = country_event
 
@@ -1152,6 +1119,15 @@ china_events.9 = { #Kuomintang decides to capitulate or not
 					}
 				}
 			add_diplomatic_play_war_support = { target = c:KMT value = -200 }
+		}
+        random_scope_character =  {
+			limit = {
+				is_ruler = yes
+			}
+			remove_character_role = ruler
+            remove_character_role = politician
+		    add_character_role = agitator
+            exile_character_with_martyrdom = yes
 		}
         c:CHI = {
             trigger_event = {
@@ -1267,6 +1243,21 @@ china_events.11 = { #China reunification
 			set_state_type = incorporated
         }
         change_tag = CHI
+        every_country = {
+			limit = {
+                has_strategic_adjacency = ROOT
+                is_subject = no
+                OR = {
+                   country_has_primary_culture = cu:han
+			       country_has_primary_culture = cu:manchu
+			       country_has_primary_culture = cu:yue
+                }
+			}
+            trigger_event = {
+                id = china_events.20
+                days = 30
+            }
+        }
         ai_chance = {
 		 base = 10
 	    }
@@ -1288,8 +1279,195 @@ china_events.11 = { #China reunification
 			set_state_type = incorporated
         }
         change_tag = CHI
+        every_country = {
+			limit = {
+                has_strategic_adjacency = ROOT
+                is_subject = no
+                OR = {
+                   country_has_primary_culture = cu:han
+			       country_has_primary_culture = cu:manchu
+			       country_has_primary_culture = cu:yue
+                }
+			}
+            trigger_event = {
+                id = china_events.20
+                days = 30
+            }
+        }
         ai_chance = {
 		 base = 0
 	    }
 	}
+}
+
+china_events.12 = { #Yue attacks Gui
+    type = country_event
+
+    title = china_events.12.t
+    desc = china_events.12.d
+    flavor = china_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.12.a
+        default_option = yes
+        create_diplomatic_play = {
+		  target_country = c:GNG
+          escalation = 30
+		  type = dp_annex_war
+	        add_war_goal = {
+		        holder = c:GNG
+		        type = annex_country
+		        target_country = c:YUE
+            }
+	    }
+        ai_chance = {
+		base = 10
+	    }
+	}
+
+    option = {
+        name = china_events.12.b
+        ai_chance = {
+		base = 0
+	    }
+    }
+}
+
+china_events.13 = { #Zhili attacks Anhui
+    type = country_event
+
+    title = china_events.13.t
+    desc = china_events.13.d
+    flavor = china_events.13.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.13.a
+        default_option = yes
+        create_diplomatic_play = {
+		  target_country = c:AHU
+          escalation = 30
+		  type = dp_annex_war
+	        add_war_goal = {
+		        holder = c:AHU
+		        type = annex_country
+		        target_country = c:ZHI
+            }
+	    }
+        ai_chance = {
+		base = 10
+	    }
+	}
+
+    option = {
+        name = china_events.13.b
+        ai_chance = {
+		base = 0
+	    }
+    }
+}
+
+china_events.14 = { #Manchuria attacks Beiyang
+    type = country_event
+
+    title = china_events.14.t
+    desc = china_events.14.d
+    flavor = china_events.14.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.14.a
+        default_option = yes
+        create_diplomatic_play = {
+		  target_state = s:STATE_BEIJING.region_state:BEI
+          escalation = 30
+		  type = dp_conquer_state
+	        add_war_goal = {
+		        holder = c:BEI
+		        type = annex_country
+		        target_country = c:MCH
+            }
+	    }
+        ai_chance = {
+		base = 10
+	    }
+	}
+
+    option = {
+        name = china_events.14.b
+        ai_chance = {
+		base = 0
+	    }
+    }
+}
+
+china_events.20 = { #Join the central government ?
+    type = country_event
+
+    title = china_events.20.t
+    desc = china_events.20.d
+    flavor = china_events.20.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.20.a
+        default_option = yes
+        c:CHI = {
+            create_diplomatic_pact = {
+				country = ROOT
+				type = protectorate
+			}
+        }
+        ai_chance = {
+		base = 7
+	    }
+	}
+
+    option = {
+        name = china_events.20.b
+        ai_chance = {
+		base = 3
+	    }
+    }
 }
