@@ -466,7 +466,7 @@ stabilization_buff_events.15 = {
         trigger = { is_player = no }
         add_modifier = {
             name = revolution_stabilization_buff_4
-            years = 10
+            years = 20
         }
     }
 }
@@ -733,5 +733,29 @@ stabilization_buff_events.22 = {
 				count = 5
 			}
 		}
+    }
+}
+
+stabilization_buff_events.23 = { 
+    type = country_event
+
+    title = stabilization_buff_events.23.t
+    desc = stabilization_buff_events.23.d
+    flavor = stabilization_buff_events.23.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.23.a
+        trigger = { is_player = no }
+        default_option = yes
+        add_treasury = -100000000
     }
 }

@@ -85,6 +85,11 @@ usa_events.6 = { #Black Tuesday
         default_option = yes
         add_investment_pool = -9999999999
         add_modifier = {
+            name = great_depression_effect_1
+            years = 20
+            is_decaying = yes
+        }
+        add_modifier = {
             name = angry_population_modifier
             years = 5
             is_decaying = yes
@@ -225,7 +230,7 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
         }
         add_modifier = {
             name = great_depression_effect_2
-            years = 5
+            years = 10
             is_decaying = yes
         }
         ai_chance = {
@@ -243,7 +248,7 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
         }
         add_modifier = {
             name = great_depression_effect_2
-            years = 10
+            years = 15
             is_decaying = yes
         }
         ai_chance = {
@@ -259,8 +264,12 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
         add_investment_pool = -9999999999
         add_modifier = {
             name = great_depression_effect_3
-            years = 10
+            years = 15
             is_decaying = yes
+        }
+        trigger_event = {
+            id = stabilization_buff_events.23
+            days = 5
         }
         add_treasury = -50000000
         c:USA = {
