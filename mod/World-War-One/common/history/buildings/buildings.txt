@@ -30617,7 +30617,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 2
+						levels = 6
 						region = STATE_EAST_ANGLIA
 					}
 				}
@@ -30795,7 +30795,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 2
+						levels = 4
 						region = STATE_EAST_ANGLIA
 					}
 				}
@@ -50730,6 +50730,36 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_mechanized_workshops pm_precision_tools pm_rotary_valve_engine_building_furniture_manufacturies 
+				}
+			}
+			create_building = {
+				building = building_explosives_factory
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GRE
+						levels = 3
+						region = STATE_ATTICA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_brine_electrolysis 
+				}
+			}
+			create_building = {
+				building = building_glassworks
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GRE
+						levels = 6
+						region = STATE_ATTICA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_crystal_glass pm_disabled_ceramics pm_manual_glassblowing 
 				}
 			}
 			create_building = {
