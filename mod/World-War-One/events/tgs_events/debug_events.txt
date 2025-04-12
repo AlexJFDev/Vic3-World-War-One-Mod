@@ -40,21 +40,6 @@ debug_events.1 = {
 		      set_state_owner = c:FRA
             }
         }
-		every_diplomatic_play = {
-			limit = {
-				is_war = yes
-				initiator = c:AUS
-                target = c:USA
-			}
-			add_target_backers = {
-				c:FRA
-			}
-			add_war_goal = {
-                holder = c:FRA
-                type = conquer_state
-                target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
-            }
-		}
 	}
 }
 
@@ -88,5 +73,38 @@ debug_events.2 = {
         c:FRA = {
 			end_truce = c:GER
 		}
+		set_capital = STATE_ILE_DE_FRANCE
+	}
+}
+
+debug_events.3 = {
+	type = country_event
+	
+	event_image = {
+        texture = "gfx/event_pictures/second_debug.dds"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/world_map.dds"
+
+	title = debug_events.3.t
+	desc = debug_events.3.d
+	flavor = debug_events.3.f
+
+	duration = 3
+
+	trigger = {}
+
+	immediate = {}
+   
+	option = {
+		name = debug_events.3.a
+        default_option = yes
+		ai_chance = {
+			base = 1
+		}
+        set_variable = cancel_peace_deal_germany_russia
+		set_global_variable = fix_journal_bug
 	}
 }

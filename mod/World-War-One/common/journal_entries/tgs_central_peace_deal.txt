@@ -15,32 +15,38 @@
 
     possible = { 
 		NOT = {
-		  has_global_variable = world_war_1_over
+		  OR = {
+			 has_global_variable = world_war_1_over
+             has_global_variable = central_powers_partial_victory
+		    }
 	    }
 	   has_variable = central_powers_participant
 	   country_rank >= rank_value:great_power
 	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-		    }
+			has_law = law_type:law_council_republic
+			has_global_variable = fix_journal_bug
 	    }
-	  c:FRA = {
+	    c:FRA = {
           has_variable = entente_participant
-		  has_modifier = country_humiliated
-        } 
-      c:ITA = {
-          has_variable = entente_participant
-		  has_modifier = country_humiliated
         } 
 	}
 
-    immediate = {
-		trigger_event = { id = central_peace_deal.1 popup = yes }
-    }
+    immediate = {}
 
     complete = {
-        has_global_variable = central_powers_partial_victory
+        c:FRA = {
+          has_variable = entente_participant
+		  has_modifier = country_humiliated
+        } 
     }
+
+	on_complete = {
+		set_global_variable = central_powers_partial_victory
+		trigger_event = { 
+			id = central_peace_deal.1 
+			popup = yes 
+		}
+	}
 
     on_complete = {}
 
@@ -57,7 +63,10 @@ je_central_peace_deal_round_2 = {
     
 	is_shown_when_inactive = {
 		NOT = {
-		  has_global_variable = world_war_1_over
+		  OR = {
+			 has_global_variable = world_war_1_over
+             has_global_variable = russia_surrenders
+		    }
 	    }
 	  has_variable = central_powers_participant
 	  exists = c:GER
@@ -68,28 +77,37 @@ je_central_peace_deal_round_2 = {
 		NOT = {
 		  has_global_variable = world_war_1_over
 	    }
-	   has_variable = central_powers_participant
-	   country_rank >= rank_value:great_power
+	    has_variable = central_powers_participant
+	    country_rank >= rank_value:great_power
 	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-		    }
+		  has_law = law_type:law_council_republic
+		  has_global_variable = fix_journal_bug
 	    }
 	  c:RUS = {
           has_variable = entente_participant
-		  has_modifier = country_humiliated
         } 
 	}
 
-    immediate = {
-		trigger_event = { id = central_peace_deal.2 popup = yes }
-    }
+    immediate = {}
 
     complete = {
-        has_global_variable = russia_surrenders
+        c:RUS = {
+          has_variable = entente_participant
+		  has_modifier = country_humiliated
+        } 
     }
 
-    on_complete = {}
+	invalid = {
+		has_variable = cancel_peace_deal_germany_russia
+	}
+
+    on_complete = {
+		set_global_variable = russia_surrenders
+		trigger_event = {
+			id = central_peace_deal.2 
+			popup = yes
+		}
+	}
 
     weight = 1000
     timeout = -1
@@ -104,7 +122,10 @@ je_central_peace_deal_round_3 = {
     
 	is_shown_when_inactive = {
 	  NOT = {
-		  has_global_variable = world_war_1_over
+		  OR = {
+			 has_global_variable = world_war_1_over
+             has_global_variable = central_powers_complete_victory
+		    }
 	    }
 	  has_variable = central_powers_participant
 	  exists = c:GER
@@ -118,13 +139,10 @@ je_central_peace_deal_round_3 = {
 	   has_variable = central_powers_participant
 	   country_rank >= rank_value:great_power
 	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-		    }
+			has_law = law_type:law_council_republic
 	    }
 	  c:GBR = {
           has_variable = entente_participant
-		  has_modifier = country_humiliated
         } 
 	  c:GER = {
 		owns_entire_state_region = STATE_HOME_COUNTIES
@@ -136,7 +154,12 @@ je_central_peace_deal_round_3 = {
     }
 
     complete = {
-        has_global_variable = central_powers_complete_victory
+        c:GBR = {
+          has_variable = entente_participant
+        } 
+	    c:GER = {
+		  owns_entire_state_region = STATE_HOME_COUNTIES
+	    }
     }
 
     on_complete = {
@@ -146,6 +169,7 @@ je_central_peace_deal_round_3 = {
                 days = 40
             }
         }
+		set_global_variable = central_powers_complete_victory
 	}
 
     weight = 1000
