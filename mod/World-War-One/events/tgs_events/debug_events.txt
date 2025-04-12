@@ -1,0 +1,92 @@
+﻿namespace = debug_events
+
+debug_events.1 = {
+	type = country_event
+	
+	event_image = {
+        texture = "gfx/event_pictures/second_debug.dds"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/world_map.dds"
+
+	title = debug_events.1.t
+	desc = debug_events.1.d
+	flavor = debug_events.1.f
+
+	duration = 3
+
+	trigger = {}
+
+	immediate = {}
+   
+	option = {
+		name = debug_events.1.a
+        default_option = yes
+		ai_chance = {
+			base = 1
+		}
+        s:STATE_ILE_DE_FRANCE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FRA
+            }
+        }
+		every_diplomatic_play = {
+			limit = {
+				is_war = yes
+				initiator = c:AUS
+                target = c:USA
+			}
+			add_target_backers = {
+				c:FRA
+			}
+			add_war_goal = {
+                holder = c:FRA
+                type = conquer_state
+                target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
+            }
+		}
+	}
+}
+
+debug_events.2 = {
+	type = country_event
+	
+	event_image = {
+        texture = "gfx/event_pictures/second_debug.dds"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/world_map.dds"
+
+	title = debug_events.2.t
+	desc = debug_events.2.d
+	flavor = debug_events.2.f
+
+	duration = 3
+
+	trigger = {}
+
+	immediate = {}
+   
+	option = {
+		name = debug_events.2.a
+        default_option = yes
+		ai_chance = {
+			base = 1
+		}
+        c:FRA = {
+			end_truce = c:GER
+		}
+	}
+}
