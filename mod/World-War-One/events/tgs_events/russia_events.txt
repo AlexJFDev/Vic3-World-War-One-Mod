@@ -153,6 +153,113 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         ig:ig_devout = {
 			remove_ruling_interest_group = yes
 		}
+        create_character = {
+			template = rus_leon_trotsky_character_template
+            on_created = {
+               set_variable = {
+                  name = leon_trotsky
+                }                
+            }
+        }
+    }
+
+    option = {
+        name = russia_events.3.b
+        default_option = yes
+        activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_wealth_voting
+        activate_law = law_type:law_right_of_assembly
+        activate_law = law_type:law_public_schools
+        activate_law = law_type:law_dedicated_police
+        c:GER = {
+            trigger_event = {
+                id = russia_events.5
+                days = 5
+            }
+        }
+        ig:ig_industrialists = {
+			add_ruling_interest_group = yes
+		}
+        ig:ig_landowners = {
+			remove_ruling_interest_group = yes
+		}
+        ig:ig_devout = {
+			remove_ruling_interest_group = yes
+		}
+        create_character = {
+			template = rus_leon_trotsky_character_template
+            on_created = {
+               set_variable = {
+                  name = leon_trotsky
+                }                
+            }
+        }
+    }
+
+    option = {
+        name = russia_events.3.c
+        default_option = yes
+        activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_oligarchy
+        activate_law = law_type:law_right_of_assembly
+        activate_law = law_type:law_public_schools
+        activate_law = law_type:law_dedicated_police
+        c:GER = {
+            trigger_event = {
+                id = russia_events.5
+                days = 5
+            }
+        }
+        ig:ig_industrialists = {
+			add_ruling_interest_group = yes
+		}
+        ig:ig_landowners = {
+			remove_ruling_interest_group = yes
+		}
+        ig:ig_devout = {
+			remove_ruling_interest_group = yes
+		}
+        create_character = {
+			template = rus_leon_trotsky_character_template
+            on_created = {
+               set_variable = {
+                  name = leon_trotsky
+                }                
+            }
+        }
+    }
+
+    option = {
+        name = russia_events.3.e
+        default_option = yes
+        activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_censorship
+        activate_law = law_type:law_public_schools
+        activate_law = law_type:law_dedicated_police
+        c:GER = {
+            trigger_event = {
+                id = russia_events.5
+                days = 5
+            }
+        }
+        ig:ig_armed_forces = {
+			add_ruling_interest_group = yes
+		}
+        ig:ig_landowners = {
+			remove_ruling_interest_group = yes
+		}
+        ig:ig_devout = {
+			remove_ruling_interest_group = yes
+		}
+        create_character = {
+			template = rus_leon_trotsky_character_template
+            on_created = {
+               set_variable = {
+                  name = leon_trotsky
+                }                
+            }
+        }
     }
 }
 
@@ -183,9 +290,14 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         }
         remove_modifier = war_protests_1_modifier
         set_variable = russian_rep_continues_war
-        create_character = {
-			template = rus_leon_trotsky_character_template
-        }
+        random_scope_character =  {
+				limit = {
+					has_variable = leon_trotsky
+				}
+			remove_character_role = agitator
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+		}
 		ai_chance = {
 			base = 100
 		}
