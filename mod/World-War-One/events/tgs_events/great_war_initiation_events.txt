@@ -2,7 +2,7 @@
 
 # Archduke Assassinated
 ## Austrian Event
-great_war_initiation_events.1 = { # Triggered by global on June 28th.
+great_war_initiation_events.1 = { # Triggered by global on June 28th. 
     type = country_event
     placement = root
     
@@ -57,10 +57,8 @@ great_war_initiation_events.1 = { # Triggered by global on June 28th.
         }
         trigger_event = { 
             id = great_war_initiation_events.3
-            days = 7
+            days = 5
         }
-
-        set_global_variable = great_war_starting
     }
 
     option = {
@@ -122,7 +120,7 @@ great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
         c:SER = {
             trigger_event = { 
                 id = great_war_initiation_events.4
-                days = 7
+                days = 5
             }
         }
     }
@@ -134,7 +132,7 @@ great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
         c:SER = {
             trigger_event = { 
                 id = great_war_initiation_events.5 
-                days = 7
+                days = 5
             }
         }
     }
@@ -160,11 +158,7 @@ great_war_initiation_events.4 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    immediate = {
-        set_global_variable = {
-            name = great_war_starting value = no
-        }
-    }
+    immediate = {}
 
     option = { # Reject the investigation
         name = great_war_initiation_events.4.a
@@ -186,19 +180,18 @@ great_war_initiation_events.4 = {
                 }
             }
         }
-        set_global_variable = great_war_active
         c:AUS = { set_variable = central_powers_participant }
         c:SER = { set_variable = entente_participant }
         c:RUS = {
             trigger_event = { 
                 id = great_war_initiation_events.6
-                days = 3
+                days = 5
             }
         }
         c:MON = {
             trigger_event = {
                 id = great_war_initiation_events.17
-                days = 3
+                days = 5
             }
         }
         c:BUL = {
@@ -237,11 +230,7 @@ great_war_initiation_events.5 = {
         texture = "gfx/event_pictures/july_crisis.dds"
     }
 
-    immediate = {
-        set_global_variable = {
-            name = great_war_starting value = no
-        }
-    }
+    immediate = {}
 
     title = great_war_initiation_events.5.t
     desc = great_war_initiation_events.5.d
@@ -253,7 +242,7 @@ great_war_initiation_events.5 = {
         name = great_war_initiation_events.5.a
         default_option = yes
         ai_chance = {
-            base = 1
+            base = 0
         }
         c:AUS = {
             create_diplomatic_play = { # c:SER is target, c:AUS is initiator
@@ -269,26 +258,25 @@ great_war_initiation_events.5 = {
                 }
             }
         }
-        set_global_variable = great_war_active
         c:AUS = { set_variable = central_powers_participant }
         c:SER = { set_variable = entente_participant }
         c:RUS = {
             trigger_event = {
                 id = great_war_initiation_events.6
-                days = 3
+                days = 5
             }
         }
         c:MON = {
             trigger_event = {
                 id = great_war_initiation_events.17
-                days = 3
+                days = 5
             }
         }
     }
     option = { # Make an apology
         name = great_war_initiation_events.5.b
         ai_chance = {
-            base = 0
+            base = 1
         }
         c:AUS = {
         add_modifier = {
@@ -316,11 +304,7 @@ great_war_initiation_events.6 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    immediate = {
-        set_global_variable = {
-            name = great_war_starting value = no
-        }
-    }
+    immediate = {}
 
     option = { # Threaten Austria
         name = great_war_initiation_events.6.a
@@ -331,7 +315,7 @@ great_war_initiation_events.6 = {
         c:GER = {
             trigger_event = { 
                 id = great_war_initiation_events.7 
-                days = 3
+                days = 5
             }
         }
     }
@@ -375,7 +359,7 @@ great_war_initiation_events.7 = {
         c:RUS = {
             trigger_event = { 
                 id = great_war_initiation_events.8
-                days = 3
+                days = 5
             }
         }
     }
@@ -387,7 +371,7 @@ great_war_initiation_events.7 = {
         c:AUS = {
             trigger_event = { 
                 id = great_war_initiation_events.9
-                days = 3
+                days = 5
             }
         }
         c:GER = {
@@ -400,7 +384,7 @@ great_war_initiation_events.7 = {
         C:AUS = {
         change_relations = { 
 				country = c:GER
-				value = -50
+				value = -60
 			}
         }
     }
@@ -427,6 +411,7 @@ great_war_initiation_events.8 = {
         ai_chance = {
             base = 1
         }
+        set_global_variable = world_war_1_ongoing
         c:GER = {
             trigger_event = {
 			   id = stabilization_buff_events.2
@@ -563,7 +548,6 @@ great_war_initiation_events.9 = {
         ai_chance = {
             base = 1
         }        
-        # TODO:MID Add side effects
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
@@ -571,7 +555,6 @@ great_war_initiation_events.9 = {
 			}
             end_play = true
 		}
-        set_variable = war_cancelled
         c:AUS = {
         add_modifier = {
             name = angry_elites_1_modifier
@@ -604,7 +587,7 @@ great_war_initiation_events.10 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    option = { # pursue diplomacy
+    option = { # Pursue diplomacy
         name = great_war_initiation_events.10.a
         default_option = yes
         ai_chance = {
@@ -613,11 +596,11 @@ great_war_initiation_events.10 = {
         c:GER = {
             trigger_event = { 
                 id = great_war_initiation_events.13
-                days = 3
+                days = 5
             }
         }
     }
-    option = { # support Russia
+    option = { # Support Russia
         name = great_war_initiation_events.10.b
         ai_chance = {
             base = 0
@@ -625,7 +608,7 @@ great_war_initiation_events.10 = {
         c:GER = {
             trigger_event = {
                 id = great_war_initiation_events.14
-                days = 3
+                days = 5
             }
         }
         c:FRA = {
@@ -635,7 +618,10 @@ great_war_initiation_events.10 = {
             }
         }
         c:ITA = {
-            trigger_event = { id = great_war_initiation_events.12 }
+            trigger_event = { 
+                id = great_war_initiation_events.12 
+                days = 5
+            }
         }
         every_diplomatic_play = {
 			limit = {
@@ -682,7 +668,6 @@ great_war_initiation_events.10 = {
                 days = 30
             }
         }
-        set_global_variable = world_war_1_ongoing
     }
 }
 
@@ -748,7 +733,6 @@ great_war_initiation_events.12 = {
             base = 1
         }
         default_option = yes
-        c:ITA = { set_variable = is_neutral }
         c:ITA = {
             trigger_event = {
                 id = joining_world_war_events.14
@@ -793,15 +777,15 @@ great_war_initiation_events.13 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
     option = { # Strike first
-        name = great_war_initiation_events.13.b
+        name = great_war_initiation_events.13.a
         default_option = yes
         ai_chance = {
-            base = 0
+            base = 1
         }
         c:GER = {
             trigger_event = {
                 id = great_war_initiation_events.14
-                days = 3
+                days = 2
             }
         }
         c:FRA = {
@@ -811,7 +795,10 @@ great_war_initiation_events.13 = {
             }
         }
         c:ITA = {
-            trigger_event = { id = great_war_initiation_events.12 }
+            trigger_event = { 
+                id = great_war_initiation_events.12 
+                days = 5
+            }
         }
         every_diplomatic_play = {
 			limit = {
@@ -821,6 +808,12 @@ great_war_initiation_events.13 = {
 			add_target_backers = {
 				c:FRA
 			}
+            add_target_backers = {
+                c:MOR
+            }
+            add_target_backers = {
+                c:TUN
+            }
             add_target_backers = {
                 c:WAF
             }
@@ -870,10 +863,9 @@ great_war_initiation_events.13 = {
                 days = 30
             }
         }
-        set_global_variable = world_war_1_ongoing
     }
     option = { # Leave France alone
-        name = great_war_initiation_events.13.a
+        name = great_war_initiation_events.13.b
         ai_chance = {
             base = 0
         }
@@ -883,18 +875,6 @@ great_war_initiation_events.13 = {
             years = 5
             is_decaying = yes
         }
-        }
-        c:GER = {
-            trigger_event = { 
-                id = great_war_initiation_events.26
-                days = 30
-            }
-        }
-        c:FRA = {
-            trigger_event = { 
-                id = great_war_initiation_events.25
-                days = 30
-            }
         }
     }
 }
@@ -945,13 +925,8 @@ great_war_initiation_events.14 = {
         }
         add_modifier = {
             name = schlieffen_plan_1_modifier
-            months = 5
-        }
-        c:GER = {
-            trigger_event = {
-                id = ww1_war_policies_events.3
-                days = 3
-            }
+            months = 6
+            is_decaying = yes
         }
         every_diplomatic_play = {
             limit = {
@@ -1002,12 +977,6 @@ great_war_initiation_events.14 = {
             name = schlieffen_plan_2_modifier
             months = 5
         }
-        c:GER = {
-            trigger_event = {
-                id = ww1_war_policies_events.3
-                days = 3
-            }
-        }
         every_diplomatic_play = {
             limit = {
                 initiator = c:AUS
@@ -1035,12 +1004,6 @@ great_war_initiation_events.14 = {
                 name = angry_military_modifier
                 years = 5
                 is_decaying = yes
-            }
-        }
-        c:GER = {
-            trigger_event = {
-                id = ww1_war_policies_events.3
-                days = 3
             }
         }
     }
@@ -1148,6 +1111,12 @@ great_war_initiation_events.15 = {
             trigger_event = {
                 id = joining_world_war_events.21
                 days = 200
+            }
+        }
+        c:GER = {
+            trigger_event = {
+                id = ww1_war_policies_events.3
+                days = 5
             }
         }
         c:GBR = {
@@ -1354,268 +1323,6 @@ great_war_initiation_events.24 = {
 				}
 			add_diplomatic_play_war_support = { target = c:LUX value = -200 }
 		}
-        c:LUX = {
-            trigger_event = {
-                id = great_war_initiation_events.27
-                days = 60
-            }
-        }
-        ai_chance = {
-            base = 10
-        }
-    }
-}
-
-#France decides to join again
-great_war_initiation_events.25 = {
-    type = country_event
-
-    duration = 6
-    event_image = { 
-        texture = "gfx/event_pictures/july_crisis.dds"
-    }
-
-    title = great_war_initiation_events.25.t
-    desc = great_war_initiation_events.25.d
-    flavor = great_war_initiation_events.25.f
-
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-    option = { # Join the war
-        name = great_war_initiation_events.25.b
-        trigger = {
-           NOT = { has_global_variable = world_war_1_ongoing }
-        }
-        default_option = yes
-        ai_chance = {
-            base = 1
-        }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
-			add_target_backers = {
-				c:FRA
-			}
-            add_war_goal = {
-                    holder = c:FRA
-                    type = conquer_state
-                    target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_ILE_DE_FRANCE.region_state:FRA
-                }
-            add_war_goal = {
-                    holder = c:FRA
-                    type = humiliation
-                    target_country = c:GER
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = humiliation
-                    target_country = c:FRA
-                }
-            add_war_goal = {
-                    holder = c:FRA
-                    type = humiliation
-                    target_country = c:AUS
-                }
-        }
-        c:GER = {
-            trigger_event = {
-                id = great_war_initiation_events.14
-                days = 3
-            }
-        }
-        c:FRA = {
-            trigger_event = {
-                id = stabilization_buff_events.21
-                days = 5
-            }
-        }
-        c:FRA = { set_variable = entente_participant }
-        c:FRA = {
-        create_bidirectional_truce = { 
-            country = c:GBR
-            months = 120
-        }
-        }
-    }
-
-    option = { # Stay Neutral
-        name = great_war_initiation_events.25.a
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-#Germany decides to attack France again
-great_war_initiation_events.26 = {
-    type = country_event
-
-    duration = 6
-    event_image = { 
-        texture = "gfx/event_pictures/july_crisis.dds"
-    }
-
-    title = great_war_initiation_events.26.t
-    desc = great_war_initiation_events.26.d
-    flavor = great_war_initiation_events.26.f
-
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-    option = { # Join the war
-        name = great_war_initiation_events.26.b
-        default_option = yes
-        trigger = {
-           NOT = { has_global_variable = world_war_1_ongoing }
-        }
-        ai_chance = {
-            base = 1
-        }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
-			add_target_backers = {
-				c:FRA
-			}
-            add_war_goal = {
-                    holder = c:FRA
-                    type = conquer_state
-                    target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_ILE_DE_FRANCE.region_state:FRA
-                }
-            add_war_goal = {
-                    holder = c:FRA
-                    type = humiliation
-                    target_country = c:GER
-                }
-            add_war_goal = {
-                    holder = c:GER
-                    type = humiliation
-                    target_country = c:FRA
-                }
-            add_war_goal = {
-                    holder = c:FRA
-                    type = humiliation
-                    target_country = c:AUS
-                }
-        }
-        c:GER = {
-            trigger_event = {
-                id = great_war_initiation_events.14
-                days = 3
-            }
-        }
-        c:FRA = {
-            trigger_event = {
-                id = stabilization_buff_events.21
-                days = 5
-            }
-        }
-        c:FRA = { set_variable = entente_participant }
-        c:FRA = {
-        create_bidirectional_truce = { 
-            country = c:GBR
-            months = 120
-        }
-        }
-    }
-
-    option = { # Stay Neutral
-        name = great_war_initiation_events.26.a
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-#Luxembourg becomes puppet
-great_war_initiation_events.27 = {
-    type = country_event
-
-    duration = 0.1
-    event_image = { 
-        texture = "gfx/event_pictures/july_crisis.dds"
-    }
-
-    title = great_war_initiation_events.27.t
-    desc = great_war_initiation_events.27.d
-    flavor = great_war_initiation_events.27.f
-
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-    option = {
-        name = great_war_initiation_events.27.a
-        default_option = yes
         c:GER = {
 		   create_diplomatic_pact = {
 			  country = c:LUX
