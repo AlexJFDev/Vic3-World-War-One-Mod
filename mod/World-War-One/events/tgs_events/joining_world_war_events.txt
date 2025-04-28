@@ -1052,6 +1052,11 @@ joining_world_war_events.18 = { #USA joins
                     type = war_reparations
                     target_country = c:USA
                 }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_PANAMA.region_state:USA
+                } 
         }
         c:USA = { set_variable = entente_participant }
         c:USA = {
