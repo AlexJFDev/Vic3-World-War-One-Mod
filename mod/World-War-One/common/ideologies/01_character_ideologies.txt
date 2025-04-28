@@ -590,6 +590,18 @@ ideology_republican_leader = {
 		law_hereditary_bureaucrats = disapprove
 	}
 
+	lawgroup_military_governance = { 
+       law_subordinate_general_staff = approve
+       law_independant_general_staff = disapprove
+	   law_military_oversight = strongly_disapprove
+	}
+
+	lawgroup_surveillance = {
+        law_no_agencies = disapprove
+		law_foreign_counterintelligence = approve
+		law_surveillance_state = strongly_disapprove
+	}
+
 	interest_group_leader_trigger = {
 		ideology_republican_leader_valid_trigger = yes
 	}
@@ -782,7 +794,19 @@ ideology_radical = {
 		law_dedicated_police = disapprove
 		law_local_police = strongly_disapprove
 		law_militarized_police = strongly_disapprove
-	}		
+	}	
+
+	lawgroup_military_governance = { 
+       law_subordinate_general_staff = approve
+       law_independant_general_staff = disapprove
+	   law_military_oversight = strongly_disapprove
+	}
+
+	lawgroup_surveillance = {
+        law_no_agencies = disapprove
+		law_foreign_counterintelligence = approve
+		law_surveillance_state = strongly_disapprove
+	}	
 	
 	country_trigger = {
 		has_technology_researched = egalitarianism
@@ -1520,6 +1544,12 @@ ideology_pacifist = {
 		law_frontier_colonization = strongly_disapprove
 	}
 
+	lawgroup_military_governance = { 
+       law_subordinate_general_staff = strongly_approve
+       law_independant_general_staff = disapprove
+	   law_military_oversight = strongly_disapprove
+	}
+
 	interest_group_leader_trigger = {
 		ideology_pacifist_valid_trigger = yes
 	}
@@ -1655,6 +1685,18 @@ ideology_jingoist_leader = {
 		law_colonial_resettlement = approve
 		law_frontier_colonization = approve
 		law_colonial_exploitation = strongly_approve
+	}
+
+	lawgroup_military_governance = { 
+       law_subordinate_general_staff = strongly_disapprove
+       law_independant_general_staff = approve
+	   law_military_oversight = strongly_approve
+	}
+
+	lawgroup_surveillance = {
+        law_no_agencies = disapprove
+		law_foreign_counterintelligence = strongly_approve
+		law_surveillance_state = neutral
 	}
 
 	interest_group_leader_trigger = {
@@ -2349,6 +2391,12 @@ ideology_vanguardist = {
         law_outlawed_dissent = strongly_approve
 	}
 
+	lawgroup_surveillance = {
+        law_no_agencies = strongly_disapprove
+		law_foreign_counterintelligence = approve
+		law_surveillance_state = strongly_approve
+	}
+
 	country_trigger = {
 		has_technology_researched = political_agitation
 	}
@@ -2582,6 +2630,12 @@ ideology_fascist = {
         law_federated = disapprove
         law_devolved = approve
         law_unitary = strongly_approve
+	}
+
+	lawgroup_surveillance = {
+        law_no_agencies = strongly_disapprove
+		law_foreign_counterintelligence = approve
+		law_surveillance_state = strongly_approve
 	}
 
 	country_trigger = {
@@ -2863,6 +2917,18 @@ ideology_anarchist = {
         law_federated = approve
         law_devolved = disapprove
         law_unitary = strongly_disapprove
+	}
+
+	lawgroup_military_governance = { 
+       law_subordinate_general_staff = approve
+       law_independant_general_staff = disapprove
+	   law_military_oversight = strongly_disapprove
+	}
+
+	lawgroup_surveillance = {
+        law_no_agencies = neutral
+		law_foreign_counterintelligence = neutral
+		law_surveillance_state = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -3662,6 +3728,12 @@ ideology_authoritarian = {
         law_federated = disapprove
         law_devolved = approve
         law_unitary = strongly_approve
+	}
+
+	lawgroup_surveillance = {
+        law_no_agencies = strongly_disapprove
+		law_foreign_counterintelligence = approve
+		law_surveillance_state = strongly_approve
 	}
 
 	interest_group_leader_trigger = {
