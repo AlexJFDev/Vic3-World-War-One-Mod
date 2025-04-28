@@ -13,6 +13,10 @@ join_entente_progress_bar = {
                 is_revolutionnary = no
 			}
 			add = {
+				desc = "entente_progress_from_trade"
+				value = owner.var:entente_progress_from_trade
+			}
+			add = {
 				desc = "entente_progress_from_diplomacy"
 				value = owner.var:entente_progress_from_diplomacy
 			}
@@ -39,6 +43,10 @@ join_central_powers_progress_bar = {
 			limit = {
 				is_at_war = no
                 is_revolutionnary = no
+			}
+			add = {
+				desc = "central_powers_progress_from_trade"
+				value = owner.var:central_powers_progress_from_trade
 			}
 			add = {
 				desc = "central_powers_progress_from_diplomacy"

@@ -1,9 +1,11 @@
 ﻿
 joining_world_war_set_variables = { 
 
+    set_variable = { name = entente_progress_from_trade value = 0 }
     set_variable = { name = entente_progress_from_diplomacy value = 0 } 
     set_variable = { name = entente_progress_from_lobbies value = 0 }
 
+    set_variable = { name = entente_progress_from_trade value = 0 }
     set_variable = { name = central_powers_progress_from_diplomacy value = 0 } 
     set_variable = { name = central_powers_progress_from_lobbies value = 0 }
 
@@ -11,8 +13,37 @@ joining_world_war_set_variables = {
 
 weekly_pulse_entente_progress = {
      
+    set_variable = { name = entente_progress_from_trade value = 0 }
     set_variable = { name = entente_progress_from_diplomacy value = 0 } 
     set_variable = { name = entente_progress_from_lobbies value = 0 }
+
+    every_trade_route = {
+        limit = {
+		   level >= 5
+		   importer.owner = root
+		   exporter.owner = {
+			  has_variable = entente_participant	
+		    }
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_trade add = 0.3  }
+            change_variable = { name = central_powers_progress_from_trade add = -0.3  }
+		}
+	}
+
+    every_trade_route = {
+        limit = {
+		   level >= 5
+		   exporter.owner = root
+		   importer.owner = {
+			  has_variable = entente_participant	
+		    }
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_trade add = 0.3  }
+            change_variable = { name = central_powers_progress_from_trade add = -0.3  }
+		}
+	}
 
     every_country = {
 		limit = {
@@ -24,8 +55,8 @@ weekly_pulse_entente_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = 1  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+			change_variable = { name = entente_progress_from_trade add = 2  }
+            change_variable = { name = central_powers_progress_from_trade add = -2  }
 		}
     }
 
@@ -39,8 +70,8 @@ weekly_pulse_entente_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = 1  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+			change_variable = { name = entente_progress_from_diplomacy add = 2  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -2  }
 		}
     }
 
@@ -53,8 +84,8 @@ weekly_pulse_entente_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = 3  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -3  }
+			change_variable = { name = entente_progress_from_diplomacy add = 5  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
 		}
     }
     
@@ -67,8 +98,8 @@ weekly_pulse_entente_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = 6  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -6  }
+			change_variable = { name = entente_progress_from_diplomacy add = 10  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -10  }
 		}
     }
 
@@ -145,8 +176,37 @@ weekly_pulse_entente_progress = {
 
 weekly_pulse_central_powers_progress = {
      
+    set_variable = { name = entente_progress_from_trade value = 0 } 
     set_variable = { name = central_powers_progress_from_diplomacy value = 0 } 
     set_variable = { name = central_powers_progress_from_lobbies value = 0 }
+
+    every_trade_route = {
+        limit = {
+		   level >= 5
+		   importer.owner = root
+		   exporter.owner = {
+			  has_variable = entente_participant	
+		    }
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_trade add = 0.3  }
+            change_variable = { name = central_powers_progress_from_trade add = -0.3  }
+		}
+	}
+
+    every_trade_route = {
+        limit = {
+		   level >= 5
+		   exporter.owner = root
+		   importer.owner = {
+			  has_variable = entente_participant	
+		    }
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_trade add = 0.3  }
+            change_variable = { name = central_powers_progress_from_trade add = -0.3  }
+		}
+	}
 
     every_country = {
 		limit = {
@@ -158,8 +218,8 @@ weekly_pulse_central_powers_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = -1  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+			change_variable = { name = entente_progress_from_diplomacy add = -2  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = 2  }
 		}
     }
 
@@ -173,8 +233,8 @@ weekly_pulse_central_powers_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = -1  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+			change_variable = { name = entente_progress_from_diplomacy add = -2  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = 2  }
 		}
     }
 
@@ -187,8 +247,8 @@ weekly_pulse_central_powers_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = -3  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 3  }
+			change_variable = { name = entente_progress_from_diplomacy add = -5  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
 		}
     }
     
@@ -201,8 +261,8 @@ weekly_pulse_central_powers_progress = {
 			}	
         }
         ROOT = {
-			change_variable = { name = entente_progress_from_diplomacy add = -6  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 6  }
+			change_variable = { name = entente_progress_from_diplomacy add = -10  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = 10  }
 		}
     }
 
