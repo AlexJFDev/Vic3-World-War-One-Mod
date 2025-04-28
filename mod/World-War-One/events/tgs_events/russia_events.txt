@@ -24,7 +24,7 @@ russia_events.1 = { #Je colossus initiator
     }
 }
 
-russia_events.2 = { #Russian empire decides to continue the war or not
+russia_events.2 = { #Russian empire decides to continue the war or not 
     type = country_event
 
     title = russia_events.2.t
@@ -45,33 +45,13 @@ russia_events.2 = { #Russian empire decides to continue the war or not
     option = {
         name = russia_events.2.a
         default_option = yes
-        trigger = { 
-            has_variable = entente_participant
-            is_at_war = yes 
-            NOT = {
-                has_global_variable = russian_revolution_1
-                has_modifier = war_protests_2_modifier
-            }
-        }
         ai_chance = {
-			base = 100
+			base = 10
 		}
-        add_modifier = {
-        name = war_protests_1_modifier
-        duration = -1
-        } 
     }
 
     option = { 
         name = russia_events.2.b
-        trigger = { 
-            has_variable = entente_participant
-            is_at_war = yes 
-            NOT = {
-                has_global_variable = russian_revolution_1
-                has_modifier = war_protests_2_modifier
-            }
-        }
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
@@ -108,6 +88,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			}
             add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
         }
+        ai_chance = {
+			base = 0
+		}
     }
 }
 
@@ -288,7 +271,6 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             has_variable = entente_participant
             is_at_war = yes 
         }
-        remove_modifier = war_protests_1_modifier
         set_variable = russian_rep_continues_war
         random_scope_character =  {
 				limit = {

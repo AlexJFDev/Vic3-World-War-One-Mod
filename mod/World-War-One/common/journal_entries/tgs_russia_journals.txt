@@ -78,7 +78,6 @@
         random_civil_war = {
 			add_civil_war_progress = -100
 		}
-        remove_modifier = war_protests_1_modifier
         remove_variable = no_reform_russia
         set_global_variable = russian_revolution_1
     }
@@ -98,8 +97,6 @@
     }
 
     on_invalid = {
-		remove_modifier = war_protests_1_modifier
-		remove_modifier = war_protests_2_modifier
         add_modifier = {
         name = revolution_stabilization_buff_2
         years = 5
@@ -119,6 +116,63 @@
     should_be_pinned_by_default = yes
 }
 
+je_war_fatigue_russia = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:RUS
+        THIS = c:RUS
+        has_variable = entente_participant
+    }
+    
+    possible = {
+        has_variable = entente_participant
+        root.average_sol <= 9.5
+        any_scope_war = {
+		    has_war_support = {
+		        target = ROOT
+		        value < 20
+		    }
+		}
+    }
+
+    modifiers_while_active = {
+        war_protests_1_modifier
+    }
+
+    immediate = {
+       c:RUS = {
+            trigger_event = {
+                id = russia_events.2
+                days = 5
+            }
+        }
+    }
+
+    complete = { 
+        is_at_war = no
+    }
+
+    invalid = {
+        has_variable = entente_participant
+        OR = {
+        c:GER = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
+        c:AUS = {
+          has_variable = central_powers_participant
+		  has_modifier = country_humiliated
+        } 
+        }
+    }
+
+    weight = 1000
+    timeout = -1
+    should_be_pinned_by_default = yes
+}
+
 je_soviet_threat = {
     icon = "gfx/interface/icons/event_icons/red_star.dds"
     group = je_group_internal_affairs
@@ -130,7 +184,8 @@ je_soviet_threat = {
     }
     
     possible = {
-        has_variable = russian_rep_continues_war
+        has_global_variable = russian_revolution_1
+        is_at_war = yes
         root.average_sol <= 9.5
     }
 
@@ -170,7 +225,6 @@ je_soviet_threat = {
 
     on_complete = {
         set_global_variable = russian_revolution_2
-        remove_modifier = war_protests_1_modifier
         trigger_event = {
 			id = russia_events.9
             days = 5
@@ -201,8 +255,6 @@ je_soviet_threat = {
       random_civil_war = {
 			add_civil_war_progress = -100
 		}
-      remove_modifier = war_protests_1_modifier
-      remove_modifier = war_protests_2_modifier
       remove_global_variable = russian_revolution_1
       set_global_variable = russian_revolution_2
     }
@@ -224,8 +276,6 @@ je_soviet_threat = {
     }
 
     on_invalid = {
-		remove_modifier = war_protests_1_modifier
-		remove_modifier = war_protests_2_modifier
         add_modifier = {
         name = revolution_stabilization_buff_2
         years = 5
