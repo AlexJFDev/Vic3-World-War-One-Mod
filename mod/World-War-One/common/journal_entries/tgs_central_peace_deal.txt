@@ -144,25 +144,23 @@ je_central_peace_deal_round_3 = {
 	  c:GBR = {
           has_variable = entente_participant
         } 
-	  c:GER = {
-		owns_entire_state_region = STATE_HOME_COUNTIES
-	  }
 	}
 
-    immediate = {
-		trigger_event = { id = central_peace_deal.3 popup = yes }
-    }
+    immediate = {}
 
     complete = {
+		AND = {
         c:GBR = {
           has_variable = entente_participant
         } 
 	    c:GER = {
 		  owns_entire_state_region = STATE_HOME_COUNTIES
 	    }
+		}
     }
 
     on_complete = {
+		trigger_event = { id = central_peace_deal.3 popup = yes }
 		c:TUR = {
             trigger_event = {
                 id = central_peace_deal.5
