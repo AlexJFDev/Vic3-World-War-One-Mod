@@ -699,6 +699,7 @@ war_propaganda = {
 	modifier = {
 		unit_morale_loss_mult = -0.05
 		state_conscription_rate_mult = 0.2
+		country_institution_propaganda_max_investment_add = 1
 	}
 	
 	unlocking_technologies = {	
@@ -1003,7 +1004,11 @@ mobile_armor = {
 	unlocking_technologies = {	
 		automatic_machine_guns
 	}
-	
+    
+	modifier = {
+	   country_institution_border_control_max_investment_add = 1
+	}
+
 	ai_weight = {
 		value = 5
 	}
@@ -1019,6 +1024,7 @@ military_aviation = {
 	modifier = {
 		# increased oil consumption
 		# increased recon/scouting/go fast
+		country_institution_border_control_max_investment_add = 1
 	}
 	
 	unlocking_technologies = {	
