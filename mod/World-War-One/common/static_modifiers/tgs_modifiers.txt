@@ -558,3 +558,79 @@ unitary_stall = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_law_enactment_success_add = -0.2
 }
+
+#General Staff Laws Events Modifiers
+
+general_staff_streamlining = {
+    icon = "gfx/interface/icons/modifiers/efficiency.dds"
+    modifier = {
+        enactment_success_chance = 0.05
+    }
+}
+
+general_staff_resistance = {
+    icon = "gfx/interface/icons/modifiers/interest_group_disapproval.dds"
+    modifier = {
+        enactment_success_chance = -0.05
+    }
+}
+
+general_staff_stall = {
+    icon = "gfx/interface/icons/modifiers/politics_unrest.dds"
+    modifier = {
+        enactment_time = 0.10
+    }
+}
+
+general_staff_progress = {
+    icon = "gfx/interface/icons/modifiers/law_enactment_chance.dds"
+    modifier = {
+        enactment_success_chance = 0.10
+    }
+}
+
+general_staff_compromise = {
+    icon = "gfx/interface/icons/modifiers/politics_compromise.dds"
+    modifier = {
+        enactment_success_chance = 0.0
+        enactment_time = -0.05
+    }
+}
+
+#Surveillance Laws Events Modifiers
+
+surveillance_streamlining = {
+    icon = "gfx/interface/icons/modifiers/efficiency.dds"
+    modifier = {
+        enactment_success_chance = 0.05
+    }
+}
+
+surveillance_resistance = {
+    icon = "gfx/interface/icons/modifiers/interest_group_disapproval.dds"
+    modifier = {
+        enactment_success_chance = -0.05
+    }
+}
+
+surveillance_stall = {
+    icon = "gfx/interface/icons/modifiers/politics_unrest.dds"
+    modifier = {
+        enactment_time = 0.10
+    }
+}
+
+surveillance_progress = {
+    icon = "gfx/interface/icons/modifiers/law_enactment_chance.dds"
+    modifier = {
+        enactment_success_chance = 0.10
+    }
+}
+
+surveillance_compromise = {
+    icon = "gfx/interface/icons/modifiers/politics_compromise.dds"
+    modifier = {
+        enactment_success_chance = 0.0
+        enactment_time = -0.05
+    }
+}

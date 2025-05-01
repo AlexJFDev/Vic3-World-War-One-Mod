@@ -1,0 +1,251 @@
+﻿namespace = general_staff_laws
+
+# Advance Event for Subordinate General Staff
+general_staff_laws.1 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.1.t
+    desc = general_staff_laws.1.d
+    flavor = general_staff_laws.1.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_subordinate_general_staff
+        NOT = { has_modifier = general_staff_streamlining }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_streamlining months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_subordinate_general_staff }
+    }
+    option = {
+        name = general_staff_laws.1.a
+        add_enactment_modifier = { name = general_staff_progress }
+    }
+}
+
+# Debate Event for Subordinate General Staff
+general_staff_laws.2 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.2.t
+    desc = general_staff_laws.2.d
+    flavor = general_staff_laws.2.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_subordinate_general_staff
+        NOT = { has_modifier = general_staff_resistance }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_resistance months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_subordinate_general_staff }
+    }
+    option = {
+        name = general_staff_laws.2.a
+        add_enactment_modifier = { name = general_staff_compromise }
+    }
+}
+
+# Stall Event for Subordinate General Staff
+general_staff_laws.3 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.3.t
+    desc = general_staff_laws.3.d
+    flavor = general_staff_laws.3.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_subordinate_general_staff
+        NOT = { has_modifier = general_staff_stall }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_stall months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_subordinate_general_staff }
+    }
+    option = {
+        name = general_staff_laws.3.a
+    }
+}
+
+# Advance Event for Independant General Staff
+general_staff_laws.4 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.4.t
+    desc = general_staff_laws.4.d
+    flavor = general_staff_laws.4.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_independant_general_staff
+        NOT = { has_modifier = general_staff_streamlining }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_streamlining months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_independant_general_staff }
+    }
+    option = {
+        name = general_staff_laws.4.a
+        add_enactment_modifier = { name = general_staff_progress }
+    }
+}
+
+# Debate Event for Independant General Staff
+general_staff_laws.5 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.5.t
+    desc = general_staff_laws.5.d
+    flavor = general_staff_laws.5.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_independant_general_staff
+        NOT = { has_modifier = general_staff_resistance }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_resistance months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_independant_general_staff }
+    }
+    option = {
+        name = general_staff_laws.5.a
+        add_enactment_modifier = { name = general_staff_compromise }
+    }
+}
+
+# Stall Event for Independant General Staff
+general_staff_laws.6 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.6.t
+    desc = general_staff_laws.6.d
+    flavor = general_staff_laws.6.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_independant_general_staff
+        NOT = { has_modifier = general_staff_stall }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_stall months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_independant_general_staff }
+    }
+    option = {
+        name = general_staff_laws.6.a
+    }
+}
+
+# Advance Event for Military Oversight
+general_staff_laws.7 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.7.t
+    desc = general_staff_laws.7.d
+    flavor = general_staff_laws.7.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_military_oversight
+        NOT = { has_modifier = general_staff_streamlining }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_streamlining months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_military_oversight }
+    }
+    option = {
+        name = general_staff_laws.7.a
+        add_enactment_modifier = { name = general_staff_progress }
+    }
+}
+
+# Debate Event for Military Oversight
+general_staff_laws.8 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.8.t
+    desc = general_staff_laws.8.d
+    flavor = general_staff_laws.8.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_military_oversight
+        NOT = { has_modifier = general_staff_resistance }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_resistance months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_military_oversight }
+    }
+    option = {
+        name = general_staff_laws.8.a
+        add_enactment_modifier = { name = general_staff_compromise }
+    }
+}
+
+# Stall Event for Military Oversight
+general_staff_laws.9 = {
+    type = country_event
+    placement = root
+    title = general_staff_laws.9.t
+    desc = general_staff_laws.9.d
+    flavor = general_staff_laws.9.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_war.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_military_oversight
+        NOT = { has_modifier = general_staff_stall }
+    }
+    immediate = {
+        add_modifier = { name = general_staff_stall months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_military_oversight }
+    }
+    option = {
+        name = general_staff_laws.9.a
+    }
+}
+

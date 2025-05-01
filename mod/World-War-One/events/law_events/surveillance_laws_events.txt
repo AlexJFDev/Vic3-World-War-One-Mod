@@ -1,0 +1,251 @@
+﻿namespace = surveillance_laws
+
+# Advance Event for No Agencies
+surveillance_laws.1 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.1.t
+    desc = surveillance_laws.1.d
+    flavor = surveillance_laws.1.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_no_agencies
+        NOT = { has_modifier = surveillance_streamlining }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_streamlining months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_no_agencies }
+    }
+    option = {
+        name = surveillance_laws.1.a
+        add_enactment_modifier = { name = surveillance_support }
+    }
+}
+
+# Debate Event for No Agencies
+surveillance_laws.2 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.2.t
+    desc = surveillance_laws.2.d
+    flavor = surveillance_laws.2.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_no_agencies
+        NOT = { has_modifier = surveillance_resistance }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_resistance months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_no_agencies }
+    }
+    option = {
+        name = surveillance_laws.2.a
+        add_enactment_modifier = { name = surveillance_compromise }
+    }
+}
+
+# Stall Event for No Agencies
+surveillance_laws.3 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.3.t
+    desc = surveillance_laws.3.d
+    flavor = surveillance_laws.3.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_no_agencies
+        NOT = { has_modifier = surveillance_stall }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_stall months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_no_agencies }
+    }
+    option = {
+        name = surveillance_laws.3.a
+    }
+}
+
+# Advance Event for Foreign Counterintelligence
+surveillance_laws.4 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.4.t
+    desc = surveillance_laws.4.d
+    flavor = surveillance_laws.4.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_foreign_counterintelligence
+        NOT = { has_modifier = surveillance_streamlining }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_streamlining months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_foreign_counterintelligence }
+    }
+    option = {
+        name = surveillance_laws.4.a
+        add_enactment_modifier = { name = surveillance_support }
+    }
+}
+
+# Debate Event for Foreign Counterintelligence
+surveillance_laws.5 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.5.t
+    desc = surveillance_laws.5.d
+    flavor = surveillance_laws.5.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_foreign_counterintelligence
+        NOT = { has_modifier = surveillance_resistance }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_resistance months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_foreign_counterintelligence }
+    }
+    option = {
+        name = surveillance_laws.5.a
+        add_enactment_modifier = { name = surveillance_compromise }
+    }
+}
+
+# Stall Event for Foreign Counterintelligence
+surveillance_laws.6 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.6.t
+    desc = surveillance_laws.6.d
+    flavor = surveillance_laws.6.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_foreign_counterintelligence
+        NOT = { has_modifier = surveillance_stall }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_stall months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_foreign_counterintelligence }
+    }
+    option = {
+        name = surveillance_laws.6.a
+    }
+}
+
+# Advance Event for Surveillance State
+surveillance_laws.7 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.7.t
+    desc = surveillance_laws.7.d
+    flavor = surveillance_laws.7.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_surveillance_state
+        NOT = { has_modifier = surveillance_streamlining }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_streamlining months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_surveillance_state }
+    }
+    option = {
+        name = surveillance_laws.7.a
+        add_enactment_modifier = { name = surveillance_support }
+    }
+}
+
+# Debate Event for Surveillance State
+surveillance_laws.8 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.8.t
+    desc = surveillance_laws.8.d
+    flavor = surveillance_laws.8.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_surveillance_state
+        NOT = { has_modifier = surveillance_resistance }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_resistance months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_surveillance_state }
+    }
+    option = {
+        name = surveillance_laws.8.a
+        add_enactment_modifier = { name = surveillance_compromise }
+    }
+}
+
+# Stall Event for Surveillance State
+surveillance_laws.9 = {
+    type = country_event
+    placement = root
+    title = surveillance_laws.9.t
+    desc = surveillance_laws.9.d
+    flavor = surveillance_laws.9.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { months = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_surveillance_state
+        NOT = { has_modifier = surveillance_stall }
+    }
+    immediate = {
+        add_modifier = { name = surveillance_stall months = normal_modifier_time }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_surveillance_state }
+    }
+    option = {
+        name = surveillance_laws.9.a
+    }
+}
+
