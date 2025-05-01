@@ -22,7 +22,7 @@ internal_security_events.1 = {
 	duration = 3
 	
 	trigger = {
-		is_enacting_law = law_type:law_secret_police
+		is_enacting_law = law_type:law_surveillance_state
 		ig:ig_armed_forces = {
 			is_marginal = no
 		}
@@ -31,7 +31,7 @@ internal_security_events.1 = {
 		}
 		any_interest_group = {
 			law_stance = {
-				law = law_type:law_secret_police
+				law = law_type:law_surveillance_state
 				value < neutral
 			}
 			leader = {
@@ -59,7 +59,7 @@ internal_security_events.1 = {
 		random_interest_group = {
 			limit = {
 				law_stance = {
-					law = law_type:law_secret_police
+					law = law_type:law_surveillance_state
 					value < neutral
 				}
 				leader = {
@@ -124,7 +124,7 @@ internal_security_events.2 = {
 	duration = 3
 	
 	trigger = {
-		is_enacting_law = law_type:law_secret_police
+		is_enacting_law = law_type:law_surveillance_state
 		ig:ig_armed_forces = {
 			is_marginal = no
 		}
@@ -219,7 +219,7 @@ internal_security_events.3 = {
 	duration = 3
 
 	trigger = {
-		is_enacting_law = law_type:law_secret_police
+		is_enacting_law = law_type:law_surveillance_state
 		ig:ig_armed_forces = {
 			is_marginal = no
 		}
@@ -228,7 +228,7 @@ internal_security_events.3 = {
 		}
 		any_interest_group = {
 			law_stance = {
-				law = law_type:law_secret_police
+				law = law_type:law_surveillance_state
 				value < neutral
 			}
 		}
@@ -252,7 +252,7 @@ internal_security_events.3 = {
 		random_interest_group = {
 			limit = {
 				law_stance = {
-					law = law_type:law_secret_police
+					law = law_type:law_surveillance_state
 					value < neutral
 				}
 			}
@@ -264,7 +264,7 @@ internal_security_events.3 = {
 		random_political_movement = {
 			limit = {
 				law_stance = {
-					law = law_type:law_secret_police
+					law = law_type:law_surveillance_state
 					value > neutral
 				}
 			}
@@ -382,7 +382,7 @@ internal_security_events.4 = {
 				institution = institution_police
 				value >= 1
 			}
-			has_law = law_type:law_secret_police
+			has_law = law_type:law_surveillance_state
 			has_law = law_type:law_dedicated_police
 			has_law = law_type:law_militarized_police
 		}
@@ -534,7 +534,7 @@ internal_security_events.6 = {
 				institution = institution_police
 				value >= 1
 			}
-			has_law = law_type:law_secret_police
+			has_law = law_type:law_surveillance_state
 			has_law = law_type:law_dedicated_police
 			has_law = law_type:law_militarized_police
 		}
