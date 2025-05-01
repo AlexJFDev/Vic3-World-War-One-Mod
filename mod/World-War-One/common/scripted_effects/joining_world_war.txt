@@ -48,7 +48,7 @@ weekly_pulse_entente_progress = {
     every_country = {
 		limit = {
             has_variable = entente_participant
-            country_rank >= rank_value:great_power
+            country_rank >= rank_value:major_power
             has_diplomatic_pact = {
 				who = root
 				type = trade_agreement
@@ -63,7 +63,22 @@ weekly_pulse_entente_progress = {
     every_country = {
 		limit = {
             has_variable = entente_participant
-            country_rank >= rank_value:great_power
+            country_rank >= rank_value:major_power
+            has_diplomatic_pact = {
+				who = root
+				type = foreign_investment_rights
+			}	
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = 1  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+		}
+    }
+
+    every_country = {
+		limit = {
+            has_variable = entente_participant
+            country_rank >= rank_value:major_power
             has_diplomatic_pact = {
 				who = root
 				type = foreign_investment_agreement
@@ -120,7 +135,7 @@ weekly_pulse_entente_progress = {
     every_country = {
 		limit = {
             has_variable = entente_participant
-            country_rank >= rank_value:great_power
+            country_rank >= rank_value:major_power
             has_diplomatic_pact = {
 				who = root
 				type = bankroll
@@ -135,7 +150,7 @@ weekly_pulse_entente_progress = {
     every_country = {
 		limit = {
             has_variable = entente_participant
-            country_rank >= rank_value:great_power
+            country_rank >= rank_value:major_power
             has_diplomatic_pact = {
 				who = root
 				type = fund_lobbies
@@ -211,7 +226,7 @@ weekly_pulse_central_powers_progress = {
     every_country = {
 		limit = {
             has_variable = central_powers_participant
-            country_rank >= rank_value:great_power
+            country_rank >= rank_value:major_power
             has_diplomatic_pact = {
 				who = root
 				type = trade_agreement
@@ -226,7 +241,22 @@ weekly_pulse_central_powers_progress = {
     every_country = {
 		limit = {
             has_variable = central_powers_participant
-            country_rank >= rank_value:great_power
+            country_rank >= rank_value:major_power
+            has_diplomatic_pact = {
+				who = root
+				type = foreign_investment_rights
+			}	
+        }
+        ROOT = {
+			change_variable = { name = entente_progress_from_diplomacy add = -1  }
+            change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+		}
+    }
+
+    every_country = {
+		limit = {
+            has_variable = central_powers_participant
+            country_rank >= rank_value:major_power
             has_diplomatic_pact = {
 				who = root
 				type = foreign_investment_agreement
@@ -283,7 +313,7 @@ weekly_pulse_central_powers_progress = {
     every_country = {
 		limit = {
             has_variable = central_powers_participant
-            country_rank >= rank_value:great_power
+            country_rank >= rank_value:major_power
             has_diplomatic_pact = {
 				who = root
 				type = bankroll
@@ -298,7 +328,7 @@ weekly_pulse_central_powers_progress = {
     every_country = {
 		limit = {
             has_variable = central_powers_participant
-            country_rank >= rank_value:great_power
+            country_rank >= rank_value:major_power
             has_diplomatic_pact = {
 				who = root
 				type = fund_lobbies
