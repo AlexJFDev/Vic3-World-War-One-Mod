@@ -16,9 +16,6 @@ general_staff_laws.1 = {
         is_enacting_law = law_type:law_subordinate_general_staff
         NOT = { has_modifier = general_staff_streamlining }
     }
-    immediate = {
-        add_modifier = { name = general_staff_streamlining months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_subordinate_general_staff }
     }
@@ -42,10 +39,7 @@ general_staff_laws.2 = {
     cooldown = { months = normal_modifier_time }
     trigger = {
         is_enacting_law = law_type:law_subordinate_general_staff
-        NOT = { has_modifier = general_staff_resistance }
-    }
-    immediate = {
-        add_modifier = { name = general_staff_resistance months = normal_modifier_time }
+        NOT = { has_modifier = general_staff_resistance } 
     }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_subordinate_general_staff }
@@ -72,14 +66,12 @@ general_staff_laws.3 = {
         is_enacting_law = law_type:law_subordinate_general_staff
         NOT = { has_modifier = general_staff_stall }
     }
-    immediate = {
-        add_modifier = { name = general_staff_stall months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_subordinate_general_staff }
     }
     option = {
         name = general_staff_laws.3.a
+        add_enactment_modifier = { name = general_staff_stall }
     }
 }
 
@@ -98,9 +90,6 @@ general_staff_laws.4 = {
     trigger = {
         is_enacting_law = law_type:law_independant_general_staff
         NOT = { has_modifier = general_staff_streamlining }
-    }
-    immediate = {
-        add_modifier = { name = general_staff_streamlining months = normal_modifier_time }
     }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_independant_general_staff }
@@ -127,9 +116,6 @@ general_staff_laws.5 = {
         is_enacting_law = law_type:law_independant_general_staff
         NOT = { has_modifier = general_staff_resistance }
     }
-    immediate = {
-        add_modifier = { name = general_staff_resistance months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_independant_general_staff }
     }
@@ -155,14 +141,12 @@ general_staff_laws.6 = {
         is_enacting_law = law_type:law_independant_general_staff
         NOT = { has_modifier = general_staff_stall }
     }
-    immediate = {
-        add_modifier = { name = general_staff_stall months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_independant_general_staff }
     }
     option = {
         name = general_staff_laws.6.a
+        add_enactment_modifier = { name = general_staff_stall }
     }
 }
 
@@ -181,9 +165,6 @@ general_staff_laws.7 = {
     trigger = {
         is_enacting_law = law_type:law_military_oversight
         NOT = { has_modifier = general_staff_streamlining }
-    }
-    immediate = {
-        add_modifier = { name = general_staff_streamlining months = normal_modifier_time }
     }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_military_oversight }
@@ -210,9 +191,6 @@ general_staff_laws.8 = {
         is_enacting_law = law_type:law_military_oversight
         NOT = { has_modifier = general_staff_resistance }
     }
-    immediate = {
-        add_modifier = { name = general_staff_resistance months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_military_oversight }
     }
@@ -238,14 +216,12 @@ general_staff_laws.9 = {
         is_enacting_law = law_type:law_military_oversight
         NOT = { has_modifier = general_staff_stall }
     }
-    immediate = {
-        add_modifier = { name = general_staff_stall months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_military_oversight }
     }
     option = {
         name = general_staff_laws.9.a
+        add_enactment_modifier = { name = general_staff_stall }
     }
 }
 

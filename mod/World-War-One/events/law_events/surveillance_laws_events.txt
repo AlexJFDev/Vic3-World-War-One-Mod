@@ -16,15 +16,12 @@ surveillance_laws.1 = {
         is_enacting_law = law_type:law_no_agencies
         NOT = { has_modifier = surveillance_streamlining }
     }
-    immediate = {
-        add_modifier = { name = surveillance_streamlining months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_no_agencies }
     }
     option = {
         name = surveillance_laws.1.a
-        add_enactment_modifier = { name = surveillance_support }
+        add_enactment_modifier = { name = surveillance_progress }
     }
 }
 
@@ -43,9 +40,6 @@ surveillance_laws.2 = {
     trigger = {
         is_enacting_law = law_type:law_no_agencies
         NOT = { has_modifier = surveillance_resistance }
-    }
-    immediate = {
-        add_modifier = { name = surveillance_resistance months = normal_modifier_time }
     }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_no_agencies }
@@ -72,14 +66,12 @@ surveillance_laws.3 = {
         is_enacting_law = law_type:law_no_agencies
         NOT = { has_modifier = surveillance_stall }
     }
-    immediate = {
-        add_modifier = { name = surveillance_stall months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_no_agencies }
     }
     option = {
         name = surveillance_laws.3.a
+        add_enactment_modifier = { name = surveillance_stall }
     }
 }
 
@@ -99,15 +91,12 @@ surveillance_laws.4 = {
         is_enacting_law = law_type:law_foreign_counterintelligence
         NOT = { has_modifier = surveillance_streamlining }
     }
-    immediate = {
-        add_modifier = { name = surveillance_streamlining months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_foreign_counterintelligence }
     }
     option = {
         name = surveillance_laws.4.a
-        add_enactment_modifier = { name = surveillance_support }
+        add_enactment_modifier = { name = surveillance_progress }
     }
 }
 
@@ -126,9 +115,6 @@ surveillance_laws.5 = {
     trigger = {
         is_enacting_law = law_type:law_foreign_counterintelligence
         NOT = { has_modifier = surveillance_resistance }
-    }
-    immediate = {
-        add_modifier = { name = surveillance_resistance months = normal_modifier_time }
     }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_foreign_counterintelligence }
@@ -155,14 +141,12 @@ surveillance_laws.6 = {
         is_enacting_law = law_type:law_foreign_counterintelligence
         NOT = { has_modifier = surveillance_stall }
     }
-    immediate = {
-        add_modifier = { name = surveillance_stall months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_foreign_counterintelligence }
     }
     option = {
         name = surveillance_laws.6.a
+        add_enactment_modifier = { name = surveillance_stall }
     }
 }
 
@@ -182,15 +166,12 @@ surveillance_laws.7 = {
         is_enacting_law = law_type:law_surveillance_state
         NOT = { has_modifier = surveillance_streamlining }
     }
-    immediate = {
-        add_modifier = { name = surveillance_streamlining months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_surveillance_state }
     }
     option = {
         name = surveillance_laws.7.a
-        add_enactment_modifier = { name = surveillance_support }
+        add_enactment_modifier = { name = surveillance_progress }
     }
 }
 
@@ -209,9 +190,6 @@ surveillance_laws.8 = {
     trigger = {
         is_enacting_law = law_type:law_surveillance_state
         NOT = { has_modifier = surveillance_resistance }
-    }
-    immediate = {
-        add_modifier = { name = surveillance_resistance months = normal_modifier_time }
     }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_surveillance_state }
@@ -238,14 +216,12 @@ surveillance_laws.9 = {
         is_enacting_law = law_type:law_surveillance_state
         NOT = { has_modifier = surveillance_stall }
     }
-    immediate = {
-        add_modifier = { name = surveillance_stall months = normal_modifier_time }
-    }
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_surveillance_state }
     }
     option = {
         name = surveillance_laws.9.a
+        add_enactment_modifier = { name = surveillance_stall }
     }
 }
 

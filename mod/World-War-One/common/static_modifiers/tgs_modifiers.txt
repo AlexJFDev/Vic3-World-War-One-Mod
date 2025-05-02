@@ -564,36 +564,37 @@ unitary_stall = {
 general_staff_streamlining = {
     icon = "gfx/interface/icons/modifiers/efficiency.dds"
     modifier = {
-        enactment_success_chance = 0.05
+        country_law_enactment_success_add = 0.1
     }
 }
 
 general_staff_resistance = {
     icon = "gfx/interface/icons/modifiers/interest_group_disapproval.dds"
     modifier = {
-        enactment_success_chance = -0.05
+        country_law_enactment_success_add = -0.1
     }
 }
 
 general_staff_stall = {
     icon = "gfx/interface/icons/modifiers/politics_unrest.dds"
     modifier = {
-        enactment_time = 0.10
+        country_law_enactment_time_mult = 0.15
+        country_law_enactment_success_add = -0.05
     }
 }
 
 general_staff_progress = {
     icon = "gfx/interface/icons/modifiers/law_enactment_chance.dds"
     modifier = {
-        enactment_success_chance = 0.10
+        country_law_enactment_success_add = 0.2
     }
 }
 
 general_staff_compromise = {
     icon = "gfx/interface/icons/modifiers/politics_compromise.dds"
     modifier = {
-        enactment_success_chance = 0.0
-        enactment_time = -0.05
+        country_law_enactment_time_mult = 0.2
+        country_law_enactment_success_add = 0.05
     }
 }
 
@@ -602,35 +603,36 @@ general_staff_compromise = {
 surveillance_streamlining = {
     icon = "gfx/interface/icons/modifiers/efficiency.dds"
     modifier = {
-        enactment_success_chance = 0.05
+        country_law_enactment_success_add = 0.1
     }
 }
 
 surveillance_resistance = {
     icon = "gfx/interface/icons/modifiers/interest_group_disapproval.dds"
     modifier = {
-        enactment_success_chance = -0.05
+        country_law_enactment_success_add = -0.1
     }
 }
 
 surveillance_stall = {
     icon = "gfx/interface/icons/modifiers/politics_unrest.dds"
     modifier = {
-        enactment_time = 0.10
+        country_law_enactment_time_mult = 0.15
+        country_law_enactment_success_add = -0.05
     }
 }
 
 surveillance_progress = {
     icon = "gfx/interface/icons/modifiers/law_enactment_chance.dds"
     modifier = {
-        enactment_success_chance = 0.10
+        country_law_enactment_success_add = 0.2
     }
 }
 
 surveillance_compromise = {
     icon = "gfx/interface/icons/modifiers/politics_compromise.dds"
     modifier = {
-        enactment_success_chance = 0.0
-        enactment_time = -0.05
+        country_law_enactment_time_mult = 0.2
+        country_law_enactment_success_add = 0.05
     }
 }
