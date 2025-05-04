@@ -66,6 +66,7 @@ pm_arcades = {
 			goods_input_glass_add = 2
 			goods_input_steel_add = 2
 			goods_input_electricity_add = 1
+			goods_input_fine_art_add = 2
 			goods_output_services_add = 30
 		}
 
@@ -466,6 +467,104 @@ pm_oil-fired_plant = {
 			building_employment_laborers_add = 2000
 			building_employment_machinists_add = 1500
 			building_employment_engineers_add = 1400
+		}
+	}
+}
+
+pm_no_restaurants = {
+    texture = "gfx/interface/icons/production_method_icons/no_restaurants.dds"
+}
+
+pm_fish_restaurants = {
+    texture = "gfx/interface/icons/production_method_icons/fish_restaurants.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fish_add = 2
+			goods_input_grain_add = 1
+			goods_input_fruits_add = 0.1
+			goods_input_sugar_add = 0.1
+			goods_input_glass_add = 0.5
+			goods_input_liquor_add = 0.1
+			goods_input_tea_add = 0.1
+			goods_input_coffee_add = 0.1
+			goods_output_services_add = 20
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_shopkeepers_add = 800
+		}
+	}
+}
+
+pm_meat_restaurants = {
+    texture = "gfx/interface/icons/production_method_icons/meat_restaurants.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_meat_add = 2
+			goods_input_grain_add = 1
+			goods_input_fruits_add = 0.1
+			goods_input_sugar_add = 0.1
+			goods_input_glass_add = 0.5
+			goods_input_liquor_add = 0.1
+			goods_input_tea_add = 0.1
+			goods_input_coffee_add = 0.1
+			goods_output_services_add = 20
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_shopkeepers_add = 800
+		}
+	}
+}
+
+pm_mixed_restaurants = {
+    texture = "gfx/interface/icons/production_method_icons/mixed_restaurants.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fish_add = 3
+			goods_input_meat_add = 3
+			goods_input_grain_add = 2
+			goods_input_fruits_add = 0.2
+			goods_input_sugar_add = 0.2
+			goods_input_glass_add = 1
+			goods_input_liquor_add = 0.2
+			goods_input_tea_add = 0.2
+			goods_input_coffee_add = 0.2
+			goods_output_services_add = 40
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_shopkeepers_add = 1600
+		}
+	}
+}
+
+pm_luxury_restaurants = {
+    texture = "gfx/interface/icons/production_method_icons/luxury_restaurants.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fish_add = 4
+			goods_input_meat_add = 4
+			goods_input_grain_add = 3
+			goods_input_fruits_add = 0.3
+			goods_input_sugar_add = 0.3
+			goods_input_porcelain_add = 1.2
+			goods_input_wine_add = 0.3
+			goods_input_tea_add = 0.3
+			goods_input_coffee_add = 0.3
+			goods_output_services_add = 80
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2500
+			building_employment_shopkeepers_add = 2100
 		}
 	}
 }
