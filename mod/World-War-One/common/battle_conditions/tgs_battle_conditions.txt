@@ -8,6 +8,9 @@
 
 	possible = {
 		exists = scope:character
+		scope:character = { 
+			has_role = general 
+		}
 		allied_air_dominance > ennemy_air_dominance
 	}
  
@@ -40,6 +43,9 @@ battle_condition_enemy_air_superiority = {
 
 	possible = {
 		exists = scope:character
+		scope:character = { 
+			has_role = general 
+		}
 		allied_air_dominance < ennemy_air_dominance
 	}
 
@@ -58,4 +64,51 @@ battle_condition_enemy_air_superiority = {
 	}
 
 	weight = 30
+}
+
+battle_condition_gas_attack = {
+	icon = "gfx/interface/icons/battle_conditions/gas_attack.dds"
+
+	modifier = {
+		unit_kill_rate_add = 0.15
+		unit_provinces_captured_mult = -0.3
+	}
+
+	possible = {
+		exists = scope:character
+		scope:character = { 
+			has_role = general 
+		}
+		has_mobilization_option = mobilization_option:mobilization_option_chemical_weapons
+		NOT = {
+		opposite_battle_side = {
+			has_mobilization_option = mobilization_option:mobilization_option_gas_masks
+		}
+		}
+	}
+	
+	weight = {
+		value = 15
+	}
+}
+
+battle_condition_naval_bombardment = {
+	icon = "gfx/interface/icons/battle_conditions/naval_bombardment.dds"
+
+	modifier = {
+		unit_kill_rate_add = 0.1
+	}
+
+	possible = {
+		exists = scope:character
+		scope:character = { 
+			has_role = general 
+		}
+		scope:is_naval_invasion = yes
+		scope:is_advancing_side = yes
+	}
+	
+	weight = {
+		value = 15
+	}
 }
