@@ -46,7 +46,7 @@ battle_condition_enemy_air_superiority = {
 		scope:character = { 
 			has_role = general 
 		}
-		allied_air_dominance < ennemy_air_dominance
+		allied_air_dominance < enemy_air_dominance
 	}
 
 	instant_switch = {
@@ -78,12 +78,19 @@ battle_condition_gas_attack = {
 		exists = scope:character
 		scope:character = { 
 			has_role = general 
+			this.commander_military_formation = {
+				has_mobilization_option = mobilization_option:mobilization_option_chemical_weapons
+			}
 		}
-		has_mobilization_option = mobilization_option:mobilization_option_chemical_weapons
-		NOT = {
 		opposite_battle_side = {
-			has_mobilization_option = mobilization_option:mobilization_option_gas_masks
-		}
+			scope:character.opposing_commander = {
+				has_role = general
+                this.commander_military_formation = {
+					NOT = {
+                       has_mobilization_option = mobilization_option:mobilization_option_gas_masks
+					}
+                }
+            }
 		}
 	}
 	
@@ -97,18 +104,19 @@ battle_condition_naval_bombardment = {
 
 	modifier = {
 		unit_kill_rate_add = 0.1
+		unit_devastation_mult = 0.15
 	}
 
 	possible = {
+		scope:battle = 
 		exists = scope:character
 		scope:character = { 
 			has_role = general 
 		}
-		scope:is_naval_invasion = yes
-		scope:is_advancing_side = yes
+		naval_invasion_attacker ?= scope:actor
 	}
 	
 	weight = {
 		value = 15
 	}
-}
+}	
