@@ -1,0 +1,584 @@
+﻿#Usa
+
+usa_warren_harding_character_template = { 
+    first_name = Warren
+    last_name = Harding
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	is_agitator = yes
+    birth_date = 1865.11.2
+    traits = {
+        charismatic
+    }    
+}
+
+usa_james_cox_character_template = {
+    first_name = James
+    last_name = Cox
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_rooseveltian_progressivism
+    interest_group = ig_petty_bourgeoisie
+	is_agitator = yes
+    birth_date = 1870.3.31
+    traits = {
+        expert_political_operator
+    }    
+}
+
+usa_calvin_coolidge_character_template = {
+    first_name = Calvin
+    last_name = Coolidge
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	is_agitator = yes
+    birth_date = 1882.1.30
+    traits = {
+        persistent
+		expert_political_operator
+    }    
+}
+
+usa_john_davis_character_template = {
+    first_name = John
+    last_name = Davis
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_humanitarian
+    interest_group = ig_petty_bourgeoisie
+	is_agitator = yes
+    birth_date = 1873.3.13
+    traits = {
+        cautious
+    }    
+}
+
+usa_herbert_hoover_character_template = {
+    first_name = Herbet
+    last_name = Hoover
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	is_agitator = yes
+    birth_date = 1874.8.10
+    traits = {
+        engineer 
+		bigoted
+    }    
+}
+
+usa_ai_smith_character_template = {
+    first_name = Ai
+    last_name = Smith
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = catholic
+    ideology = ideology_rooseveltian_progressivism
+    interest_group = ig_petty_bourgeoisie
+	is_agitator = yes
+    birth_date = 1873.12.30
+    traits = {
+        honorable
+    }    
+}
+
+usa_franklin_delano_roosevelt_character_template = {
+    first_name = Franklin
+    last_name = Roosevelt2
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_rooseveltian_progressivism
+    interest_group = ig_petty_bourgeoisie
+	is_agitator = yes
+    birth_date = 1882.1.30
+    traits = {
+        persistent 
+		charismatic
+		expert_political_operator
+    }    
+}
+
+usa_alf_landon_character_template = {
+    first_name = Alf
+    last_name = Landon
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	is_agitator = yes
+    birth_date = 1887.9.9
+    traits = {
+        master_bureaucrat
+    }    
+}
+
+usa_wendell_willkie_character_template = {
+    first_name = Wendell
+    last_name = Willkie
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	is_agitator = yes
+    birth_date = 1892.2.18
+    traits = {
+        experienced_political_operator
+		experienced_diplomat
+		charismatic
+    }    
+}
+
+usa_thomas_dewey_character_template = {
+    first_name = Thomas
+    last_name = Dewey2
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	is_agitator = yes
+    birth_date = 1902.3.24
+    traits = {
+        experienced_political_operator
+		charismatic
+		master_bureaucrat
+    }    
+}
+
+usa_harry_truman_character_template = {
+    first_name = Harry
+    last_name = Truman
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_rooseveltian_progressivism
+    interest_group = ig_petty_bourgeoisie
+	is_agitator = yes
+    birth_date = 1884.5.8
+    traits = {
+        master_bureaucrat
+		imposing
+    }    
+}
+
+usa_rockefeller_character_template = {
+    first_name = John
+    last_name = Rockefeller
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = protestant
+    ideology = ideology_moderate
+    interest_group = ig_industrialists
+    birth_date = 1839.6.8
+    traits = {
+        ambitious
+        persistent
+    }   
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+            has_company = company_type:company_standard_oil
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_industrialists
+        }   
+        earliest_usage_date = 1875.1.1
+        latest_usage_date = 1915.1.1
+        chance = 25
+    }   
+}
+
+usa_thomas_edison_character_template = {
+    first_name = Thomas
+    last_name = Edison
+    historical = yes
+    culture = cu:euro_american
+    female = no
+    religion = atheist
+    ideology = ideology_pacifist
+    interest_group = ig_intelligentsia
+    birth_date = 1847.2.11
+    traits = {
+        ambitious
+        engineer
+        imperious
+    }   
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+            has_company = company_type:company_general_electric
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }   
+        earliest_usage_date = 1876.1.1
+        latest_usage_date = 1920.1.1
+        chance = 25
+    }   
+    on_created = {
+        if = {
+            limit = {
+                owner = {
+                    has_technology_researched = feminism
+                    NOT = {
+                        has_law = law_type:law_womens_suffrage
+                    }
+                }
+            }
+            set_ideology = ideology:ideology_feminist
+        }
+    }
+}
+
+#Russia
+
+RUS_nicholas_ii = { #Nicholas II, son of Alexander III
+	first_name = Nikolai
+	last_name = Romanov
+	historical = yes
+	culture = cu:russian
+	ruler = yes
+	birth_date = 1868.5.18
+	dna = dna_tsar_nicolas_02
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	traits = {
+		imperious 
+		pious
+        bigoted
+	}
+	trait_generation = {
+		
+	}
+}
+
+RUS_alexei_ii = { #Alexei Romanov, son of Nicholas II
+	first_name = Alexei
+	last_name = Romanov
+	historical = yes
+	culture = cu:russian
+	heir = yes
+	birth_date = 1904.8.12
+	interest_group = ig_landowners
+	ideology = ideology_jingoist_leader
+	traits = {
+		sickly 
+		romantic
+		arrogant
+	}
+	trait_generation = {
+		
+	}
+}
+
+RUS_alexey_alekseevich_borovoy = {
+	first_name = Alexey
+	last_name = Borovoy
+	historical = yes
+	female = no
+	is_agitator = yes
+	culture = cu:russian
+	religion = atheist
+	interest_group = ig_intelligentsia
+	ideology = ideology_atheist
+	birth_date = 1875.11.11
+	traits = {
+		erudite
+		brave
+		inspirational_orator
+	}
+    agitator_usage = {
+        country_trigger = {
+			exists = c:RUS
+			this = c:RUS
+			has_dlc_feature = ep1_content
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }   
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1936.1.1
+        chance = 100
+    }   
+}
+
+RUS_alexey_aleksandrovich_solonovich = {
+	first_name = Alexey
+	last_name = Solonovich
+	historical = yes
+	female = no
+	is_agitator = yes
+	culture = cu:russian
+	religion = animist
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	birth_date = 1887.10.23
+	traits = {
+		literary
+		inspirational_orator
+	}
+    agitator_usage = {
+        country_trigger = {
+			exists = c:RUS
+			this = c:RUS
+            has_technology_researched = anarchism
+			has_dlc_feature = ep1_content
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }   
+        earliest_usage_date = 1910.1.1
+        latest_usage_date = 1936.1.1
+        chance = 100
+    }   
+}
+
+RUS_olha_illivna_taratuta = {
+	first_name = Olha
+	last_name = Taratuta
+	historical = yes
+	female = yes
+	is_agitator = yes
+	culture = cu:ukrainian
+	religion = atheist
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	birth_date = 1876.1.21
+	traits = {
+		brave
+		ambitious
+	}
+    agitator_usage = {
+        country_trigger = {
+			exists = c:RUS
+			this = c:RUS
+            has_technology_researched = anarchism
+			has_dlc_feature = ep1_content
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_trade_unions
+        }   
+        earliest_usage_date = 1898.1.1
+        latest_usage_date = 1930.1.1
+        chance = 100
+    }   
+}
+
+RUS_alexandra_mikhailovna_kollontai = {
+	first_name = Alexandra
+	last_name = Kollontai
+	historical = yes
+	female = yes
+	is_agitator = yes
+    dna = dna_kollontai
+	culture = cu:russian
+	religion = atheist
+	interest_group = ig_trade_unions
+	ideology = ideology_humanitarian
+	birth_date = 1872.3.31
+	traits = {
+		reckless # I admire her, but there's really no other word for her handing Lenin an opposition pamphlet. # I admire her as well 
+		firebrand # Was known for her fiery speeches in party congresses.
+		basic_diplomat # Her historical diplomatic career, and her international anti-war advocacy.
+	}
+    agitator_usage = {
+        country_trigger = {
+			exists = c:RUS
+			this = c:RUS
+            has_technology_researched = feminism
+			has_dlc_feature = ep1_content
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_trade_unions
+        }   
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1936.1.1
+        chance = 100
+    }   
+}
+
+agitator_aleksei_aladin = { # Aleksei Feodorovich Aladin
+	first_name = Aleksei
+	last_name = Aladin
+	historical = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	female = no
+	interest_group = ig_rural_folk
+	ideology = ideology_social_democrat
+	birth_date = 1873.3.15
+	traits = {
+		cautious
+		inspirational_orator
+		basic_diplomat
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			c:RUS ?= this
+		}
+        interest_group_trigger = {
+            is_marginal = no
+		    is_interest_group_type = ig_rural_folk
+        }   
+		earliest_usage_date = 1892.1.1
+		latest_usage_date = 1927.7.30
+		chance = 25
+	}
+}
+
+agitator_nestor_makhno = {
+	first_name = Nestor
+	last_name = Makhno
+	historical = yes
+	culture = cu:ukrainian
+	religion = rel:atheist
+	female = no
+	interest_group = ig_rural_folk
+	ideology = ideology_anarchist
+	birth_date = 1888.11.8 # October 27th in the Old Style calendar
+	dna = dna_mahno
+	traits = {
+		social_bandit
+		imposing
+		celebrity_commander
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				c:RUS ?= this
+				c:UKR ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_trade_unions
+                is_interest_group_type = ig_rural_folk
+            } 
+        }   
+		earliest_usage_date = 1910.1.1
+		latest_usage_date = 1935.12.31
+		chance = 75
+	}
+}
+
+agitator_maxim_gorky = { # The Maximum Gorky
+	first_name = Maxim
+	last_name = Gorky
+	historical = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	birth_date = 1868.3.28
+	traits = {
+		bigoted
+		literary
+		charismatic
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			c:RUS ?= this
+		}
+        interest_group_trigger = {
+            is_marginal = no
+			is_interest_group_type = ig_intelligentsia
+        }
+		earliest_usage_date = 1899.1.1
+		latest_usage_date = 1921.1.1
+		chance = 50
+	}
+}
+
+rus_leon_trotsky_character_template = { # Generated by event
+    first_name = Leon_2
+	last_name = Trotsky
+	historical = yes
+	culture = cu:ashkenazi
+	religion = rel:atheist
+	female = no
+    is_agitator = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_vanguardist
+	birth_date = 1879.10.26
+	dna = dna_trotsky
+	traits = {
+		innovative
+        charismatic
+        persistent
+	}
+}
+
+rus_lenin_character_template = { # Generated by event
+    first_name = Vladimir
+    last_name = Lenin
+    historical = yes
+    birth_date = 1870.4.22
+    is_agitator = yes
+    female = no
+    culture = cu:russian
+    religion = rel:atheist
+    interest_group = ig_trade_unions
+    ig_leader = yes
+    ideology = ideology_vanguardist
+    dna = dna_lenin
+    traits = {
+        firebrand
+        charismatic
+        reckless
+    }
+}
+
+#China
+
+chi_sun_yat_sen_character_template = {
+    first_name = Sun
+	last_name = Yat_Sen
+	historical = yes
+	culture = cu:han
+	religion = rel:protestant
+	female = no
+    ruler = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_republican_leader
+	birth_date = 1866.11.12
+	dna = dna_sun_yat_sen
+	traits = {
+		erudite
+        persistent
+        ambitious
+	}
+}
