@@ -527,33 +527,9 @@ mobilization_option_chemical_weapons = {
 	upkeep_modifier = {
 		goods_input_fertilizer_add = 2
 	}
-	ai_weight = {
-		value = 1
-	}
-
-    group = special_weapons
-}
-
-mobilization_option_gas_masks = {
-	texture = "gfx/interface/icons/mobilization_options/gas_masks.dds"
-
-	possible = {
-		market ?= {
-			mg:fabric ?= {
-				market_goods_sell_orders > 0
-			}
-			mg:rubber ?= {
-				market_goods_sell_orders > 0
-			}
-		}
-	}
-	
-	unlocking_technologies = {
-		chemical_warfare
-	}
-	upkeep_modifier = {
-		goods_input_fabric_add = 1
-		goods_input_rubber_add = 1
+	unit_modifier = {
+		unit_kill_rate_add = 0.5
+		unit_provinces_captured_mult = -0.3
 	}
 	ai_weight = {
 		value = 1
@@ -600,7 +576,7 @@ mobilization_option_flamethrowers = {
 		goods_input_oil_add = 1
 	}
 	unit_modifier = {
-		unit_offense_add = 15
+		unit_offense_add = 8
 		unit_devastation_mult = 0.5
 		unit_morale_damage_mult = 0.1
 	}

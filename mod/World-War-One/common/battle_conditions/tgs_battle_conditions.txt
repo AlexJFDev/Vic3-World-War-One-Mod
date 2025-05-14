@@ -65,36 +65,3 @@ battle_condition_enemy_air_superiority = {
 
 	weight = 30
 }
-
-battle_condition_gas_attack = {
-	icon = "gfx/interface/icons/battle_conditions/gas_attack.dds"
-
-	modifier = {
-		unit_kill_rate_add = 0.15
-		unit_provinces_captured_mult = -0.3
-	}
-
-	possible = {
-		exists = scope:character
-		scope:character = { 
-			has_role = general 
-			this.commander_military_formation = {
-				has_mobilization_option = mobilization_option:mobilization_option_chemical_weapons
-			}
-		}
-		opposite_battle_side = {
-			scope:character = {
-				has_role = general
-                this.commander_military_formation = {
-					NOT = {
-                       has_mobilization_option = mobilization_option:mobilization_option_gas_masks
-					}
-                }
-            }
-		}
-	}
-	
-	weight = {
-		value = 15
-	}
-}
