@@ -83,7 +83,7 @@ battle_condition_gas_attack = {
 			}
 		}
 		opposite_battle_side = {
-			scope:character.opposing_commander = {
+			scope:character = {
 				has_role = general
                 this.commander_military_formation = {
 					NOT = {
@@ -98,25 +98,3 @@ battle_condition_gas_attack = {
 		value = 15
 	}
 }
-
-battle_condition_naval_bombardment = {
-	icon = "gfx/interface/icons/battle_conditions/naval_bombardment.dds"
-
-	modifier = {
-		unit_kill_rate_add = 0.1
-		unit_devastation_mult = 0.15
-	}
-
-	possible = {
-		scope:battle = 
-		exists = scope:character
-		scope:character = { 
-			has_role = general 
-		}
-		naval_invasion_attacker ?= scope:actor
-	}
-	
-	weight = {
-		value = 15
-	}
-}	
