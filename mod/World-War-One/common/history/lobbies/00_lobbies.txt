@@ -175,20 +175,19 @@
         create_political_lobby = {  
 			type = lobby_pro_country 
 			target = c:GBR
-			add_interest_group = ig:ig_intelligentsia
 			add_interest_group = ig:ig_petty_bourgeoisie
 			add_interest_group = ig:ig_industrialists
+		}
+		create_political_lobby = {  
+			type = lobby_pro_country 
+			target = c:FRA
+			add_interest_group = ig:ig_intelligentsia
 		}
 		create_political_lobby = {  
 			type = lobby_anti_country 
 			target = c:JAP
 			add_interest_group = ig:ig_armed_forces
-		}	
-		create_political_lobby = {  
-			type = lobby_pro_country 
-			target = c:GER
-			add_interest_group = ig:ig_rural_folk
-		}	
+		}
     }	
 
 	c:JAP = {

@@ -551,10 +551,6 @@ joining_world_war_events.13 = { #Ottoman Empire joins
                 id = ww1_war_techs_events.1
                 days = 15
             }
-            trigger_event = {
-                id = ww1_war_policies_events.1 
-                days = 30
-            }
         }
         set_variable = central_powers_participant
         if = {
@@ -686,10 +682,6 @@ joining_world_war_events.14 = { #Italy joins
             trigger_event = {
                 id = ww1_war_techs_events.1
                 days = 15
-            }
-            trigger_event = {
-                id = ww1_war_policies_events.1 
-                days = 30
             }
         }
         ai_chance = {
@@ -1016,6 +1008,7 @@ joining_world_war_events.18 = { #USA joins
     option = { #Join directly
         name = joining_world_war_events.18.a
         default_option = yes
+        trigger = { is_player = no }
         every_diplomatic_play = {
 			limit = {
                 initiator = c:AUS
@@ -1088,12 +1081,24 @@ joining_world_war_events.18 = { #USA joins
         }
         }
         ai_chance = {
-            base = 100
+            base = 10
+        }
+    }
+
+    option = { #Join directly
+        name = joining_world_war_events.18.b
+        trigger = { is_player = yes }
+        je:je_joining_world_war = {
+			add_progress = { value = 90 name = join_entente_progress_bar }
+            add_progress = { value = -90 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 10
         }
     }
 
     option = { #Show support but dont join now
-        name = joining_world_war_events.18.b
+        name = joining_world_war_events.18.c
         je:je_joining_world_war = {
 			add_progress = { value = 30 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
@@ -1104,7 +1109,7 @@ joining_world_war_events.18 = { #USA joins
     }
 
     option = { #Reject violently the offer
-        name = joining_world_war_events.18.c
+        name = joining_world_war_events.18.e
         je:je_joining_world_war = {
             add_progress = { value = -15 name = join_entente_progress_bar }
 		}
@@ -1417,5 +1422,224 @@ joining_world_war_events.21 = { #Persia joins
         ai_chance = {
             base = 0
         }
+    }
+}
+
+joining_world_war_events.22 = { #USA jewish minorities condemns Russia
+    type = country_event
+
+    title = joining_world_war_events.22.t
+    desc = joining_world_war_events.22.d
+    flavor = joining_world_war_events.22.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_usa.dds"
+    }
+
+    trigger = {
+        exists = c:USA
+        THIS = c:USA
+    }
+
+    option = {
+        name = joining_world_war_events.22.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -20 name = join_entente_progress_bar }
+            add_progress = { value = 5 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.23 = { #USA Irish minorities supports central powers
+    type = country_event
+
+    title = joining_world_war_events.23.t
+    desc = joining_world_war_events.23.d
+    flavor = joining_world_war_events.23.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_usa.dds"
+    }
+
+    trigger = {
+        exists = c:USA
+        THIS = c:USA
+        c:GBR = {
+            has_variable = entente_participant
+        }
+    }
+
+    option = {
+        name = joining_world_war_events.23.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -30 name = join_entente_progress_bar }
+            add_progress = { value = 15 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.24 = { #USA german minorities supports central powers
+    type = country_event
+
+    title = joining_world_war_events.24.t
+    desc = joining_world_war_events.24.d
+    flavor = joining_world_war_events.24.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_usa.dds"
+    }
+
+    trigger = {
+        exists = c:USA
+        THIS = c:USA
+    }
+
+    option = {
+        name = joining_world_war_events.24.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -30 name = join_entente_progress_bar }
+            add_progress = { value = 15 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.25 = { #USA politician evokes the memory of the civil war
+    type = country_event
+
+    title = joining_world_war_events.25.t
+    desc = joining_world_war_events.25.d
+    flavor = joining_world_war_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_usa.dds"
+    }
+
+    trigger = {
+        exists = c:USA
+        THIS = c:USA
+    }
+
+    option = {
+        name = joining_world_war_events.25.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = -15 name = join_entente_progress_bar }
+            add_progress = { value = -15 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.26 = { #liner sunk by german subs
+    type = country_event
+
+    title = joining_world_war_events.26.t
+    desc = joining_world_war_events.26.d
+    flavor = joining_world_war_events.26.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/liner_sinking.dds"
+    }
+
+    trigger = {
+        ROOT = {
+            OR = {
+                country_is_in_north_america = yes
+                country_is_in_south_america = yes
+            }
+        }
+        c:GER = {
+            any_character = {
+                limit = {
+				  has_role = admiral
+				  has_commander_order = raid_convoys
+                }
+			}
+        }
+        c:GBR = {
+            has_variable = entente_participant
+        }
+    }
+
+    option = {
+        name = joining_world_war_events.26.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = 30 name = join_entente_progress_bar }
+            add_progress = { value = -30 name = join_central_powers_progress_bar }
+		}
+    }
+}
+
+joining_world_war_events.27 = { #submarine warfare causes concern
+    type = country_event
+
+    title = joining_world_war_events.27.t
+    desc = joining_world_war_events.27.d
+    flavor = joining_world_war_events.27.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/submarine.dds"
+    }
+
+    trigger = {
+        ROOT = {
+            OR = {
+                country_is_in_north_america = yes
+                country_is_in_south_america = yes
+            }
+        }
+        c:GER = {
+            any_character = {
+                limit = {
+				  has_role = admiral
+				  has_commander_order = raid_convoys
+                }
+			}
+        }
+        c:GBR = {
+            has_variable = entente_participant
+        }
+    }
+
+    option = {
+        name = joining_world_war_events.27.a
+        default_option = yes
+        je:je_joining_world_war = {
+			add_progress = { value = 15 name = join_entente_progress_bar }
+            add_progress = { value = -15 name = join_central_powers_progress_bar }
+		}
     }
 }
