@@ -59559,7 +59559,7 @@
 		}
 	}
 	s:STATE_GUERRERO = {
-		region_state:MEX = {
+		region_state:RMX = {
 			create_building = {
 				building = building_railway
 				add_ownership = {
@@ -59580,7 +59580,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 6
 						region = STATE_GUERRERO
 					}
@@ -59595,7 +59595,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 6
 						region = STATE_GUERRERO
 					}
@@ -59610,7 +59610,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 3
 						region = STATE_GUERRERO
 					}
@@ -59654,7 +59654,7 @@
 				building = building_port
 				add_ownership = {
 					country = {
-						country = c:MEX
+						country = c:RMX
 						levels = 3
 					}
 				}
@@ -59680,7 +59680,7 @@
 				building = building_government_administration
 				add_ownership = {
 					country = {
-						country = c:MEX
+						country = c:RMX
 						levels = 1
 					}
 				}
@@ -60626,19 +60626,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
-				}
-			}
-			create_building = {
-				building = building_munition_plants
-				add_ownership = {
-					country = {
-						country = c:RMX
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
 				}
 			}
 			create_building = {

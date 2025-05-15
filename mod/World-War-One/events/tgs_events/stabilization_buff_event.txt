@@ -1,4 +1,4 @@
-namespace = stabilization_buff_events
+﻿namespace = stabilization_buff_events
 
 stabilization_buff_events.1 = { 
     type = country_event
@@ -757,5 +757,32 @@ stabilization_buff_events.23 = {
         trigger = { is_player = no }
         default_option = yes
         add_treasury = -100000000
+    }
+}
+
+stabilization_buff_events.24 = { 
+    type = country_event
+
+    title = stabilization_buff_events.24.t
+    desc = stabilization_buff_events.24.d
+    flavor = stabilization_buff_events.24.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.24.a
+        default_option = yes
+        add_modifier = {
+            name = ejercito_federal_nerf
+            years = 10
+            is_decaying = yes
+        }
     }
 }

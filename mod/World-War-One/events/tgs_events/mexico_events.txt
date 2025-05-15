@@ -1,0 +1,146 @@
+﻿namespace = mexico_events
+
+mexico_events.3 = { #Tampico Affair part 1
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_usa.dds"
+    }
+
+    title = mexico_events.3.t
+    desc = mexico_events.3.d
+    flavor = mexico_events.3.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = mexico_events.3.a
+        default_option = yes
+        c:MEX = {
+            trigger_event = {
+              id = mexico_events.4
+              days = 5
+            }
+        }
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+        name = mexico_events.3.b
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+mexico_events.4 = { #Tampico Affair part 2
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_usa.dds"
+    }
+
+    title = mexico_events.4.t
+    desc = mexico_events.4.d
+    flavor = mexico_events.4.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = mexico_events.4.a
+        default_option = yes
+        c:USA = {
+          create_diplomatic_play = {
+		    target_country = c:MEX
+		    type = dp_take_treaty_port
+            escalation = 99
+            target_state = s:STATE_VERACRUZ.region_state:MEX
+	        add_war_goal = {
+		        holder = c:MEX
+		        type = humiliation
+		        target_country = c:USA
+            }
+	        }
+        }
+		c:GER = {
+          trigger_event = {
+              id = mexico_events.5
+		      days = 5
+            }
+		}
+		c:GBR = {
+          trigger_event = {
+              id = mexico_events.5
+		      days = 5
+            }
+		}
+		c:FRA = {
+          trigger_event = {
+              id = mexico_events.5
+		      days = 5
+            }
+		}
+        ai_chance = {
+			base = 8
+		}
+    }
+
+    option = {
+        name = mexico_events.4.b
+        ai_chance = {
+			base = 2
+		}
+    }
+}
+
+mexico_events.5 = { #Tampico Affair part 3
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/politics_usa.dds"
+    }
+
+    title = mexico_events.5.t
+    desc = mexico_events.5.d
+    flavor = mexico_events.5.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = mexico_events.5.a
+        default_option = yes
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+        name = mexico_events.5.b
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:USA
+                target = c:MEX
+			}
+			add_target_backers = {
+				c:ROOT
+			}
+		}
+        ai_chance = {
+			base = 0
+		}
+    }
+}
