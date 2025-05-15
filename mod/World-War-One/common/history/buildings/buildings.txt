@@ -51677,7 +51677,7 @@
 				add_ownership = {
 					country = {
 						country = c:HAI
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
@@ -51720,9 +51720,9 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:HAI
+						country = c:USA
 						levels = 8
-						region = STATE_HAITI
+						region = STATE_FLORIDA
 					}
 				}
 				reserves = 1
@@ -51735,9 +51735,9 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:HAI
+						country = c:USA
 						levels = 3
-						region = STATE_HAITI
+						region = STATE_FLORIDA
 					}
 				}
 				reserves = 1
@@ -51765,9 +51765,9 @@
 				add_ownership = {
 					building = {
 						type = building_financial_district
-						country = c:HAI
+						country = c:GER
 						levels = 3
-						region = STATE_HAITI
+						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -51780,9 +51780,9 @@
 				add_ownership = {
 					building = {
 						type = building_financial_district
-						country = c:HAI
+						country = c:GER
 						levels = 1
-						region = STATE_HAITI
+						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -59345,7 +59345,7 @@
 		}
 	}
 	s:STATE_CHIHUAHUA = {
-		region_state:MEX = {
+		region_state:RMX = {
 			create_building = {
 				building = building_railway
 				add_ownership = {
@@ -59381,7 +59381,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 3
 						region = STATE_CHIHUAHUA
 					}
@@ -59396,7 +59396,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 6
 						region = STATE_CHIHUAHUA
 					}
@@ -59411,7 +59411,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 2
 						region = STATE_CHIHUAHUA
 					}
@@ -59440,7 +59440,7 @@
 				building = building_government_administration
 				add_ownership = {
 					country = {
-						country = c:MEX
+						country = c:RMX
 						levels = 1
 					}
 				}
@@ -60524,12 +60524,12 @@
 		}
 	}
 	s:STATE_SINALOA = {
-		region_state:MEX = {
+		region_state:RMX = {
 			create_building = {
 				building = building_railway
 				add_ownership = {
 					country = {
-						country = c:MEX
+						country = c:RMX
 						levels = 1
 					}
 				}
@@ -60543,7 +60543,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 4
 						region = STATE_SINALOA
 					}
@@ -60558,7 +60558,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 1
 						region = STATE_SINALOA
 					}
@@ -60571,12 +60571,12 @@
 		}
 	}
 	s:STATE_SONORA = {
-		region_state:MEX = {
+		region_state:RMX = {
 			create_building = {
 				building = building_railway
 				add_ownership = {
 					country = {
-						country = c:MEX
+						country = c:RMX
 						levels = 1
 					}
 				}
@@ -60590,7 +60590,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 3
 						region = STATE_SONORA
 					}
@@ -60605,7 +60605,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:MEX
+						country = c:RMX
 						levels = 1
 						region = STATE_SONORA
 					}
@@ -60616,10 +60616,49 @@
 				}
 			}
 			create_building = {
+				building = building_arms_industry
+				add_ownership = {
+					country = {
+						country = c:RMX
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_munition_plants
+				add_ownership = {
+					country = {
+						country = c:RMX
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
+				}
+			}
+			create_building = {
+				building = building_government_administration
+				add_ownership = {
+					country = {
+						country = c:RMX
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
+				}
+			}
+			create_building = {
 				building = building_gold_mine
 				add_ownership = {
 					country = {
-						country = c:MEX
+						country = c:RMX
 						levels = 6
 					}
 				}

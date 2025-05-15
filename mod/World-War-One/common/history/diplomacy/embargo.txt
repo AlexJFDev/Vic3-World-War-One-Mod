@@ -23,4 +23,34 @@ DIPLOMACY = {
 			type = embargo
 		}	
 	}
+	c:USA = {
+		create_diplomatic_pact = {
+			country = c:MEX
+			type = embargo
+		}	
+	}
+	c:RMX = {
+		create_diplomatic_pact = {
+			country = c:MEX
+			type = embargo
+		}	
+	}
+	c:MEX = {
+		create_diplomatic_pact = {
+			country = c:RMX
+			type = embargo
+		}	
+	}
+	c:CHI = {
+		create_diplomatic_pact = {
+			country = c:KMT
+			type = embargo
+		}	
+	}
+	c:KMT = {
+		create_diplomatic_pact = {
+			country = c:CHI
+			type = embargo
+		}	
+	}
 }

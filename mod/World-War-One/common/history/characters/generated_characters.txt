@@ -1931,7 +1931,7 @@
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
 			birth_date = 1863.08.01
-			is_agitator = yes
+			ig_leader = yes
 			historical = yes
 			traits = {
 			}
@@ -3104,20 +3104,7 @@
 			}
 		}
 	}
-	c:MEX = {
-		create_character = {
-			first_name = Victoriano
-			last_name = Huerta
-			culture = cu:mexican
-			interest_group = ig_armed_forces
-			ideology = ideology_authoritarian
-			birth_date = 1850.12.23
-			ruler = yes
-			historical = yes
-			traits = {
-				ambitious cruel engineer experienced_offensive_planner imposing 
-			}
-		}
+	c:RMX = {
 		create_character = {
 			first_name = Jose
 			last_name = Venustiano Garza
@@ -3125,10 +3112,22 @@
 			interest_group = ig_intelligentsia
 			ideology = ideology_liberal_modern
 			birth_date = 1859.12.29
-			ig_leader = yes
+			ruler = yes
 			historical = yes
 			traits = {
 				cautious 
+			}
+		}
+		create_character = {
+			first_name = Francisco
+			last_name = Villa
+			culture = cu:mexican
+			interest_group = ig_trade_unions
+			ideology = ideology_land_reformer
+			birth_date = 1878.06.05
+			ig_leader = yes
+			historical = yes
+			traits = {
 			}
 		}
 		create_character = {
@@ -3144,16 +3143,19 @@
 				ambitious reckless 
 			}
 		}
+	}
+	c:MEX = {
 		create_character = {
-			first_name = Francisco
-			last_name = Villa
+			first_name = Victoriano
+			last_name = Huerta
 			culture = cu:mexican
-			interest_group = ig_trade_unions
-			ideology = ideology_land_reformer
-			birth_date = 1878.06.05
-			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian
+			birth_date = 1850.12.23
+			ruler = yes
 			historical = yes
 			traits = {
+				ambitious cruel engineer experienced_offensive_planner imposing 
 			}
 		}
 		create_character = {

@@ -1358,6 +1358,58 @@
 			}
 		}
 	}
+	c:RMX = {
+		create_military_formation = {
+			name = Ejercito_Revolucionario
+			type = army
+			hq_region = sr:region_mexico
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_SONORA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_CHIHUAHUA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_SINALOA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SONORA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_CHIHUAHUA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SINALOA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_shrapnel_artillery
+				state_region = s:STATE_SONORA
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_shrapnel_artillery
+				state_region = s:STATE_CHIHUAHUA
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_shrapnel_artillery
+				state_region = s:STATE_SINALOA
+				count = 1
+			}
+		}
+	}
 	c:MEX = {
 		create_military_formation = {
 			name = Ejercito_Federal
@@ -1366,42 +1418,42 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_MEXICO
-				count = 13
+				count = 8
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_JALISCO
-				count = 13
+				count = 8
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_VERACRUZ
-				count = 13
+				count = 8
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_ZACATECAS
-				count = 13
+				count = 8
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_MEXICO
-				count = 5
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_JALISCO
-				count = 5
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_VERACRUZ
-				count = 5
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_ZACATECAS
-				count = 5
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_shrapnel_artillery
