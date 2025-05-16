@@ -4,7 +4,7 @@ mexico_events.3 = { #Tampico Affair part 1
     type = country_event
 
     event_image = {
-        texture = "gfx/event_pictures/politics_usa.dds"
+        texture = "gfx/event_pictures/admirals.dds"
     }
 
     title = mexico_events.3.t
@@ -43,7 +43,7 @@ mexico_events.4 = { #Tampico Affair part 2
     type = country_event
 
     event_image = {
-        texture = "gfx/event_pictures/politics_usa.dds"
+        texture = "gfx/event_pictures/admirals.dds"
     }
 
     title = mexico_events.4.t
@@ -107,7 +107,7 @@ mexico_events.5 = { #Tampico Affair part 3
     type = country_event
 
     event_image = {
-        texture = "gfx/event_pictures/politics_usa.dds"
+        texture = "gfx/event_pictures/admirals.dds"
     }
 
     title = mexico_events.5.t
@@ -141,6 +141,93 @@ mexico_events.5 = { #Tampico Affair part 3
 		}
         ai_chance = {
 			base = 0
+		}
+    }
+}
+
+mexico_events.10 = { #Revolutionnary victory
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/mexican_constitution.dds"
+    }
+
+    title = mexico_events.10.t
+    desc = mexico_events.10.d
+    flavor = mexico_events.10.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = { #Carrancistas 
+        name = mexico_events.5.a
+        default_option = yes
+        change_tag = MEX
+		activate_law = law_type:law_census_voting
+        activate_law = law_type:law_interventionism
+        activate_law = law_type:law_national_guard
+        activate_law = law_interventionism
+        activate_law = law_mercantilism
+        add_modifier = {
+            name =
+            years = 
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 3
+		}
+    }
+
+    option = { #Zapatistas
+        name = mexico_events.5.b
+        change_tag = MEX
+        activate_law = law_type:law_anarchy
+        activate_law = law_type:law_multiculturalism
+        activate_law = law_type:law_guaranteed_liberties
+        activate_law = law_type:law_agrarianism
+        activate_law = law_type:law_protectionism
+		activate_law = law_type:law_homesteading
+        add_modifier = {
+            name =
+            years = 
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = { #Villistas
+        name = mexico_events.5.c
+        change_tag = MEX
+        activate_law = law_type:law_universal_suffrage
+        activate_law = law_type:law_national_guard
+        activate_law = law_type:law_protectionism
+		activate_law = law_type:law_homesteading
+        activate_law = law_type:law_command_economy
+        add_modifier = {
+            name =
+            years = 
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = { #Legislative failure
+        name = mexico_events.5.e
+        change_tag = MEX
+        add_modifier = {
+            name =
+            years = 
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 1
 		}
     }
 }
