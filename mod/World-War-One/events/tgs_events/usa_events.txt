@@ -119,6 +119,7 @@ usa_events.6 = { #Black Tuesday
                 days = 30
             }
         }
+        set_variable = great_depression_started
         ai_chance = {
 			base = 10
 		}
@@ -154,6 +155,7 @@ usa_events.6 = { #Black Tuesday
                 days = 30
             }
         }
+        set_variable = great_depression_started
         ai_chance = {
 			base = 0
 		}
@@ -185,7 +187,6 @@ usa_events.7 = { #Smoot–Hawley Tariff
             years = 2
             is_decaying = yes
         }
-        set_variable = great_depression_started
         ai_chance = {
 			base = 8
 		}
@@ -193,7 +194,6 @@ usa_events.7 = { #Smoot–Hawley Tariff
 
     option = {
         name = usa_events.7.b
-        set_variable = great_depression_started
         ai_chance = {
 			base = 2
 		}
@@ -476,6 +476,54 @@ usa_events.10 = { #Dawes Plan
     }
 }
 
+usa_events.11 = { #Great Depression JE completion
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/new_deal.dds"
+    }
+
+    title = usa_events.11.t
+    desc = usa_events.11.d
+    flavor = usa_events.11.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = { #Welfare focus
+        name = usa_events.11.a
+        default_option = yes
+        add_modifier = {
+            name = great_depression_recovering_1
+            years = 5
+            is_decaying = yes
+        }
+    }
+
+    option = { #Money printing focus
+        name = usa_events.11.b
+        default_option = yes
+        add_modifier = {
+            name = great_depression_recovering_2
+            years = 5
+            is_decaying = yes
+        }
+    }
+
+    option = { #Political reforms focus
+        name = usa_events.11.c
+        default_option = yes
+        add_modifier = {
+            name = great_depression_recovering_3
+            years = 5
+            is_decaying = yes
+        }
+    }
+}
+
 usa_events.13 = { #Broken promise
     type = country_event
 
@@ -521,6 +569,39 @@ usa_events.13 = { #Broken promise
                 years = 10
                 is_decaying = yes
             }
+        }
+    }
+}
+
+usa_events.14 = { #Amercian cinema JE completion
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/king_kong.dds"
+    }
+
+    title = usa_events.14.t
+    desc = usa_events.14.d
+    flavor = usa_events.14.f
+
+    icon = "gfx/interface/icons/event_icons/event_cinema.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = usa_events.14.a
+        default_option = yes
+        add_modifier = {
+            name = american_cinema_modifier
+            years = 10
+            is_decaying = yes
+        }
+        cu:euro_american = {
+           add_cultural_obsession = fine_art
         }
     }
 }

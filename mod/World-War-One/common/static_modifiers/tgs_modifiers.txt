@@ -507,6 +507,37 @@ ejercito_federal_nerf = {
    military_formation_mobilization_speed_mult = -0.8
 }
 
+starting_sol_buff = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+   state_lower_strata_standard_of_living_add = 2
+   state_middle_strata_standard_of_living_add = 2
+   state_upper_strata_standard_of_living_add = 2
+}
+
+great_depression_recovering_1 = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+   state_welfare_payments_mult = 1
+}
+
+great_depression_recovering_2 = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+   country_minting_mult = 1.5
+   country_loan_interest_rate_mult = -0.5
+}
+
+great_depression_recovering_3 = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+   country_legitimacy_base_add = 15
+   country_law_enactment_time_mult = -0.2
+}
+
+american_cinema_modifier = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+   country_pact_leverage_generation_mult = 0.3
+   building_arts_academy_throughput_add = 0.2
+   country_prestige_mult = 0.5
+}
+
 #Centralization Laws Events Modifiers
 
 # Confederated Law Modifiers
