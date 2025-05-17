@@ -85,7 +85,7 @@ def generate_region_object(country_tag: str, state_tag: str, buildings: list[tup
             ownership_object.get_value_named('building').add_named_value('levels', building_level)
             ownership_object.get_value_named('building').add_named_value('region', owner_region)
         elif owner_type == 'company':
-            company_name, company_country = owner.split(',')
+            company_name, company_country = owner.split(' ')
             company_owner = ClausewitzObject()
             ownership_object.add_named_value('company', company_owner)
             company_owner.add_named_value('type', company_name)
