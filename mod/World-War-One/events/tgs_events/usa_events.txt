@@ -985,3 +985,48 @@ usa_events.16 = { #Republican party convention
         } 
     }
 }
+
+usa_events.17 = { #Waco lynching
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/racism.dds"
+    }
+
+    title = usa_events.17.t
+    desc = usa_events.17.d
+    flavor = usa_events.17.f
+
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = usa_events.17.a
+        default_option = yes
+        add_modifier = {
+            name = waco_lynching_no_repression
+            years = 2
+            is_decaying = yes
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = usa_events.17.b
+        add_modifier = {
+            name = waco_lynching_repression
+            years = 2
+            is_decaying = yes
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}

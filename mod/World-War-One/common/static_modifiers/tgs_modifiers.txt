@@ -538,6 +538,20 @@ american_cinema_modifier = {
    country_prestige_mult = 0.5
 }
 
+waco_lynching_no_repression = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+    interest_group_ig_rural_folk_approval_add = 1
+    interest_group_ig_intelligentsia_approval_add = -3
+}
+
+waco_lynching_repression = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+    interest_group_ig_rural_folk_approval_add = -3
+    interest_group_ig_petty_bourgeoisie_approval_add = -1
+    interest_group_ig_intelligentsia_approval_add = 3
+}
+
+
 #Centralization Laws Events Modifiers
 
 # Confederated Law Modifiers
