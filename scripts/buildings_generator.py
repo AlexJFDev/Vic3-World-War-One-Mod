@@ -58,7 +58,7 @@ def generate_region_object(country_tag: str, state_tag: str, buildings: list[tup
             continue
 
         if building_type not in building_types:
-            raise ValueError(f'type', building_type)
+            raise ValueError(f'building_type', building_type)
         if not production_methods.issubset(production_methods_map[building_type]):
             raise ValueError(f'production', building_type, production_methods.difference(production_methods_map[building_type]))
 
@@ -77,13 +77,22 @@ def generate_region_object(country_tag: str, state_tag: str, buildings: list[tup
             ownership_object.get_value_named('building').add_named_value('country', f'c:{country_tag}')
             ownership_object.get_value_named('building').add_named_value('levels', building_level)
             ownership_object.get_value_named('building').add_named_value('region', state_tag.split(':')[1])
-        else:
+        elif owner_type == 'building_financial_district' or owner_type == 'building_manor_house':
             owner_region, owner_country = owner.split('.')
             ownership_object.add_named_value('building', ClausewitzObject())
             ownership_object.get_value_named('building').add_named_value('type', owner_type)
             ownership_object.get_value_named('building').add_named_value('country', f'c:{owner_country}')
             ownership_object.get_value_named('building').add_named_value('levels', building_level)
             ownership_object.get_value_named('building').add_named_value('region', owner_region)
+        elif owner_type == 'company':
+            company_name, company_country = owner.split(' ')
+            company_owner = ClausewitzObject()
+            ownership_object.add_named_value('company', company_owner)
+            company_owner.add_named_value('type', company_name)
+            company_owner.add_named_value('country', company_country)
+            company_owner.add_named_value('levels', building_level)
+        else:
+            raise ValueError('owner_type', owner_type)
 
         production_methods = sorted(list(production_methods))
 
@@ -138,10 +147,12 @@ def generate_buildings(file_path: str):
                 region_object = generate_region_object(owner_tag, state_tag, buildings)
                 state_object.add_named_value(f'region_state:{owner_tag}', region_object)
             except ValueError as e:
-                if e.args[0] == 'type':
+                if e.args[0] == 'building_type':
                     print(f'Error in cell {number_to_alphabet(column_number)}{line_number}: Unknown building type: {e.args[1]}')
                 elif e.args[0] == 'production':
                     print(f'Error in cell {number_to_alphabet(column_number)}{line_number}: Unknown production method {e.args[2]} for type {e.args[1]}')
+                elif e.args[0] == 'owner_type':
+                    print(f'Error in cell {number_to_alphabet(column_number)}{line_number}: Unknown ownership type: {e.args[1]}')
                 else:
                     print(f'Unknown error in cell {number_to_alphabet(column_number)}{line_number}: {e.args[0]}')
                 i = input('Press enter to continue or type "q" to quit')
