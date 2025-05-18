@@ -156,24 +156,25 @@ mexico_events.10 = { #Revolutionnary victory
     desc = mexico_events.10.d
     flavor = mexico_events.10.f
 
-    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     duration = 3
 
     trigger = {}
 
     option = { #Carrancistas 
-        name = mexico_events.5.a
+        name = mexico_events.10.a
         default_option = yes
         change_tag = MEX
+        set_capital = STATE_MEXICO
 		activate_law = law_type:law_census_voting
         activate_law = law_type:law_interventionism
         activate_law = law_type:law_national_guard
         activate_law = law_interventionism
         activate_law = law_mercantilism
         add_modifier = {
-            name =
-            years = 
+            name = favor_carrancistas
+            years = 5
             is_decaying = yes
         }
         ai_chance = {
@@ -182,8 +183,9 @@ mexico_events.10 = { #Revolutionnary victory
     }
 
     option = { #Zapatistas
-        name = mexico_events.5.b
+        name = mexico_events.10.b
         change_tag = MEX
+        set_capital = STATE_MEXICO
         activate_law = law_type:law_anarchy
         activate_law = law_type:law_multiculturalism
         activate_law = law_type:law_guaranteed_liberties
@@ -191,8 +193,8 @@ mexico_events.10 = { #Revolutionnary victory
         activate_law = law_type:law_protectionism
 		activate_law = law_type:law_homesteading
         add_modifier = {
-            name =
-            years = 
+            name = favor_zapatistas
+            years = 5
             is_decaying = yes
         }
         ai_chance = {
@@ -201,16 +203,17 @@ mexico_events.10 = { #Revolutionnary victory
     }
 
     option = { #Villistas
-        name = mexico_events.5.c
+        name = mexico_events.10.c
         change_tag = MEX
+        set_capital = STATE_MEXICO
         activate_law = law_type:law_universal_suffrage
         activate_law = law_type:law_national_guard
         activate_law = law_type:law_protectionism
 		activate_law = law_type:law_homesteading
         activate_law = law_type:law_command_economy
         add_modifier = {
-            name =
-            years = 
+            name = favor_villistas
+            years = 5
             is_decaying = yes
         }
         ai_chance = {
@@ -219,11 +222,12 @@ mexico_events.10 = { #Revolutionnary victory
     }
 
     option = { #Legislative failure
-        name = mexico_events.5.e
+        name = mexico_events.10.e
         change_tag = MEX
+        set_capital = STATE_MEXICO
         add_modifier = {
-            name =
-            years = 
+            name = mexico_legislative_failure
+            years = 5
             is_decaying = yes
         }
         ai_chance = {

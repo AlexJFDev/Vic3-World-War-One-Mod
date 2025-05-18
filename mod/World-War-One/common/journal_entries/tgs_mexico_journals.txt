@@ -1,0 +1,31 @@
+﻿je_mexican_revolution = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:RMX
+        THIS = c:RMX
+    }
+    
+    possible = {
+        has_technology_researched = human_rights
+    }
+
+    immediate = {}
+
+    complete = {
+       c:RMX = {
+		  owns_entire_state_region = STATE_MEXICO
+	    }
+    }
+
+    on_complete = {
+        trigger_event = { 
+           id = mexico_events.10
+           days = 5
+        }
+    }
+
+    timeout = -1
+    should_be_pinned_by_default = yes
+}
