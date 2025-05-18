@@ -36,13 +36,14 @@
 		create_political_lobby = {  
 			type = lobby_pro_country  
 			target = c:USA
-			add_interest_group = ig:ig_industrialists
 			add_interest_group = ig:ig_landowners
 		}
 		create_political_lobby = {  
 			type = lobby_anti_country  
 			target = c:USA
 			add_interest_group = ig:ig_trade_unions
+			add_interest_group = ig:ig_industrialists
+			add_interest_group = ig:ig_rural_folk
 		}
 	}
 

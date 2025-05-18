@@ -1572,7 +1572,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_cordoba_railway
 						country = c:ARG
 						levels = 3
 					}
@@ -1762,6 +1763,20 @@
 					default_building_sugar_plantation pm_road_carts 
 				}
 			}
+			create_building = {
+				building = building_vineyard_plantation
+				add_ownership = {
+					company = {
+						type = company_argentinian_wine
+						country = c:ARG
+						levels = 45
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_vineyard_plantation pm_road_carts 
+				}
+			}
 		}
 	}
 	s:STATE_CORRIENTES = {
@@ -1769,11 +1784,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_cordoba_railway
+						country = c:ARG
 						levels = 3
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -1878,7 +1892,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_cordoba_railway
 						country = c:ARG
 						levels = 6
 					}
@@ -2275,7 +2290,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_cordoba_railway
 						country = c:ARG
 						levels = 3
 					}
@@ -8658,9 +8674,11 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
-						country = c:BRZ
+					building = {
+						type = building_financial_district
+						country = c:GBR
 						levels = 1
+						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -9072,11 +9090,10 @@
 			create_building = {
 				building = building_arms_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_rossi
 						country = c:BRZ
 						levels = 2
-						region = STATE_RIO_DE_JANEIRO
 					}
 				}
 				reserves = 1
@@ -9102,11 +9119,10 @@
 			create_building = {
 				building = building_munition_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_rossi
 						country = c:BRZ
 						levels = 1
-						region = STATE_RIO_DE_JANEIRO
 					}
 				}
 				reserves = 1
@@ -9276,11 +9292,10 @@
 			create_building = {
 				building = building_logging_camp
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_kablin
 						country = c:BRZ
 						levels = 5
-						region = STATE_PARA
 					}
 				}
 				reserves = 1
@@ -9308,9 +9323,11 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
-						country = c:BRZ
+					building = {
+						type = building_financial_district
+						country = c:GBR
 						levels = 1
+						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -9396,11 +9413,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_sao_paulo_railway
+						country = c:BRZ
 						levels = 1
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -9456,11 +9472,10 @@
 			create_building = {
 				building = building_logging_camp
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_kablin
 						country = c:BRZ
 						levels = 5
-						region = STATE_PARANA
 					}
 				}
 				reserves = 1
@@ -9615,11 +9630,10 @@
 			create_building = {
 				building = building_logging_camp
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_kablin
 						country = c:BRZ
 						levels = 2
-						region = STATE_PERNAMBUCO
 					}
 				}
 				reserves = 1
@@ -9888,7 +9902,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BRZ
-						levels = 1
+						levels = 5
 						region = STATE_RIO_DE_JANEIRO
 					}
 				}
@@ -9900,11 +9914,10 @@
 			create_building = {
 				building = building_military_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_estaleiro_maua
 						country = c:BRZ
 						levels = 1
-						region = STATE_RIO_DE_JANEIRO
 					}
 				}
 				reserves = 1
@@ -9917,7 +9930,7 @@
 				add_ownership = {
 					country = {
 						country = c:BRZ
-						levels = 3
+						levels = 12
 					}
 				}
 				reserves = 1
@@ -9928,11 +9941,10 @@
 			create_building = {
 				building = building_logging_camp
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_kablin
 						country = c:BRZ
 						levels = 4
-						region = STATE_RIO_DE_JANEIRO
 					}
 				}
 				reserves = 1
@@ -9999,9 +10011,11 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
-						country = c:BRZ
+					building = {
+						type = building_financial_district
+						country = c:GBR
 						levels = 1
+						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -10059,7 +10073,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_sao_paulo_railway
 						country = c:BRZ
 						levels = 3
 					}
@@ -10143,11 +10158,10 @@
 			create_building = {
 				building = building_logging_camp
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_kablin
 						country = c:BRZ
 						levels = 3
-						region = STATE_RIO_GRANDE_DO_SUL
 					}
 				}
 				reserves = 1
@@ -10175,11 +10189,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_sao_paulo_railway
+						country = c:BRZ
 						levels = 3
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -10280,11 +10293,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_sao_paulo_railway
+						country = c:BRZ
 						levels = 4
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -10353,11 +10365,10 @@
 			create_building = {
 				building = building_logging_camp
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_kablin
 						country = c:BRZ
 						levels = 4
-						region = STATE_SAO_PAULO
 					}
 				}
 				reserves = 1
@@ -18031,11 +18042,10 @@
 			create_building = {
 				building = building_food_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_hbc
 						country = c:CAN
 						levels = 5
-						region = STATE_ONTARIO
 					}
 				}
 				reserves = 1
@@ -18512,11 +18522,10 @@
 			create_building = {
 				building = building_food_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_hbc
 						country = c:CAN
 						levels = 5
-						region = STATE_ONTARIO
 					}
 				}
 				reserves = 1
@@ -18853,7 +18862,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_csf
 						country = c:CHL
 						levels = 2
 					}
@@ -18894,11 +18904,10 @@
 			create_building = {
 				building = building_sulfur_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
-						levels = 6
-						region = STATE_HOME_COUNTIES
+					company = {
+						type = company_csf
+						country = c:CHL
+						levels = 35
 					}
 				}
 				reserves = 1
@@ -18939,7 +18948,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_csf
 						country = c:CHL
 						levels = 1
 					}
@@ -19272,11 +19282,10 @@
 			create_building = {
 				building = building_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_sudamericana_de_vapores
 						country = c:CHL
 						levels = 1
-						region = STATE_SANTIAGO
 					}
 				}
 				reserves = 1
@@ -19609,11 +19618,10 @@
 			create_building = {
 				building = building_arms_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_famae
 						country = c:CHL
 						levels = 1
-						region = STATE_SANTIAGO
 					}
 				}
 				reserves = 1
@@ -19624,11 +19632,10 @@
 			create_building = {
 				building = building_munition_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_famae
 						country = c:CHL
 						levels = 1
-						region = STATE_SANTIAGO
 					}
 				}
 				reserves = 1
@@ -19680,11 +19687,10 @@
 			create_building = {
 				building = building_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_sudamericana_de_vapores
 						country = c:CHL
-						levels = 1
-						region = STATE_SANTIAGO
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -19834,6 +19840,20 @@
 					pm_financial_district_publicly_traded 
 				}
 			}
+			create_building = {
+				building = building_artillery_foundries
+				add_ownership = {
+					company = {
+						type = company_famae
+						country = c:CHL
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_breech_loaders pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
 		}
 	}
 	s:STATE_TAHITI = {
@@ -19944,7 +19964,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_csf
 						country = c:CHL
 						levels = 1
 					}
@@ -30076,11 +30097,10 @@
 			create_building = {
 				building = building_rubber_plantation
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:USA
-						levels = 5
-						region = STATE_LOUISIANA
+					company = {
+						type = company_peruvian_amazon
+						country = c:PEU
+						levels = 7
 					}
 				}
 				reserves = 1
@@ -60301,11 +60321,10 @@
 			create_building = {
 				building = building_coal_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_fundidora_monterrey
 						country = c:MEX
 						levels = 24
-						region = STATE_MEXICO
 					}
 				}
 				reserves = 1
@@ -60509,11 +60528,10 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:USA
-						levels = 8
-						region = STATE_TEXAS
+					company = {
+						type = company_el_aguila
+						country = c:MEX
+						levels = 12
 					}
 				}
 				reserves = 1
@@ -60809,11 +60827,10 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:USA
-						levels = 3
-						region = STATE_TEXAS
+					company = {
+						type = company_el_aguila
+						country = c:MEX
+						levels = 26
 					}
 				}
 				reserves = 1
@@ -90080,11 +90097,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_ford_motor
 						country = c:USA
 						levels = 42
-						region = STATE_NEW_YORK
 					}
 				}
 				reserves = 1
@@ -90120,6 +90136,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_electric_saw_mills pm_increased_hardwood pm_log_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_war_machine_industry
+				add_ownership = {
+					company = {
+						type = company_ford_motor
+						country = c:USA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_aeroplane_production pm_no_tank_production 
 				}
 			}
 			create_building = {
@@ -91363,11 +91393,10 @@
 			create_building = {
 				building = building_military_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_william_cramp
 						country = c:USA
 						levels = 8
-						region = STATE_NEW_YORK
 					}
 				}
 				reserves = 1
@@ -91777,11 +91806,10 @@
 			create_building = {
 				building = building_electrics_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_general_electric
 						country = c:USA
 						levels = 40
-						region = STATE_NEW_YORK
 					}
 				}
 				reserves = 1
@@ -91867,11 +91895,10 @@
 			create_building = {
 				building = building_power_plant
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_general_electric
 						country = c:USA
 						levels = 18
-						region = STATE_NEW_YORK
 					}
 				}
 				reserves = 1
@@ -91983,11 +92010,10 @@
 			create_building = {
 				building = building_military_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_william_cramp
 						country = c:USA
 						levels = 3
-						region = STATE_NEW_YORK
 					}
 				}
 				reserves = 1
@@ -96069,11 +96095,10 @@
 			create_building = {
 				building = building_power_plant
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_electricidad_de_caracas
 						country = c:VNZ
 						levels = 1
-						region = STATE_MIRANDA
 					}
 				}
 				reserves = 1
@@ -96273,11 +96298,10 @@
 			create_building = {
 				building = building_power_plant
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_electricidad_de_caracas
 						country = c:VNZ
 						levels = 1
-						region = STATE_MIRANDA
 					}
 				}
 				reserves = 1
@@ -96569,11 +96593,10 @@
 			create_building = {
 				building = building_power_plant
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_electricidad_de_caracas
 						country = c:VNZ
 						levels = 1
-						region = STATE_MIRANDA
 					}
 				}
 				reserves = 1
