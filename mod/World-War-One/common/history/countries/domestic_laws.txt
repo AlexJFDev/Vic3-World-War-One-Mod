@@ -1,4 +1,31 @@
 ﻿COUNTRIES = {
+	c:YEM = {
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_peasant_levies
+		activate_law = law_type:law_no_home_affairs
+		activate_law = law_type:law_traditionalism
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_no_health_system
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_child_labor_allowed
+		activate_law = law_type:law_no_womens_rights
+		activate_law = law_type:law_no_social_security
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_unitary
+		activate_law = law_type:law_no_agencies
+		activate_law = law_type:law_subordinate_general_staff
+	}
 	c:AFG = {
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy
@@ -553,6 +580,7 @@
 		activate_law = law_type:law_devolved
 		activate_law = law_type:law_surveillance_state
 		activate_law = law_type:law_subordinate_general_staff
+		set_market_capital = STATE_BOMBAY
 	}
 	c:SLD = {
 		activate_law = law_type:law_presidential_republic
@@ -836,6 +864,18 @@
 		activate_law = law_type:law_unitary
 		activate_law = law_type:law_no_agencies
 		activate_law = law_type:law_subordinate_general_staff
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
 	}
 	c:CHI = {
 		activate_law = law_type:law_presidential_republic
@@ -945,33 +985,6 @@
 			institution = institution_schools
 			level = 3
 		}
-	}
-	c:Tag = {
-		activate_law = law_type:Governance
-		activate_law = law_type:Power Distribution
-		activate_law = law_type:Citizenship
-		activate_law = law_type:Religion
-		activate_law = law_type:Bureaucracy
-		activate_law = law_type:Army
-		activate_law = law_type:Internal Security
-		activate_law = law_type:Economic System
-		activate_law = law_type:Trade
-		activate_law = law_type:Taxation
-		activate_law = law_type:Land Reform
-		activate_law = law_type:Colonization
-		activate_law = law_type:Police
-		activate_law = law_type:Education
-		activate_law = law_type:Healthcare
-		activate_law = law_type:Speech
-		activate_law = law_type:Labor Rights
-		activate_law = law_type:Children's Rights
-		activate_law = law_type:Women's Rights
-		activate_law = law_type:Welfare
-		activate_law = law_type:Migration
-		activate_law = law_type:Slavery
-		activate_law = law_type:Centralization
-		activate_law = law_type:Surveillance
-		activate_law = law_type:General Staff
 	}
 	c:CUB = {
 		activate_law = law_type:law_presidential_republic
@@ -1694,11 +1707,11 @@
 		activate_law = law_type:law_subordinate_general_staff
 		set_institution_investment_level = {
 			institution = institution_social_security
-			level = 1
+			level = 2
 		}
 		set_institution_investment_level = {
 			institution = institution_workplace_safety
-			level = 1
+			level = 2
 		}
 		set_institution_investment_level = {
 			institution = institution_schools
@@ -3049,7 +3062,7 @@
 		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_wealth_voting
 		activate_law = law_type:law_cultural_exclusion
-		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_total_separation
 		activate_law = law_type:law_elected_bureaucrats
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_no_home_affairs

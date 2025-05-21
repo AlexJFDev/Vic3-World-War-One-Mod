@@ -100,4 +100,26 @@
 			set_company_state_region = s:STATE_RIO_GRANDE_DO_SUL
 		}
 	}
+    c:GBR = {
+        add_company = company_type:company_suez_company
+		company:company_suez_company = {
+			set_company_establishment_date = 1858.2.16
+			set_company_state_region = s:STATE_HOME_COUNTIES
+		}
+		add_company = company_type:company_armstrong_whitworth
+		company:company_armstrong_whitworth = {
+			set_company_establishment_date = 1897.5.8
+			set_company_state_region = s:STATE_HOME_COUNTIES
+		}
+		add_company = company_type:company_gwr
+		company:company_gwr = {
+			set_company_establishment_date = 1833.2.14
+			set_company_state_region = s:STATE_HOME_COUNTIES
+		}
+		add_company = company_type:company_j_p_coats
+		company:company_j_p_coats = {
+			set_company_establishment_date = 1755.10.23
+			set_company_state_region = s:STATE_LANCASHIRE
+		}
+	}
 }

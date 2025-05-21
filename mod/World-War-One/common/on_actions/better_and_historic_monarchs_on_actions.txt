@@ -1,0 +1,24 @@
+﻿on_character_death = {
+	effect = {
+		save_scope_as = dead_character
+        # BRITAIN George 05 Dies as Ruler
+		if = {
+			limit = {
+				AND = { 
+					is_ruler = yes
+					has_template = is_gbr_george_05
+					owner = {
+						any_scope_character = { is_heir = yes is_historical = yes }
+					}
+				}
+			}
+			owner = {
+				trigger_event = {
+					id = uk_events.10
+					days = 5
+				}	
+			}
+		}
+
+	}
+}

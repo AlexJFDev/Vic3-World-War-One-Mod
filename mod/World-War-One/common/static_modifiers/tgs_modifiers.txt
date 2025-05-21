@@ -232,6 +232,11 @@ political_movement_buff_1 = {
     political_movement_radicalism_add = 0.3
 }
 
+political_movement_buff_2 = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+   political_movement_radicalism_add = 0.5
+}
+
 starting_minting_buff_1_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_minting_mult = 1
@@ -581,6 +586,18 @@ mexico_legislative_failure = {
     country_law_enactment_time_mult = 0.3
 }
 
+uk_report_election = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+   interest_group_in_government_approval_add = 5
+   interest_group_in_opposition_approval_add = -5
+   country_legitimacy_base_add = -15
+}
+
+uk_no_report_election = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+  interest_group_in_government_approval_add = -5
+  interest_group_in_opposition_approval_add = 5
+}
 
 #Centralization Laws Events Modifiers
 

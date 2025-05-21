@@ -1,0 +1,59 @@
+﻿je_irish_question = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:GBR
+        THIS = c:GBR
+        c:GBR = {
+		  owns_entire_state_region = STATE_LEINSTER
+          owns_entire_state_region = STATE_ULSTER
+          owns_entire_state_region = STATE_MUNSTER
+          owns_entire_state_region = STATE_CONNAUGHT
+	    }
+    }
+    
+    possible = {
+		owns_entire_state_region = STATE_LEINSTER
+        owns_entire_state_region = STATE_ULSTER
+        owns_entire_state_region = STATE_MUNSTER
+        owns_entire_state_region = STATE_CONNAUGHT
+    }
+
+    immediate = {
+        trigger_event = { 
+           id = uk_events.6
+           days = 5
+        }
+    }
+
+    fail = {
+       NOT = {
+          owns_entire_state_region = STATE_LEINSTER
+          owns_entire_state_region = STATE_ULSTER
+          owns_entire_state_region = STATE_MUNSTER
+          owns_entire_state_region = STATE_CONNAUGHT
+        }
+       any_political_movement = {
+			is_political_movement_type = movement_cultural_minority
+            is_insurrectionary = yes
+			civil_war ?= {
+                OR = {
+                  is_civil_war_type = revolution
+                  is_civil_war_type = secession
+                }
+				civil_war_progress >= 0.75
+			}
+        }
+    }
+
+    on_fail = {
+        trigger_event = { 
+           id = uk_events.7
+           days = 5
+        }
+    }
+
+    timeout = -1
+    should_be_pinned_by_default = yes
+}

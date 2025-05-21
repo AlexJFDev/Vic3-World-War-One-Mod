@@ -1,0 +1,351 @@
+﻿namespace = uk_events
+
+uk_events.5 = {#Report the election ?
+    type = country_event
+
+    title = uk_events.5.t
+    desc = uk_events.5.d
+    flavor = uk_events.5.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/house_of_commons.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = uk_events.5.a
+        default_option = yes
+        set_next_election_date = 1918.12.14
+        add_modifier = {
+            name = uk_report_election
+            years = 4
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = uk_events.5.b
+        set_next_election_date = 1916.12.14
+        add_modifier = {
+            name = uk_no_report_election
+            years = 4
+            is_decaying = yes
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+uk_events.6 = {#Irish question JE initiation
+    type = country_event
+
+    title = uk_events.6.t
+    desc = uk_events.6.d
+    flavor = uk_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = { create_political_movement = { type = movement_cultural_minority } }
+
+    event_image = {
+        texture = "gfx/event_pictures/house_of_commons.dds"
+    }
+
+    trigger = {}
+
+    option = { #Not working
+        name = uk_events.6.a
+        default_option = yes
+        every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority
+			}
+			add_modifier = {
+				name = political_movement_buff_2
+				years = 10
+			}
+		}   
+        ai_chance = {
+			base = 8
+		}
+    }
+
+    option = {
+        name = uk_events.6.b
+        default_option = yes
+        activate_law = law_type:law_federated
+        ai_chance = {
+			base = 3
+		}
+    }
+
+    option = {
+        name = uk_events.6.c
+        create_country = {
+	       tag = IRE
+	       origin = this
+	       state = s:STATE_LEINSTER.region_state:GBR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           }
+        }
+        s:STATE_MUNSTER = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GBR
+			    owner = {
+				  OR = {
+					c:GBR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRE
+            }
+        }
+        s:STATE_CONNAUGHT = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GBR
+			    owner = {
+				  OR = {
+					c:GBR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRE
+            }
+        }
+        c:GBR = {
+           create_diplomatic_pact = {
+			  country = c:IRE
+			  type = personal_union
+		    }
+        }
+        c:IRE = {
+            trigger_event = {
+             id = stabilization_buff_events.8
+             days = 5
+            }
+        }
+        ai_chance = {
+			base = 1
+		}
+    }
+}
+
+uk_events.7 = {#Irish question JE failure
+    type = country_event
+
+    title = uk_events.7.t
+    desc = uk_events.7.d
+    flavor = uk_events.7.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/easter_uprising.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = uk_events.7.a
+        default_option = yes
+        create_country = {
+	       tag = IRE
+	       origin = this
+	       state = s:STATE_LEINSTER.region_state:GBR
+           on_created = { 
+           activate_law = law_type:law_monarchy
+           }
+        }
+        s:STATE_MUNSTER = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GBR
+			    owner = {
+				  OR = {
+					c:GBR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRE
+            }
+        }
+        s:STATE_CONNAUGHT = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GBR
+			    owner = {
+				  OR = {
+					c:GBR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRE
+            }
+        }
+        c:GBR = {
+           create_diplomatic_pact = {
+			  country = c:IRE
+			  type = personal_union
+		    }
+        }
+        c:IRE = {
+            trigger_event = {
+             id = stabilization_buff_events.8
+             days = 5
+            }
+        }
+        ai_chance = {
+			base = 9
+		}
+    }
+
+    option = {
+        name = uk_events.7.b
+        create_country = {
+	       tag = IRE
+	       origin = this
+	       state = s:STATE_LEINSTER.region_state:GBR
+           on_created = { 
+           activate_law = law_type:law_presidential_republic
+           }
+        }
+        s:STATE_MUNSTER = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GBR
+			    owner = {
+				  OR = {
+					c:GBR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRE
+            }
+        }
+        s:STATE_CONNAUGHT = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GBR
+			    owner = {
+				  OR = {
+					c:GBR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:IRE
+            }
+        }
+        c:GBR = {
+          create_diplomatic_play = {
+		    target_country = c:IRE
+		    type = dp_make_protectorate
+	        add_war_goal = {
+		        holder = c:IRE
+		        type = conquer_state
+		        target_state = s:STATE_ULSTER.region_state:GBR
+            }
+            add_war_goal = {
+		        holder = c:IRE
+		        type = humiliation
+		        target_country = c:GBR
+            }
+	        }
+        }
+        ai_chance = {
+			base = 1
+		}
+    }
+}
+
+uk_events.10 = {#George V death
+    type = country_event
+
+    title = uk_events.10.t
+    desc = uk_events.10.d
+    flavor = uk_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/old_george_5.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = uk_events.10.a
+        trigger_event = {
+            id = uk_events.11
+            days = 300
+        }
+    }
+}
+
+uk_events.11 = {#Edward VIII marriage scandal
+    type = country_event
+
+    title = uk_events.11.t
+    desc = uk_events.11.d
+    flavor = uk_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/edward_8_scandal.dds"
+    }
+
+    trigger = {}
+    
+    option = { #Not working
+        name = uk_events.11.a
+        default_option = yes
+        create_character = {
+			template = is_gbr_george_06
+        }
+        create_character = {
+			template = is_gbr_elizabeth_02
+        }
+    }
+
+    option = { #Not working
+        name = uk_events.11.b
+        c:GBR = {
+        ruler = {
+            character_popularity_add = -50
+        }
+        }
+    }
+}
