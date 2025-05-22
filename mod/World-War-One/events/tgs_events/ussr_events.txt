@@ -57,24 +57,209 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 			}
             add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
         }
-        ai_chance = {
-			base = 100
+		scope:valdimir_lenin_scope = {
+			set_character_as_ruler = yes
 		}
-		ig:ig_trade_unions = {
-				leader = {
-					set_character_as_ruler = yes
-				}
-				add_ruling_interest_group = yes
-			}
+		trigger_event = {
+            id = ussr_events.2
+            years = 2
+        }
+		trigger_event = {
+            id = ussr_events.4
+            years = 5
+        }
+		ai_chance = {
+			base = 10
+		}
     }
         
     option = {
         name = ussr_events.1.b
-		ig:ig_trade_unions = {
-				leader = {
-					set_character_as_ruler = yes
-				}
-				add_ruling_interest_group = yes
-			}
+		scope:valdimir_lenin_scope = {
+			set_character_as_ruler = yes
+		}
+		trigger_event = {
+            id = ussr_events.2
+            years = 2
+        }
+		trigger_event = {
+            id = ussr_events.4
+            years = 5
+        }
+		ai_chance = {
+			base = 0
+		}
     }
+}
+
+ussr_events.2 = { #The New Economic Policy part 1
+    type = country_event
+
+    title = ussr_events.2.t
+    desc = ussr_events.2.d
+    flavor = ussr_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/soviet_eco_propaganda.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = ussr_events.2.a
+        default_option = yes
+        activate_law = law_type:law_interventionism
+        trigger_event = {
+            id = ussr_events.3
+            years = 7
+        }
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+        name = ussr_events.2.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+ussr_events.3 = { #The New Economic Policy part 2
+    type = country_event
+
+    title = ussr_events.3.t
+    desc = ussr_events.3.d
+    flavor = ussr_events.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/soviet_eco_propaganda.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = ussr_events.3.a
+        default_option = yes
+        activate_law = law_type:law_command_economy
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+        name = ussr_events.2.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+ussr_events.4 = { #Lenin death
+    type = country_event
+
+    title = ussr_events.4.t
+    desc = ussr_events.4.d
+    flavor = ussr_events.4.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/soviet_eco_propaganda.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = ussr_events.3.a
+        default_option = yes
+        scope:valdimir_lenin_scope = {
+			kill_character = yes
+		}
+        scope:stalin_scope = {
+            set_character_as_ruler = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+        name = ussr_events.2.b
+		scope:valdimir_lenin_scope = {
+			kill_character = yes
+		}
+        scope:zinoviev_scope = {
+            set_character_as_ruler = yes
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+        name = ussr_events.2.c
+		scope:valdimir_lenin_scope = {
+			kill_character = yes
+		}
+		scope:kamenev_scope = {
+            set_character_as_ruler = yes
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+        name = ussr_events.2.e
+		scope:valdimir_lenin_scope = {
+			kill_character = yes
+		}
+		scope:bukharin_scope = {
+            set_character_as_ruler = yes
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+        name = ussr_events.2.g
+		scope:valdimir_lenin_scope = {
+			kill_character = yes
+		}
+		scope:rykov_scope = {
+            set_character_as_ruler = yes
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+        name = ussr_events.2.h
+		scope:valdimir_lenin_scope = {
+			kill_character = yes
+		}
+		scope:trotsky_scope = {
+            set_character_as_ruler = yes
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
 }
