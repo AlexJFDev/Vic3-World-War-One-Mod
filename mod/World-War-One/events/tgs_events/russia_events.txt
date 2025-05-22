@@ -139,14 +139,18 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         create_character = {
 			template = rus_leon_trotsky_character_template
             on_created = {
-			  save_scope_as = trotsky_scope
-			}
+               set_variable = {
+                  name = leon_trotsky
+                } 
+            }
         }
+        ai_chance = {
+			base = 10
+		}
     }
 
     option = {
         name = russia_events.3.b
-        default_option = yes
         activate_law = law_type:law_presidential_republic
         activate_law = law_type:law_wealth_voting
         activate_law = law_type:law_right_of_assembly
@@ -170,14 +174,18 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         create_character = {
 			template = rus_leon_trotsky_character_template
             on_created = {
-			  save_scope_as = trotsky_scope
-			}
+               set_variable = {
+                  name = leon_trotsky
+                } 
+            }
         }
+        ai_chance = {
+			base = 0
+		}
     }
 
     option = {
         name = russia_events.3.c
-        default_option = yes
         activate_law = law_type:law_presidential_republic
         activate_law = law_type:law_oligarchy
         activate_law = law_type:law_right_of_assembly
@@ -201,14 +209,18 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         create_character = {
 			template = rus_leon_trotsky_character_template
             on_created = {
-			  save_scope_as = trotsky_scope
-			}
+               set_variable = {
+                  name = leon_trotsky
+                } 
+            }
         }
+        ai_chance = {
+			base = 0
+		}
     }
 
     option = {
         name = russia_events.3.e
-        default_option = yes
         activate_law = law_type:law_presidential_republic
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_censorship
@@ -232,9 +244,14 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         create_character = {
 			template = rus_leon_trotsky_character_template
             on_created = {
-			  save_scope_as = trotsky_scope
-			}
+               set_variable = {
+                  name = leon_trotsky
+                } 
+            }
         }
+        ai_chance = {
+			base = 0
+		}
     }
 }
 
@@ -264,7 +281,10 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             is_at_war = yes 
         }
         set_variable = russian_rep_continues_war
-        scope:trotsky_scope =  {
+        random_scope_character =  {
+				limit = {
+					has_variable = leon_trotsky
+				}
 			remove_character_role = agitator
 		    add_character_role = politician
             set_as_interest_group_leader = yes
@@ -375,7 +395,9 @@ russia_events.6 = { #Lenin returns to Russia
         create_character = {
 			template = rus_lenin_character_template
             on_created = {
-			  save_scope_as = valdimir_lenin_scope
+			  set_variable = {
+                  name = lenin
+                }
 			}
         }
     }
@@ -447,35 +469,49 @@ russia_events.7 = { #Soviet uprising
 			type = alliance
 		}        
         set_capital = STATE_MOSCOW
+        random_scope_character = { 
+			limit = { has_variable = lenin }
+            set_character_as_ruler = yes
+		}
         create_character = {
 			template = sov_joseph_stalin_character_template
             on_created = {
-			  save_scope_as = stalin_scope
-			}
+               set_variable = {
+                  name = stalin
+                } 
+            }
         }
         create_character = {
 			template = sov_grigory_zinoviev_character_template
             on_created = {
-			  save_scope_as = zinoviev_scope
-			}
+               set_variable = {
+                  name = zinoviev
+                } 
+            }
         }
         create_character = {
 			template = sov_lev_kamenev_character_template
             on_created = {
-			  save_scope_as = kamenev_scope
-			}
+               set_variable = {
+                  name = kamenev
+                } 
+            }
         }
         create_character = {
 			template = sov_nikolai_bukharin_character_template
             on_created = {
-			  save_scope_as = bukharin_scope
-			}
+               set_variable = {
+                  name = bukharin
+                } 
+            }
         }
         create_character = {
 			template = sov_alexei_rykov_character_template
             on_created = {
-			  save_scope_as = rykov_scope
-			}
+               set_variable = {
+                  name = rykov
+                } 
+            }
         }
     }
 }

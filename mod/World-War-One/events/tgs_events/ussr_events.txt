@@ -57,9 +57,6 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 			}
             add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
         }
-		scope:valdimir_lenin_scope = {
-			set_character_as_ruler = yes
-		}
 		trigger_event = {
             id = ussr_events.2
             years = 2
@@ -75,8 +72,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
         
     option = {
         name = ussr_events.1.b
-		scope:valdimir_lenin_scope = {
-			set_character_as_ruler = yes
+		random_scope_character = { 
+			limit = { has_variable = lenin }
+            set_character_as_ruler = yes
 		}
 		trigger_event = {
             id = ussr_events.2
@@ -179,18 +177,20 @@ ussr_events.4 = { #Lenin death
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/soviet_eco_propaganda.dds"
+        texture = "gfx/event_pictures/lenin_funeral.dds"
     }
 
     trigger = {}
 
     option = {
-        name = ussr_events.3.a
+        name = ussr_events.4.a
         default_option = yes
-        scope:valdimir_lenin_scope = {
-			kill_character = yes
+        random_scope_character = { 
+			limit = { has_variable = lenin }
+            kill_character = yes
 		}
-        scope:stalin_scope = {
+		random_scope_character = { 
+			limit = { has_variable = stalin }
             set_character_as_ruler = yes
 		}
 		ai_chance = {
@@ -199,11 +199,13 @@ ussr_events.4 = { #Lenin death
 	}
 
 	option = {
-        name = ussr_events.2.b
-		scope:valdimir_lenin_scope = {
-			kill_character = yes
+        name = ussr_events.4.b
+		random_scope_character = { 
+			limit = { has_variable = lenin }
+            kill_character = yes
 		}
-        scope:zinoviev_scope = {
+        random_scope_character = { 
+			limit = { has_variable = zinoviev }
             set_character_as_ruler = yes
 		}
 		ai_chance = {
@@ -212,11 +214,13 @@ ussr_events.4 = { #Lenin death
 	}
 
 	option = {
-        name = ussr_events.2.c
-		scope:valdimir_lenin_scope = {
-			kill_character = yes
+        name = ussr_events.4.c
+		random_scope_character = { 
+			limit = { has_variable = lenin }
+            kill_character = yes
 		}
-		scope:kamenev_scope = {
+		random_scope_character = { 
+			limit = { has_variable = kamenev }
             set_character_as_ruler = yes
 		}
 		ai_chance = {
@@ -225,11 +229,13 @@ ussr_events.4 = { #Lenin death
 	}
 
 	option = {
-        name = ussr_events.2.e
-		scope:valdimir_lenin_scope = {
-			kill_character = yes
+        name = ussr_events.4.e
+		random_scope_character = { 
+			limit = { has_variable = lenin }
+            kill_character = yes
 		}
-		scope:bukharin_scope = {
+		random_scope_character = { 
+			limit = { has_variable = bukharin }
             set_character_as_ruler = yes
 		}
 		ai_chance = {
@@ -238,11 +244,13 @@ ussr_events.4 = { #Lenin death
 	}
 
 	option = {
-        name = ussr_events.2.g
-		scope:valdimir_lenin_scope = {
-			kill_character = yes
+        name = ussr_events.4.g
+		random_scope_character = { 
+			limit = { has_variable = lenin }
+            kill_character = yes
 		}
-		scope:rykov_scope = {
+		random_scope_character = { 
+			limit = { has_variable = rykov }
             set_character_as_ruler = yes
 		}
 		ai_chance = {
@@ -251,11 +259,13 @@ ussr_events.4 = { #Lenin death
 	}
 
 	option = {
-        name = ussr_events.2.h
-		scope:valdimir_lenin_scope = {
-			kill_character = yes
+        name = ussr_events.4.h
+		random_scope_character = { 
+			limit = { has_variable = lenin }
+            kill_character = yes
 		}
-		scope:trotsky_scope = {
+		random_scope_character = { 
+			limit = { has_variable = trotsky }
             set_character_as_ruler = yes
 		}
 		ai_chance = {
