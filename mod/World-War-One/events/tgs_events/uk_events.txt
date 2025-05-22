@@ -10,7 +10,7 @@ uk_events.5 = {#Report the election ?
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     immediate = {}
 
@@ -58,9 +58,26 @@ uk_events.6 = {#Irish question JE initiation
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
-    immediate = { create_political_movement = { type = movement_cultural_minority } }
+    immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_cultural_minority
+					}
+				}
+			}
+			create_political_movement = { type = movement_cultural_minority }
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority
+			}
+			save_scope_as = irish_movement_scope
+		}
+	}
 
     event_image = {
         texture = "gfx/event_pictures/house_of_commons.dds"
@@ -68,18 +85,19 @@ uk_events.6 = {#Irish question JE initiation
 
     trigger = {}
 
-    option = { #Not working
+    option = {
         name = uk_events.6.a
         default_option = yes
-        every_political_movement = {
-			limit = {
-				is_political_movement_type = movement_cultural_minority
-			}
+		scope:irish_movement_scope = {
 			add_modifier = {
 				name = political_movement_buff_2
 				years = 10
 			}
 		}   
+        trigger_event = {
+            id = uk_events.7
+            years = 3
+        }
         ai_chance = {
 			base = 8
 		}
@@ -87,8 +105,18 @@ uk_events.6 = {#Irish question JE initiation
 
     option = {
         name = uk_events.6.b
-        default_option = yes
-        activate_law = law_type:law_federated
+        if = {
+            has_law = law_type:law_unitary
+            activate_law = law_type:law_devolved
+        }
+        if = {
+            has_law = law_type:law_devolved
+            activate_law = law_type:law_federated
+        }
+        if = {
+            has_law = law_type:law_federated
+            activate_law = law_type:law_confederated
+        }
         ai_chance = {
 			base = 3
 		}
@@ -148,7 +176,7 @@ uk_events.6 = {#Irish question JE initiation
     }
 }
 
-uk_events.7 = {#Irish question JE failure
+uk_events.7 = {#Easter uprising
     type = country_event
 
     title = uk_events.7.t
@@ -158,7 +186,7 @@ uk_events.7 = {#Irish question JE failure
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     immediate = {}
 
@@ -170,6 +198,64 @@ uk_events.7 = {#Irish question JE failure
 
     option = {
         name = uk_events.7.a
+        default_option = yes
+		scope:irish_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_2
+				years = 10
+			}
+		}   
+        add_modifier = {
+			name = easter_uprising_repressed
+			years = 3
+            is_decaying = yes
+		}
+        ai_chance = {
+			base = 9
+		}
+    }
+
+    option = {
+        name = uk_events.7.b
+        scope:irish_movement_scope = {
+			add_modifier = {
+				name = political_movement_nerf_2
+				years = 5
+			}
+		}  
+        add_modifier = {
+			name = easter_uprising_no_repression
+			years = 3
+            is_decaying = yes
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+}
+
+uk_events.8 = {#Irish question JE failure
+    type = country_event
+
+    title = uk_events.8.t
+    desc = uk_events.8.d
+    flavor = uk_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/easter_uprising.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = uk_events.8.a
         default_option = yes
         create_country = {
 	       tag = IRE
@@ -223,7 +309,7 @@ uk_events.7 = {#Irish question JE failure
     }
 
     option = {
-        name = uk_events.7.b
+        name = uk_events.8.b
         create_country = {
 	       tag = IRE
 	       origin = this
@@ -290,7 +376,7 @@ uk_events.10 = {#George V death
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     immediate = {}
 
@@ -319,9 +405,16 @@ uk_events.11 = {#Edward VIII marriage scandal
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
-    immediate = {}
+    immediate = { 
+        random_scope_character = {
+            limit = {
+               has_template = is_gbr_edward_08
+            }
+            save_scope_as = edward_8
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/edward_8_scandal.dds"
@@ -329,7 +422,7 @@ uk_events.11 = {#Edward VIII marriage scandal
 
     trigger = {}
     
-    option = { #Not working
+    option = {
         name = uk_events.11.a
         default_option = yes
         create_character = {
@@ -338,14 +431,22 @@ uk_events.11 = {#Edward VIII marriage scandal
         create_character = {
 			template = is_gbr_elizabeth_02
         }
+        ai_chance = {
+			base = 10
+		}
     }
 
-    option = { #Not working
+    option = {
         name = uk_events.11.b
-        c:GBR = {
-        ruler = {
-            character_popularity_add = -50
-        }
-        }
+        scope:edward_8 = {
+			add_modifier = {
+              name = royal_scandal
+              years = 10
+              is_decaying = yes
+            }
+		}
+        ai_chance = {
+			base = 0
+		}
     }
 }

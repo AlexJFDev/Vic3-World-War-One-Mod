@@ -227,6 +227,11 @@ political_movement_nerf_1 = {
     political_movement_radicalism_add = -1
 }
 
+political_movement_nerf_2 = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+   political_movement_radicalism_add = -0.1
+}
+
 political_movement_buff_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     political_movement_radicalism_add = 0.3
@@ -597,6 +602,25 @@ uk_no_report_election = {
   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
   interest_group_in_government_approval_add = -5
   interest_group_in_opposition_approval_add = 5
+}
+
+easter_uprising_repressed = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+  interest_group_ig_armed_forces_approval_add = 2
+  interest_group_ig_petty_bourgeoisie_approval_add = 2
+  interest_group_ig_landowners_approval_add = 2
+}
+
+easter_uprising_no_repression = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+  interest_group_ig_armed_forces_approval_add = -3
+  interest_group_ig_petty_bourgeoisie_approval_add = -3
+  interest_group_ig_landowners_approval_add = -3
+}
+
+royal_scandal = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+  character_popularity_add = -50
 }
 
 #Centralization Laws Events Modifiers
