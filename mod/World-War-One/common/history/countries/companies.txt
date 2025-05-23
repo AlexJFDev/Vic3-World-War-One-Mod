@@ -122,4 +122,26 @@
 			set_company_state_region = s:STATE_LANCASHIRE
 		}
 	}
+	c:FRA = {
+		add_company = company_type:company_schneider_creusot
+		company:company_schneider_creusot = {
+			set_company_establishment_date = 1836.2.12
+			set_company_state_region = s:STATE_ILE_DE_FRANCE
+		}
+		add_company = company_type:company_saint_etienne
+		company:company_saint_etienne = {
+			set_company_establishment_date = 1864.6.8
+			set_company_state_region = s:STATE_RHONE
+		}
+		add_company = company_type:company_fcm
+		company:company_fcm = {
+			set_company_establishment_date = 1855.8.14
+			set_company_state_region = s:STATE_PROVENCE
+		}
+		add_company = company_type:company_cgv
+		company:company_cgv = {
+			set_company_establishment_date = 1907.9.22
+			set_company_state_region = s:STATE_LANGUEDOC
+		}
+	}
 }

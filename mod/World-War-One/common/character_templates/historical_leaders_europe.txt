@@ -34,45 +34,6 @@ aus_franz_josef_I_habsburg_template = {
     }
 }
 
-fra_clemenceau_character_template = {
-    first_name = Georges
-    last_name = Clemenceau
-    historical = yes
-    culture = cu:french
-    female = no
-    religion = catholic
-    ideology = ideology_radical
-    interest_group = ig_intelligentsia
-    dna = dna_georges_clemenceau
-    birth_date = 1841.9.11
-    traits = {
-        experienced_political_operator
-        persistent
-        direct
-    }   
-    interest_group_leader_usage = {
-        country_trigger = {
-            has_dlc_feature = voice_of_the_people_preorder
-            exists = c:FRA
-            this = c:FRA
-        }
-        interest_group_trigger = {
-            is_marginal = no
-            is_interest_group_type = ig_intelligentsia    
-            NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
-        }   
-        earliest_usage_date = 1871.1.1
-        latest_usage_date = 1929.1.1
-        chance = 50
-    }   
-}
-
 # Frankfurt - FRM
 frm_grimm_character_template = {
     first_name = Wilhelm
