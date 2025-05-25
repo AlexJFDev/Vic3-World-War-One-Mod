@@ -71,7 +71,7 @@ great_war_initiation_events.1 = { # Triggered by global on June 28th.
 great_war_initiation_events.2 = {
     type = country_event
     
-    duration = 1
+    duration = 3
 
     trigger = {
         NOT = {
@@ -126,6 +126,7 @@ great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
     }
     option = { # Demand an apology
         name = great_war_initiation_events.3.b
+        trigger = { NOT = { has_law = law_type:law_military_oversight }	
         ai_chance = {
             base = 0
         }
@@ -365,6 +366,7 @@ great_war_initiation_events.7 = {
     }
     option = { # Do nothing
         name = great_war_initiation_events.7.b
+        trigger = { NOT = { has_law = law_type:law_military_oversight }
         ai_chance = {
             base = 0
         }
@@ -580,6 +582,12 @@ great_war_initiation_events.10 = {
         c:GER = {
             trigger_event = { 
                 id = great_war_initiation_events.13
+                days = 5
+            }
+        }
+        c:FRA = {
+            trigger_event = { 
+                id = france_events.5
                 days = 5
             }
         }
@@ -838,6 +846,7 @@ great_war_initiation_events.13 = {
     }
     option = { # Leave France alone
         name = great_war_initiation_events.13.b
+        trigger = { NOT = { has_law = law_type:law_military_oversight }
         ai_chance = {
             base = 0
         }
@@ -968,6 +977,7 @@ great_war_initiation_events.14 = {
 
     option = { # Do nothing
         name = great_war_initiation_events.14.c
+        trigger = { NOT = { has_law = law_type:law_military_oversight }
         ai_chance = {
             base = 0
         }

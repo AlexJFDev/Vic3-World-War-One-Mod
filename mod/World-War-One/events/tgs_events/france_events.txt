@@ -1,0 +1,40 @@
+﻿namespace = france_events
+
+france_events.5 = { #Jean Jaures assasination
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/jean_jaures.dds"
+    }
+
+    title = france_events.5.t
+    desc = france_events.5.d
+    flavor = france_events.5.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {
+         random_scope_character = {
+            limit = {
+               has_template = agitator_jean_jaures
+            }
+            set_variable = {
+                name = jaures
+            }
+        }
+    }
+
+    option = {
+        name = france_events.5.a
+        default_option = yes
+        random_scope_character = { 
+			limit = { has_variable = jaures }
+            kill_character = yes
+		}
+        
+    }
+}
