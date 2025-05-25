@@ -297,7 +297,16 @@ je_the_final_war = {
     }
     
     possible = {
-       has_global_variable = hitler_rise_to_power
+      OR = {
+           has_global_variable = hitler_rise_to_power
+            c:GER = {
+                ruler = {
+                OR = {
+				   has_ideology = ideology:ideology_fascist
+                   has_ideology = ideology:ideology_authoritarian
+                }
+            }
+        }
     }
 
     immediate = {
@@ -308,10 +317,14 @@ je_the_final_war = {
     }
 
     complete = {
+        army_size >= 800
+        navy_size >= 100
+        has_technology_researched = blitzkrieg_tech
+        average_sol > average_expected_sol
+        any_political_movement = {
+            is_insurrectionary = no
+        }
         NOT = {
-            any_political_movement = {
-                is_insurrectionary = yes
-            }
             c:GBR = {
 			  has_truce_with = root
             }
@@ -322,14 +335,6 @@ je_the_final_war = {
 			  has_truce_with = root
             }
         }
-        any_scope_building = {
-			is_building_type = building_barracks
-			count >= 800
-		}
-        any_scope_building = {
-			is_building_type = building_naval_base
-			count >= 150
-		}
         any_country = {
 		    limit = {
               country_rank >= rank_value:great_power
@@ -339,8 +344,11 @@ je_the_final_war = {
 				type = alliance
 			}	
         }
-        has_technology_researched = blitzkrieg_tech
-        average_sol > average_expected_sol
+        OR = {
+            exists = c:POL
+            exists = c:CZE
+        }
+        is_at_war = no
     }
 
     on_complete = {

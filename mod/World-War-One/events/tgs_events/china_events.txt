@@ -632,6 +632,10 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:YUE = {
             trigger_event = {
@@ -646,6 +650,10 @@ china_events.5 = { #China collapse
                 id = stabilization_buff_events.12
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:ZHI = {
             trigger_event = {
@@ -656,10 +664,18 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:AHU = {
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.21
                 days = 5
             }
         }
@@ -668,10 +684,18 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:HUB = {
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.21
                 days = 5
             }
         }
@@ -680,10 +704,18 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:YUN = {
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.21
                 days = 5
             }
         }
@@ -692,10 +724,18 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:SIH = {
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.21
                 days = 5
             }
         }
@@ -704,10 +744,18 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:JSU = {
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.21
                 days = 5
             }
         }
@@ -716,10 +764,18 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:ZHE = {
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.21
                 days = 5
             }
         }
@@ -728,16 +784,28 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:FRS = {
             trigger_event = {
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.21
+                days = 5
+            }
         }
         c:SHN = {
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.21
                 days = 5
             }
         }
@@ -748,6 +816,10 @@ china_events.5 = { #China collapse
             }
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.23
                 days = 5
             }
         }
@@ -772,6 +844,10 @@ china_events.5 = { #China collapse
         c:GAN = {
             trigger_event = {
                 id = china_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = china_events.21
                 days = 5
             }
         }
@@ -1476,4 +1552,351 @@ china_events.20 = { #Join the central government ?
 		base = 3
 	    }
     }
+}
+
+china_events.21 = { #New armies spawn
+    type = country_event
+
+    title = china_events.21.t
+    desc = china_events.21.d
+    flavor = china_events.21.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.21.a
+        default_option = yes
+        c:MCH = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_manchuria
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_SHENGJING
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:BEI = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_BEIJING
+					count = 30
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:ZHI = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_ZHILI
+					count = 100
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:SHN = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_SHANXI
+					count = 50
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:HEN = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_HENAN
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:AHU = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_NORTHERN_ANHUI
+					count = 30
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:JSU = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_JIANGSU
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:QIN = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_XIAN
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:GAN = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_GANSU
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:QIN = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_XIAN
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:ZHE = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_ZHEJIANG
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:FRS = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_FUJIAN
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:JXI = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_JIANGXI
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:YUE = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_GUANGDONG
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:GNG = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_GUANGXI
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:HNA = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_HUNAN
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:GUI = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_GUIZHOU
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:SIH = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_CHONGQING
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}
+        c:YUN = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_south_china
+                name = Warlord_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_YUNNAN
+					count = 80
+				}
+			}
+            activate_production_method = {
+			  building_type = building_barracks
+			  production_method = pm_general_training
+		    }
+		}        
+	}
 }

@@ -1106,6 +1106,7 @@ germany_events.35 = { #Invasion of Poland
 
     option = {
         name = germany_events.35.a
+        trigger = { exists = c:POL }
         set_strategy = ai_strategy_territorial_expansion
         create_diplomatic_play = {
 	        target_state = s:STATE_WEST_PRUSSIA.region_state:POL
@@ -1116,17 +1117,30 @@ germany_events.35 = { #Invasion of Poland
             days = 5
         }
         ai_chance = {
-            base = 10
+            base = 8
         }
     }
 
     option = {
         name = germany_events.35.b
+        trigger = { exists = c:POL }
         set_strategy = ai_strategy_territorial_expansion
+        create_diplomatic_play = {
+	        target_state = s:STATE_BOHEMIA.region_state:CZE
+            type = dp_conquer_state
+	    }
         trigger_event = {
             id = stabilization_buff_events.2
             days = 5
         }
+        ai_chance = {
+            base = 2
+        }
+    }
+
+    option = {
+        name = germany_events.35.c
+        set_strategy = ai_strategy_territorial_expansion
         ai_chance = {
             base = 0
         }
