@@ -166,4 +166,26 @@
 			set_company_state_region = s:STATE_RHINELAND
 		}
 	}
+	c:AUS = {
+		add_company = company_type:company_galician_carpathian_oil
+		company:company_galician_carpathian_oil = {
+			set_company_establishment_date = 1881.3.18
+			set_company_state_region = s:STATE_EAST_GALICIA
+		}
+		add_company = company_type:company_skoda
+		company:company_skoda = {
+			set_company_establishment_date = 1859.12.5
+			set_company_state_region = s:STATE_BOHEMIA
+		}
+		add_company = company_type:company_mav
+		company:company_mav = {
+			set_company_establishment_date = 1892.2.25
+			set_company_state_region = s:STATE_CENTRAL_HUNGARY
+		}
+		add_company = company_manfred_weiss
+		company:company_manfred_weiss = {
+			set_company_establishment_date = 1892.6.8
+			set_company_state_region = s:STATE_CENTRAL_HUNGARY
+		}
+	}
 }

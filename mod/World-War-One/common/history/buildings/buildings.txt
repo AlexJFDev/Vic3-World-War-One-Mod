@@ -3463,7 +3463,7 @@
 				add_ownership = {
 					country = {
 						country = c:AUS
-						levels = 45
+						levels = 32
 					}
 				}
 				reserves = 1
@@ -3901,11 +3901,10 @@
 			create_building = {
 				building = building_steel_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_skoda
 						country = c:AUS
 						levels = 45
-						region = STATE_AUSTRIA
 					}
 				}
 				reserves = 1
@@ -3916,11 +3915,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_skoda
 						country = c:AUS
 						levels = 18
-						region = STATE_AUSTRIA
 					}
 				}
 				reserves = 1
@@ -4036,11 +4034,10 @@
 			create_building = {
 				building = building_artillery_foundries
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_skoda
 						country = c:AUS
 						levels = 30
-						region = STATE_AUSTRIA
 					}
 				}
 				reserves = 1
@@ -4304,11 +4301,10 @@
 			create_building = {
 				building = building_tooling_workshops
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_mav
 						country = c:AUS
 						levels = 25
-						region = STATE_CENTRAL_HUNGARY
 					}
 				}
 				reserves = 1
@@ -4319,11 +4315,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_mav
 						country = c:AUS
 						levels = 16
-						region = STATE_CENTRAL_HUNGARY
 					}
 				}
 				reserves = 1
@@ -4430,6 +4425,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+				}
+			}
+			create_building = {
+				building = building_steel_mills
+				add_ownership = {
+					company = {
+						type = company_manfred_weiss
+						country = c:AUS
+						levels = 8
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_arc_process pm_rotary_valve_engine_building_steel_mills 
 				}
 			}
 			create_building = {
@@ -4826,9 +4835,10 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					country = {
+					company = {
+						type = company_galician_carpathian_oil
 						country = c:AUS
-						levels = 6
+						levels = 18
 					}
 				}
 				reserves = 1
@@ -43606,7 +43616,7 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 23
+						levels = 35
 					}
 				}
 				reserves = 1
@@ -44062,7 +44072,7 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 20
+						levels = 27
 					}
 				}
 				reserves = 1
