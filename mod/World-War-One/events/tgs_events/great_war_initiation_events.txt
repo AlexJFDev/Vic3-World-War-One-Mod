@@ -126,7 +126,7 @@ great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
     }
     option = { # Demand an apology
         name = great_war_initiation_events.3.b
-        trigger = { NOT = { has_law = law_type:law_military_oversight }	
+        trigger = { NOT = { has_law = law_type:law_military_oversight }	}
         ai_chance = {
             base = 0
         }
@@ -145,9 +145,7 @@ great_war_initiation_events.4 = {
 
     duration = 1
 
-    trigger = {
-        c:SER = ROOT
-    }
+    trigger = {}
 
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
@@ -223,9 +221,7 @@ great_war_initiation_events.5 = {
 
     duration = 1
 
-    trigger = {
-        c:SER = ROOT
-    }
+    trigger = {}
 
     event_image = { 
         texture = "gfx/event_pictures/july_crisis.dds"
@@ -366,7 +362,7 @@ great_war_initiation_events.7 = {
     }
     option = { # Do nothing
         name = great_war_initiation_events.7.b
-        trigger = { NOT = { has_law = law_type:law_military_oversight }
+        trigger = { NOT = { has_law = law_type:law_military_oversight } }
         ai_chance = {
             base = 0
         }
@@ -603,12 +599,6 @@ great_war_initiation_events.10 = {
                 days = 5
             }
         }
-        c:FRA = {
-            trigger_event = {
-                id = stabilization_buff_events.21
-                days = 5
-            }
-        }
         c:ITA = {
             trigger_event = { 
                 id = great_war_initiation_events.12 
@@ -772,12 +762,6 @@ great_war_initiation_events.13 = {
                 days = 2
             }
         }
-        c:FRA = {
-            trigger_event = {
-                id = stabilization_buff_events.21
-                days = 5
-            }
-        }
         c:ITA = {
             trigger_event = { 
                 id = great_war_initiation_events.12 
@@ -846,7 +830,7 @@ great_war_initiation_events.13 = {
     }
     option = { # Leave France alone
         name = great_war_initiation_events.13.b
-        trigger = { NOT = { has_law = law_type:law_military_oversight }
+        trigger = { NOT = { has_law = law_type:law_military_oversight } }
         ai_chance = {
             base = 0
         }
@@ -977,7 +961,7 @@ great_war_initiation_events.14 = {
 
     option = { # Do nothing
         name = great_war_initiation_events.14.c
-        trigger = { NOT = { has_law = law_type:law_military_oversight }
+        trigger = { NOT = { has_law = law_type:law_military_oversight } }
         ai_chance = {
             base = 0
         }
