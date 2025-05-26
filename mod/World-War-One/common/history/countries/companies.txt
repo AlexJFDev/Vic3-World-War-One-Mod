@@ -122,6 +122,31 @@
 			set_company_state_region = s:STATE_LANCASHIRE
 		}
 	}
+	c:NET = {
+		add_company = company_type:company_philips
+		company:company_philips = {
+			set_company_establishment_date = 1891.5.15
+			set_company_state_region = s:STATE_GELRE
+		}
+		add_company = company_type:company_nederlandse_petroleum
+		company:company_nederlandse_petroleum = {
+			set_company_establishment_date = 1907.2.23
+			set_company_state_region = s:STATE_HOLLAND
+		}
+		
+	}
+	c:BEL = {
+		add_company = company_type:company_john_cockerill
+		company:company_john_cockerill = {
+			set_company_establishment_date = 1825.8.13
+			set_company_state_region = s:STATE_WALLONIA
+		}
+		add_company = company_type:company_franco_belge
+		company:company_franco_belge = {
+			set_company_establishment_date = 1881.10.8
+			set_company_state_region = s:STATE_WALLONIA
+		}
+	}
 	c:FRA = {
 		add_company = company_type:company_schneider_creusot
 		company:company_schneider_creusot = {

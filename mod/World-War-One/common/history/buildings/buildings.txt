@@ -6668,11 +6668,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_john_cockerill
 						country = c:BEL
 						levels = 12
-						region = STATE_FLANDERS
 					}
 				}
 				reserves = 1
@@ -6945,11 +6944,10 @@
 			create_building = {
 				building = building_steel_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_john_cockerill
 						country = c:BEL
 						levels = 70
-						region = STATE_FLANDERS
 					}
 				}
 				reserves = 1
@@ -6960,11 +6958,10 @@
 			create_building = {
 				building = building_tooling_workshops
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_john_cockerill
 						country = c:BEL
 						levels = 20
-						region = STATE_FLANDERS
 					}
 				}
 				reserves = 1
@@ -7146,6 +7143,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_motor_industry
+				add_ownership = {
+					company = {
+						type = company_franco_belg
+						country = c:BEL
+						levels = 25
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
 				}
 			}
 		}
@@ -28857,7 +28868,8 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					country = {
+					company = {
+						type = company_nederlandse_petroleum
 						country = c:NET
 						levels = 8
 					}
@@ -29452,9 +29464,10 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					country = {
+					company = {
+						type = company_nederlandse_petroleum
 						country = c:NET
-						levels = 5
+						levels = 15
 					}
 				}
 				reserves = 1
@@ -62015,6 +62028,20 @@
 				}
 			}
 			create_building = {
+				building = building_oil_rig
+				add_ownership = {
+					company = {
+						type = company_nederlandse_petroleum
+						country = c:NET
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_combustion_derricks pm_road_carts 
+				}
+			}
+			create_building = {
 				building = building_power_plant
 				add_ownership = {
 					building = {
@@ -62162,6 +62189,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_automatic_power_looms pm_craftsman_sewing pm_electric_sewing_machines 
+				}
+			}
+			create_building = {
+				building = building_electrics_industry
+				add_ownership = {
+					company = {
+						type = company_philips
+						country = c:NET
+						levels = 8
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_radios pm_telephones 
 				}
 			}
 			create_building = {
