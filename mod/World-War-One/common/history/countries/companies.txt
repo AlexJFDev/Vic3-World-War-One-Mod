@@ -144,4 +144,26 @@
 			set_company_state_region = s:STATE_LANGUEDOC
 		}
 	}
+	c:GER = {
+		add_company = company_type:company_siemens_and_halske
+		company:company_siemens_and_halske = {
+			set_company_establishment_date = 1847.10.12
+			set_company_state_region = s:STATE_BANDENBURG
+		}
+		add_company = company_type:company_rheinmetall
+		company:company_rheinmetall = {
+			set_company_establishment_date = 1889.3.5
+			set_company_state_region = s:STATE_RHUR
+		}
+		add_company = company_type:company_krupp
+		company:company_krupp = {
+			set_company_establishment_date = 1811.8.9
+			set_company_state_region = s:STATE_WESTPHALIA
+		}
+		add_company = company_type:company_basf
+		company:company_basf = {
+			set_company_establishment_date = 1865.4.6
+			set_company_state_region = s:STATE_RHINELAND
+		}
+	}
 }

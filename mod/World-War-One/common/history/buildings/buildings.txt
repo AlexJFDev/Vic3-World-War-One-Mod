@@ -32473,11 +32473,10 @@
 			create_building = {
 				building = building_vineyard_plantation
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_cgv
 						country = c:FRA
 						levels = 5
-						region = STATE_PROVENCE
 					}
 				}
 				reserves = 1
@@ -32679,6 +32678,19 @@
 				}
 			}
 			create_building = {
+				building = building_port
+				add_ownership = {
+					country = {
+						country = c:FRA
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_industrial_port 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -32758,11 +32770,10 @@
 			create_building = {
 				building = building_vineyard_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_cgv
 						country = c:FRA
 						levels = 5
-						region = STATE_AUVERGNE_LIMOUSIN
 					}
 				}
 				reserves = 1
@@ -33371,11 +33382,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_schneider_creusot
 						country = c:FRA
 						levels = 20
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -33958,11 +33968,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_schneider_creusot
 						country = c:FRA
 						levels = 10
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -34033,11 +34042,10 @@
 			create_building = {
 				building = building_steel_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:BEL
+					company = {
+						type = company_schneider_creusot
+						country = c:FRA
 						levels = 15
-						region = STATE_FLANDERS
 					}
 				}
 				reserves = 1
@@ -34110,7 +34118,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 18
+						levels = 15
 					}
 				}
 				reserves = 1
@@ -34481,11 +34489,10 @@
 			create_building = {
 				building = building_vineyard_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_cgv
 						country = c:FRA
 						levels = 5
-						region = STATE_GUYENNE
 					}
 				}
 				reserves = 1
@@ -34755,7 +34762,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 75
+						levels = 68
 					}
 				}
 				reserves = 1
@@ -35090,11 +35097,10 @@
 			create_building = {
 				building = building_vineyard_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_cgv
 						country = c:FRA
 						levels = 5
-						region = STATE_LANGUEDOC
 					}
 				}
 				reserves = 1
@@ -35165,11 +35171,10 @@
 			create_building = {
 				building = building_artillery_foundries
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_saint_etienne
 						country = c:FRA
 						levels = 8
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -35197,7 +35202,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 12
+						levels = 2
 					}
 				}
 				reserves = 1
@@ -35251,11 +35256,10 @@
 			create_building = {
 				building = building_arms_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_saint_etienne
 						country = c:FRA
 						levels = 14
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -35266,31 +35270,15 @@
 			create_building = {
 				building = building_munition_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_saint_etienne
 						country = c:FRA
 						levels = 15
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
 					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
-				}
-			}
-			create_building = {
-				building = building_artillery_foundries
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:FRA
-						levels = 5
-						region = STATE_ILE_DE_FRANCE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
 				}
 			}
 			create_building = {
@@ -35373,11 +35361,10 @@
 			create_building = {
 				building = building_steel_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_schneider_creusot
+						country = c:FRA
 						levels = 12
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -35814,7 +35801,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 20
+						levels = 16
 					}
 				}
 				reserves = 1
@@ -36003,11 +35990,10 @@
 			create_building = {
 				building = building_vineyard_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_cgv
 						country = c:FRA
 						levels = 5
-						region = STATE_ORLEANS
 					}
 				}
 				reserves = 1
@@ -36215,7 +36201,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 18
+						levels = 6
 					}
 				}
 				reserves = 1
@@ -36361,11 +36347,10 @@
 			create_building = {
 				building = building_vineyard_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_cgv
 						country = c:FRA
 						levels = 5
-						region = STATE_POITOU
 					}
 				}
 				reserves = 1
@@ -36481,11 +36466,10 @@
 			create_building = {
 				building = building_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_fcm
 						country = c:FRA
 						levels = 5
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -36496,11 +36480,10 @@
 			create_building = {
 				building = building_military_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_fcm
 						country = c:FRA
 						levels = 3
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -36663,7 +36646,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 18
+						levels = 15
 					}
 				}
 				reserves = 1
@@ -36837,11 +36820,10 @@
 			create_building = {
 				building = building_arms_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_saint_etienne
 						country = c:FRA
 						levels = 18
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -36852,11 +36834,10 @@
 			create_building = {
 				building = building_artillery_foundries
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_saint_etienne
 						country = c:FRA
 						levels = 15
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -36867,11 +36848,10 @@
 			create_building = {
 				building = building_munition_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_saint_etienne
 						country = c:FRA
 						levels = 18
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -36912,11 +36892,10 @@
 			create_building = {
 				building = building_vineyard_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_cgv
 						country = c:FRA
 						levels = 5
-						region = STATE_RHONE
 					}
 				}
 				reserves = 1
@@ -42907,11 +42886,10 @@
 			create_building = {
 				building = building_electrics_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_siemens_and_halske
 						country = c:GER
 						levels = 8
-						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -42924,7 +42902,7 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 75
+						levels = 65
 					}
 				}
 				reserves = 1
@@ -42978,11 +42956,10 @@
 			create_building = {
 				building = building_chemical_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_basf
 						country = c:GER
-						levels = 12
-						region = STATE_BRANDENBURG
+						levels = 18
 					}
 				}
 				reserves = 1
@@ -43068,11 +43045,10 @@
 			create_building = {
 				building = building_synthetics_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_basf
 						country = c:GER
 						levels = 50
-						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -43727,11 +43703,10 @@
 			create_building = {
 				building = building_electrics_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_siemens_and_halske
 						country = c:GER
 						levels = 2
-						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -44686,11 +44661,10 @@
 			create_building = {
 				building = building_arms_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_rheinmetall
 						country = c:GER
 						levels = 15
-						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -44701,11 +44675,10 @@
 			create_building = {
 				building = building_artillery_foundries
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_rheinmetall
 						country = c:GER
 						levels = 8
-						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -44716,11 +44689,10 @@
 			create_building = {
 				building = building_munition_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_rheinmetall
 						country = c:GER
 						levels = 10
-						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -45244,6 +45216,20 @@
 				}
 			}
 			create_building = {
+				building = building_synthetics_plants
+				add_ownership = {
+					company = {
+						type = company_basf
+						country = c:GER
+						levels = 18
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_dye_production pm_no_artificial_fibers 
+				}
+			}
+			create_building = {
 				building = building_government_administration
 				add_ownership = {
 					country = {
@@ -45304,11 +45290,10 @@
 			create_building = {
 				building = building_steel_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_krupp
 						country = c:GER
 						levels = 40
-						region = STATE_BRANDENBURG
 					}
 				}
 				reserves = 1
@@ -45447,6 +45432,48 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_brine_electrolysis 
+				}
+			}
+			create_building = {
+				building = building_arms_industry
+				add_ownership = {
+					company = {
+						type = company_rheinmetall
+						country = c:GER
+						levels = 8
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_artillery_foundries
+				add_ownership = {
+					company = {
+						type = company_rheinmetall
+						country = c:GER
+						levels = 6
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_munition_plants
+				add_ownership = {
+					company = {
+						type = company_rheinmetall
+						country = c:GER
+						levels = 4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
 				}
 			}
 			create_building = {
@@ -45723,7 +45750,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GER
-						levels = 12
+						levels = 3
 						region = STATE_BRANDENBURG
 					}
 				}
@@ -46336,11 +46363,10 @@
 			create_building = {
 				building = building_arms_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_krupp
 						country = c:GER
-						levels = 25
-						region = STATE_BRANDENBURG
+						levels = 20
 					}
 				}
 				reserves = 1
@@ -46351,11 +46377,10 @@
 			create_building = {
 				building = building_artillery_foundries
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_krupp
 						country = c:GER
-						levels = 35
-						region = STATE_BRANDENBURG
+						levels = 30
 					}
 				}
 				reserves = 1
@@ -46366,11 +46391,10 @@
 			create_building = {
 				building = building_munition_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_krupp
 						country = c:GER
-						levels = 35
-						region = STATE_BRANDENBURG
+						levels = 32
 					}
 				}
 				reserves = 1
