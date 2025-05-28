@@ -245,37 +245,6 @@ combat_unit_type_trench_infantry = {
     }
 }
 
-combat_unit_type_mechanized_infantry = {
-    group = combat_unit_group_infantry
-
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-
-    upkeep_modifier = {
-        goods_input_small_arms_add = 1.5
-        goods_input_ammunition_add = 1.5
-        goods_input_oil_add = 2
-        goods_input_radios_add = 1
-        goods_input_tanks_add = 2
-    }
-    
-    battle_modifier = {
-        unit_offense_add = 50
-        unit_defense_add = 60
-        unit_morale_loss_add = 4
-        unit_devastation_mult = 0.1
-    }
-
-	unlocking_technologies = { mobile_armor }
-
-    combat_unit_image = {
-        texture = "gfx/unit_illustrations/mechanized_infantry.dds"
-    }
-}
-
 combat_unit_type_squad_infantry = {
     group = combat_unit_group_infantry
 
@@ -328,6 +297,47 @@ combat_unit_type_squad_infantry = {
 
     upgrades = {
         combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_mechanized_infantry = {
+    group = combat_unit_group_infantry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 1.5
+        goods_input_ammunition_add = 1.5
+        goods_input_oil_add = 2
+        goods_input_radios_add = 1
+        goods_input_tanks_add = 2
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 60
+        unit_morale_loss_add = 4
+        unit_devastation_mult = 0.1
+    }
+
+	unlocking_technologies = { mobile_armor }
+
+    combat_unit_image = {
+		trigger = { 
+            game_date < 1930.1.1
+        }
+        texture = "gfx/unit_illustrations/infantry_eu_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            game_date > 1930.1.1
+        }
+        texture = "gfx/unit_illustrations/late_mechanized_infantry.dds"
     }
 }
 
@@ -633,7 +643,17 @@ combat_unit_type_heavy_tank = {
 	unlocking_technologies = { mobile_armor }
 
     combat_unit_image = {
-        texture = "gfx/unit_illustrations/heavy_tanks.dds"
+        trigger = { 
+            game_date < 1925.1.1
+        }
+        texture = "gfx/unit_illustrations/artillery_heavy_tank.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            game_date > 1925.1.1
+        }
+        texture = "gfx/unit_illustrations/late_heavy_tanks.dds"
     }
 }
 
@@ -970,7 +990,6 @@ combat_unit_type_close_air_support = {
 	unlocking_technologies = { aerial_ground_support } 
 
     combat_unit_image = {
-        # fallback
         texture = "gfx/unit_illustrations/close_air_support.dds"
     }
 
@@ -1008,8 +1027,17 @@ combat_unit_type_bomber = {
 	unlocking_technologies = { military_aviation }
 
     combat_unit_image = {
-        # fallback
+        trigger = { 
+            game_date < 1935.1.1
+        }
         texture = "gfx/unit_illustrations/bomber.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            game_date > 1935.1.1
+        }
+        texture = "gfx/unit_illustrations/late_bomber.dds"
     }
 
     upgrades = {}
@@ -1046,8 +1074,17 @@ combat_unit_type_fighter = {
 	unlocking_technologies = { military_aviation }
 
     combat_unit_image = {
-        # fallback
+        trigger = { 
+            game_date < 1935.1.1
+        }
         texture = "gfx/unit_illustrations/fighter.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            game_date > 1935.1.1
+        }
+        texture = "gfx/unit_illustrations/late_fighter.dds"
     }
 
     upgrades = {
