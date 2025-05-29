@@ -552,6 +552,12 @@ joining_world_war_events.13 = { #Ottoman Empire joins
                 days = 15
             }
         }
+        c:SEN = {
+            trigger_event = {
+                id = joining_world_war_events.28
+                days = 15
+            }
+        }
         set_variable = central_powers_participant
         if = {
           limit = {
@@ -1642,5 +1648,48 @@ joining_world_war_events.27 = { #submarine warfare causes concern
 			add_progress = { value = 15 name = join_entente_progress_bar }
             add_progress = { value = -15 name = join_central_powers_progress_bar }
 		}
+    }
+}
+
+joining_world_war_events.28 = { #Senussi order joins WW1
+    type = country_event
+
+    title = joining_world_war_events.28.t
+    desc = joining_world_war_events.28.d
+    flavor = joining_world_war_events.28.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/trenches.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = joining_world_war_events.28.a
+        default_option = yes
+        every_diplomatic_play = {
+			limit = {
+                initiator = c:AUS
+                target = c:SER
+			}
+            add_initiator_backers = {
+                c:SEN
+            }            
+		}
+        ai_chance = {
+		  base = 10
+	    }
+    }
+
+    option = {
+        name = joining_world_war_events.28.b
+        ai_chance = {
+		   base = 0
+	    }
     }
 }

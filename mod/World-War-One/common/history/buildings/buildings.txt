@@ -16340,10 +16340,11 @@
 			create_building = {
 				building = building_military_shipyards
 				add_ownership = {
-					company = {
-						type = company_imperial_arsenal
+					building = {
+						type = building_financial_district
 						country = c:TUR
 						levels = 1
+						region = STATE_EASTERN_THRACE
 					}
 				}
 				reserves = 1
@@ -26684,20 +26685,20 @@
 		}
 	}
 	s:STATE_LIBYAN_DESERT = {
-		region_state:CYR = {
+		region_state:SEN = {
 			create_building = {
-				building = building_railway
+				building = building_livestock_ranch
 				add_ownership = {
 					building = {
-						type = building_financial_district
-						country = c:ITA
+						type = building_livestock_ranch
+						country = c:SEN
 						levels = 1
-						region = STATE_PIEDMONT
+						region = STATE_LIBYAN_DESERT
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_no_passenger_trains pm_steam_trains 
+					pm_sheep_farms pm_slaughterhouses pm_standard_fences pm_unrefrigerated 
 				}
 			}
 		}

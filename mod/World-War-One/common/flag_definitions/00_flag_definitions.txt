@@ -6267,13 +6267,16 @@ NEW = { # Newfoundland
 	flag_definition = {
 		coa = NEW
 		coa_with_overlord_canton = NEW_subject
-		allow_overlord_canton = yes
+		allow_overlord_canton = no
 	}
 	flag_definition = {
 		coa = NEW_republic
 		priority = 10
 		trigger = { 
-			coa_def_republic_flag_trigger = yes
+		   AND = {
+			  coa_def_republic_flag_trigger = yes
+			  is_subject = no
+			}
 		}
 	}
 	flag_definition = {
@@ -10180,6 +10183,14 @@ CYR = { #TODO
 				}
 			}
 		}
+	}
+}
+
+SEN = {
+	flag_definition = {
+		coa = SEY
+		subject_canton = SEY
+		priority = 1
 	}
 }
 

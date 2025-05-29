@@ -16354,6 +16354,23 @@
 			}
 		}
 	}
+	c:SEN = {
+		create_military_formation = {
+			name = Senussi_Mujahideen
+			type = army
+			hq_region = sr:region_north_africa
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LIBYAN_DESERT
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_LIBYAN_DESERT
+				count = 2
+			}
+		}
+	}
 	c:SUD = {
 		create_military_formation = {
 			name = Khartoum_Garrison
