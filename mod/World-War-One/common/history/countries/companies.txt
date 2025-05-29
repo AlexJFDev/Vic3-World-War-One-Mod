@@ -278,5 +278,17 @@
 			set_company_state_region = s:STATE_MOSCOW
 		}
 	}
+	c:TUR = {
+	    add_company = company_type:company_turkish_petroleum
+		company:company_turkish_petroleum = {
+			set_company_establishment_date = 1912.5.13
+			set_company_state_region = s:STATE_BAGHDAD
+		}
+		add_company = company_type:company_ottoman_tobacco_regie
+		company:company_ottoman_tobacco_regie = {
+			set_company_establishment_date = 1894.2.24
+			set_company_state_region = s:STATE_EASTERN_THRACE
+		}
+	}
 
 }

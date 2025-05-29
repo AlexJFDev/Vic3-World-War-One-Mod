@@ -92,31 +92,18 @@ turkey_events.4 = { #Mustapha Kemal denounces the Sultan
 
     trigger = {}
 
+    immediate = {
+        random_scope_character = {
+            limit = {
+               has_template = tur_ataturk_character_template
+            }
+            save_scope_as = ataturk_scope
+        }
+    }
+
     option = { 
         name = turkey_events.4.a
         default_option = yes
-        create_character = {
-            first_name = Kemal
-	        last_name = Ataturk
-	        historical = yes
-            birth_date = 1883.05.19
-	        culture = cu:turc
-	        religion = rel:sunni
-	        female = no
-            is_agitator = yes
-	        interest_group = ig_intelligentsia
-	        ideology = ideology_nihilist
-	        traits = {
-             firebrand
-             honorable
-             expert_political_operator
-	        }
-	        on_created = {
-               set_variable = {
-                  name = kemal_ataturk
-                }                
-            }
-        }
     }
 }
 
@@ -149,10 +136,7 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
             years = 3
             is_decaying = yes
 		}
-        random_scope_character =  {
-				limit = {
-					has_variable = kemal_ataturk
-				}
+        scope:ataturk_scope = {
 			remove_character_role = agitator
 		    add_character_role = politician
             set_as_interest_group_leader = yes

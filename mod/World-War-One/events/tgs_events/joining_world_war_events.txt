@@ -589,6 +589,7 @@ joining_world_war_events.13 = { #Ottoman Empire joins
 
     option = { #Reject violently the offer
         name = joining_world_war_events.13.c
+        trigger = { NOT = { has_law = law_type:law_military_oversight } }
         je:je_joining_world_war = {
             add_progress = { value = -15 name = join_central_powers_progress_bar }
 		}
