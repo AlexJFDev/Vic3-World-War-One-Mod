@@ -1,0 +1,44 @@
+﻿je_fragile_dynasty = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:PER
+        THIS = c:PER
+    }
+    
+    possible = {
+		has_technology_researched = nationalism
+    }
+
+    immediate = {
+        trigger_event = { 
+           id = persia_events.1
+           days = 5
+        }
+    }
+
+    fail = {
+        is_subject = yes
+        any_political_movement = {
+            is_insurrectionary = yes
+			civil_war ?= {
+                OR = {
+                  is_civil_war_type = revolution
+                  is_civil_war_type = secession
+                }
+				civil_war_progress >= 0.75
+			}
+        }
+    }
+
+    on_fail = {
+        trigger_event = { 
+           id = persia_events.3
+           days = 5
+        }
+    }
+
+    timeout = 7300
+    should_be_pinned_by_default = yes
+}

@@ -1,0 +1,162 @@
+﻿namespace = persia_events
+
+persia_events.1 = {
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/persia_map.dds"
+    }
+
+    title = persia_events.1.t
+    desc = persia_events.1.d
+    flavor = persia_events.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = persia_events.1.a #Politics
+        default_option = yes
+        add_modifier = {
+          name = persia_policy_politics
+          years = 10
+          is_decaying = yes
+        }
+        ai_chance = {
+			base = 5
+		}
+    }
+
+    option = {
+        name = persia_events.1.b #Economic
+        add_modifier = {
+          name = persia_policy_economy
+          years = 10
+          is_decaying = yes
+        }
+        ai_chance = {
+			base = 3
+		}
+    }
+
+    option = {
+        name = persia_events.1.c #Military
+        add_modifier = {
+          name = persia_policy_military
+          years = 10
+          is_decaying = yes
+        }
+        ai_chance = {
+			base = 2
+		}
+    }
+}
+
+persia_events.2 = {
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/persia_ww1.dds"
+    }
+
+    title = persia_events.2.t
+    desc = persia_events.2.d
+    flavor = persia_events.2.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = persia_events.2.a
+        default_option = yes
+        add_modifier = {
+          name = persia_weak_government
+          years = 10
+          is_decaying = yes
+        }
+    }
+}
+
+persia_events.3 = {
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/shah_riza.dds"
+    }
+
+    title = persia_events.3.t
+    desc = persia_events.3.d
+    flavor = persia_events.3.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = { 
+      remove_modifier = persia_weak_government 
+      random_scope_character = {
+            limit = {
+               has_template = per_riza_pahlevi_character_template
+            }
+            save_scope_as = riza_pahlevi_scope
+        }
+      
+    }
+
+    option = {
+        name = persia_events.3.a
+        default_option = yes
+        scope:riza_pahlevi_scope = {
+			remove_character_role = general
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+            set_character_as_ruler = yes
+		}
+        set_variable = pahlevi_takeover
+        activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_unitary
+		activate_law = law_type:law_censorship
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+        name = persia_events.3.b
+        activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_right_of_assembly
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = persia_events.3.c
+        trigger = { 
+          OR = {
+           c:RUS = {
+               has_law = law_type:law_council_republic
+            }
+           c:TUR = {
+               has_law = law_type:law_council_republic
+            }
+          }
+        }
+        activate_law = law_type:law_council_republic
+		activate_law = law_type:law_single_party_state
+		activate_law = law_type:law_command_economy
+        ai_chance = {
+			base = 0
+		}
+    }
+}

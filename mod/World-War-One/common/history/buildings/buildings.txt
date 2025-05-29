@@ -26698,7 +26698,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_sheep_farms pm_slaughterhouses pm_standard_fences pm_unrefrigerated 
+					pm_open_air_stockyards pm_simple_ranch pm_standard_fences pm_unrefrigerated 
 				}
 			}
 		}
@@ -50251,7 +50251,8 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					country = {
+					company = {
+						type = company_anglo_persian_oil
 						country = c:GBR
 						levels = 5
 					}
@@ -50380,11 +50381,10 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_anglo_persian_oil
 						country = c:GBR
 						levels = 25
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -55000,7 +55000,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_sheep_farms pm_slaughterhouses pm_standard_fences pm_unrefrigerated 
+					pm_open_air_stockyards pm_simple_ranch pm_standard_fences pm_unrefrigerated 
 				}
 			}
 			create_building = {
@@ -61819,7 +61819,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_sheep_farms pm_slaughterhouses pm_standard_fences pm_unrefrigerated 
+					pm_open_air_stockyards pm_simple_ranch pm_standard_fences pm_unrefrigerated 
 				}
 			}
 			create_building = {
@@ -67507,11 +67507,10 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_anglo_persian_oil
 						country = c:GBR
 						levels = 2
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -67582,11 +67581,10 @@
 			create_building = {
 				building = building_textile_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_sherkate_eslamiya
 						country = c:PER
 						levels = 20
-						region = STATE_IRAKAJEMI
 					}
 				}
 				reserves = 1
@@ -67945,6 +67943,20 @@
 				}
 			}
 			create_building = {
+				building = building_textile_mills
+				add_ownership = {
+					company = {
+						type = company_sherkate_eslamiya
+						country = c:PER
+						levels = 6
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_craftsman_sewing pm_mechanized_looms pm_sewing_machines 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -68174,11 +68186,10 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_anglo_persian_oil
 						country = c:GBR
 						levels = 18
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -68540,11 +68551,10 @@
 			create_building = {
 				building = building_tobacco_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_imperial_tobacco
 						country = c:PER
 						levels = 8
-						region = STATE_URMIA
 					}
 				}
 				reserves = 1
@@ -68620,7 +68630,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PER
-						levels = 4
+						levels = 6
 						region = STATE_PERSIAN_KURDISTAN
 					}
 				}
@@ -68709,11 +68719,10 @@
 			create_building = {
 				building = building_tobacco_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_imperial_tobacco
 						country = c:PER
-						levels = 1
-						region = STATE_SEMNAN
+						levels = 4
 					}
 				}
 				reserves = 1
@@ -69178,11 +69187,10 @@
 			create_building = {
 				building = building_tobacco_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_imperial_tobacco
 						country = c:PER
 						levels = 8
-						region = STATE_TABRIZ
 					}
 				}
 				reserves = 1
@@ -69270,11 +69278,10 @@
 			create_building = {
 				building = building_tobacco_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_imperial_tobacco
 						country = c:PER
-						levels = 3
-						region = STATE_SISTAN
+						levels = 5
 					}
 				}
 				reserves = 1

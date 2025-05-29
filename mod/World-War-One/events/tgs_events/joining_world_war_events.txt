@@ -1374,6 +1374,12 @@ joining_world_war_events.21 = { #Persia joins
                     target_country = c:PER
                 }
         }
+        c:PER = {
+            trigger_event = {
+              id = persia_events.2
+              days = 5
+            }
+        }
         c:PER = { set_variable = entente_participant }
         ai_chance = {
             base = 100

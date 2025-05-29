@@ -121,6 +121,11 @@
 			set_company_establishment_date = 1755.10.23
 			set_company_state_region = s:STATE_LANCASHIRE
 		}
+		add_company = company_type:company_anglo_persian_oil
+		company:company_sherkate_eslamiya = {
+			set_company_establishment_date = 1909.4.14
+			set_company_state_region = s:STATE_HOME_COUNTIES
+		}
 	}
 	c:NET = {
 		add_company = company_type:company_philips
@@ -290,5 +295,16 @@
 			set_company_state_region = s:STATE_EASTERN_THRACE
 		}
 	}
-
+	c:PER = {
+	    add_company = company_type:company_imperial_tobacco
+		company:company_imperial_tobacco = {
+			set_company_establishment_date = 1881.2.12
+			set_company_state_region = s:STATE_IRAKAJEMI
+		}
+		add_company = company_type:company_sherkate_eslamiyaie
+		company:company_sherkate_eslamiya = {
+			set_company_establishment_date = 1894.11.21
+			set_company_state_region = s:STATE_ISFAHAN
+		}
+	}
 }
