@@ -551,6 +551,10 @@ joining_world_war_events.13 = { #Ottoman Empire joins
                 id = ww1_war_techs_events.1
                 days = 15
             }
+            trigger_event = {
+                id = turkey_events.8
+                years = 1
+            }
         }
         c:SEN = {
             trigger_event = {
@@ -1687,6 +1691,41 @@ joining_world_war_events.28 = { #Senussi order joins WW1
                 c:SEN
             }            
 		}
+        any_state = {
+          limit = {
+                OR = {
+                  owner = c:GBR
+                  owner = c:ITA
+                }
+                OR = {
+                 region = sr:region_north_africa
+                 region = sr:region_nile_basin
+                }
+            }
+            add_modifier = {
+               name = senusi_turmoil
+               years = 5
+               is_decaying = yes
+            }
+        }
+        c:SEN = {
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_north_africa
+                name = Senusi_peasent_levies
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_LIBYAN_DESERT
+					count = 30
+				}
+			}
+		}
+        add_modifier = {
+               name = senusi_army_buff
+               years = 5
+               is_decaying = yes
+            }
         ai_chance = {
 		  base = 10
 	    }

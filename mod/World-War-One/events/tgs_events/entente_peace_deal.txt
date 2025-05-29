@@ -2331,17 +2331,15 @@ entente_peace_deal.8 = { #Round 7 result
 		ai_chance = {
 			base = 100
 		}
-        create_country = {
-	       tag = HDJ
-	       origin = this
-	       state = s:STATE_HEDJAZ.region_state:TUR
-           on_created = { 
-           activate_law = law_type:law_monarchy
-           activate_law = law_type:law_census_voting
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
+		If = {
+           limit = { NOT = { exists = c:HDJ } }
+           create_country = {
+	          tag = HDJ
+	          origin = this
+	          state = s:STATE_HEDJAZ.region_state:TUR
+              on_created = { 
+              activate_law = law_type:law_theocracy
+            }
 		}
 		s:STATE_ALEPPO = {
            random_scope_state = {
@@ -2635,17 +2633,15 @@ entente_peace_deal.8 = { #Round 7 result
 		      set_state_owner = c:PAL
             }
         }
-		create_country = {
-	       tag = HDJ
-	       origin = this
-	       state = s:STATE_HEDJAZ.region_state:TUR
-           on_created = { 
-           activate_law = law_type:law_monarchy
-           activate_law = law_type:law_census_voting
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
+		If = {
+           limit = { NOT = { exists = c:HDJ } }
+           create_country = {
+	          tag = HDJ
+	          origin = this
+	          state = s:STATE_HEDJAZ.region_state:TUR
+              on_created = { 
+              activate_law = law_type:law_theocracy
+            }
 		}
 		create_country = {
 	       tag = IRQ
@@ -2796,17 +2792,15 @@ entente_peace_deal.8 = { #Round 7 result
 		      set_state_owner = c:PAL
             }
         }
-		create_country = {
-	       tag = HDJ
-	       origin = this
-	       state = s:STATE_HEDJAZ.region_state:TUR
-           on_created = { 
-           activate_law = law_type:law_monarchy
-           activate_law = law_type:law_census_voting
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
+		If = {
+           limit = { NOT = { exists = c:HDJ } }
+           create_country = {
+	          tag = HDJ
+	          origin = this
+	          state = s:STATE_HEDJAZ.region_state:TUR
+              on_created = { 
+              activate_law = law_type:law_theocracy
+            }
 		}
 		create_country = {
 	       tag = IRQ
