@@ -26,6 +26,7 @@ law_outlawed_dissent = {
 	    country_prestige_mult = 0.05
 	    country_infamy_decay_mult = 0.1
 	    country_war_exhaustion_casualties_mult = -0.2
+		military_formation_mobilization_speed_mult = 0.2
 	    country_loyalists_from_legitimacy_mult = 0.2
 	}
 
@@ -66,6 +67,7 @@ law_censorship = {
 	    country_prestige_mult = 0.1
 	    country_infamy_decay_mult = 0.05
 	    country_war_exhaustion_casualties_mult = -0.1
+		military_formation_mobilization_speed_mult = 0.1
 	    country_loyalists_from_legitimacy_mult = 0.1
 	}
 
@@ -93,6 +95,7 @@ law_right_of_assembly = {
 		country_authority_add = 50
 		country_bolster_attraction_mult = 0.3
 		country_suppression_attraction_mult = -0.3
+		country_leverage_resistance_mult = -0.1
 	}
 
     institution = institution_propaganda
@@ -102,6 +105,7 @@ law_right_of_assembly = {
 	    interest_group_in_government_approval_add = 0.5
 	    country_prestige_mult = 0.2
 	    country_war_exhaustion_casualties_mult = -0.05
+		military_formation_mobilization_speed_mult = 0.05
 	    country_loyalists_from_legitimacy_mult = 0.05
 	}
 
@@ -135,6 +139,8 @@ law_protected_speech = {
 		interest_group_in_government_attraction_mult = 0.05
 	    state_loyalists_from_political_movements_mult = 0.01
 	    country_prestige_mult = 0.3
+		country_war_exhaustion_casualties_mult = -0.01
+		military_formation_mobilization_speed_mult = 0.01
 	    country_loyalists_from_legitimacy_mult = 0.025
 	}
 	
