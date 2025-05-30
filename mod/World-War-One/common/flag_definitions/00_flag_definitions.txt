@@ -1747,11 +1747,40 @@ CAM = { # Cambodia
 	}	
 }
 
+WPT = { #Western Pacific
+	flag_definition = {
+		coa = GBR
+		allow_overlord_canton = yes		
+		priority = 50
+		trigger = { 
+			AND = {
+				exists = c:GBR
+				scope:actor ?= {
+					is_subject_of = c:GBR
+				}
+			} 
+		}
+	}
+}
+
 CAN = { # Canada
 	flag_definition = {
 		coa = CAN
 		coa_with_overlord_canton = CAN
 		allow_overlord_canton = no
+	}
+    flag_definition = {
+		coa = CAN_subject_GBR
+		allow_overlord_canton = yes		
+		priority = 50
+		trigger = { 
+			AND = {
+				exists = c:GBR
+				scope:actor ?= {
+					is_subject_of = c:GBR
+				}
+			} 
+		}
 	}
 	flag_definition = {
 		coa = CAN_theocracy
@@ -6267,7 +6296,7 @@ NEW = { # Newfoundland
 	flag_definition = {
 		coa = NEW
 		coa_with_overlord_canton = NEW_subject
-		allow_overlord_canton = no
+		allow_overlord_canton = yes
 	}
 	flag_definition = {
 		coa = NEW_republic
@@ -6280,10 +6309,25 @@ NEW = { # Newfoundland
 		}
 	}
 	flag_definition = {
+		coa = NEW_subject
+		priority = 200
+		trigger = { 
+			AND = {
+				exists = c:GBR
+				scope:actor ?= {
+					is_subject_of = c:GBR
+				}
+			} 
+		}
+	}
+	flag_definition = {
 		coa = NEW_coa
 		priority = 20
 		trigger = { 
-			coa_def_absolute_monarchy_flag_trigger = yes
+			AND = {
+			  coa_def_absolute_monarchy_flag_trigger = yes
+			  is_subject = no
+			}
 		}
 	}
 	flag_definition = {
