@@ -1674,7 +1674,7 @@ joining_world_war_events.28 = { #Senussi order joins WW1
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/trenches.dds"
+        texture = "gfx/event_pictures/arab_revolt.dds"
     }
 
     trigger = {}
@@ -1691,11 +1691,14 @@ joining_world_war_events.28 = { #Senussi order joins WW1
                 c:SEN
             }            
 		}
-        any_state = {
+        every_state = {
           limit = {
                 OR = {
                   owner = c:GBR
                   owner = c:ITA
+                  owner = c:EGY
+                  owner = c:CYR
+                  owner = c:TRI
                 }
                 OR = {
                  region = sr:region_north_africa
