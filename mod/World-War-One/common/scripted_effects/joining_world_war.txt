@@ -11,7 +11,7 @@ joining_world_war_set_variables = {
 
 }
 
-weekly_pulse_entente_progress = {
+monthly_pulse_entente_progress = {
      
     set_variable = { name = entente_progress_from_trade value = 0 }
     set_variable = { name = entente_progress_from_diplomacy value = 0 } 
@@ -25,7 +25,7 @@ weekly_pulse_entente_progress = {
 			  has_variable = entente_participant	
 		    }
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_trade add = 0.5  }
             change_variable = { name = central_powers_progress_from_trade add = -0.5  }
 		}
@@ -39,7 +39,7 @@ weekly_pulse_entente_progress = {
 			  has_variable = entente_participant	
 		    }
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_trade add = 0.5  }
             change_variable = { name = central_powers_progress_from_trade add = -0.5  }
 		}
@@ -54,7 +54,7 @@ weekly_pulse_entente_progress = {
 				type = trade_agreement
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_trade add = 2  }
             change_variable = { name = central_powers_progress_from_trade add = -2  }
 		}
@@ -69,7 +69,7 @@ weekly_pulse_entente_progress = {
 				type = foreign_investment_rights
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = 1  }
             change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
 		}
@@ -84,7 +84,7 @@ weekly_pulse_entente_progress = {
 				type = foreign_investment_agreement
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = 2  }
             change_variable = { name = central_powers_progress_from_diplomacy add = -2  }
 		}
@@ -98,7 +98,7 @@ weekly_pulse_entente_progress = {
 				type = defensive_pact
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = 5  }
             change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
 		}
@@ -112,7 +112,7 @@ weekly_pulse_entente_progress = {
 				type = alliance
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = 10  }
             change_variable = { name = central_powers_progress_from_diplomacy add = -10  }
 		}
@@ -126,7 +126,7 @@ weekly_pulse_entente_progress = {
 				type = rivalry
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = 5  }
             change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
 		}
@@ -141,7 +141,7 @@ weekly_pulse_entente_progress = {
 				type = bankroll
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = 5  }
             change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
 		}
@@ -156,7 +156,7 @@ weekly_pulse_entente_progress = {
 				type = fund_lobbies
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = 1  }
             change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
 		}
@@ -169,7 +169,7 @@ weekly_pulse_entente_progress = {
                 has_variable = entente_participant
             }
 	    }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_lobbies add = 3  }
             change_variable = { name = central_powers_progress_from_lobbies add = -3  }
 		}
@@ -182,14 +182,14 @@ weekly_pulse_entente_progress = {
                 has_variable = central_powers_participant
             }
 	    }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_lobbies add = 3  }
             change_variable = { name = central_powers_progress_from_lobbies add = -3  }
 		}
     }
 }
 
-weekly_pulse_central_powers_progress = {
+monthly_pulse_central_powers_progress = {
      
     set_variable = { name = central_powers_progress_from_trade value = 0 } 
     set_variable = { name = central_powers_progress_from_diplomacy value = 0 } 
@@ -203,7 +203,7 @@ weekly_pulse_central_powers_progress = {
 			  has_variable = central_powers_participant	
 		    }
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_trade add = 0.5  }
             change_variable = { name = central_powers_progress_from_trade add = -0.5  }
 		}
@@ -217,7 +217,7 @@ weekly_pulse_central_powers_progress = {
 			  has_variable = central_powers_participant	
 		    }
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_trade add = 0.5  }
             change_variable = { name = central_powers_progress_from_trade add = -0.5  }
 		}
@@ -232,7 +232,7 @@ weekly_pulse_central_powers_progress = {
 				type = trade_agreement
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_trade add = -2  }
             change_variable = { name = central_powers_progress_from_trade add = 2  }
 		}
@@ -247,7 +247,7 @@ weekly_pulse_central_powers_progress = {
 				type = foreign_investment_rights
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = -1  }
             change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
 		}
@@ -262,7 +262,7 @@ weekly_pulse_central_powers_progress = {
 				type = foreign_investment_agreement
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = -2  }
             change_variable = { name = central_powers_progress_from_diplomacy add = 2  }
 		}
@@ -276,7 +276,7 @@ weekly_pulse_central_powers_progress = {
 				type = defensive_pact
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = -5  }
             change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
 		}
@@ -290,7 +290,7 @@ weekly_pulse_central_powers_progress = {
 				type = alliance
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = -10  }
             change_variable = { name = central_powers_progress_from_diplomacy add = 10  }
 		}
@@ -304,7 +304,7 @@ weekly_pulse_central_powers_progress = {
 				type = rivalry
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = -5  }
             change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
 		}
@@ -319,7 +319,7 @@ weekly_pulse_central_powers_progress = {
 				type = bankroll
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = -5  }
             change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
 		}
@@ -334,7 +334,7 @@ weekly_pulse_central_powers_progress = {
 				type = fund_lobbies
 			}	
         }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_diplomacy add = -1  }
             change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
 		}
@@ -347,7 +347,7 @@ weekly_pulse_central_powers_progress = {
                 has_variable = central_powers_participant
             }
 	    }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_lobbies add = -3  }
             change_variable = { name = central_powers_progress_from_lobbies add = 3  }
 		}
@@ -360,7 +360,7 @@ weekly_pulse_central_powers_progress = {
                 has_variable = entente_participant
             }
 	    }
-        ROOT = {
+        owner = {
 			change_variable = { name = entente_progress_from_lobbies add = -3  }
             change_variable = { name = central_powers_progress_from_lobbies add = 3  }
 		}

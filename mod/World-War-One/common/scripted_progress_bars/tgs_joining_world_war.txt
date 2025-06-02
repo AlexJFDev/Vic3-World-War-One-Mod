@@ -1,65 +1,81 @@
-﻿#je_joining_world_war
+﻿join_entente_progress_bar = {
+    name = "join_entente_progress_bar"
+    desc = "join_entente_progress_bar_desc"
 
-join_entente_progress_bar = {
-	name = "join_entente_progress_bar"
-	desc = "join_entente_progress_bar_desc"
+    default = yes
 
-	default_green = yes
-
-	monthly_progress = {
-		if = {
-			limit = {
-				is_at_war = no
-                is_revolutionnary = no
-			}
-			add = {
-				desc = "entente_progress_from_trade"
-				value = owner.var:entente_progress_from_trade
-			}
-			add = {
-				desc = "entente_progress_from_diplomacy"
-				value = owner.var:entente_progress_from_diplomacy
-			}
-			add = {
-				desc = "entente_progress_from_lobbies"
-				value = owner.var:entente_progress_from_lobbies
-			}
-		}
-	}
+    monthly_progress = {
+        if = {
+            limit = {
+                exists = owner.var:entente_progress_from_trade
+            }
+            add = {
+                desc = "entente_progress_from_trade"
+                value = owner.var:entente_progress_from_trade
+            }
+        }
+        if = {
+            limit = {
+                exists = owner.var:entente_progress_from_diplomacy
+            }
+            add = {
+                desc = "entente_progress_from_diplomacy"
+                value = owner.var:entente_progress_from_diplomacy
+            }
+        }
+        if = {
+            limit = {
+                exists = owner.var:entente_progress_from_lobbies
+            }
+            add = {
+                desc = "entente_progress_from_lobbies"
+                value = owner.var:entente_progress_from_lobbies
+            }
+        }
+    }
 
     start_value = 0
-	min_value = 0
-	max_value = 200
+    min_value = 0
+    max_value = 200
 }
 
 join_central_powers_progress_bar = {
-	name = "join_central_powers_progress_bar"
-	desc = "join_central_powers_progress_bar_desc"
+    name = "join_central_powers_progress_bar"
+    desc = "join_central_powers_progress_bar_desc"
 
-	default_bad = yes
+    default_bad = yes
 
-	monthly_progress = {
-		if = {
-			limit = {
-				is_at_war = no
-                is_revolutionnary = no
-			}
-			add = {
-				desc = "central_powers_progress_from_trade"
-				value = owner.var:central_powers_progress_from_trade
-			}
-			add = {
-				desc = "central_powers_progress_from_diplomacy"
-				value = owner.var:central_powers_progress_from_diplomacy
-			}
-			add = {
-				desc = "central_powers_progress_from_lobbies"
-				value = owner.var:central_powers_progress_from_lobbies
-			}
-		}
-	}
+    monthly_progress = {
+        if = {
+            limit = {
+                exists = owner.var:central_powers_progress_from_trade
+            }
+            add = {
+                desc = "central_powers_progress_from_trade"
+                value = owner.var:central_powers_progress_from_trade
+            }
+        }
+        if = {
+            limit = {
+                exists = owner.var:central_powers_progress_from_diplomacy
+            }
+            add = {
+                desc = "central_powers_progress_from_diplomacy"
+                value = owner.var:central_powers_progress_from_diplomacy
+            }
+        }
+        if = {
+            limit = {
+                exists = owner.var:central_powers_progress_from_lobbies
+            }
+            add = {
+                desc = "central_powers_progress_from_lobbies"
+                value = owner.var:central_powers_progress_from_lobbies
+            }
+        }
+    }
 
     start_value = 0
-	min_value = 0
-	max_value = 200
+    min_value = 0
+    max_value = 200
 }
