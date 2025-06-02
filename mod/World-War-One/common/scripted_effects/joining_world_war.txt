@@ -1,5 +1,5 @@
 ﻿
-joining_world_war_set_variables = { 
+joining_world_war_set_variables = {  
 
     set_variable = { name = entente_progress_from_trade value = 0 }
     set_variable = { name = entente_progress_from_diplomacy value = 0 } 
@@ -26,8 +26,12 @@ monthly_pulse_entente_progress = {
 		    }
         }
         owner = {
-			change_variable = { name = entente_progress_from_trade add = 0.5  }
-            change_variable = { name = central_powers_progress_from_trade add = -0.5  }
+			owner = {
+    change_variable = { name = entente_progress_from_trade add = 0.5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_trade add = -0.5  }
+}
 		}
 	}
 
@@ -40,8 +44,12 @@ monthly_pulse_entente_progress = {
 		    }
         }
         owner = {
-			change_variable = { name = entente_progress_from_trade add = 0.5  }
-            change_variable = { name = central_powers_progress_from_trade add = -0.5  }
+			owner = {
+    change_variable = { name = entente_progress_from_trade add = 0.5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_trade add = -0.5  }
+}
 		}
 	}
 
@@ -55,8 +63,12 @@ monthly_pulse_entente_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_trade add = 2  }
-            change_variable = { name = central_powers_progress_from_trade add = -2  }
+			owner = {
+    change_variable = { name = entente_progress_from_trade add = 2  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_trade add = -2  }
+}
 		}
     }
 
@@ -70,8 +82,12 @@ monthly_pulse_entente_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = 1  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = 1  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+}
 		}
     }
 
@@ -85,8 +101,12 @@ monthly_pulse_entente_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = 2  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -2  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = 2  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = -2  }
+}
 		}
     }
 
@@ -99,8 +119,12 @@ monthly_pulse_entente_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = 5  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = 5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+}
 		}
     }
     
@@ -113,8 +137,12 @@ monthly_pulse_entente_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = 10  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -10  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = 10  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = -10  }
+}
 		}
     }
 
@@ -127,8 +155,12 @@ monthly_pulse_entente_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = 5  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = 5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+}
 		}
     }
 
@@ -142,8 +174,12 @@ monthly_pulse_entente_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = 5  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = 5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = -5  }
+}
 		}
     }
 
@@ -157,8 +193,12 @@ monthly_pulse_entente_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = 1  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = 1  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = -1  }
+}
 		}
     }
 
@@ -170,8 +210,12 @@ monthly_pulse_entente_progress = {
             }
 	    }
         owner = {
-			change_variable = { name = entente_progress_from_lobbies add = 3  }
-            change_variable = { name = central_powers_progress_from_lobbies add = -3  }
+			owner = {
+    change_variable = { name = entente_progress_from_lobbies add = 3  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_lobbies add = -3  }
+}
 		}
     }
 
@@ -183,8 +227,12 @@ monthly_pulse_entente_progress = {
             }
 	    }
         owner = {
-			change_variable = { name = entente_progress_from_lobbies add = 3  }
-            change_variable = { name = central_powers_progress_from_lobbies add = -3  }
+			owner = {
+    change_variable = { name = entente_progress_from_lobbies add = 3  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_lobbies add = -3  }
+}
 		}
     }
 }
@@ -204,8 +252,12 @@ monthly_pulse_central_powers_progress = {
 		    }
         }
         owner = {
-			change_variable = { name = entente_progress_from_trade add = 0.5  }
-            change_variable = { name = central_powers_progress_from_trade add = -0.5  }
+			owner = {
+    change_variable = { name = entente_progress_from_trade add = 0.5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_trade add = -0.5  }
+}
 		}
 	}
 
@@ -218,8 +270,12 @@ monthly_pulse_central_powers_progress = {
 		    }
         }
         owner = {
-			change_variable = { name = entente_progress_from_trade add = 0.5  }
-            change_variable = { name = central_powers_progress_from_trade add = -0.5  }
+			owner = {
+    change_variable = { name = entente_progress_from_trade add = 0.5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_trade add = -0.5  }
+}
 		}
 	}
 
@@ -233,8 +289,12 @@ monthly_pulse_central_powers_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_trade add = -2  }
-            change_variable = { name = central_powers_progress_from_trade add = 2  }
+			owner = {
+    change_variable = { name = entente_progress_from_trade add = -2  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_trade add = 2  }
+}
 		}
     }
 
@@ -248,8 +308,12 @@ monthly_pulse_central_powers_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = -1  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = -1  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+}
 		}
     }
 
@@ -263,8 +327,12 @@ monthly_pulse_central_powers_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = -2  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 2  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = -2  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = 2  }
+}
 		}
     }
 
@@ -277,8 +345,12 @@ monthly_pulse_central_powers_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = -5  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = -5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+}
 		}
     }
     
@@ -291,8 +363,12 @@ monthly_pulse_central_powers_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = -10  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 10  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = -10  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = 10  }
+}
 		}
     }
 
@@ -305,8 +381,12 @@ monthly_pulse_central_powers_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = -5  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = -5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+}
 		}
     }
     
@@ -320,8 +400,12 @@ monthly_pulse_central_powers_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = -5  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = -5  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = 5  }
+}
 		}
     }
 
@@ -335,8 +419,12 @@ monthly_pulse_central_powers_progress = {
 			}	
         }
         owner = {
-			change_variable = { name = entente_progress_from_diplomacy add = -1  }
-            change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+			owner = {
+    change_variable = { name = entente_progress_from_diplomacy add = -1  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_diplomacy add = 1  }
+}
 		}
     }
 
@@ -348,8 +436,12 @@ monthly_pulse_central_powers_progress = {
             }
 	    }
         owner = {
-			change_variable = { name = entente_progress_from_lobbies add = -3  }
-            change_variable = { name = central_powers_progress_from_lobbies add = 3  }
+			owner = {
+    change_variable = { name = entente_progress_from_lobbies add = -3  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_lobbies add = 3  }
+}
 		}
     }
 
@@ -361,8 +453,12 @@ monthly_pulse_central_powers_progress = {
             }
 	    }
         owner = {
-			change_variable = { name = entente_progress_from_lobbies add = -3  }
-            change_variable = { name = central_powers_progress_from_lobbies add = 3  }
+			owner = {
+    change_variable = { name = entente_progress_from_lobbies add = -3  }
+}
+            owner = {
+    change_variable = { name = central_powers_progress_from_lobbies add = 3  }
+}
 		}
     }
 }
