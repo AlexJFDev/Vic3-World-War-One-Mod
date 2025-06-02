@@ -2548,6 +2548,12 @@ entente_peace_deal.8 = { #Round 7 result
 		      set_state_owner = c:ARM
             }
         }
+		c:TUR = {
+        remove_diplomatic_pact = {
+			country = c:JAB
+			type = protectorate
+		}
+		}
 	}
 
 	option = {
@@ -2707,6 +2713,12 @@ entente_peace_deal.8 = { #Round 7 result
 		      set_state_owner = c:BHN
             }
         }
+		c:TUR = {
+        remove_diplomatic_pact = {
+			country = c:JAB
+			type = protectorate
+		}
+		}
 	}
 
 	option = {
@@ -2902,7 +2914,13 @@ entente_peace_deal.8 = { #Round 7 result
 			country = c:JAB
 			type = protectorate
 		}	
-        }  
+        }
+		c:TUR = {
+        remove_diplomatic_pact = {
+			country = c:JAB
+			type = protectorate
+		}
+		}  
 	}
 }
 
