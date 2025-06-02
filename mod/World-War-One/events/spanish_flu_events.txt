@@ -3,7 +3,6 @@
 # The plague arrives
 plague.1 = {
 	type = country_event
-	placement = scope:plague_origin_state
 
 	title = plague.1.t
 	desc = plague.1.d
@@ -15,33 +14,11 @@ plague.1 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
 
-	trigger = {
-		NOT = { has_global_variable = spanish_flu }
-		country_rank >= rank_value:major_power
-		NOT = {
-			institution_investment_level = {
-				institution = institution_health_system
-				value >= 3
-			}
-		}
-		any_scope_state = {
-			is_incorporated = yes
-			OR = {
-				is_production_method_active = {
-					building_type = building_railway
-					production_method = pm_electric_trains
-				}
-				is_production_method_active = {
-					building_type = building_railway
-					production_method = pm_diesel_trains
-				}
-			}
-		}
-	}
+	trigger = {}
 
 	immediate = {
 		set_global_variable = {
@@ -87,7 +64,7 @@ plague.1 = {
 				}
 				trigger_event = { id = plague.4 }
 			}
-		}
+		} 
 		add_journal_entry = { type = je_spanish_flu }
 		set_variable = country_hit_by_plague # so that countries cannot get JE multiple times
 	}
@@ -108,7 +85,7 @@ plague.2 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
 
@@ -273,7 +250,7 @@ plague.3 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
 
@@ -317,7 +294,7 @@ plague.4 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	trigger = {
 		# triggered by plague.1
@@ -359,7 +336,7 @@ plague.5 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
 
@@ -473,7 +450,7 @@ plague.7 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
 
@@ -604,7 +581,7 @@ plague.8 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
 
