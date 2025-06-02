@@ -181,6 +181,13 @@ great_war_initiation_events.4 = {
         }
         c:AUS = { set_variable = central_powers_participant }
         c:SER = { set_variable = entente_participant }
+        c:SER = {
+            add_modifier = {
+               name = army_buff_modifier_6
+               years = 5
+               is_decaying = yes
+            }
+        }
         c:RUS = {
             trigger_event = { 
                 id = great_war_initiation_events.6
@@ -257,6 +264,13 @@ great_war_initiation_events.5 = {
         }
         c:AUS = { set_variable = central_powers_participant }
         c:SER = { set_variable = entente_participant }
+        c:SER = {
+            add_modifier = {
+               name = army_buff_modifier_6
+               years = 5
+               is_decaying = yes
+            }
+        }
         c:RUS = {
             trigger_event = {
                 id = great_war_initiation_events.6
