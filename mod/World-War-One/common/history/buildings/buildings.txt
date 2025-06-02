@@ -59905,6 +59905,21 @@
 				}
 			}
 			create_building = {
+				building = building_food_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:MEX
+						levels = 16
+						region = STATE_MEXICO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_baking_powder pm_cannery pm_patent_stills 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -60133,7 +60148,7 @@
 					building = {
 						type = building_financial_district
 						country = c:MEX
-						levels = 18
+						levels = 14
 						region = STATE_MEXICO
 					}
 				}

@@ -5988,7 +5988,7 @@ STATE_ALASKA = {
 	wood = x17211C
 	arable_land = 20
 	traits = {
-		state_trait_yukon_river_salmon_run state_trait_siberian_terrain 
+		state_trait_yukon_river_salmon_run state_trait_siberian_terrain state_trait_cold_water_port 
 	}
 	arable_resources = {
 		bg_livestock_ranches 
@@ -7236,7 +7236,7 @@ STATE_NUNAVUT = {
 	wood = x7F3B2A
 	arable_land = 20
 	traits = {
-		state_trait_northern_canadian_terrain 
+		state_trait_northern_canadian_terrain state_trait_freezing_water_port 
 	}
 	arable_resources = {
 		bg_livestock_ranches 
@@ -7891,6 +7891,9 @@ STATE_PANAMA = {
 		bg_rubber = 15
 	}
 	naval_exit_id = 3026
+	impassable = {
+		xB0B080 xEE835F xB0A911 
+	}
 }
 STATE_HAITI = {
 	id = 344
@@ -14263,7 +14266,7 @@ STATE_CHUKOTKA = {
 	wood = x633AE3
 	arable_land = 2
 	traits = {
-		state_trait_siberian_terrain 
+		state_trait_siberian_terrain state_trait_freezing_water_port 
 	}
 	arable_resources = {
 		bg_livestock_ranches 
@@ -14423,6 +14426,9 @@ STATE_TALINN = {
 	mine = x5C8F48
 	wood = x80A021
 	arable_land = 22
+	traits = {
+		state_trait_cold_water_port 
+	}
 	arable_resources = {
 		bg_rye_farms bg_livestock_ranches 
 	}
@@ -14567,7 +14573,7 @@ STATE_UUSIMAA = {
 	wood = x61C0E0
 	arable_land = 32
 	traits = {
-		state_trait_scandinavian_forests 
+		state_trait_scandinavian_forests state_trait_cold_water_port 
 	}
 	arable_resources = {
 		bg_rye_farms bg_livestock_ranches 
@@ -14593,7 +14599,7 @@ STATE_WEST_KARELIA = {
 	wood = x934610
 	arable_land = 22
 	traits = {
-		state_trait_scandinavian_forests 
+		state_trait_scandinavian_forests state_trait_cold_water_port 
 	}
 	arable_resources = {
 		bg_rye_farms bg_livestock_ranches 
@@ -14687,7 +14693,7 @@ STATE_EAST_KARELIA = {
 	wood = xB7363A
 	arable_land = 10
 	traits = {
-		state_trait_scandinavian_forests 
+		state_trait_scandinavian_forests state_trait_freezing_water_port 
 	}
 	arable_resources = {
 		bg_rye_farms bg_livestock_ranches 
@@ -14712,7 +14718,7 @@ STATE_KOLA = {
 	wood = xA09A15
 	arable_land = 2
 	traits = {
-		state_trait_scandinavian_forests 
+		state_trait_scandinavian_forests state_trait_freezing_water_port 
 	}
 	arable_resources = {
 		bg_rye_farms bg_livestock_ranches 
@@ -14738,7 +14744,7 @@ STATE_INGRIA = {
 	wood = x80A0E0
 	arable_land = 50
 	traits = {
-		state_trait_russian_forest state_trait_kronstadt_island 
+		state_trait_russian_forest state_trait_cold_water_port 
 	}
 	arable_resources = {
 		bg_rye_farms bg_livestock_ranches 
@@ -14909,7 +14915,7 @@ STATE_ARKHANGELSK = {
 	wood = x360D95
 	arable_land = 15
 	traits = {
-		state_trait_russian_forest 
+		state_trait_russian_forest state_trait_freezing_water_port 
 	}
 	arable_resources = {
 		bg_rye_farms bg_livestock_ranches 
