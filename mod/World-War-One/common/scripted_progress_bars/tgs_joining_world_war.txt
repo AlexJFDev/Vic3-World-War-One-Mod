@@ -4,77 +4,149 @@
 
     default = yes 
 
-    monthly_progress = {
-
-        # Diplomatic Pacts
-        owner = {
-            every_country = {
-                limit = {
-                    has_variable = entente_participant
-                    has_diplomatic_pact = { who = root type = alliance }
+    monthly_progress = { 
+        #From trade
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = entente_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = trade_agreement
+			        }	
                 }
-                add = { desc = "entente_progress_alliance_tt" value = 10 }
             }
-            every_country = {
-                limit = {
-                    has_variable = entente_participant
-                    has_diplomatic_pact = { who = root type = defensive_pact }
-                }
-                add = { desc = "entente_progress_defensive_pact_tt" value = 5 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = entente_participant
-                    has_diplomatic_pact = { who = root type = foreign_investment_agreement }
-                }
-                add = { desc = "entente_progress_investment_agreement_tt" value = 2 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = entente_participant
-                    has_diplomatic_pact = { who = root type = foreign_investment_rights }
-                }
-                add = { desc = "entente_progress_investment_rights_tt" value = 1 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = entente_participant
-                    has_diplomatic_pact = { who = root type = bankroll }
-                }
-                add = { desc = "entente_progress_bankroll_tt" value = 5 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = entente_participant
-                    has_diplomatic_pact = { who = root type = fund_lobbies }
-                }
-                add = { desc = "entente_progress_fund_lobbies_tt" value = 1 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = central_powers_participant
-                    has_diplomatic_pact = { who = root type = rivalry }
-                }
-                add = { desc = "entente_progress_from_rivalry_tt" value = 5 }
-            }
+            add = {
+				desc = "entente_progress_from_trade"
+				value = 2
+			}
         }
-
-        # Lobbies
-        owner = {
-            every_political_lobby = {
-                limit = {
-                    is_political_lobby_type = lobby_pro_country
-                    target = { has_variable = entente_participant }
+        #From diplomacy
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = entente_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = foreign_investment_rights
+			        }	
                 }
-                add = { desc = "entente_progress_pro_lobby_tt" value = 3 }
             }
-            every_political_lobby = {
-                limit = {
-                    is_political_lobby_type = lobby_anti_country
-                    target = { has_variable = central_powers_participant }
+            add = {
+				desc = "entente_progress_from_diplomacy"
+				value = 1
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = entente_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = foreign_investment_agreement
+			        }	
                 }
-                add = { desc = "entente_progress_anti_lobby_tt" value = 3 }
             }
+            add = {
+				desc = "entente_progress_from_diplomacy"
+				value = 2
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = entente_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = defensive_pact
+			        }	
+                }
+            }
+            add = {
+				desc = "entente_progress_from_diplomacy"
+				value = 10
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = entente_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = alliance
+			        }	
+                }
+            }
+            add = {
+				desc = "entente_progress_from_diplomacy"
+				value = 20
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = central_powers_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = rivalry
+			        }	
+                }
+            }
+            add = {
+				desc = "entente_progress_from_diplomacy"
+				value = 5
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = entente_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = bankroll
+			        }	
+                }
+            }
+            add = {
+				desc = "entente_progress_from_diplomacy"
+				value = 8
+			}
+        }
+        #From Lobbies
+        if = {
+		   limit = {
+                any_political_lobby = {
+			        is_political_lobby_type = lobby_pro_country
+			        target = {
+                        has_variable = entente_participant
+                    }
+	            }
+            }
+            add = {
+				desc = "entente_progress_from_lobbies"
+				value = 3
+			}
+        }
+        if = {
+		   limit = {
+                any_political_lobby = {
+			        is_political_lobby_type = lobby_anti_country
+			        target = {
+                        has_variable = entente_participant
+                    }
+	            }
+            }
+            add = {
+				desc = "entente_progress_from_lobbies"
+				value = -3
+			}
         }
     }
 
@@ -87,79 +159,151 @@ join_central_powers_progress_bar = {
     name = "join_central_powers_progress_bar"
     desc = "join_central_powers_progress_bar_desc"
 
-    default_bad = yes
+    default_green = yes
 
-    monthly_progress = {
-
-        # Diplomatic Pacts
-        owner = {
-            every_country = {
-                limit = {
-                    has_variable = central_powers_participant
-                    has_diplomatic_pact = { who = root type = alliance }
+    monthly_progress = { 
+        #From trade
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = central_powers_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = trade_agreement
+			        }	
                 }
-                add = { desc = "central_progress_alliance_tt" value = 10 }
             }
-            every_country = {
-                limit = {
-                    has_variable = central_powers_participant
-                    has_diplomatic_pact = { who = root type = defensive_pact }
-                }
-                add = { desc = "central_progress_defensive_pact_tt" value = 5 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = central_powers_participant
-                    has_diplomatic_pact = { who = root type = foreign_investment_agreement }
-                }
-                add = { desc = "central_progress_investment_agreement_tt" value = 2 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = central_powers_participant
-                    has_diplomatic_pact = { who = root type = foreign_investment_rights }
-                }
-                add = { desc = "central_progress_investment_rights_tt" value = 1 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = central_powers_participant
-                    has_diplomatic_pact = { who = root type = bankroll }
-                }
-                add = { desc = "central_progress_bankroll_tt" value = 5 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = central_powers_participant
-                    has_diplomatic_pact = { who = root type = fund_lobbies }
-                }
-                add = { desc = "central_progress_fund_lobbies_tt" value = 1 }
-            }
-            every_country = {
-                limit = {
-                    has_variable = entente_participant
-                    has_diplomatic_pact = { who = root type = rivalry }
-                }
-                add = { desc = "central_progress_from_rivalry_tt" value = 5 }
-            }
+            add = {
+				desc = "central_powers_progress_from_trade"
+				value = 2
+			}
         }
-
-        # Lobbies
-        owner = {
-            every_political_lobby = {
-                limit = {
-                    is_political_lobby_type = lobby_pro_country
-                    target = { has_variable = central_powers_participant }
+        #From diplomacy
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = central_powers_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = foreign_investment_rights
+			        }	
                 }
-                add = { desc = "central_progress_pro_lobby_tt" value = 3 }
             }
-            every_political_lobby = {
-                limit = {
-                    is_political_lobby_type = lobby_anti_country
-                    target = { has_variable = entente_participant }
+            add = {
+				desc = "central_powers_progress_from_diplomacy"
+				value = 1
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = central_powers_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = foreign_investment_agreement
+			        }	
                 }
-                add = { desc = "central_progress_anti_lobby_tt" value = 3 }
             }
+            add = {
+				desc = "central_powers_progress_from_diplomacy"
+				value = 2
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = central_powers_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = defensive_pact
+			        }	
+                }
+            }
+            add = {
+				desc = "central_powers_progress_from_diplomacy"
+				value = 10
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = central_powers_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = alliance
+			        }	
+                }
+            }
+            add = {
+				desc = "central_powers_progress_from_diplomacy"
+				value = 20
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = entente_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = rivalry
+			        }	
+                }
+            }
+            add = {
+				desc = "central_powers_progress_from_diplomacy"
+				value = 5
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = central_powers_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = bankroll
+			        }	
+                }
+            }
+            add = {
+				desc = "central_powers_progress_from_diplomacy"
+				value = 8
+			}
+        }
+        #From Lobbies
+        if = {
+		   limit = {
+                any_political_lobby = {
+			        is_political_lobby_type = lobby_pro_country
+			        target = {
+                        has_variable = central_powers_participant
+                    }
+	            }
+            }
+            add = {
+				desc = "central_powers_progress_from_lobbies"
+				value = 3
+			}
+        }
+        if = {
+		   limit = {
+                any_political_lobby = {
+			        is_political_lobby_type = lobby_anti_country
+			        target = {
+                        has_variable = central_powers_participant
+                    }
+	            }
+            }
+            add = {
+				desc = "central_powers_progress_from_lobbies"
+				value = -3
+			}
         }
     }
 

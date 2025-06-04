@@ -6,23 +6,24 @@
     
 	is_shown_when_inactive = {
 	  has_global_variable = world_war_1_ongoing
+      country_rank >= rank_value:minor_power
       is_country_type = recognized
       is_subject = no
       NOT = {
-        has_global_variable = world_war_1_over
-        has_variable = warlord_state
-		has_variable = entente_participant
-		has_variable = central_powers_participant
-      }
+           has_global_variable = world_war_1_over
+           has_variable = warlord_state
+		   has_variable = entente_participant
+		   has_variable = central_powers_participant
+        }
 	}
 
     possible = { 
+       country_rank >= rank_value:minor_power
 	   is_at_war = no
        is_revolutionnary = no
 	}
 
     immediate = {
-        joining_world_war_set_variables = yes
 		trigger_event = { id = joining_world_war_events.1 popup = yes }
     }
 
@@ -59,7 +60,7 @@
           has_variable = entente_participant
           has_variable = central_powers_participant
         }
-    }
+    } 
 
     on_monthly_pulse = {
       random_events = {
@@ -74,11 +75,7 @@
             5 = joining_world_war_events.25
             5 = joining_world_war_events.26
             8 = joining_world_war_events.27
-		} 
-        effect = {
-		 monthly_pulse_entente_progress = yes 
-		 monthly_pulse_central_powers_progress = yes  	
-		}     	  
+		}    	  
     }
 
     should_be_pinned_by_default = yes
