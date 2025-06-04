@@ -2,29 +2,9 @@
     name = "join_entente_progress_bar"
     desc = "join_entente_progress_bar_desc"
 
-    default = yes
+    default = yes 
 
     monthly_progress = {
-        # Trade Routes
-        owner = {
-            every_trade_route = {
-                limit = {
-                    level >= 5
-                    OR = {
-                        importer.owner = root
-                        exporter.owner = root
-                    }
-                    OR = {
-                        importer.owner = { has_variable = entente_participant }
-                        exporter.owner = { has_variable = entente_participant }
-                    }
-                }
-                add = {
-                    desc = "entente_progress_from_trade_tt"
-                    value = 1
-                }
-            }
-        }
 
         # Diplomatic Pacts
         owner = {
@@ -110,26 +90,6 @@ join_central_powers_progress_bar = {
     default_bad = yes
 
     monthly_progress = {
-        # Trade Routes
-        owner = {
-            every_trade_route = {
-                limit = {
-                    level >= 5
-                    OR = {
-                        importer.owner = root
-                        exporter.owner = root
-                    }
-                    OR = {
-                        importer.owner = { has_variable = central_powers_participant }
-                        exporter.owner = { has_variable = central_powers_participant }
-                    }
-                }
-                add = {
-                    desc = "central_powers_progress_from_trade_tt"
-                    value = 1
-                }
-            }
-        }
 
         # Diplomatic Pacts
         owner = {

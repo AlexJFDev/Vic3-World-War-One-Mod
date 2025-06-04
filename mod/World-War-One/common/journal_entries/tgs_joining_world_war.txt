@@ -22,6 +22,7 @@
 	}
 
     immediate = {
+        joining_world_war_set_variables = yes
 		trigger_event = { id = joining_world_war_events.1 popup = yes }
     }
 
@@ -52,20 +53,13 @@
         trigger_event = { id = joining_world_war_events.3 popup = yes}
     }
  
-    invalid = {
+    invalid = { 
         OR = {
           has_global_variable = world_war_1_over
           has_variable = entente_participant
           has_variable = central_powers_participant
         }
     }
-
-    on_monthly_pulse = {
-		effect = {
-		 monthly_pulse_entente_progress = yes 
-		 monthly_pulse_central_powers_progress = yes  	
-		}
-	}
 
     if = {
        limit = { scripted_bar_progress(join_entente_progress_bar) >= 150 }
@@ -85,7 +79,11 @@
             5 = joining_world_war_events.25
             5 = joining_world_war_events.26
             8 = joining_world_war_events.27
-		}      	  
+		} 
+        effect = {
+		 monthly_pulse_entente_progress = yes 
+		 monthly_pulse_central_powers_progress = yes  	
+		}     	  
     }
 
     should_be_pinned_by_default = yes
