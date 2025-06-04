@@ -112,6 +112,9 @@ usa_events.6 = { #Black Tuesday
                 NOT = {
                     c:USA ?= this
                 }
+                NOT = {
+                    has_law = law_type:law_council_republic
+                }
 				country_rank >= rank_value:major_power 
 			}
             trigger_event = {
@@ -147,6 +150,9 @@ usa_events.6 = { #Black Tuesday
                 }
                 NOT = {
                     c:USA ?= this
+                }
+                NOT = {
+                    has_law = law_type:law_council_republic
                 }
 				country_rank >= rank_value:major_power 
 			}
