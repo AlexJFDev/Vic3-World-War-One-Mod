@@ -1,5 +1,82 @@
 ﻿namespace = japan_events
 
+japan_events.15 = {#Tokyo earthquake
+    type = country_event
+
+    title = japan_events.15.t
+    desc = japan_events.15.d
+    flavor = japan_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/devastation.dds"
+    }
+
+    immediate = {
+        s:STATE_KANTO = {
+			add_devastation = 75
+		}
+    }
+
+    trigger = {}
+
+    option = {
+        name = japan_events.15.a
+        c:JAP = {
+        if = {
+         limit = { has_law = law_type:law_monarchy }
+            trigger_event = { 
+              id = japan_events.16
+               years = 3
+            }
+        }
+        }
+    }
+}
+
+japan_events.16 = {#Taisho death
+    type = country_event
+
+    title = japan_events.16.t
+    desc = japan_events.16.d
+    flavor = japan_events.16.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/devastation.dds"
+    }
+
+    immediate = {
+        random_scope_character = {
+            limit = {
+               has_template = JAP_taisho_template
+            }
+            set_variable = {
+                name = taisho
+            }
+        }
+    }
+
+    trigger = {}
+
+    option = {
+        name = japan_events.15.a
+        default_option = yes
+        random_scope_character = { 
+			limit = { has_variable = taisho }
+            kill_character = yes
+		} 
+    }
+}
+
 japan_events.20 = { 
     type = country_event
 
@@ -13,7 +90,7 @@ japan_events.20 = {
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/"
+        texture = "gfx/event_pictures/warlord_china.dds"
     }
 
     trigger = {}
@@ -76,7 +153,7 @@ japan_events.29 = {
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/"
+        texture = "gfx/event_pictures/warlord_china.dds"
     }
 
     trigger = {}

@@ -456,7 +456,16 @@ uk_events.10 = {#George V death
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        random_scope_character = {
+            limit = {
+               has_template = is_gbr_george_05
+            }
+            set_variable = {
+                name = george_5
+            }
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/old_george_5.dds"
@@ -466,6 +475,10 @@ uk_events.10 = {#George V death
 
     option = {
         name = uk_events.10.a
+        random_scope_character = { 
+			limit = { has_variable = george_5 }
+            kill_character = yes
+		} 
         trigger_event = {
             id = uk_events.11
             days = 300
