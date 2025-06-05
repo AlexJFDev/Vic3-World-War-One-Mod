@@ -26998,21 +26998,6 @@
 				}
 			}
 			create_building = {
-				building = building_chemical_plants
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:USA
-						levels = 5
-						region = STATE_NEW_YORK
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_improved_fertilizer 
-				}
-			}
-			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -27427,7 +27412,7 @@
 				add_ownership = {
 					country = {
 						country = c:DEN
-						levels = 6
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -27496,11 +27481,10 @@
 			create_building = {
 				building = building_food_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_chr_hansens
 						country = c:DEN
-						levels = 1
-						region = STATE_ZEALAND
+						levels = 12
 					}
 				}
 				reserves = 1
@@ -27669,6 +27653,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_military_shipbuilding_steam 
+				}
+			}
+			create_building = {
+				building = building_chemical_plants
+				add_ownership = {
+					company = {
+						type = company_chr_hansens
+						country = c:DEN
+						levels = 25
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_improved_fertilizer 
 				}
 			}
 			create_building = {
@@ -32114,6 +32112,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_chemical_fertilizer pm_no_secondary pm_tractors 
+				}
+			}
+			create_building = {
+				building = building_government_administration
+				add_ownership = {
+					country = {
+						country = c:FIN
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
 				}
 			}
 			create_building = {
@@ -63564,7 +63575,7 @@
 				add_ownership = {
 					country = {
 						country = c:NOR
-						levels = 3
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -63663,11 +63674,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_aker_mek
 						country = c:NOR
 						levels = 3
-						region = STATE_EASTERN_NORWAY
 					}
 				}
 				reserves = 1
@@ -63708,11 +63718,10 @@
 			create_building = {
 				building = building_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_aker_mek
+						country = c:NOR
 						levels = 5
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -81473,6 +81482,21 @@
 					pm_sheep_farms pm_slaughterhouses pm_standard_fences pm_unrefrigerated 
 				}
 			}
+			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_logging_camp
+						country = c:SWZ
+						levels = 1
+						region = STATE_TRANSVAAL
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_hardwood pm_no_equipment pm_road_carts pm_saw_mills 
+				}
+			}
 		}
 	}
 	s:STATE_VRYSTAAT = {
@@ -84075,9 +84099,9 @@
 				add_ownership = {
 					building = {
 						type = building_financial_district
-						country = c:GBR
+						country = c:SWE
 						levels = 15
-						region = STATE_HOME_COUNTIES
+						region = STATE_SVEALAND
 					}
 				}
 				reserves = 1
@@ -84131,18 +84155,44 @@
 				}
 			}
 			create_building = {
-				building = building_electrics_industry
+				building = building_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_gotaverken
 						country = c:SWE
-						levels = 25
-						region = STATE_SVEALAND
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_radios pm_telephones 
+					pm_metal_shipbuilding 
+				}
+			}
+			create_building = {
+				building = building_military_shipyards
+				add_ownership = {
+					company = {
+						type = company_gotaverken
+						country = c:SWE
+						levels = 4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_military_shipbuilding_steam 
+				}
+			}
+			create_building = {
+				building = building_government_administration
+				add_ownership = {
+					country = {
+						country = c:SWE
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_professional_bureaucrats pm_secular_bureaucrats pm_switch_boards 
 				}
 			}
 			create_building = {
@@ -84343,11 +84393,10 @@
 			create_building = {
 				building = building_iron_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_lkab
 						country = c:SWE
 						levels = 28
-						region = STATE_SVEALAND
 					}
 				}
 				reserves = 1
@@ -84518,6 +84567,33 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_rotary_valve_engine_building_tooling_workshops pm_steel 
+				}
+			}
+			create_building = {
+				building = building_motor_industry
+				add_ownership = {
+					company = {
+						type = company_gotaverken
+						country = c:SWE
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
+				}
+			}
+			create_building = {
+				building = building_government_administration
+				add_ownership = {
+					country = {
+						country = c:SWE
+						levels = 8
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_professional_bureaucrats pm_secular_bureaucrats pm_switch_boards 
 				}
 			}
 			create_building = {
@@ -84701,11 +84777,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_gotaverken
 						country = c:SWE
-						levels = 6
-						region = STATE_SVEALAND
+						levels = 10
 					}
 				}
 				reserves = 1
@@ -84719,7 +84794,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GER
-						levels = 2
+						levels = 5
 						region = STATE_BRANDENBURG
 					}
 				}
@@ -84734,7 +84809,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SWE
-						levels = 2
+						levels = 8
 						region = STATE_SVEALAND
 					}
 				}
@@ -84749,7 +84824,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SWE
-						levels = 5
+						levels = 6
 						region = STATE_SVEALAND
 					}
 				}
@@ -84764,7 +84839,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SWE
-						levels = 25
+						levels = 35
 						region = STATE_SVEALAND
 					}
 				}
@@ -84778,7 +84853,7 @@
 				add_ownership = {
 					country = {
 						country = c:SWE
-						levels = 8
+						levels = 20
 					}
 				}
 				reserves = 1
@@ -84819,9 +84894,9 @@
 				add_ownership = {
 					building = {
 						type = building_financial_district
-						country = c:SWE
+						country = c:GBR
 						levels = 5
-						region = STATE_SVEALAND
+						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -84895,28 +84970,13 @@
 					building = {
 						type = building_financial_district
 						country = c:SWE
-						levels = 2
-						region = STATE_SVEALAND
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_metal_shipbuilding 
-				}
-			}
-			create_building = {
-				building = building_military_shipyards
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:SWE
 						levels = 1
 						region = STATE_SVEALAND
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_military_shipbuilding_steam 
+					pm_metal_shipbuilding 
 				}
 			}
 			create_building = {
@@ -84932,6 +84992,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_condensing_engine_pump_building_lead_mine pm_nitroglycerin_building_lead_mine pm_road_carts pm_steam_donkey_mine 
+				}
+			}
+			create_building = {
+				building = building_electrics_industry
+				add_ownership = {
+					company = {
+						type = company_ericsson
+						country = c:SWE
+						levels = 28
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_radios pm_telephones 
 				}
 			}
 			create_building = {

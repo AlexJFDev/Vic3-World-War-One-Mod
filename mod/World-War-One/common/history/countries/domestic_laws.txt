@@ -966,7 +966,7 @@
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_professional_army
-		activate_law = law_type:law_no_home_affairs
+		activate_law = law_type:law_national_guard
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_proportional_taxation
@@ -987,7 +987,7 @@
 		activate_law = law_type:law_subordinate_general_staff
 		set_institution_investment_level = {
 			institution = institution_social_security
-			level = 1
+			level = 2
 		}
 		set_institution_investment_level = {
 			institution = institution_schools
@@ -999,6 +999,10 @@
 		}
 		set_institution_investment_level = {
 			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
 			level = 1
 		}
 	}
@@ -1236,7 +1240,7 @@
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_national_militia
 		activate_law = law_type:law_no_home_affairs
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_mercantilism
@@ -1256,6 +1260,10 @@
 		activate_law = law_type:law_unitary
 		activate_law = law_type:law_no_agencies
 		activate_law = law_type:law_subordinate_general_staff
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
 	}
 	c:FPL = {
 		activate_law = law_type:law_presidential_republic
@@ -1464,7 +1472,7 @@
 		activate_law = law_type:law_military_oversight
 		set_institution_investment_level = {
 			institution = institution_social_security
-			level = 1
+			level = 2
 		}
 		set_institution_investment_level = {
 			institution = institution_workplace_safety
@@ -2515,14 +2523,14 @@
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_no_home_affairs
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_proportional_taxation
 		activate_law = law_type:law_homesteading
 		activate_law = law_type:law_no_colonial_affairs
-		activate_law = law_type:law_no_police
+		activate_law = law_type:law_dedicated_police
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_charitable_health_system
 		activate_law = law_type:law_right_of_assembly
@@ -2535,6 +2543,26 @@
 		activate_law = law_type:law_unitary
 		activate_law = law_type:law_no_agencies
 		activate_law = law_type:law_subordinate_general_staff
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:NZL = {
 		activate_law = law_type:law_parliamentary_republic
@@ -3325,7 +3353,7 @@
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_national_guard
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_mercantilism
@@ -3345,6 +3373,26 @@
 		activate_law = law_type:law_unitary
 		activate_law = law_type:law_no_agencies
 		activate_law = law_type:law_subordinate_general_staff
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 4
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_home_affairs
+			level = 1
+		}
 	}
 	c:SWI = {
 		activate_law = law_type:law_parliamentary_republic

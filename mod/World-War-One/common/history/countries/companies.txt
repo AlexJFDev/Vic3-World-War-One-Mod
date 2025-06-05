@@ -152,6 +152,37 @@
 			set_company_state_region = s:STATE_WALLONIA
 		}
 	}
+	c:DEN = {
+		add_company = company_type:company_chr_hansens
+		company:company_chr_hansens = {
+			set_company_establishment_date = 1874.11.8
+			set_company_state_region = s:STATE_ZEALAND
+		}
+	}
+	c:SWE = {
+		add_company = company_type:company_ericsson
+		company:company_ericsson = {
+			set_company_establishment_date = 1876.3.14
+			set_company_state_region = s:STATE_SVEALAND
+		}
+		add_company = company_type:company_lkab
+		company:company_lkab = {
+			set_company_establishment_date = 1890.9.22
+			set_company_state_region = s:STATE_NORRLAND
+		}
+		add_company = company_type:company_gotaverken
+		company:company_gotaverken = {
+			set_company_establishment_date = 1841.4.11
+			set_company_state_region = s:STATE_GOTALAND
+		}
+	}
+	c:NOR = {
+		add_company = company_type:company_aker_mek
+		company:company_aker_mek = {
+			set_company_establishment_date = 1841.3.25
+			set_company_state_region = s:STATE_EASTERN_NORWAY
+		}
+	}
 	c:FRA = {
 		add_company = company_type:company_schneider_creusot
 		company:company_schneider_creusot = {
