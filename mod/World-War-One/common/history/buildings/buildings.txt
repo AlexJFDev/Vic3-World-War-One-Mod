@@ -2559,11 +2559,10 @@
 			create_building = {
 				building = building_steel_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_william_sandford
 						country = c:AST
 						levels = 32
-						region = STATE_NEW_SOUTH_WALES
 					}
 				}
 				reserves = 1
@@ -12185,11 +12184,10 @@
 			create_building = {
 				building = building_textile_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
-						levels = 28
-						region = STATE_HOME_COUNTIES
+					company = {
+						type = company_tata
+						country = c:BIC
+						levels = 38
 					}
 				}
 				reserves = 1
@@ -12275,7 +12273,7 @@
 				add_ownership = {
 					country = {
 						country = c:BIC
-						levels = 50
+						levels = 115
 					}
 				}
 				reserves = 1
@@ -12627,7 +12625,7 @@
 				add_ownership = {
 					country = {
 						country = c:BIC
-						levels = 20
+						levels = 50
 					}
 				}
 				reserves = 1
@@ -12777,7 +12775,7 @@
 				add_ownership = {
 					country = {
 						country = c:BIC
-						levels = 30
+						levels = 60
 					}
 				}
 				reserves = 1
@@ -12844,11 +12842,10 @@
 			create_building = {
 				building = building_coal_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_bengal_coal_company
 						country = c:BIC
 						levels = 38
-						region = STATE_BOMBAY
 					}
 				}
 				reserves = 1
@@ -12983,7 +12980,7 @@
 				add_ownership = {
 					country = {
 						country = c:BIC
-						levels = 40
+						levels = 80
 					}
 				}
 				reserves = 1
@@ -13294,7 +13291,7 @@
 				add_ownership = {
 					country = {
 						country = c:BIC
-						levels = 30
+						levels = 70
 					}
 				}
 				reserves = 1
@@ -13512,7 +13509,7 @@
 				add_ownership = {
 					country = {
 						country = c:BIC
-						levels = 8
+						levels = 30
 					}
 				}
 				reserves = 1
@@ -13548,6 +13545,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_fertilization_building_rice_farm pm_no_secondary pm_tools_building_rice_farm 
+				}
+			}
+			create_building = {
+				building = building_textile_mills
+				add_ownership = {
+					company = {
+						type = company_madura_mills
+						country = c:BIC
+						levels = 25
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_mechanized_looms pm_no_luxury_clothes pm_sewing_machines 
 				}
 			}
 			create_building = {
@@ -13851,7 +13862,7 @@
 				add_ownership = {
 					country = {
 						country = c:BIC
-						levels = 5
+						levels = 40
 					}
 				}
 				reserves = 1
@@ -13902,6 +13913,20 @@
 				reserves = 1
 				activate_production_methods = {
 					default_building_cotton_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_coal_mine
+				add_ownership = {
+					company = {
+						type = company_bengal_coal_company
+						country = c:BIC
+						levels = 25
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -20253,9 +20278,11 @@
 			create_building = {
 				building = building_arms_industry
 				add_ownership = {
-					country = {
+					building = {
+						type = building_manor_house
 						country = c:CHI
-						levels = 6
+						levels = 2
+						region = STATE_BEIJING
 					}
 				}
 				reserves = 1
@@ -20264,25 +20291,12 @@
 				}
 			}
 			create_building = {
-				building = building_artillery_foundries
-				add_ownership = {
-					country = {
-						country = c:CHI
-						levels = 4
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_breech_loaders pm_rotary_valve_engine_building_arms_industry 
-				}
-			}
-			create_building = {
 				building = building_munition_plants
 				add_ownership = {
 					building = {
 						type = building_financial_district
 						country = c:KMT
-						levels = 5
+						levels = 1
 						region = STATE_SUZHOU
 					}
 				}
@@ -20792,6 +20806,48 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_automobiles_disabled pm_steam_engines pm_watertube_boiler_building_motor_industry 
+				}
+			}
+			create_building = {
+				building = building_arms_industry
+				add_ownership = {
+					company = {
+						type = company_hanyang_arsenal
+						country = c:CHI
+						levels = 4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_artillery_foundries
+				add_ownership = {
+					company = {
+						type = company_hanyang_arsenal
+						country = c:CHI
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_breech_loaders pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_munition_plants
+				add_ownership = {
+					company = {
+						type = company_hanyang_arsenal
+						country = c:CHI
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
 				}
 			}
 		}
@@ -21824,7 +21880,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_kaiping_mining
 						country = c:CHI
 						levels = 5
 					}
@@ -22240,11 +22297,10 @@
 			create_building = {
 				building = building_glassworks
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_jingdezhen
 						country = c:KMT
-						levels = 8
-						region = STATE_JIANGXI
+						levels = 58
 					}
 				}
 				reserves = 1
@@ -22529,7 +22585,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_kaiping_mining
 						country = c:CHI
 						levels = 2
 					}
@@ -23757,7 +23814,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_kaiping_mining
 						country = c:CHI
 						levels = 8
 					}
@@ -24752,11 +24810,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_kaiping_mining
+						country = c:CHI
 						levels = 8
-						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
@@ -24835,6 +24892,20 @@
 				reserves = 1
 				activate_production_methods = {
 					default_building_cotton_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_coal_mine
+				add_ownership = {
+					company = {
+						type = company_kaiping_mining
+						country = c:CHI
+						levels = 25
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_no_steam_automation pm_road_carts 
 				}
 			}
 			create_building = {
@@ -56018,7 +56089,7 @@
 				add_ownership = {
 					country = {
 						country = c:JAP
-						levels = 18
+						levels = 15
 					}
 				}
 				reserves = 1
@@ -56338,7 +56409,7 @@
 				add_ownership = {
 					country = {
 						country = c:JAP
-						levels = 65
+						levels = 55
 					}
 				}
 				reserves = 1
@@ -56364,11 +56435,10 @@
 			create_building = {
 				building = building_textile_mills
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_mitsui
 						country = c:JAP
 						levels = 28
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -56480,11 +56550,10 @@
 			create_building = {
 				building = building_chemical_plants
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_mitsui
 						country = c:JAP
 						levels = 8
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -56495,11 +56564,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_mitsubishi
 						country = c:JAP
 						levels = 15
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -56615,11 +56683,10 @@
 			create_building = {
 				building = building_military_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_mitsubishi
 						country = c:JAP
-						levels = 4
-						region = STATE_KANTO
+						levels = 6
 					}
 				}
 				reserves = 1
@@ -56774,11 +56841,10 @@
 			create_building = {
 				building = building_coal_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_mitsubishi
 						country = c:JAP
 						levels = 58
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -56963,11 +57029,10 @@
 			create_building = {
 				building = building_lead_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_mitsui
 						country = c:JAP
 						levels = 15
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -80276,7 +80341,7 @@
 				add_ownership = {
 					country = {
 						country = c:SIA
-						levels = 25
+						levels = 10
 					}
 				}
 				reserves = 1
@@ -80538,11 +80603,10 @@
 			create_building = {
 				building = building_rice_farm
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_b_grimm
 						country = c:SIA
-						levels = 8
-						region = STATE_BANGKOK
+						levels = 32
 					}
 				}
 				reserves = 1
@@ -80855,11 +80919,10 @@
 			create_building = {
 				building = building_rice_farm
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_b_grimm
 						country = c:SIA
-						levels = 8
-						region = STATE_NAKHON_RATCHASIMA
+						levels = 12
 					}
 				}
 				reserves = 1

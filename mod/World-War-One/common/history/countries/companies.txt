@@ -379,4 +379,66 @@
 			set_company_state_region = s:STATE_ISFAHAN
 		}
 	}
+	c:BIC = {
+		add_company = company_type:company_tata
+		company:company_tata = {
+			set_company_establishment_date = 1868.3.11
+			set_company_state_region = s:STATE_BOMBAY
+		}
+		add_company = company_type:company_madura_mills
+		company:company_madura_mills = {
+			set_company_establishment_date = 1892.8.9
+			set_company_state_region = s:STATE_CARNATIC
+		}
+		add_company = company_type:company_bengal_coal_company
+		company:company_bengal_coal_company = {
+			set_company_establishment_date = 1878.11.23
+			set_company_state_region = s:STATE_WEST_BENGAL
+		}
+	}
+	c:SIA = {
+		add_company = company_type:company_b_grimm
+		company:company_b_grimm = {
+			set_company_establishment_date = 1902.5.8
+			set_company_state_region = s:STATE_BANGKOK
+		}
+	}
+	c:AST = {
+		add_company = company_type:company_william_sandford
+		company:company_william_sandford = {
+			set_company_establishment_date = 1874.4.21
+			set_company_state_region = s:STATE_NEW_SOUTH_WALES
+		}
+	}
+	c:CHI = {
+		add_company = company_type:company_hanyang_arsenal
+		company:company_hanyang_arsenal = {
+			set_company_establishment_date = 1894.2.13
+			set_company_state_region = s:STATE_EASTERN_HUBEI
+		}
+		add_company = company_type:company_kaiping_mining
+		company:company_kaiping_mining = {
+			set_company_establishment_date = 1881.11.5
+			set_company_state_region = s:STATE_ZHILI
+		}
+	}
+	c:KMT = {
+		add_company = company_type:company_jingdezhen
+		company:company_jingdezhen = {
+			set_company_establishment_date = 1731.5.9
+			set_company_state_region = s:STATE_JIANGXI
+		}	
+	}
+	c:JAP = {
+		add_company = company_type:company_mitsui
+		company:company_mitsui = {
+			set_company_establishment_date = 1876.3.29
+			set_company_state_region = s:STATE_KANTO
+		}	
+		add_company = company_type:company_mitsubishi
+		company:company_mitsubishi = {
+			set_company_establishment_date = 1870.11.4
+			set_company_state_region = s:STATE_KANTO
+		}	
+	}
 }
