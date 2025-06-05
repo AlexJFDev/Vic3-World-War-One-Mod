@@ -141,13 +141,17 @@ persia_events.3 = {
 
     immediate = { 
       remove_modifier = persia_weak_government 
+      add_modifier = {
+         name = revolution_stabilization_buff_2
+         years = 5
+         is_decaying = yes
+        }
       random_scope_character = {
             limit = {
                has_template = per_riza_pahlevi_character_template
             }
             save_scope_as = riza_pahlevi_scope
         }
-      
     }
 
     option = {
