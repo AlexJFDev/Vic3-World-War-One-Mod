@@ -7,7 +7,7 @@ japan_events.15 = {#Tokyo earthquake
     desc = japan_events.15.d
     flavor = japan_events.15.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -45,13 +45,13 @@ japan_events.16 = {#Taisho death
     desc = japan_events.16.d
     flavor = japan_events.16.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/devastation.dds"
+        texture = "gfx/event_pictures/taisho.dds"
     }
 
     immediate = {
@@ -74,6 +74,81 @@ japan_events.16 = {#Taisho death
 			limit = { has_variable = taisho }
             kill_character = yes
 		} 
+        trigger_event = { 
+              id = japan_events.17
+              days = 15
+            }
+    }
+}
+
+japan_events.17 = {#The Showa era
+    type = country_event
+
+    title = japan_events.17.t
+    desc = japan_events.17.d
+    flavor = japan_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_waving_flag.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/hirohito.dds"
+    }
+
+    immediate = {
+        random_scope_character = {
+            limit = {
+               has_template = JAP_hirohito_template
+            }
+            set_variable = {
+                name = hirohito
+            }
+        }
+    }
+
+    trigger = {}
+
+    option = {
+        name = japan_events.17.a
+        default_option = yes
+        random_scope_character = { 
+			limit = { has_variable = hirohito }
+            set_ideology = ideology:ideology_jingoist_leader
+		} 
+        ai_chance = {
+		  base = 10
+	    }
+    }
+
+    option = {
+        name = japan_events.17.b
+        random_scope_character = { 
+			limit = { has_variable = hirohito }
+            set_ideology = ideology:ideology_fascist
+		} 
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = japan_events.17.c
+        random_scope_character = { 
+			limit = { has_variable = hirohito }
+            set_ideology = ideology:ideology_liberal_leader
+		} 
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = japan_events.17.e
+        ai_chance = {
+		  base = 0
+	    }
     }
 }
 
