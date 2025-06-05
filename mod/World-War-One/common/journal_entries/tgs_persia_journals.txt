@@ -20,9 +20,24 @@
         }
     }
 
+    modifiers_while_active = {
+	   persia_weak_dynasty
+	}
+
     fail = {
         is_subject = yes
         any_political_movement = {
+            OR = {
+				is_political_movement_type = movement_socialist
+				is_political_movement_type = movement_communist
+                is_political_movement_type = movement_anarchist
+                is_political_movement_type = movement_radical
+                is_political_movement_type = movement_labor
+                is_political_movement_type = movement_nihilist
+                is_political_movement_type = movement_land_reform
+                is_political_movement_type = movement_anti_slavery
+                is_political_movement_type = movement_liberal
+			}
             is_insurrectionary = yes
 			civil_war ?= {
                 OR = {

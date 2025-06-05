@@ -25,6 +25,16 @@ persia_events.1 = {
           years = 10
           is_decaying = yes
         }
+        if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_radical
+					}
+				}
+			}
+			create_political_movement = { type = movement_radical }
+		}
         ai_chance = {
 			base = 5
 		}
@@ -37,6 +47,16 @@ persia_events.1 = {
           years = 10
           is_decaying = yes
         }
+        if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_radical
+					}
+				}
+			}
+			create_political_movement = { type = movement_radical }
+		}
         ai_chance = {
 			base = 3
 		}
@@ -49,6 +69,16 @@ persia_events.1 = {
           years = 10
           is_decaying = yes
         }
+        if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_radical
+					}
+				}
+			}
+			create_political_movement = { type = movement_radical }
+		}
         ai_chance = {
 			base = 2
 		}
@@ -73,12 +103,21 @@ persia_events.2 = {
     trigger = {}
 
     option = {
-        name = persia_events.2.a
+        name = persia_events.2
         default_option = yes
         add_modifier = {
           name = persia_weak_government
           years = 10
           is_decaying = yes
+        }
+        any_political_movement = {
+            limit = {
+                is_political_movement_type = movement_radical
+            }
+            add_modifier = {
+				name = political_movement_buff_3
+				years = 2
+			}
         }
     }
 }

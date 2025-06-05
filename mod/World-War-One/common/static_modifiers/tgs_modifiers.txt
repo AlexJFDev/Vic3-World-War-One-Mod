@@ -248,6 +248,11 @@ political_movement_buff_2 = {
    political_movement_radicalism_add = 0.5
 }
 
+political_movement_buff_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+    political_movement_radicalism_add = 0.1
+}
+
 starting_minting_buff_1_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_minting_mult = 1
@@ -657,6 +662,7 @@ persia_policy_military = {
     unit_army_offense_mult = 0.05
     unit_army_defense_mult = 0.05
     country_military_goods_cost_mult = -0.1
+    interest_group_ig_armed_forces_pol_str_mult = 0.3
 }
 
 persia_weak_government = {
@@ -667,6 +673,13 @@ persia_weak_government = {
   country_prestige_mult = -0.3
   political_movement_radicalism_add = 0.3
   country_authority_mult = -0.5
+}
+
+persia_weak_dynasty = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+  interest_group_in_government_attraction_mult = -0.2
+  political_movement_radicalism_add = 0.15
+  country_authority_mult = -0.1
 }
 
 monetary_supremacy_modifier = {
