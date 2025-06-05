@@ -15735,6 +15735,19 @@
 				}
 			}
 			create_building = {
+				building = building_government_administration
+				add_ownership = {
+					country = {
+						country = c:BUL
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
+				}
+			}
+			create_building = {
 				building = building_steel_mills
 				add_ownership = {
 					building = {
@@ -15868,11 +15881,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_cfr
 						country = c:ROM
 						levels = 3
-						region = STATE_WALLACHIA
 					}
 				}
 				reserves = 1
@@ -16129,6 +16141,19 @@
 				reserves = 1
 				activate_production_methods = {
 					default_building_tobacco_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_government_administration
+				add_ownership = {
+					country = {
+						country = c:BUL
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
 				}
 			}
 			create_building = {
@@ -16645,7 +16670,7 @@
 				add_ownership = {
 					country = {
 						country = c:BUL
-						levels = 5
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -50507,11 +50532,10 @@
 			create_building = {
 				building = building_tooling_workshops
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_kouppas
 						country = c:GRE
 						levels = 8
-						region = STATE_ATTICA
 					}
 				}
 				reserves = 1
@@ -50522,11 +50546,10 @@
 			create_building = {
 				building = building_motor_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_kouppas
 						country = c:GRE
-						levels = 2
-						region = STATE_ATTICA
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -50627,11 +50650,10 @@
 			create_building = {
 				building = building_shipyards
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_basileiades
 						country = c:GRE
-						levels = 1
-						region = STATE_ATTICA
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -51153,11 +51175,10 @@
 			create_building = {
 				building = building_wheat_farm
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_allatini_mills
 						country = c:GRE
 						levels = 6
-						region = STATE_MACEDONIA
 					}
 				}
 				reserves = 1
@@ -51374,11 +51395,10 @@
 			create_building = {
 				building = building_wheat_farm
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_allatini_mills
 						country = c:GRE
 						levels = 8
-						region = STATE_PELOPONNESE
 					}
 				}
 				reserves = 1
@@ -51414,6 +51434,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+				}
+			}
+			create_building = {
+				building = building_motor_industry
+				add_ownership = {
+					company = {
+						type = company_basileiades
+						country = c:GRE
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
 				}
 			}
 			create_building = {
@@ -51550,11 +51584,10 @@
 			create_building = {
 				building = building_wheat_farm
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_allatini_mills
 						country = c:GRE
 						levels = 9
-						region = STATE_THESSALIA
 					}
 				}
 				reserves = 1
@@ -72216,11 +72249,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_cfr
 						country = c:ROM
 						levels = 13
-						region = STATE_WALLACHIA
 					}
 				}
 				reserves = 1
@@ -72469,11 +72501,10 @@
 			create_building = {
 				building = building_oil_rig
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_romanian_star
 						country = c:ROM
 						levels = 32
-						region = STATE_WALLACHIA
 					}
 				}
 				reserves = 1
@@ -79873,11 +79904,10 @@
 			create_building = {
 				building = building_arms_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_zastava
 						country = c:SER
-						levels = 8
-						region = STATE_SOUTHERN_SERBIA
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -79891,7 +79921,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SER
-						levels = 7
+						levels = 1
 						region = STATE_SOUTHERN_SERBIA
 					}
 				}
@@ -79906,7 +79936,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SER
-						levels = 8
+						levels = 2
 						region = STATE_SOUTHERN_SERBIA
 					}
 				}
@@ -80063,6 +80093,49 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_hydroelectric_plant 
+				}
+			}
+			create_building = {
+				building = building_arms_industry
+				add_ownership = {
+					company = {
+						type = company_zastava
+						country = c:SER
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_artillery_foundries
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:SER
+						levels = 5
+						region = STATE_SOUTHERN_SERBIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_munition_plants
+				add_ownership = {
+					company = {
+						type = company_zastava
+						country = c:SER
+						levels = 6
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_explosive_shells pm_rotary_valve_engine_building_munition_plants 
 				}
 			}
 			create_building = {

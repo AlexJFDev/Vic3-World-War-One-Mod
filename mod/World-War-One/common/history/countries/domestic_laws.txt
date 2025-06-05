@@ -56,7 +56,7 @@
 	c:ALB = {
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_wealth_voting
-		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_mass_conscription
@@ -661,7 +661,7 @@
 		}
 		set_institution_investment_level = {
 			institution = institution_schools
-			level = 3
+			level = 4
 		}
 		set_institution_investment_level = {
 			institution = institution_police
@@ -1429,7 +1429,7 @@
 		}
 		set_institution_investment_level = {
 			institution = institution_schools
-			level = 3
+			level = 4
 		}
 		set_institution_investment_level = {
 			institution = institution_police
@@ -1480,7 +1480,7 @@
 		}
 		set_institution_investment_level = {
 			institution = institution_schools
-			level = 3
+			level = 4
 		}
 		set_institution_investment_level = {
 			institution = institution_police
@@ -1552,7 +1552,7 @@
 	c:GRE = {
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_census_voting
-		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_mass_conscription
@@ -2370,7 +2370,7 @@
 		activate_law = law_type:law_subordinate_general_staff
 		set_institution_investment_level = {
 			institution = institution_schools
-			level = 3
+			level = 4
 		}
 		set_institution_investment_level = {
 			institution = institution_police
@@ -3096,7 +3096,7 @@
 		activate_law = law_type:law_dedicated_police
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_charitable_health_system
-		activate_law = law_type:law_protected_speech
+		activate_law = law_type:law_censorship
 		activate_law = law_type:law_no_workers_rights
 		activate_law = law_type:law_restricted_child_labor
 		activate_law = law_type:law_women_own_property
@@ -3420,6 +3420,10 @@
 		activate_law = law_type:law_confederated
 		activate_law = law_type:law_no_agencies
 		activate_law = law_type:law_subordinate_general_staff
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 4
+		}
 	}
 	c:SWZ = {
 		activate_law = law_type:law_monarchy
