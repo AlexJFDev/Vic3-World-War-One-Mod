@@ -25,6 +25,7 @@
 	}
 
     fail = {
+       OR = { 
         is_subject = yes
         any_political_movement = {
             OR = {
@@ -47,6 +48,7 @@
 				civil_war_progress >= 0.75
 			}
         }
+       }
     }
 
     on_fail = {

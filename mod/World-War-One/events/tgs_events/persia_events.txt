@@ -103,21 +103,12 @@ persia_events.2 = {
     trigger = {}
 
     option = {
-        name = persia_events.2
+        name = persia_events.2.a
         default_option = yes
         add_modifier = {
           name = persia_weak_government
           years = 10
           is_decaying = yes
-        }
-        any_political_movement = {
-            limit = {
-                is_political_movement_type = movement_radical
-            }
-            add_modifier = {
-				name = political_movement_buff_3
-				years = 2
-			}
         }
     }
 }
@@ -133,7 +124,7 @@ persia_events.3 = {
     desc = persia_events.3.d
     flavor = persia_events.3.f
 
-    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     duration = 3
 
