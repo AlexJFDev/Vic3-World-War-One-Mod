@@ -520,6 +520,9 @@ RUS_nicholas_ii = { #Nicholas II, son of Alexander III
 		pious
         bigoted
 	}
+	on_created = {
+		set_variable = is_married
+	}
 	trait_generation = {
 		
 	}
@@ -936,27 +939,6 @@ per_riza_pahlevi_character_template = {
 	}
 }
 
-#China
-
-chi_sun_yat_sen_character_template = {
-    first_name = Sun
-	last_name = Yat_Sen
-	historical = yes
-	culture = cu:han
-	religion = rel:protestant
-	female = no
-    ruler = yes
-	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_republican_leader
-	birth_date = 1866.11.12
-	dna = dna_sun_yat_sen
-	traits = {
-		erudite
-        persistent
-        ambitious
-	}
-}
-
 #Raj 
 
 BIC_mohandas_karamchand_gandhi = { # Mohandas Karamchand Gandhi
@@ -1069,6 +1051,27 @@ BIC_pandita_ramabai_sarasvati = { # Pandita Ramabai Sarasvati
 		persistent
         direct
 		literary
+	}
+}
+
+#China
+
+chi_sun_yat_sen_character_template = {
+    first_name = Sun
+	last_name = Yat_Sen
+	historical = yes
+	culture = cu:han
+	religion = rel:protestant
+	female = no
+    ruler = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_republican_leader
+	birth_date = 1866.11.12
+	dna = dna_sun_yat_sen
+	traits = {
+		erudite
+        persistent
+        ambitious
 	}
 }
 
