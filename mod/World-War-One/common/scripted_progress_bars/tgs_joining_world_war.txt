@@ -154,7 +154,7 @@
                 has_variable = supporting_central_powers_var
             }
             add = {
-				desc = "central_powers_progress_from_decision"
+				desc = "entente_progress_from_decision"
 				value = -5
 			}
         }
@@ -163,8 +163,17 @@
                 has_variable = supporting_entente_var
             }
             add = {
-				desc = "central_powers_progress_from_decision"
+				desc = "entente_progress_from_decision"
 				value = 10
+			}
+        }
+        if = {
+		   limit = {
+                has_variable = maintain_neutrality_var
+            }
+            add = {
+				desc = "entente_progress_from_decision"
+				value = -10
 			}
         }
     }
@@ -341,6 +350,15 @@ join_central_powers_progress_bar = {
             add = {
 				desc = "central_powers_progress_from_decision"
 				value = -5
+			}
+        }
+        if = {
+		   limit = {
+                has_variable = maintain_neutrality_var
+            }
+            add = {
+				desc = "central_powers_progress_from_decision"
+				value = -10
 			}
         }
     }
