@@ -72,10 +72,6 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
         
     option = {
         name = ussr_events.1.b
-		random_scope_character = { 
-			limit = { has_variable = lenin }
-            set_character_as_ruler = yes
-		}
 		trigger_event = {
             id = ussr_events.2
             years = 2
@@ -171,7 +167,7 @@ ussr_events.4 = { #Lenin death
     desc = ussr_events.4.d
     flavor = ussr_events.4.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -193,6 +189,11 @@ ussr_events.4 = { #Lenin death
 			limit = { has_variable = stalin }
             set_character_as_ruler = yes
 		}
+		add_modifier = {
+			name = stalin_reign
+            years = 10
+            is_decaying = yes
+		}
 		ai_chance = {
 			base = 10
 		}
@@ -204,9 +205,14 @@ ussr_events.4 = { #Lenin death
 			limit = { has_variable = lenin }
             kill_character = yes
 		}
-        random_scope_character = { 
-			limit = { has_variable = zinoviev }
+		random_scope_character = { 
+			limit = { has_variable = trotsky }
             set_character_as_ruler = yes
+		}
+		add_modifier = {
+			name = trotsky_reign
+            years = 10
+            is_decaying = yes
 		}
 		ai_chance = {
 			base = 0
@@ -223,6 +229,11 @@ ussr_events.4 = { #Lenin death
 			limit = { has_variable = kamenev }
             set_character_as_ruler = yes
 		}
+		add_modifier = {
+			name = kamenev_reign
+            years = 10
+            is_decaying = yes
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -237,6 +248,11 @@ ussr_events.4 = { #Lenin death
 		random_scope_character = { 
 			limit = { has_variable = bukharin }
             set_character_as_ruler = yes
+		}
+		add_modifier = {
+			name = bukharin_reign
+            years = 10
+            is_decaying = yes
 		}
 		ai_chance = {
 			base = 0
@@ -253,6 +269,11 @@ ussr_events.4 = { #Lenin death
 			limit = { has_variable = rykov }
             set_character_as_ruler = yes
 		}
+		add_modifier = {
+			name = rykov_reign
+            years = 10
+            is_decaying = yes
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -264,9 +285,14 @@ ussr_events.4 = { #Lenin death
 			limit = { has_variable = lenin }
             kill_character = yes
 		}
-		random_scope_character = { 
-			limit = { has_variable = trotsky }
+        random_scope_character = { 
+			limit = { has_variable = zinoviev }
             set_character_as_ruler = yes
+		}
+		add_modifier = {
+			name = zinoviev_reign
+            years = 10
+            is_decaying = yes
 		}
 		ai_chance = {
 			base = 0

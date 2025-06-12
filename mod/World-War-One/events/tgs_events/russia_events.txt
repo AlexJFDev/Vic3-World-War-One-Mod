@@ -101,7 +101,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
     desc = russia_events.3.d
     flavor = russia_events.3.f
     
-    icon = "gfx/interface/icons/event_icons/event_election.dds"
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -121,12 +121,6 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         activate_law = law_type:law_wage_subsidies
         activate_law = law_type:law_public_schools
         activate_law = law_type:law_dedicated_police
-        c:GER = {
-            trigger_event = {
-                id = russia_events.5
-                days = 5
-            }
-        }
         ig:ig_rural_folks = {
 			add_ruling_interest_group = yes
 		}
@@ -140,9 +134,17 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 			template = rus_leon_trotsky_character_template
             on_created = {
                set_variable = {
-                  name = leon_trotsky
+                  name = trotsky
                 } 
             }
+        }
+        create_character = {
+			template = rus_lenin_character_template
+            on_created = {
+			  set_variable = {
+                  name = lenin
+                }
+			}
         }
         ai_chance = {
 			base = 10
@@ -156,12 +158,6 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         activate_law = law_type:law_right_of_assembly
         activate_law = law_type:law_public_schools
         activate_law = law_type:law_dedicated_police
-        c:GER = {
-            trigger_event = {
-                id = russia_events.5
-                days = 5
-            }
-        }
         ig:ig_industrialists = {
 			add_ruling_interest_group = yes
 		}
@@ -175,9 +171,17 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 			template = rus_leon_trotsky_character_template
             on_created = {
                set_variable = {
-                  name = leon_trotsky
+                  name = trotsky
                 } 
             }
+        }
+        create_character = {
+			template = rus_lenin_character_template
+            on_created = {
+			  set_variable = {
+                  name = lenin
+                }
+			}
         }
         ai_chance = {
 			base = 0
@@ -191,12 +195,6 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         activate_law = law_type:law_right_of_assembly
         activate_law = law_type:law_public_schools
         activate_law = law_type:law_dedicated_police
-        c:GER = {
-            trigger_event = {
-                id = russia_events.5
-                days = 5
-            }
-        }
         ig:ig_industrialists = {
 			add_ruling_interest_group = yes
 		}
@@ -210,9 +208,17 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 			template = rus_leon_trotsky_character_template
             on_created = {
                set_variable = {
-                  name = leon_trotsky
+                  name = trotsky
                 } 
             }
+        }
+        create_character = {
+			template = rus_lenin_character_template
+            on_created = {
+			  set_variable = {
+                  name = lenin
+                }
+			}
         }
         ai_chance = {
 			base = 0
@@ -226,12 +232,6 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         activate_law = law_type:law_censorship
         activate_law = law_type:law_public_schools
         activate_law = law_type:law_dedicated_police
-        c:GER = {
-            trigger_event = {
-                id = russia_events.5
-                days = 5
-            }
-        }
         ig:ig_armed_forces = {
 			add_ruling_interest_group = yes
 		}
@@ -245,9 +245,17 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 			template = rus_leon_trotsky_character_template
             on_created = {
                set_variable = {
-                  name = leon_trotsky
+                  name = trotsky
                 } 
             }
+        }
+        create_character = {
+			template = rus_lenin_character_template
+            on_created = {
+			  set_variable = {
+                  name = lenin
+                }
+			}
         }
         ai_chance = {
 			base = 0
@@ -283,7 +291,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         set_variable = russian_rep_continues_war
         random_scope_character =  {
 				limit = {
-					has_variable = leon_trotsky
+					has_variable = trotsky
 				}
 			remove_character_role = agitator
 		    add_character_role = politician
@@ -334,74 +342,6 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         }
     }
 }
-
-russia_events.5 = { #Germany decides to send Lenin to Russia
-    type = country_event
-
-    title = russia_events.5.t
-    desc = russia_events.5.d
-    flavor = russia_events.5.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    event_image = {
-        texture = "gfx/event_pictures/russian_revolution.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = russia_events.5.a
-        default_option = yes
-        c:RUS = {
-            trigger_event = {
-                id = russia_events.6
-                days = 5
-            }
-        }  
-		ai_chance = {
-			base = 100
-		}
-    }
-
-	option = {
-        name = russia_events.5.b
-    }
-}
-
-russia_events.6 = { #Lenin returns to Russia
-    type = country_event
-
-    title = russia_events.6.t
-    desc = russia_events.6.d
-    flavor = russia_events.6.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    event_image = {
-        texture = "gfx/event_pictures/russian_revolution.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = russia_events.6.a
-        create_character = {
-			template = rus_lenin_character_template
-            on_created = {
-			  set_variable = {
-                  name = lenin
-                }
-			}
-        }
-    }
-}
  
 russia_events.7 = { #Soviet uprising
     type = country_event
@@ -433,12 +373,6 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_public_health_insurance
      activate_law = law_type:law_public_schools
      activate_law = law_type:law_compulsory_primary_school
-	 ig:ig_trade_unions = {
-				leader = {
-					set_character_as_ruler = yes
-				}
-				add_ruling_interest_group = yes
-			}
       c:RUS = {
             trigger_event = {
              id = russia_events.8
@@ -469,10 +403,6 @@ russia_events.7 = { #Soviet uprising
 			type = alliance
 		}        
         set_capital = STATE_MOSCOW
-        random_scope_character = { 
-			limit = { has_variable = lenin }
-            set_character_as_ruler = yes
-		}
         create_character = {
 			template = sov_joseph_stalin_character_template
             on_created = {
@@ -679,6 +609,10 @@ russia_events.8 = { #The civil war begins
         c:SIB = {
             change_infamy = -100
         }
+        random_scope_character = { 
+			limit = { has_variable = lenin }
+            set_character_as_ruler = yes
+		}
     }
 }
 
@@ -706,6 +640,7 @@ russia_events.9 = { #Reforms success
         add_modifier = {
 			name = a_new_russia_modifier
             years = 5
+            is_decaying = yes
 		}
     }
 }
