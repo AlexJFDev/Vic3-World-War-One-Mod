@@ -176,53 +176,6 @@ agitator_emiliano_zapata = {
 	}
 }
 
-agitator_ernst_rohm = {
-	first_name = Ernst
-	last_name = RO_hm
-	historical = yes
-	culture = cu:south_german
-	religion = rel:protestant
-	female = no
-	interest_group = ig_armed_forces
-	ideology = ideology_fascist
-	dna = dna_rohm_ernst
-	birth_date = 1887.11.28
-	traits = {
-		ambitious
-		bigoted
-		direct
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			NOT = {
-				has_variable = ernst_rohm_spawn
-			}
-			OR = {
-				c:BAV ?= this
-				c:SGF ?= this
-				c:GER ?= this
-				c:BOL ?= this # Yes, Bolivia.
-			}
-		}
-        interest_group_trigger = {
-            is_marginal = no
-            OR = {
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_petty_bourgeoisie
-            } 
-        }   
-		earliest_usage_date = 1917.1.1
-		latest_usage_date = 1935.12.31
-		chance = 25
-	}
-	on_created = {
-		owner = {
-			set_variable = ernst_rohm_spawn
-		}
-	}
-}
-
 agitator_frederick_douglass = {
 	first_name = Frederick
 	last_name = Douglass
