@@ -37,15 +37,6 @@ uk_events.4 = {#Maritz Rebellion
 		      set_state_owner = c:MRB
             }
         }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
-            add_initiator_backers = {
-                c:MRB
-            }            
-		}
         c:MRB = {
         create_character = {
             first_name = Salomon
@@ -75,6 +66,29 @@ uk_events.4 = {#Maritz Rebellion
 
     option = {
         name = uk_events.4.a
+        create_diplomatic_play = {
+            name = maritz_rebellion
+
+            target_country = c:MRB
+
+            type = dp_revolution
+
+            escalation = 30
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = uk_events.4.b
+        create_diplomatic_pact = {
+			country = c:MRB
+			type = protectorate
+		}	
+        ai_chance = {
+			base = 0
+		}
     }
 }
 
