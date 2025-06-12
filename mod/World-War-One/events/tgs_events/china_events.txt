@@ -779,12 +779,6 @@ china_events.5 = { #China collapse
                 days = 5
             }
         }
-        c:JAP = {
-            trigger_event = {
-                id = japan_events.20
-                years = 14
-            }
-        }
         change_tag = BEI
 		set_global_variable = { name = chinese_central_government value = c:BEI }
     }
@@ -979,6 +973,8 @@ china_events.7 = { #Policy choice
     option = {
         name = china_events.7.a #Military effort
         default_option = yes
+        set_variable = warlord_state
+        set_strategy = ai_strategy_unify_china
         add_modifier = {
         name = warlord_policy_military
         years = 20
@@ -1009,6 +1005,8 @@ china_events.7 = { #Policy choice
 
     option = {
         name = china_events.7.b #Economic effort
+        set_variable = warlord_state
+        set_strategy = ai_strategy_unify_china
         add_modifier = {
         name = warlord_policy_economy
         years = 20
@@ -1039,6 +1037,8 @@ china_events.7 = { #Policy choice
     
     option = {
         name = china_events.7.c #Political effort
+        set_variable = warlord_state
+        set_strategy = ai_strategy_unify_china
         add_modifier = {
         name = warlord_policy_politics
         years = 20
@@ -1069,6 +1069,8 @@ china_events.7 = { #Policy choice
 
     option = {
         name = china_events.7.e #Communist effort
+        set_variable = warlord_state
+        set_strategy = ai_strategy_unify_china
         add_modifier = {
         name = warlord_policy_communism
         years = 20
@@ -1240,6 +1242,10 @@ china_events.11 = { #China reunification
     option = {
 		name = china_events.11.a
         default_option = yes
+        remove_modifier = warlord_policy_military
+        remove_modifier = warlord_policy_politics
+        remove_modifier = warlord_policy_economy
+        remove_modifier = warlord_policy_communism
 		add_modifier = {
 			name = modifier_century_of_triumph_technology
 			years = 20
@@ -1268,14 +1274,21 @@ china_events.11 = { #China reunification
                 days = 30
             }
         }
+        trigger_event = {
+            id = stabilization_buff_events.30
+            days = 5
+        }
         ai_chance = {
 		 base = 10
 	    }
 	}
 
 	option = {
-		default_option = yes
 		name = china_events.11.b
+        remove_modifier = warlord_policy_military
+        remove_modifier = warlord_policy_politics
+        remove_modifier = warlord_policy_economy
+        remove_modifier = warlord_policy_communism
 		add_modifier = {
 			name = modifier_century_of_triumph_politics
 			years = 20
@@ -1303,6 +1316,10 @@ china_events.11 = { #China reunification
                 id = china_events.20
                 days = 30
             }
+        }
+        trigger_event = {
+            id = stabilization_buff_events.30
+            days = 5
         }
         ai_chance = {
 		 base = 0

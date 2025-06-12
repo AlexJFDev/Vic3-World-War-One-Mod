@@ -1,5 +1,5 @@
 ﻿je_japan_expansion = {
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -24,8 +24,9 @@
     immediate = {}
 
     complete = {
+        exists = c:CHI
         army_size >= 150
-        game_date > 1930.1.1
+        game_date > 1937.1.1
         is_at_war = no
         has_law = law_type:law_military_oversight
         any_political_movement = {

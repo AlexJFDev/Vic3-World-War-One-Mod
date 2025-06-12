@@ -939,3 +939,45 @@ stabilization_buff_events.29 = {
         }
     }
 }
+
+stabilization_buff_events.30 = { 
+    type = country_event
+
+    title = stabilization_buff_events.30.t
+    desc = stabilization_buff_events.30.d
+    flavor = stabilization_buff_events.30.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.30.a
+        default_option = yes
+        trigger = { is_player = no }
+        c:CHI = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_sout_china
+            name = Warlord_peasent_levies
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_NANJING
+				count = 80
+			}
+		}
+        }
+    }
+
+    option = {
+        name = stabilization_buff_events.30.b
+    }
+}
+
+

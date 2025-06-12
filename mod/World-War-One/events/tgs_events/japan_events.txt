@@ -45,7 +45,7 @@ japan_events.16 = {#Taisho death
     desc = japan_events.16.d
     flavor = japan_events.16.f
     
-    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -88,7 +88,7 @@ japan_events.17 = {#The Showa era
     desc = japan_events.17.d
     flavor = japan_events.17.f
     
-    icon = "gfx/interface/icons/event_icons/event_waving_flag.dds"
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -173,70 +173,6 @@ japan_events.20 = {
     option = {
         name = japan_events.20.a
         default_option = yes
-        trigger = { exists = c:MCH }
-        create_diplomatic_play = {
-		  target_country = c:MCH
-          escalation = 30
-		  type = dp_make_protectorate
-	    }
-        trigger_event = { 
-           id = japan_events.29
-           years = 6
-        }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = japan_events.20.a
-        default_option = yes
-        trigger = { NOT = { exists = c:MCH } }
-        create_diplomatic_play = {
-		  target_country = c:BEI
-          escalation = 30
-		  type = dp_make_protectorate
-	    }
-        trigger_event = { 
-           id = japan_events.29
-           years = 6
-        }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = japan_events.20.b
-        trigger = { is_player = no }
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-japan_events.29 = { 
-    type = country_event
-
-    title = japan_events.29.t
-    desc = japan_events.29.d
-    flavor = japan_events.29.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = japan_events.29.a
-        default_option = yes
-        trigger = { exists = c:CHI }
         create_diplomatic_play = {
 		  target_country = c:CHI
           escalation = 30
@@ -248,21 +184,7 @@ japan_events.29 = {
     }
 
     option = {
-        name = japan_events.29.b
-        default_option = yes
-        trigger = { exists = c:BEI }
-        create_diplomatic_play = {
-		  target_country = c:BEI
-          escalation = 30
-		  type = dp_make_protectorate
-	    }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = japan_events.29.c
+        name = japan_events.20.c
         ai_chance = {
             base = 0
         }

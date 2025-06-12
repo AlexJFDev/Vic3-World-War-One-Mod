@@ -333,14 +333,14 @@ warlord_policy_military = {
     unit_army_offense_mult = 0.05
     unit_army_defense_mult = 0.05
     country_military_goods_cost_mult = -0.1
-    country_minting_mult = 15
+    country_minting_mult = 5
 }
 
 warlord_policy_economy = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
     country_production_tech_research_speed_mult = 0.2
     interest_group_ig_industrialists_pol_str_mult = 0.8
-    country_minting_mult = 15
+    country_minting_mult = 5
     state_construction_mult = 0.15
     building_group_bg_manufacturing_throughput_add = 0.1
 }
@@ -353,7 +353,7 @@ warlord_policy_politics = {
     interest_group_ig_landowners_pol_str_mult = -1
     country_agitator_slots_add = 1
     building_government_administration_throughput_add = 0.35
-    country_minting_mult = 15
+    country_minting_mult = 5
 }
 
 warlord_policy_communism = {
@@ -364,7 +364,20 @@ warlord_policy_communism = {
     interest_group_ig_landowners_pol_str_mult = -1.5
     country_agitator_slots_add = 1
     building_government_administration_throughput_add = 0.15
-    country_minting_mult = 15
+    country_minting_mult = 5
+}
+
+modifier_century_of_triumph_politics = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 25
+	state_decree_cost_mult = -0.5
+    law_enactment_chance = 0.1
+}
+
+modifier_century_of_triumph_technology = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 0.2
+	country_tech_spread_mult = 0.25
 }
 
 great_depression_effect_1 = {
@@ -779,21 +792,21 @@ unitary_stall = {
 #General Staff Laws Events Modifiers
 
 general_staff_streamlining = {
-    icon = "gfx/interface/icons/modifiers/efficiency.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     modifier = {
         country_law_enactment_success_add = 0.1
     }
 }
 
 general_staff_resistance = {
-    icon = "gfx/interface/icons/modifiers/interest_group_disapproval.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     modifier = {
         country_law_enactment_success_add = -0.1
     }
 }
 
 general_staff_stall = {
-    icon = "gfx/interface/icons/modifiers/politics_unrest.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     modifier = {
         country_law_enactment_time_mult = 0.15
         country_law_enactment_success_add = -0.05
@@ -801,14 +814,14 @@ general_staff_stall = {
 }
 
 general_staff_progress = {
-    icon = "gfx/interface/icons/modifiers/law_enactment_chance.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     modifier = {
         country_law_enactment_success_add = 0.2
     }
 }
 
 general_staff_compromise = {
-    icon = "gfx/interface/icons/modifiers/politics_compromise.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     modifier = {
         country_law_enactment_time_mult = 0.2
         country_law_enactment_success_add = 0.05
@@ -818,21 +831,21 @@ general_staff_compromise = {
 #Surveillance Laws Events Modifiers
 
 surveillance_streamlining = {
-    icon = "gfx/interface/icons/modifiers/efficiency.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     modifier = {
         country_law_enactment_success_add = 0.1
     }
 }
 
 surveillance_resistance = {
-    icon = "gfx/interface/icons/modifiers/interest_group_disapproval.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     modifier = {
         country_law_enactment_success_add = -0.1
     }
 }
 
 surveillance_stall = {
-    icon = "gfx/interface/icons/modifiers/politics_unrest.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     modifier = {
         country_law_enactment_time_mult = 0.15
         country_law_enactment_success_add = -0.05
@@ -840,14 +853,14 @@ surveillance_stall = {
 }
 
 surveillance_progress = {
-    icon = "gfx/interface/icons/modifiers/law_enactment_chance.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     modifier = {
         country_law_enactment_success_add = 0.2
     }
 }
 
 surveillance_compromise = {
-    icon = "gfx/interface/icons/modifiers/politics_compromise.dds"
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     modifier = {
         country_law_enactment_time_mult = 0.2
         country_law_enactment_success_add = 0.05

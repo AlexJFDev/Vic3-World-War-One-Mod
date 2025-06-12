@@ -1,4 +1,4 @@
-﻿je_warlord_china = { #TGS version
+﻿je_warlord_china = {
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	group = je_group_historical_content
@@ -60,5 +60,50 @@
 	}
 
 	weight = 10000
+	should_be_pinned_by_default = yes
+}
+
+je_reunify_china = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/invention_icons/wargaming.dds"
+
+	group = je_group_foreign_affairs
+
+	modifiers_while_active = {
+		modifier_chinese_warlord_era
+	}
+
+	is_shown_when_inactive = {
+		has_global_variable = china_shatters
+		OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:yue
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = china_shattered_tt
+			has_global_variable = china_shatters
+		}
+		OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:yue
+		}
+	}
+
+	complete = {
+		country_rank >= rank_value:major_power
+		owns_entire_state_region = STATE_NANJING
+	}
+	
+	on_complete = {
+		trigger_event = { id = china_events.11 popup = yes }
+		remove_global_variable = china_shatters
+	}
+		
+	weight = 1000
 	should_be_pinned_by_default = yes
 }
