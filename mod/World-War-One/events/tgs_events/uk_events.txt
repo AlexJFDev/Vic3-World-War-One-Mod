@@ -24,19 +24,6 @@ uk_events.4 = {#Maritz Rebellion
               activate_law = law_type:law_national_militia
             }
         }
-        s:STATE_EASTERN_CAPE = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SAF
-			    owner = {
-				  OR = {
-					c:SAF = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:MRB
-            }
-        }
         c:MRB = {
         create_character = {
             first_name = Salomon
