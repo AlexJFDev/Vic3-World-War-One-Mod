@@ -468,7 +468,8 @@ PER = { Persia
 		priority = 1
 
 		trigger = {
-			scope:actor = {
+			exists = scope:actor
+			scope:actor ?= {
 				has_variable = pahlevi_takeover
 			}
 		}
