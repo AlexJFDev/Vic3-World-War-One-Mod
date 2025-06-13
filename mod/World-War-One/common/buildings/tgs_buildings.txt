@@ -1,0 +1,157 @@
+building_urban_center = {
+	building_group = bg_service
+	icon = "gfx/interface/icons/building_icons/urban_center.dds"
+	city_type = city
+	residence_points_per_level = 0
+	
+	unlocking_technologies = { 
+		urbanization
+	}
+	
+	production_method_groups = {
+		pmg_amenities
+		pmg_restaurants
+		pmg_street_lighting
+		pmg_public_transport
+		pmg_urban_clergy
+	}
+	
+	buildable = no
+	expandable = no
+	downsizeable = no
+	can_switch_owner = no
+	
+	terrain_manipulator = urban_city
+	
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_skyscraper = {
+
+	building_group = bg_skyscraper
+
+	city_type = city
+
+	levels_per_mesh = 1
+
+	enable_air_connection = yes
+
+	override_centerpiece_mesh = yes
+	centerpiece_mesh_weight = 2
+
+    unlocking_technologies = {
+		elevator
+	}
+
+	expandable = yes
+
+	downsizeable = no
+
+	production_method_groups = {
+		pmg_base_building_skyscraper
+		pmg_airship_mooring_post
+	}
+
+	icon = "gfx/interface/icons/building_icons/skyscraper.dds"
+
+	required_construction = construction_cost_monument
+
+    possible = {
+		OR = { 
+			is_incorporated = yes 
+			is_treaty_port = yes 
+		}
+		any_scope_building = {
+			is_building_type = building_urban_center
+				level >= 200
+		}
+	}
+	
+	can_build_private = {
+		always = no
+	}	
+	
+	ai_value = 200
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_shipyards = {
+	building_group = bg_shipyards
+	icon = "gfx/interface/icons/building_icons/shipyards.dds"
+	city_type = port
+	downsizeable = no
+	
+	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
+	
+	unlocking_technologies = {
+		navigation
+	}
+
+	production_method_groups = {
+		pmg_base_building_shipyards
+	}
+
+	required_construction = construction_cost_high
+	
+	potential = {
+		is_coastal = yes
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
+}
+
+building_military_shipyards = {
+	building_group = bg_military_shipyards
+	icon = "gfx/interface/icons/building_icons/military_shipyards.dds"
+	city_type = port
+	downsizeable = no
+	
+	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
+	
+	unlocking_technologies = {
+		admiralty
+	}
+
+	production_method_groups = {
+		pmg_military_base
+	}
+
+	required_construction = construction_cost_big
+	
+	potential = {
+		is_coastal = yes
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
+}
+
+building_naval_base = {
+	building_group = bg_navy
+	recruits_combat_units = yes
+	city_type = port
+	levels_per_mesh = 25
+	
+	has_max_level = yes
+	
+	icon = "gfx/interface/icons/building_icons/naval_base.dds"
+	naval = yes
+	unlocking_technologies = { admiralty }
+	
+	production_method_groups = {
+		pmg_naval_theory
+	}
+	
+	required_construction = construction_cost_medium
+	
+	# Can only build naval bases on the coast
+	potential = {
+		is_coastal = yes
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_military.dds"
+}
