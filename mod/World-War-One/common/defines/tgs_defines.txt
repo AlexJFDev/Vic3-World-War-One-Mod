@@ -7,15 +7,7 @@ NPolitics = {
     DEFAULT_LAW_ACTIVATION_DATE = "1913.6.28"
 }
 
-NEconomy = {
-    TRADE_ROUTE_AUTO_INCREASE_LOW_PRODUCTIVITY_THRESHOLD = 4 # If trade route's productivity would drop below this, don't automatically increase its level (regardless of total revenue)
-	TRADE_ROUTE_AUTO_INCREASE_HIGH_PRODUCTIVITY_THRESHOLD = 5 # If trade route's productivity is above this, it's always fine to automatically increase its level (regardless of total revenue)
-}
-
 NMilitary = {
-	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.04 	# The minimum percentage of manpower a unit can lose each week due to attrition
-	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
-    BASE_BATTALION_CONVOY_COST = 20				# Cost in convoys per Battalion for shipping lanes
     DEFAULT_ORDER_GENERAL = "defend"		    # Default order for generals
 }
 
@@ -32,5 +24,4 @@ NWar = {
     WAR_EXHAUSTION_KIA_FACTOR = 1.5 # Scaled by casualties compared to total manpower
 	WAR_EXHAUSTION_KIA_BASE_MULTIPLIER = 0.1 # War Exhaustion from casualties is always multiplied by at least this
 	WAR_EXHAUSTION_TURMOIL_FACTOR = 2.5 # At 100% turmoil
-	MAX_SIMULTANEOUS_BATTLES = 3 # Allows to spawn up to MAX_SIMULTANEOUS_BATTLES as long as you have that many generals with advance orders.
 }
