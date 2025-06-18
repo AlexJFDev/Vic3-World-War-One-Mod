@@ -1,8 +1,46 @@
 ﻿namespace = great_war_initiation_events
 
+#Emperor decides if Franz goes to Sarajevo
+great_war_initiation_events.25 = { # Triggered by global on June 20th. 
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/franz_ferdinand_assasination.dds"
+    }
+
+    title = great_war_initiation_events.25.t
+    desc = great_war_initiation_events.25.d
+    flavor = great_war_initiation_events.25.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = { # Franz goes to Sarajevo
+        name = great_war_initiation_events.25.a
+        default_option = yes
+        trigger_event = { 
+            id = great_war_initiation_events.1
+            days = 5
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = { # It's too dangerous ...
+        name = great_war_initiation_events.25.b
+        default_option = yes
+        
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
 # Archduke Assassinated
 ## Austrian Event
-great_war_initiation_events.1 = { # Triggered by global on June 28th. 
+great_war_initiation_events.1 = { 
     type = country_event
     placement = root
     
@@ -137,6 +175,24 @@ great_war_initiation_events.3 = { # Triggered by event 1 to happen on July 5th
             }
         }
     }
+    option = { # Demand an apology
+        name = great_war_initiation_events.3.b
+        trigger = { has_law = law_type:law_military_oversight }
+        ai_chance = {
+            base = 0
+        }
+        add_modifier = {
+            name = angry_military_modifier
+            years = 5
+            is_decaying = yes
+        }
+        c:SER = {
+            trigger_event = { 
+                id = great_war_initiation_events.5 
+                days = 5
+            }
+        }
+    }
 }
 
 # Vienna demands an investigation
@@ -219,6 +275,9 @@ great_war_initiation_events.4 = {
             is_decaying = yes
         }
         }
+        c:AUS.power_bloc ?= {
+		   add_leverage = { target = c:SER value = 150 }
+	    }
     }
 }
 
@@ -262,7 +321,10 @@ great_war_initiation_events.5 = {
                 }
             }
         }
-        c:AUS = { set_variable = central_powers_participant }
+        c:AUS = { 
+            set_variable = central_powers_participant 
+            remove_modifier = angry_military_modifier
+        }
         c:SER = { set_variable = entente_participant }
         c:SER = {
             add_modifier = {
@@ -288,13 +350,6 @@ great_war_initiation_events.5 = {
         name = great_war_initiation_events.5.b
         ai_chance = {
             base = 1
-        }
-        c:AUS = {
-        add_modifier = {
-            name = angry_elites_1_modifier
-            years = 5
-            is_decaying = yes
-        }
         }
     }
 }
@@ -386,12 +441,29 @@ great_war_initiation_events.7 = {
                 days = 5
             }
         }
-        c:GER = {
-        add_modifier = {
-            name = angry_elites_3_modifier
-            years = 5
-            is_decaying = yes
+        C:AUS = {
+        change_relations = { 
+				country = c:GER
+				value = -60
+			}
         }
+    }
+    option = { # Do nothing
+        name = great_war_initiation_events.7.b
+        trigger = { has_law = law_type:law_military_oversight }
+        ai_chance = {
+            base = 0
+        }
+        c:AUS = {
+            trigger_event = { 
+                id = great_war_initiation_events.9
+                days = 5
+            }
+        }
+        add_modifier = {
+            name = angry_military_modifier
+            years = 10
+            is_decaying = yes
         }
         C:AUS = {
         change_relations = { 
@@ -512,12 +584,10 @@ great_war_initiation_events.8 = {
         ai_chance = {
             base = 0
         }
-        c:RUS = {
         add_modifier = {
             name = angry_elites_2_modifier
             years = 5
             is_decaying = yes
-        }
         }
     }
 }
@@ -551,12 +621,10 @@ great_war_initiation_events.9 = {
 			}
             end_play = true
 		}
-        c:AUS = {
         add_modifier = {
             name = angry_elites_1_modifier
             years = 5
             is_decaying = yes
-        }
         }
     }
     option = { # Fight alone
@@ -860,12 +928,17 @@ great_war_initiation_events.13 = {
         ai_chance = {
             base = 0
         }
-        c:GER = {
+    }
+    option = { # Leave France alone
+        name = great_war_initiation_events.13.b
+        trigger = { has_law = law_type:law_military_oversight }
+        ai_chance = {
+            base = 0
+        }
         add_modifier = {
             name = angry_military_modifier
-            years = 5
+            years = 10
             is_decaying = yes
-        }
         }
     }
 }
@@ -991,12 +1064,18 @@ great_war_initiation_events.14 = {
         ai_chance = {
             base = 0
         }
-        c:GER = {
-            add_modifier = {
-                name = angry_military_modifier
-                years = 5
-                is_decaying = yes
-            }
+    }
+
+    option = { # Do nothing
+        name = great_war_initiation_events.14.c
+        trigger = { has_law = law_type:law_military_oversight }
+        ai_chance = {
+            base = 0
+        }
+        add_modifier = {
+            name = angry_military_2_modifier
+            years = 10
+            is_decaying = yes
         }
     }
 }
