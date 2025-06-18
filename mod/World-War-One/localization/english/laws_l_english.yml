@@ -1,13 +1,6 @@
 ﻿l_english:
   
   # Leader Ideologies
- 
- ideology_rooseveltian_progressivism:0 "Rooseveltian Progressivist"
- ideology_rooseveltian_progressivism_desc:0 "A reformism movement aiming to improving the human condition through government regulation and social protections. To achieve those goals, the Rooseveltian branch advocates for more regulations of capitalism."
-
- ideology_wilsonian_progressivism:0 "Wilsonian Progressivist"
- ideology_wilsonian_progressivism_desc:0 "A reformism movement aiming to improving the human condition through government regulation and social protections. The Wilsonian branch implies less regulation of the economy than the Rooseveltian branch."
-
  ideology_moderate:0 "Moderate"
  ideology_moderate_desc:0 "#lore This leader is considered a moderate in their Interest Group, with no particular ideology of their own.#!"
  
@@ -17,8 +10,8 @@
  ideology_traditionalist_minoritarian: "Minoritarian Traditionalist"
  ideology_traditionalist_minoritarian_desc:0 "#lore This leader believes in maintaining traditional customs, viewing them as an extension of natural laws. Whilst their country remains under the rule of a different religion, they will oppose imposing the state religion upon the populace. #!"
 
- ideology_atheist:1 "Nihilist"
- ideology_atheist_desc:1 "#lore This leader prioritizes the questioning and overturning of traditionalist social order and institutions at all costs, seeking to clear the ground for a comprehensively revolutionary society. #!"
+ ideology_nihilist: "Nihilist"
+ ideology_nihilist_desc: "#lore This leader prioritizes the questioning and overturning of traditionalist social order and institutions at all costs, seeking to clear the ground for a comprehensively revolutionary society. #!"
 
  ideology_republican_leader:0 "Republican"
  ideology_republican_leader_desc:0 "#lore This leader seeks to establish a republic ruled by elected officials. #!"
@@ -78,6 +71,9 @@
 
  ideology_paternalistic:0 "Paternalistic"
  ideology_paternalistic_desc:0 "#lore This group has little faith in the populus attempting to govern itself, believing they need the guidance of a traditional aristocracy.#!"
+
+ ideology_magnatial: "Magnatial"
+ ideology_magnatial_desc:0 "#lore This group has a long tradition of parliamentary governance, favoring cooperation between the monarchy and an elected chamber dominated by a landed elite.#!"
   
  ideology_patriarchal:0 "Patriarchal"
  ideology_patriarchal_desc:0 "#lore This group believes men should have political authority and that women should obey their fathers and husbands.#!"
@@ -207,39 +203,99 @@
  liberal_and_egalitarian_amended_tt: "The [GetIdeology('ideology_liberal').GetName] and [GetIdeology('ideology_egalitarian').GetName] [Concept('concept_ideology','$concept_ideologies$')]' stances on the $lawgroup_rights_of_women$ will change"
 
  # Movement Ideologies
+ ideology_anti_slavery_movement: "$ideology_anti_slavery$"
+ ideology_anti_slavery_movement_desc: "#lore This movement abhors slavery and views it as a feature of a barbarous past.#!"
 
- ideology_royalist_movement: "Royalist"
- ideology_royalist_movement_desc: "#lore This group's loyalties are to the monarchy and its rightful ruler.#!"
+ ideology_pro_slavery_movement: "$ideology_pro_slavery$"
+ ideology_pro_slavery_movement_desc: "#lore This movement views slavery as a necessary part of a well-functioning society, and supports the institutions that uphold it.#!"
 
  ideology_absolutist_movement: "Absolutist"
- ideology_absolutist_movement_desc: "#lore This group is loyal to the institution of the monarchy, and supports vesting it with absolute power.#!"
+ ideology_absolutist_movement_desc:1 "#lore This movement is loyal to the institution of the monarchy, and supports vesting it with absolute power.#!"
 
- ideology_anarchist_movement: "Anarchist"
- ideology_anarchist_movement_desc: "#lore This group seeks the abolition of hierarchy, authority and the state, leaving people to govern themselves. #!"
+ ideology_royalist_movement: "Royalist"
+ ideology_royalist_movement_desc:1 "#lore This movement's loyalties are to the monarchy and its rightful ruler.#!"
+
+ ideology_proletarian_movement: "$ideology_proletarian$"
+ ideology_proletarian_movement_desc: "#lore This movement views politics through the lens of class struggle, supporting better conditions and increased political influence for workers.#!"
+
+ ideology_socialist_movement: "$ideology_socialist$"
+ ideology_socialist_movement_desc: "#lore This movement supports workers' ownership of the means of production and the dismantling of the capitalist system.#!"
 
  ideology_communist_movement: "Communist"
- ideology_communist_movement_desc: "#lore This group believes in the working class seizing political power through whatever means necessary. #!"
+ ideology_communist_movement_desc:1 "#lore This movement believes in the working class seizing political power through whatever means necessary.#!"
+
+ ideology_anarchist_movement: "Anarchist"
+ ideology_anarchist_movement_desc:1 "#lore This movement seeks the abolition of hierarchy, authority and the state, leaving people to govern themselves.#!"
 
  ideology_vanguardist_movement: "Vanguardist"
- ideology_vanguardist_movement_desc: "#lore This group believes in achieving a socialist society through a vanguard party of dedicated radicals. #!"
+ ideology_vanguardist_movement_desc:2 "#lore This movement seeks to achieve a socialist society through a revolution headed by a vanguard party of dedicated radicals.#!"
 
- ideology_radical_movement: "Radical"
- ideology_radical_movement_desc:1 "#lore This group strives for radical liberal reforms advancing democratic ideals. #!"
+ ideology_fascist_movement: "$ideology_fascist$"
+ ideology_fascist_movement_desc: "#lore This movement seeks the establishment of a totalitarian state founded upon corporatist principles, and the revival of perceived traditional, authoritarian values in a modern context.#!"
+
+ ideology_corporatist_movement: "$ideology_corporatist$"
+ ideology_corporatist_movement_desc: "#lore This movement supports the resolution of class conflict through concessions from the upper class and collaboration between different social groups.#!"
 
  ideology_liberal_movement: "Liberal"
- ideology_liberal_movement_desc: "#lore This group values the institution of democracy, and supports guaranteeing essential freedoms for citizens. #!"
+ ideology_liberal_movement_desc:1 "#lore This movement values the institution of democracy, and supports guaranteeing essential freedoms for citizens. #!"
+ 
+ ideology_radical_movement: "Radical"
+ ideology_radical_movement_desc:2 "#lore This movement strives for radical liberal reforms advancing democratic ideals. #!"
+
+ ideology_nihilist_movement: "$ideology_nihilist$"
+ ideology_nihilist_movement_desc: "#lore This movement prioritizes the questioning and overturning of traditionalist social order and institutions at all costs, seeking to clear the ground for a comprehensively revolutionary society.#!"
+ 
+ ideology_positivist_movement: "$ideology_positivist$"
+ ideology_positivist_movement_desc: "#lore This movement supports a society founded upon technocratic and anticlericalist lines, disdaining both the arbitrary power of monarchs and the fickle whims of the public.#!"
+
+ ideology_land_reformer_movement: "$ideology_land_reformer$"
+ ideology_land_reformer_movement_desc: "#lore This movement is committed to breaking the power of large landowners, and redistributing land to be worked by the common people.#!"
+
+ ideology_feminist_movement: "$ideology_feminist$"
+ ideology_feminist_movement_desc: "#lore This movement holds that women are equal to men, and strives for the extension of their rights as citizens.#!"
+
+ ideology_reactionary_movement: "$ideology_reactionary$"
+ ideology_reactionary_movement_desc: "#lore This movement seeks to restore a past, real or imagined, where just kings ruled over a uniform society.#!"
+
+ ideology_modernizer_movement: "$ideology_modernizer$"
+ ideology_modernizer_movement_desc: "#lore This movement is strongly invested in modernizing and centralizing the nation under rational lines.#!"
+
+ ideology_traditionalist_movement: "$ideology_traditionalist$"
+ ideology_traditionalist_movement_desc: "#lore This movement seeks to maintain traditional customs, viewing them as an extension of natural laws.#!"
+ 
+ ideology_traditionalist_minoritarian_movement: "$ideology_traditionalist_minoritarian$"
+ ideology_traditionalist_minoritarian_movement_desc: "#lore This movement seeks to advance the station of their religion within society, both protecting its followers from discrimination and seeking to uphold its traditional customs.#!"
+
+ ideology_ethno_nationalist_movement: "$ideology_ethno_nationalist$"
+ ideology_ethno_nationalist_movement_desc: "#lore This movement desires a nation defined on ethnic grounds, within which the supremacy of the dominant ethnicity is legally enshrined.#!"
 
  ideology_pluralist_movement_1: "Pluralist"
- ideology_pluralist_movement_1_desc: "#lore This group wishes to safeguard their cultural traditions, identity and language. #!"
+ ideology_pluralist_movement_1_desc:1 "#lore This movement wishes to safeguard their cultural traditions, identity and language. #!"
 
  ideology_pluralist_movement_2: "$ideology_pluralist_movement_1$"
- ideology_pluralist_movement_2_desc: "$ideology_pluralist_movement_1_desc$"
+ ideology_pluralist_movement_2_desc:1 "$ideology_pluralist_movement_1_desc$"
 
  ideology_pluralist_movement_3: "$ideology_pluralist_movement_1$"
- ideology_pluralist_movement_3_desc: "$ideology_pluralist_movement_1_desc$"
+ ideology_pluralist_movement_3_desc:1 "$ideology_pluralist_movement_1_desc$"
 
  ideology_pluralist_movement_4: "$ideology_pluralist_movement_1$"
- ideology_pluralist_movement_4_desc: "$ideology_pluralist_movement_1_desc$"
+ ideology_pluralist_movement_4_desc:1 "$ideology_pluralist_movement_1_desc$"
+
+ ideology_sovereignist_movement: "$ideology_sovereignist$"
+ ideology_sovereignist_movement_desc: "#lore This movement opposes oppressive measures imposed upon their nation by colonial authorities, and seeks to advance policies that serve the ends of national self-governance.#!"
+
+ ideology_utilitarian_movement: "$ideology_utilitarian_millian$"
+ ideology_utilitarian_movement_desc: "#lore This movement supports codifying and rationalizing government functions in order to promote the common good.#!"
+
+ ideology_orleanist_movement: "$ideology_orleanist$"
+ ideology_orleanist_movement_desc: "#lore This movement supports the house of Orléans' claim to the French throne, desiring a constitutional order under a restrained monarch.#!"
+
+ ideology_bonapartist_movement: "$ideology_bonapartist$"
+ ideology_bonapartist_movement_desc: "#lore This movement supports the restoration of a Bonaparte to the French throne, and a new Emperor to lead France into a new era of unquestioned might.#!"
+
+ ideology_legitimist_movement: "$ideology_legitimist$"
+ ideology_legitimist_movement_desc: "#lore This movement yearns for the time of the French kings of old, before the Reign of Terror sullied everything.#!"
+
 
   # Government Principles group
  lawgroup_governance_principles:0 "Governance Principles"
@@ -286,40 +342,6 @@
  law_professional_army:0 "Professional Army"
  law_professional_army_desc:0 "The army consists of well-trained, professional regulars."
   
-  #BPM Centralization
- lawgroup_centralization:0 "Centralization"
- lawgroup_centralization_desc:0 "Laws that dictate the power balance between the central government and regional governments."
- law_unitary:0 "Unitary"
- law_unitary_desc:0 "The central state has the monopole over every aspect of the country’s organization."
- law_devolved:0 "Devolved"
- law_devolved_desc:0 "The central states hold the power, but delegates some of the decision making and organization to the regional entities."
- law_federated:0 "Federated"
- law_federated_desc:0 "The regional entities are granted the right to decide most of their legislation. The federal state holds the executive powers, but must rules with the regions’ approbation."
- law_confederated:0 "Confederated"
- law_confederated_desc:0 "The country is bounded by the union of regional and independent political states. The central state only manages the essential policies of the union."
- law_ad_hoc_centralization:0 "Patchwork Governance"
- law_ad_hoc_centralization_desc:0 "This polity's administration has an inconsistent, sometimes contradictory set of policies regarding the autonomy and privileges of various regions."
-
- #TGS Military Governance
- lawgroup_military_governance:0 "Military Governance"
- lawgroup_military_governance_desc:0 "Laws that dictate how independant is the general staff from the government."
- law_subordinate_general_staff:0 "Subordinate General Staff"
- law_subordinate_general_staff_desc:0 "The general staff operates under the surveillance and rule of the government."
- law_independant_general_staff:0 "Independent General Staff"
- law_independant_general_staff_desc:0 "The general staff operates and can launch operations independantly from the government's will."
- law_military_oversight:0 "Military Oversight of Government"
- law_military_oversight_desc:0 "The general staff approves or reject the nominations of ministers."
-
- #TGS Surveillance
- lawgroup_surveillance:0 "Surveillance"
- lawgroup_surveillance_desc:0 "Laws that regulates the intelligence agencies. They are tasked to protect and extend the powers of the state locally and abroad."
- law_no_agencies:0 "No Agencies"
- law_no_agencies_desc:0 "The State relies only on it's police and home affairs means to deal with foreign and internal threats."
- law_foreign_counterintelligence:0 "Foreign Counter-Intelligence"
- law_foreign_counterintelligence_desc:0 "Intelligence agencies mainly focuses on foreign threats and the extension of the State's influence abroad."
- law_surveillance_state:0 "Surveillance State"
- law_surveillance_state_desc:0 "Intelligence agencies are allowed to operate both locally and abroad, to the expanse of civil liberties."
-
   # Distribution of Power group
  lawgroup_distribution_of_power:0 "Distribution of Power"
  lawgroup_distribution_of_power_desc:0 "How political power is distributed. Determines who the Head of State is accountable to."
@@ -458,6 +480,9 @@
  law_isolationism_desc:0 "An economy focused on supplying the nation's needs internally, while keeping out of the affairs of others."
  law_mercantilism:0 "Mercantilism"
  law_mercantilism_desc:0 "An export-focused economy with an emphasis on keeping a positive current account and competing with other nations."
+ law_canton_system: "Canton System"
+ law_canton_system_desc: "A variant of $law_isolationism$ where trade is only permitted in a single coastal state."
+ canton_system_trade_center_trigger_tt: "Under the [GetLawType('law_canton_system').GetName] [concept_law], Trade Centers can only be constructed up to level #v 50#! in #v $STATE_GUANGDONG$#!"
 
   # Taxation Group
  lawgroup_taxation:0 "Taxation"
@@ -624,249 +649,6 @@
  pm_publicly_traded_plantation: "Publicly Traded"
  pm_government_run_plantation: "Government Run"
 
- 
-
- # Localization for Confederated Law Events
- # Advance Event
- centralization_laws.1.t:0 "To ensure stability"
- centralization_laws.1.d:0 "Troubling times require ambitious changes"
- centralization_laws.1.f:0 "To stabilize our regime, it is nescessary to let the power reside over regionnal entities. A central state often draws the wrath of his people. Regionnal entities better knows and provides for them, letting the people choose their local policies. By allowing this, we will greatly limit the possibilies of armed insurections in our nation."
- centralization_laws.1.a:0 "The best way to pacify"
-
- # Debate Event
- centralization_laws.2.t:0 "Maybe a less radical approach ?"
- centralization_laws.2.d:0 "A confederation seems a bit excessive"
- centralization_laws.2.f:0 "The high degree of decentralization promised by a confederation is worrying many in the nation. Perhaphs a more balanced approach would ensure the satisfaction of many and avoid dangerous systemic restructurations of our nation's organisation. The governement should consider other degrees of decentralization, otherwise this law is unlikely to bear fruits."
- centralization_laws.2.a:0 "We need to better our arguments"
-
- # Stall Event
- centralization_laws.3.t:0 "A weaken state"
- centralization_laws.3.d:0 "A confederation will fragilise us !"
- centralization_laws.3.f:0 "The high degree of decentralization promised by a confederation is worrying many in the nation. How could we assure the well effectivness of our economy if all states have different legislations. More importantly, how could we make all the states agreed on vital matters like war ?"
- centralization_laws.3.a:0 "Their concerns are spreading like wildfires"
-
- # Localization for Federated Law Events
- # Advance Event
- centralization_laws.4.t:0 "Regionnal politics"
- centralization_laws.4.d:0 "The state must recognize regionnal politics"
- centralization_laws.4.f:0 "As debates are ongoing, many regionnal figures have stated the importance of respecting the nation's regionnal political particularities. The centralised legislation often overlook important regionnal traditions. A Federation would grant more liberties to the regions, and ensure more stability."
- centralization_laws.4.a:0 "It is a necessity"
-
- # Debate Event
- centralization_laws.5.t:0 "Power's repartition"
- centralization_laws.5.d:0 "Distribution of power among regionnal entities is causing problems"
- centralization_laws.5.f:0 "As the text progress, regionnal figures are now accusing the central states to favouring some of them, while forsaking others. The new political organisation revolving must be fair in power's repartition, but this process will take a while. Mistrust between the regionnal figures and regarding the states have only worsen since."
- centralization_laws.5.a:0 "We can only propose new distribution's alternatives"
-
- # Stall Event
- centralization_laws.6.t:0 "Power's repartition"
- centralization_laws.6.d:0 "Distribution of power among regionnal entities is causing problems"
- centralization_laws.6.f:0 "A regionnal figure has been caught briding politicians to favour their regions in the process of power distribution. This has caused havoc in our political sphere, and will greatly harm our efforts. Many politicians are now wondering if that pratice has become widespread. Mistrust between the regionnal figures and regarding the states have only worsen since."
- centralization_laws.6.a:0 "One men can screw everything"
-
- # Localization for Devolved Law Events
- # Advance Event
- centralization_laws.7.t:0 "A balanced approch"
- centralization_laws.7.d:0 "The state must deleguate"
- centralization_laws.7.f:0 "The central state cannot realistically bear all it's pregoratives alone. It must shared it's workload with some regionnal entities, which knows how to better administrate their territories than the central governement. This balanced approach will ensure that most of the interest groups are satisfied."
- centralization_laws.7.a:0 "The Leviathan must rest"
-
- # Debate Event
- centralization_laws.8.t:0 "A difficult reorganisation"
- centralization_laws.8.d:0 "The systemic reorganisation of our state is more complicated than expected"
- centralization_laws.8.f:0 "The very complex process regarding this law is provoking reluctance among political spheres. For many, it goes into contradiction with the political traditions of our nation, and is requesting too many efforts and ressources. Such changes in our nation's organization will clearly need more time to be adopted."
- centralization_laws.8.a:0 "We need to convince them"
-
- # Stall Event
- centralization_laws.9.t:0 "A difficult reorganisation"
- centralization_laws.9.d:0 "The systemic reorganisation of our state is more complicated than expected"
- centralization_laws.9.f:0 "The very complex process regarding this law is provoking reluctance among political spheres. For many, it goes into contradiction with the political traditions of our nation, and is requesting too many efforts and ressources. Such changes in our nation's organization will clearly need more time to be adopted."
- centralization_laws.9.a:0 "We'll retry next time"
-
- # Localization for Unitary Law Events
- # Advance Event
- centralization_laws.10.t:0 "The Leviathan must rule"
- centralization_laws.10.d:0 "The nation requires a more powerfull state in case of trouble times"
- centralization_laws.10.f:0 "To concentrate the power in the hands of the central state will allow it to operate more effectivly for long-term planning and legislation changes. This concentration is nescessary for better advancements regarding economy, politics and foreign policies. When troubling times arise, we will be better prepared united than divided."
- centralization_laws.10.a:0 "The regions will follow the lead"
-
- # Debate Event
- centralization_laws.11.t:0 "Regionnal cultural arguments"
- centralization_laws.11.d:0 "Regions are contesting their political losses"
- centralization_laws.11.f:0 "Provincial leaders are voicing concerns about the loss of regional autonomy, leading to debates about their roles in the new system. They demand written gurantees that certain extends of their pregoratives are kept under the new legislation. If their demands are not met, they threathen to keep sabotating the law's advancement."
- centralization_laws.11.a:0 "We must find a balance to move ahead."
-
- # Stall Event
- centralization_laws.12.t:0 "Administrative Overload"
- centralization_laws.12.d:0 "A government burdened by its own ambition"
- centralization_laws.12.f:0 "The central government is struggling to edify the new organisation of the state's apparatus, stalling the progress of the law. The new planned hierarchy requires precise implementation, or it could create instabilities. This process is greatly concerning our politicians, which have rejected our current law's proposal."
- centralization_laws.12.a:0 "We need to present a clear plan"
-
- # Localization for Centralization Laws Modifiers
- confederation_cooperation:0 "Confederation Cooperation"
- confederation_cooperation.desc:0 "Cooperation among member states is improving, facilitating the enactment of the Confederated law."
-
- confederation_divisions:0 "Confederation Divisions"
- confederation_divisions.desc:0 "Disagreements among member states are delaying progress on the Confederated law."
-
- confederation_gridlock:0 "Confederation Gridlock"
- confederation_gridlock.desc:0 "Member states are unable to reach consensus, stalling the enactment of the Confederated law."
-
- federal_cooperation:0 "Federal Cooperation"
- federal_cooperation.desc:0 "Regions are cooperating to create a federal framework."
-
- federal_divisions:0 "Federal Divisions"
- federal_divisions.desc:0 "Regional disputes over representation and authority are slowing the Federated law."
-
- federal_gridlock:0 "Federal Gridlock"
- federal_gridlock.desc:0 "Disagreements have caused a standstill in progress toward the Federated law."
- 
- devolution_progress:0 "Regional Autonomy Celebrated"
- devolution_progress.desc:0 "Regional autonomy celebrations are advancing the Devolved law."
-
- devolution_tensions:0 "Unequal Benefits"
- devolution_tensions.desc:0 "Concerns about uneven benefits are causing tensions over the Devolved law."
-
- devolution_stall:0 "Central Resistance"
- devolution_stall.desc:0 "The central government's resistance is stalling progress on the Devolved law."
-
- unitary_efficiency:0 "Efficient Centralization"
- unitary_efficiency.desc:0 "Efforts to centralize governance are improving efficiency, accelerating the Unitary law."
-
- unitary_pushback:0 "Provincial Discontent"
- unitary_pushback.desc:0 "Provincial resistance to centralization is delaying the Unitary law."
-
- unitary_stall:0 "Administrative Overload"
- unitary_stall.desc:0 "Administrative challenges are stalling progress on the Unitary law."
-
- #Localization for general saff laws
-
- general_staff_laws.1.t:0 "Streamlining the Subordinate Staff"
- general_staff_laws.1.d:0 "The reorganization is proceeding efficiently"
- general_staff_laws.1.f:0 "A clear and subordinated chain of command is the backbone of operational success and political symbiosis. The legislative corp and the general staff agrees that it is nescessary for the overhaul stability of the nation."
- general_staff_laws.1.a:0 "Glad we all agree."
-
- general_staff_laws.2.t:0 "Debate Over Subordination"
- general_staff_laws.2.d:0 "Conflicting voices in the military arises"
- general_staff_laws.2.f:0 "Blind obedience is no substitute for tactical wisdom. Officers are arguing over the implications of subordination and whether it undermines the army's initiative."
- general_staff_laws.2.a:0 "Let’s find a compromise."
-
- general_staff_laws.3.t:0 "Stalled Staff Discussions"
- general_staff_laws.3.d:0 "Delays and disputes have arised"
- general_staff_laws.3.f:0 "The reorganization is being extensivly monitored by the general staff, delaying the process. They claim that those are nescessary to not undermine the army's new organization, but ministers are accusing them to spoiling the enactment."
- general_staff_laws.3.a:0 "Unfortunate."
-
- general_staff_laws.4.t:0 "Efficient Independent Operations"
- general_staff_laws.4.d:0 "Good arguments"
- general_staff_laws.4.f:0 "Independence allows excellence and rapid execution. The officiers have pushed their arguments sucessfully for a more agile and efficient operational planning among the political scene."
- general_staff_laws.4.a:0 "Glad they heard us."
-
- general_staff_laws.5.t:0 "Autonomy Contested"
- general_staff_laws.5.d:0 "Fears of overstepping arise"
- general_staff_laws.5.f:0 "The sword must remain under the hand of the state. Concerns have raised among the political scene that an independent general staff may act beyond political control."
- general_staff_laws.5.a:0 "Compromises must be made then."
-
- general_staff_laws.6.t:0 "Political Inertia"
- general_staff_laws.6.d:0 "Too many chiefs, not enough orders followed"
- general_staff_laws.6.f:0 "A lack of coordination and unclear jurisdictions are stalling reforms. The legislative corp insists on resolving those issues before pursuing the enactment."
- general_staff_laws.6.a:0 "So much time lost ..."
-
- general_staff_laws.7.t:0 "Oversight Leads to Streamlining"
- general_staff_laws.7.d:0 "Accountability sharpens the sword"
- general_staff_laws.7.f:0 "The general staff has made it's case to the political scene : a new oversight mechanisms would eliminate redundancies and greatly improve the army's performance."
- general_staff_laws.7.a:0 "Anything for the army."
-
- general_staff_laws.8.t:0 "Oversight Debated"
- general_staff_laws.8.d:0 "No one wants to give up power"
- general_staff_laws.8.f:0 "The merits and risks of placing the military under stricter oversight are hotly debated. Officers argues they need more power during conflicts, as they now better than politicians. However, the governement wants to retain some control over the high ranking officiers."
- general_staff_laws.8.a:0 "A compromise must be reached."
-
- general_staff_laws.9.t:0 "Oversight Logjam"
- general_staff_laws.9.d:0 "The government fears army's influence"
- general_staff_laws.9.f:0 "The new legislation would retain the government rights inspect the army doings. However, many politicians estimates it would only be dull paperwork, without any means to counter the general staff's influence."
- general_staff_laws.9.a:0 "We have to conveince them next time."
-
- #Localization for general saff laws modifiers
- 
- general_staff_streamlining:0 "General Staff Law Streamlining"
- general_staff_streamlining_desc:0 "The law is being debated successfully."
-
- general_staff_resistance:0 "General Staff Law Resistance"
- general_staff_resistance_desc:0 "Some concerns have arised during the law's debate."
-
- general_staff_stall:0 "General Staff Law Stall"
- general_staff_stall_desc:0 "The law enactment is being delayed due to the oposition concerns."
-
- general_staff_progress:0 "General Staff Law Progress"
- general_staff_progress_desc:0 "The law is being debated successfully."
-
- general_staff_compromise:0 "General Staff Law Compromise"
- general_staff_compromise_desc:0 "A compromise needs to be found to resolve tensions amid the enactment."
-
- #Localization for surveillance laws
-
- surveillance_laws.1.t:0 "Policing is Sufficient"
- surveillance_laws.1.d:0 "New measures are deemed unescessary"
- surveillance_laws.1.f:0 "The nation has for most of it's existence only relied on traditionnal means of security. Many politicians have claimed their past sucess, and sucessfully stated that surveillance agencies are a waste of the government's money."
- surveillance_laws.1.a:0 "Excactly !"
-
- surveillance_laws.2.t:0 "Lack of Surveillance Raises Concerns"
- surveillance_laws.2.d:0 "Every nations needs a guardian"
- surveillance_laws.2.f:0 ""Some interest groups are voicing discomfort with the level of state surveillance being proposed. They have stated multiple times the danger that the nation will be exposed to due to the lack of agencies."
- surveillance_laws.2.a:0 "A compromise will be necessary."
-
- surveillance_laws.3.t:0 "The Disbanding is Stalling"
- surveillance_laws.3.d:0 "A petition has been presented"
- surveillance_laws.3.f:0 "Influencial high ranking policemen and officers have signed a petition for the maintaining of the agencies. They claim that they are essential for the security of the nation, and that their disbanding would expose us to great dangers."
- surveillance_laws.3.a:0 "We'll hear their claims."
-
- surveillance_laws.4.t:0 "Faith in the Process"
- surveillance_laws.4.d:0 "Agencies have made their arguments"
- surveillance_laws.4.f:0 "A surveillance agency only focusing on foreign affairs has sucessfully been proven to not be a threat to society and the political sphere. Conveinced, and feeling unthreathened, the legislative corp has then approved the establishment of the agency."
- surveillance_laws.4.a:0 "Glad we can move on."
-
- surveillance_laws.5.t:0 "Independence Raises Eyebrows"
- surveillance_laws.5.d:0 "Politicians are unsured about the new system"
- surveillance_laws.5.f:0 "Critics warn that an independent surveillance body could become unaccountable and intrusive. Even with limited powers, some politicians have expressed cocnerns on the agencies' influence growth over time."
- surveillance_laws.5.a:0 "We’ll seek a middle ground."
-
- surveillance_laws.6.t:0 "Independence Without Direction"
- surveillance_laws.6.d:0 "Too many eyes, not enough brains."
- surveillance_laws.6.f:0 "Without the government control, the surveillance agency is struggling to coordinate with other departments and pursue it's efforts. However, the current legislative corp is not ready to grant this power to the government, fearing that it would turn the agencies into surveillance apparatus."
- surveillance_laws.6.a:0 "We need to find a proper balancing."
-
- surveillance_laws.7.t:0 "Insecurity Helping the Law Progress"
- surveillance_laws.7.d:0 "A public demand for more security arises"
- surveillance_laws.7.f:0 "Our nations remains the target of various threats, wherer locally or abroad. One of the prime duty of the state is to assure security to the people. Many members of the civil society understand that and support the new agencies legislation."
- surveillance_laws.7.a:0 "It's for the best of the nation."
-
- surveillance_laws.8.t:0 "Oversight Contested"
- surveillance_laws.8.d:0 "Human rights concerns have arised"
- surveillance_laws.8.f:0 "The push for more state monitoring has sparked friction between civilian authorities and intelligence officers. Civil rights' activists demands assurance for the respect of the human rights, including the right to privacy. On the contrary, the high ranking police officers argue that monitoring of the population is nescessary sometimes to ensure overhaul security."
- surveillance_laws.8.a:0 "Let’s compromise then."
-
- surveillance_laws.9.t:0 "Surveillance Scandal"
- surveillance_laws.9.d:0 "An activist has exposed a part of the law"
- surveillance_laws.9.f:0 "A civil right activist has presented a specific line of the new legislation to newspapers, causing even more uproar among the civil society. The line clearly grant the right to the state to monitor discussions via secret policemen among the public sphere and telephones lines. This privacy violation is causing even more reluctance to pass the new law."
- surveillance_laws.9.a:0 "We need to rework our arguments."
-
- #Localization for surveillance laws modifiers
-
- surveillance_streamlining:0 "Surveillance Law Streamlining"
- surveillance_streamlining_desc:0 "The law is being debated successfully."
-
- surveillance_resistance:0 "Surveillance Law Resistance"
- surveillance_resistance_desc:0 "Some concerns have arised during the law's debate."
-
- surveillance_stall:0 "Surveillance Law Stall"
- surveillance_stall_desc:0 "The law enactment is being delayed due to the oposition concerns."
-
- surveillance_progress:0 "Surveillance Law Progress"
- surveillance_progress_desc:0 "The law is being debated successfully."
-
- surveillance_compromise:0 "Surveillance Law Compromise"
- surveillance_compromise_desc:0 "A compromise needs to be found to resolve tensions amid the enactment."
-
  # Jacksonian Democrat
  ideology_jacksonian_democrat: "Jacksonian Democrat"
  ideology_jacksonian_democrat_desc: "This character advocates for greater public participation in government - for a certain definition of 'public'."
@@ -903,3 +685,37 @@
  # Frontier Colonization
  law_frontier_colonization: "Frontier Colonization"
  law_frontier_colonization_desc: "The wild frontiers on our borders are ripe for settlement if they can first be pacified and tamed."
+
+ #BPM Centralization
+ lawgroup_centralization:0 "Centralization"
+ lawgroup_centralization_desc:0 "Laws that dictate the power balance between the central government and regional governments."
+ law_unitary:0 "Unitary"
+ law_unitary_desc:0 "The central state has the monopole over every aspect of the country’s organization."
+ law_devolved:0 "Devolved"
+ law_devolved_desc:0 "The central states hold the power, but delegates some of the decision making and organization to the regional entities."
+ law_federated:0 "Federated"
+ law_federated_desc:0 "The regional entities are granted the right to decide most of their legislation. The federal state holds the executive powers, but must rules with the regions’ approbation."
+ law_confederated:0 "Confederated"
+ law_confederated_desc:0 "The country is bounded by the union of regional and independent political states. The central state only manages the essential policies of the union."
+ law_ad_hoc_centralization:0 "Patchwork Governance"
+ law_ad_hoc_centralization_desc:0 "This polity's administration has an inconsistent, sometimes contradictory set of policies regarding the autonomy and privileges of various regions."
+
+ #TGS Military Governance
+ lawgroup_military_governance:0 "Military Governance"
+ lawgroup_military_governance_desc:0 "Laws that dictate how independant is the general staff from the government."
+ law_subordinate_general_staff:0 "Subordinate General Staff"
+ law_subordinate_general_staff_desc:0 "The general staff operates under the surveillance and rule of the government."
+ law_independant_general_staff:0 "Independent General Staff"
+ law_independant_general_staff_desc:0 "The general staff operates and can launch operations independantly from the government's will."
+ law_military_oversight:0 "Military Oversight of Government"
+ law_military_oversight_desc:0 "The general staff approves or reject the nominations of ministers."
+
+ #TGS Surveillance
+ lawgroup_surveillance:0 "Surveillance"
+ lawgroup_surveillance_desc:0 "Laws that regulates the intelligence agencies. They are tasked to protect and extend the powers of the state locally and abroad."
+ law_no_agencies:0 "No Agencies"
+ law_no_agencies_desc:0 "The State relies only on it's police and home affairs means to deal with foreign and internal threats."
+ law_foreign_counterintelligence:0 "Foreign Counter-Intelligence"
+ law_foreign_counterintelligence_desc:0 "Intelligence agencies mainly focuses on foreign threats and the extension of the State's influence abroad."
+ law_surveillance_state:0 "Surveillance State"
+ law_surveillance_state_desc:0 "Intelligence agencies are allowed to operate both locally and abroad, to the expanse of civil liberties."
