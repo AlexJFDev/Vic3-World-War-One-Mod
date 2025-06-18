@@ -134,7 +134,7 @@
 	# USA-VEN
 	create_treaty = {
 		name = treaty_name_usa_ven_invest
-		first_country = c:VEN
+		first_country = c:VNZ
 		second_country = c:USA
 		is_draft = no
 		entered_into_force_on = 1900.1.1
@@ -142,7 +142,7 @@
 		articles_to_create = {
 			{
 				article = foreign_investment_rights
-				source_country = c:VEN
+				source_country = c:VNZ
 				target_country = c:USA
 			}
 		}
@@ -219,7 +219,7 @@
 	# USA-CHI
 	create_treaty = {
 		name = treaty_name_usa_chi_invest
-		first_country = c:BRZ
+		first_country = c:USA
 		second_country = c:CHI
 		is_draft = no
 		entered_into_force_on = 1900.1.1
@@ -248,7 +248,7 @@
 			source_country = c:USA
 			target_country = c:RMX
 			inputs = {
-				{ quantity = 30000 }
+				{ quantity = 1000 }
 			}
 		}
 	}
@@ -345,6 +345,23 @@
 					{ goods = g:sugar }
 				}
 			}
+		}
+	}
+
+	# Transit Rights Agreement for Paraguay
+	create_treaty = {
+		name = treaty_name_prg_transit_rights
+		first_country = c:PRG
+		second_country = c:BRZ
+
+		is_draft = no
+		entered_into_force_on = 1900.3.5
+		binding_period = { years = 53 }
+
+		articles_to_create = {
+			article = transit_rights
+			source_country = c:BRZ
+			target_country = c:PRG
 		}
 	}
 
@@ -714,15 +731,13 @@
 		second_country = c:FRA
 
 		is_draft = no
-		entered_into_force_on = 1836.1.1
-		binding_period = { years = 10 } # 10 years
+		entered_into_force_on = 1900.3.5
+		binding_period = { years = 25 }
 
 		articles_to_create = {
-			{
-				article = transit_rights
-				source_country = c:FRA
-				target_country = c:SWI
-			}
+			article = transit_rights
+			source_country = c:FRA
+			target_country = c:SWI
 		}
 	}
 
@@ -1008,7 +1023,7 @@
 			    source_country = c:USA
 			    target_country = c:LIB
 			    inputs = {
-				   { quantity = 8000 }
+				   { quantity = 1000 }
 			    }
 			}
 			{ 
@@ -1070,7 +1085,7 @@
 			{ 
 				article = trade_privilege
 				source_country = c:PER
-				target_country = c:LIB
+				target_country = c:RUS
 			}
 			{ article = military_access source_country = c:RUS target_country = c:PER }
 			{ article = host_power_bloc_embassy source_country = c:RUS target_country = c:PER } 
@@ -1156,7 +1171,7 @@
 				source_country = c:CHI
 				target_country = c:GBR
 			}
-			{ article = military_access source_country = c:QNG target_country = c:GBR }
+			{ article = military_access source_country = c:CHI target_country = c:GBR }
 			{
 				article = treaty_port
 				source_country = c:CHI
@@ -1187,7 +1202,7 @@
 				source_country = c:CHI
 				target_country = c:FRA
 			}
-			{ article = military_access source_country = c:QNG target_country = c:FRA }
+			{ article = military_access source_country = c:CHI target_country = c:FRA }
 			{
 				article = foreign_investment_rights
 				source_country = c:CHI
@@ -1207,13 +1222,13 @@
 		binding_period = { years = 99 }
 
 		articles_to_create = {
-			{ article = military_access source_country = c:QNG target_country = c:GER }
+			{ article = military_access source_country = c:CHI target_country = c:GER }
             {
 				article = treaty_port
-				source_country = c:MCH
+				source_country = c:CHI
 				target_country = c:GER
 				inputs = {
-					{ state = STATE_SHANDONG.region_state:CHI }
+					{ state = s:STATE_SHANDONG.region_state:CHI }
 				}
 			}
 			{
@@ -1232,16 +1247,16 @@
 
 		is_draft = no
 		entered_into_force_on = 1895.4.17
-		binding_period = { years = 99 }
+		binding_period = { years = 25 }
 
 		articles_to_create = {
-			{ article = military_access source_country = c:QNG target_country = c:JAP }
+			{ article = military_access source_country = c:CHI target_country = c:JAP }
             {
 				article = treaty_port
 				source_country = c:MCH
 				target_country = c:JAP
 				inputs = {
-					{ state = STATE_SHENGJING.region_state:MCH }
+					{ state = s:STATE_SHENGJING.region_state:MCH }
 				}
 			}
 		}
@@ -1251,7 +1266,7 @@
 	create_treaty = {
 		name = treaty_name_luso_chinese_agreement
 		first_country = c:POR
-		second_country = c:CHI
+		second_country = c:KMT
 
 		is_draft = no
 		entered_into_force_on = 1554.1.1 # Establishment of Portugese Macau
@@ -1260,16 +1275,16 @@
 		articles_to_create = {
 			{
 				article = treaty_port
-				source_country = c:CHI
+				source_country = c:KMT
 				target_country = c:POR
 				inputs = {
-					{ state = s:STATE_GUANGDONG.region_state:CHI }
+					{ state = s:STATE_GUANGDONG.region_state:KMT }
 				}
 			}
 			{
 				article = money_transfer
 				source_country = c:POR
-				target_country = c:CHI
+				target_country = c:KMT
 				inputs = {
 					{ quantity = 150 } # The rent of Macau was 500 taels, about 700 spanish dollars or 145 pounds in 1840 (based on silver prices)
 				}
@@ -1299,7 +1314,7 @@
 				source_country = c:KMT
 				target_country = c:FRA
 				inputs = {
-					{ state = STATE_GUANGDONG.region_state:KMT }
+					{ state = s:STATE_GUANGDONG.region_state:KMT }
 				}
 			}
 		}
@@ -1327,7 +1342,7 @@
 				source_country = c:KMT
 				target_country = c:GBR
 				inputs = {
-					{ state = STATE_GUANGDONG.region_state:KMT }
+					{ state = s:STATE_GUANGDONG.region_state:KMT }
 				}
 			}
 		}
@@ -1336,7 +1351,7 @@
 	# RUS-CHI
 	create_treaty = {
 		name = treaty_name_rus_chi_invest
-		first_country = c:BRZ
+		first_country = c:RUS
 		second_country = c:CHI
 		is_draft = no
 		entered_into_force_on = 1900.1.1
@@ -1353,7 +1368,7 @@
 	# JAP-CHI
 	create_treaty = {
 		name = treaty_name_jap_chi_invest
-		first_country = c:BRZ
+		first_country = c:JAP
 		second_country = c:CHI
 		is_draft = no
 		entered_into_force_on = 1895.5.12

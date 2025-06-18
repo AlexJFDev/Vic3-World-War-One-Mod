@@ -1023,20 +1023,6 @@ great_war_initiation_events.14 = {
                 days = 5
             }
         }
-        c:LUX = {
-            trigger_event = { 
-                id = great_war_initiation_events.24
-                days = 5
-            }
-            trigger_event = { 
-                id = great_war_initiation_events.24
-                days = 6
-            }
-            trigger_event = { 
-                id = great_war_initiation_events.24
-                days = 7
-            }
-        }
         add_modifier = {
             name = schlieffen_plan_2_modifier
             months = 5
@@ -1052,6 +1038,11 @@ great_war_initiation_events.14 = {
                 holder = c:GER
                 type = annex_country
                 target_country = c:BEL
+            }
+            add_war_goal = {
+                holder = c:GER
+                type = puppet
+                target_country = c:LUX
             }
         }
         c:BEL = { set_variable = entente_participant }
