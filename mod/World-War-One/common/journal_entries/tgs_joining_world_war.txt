@@ -10,6 +10,7 @@
       is_subject = no
       NOT = {
            has_global_variable = world_war_1_over
+           has_modifier = fragile_unity_modifier
            has_variable = warlord_state
 		   has_variable = entente_participant
 		   has_variable = central_powers_participant
@@ -56,6 +57,7 @@
     invalid = { 
         OR = {
           has_global_variable = world_war_1_over
+          has_variable = warlord_state
           has_variable = entente_participant
           has_variable = central_powers_participant
         }

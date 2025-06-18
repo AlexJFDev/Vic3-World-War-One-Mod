@@ -21,13 +21,13 @@ partition_1_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:FRA }
+		value = 0
+		if = {
+			limit = { root = c:FRA }
 			add = 100
 		}
-		modifier = {
-			trigger = { root = c:RUS }
+		if = {
+			limit = { root = c:RUS }
 			add = 100
 		}
 	}
@@ -54,7 +54,7 @@ partition_2_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -79,7 +79,7 @@ partition_3_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -106,7 +106,7 @@ war_rep_1_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -131,7 +131,7 @@ war_rep_2_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -156,13 +156,13 @@ war_rep_3_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:FRA }
+		value = 0
+		if = {
+			limit = { root = c:FRA }
 			add = 100
 		}
-		modifier = {
-			trigger = { root = c:RUS }
+		if = {
+			limit = { root = c:RUS }
 			add = 100
 		}
 	}
@@ -191,9 +191,9 @@ how_big_poland_1_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:FRA }
+		value = 0
+		if = {
+			limit = { root = c:FRA }
 			add = 100
 		}
 	}
@@ -220,7 +220,7 @@ how_big_poland_2_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -245,7 +245,7 @@ how_big_poland_3_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -272,9 +272,9 @@ italy_iredentist_1_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:ITA }
+		value = 0
+		if = {
+			limit = { root = c:ITA }
 			add = 100
 		}
 	}
@@ -301,7 +301,7 @@ italy_iredentist_2_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -326,7 +326,7 @@ italy_iredentist_3_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -353,7 +353,7 @@ italy_defeat_1_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -378,7 +378,7 @@ italy_defeat_2_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -403,7 +403,7 @@ italy_defeat_3_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -430,9 +430,9 @@ how_big_greece_1_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:RUS }
+		value = 0
+		if = {
+			limit = { root = c:RUS }
 			add = 100
 		}
 	}
@@ -459,7 +459,7 @@ how_big_greece_2_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -484,7 +484,7 @@ how_big_greece_3_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -511,7 +511,7 @@ arab_states_1_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -536,9 +536,9 @@ arab_states_2_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:USA }
+		value = 0
+		if = {
+			limit = { root = c:USA }
 			add = 100
 		}
 	}
@@ -565,7 +565,7 @@ arab_states_3_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -592,7 +592,7 @@ how_big_russia_1_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -617,13 +617,13 @@ how_big_russia_2_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:GBR }
+		value = 0
+		if = {
+			limit = { root = c:GBR }
 			add = 100
 		}
-		modifier = {
-			trigger = { root = c:USA }
+		if = {
+			limit = { root = c:USA }
 			add = 100
 		}
 	}
@@ -650,7 +650,7 @@ how_big_russia_3_button = {
     }
 
     ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -677,9 +677,9 @@ how_big_japan_1_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:JAP }
+		value = 0
+		if = {
+			limit = { root = c:JAP }
 			add = 100
 		}
 	}
@@ -706,7 +706,7 @@ how_big_japan_2_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -731,13 +731,13 @@ how_big_japan_3_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:USA }
+		value = 0
+		if = {
+			limit = { root = c:USA }
 			add = 100
 		}
-		modifier = {
-			trigger = { root = c:RUS }
+		if = {
+			limit = { root = c:RUS }
 			add = 100
 		}
 	}
@@ -766,7 +766,7 @@ german_colonies_1_button = {
     }
 
     ai_chance = {
-		base = 50
+		value = 50
 	}
 }
 
@@ -791,9 +791,9 @@ german_colonies_2_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:ITA }
+		value = 0
+		if = {
+			limit = { root = c:ITA }
 			add = 100
 		}
 	}
@@ -820,9 +820,9 @@ german_colonies_3_button = {
     }
 
     ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { root = c:USA }
+		value = 0
+		if = {
+			limit = { root = c:USA }
 			add = 100
 		}
 	}
