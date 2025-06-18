@@ -57,11 +57,6 @@ def generate_region_object(country_tag: str, state_tag: str, buildings: list[tup
             column_number += 5 # Data per building is 5 columns wide
             continue
 
-        if building_type not in building_types:
-            raise ValueError(f'building_type', building_type)
-        if not production_methods.issubset(production_methods_map[building_type]):
-            raise ValueError(f'production', building_type, production_methods.difference(production_methods_map[building_type]))
-
         ownership_object = ClausewitzObject()
         if owner_type == 'country':
             ownership_object.add_named_value('country', ClausewitzObject())
