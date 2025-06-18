@@ -1,0 +1,453 @@
+﻿TREATIES = {
+
+	# Entente Cordiale – UK and France (1904)
+	create_treaty = {
+		name = treaty_name_entente_cordiale
+		first_country = c:GBR
+		second_country = c:FRA
+
+		is_draft = no
+		entered_into_force_on = 1904.4.8
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+			{ article = trade_privilege source_country = c:FRA target_country = c:GBR }
+			{ article = trade_privilege source_country = c:GBR target_country = c:FRA }
+			{
+				article = foreign_investment_rights
+				source_country = c:FRA
+				target_country = c:GBR
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:GBR
+				target_country = c:FRA
+			}
+		}
+	}
+
+    # Franco-Russian Alliance (France–Russia but included here for continuity)
+	create_treaty = {
+		name = treaty_name_franco_russian_alliance
+		first_country = c:FRA
+		second_country = c:RUS
+
+		is_draft = no
+		entered_into_force_on = 1894.1.4
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+			{ article = trade_privilege source_country = c:FRA target_country = c:RUS }
+			{ article = trade_privilege source_country = c:RUS target_country = c:FRA }
+			{
+				article = foreign_investment_rights
+				source_country = c:FRA
+				target_country = c:RUS
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:RUS
+				target_country = c:FRA
+			}
+		}
+	}
+
+	# Anglo-Portuguese Alliance - GBR/POR
+	if = {
+		limit = {
+			OR = {
+				has_dlc_feature = foreign_investment
+				has_dlc_feature = mp1_treaties
+			}
+		}
+		create_treaty = {
+			name = treaty_name_anglo_portuguese_alliance
+			first_country = c:GBR
+			second_country = c:POR
+
+			is_draft = no
+			entered_into_force_on = 1834.4.22
+			binding_period = { years = 10 } # 8 years
+
+			articles_to_create = {
+				{ # Anglo-Portuguese Alliance
+					article = defensive_pact
+				}
+				{ # British Military Assistance to Portugal
+					article = military_assistance
+					source_country = c:GBR
+					target_country = c:POR
+				}
+				{ # British Economic interests in Portugal
+					article = foreign_investment_rights
+					source_country = c:POR
+					target_country = c:GBR
+				}
+				{ # British Portuguese Trade Agreement
+					article = trade_privilege
+					source_country = c:GBR
+					target_country = c:POR
+				}
+				{ # Port wine trade
+					article = goods_transfer
+					source_country = c:POR
+					target_country = c:GBR
+					inputs = {
+						{ goods = g:wine }
+						{ quantity = 20 }
+					}
+				}
+			}
+		}
+	}
+
+	#British investment to Russia
+	create_treaty = {
+		name = treaty_name_gbr_rus_invest
+		first_country = c:GBR
+		second_country = c:RUS
+
+		is_draft = no
+		entered_into_force_on = 1913.1.5
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{
+				article = foreign_investment_rights
+				source_country = c:RUS
+				target_country = c:GBR
+			}
+		}
+	}
+
+	#British investment to Argentina
+	create_treaty = {
+		name = treaty_name_gbr_arg_invest
+		first_country = c:GBR
+		second_country = c:ARG
+
+		is_draft = no
+		entered_into_force_on = 1913.1.5
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{
+				article = foreign_investment_rights
+				source_country = c:ARG
+				target_country = c:GBR
+			}
+		}
+	}
+
+    #British investment to Brazil
+	create_treaty = {
+		name = treaty_name_gbr_brz_invest
+		first_country = c:GBR
+		second_country = c:BRZ
+
+		is_draft = no
+		entered_into_force_on = 1913.1.5
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{
+				article = foreign_investment_rights
+				source_country = c:BRZ
+				target_country = c:GBR
+			}
+		}
+	}
+	
+	# French Guarantee of Belgian Independence / Not official treaty
+	create_treaty = {
+		first_country = c:FRA
+		second_country = c:BEL
+
+		is_draft = no
+		entered_into_force_on = 1831.8.8 # Date of French intervention during the Ten Days' Campaign
+		binding_period = { years = 15 } # 10 years Treaty of London
+
+		articles_to_create = {
+			{ # French Guarantee of Belgian Independence
+				article = guarantee_independence
+				source_country = c:FRA
+				target_country = c:BEL
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:BEL
+				target_country = c:FRA
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:FRA
+				target_country = c:BEL
+			}
+		}
+	}
+
+	# Anglo-Belgian Trade relationship / Not official treaty
+	if = {
+		limit = {
+			OR = {
+				has_dlc_feature = foreign_investment
+				has_dlc_feature = mp1_treaties
+			}
+		}
+		create_treaty = {
+			first_country = c:GBR
+			second_country = c:BEL
+
+			is_draft = no
+			entered_into_force_on = 1831.8.12 # End of the Ten Days' Campaign
+			binding_period = { years = 15 } # 10 years
+
+			articles_to_create = {
+				{ # Anglo-Belgian Trade Agreement
+					article = trade_privilege
+					source_country = c:GBR
+					target_country = c:BEL
+				}
+				{ # Anglo-Belgian Trade Agreement
+					article = trade_privilege
+					source_country = c:BEL
+					target_country = c:GBR
+				}
+				{ # British economic interests in Belgium
+					article = foreign_investment_rights
+					source_country = c:BEL
+					target_country = c:GBR
+				}
+				{
+				   article = foreign_investment_rights
+				   source_country = c:GBR
+				   target_country = c:BEL
+			    }		
+				{ # British Guarantee of Belgian Independence
+				article = guarantee_independence
+				source_country = c:GBR
+				target_country = c:BEL
+			    }
+			}
+		}
+	}
+
+	# Triple Alliance – Germany, Austria-Hungary, Italy (active in 1913)
+	create_treaty = {
+		name = treaty_name_triple_alliance
+		first_country = c:GER
+		second_country = c:AUS
+
+		is_draft = no
+		entered_into_force_on = 1882.5.20
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{ article = alliance }
+			{
+				article = foreign_investment_rights
+				source_country = c:GER
+				target_country = c:AUS
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:AUS
+				target_country = c:GER
+			}
+			{ article = trade_privilege source_country = c:AUS target_country = c:GER }
+			{ article = trade_privilege source_country = c:GER target_country = c:AUS }
+		}
+	}
+	create_treaty = {
+		name = treaty_name_triple_alliance
+		first_country = c:GER
+		second_country = c:ITA
+
+		is_draft = no
+		entered_into_force_on = 1882.5.20
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+			{
+				article = foreign_investment_rights
+				source_country = c:GER
+				target_country = c:ITA
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:ITA
+				target_country = c:GER
+			}
+			{ article = trade_privilege source_country = c:ITA target_country = c:GER }
+			{ article = trade_privilege source_country = c:GER target_country = c:ITA }
+		}
+	}
+	create_treaty = {
+		name = treaty_name_triple_alliance
+		first_country = c:AUS
+		second_country = c:ITA
+
+		is_draft = no
+		entered_into_force_on = 1882.5.20
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+			{
+				article = foreign_investment_rights
+				source_country = c:ITA
+				target_country = c:AUS
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:ITA
+				target_country = c:GER
+			}
+			{ article = trade_privilege source_country = c:AUS target_country = c:ITA }
+			{ article = trade_privilege source_country = c:ITA target_country = c:AUS }
+		}
+	}
+
+    # Balkan League – Serbia, Bulgaria, Greece, Montenegro
+	create_treaty = {
+		name = treaty_name_balkan_league
+		first_country = c:SER
+		second_country = c:GRE
+
+		is_draft = no
+		entered_into_force_on = 1912.6.1
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+		}
+	}
+	create_treaty = {
+		name = treaty_name_balkan_league
+		first_country = c:SER
+		second_country = c:MON
+
+		is_draft = no
+		entered_into_force_on = 1912.9.1
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+		}
+	}
+	create_treaty = {
+		name = treaty_name_balkan_league
+		first_country = c:GRE
+		second_country = c:MON
+
+		is_draft = no
+		entered_into_force_on = 1912.9.1
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+		}
+	}
+
+	# Sweden–Norway Treaty of Separation (1905) – Neutrality agreement
+	create_treaty = {
+		name = treaty_name_sweden_norway_peace_treaty
+		first_country = c:SWE
+		second_country = c:NOR
+
+		is_draft = no
+		entered_into_force_on = 1905.10.26
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ article = non_aggression_pact }
+		}
+	}
+
+	# Russian–Serbian Alliance
+	create_treaty = {
+		name = treaty_name_russian_serbian_alliance
+		first_country = c:RUS
+		second_country = c:SER
+
+		is_draft = no
+		entered_into_force_on = 1903.7.1
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+			{ article = military_access source_country = c:SER target_country = c:RUS }
+			{ article = military_access source_country = c:RUS target_country = c:SER }
+			{
+				article = money_transfer
+				source_country = c:RUS
+				target_country = c:SER
+				inputs = {
+					{ quantity = 25000 }
+				}
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:SER
+				target_country = c:RUS
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:RUS
+				target_country = c:SER
+			}
+		}
+	}
+
+	# Russian–Romanian Treaty
+	create_treaty = {
+		name = treaty_name_russian_romanian_treaty
+		first_country = c:RUS
+		second_country = c:ROM
+
+		is_draft = no
+		entered_into_force_on = 1913.1.1
+		binding_period = { years = 10 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+		}
+	}
+
+	# Russian–Montenegrin Military Convention
+	create_treaty = {
+		name = treaty_name_russian_montenegrin_convention
+		first_country = c:RUS
+		second_country = c:MON
+
+		is_draft = no
+		entered_into_force_on = 1902.10.1
+		binding_period = { years = 15 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+		}
+	}
+
+	# Transit Rights Agreement for Switzerland
+	create_treaty = {
+		name = treaty_name_swi_transit_rights
+		first_country = c:SWI
+		second_country = c:FRA
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 200 } # 10 years
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:FRA
+				target_country = c:SWI
+			}
+		}
+	}
+}

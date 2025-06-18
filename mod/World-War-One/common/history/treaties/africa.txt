@@ -1,0 +1,54 @@
+﻿TREATIES = {
+
+	# Anglo-Ethiopian Treaty of Friendship
+	create_treaty = {
+		name = treaty_name_anglo_ethiopian_friendship
+		first_country = c:GBR
+		second_country = c:ETH
+
+		is_draft = no
+		entered_into_force_on = 1897.5.14
+		binding_period = { years = 25 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:ETH
+				target_country = c:GBR
+			}
+		}
+	}
+
+	#American Assistance to Liberia
+	create_treaty = {
+		name = treaty_name_usa_lib_assistance
+		first_country = c:USA
+		second_country = c:LIB
+
+		is_draft = no
+		entered_into_force_on = 1847.7.26
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{
+			    article = money_transfer
+			    source_country = c:USA
+			    target_country = c:LIB
+			    inputs = {
+				   { quantity = 1000 }
+			    }
+			}
+			{ 
+				article = guarantee_independence
+				source_country = c:USA
+				target_country = c:LIB
+			}
+			{
+				article = trade_privilege
+				source_country = c:LIB
+				target_country = c:USA
+			}
+			{ article = military_access source_country = c:USA target_country = c:LIB }
+		}
+	}
+}

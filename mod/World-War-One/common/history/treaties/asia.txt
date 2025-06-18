@@ -1,0 +1,396 @@
+﻿TREATIES = {
+
+    #British investment to Turkey
+	create_treaty = {
+		name = treaty_name_gbr_tur_invest
+		first_country = c:GBR
+		second_country = c:TUR
+
+		is_draft = no
+		entered_into_force_on = 1913.1.5
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{
+				article = foreign_investment_rights
+				source_country = c:TUR
+				target_country = c:GBR
+			}
+		}
+	}
+
+    # AUS–TUR
+	create_treaty = {
+		name = treaty_name_aus_tur_trade
+		first_country = c:AUS
+		second_country = c:TUR
+		is_draft = no
+		entered_into_force_on = 1900.1.1
+		binding_period = { years = 25 }
+		articles_to_create = {
+			{ article = trade_privilege source_country = c:AUS target_country = c:TUR }
+			{ article = trade_privilege source_country = c:TUR target_country = c:AUS }
+		}
+	}
+
+	# GER–TUR
+	create_treaty = {
+		name = treaty_name_ger_tur_trade
+		first_country = c:GER
+		second_country = c:TUR
+		is_draft = no
+		entered_into_force_on = 1900.1.1
+		binding_period = { years = 25 }
+		articles_to_create = {
+			{ article = trade_privilege source_country = c:GER target_country = c:TUR }
+			{ article = trade_privilege source_country = c:TUR target_country = c:GER }
+			{
+				article = foreign_investment_rights
+				source_country = c:TUR
+				target_country = c:GER
+			}
+		}
+	}
+
+	# Anglo-Persian Agreement 
+	create_treaty = {
+		name = treaty_name_anglo_persian_access
+		first_country = c:PER
+		second_country = c:GBR
+
+		is_draft = no
+		entered_into_force_on = 1907.9.1
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:PER
+				target_country = c:GBR
+			}
+			{ article = military_access source_country = c:GBR target_country = c:PER }
+			{ article = host_power_bloc_embassy source_country = c:GBR target_country = c:PER }     
+			{
+				article = guarantee_independence
+				source_country = c:GBR
+				target_country = c:PER
+			} 
+			{
+				article = foreign_investment_rights
+				source_country = c:PER
+				target_country = c:GBR
+			}
+		}
+	}
+
+	# Russo-Persian Agreement 
+	create_treaty = {
+		name = treaty_name_russo_persian_access
+		first_country = c:PER
+		second_country = c:RUS
+
+		is_draft = no
+		entered_into_force_on = 1907.9.1
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:PER
+				target_country = c:RUS
+			}
+			{ article = military_access source_country = c:RUS target_country = c:PER }
+			{ article = host_power_bloc_embassy source_country = c:RUS target_country = c:PER } 
+			{
+				article = guarantee_independence
+				source_country = c:RUS
+				target_country = c:PER
+			}   
+			{
+				article = foreign_investment_rights
+				source_country = c:PER
+				target_country = c:RUS
+			}
+		}
+	}
+
+	# Anglo-French Siam Agreement (1907) part 1
+	create_treaty = {
+		name = treaty_name_anglo_french_siam_agreement
+		first_country = c:GBR
+		second_country = c:SIA
+
+		is_draft = no
+		entered_into_force_on = 1907.3.23
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{
+				article = guarantee_independence
+				source_country = c:GBR
+				target_country = c:SIA
+			}
+		}
+	}
+
+	# Anglo-French Siam Agreement (1907) part 2
+	create_treaty = {
+		name = treaty_name_anglo_french_siam_agreement
+		first_country = c:FRA
+		second_country = c:SIA
+
+		is_draft = no
+		entered_into_force_on = 1907.3.23
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{
+				article = guarantee_independence
+				source_country = c:FRA
+				target_country = c:SIA
+			}
+		}
+	}
+
+	# Anglo-Japanese Alliance (1902, renewed 1905 and 1911)
+	create_treaty = {
+		name = treaty_name_anglo_japanese_alliance
+		first_country = c:GBR
+		second_country = c:JAP
+
+		is_draft = no
+		entered_into_force_on = 1911.7.13
+		binding_period = { years = 10 }
+
+		articles_to_create = {
+			{ article = defensive_pact }
+		}
+	}
+
+	# Treaty of Peking (1860) – Chinese cessions to Britain and France
+	create_treaty = {
+		name = treaty_name_treaty_of_peking
+		first_country = c:CHI
+		second_country = c:GBR
+
+		is_draft = no
+		entered_into_force_on = 1860.10.24
+		binding_period = { years = 99 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:CHI
+				target_country = c:GBR
+			}
+			{ article = military_access source_country = c:CHI target_country = c:GBR }
+			{
+				article = treaty_port
+				source_country = c:CHI
+				target_country = c:GBR
+				inputs = {
+					{ state = s:STATE_SHANDONG.region_state:CHI }
+				}
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:CHI
+				target_country = c:GBR
+			}
+		}
+	}
+	create_treaty = {
+		name = treaty_name_treaty_of_peking
+		first_country = c:CHI
+		second_country = c:FRA
+
+		is_draft = no
+		entered_into_force_on = 1860.10.24
+		binding_period = { years = 99 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:CHI
+				target_country = c:FRA
+			}
+			{ article = military_access source_country = c:CHI target_country = c:FRA }
+			{
+				article = foreign_investment_rights
+				source_country = c:CHI
+				target_country = c:FRA
+			}
+		}
+	}
+
+	# Treaty of Tientsin (China–Germany, Kiautschou Bay concession)
+	create_treaty = {
+		name = treaty_name_german_chinese_kiautschou_agreement
+		first_country = c:CHI
+		second_country = c:GER
+
+		is_draft = no
+		entered_into_force_on = 1898.3.6
+		binding_period = { years = 99 }
+
+		articles_to_create = {
+			{ article = military_access source_country = c:CHI target_country = c:GER }
+            {
+				article = treaty_port
+				source_country = c:CHI
+				target_country = c:GER
+				inputs = {
+					{ state = s:STATE_SHANDONG.region_state:CHI }
+				}
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:CHI
+				target_country = c:GER
+			}
+		}
+	}
+
+	# Treaty of Shimonoseki (China–Japan, post-First Sino-Japanese War)
+	create_treaty = {
+		name = treaty_name_treaty_of_shimonoseki
+		first_country = c:MCH
+		second_country = c:JAP
+
+		is_draft = no
+		entered_into_force_on = 1895.4.17
+		binding_period = { years = 25 }
+
+		articles_to_create = {
+			{ article = military_access source_country = c:CHI target_country = c:JAP }
+            {
+				article = treaty_port
+				source_country = c:MCH
+				target_country = c:JAP
+				inputs = {
+					{ state = s:STATE_SHENGJING.region_state:MCH }
+				}
+			}
+		}
+	}
+
+	# Macau Treaty Port
+	create_treaty = {
+		name = treaty_name_luso_chinese_agreement
+		first_country = c:POR
+		second_country = c:KMT
+
+		is_draft = no
+		entered_into_force_on = 1554.1.1 # Establishment of Portugese Macau
+		binding_period = { years = 381 } # 99 year binding period after start of game
+
+		articles_to_create = {
+			{
+				article = treaty_port
+				source_country = c:KMT
+				target_country = c:POR
+				inputs = {
+					{ state = s:STATE_GUANGDONG.region_state:KMT }
+				}
+			}
+			{
+				article = money_transfer
+				source_country = c:POR
+				target_country = c:KMT
+				inputs = {
+					{ quantity = 150 } # The rent of Macau was 500 taels, about 700 spanish dollars or 145 pounds in 1840 (based on silver prices)
+				}
+			}
+		}
+	}
+
+	# French Treaty Port – Guangzhouwan Lease
+	create_treaty = {
+		name = treaty_name_french_guangzhouwan_lease
+		first_country = c:KMT
+		second_country = c:FRA
+
+		is_draft = no
+		entered_into_force_on = 1898.4.6
+		binding_period = { years = 99 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:KMT
+				target_country = c:FRA
+			}
+			{ article = military_access source_country = c:KMT target_country = c:FRA }
+			{
+				article = treaty_port
+				source_country = c:KMT
+				target_country = c:FRA
+				inputs = {
+					{ state = s:STATE_GUANGDONG.region_state:KMT }
+				}
+			}
+		}
+	}
+
+	# British Treaty Port – Hong Kong Extension Agreement
+	create_treaty = {
+		name = treaty_name_british_hong_kong_extension
+		first_country = c:KMT
+		second_country = c:GBR
+
+		is_draft = no
+		entered_into_force_on = 1898.6.9
+		binding_period = { years = 99 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:KMT
+				target_country = c:GBR
+			}
+			{ article = military_access source_country = c:KMT target_country = c:GBR }
+			{
+				article = treaty_port
+				source_country = c:KMT
+				target_country = c:GBR
+				inputs = {
+					{ state = s:STATE_GUANGDONG.region_state:KMT }
+				}
+			}
+		}
+	}
+
+	# RUS-CHI
+	create_treaty = {
+		name = treaty_name_rus_chi_invest
+		first_country = c:RUS
+		second_country = c:CHI
+		is_draft = no
+		entered_into_force_on = 1900.1.1
+		binding_period = { years = 25 }
+		articles_to_create = {
+			{
+				article = foreign_investment_rights
+				source_country = c:CHI
+				target_country = c:RUS
+			}
+		}
+	}
+
+	# JAP-CHI
+	create_treaty = {
+		name = treaty_name_jap_chi_invest
+		first_country = c:JAP
+		second_country = c:CHI
+		is_draft = no
+		entered_into_force_on = 1895.5.12
+		binding_period = { years = 30 }
+		articles_to_create = {
+			{
+				article = foreign_investment_rights
+				source_country = c:CHI
+				target_country = c:JAP
+			}
+		}
+	}
+}
