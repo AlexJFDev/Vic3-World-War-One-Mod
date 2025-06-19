@@ -1352,11 +1352,10 @@
 			create_building = {
 				building = building_livestock_ranch
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_compania_sansinena_de_carnes_congeladas
 						country = c:ARG
 						levels = 60
-						region = STATE_BUENOS_AIRES
 					}
 				}
 				reserves = 1
@@ -1367,11 +1366,10 @@
 			create_building = {
 				building = building_food_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:USA
+					company = {
+						type = company_compania_sansinena_de_carnes_congeladas
+						country = c:ARG
 						levels = 40
-						region = STATE_NEW_YORK
 					}
 				}
 				reserves = 1
@@ -1879,11 +1877,10 @@
 			create_building = {
 				building = building_livestock_ranch
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_compania_sansinena_de_carnes_congeladas
 						country = c:ARG
 						levels = 20
-						region = STATE_LA_PAMPA
 					}
 				}
 				reserves = 1
@@ -1941,7 +1938,7 @@
 					building = {
 						type = building_financial_district
 						country = c:ARG
-						levels = 5
+						levels = 8
 						region = STATE_BUENOS_AIRES
 					}
 				}
@@ -2152,11 +2149,10 @@
 			create_building = {
 				building = building_livestock_ranch
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_compania_sansinena_de_carnes_congeladas
 						country = c:ARG
 						levels = 15
-						region = STATE_RIO_NEGRO
 					}
 				}
 				reserves = 1
@@ -2213,7 +2209,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ARG
-						levels = 1
+						levels = 3
 						region = STATE_RIO_NEGRO
 					}
 				}
@@ -2312,6 +2308,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:ARG
+						levels = 2
+						region = STATE_BUENOS_AIRES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -2511,7 +2522,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ARG
-						levels = 1
+						levels = 8
 						region = STATE_SANTA_FE
 					}
 				}
