@@ -10,13 +10,13 @@
     
     possible = {
         has_variable = central_powers_participant
+        
         any_scope_war = {
 		    has_war_support = {
 		        target = ROOT
 		        value < 5
 		    }
 		}
-        average_sol < average_expected_sol
         market_capital.market = {
 			   mg:grain = { 
 				 market_goods_pricier > 0.1
@@ -38,7 +38,7 @@
     }
 
     complete = { 
-        average_sol > average_expected_sol
+
         market_capital.market = {
 			mg:grain = { 
 				market_goods_pricier < 0.05

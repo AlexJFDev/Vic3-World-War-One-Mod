@@ -27,7 +27,7 @@
             has_law = law_type:law_universal_suffrage
             has_law = law_type:law_anarchy
             has_law = law_type:law_council_republic
-            root.average_sol >= 10
+            root.average_sol >= 12
         }
     }
     
@@ -84,16 +84,18 @@
     }
 
     invalid = {
-        has_variable = entente_participant
-        OR = {
-        c:GER = {
-          has_variable = central_powers_participant
-		  has_modifier = country_humiliated
-        } 
-        c:AUS = {
-          has_variable = central_powers_participant
-		  has_modifier = country_humiliated
-        } 
+        AND = {
+          has_variable = entente_participant
+          OR = {
+           c:GER = {
+             has_variable = central_powers_participant
+		     has_modifier = country_humiliated
+            } 
+           c:AUS = {
+             has_variable = central_powers_participant
+		     has_modifier = country_humiliated
+            } 
+           }
         }
     }
 
@@ -156,16 +158,18 @@ je_war_fatigue_russia = {
     }
 
     invalid = {
-        has_variable = entente_participant
-        OR = {
-        c:GER = {
-          has_variable = central_powers_participant
-		  has_modifier = country_humiliated
-        } 
-        c:AUS = {
-          has_variable = central_powers_participant
-		  has_modifier = country_humiliated
-        } 
+        AND = {
+          has_variable = entente_participant
+           OR = {
+             c:GER = {
+                 has_variable = central_powers_participant
+		         has_modifier = country_humiliated
+                } 
+             c:AUS = {
+                 has_variable = central_powers_participant
+		         has_modifier = country_humiliated
+                } 
+            }
         }
     }
 
@@ -187,7 +191,7 @@ je_soviet_threat = {
     possible = {
         has_global_variable = russian_revolution_1
         is_at_war = yes
-        root.average_sol <= 9.5
+        root.average_sol <= 12
     }
 
     modifiers_while_active = {
@@ -197,23 +201,13 @@ je_soviet_threat = {
     complete = {
         OR = {
             has_law = law_type:law_council_republic
-            root.average_sol >= 10
+            root.average_sol >= 12
             is_at_war = no
         }
     }
     
     fail = { 
         any_political_movement = {
-            OR = {
-				is_political_movement_type = movement_socialist
-				is_political_movement_type = movement_communist
-                is_political_movement_type = movement_anarchist
-                is_political_movement_type = movement_radical
-                is_political_movement_type = movement_labor
-                is_political_movement_type = movement_nihilist
-                is_political_movement_type = movement_land_reform
-                is_political_movement_type = movement_liberal
-			}
             is_insurrectionary = yes
 			civil_war ?= {
                 OR = {

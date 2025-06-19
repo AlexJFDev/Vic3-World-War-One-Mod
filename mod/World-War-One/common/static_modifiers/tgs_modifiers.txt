@@ -40,9 +40,9 @@ schlieffen_plan_1_modifier = { #Player
 
 schlieffen_plan_2_modifier = { #AI
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.4
-    unit_occupation_mult = 2.5
-    military_formation_mobilization_speed_mult = 1
+    unit_army_offense_mult = 0.5
+    unit_occupation_mult = 2
+    military_formation_mobilization_speed_mult = 2
 }
 
 angry_elites_1_modifier = {
@@ -158,8 +158,8 @@ stabilization_buff_modifier = {
 
 army_buff_modifier_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.2
-    unit_army_defense_mult = 0.4
+    unit_army_offense_mult = 0.4
+    unit_army_defense_mult = 0.6
     military_formation_mobilization_speed_mult = 0.8
     unit_occupation_mult = 0.5
 }
@@ -227,7 +227,6 @@ war_fatigue_1 = {
 fragile_unity_modifier = { 
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     country_prestige_mult = -0.3
-    political_movement_radicalism_add = 0.1
     state_construction_mult = -0.3
     unit_army_offense_mult = -0.2
     unit_army_defense_mult = -0.1
@@ -517,7 +516,8 @@ nazi_germany_politics_heavy_industry = {
 
 france_outdated_tactics = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    unit_army_offense_mult = -0.1
+    unit_army_offense_mult = -0.3
+    unit_army_defense_mult = -0.15
 }
 
 austria_multilingual_army = {
