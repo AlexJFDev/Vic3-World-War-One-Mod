@@ -576,6 +576,28 @@ great_war_initiation_events.8 = {
                 days = 1080
             }
         }
+        c:GER = {
+		   create_diplomatic_pact = {
+			  country = c:RUS
+			  type = embargo
+		    }
+        }
+        c:AUS = {
+		   create_diplomatic_pact = {
+			  country = c:RUS
+			  type = embargo
+		    }
+        }
+        c:RUS = {
+		   create_diplomatic_pact = {
+			  country = c:GER
+			  type = embargo
+		    }
+            create_diplomatic_pact = {
+			  country = c:AUS
+			  type = embargo
+		    }
+        }
     }
     option = {
         name = great_war_initiation_events.8.b
@@ -731,6 +753,28 @@ great_war_initiation_events.10 = {
                 id = ww1_war_policies_events.2
                 days = 15
             }
+        }
+        c:GER = {
+		   create_diplomatic_pact = {
+			  country = c:FRA
+			  type = embargo
+		    }
+        }
+        c:AUS = {
+		   create_diplomatic_pact = {
+			  country = c:FRA
+			  type = embargo
+		    }
+        }
+        c:FRA = {
+		   create_diplomatic_pact = {
+			  country = c:GER
+			  type = embargo
+		    }
+            create_diplomatic_pact = {
+			  country = c:AUS
+			  type = embargo
+		    }
         }
     }
 }
@@ -919,6 +963,28 @@ great_war_initiation_events.13 = {
                 days = 15
             }
         }
+        c:GER = {
+		   create_diplomatic_pact = {
+			  country = c:FRA
+			  type = embargo
+		    }
+        }
+        c:AUS = {
+		   create_diplomatic_pact = {
+			  country = c:FRA
+			  type = embargo
+		    }
+        }
+        c:FRA = {
+		   create_diplomatic_pact = {
+			  country = c:GER
+			  type = embargo
+		    }
+            create_diplomatic_pact = {
+			  country = c:AUS
+			  type = embargo
+		    }
+        }
     }
     option = { # Leave France alone
         name = great_war_initiation_events.13.b
@@ -1023,7 +1089,7 @@ great_war_initiation_events.14 = {
         }
         add_modifier = {
             name = schlieffen_plan_2_modifier
-            months = 12
+            months = 10
         }
         every_diplomatic_play = {
             limit = {
@@ -1184,6 +1250,28 @@ great_war_initiation_events.15 = {
             country = c:FRA
             months = 120
         }
+        }
+        c:GER = {
+		   create_diplomatic_pact = {
+			  country = c:GBR
+			  type = embargo
+		    }
+        }
+        c:AUS = {
+		   create_diplomatic_pact = {
+			  country = c:GBR
+			  type = embargo
+		    }
+        }
+        c:GBR = {
+		   create_diplomatic_pact = {
+			  country = c:GER
+			  type = embargo
+		    }
+            create_diplomatic_pact = {
+			  country = c:AUS
+			  type = embargo
+		    }
         }
     }
     
