@@ -14,7 +14,7 @@
         any_scope_war = {
 		    has_war_support = {
 		        target = ROOT
-		        value < 5
+		        value < 50
 		    }
 		}
         market_capital.market = {
@@ -38,11 +38,14 @@
     }
 
     complete = { 
-        market_capital.market = {
-			mg:grain = { 
-				market_goods_pricier < 0.05
-			}
-		}
+        AND = {
+           market_capital.market = {
+			   mg:grain = { 
+				   market_goods_pricier < 0.05
+			    }
+		    }
+            is_at_war = no
+        }
     }
     
     fail = { 

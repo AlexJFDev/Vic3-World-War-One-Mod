@@ -33,7 +33,7 @@
             has_law = law_type:law_collectivized_agriculture
 			has_law = law_type:law_proportional_taxation
 			has_law = law_type:law_graduated_taxation 
-			root.average_sol >= 10
+			root.average_sol >= 12
 		}
     }
 
@@ -95,7 +95,13 @@ je_reunify_china = {
 
 	complete = {
 		country_rank >= rank_value:major_power
-		owns_entire_state_region = STATE_NANJING
+		is_subject = no
+		OR = {
+			owns_entire_state_region = STATE_NANJING
+            c:BEI = {
+				is_subject_of = ROOT
+			}
+		}
 	}
 	
 	on_complete = {

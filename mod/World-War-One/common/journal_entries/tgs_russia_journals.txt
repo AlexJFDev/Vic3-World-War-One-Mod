@@ -141,7 +141,7 @@ je_war_fatigue_russia = {
     }
 
     modifiers_while_active = {
-        war_protests_1_modifier
+       war_protests_1_modifier
     }
 
     immediate = {
@@ -154,7 +154,10 @@ je_war_fatigue_russia = {
     }
 
     complete = { 
-        is_at_war = no
+        OR = {
+          has_law = law_type:law_council_republic
+          is_at_war = no
+        }
     }
 
     invalid = {
@@ -195,7 +198,7 @@ je_soviet_threat = {
     }
 
     modifiers_while_active = {
-	   war_protests_2_modifier
+	  war_protests_2_modifier
 	}
 
     complete = {
