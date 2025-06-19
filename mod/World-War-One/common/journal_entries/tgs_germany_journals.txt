@@ -18,10 +18,10 @@
 		    }
 		}
         market_capital.market = {
-			   mg:grain = { 
-				 market_goods_pricier > 0.1
-			    }
-		    }
+			mg:grain = { 
+				market_goods_pricier > 0.12
+			}
+		}
     }
 
     modifiers_while_active = {
@@ -38,7 +38,6 @@
     }
 
     complete = { 
-
         market_capital.market = {
 			mg:grain = { 
 				market_goods_pricier < 0.05
