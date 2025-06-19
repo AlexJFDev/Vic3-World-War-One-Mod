@@ -18274,7 +18274,7 @@
 					building = {
 						type = building_financial_district
 						country = c:TUR
-						levels = 8
+						levels = 5
 						region = STATE_EASTERN_THRACE
 					}
 				}
@@ -36729,7 +36729,7 @@
 					building = {
 						type = building_financial_district
 						country = c:FRA
-						levels = 8
+						levels = 3
 						region = STATE_ILE_DE_FRANCE
 					}
 				}
@@ -37926,7 +37926,7 @@
 					building = {
 						type = building_financial_district
 						country = c:FRA
-						levels = 12
+						levels = 5
 						region = STATE_ILE_DE_FRANCE
 					}
 				}
@@ -40199,7 +40199,7 @@
 					building = {
 						type = building_financial_district
 						country = c:FRA
-						levels = 2
+						levels = 1
 						region = STATE_ILE_DE_FRANCE
 					}
 				}
@@ -48744,7 +48744,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GER
-						levels = 20
+						levels = 10
 						region = STATE_BRANDENBURG
 					}
 				}
@@ -61596,7 +61596,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 3
+						levels = 2
 						region = STATE_KANTO
 					}
 				}
@@ -61933,7 +61933,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 15
+						levels = 8
 						region = STATE_KANTO
 					}
 				}
@@ -62444,7 +62444,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 2
+						levels = 3
 						region = STATE_KANTO
 					}
 				}
@@ -63869,7 +63869,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 2
+						levels = 1
 						region = STATE_KANTO
 					}
 				}
@@ -72116,7 +72116,7 @@
 					building = {
 						type = building_financial_district
 						country = c:TUR
-						levels = 3
+						levels = 1
 						region = STATE_EASTERN_THRACE
 					}
 				}
@@ -80905,7 +80905,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 2
+						levels = 1
 						region = STATE_MOSCOW
 					}
 				}
@@ -81162,7 +81162,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 3
+						levels = 1
 						region = STATE_MOSCOW
 					}
 				}
@@ -81571,7 +81571,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 8
+						levels = 5
 						region = STATE_MOSCOW
 					}
 				}
@@ -82555,7 +82555,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 5
+						levels = 2
 						region = STATE_MOSCOW
 					}
 				}
@@ -82641,7 +82641,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 5
+						levels = 2
 						region = STATE_MOSCOW
 					}
 				}
@@ -83731,7 +83731,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 3
+						levels = 1
 						region = STATE_MOSCOW
 					}
 				}
@@ -84091,7 +84091,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 2
+						levels = 1
 						region = STATE_MOSCOW
 					}
 				}
@@ -87170,7 +87170,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 3
+						levels = 1
 						region = STATE_MOSCOW
 					}
 				}
@@ -97248,7 +97248,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 15
+						levels = 25
 						region = STATE_NEW_YORK
 					}
 				}
@@ -97838,6 +97838,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_rail_transport_mine pm_steam_donkey_mine 
+				}
+			}
+			create_building = {
+				building = building_motor_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:USA
+						levels = 6
+						region = STATE_NEW_YORK
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
 				}
 			}
 			create_building = {
@@ -101545,6 +101560,21 @@
 				}
 			}
 			create_building = {
+				building = building_motor_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:USA
+						levels = 10
+						region = STATE_NEW_YORK
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -102530,7 +102560,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 18
+						levels = 28
 						region = STATE_NEW_YORK
 					}
 				}
@@ -104334,6 +104364,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_professional_bureaucrats pm_secular_bureaucrats pm_switch_boards 
+				}
+			}
+			create_building = {
+				building = building_motor_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:USA
+						levels = 8
+						region = STATE_NEW_YORK
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
 				}
 			}
 			create_building = {
