@@ -975,7 +975,7 @@ stabilization_buff_events.30 = {
         c:CHI = {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_sout_china
+			hq_region = sr:region_south_china
             name = Warlord_peasent_levies
 	
 			combat_unit = {
@@ -1019,4 +1019,211 @@ stabilization_buff_events.31 = {
     }
 }
 
+stabilization_buff_events.32 = { 
+    type = country_event
 
+    title = stabilization_buff_events.32.t
+    desc = stabilization_buff_events.32.d
+    flavor = stabilization_buff_events.32.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:USA
+            } 
+        }
+        c:USA = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_england
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_NEW_YORK
+				count = 30
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:GBR
+            } 
+        }
+        c:GBR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_england
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_HOME_COUNTIES
+				count = 30
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:FRA
+            } 
+        }
+        c:FRA = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_france
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_ILE_DE_FRANCE
+				count = 30
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:GER
+            } 
+        }
+        c:GER = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_germany
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_BRANDENBURG
+				count = 30
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:ITA
+            } 
+        }
+        c:ITA = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_italy
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_PIEDMONT
+				count = 30
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:AUS
+            } 
+        }
+        c:AUS = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_germany
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_BOHEMIA
+				count = 30
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:RUS
+            } 
+        }
+        c:RUS = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_russia
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_MOSCOW
+				count = 30
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:TUR
+            } 
+        }
+        c:TUR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_anatolia
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_HUDAVENDIGAR
+				count = 30
+			}
+		}
+        }   
+    }
+}

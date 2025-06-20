@@ -802,6 +802,10 @@ combat_unit_type_dragoons = {
     upgrades = {
         combat_unit_type_cuirassiers
         combat_unit_type_lancers
+        combat_unit_type_fighter
+        combat_unit_type_bomber
+        combat_unit_type_close_air_support
+        combat_unit_type_light_tanks
     }
 }
 
@@ -942,55 +946,6 @@ combat_unit_type_lancers = {
     }
 }
 
-combat_unit_type_fighter = {
-    group = combat_unit_group_cavalry
-    max_manpower = 500
-
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
-    upkeep_modifier = {
-	goods_input_aeroplanes_add = 2
-    goods_input_small_arms_add = 1
-	goods_input_ammunition_add = 2
-	goods_input_oil_add = 1
-    goods_input_radios_add = 1
-    }
-
-    battle_modifier = {
-    unit_offense_add = 40
-    unit_defense_add = 40
-    unit_morale_loss_add = 4
-	unit_occupation_mult = 0.3
-	
-	
-        #should get modifiers to mobile/surprise battle conditions appearing
-    }
-
-	unlocking_technologies = { military_aviation }
-
-    combat_unit_image = {
-        trigger = { 
-            game_date < 1935.1.1
-        }
-        texture = "gfx/unit_illustrations/fighter.dds"
-    }
-
-    combat_unit_image = {
-        trigger = { 
-            game_date > 1935.1.1
-        }
-        texture = "gfx/unit_illustrations/late_fighter.dds"
-    }
-
-    upgrades = {
-        combat_unit_type_close_air_support
-    }
-}
-
 combat_unit_type_light_tanks = {
     group = combat_unit_group_cavalry
     max_manpower = 500
@@ -1024,42 +979,6 @@ combat_unit_type_light_tanks = {
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/cavalry_light_tank.dds"
-    }
-}
-
-combat_unit_type_close_air_support = {
-    group = combat_unit_group_cavalry
-    max_manpower = 500
-
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
-    upkeep_modifier = {
-	goods_input_aeroplanes_add = 2
-    goods_input_small_arms_add = 1
-	goods_input_ammunition_add = 4
-	goods_input_oil_add = 1
-	goods_input_radios_add = 1
-    }
-
-    battle_modifier = {
-    unit_offense_add = 75
-    unit_defense_add = 40
-    unit_kill_rate_add = 0.15
-	unit_morale_loss_add = 4
-    }
-
-	unlocking_technologies = { aerial_ground_support } 
-
-    combat_unit_image = {
-        texture = "gfx/unit_illustrations/close_air_support.dds"
-    }
-
-    upgrades = { 
-        combat_unit_type_fighter
     }
 }
 
@@ -1105,5 +1024,89 @@ combat_unit_type_bomber = {
         texture = "gfx/unit_illustrations/late_bomber.dds"
     }
 
-    upgrades = {}
+    upgrades = { 
+        combat_unit_type_fighter
+    }
+}
+
+combat_unit_type_close_air_support = {
+    group = combat_unit_group_cavalry
+    max_manpower = 500
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+	goods_input_aeroplanes_add = 2
+    goods_input_small_arms_add = 1
+	goods_input_ammunition_add = 4
+	goods_input_oil_add = 1
+	goods_input_radios_add = 1
+    }
+
+    battle_modifier = {
+    unit_offense_add = 75
+    unit_defense_add = 40
+    unit_kill_rate_add = 0.15
+	unit_morale_loss_add = 4
+    }
+
+	unlocking_technologies = { aerial_ground_support } 
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/close_air_support.dds"
+    }
+
+    upgrades = { 
+        combat_unit_type_fighter
+    }
+}
+
+combat_unit_type_fighter = {
+    group = combat_unit_group_cavalry
+    max_manpower = 500
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+	goods_input_aeroplanes_add = 2
+    goods_input_small_arms_add = 1
+	goods_input_ammunition_add = 2
+	goods_input_oil_add = 1
+    goods_input_radios_add = 1
+    }
+
+    battle_modifier = {
+    unit_offense_add = 40
+    unit_defense_add = 40
+    unit_morale_loss_add = 4
+	unit_occupation_mult = 0.3
+    }
+
+	unlocking_technologies = { military_aviation }
+
+    combat_unit_image = {
+        trigger = { 
+            game_date < 1935.1.1
+        }
+        texture = "gfx/unit_illustrations/fighter.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            game_date > 1935.1.1
+        }
+        texture = "gfx/unit_illustrations/late_fighter.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_close_air_support
+    }
 }

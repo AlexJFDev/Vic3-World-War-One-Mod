@@ -9,25 +9,16 @@
     
     possible = {
         country_rank >= rank_value:major_power
-        has_technology_researched = military_aviation
-    }
-
-    immediate = {
-        trigger_event = { id =  popup = yes }
+        has_technology_researched = automatic_machine_guns
     }
 
     complete = {
-        country_army_unit_type_fraction = {  
-            target = unit_type:combat_unit_type_fighter 
-            value >= 0.15
-        }
-        country_army_unit_type_fraction = {  
-            target = unit_type:combat_unit_type_bomber 
-            value >= 0.05
-        }
+        has_technology_researched = military_aviation
     }
 
-    on_complete = {}
+    on_complete = {
+        trigger_event = { id = stabilization_buff_events.32 }
+    }
 
     weight = 1000
     timeout = -1
