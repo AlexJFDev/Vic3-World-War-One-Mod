@@ -722,11 +722,6 @@ great_war_initiation_events.10 = {
 				c:FRA
 			}
             add_war_goal = {
-                    holder = c:FRA
-                    type = conquer_state
-                    target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
-                }
-            add_war_goal = {
                     holder = c:GER
                     type = conquer_state
                     target_state = s:STATE_ILE_DE_FRANCE.region_state:FRA
@@ -931,11 +926,6 @@ great_war_initiation_events.13 = {
                 c:CMR
             }
             add_war_goal = {
-                    holder = c:FRA
-                    type = conquer_state
-                    target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
-                }
-            add_war_goal = {
                     holder = c:GER
                     type = conquer_state
                     target_state = s:STATE_ILE_DE_FRANCE.region_state:FRA
@@ -1089,7 +1079,7 @@ great_war_initiation_events.14 = {
         }
         add_modifier = {
             name = schlieffen_plan_2_modifier
-            months = 5
+            months = 12
         }
         every_diplomatic_play = {
             limit = {

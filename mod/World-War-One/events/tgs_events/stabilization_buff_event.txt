@@ -1227,3 +1227,51 @@ stabilization_buff_events.32 = {
         }   
     }
 }
+
+stabilization_buff_events.33 = { 
+    type = country_event
+
+    title = stabilization_buff_events.32.t
+    desc = stabilization_buff_events.32.d
+    flavor = stabilization_buff_events.32.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { is_player = no } 
+        c:GER = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_rhine
+            name = ger_army_help
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_NORTH_RHINE
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_RUHR
+				count = 50
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_ALSACE_LORRAINE
+				count = 50
+			}
+		}
+        }   
+    }
+}

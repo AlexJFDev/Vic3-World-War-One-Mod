@@ -84,6 +84,19 @@ entente_peace_deal.1 = { #Entente victory
 			type = protectorate
 		}
 		}
+		s:STATE_ALSACE_LORRAINE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FRA
+            }
+        }
 		s:STATE_HUDAVENDIGAR = {
 	       random_scope_state = {
 		      limit = {
