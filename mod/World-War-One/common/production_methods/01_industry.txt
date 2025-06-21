@@ -2202,6 +2202,7 @@ pm_automobile_production = {
 		workforce_scaled = {
 			# input goods
 			goods_input_engines_add = 10
+			goods_input_steel_add = 10
 			goods_input_rubber_add = 5
 			goods_input_oil_add = 5
 
@@ -2233,7 +2234,8 @@ pm_mass_automobile_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_engines_add = 10
+			goods_input_engines_add = 15
+			goods_input_steel_add = 15
 			goods_input_rubber_add = 10
 			goods_input_oil_add = 10
 
@@ -2250,10 +2252,6 @@ pm_mass_automobile_production = {
 	}
 }
 
-pm_no_aeroplane_production = {
-	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes.dds"
-}
-
 pm_aeroplane_production = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes.dds"
 
@@ -2264,12 +2262,13 @@ pm_aeroplane_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_hardwood_add = 4
-			goods_input_fabric_add = 4
+			goods_input_engines_add = 10
+			goods_input_steel_add = 10
+			goods_input_rubber_add = 5
+			goods_input_oil_add = 5
 
 			# output goods
-			goods_output_automobiles_add = -10
-			goods_output_aeroplanes_add = 10
+			goods_output_aeroplanes_add = 40
 		}
 
 		level_scaled = {
