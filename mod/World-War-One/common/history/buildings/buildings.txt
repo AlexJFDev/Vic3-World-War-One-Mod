@@ -105768,7 +105768,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:VEN
+						country = c:VNZ
 						levels = 1
 						region = STATE_BOLIVAR
 					}
@@ -105948,7 +105948,7 @@
 					building = {
 						type = building_manor_house
 						country = c:VNZ
-						levels = 8
+						levels = 15
 						region = STATE_MIRANDA
 					}
 				}
@@ -106023,7 +106023,7 @@
 					building = {
 						type = building_manor_house
 						country = c:VNZ
-						levels = 3
+						levels = 8
 						region = STATE_MIRANDA
 					}
 				}
@@ -106091,6 +106091,21 @@
 				}
 			}
 			create_building = {
+				building = building_banana_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:VNZ
+						levels = 14
+						region = STATE_MIRANDA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_banana_plantation pm_road_carts 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -106121,8 +106136,8 @@
 				add_ownership = {
 					building = {
 						type = building_financial_district
-						country = c:VEN
-						levels = 8
+						country = c:VNZ
+						levels = 12
 						region = STATE_MIRANDA
 					}
 				}
@@ -106163,6 +106178,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_coffee_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:VNZ
+						levels = 12
+						region = STATE_ZULIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_coffee_plantation pm_road_carts 
 				}
 			}
 			create_building = {
@@ -106241,6 +106271,21 @@
 				}
 			}
 			create_building = {
+				building = building_coffee_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:VNZ
+						levels = 10
+						region = STATE_ZULIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_coffee_plantation pm_road_carts 
+				}
+			}
+			create_building = {
 				building = building_power_plant
 				add_ownership = {
 					company = {
@@ -106287,7 +106332,7 @@
 				add_ownership = {
 					building = {
 						type = building_manor_house
-						country = c:VEN
+						country = c:VNZ
 						levels = 1
 						region = STATE_ZULIA
 					}
