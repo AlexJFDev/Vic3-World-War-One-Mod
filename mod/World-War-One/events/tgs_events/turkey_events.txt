@@ -323,48 +323,32 @@ turkey_events.8 = { #Arab uprising
     option = { 
         name = turkey_events.8.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
-			add_target_backers = {
-				c:HDJ
-			}
-        }   
         c:HDJ = {
             trigger_event = {
                 id = stabilization_buff_events.28
                 days = 5
+            }
+            create_diplomatic_play = {
+            name = arab_revolt
+
+            target_country = c:TUR
+
+            type = dp_independence
+
+            escalation = 85
+            
+            add_war_goal = {
+                holder = c:TUR
+                type = annex_country
+                target_country : c:HDJ
+            }
+            
+            add_initiator_backers = {
+                c:GBR
+            }
+            add_target_backers = {
+                c:GER
+            }
             }
         }
         ai_chance = {

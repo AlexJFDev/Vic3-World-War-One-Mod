@@ -684,6 +684,96 @@ entente_peace_deal.1 = { #Entente victory
           days = 5
             }
         }
+		create_treaty = {
+			first_country = C:GER
+			second_country = c:AUS
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:AUS
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = C:GER
+			second_country = c:CZH
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:CZE
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = C:ROM
+			second_country = c:HUN
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:ROM
+				target_country = c:HUN
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = C:YUG
+			second_country = c:HUN
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:YUG
+				target_country = c:HUN
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = C:ROM
+			second_country = c:GAL
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:ROM
+				target_country = c:GAL
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = C:POL
+			second_country = c:GAL
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:POL
+				target_country = c:GAL
+			    }
+			}
+		}
 		s:STATE_WEST_SLOVAKIA = { 
 			add_claim = HUN
 		}
@@ -2352,7 +2442,8 @@ entente_peace_deal.8 = { #Round 7 result
 	          state = s:STATE_HEDJAZ.region_state:TUR
               on_created = { 
               activate_law = law_type:law_theocracy
-            }
+               }
+		    }
 		}
 		s:STATE_ALEPPO = {
            random_scope_state = {
@@ -2660,7 +2751,8 @@ entente_peace_deal.8 = { #Round 7 result
 	          state = s:STATE_HEDJAZ.region_state:TUR
               on_created = { 
               activate_law = law_type:law_theocracy
-            }
+               }
+		    }
 		}
 		create_country = {
 	       tag = IRQ
@@ -2825,7 +2917,8 @@ entente_peace_deal.8 = { #Round 7 result
 	          state = s:STATE_HEDJAZ.region_state:TUR
               on_created = { 
               activate_law = law_type:law_theocracy
-            }
+               }
+		    }
 		}
 		create_country = {
 	       tag = IRQ
