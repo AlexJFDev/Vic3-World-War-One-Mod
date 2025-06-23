@@ -131,13 +131,8 @@ je_war_fatigue_russia = {
     
     possible = {
         has_variable = entente_participant
-        root.average_sol <= 12
-        any_scope_war = {
-		    has_war_support = {
-		        target = ROOT
-		        value < 20
-		    }
-		}
+        average_sol < average_expected_sol
+        is_at_war = yes
     }
 
     modifiers_while_active = {
@@ -156,6 +151,7 @@ je_war_fatigue_russia = {
     complete = { 
         OR = {
           has_law = law_type:law_council_republic
+          root.average_sol >= 12 
           is_at_war = no
         }
     }

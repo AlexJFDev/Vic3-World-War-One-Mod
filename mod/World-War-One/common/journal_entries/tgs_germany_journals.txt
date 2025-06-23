@@ -11,12 +11,7 @@
     possible = {
         has_variable = central_powers_participant
         average_sol < average_expected_sol
-        any_scope_war = {
-		    has_war_support = {
-		        target = ROOT
-		        value < 10
-		    }
-		}
+        is_at_war = yes
     }
 
     modifiers_while_active = {
