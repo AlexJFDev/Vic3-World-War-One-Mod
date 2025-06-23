@@ -318,6 +318,19 @@ turkey_events.8 = { #Arab uprising
            activate_law = law_type:law_right_of_assembly
            }
 		}
+        s:STATE_YEMEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HDJ
+            }
+        }
     }
 
     option = { 
