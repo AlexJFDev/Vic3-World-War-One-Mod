@@ -605,9 +605,19 @@ russia_events.8 = { #The civil war begins
             }
         }
         c:RUS = {
+            remove_diplomatic_pact = {
+			 country = c:FIN
+			 type = personal_union
+		    }
+        }
+        c:RUS = {
             change_infamy = -100
         }
         c:SIB = {
+            trigger_event = {
+			   id = stabilization_buff_events.1
+			   days = 5
+		    }
             change_infamy = -100
         }
         random_scope_character = { 
