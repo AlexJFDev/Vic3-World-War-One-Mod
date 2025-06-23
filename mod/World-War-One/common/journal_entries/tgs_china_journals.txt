@@ -74,21 +74,15 @@ je_reunify_china = {
 	}
 
 	is_shown_when_inactive = {
-		has_global_variable = china_shatters
-		has_variable = warlord_state
 		OR = {
 			country_has_primary_culture = cu:han
 			country_has_primary_culture = cu:manchu
 			country_has_primary_culture = cu:yue
-		}
-		NOT = {
-			has_global_variable = a_new_china
 		}
 	}
 
 	possible = {
 		has_global_variable = china_shatters
-		has_variable = warlord_state
 		OR = {
 			country_has_primary_culture = cu:han
 			country_has_primary_culture = cu:manchu
@@ -96,8 +90,6 @@ je_reunify_china = {
 		}
 		NOT = {
 			has_global_variable = a_new_china
-		}
-		NOT = {
 			has_modifier = recently_collapsed_1
 			has_modifier = recently_collapsed_2
 		}
@@ -119,9 +111,7 @@ je_reunify_china = {
 	}
 
 	invalid = {
-		NOT = {
-			has_global_variable = a_new_china
-		}
+		has_global_variable = a_new_china
 	}
 		
 	weight = 1000

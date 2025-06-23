@@ -447,6 +447,8 @@ china_events.5 = { #China collapse
 
     trigger = {}
 
+    immediate = { set_global_variable = china_shatters }
+
     option = {
         name = china_events.5.a
         set_global_variable = china_shatters
@@ -971,6 +973,15 @@ china_events.7 = { #Policy choice
         texture = "gfx/event_pictures/warlord_china.dds"
     }
 
+    immediate = {
+        ig:ig_trade_unions = {
+			leader = {
+				save_scope_as = union_ig_leader_scope
+			}
+		}
+        set_variable = warlord_state
+    }
+
     trigger = {}
 
     option = {
@@ -983,6 +994,7 @@ china_events.7 = { #Policy choice
         years = 20
         is_decaying = yes
         } 
+        activate_law = law_type:law_military_oversight
         every_state_region = {
 			limit = {
 				NOT = {
@@ -1015,6 +1027,7 @@ china_events.7 = { #Policy choice
         years = 20
         is_decaying = yes
         } 
+        activate_law = law_type:law_military_oversight
         every_state_region = {
 			limit = {
 				NOT = {
@@ -1047,6 +1060,7 @@ china_events.7 = { #Policy choice
         years = 20
         is_decaying = yes
         } 
+        activate_law = law_type:law_military_oversight
         every_state_region = {
 			limit = {
 				NOT = {
@@ -1079,6 +1093,12 @@ china_events.7 = { #Policy choice
         years = 20
         is_decaying = yes
         } 
+        activate_law = law_type:law_council_republic
+        activate_law = law_type:law_command_economy
+        activate_law = law_type:law_military_oversight
+        scope:union_ig_leader_scope = {
+            set_character_as_ruler = yes
+        }
         every_state_region = {
 			limit = {
 				NOT = {
@@ -1098,7 +1118,7 @@ china_events.7 = { #Policy choice
 			add_claim = ROOT
 		}
         ai_chance = {
-		  base = 10
+		  base = 5
 	    }
     }
 }
