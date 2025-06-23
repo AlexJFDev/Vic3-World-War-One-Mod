@@ -436,6 +436,64 @@
 	create_treaty = {
 		name = treaty_name_swi_transit_rights
 		first_country = c:SWI
+		second_country = c:GER
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 200 } # 10 years
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:SWI
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:GER
+				target_country = c:SWI
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:SWI
+				target_country = c:GER
+			}
+		}
+	}
+
+	# Transit Rights Agreement for Switzerland
+	create_treaty = {
+		name = treaty_name_swi_transit_rights
+		first_country = c:SWI
+		second_country = c:AUS
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 200 } # 10 years
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:AUS
+				target_country = c:SWI
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:AUS
+				target_country = c:SWI
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:AUS
+				target_country = c:FRA
+			}
+		}
+	}
+
+	# Transit Rights Agreement for Switzerland
+	create_treaty = {
+		name = treaty_name_swi_transit_rights
+		first_country = c:SWI
 		second_country = c:FRA
 
 		is_draft = no
@@ -447,6 +505,16 @@
 				article = transit_rights
 				source_country = c:FRA
 				target_country = c:SWI
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:FRA
+				target_country = c:SWI
+			}
+			{
+				article = foreign_investment_rights
+				source_country = c:SWI
+				target_country = c:FRA
 			}
 		}
 	}
