@@ -81,6 +81,9 @@ je_reunify_china = {
 			country_has_primary_culture = cu:manchu
 			country_has_primary_culture = cu:yue
 		}
+		NOT = {
+			has_global_variable = a_new_china
+		}
 	}
 
 	possible = {
@@ -91,22 +94,34 @@ je_reunify_china = {
 			country_has_primary_culture = cu:manchu
 			country_has_primary_culture = cu:yue
 		}
+		NOT = {
+			has_global_variable = a_new_china
+		}
+		NOT = {
+			has_modifier = recently_collapsed_1
+			has_modifier = recently_collapsed_2
+		}
 	}
 
 	complete = {
 		country_rank >= rank_value:major_power
 		is_subject = no
-		OR = {
-			owns_entire_state_region = STATE_NANJING
-            c:BEI = {
-				is_subject_of = ROOT
-			}
+		NOT = {
+			has_modifier = recently_collapsed_1
+			has_modifier = recently_collapsed_2
 		}
 	}
 	
 	on_complete = {
 		trigger_event = { id = china_events.11 popup = yes }
 		remove_global_variable = china_shatters
+		set_global_variable = a_new_china
+	}
+
+	invalid = {
+		NOT = {
+			has_global_variable = a_new_china
+		}
 	}
 		
 	weight = 1000

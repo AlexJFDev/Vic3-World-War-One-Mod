@@ -1297,7 +1297,8 @@ stabilization_buff_events.34 = {
     option = {
         name = stabilization_buff_events.32.a
         default_option = yes
-        trigger = { is_player = no } 
+        trigger = { is_player = no }   
+        remove_modifier = stabilization_buff_modifier 
         add_modifier = {
            name = recently_collapsed_1
            years = 10
@@ -1309,6 +1310,8 @@ stabilization_buff_events.34 = {
         name = stabilization_buff_events.32.a
         default_option = yes
         trigger = { is_player = yes } 
+        c:BEI = { set_variable = warlord_state }
+        remove_modifier = stabilization_buff_modifier 
         add_modifier = {
            name = recently_collapsed_2
            years = 10
