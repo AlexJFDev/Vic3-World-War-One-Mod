@@ -1741,3 +1741,54 @@ joining_world_war_events.28 = { #Senussi order joins WW1
 	    }
     }
 }
+
+joining_world_war_events.29 = { #Mexico receives zimmermann telegram
+    type = country_event
+
+    title = joining_world_war_events.29.t
+    desc = joining_world_war_events.29.d
+    flavor = joining_world_war_events.29.f
+    
+    icon = "gfx/interface/icons/event_icons/protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/zimmermann_telegram.dds"
+    }
+
+    trigger = {}
+
+    option = { #Reject violently the offer
+        name = joining_world_war_events.29.a
+        je:je_joining_world_war = {
+            add_progress = { value = -80 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = { #Show support but dont join now
+        name = joining_world_war_events.29.b
+        je:je_joining_world_war = {
+			add_progress = { value = -80 name = join_entente_progress_bar }
+            add_progress = { value = 80 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Join directly
+        name = joining_world_war_events.29.c
+        je:je_joining_world_war = {
+			add_progress = { value = -200 name = join_entente_progress_bar }
+            add_progress = { value = 200 name = join_central_powers_progress_bar }
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}

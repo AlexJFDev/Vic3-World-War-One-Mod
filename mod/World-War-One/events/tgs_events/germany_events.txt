@@ -129,6 +129,53 @@ germany_events.2 = { #November Revolution
     }
 }
 
+germany_events.3 = { #Zimmermann telegram
+    type = country_event
+
+    title = germany_events.3.t
+    desc = germany_events.3.d
+    flavor = germany_events.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/zimmermann_telegram.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.3.a
+        c:MEX = {
+            trigger_event = {
+                id = joining_world_war_events.29
+                days = 5
+            }
+        }
+        c:USA = {
+            trigger_event = {
+                id = joining_world_war_events.18
+                days = 5
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.3.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
 germany_events.4 = { #Communist uprising
     type = country_event
 
