@@ -15,7 +15,7 @@
     }
 
     modifiers_while_active = {
-        war_fatigue_1
+       war_fatigue_1
     }
 
     immediate = {
@@ -35,25 +35,9 @@
     }
     
     fail = { 
-        any_political_movement = {
-            OR = {
-				is_political_movement_type = movement_socialist
-				is_political_movement_type = movement_communist
-                is_political_movement_type = movement_anarchist
-                is_political_movement_type = movement_radical
-                is_political_movement_type = movement_labor
-                is_political_movement_type = movement_nihilist
-                is_political_movement_type = movement_liberal
-			}
-            is_insurrectionary = yes
-			civil_war ?= {
-                OR = {
-                  is_civil_war_type = revolution
-                  is_civil_war_type = secession
-                }
-				civil_war_progress >= 0.75
-			}
-        }
+        any_civil_war = {
+			civil_war_progress >= 0.75
+		}
     }
 
     on_fail = { 
@@ -163,30 +147,9 @@ je_socialist_split = {
     
     fail = { 
       has_variable = socialist_negotiations_over
-      OR = {
-          any_political_movement = {
-            OR = {
-				is_political_movement_type = movement_socialist
-				is_political_movement_type = movement_communist
-                is_political_movement_type = movement_anarchist
-                is_political_movement_type = movement_radical
-                is_political_movement_type = movement_labor
-                is_political_movement_type = movement_nihilist
-                is_political_movement_type = movement_liberal
-			}
-            is_insurrectionary = yes
-			civil_war ?= {
-                OR = {
-                  is_civil_war_type = revolution
-                  is_civil_war_type = secession
-                }
-				civil_war_progress >= 0.75
-			}
-            }
-            ig:ig_trade_unions  = {
-				ig_approval < -10
-			}	
-        }
+      any_civil_war = {
+			civil_war_progress >= 0.75
+		}
     }
 
     on_complete = {

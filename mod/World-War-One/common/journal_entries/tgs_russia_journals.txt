@@ -32,26 +32,9 @@
     }
     
     fail = { 
-        any_political_movement = {
-            OR = {
-				is_political_movement_type = movement_socialist
-				is_political_movement_type = movement_communist
-                is_political_movement_type = movement_anarchist
-                is_political_movement_type = movement_radical
-                is_political_movement_type = movement_labor
-                is_political_movement_type = movement_nihilist
-                is_political_movement_type = movement_land_reform
-                is_political_movement_type = movement_liberal
-			}
-            is_insurrectionary = yes
-			civil_war ?= {
-                OR = {
-                  is_civil_war_type = revolution
-                  is_civil_war_type = secession
-                }
-				civil_war_progress >= 0.75
-			}
-        }
+        any_civil_war = {
+			civil_war_progress >= 0.75
+		}
     }
 
     on_complete = {
@@ -132,6 +115,7 @@ je_war_fatigue_russia = {
         has_variable = entente_participant
         average_sol < average_expected_sol
         is_at_war = yes
+        game_date > 1916.1.1
     }
 
     modifiers_while_active = {
@@ -204,16 +188,9 @@ je_soviet_threat = {
     }
     
     fail = { 
-        any_political_movement = {
-            is_insurrectionary = yes
-			civil_war ?= {
-                OR = {
-                  is_civil_war_type = revolution
-                  is_civil_war_type = secession
-                }
-				civil_war_progress >= 0.75
-			}
-        }
+        any_civil_war = {
+			civil_war_progress >= 0.75
+		}
     }
 
     on_complete = {

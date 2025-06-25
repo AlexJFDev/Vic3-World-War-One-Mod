@@ -104,12 +104,18 @@ persia_events.2 = {
 
     option = {
         name = persia_events.2.a
+        trigger = { is_player = yes }
         default_option = yes
         add_modifier = {
           name = persia_weak_government
           years = 20
           is_decaying = yes
         }
+    }
+
+    option = {
+        name = persia_events.2.a
+        trigger = { is_player = no }
     }
 }
 
