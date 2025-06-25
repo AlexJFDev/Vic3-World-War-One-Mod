@@ -1360,56 +1360,63 @@ entente_peace_deal.3 = { #Round 2 result
 		c:FRA = {
 		   add_treasury = 50000000
 		}
-		every_scope_state = {
-			    if = {
-					limit = {
-						has_building = building_barracks
-						is_capital = no
-					}
-					remove_building = building_barracks
+		every_state = {
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_barracks
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_naval_base
-						is_capital = no
-					}
-					remove_building = building_naval_base
+				remove_building = building_barracks
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_naval_base
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_arms_industry
-						is_capital = no
-					}
-					remove_building = building_arms_industry
+				remove_building = building_naval_base
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_arms_industry
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_artillery_foundries
-						is_capital = no
-					}
-					remove_building = building_artillery_foundries
+				remove_building = building_arms_industry
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_artillery_foundries
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_munition_plants
-						is_capital = no
-					}
-					remove_building = building_munition_plants
+				remove_building = building_artillery_foundries
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_munition_plants
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_war_machine_industry
-						is_capital = no
-					}
-					remove_building = building_war_machine_industry
+				remove_building = building_munition_plants
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_aircraft_factory
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_military_shipyards
-						is_capital = no
-					}
-					remove_building = building_military_shipyards
-				}	
+				remove_building = building_aircraft_factory
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_military_shipyards
+					is_capital = no
+				}
+				remove_building = building_military_shipyards
+			}	
 		}
 	}
 
@@ -1424,62 +1431,69 @@ entente_peace_deal.3 = { #Round 2 result
 		c:FRA = {
 		   add_treasury = 100000000
 		}
-		every_scope_state = {
-			    if = {
-					limit = {
-						has_building = building_barracks
-						is_capital = no
-					}
-					remove_building = building_barracks
+		every_state = {
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_barracks
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_naval_base
-						is_capital = no
-					}
-					remove_building = building_naval_base
+				remove_building = building_barracks
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_naval_base
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_arms_industry
-						is_capital = no
-					}
-					remove_building = building_arms_industry
+				remove_building = building_naval_base
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_arms_industry
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_artillery_foundries
-						is_capital = no
-					}
-					remove_building = building_artillery_foundries
+				remove_building = building_arms_industry
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_artillery_foundries
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_munition_plants
-						is_capital = no
-					}
-					remove_building = building_munition_plants
+				remove_building = building_artillery_foundries
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_munition_plants
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_war_machine_industry
-						is_capital = no
-					}
-					remove_building = building_war_machine_industry
+				remove_building = building_munition_plants
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_aircraft_factory
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_military_shipyards
-						is_capital = no
-					}
-					remove_building = building_military_shipyards
-				}	
+				remove_building = building_aircraft_factory
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_military_shipyards
+					is_capital = no
+				}
+				remove_building = building_military_shipyards
+			}	
 		}
 	}
 
 	option = {
 		name = entente_peace_deal.3.c
-        trigger = { 
+		trigger = { 
          has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
 		}
 		c:GER = {
@@ -1488,56 +1502,63 @@ entente_peace_deal.3 = { #Round 2 result
 		c:FRA = {
 		   add_treasury = 150000000
 		}
-		every_scope_state = {
-			    if = {
-					limit = {
-						has_building = building_barracks
-						is_capital = no
-					}
-					remove_building = building_barracks
+		every_state = {
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_barracks
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_naval_base
-						is_capital = no
-					}
-					remove_building = building_naval_base
+				remove_building = building_barracks
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_naval_base
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_arms_industry
-						is_capital = no
-					}
-					remove_building = building_arms_industry
+				remove_building = building_naval_base
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_arms_industry
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_artillery_foundries
-						is_capital = no
-					}
-					remove_building = building_artillery_foundries
+				remove_building = building_arms_industry
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_artillery_foundries
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_munition_plants
-						is_capital = no
-					}
-					remove_building = building_munition_plants
+				remove_building = building_artillery_foundries
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_munition_plants
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_war_machine_industry
-						is_capital = no
-					}
-					remove_building = building_war_machine_industry
+				remove_building = building_munition_plants
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_aircraft_factory
+					is_capital = no
 				}
-				if = {
-					limit = {
-						has_building = building_military_shipyards
-						is_capital = no
-					}
-					remove_building = building_military_shipyards
-				}	
+				remove_building = building_aircraft_factory
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_military_shipyards
+					is_capital = no
+				}
+				remove_building = building_military_shipyards
+			}	
 		}
 	}
 }
