@@ -119,7 +119,6 @@
 	}
 
     weight = 1000
-    timeout = -1
     should_be_pinned_by_default = yes
 }
 
@@ -214,7 +213,6 @@ je_socialist_split = {
         }
     }
 
-    timeout = -1
     should_be_pinned_by_default = yes
 }
 
@@ -273,8 +271,7 @@ je_nazi_threat = {
             popup = yes 
         }
     }
-      
-    timeout = -1
+   
     should_be_pinned_by_default = yes
 }
 
@@ -289,13 +286,14 @@ je_the_final_war = {
     }
     
     possible = {
-      OR = {
-           has_global_variable = hitler_rise_to_power
+        OR = {
+            has_global_variable = hitler_rise_to_power
             c:GER = {
                 ruler = {
                 OR = {
 				   has_ideology = ideology:ideology_fascist
                    has_ideology = ideology:ideology_authoritarian
+                }
                 }
             }
         }
@@ -350,8 +348,5 @@ je_the_final_war = {
         }
     }
 
-    on_timeout = {}
-
-    timeout = -1
     should_be_pinned_by_default = yes
 }
