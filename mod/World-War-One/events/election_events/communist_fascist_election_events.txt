@@ -54,7 +54,7 @@ communist_elections.1 = {
 	immediate = {
 		set_variable = {
 			name = red_scare_var
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		random_interest_group = {
 			limit = {
@@ -109,7 +109,7 @@ communist_elections.1 = {
 		}
 		add_modifier = { # reduced government opinion
 			name = red_scare_minimized
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 
@@ -127,7 +127,7 @@ communist_elections.1 = {
 			every_member = {
 				add_modifier = {
 					name = red_scare_communists_annoyed
-					months = short_modifier_time
+					days = short_modifier_time
 				}
 			}
 		}
@@ -144,7 +144,7 @@ communist_elections.1 = {
 		}
 		add_modifier = { # costs some authority
 			name = infiltrating_communist_parties
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 
@@ -164,7 +164,7 @@ communist_elections.1 = {
 			every_member = {
 				add_modifier = {
 					name = red_scare_minimized
-					months = short_modifier_time
+					days = short_modifier_time
 				}
 			}
 		}
@@ -208,7 +208,7 @@ communist_elections.2 = {
 	immediate = {
 		set_variable = {
 			name = council_elections_var
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		ig:ig_trade_unions = {
 			save_scope_as = unions_ig
@@ -255,7 +255,7 @@ communist_elections.2 = {
 		}
 		add_modifier = { # authority
 			name = mandatory_communist_support
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 	option = { # other voices should also be heard
@@ -340,7 +340,7 @@ communist_elections.3 = {
 	immediate = {
 		set_variable = {
 			name = international_socialism_var
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		random_interest_group = {
 			limit = {
@@ -557,7 +557,7 @@ communist_elections.4 = {
 	immediate = {
 		set_variable = {
 			name = blackshirts_var
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		random_interest_group = {
 			limit = {
@@ -643,7 +643,7 @@ communist_elections.4 = {
 			}
 			add_modifier = {
 				name = state_sanctioned_paramilitaries
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		else_if = {
@@ -657,7 +657,7 @@ communist_elections.4 = {
 			}
 			add_modifier = {
 				name = state_sanctioned_paramilitaries
-				months = short_modifier_time
+				days = short_modifier_time
 				multiplier = -1
 			}
 		}
@@ -671,7 +671,7 @@ communist_elections.4 = {
 		scope:fascist_ig = {
 			add_modifier = {
 				name = paramilitaries_opposed
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		every_active_party = {
@@ -701,7 +701,7 @@ communist_elections.4 = {
 		scope:fascist_ig = {
 			add_modifier = {
 				name = paramilitaries_opposed
-				months = short_modifier_time
+				days = short_modifier_time
 				multiplier = -2
 			}
 		}
@@ -756,7 +756,7 @@ cable_street.1 = {
 	immediate = {
 		set_variable = {
 			name = cable_street_var
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		random_scope_state = {
 			limit = {

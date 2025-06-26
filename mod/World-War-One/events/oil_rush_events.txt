@@ -29,7 +29,7 @@ oil_rush.1 = {
 		default_option = yes
 		add_modifier = {
 			name = state_oil_rush
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		trigger_event = { id = oil_rush.2 years = 5 }
 	}
@@ -38,7 +38,7 @@ oil_rush.1 = {
 		name = oil_rush.1.b
 		add_modifier = {
 			name = state_limited_oil_rush
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		trigger_event = { id = oil_rush.2 years = 5 }
 	}
@@ -67,7 +67,7 @@ oil_rush.2 = {
 		default_option = yes
 		add_modifier = {
 			name = state_oil_rush_over
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 }
@@ -119,14 +119,14 @@ oil_rush.3 = {
 			ig:ig_industrialists = {
 				add_modifier = {
 					name = permitted_oil_dangerous_work
-					months = short_modifier_time
+					days = short_modifier_time
 				}
 			}
 			ig:ig_trade_unions = {
 				add_modifier = {
 					name = permitted_oil_dangerous_work
 					multiplier = -1
-					months = short_modifier_time
+					days = short_modifier_time
 				}
 			}
 		}
@@ -142,14 +142,14 @@ oil_rush.3 = {
 			ig:ig_trade_unions = {
 				add_modifier = {
 					name = prevented_oil_dangerous_work
-					months = short_modifier_time
+					days = short_modifier_time
 				}
 			}
 			ig:ig_industrialists = {
 				add_modifier = {
 					name = prevented_oil_dangerous_work
 					multiplier = -1
-					months = short_modifier_time
+					days = short_modifier_time
 				}
 			}
 		}
@@ -196,7 +196,7 @@ oil_rush.4 = {
 			ig:ig_industrialists = {
 				add_modifier = {
 					name = pipeline_funded
-					months = short_modifier_time
+					days = short_modifier_time
 				}
 			}
 		}
@@ -209,7 +209,7 @@ oil_rush.4 = {
 			ig:ig_industrialists = {
 				add_modifier = {
 					name = no_pipeline_funding
-					months = short_modifier_time
+					days = short_modifier_time
 				}
 			}
 		}
@@ -288,7 +288,7 @@ oil_rush.5 = {
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = jailed_oil_barons
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 	}
@@ -305,7 +305,7 @@ oil_rush.5 = {
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = let_off_oil_barons
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 	}
@@ -316,12 +316,12 @@ oil_rush.5 = {
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = jailed_oil_barons
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		add_modifier = {
 			name = corrupt_administration
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 
@@ -332,12 +332,12 @@ oil_rush.5 = {
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = let_off_oil_barons
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		add_modifier = {
 			name = corrupt_administration
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 }

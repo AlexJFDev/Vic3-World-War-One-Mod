@@ -31,7 +31,7 @@ goldrush.1 = { #gold discovered in a state
 		default_option = yes
 		add_modifier = {
 			name = state_gold_rush
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 	
@@ -39,11 +39,11 @@ goldrush.1 = { #gold discovered in a state
 		name = goldrush.1.b
 		add_modifier = {
 			name = state_gold_rush_less_migration
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		add_modifier = {
 			name = state_gold_rush_explotation
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 }
@@ -86,7 +86,7 @@ goldrush.2 = { #gold fields depleted
 		}
 		add_modifier = {
 			name = state_gold_depleted
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 	}
 	
@@ -100,7 +100,7 @@ goldrush.2 = { #gold fields depleted
 		}
 		add_modifier = {
 			name = state_gold_depleted_palliative
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		add_radicals_in_state = {
 			pop_type = laborers
@@ -194,7 +194,7 @@ goldrush.3 = { #foreign influx provokes outcry
 			remove_modifier = state_gold_rush
 			add_modifier = {
 				name = state_limited_gold_rush
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 	}
