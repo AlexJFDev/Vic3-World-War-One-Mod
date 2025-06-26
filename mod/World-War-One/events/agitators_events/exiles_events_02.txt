@@ -18,7 +18,7 @@ exiles_more_events.1 = {
 
 	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_diplomatic_play = {
@@ -79,7 +79,7 @@ exiles_more_events.1 = {
 		scope:patriotic_exile_home_ig = {
 			add_modifier = {
 				name = exile_pardoned
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -101,7 +101,7 @@ exiles_more_events.1 = {
 		scope:patriotic_exile_home_ig = {
 			add_modifier = {
 				name = exile_welcomed_and_promoted
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -114,7 +114,7 @@ exiles_more_events.1 = {
 		scope:patriotic_exile_home_ig = {
 			add_modifier = {
 				name = exile_offer_rejected
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -139,7 +139,7 @@ exiles_more_events.2 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		enacting_any_law = yes
@@ -373,7 +373,7 @@ exiles_more_events.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_scope_character = {
@@ -434,7 +434,7 @@ exiles_more_events.3 = {
 		scope:the_loneliest_little_agitator = {
 			add_modifier = {
 				name = inspired_by_studies
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -456,7 +456,7 @@ exiles_more_events.3 = {
 					political_movement ?= {
 						add_modifier = {
 							name = radical_new_approach
-							months = normal_modifier_time
+							days = normal_modifier_time
 						}
 					}
 				}
@@ -466,7 +466,7 @@ exiles_more_events.3 = {
 					political_movement ?= {
 						add_modifier = {
 							name = failed_relaunch
-							months = normal_modifier_time
+							days = normal_modifier_time
 						}
 					}
 				}
@@ -476,7 +476,7 @@ exiles_more_events.3 = {
 					political_movement ?= {
 						add_modifier = {
 							name = all_worked_up
-							months = normal_modifier_time
+							days = normal_modifier_time
 						}
 					}
 				}
@@ -499,7 +499,7 @@ exiles_more_events.3 = {
 			political_movement ?= {
 				add_modifier = {
 					name = deliberate_deliberations
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -525,7 +525,7 @@ exiles_more_events.4 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_major_unifier = yes
@@ -590,7 +590,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rises
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -605,7 +605,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rises
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -620,7 +620,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rises
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -635,7 +635,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rises
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -650,7 +650,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rises
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -669,7 +669,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -684,7 +684,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -699,7 +699,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -714,7 +714,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -729,7 +729,7 @@ exiles_more_events.4 = {
 				}
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -743,7 +743,7 @@ exiles_more_events.4 = {
 			ig:ig_armed_forces = {
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -755,7 +755,7 @@ exiles_more_events.4 = {
 			ig:ig_devout = {
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -767,7 +767,7 @@ exiles_more_events.4 = {
 			ig:ig_industrialists = {
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -779,7 +779,7 @@ exiles_more_events.4 = {
 			ig:ig_intelligentsia = {
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -791,7 +791,7 @@ exiles_more_events.4 = {
 			ig:ig_landowners = {
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -803,7 +803,7 @@ exiles_more_events.4 = {
 			ig:ig_petty_bourgeoisie = {
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -815,7 +815,7 @@ exiles_more_events.4 = {
 			ig:ig_rural_folk = {
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -827,7 +827,7 @@ exiles_more_events.4 = {
 			ig:ig_trade_unions = {
 				add_modifier = {
 					name = national_hero_rejected
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -853,7 +853,7 @@ exiles_more_events.5 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_scope_character = {
@@ -904,7 +904,7 @@ exiles_more_events.5 = {
 				scope:experienced_exile = {
 					add_modifier = {
 						name = filled_with_determination
-						months = normal_modifier_time
+						days = normal_modifier_time
 					}
 				}
 			}
@@ -912,7 +912,7 @@ exiles_more_events.5 = {
 				scope:experienced_exile = {
 					add_modifier = {
 						name = dejected_tryhard
-						months = normal_modifier_time
+						days = normal_modifier_time
 					}
 				}
 			}
@@ -939,7 +939,7 @@ exiles_more_events.6 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_character_in_exile_pool = {
@@ -1025,7 +1025,7 @@ exiles_more_events.6 = {
 		scope:melodrama_villain_ig = {
 			add_modifier = {
 				name = in_the_thrall_of_a_villain
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1051,14 +1051,14 @@ exiles_more_events.6 = {
 		scope:melodrama_villain_ig_leader = {
 			add_modifier = {
 				name = apprentice_becomes_the_master
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:melodrama_villain = {
 			remove_variable = THE_NEFARIOUS_TOP_HAT
 			add_modifier = {
 				name = foiled_again
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1100,7 +1100,7 @@ exiles_more_events.6 = {
 
 					add_modifier = {
 						name = i_return_triumphant
-						months = normal_modifier_time
+						days = normal_modifier_time
 					}
 				}
 			}
@@ -1108,7 +1108,7 @@ exiles_more_events.6 = {
 				scope:melodrama_villain = {
 					add_modifier = {
 						name = foiled_again
-						months = normal_modifier_time
+						days = normal_modifier_time
 					}
 				}
 			}
@@ -1127,7 +1127,7 @@ exiles_more_events.6 = {
 				remove_variable = THE_NEFARIOUS_TOP_HAT
 				add_modifier = {
 					name = pawns_of_a_greater_mind
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -1155,7 +1155,7 @@ exiles_more_events.7 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_scope_character = {
@@ -1212,7 +1212,7 @@ exiles_more_events.7 = {
 
 		add_modifier = {
 			name = their_spats_are_our_problems
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -1260,7 +1260,7 @@ exiles_more_events.8 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -1369,7 +1369,7 @@ exiles_more_events.9 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -1455,7 +1455,7 @@ exiles_more_events.9 = {
 		scope:fertile_ground_ig = { 
 			add_modifier = {
 				name = messed_with_the_wrong_ig
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1477,7 +1477,7 @@ exiles_more_events.9 = {
 		scope:fertile_ground_ig = { 
 			add_modifier = {
 				name = accused_of_subversion
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1502,7 +1502,7 @@ exiles_more_events.10 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -1555,7 +1555,7 @@ exiles_more_events.10 = {
 		scope:unstable_element_ig = {
 			add_modifier = {
 				name = target_of_paranoia
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1566,7 +1566,7 @@ exiles_more_events.10 = {
 		scope:unstable_element_ig = {
 			add_modifier = {
 				name = the_velvet_glove_forgives
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}

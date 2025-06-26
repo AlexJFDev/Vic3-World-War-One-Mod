@@ -125,7 +125,7 @@ autocracy.2 = {
 	immediate = {
 		set_variable = {
 			name = secret_societies_timer
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		ig:ig_intelligentsia = {
 			save_scope_as = secret_society_ig
@@ -164,7 +164,7 @@ autocracy.2 = {
 		scope:secret_society_ig = {
 			add_modifier = {
 				name = tolerated_secret_societies
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -174,7 +174,7 @@ autocracy.2 = {
 		scope:secret_society_ig = {
 			add_modifier = {
 				name = suppressed_secret_societies
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:secret_societies_state = {
@@ -234,7 +234,7 @@ autocracy.3 = {
 	immediate = {
 		set_variable = {
 			name = religious_serfs_timer
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		random_scope_state = {
 			limit = {

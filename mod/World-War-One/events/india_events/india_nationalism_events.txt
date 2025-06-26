@@ -20,7 +20,7 @@ india_nationalism_events.1 = { # The Anarchy
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	immediate = {
 		c:BIC ?= {
@@ -107,7 +107,7 @@ india_nationalism_events.2 = { # The Anarchy - 2 - British Withdrawal
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	immediate = {
 		top_overlord = {
@@ -400,7 +400,7 @@ india_nationalism_events.3 = { # The Salt March
 		scope:salt_march_state = {
 			add_modifier = {
 				name = modifier_salt_tax_protests
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 0.5
 			}
 		}
@@ -411,7 +411,7 @@ india_nationalism_events.3 = { # The Salt March
 		scope:salt_march_state = {
 			add_modifier = {
 				name = modifier_salt_tax_protests
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -438,7 +438,7 @@ india_nationalism_events.4 = { # Gandhi in Sooth Efrika
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -763,7 +763,7 @@ india_nationalism_events.6 = { # India League
 				random_member = {
 					add_modifier = {
 						name = modifier_india_league_ig
-						months = normal_modifier_time
+						days = normal_modifier_time
 					}
 				}
 			}
@@ -775,7 +775,7 @@ india_nationalism_events.6 = { # India League
 			scope:india_league_character = {
 				add_modifier = {
 					name = modifier_india_league_character
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -791,7 +791,7 @@ india_nationalism_events.6 = { # India League
 				random_member = {
 					add_modifier = {
 						name = modifier_india_league_ig
-						months = normal_modifier_time
+						days = normal_modifier_time
 						multiplier = 0.5
 					}
 				}
@@ -804,7 +804,7 @@ india_nationalism_events.6 = { # India League
 			scope:india_league_character = {
 				add_modifier = {
 					name = modifier_india_league_character
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = 0.5
 				}
 			}

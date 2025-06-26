@@ -45,7 +45,7 @@ movement_events.1 = { # Opposition pamphlet slandering the government’s positi
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_political_movement = {
@@ -139,7 +139,7 @@ movement_events.1 = { # Opposition pamphlet slandering the government’s positi
 		scope:relevant_movement = {
 			add_modifier = {
 				name = modifier_movement_pamphlets_distributed
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		if = {
@@ -149,7 +149,7 @@ movement_events.1 = { # Opposition pamphlet slandering the government’s positi
 			scope:relevant_agitator = {
 				add_modifier = {
 					name = modifier_movement_positive_influence
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -182,7 +182,7 @@ movement_events.1 = { # Opposition pamphlet slandering the government’s positi
 		scope:relevant_movement = {
 			add_modifier = {
 				name = modifier_movement_pamphlets_confiscated_arrests
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ai_chance = {
@@ -236,7 +236,7 @@ movement_events.2 = { # Opposition leader participates in the founding of a “X
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_political_movement = {
@@ -334,7 +334,7 @@ movement_events.2 = { # Opposition leader participates in the founding of a “X
 		scope:relevant_movement = {
 			add_modifier = {
 				name = modifier_movement_society_benefits
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -346,7 +346,7 @@ movement_events.2 = { # Opposition leader participates in the founding of a “X
 		scope:relevant_movement = {
 			add_modifier = {
 				name = modifier_movement_society_repressed
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -358,14 +358,14 @@ movement_events.2 = { # Opposition leader participates in the founding of a “X
 		scope:relevant_movement = {
 			add_modifier = {
 				name = modifier_movement_society_benefits
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 0.5
 			}
 		}
 		scope:relevant_agitator = {
 			add_modifier = {
 				name = modifier_movement_agitator_gaining_fame
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ai_chance = {
@@ -392,7 +392,7 @@ movement_events.3 = { # Political Union formed in a town to organise the people.
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_political_movement = {
@@ -454,13 +454,13 @@ movement_events.3 = { # Political Union formed in a town to organise the people.
 		scope:relevant_state = {
 			add_modifier = {
 				name = modifier_state_political_union_influence
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:relevant_movement = {
 			add_modifier = {
 				name = modifier_movement_political_union_influence
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1111,7 +1111,7 @@ movement_events.9 = { # Worker strikes break out over a given issue.
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_political_movement = {
@@ -1202,7 +1202,7 @@ movement_events.9 = { # Worker strikes break out over a given issue.
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = modifier_movement_workers_emboldened
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1222,7 +1222,7 @@ movement_events.9 = { # Worker strikes break out over a given issue.
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = modifier_movement_trade_unions_replaced
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}

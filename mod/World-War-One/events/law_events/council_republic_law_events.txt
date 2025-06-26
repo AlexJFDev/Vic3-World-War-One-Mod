@@ -19,7 +19,7 @@ council_republic_law_events.1 = { #Cool & Based Speech
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_enacting_law = law_type:law_council_republic
@@ -81,7 +81,7 @@ council_republic_law_events.2 = { #Factory Owner Murdered
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_enacting_law = law_type:law_council_republic
@@ -115,7 +115,7 @@ council_republic_law_events.2 = { #Factory Owner Murdered
 
 			add_modifier = {
 				name = angry_at_factory_revolution
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -145,7 +145,7 @@ council_republic_law_events.2 = { #Factory Owner Murdered
 
 			add_modifier = {
 				name = angry_at_factory_revolution
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 2
 			}
 		}
@@ -175,7 +175,7 @@ council_republic_law_events.3 = { #Party Headquarters burns down
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_enacting_law = law_type:law_council_republic
@@ -212,7 +212,7 @@ council_republic_law_events.3 = { #Party Headquarters burns down
 
 			add_modifier = {
 				name = communist_party_supported
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 
@@ -239,7 +239,7 @@ council_republic_law_events.3 = { #Party Headquarters burns down
 			}
 			add_modifier = {
 				name = communist_party_supported
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 2
 			}
 		}

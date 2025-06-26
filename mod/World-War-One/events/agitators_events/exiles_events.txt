@@ -19,7 +19,7 @@ exiles_events.100 = {
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# triggered by return_to_home_country interaction
@@ -67,7 +67,7 @@ exiles_events.1 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_scope_character = {
@@ -109,7 +109,7 @@ exiles_events.1 = {
 		scope:agitator_ig = {
 			add_modifier = {
 				name = modifier_agitator_left
-				months = normal_modifier_time
+				days = normal_modifier_time
 				is_decaying = yes
 			}
 		}
@@ -153,7 +153,7 @@ exiles_events.2 = {
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -234,7 +234,7 @@ exiles_events.2 = {
 		scope:exile_ig_scope = {
 			add_modifier = {
 				name = modifier_exile_ig_empowered
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:exile_scope = {
@@ -250,12 +250,12 @@ exiles_events.2 = {
 		scope:friend_scope = {
 			add_modifier = {
 				name = modifier_judgement_questioned
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			this.interest_group = {
 				add_modifier = {
 					name = modifier_judgement_questioned_ig
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -280,7 +280,7 @@ exiles_events.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -338,7 +338,7 @@ exiles_events.3 = {
 		scope:movement_scope = {
 			add_modifier = {
 				name = modifier_agitator_invited
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -348,13 +348,13 @@ exiles_events.3 = {
 		scope:movement_scope = {
 			add_modifier = {
 				name = modifier_agitator_refused
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:exile_scope = {
 			add_modifier = {
 				name = modifier_agitator_coward
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -474,7 +474,7 @@ exiles_events.5 = {
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -538,7 +538,7 @@ exiles_events.5 = {
 		}
 		add_modifier = {
 			name = modifier_accepted_repentant_exile
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -547,7 +547,7 @@ exiles_events.5 = {
 		scope:exile_ig = {
 			add_modifier = {
 				name = modifier_refused_repentant_exile
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -571,7 +571,7 @@ exiles_events.6 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -620,7 +620,7 @@ exiles_events.6 = {
 		default_option = yes
 		add_modifier = {
 			name = modifier_rich_politics
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:exile_scope = {
 			transfer_character = root
@@ -634,7 +634,7 @@ exiles_events.6 = {
 		name = exiles_events.6.b
 		add_modifier = {
 			name = modifier_rich_politics_rejected
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }
@@ -657,7 +657,7 @@ exiles_events.7 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -723,7 +723,7 @@ exiles_events.7 = {
 			}
 			add_modifier = {
 				name = modifier_turned_away_immigrant
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -747,7 +747,7 @@ exiles_events.8 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_political_movement = {
@@ -794,7 +794,7 @@ exiles_events.8 = {
 		scope:movement_scope = {
 			add_modifier = {
 				name = modifier_foreign_manifesto
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -804,12 +804,12 @@ exiles_events.8 = {
 		scope:movement_scope = {
 			add_modifier = {
 				name = modifier_censored_foreign_manifesto
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			random_influenced_interest_group = {
 				add_modifier = {
 					name = modifier_supporters_of_foreigners
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -834,7 +834,7 @@ exiles_events.9 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -893,7 +893,7 @@ exiles_events.9 = {
 		scope:government_ig_scope = {
 			add_modifier = {
 				name = modifier_government_ig_placated
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:exile_scope = {
@@ -909,7 +909,7 @@ exiles_events.9 = {
 		scope:government_ig_scope = {
 			add_modifier = {
 				name = modifier_government_ig_angered
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -933,7 +933,7 @@ exiles_events.10 = {
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		empty_agitator_slots >= 1
@@ -989,7 +989,7 @@ exiles_events.10 = {
 		}
 		add_modifier = {
 			name = modifier_impressive_healthcare_system
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -1003,7 +1003,7 @@ exiles_events.10 = {
 		}
 		add_modifier = {
 			name = modifier_impressive_healthcare_system
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:exile_scope = {
 			transfer_character = root

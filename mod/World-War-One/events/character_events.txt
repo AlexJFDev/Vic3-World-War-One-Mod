@@ -86,7 +86,7 @@ character_events.2 = { #Rich industrialist wants to build a university
 		scope:university_benefactor.interest_group = {
 			add_modifier = {
 				name = modifier_university_built
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -96,7 +96,7 @@ character_events.2 = { #Rich industrialist wants to build a university
 		scope:university_benefactor.interest_group = {
 			add_modifier = {
 				name = modifier_blocked_building_university
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -386,13 +386,13 @@ character_events.3 = { #The duel
 		scope:duel_participant_1 = {
 			add_modifier = {
 				name = tarnished_honor_modifier #popularity
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:duel_participant_2 = {
 			add_modifier = {
 				name = tarnished_honor_modifier #popularity
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -413,7 +413,7 @@ character_events.3 = { #The duel
 			ig:ig_landowners = {
 				add_modifier = {
 					name = angry_duels_banned
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -421,14 +421,14 @@ character_events.3 = { #The duel
 			ig:ig_armed_forces = {
 				add_modifier = {
 					name = angry_duels_banned
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
 		ig:ig_intelligentsia = {
 			add_modifier = {
 				name = happy_duels_banned
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -517,7 +517,7 @@ character_events.4 = { #Devout leader sleeping with a nun
 		scope:devout_scandal = {
 			add_modifier = {
 				name = modifier_devout_in_scandal
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 2
 			}
 		}
@@ -529,7 +529,7 @@ character_events.4 = { #Devout leader sleeping with a nun
 		scope:devout_scandal = {
 			add_modifier = {
 				name = modifier_devout_in_scandal
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -591,12 +591,12 @@ character_events.5 = { #A statue made of the king
 		name = character_events.5.a
 		add_modifier = {
 			name = modifier_statue_of_ruler #prestige
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:statue_state = {
 			set_variable = {
 				name = ruler_statue_var
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_radicals_in_state = {
   				value = small_radicals
@@ -628,7 +628,7 @@ character_events.5 = { #A statue made of the king
 			}
 			add_modifier = {
 				name = modifier_ig_disapprove_of_no_statue
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		if = {
@@ -692,7 +692,7 @@ character_events.6 = { #Statue torn down
 			}
 			add_modifier = {
 				name = modifier_ig_approve_statue_removal
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -709,7 +709,7 @@ character_events.6 = { #Statue torn down
 			}
 			add_modifier = {
 				name = modifier_ig_approve_no_statue_removal
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -731,7 +731,7 @@ character_events.6 = { #Statue torn down
 		capital = {
 			set_variable = {
 				name = ruler_statue_var
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_radicals_in_state = {
 				value = small_radicals

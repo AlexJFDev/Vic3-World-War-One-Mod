@@ -183,7 +183,7 @@ goldrush.3 = { #foreign influx provokes outcry
 		ig:ig_petty_bourgeoisie = {
 			add_modifier = {
 				name = pb_angry_at_foreign_miners
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -258,13 +258,13 @@ goldrush.4 = { #miners get organized
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = tu_mining_syndicates_formed
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = in_disrupted_paradigms
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -274,13 +274,13 @@ goldrush.4 = { #miners get organized
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = in_mining_conglomerates_formed
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = tu_miners_exploited
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -304,7 +304,7 @@ goldrush.5 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -326,7 +326,7 @@ goldrush.5 = {
 		default_option = yes
 		add_modifier = {
 			name = expecting_riches
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	
@@ -334,7 +334,7 @@ goldrush.5 = {
 		name = goldrush.5.b 
 		add_modifier = {
 			name = expecting_riches_angry
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}	
 	}
 }

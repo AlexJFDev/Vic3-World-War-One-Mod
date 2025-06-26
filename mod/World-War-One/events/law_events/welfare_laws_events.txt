@@ -22,7 +22,7 @@ welfare_laws.1 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_enacting_law = law_type:law_poor_laws
@@ -72,7 +72,7 @@ welfare_laws.1 = {
 		ig:ig_devout = {
 			add_modifier = {
 				name = religious_workhouses
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_radicals = {
@@ -111,7 +111,7 @@ welfare_laws.2 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_enacting_law = law_type:law_poor_laws
@@ -187,7 +187,7 @@ welfare_laws.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_enacting_law = law_type:law_poor_laws
@@ -216,7 +216,7 @@ welfare_laws.3 = {
 		ig:ig_intelligentsia = {
 			add_modifier = {
 				name = criminalization_of_poverty
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -251,7 +251,7 @@ welfare_laws.4 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_law = law_type:law_poor_laws
@@ -323,7 +323,7 @@ welfare_laws.5 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_law = law_type:law_poor_laws
@@ -357,7 +357,7 @@ welfare_laws.5 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = anti_paternalist_sentiment
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -392,7 +392,7 @@ welfare_laws.6 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_law = law_type:law_poor_laws
@@ -435,7 +435,7 @@ welfare_laws.6 = {
 			}
 			add_modifier = {
 				name = vagrants_and_wastrels
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -469,7 +469,7 @@ welfare_laws.8 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_enacting_law = law_type:law_old_age_pension
@@ -498,13 +498,13 @@ welfare_laws.8 = {
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = veterans_prioritized
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = veterans_prioritized
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -1
 			}
 		}
@@ -539,7 +539,7 @@ welfare_laws.9 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -574,14 +574,14 @@ welfare_laws.9 = {
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = embraced_union_leverage
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -2
 			}
 		}
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = embraced_union_leverage
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -595,13 +595,13 @@ welfare_laws.9 = {
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = repudiated_union_leverage
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = repudiated_union_leverage
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -1
 			}
 		}
@@ -628,7 +628,7 @@ welfare_laws.10 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -669,7 +669,7 @@ welfare_laws.10 = {
 			interest_group = {
 				add_modifier = {
 					name = overspending_on_welfare
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}

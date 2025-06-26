@@ -20,7 +20,7 @@ india_home_rule_events.1 = { # The Indian Home Rule Act
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 	
 	option = {
 		name = india_home_rule_events.1.a 
@@ -113,7 +113,7 @@ india_home_rule_events.2 = { # Permission for Democratisation
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 
@@ -380,7 +380,7 @@ india_home_rule_events.3 = { # Jallianwala Bagh Massacre
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	# Triggered by JE
 	
@@ -517,7 +517,7 @@ india_home_rule_events.4 = { # Gujranwala Riots
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	# Triggered by event
 	
@@ -581,7 +581,7 @@ india_home_rule_events.5 = { # Hunter Commission
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	# Triggered by event
 	
@@ -609,7 +609,7 @@ india_home_rule_events.5 = { # Hunter Commission
 		scope:army_ig = {
 			add_modifier = {
 				name = modifier_disciplined_war_criminal
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		top_overlord ?= {
@@ -638,7 +638,7 @@ india_home_rule_events.6 = { # Dyer's Homecoming
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	# Triggered by event
 	
@@ -666,7 +666,7 @@ india_home_rule_events.6 = { # Dyer's Homecoming
 				}
 				add_modifier = {
 					name = modifier_the_man_who_saved_india
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 			every_interest_group = {
@@ -682,7 +682,7 @@ india_home_rule_events.6 = { # Dyer's Homecoming
 				}
 				add_modifier = {
 					name = modifier_disgrace_in_india
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -738,7 +738,7 @@ india_home_rule_events.7 = { # Indian Home Rule movement
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	# Triggered by event
 	
@@ -813,14 +813,14 @@ india_home_rule_events.7 = { # Indian Home Rule movement
 		scope:intelligentsia_ig = {
 			add_modifier = {
 				name = modifier_indian_national_movement_ig
-				months = normal_modifier_time
+				days = normal_modifier_time
 				is_decaying = yes
 			}
 		}
 		scope:petty_bourgeoisie_ig = {
 			add_modifier = {
 				name = modifier_indian_national_movement_ig
-				months = normal_modifier_time
+				days = normal_modifier_time
 				is_decaying = yes
 			}
 		}
@@ -837,7 +837,7 @@ india_home_rule_events.7 = { # Indian Home Rule movement
 		scope:intelligentsia_ig = {
 			add_modifier = {
 				name = modifier_indian_national_movement_ig
-				months = normal_modifier_time
+				days = normal_modifier_time
 				is_decaying = yes
 				multiplier = 2
 			}
@@ -845,7 +845,7 @@ india_home_rule_events.7 = { # Indian Home Rule movement
 		scope:petty_bourgeoisie_ig = {
 			add_modifier = {
 				name = modifier_indian_national_movement_ig
-				months = normal_modifier_time
+				days = normal_modifier_time
 				is_decaying = yes
 				multiplier = 2
 			}
@@ -879,7 +879,7 @@ india_home_rule_events.8 = { # Indian Home Rule movement for Britain
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	# Triggered by event
 	
@@ -940,7 +940,7 @@ india_home_rule_events.9 = { # Montagu-Chelmsford Reforms
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	# Triggered by decision
 	
@@ -1044,7 +1044,7 @@ india_home_rule_events.10 = { # Simon Commission setup
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		NOT = {
@@ -1166,7 +1166,7 @@ india_home_rule_events.11 = { # Simon Commission
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	# Triggered by decision
 	
@@ -1278,7 +1278,7 @@ india_home_rule_events.11 = { # Simon Commission
 			}
 			add_modifier = {
 				name = modifier_simon_commission_embraced
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			if = {
 				limit = {
@@ -1364,7 +1364,7 @@ india_home_rule_events.11 = { # Simon Commission
 		}
 		add_modifier = {
 			name = modifier_simon_commission_boycott
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		if = {
 			limit = {
@@ -1434,7 +1434,7 @@ india_home_rule_events.11 = { # Simon Commission
 			}
 			add_modifier = {
 				name = modifier_simon_commission_embraced
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 2
 			}
 			if = {
@@ -1600,7 +1600,7 @@ india_home_rule_events.11 = { # Simon Commission
 		}
 		add_modifier = {
 			name = modifier_simon_commission_boycott
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		add_medium_indian_radicals = yes
 	}

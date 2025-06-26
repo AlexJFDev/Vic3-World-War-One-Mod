@@ -20,7 +20,7 @@ revolution_pulse_events.1 = {
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		reactionary_revolution_ongoing = yes
@@ -104,7 +104,7 @@ revolution_pulse_events.1 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_minority_self_defense_radicalism
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		every_interest_group = {
@@ -122,12 +122,12 @@ revolution_pulse_events.1 = {
 			}
 			add_modifier = {
 				name = modifier_minority_self_defense_tolerated
-				months = normal_modifier_time 
+				days = normal_modifier_time 
 			}
 		}
 		add_modifier = {
 			name = modifier_subversion_of_monopoly_on_violence
-			months = normal_modifier_time 
+			days = normal_modifier_time 
 		}
 	}
 
@@ -139,7 +139,7 @@ revolution_pulse_events.1 = {
 		scope:self_defense_threat_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = scope:self_defense_threat_culture
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -2
 			}
 			every_neighbouring_state = {
@@ -154,7 +154,7 @@ revolution_pulse_events.1 = {
 				}
 				add_culture_standard_of_living_modifier = {
 					culture = scope:self_defense_threat_culture
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = -2
 				}
 			}
@@ -182,7 +182,7 @@ revolution_pulse_events.2 = {
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -245,13 +245,13 @@ revolution_pulse_events.2 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_movement_tarred
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:blatant_fedposting_ig = {
 			add_modifier = {
 				name = modifier_tarred_with_terrorist_brush
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:blatant_fedposting_state = { #Something got blown up.
@@ -269,13 +269,13 @@ revolution_pulse_events.2 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_terrorist_smears
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:fedposting_agitator = {
 			add_modifier = {
 				name = modifier_terrorist_smears
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:blatant_fedposting_state = {
@@ -337,7 +337,7 @@ revolution_pulse_events.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		socialist_revolution_ongoing = yes
@@ -424,7 +424,7 @@ revolution_pulse_events.3 = {
 		}
 		add_modifier = {
 			name = modifier_repressing_dual_power
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:dual_power_state = {
 			add_radicals_in_state = {
@@ -441,12 +441,12 @@ revolution_pulse_events.3 = {
 		scope:dual_power_state = {
 			add_modifier = {
 				name = modifier_dual_power_state
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_modifier = {
 			name = modifier_dual_power_country
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -466,7 +466,7 @@ revolution_pulse_events.3 = {
 		scope:dual_power_state = {
 			add_modifier = {
 				name = modifier_dual_power_state_occupied
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_radicals_in_state = {
 				value = small_radicals
@@ -475,7 +475,7 @@ revolution_pulse_events.3 = {
 		scope:armed_forces_ig = {
 			add_modifier = {
 				name = modifier_given_occupation_duties
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -501,7 +501,7 @@ revolution_pulse_events.4 = {
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -578,7 +578,7 @@ revolution_pulse_events.4 = {
 			scope:armed_forces_ig = {
 				add_modifier = {
 					name = modifier_soldiers_council_ig
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}	
@@ -605,7 +605,7 @@ revolution_pulse_events.5 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		socialist_revolution_ongoing = yes
@@ -664,7 +664,7 @@ revolution_pulse_events.5 = {
 		scope:landowners_ig = {
 			add_modifier = {
 				name = modifier_intervened_against_peasant_councils
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -683,7 +683,7 @@ revolution_pulse_events.5 = {
 		scope:landowners_ig = {
 			add_modifier = {
 				name = modifier_tolerated_peasant_councils
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -779,7 +779,7 @@ revolution_pulse_events.5 = {
  		scope:ongoing_revolution_movement = {
  			add_modifier = { 
  				name = modifier_movement_dreadnought_recovered
- 				months = normal_modifier_time
+ 				days = normal_modifier_time
  			}
  		}
  		random_scope_admiral = {
@@ -806,7 +806,7 @@ revolution_pulse_events.5 = {
  			scope:potemkin_naval_base = {
  				add_modifier = {
  					name = modifier_dreadnought_refurbishing
- 					months = normal_modifier_time
+ 					days = normal_modifier_time
  				}
  			}
  		}
@@ -820,14 +820,14 @@ revolution_pulse_events.5 = {
  		scope:ongoing_revolution_movement = {
  			add_modifier = { 
  				name = modifier_movement_dreadnought_martyred
- 				months = normal_modifier_time
+ 				days = normal_modifier_time
  			}
  		}
  		scope:potemkin_state = {
  			scope:potemkin_naval_base = {
  				add_modifier = {
  					name = modifier_dreadnought_defection
- 					months = normal_modifier_time
+ 					days = normal_modifier_time
  				}
  			}
  		}
@@ -860,7 +860,7 @@ revolution_pulse_events.7 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -909,7 +909,7 @@ revolution_pulse_events.7 = {
 		scope:petition_march_ig = {
 			add_modifier = {
 				name = modifier_petition_march_appeased
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -973,7 +973,7 @@ revolution_pulse_events.7 = {
 		scope:petition_march_ig = {
 			add_modifier = {
 				name = modifier_petition_march_shot
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1001,13 +1001,13 @@ revolution_pulse_events.7 = {
 		scope:petition_march_ig = {
 			add_modifier = {
 				name = modifier_petition_march_heard
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ruler = {
 			add_modifier = {
 				name = modifier_ruler_of_the_people
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1033,7 +1033,7 @@ revolution_pulse_events.8 = {
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -1153,7 +1153,7 @@ revolution_pulse_events.9 = {
 
 	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -1271,7 +1271,7 @@ revolution_pulse_events.10 = {
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -1527,7 +1527,7 @@ revolution_pulse_events.10 = {
 		scope:reforms_at_gunpoint_ig = {
 			add_modifier = {
 				name = modifier_vanguard_against_radicalism
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_loyalists = {
@@ -1544,13 +1544,13 @@ revolution_pulse_events.10 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_reforms_at_gunpoint_failed
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:reforms_at_gunpoint_ig = {
 			add_modifier = {
 				name = modifier_refused_advice
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1576,7 +1576,7 @@ revolution_pulse_events.11 = {
 
 	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -1622,7 +1622,7 @@ revolution_pulse_events.11 = {
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = modifier_spirit_of_trenches
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_loyalists = {
@@ -1632,7 +1632,7 @@ revolution_pulse_events.11 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_trenchocracy
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1642,7 +1642,7 @@ revolution_pulse_events.11 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_trenchocracy_rebutted
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1668,7 +1668,7 @@ revolution_pulse_events.12 = {
 
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		socialist_revolution_ongoing = yes
@@ -1727,7 +1727,7 @@ revolution_pulse_events.12 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_social_democratic_betrayal
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		create_character = {
@@ -1744,7 +1744,7 @@ revolution_pulse_events.12 = {
 		scope:trade_union_ig = {
 			add_modifier = {
 				name = modifier_yellow_trade_unions
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1777,7 +1777,7 @@ revolution_pulse_events.13 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		socialist_revolution_ongoing = yes
@@ -1848,13 +1848,13 @@ revolution_pulse_events.13 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_state_paramilitarism
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:paramil_ig = {
 			add_modifier = {
 				name = modifier_deployed_against_people
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			leader = {
 				add_modifier = {
@@ -1887,7 +1887,7 @@ revolution_pulse_events.13 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_state_paramilitarism
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:communist_revolutionary_scope = {
@@ -1903,7 +1903,7 @@ revolution_pulse_events.13 = {
 		scope:paramil_ig = {
 			add_modifier = {
 				name = modifier_deployed_against_people
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			leader = {
 				add_modifier = {
@@ -1918,13 +1918,13 @@ revolution_pulse_events.13 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_civil_demonstrations
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:attacked_state = {
 			add_modifier = {
 				name = modifier_civil_demonstrations
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1952,7 +1952,7 @@ revolution_pulse_events.14 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -2006,7 +2006,7 @@ revolution_pulse_events.14 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_militant_counter_revolutionaries
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		set_variable = { name = embraced_reactionary_group value = 1 }
@@ -2033,7 +2033,7 @@ revolution_pulse_events.14 = {
 		scope:reactionary_agitator_ig = {
 			add_modifier = {
 				name = modifier_refused_overtures
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -2059,7 +2059,7 @@ revolution_pulse_events.15 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -2108,7 +2108,7 @@ revolution_pulse_events.15 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_government_embraced_counter_revolutionaries
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		if = {
@@ -2130,12 +2130,12 @@ revolution_pulse_events.15 = {
 			}
 			add_modifier = {
 				name = modifier_government_courting_reactionaries
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_modifier = {
 			name = modifier_government_courting_reactionaries_country
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -2144,7 +2144,7 @@ revolution_pulse_events.15 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_deradicalized_counter_revolutionaries
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		every_interest_group = {
@@ -2153,7 +2153,7 @@ revolution_pulse_events.15 = {
 			}
 			add_modifier = {
 				name = modifier_government_not_courting_reactionaries_1
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		random_scope_character = {
@@ -2162,7 +2162,7 @@ revolution_pulse_events.15 = {
 			}
 			add_modifier = {
 				name = modifier_government_snubbed_by_government
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -2188,7 +2188,7 @@ revolution_pulse_events.16 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		socialist_revolution_ongoing = yes
@@ -2220,7 +2220,7 @@ revolution_pulse_events.16 = {
 		set_variable = { name = reactionary_group_alignment value = 1 }
 		add_modifier = {
 			name = modifier_rising_fascism
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -2237,7 +2237,7 @@ revolution_pulse_events.16 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = modifier_appealed_to_tradition
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -2263,7 +2263,7 @@ revolution_pulse_events.17 = {
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {	
 		any_scope_state = {
@@ -2336,13 +2336,13 @@ revolution_pulse_events.17 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_reactionary_pogroms
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:pogrom_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = scope:pogrom_culture
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -10
 			}
 			state_region = {
@@ -2361,7 +2361,7 @@ revolution_pulse_events.17 = {
 				}
 				add_culture_standard_of_living_modifier = {
 					culture = scope:pogrom_culture
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = -7
 				}
 				add_radicals_in_state = {
@@ -2391,7 +2391,7 @@ revolution_pulse_events.17 = {
 		scope:pogrom_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = scope:pogrom_culture
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -5
 			}
 			state_region = {
@@ -2410,7 +2410,7 @@ revolution_pulse_events.17 = {
 				}
 				add_culture_standard_of_living_modifier = {
 					culture = scope:pogrom_culture
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = -3
 				}
 				add_radicals_in_state = {
@@ -2434,7 +2434,7 @@ revolution_pulse_events.17 = {
 			}
 			add_modifier = {
 				name = modifier_government_not_courting_reactionaries_2
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:pogrom_culture = {
@@ -2463,7 +2463,7 @@ revolution_pulse_events.18 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		socialist_revolution_ongoing = yes
@@ -2603,7 +2603,7 @@ revolution_pulse_events.19 = {
 
 	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		socialist_revolution_ongoing = yes
@@ -2678,7 +2678,7 @@ revolution_pulse_events.19 = {
 			}
 			add_modifier = {
 				name = modifier_fascist_repressions
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -2722,7 +2722,7 @@ revolution_pulse_events.19 = {
 			}
 			add_modifier = {
 				name = modifier_fascist_repressions
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -2732,7 +2732,7 @@ revolution_pulse_events.19 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_putsch_averted
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:fascist_agitator_ig = {
@@ -2750,7 +2750,7 @@ revolution_pulse_events.19 = {
 			}
 			add_modifier = {
 				name = modifier_government_not_courting_reactionaries_3
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		every_interest_group = {
@@ -2772,7 +2772,7 @@ revolution_pulse_events.19 = {
 			}
 			add_modifier = {
 				name = modifier_united_front
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -2798,7 +2798,7 @@ revolution_pulse_events.20 = {
 
 	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -2866,7 +2866,7 @@ revolution_pulse_events.20 = {
 			}
 			add_modifier = {
 				name = modifier_government_in_freefall
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -2876,7 +2876,7 @@ revolution_pulse_events.20 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_putsch_averted
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:reactionary_regime_ig = {
@@ -2894,7 +2894,7 @@ revolution_pulse_events.20 = {
 			}
 			add_modifier = {
 				name = modifier_government_not_courting_reactionaries_3
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -2920,7 +2920,7 @@ revolution_pulse_events.21 = {
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -3037,7 +3037,7 @@ revolution_pulse_events.22 = {
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -3102,7 +3102,7 @@ revolution_pulse_events.22 = {
 		scope:hostage_ig = {
 			add_modifier = {
 				name = modifier_loyal_to_leader
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		random_interest_group = {
@@ -3143,7 +3143,7 @@ revolution_pulse_events.22 = {
 		scope:hostage_ig = {
 			add_modifier = {
 				name = modifier_furious_at_sacrifice
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -3203,7 +3203,7 @@ revolution_pulse_events.23 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -3305,7 +3305,7 @@ revolution_pulse_events.24 = {
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -3453,7 +3453,7 @@ revolution_pulse_events.24 = {
 			}
 			add_modifier = {
 				name = modifier_surgical_reprisal
-				months = normal_modifier_time
+				days = normal_modifier_time
 				is_decaying = yes
 			}
 		}
@@ -3480,7 +3480,7 @@ revolution_pulse_events.25 = {
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		OR = {
@@ -3768,7 +3768,7 @@ revolution_pulse_events.25 = {
 		}
 		add_modifier = {
 			name = modifier_security_measure_support
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		hidden_effect = {
 			ruler = {
@@ -3798,7 +3798,7 @@ revolution_pulse_events.26 = {
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_interest_group = {
@@ -3832,7 +3832,7 @@ revolution_pulse_events.26 = {
 		scope:devout_ig = {
 			add_modifier = {
 				name = modifier_anticlerical_revolution
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_radicals = {
@@ -3852,7 +3852,7 @@ revolution_pulse_events.26 = {
 		scope:devout_ig = {
 			add_modifier = {
 				name = modifier_clergy_empowered
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -3878,7 +3878,7 @@ revolution_pulse_events.27 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_interest_group = {
@@ -3952,7 +3952,7 @@ revolution_pulse_events.27 = {
 			}
 			add_modifier = {
 				name = modifier_government_made_peace
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -3978,7 +3978,7 @@ revolution_pulse_events.28 = {
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		reactionary_revolution_ongoing = yes
@@ -4052,7 +4052,7 @@ revolution_pulse_events.29 = {
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_interest_group = {
@@ -4095,7 +4095,7 @@ revolution_pulse_events.29 = {
 		scope:ongoing_revolution_movement = {
 			add_modifier = {
 				name = modifier_movement_clergy_support
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -4145,7 +4145,7 @@ revolution_pulse_events.30 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		reactionary_revolution_ongoing = yes
@@ -4202,13 +4202,13 @@ revolution_pulse_events.30 = {
 		scope:workers_militia_ig = {
 			add_modifier = {
 				name = modifier_workers_militias_empowered
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:workers_brigade_state = {
 			add_modifier = {
 				name = modifier_workers_militia_support
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_loyalists_in_state = {
 				value = medium_radicals
@@ -4225,7 +4225,7 @@ revolution_pulse_events.30 = {
 		scope:workers_militia_ig = {
 			add_modifier = {
 				name = modifier_workers_militias_disbanded
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:workers_brigade_state = {
@@ -4257,7 +4257,7 @@ revolution_pulse_events.31 = {
 
 	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -4382,7 +4382,7 @@ revolution_pulse_events.32 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		NOT = {
@@ -4532,7 +4532,7 @@ revolution_pulse_events.33 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -4683,7 +4683,7 @@ revolution_pulse_events.34 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -4811,7 +4811,7 @@ revolution_pulse_events.35 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -4875,7 +4875,7 @@ revolution_pulse_events.35 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = modifier_arrested_landlords_for_collusion
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -4887,7 +4887,7 @@ revolution_pulse_events.35 = {
 		}
 		add_modifier = {
 			name = modifier_arrested_landlords_exortion
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -4903,7 +4903,7 @@ revolution_pulse_events.35 = {
 			}
 			add_modifier = {
 				name = modifier_light_rent_controls
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -4929,7 +4929,7 @@ revolution_pulse_events.36 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -5037,7 +5037,7 @@ revolution_pulse_events.37 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -5172,7 +5172,7 @@ revolution_pulse_events.38 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -5238,7 +5238,7 @@ revolution_pulse_events.38 = {
 				}
 				add_modifier = {
 					name = modifier_unp_barracks_malus
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -5295,7 +5295,7 @@ revolution_pulse_events.38 = {
 		}
 		add_modifier = {
 			name = modifier_militarised_police_force
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:shall_not_be_infringed_state = {
 			add_radicals_in_state = {
@@ -5326,7 +5326,7 @@ revolution_pulse_events.39 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes
@@ -5422,7 +5422,7 @@ revolution_pulse_events.40 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_revolution_ongoing = yes

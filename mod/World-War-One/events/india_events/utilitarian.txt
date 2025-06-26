@@ -39,7 +39,7 @@ utilitarian.1 = {
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by Imperialism of Promise JE
@@ -101,7 +101,7 @@ utilitarian.1 = {
 			}
 			add_modifier = {
 				name = util_colonial_admin_success
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -127,7 +127,7 @@ utilitarian.2 = {
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by Imperialism of Promise JE
@@ -189,7 +189,7 @@ utilitarian.2 = {
 			}
 			add_modifier = {
 				name = util_colonial_admin_fail
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -232,7 +232,7 @@ utilitarian.3 = {
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by Imperialism of Promise JE
@@ -343,7 +343,7 @@ utilitarian.3 = {
 				}
 				add_modifier = {
 					name = util_colonial_admin_partial_success
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -384,7 +384,7 @@ utilitarian.4 = {
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by Imperialism of Promise JE
@@ -448,7 +448,7 @@ utilitarian.4 = {
 		}
 		add_modifier = {
 			name = stop_meddlesome_affairs
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
@@ -459,7 +459,7 @@ utilitarian.4 = {
 		}
 		add_modifier = {
 			name = meddlesome_affairs
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }
@@ -484,7 +484,7 @@ utilitarian.5 = {
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_scope_state = {
@@ -570,7 +570,7 @@ utilitarian.5 = {
 			}
 			add_modifier = {
 				name = restrained_fortune_seekers
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -583,7 +583,7 @@ utilitarian.5 = {
 			}
 			add_modifier = {
 				name = unrestrained_fortune_seekers
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -609,7 +609,7 @@ utilitarian.6 = {
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_subject = yes
@@ -711,7 +711,7 @@ utilitarian.7 = {
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		is_subject = yes
@@ -786,7 +786,7 @@ utilitarian.7 = {
 		default_option = yes
 		add_modifier = {
 			name = bic_by_the_book
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
@@ -822,7 +822,7 @@ utilitarian.8 = { # Success event for schooling
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = { # is fired by the enactment pulse
 		has_dlc_feature = ip2_content
@@ -952,7 +952,7 @@ utilitarian.8 = { # Success event for schooling
 			}
 			add_modifier = {
 				name = no_edu_change_stance_gain_pol_str
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -978,7 +978,7 @@ utilitarian.9 = {
 
 	duration = 3
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by Imperialism of Promise JE
@@ -1036,7 +1036,7 @@ utilitarian.9 = {
 		scope:relevant_ig = {
 			add_modifier = {
 				name = persuasive_util_pamphlet_attract
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_medium_european_loyalists = yes
@@ -1046,7 +1046,7 @@ utilitarian.9 = {
 		scope:relevant_ig = {
 			add_modifier = {
 				name = persuasive_util_pamphlet_pol_str
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}		
 		}
 		add_loyalists = {
@@ -1147,14 +1147,14 @@ utilitarian.10 = {
 		default_option = yes
 		add_modifier = {
 			name = utilitarian_census_in_progress_cost
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:relevant_state = {
 			set_variable = utilitarian_effort_underway
 		}
 		add_modifier = {
 			name = util_caste_divisions
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
@@ -1171,12 +1171,12 @@ utilitarian.10 = {
 			}
 			add_modifier = {
 				name = utilitarian_no_census
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_modifier = {
 			name = util_authority
-			months = normal_modifier_time
+			days = normal_modifier_time
 
 		}
 	}

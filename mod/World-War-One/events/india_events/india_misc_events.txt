@@ -53,7 +53,7 @@ india_events.1 = { # Kaisar-i-Hind
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		c:GBR ?= this
@@ -148,7 +148,7 @@ india_events.1 = { # Kaisar-i-Hind
 		scope:pm_scope = {
 			add_modifier = {
 				name = modifier_denied_monarch_title
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_radicals = {
@@ -217,7 +217,7 @@ india_events.2 = { # Delhi Durbar
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by previous event
@@ -265,13 +265,13 @@ india_events.2 = { # Delhi Durbar
 		default_option = yes
 		add_modifier = {
 			name = modifier_delhi_durbar
-			months = normal_modifier_time
+			days = normal_modifier_time
 			is_decaying = yes
 		}
 		ig:ig_landowners = {
 			add_modifier = {
 				name = modifier_delhi_durbar_approval
-				months = normal_modifier_time
+				days = normal_modifier_time
 				is_decaying = yes
 			}
 		}
@@ -286,7 +286,7 @@ india_events.2 = { # Delhi Durbar
 		}
 		add_modifier = {
 			name = modifier_delhi_durbar
-			months = normal_modifier_time
+			days = normal_modifier_time
 			is_decaying = yes
 		}
 		custom_tooltip = {
@@ -325,7 +325,7 @@ india_events.3 = { # Koh-i-Noor
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by on_action
@@ -366,7 +366,7 @@ india_events.3 = { # Koh-i-Noor
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = modifier_dispatched_koh_i_noor_diamond
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		change_relations = {
@@ -428,7 +428,7 @@ india_events.4 = { # Demanding return of the Koh-i-Noor
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by decision
@@ -513,7 +513,7 @@ india_events.5 = { # Deccan Riots
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -571,7 +571,7 @@ india_events.5 = { # Deccan Riots
 		ig:ig_rural_folk = {
 			add_modifier = {
 				name = modifier_deccan_riots_unaffected
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -603,13 +603,13 @@ india_events.5 = { # Deccan Riots
 		ig:ig_landowners = {
 			add_modifier = {
 				name = modifier_deccan_riots_limited_money_lending
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ig:ig_petty_bourgeoisie = {
 			add_modifier = {
 				name = modifier_deccan_riots_limited_money_lending
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -635,7 +635,7 @@ india_events.6 = { # Hindu-German Conspiracy
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -702,13 +702,13 @@ india_events.6 = { # Hindu-German Conspiracy
 		ig:ig_petty_bourgeoisie = {
 			add_modifier = {
 				name = modifier_revolutionary_conspiracy_crackdown
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		ig:ig_intelligentsia = {
 			add_modifier = {
 				name = modifier_revolutionary_conspiracy_crackdown
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -746,7 +746,7 @@ india_events.7 = { # Lahore Trials
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by previous event
@@ -792,7 +792,7 @@ india_events.7 = { # Lahore Trials
 		default_option = yes
 		add_modifier = { 
 			name = modifier_indian_conspiracy_trials
-			months = normal_modifier_time
+			days = normal_modifier_time
 			is_decaying = yes
 			multiplier = 1.5
 		}
@@ -802,7 +802,7 @@ india_events.7 = { # Lahore Trials
 		name = india_events.7.b
 		add_modifier = { 
 			name = modifier_indian_conspiracy_trials
-			months = normal_modifier_time
+			days = normal_modifier_time
 			is_decaying = yes
 		}
 		random_political_movement = {
@@ -811,7 +811,7 @@ india_events.7 = { # Lahore Trials
 			}
 			add_modifier = {
 				name = modifier_india_forty_two_martyrs
-				months = normal_modifier_time
+				days = normal_modifier_time
 				is_decaying = yes
 			}
 		}
@@ -903,7 +903,7 @@ india_events.8 = { # Phool Walon Ki Sair
 			}
 			add_modifier = {
 				name = modifier_shuttered_pwks
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:phool_walon_ki_sair_state = {
@@ -949,7 +949,7 @@ india_events.9 = { # Indian Army
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		c:BIC ?= this
@@ -977,7 +977,7 @@ india_events.9 = { # Indian Army
 		}
 		add_modifier = {
 			name = modifier_consolidated_indian_armies
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	
@@ -995,7 +995,7 @@ india_events.9 = { # Indian Army
 		add_small_indian_loyalists = yes
 		add_modifier = {
 			name = modifier_encouraged_indian_military_participation
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }
@@ -1021,7 +1021,7 @@ india_events.10 = { # Amy Carmichael
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -1072,7 +1072,7 @@ india_events.10 = { # Amy Carmichael
 			}
 			add_modifier = {
 				name = modifier_bic_missionary_works
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1082,7 +1082,7 @@ india_events.10 = { # Amy Carmichael
 		scope:dohnavur_state = {
 			add_modifier = {
 				name = modifier_bic_missionary_works
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 0.5
 			}
 		}
@@ -1110,7 +1110,7 @@ india_events.11 = { # Usha Mehta
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -1169,7 +1169,7 @@ india_events.11 = { # Usha Mehta
 		scope:mehta_state = {
 			add_modifier = {
 				name = modifier_childrens_protest_marches
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1207,7 +1207,7 @@ india_events.12 = { # Anne Besant goes to India
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -1282,7 +1282,7 @@ india_events.12 = { # Anne Besant goes to India
 		capital = {
 			add_modifier = {
 				name = modifier_london_theosophical_society
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1309,7 +1309,7 @@ india_events.13 = { # Theosophy Chain - 1
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -1399,7 +1399,7 @@ india_events.14 = { # Theosophy Chain - 2 - Order of the Star in the East
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -1459,7 +1459,7 @@ india_events.15 = { # Theosophy Chain - 3 - Divine Inspiration
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -1525,7 +1525,7 @@ india_events.16 = { # Theosophy Chain - 4 - Order of the Star Dissolved
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -1653,7 +1653,7 @@ india_events.17 = { # Khudiram Bose
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -1728,7 +1728,7 @@ india_events.18 = { # Sale of Berar
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# triggered by decision

@@ -68,7 +68,7 @@ indian_famines.1 = {
 		scope:indian_famine_state_scope = {
 			add_modifier = {
 				name = reduced_taxation_due_to_famine
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_loyalists_in_state = {
 				value = small_radicals
@@ -90,7 +90,7 @@ indian_famines.1 = {
 		scope:indian_famine_state_scope = {
 			add_modifier = {
 				name = no_taxation_due_to_famine
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_loyalists_in_state = {
 				value = medium_radicals
@@ -98,7 +98,7 @@ indian_famines.1 = {
 		}
 		add_modifier = {
 			name = famine_relief_aid_costs
-			months = normal_modifier_time
+			days = normal_modifier_time
 			multiplier = money_amount_multiplier_very_small
 		}
 	}
@@ -213,7 +213,7 @@ indian_famines.2 = {
 				order_by = gdp
 				add_modifier = {
 					name = temporary_switch_to_food_crops
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 				add_loyalists_in_state = {
 					value = small_radicals
@@ -241,7 +241,7 @@ indian_famines.2 = {
 				}
 				add_modifier = {
 					name = temporary_switch_to_food_crops
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 				add_loyalists_in_state = {
 					value = small_radicals
@@ -251,7 +251,7 @@ indian_famines.2 = {
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = bowed_to_food_crop_demands
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -298,7 +298,7 @@ indian_famines.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	duration = 3
 
@@ -351,12 +351,12 @@ indian_famines.3 = {
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = bowed_to_hunger_strike
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_modifier = {
 			name = food_crop_system_modifier
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }
@@ -421,7 +421,7 @@ indian_famines.4 = {
 		ig:ig_petty_bourgeoisie = {
 			add_modifier = {
 				name = kept_farmers_out_of_city_modifier
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:indian_famine_state_scope = {
@@ -436,7 +436,7 @@ indian_famines.4 = {
 		scope:indian_famine_state_scope = {
 			add_modifier = {
 				name = tax_breaks_for_warehouses
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_radicals_in_state = {
 				strata = middle
@@ -446,7 +446,7 @@ indian_famines.4 = {
 		ig:ig_petty_bourgeoisie = {
 			add_modifier = {
 				name = allowed_farmers_into_cities
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}

@@ -20,7 +20,7 @@ positivism.2 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		# Triggered by JE
@@ -67,7 +67,7 @@ positivism.2 = {
 		scope:positivist_agitator.interest_group = {
 			add_modifier = {
 				name = modifier_positivist_influence
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:positivist_church_state = {
@@ -99,7 +99,7 @@ positivism.2 = {
 		scope:positivist_agitator.interest_group = {
 			add_modifier = {
 				name = modifier_positivist_influence_against
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:positivist_church_state = {
@@ -148,7 +148,7 @@ positivism.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		#Triggered by JE
@@ -170,7 +170,7 @@ positivism.3 = {
 			}	
 			add_modifier = {
 				name = modifier_positivist_society_reward
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 1.5
 			}
 		}
@@ -180,14 +180,14 @@ positivism.3 = {
 			}	
 			add_modifier = {
 				name = modifier_positivist_society_reward
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 1
 			}
 		}
 		else = {
 			add_modifier = {
 				name = modifier_positivist_society_reward
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 0.5
 			}
 		}
@@ -207,7 +207,7 @@ positivism.3 = {
 				}
 				add_modifier = {
 					name = modifier_positivist_leaders_reward
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = 2
 				}
 			}
@@ -224,7 +224,7 @@ positivism.3 = {
 				}
 				add_modifier = {
 					name = modifier_positivist_leaders_reward
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = 1
 				}
 			}
@@ -238,7 +238,7 @@ positivism.3 = {
 				}
 				add_modifier = {
 					name = modifier_positivist_leaders_reward
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = 0.5
 				}
 			}
@@ -270,7 +270,7 @@ positivism.4 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		#Triggered by JE
@@ -314,7 +314,7 @@ positivism.4 = {
 				}
 				add_modifier = {
 					name = modifier_positivism_fading
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -330,7 +330,7 @@ positivism.4 = {
 				}
 				add_modifier = {
 					name = modifier_positivism_fading
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = 1.5
 				}
 			}
@@ -344,7 +344,7 @@ positivism.4 = {
 				}
 				add_modifier = {
 					name = modifier_positivism_fading
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = 2
 				}
 			}
@@ -365,7 +365,7 @@ positivism.4 = {
 				}
 				add_modifier = {
 					name = modifier_positivism_fading
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = 0.5
 				}
 			}
@@ -382,7 +382,7 @@ positivism.4 = {
 				}
 				add_modifier = {
 					name = modifier_positivism_fading
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -395,7 +395,7 @@ positivism.4 = {
 				}
 				add_modifier = {
 					name = modifier_positivism_fading
-					months = normal_modifier_time
+					days = normal_modifier_time
 					multiplier = 0.75
 				}
 			}
@@ -521,7 +521,7 @@ positivism_pulse.2 = {
 		}
 		add_modifier = {
 			name = modifier_positivism_mil_reformism
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -533,7 +533,7 @@ positivism_pulse.2 = {
 		}
 		add_modifier = {
 			name = modifier_positivism_mil_influence
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		custom_tooltip = {
 			text = positivists_advance_10
@@ -565,7 +565,7 @@ positivism_pulse.2 = {
 		}
 		add_modifier = {
 			name = modifier_positivism_mil_influence
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		custom_tooltip = {
 			text = military_academy_positivist_tt
@@ -627,7 +627,7 @@ positivism_pulse.3 = {
 		scope:armed_forces_ig = {	
 			add_modifier = {
 				name = modifier_upset_army_positivists
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		custom_tooltip = {
@@ -648,7 +648,7 @@ positivism_pulse.3 = {
 		}
 		add_modifier = {
 			name = modifier_positivist_cadet_influence
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		custom_tooltip = {
 			text = positivists_advance_20
@@ -705,7 +705,7 @@ positivism_pulse.4 = {
 		default_option = yes
 		add_modifier = {
 			name = modifier_practicing_positivists_embraced
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 
@@ -714,7 +714,7 @@ positivism_pulse.4 = {
 		scope:positivist_ig = {
 			add_modifier = {
 				name = modifier_stifling_positivist_orthodoxy
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		custom_tooltip = {
@@ -746,7 +746,7 @@ positivism_pulse.5 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	trigger = {
 		any_scope_state = {
