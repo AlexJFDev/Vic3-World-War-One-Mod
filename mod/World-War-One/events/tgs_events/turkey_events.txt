@@ -179,12 +179,6 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                 days = 5
             }
         }  
-        c:ARM = {
-            trigger_event = {
-                id = turkey_events.6
-                days = 5
-            }
-        } 
         c:GRE = {
             trigger_event = {
                 id = turkey_events.7
@@ -224,17 +218,24 @@ turkey_events.6 = { #Countries react to revolution
 				who = root
 			}
         }
+        trigger_event = {
+            id = turkey_events.7
+            days = 50
+        }
         ai_chance = {
-		  base = 100
+		  base = 10
 	    }
     }
 
     option = { 
         name = turkey_events.6.b
+        ai_chance = {
+		  base = 0
+	    }
     }
 }
 
-turkey_events.7 = { #Countries refrain from intervening furthermore (Not activated ATM)
+turkey_events.7 = { #Countries refrain from intervening furthermore
     type = country_event
 
     title = turkey_events.7.t
@@ -267,11 +268,7 @@ turkey_events.7 = { #Countries refrain from intervening furthermore (Not activat
 			add_diplomatic_play_war_support = { target = root value = -200 }
 		}
         ai_chance = {
-		base = 100
-		modifier = {
-			trigger = { root = c:ARM }
-			add = 0
-		}
+		base = 10
         }
 	}
 
@@ -279,10 +276,6 @@ turkey_events.7 = { #Countries refrain from intervening furthermore (Not activat
         name = turkey_events.7.b
         ai_chance = {
 		  base = 0
-          modifier = {
-			trigger = { root = c:ARM }
-			add = 100
-		}
 	    }
     }
 }
