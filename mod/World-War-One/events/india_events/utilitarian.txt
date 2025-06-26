@@ -78,7 +78,7 @@ utilitarian.1 = {
 		default_option = yes
 		add_modifier = {
 			name = utilitarian_bonus
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		ig:ig_industrialists = {
 			if = {
@@ -175,7 +175,7 @@ utilitarian.2 = {
 		default_option = yes
 		add_modifier = {
 			name = utilitarian_malus
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		every_interest_group = {
 			limit = {
@@ -325,7 +325,7 @@ utilitarian.3 = {
 		default_option = yes
 		add_modifier = {
 			name = utilitarian_partial_malus
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		if = {
 			limit = {
@@ -1077,7 +1077,7 @@ utilitarian.10 = {
 	duration = 3
 
 	# Would only want this to happen once for the Imperialism of Promise JE
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		any_scope_state = {

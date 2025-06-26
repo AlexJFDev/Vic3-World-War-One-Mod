@@ -73,7 +73,7 @@ positivism.2 = {
 		scope:positivist_church_state = {
 			add_modifier = {
 				name = modifier_positivist_church
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		custom_tooltip = {
@@ -105,7 +105,7 @@ positivism.2 = {
 		scope:positivist_church_state = {
 			add_modifier = {
 				name = modifier_positivist_church
-				months = long_modifier_time
+				days = long_modifier_time
 				multiplier = 0.5
 			}
 		}
@@ -425,7 +425,7 @@ positivism_pulse.1 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		
@@ -444,7 +444,7 @@ positivism_pulse.1 = {
 			text = positivist_leaders_spawn_increase_tt
 			set_variable = {
 				name = positivist_leaders_je_var
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		custom_tooltip = {
@@ -461,7 +461,7 @@ positivism_pulse.1 = {
 			text = positivist_leaders_spawn_increase_small_tt
 			set_variable = {
 				name = positivist_leaders_less_je_var
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		custom_tooltip = {
@@ -493,7 +493,7 @@ positivism_pulse.2 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		ig:ig_armed_forces = {
@@ -600,7 +600,7 @@ positivism_pulse.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		has_variable = military_academy_positivists
@@ -679,7 +679,7 @@ positivism_pulse.4 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		any_interest_group = {
@@ -786,7 +786,7 @@ positivism_pulse.5 = {
 		scope:temple_of_humanity_state = {
 			add_modifier = {
 				name = modifier_positivist_church
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		custom_tooltip = {

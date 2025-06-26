@@ -195,7 +195,7 @@ nihilism.1 = {
 		default_option = yes
 		add_modifier = {
 			name = modifier_nihilist_movement_enhancement
-			months = long_modifier_time
+			days = long_modifier_time
 			multiplier = 2
 		}
 		if = {
@@ -225,7 +225,7 @@ nihilism.1 = {
 		
 		add_modifier = {
 			name = modifier_nihilist_movement_enhancement
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		
 		custom_tooltip = {
@@ -582,7 +582,7 @@ nihilism.4 = {  #Fathers and Sons
 
 	duration = 3
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		ig:ig_intelligentsia = {
@@ -1054,7 +1054,7 @@ nihilism.9 = { #Nihilists commit arson on government buildings
 
 	duration = 3
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		has_variable = nihilism_level_two
@@ -1347,7 +1347,7 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	duration = 3
 
@@ -1466,7 +1466,7 @@ nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separ
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	duration = 3
 
@@ -1681,7 +1681,7 @@ nihilism.13 = { #Instant law pass for abolishing state religion/instituting athe
 		ig:ig_devout = {
 			add_modifier = {
 				name = modifier_deicide
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 	}
