@@ -113,6 +113,118 @@ japan_events.17 = {#The Showa era
     option = {
         name = japan_events.17.a
         default_option = yes
+        set_strategy = ai_strategy_territorial_expansion
+        set_secret_goal = {
+			country = c:CHI
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:MCH
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:BEI
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:YUE
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:PHI
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:DEI
+			secret_goal = conquer
+		}
+        c:JAP = {
+		   create_diplomatic_pact = {
+			   country = c:CHI
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:BEI
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:AHU
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:ZHI
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:ZHE
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:YUE
+			   type = rivalry
+		    }
+			create_diplomatic_pact = {
+			   country = c:SHA
+			   type = rivalry
+		    }
+	    }
+        c:CHI = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:BEI = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:AHU = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:ZHI = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:MCH = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:ZHE = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:YUE = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+		c:SHA = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+		c:JAP ?= { 
+           set_relations = { country = c:CHI value = -100 }
+           set_relations = { country = c:BEI value = -100 }
+           set_relations = { country = c:ZHI value = -100 }
+           set_relations = { country = c:AHU value = -100 }
+           set_relations = { country = c:YUE value = -100 }
+           set_relations = { country = c:MCH value = -100 }
+		   set_relations = { country = c:SHA value = -100 }
+        }
         random_scope_character = { 
 			limit = { has_variable = hirohito }
             set_ideology = ideology:ideology_jingoist_leader
@@ -124,6 +236,118 @@ japan_events.17 = {#The Showa era
 
     option = {
         name = japan_events.17.b
+        set_strategy = ai_strategy_territorial_expansion
+        set_secret_goal = {
+			country = c:CHI
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:MCH
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:BEI
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:YUE
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:PHI
+			secret_goal = conquer
+		}
+        set_secret_goal = {
+			country = c:DEI
+			secret_goal = conquer
+		}
+        c:JAP = {
+		   create_diplomatic_pact = {
+			   country = c:CHI
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:BEI
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:AHU
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:ZHI
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:ZHE
+			   type = rivalry
+		    }
+            create_diplomatic_pact = {
+			   country = c:YUE
+			   type = rivalry
+		    }
+			create_diplomatic_pact = {
+			   country = c:SHA
+			   type = rivalry
+		    }
+	    }
+        c:CHI = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:BEI = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:AHU = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:ZHI = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:MCH = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:ZHE = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+        c:YUE = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+		c:SHA = {
+		   create_diplomatic_pact = {
+			   country = c:JAP
+			   type = rivalry
+		    }
+	    }
+		c:JAP ?= { 
+           set_relations = { country = c:CHI value = -100 }
+           set_relations = { country = c:BEI value = -100 }
+           set_relations = { country = c:ZHI value = -100 }
+           set_relations = { country = c:AHU value = -100 }
+           set_relations = { country = c:YUE value = -100 }
+           set_relations = { country = c:MCH value = -100 }
+		   set_relations = { country = c:SHA value = -100 }
+        }
         random_scope_character = { 
 			limit = { has_variable = hirohito }
             set_ideology = ideology:ideology_fascist
@@ -149,45 +373,5 @@ japan_events.17 = {#The Showa era
         ai_chance = {
 		  base = 0
 	    }
-    }
-}
-
-japan_events.20 = { 
-    type = country_event
-
-    title = japan_events.20.t
-    desc = japan_events.20.d
-    flavor = japan_events.20.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = japan_events.20.a
-        default_option = yes
-        set_strategy = ai_strategy_territorial_expansion
-        create_diplomatic_play = {
-		  target_country = c:CHI
-          escalation = 30
-		  type = dp_make_protectorate
-	    }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = japan_events.20.c
-        ai_chance = {
-            base = 0
-        }
     }
 }

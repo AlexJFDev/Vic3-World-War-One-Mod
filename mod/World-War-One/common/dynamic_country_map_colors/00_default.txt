@@ -317,29 +317,12 @@ communist_britain = {
 }
 
 unpleasant_germany = {
-	color = "feldgrau"
+	color = "nihilist_germany_color"
 
 	possible = {
 		exists = c:GER
 		THIS = c:GER
-		coa_dictatorship_trigger = yes
-		NOT = {
-			OR = {
-				py:communist_party ?= {
-					any_member = {
-						is_in_government = yes
-					}
-				}
-				any_scope_character = {
-					is_ruler = yes
-					OR = {
-						has_ideology = ideology:ideology_communist
-						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_anarchist
-					}
-				}
-			}
-		}
+		coa_fascist_trigger = yes
 	}
 }
 
@@ -353,47 +336,13 @@ communist_germany = {
 	}
 }
 
-ddr_germany = {
-	color = "DDR_green"
+german_soviet_republic = {
+    color = "communist_germany_red"
 
 	possible = {
-		exists = c:GER
-		THIS = c:GER
-		OR = {
-			AND = {
-				has_law = law_type:law_single_party_state
-				py:communist_party ?= {
-					any_member = {
-						is_in_government = yes
-					}
-				}
-			}
-			AND = {
-				OR = {
-					has_law = law_type:law_autocracy
-					has_law = law_type:law_technocracy
-					has_law = law_type:law_oligarchy
-				}
-				any_scope_character = {
-					is_ruler = yes
-					OR = {
-						has_ideology = ideology:ideology_communist
-						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_anarchist
-					}
-				}
-			}
-			AND = {
-				is_subject = yes
-				overlord = {
-					has_law = law_type:law_council_republic
-				}
-			}
-		}
-		OR = {
-			has_law = law_type:law_parliamentary_republic
-			has_law = law_type:law_presidential_republic
-		}
+		exists = c:BAV
+		THIS = c:BAV
+		has_law = law_type:law_council_republic
 	}
 }
 
@@ -481,19 +430,6 @@ nihilist_russia = {
 	possible = {
 		exists = c:RUS
 		THIS = c:RUS
-		has_law = law_type:law_state_atheism
-		ruler = {
-			has_ideology = ideology:ideology_atheist
-		}
-	}
-}
-
-nihilist_germany = {
-	color = "nihilist_germany_color"
-
-	possible = {
-		exists = c:GER
-		THIS = c:GER 
 		has_law = law_type:law_state_atheism
 		ruler = {
 			has_ideology = ideology:ideology_atheist
@@ -704,29 +640,5 @@ kartli_kakheti = {
 		NOT = {
 			has_technology_researched = nationalism
 		}
-	}
-}
-
-german_soviet_republic = {
-    color = "communist_germany_red"
-
-	possible = {
-		exists = c:BAV
-		THIS = c:BAV
-		has_law = law_type:law_council_republic
-	}
-}
-
-unpleasant_germany = {
-	color = "feldgrau"
-
-	possible = {
-		exists = c:GER
-		THIS = c:GER
-		OR = {
-			has_law = law_type:law_single_party_state
-			has_law = law_type:law_autocracy
-		}
-		has_law = law_type:law_presidential_republic
 	}
 }

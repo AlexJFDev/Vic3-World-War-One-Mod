@@ -1973,6 +1973,30 @@ CHI = { # China
 		}
 	}	
 	flag_definition = {
+		coa = CHI_republic
+		subject_canton = CHI_republic
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = { 
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
+			}
+			has_law = law_type:law_autocracy
+		}
+	}	
+	flag_definition = {
+		coa = CHI_dictatorship
+		subject_canton = CHI_dictatorship
+		priority = 10
+		trigger = { 
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
+			}
+		}
+	}
+	flag_definition = {
 		coa = CHI_theocracy
 		subject_canton = CHI_theocracy
 		subject_canton = CHI_absolute_monarchy

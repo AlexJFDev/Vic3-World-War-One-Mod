@@ -230,86 +230,10 @@ je_nazi_threat = {
     on_fail = {
         trigger_event = { 
             id = germany_events.26 
-            days = 60
+            days = 5
             popup = yes 
         }
     }
    
-    should_be_pinned_by_default = yes
-}
-
-je_the_final_war = {
-    icon = "gfx/interface/icons/event_icons/event_skull.dds"
-    group = je_group_internal_affairs
-
-    is_shown_when_inactive = {
-        exists = c:GER
-        THIS = c:GER
-        has_global_variable = world_war_1_over
-    }
-    
-    possible = {
-        OR = {
-            has_global_variable = hitler_rise_to_power
-            c:GER = {
-                ruler = {
-                OR = {
-				   has_ideology = ideology:ideology_fascist
-                   has_ideology = ideology:ideology_authoritarian
-                }
-                }
-            }
-        }
-    }
-
-    immediate = {
-        trigger_event = {
-            id = germany_events.29
-            days = 5
-        }
-    }
-
-    complete = {
-        army_size >= 800
-        navy_size >= 100
-        has_technology_researched = blitzkrieg_tech
-        average_sol > average_expected_sol
-        any_political_movement = {
-            is_insurrectionary = no
-        }
-        NOT = {
-            c:GBR = {
-			  has_truce_with = root
-            }
-            c:FRA = {
-			  has_truce_with = root
-            }
-            c:POL = {
-			  has_truce_with = root
-            }
-        }
-        any_country = {
-		    limit = {
-              country_rank >= rank_value:great_power
-            }
-            has_diplomatic_pact = {
-				who = root
-				type = alliance
-			}	
-        }
-        OR = {
-            exists = c:POL
-            exists = c:CZE
-        }
-        is_at_war = no
-    }
-
-    on_complete = {
-        trigger_event = {
-            id = germany_events.35
-            days = 90
-        }
-    }
-
     should_be_pinned_by_default = yes
 }
