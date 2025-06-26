@@ -94,9 +94,9 @@ usa_events.6 = { #Black Tuesday
             is_decaying = yes
         }
         c:USA = {
-           trigger_event = {
-                id = usa_events.7
-                days = 60
+            trigger_event = {
+                id = stabilization_buff_events.37
+                days = 5
             }
             trigger_event = {
                 id = stabilization_buff_events.15
@@ -141,6 +141,16 @@ usa_events.6 = { #Black Tuesday
             name = angry_industrialists_1_modifier
             years = 3
             is_decaying = yes
+        }
+        c:USA = {
+            trigger_event = {
+                id = stabilization_buff_events.37
+                days = 5
+            }
+            trigger_event = {
+                id = stabilization_buff_events.15
+                days = 5
+            }
         }
         every_country = {
 			limit = {
@@ -274,6 +284,10 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
         }
         trigger_event = {
             id = stabilization_buff_events.23
+            days = 5
+        }
+        trigger_event = {
+            id = stabilization_buff_events.38
             days = 5
         }
         add_treasury = -50000000
