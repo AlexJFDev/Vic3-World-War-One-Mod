@@ -1,5 +1,5 @@
 ﻿je_colossus_with_feet_of_clay = {
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -113,13 +113,12 @@ je_war_fatigue_russia = {
     
     possible = {
         has_variable = entente_participant
-        average_sol < average_expected_sol
         is_at_war = yes
-        game_date > 1916.1.1
-    }
-
-    modifiers_while_active = {
-       war_protests_1_modifier
+        game_date > 1915.1.1
+        OR = {
+            root.average_sol <= 10
+            average_sol < average_expected_sol
+        }
     }
 
     immediate = {
@@ -129,6 +128,10 @@ je_war_fatigue_russia = {
                 days = 5
             }
         }
+    }
+
+    modifiers_while_active = {
+        war_protests_1_modifier
     }
 
     complete = { 

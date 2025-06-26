@@ -9,13 +9,10 @@
     }
     
     possible = {
+        game_date > 1915.1.1
         has_variable = central_powers_participant
         average_sol < average_expected_sol
         is_at_war = yes
-    }
-
-    modifiers_while_active = {
-       war_fatigue_1
     }
 
     immediate = {
@@ -25,6 +22,10 @@
                 days = 5
             }
         }
+    }
+
+    modifiers_while_active = {
+         war_fatigue_1
     }
 
     complete = { 
