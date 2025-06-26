@@ -8,23 +8,178 @@ nazi_ascension_progress_bar = {
 
 	monthly_progress = {
 		if = {
+			limit = {
+				any_country = {
+					limit = {
+                        country_rank >= rank_value:great_power
+                        ruler = {
+                            OR = {
+				                has_ideology = ideology:ideology_fascist
+				                has_ideology = ideology:ideology_reactionary
+                                has_ideology = ideology:ideology_integralist
+                            }
+                        }
+                    }
+				}
+			}
 			add = {
 				desc = "nazi_progress_from_global_fascism"
-				value = owner.var:nazi_progress_from_global_fascism
+				owner = {
+					every_country = {
+					limit = {
+                        country_rank >= rank_value:great_power
+                        ruler = {
+                            OR = {
+				                has_ideology = ideology:ideology_fascist
+				                has_ideology = ideology:ideology_reactionary
+                                has_ideology = ideology:ideology_integralist
+                            }
+                        }
+                    }
+					   add = 0.5
+				    }
+
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				any_country = {
+					limit = {
+                           country_rank >= rank_value:great_power
+                               OR = {
+                                   has_law = law_type:law_council_republic
+                                   has_law = law_type:law_anarchism
+                                   has_law = law_type:law_cooperative_ownership
+                                }
+                    }
+				}
 			}
 			add = {
 				desc = "nazi_progress_from_global_communism"
-				value = owner.var:nazi_progress_from_global_communism
-			}
-			add = {
-				desc = "nazi_progress_from_war_reps"
-				value = owner.var:nazi_progress_from_war_reps
-			}
-			add = {
-				desc = "nazi_progress_from_sol"
-				value = owner.var:nazi_progress_from_sol
+				owner = {
+					every_country = {
+					limit = {
+                             country_rank >= rank_value:great_power
+                               OR = {
+                                       has_law = law_type:law_council_republic
+                                       has_law = law_type:law_anarchism
+                                       has_law = law_type:law_cooperative_ownership
+                                    }
+                            }
+					   add = 0.5
+				    }
+				}
 			}
 		}
+		
+    every_country = {
+		limit = {
+            country_rank >= rank_value:great_power
+            OR = {
+                has_law = law_type:law_council_republic
+                has_law = law_type:law_anarchism
+                has_law = law_type:law_cooperative_ownership
+            }
+        }
+		add = {
+			desc = "nazi_progress_from_global_communism"
+			value = 0.5
+		}
+    }
+
+    if = {
+        limit = {
+            has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
+        }
+		add = {
+			desc = "nazi_progress_from_war_reps"
+			value = 1
+		}
+    }
+
+    if = {
+        limit = {
+            has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
+        }
+		add = {
+			desc = "nazi_progress_from_war_reps"
+			value = 0.5
+		}
+    }
+
+    if = {
+        limit = {
+            average_sol < average_expected_sol
+        }
+		add = {
+			desc = "nazi_progress_from_sol"
+			value = 6
+		}
+    }
+
+    if = {
+        limit = {
+            average_sol > average_expected_sol
+        }
+		add = {
+			desc = "nazi_progress_from_sol"
+			value = -6
+		}
+    }
+
+    if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_fascist
+						is_political_movement_type = movement_reactionary
+						is_political_movement_type = movement_corporatist
+					}
+				}
+			}
+			add = {
+				desc = "nazi_progress_from_political_movement"
+				every_political_movement = {
+					limit = {
+						OR = {
+							is_political_movement_type = movement_fascist
+							is_political_movement_type = movement_reactionary
+							is_political_movement_type = movement_corporatist
+						}
+					}
+					add = 0.5
+				}
+			}
+	}
+
+    if = {
+			limit = {
+				any_state = {
+					OR = {
+						has_claim_by = ROOT
+						is_homeland_of_country_cultures = ROOT
+					}
+					NOT = { owner = ROOT }
+				}
+			}
+			add = {
+				desc = "nazi_progress_from_revanchism"
+				owner = {
+					every_state = {
+						limit = {
+							OR = {
+								has_claim_by = ROOT
+								is_homeland_of_country_cultures = ROOT
+							}
+							NOT = { owner = ROOT }
+						}
+						add = 0.25
+					}
+				}
+			}
+	}
 	}
 
     start_value = 25
