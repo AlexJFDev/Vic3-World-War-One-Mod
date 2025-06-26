@@ -817,6 +817,12 @@ china_events.6 = { #Bei offers presidency to a clique
 			}
 		}
         c:AHU = {
+            trigger_event = {
+                id = china_events.21
+                years = 10
+            }
+        }
+        c:AHU = {
            set_variable = choosen_clique
         }
         c:AHU = {
@@ -844,7 +850,7 @@ china_events.6 = { #Bei offers presidency to a clique
 		}
 	    }
         ai_chance = {
-		  base = 40
+		  base = 50
 	    }
 	}
 
@@ -857,6 +863,12 @@ china_events.6 = { #Bei offers presidency to a clique
 			}
 		}
         c:ZHI = {
+            trigger_event = {
+                id = china_events.21
+                years = 10
+            }
+        }
+        c:ZHI = {
            set_variable = choosen_clique
         }
         c:AHU = {
@@ -884,7 +896,7 @@ china_events.6 = { #Bei offers presidency to a clique
 		}
 	    }
         ai_chance = {
-		base = 30
+		base = 50
 	    }
     }
 
@@ -896,6 +908,12 @@ china_events.6 = { #Bei offers presidency to a clique
 				type = puppet
 			}
 		}
+        c:HUB = {
+            trigger_event = {
+                id = china_events.21
+                years = 10
+            }
+        }
         c:HUB = {
            set_variable = choosen_clique
         }
@@ -924,15 +942,12 @@ china_events.6 = { #Bei offers presidency to a clique
 		}
 	    }  
         ai_chance = {
-		  base = 20
+		  base = 0
 	    } 
     }
 
     option = {
         name = china_events.6.e
-        ai_chance = {
-		base = 10
-	    } 
         c:HUB = {
 		create_diplomatic_pact = {
 			country = c:BEI
@@ -952,7 +967,7 @@ china_events.6 = { #Bei offers presidency to a clique
 		}
 	    } 
         ai_chance = {
-		  base = 10
+		  base = 0
 	    } 
     }
 }
@@ -1511,6 +1526,47 @@ china_events.20 = { #Join the central government ?
         name = china_events.20.b
         ai_chance = {
 		base = 3
+	    }
+    }
+}
+
+china_events.21 = { #The president can annex Beiyang
+    type = country_event
+
+    title = china_events.21.t
+    desc = china_events.21.d
+    flavor = china_events.21.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.21.a
+        default_option = yes
+        trigger = { 
+            is_player = no
+            c:BEI = {
+               is_player = no
+            } 
+        }
+        annex = c:BEI
+        ai_chance = {
+		base = 10
+	    }
+	}
+
+    option = {
+        name = china_events.21.b
+        ai_chance = {
+		base = 0
 	    }
     }
 }
