@@ -83,31 +83,4 @@ weekly_pulse_nazi_ascension_progress = {
 			change_variable = { name = nazi_progress_from_sol add = -3 }
 		}
     }
-
-    any_political_movement = {
-        limit = {
-            OR = {
-				is_political_movement_type = movement_fascist
-				is_political_movement_type = movement_reactionary
-                is_political_movement_type = movement_cultural_majority
-			}
-            political_movement_radicalism >= 0.4
-        }
-        ROOT = {
-			change_variable = { name = nazi_progress_from_political_movement add = 0.5 }
-		}
-    }
-
-    any_state = {
-        limit = {
-		   OR = {
-			   has_claim_by = ROOT
-			   is_homeland_of_country_cultures = ROOT
-		    }
-		    NOT = { owner = ROOT }
-        }
-        ROOT = {
-			change_variable = { name = nazi_progress_from_lost_land add = 2 }
-		}
-	}
 }
