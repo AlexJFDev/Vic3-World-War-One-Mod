@@ -703,8 +703,18 @@ persia_weak_government = {
 persia_weak_dynasty = {
   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
   interest_group_in_government_attraction_mult = -0.2
-  political_movement_radicalism_add = 0.15
+  political_movement_radicalism_add = 0.1
   country_authority_mult = -0.1
+}
+
+persia_ascension = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+  country_authority_mult = 0.3
+  country_prestige_mult = 0.3
+  country_legitimacy_base_add = 30
+  country_minting_mult = 0.2
+  political_movement_radicalism_add = -0.15
+  country_tech_spread_mult = 0.1
 }
 
 monetary_supremacy_modifier = {

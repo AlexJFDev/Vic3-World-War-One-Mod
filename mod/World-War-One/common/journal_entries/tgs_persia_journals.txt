@@ -24,6 +24,27 @@
 	   persia_weak_dynasty
 	}
 
+    complete = {
+        OR = {
+            gdp > 50000000
+            country_rank >= rank_value:major_power
+            owns_entire_state_region = STATE_BAGHDAD
+			owns_entire_state_region = STATE_BASRA
+			owns_entire_state_region = STATE_AZERBAIJAN
+			owns_entire_state_region = STATE_ELIZAVETPOL
+			owns_entire_state_region = STATE_TURKMENIA
+			owns_entire_state_region = STATE_HERAT
+            owns_entire_state_region = STATE_BALUCHISTAN
+        }
+    }
+
+    on_complete = {
+        trigger_event = { 
+           id = persia_events.4
+           days = 5
+        }
+    }
+
     fail = {
        OR = { 
         is_subject = yes
@@ -42,7 +63,7 @@
 			add_civil_war_progress = -100
 		}
     }
-
-    timeout = 7300
+    
+    timeout = 3650
     should_be_pinned_by_default = yes
 }

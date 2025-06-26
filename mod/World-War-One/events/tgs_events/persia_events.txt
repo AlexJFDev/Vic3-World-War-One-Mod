@@ -104,18 +104,12 @@ persia_events.2 = {
 
     option = {
         name = persia_events.2.a
-        trigger = { is_player = yes }
         default_option = yes
         add_modifier = {
           name = persia_weak_government
           years = 20
           is_decaying = yes
         }
-    }
-
-    option = {
-        name = persia_events.2.a
-        trigger = { is_player = no }
     }
 }
 
@@ -138,7 +132,7 @@ persia_events.3 = {
 
     immediate = { 
       remove_modifier = persia_weak_government 
-      add_modifier = {
+        add_modifier = {
          name = revolution_stabilization_buff_2
          years = 5
          is_decaying = yes
@@ -198,5 +192,33 @@ persia_events.3 = {
         ai_chance = {
 			base = 0
 		}
+    }
+}
+
+persia_events.4 = {
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/persia_map.dds"
+    }
+
+    title = persia_events.4.t
+    desc = persia_events.4.d
+    flavor = persia_events.4.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = persia_events.4.a
+        default_option = yes
+        add_modifier = {
+          name = persia_ascension
+          years = 20
+          is_decaying = yes
+        }
     }
 }
