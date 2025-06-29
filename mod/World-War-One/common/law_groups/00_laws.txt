@@ -190,6 +190,7 @@ lawgroup_slavery = {
 	law_group_category = human_rights
 	enactment_approval_mult = 2.0
 	base_enactment_days = 150
+	affected_by_regime_change = yes
 	
 	progressive_movement_chance = 5
 	regressive_movement_chance = 0.25
@@ -212,6 +213,7 @@ lawgroup_centralization = {
 lawgroup_military_governance = {
 	law_group_category = power_structure
 	base_enactment_days = 150
+	affected_by_regime_change = yes
 	
 	progressive_movement_chance = 2
 	regressive_movement_chance = 0.25
@@ -220,6 +222,16 @@ lawgroup_military_governance = {
 lawgroup_surveillance = {
 	law_group_category = human_rights
 	base_enactment_days = 150
+	affected_by_regime_change = yes
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
+lawgroup_foreign_policy = {
+	law_group_category = power_structure
+	base_enactment_days = 150
+	affected_by_regime_change = yes
 	
 	progressive_movement_chance = 2
 	regressive_movement_chance = 0.25

@@ -1,0 +1,343 @@
+﻿namespace = foreign_policy_laws
+
+foreign_policy_laws.1 = {               # ADVANCE
+    type          = country_event
+    placement     = root
+    title         = foreign_policy_laws.1.t
+    desc          = foreign_policy_laws.1.d
+    flavor        = foreign_policy_laws.1.f
+    category      = enactment
+    event_image   = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon          = "gfx/interface/icons/event_icons/event_default.dds"
+    duration      = 3
+    cooldown      = { days = normal_modifier_time }
+    trigger       = {
+        is_enacting_law = law_type:law_true_neutrality
+        NOT = { has_modifier = true_neutrality_progress }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_true_neutrality }
+    }
+    option = {
+        name = foreign_policy_laws.1.a
+        add_enactment_modifier = { name = true_neutrality_progress }
+    }
+}
+
+foreign_policy_laws.2 = {               # DEBATE
+    type          = country_event
+    placement     = root
+    title         = foreign_policy_laws.2.t
+    desc          = foreign_policy_laws.2.d
+    flavor        = foreign_policy_laws.2.f
+    category      = enactment
+    event_image   = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon          = "gfx/interface/icons/event_icons/event_default.dds"
+    duration      = 3
+    cooldown      = { days = normal_modifier_time }
+    trigger       = {
+        is_enacting_law = law_type:law_true_neutrality
+        NOT = { has_modifier = true_neutrality_compromise }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_true_neutrality }
+    }
+    option = {
+        name = foreign_policy_laws.2.a
+        add_enactment_modifier = { name = true_neutrality_compromise }
+    }
+}
+
+foreign_policy_laws.3 = {               # STALL
+    type          = country_event
+    placement     = root
+    title         = foreign_policy_laws.3.t
+    desc          = foreign_policy_laws.3.d
+    flavor        = foreign_policy_laws.3.f
+    category      = enactment
+    event_image   = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon          = "gfx/interface/icons/event_icons/event_default.dds"
+    duration      = 3
+    cooldown      = { days = normal_modifier_time }
+    trigger       = {
+        is_enacting_law = law_type:law_true_neutrality
+        NOT = { has_modifier = true_neutrality_stall }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_true_neutrality }
+    }
+    option = {
+        name = foreign_policy_laws.3.a
+        add_enactment_modifier = { name = true_neutrality_stall }
+    }
+}
+
+foreign_policy_laws.4 = {               # ADVANCE
+    type       = country_event
+    placement  = root
+    title      = foreign_policy_laws.4.t
+    desc       = foreign_policy_laws.4.d
+    flavor     = foreign_policy_laws.4.f
+    category   = enactment
+    event_image= { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon       = "gfx/interface/icons/event_icons/event_default.dds"
+    duration   = 3
+    cooldown   = { days = normal_modifier_time }
+    trigger    = {
+        is_enacting_law = law_type:law_armed_neutrality
+        NOT = { has_modifier = armed_neutrality_progress }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_armed_neutrality }
+    }
+    option = {
+        name = foreign_policy_laws.4.a
+        add_enactment_modifier = { name = armed_neutrality_progress }
+    }
+}
+
+foreign_policy_laws.5 = {               # DEBATE
+    type          = country_event
+    placement     = root
+    title         = foreign_policy_laws.5.t
+    desc          = foreign_policy_laws.5.d
+    flavor        = foreign_policy_laws.5.f
+    category      = enactment
+    event_image   = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon          = "gfx/interface/icons/event_icons/event_default.dds"
+    duration      = 3
+    cooldown      = { days = normal_modifier_time }
+    trigger       = {
+        is_enacting_law = law_type:law_armed_neutrality
+        NOT = { has_modifier = armed_neutrality_compromise }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_armed_neutrality }
+    }
+    option = {
+        name = foreign_policy_laws.5.a
+        add_enactment_modifier = { name = armed_neutrality_compromise }
+    }
+}
+
+foreign_policy_laws.6 = {               # STALL
+    type          = country_event
+    placement     = root
+    title         = foreign_policy_laws.6.t
+    desc          = foreign_policy_laws.6.d
+    flavor        = foreign_policy_laws.6.f
+    category      = enactment
+    event_image   = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon          = "gfx/interface/icons/event_icons/event_default.dds"
+    duration      = 3
+    cooldown      = { days = normal_modifier_time }
+    trigger       = {
+        is_enacting_law = law_type:law_armed_neutrality
+        NOT = { has_modifier = armed_neutrality_stall }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_armed_neutrality }
+    }
+    option = {
+        name = foreign_policy_laws.6.a
+        add_enactment_modifier = { name = armed_neutrality_stall }
+    }
+}
+
+foreign_policy_laws.7 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.7.t
+    desc  = foreign_policy_laws.7.d
+    flavor= foreign_policy_laws.7.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_limited_interventionism
+        NOT = { has_modifier = limited_interventionism_progress }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_limited_interventionism } }
+    option = {
+        name = foreign_policy_laws.7.a
+        add_enactment_modifier = { name = limited_interventionism_progress }
+    }
+}
+
+foreign_policy_laws.8 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.8.t
+    desc  = foreign_policy_laws.8.d
+    flavor= foreign_policy_laws.8.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_limited_interventionism
+        NOT = { has_modifier = limited_interventionism_compromise }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_limited_interventionism } }
+    option = {
+        name = foreign_policy_laws.8.a
+        add_enactment_modifier = { name = limited_interventionism_compromise }
+    }
+}
+
+foreign_policy_laws.9 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.9.t
+    desc  = foreign_policy_laws.9.d
+    flavor= foreign_policy_laws.9.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_limited_interventionism
+        NOT = { has_modifier = limited_interventionism_stall }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_limited_interventionism } }
+    option = {
+        name = foreign_policy_laws.9.a
+        add_enactment_modifier = { name = limited_interventionism_stall }
+    }
+}
+
+foreign_policy_laws.10 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.10.t
+    desc  = foreign_policy_laws.10.d
+    flavor= foreign_policy_laws.10.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_expansionism
+        NOT = { has_modifier = expansionism_progress }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_expansionism } }
+    option = {
+        name = foreign_policy_laws.10.a
+        add_enactment_modifier = { name = expansionism_progress }
+    }
+}
+
+foreign_policy_laws.11 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.11.t
+    desc  = foreign_policy_laws.11.d
+    flavor= foreign_policy_laws.11.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_expansionism
+        NOT = { has_modifier = expansionism_compromise }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_expansionism } }
+    option = {
+        name = foreign_policy_laws.11.a
+        add_enactment_modifier = { name = expansionism_compromise }
+    }
+}
+
+foreign_policy_laws.12 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.12.t
+    desc  = foreign_policy_laws.12.d
+    flavor= foreign_policy_laws.12.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_expansionism
+        NOT = { has_modifier = expansionism_stall }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_expansionism } }
+    option = {
+        name = foreign_policy_laws.12.a
+        add_enactment_modifier = { name = expansionism_stall }
+    }
+}
+
+foreign_policy_laws.13 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.13.t
+    desc  = foreign_policy_laws.13.d
+    flavor= foreign_policy_laws.13.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_imperialism
+        NOT = { has_modifier = imperialism_progress }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_imperialism } }
+    option = {
+        name = foreign_policy_laws.13.a
+        add_enactment_modifier = { name = imperialism_progress }
+    }
+}
+
+foreign_policy_laws.14 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.14.t
+    desc  = foreign_policy_laws.14.d
+    flavor= foreign_policy_laws.14.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_imperialism
+        NOT = { has_modifier = imperialism_compromise }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_imperialism } }
+    option = {
+        name = foreign_policy_laws.14.a
+        add_enactment_modifier = { name = imperialism_compromise }
+    }
+}
+
+foreign_policy_laws.15 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.15.t
+    desc  = foreign_policy_laws.15.d
+    flavor= foreign_policy_laws.15.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_imperialism
+        NOT = { has_modifier = imperialism_stall }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_imperialism } }
+    option = {
+        name = foreign_policy_laws.15.a
+        add_enactment_modifier = { name = imperialism_stall }
+    }
+}

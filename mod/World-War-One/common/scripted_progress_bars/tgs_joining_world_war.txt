@@ -117,6 +117,34 @@
 				value = -5
 			}
         }
+        #From laws
+        if = {
+		   limit = {
+                has_law = law_type:law_true_neutrality
+            }
+            add = {
+				desc = "entente_progress_from_legislation"
+				value = -15
+			}
+        }
+        if = {
+		   limit = {
+                has_law = law_type:law_armed_neutrality
+            }
+            add = {
+				desc = "entente_progress_from_legislation"
+				value = -10
+			}
+        }
+        if = {
+		   limit = {
+                has_law = law_type:law_limited_interventionism
+            }
+            add = {
+				desc = "entente_progress_from_legislation"
+				value = -2.5
+			}
+        }  
     }
 
     start_value = 0
@@ -244,6 +272,34 @@ join_central_powers_progress_bar = {
 				value = -5
 			}
         }
+        #From laws
+        if = {
+		   limit = {
+                has_law = law_type:law_true_neutrality
+            }
+            add = {
+				desc = "central_powers_progress_from_legislation"
+				value = -15
+			}
+        }
+        if = {
+		   limit = {
+                has_law = law_type:law_armed_neutrality
+            }
+            add = {
+				desc = "central_powers_progress_from_legislation"
+				value = -10
+			}
+        }
+        if = {
+		   limit = {
+                has_law = law_type:law_limited_interventionism
+            }
+            add = {
+				desc = "central_powers_progress_from_legislation"
+				value = -2.5
+			}
+        } 
     }
 
     start_value = 0

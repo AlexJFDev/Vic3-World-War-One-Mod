@@ -1,120 +1,4 @@
-﻿# TGS
-
-ideology_rooseveltian_progressivism = {
-    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_reformer.dds"
-
-	lawgroup_economic_system = {
-        law_interventionism = strongly_approve
-        law_laissez_faire = disapprove
-		law_command_economy = strongly_disapprove
-		law_traditionalism = strongly_disapprove
-		law_agrarianism = strongly_disapprove
-		law_cooperative_ownership = strongly_disapprove
-		law_industry_banned = strongly_disapprove
-		law_extraction_economy = strongly_disapprove
-	}
- 
-    lawgroup_taxation = {
-        law_graduated_taxation = approve
-        law_proportional_taxation = disapprove
-		law_consumption_based_taxation = disapprove
-		law_per_capita_based_taxation = strongly_disapprove
-		law_land_based_taxation = strongly_disapprove
-	}
-
-    lawgroup_education_system = {
-        law_public_schools = strongly_approve
-		law_private_schools = disapprove
-		law_religious_schools = strongly_disapprove
-		law_no_schools = strongly_disapprove
-	}
-    
-	lawgroup_health_system = {
-        law_public_health_insurance = approve
-		law_private_health_insurance = neutral
-		law_charitable_health_system = neutral
-		law_no_health_system = strongly_disapprove
-	}
-	
-	lawgroup_labor_rights = {
-        law_no_workers_rights = strongly_disapprove
-		law_regulatory_bodies = strongly_approve
-		law_worker_protections = approve
-	}
-
-    lawgroup_childrens_rights = {
-        law_child_labor_allowed = strongly_disapprove
-		law_restricted_child_labor = approve
-		law_compulsory_primary_school = strongly_approve
-	}
-
-    lawgroup_welfare = {
-        law_no_social_security = strongly_disapprove
-		law_poor_laws = neutral
-		law_wage_subsidies = approve
-		law_old_age_pension = approve
-	}
-}
-
-ideology_wilsonian_progressivism = {
-    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_reformer.dds"
-
-	lawgroup_economic_system = {
-        law_interventionism = disapprove
-        law_laissez_faire = approve
-		law_command_economy = strongly_disapprove
-		law_traditionalism = strongly_disapprove
-		law_agrarianism = strongly_disapprove
-		law_cooperative_ownership = strongly_disapprove
-		law_industry_banned = strongly_disapprove
-		law_extraction_economy = strongly_disapprove
-	}
- 
-    lawgroup_taxation = {
-        law_graduated_taxation = approve
-        law_proportional_taxation = disapprove
-		law_consumption_based_taxation = disapprove
-		law_per_capita_based_taxation = strongly_disapprove
-		law_land_based_taxation = strongly_disapprove
-	}
-
-    lawgroup_education_system = {
-        law_public_schools = strongly_approve
-		law_private_schools = disapprove
-		law_religious_schools = strongly_disapprove
-		law_no_schools = strongly_disapprove
-	}
-    
-	lawgroup_health_system = {
-        law_public_health_insurance = approve
-		law_private_health_insurance = neutral
-		law_charitable_health_system = neutral
-		law_no_health_system = strongly_disapprove
-	}
-	
-	lawgroup_labor_rights = {
-        law_no_workers_rights = strongly_disapprove
-		law_regulatory_bodies = strongly_approve
-		law_worker_protections = approve
-	}
-
-    lawgroup_childrens_rights = {
-        law_child_labor_allowed = strongly_disapprove
-		law_restricted_child_labor = approve
-		law_compulsory_primary_school = strongly_approve
-	}
-
-    lawgroup_welfare = {
-        law_no_social_security = strongly_disapprove
-		law_poor_laws = neutral
-		law_wage_subsidies = approve
-		law_old_age_pension = approve
-	}
-}
-
-# Vanilla
-
-ideology_moderate = {
+﻿ideology_moderate = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_no_ideology.dds"
 	
 	show_in_list = no
@@ -1544,6 +1428,14 @@ ideology_pacifist = {
 	   law_military_oversight = strongly_disapprove
 	}
 
+	lawgroup_foreign_policy = {
+       law_true_neutrality = strongly_approve
+	   law_armed_neutrality = approve
+	   law_limited_interventionism = neutral
+	   law_expansionism = disapprove
+	   law_imperialism = strongly_disapprove
+	}
+
 	interest_group_leader_trigger = {
 		ideology_pacifist_valid_trigger = yes
 	}
@@ -1685,6 +1577,14 @@ ideology_jingoist_leader = {
        law_subordinate_general_staff = strongly_disapprove
        law_independant_general_staff = approve
 	   law_military_oversight = strongly_approve
+	}
+
+	lawgroup_foreign_policy = {
+       law_true_neutrality = strongly_disapprove
+	   law_armed_neutrality = disapprove
+	   law_limited_interventionism = neutral
+	   law_expansionism = approve
+	   law_imperialism = strongly_approve
 	}
 
 	interest_group_leader_trigger = {
@@ -2626,6 +2526,14 @@ ideology_fascist = {
 		law_surveillance_state = strongly_approve
 	}
 
+	lawgroup_foreign_policy = {
+       law_true_neutrality = strongly_disapprove
+	   law_armed_neutrality = disapprove
+	   law_limited_interventionism = neutral
+	   law_expansionism = approve
+	   law_imperialism = strongly_approve
+	}
+
 	country_trigger = {
 		has_technology_researched = mass_propaganda
 	}
@@ -2917,6 +2825,14 @@ ideology_anarchist = {
         law_no_agencies = neutral
 		law_foreign_counterintelligence = neutral
 		law_surveillance_state = strongly_disapprove
+	}
+
+	lawgroup_foreign_policy = {
+       law_true_neutrality = strongly_approve
+	   law_armed_neutrality = approve
+	   law_limited_interventionism = neutral
+	   law_expansionism = disapprove
+	   law_imperialism = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -4069,6 +3985,14 @@ ideology_humanitarian = {
 		law_child_labor_allowed = strongly_disapprove
 		law_restricted_child_labor = disapprove
 		law_compulsory_primary_school = approve
+	}
+
+	lawgroup_foreign_policy = {
+       law_true_neutrality = strongly_approve
+	   law_armed_neutrality = approve
+	   law_limited_interventionism = neutral
+	   law_expansionism = disapprove
+	   law_imperialism = strongly_disapprove
 	}
 	
 	country_trigger = {
@@ -5253,6 +5177,14 @@ ideology_humanitarian_royalist = {
 		law_child_labor_allowed = strongly_disapprove
 		law_restricted_child_labor = disapprove
 		law_compulsory_primary_school = approve
+	}
+
+	lawgroup_foreign_policy = {
+       law_true_neutrality = strongly_approve
+	   law_armed_neutrality = approve
+	   law_limited_interventionism = neutral
+	   law_expansionism = disapprove
+	   law_imperialism = strongly_disapprove
 	}
 	
 	country_trigger = {
