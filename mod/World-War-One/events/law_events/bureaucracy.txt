@@ -26,6 +26,7 @@ bureaucracy.1 = {
 		OR = {
 			is_enacting_law = law_type:law_hereditary_bureaucrats
 			is_enacting_law = law_type:law_appointed_bureaucrats
+			is_enacting_law = law_type:law_meritocratic_bureaucracy
 			is_enacting_law = law_type:law_elected_bureaucrats
 		}
 		NOR = {
@@ -49,6 +50,14 @@ bureaucracy.1 = {
 		if = {
 			limit = {
 				has_law = law_type:law_appointed_bureaucrats
+			}
+			ig:ig_intelligentsia = {
+				save_scope_as = bureaucrat_class
+			}
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_meritocratic_bureaucracy
 			}
 			ig:ig_intelligentsia = {
 				save_scope_as = bureaucrat_class
@@ -143,6 +152,7 @@ bureaucracy.2 = {
 		OR = {
 			is_enacting_law = law_type:law_appointed_bureaucrats
 			is_enacting_law = law_type:law_elected_bureaucrats
+			is_enacting_law = law_type:law_meritocratic_bureaucracy
 		}
 		NOT = { has_modifier = meritocracy }
 	}
@@ -154,6 +164,14 @@ bureaucracy.2 = {
 		if = {
 			limit = {
 				is_enacting_law = law_type:law_appointed_bureaucrats
+			}
+			ig:ig_intelligentsia = {
+				save_scope_as = meritocracy_ig
+			}
+		}
+		if = {
+			limit = {
+				is_enacting_law = law_type:law_meritocratic_bureaucracy
 			}
 			ig:ig_intelligentsia = {
 				save_scope_as = meritocracy_ig
@@ -243,6 +261,7 @@ bureaucracy.3 = {
 			is_enacting_law = law_type:law_appointed_bureaucrats
 			is_enacting_law = law_type:law_elected_bureaucrats
 			is_enacting_law = law_type:law_hereditary_bureaucrats
+			is_enacting_law = law_type:law_meritocratic_bureaucracy
 		}
 		NOR = {
 			has_modifier = good_and_fast
