@@ -1794,6 +1794,7 @@ pm_electric_engines = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
+			goods_input_copper_add = 15
 			goods_input_steel_add = 40
 			goods_input_electricity_add = 30
 
@@ -1828,6 +1829,7 @@ pm_diesel_engines = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
+			goods_input_copper_add = 30
 			goods_input_steel_add = 50
 			goods_input_oil_add = 50
 
@@ -2167,6 +2169,7 @@ pm_military_shipbuilding_steam_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input
+			goods_input_copper_add = 15
 			goods_input_steel_add = 40
 			goods_input_electricity_add = 30
 			goods_input_engines_add = 20
@@ -2308,9 +2311,10 @@ pm_telephones = {
 	texture = "gfx/interface/icons/production_method_icons/telephones.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_iron_add = 20
+			goods_input_copper_add = 15
+			goods_input_steel_add = 15
 			goods_input_rubber_add = 20
-			goods_input_lead_add = 20
+			goods_input_lead_add = 10
 			goods_input_tools_add = 10
 
 			goods_output_telephones_add = 60
@@ -2661,6 +2665,7 @@ pm_explosive_shells = {
 			# input goods
 			goods_input_explosives_add = 40
 			goods_input_lead_add = 30
+			goods_input_copper_add = 5
 
 			# output goods
 			goods_output_ammunition_add = 90
