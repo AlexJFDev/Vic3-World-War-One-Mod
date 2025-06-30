@@ -531,3 +531,81 @@ labor_rights.6 = {
 		}
 	}
 }
+
+labor_rights.7 = {
+    type        = country_event
+    placement   = root
+    title       = labor_rights.7.t
+    desc        = labor_rights.7.d
+    flavor      = labor_rights.7.f
+    category    = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon        = "gfx/interface/icons/event_icons/event_default.dds"
+    duration    = 3
+    cooldown    = { days = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_limited_work_hours
+        NOT = { has_modifier = workhours_streamlining }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_limited_work_hours }
+    }
+
+    option = {
+        name = labor_rights.7.a
+        add_enactment_modifier = { name = workhours_progress }
+    }
+}
+
+labor_rights.8 = {
+    type        = country_event
+    placement   = root
+    title       = labor_rights.8.t
+    desc        = labor_rights.8.d
+    flavor      = labor_rights.8.f
+    category    = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon        = "gfx/interface/icons/event_icons/event_default.dds"
+    duration    = 3
+    cooldown    = { days = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_limited_work_hours
+        NOT = { has_modifier = workhours_resistance }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_limited_work_hours }
+    }
+
+    option = {
+        name = labor_rights.8.a
+        add_enactment_modifier = { name = workhours_compromise }
+    }
+}
+
+labor_rights.9 = {
+    type        = country_event
+    placement   = root
+    title       = labor_rights.9.t
+    desc        = labor_rights.9.d
+    flavor      = labor_rights.9.f
+    category    = enactment
+    event_image = { texture = "gfx/event_pictures/printing.dds" }
+    icon        = "gfx/interface/icons/event_icons/event_default.dds"
+    duration    = 3
+    cooldown    = { days = normal_modifier_time }
+
+    trigger = {
+        is_enacting_law = law_type:law_limited_work_hours
+        NOT = { has_modifier = workhours_stall }
+    }
+    cancellation_trigger = {
+        NOT = { is_enacting_law = law_type:law_limited_work_hours }
+    }
+
+    option = {
+        name = labor_rights.9.a
+        add_enactment_modifier = { name = workhours_stall }
+    }
+}

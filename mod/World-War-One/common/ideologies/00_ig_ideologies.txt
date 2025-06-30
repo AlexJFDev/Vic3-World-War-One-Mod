@@ -85,7 +85,8 @@ ideology_laissez_faire = {
 	lawgroup_labor_rights = {
 		law_no_workers_rights = neutral
 		law_regulatory_bodies = disapprove
-		law_worker_protections = strongly_disapprove
+		law_worker_protections = disapprove
+		law_limited_work_hours = strongly_disapprove
 	}
 
 	lawgroup_land_reform = {
@@ -661,9 +662,10 @@ ideology_egalitarian = {
 	}
 	
 	lawgroup_labor_rights = {		
-		law_worker_protections = strongly_approve
+		law_limited_work_hours = strongly_approve
+		law_worker_protections = approve
 		law_regulatory_bodies = approve
-		law_no_workers_rights = neutral
+		law_no_workers_rights = strongly_disapprove
 	}		
 }
 
@@ -742,9 +744,10 @@ ideology_socialist = {
 	}
 
 	lawgroup_labor_rights = {
-		law_no_workers_rights = disapprove
+		law_no_workers_rights = strongly_disapprove
 		law_regulatory_bodies = approve
-		law_worker_protections = neutral
+		law_worker_protections = approve
+		law_limited_work_hours = strongly_approve
 	}	
 	
 	lawgroup_welfare = {
@@ -891,6 +894,7 @@ ideology_corporatist = {
 		law_no_workers_rights = neutral
 		law_regulatory_bodies = approve
 		law_worker_protections = neutral
+		law_limited_work_hours = strongly_disapprove
 	}
 	
 	lawgroup_welfare = {

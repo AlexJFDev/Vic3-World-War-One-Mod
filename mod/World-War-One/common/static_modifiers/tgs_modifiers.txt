@@ -997,3 +997,43 @@ imperialism_stall = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     country_law_enactment_success_add = -0.20
 }
+
+#Limited work hours 
+
+# Limited Work Hours – Enactment Modifiers
+workhours_streamlining = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    modifier = {
+        country_law_enactment_success_add = 0.10
+    }
+}
+
+workhours_resistance = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    modifier = {
+        country_law_enactment_success_add = -0.10
+    }
+}
+
+workhours_stall = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    modifier = {
+        country_law_enactment_time_mult  = 0.15
+        country_law_enactment_success_add = -0.15
+    }
+}
+
+workhours_progress = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    modifier = {
+        country_law_enactment_success_add = 0.20
+    }
+}
+
+workhours_compromise = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    modifier = {
+        country_law_enactment_time_mult   = 0.20
+        country_law_enactment_success_add = 0.05
+    }
+}

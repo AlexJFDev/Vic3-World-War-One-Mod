@@ -1862,9 +1862,10 @@ ideology_social_democrat = {
 	character_ideology = yes
 
 	lawgroup_labor_rights = {		
-		law_worker_protections = strongly_approve
+		law_limited_work_hours = strongly_approve
+		law_worker_protections = approve
 		law_regulatory_bodies = approve
-		law_no_workers_rights = neutral
+		law_no_workers_rights = strongly_disapprove
 	}
 
 	lawgroup_distribution_of_power = {
@@ -2048,10 +2049,11 @@ ideology_communist = {
 	
 	character_ideology = yes
 
-	lawgroup_labor_rights = {		
+	lawgroup_labor_rights = {	
+		law_limited_work_hours = approve	
 		law_worker_protections = strongly_approve
 		law_regulatory_bodies = approve
-		law_no_workers_rights = neutral
+		law_no_workers_rights = strongly_disapprove
 	}
 
 	lawgroup_governance_principles = {
@@ -2284,6 +2286,13 @@ ideology_vanguardist = {
         law_no_agencies = strongly_disapprove
 		law_foreign_counterintelligence = approve
 		law_surveillance_state = strongly_approve
+	}
+
+	lawgroup_labor_rights = {
+		law_limited_work_hours = disapprove
+		law_regulatory_bodies = neutral
+		law_worker_protections = strongly_approve
+        law_no_workers_rights = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -3269,8 +3278,10 @@ ideology_market_liberal = {
 	}
 
 	lawgroup_labor_rights = {
+		law_limited_work_hours = strongly_disapprove
 		law_regulatory_bodies = disapprove
-		law_worker_protections = strongly_disapprove
+		law_worker_protections = disapprove
+		law_no_workers_rights = approve
 	}
 
 	lawgroup_land_reform = {
@@ -5014,7 +5025,8 @@ ideology_corporatist_leader = {
 	}	
 	
 	lawgroup_labor_rights = {
-		law_no_workers_rights = neutral
+		law_limited_work_hours = strongly_disapprove
+		law_no_workers_rights = disapprove
 		law_regulatory_bodies = approve
 		law_worker_protections = neutral
 	}
