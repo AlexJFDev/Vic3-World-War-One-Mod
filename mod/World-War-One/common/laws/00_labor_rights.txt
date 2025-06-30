@@ -33,6 +33,9 @@ law_regulatory_bodies = {
 	}
 
 	institution = institution_workplace_safety
+    institution_modifier = {
+		building_working_conditions_mult = -0.15
+	}
 
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
@@ -57,6 +60,7 @@ law_worker_protections = {
 
 	institution = institution_workplace_safety
 	institution_modifier = {
+		building_working_conditions_mult = -0.15
 		building_minimum_wage_mult = 0.15
 	}
 
@@ -83,8 +87,9 @@ law_limited_work_hours = {
 
 	institution = institution_workplace_safety
 	institution_modifier = {
+		building_working_conditions_mult = -0.15
 		building_minimum_wage_mult = 0.15
-        building_group_bg_manufacturing_throughput_add = -0.025
+        building_group_bg_manufacturing_throughput_add = -0.02
         state_lower_strata_standard_of_living_add = 0.5
 	}
 
