@@ -4393,13 +4393,13 @@
 					building = {
 						type = building_financial_district
 						country = c:AUS
-						levels = 5
+						levels = 8
 						region = STATE_AUSTRIA
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_dye_production pm_rayon 
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {
@@ -7473,13 +7473,13 @@
 					building = {
 						type = building_financial_district
 						country = c:GER
-						levels = 5
+						levels = 6
 						region = STATE_NORTH_RHINE
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_dye_production pm_rayon 
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {
@@ -38803,6 +38803,21 @@
 				}
 			}
 			create_building = {
+				building = building_synthetics_plants
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:FRA
+						levels = 6
+						region = STATE_ILE_DE_FRANCE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_dye_production pm_pharmaceuticals pm_rayon 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -49029,7 +49044,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_dye_production pm_rayon 
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {
@@ -53119,6 +53134,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_aeroplane_production 
+				}
+			}
+			create_building = {
+				building = building_synthetics_plants
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 6
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {
@@ -58660,7 +58690,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_dye_production pm_rayon 
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {
@@ -69122,7 +69152,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_dye_production pm_rayon 
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {
@@ -83536,7 +83566,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_dye_production pm_rayon 
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {
@@ -88015,7 +88045,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_dye_production pm_rayon 
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {
@@ -100984,13 +101014,13 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 5
+						levels = 18
 						region = STATE_NEW_YORK
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_dye_production pm_rayon 
+					pm_dye_production pm_pharmaceuticals pm_rayon 
 				}
 			}
 			create_building = {

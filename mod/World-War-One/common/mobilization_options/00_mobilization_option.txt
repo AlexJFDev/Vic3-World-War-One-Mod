@@ -588,24 +588,6 @@ mobilization_option_flamethrowers = {
     group = special_weapons
 }
 
-# mobilization_option_landing_crafts = {
-# 	texture = "gfx/interface/icons/production_method_icons/flamethrower_company.dds"
-# 	unlocking_technologies = {
-# 		landing_craft
-# 	}
-# 	upkeep_modifier = {
-# 		goods_input_ironclads_add = 1
-# 	}
-# 	unit_modifier = {
-# 		#needs code support to reduce naval invasion penalty
-# 	}
-# 	ai_weight = {
-		value = 1
-	}
-
-#     group = special_weapons
-# }
-
 mobilization_option_motorized_recon = {
 	texture = "gfx/interface/icons/mobilization_options/motorized_reconaissance.dds"
 
@@ -725,6 +707,9 @@ mobilization_option_first_aid = {
 	possible = {
 		NOT = { scope:military_formation = { has_mobilization_option = mobilization_option:mobilization_option_field_hospitals } }
 		market ?= {
+			mg:tools ?= {
+				market_goods_sell_orders > 0
+			}
 			mg:fabric ?= {
 				market_goods_sell_orders > 0
 			}
@@ -788,6 +773,15 @@ mobilization_option_field_hospitals = {
 			mg:tools ?= {
 				market_goods_sell_orders > 0
 			}
+			mg:fabric ?= {
+				market_goods_sell_orders > 0
+			}
+			mg:liquor ?= {
+				market_goods_sell_orders > 0
+			}
+			mg:pharmaceuticals ?= {
+				market_goods_sell_orders > 0
+			}
 		}
 	}
 	on_activate_while_mobilized = {
@@ -816,7 +810,7 @@ mobilization_option_field_hospitals = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_liquor_add = 2
+		goods_input_pharmaceuticals_add = 1
 		goods_input_fabric_add = 1
 		goods_input_tools_add = 1
 	}

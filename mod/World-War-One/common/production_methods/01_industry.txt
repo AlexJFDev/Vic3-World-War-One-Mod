@@ -1497,7 +1497,7 @@ pm_no_artificial_fibers = {
 }
 
 pm_rayon = {
-	texture = "gfx/interface/icons/production_method_icons/rayon.dds"
+	texture = "gfx/interface/icons/goods_icons/silk.dds"
 
 	unlocking_technologies = {
 		art_silk
@@ -1561,6 +1561,37 @@ pm_synthetic_rubber = {
 			# output goods
 			goods_output_dye_add = -10
 			goods_output_rubber_add = 20
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = -1000
+			building_employment_machinists_add = 1000
+		}
+	}
+}
+
+pm_no_pharmaceuticals = {
+   texture = "gfx/interface/icons/production_method_icons/no_pharmaceuticals.dds"
+}
+
+pm_pharmaceuticals = {
+   texture = "gfx/interface/icons/goods_icons/pharmaceuticals.dds"
+
+    unlocking_technologies = {
+		synthetic_polymers
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_opium_add = 5
+			goods_input_liquor_add = 5
+			goods_input_fruit_add = 5
+
+			# output goods
+			goods_output_dye_add = -10
+			goods_output_pharmaceuticals_add = 20
 		}
 
 		level_scaled = {
