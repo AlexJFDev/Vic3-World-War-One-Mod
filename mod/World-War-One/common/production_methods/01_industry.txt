@@ -2287,7 +2287,7 @@ pm_mass_automobile_production = {
 }
 
 pm_aeroplane_production = {
-	texture = "gfx/interface/icons/production_method_icons/aeroplanes.dds"
+	texture = "gfx/interface/icons/production_method_icons/aeroplanes_production.dds"
 
 	unlocking_technologies = {
 		combustion_engine
@@ -2306,10 +2306,41 @@ pm_aeroplane_production = {
 		}
 
 		level_scaled = {
-			building_employment_engineers_add = 250
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 1500
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1000
 		}
 	}
 }
+
+pm_mass_aeroplane_production = {
+	texture = "gfx/interface/icons/production_method_icons/mass_aeroplane_production.dds"
+
+	unlocking_technologies = {
+		compression_ignition
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 15
+			goods_input_steel_add = 15
+			goods_input_rubber_add = 10
+			goods_input_oil_add = 10
+
+			# output goods
+			goods_output_aeroplanes_add = 80
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1500
+		}
+	}
+} 
 
 pm_no_tank_production = {
 	texture = "gfx/interface/icons/production_method_icons/no_tanks.dds"
