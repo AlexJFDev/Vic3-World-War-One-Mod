@@ -1475,28 +1475,6 @@ multilateral_alliances = {
 
 ### ERA 5
 
-mass_surveillance = {
-	# Unlocks Personal Files PM in Government Administrations
-	# Unlocks Militarized Police - Policing Law
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/mass_surveillance.dds"
-	category = society
-
-	modifier = {
-		state_tax_capacity_add = 25
-		country_institution_surveillance_max_investment_add = 3
-		country_institution_border_control_max_investment_add = 1
-	}
-
-	unlocking_technologies = {
-		central_planning
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 antibiotics = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/antibiotics.dds"
@@ -1509,30 +1487,6 @@ antibiotics = {
 
 	unlocking_technologies = {
 		malaria_prevention
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
-mass_propaganda = {
-	# Unlocks Better Radios PM in Electrics Industries
-	# New leaders may spawn with the Fascist Ideology
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/mass_propaganda.dds"
-	category = society
-
-	modifier = {
-		country_authority_mult = 0.1
-		state_expected_sol_from_literacy = 1
-		country_agitator_slots_add = 1
-		country_institution_propaganda_max_investment_add = 1
-	}
-
-	unlocking_technologies = {
-		political_agitation
-		film
 	}
 
 	ai_weight = {
@@ -1632,6 +1586,54 @@ paved_roads = {
 	}
 }
 
+### ERA 6
+
+mass_propaganda = {
+	# Unlocks Better Radios PM in Electrics Industries
+	# New leaders may spawn with the Fascist Ideology
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/mass_propaganda.dds"
+	category = society
+
+	modifier = {
+		country_authority_mult = 0.1
+		state_expected_sol_from_literacy = 1
+		country_agitator_slots_add = 1
+		country_institution_propaganda_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		political_agitation
+		film
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+mass_surveillance = {
+	# Unlocks Personal Files PM in Government Administrations
+	# Unlocks Militarized Police - Policing Law
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/mass_surveillance.dds"
+	category = society
+
+	modifier = {
+		state_tax_capacity_add = 25
+		country_institution_surveillance_max_investment_add = 3
+		country_institution_border_control_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		central_planning
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 modern_urban_planning = {
 	# Unlocks skyscrapers and modern cities
 	era = era_6
@@ -1650,5 +1652,21 @@ modern_urban_planning = {
 	
 	ai_weight = {
 		value = 1 # Important tech for modern economies
+	}
+}
+
+market_studies = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/market_studies.dds"
+	category = society
+	modifier = {
+		state_trade_advantage_mult = 0.15
+	}
+	unlocking_technologies = {
+		behaviorism
+	}
+		
+	ai_weight = {
+		value = 1
 	}
 }

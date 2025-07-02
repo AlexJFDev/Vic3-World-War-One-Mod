@@ -1579,7 +1579,7 @@ pm_pharmaceuticals = {
    texture = "gfx/interface/icons/goods_icons/pharmaceuticals.dds"
 
     unlocking_technologies = {
-		synthetic_polymers
+		
 	}
 
 	building_modifiers = {
@@ -2413,6 +2413,36 @@ pm_radios = {
 	}
 
 	required_input_goods = electricity
+}
+
+pm_no_televisions = {
+	texture = "gfx/interface/icons/production_method_icons/pm_no_televisions.dds"
+}
+
+pm_cathode_tube_televisions = {
+	texture = "gfx/interface/icons/production_method_icons/pm_cathode_tube_televisions.dds"
+
+	unlocking_technologies = {
+		television
+	}	
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_glass_add = 3
+			goods_input_copper_add = 5
+			goods_input_electricity_add = 10
+			goods_input_steel_add = 5
+
+			goods_output_televisions_add = 45 #4900
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_engineers_add = 250
+		}		
+	}
+
+	required_input_goods = telecommunications
 }
 
 pm_muskets = {
