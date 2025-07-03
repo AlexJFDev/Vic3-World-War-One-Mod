@@ -487,13 +487,8 @@ russia_events.8 = { #The civil war begins
            activate_law = law_type:law_censorship
 	       create_diplomatic_play = {
 		      target_country = c:RUS
-		      type = dp_annex_war
+		      type = dp_revolution
 	          war = yes
-	          add_war_goal = {
-		        holder = c:RUS
-		        type = annex_country
-		        target_country = c:SIB
-              }
 	        }
            }
         }
@@ -632,6 +627,17 @@ russia_events.8 = { #The civil war begins
 			limit = { has_variable = lenin }
             set_character_as_ruler = yes
 		}
+        c:SIB ?= { 
+		  set_relations = { country = c:FIN value = 80 }
+		  set_relations = { country = c:GER value = 80 }
+		  set_relations = { country = c:AUS value = 80 }
+		  set_relations = { country = c:TUR value = 80 }
+		  set_relations = { country = c:ITA value = 80 }
+		  set_relations = { country = c:FRA value = 80 }
+		  set_relations = { country = c:GBR value = 80 }
+		  set_relations = { country = c:USA value = 80 }
+		  set_relations = { country = c:JAP value = 80 }
+        }
     }
 }
 
