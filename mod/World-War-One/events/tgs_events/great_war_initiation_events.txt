@@ -1341,16 +1341,20 @@ great_war_initiation_events.16 = {
 			}
 		}
         c:JAP = { set_variable = entente_participant }
-        c:JAP = {
-        create_bidirectional_truce = { 
-            country = c:GBR
-            months = 120
-        }
-        create_bidirectional_truce = { 
-            country = c:FRA
-            months = 120
-        }
-        }
+        c:JAP ?= {
+		create_bidirectional_truce = {
+			country = c:FRA
+			months = 120
+		}
+		create_bidirectional_truce = {
+			country = c:GBR
+			months = 120
+		}
+		create_bidirectional_truce = {
+			country = c:RUS
+			months = 120
+		}
+	    }
     }
     option = { # Do nothing
         name = great_war_initiation_events.16.b

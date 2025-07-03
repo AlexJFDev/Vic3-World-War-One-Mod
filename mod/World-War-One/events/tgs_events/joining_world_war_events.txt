@@ -689,6 +689,24 @@ joining_world_war_events.14 = { #Italy joins
                 }
         }
         c:ITA = { set_variable = entente_participant }
+        c:ITA ?= {
+		create_bidirectional_truce = {
+			country = c:FRA
+			months = 120
+		}
+		create_bidirectional_truce = {
+			country = c:JAP
+			months = 120
+		}
+		create_bidirectional_truce = {
+			country = c:GBR
+			months = 120
+		}
+		create_bidirectional_truce = {
+			country = c:RUS
+			months = 120
+		}
+	    }
         c:ITA = {
             trigger_event = {
                 id = ww1_war_techs_events.1
@@ -1081,16 +1099,28 @@ joining_world_war_events.18 = { #USA joins
                 days = 210
             }
         }
-        c:USA = {
-        create_bidirectional_truce = { 
-            country = c:GBR
-            months = 120
-        }
-        create_bidirectional_truce = { 
-            country = c:FRA
-            months = 120
-        }
-        }
+        c:USA ?= {
+		create_bidirectional_truce = {
+			country = c:FRA
+			months = 120
+		}
+		create_bidirectional_truce = {
+			country = c:GBR
+			months = 120
+		}
+		create_bidirectional_truce = {
+			country = c:RUS
+			months = 120
+		}
+        create_bidirectional_truce = {
+			country = c:ITA
+			months = 120
+		}
+        create_bidirectional_truce = {
+			country = c:JAP
+			months = 120
+		}
+	    }
         ai_chance = {
             base = 10
         }
