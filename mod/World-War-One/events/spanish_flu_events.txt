@@ -3,6 +3,7 @@
 # The plague arrives
 plague.1 = {
 	type = country_event
+	placement = scope:plague_origin_state
 
 	title = plague.1.t
 	desc = plague.1.d
@@ -14,11 +15,41 @@ plague.1 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	duration = 3
 
-	trigger = {}
+	trigger = {
+		NOT = { has_global_variable = spanish_flu }
+		country_rank >= rank_value:major_power
+		NOT = {
+			institution_investment_level = {
+				institution = institution_health_system
+				value >= 3
+			}
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			OR = {
+				is_production_method_active = {
+					building_type = building_railway
+					production_method = pm_electric_trains
+				}
+				is_production_method_active = {
+					building_type = building_railway
+					production_method = pm_electric_trains_principle_transport_3
+				}
+				is_production_method_active = {
+					building_type = building_railway
+					production_method = pm_diesel_trains
+				}
+				is_production_method_active = {
+					building_type = building_railway
+					production_method = pm_diesel_trains_principle_transport_3
+				}
+			}
+		}
+	}
 
 	immediate = {
 		set_global_variable = {
@@ -38,7 +69,15 @@ plague.1 = {
 					}
 					is_production_method_active = {
 						building_type = building_railway
+						production_method = pm_electric_trains_principle_transport_3
+					}
+					is_production_method_active = {
+						building_type = building_railway
 						production_method = pm_diesel_trains
+					}
+					is_production_method_active = {
+						building_type = building_railway
+						production_method = pm_diesel_trains_principle_transport_3
 					}
 				}
 			}
@@ -64,7 +103,7 @@ plague.1 = {
 				}
 				trigger_event = { id = plague.4 }
 			}
-		} 
+		}
 		add_journal_entry = { type = je_spanish_flu }
 		set_variable = country_hit_by_plague # so that countries cannot get JE multiple times
 	}
@@ -85,7 +124,7 @@ plague.2 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	duration = 3
 
@@ -109,7 +148,7 @@ plague.2 = {
 			}
 		}
 	}
-	
+
 	immediate = {
 		random_country = {
 			limit = {
@@ -127,7 +166,7 @@ plague.2 = {
 				}
 			}
 			random_scope_state = {
-				limit = { 
+				limit = {
 					has_variable = plague_international_spread_var
 				}
 				save_scope_as = plague_spread_target
@@ -168,7 +207,7 @@ plague.2 = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = plague.2.a
 		show_as_tooltip = {
@@ -245,12 +284,12 @@ plague.3 = {
 	hidden = yes # hiding to avoid spam
 
 	event_image = {
-        texture = "gfx/event_pictures/brancardier.dds"
+        texture = "gfx/event_pictures/hospital.dds"
     }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	duration = 3
 
@@ -294,7 +333,7 @@ plague.4 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	trigger = {
 		# triggered by plague.1
@@ -331,12 +370,12 @@ plague.5 = {
 	flavor = plague.5.f
 
 	event_image = {
-        texture = "gfx/event_pictures/masks.dds"
+        texture = "gfx/event_pictures/hospital.dds"
     }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	duration = 3
 
@@ -372,7 +411,7 @@ plague.5 = {
 					has_modifier = plague_measures_mod
 				}
 				remove_modifier = plague_measures_mod
-			}			
+			}
 			if = {
 				limit = {
 					has_variable = plague_measures
@@ -401,7 +440,7 @@ plague.5 = {
 					has_modifier = plague_lockdown_mod
 				}
 				remove_modifier = plague_lockdown_mod
-			}			
+			}
 			if = {
 				limit = {
 					has_variable = plague_lockdown
@@ -445,12 +484,12 @@ plague.7 = {
 	flavor = plague.7.f
 
 	event_image = {
-        texture = "gfx/event_pictures/brancardier.dds"
+        texture = "gfx/event_pictures/hospital.dds"
     }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	duration = 3
 
@@ -576,12 +615,12 @@ plague.8 = {
 	flavor = plague.8.f
 
 	event_image = {
-        texture = "gfx/event_pictures/hospital.dds"
-    }
+		video = "europenorthamerica_rich_and_poor"
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	duration = 3
 
@@ -749,8 +788,8 @@ plague.9 = {
 	flavor = plague.9.f
 
 	event_image = {
-        texture = "gfx/event_pictures/masks.dds"
-    }
+		video = "europenorthamerica_political_extremism"
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -804,7 +843,7 @@ plague.9 = {
 	cancellation_trigger = {
 		has_variable = spanish_flu_over
 	}
-	
+
 	option = { # Ignore their demands
 		name = plague.9.a
 		default_option = yes
