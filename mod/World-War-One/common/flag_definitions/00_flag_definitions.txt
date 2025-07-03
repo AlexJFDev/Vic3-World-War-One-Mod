@@ -1990,10 +1990,7 @@ CHI = { # China
 		subject_canton = CHI_dictatorship
 		priority = 10
 		trigger = { 
-			OR = {
-				has_law = law_type:law_presidential_republic
-				has_law = law_type:law_parliamentary_republic
-			}
+		   country_rank >= rank_value:great_power
 		}
 	}
 	flag_definition = {
