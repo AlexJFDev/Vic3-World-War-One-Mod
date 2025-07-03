@@ -1458,7 +1458,7 @@ stabilization_buff_events.39 = {
     }
 }
 
-stabilization_buff_events.40 = { #War fatigue Russia modifiers
+stabilization_buff_events.40 = { #Migration attraction buff
     type = country_event
 
     title = stabilization_buff_events.8.t
@@ -1477,49 +1477,20 @@ stabilization_buff_events.40 = { #War fatigue Russia modifiers
     option = {
         name = stabilization_buff_events.39.a
         default_option = yes
-        if = {
-            limit = {
-                NOT = {
-                    has_modifier = war_protests_1_modifier
-                }
-            }
-            add_modifier = {
-			  name = war_protests_1_modifier
-              years = 10
-		    }
-        }
-    }
-}
-
-stabilization_buff_events.40 = { #War fatigue Russia modifiers
-    type = country_event
-
-    title = stabilization_buff_events.8.t
-    desc = stabilization_buff_events.8.d
-    flavor = stabilization_buff_events.8.f
-    
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    event_image = {
-        texture = "gfx/event_pictures/world_map.dds"
+        trigger = { is_player = no }
+        add_modifier = {
+			name = migration_buff_1
+            years = 10
+		}
     }
 
     option = {
-        name = stabilization_buff_events.39.a
+        name = stabilization_buff_events.39.b
         default_option = yes
-        if = {
-            limit = {
-                NOT = {
-                    has_modifier = war_protests_1_modifier
-                }
-            }
-            add_modifier = {
-			  name = war_protests_1_modifier
-              years = 10
-		    }
-        }
+        trigger = { is_player = yes }
+        add_modifier = {
+			name = migration_buff_1
+            years = 5
+		}
     }
 }

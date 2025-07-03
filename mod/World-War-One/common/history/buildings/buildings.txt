@@ -21285,7 +21285,7 @@
 					building = {
 						type = building_financial_district
 						country = c:CHL
-						levels = 62
+						levels = 32
 						region = STATE_SANTIAGO
 					}
 				}
@@ -22488,6 +22488,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_condensing_engine_pump_building_sulfur_mine pm_nitroglycerin_building_sulfur_mine pm_road_carts pm_steam_donkey_mine 
+				}
+			}
+			create_building = {
+				building = building_copper_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:CHL
+						levels = 28
+						region = STATE_SANTIAGO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_copper_mine pm_nitroglycerin_building_copper_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -93607,6 +93622,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_radios pm_telephones 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:SWE
+						levels = 15
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
