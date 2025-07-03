@@ -1,4 +1,4 @@
-﻿je_war_fatigue = {
+﻿je_war_fatigue_ai_germany = {
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     group = je_group_internal_affairs
 
@@ -9,6 +9,7 @@
     }
     
     possible = {
+        is_player = no
         game_date > 1917.1.1
         has_variable = central_powers_participant
         average_sol < average_expected_sol
@@ -25,20 +26,22 @@
     }
 
     modifiers_while_active = {
-         war_fatigue_1
-    }
-
-    complete = { 
-        OR = {
-            average_sol > average_expected_sol
-            is_at_war = no
-        }
+        war_fatigue_1
     }
     
     fail = { 
-        any_civil_war = {
-			civil_war_progress >= 0.75
-		}
+        OR = {
+            any_civil_war = {
+			   civil_war_progress >= 0.75
+		    }
+            c:GER = {
+              has_variable = central_powers_participant
+		      has_modifier = country_humiliated
+            } 
+            NOT = {
+              owns_entire_state_region = STATE_ALSACE_LORRAINE
+            }
+        }
     }
 
     on_fail = { 
@@ -67,22 +70,68 @@
     }
 
     invalid = {
-       OR = {
-        c:GER = {
-          has_variable = central_powers_participant
-		  has_modifier = country_humiliated
-        } 
-        NOT = {
-            owns_entire_state_region = STATE_ALSACE_LORRAINE
-        }
-       }
+       is_at_war = no
     }
 
-    on_invalid = {
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_war_fatigue_player_germany = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:GER
+        THIS = c:GER
+        has_variable = central_powers_participant
+    }
+    
+    possible = {
+        is_player = yes
+        game_date > 1917.1.1
+        has_variable = central_powers_participant
+        average_sol < average_expected_sol
+        is_at_war = yes
+    }
+
+    immediate = {
+       c:GER = {
+            trigger_event = {
+                id = germany_events.1
+                days = 5
+            }
+        }
+    }
+
+    modifiers_while_active = {
+        war_fatigue_1
+    }
+
+    complete = {
+        average_sol > average_expected_sol
+    }
+    
+    fail = { 
+        OR = {
+            any_civil_war = {
+			   civil_war_progress >= 0.75
+		    }
+            c:GER = {
+              has_variable = central_powers_participant
+		      has_modifier = country_humiliated
+            } 
+            NOT = {
+              owns_entire_state_region = STATE_ALSACE_LORRAINE
+            }
+        }
+    }
+
+    on_fail = { 
         random_civil_war = {
 			add_civil_war_progress = -100
 		}
-        c:GER = {
+      c:GER = {
             trigger_event = {
                 id = germany_events.2
                 days = 5
@@ -100,12 +149,17 @@
                 days = 15
             }
         }
-        set_global_variable = german_revolution_1
-	}
+      set_variable = german_revolution_1
+    }
+
+    invalid = {
+       is_at_war = no
+    }
 
     weight = 1000
     should_be_pinned_by_default = yes
 }
+
 
 je_socialist_split = {
     icon = "gfx/interface/icons/event_icons/red_star.dds"
