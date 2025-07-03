@@ -74,16 +74,6 @@ entente_peace_deal.1 = { #Entente victory
 			type = alliance
 		}
 		}
-		c:AUS = {
-        remove_diplomatic_pact = {
-			country = c:UKR
-			type = protectorate
-		}
-		remove_diplomatic_pact = {
-			country = c:SER
-			type = protectorate
-		}
-		}
 		s:STATE_ALSACE_LORRAINE = {
 	       random_scope_state = {
 		      limit = {
@@ -129,9 +119,23 @@ entente_peace_deal.1 = { #Entente victory
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
-		}
-		c:AUS = {
 		   remove_primary_culture = hungarian
+           remove_diplomatic_pact = {
+			   country = c:UKR
+			   type = protectorate
+		    }
+		   remove_diplomatic_pact = {
+			   country = c:SER
+			   type = protectorate
+		    }
+			trigger_event = {
+              id = stabilization_buff_events.1
+              days = 5
+            }
+			trigger_event = {
+              id = stabilization_buff_events.36
+              days = 5
+            } 
 		}
 		If = {
            limit = {
