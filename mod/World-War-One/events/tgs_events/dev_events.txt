@@ -1,0 +1,100 @@
+﻿namespace = dev_events
+
+dev_events.3 = {#WW2 initiation
+    type = country_event
+
+    title = dev_events.3.t
+    desc = dev_events.3.d
+    flavor = dev_events.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {
+    }
+
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = dev_events.3.a
+        create_diplomatic_play = {
+            name = world_war_two
+
+            target_country = c:POL
+
+            type = dp_humiliation
+
+            escalation = 99
+
+            add_war_goal = {
+                holder = c:GER
+                type = humiliation
+                target_country = c:FRA
+            }
+
+            add_war_goal = {
+                holder = c:GER
+                type = humiliation
+                target_country = c:GBR
+            }
+
+            add_war_goal = {
+                holder = c:GER
+                type = humiliation
+                target_country = c:BEL
+            }
+
+            add_war_goal = {
+                holder = c:GER
+                type = humiliation
+                target_country = c:NET
+            }
+
+            add_war_goal = {
+                holder = c:FRA
+                type = humiliation
+                target_country = c:GER
+            }
+
+            add_war_goal = {
+                holder = c:FRA
+                type = humiliation
+                target_country = c:ITA
+            }
+
+            add_war_goal = {
+                holder = c:GBR
+                type = humiliation
+                target_country = c:GER
+            }
+
+            add_war_goal = {
+                holder = c:GBR
+                type = humiliation
+                target_country = c:ITA
+            }
+
+            add_target_backers = { c:GBR }
+            add_target_backers = { c:FRA }
+            add_target_backers = { c:BEL }
+            add_target_backers = { c:NET }
+            add_initiator_backers = { c:ITA }
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = dev_events.3.b
+        ai_chance = {
+			base = 0
+		}
+    }
+}
