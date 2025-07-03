@@ -466,7 +466,7 @@ stabilization_buff_events.15 = {
         trigger = { is_player = no }
         add_modifier = {
             name = revolution_stabilization_buff_4
-            years = 20
+            years = 30
         }
     }
 }
@@ -1402,6 +1402,7 @@ stabilization_buff_events.37 = {
         name = stabilization_buff_events.8.a
         default_option = yes
         trigger = { is_player = no }
+        activate_law = law_type:law_armed_neutrality
         add_treasury = -300000000
     }
 }
