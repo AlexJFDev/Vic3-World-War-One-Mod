@@ -14,7 +14,7 @@ production_tech_events.1 = {
 	}
 
 	event_image = {
-        texture = "gfx/event_pictures/factory.dds"
+        texture = "gfx/event_pictures/rubber.dds"
     }
 
 	duration = 3
@@ -168,7 +168,7 @@ production_tech_events.103 = {
 	}
 
 	event_image = {
-        texture = "gfx/event_pictures/factory.dds"
+        texture = "gfx/event_pictures/automobile.dds"
     }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -959,83 +959,5 @@ production_tech_events.600 = {
 			name = tractor_production
 			days = normal_modifier_time
 		}
-	}
-}
-
-production_tech_events.601 = {
-	type = country_event
-
-	placement = scope:atmospheric_engine_state
-
-	title = production_tech_events.601.t
-	desc = production_tech_events.601.d
-	flavor = production_tech_events.601.f
-
-	trigger = {
-		has_technology_researched = atmospheric_engine
-		any_scope_building = {
-			OR = {
-				is_building_type = building_coal_mine
-				is_building_type = building_iron_mine
-				is_building_type = building_sulfur_mine
-				is_building_type = building_lead_mine
-			}
-			level >= 3
-		}
-	}
-
-	event_image = {
-        texture = "gfx/event_pictures/factory.dds"
-    }
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-	duration = 3
-
-	cooldown = { days = never_fire_again_modifier_time }
-
-	immediate = {
-		random_scope_state = {
-			random_scope_building = {
-				limit = {
-					OR = {
-						is_building_type = building_coal_mine
-						is_building_type = building_iron_mine
-						is_building_type = building_sulfur_mine
-						is_building_type = building_lead_mine
-					}
-					has_active_production_method = pm_atmospheric_engine_pump_building_coal_mine
-				}
-			}
-			save_scope_as = atmospheric_engine_state
-		}
-	}
-
-	option = { # mine production
-		name = production_tech_events.601.a
-		default_option = yes
-		add_modifier = {
-			name = atmospheric_engine_mining
-			days = normal_modifier_time
-		}
-	}
-
-	option = { # railway tech
-		name = production_tech_events.601.b
-		trigger = {
-			NOT = { has_technology_researched = railways }
-			has_technology_researched = mechanical_tools
-		}
-		add_technology_progress = { progress = 3500 technology = railways }
-	}
-
-	option = { # boiler tech
-		name = production_tech_events.601.c
-		trigger = {
-			NOT = { has_technology_researched = watertube_boiler }
-		}
-		add_technology_progress = { progress = 3500 technology = watertube_boiler }
 	}
 }
