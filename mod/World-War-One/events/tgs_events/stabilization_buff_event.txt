@@ -22,7 +22,7 @@ stabilization_buff_events.1 = {
         trigger = { is_player = no }
         add_modifier = {
 			name = stabilization_buff_modifier
-            years = 20
+            years = 50
 		}
     }
 }
@@ -1493,5 +1493,29 @@ stabilization_buff_events.40 = { #Migration attraction buff
 			name = migration_buff_1
             years = 5
 		}
+    }
+}
+
+stabilization_buff_events.41 = { #Ai UK looses money after WW1
+    type = country_event
+
+    title = stabilization_buff_events.8.t
+    desc = stabilization_buff_events.8.d
+    flavor = stabilization_buff_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.8.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = -300000000
     }
 }

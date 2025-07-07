@@ -141,8 +141,18 @@ uk_events.6 = {#Irish question JE initiation
     
     duration = 3
     
-    immediate = {
-		if = {
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/house_of_commons.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = uk_events.6.a
+        default_option = yes
+        if = {
 			limit = {
 				NOT = {
 					any_political_movement = {
@@ -158,48 +168,26 @@ uk_events.6 = {#Irish question JE initiation
 			}
 			save_scope_as = irish_movement_scope
 		}
-	}
-
-    event_image = {
-        texture = "gfx/event_pictures/house_of_commons.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = uk_events.6.a
-        default_option = yes
 		scope:irish_movement_scope = {
 			add_modifier = {
 				name = political_movement_buff_2
 				years = 10
-			}
+			} 
 		}   
         trigger_event = {
             id = uk_events.7
             years = 3
         }
         ai_chance = {
-			base = 8
+			base = 10
 		}
     }
 
     option = {
         name = uk_events.6.b
-        if = {
-            has_law = law_type:law_unitary
-            activate_law = law_type:law_devolved
-        }
-        if = {
-            has_law = law_type:law_devolved
-            activate_law = law_type:law_federated
-        }
-        if = {
-            has_law = law_type:law_federated
-            activate_law = law_type:law_confederated
-        }
+        activate_law = law_type:law_federated
         ai_chance = {
-			base = 2
+			base = 0
 		}
     }
 
@@ -239,16 +227,20 @@ uk_events.6 = {#Irish question JE initiation
 		      set_state_owner = c:IRE
             }
         }
+        s:STATE_ULSTER = {
+			set_owner_of_provinces = {
+				country = c:IRE
+				provinces = { xA06040 xA0C0E0 }
+			}
+		}
         c:GBR = {
            create_diplomatic_pact = {
 			  country = c:IRE
 			  type = personal_union
 		    }
-        }
-        c:IRE = {
             trigger_event = {
-             id = stabilization_buff_events.8
-             days = 5
+             id = uk_events.12
+             years = 30
             }
         }
         ai_chance = {
@@ -269,7 +261,14 @@ uk_events.7 = {#Easter uprising
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority
+			}
+			save_scope_as = irish_movement_scope
+		}
+    }
 
     event_image = {
         texture = "gfx/event_pictures/easter_uprising.dds"
@@ -283,7 +282,7 @@ uk_events.7 = {#Easter uprising
 		scope:irish_movement_scope = {
 			add_modifier = {
 				name = political_movement_buff_2
-				years = 10
+				years = 20
 			}
 		}   
         add_modifier = {
@@ -292,25 +291,19 @@ uk_events.7 = {#Easter uprising
             is_decaying = yes
 		}
         ai_chance = {
-			base = 9
+			base = 10
 		}
     }
 
     option = {
-        name = uk_events.7.b
-        scope:irish_movement_scope = {
-			add_modifier = {
-				name = political_movement_nerf_2
-				years = 5
-			}
-		}  
+        name = uk_events.7.b 
         add_modifier = {
 			name = easter_uprising_no_repression
 			years = 3
             is_decaying = yes
 		}
         ai_chance = {
-			base = 1
+			base = 0
 		}
     }
 }
@@ -372,20 +365,24 @@ uk_events.8 = {#Irish question JE failure
 		      set_state_owner = c:IRE
             }
         }
+        s:STATE_ULSTER = {
+			set_owner_of_provinces = {
+				country = c:IRE
+				provinces = { xA06040 xA0C0E0 }
+			}
+		}
         c:GBR = {
-           create_diplomatic_pact = {
+            create_diplomatic_pact = {
 			  country = c:IRE
 			  type = personal_union
 		    }
-        }
-        c:IRE = {
             trigger_event = {
-             id = stabilization_buff_events.8
-             days = 5
+             id = uk_events.12
+             years = 30
             }
         }
         ai_chance = {
-			base = 9
+			base = 10
 		}
     }
 
@@ -425,6 +422,12 @@ uk_events.8 = {#Irish question JE failure
 		      set_state_owner = c:IRE
             }
         }
+        s:STATE_ULSTER = {
+			set_owner_of_provinces = {
+				country = c:IRE
+				provinces = { xA06040 xA0C0E0 }
+			}
+		}
         c:GBR = {
           create_diplomatic_play = {
 		    target_country = c:IRE
@@ -442,7 +445,7 @@ uk_events.8 = {#Irish question JE failure
 	        }
         }
         ai_chance = {
-			base = 1
+			base = 0
 		}
     }
 }
@@ -539,6 +542,66 @@ uk_events.11 = {#Edward VIII marriage scandal
               is_decaying = yes
             }
 		}
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+uk_events.12 = {#Irish Independance
+    type = country_event
+
+    title = uk_events.12.t
+    desc = uk_events.12.d
+    flavor = uk_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/house_of_commons.dds"
+    }
+
+    trigger = {}
+    
+    option = {
+        name = uk_events.12.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:IRE
+			type = personal_union
+		}
+        remove_diplomatic_pact = {
+			country = c:IRE
+			type = dominion
+		}
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = uk_events.12.b
+        c:GBR = {
+          create_diplomatic_play = {
+		    target_country = c:IRE
+		    type = dp_make_protectorate
+	        add_war_goal = {
+		        holder = c:IRE
+		        type = conquer_state
+		        target_state = s:STATE_ULSTER.region_state:GBR
+            }
+            add_war_goal = {
+		        holder = c:IRE
+		        type = humiliation
+		        target_country = c:GBR
+            }
+	        }
+        }
         ai_chance = {
 			base = 0
 		}
