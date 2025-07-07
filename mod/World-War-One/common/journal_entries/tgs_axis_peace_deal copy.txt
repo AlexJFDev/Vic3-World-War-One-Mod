@@ -1,0 +1,39 @@
+﻿ je_axis_peace_deal_round_1 = { 
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_crises
+    
+	is_shown_when_inactive = {
+      is_diplomatic_play_enemy_of = c:FRA
+	  exists = c:GER
+      THIS = c:GER
+	}
+
+    possible = { 
+	  is_diplomatic_play_enemy_of = c:FRA
+	  exists = c:GER
+      THIS = c:GER
+	}
+
+    immediate = {}
+
+    complete = {
+		c:FRA = {
+			has_variable = allies_participant
+		}
+	}
+
+	on_complete = {
+		set_global_variable = axis_partial_victory
+		trigger_event = { 
+			id = axis_peace_deal.1 
+			popup = yes 
+		}
+	}
+
+    on_complete = {}
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
