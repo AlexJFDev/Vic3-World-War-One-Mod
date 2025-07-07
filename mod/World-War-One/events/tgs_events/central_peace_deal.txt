@@ -434,12 +434,13 @@ central_peace_deal.2 = { #Russia surrenders
 				c:GER = THIS
 			}
             set_global_variable = russia_surrenders
-            create_country = { #Estonia
+            create_country = { #United Baltic Provinces
 			origin = root
-			tag = EST
+			tag = UBD
 			state = s:STATE_TALINN.region_state:RUS
 			on_created = {
 				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_universal_suffrage
                 activate_law = law_type:law_mass_conscription	
                 every_diplomatic_play = {
 			     limit = {
@@ -475,11 +476,11 @@ central_peace_deal.2 = { #Russia surrenders
 				    }
 			        }
 			      }
-                   add_diplomatic_play_war_support = { target = c:EST value = -200 }   
+                   add_diplomatic_play_war_support = { target = c:UBD value = -200 }   
                 }
 			}
 		}
-        s:STATE_TARTU = {
+		s:STATE_TARTU = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:RUS
@@ -489,55 +490,10 @@ central_peace_deal.2 = { #Russia surrenders
 				    }
 			    }
 		        }
-		      set_state_owner = c:EST
+		      set_state_owner = c:UBD
             }
         }
-        create_country = { #Latvia
-			origin = root
-			tag = LAT
-			state = s:STATE_RIGA.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-                every_diplomatic_play = {
-			     limit = {
-                 initiator = c:AUS
-                 target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:SIB								
-						this = c:SIB						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			        }
-			      }
-                   add_diplomatic_play_war_support = { target = c:LAT value = -200 }   
-                }
-			}
-		}
-        s:STATE_COURLAND = {
+		s:STATE_RIGA = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:RUS
@@ -547,54 +503,35 @@ central_peace_deal.2 = { #Russia surrenders
 				    }
 			    }
 		        }
-		      set_state_owner = c:LAT
+		      set_state_owner = c:UBD
             }
         }
-        create_country = { #Lithuania
-			origin = root
-			tag = LIT
-			state = s:STATE_KAUNAS.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-                every_diplomatic_play = {
-			     limit = {
-                 initiator = c:AUS
-                 target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
+		s:STATE_COURLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
 				    }
-                    or = {
-						exists = c:SIB								
-						this = c:SIB						
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+		s:STATE_KAUNAS = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
 				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			        }
-			      }
-                   add_diplomatic_play_war_support = { target = c:LIT value = -200 }   
-                }
-			}
-		}
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
         create_country = { #Poland
 			origin = root
 			tag = POL
@@ -711,7 +648,7 @@ central_peace_deal.2 = { #Russia surrenders
 			tag = UKR
 			state = s:STATE_KIEV.region_state:RUS
 			on_created = {
-				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_monarchy
                 activate_law = law_type:law_mass_conscription	
                 every_diplomatic_play = {
 			     limit = {
@@ -831,17 +768,9 @@ central_peace_deal.2 = { #Russia surrenders
         }
         c:GER = {
 		create_diplomatic_pact = {
-			country = c:EST
+			country = c:
 			type = protectorate
-		}	
-        create_diplomatic_pact = {
-			country = c:LAT
-			type = protectorate
-		}	
-        create_diplomatic_pact = {
-			country = c:LIT
-			type = protectorate
-		}	
+		}		
         create_diplomatic_pact = {
 			country = c:POL
 			type = protectorate

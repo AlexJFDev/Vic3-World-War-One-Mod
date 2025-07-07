@@ -205,6 +205,12 @@ entente_peace_deal.1 = { #Entente victory
           days = 5
             }
         }
+		c:GBR = {
+            trigger_event = {
+                id = stabilization_buff_events.41
+                days = 5
+            }
+        }
 		c:GER = {
         create_bidirectional_truce = { 
             country = c:GBR 
@@ -793,9 +799,66 @@ entente_peace_deal.1 = { #Entente victory
 		s:STATE_DELVIDEK = { 
 			add_claim = HUN
 		}
+		create_country = { #Estonia
+			origin = root
+			tag = EST
+			state = s:STATE_TALINN.region_state:UBD
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+        s:STATE_TARTU = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:UBD
+			    owner = {
+				  OR = {
+					c:UBD = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:EST
+            }
+        }
+        create_country = { #Latvia
+			origin = root
+			tag = LAT
+			state = s:STATE_RIGA.region_state:UBD
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+        s:STATE_COURLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:UBD
+			    owner = {
+				  OR = {
+					c:UBD = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:LAT
+            }
+        }
+        create_country = { #Lithuania
+			origin = root
+			tag = LIT
+			state = s:STATE_KAUNAS.region_state:UBD
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	  
+                }
+		}
 		c:EST = {
             trigger_event = {
                 id = stabilization_buff_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = stabilization_buff_events.16
                 days = 5
             }
         } 
@@ -804,10 +867,18 @@ entente_peace_deal.1 = { #Entente victory
                 id = stabilization_buff_events.1
                 days = 5
             }
+			trigger_event = {
+                id = stabilization_buff_events.16
+                days = 5
+            }
         } 
 		c:LIT = {
             trigger_event = {
                 id = stabilization_buff_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = stabilization_buff_events.16
                 days = 5
             }
         } 
@@ -816,16 +887,28 @@ entente_peace_deal.1 = { #Entente victory
                 id = stabilization_buff_events.1
                 days = 5
             }
+			trigger_event = {
+                id = stabilization_buff_events.16
+                days = 5
+            }
         } 
 		c:AUS = {
             trigger_event = {
                 id = stabilization_buff_events.1
                 days = 5
             }
+			trigger_event = {
+                id = stabilization_buff_events.16
+                days = 5
+            }
         } 
 		c:HUN = {
             trigger_event = {
                 id = stabilization_buff_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = stabilization_buff_events.16
                 days = 5
             }
         } 		
