@@ -120,11 +120,12 @@ ww1_war_policies_events.3 = {
         default_option = yes
         add_modifier = {
         name = submarine_focus_modifier
+        set_global_variable = germany_unrestricted_submarine_warfare
         years = 6
         is_decaying = yes
         } 
         ai_chance = {
-		  base = 3
+		  base = 10
 	    }
     }
 
@@ -136,7 +137,7 @@ ww1_war_policies_events.3 = {
         is_decaying = yes
         } 
         ai_chance = {
-		  base = 1
+		  base = 0
 	    }
     }
     
@@ -144,7 +145,7 @@ ww1_war_policies_events.3 = {
         name = ww1_war_policies_events.3.c #Science effort
         add_technology_progress = { progress = 3000 technology = battleship_tech }
         ai_chance = {
-		  base = 1
+		  base = 0
 	    }
     }
 }
