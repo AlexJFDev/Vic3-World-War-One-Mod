@@ -2,7 +2,7 @@
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	group = je_group_foreign_affairs
-    
+
     immediate = {
 		save_scope_as = country_imposed_upon
 		imposed_law = {
@@ -16,14 +16,14 @@
 			add_modifier = foreign_legislative_interference
 		}
 	}
-	
-	modifiers_while_active = { 
+
+	modifiers_while_active = {
 		impose_law_cooldown
 	}
-	
+
 	scripted_button = button_implement_law_imposition
 	scripted_button = button_refuse_law_imposition
-	
+
     status_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -39,9 +39,9 @@
 	on_weekly_pulse = {
 		effect = {
 			if = {
-				limit = { 
+				limit = {
 					exists = currently_enacting_law
-					scope:journal_entry = { NOT = { has_variable = notification_sent_var } } 
+					scope:journal_entry = { NOT = { has_variable = notification_sent_var } }
 					currently_enacting_law ?= scope:foreign_imposition_law
 				}
 				imposer_of_law = { post_notification = imposition_started }
@@ -59,7 +59,7 @@
 			country = scope:foreign_imposition_country
 			value = 20
 		}
-		
+
 		every_political_lobby = {
 			limit = { pro_foreign_imposition_country = yes }
 			change_appeasement = { amount = 1 factor = appeasement_imposed_law_enacted }
@@ -90,9 +90,9 @@
 			}
 		}
     }
-	
+
 	on_invalid = {
-		if = { 
+		if = {
 			limit = { currently_enacting_law ?= scope:foreign_imposition_law }
 			cancel_enactment = yes
 		}

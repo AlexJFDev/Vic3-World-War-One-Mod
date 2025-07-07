@@ -32,7 +32,7 @@
 			country_rank >= rank_value:great_power
 			relations:root >= relations_threshold:amicable
 		}
-		custom_tooltip = { 
+		custom_tooltip = {
 			text = je_earn_recognition_complete_tt
 			scope:journal_entry ?= {
 				"scripted_bar_progress(earn_recognition_progress_bar)" >= 200
@@ -79,7 +79,7 @@
 					name = recognition_progress_var
 					add = 1
 				}
-			}			
+			}
 			if = {
 				limit = {
 					# Country has voting rights

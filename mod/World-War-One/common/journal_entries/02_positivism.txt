@@ -2,7 +2,7 @@
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
 	group = je_group_internal_affairs
-	
+
 	is_shown_when_inactive = {
 		has_technology_researched = psychiatry
 		has_global_variable = positivism_invented
@@ -63,7 +63,7 @@
 		custom_tooltip = {
 			text = positivism_at_100_tt
 			scope:journal_entry = {
-				"scripted_bar_progress(positivist_progress_bar)" > 100
+				"scripted_bar_progress(positivist_progress_bar)" >= 100
 			}
 		}
 	}
