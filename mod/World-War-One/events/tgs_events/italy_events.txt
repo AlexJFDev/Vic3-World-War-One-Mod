@@ -103,6 +103,54 @@ italy_events.11 = {
 
     option = {
         name = italy_events.11.a
+        trigger = { is_player = no }
+        default_option = yes
+        random_scope_character =  {
+				limit = {
+					has_variable = benito_mussolini
+				}
+			remove_character_role = agitator
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+		}
+        random_scope_character =  {
+				limit = {
+					is_ruler = yes
+				}
+			set_ideology = ideology:ideology_fascist
+		}
+        random_scope_character =  {
+				limit = {
+					is_heir = yes
+				}
+			set_ideology = ideology:ideology_fascist
+		}
+        c:ITA ?= { 
+           set_relations = { country = c:USA value = -80 }
+           set_relations = { country = c:GBR value = -80 }
+           set_relations = { country = c:FRA value = -80 }
+           set_relations = { country = c:YUG value = -80 }
+            create_diplomatic_pact = {
+			  country = c:GBR
+			  type = rivalry
+		    }
+            create_diplomatic_pact = {
+			  country = c:FRA
+			  type = rivalry
+		    }
+            create_diplomatic_pact = {
+			  country = c:YUG
+			  type = rivalry
+		    }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = italy_events.11.a
+        trigger = { is_player = yes }
         default_option = yes
         random_scope_character =  {
 				limit = {
