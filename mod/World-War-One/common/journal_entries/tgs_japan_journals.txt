@@ -2,39 +2,18 @@
     icon = "gfx/interface/icons/event_icons/japan_coa.dds"
     group = je_group_internal_affairs
 
-    is_shown_when_inactive = {
-        exists = c:JAP
-        THIS = c:JAP
-    }
+    is_shown_when_inactive = {}
     
-    possible = {
-        OR = {
-          has_modifier = great_depression_effect_2
-          has_modifier = great_depression_effect_3
-        }
-        ruler = {
-            OR = {
-				has_ideology = ideology:ideology_fascist
-				has_ideology = ideology:ideology_reactionary
-                has_ideology = ideology:ideology_jingoist_leader
-            }
-        }
-    }
+    possible = {}
 
     immediate = {}
 
-    complete = {
-        
-        average_sol > average_expected_sol
-        any_political_movement = {
-            is_insurrectionary = no
-        }
-    }
+    complete = {}
 
     on_complete = {
         trigger_event = { 
-           id = japan_events.20
-           days = 30
+           id = 
+           days = 
         }
     }
 
@@ -51,10 +30,6 @@ je_showa_era = {
     }
     
     possible = {
-        OR = {
-          has_modifier = great_depression_effect_2
-          has_modifier = great_depression_effect_3
-        }
         ruler = {
             OR = {
 				has_ideology = ideology:ideology_fascist
@@ -68,8 +43,8 @@ je_showa_era = {
 
     complete = {
         exists = c:CHI
-        army_size >= 150
-        game_date > 1937.1.1
+        army_size >= 200
+        game_date > 1937.6.1
         has_law = law_type:law_military_oversight
         is_at_war = no
         average_sol > average_expected_sol
@@ -80,8 +55,51 @@ je_showa_era = {
 
     on_complete = {
         trigger_event = { 
-           id = japan_events.20
-           days = 30
+           id = japan_events.19
+           days = 5
+        }
+    }
+
+    should_be_pinned_by_default = yes
+}
+
+dragon_and_eagle = {
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds" 
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:JAP
+        THIS = c:JAP
+    }
+    
+    possible = {
+        has_global_variable = japan_invades_china
+        ruler = {
+            OR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_reactionary
+                has_ideology = ideology:ideology_jingoist_leader
+            }
+        }
+    }
+
+    immediate = {}
+
+    complete = {
+        army_size >= 200
+        game_date > 1941.12.1
+        has_law = law_type:law_military_oversight
+        is_at_war = no
+        average_sol > average_expected_sol
+        any_political_movement = {
+            is_insurrectionary = no
+        }
+    }
+
+    on_complete = {
+        trigger_event = { 
+           id = japan_events.22
+           days = 5
         }
     }
 

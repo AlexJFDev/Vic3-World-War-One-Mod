@@ -198,6 +198,10 @@ ussr_events.4 = { #Lenin death
 			limit = { has_variable = stalin }
             set_character_as_ruler = yes
 		}
+        trigger_event = {
+            id = ussr_events.5
+            years = 13
+		}
 		add_modifier = {
 			name = stalin_reign
             years = 10
@@ -205,7 +209,7 @@ ussr_events.4 = { #Lenin death
 		}
         set_strategy = ai_strategy_socialism_in_one_country
 		ai_chance = {
-			base = 9
+			base = 10
 		}
 	}
 
@@ -226,7 +230,7 @@ ussr_events.4 = { #Lenin death
 		}
 		set_strategy = ai_strategy_world_revolution
 		ai_chance = {
-			base = 2
+			base = 0
 		}
 	}
 
@@ -246,7 +250,7 @@ ussr_events.4 = { #Lenin death
             is_decaying = yes
 		}
 		ai_chance = {
-			base = 1
+			base = 0
 		}
 	}
 
@@ -266,7 +270,7 @@ ussr_events.4 = { #Lenin death
             is_decaying = yes
 		}
 		ai_chance = {
-			base = 1
+			base = 0
 		}
 	}
 
@@ -286,7 +290,7 @@ ussr_events.4 = { #Lenin death
             is_decaying = yes
 		}
 		ai_chance = {
-			base = 1
+			base = 0
 		}
 	}
 
@@ -306,7 +310,100 @@ ussr_events.4 = { #Lenin death
             is_decaying = yes
 		}
 		ai_chance = {
-			base = 1
+			base = 0
+		}
+	}
+}
+
+ussr_events.5 = { #Stalin purges
+    type = country_event
+
+    title = ussr_events.5.t
+    desc = ussr_events.5.d
+    flavor = ussr_events.5.f
+    
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/lenin_funeral.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = ussr_events.5.a
+        default_option = yes
+        random_scope_character = { 
+			limit = { has_variable =  }
+            kill_character = yes
+		}
+		add_modifier = {
+			name = stalin_purges
+            years = 8
+			is_decaying = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+        name = ussr_events.5.b
+		
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+        name = ussr_events.5.c
+		
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+ussr_events.10 = { #Moscow will not fall
+    type = country_event
+
+    title = ussr_events.10.t
+    desc = ussr_events.10.d
+    flavor = ussr_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/lenin_funeral.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = ussr_events.10.a
+        default_option = yes
+		trigger = { is_at_war = yes }
+		add_modifier = {
+			name = moscow_will_not_fall
+            years = 3
+			is_decaying = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+        name = ussr_events.10.b
+		trigger = { is_at_war = no }
+		ai_chance = {
+			base = 0
 		}
 	}
 }

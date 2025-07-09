@@ -1538,6 +1538,12 @@ germany_events.40 = { #WW2 initiation Germany invades Poland
             type = dp_make_protectorate
 
             escalation = 0
+
+            save_scope_as = world_war_two_diplo_play
+        }
+        trigger_event = {
+            id = germany_events.45
+            months = 7
         }
         trigger_event = {
             id = germany_events.44
@@ -1574,7 +1580,7 @@ germany_events.40 = { #WW2 initiation Germany invades Poland
     }
 }
 
-germany_events.41 = { #France threatens Germany
+germany_events.41 = { #Sudet crisis France threatens Germany
     type = country_event
 
     title = germany_events.41.t
@@ -1646,18 +1652,8 @@ germany_events.42 = { #WW2 initiation Allies response
     option = {
         name = germany_events.42.a
         default_option = yes
-        random_diplomatic_play = {
-				limit = {
-					c:GER = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:POL = {
-						is_diplomatic_play_target = yes
-					}
-				}
-			add_target_backers = {
-                who = root
-            }  
+        scope:world_war_two_diplo_play = {
+			add_target_backers = { root }
             add_war_goal = {
                 holder = root
                 type = contain_threat
@@ -1706,15 +1702,7 @@ germany_events.43 = { #WW2 initiation Italy response
     option = {
         name = germany_events.43.a
         default_option = yes
-        random_diplomatic_play = {
-				limit = {
-					c:GER = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:POL = {
-						is_diplomatic_play_target = yes
-					}
-				}
+        scope:world_war_two_diplo_play = {
 			add_initiator_backers = {
                 who = root
             }  
@@ -1763,15 +1751,7 @@ germany_events.44 = { #WW2 initiation Germany invades Belgium and Netherlands
           years = 1
           is_decaying = yes
         }
-        random_diplomatic_play = {
-				limit = {
-					c:GER = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:POL = {
-						is_diplomatic_play_target = yes
-					}
-				}
+        scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL
             }  
@@ -1795,15 +1775,7 @@ germany_events.44 = { #WW2 initiation Germany invades Belgium and Netherlands
           years = 1
           is_decaying = yes
         }
-        random_diplomatic_play = {
-				limit = {
-					c:GER = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:POL = {
-						is_diplomatic_play_target = yes
-					}
-				}
+        scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL
             }  
@@ -1820,7 +1792,7 @@ germany_events.44 = { #WW2 initiation Germany invades Belgium and Netherlands
 
    
     option = {
-        name = germany_events.44.a
+        name = germany_events.44.b
         default_option = yes
         trigger = { is_player = no }
         add_modifier = {
@@ -1828,15 +1800,7 @@ germany_events.44 = { #WW2 initiation Germany invades Belgium and Netherlands
           years = 1
           is_decaying = yes
         }
-        random_diplomatic_play = {
-				limit = {
-					c:GER = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:POL = {
-						is_diplomatic_play_target = yes
-					}
-				}
+        scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL
             }  
@@ -1849,7 +1813,7 @@ germany_events.44 = { #WW2 initiation Germany invades Belgium and Netherlands
 
 
     option = {
-        name = germany_events.44.a
+        name = germany_events.44.b
         default_option = yes
         trigger = { is_player = yes }
         add_modifier = {
@@ -1857,15 +1821,7 @@ germany_events.44 = { #WW2 initiation Germany invades Belgium and Netherlands
           years = 1
           is_decaying = yes
         }
-        random_diplomatic_play = {
-				limit = {
-					c:GER = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:POL = {
-						is_diplomatic_play_target = yes
-					}
-				}
+        scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL
             }  
@@ -1878,6 +1834,207 @@ germany_events.44 = { #WW2 initiation Germany invades Belgium and Netherlands
 
     option = {
         name = germany_events.44.c
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+germany_events.45 = { #WW2 initiation Germany invades Denmark and Norway
+    type = country_event
+
+    title = germany_events.45.t
+    desc = germany_events.45.d
+    flavor = germany_events.45.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.45.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = nazi_germany_army_buff_1
+          years = 1
+          is_decaying = yes
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:DEN
+            }  
+            add_target_backers = {
+                c:NOR
+            }
+		}
+        c:DEN = { set_variable = allies_participant }
+        c:NOR = { set_variable = allies_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.45.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = nazi_germany_army_buff_1
+          years = 1
+          is_decaying = yes
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:DEN
+            }  
+		}
+        c:DEN = { set_variable = allies_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.45.c
+        ai_chance = {
+            base = 0
+        }
+    }
+    
+    option = {
+        name = germany_events.44.c
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+germany_events.46 = { #WW2 initiation Germany invades USSR
+    type = country_event
+
+    title = germany_events.46.t
+    desc = germany_events.46.d
+    flavor = germany_events.46.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.46.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:RUS
+            }  
+		}
+        c:RUS = { set_variable = allies_participant }
+        c:RUS = {
+            trigger_event = {
+                id = ussr_events.10
+                years = 1
+            }
+        }
+        if = {
+            limit = {
+                c:ROM = {
+                    NOT = { 
+                        has_law = law_type:law_council_republic
+                        has_law = law_type:law_anarchy
+                    }
+                }
+            }
+            c:ROM = {
+               trigger_event = {
+                  id = germany_events.47
+                  days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:FIN = {
+                    NOT = { 
+                        has_law = law_type:law_council_republic
+                        has_law = law_type:law_anarchy
+                    }
+                }
+            }
+            c:FIN = {
+               trigger_event = {
+                  id = germany_events.47
+                  days = 5
+                }
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+    
+    option = {
+        name = germany_events.46.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+germany_events.47 = { #WW2 initiation Romania joins invasion of USSR
+    type = country_event
+
+    title = germany_events.47.t
+    desc = germany_events.47.d
+    flavor = germany_events.47.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.47.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_initiator_backers = {
+               who = root
+            }  
+		}
+        ROOT = { set_variable = axis_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+    
+    option = {
+        name = germany_events.47.b
         ai_chance = {
             base = 0
         }

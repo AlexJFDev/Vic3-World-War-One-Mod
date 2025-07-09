@@ -752,6 +752,12 @@ stalin_reign = {
    country_leverage_resistance_mult = 0.3
 }
 
+trotsky_reign = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+   country_prestige_mult = 0.1
+   country_pact_leverage_generation_mult = 0.4
+}
+
 zinoviev_reign = {
    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
    state_loyalists_from_political_movements_mult = 0.3
@@ -777,10 +783,20 @@ rykov_reign = {
    country_production_tech_research_speed_mult = 0.2
 }
 
-trotsky_reign = {
-   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-   country_prestige_mult = 0.1
-   country_pact_leverage_generation_mult = 0.4
+stalin_purges = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+   unit_army_offense_mult = -0.4
+   unit_army_defense_mult = -0.2
+   building_government_administration_throughput_add = -0.2
+   country_legitimacy_base_add = 30
+   country_leverage_resistance_mult = 0.3
+   country_authority_mult = 0.5
+}
+
+moscow_will_not_fall = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+   unit_army_offense_mult = 0.3
+   unit_army_defense_mult = 0.4
 }
 
 recently_collapsed_1 = {

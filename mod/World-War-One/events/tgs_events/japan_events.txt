@@ -225,6 +225,10 @@ japan_events.17 = {#The Showa era
            set_relations = { country = c:MCH value = -100 }
 		   set_relations = { country = c:SHA value = -100 }
         }
+		trigger_event = {
+            id = japan_events.18
+            years = 5
+        }
         random_scope_character = { 
 			limit = { has_variable = hirohito }
             set_ideology = ideology:ideology_jingoist_leader
@@ -373,5 +377,278 @@ japan_events.17 = {#The Showa era
         ai_chance = {
 		  base = 0
 	    }
+    }
+}
+
+japan_events.18 = {#Invasion of Manchuria
+    type = country_event
+
+    title = japan_events.18.t
+    desc = japan_events.18.d
+    flavor = japan_events.18.f
+    
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/taisho.dds"
+    }
+
+    immediate = {
+        s:STATE_SOUTHERN_MANCHURIA = {
+            owner = {
+				save_scope_as = manchuria_owner
+			}
+		}
+    }
+
+    trigger = {}
+
+    option = {
+        name = japan_events.18.a
+        default_option = yes
+        create_diplomatic_play = {
+            name = japan_invades_manchuria
+
+            target_state = s:STATE_SOUTHERN_MANCHURIA.region_state:manchuria_owner
+
+            type = dp_conquer_state
+
+            escalation = 0
+
+			add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_SHENGJING.region_state:manchuria_owner
+            }
+		}
+    }
+
+	option = {
+        name = japan_events.18.b
+    }
+}
+
+japan_events.19 = {#Invasion of China inititation
+    type = country_event
+
+    title = japan_events.19.t
+    desc = japan_events.19.d
+    flavor = japan_events.19.f
+    
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/taisho.dds"
+    }
+
+    immediate = {}
+
+    trigger = {}
+
+    option = {
+        name = japan_events.19.a
+        default_option = yes
+        c:CHI = {
+			trigger_event = {
+              id = japan_events.20
+              days = 5
+            }
+		}
+    }
+
+	option = {
+        name = japan_events.19.b
+    }
+}
+
+japan_events.20 = {#Invasion of China response
+    type = country_event
+
+    title = japan_events.20.t
+    desc = japan_events.20.d
+    flavor = japan_events.20.f
+    
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/taisho.dds"
+    }
+
+    immediate = {}
+
+    trigger = {}
+
+    option = {
+        name = japan_events.20.a
+        default_option = yes
+		c:JAP = {
+        create_diplomatic_play = {
+            name = sino_japan_war_diplo_play
+
+            target_state = s:STATE_CHONGQING.region_state:CHI
+
+            type = dp_conquer_state
+
+            escalation = 0
+
+			save_scope_as = sino_japan_war_diplo_play
+		}
+		}
+		set_capital = STATE_CHONGQING
+		set_global_variable = japan_invades_china
+		every_country = {
+            limit = {
+				OR = {
+			        country_has_primary_culture = cu:han
+			        country_has_primary_culture = cu:manchu
+			        country_has_primary_culture = cu:yue
+		        }
+				NOT = { is_subject_of = c:JAP }
+            } 
+            trigger_event = {
+                id = china_events.22
+                days = 5
+            }
+        }
+		c:USA = {
+		   trigger_event = {
+              id = japan_events.21
+              days = 5
+            }
+		}
+    }
+
+	option = {
+        name = japan_events.20.b
+    }
+}
+
+japan_events.21 = {#USA reacts to sino-japan war
+    type = country_event
+
+    title = japan_events.21.t
+    desc = japan_events.21.d
+    flavor = japan_events.21.f
+    
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/taisho.dds"
+    }
+
+    immediate = {
+        s:STATE_CHONGQING = {
+            owner = {
+				save_scope_as = chongqing_owner
+			}
+		}
+    }
+
+    trigger = {}
+
+    option = {
+        name = japan_events.21.a
+        default_option = yes
+		c:USA = {
+		create_diplomatic_pact = {
+			country = c:JAP
+			type = embargo
+		}
+		create_diplomatic_pact = {
+			country = c:JAP
+			type = rivalry
+		}	
+		}
+		c:JAP = {
+		create_diplomatic_pact = {
+			country = c:USA
+			type = rivalry
+		}	
+		}
+    }
+
+	option = {
+        name = japan_events.21.b
+		trigger = { 
+			NOT = { 
+                has_law = law_type:law_true_neutrality
+                has_law = law_type:law_armed_neutrality
+            }
+		}
+		scope:sino_japan_war_diplo_play = {
+			add_target_backers = { root }
+		}
+		c:USA = {
+		create_diplomatic_pact = {
+			country = c:JAP
+			type = embargo
+		}
+		create_diplomatic_pact = {
+			country = c:JAP
+			type = rivalry
+		}	
+		}
+		c:JAP = {
+		create_diplomatic_pact = {
+			country = c:USA
+			type = embargo
+		}
+		create_diplomatic_pact = {
+			country = c:USA
+			type = rivalry
+		}	
+		}
+    }
+
+	option = {
+        name = japan_events.21.c
+    }
+}
+
+japan_events.22 = {#Japan attacks USA and western nations
+    type = country_event
+
+    title = japan_events.22.t
+    desc = japan_events.22.d
+    flavor = japan_events.22.f
+    
+    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/taisho.dds"
+    }
+
+    immediate = {}
+
+    trigger = {}
+
+    option = {
+        name = japan_events.22.a
+        default_option = yes
+		
+    }
+
+	option = {
+        name = japan_events.22.b
+		
+    }
+
+	option = {
+        name = japan_events.22.c
     }
 }
