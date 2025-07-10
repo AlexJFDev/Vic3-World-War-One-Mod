@@ -12,19 +12,21 @@
     
     possible = {
         has_modifier = federal_reserve_established_modifier
+        NOT = { has_variable = fed_decision_taken_var }
     }
 
     when_taken = {
-      add_modifier = {
-              name = no_federal_reserve_modifier
-              duration = -1
-          }
-          remove_modifier = federal_reserve_established_modifier
-          scope:journal_entry = {
-        custom_tooltip = fed_decision_taken_var
-        set_variable = { name = fed_decision_taken_var years = 10 }
-      }
-	  }
+        remove_modifier = federal_reserve_established_modifier
+        add_modifier = {
+            name = no_federal_reserve_modifier
+            duration = -1
+        }
+        set_variable = {
+			name = fed_decision_taken_var
+			value = yes
+			years = 10
+		}
+	}
 
     ai_chance = {
 		value = 0

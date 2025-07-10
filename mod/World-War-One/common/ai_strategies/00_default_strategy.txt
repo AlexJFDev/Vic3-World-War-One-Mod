@@ -1465,7 +1465,7 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					has_journal_entry = je_the_krakow_uprising
-					country_rank >= rank_value:major_power
+					
 					exists = c:KRA
 					scope:target_state = {
 						owner = { this = c:KRA }

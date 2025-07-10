@@ -1,13 +1,13 @@
 ﻿DIPLOMACY = {
     c:FRA ?= { 
-        set_relations = { country = c:GBR value = 100 }
+        set_relations = { country = c:GBR value = 150 }
         set_relations = { country = c:RUS value = 50 }
-        set_relations = { country = c:GER value = -50 }
+        set_relations = { country = c:GER value = -100 }
         set_relations = { country = c:AUS value = -50 }
         set_relations = { country = c:ITA value = 30 }
     }
     c:GBR ?= { 
-        set_relations = { country = c:FRA value = 140 }
+        set_relations = { country = c:FRA value = 150 }
         set_relations = { country = c:RUS value = 100 }
         set_relations = { country = c:GER value = -50 }
         set_relations = { country = c:AUS value = -50 }
@@ -18,11 +18,11 @@
     c:RUS ?= { 
         set_relations = { country = c:GBR value = 50 }
         set_relations = { country = c:GER value = -50 }
-        set_relations = { country = c:AUS value = -50 }
+        set_relations = { country = c:AUS value = -100 }
         set_relations = { country = c:SER value = 100 }
     }
     c:GER ?= { 
-        set_relations = { country = c:AUS value = 70 }
+        set_relations = { country = c:AUS value = 150 }
         set_relations = { country = c:ITA value = 50 }
     }
     c:AUS ?= { 
@@ -32,24 +32,25 @@
         set_relations = { country = c:GRE value = 50 }
     }
     c:BUL ?= { 
-        set_relations = { country = c:TUR value = -30 }
-        set_relations = { country = c:GRE value = -30 }
-        set_relations = { country = c:SER value = -30 }
-        set_relations = { country = c:ROM value = -30 }
+        set_relations = { country = c:TUR value = -80 }
+        set_relations = { country = c:GRE value = -80 }
+        set_relations = { country = c:SER value = -80 }
+        set_relations = { country = c:ROM value = -80 }
     }
     c:USA ?= {
         set_relations = { country = c:GBR value = 120 }
         set_relations = { country = c:RUS value = 20 }
         set_relations = { country = c:GER value = -30 }
         set_relations = { country = c:AUS value = -30 }
-        set_relations = { country = c:FRA value = 30 }
+        set_relations = { country = c:FRA value = 100 }
         set_relations = { country = c:JAP value = -20 }
+        set_relations = { country = c:CLM value = -30 }
     }
     c:JAP ?= {
         set_relations = { country = c:GBR value = 50 }
         set_relations = { country = c:RUS value = -20 }
-        set_relations = { country = c:GER value = -30 }
+        set_relations = { country = c:GER value = -20 }
         set_relations = { country = c:USA value = -20 }
-        set_relations = { country = c:CHI value = -30 }
+        set_relations = { country = c:CHI value = -80 }
     }
 }

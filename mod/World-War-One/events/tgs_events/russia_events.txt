@@ -638,6 +638,21 @@ russia_events.8 = { #The civil war begins
 		  set_relations = { country = c:USA value = 80 }
 		  set_relations = { country = c:JAP value = 80 }
         }
+        every_country = {
+			limit = {
+                country_rank >= rank_value:great_power
+                is_subject = no
+                NOT = {
+					has_law = law_type:law_council_republic
+					has_law = law_type:law_anarchism
+                    has_law = law_type:law_true_neutrality
+				}
+			}
+            trigger_event = {
+                id = 
+                days = 30
+            }
+        }
     }
 }
 
@@ -694,5 +709,60 @@ russia_events.10 = { #Peace deal
         random_civil_war = {
 			add_civil_war_progress = -100
 		}  
+    }
+}
+
+russia_events.11 = { #Other powers help White Russia
+    type = country_event
+
+    title = russia_events.11.t
+    desc = russia_events.11.d
+    flavor = russia_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/russian_revolution.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = russia_events.11.a
+        default_option = yes
+        create_treaty = {
+		   name = treaty_name_assistance_to_white_russia
+		   first_country = ROOT
+		   second_country = c:SIB
+		   binding_period = { years = 25 }
+		   articles_to_create = {
+			    { 
+					article = military_assistance
+					source_country = ROOT
+					target_country = c:SIB
+				}
+                {
+				article = money_transfer
+				source_country = ROOT
+				target_country = c:SIB
+				inputs = {
+					{ quantity = 5000 }
+				}
+			    }
+		    }
+	    }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = russia_events.11.a
+        ai_chance = {
+			base = 0
+		}
     }
 }

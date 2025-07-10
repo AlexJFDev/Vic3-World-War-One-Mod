@@ -1352,6 +1352,12 @@ china_events.11 = { #China reunification
                 days = 30
             }
         }
+        c:BEI = {
+            trigger_event = {
+                id = china_events.20
+                days = 30
+            }
+        }
         ai_chance = {
 		 base = 0
 	    }
@@ -1518,14 +1524,14 @@ china_events.20 = { #Join the central government ?
 			}
         }
         ai_chance = {
-		base = 7
+		base = 10
 	    }
 	}
 
     option = {
         name = china_events.20.b
         ai_chance = {
-		base = 3
+		base = 0
 	    }
     }
 }
