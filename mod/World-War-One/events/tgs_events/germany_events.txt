@@ -323,6 +323,7 @@ germany_events.6 = { #Austria-Hungary capitulates
 
     option = {
         name = germany_events.6.a
+        default_option = yes
         ai_chance = {
             base = 100
         }
@@ -457,6 +458,7 @@ germany_events.9 = { #Ottoman Empire capitulates
 
     option = {
         name = germany_events.9.a
+        default_option = yes
          ai_chance = {
             base = 100
         }
@@ -1530,6 +1532,7 @@ germany_events.40 = { #WW2 initiation Germany invades Poland
     option = {
         name = germany_events.40.a
         default_option = yes
+        set_global_variable = world_war_two_started
         create_diplomatic_play = {
             name = world_war_two
 
@@ -1663,6 +1666,11 @@ germany_events.42 = { #WW2 initiation Allies response
                 holder = root
                 type = humiliation
                 target_country = c:GER
+            }
+            add_war_goal = {
+                holder = c:GER
+                type = conquer_state
+                target_state = root.capital
             }
 		}
         set_variable = allies_participant
@@ -2035,6 +2043,71 @@ germany_events.47 = { #WW2 initiation Romania joins invasion of USSR
     
     option = {
         name = germany_events.47.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+germany_events.48 = { #Germany declares war on USA
+    type = country_event
+
+    title = germany_events.48.t
+    desc = germany_events.48.d
+    flavor = germany_events.48.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.48.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:USA
+                c:CHI
+            } 
+            add_initiator_backers = {
+                c:JAP
+            } 
+            add_war_goal = {
+                holder = c:USA
+                type = contain_threat
+                target_country = c:GER
+            } 
+            add_war_goal = {
+                holder = c:GER
+                type = conquer_state
+                target_state = s:STATE_NEW_YORK.region_state:USA
+            }
+		}
+        c:JAP = {
+            set_variable = axis_participant
+        }
+        c:USA = {
+            set_variable = allies_participant
+        }
+        c:CHI = {
+            set_variable = allies_participant
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.48.b
+        
         ai_chance = {
             base = 0
         }
