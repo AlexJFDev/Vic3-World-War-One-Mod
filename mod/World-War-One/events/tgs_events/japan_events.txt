@@ -424,10 +424,16 @@ japan_events.18 = {#Invasion of Manchuria
                 target_state = s:STATE_SHENGJING.region_state:manchuria_owner
             }
 		}
+        ai_chance = {
+		  base = 10
+	    }
     }
 
 	option = {
         name = japan_events.18.b
+        ai_chance = {
+		  base = 0
+	    }
     }
 }
 
@@ -460,10 +466,16 @@ japan_events.19 = {#Invasion of China inititation
               days = 5
             }
 		}
+        ai_chance = {
+		  base = 10
+	    }
     }
 
 	option = {
         name = japan_events.19.b
+        ai_chance = {
+		  base = 0
+	    }
     }
 }
 
@@ -525,10 +537,16 @@ japan_events.20 = {#Invasion of China response
               days = 5
             }
 		}
+        ai_chance = {
+		  base = 10
+	    }
     }
 
 	option = {
         name = japan_events.20.b
+        ai_chance = {
+		  base = 0
+	    }
     }
 }
 
@@ -577,6 +595,9 @@ japan_events.21 = {#USA reacts to sino-japan war
 			type = rivalry
 		}	
 		}
+        ai_chance = {
+		  base = 10
+	    }
     }
 
 	option = {
@@ -610,10 +631,16 @@ japan_events.21 = {#USA reacts to sino-japan war
 			type = rivalry
 		}	
 		}
+        ai_chance = {
+		  base = 0
+	    }
     }
 
 	option = {
         name = japan_events.21.c
+        ai_chance = {
+		  base = 0
+	    }
     }
 }
 
@@ -640,15 +667,84 @@ japan_events.22 = {#Japan attacks USA and western nations
     option = {
         name = japan_events.22.a
         default_option = yes
-		
+		scope:sino_japan_war_diplo_play = {
+			add_target_backers = { c:USA }
+            add_target_backers = { c:GBR }
+            add_target_backers = { c:FRA }
+            add_target_backers = { c:NET }
+            add_target_backers = { c:AST }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_HAWAI.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = take_treaty_port
+                target_state = s:STATE_CALIFORNIA.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_RYUKYU_ISLANDS.region_state:JAP
+            }
+		}
+        if = {
+            limit = {
+                has_global_variable = world_war_two_started
+            }
+            c:GER = {
+                trigger_event = {
+                   id = germany_events.48
+                   days = 5
+                }
+            }
+        }
+        ai_chance = {
+		  base = 10
+	    }
     }
 
 	option = {
         name = japan_events.22.b
-		
+		scope:sino_japan_war_diplo_play = {
+			add_target_backers = { c:USA }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_HAWAI.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = take_treaty_port
+                target_state = s:STATE_CALIFORNIA.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_RYUKYU_ISLANDS.region_state:JAP
+            }
+		}
+        if = {
+            limit = {
+                has_global_variable = world_war_two_started
+            }
+            c:GER = {
+                trigger_event = {
+                   id = germany_events.48
+                   days = 5
+                }
+            }
+        }
+        ai_chance = {
+		  base = 0
+	    }
     }
 
 	option = {
         name = japan_events.22.c
+        ai_chance = {
+		  base = 0
+	    }
     }
 }

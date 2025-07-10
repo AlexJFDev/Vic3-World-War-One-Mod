@@ -1,0 +1,202 @@
+﻿namespace = axis_peace_deal
+
+axis_peace_deal.1 = {
+    type = country_event
+
+    title = axis_peace_deal.1.t
+    desc = axis_peace_deal.1.d
+    flavor = axis_peace_deal.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = axis_peace_deal.1.a
+        s:STATE_ILE_DE_FRANCE = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FRA
+            }
+        }
+        s:STATE_ALSACE = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:GER
+            }
+        }
+        c:GER = {
+		    create_diplomatic_pact = {
+			  country = c:FRA
+			  type = protectorate
+		    }
+            create_diplomatic_pact = {
+			  country = c:BEL
+			  type = protectorate
+		    }	
+            create_diplomatic_pact = {
+			  country = c:LUX
+			  type = protectorate
+		    }	
+            create_diplomatic_pact = {
+			  country = c:NET
+			  type = protectorate
+		    }		
+        }
+    }
+}
+
+axis_peace_deal.2 = {
+    type = country_event
+
+    title = axis_peace_deal.2.t
+    desc = axis_peace_deal.2.d
+    flavor = axis_peace_deal.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = axis_peace_deal.2.a
+        s:STATE_HOME_COUNTIES = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:GBR
+            }
+        }
+        c:GER = {
+		    create_diplomatic_pact = {
+			  country = c:GBR
+			  type = protectorate
+		    }	
+        }
+    }
+}
+
+axis_peace_deal.3 = {
+    type = country_event
+
+    title = axis_peace_deal.3.t
+    desc = axis_peace_deal.3.d
+    flavor = axis_peace_deal.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = axis_peace_deal.3.a
+        s:STATE_MOSCOW = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:RUS
+            }
+        }
+        c:GER = {
+		    create_diplomatic_pact = {
+			  country = c:RUS
+			  type = protectorate
+		    }	
+        }
+    }
+}
+
+axis_peace_deal.4 = {
+    type = country_event
+
+    title = axis_peace_deal.4.t
+    desc = axis_peace_deal.4.d
+    flavor = axis_peace_deal.4.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = axis_peace_deal.4.a
+        s:STATE_NEW_YORK = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:USA
+            }
+        }
+        c:GER = {
+		    create_diplomatic_pact = {
+			  country = c:USA
+			  type = protectorate
+		    }	
+        }
+    }
+}

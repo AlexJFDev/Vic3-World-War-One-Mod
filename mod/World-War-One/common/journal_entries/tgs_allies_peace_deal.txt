@@ -1,0 +1,132 @@
+﻿je_allies_peace_deal_round_1 = { 
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_crises
+    
+	is_shown_when_inactive = {
+	  has_global_variable = world_war_two_started
+      is_diplomatic_play_enemy_of = c:GER
+	  exists = c:GBR
+      THIS = c:GBR
+	}
+
+    possible = { 
+	  has_global_variable = world_war_two_started
+	  is_diplomatic_play_enemy_of = c:GER
+	  exists = c:GBR
+      THIS = c:GBR
+	}
+
+    immediate = {}
+
+    complete = {
+		c:GER = {
+			has_variable = axis_participant
+		}
+		c:GBR = {
+			owns_entire_state_region = STATE_BRANDENBURG
+		}
+	}
+
+	on_complete = {
+		set_global_variable = allies_defeat_germany
+		trigger_event = { 
+			id = allies_peace_deal.1 
+			popup = yes 
+		}
+	}
+
+    on_complete = {}
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_allies_peace_deal_round_2 = { 
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_crises
+    
+	is_shown_when_inactive = {
+	  has_global_variable = world_war_two_started
+      is_diplomatic_play_enemy_of = c:GER
+	  exists = c:RUS
+      THIS = c:RUS
+	}
+
+    possible = { 
+	  has_global_variable = world_war_two_started
+	  is_diplomatic_play_enemy_of = c:GER
+	  exists = c:RUS
+      THIS = c:RUS
+	}
+
+    immediate = {}
+
+    complete = {
+		c:GER = {
+			has_variable = axis_participant
+		}
+		c:RUS = {
+			owns_entire_state_region = STATE_BRANDENBURG
+		}
+	}
+
+	on_complete = {
+		set_global_variable = ussr_defeat_germany
+		trigger_event = { 
+			id = allies_peace_deal.2
+			popup = yes 
+		}
+	}
+
+    on_complete = {}
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_allies_peace_deal_round_3 = { 
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_crises
+    
+	is_shown_when_inactive = {
+      is_diplomatic_play_enemy_of = c:JAP
+	  exists = c:USA
+      THIS = c:USA
+	}
+
+    possible = { 
+	  is_diplomatic_play_enemy_of = c:JAP
+	  exists = c:USA
+      THIS = c:USA
+	}
+
+    immediate = {}
+
+    complete = {
+		c:JAP = {
+			has_variable = axis_participant
+		}
+		c:USA = {
+			owns_entire_state_region = STATE_RYUKYU_ISLANDS
+		}
+	}
+
+	on_complete = {
+		set_global_variable = allies_defeat_jap
+		trigger_event = { 
+			id = allies_peace_deal.3
+			popup = yes 
+		}
+	}
+
+    on_complete = {}
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}

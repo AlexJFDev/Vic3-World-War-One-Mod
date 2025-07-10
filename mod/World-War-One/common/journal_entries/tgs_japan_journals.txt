@@ -74,6 +74,7 @@ dragon_and_eagle = {
     
     possible = {
         has_global_variable = japan_invades_china
+        has_global_variable = world_war_two_started
         ruler = {
             OR = {
 				has_ideology = ideology:ideology_fascist
@@ -93,6 +94,12 @@ dragon_and_eagle = {
         average_sol > average_expected_sol
         any_political_movement = {
             is_insurrectionary = no
+        }
+        c:USA = {
+            has_diplomatic_pact = {
+				who = c:JAP
+				type = embargo
+			}
         }
     }
 

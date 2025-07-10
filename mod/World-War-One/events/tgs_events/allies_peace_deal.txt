@@ -1,0 +1,401 @@
+﻿namespace = allies_peace_deal
+
+allies_peace_deal.1 = {
+    type = country_event
+
+    title = allies_peace_deal.1.t
+    desc = allies_peace_deal.1.d
+    flavor = allies_peace_deal.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = allies_peace_deal.1.a
+        c:GER = {
+		    remove_diplomatic_pact = {
+			  country = c:FRA
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:BEL
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:LUX
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:NET
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:GBR
+			  type = protectorate
+		    }		
+            every_state = {
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_barracks
+					is_capital = no
+				}
+				remove_building = building_barracks
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_naval_base
+					is_capital = no
+				}
+				remove_building = building_naval_base
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_arms_industry
+					is_capital = no
+				}
+				remove_building = building_arms_industry
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_artillery_foundries
+					is_capital = no
+				}
+				remove_building = building_artillery_foundries
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_munition_plants
+					is_capital = no
+				}
+				remove_building = building_munition_plants
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_aircraft_factory
+					is_capital = no
+				}
+				remove_building = building_aircraft_factory
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_military_shipyards
+					is_capital = no
+				}
+				remove_building = building_military_shipyards
+			}	
+		    }
+        }
+    }
+}
+
+allies_peace_deal.2 = {
+    type = country_event
+
+    title = allies_peace_deal.1.t
+    desc = allies_peace_deal.1.d
+    flavor = allies_peace_deal.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = allies_peace_deal.1.a
+        c:GER = {
+		    remove_diplomatic_pact = {
+			  country = c:FRA
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:BEL
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:LUX
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:NET
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:GBR
+			  type = protectorate
+		    }		
+            every_state = {
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_barracks
+					is_capital = no
+				}
+				remove_building = building_barracks
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_naval_base
+					is_capital = no
+				}
+				remove_building = building_naval_base
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_arms_industry
+					is_capital = no
+				}
+				remove_building = building_arms_industry
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_artillery_foundries
+					is_capital = no
+				}
+				remove_building = building_artillery_foundries
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_munition_plants
+					is_capital = no
+				}
+				remove_building = building_munition_plants
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_aircraft_factory
+					is_capital = no
+				}
+				remove_building = building_aircraft_factory
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_military_shipyards
+					is_capital = no
+				}
+				remove_building = building_military_shipyards
+			}	
+		    }
+        }
+    }
+}
+
+allies_peace_deal.2 = {
+    type = country_event
+
+    title = allies_peace_deal.1.t
+    desc = allies_peace_deal.1.d
+    flavor = allies_peace_deal.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = allies_peace_deal.1.a
+        c:GER = {
+		    remove_diplomatic_pact = {
+			  country = c:FRA
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:BEL
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:LUX
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:NET
+			  type = protectorate
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:GBR
+			  type = protectorate
+		    }		
+            every_state = {
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_barracks
+					is_capital = no
+				}
+				remove_building = building_barracks
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_naval_base
+					is_capital = no
+				}
+				remove_building = building_naval_base
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_arms_industry
+					is_capital = no
+				}
+				remove_building = building_arms_industry
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_artillery_foundries
+					is_capital = no
+				}
+				remove_building = building_artillery_foundries
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_munition_plants
+					is_capital = no
+				}
+				remove_building = building_munition_plants
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_aircraft_factory
+					is_capital = no
+				}
+				remove_building = building_aircraft_factory
+			}
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_military_shipyards
+					is_capital = no
+				}
+				remove_building = building_military_shipyards
+			}	
+		    }
+        }
+    }
+}
+
+allies_peace_deal.3 = {
+    type = country_event
+
+    title = allies_peace_deal.3.t
+    desc = allies_peace_deal.3.d
+    flavor = allies_peace_deal.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/______.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = allies_peace_deal.3.a
+        c:JAP = {	
+            every_state = {
+			if = {
+				limit = {
+					owner = c:JEP
+					has_building = building_barracks
+					is_capital = no
+				}
+				remove_building = building_barracks
+			}
+			if = {
+				limit = {
+					owner = c:JAP
+					has_building = building_naval_base
+					is_capital = no
+				}
+				remove_building = building_naval_base
+			}
+			if = {
+				limit = {
+					owner = c:JAP
+					has_building = building_arms_industry
+					is_capital = no
+				}
+				remove_building = building_arms_industry
+			}
+			if = {
+				limit = {
+					owner = c:JAP
+					has_building = building_artillery_foundries
+					is_capital = no
+				}
+				remove_building = building_artillery_foundries
+			}
+			if = {
+				limit = {
+					owner = c:JAP
+					has_building = building_munition_plants
+					is_capital = no
+				}
+				remove_building = building_munition_plants
+			}
+			if = {
+				limit = {
+					owner = c:JAP
+					has_building = building_aircraft_factory
+					is_capital = no
+				}
+				remove_building = building_aircraft_factory
+			}
+			if = {
+				limit = {
+					owner = c:JAP
+					has_building = building_military_shipyards
+					is_capital = no
+				}
+				remove_building = building_military_shipyards
+			}	
+		    }
+        }
+    }
+}
