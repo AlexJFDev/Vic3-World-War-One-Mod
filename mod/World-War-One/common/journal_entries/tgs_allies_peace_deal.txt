@@ -95,12 +95,14 @@ je_allies_peace_deal_round_3 = {
 	group = je_group_crises
     
 	is_shown_when_inactive = {
+	  has_global_variable = world_war_two_started
       is_diplomatic_play_enemy_of = c:JAP
 	  exists = c:USA
       THIS = c:USA
 	}
 
     possible = { 
+	  has_global_variable = world_war_two_started
 	  is_diplomatic_play_enemy_of = c:JAP
 	  exists = c:USA
       THIS = c:USA
