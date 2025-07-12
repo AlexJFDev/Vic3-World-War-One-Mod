@@ -1593,8 +1593,8 @@ joining_world_war_events.25 = { #USA politician evokes the memory of the civil w
         name = joining_world_war_events.25.a
         default_option = yes
         je:je_joining_world_war = {
-			add_progress = { value = -15 name = join_entente_progress_bar }
-            add_progress = { value = -15 name = join_central_powers_progress_bar }
+			add_progress = { value = -20 name = join_entente_progress_bar }
+            add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
     }
 }
@@ -1630,16 +1630,14 @@ joining_world_war_events.26 = { #liner sunk by german subs
                 }
 			}
         }
-        c:GBR = {
-            has_variable = entente_participant
-        }
+        has_global_variable = germany_unrestricted_submarine_warfare
     }
 
     option = {
         name = joining_world_war_events.26.a
         default_option = yes
         je:je_joining_world_war = {
-			add_progress = { value = 30 name = join_entente_progress_bar }
+			add_progress = { value = 15 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
     }
@@ -1677,17 +1675,14 @@ joining_world_war_events.27 = { #submarine warfare causes concern
 			}
         }
         has_global_variable = germany_unrestricted_submarine_warfare
-        c:GBR = {
-            has_variable = entente_participant
-        }
     }
 
     option = {
         name = joining_world_war_events.27.a
         default_option = yes
         je:je_joining_world_war = {
-			add_progress = { value = 15 name = join_entente_progress_bar }
-            add_progress = { value = -15 name = join_central_powers_progress_bar }
+			add_progress = { value = 10 name = join_entente_progress_bar }
+            add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
     }
 }
