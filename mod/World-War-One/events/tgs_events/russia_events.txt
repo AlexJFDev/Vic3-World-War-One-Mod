@@ -42,9 +42,58 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 
     trigger = {}
 
+    immediate = {
+        if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_socialist
+					}
+				}
+			}
+			create_political_movement = { type = movement_socialist }
+		}
+    }
+
     option = {
         name = russia_events.2.a
+        trigger = { is_player = yes }
         default_option = yes
+        any_political_movement = {
+            limit = {
+                is_political_movement_type = movement_socialist
+            }
+            add_modifier = {
+				name = political_movement_buff_1
+				years = 2
+			}
+        }
+        add_radicals = {
+			strata = lower
+            value = 5000000
+		}
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = russia_events.2.a
+        trigger = { is_player = no }
+        default_option = yes
+        any_political_movement = {
+            limit = {
+                is_political_movement_type = movement_socialist
+            }
+            add_modifier = {
+				name = political_movement_buff_1
+				years = 2
+			}
+        }
+        add_radicals = {
+			strata = lower
+            value = 10000000
+		}
         ai_chance = {
 			base = 10
 		}

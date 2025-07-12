@@ -115,10 +115,7 @@ je_war_fatigue_russia = {
         has_variable = entente_participant
         is_at_war = yes
         game_date > 1916.1.1
-        OR = {
-            root.average_sol <= 10
-            average_sol < average_expected_sol
-        }
+        root.average_sol < 10
     }
 
     immediate = {
@@ -135,7 +132,7 @@ je_war_fatigue_russia = {
     complete = { 
         OR = {
           has_law = law_type:law_council_republic
-          root.average_sol >= 12 
+          root.average_sol >= 10 
           is_at_war = no
         }
     }

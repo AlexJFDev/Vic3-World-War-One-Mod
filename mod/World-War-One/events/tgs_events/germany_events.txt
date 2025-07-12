@@ -17,11 +17,11 @@ germany_events.1 = { #Je war fatigue initiator
 			limit = {
 				NOT = {
 					any_political_movement = {
-						is_political_movement_type = movement_radical
+						is_political_movement_type = movement_socialist
 					}
 				}
 			}
-			create_political_movement = { type = movement_radical }
+			create_political_movement = { type = movement_socialist }
 		}
     }
 
@@ -33,6 +33,8 @@ germany_events.1 = { #Je war fatigue initiator
 
     option = {
         name = germany_events.1.a
+        trigger = { is_player = yes }
+        default_option = yes
         c:GER = {
             trigger_event = {
                 id = stabilization_buff_events.19
@@ -41,13 +43,42 @@ germany_events.1 = { #Je war fatigue initiator
         }
         any_political_movement = {
             limit = {
-                is_political_movement_type = movement_radical
+                is_political_movement_type = movement_socialist
             }
             add_modifier = {
 				name = political_movement_buff_1
 				years = 2
 			}
         }
+        add_radicals = {
+			strata = lower
+            value = 5000000
+		}
+    }
+
+    option = {
+        name = germany_events.1.a
+        trigger = { is_player = no }
+        default_option = yes
+        c:GER = {
+            trigger_event = {
+                id = stabilization_buff_events.19
+                days = 5
+            }
+        }
+        any_political_movement = {
+            limit = {
+                is_political_movement_type = movement_socialist
+            }
+            add_modifier = {
+				name = political_movement_buff_1
+				years = 2
+			}
+        }
+        add_radicals = {
+			strata = lower
+            value = 10000000
+		}
     }
 }
 

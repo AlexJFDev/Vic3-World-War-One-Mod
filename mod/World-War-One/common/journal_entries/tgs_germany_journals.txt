@@ -12,8 +12,12 @@
         is_player = no
         game_date > 1917.1.1
         has_variable = central_powers_participant
-        average_sol < average_expected_sol
+        root.average_sol < 16
         is_at_war = yes
+    }
+
+    complete = {
+        root.average_sol >= 16
     }
 
     immediate = {
@@ -89,7 +93,7 @@ je_war_fatigue_player_germany = {
         is_player = yes
         game_date > 1917.1.1
         has_variable = central_powers_participant
-        average_sol < average_expected_sol
+        root.average_sol < 15
         is_at_war = yes
     }
 
@@ -105,7 +109,7 @@ je_war_fatigue_player_germany = {
     modifiers_while_active = { war_fatigue_1 }
 
     complete = {
-        average_sol > average_expected_sol
+        root.average_sol >= 15
     }
     
     fail = { 
@@ -155,7 +159,6 @@ je_war_fatigue_player_germany = {
     weight = 1000
     should_be_pinned_by_default = yes
 }
-
 
 je_socialist_split = {
     icon = "gfx/interface/icons/event_icons/red_star.dds"
