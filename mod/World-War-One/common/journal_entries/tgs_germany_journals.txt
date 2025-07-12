@@ -17,7 +17,7 @@
     }
 
     complete = {
-        root.average_sol >= 16
+        root.average_sol >= 17
     }
 
     immediate = {
@@ -93,7 +93,7 @@ je_war_fatigue_player_germany = {
         is_player = yes
         game_date > 1917.1.1
         has_variable = central_powers_participant
-        root.average_sol < 15
+        root.average_sol < 14
         is_at_war = yes
     }
 
