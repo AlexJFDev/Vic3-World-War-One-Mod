@@ -533,79 +533,105 @@ labor_rights.6 = {
 }
 
 labor_rights.7 = {
-    type        = country_event
-    placement   = root
-    title       = labor_rights.7.t
-    desc        = labor_rights.7.d
-    flavor      = labor_rights.7.f
-    category    = enactment
-    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
-    icon        = "gfx/interface/icons/event_icons/event_default.dds"
-    duration    = 3
-    cooldown    = { days = normal_modifier_time }
+	type = country_event
+	placement = root
 
-    trigger = {
-        is_enacting_law = law_type:law_limited_work_hours
-        NOT = { has_modifier = workhours_streamlining }
-    }
-    cancellation_trigger = {
-        NOT = { is_enacting_law = law_type:law_limited_work_hours }
-    }
+	title = labor_rights.7.t
+	desc = labor_rights.7.d
+	flavor = labor_rights.7.f
 
-    option = {
-        name = labor_rights.7.a
-        add_enactment_modifier = { name = workhours_progress }
-    }
+	category = enactment
+	event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		is_enacting_law = law_type:law_limited_work_hours
+	}
+	cancellation_trigger = {
+		NOT = { is_enacting_law = law_type:law_limited_work_hours }
+	}
+
+	immediate = {}
+
+	option = {
+		name = labor_rights.7.a
+		default_option = yes
+		add_enactment_modifier = { name = workhours_progress_1 }
+	}
+	option = {
+		name = labor_rights.7.b
+		add_enactment_modifier = { name = workhours_progress_2 }
+	}
 }
 
 labor_rights.8 = {
-    type        = country_event
-    placement   = root
-    title       = labor_rights.8.t
-    desc        = labor_rights.8.d
-    flavor      = labor_rights.8.f
-    category    = enactment
-    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
-    icon        = "gfx/interface/icons/event_icons/event_default.dds"
-    duration    = 3
-    cooldown    = { days = normal_modifier_time }
+	type = country_event
+	placement = root
 
-    trigger = {
-        is_enacting_law = law_type:law_limited_work_hours
-        NOT = { has_modifier = workhours_resistance }
-    }
-    cancellation_trigger = {
-        NOT = { is_enacting_law = law_type:law_limited_work_hours }
-    }
+	title = labor_rights.8.t
+	desc = labor_rights.8.d
+	flavor = labor_rights.8.f
+
+	category = enactment
+	event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		is_enacting_law = law_type:law_limited_work_hours
+		NOT = { has_modifier = workhours_resistance }
+	}
+	cancellation_trigger = {
+		NOT = { is_enacting_law = law_type:law_limited_work_hours }
+	}
+
+	immediate = {}
 
     option = {
-        name = labor_rights.8.a
-        add_enactment_modifier = { name = workhours_compromise }
-    }
+		name = labor_rights.7.a
+		default_option = yes
+		add_enactment_modifier = { name = workhours_resistance_1 }
+	}
+	option = {
+		name = labor_rights.7.b
+		add_enactment_modifier = { name = workhours_resistance_2 }
+	}
 }
 
 labor_rights.9 = {
-    type        = country_event
-    placement   = root
-    title       = labor_rights.9.t
-    desc        = labor_rights.9.d
-    flavor      = labor_rights.9.f
-    category    = enactment
-    event_image = { texture = "gfx/event_pictures/printing.dds" }
-    icon        = "gfx/interface/icons/event_icons/event_default.dds"
-    duration    = 3
-    cooldown    = { days = normal_modifier_time }
+	type = country_event
+	placement = root
 
-    trigger = {
-        is_enacting_law = law_type:law_limited_work_hours
-        NOT = { has_modifier = workhours_stall }
-    }
-    cancellation_trigger = {
-        NOT = { is_enacting_law = law_type:law_limited_work_hours }
-    }
+	title = labor_rights.9.t
+	desc = labor_rights.9.d
+	flavor = labor_rights.9.f
 
+	category = enactment
+	event_image = { texture = "gfx/event_pictures/printing.dds" }
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		is_enacting_law = law_type:law_limited_work_hours
+		NOT = { has_modifier = workhours_stall }
+	}
+	cancellation_trigger = {
+		NOT = { is_enacting_law = law_type:law_limited_work_hours }
+	}
+
+	immediate = {}
+
+	option = {
+        name = foreign_policy_laws.6.a
+        trigger = { enactment_setback_count < max_setbacks_minus_one }
+        add_enactment_setback = 1
+    }
     option = {
-        name = labor_rights.9.a
+        name = foreign_policy_laws.6.b
         add_enactment_modifier = { name = workhours_stall }
-    }
+    }  
 }

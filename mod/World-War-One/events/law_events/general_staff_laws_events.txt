@@ -21,7 +21,11 @@ general_staff_laws.1 = {
     }
     option = {
         name = general_staff_laws.1.a
-        add_enactment_modifier = { name = general_staff_progress }
+        add_enactment_modifier = { name = sub_general_staff_progress_1 }
+    }
+    option = {
+        name = general_staff_laws.1.b
+        add_enactment_modifier = { name = sub_general_staff_progress_2 }
     }
 }
 
@@ -45,8 +49,12 @@ general_staff_laws.2 = {
         NOT = { is_enacting_law = law_type:law_subordinate_general_staff }
     }
     option = {
-        name = general_staff_laws.2.a
-        add_enactment_modifier = { name = general_staff_compromise }
+        name = general_staff_laws.1.a
+        add_enactment_modifier = { name = general_staff_compromise_1 }
+    }
+    option = {
+        name = general_staff_laws.1.b
+        add_enactment_modifier = { name = general_staff_compromise_2 }
     }
 }
 
@@ -70,9 +78,14 @@ general_staff_laws.3 = {
         NOT = { is_enacting_law = law_type:law_subordinate_general_staff }
     }
     option = {
-        name = general_staff_laws.3.a
-        add_enactment_modifier = { name = general_staff_stall }
+        name = foreign_policy_laws.6.a
+        trigger = { enactment_setback_count < max_setbacks_minus_one }
+        add_enactment_setback = 1
     }
+    option = {
+        name = foreign_policy_laws.6.b
+        add_enactment_modifier = { name = true_neutrality_stall }
+    }  
 }
 
 # Advance Event for Independant General Staff
@@ -95,8 +108,12 @@ general_staff_laws.4 = {
         NOT = { is_enacting_law = law_type:law_independant_general_staff }
     }
     option = {
-        name = general_staff_laws.4.a
-        add_enactment_modifier = { name = general_staff_progress }
+        name = general_staff_laws.1.a
+        add_enactment_modifier = { name = general_staff_progress_1 }
+    }
+    option = {
+        name = general_staff_laws.1.b
+        add_enactment_modifier = { name = general_staff_progress_2 }
     }
 }
 
@@ -120,8 +137,12 @@ general_staff_laws.5 = {
         NOT = { is_enacting_law = law_type:law_independant_general_staff }
     }
     option = {
-        name = general_staff_laws.5.a
-        add_enactment_modifier = { name = general_staff_compromise }
+        name = general_staff_laws.1.a
+        add_enactment_modifier = { name = general_staff_compromise_1 }
+    }
+    option = {
+        name = general_staff_laws.1.b
+        add_enactment_modifier = { name = general_staff_compromise_2 }
     }
 }
 
@@ -145,9 +166,14 @@ general_staff_laws.6 = {
         NOT = { is_enacting_law = law_type:law_independant_general_staff }
     }
     option = {
-        name = general_staff_laws.6.a
-        add_enactment_modifier = { name = general_staff_stall }
+        name = foreign_policy_laws.6.a
+        trigger = { enactment_setback_count < max_setbacks_minus_one }
+        add_enactment_setback = 1
     }
+    option = {
+        name = foreign_policy_laws.6.b
+        add_enactment_modifier = { name = true_neutrality_stall }
+    }  
 }
 
 # Advance Event for Military Oversight
@@ -170,8 +196,12 @@ general_staff_laws.7 = {
         NOT = { is_enacting_law = law_type:law_military_oversight }
     }
     option = {
-        name = general_staff_laws.7.a
-        add_enactment_modifier = { name = general_staff_progress }
+        name = general_staff_laws.1.a
+        add_enactment_modifier = { name = general_staff_progress_1 }
+    }
+    option = {
+        name = general_staff_laws.1.b
+        add_enactment_modifier = { name = general_staff_progress_2 }
     }
 }
 
@@ -195,8 +225,12 @@ general_staff_laws.8 = {
         NOT = { is_enacting_law = law_type:law_military_oversight }
     }
     option = {
-        name = general_staff_laws.8.a
-        add_enactment_modifier = { name = general_staff_compromise }
+        name = general_staff_laws.1.a
+        add_enactment_modifier = { name = general_staff_compromise_1 }
+    }
+    option = {
+        name = general_staff_laws.1.b
+        add_enactment_modifier = { name = general_staff_compromise_2 }
     }
 }
 
@@ -220,8 +254,13 @@ general_staff_laws.9 = {
         NOT = { is_enacting_law = law_type:law_military_oversight }
     }
     option = {
-        name = general_staff_laws.9.a
-        add_enactment_modifier = { name = general_staff_stall }
+        name = foreign_policy_laws.6.a
+        trigger = { enactment_setback_count < max_setbacks_minus_one }
+        add_enactment_setback = 1
     }
+    option = {
+        name = foreign_policy_laws.6.b
+        add_enactment_modifier = { name = true_neutrality_stall }
+    }  
 }
 

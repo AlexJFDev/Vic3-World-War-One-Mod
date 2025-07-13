@@ -24,22 +24,19 @@ centralization_laws.1 = {
 
     trigger = {
         is_enacting_law = law_type:law_confederated
-        NOT = { has_modifier = confederation_cooperation }
-    }
-
-    immediate = {
-        add_modifier = {
-            name = confederation_cooperation
-            days = normal_modifier_time
-        }
     }
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_confederated }
     }
 
+    immediate = {}
+
     option = {
         name = centralization_laws.1.a
+        add_loyalists = {
+			value = small_radicals
+		}
         add_enactment_modifier = {
             name = confederation_progress
         }
@@ -68,24 +65,30 @@ centralization_laws.2 = {
 
     trigger = {
         is_enacting_law = law_type:law_confederated
-        NOT = { has_modifier = confederation_divisions }
-    }
-
-    immediate = {
-        add_modifier = {
-            name = confederation_divisions
-            days = normal_modifier_time
-        }
     }
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_confederated }
     }
 
+    immediate = {}
+
     option = {
         name = centralization_laws.2.a
+        default_option = yes
+        add_modifier = {
+          name = authority_buff_1
+          years = 5
+        }
         add_enactment_modifier = {
             name = confederation_compromise
+        }
+    }
+
+    option = {
+        name = centralization_laws.2.b
+        add_enactment_modifier = {
+            name = confederation_mitigation
         }
     }
 }
@@ -112,22 +115,28 @@ centralization_laws.3 = {
 
     trigger = {
         is_enacting_law = law_type:law_confederated
-        NOT = { has_modifier = confederation_gridlock }
-    }
-
-    immediate = {
-        add_modifier = {
-            name = confederation_gridlock
-            days = normal_modifier_time
-        }
     }
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_confederated }
     }
 
+    immediate = {}
+
+
     option = {
         name = centralization_laws.3.a
+        trigger = {
+			enactment_setback_count < max_setbacks_minus_one
+		}
+        add_enactment_setback = 1
+    }
+
+    option = {
+        name = centralization_laws.3.b
+        add_enactment_modifier = {
+            name = confederation_pass_by_force
+        }
     }
 }
 
@@ -155,15 +164,9 @@ centralization_laws.4 = {
 
     trigger = {
         is_enacting_law = law_type:law_federated
-        NOT = { has_modifier = federal_cooperation }
     }
 
-    immediate = {
-        add_modifier = {
-            name = federal_cooperation
-            days = normal_modifier_time
-        }
-    }
+    immediate = {}
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_federated }
@@ -172,7 +175,14 @@ centralization_laws.4 = {
     option = {
         name = centralization_laws.4.a
         add_enactment_modifier = {
-            name = federal_progress
+            name = federal_progress_1
+        }
+    }
+
+    option = {
+        name = centralization_laws.4.b
+        add_enactment_modifier = {
+            name = federal_progress_2
         }
     }
 }
@@ -199,15 +209,9 @@ centralization_laws.5 = {
 
     trigger = {
         is_enacting_law = law_type:law_federated
-        NOT = { has_modifier = federal_divisions }
     }
 
-    immediate = {
-        add_modifier = {
-            name = federal_divisions
-            days = normal_modifier_time
-        }
-    }
+    immediate = {}
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_federated }
@@ -216,7 +220,14 @@ centralization_laws.5 = {
     option = {
         name = centralization_laws.5.a
         add_enactment_modifier = {
-            name = federal_compromise
+            name = favor_local_bureaucrats
+        }
+    }
+
+    option = {
+        name = centralization_laws.5.b
+        add_enactment_modifier = {
+            name = favor_central_bureaucrats
         }
     }
 }
@@ -246,12 +257,7 @@ centralization_laws.6 = {
         NOT = { has_modifier = federal_gridlock }
     }
 
-    immediate = {
-        add_modifier = {
-            name = federal_gridlock
-            days = normal_modifier_time
-        }
-    }
+    immediate = {}
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_federated }
@@ -259,6 +265,17 @@ centralization_laws.6 = {
 
     option = {
         name = centralization_laws.6.a
+        trigger = {
+			enactment_setback_count < max_setbacks_minus_one
+		}
+        add_enactment_setback = 1
+    }
+
+    option = {
+        name = centralization_laws.6.b
+        add_enactment_modifier = {
+            name = federal_gridlock_2
+        }
     }
 }
 
@@ -286,15 +303,9 @@ centralization_laws.7 = {
 
     trigger = {
         is_enacting_law = law_type:law_devolved
-        NOT = { has_modifier = devolution_progress }
     }
 
-    immediate = {
-        add_modifier = {
-            name = devolution_progress
-            days = normal_modifier_time
-        }
-    }
+    immediate = {}
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_devolved }
@@ -303,7 +314,14 @@ centralization_laws.7 = {
     option = {
         name = centralization_laws.7.a
         add_enactment_modifier = {
-            name = devolved_success
+            name = devolved_success_1
+        }
+    }
+
+    option = {
+        name = centralization_laws.7.b
+        add_enactment_modifier = {
+            name = devolved_success_2
         }
     }
 }
@@ -330,24 +348,25 @@ centralization_laws.8 = {
 
     trigger = {
         is_enacting_law = law_type:law_devolved
-        NOT = { has_modifier = devolution_tensions }
     }
 
-    immediate = {
-        add_modifier = {
-            name = devolution_tensions
-            days = normal_modifier_time
-        }
-    }
+    immediate = {}
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_devolved }
     }
 
     option = {
-        name = centralization_laws.8.a
+        name = centralization_laws.5.a
         add_enactment_modifier = {
-            name = devolved_compromise
+            name = favor_local_bureaucrats
+        }
+    }
+
+    option = {
+        name = centralization_laws.5.b
+        add_enactment_modifier = {
+            name = favor_central_bureaucrats
         }
     }
 }
@@ -390,6 +409,17 @@ centralization_laws.9 = {
 
     option = {
         name = centralization_laws.9.a
+        trigger = {
+			enactment_setback_count < max_setbacks_minus_one
+		}
+        add_enactment_setback = 1
+    }
+
+    option = {
+        name = centralization_laws.9.b
+        add_enactment_modifier = {
+            name = federal_gridlock_2
+        }
     }
 }
 
@@ -417,15 +447,9 @@ centralization_laws.10 = {
 
     trigger = {
         is_enacting_law = law_type:law_unitary
-        NOT = { has_modifier = unitary_efficiency }
     }
 
-    immediate = {
-        add_modifier = {
-            name = unitary_efficiency
-            days = normal_modifier_time
-        }
-    }
+    immediate = {}
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_unitary }
@@ -434,8 +458,18 @@ centralization_laws.10 = {
     option = {
         name = centralization_laws.10.a
         add_enactment_modifier = {
-            name = unitary_progress
+            name = unitary_progress_1
         }
+    }
+
+    option = {
+        name = centralization_laws.10.b
+        add_enactment_modifier = {
+            name = unitary_progress_2
+        }
+        add_radicals = {
+			value = small_radicals
+		}
     }
 }
 
@@ -461,15 +495,9 @@ centralization_laws.11 = {
 
     trigger = {
         is_enacting_law = law_type:law_unitary
-        NOT = { has_modifier = unitary_pushback }
     }
 
-    immediate = {
-        add_modifier = {
-            name = unitary_pushback
-            days = normal_modifier_time
-        }
-    }
+    immediate = {}
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_unitary }
@@ -478,7 +506,14 @@ centralization_laws.11 = {
     option = {
         name = centralization_laws.11.a
         add_enactment_modifier = {
-            name = unitary_compromise
+            name = unitary_compromise_1
+        }
+    }
+
+    option = {
+        name = centralization_laws.11.b
+        add_enactment_modifier = {
+            name = unitary_compromise_2
         }
     }
 }
@@ -505,15 +540,9 @@ centralization_laws.12 = {
 
     trigger = {
         is_enacting_law = law_type:law_unitary
-        NOT = { has_modifier = unitary_stall }
     }
 
-    immediate = {
-        add_modifier = {
-            name = unitary_stall
-            days = normal_modifier_time
-        }
-    }
+    immediate = {}
 
     cancellation_trigger = {
         NOT = { is_enacting_law = law_type:law_unitary }
@@ -521,5 +550,16 @@ centralization_laws.12 = {
 
     option = {
         name = centralization_laws.12.a
+        trigger = {
+			enactment_setback_count < max_setbacks_minus_one
+		}
+        add_enactment_setback = 1
+    }
+
+    option = {
+        name = centralization_laws.12.b
+        add_enactment_modifier = {
+            name = confederation_pass_by_force
+        }
     }
 }

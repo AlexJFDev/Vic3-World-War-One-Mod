@@ -3,6 +3,17 @@
 # Confederated Law Modifiers
 confederation_cooperation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_law_enactment_success_add = 0.05
+}
+
+confederation_mitigation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_time_mult = -0.3
+	country_law_enactment_success_add = -0.05
+}
+
+confederation_cooperation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_law_enactment_success_add = 0.15
 }
 
@@ -16,7 +27,37 @@ confederation_gridlock = {
 	country_law_enactment_success_add = -0.2
 }
 
+confederation_pass_by_force = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_law_enactment_success_add = -0.2
+    country_law_enactment_time_mult = -0.1
+}
+
 # Federated Law Modifiers
+federal_progress_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_law_enactment_success_add = 0.2
+}
+
+federal_progress_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_law_enactment_success_add = 0.1
+    interest_group_ig_rural_folk_approval_add = 2
+}
+
+favor_local_bureaucrats = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	political_movement_radicalism_add = -0.05
+    interest_group_ig_rural_folk_approval_add = 2
+    country_law_enactment_success_add = 0.1
+}
+
+favor_central_bureaucrats = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_authority_mult = 0.1
+    country_law_enactment_success_add = 0.05
+}
+
 federal_cooperation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_law_enactment_success_add = 0.1
@@ -27,13 +68,28 @@ federal_divisions = {
 	country_law_enactment_success_add = -0.05
 }
 
-federal_gridlock = {
+federal_gridlock_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_law_enactment_success_add = -0.05
+}
+
+federal_gridlock_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_law_enactment_success_add = -0.15
 }
 
 # Devolved Law Modifiers
 devolution_progress = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_law_enactment_success_add = 0.2
+}
+
+devolution_compromise_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_law_enactment_success_add = 0.2
+}
+
+devolution_compromise_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	country_law_enactment_success_add = 0.2
 }
@@ -46,6 +102,17 @@ devolution_tensions = {
 devolution_stall = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_law_enactment_success_add = -0.2
+}
+
+devolved_success_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_law_enactment_success_add = 0.3
+}
+
+devolved_success_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_law_enactment_time_mult = -0.3
+    country_law_enactment_success_add = 0.15
 }
 
 # Unitary Law Modifiers
@@ -64,94 +131,167 @@ unitary_stall = {
 	country_law_enactment_success_add = -0.2
 }
 
+unitary_progress_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_law_enactment_success_add = 0.2
+}
+
+unitary_progress_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_law_enactment_success_add = 0.3
+}
+
+unitary_compromise_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    country_law_enactment_time_mult = 0.5
+	country_law_enactment_success_add = 0.05
+}
+
+unitary_compromise_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    country_law_enactment_time_mult = -0.2
+	country_law_enactment_success_add = -0.1
+}
+
 #General Staff Laws Events Modifiers
 
 general_staff_streamlining = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    modifier = {
-        country_law_enactment_success_add = 0.1
-    }
+    country_law_enactment_success_add = 0.1
 }
 
 general_staff_resistance = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    modifier = {
-        country_law_enactment_success_add = -0.1
-    }
+    country_law_enactment_success_add = -0.1
 }
 
 general_staff_stall = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    modifier = {
-        country_law_enactment_time_mult = 0.15
-        country_law_enactment_success_add = -0.05
-    }
+    country_law_enactment_time_mult = 0.15
+    country_law_enactment_success_add = -0.05
 }
 
-general_staff_progress = {
+sub_general_staff_progress_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    modifier = {
-        country_law_enactment_success_add = 0.2
-    }
+    country_law_enactment_success_add = 0.2
 }
 
-general_staff_compromise = {
+sub_general_staff_progress_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    modifier = {
-        country_law_enactment_time_mult = 0.2
-        country_law_enactment_success_add = 0.05
-    }
+    interest_group_ig_armed_forces_approval_add = -2
+    interest_group_ig_intelligentsia_approval_add = 2
+    country_law_enactment_success_add = 0.35
+}
+
+general_staff_progress_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_success_add = 0.2
+}
+
+general_staff_progress_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_armed_forces_approval_add = 2
+    interest_group_ig_intelligentsia_approval_add = -2
+    country_law_enactment_success_add = 0.35
+}
+
+general_staff_compromise_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_time_mult = 0.2
+    country_law_enactment_success_add = 0.1
+}
+
+general_staff_compromise_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_time_mult = -0.2
+    country_law_enactment_success_add = -0.1
 }
 
 #Surveillance Laws Events Modifiers
 
 surveillance_streamlining = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    modifier = {
-        country_law_enactment_success_add = 0.1
-    }
+    country_law_enactment_success_add = 0.1
 }
 
 surveillance_resistance = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    modifier = {
-        country_law_enactment_success_add = -0.1
-    }
+    country_law_enactment_success_add = -0.1
 }
 
 surveillance_stall = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    modifier = {
-        country_law_enactment_time_mult = 0.15
-        country_law_enactment_success_add = -0.05
-    }
+    country_law_enactment_time_mult = 0.15
+    country_law_enactment_success_add = -0.05
 }
 
-surveillance_progress = {
+no_surveillance_progress_1 = { 
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    modifier = {
-        country_law_enactment_success_add = 0.2
-    }
+    country_law_enactment_success_add = 0.2
 }
 
-surveillance_compromise = {
+no_surveillance_progress_2 = { 
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    modifier = {
-        country_law_enactment_time_mult = 0.2
-        country_law_enactment_success_add = 0.05
-    }
+    interest_group_ig_armed_forces_approval_add = -2
+    interest_group_ig_petty_bourgeoisie_approval_add = -2
+    interest_group_ig_intelligentsia_approval_add = 2
+    interest_group_ig_rural_folk_approval_add = 2
+    country_law_enactment_success_add = 0.35
+
+}
+
+surveillance_progress_1 = { 
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_success_add = 0.2
+}
+
+surveillance_progress_2 = { 
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_armed_forces_approval_add = 2
+    interest_group_ig_petty_bourgeoisie_approval_add = 2
+    interest_group_ig_intelligentsia_approval_add = -2
+    interest_group_ig_rural_folk_approval_add = -2
+    country_law_enactment_success_add = 0.35
+}
+
+surveillance_compromise_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_time_mult = 0.2
+    country_law_enactment_success_add = 0.1
+}
+
+surveillance_compromise_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_time_mult = -0.2
+    country_law_enactment_success_add = -0.1
 }
 
 #Foreign policy laws modifiers
 
-true_neutrality_progress = {
+true_neutrality_progress_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_time_mult = -0.2
     country_law_enactment_success_add = 0.15
 }
-true_neutrality_compromise = {
+
+true_neutrality_progress_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_infamy_decay_mult = 0.1
+    country_law_enactment_success_add = 0.15
+}
+
+true_neutrality_compromise_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_army_defense_mult = 0.1
     country_law_enactment_success_add = -0.05
 }
+
+true_neutrality_compromise_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    country_infamy_decay_mult = 0.1
+    country_law_enactment_success_add = -0.05
+}
+
 true_neutrality_stall = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     country_law_enactment_success_add = -0.20
@@ -170,10 +310,28 @@ armed_neutrality_stall = {
     country_law_enactment_success_add = -0.18
 }
 
-limited_interventionism_progress = {
+limited_interventionism_progress_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     country_law_enactment_success_add = 0.10
 }
+
+limited_interventionism_progress_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_infamy_decay_mult = -0.2
+    country_law_enactment_success_add = 0.20
+}
+
+interventionism_progress_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_success_add = 0.20
+}
+
+interventionism_progress_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_infamy_decay_mult = -0.3
+    country_law_enactment_success_add = 0.30
+}
+
 limited_interventionism_compromise = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     country_law_enactment_success_add = -0.04
@@ -214,37 +372,43 @@ imperialism_stall = {
 # Limited Work Hours – Enactment Modifiers
 workhours_streamlining = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    modifier = {
-        country_law_enactment_success_add = 0.10
-    }
+    country_law_enactment_success_add = 0.10
 }
 
-workhours_resistance = {
+workhours_resistance_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    modifier = {
-        country_law_enactment_success_add = -0.10
-    }
+    country_law_enactment_success_add = -0.2
+}
+
+workhours_resistance_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    interest_group_ig_industrialists_approval_add = 2
+    interest_group_ig_trade_unions_approval_add = -2
+    country_law_enactment_success_add = -0.05
 }
 
 workhours_stall = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    modifier = {
-        country_law_enactment_time_mult  = 0.15
-        country_law_enactment_success_add = -0.15
-    }
+    country_law_enactment_time_mult  = 0.15
+    country_law_enactment_success_add = -0.3
 }
 
-workhours_progress = {
+workhours_progress_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    modifier = {
-        country_law_enactment_success_add = 0.20
-    }
+
+    interest_group_ig_industrialists_approval_add = 2
+    country_law_enactment_success_add = 0.30
 }
 
-workhours_compromise = {
+workhours_progress_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    modifier = {
-        country_law_enactment_time_mult   = 0.20
-        country_law_enactment_success_add = 0.05
-    }
+    country_law_enactment_success_add = 0.20
+}
+
+workhours_progress_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_time_mult = -0.4
+    interest_group_ig_industrialists_approval_add = 2
+    interest_group_ig_trade_unions_approval_add = -2
+    country_law_enactment_success_add = 0.03
 }
