@@ -145,6 +145,24 @@
 				value = -2.5
 			}
         }  
+        if = {
+		   limit = {
+                has_law = law_type:law_federated
+            }
+            add = {
+				desc = "entente_progress_from_legislation"
+				value = -5
+			}
+        } 
+        if = {
+		   limit = {
+                has_law = law_type:law_confederated
+            }
+            add = {
+				desc = "entente_progress_from_legislation"
+				value = -10
+			}
+        } 
     }
 
     start_value = 0
@@ -298,6 +316,24 @@ join_central_powers_progress_bar = {
             add = {
 				desc = "central_powers_progress_from_legislation"
 				value = -2.5
+			}
+        } 
+        if = {
+		   limit = {
+                has_law = law_type:law_federated
+            }
+            add = {
+				desc = "central_powers_progress_from_legislation"
+				value = -5
+			}
+        } 
+        if = {
+		   limit = {
+                has_law = law_type:law_confederated
+            }
+            add = {
+				desc = "central_powers_progress_from_legislation"
+				value = -10
 			}
         } 
     }
