@@ -3764,11 +3764,11 @@ ai_strategy_default = {
 				multiply = 1.5
 			}
 		}
-		combat_unit_group_air = { #80
-			value = 0
+		combat_unit_group_air = { #90
+			value = 40
 			if = {
 				limit = { has_technology_researched = military_aviation }
-				add = 80
+				add = 50
 			}
 
 			if = {
