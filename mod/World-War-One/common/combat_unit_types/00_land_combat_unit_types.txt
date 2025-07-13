@@ -668,7 +668,7 @@ combat_unit_type_heavy_tank = {
     }
 }
 
-### Support
+### Cavalry
 
 combat_unit_type_hussars = {
     group = combat_unit_group_cavalry
@@ -970,6 +970,8 @@ combat_unit_type_light_tanks = {
     }
 }
 
+### Air
+
 combat_unit_type_bomber = {
     group = combat_unit_group_air
     max_manpower = 500
@@ -1011,10 +1013,6 @@ combat_unit_type_bomber = {
         }
         texture = "gfx/unit_illustrations/late_bomber.dds"
     }
-
-    upgrades = { 
-        combat_unit_type_fighter
-    }
 }
 
 combat_unit_type_close_air_support = {
@@ -1050,6 +1048,7 @@ combat_unit_type_close_air_support = {
 
     upgrades = { 
         combat_unit_type_fighter
+        combat_unit_type_jet_fighter
     }
 }
 

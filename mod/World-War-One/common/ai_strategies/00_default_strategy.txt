@@ -3708,7 +3708,7 @@ ai_strategy_default = {
 		combat_unit_group_infantry = {
 			value = 100
 		}
-		combat_unit_group_artillery = { #Total 55
+		combat_unit_group_artillery = { #50
 			value = 0
 			if = {
 				limit = { has_technology_researched = artillery }
@@ -3728,7 +3728,7 @@ ai_strategy_default = {
 			}
 			if = {
 				limit = { has_technology_researched = mobile_armor }
-				add = 15
+				add = 10
 			}
 
 			if = {
@@ -3744,16 +3744,13 @@ ai_strategy_default = {
 				multiply = 1.25
 			}
 		}
-		combat_unit_group_cavalry = { #Total 70
+		combat_unit_group_cavalry = { #30
 			value = 20
 			if = {
 				limit = { has_technology_researched = mobile_armor }
 				add = 10
 			}
-			if = {
-				limit = { has_technology_researched = military_aviation }
-				add = 40
-			}
+
 			if = {
 				limit = { has_law = law_type:law_national_militia }
 				multiply = 0.5
@@ -3761,6 +3758,30 @@ ai_strategy_default = {
 			else_if = {
 				limit = { has_law = law_type:law_professional_army }
 				multiply = 1.25
+			}
+			else_if = {
+				limit = { has_law = law_type:law_peasant_levies }
+				multiply = 1.5
+			}
+		}
+		combat_unit_group_air = { #80
+			value = 0
+			if = {
+				limit = { has_technology_researched = military_aviation }
+				add = 80
+			}
+
+			if = {
+				limit = { has_law = law_type:law_national_militia }
+				multiply = 1.5
+			}
+			else_if = {
+				limit = { has_law = law_type:law_professional_army }
+				multiply = 1.5
+			}
+			else_if = {
+				limit = { has_law = law_type:law_peasant_levies }
+				multiply = 0.5
 			}
 		}
 		combat_unit_group_light_ship = {
@@ -3780,7 +3801,7 @@ ai_strategy_default = {
 		combat_unit_group_support_ship = {
 			value = 0
 			if = {
-				limit = { has_technology_researched = self_propelled_torpedoes }
+				limit = { has_technology_researched = submarine }
 				add = 10
 			}
 			if = {
