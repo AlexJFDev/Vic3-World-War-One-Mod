@@ -435,13 +435,17 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_public_schools
      activate_law = law_type:law_compulsory_primary_school
      activate_law = law_type:law_closed_borders
-      c:RUS = {
+        c:RUS = {
             trigger_event = {
              id = russia_events.8
              days = 5
             }
             trigger_event = {
              id = stabilization_buff_events.16
+             days = 5
+            }
+            trigger_event = {
+             id = stabilization_buff_events.2
              days = 5
             }
         }    
