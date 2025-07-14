@@ -74,6 +74,19 @@ entente_peace_deal.1 = { #Entente victory
 			type = alliance
 		}
 		}
+		s:STATE_HESSE = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GER
+            }
+        }
 		s:STATE_ALSACE_LORRAINE = {
 	       random_scope_state = {
 		      limit = {
