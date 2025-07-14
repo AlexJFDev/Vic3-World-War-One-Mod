@@ -19,7 +19,14 @@ china_events.1 = { #Je warlord china initiator
     trigger = {}
 
     immediate = {
-	   ruler = { save_scope_as = yuan_shikai }
+	    ruler = { save_scope_as = yuan_shikai }
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:CHI ?= this }
+              target = { c:KMT ?= this }
+		    }
+           save_scope_as = kuomintang_war_diplo_play
+        }
     }
 
     option = {
@@ -356,11 +363,7 @@ china_events.3 = { #The National Protection War
     option = {
         name = china_events.3.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-				initiator = c:YUN
-                target = c:CHI
-			}
+        scope:national_protection_war_diplo_play = {
 			add_initiator_backers = {
 				who = root
 			}
@@ -396,16 +399,22 @@ china_events.4 = { #Yuan Shikai abdication
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:YUN ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = national_protection_war_diplo_play
+        }
+    }
+
     option = {
         name = china_events.4.a
         default_option = yes
         set_global_variable = china_central_government_collapse
         activate_law = law_type:law_presidential_republic
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:YUN
-                target = c:CHI
-			}
+        scope:national_protection_war_diplo_play = {
             end_play = yes
 		}
         scope:yuan_shikai = {
@@ -1164,15 +1173,7 @@ china_events.9 = { #Kuomintang decides to capitulate or not
     option = {
         name = china_events.9.a
         default_option = yes
-        every_diplomatic_play = {
-				limit = {
-					c:CHI = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:KMT = {
-						is_diplomatic_play_target = yes
-					}
-				}
+        scope:kuomintang_war_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:KMT value = -200 }
 		}
         random_scope_character =  {

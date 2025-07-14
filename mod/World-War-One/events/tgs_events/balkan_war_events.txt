@@ -20,7 +20,15 @@ balkan_war_events.1 = {
 
 	trigger = {} # Triggered in global
 
-	immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:BUL ?= this }
+              target = { c:GRE ?= this }
+		    }
+           save_scope_as = balkan_war_diplo_play
+        }
+    }
 
 	option = { # Join the war
 		name = balkan_war_events.1.a
@@ -29,12 +37,7 @@ balkan_war_events.1 = {
 			base = 1
 		}
 
-		every_diplomatic_play = {
-			limit = {
-				is_war = yes
-				initiator = c:BUL
-                target = c:GRE
-			}
+		scope:balkan_war_diplo_play = {
 			add_target_backers = {
 				c:ROM
 			}
@@ -74,7 +77,15 @@ balkan_war_events.2 = {
 
 	trigger = {} # Triggered in global
 
-	immediate = {}
+	immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:BUL ?= this }
+              target = { c:GRE ?= this }
+		    }
+           save_scope_as = balkan_war_diplo_play
+        }
+    }
 
 	option = { # Join the war
 		name = balkan_war_events.2.a
@@ -90,12 +101,7 @@ balkan_war_events.2 = {
             }
         }
 
-		every_diplomatic_play = {
-			limit = {
-				is_war = yes
-				initiator = c:BUL
-                target = c:GRE
-			}
+		scope:balkan_war_diplo_play = {
 			add_target_backers = {
 				c:TUR
 			}
@@ -140,15 +146,7 @@ balkan_war_events.3 = {
 	option = { # Give up the fight
 		name = balkan_war_events.3.a
         default_option = yes
-		every_diplomatic_play = {
-				limit = {
-					c:BUL = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:GRE = {
-						is_diplomatic_play_target = yes
-					}
-				}
+		scope:balkan_war_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:BUL value = -200 }
 		}
 		ai_chance = {

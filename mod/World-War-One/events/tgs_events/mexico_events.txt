@@ -17,6 +17,16 @@ mexico_events.3 = { #Tampico Affair part 1
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:RMX ?= this }
+              target = { c:MEX ?= this }
+		    }
+           save_scope_as = mexican_revolution_diplo_play
+        }
+    }
+
     option = {
         name = mexico_events.3.a
         default_option = yes
@@ -91,14 +101,14 @@ mexico_events.4 = { #Tampico Affair part 2
             }
 		}
         ai_chance = {
-			base = 8
+			base = 10
 		}
     }
 
     option = {
         name = mexico_events.4.b
         ai_chance = {
-			base = 2
+			base = 0
 		}
     }
 }
@@ -119,6 +129,17 @@ mexico_events.5 = { #Tampico Affair part 3
     duration = 3
 
     trigger = {}
+    
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:USA ?= this }
+              target = { c:MEX ?= this }
+		    }
+           save_scope_as = tampico_affair_diplo_play
+        }
+    }
+    
 
     option = {
         name = mexico_events.5.a
@@ -130,11 +151,7 @@ mexico_events.5 = { #Tampico Affair part 3
 
     option = {
         name = mexico_events.5.b
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:USA
-                target = c:MEX
-			}
+        scope:tampico_affair_diplo_play = {
 			add_target_backers = {
 				c:ROOT
 			}

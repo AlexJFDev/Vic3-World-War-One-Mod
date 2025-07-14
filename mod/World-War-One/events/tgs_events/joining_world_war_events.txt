@@ -45,40 +45,7 @@ joining_world_war_events.2 = { #Joining the Entente
         name = joining_world_war_events.2.a
         default_option = yes
         set_variable = entente_participant
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
           add_target_backers = {
 				who = root
 			}
@@ -118,40 +85,7 @@ joining_world_war_events.3 = { #Joining the Central Powers
         name = joining_world_war_events.3.a
         default_option = yes
         set_variable = central_powers_participant
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
           add_initiator_backers = {
                 who = root
             }   
@@ -527,11 +461,7 @@ joining_world_war_events.13 = { #Ottoman Empire joins
         name = joining_world_war_events.13.a
         default_option = yes
         add_treasury = 3000000
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+        scope:world_war_one_diplo_play = {
             add_initiator_backers = {
                 c:TUR
             }      
@@ -580,6 +510,28 @@ joining_world_war_events.13 = { #Ottoman Empire joins
           name = minting_buff_4_modifier
           years = 5
           is_decaying = yes
+        }
+        c:GBR = {
+		   create_diplomatic_pact = {
+			  country = c:TUR
+			  type = embargo
+		    }
+        }
+        c:FRA = {
+		   create_diplomatic_pact = {
+			  country = c:TUR
+			  type = embargo
+		    }
+        }
+        c:TUR = {
+		   create_diplomatic_pact = {
+			  country = c:FRA
+			  type = embargo
+		    }
+            create_diplomatic_pact = {
+			  country = c:GBR
+			  type = embargo
+		    }
         }
         ai_chance = {
             base = 100
@@ -630,40 +582,7 @@ joining_world_war_events.14 = { #Italy joins
     option = { #Join directly
         name = joining_world_war_events.14.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }                
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:ITA
 			}
@@ -770,40 +689,7 @@ joining_world_war_events.15 = { #Bulgaria joins
     option = { #Join directly
         name = joining_world_war_events.15.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
 			add_initiator_backers = {
 				c:BUL
 			}
@@ -862,40 +748,7 @@ joining_world_war_events.16 = { #Romania joins
     option = { #Join directly
         name = joining_world_war_events.16.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:ROM
 			}
@@ -954,40 +807,7 @@ joining_world_war_events.17 = { #Greece joins
     option = { #Join directly
         name = joining_world_war_events.17.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:GRE
 			}
@@ -1047,40 +867,7 @@ joining_world_war_events.18 = { #USA joins
         name = joining_world_war_events.18.a
         default_option = yes
         trigger = { is_player = no }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:USA
 			}
@@ -1190,40 +977,7 @@ joining_world_war_events.19 = { #Portugal joins
     option = { #Join directly
         name = joining_world_war_events.19.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:POR
 			}
@@ -1282,40 +1036,7 @@ joining_world_war_events.20 = { #Brazil joins
     option = { #Join directly
         name = joining_world_war_events.20.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:BRZ
 			}
@@ -1374,40 +1095,7 @@ joining_world_war_events.21 = { #Persia joins
     option = { #Uk and Russia invades and forces Persia into the war
         name = joining_world_war_events.21.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:PER
 			}
@@ -1431,40 +1119,7 @@ joining_world_war_events.21 = { #Persia joins
 
     option = { #Ask central powers for help
         name = joining_world_war_events.21.b
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
 			add_initiator_backers = {
 				c:PER
 			}
@@ -1717,11 +1372,7 @@ joining_world_war_events.28 = { #Senussi order joins WW1
     option = {
         name = joining_world_war_events.28.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+        scope:world_war_one_diplo_play = {
             add_initiator_backers = {
                 c:SEN
             }            

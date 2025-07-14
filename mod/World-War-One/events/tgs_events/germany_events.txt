@@ -108,53 +108,7 @@ germany_events.2 = { #November Revolution
         activate_law = law_type:law_right_of_assembly
         activate_law = law_type:law_racial_segregation
         activate_law = law_type:law_subordinate_general_staff
-        every_diplomatic_play = {
-			limit = {
-                initiator = {
-                    or = {
-						exists = c:GER								
-						this = c:GER								
-				    }
-                    or = {
-						exists = c:AUS							
-						this = c:AUS						
-				    }
-                    or = {
-						exists = c:TUR						
-						this = c:TUR						
-				    }
-                }
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
             add_diplomatic_play_war_support = { target = c:GER value = -200 }   
         }
     }
@@ -360,53 +314,7 @@ germany_events.6 = { #Austria-Hungary capitulates
             base = 100
         }
         set_variable = small_austria
-        every_diplomatic_play = {
-			limit = {
-                initiator = {
-                    or = {
-						exists = c:GER								
-						this = c:GER								
-				    }
-                    or = {
-						exists = c:AUS							
-						this = c:AUS						
-				    }
-                    or = {
-						exists = c:TUR						
-						this = c:TUR						
-				    }
-                }
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
             add_diplomatic_play_war_support = { target = c:AUS value = -200 }   
         }
     }
@@ -494,53 +402,7 @@ germany_events.9 = { #Ottoman Empire capitulates
          ai_chance = {
             base = 100
         }
-        every_diplomatic_play = {
-			limit = {
-                initiator = {
-                    or = {
-						exists = c:GER								
-						this = c:GER								
-				    }
-                    or = {
-						exists = c:AUS							
-						this = c:AUS						
-				    }
-                    or = {
-						exists = c:TUR						
-						this = c:TUR						
-				    }
-                }
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-			    }
-			}
+        scope:world_war_one_diplo_play = {
             add_diplomatic_play_war_support = { target = c:TUR value = -200 }   
         }
     }
@@ -1573,8 +1435,6 @@ germany_events.40 = { #WW2 initiation Germany invades Poland
             type = dp_make_protectorate
 
             escalation = 0
-
-            save_scope_as = world_war_two_diplo_play
         }
         trigger_event = {
             id = germany_events.45
@@ -1599,7 +1459,7 @@ germany_events.40 = { #WW2 initiation Germany invades Poland
         c:ITA = {
           trigger_event = {
               id = germany_events.43
-              days = 5
+              days = 15
             }
         }
         ai_chance = {
@@ -1676,7 +1536,15 @@ germany_events.42 = { #WW2 initiation Allies response
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { c:POL ?= this }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
@@ -1731,7 +1599,15 @@ germany_events.43 = { #WW2 initiation Italy response
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        any_diplomatic_play = {
+           limit = {
+			  initiator = c:GER
+              target = c:POL
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"

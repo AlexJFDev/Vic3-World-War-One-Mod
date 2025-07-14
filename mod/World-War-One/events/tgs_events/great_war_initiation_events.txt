@@ -251,7 +251,7 @@ great_war_initiation_events.4 = {
         c:MON = {
             trigger_event = {
                 id = great_war_initiation_events.17
-                days = 5
+                days = 15
             }
         }
         c:BUL = {
@@ -340,7 +340,7 @@ great_war_initiation_events.5 = {
         c:MON = {
             trigger_event = {
                 id = great_war_initiation_events.17
-                days = 5
+                days = 15
             }
         }
     }
@@ -368,7 +368,15 @@ great_war_initiation_events.6 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { c:SER ?= this }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
 
     option = { # Threaten Austria
         name = great_war_initiation_events.6.a
@@ -512,11 +520,7 @@ great_war_initiation_events.8 = {
                 days = 90
             }
         }
-        every_diplomatic_play = { 
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:RUS
 			}
@@ -634,11 +638,7 @@ great_war_initiation_events.9 = {
         ai_chance = {
             base = 1
         }        
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+        scope:world_war_one_diplo_play = {
             end_play = true
 		}
         add_modifier = {
@@ -713,11 +713,7 @@ great_war_initiation_events.10 = {
               years = 3
             }
         }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:FRA
 			}
@@ -796,11 +792,7 @@ great_war_initiation_events.12 = {
         ai_chance = {
             base = 0
         }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+        scope:world_war_one_diplo_play = {
             add_initiator_backers = {
                 c:ITA
             }
@@ -899,11 +891,7 @@ great_war_initiation_events.13 = {
               years = 4
             }
         }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:FRA
 			}
@@ -1046,11 +1034,7 @@ great_war_initiation_events.14 = {
             months = 10
             is_decaying = yes
         }
-        every_diplomatic_play = {
-            limit = {
-                initiator = c:AUS
-                target = c:SER
-            }
+        scope:world_war_one_diplo_play = {
             add_target_backers = { c:BEL }
             add_target_backers = { c:LUX }
             add_war_goal = {
@@ -1081,11 +1065,7 @@ great_war_initiation_events.14 = {
             name = schlieffen_plan_2_modifier
             months = 12
         }
-        every_diplomatic_play = {
-            limit = {
-                initiator = c:AUS
-                target = c:SER
-            }
+        scope:world_war_one_diplo_play = {
             add_target_backers = { c:BEL }
             add_target_backers = { c:LUX }
             add_war_goal = {
@@ -1151,11 +1131,7 @@ great_war_initiation_events.15 = {
         c:JAP = {
             trigger_event = { id = great_war_initiation_events.16 }
         }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = c:SER
-			}
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:GBR 
 			}
@@ -1300,39 +1276,7 @@ great_war_initiation_events.16 = {
         ai_chance = {
             base = 1
         }
-        every_diplomatic_play = {
-			limit = {
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-                }
-            }
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:JAP
 			}
@@ -1390,40 +1334,7 @@ great_war_initiation_events.17 = {
         ai_chance = {
             base = 1
         }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:AUS
-                target = {	
-					or = {
-						exists = c:SER								
-						this = c:SER								
-				    }
-                    or = {
-						exists = c:RUS								
-						this = c:RUS						
-				    }
-                    or = {
-						exists = c:FRA							
-						this = c:FRA							
-				    }
-                    or = {
-						exists = c:GBR								
-						this = c:GBR							
-				    }
-                    or = {
-						exists = c:ITA							
-						this = c:ITA								
-				    }
-                    or = {
-						exists = c:ROM						
-						this = c:ROM								
-				    }
-                    or = {
-						exists = c:GRE					
-						this = c:GRE								
-				    }
-                }
-            }
+        scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:MON
 			}
@@ -1456,15 +1367,7 @@ great_war_initiation_events.24 = {
     option = { #Capitulate
         name = great_war_initiation_events.24.a
         default_option = yes
-        random_diplomatic_play = {
-				limit = {
-					c:AUS = {
-						is_diplomatic_play_initiator = yes
-					}
-					c:SER = {
-						is_diplomatic_play_target = yes
-					}
-				}
+        scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:LUX value = -200 }
 		}
         c:GER = {
