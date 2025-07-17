@@ -52,7 +52,7 @@ germany_events.1 = { #Je war fatigue initiator
         }
         add_radicals = {
 			strata = lower
-            value = 5000000
+            value = medium_radicals
 		}
     }
 
@@ -77,7 +77,7 @@ germany_events.1 = { #Je war fatigue initiator
         }
         add_radicals = {
 			strata = lower
-            value = 10000000
+            value = medium_radicals
 		}
     }
 }
@@ -108,9 +108,13 @@ germany_events.2 = { #November Revolution
         activate_law = law_type:law_right_of_assembly
         activate_law = law_type:law_racial_segregation
         activate_law = law_type:law_subordinate_general_staff
-        scope:world_war_one_diplo_play = {
-            add_diplomatic_play_war_support = { target = c:GER value = -200 }   
-        }
+        every_diplomatic_play = {
+			limit = {
+				initiator_is = c:AUS
+				target_is = c:SER
+			}
+			add_diplomatic_play_war_support = { target = c:GER value = -200 }
+		}
     }
 }
 
@@ -314,9 +318,13 @@ germany_events.6 = { #Austria-Hungary capitulates
             base = 100
         }
         set_variable = small_austria
-        scope:world_war_one_diplo_play = {
-            add_diplomatic_play_war_support = { target = c:AUS value = -200 }   
-        }
+        every_diplomatic_play = {
+			limit = {
+				initiator_is = c:AUS
+				target_is = c:SER
+			}
+			add_diplomatic_play_war_support = { target = c:AUS value = -200 }
+		}
     }
 
     option = {
@@ -402,9 +410,13 @@ germany_events.9 = { #Ottoman Empire capitulates
          ai_chance = {
             base = 100
         }
-        scope:world_war_one_diplo_play = {
-            add_diplomatic_play_war_support = { target = c:TUR value = -200 }   
-        }
+        every_diplomatic_play = {
+			limit = {
+				initiator_is = c:AUS
+				target_is = c:SER
+			}
+			add_diplomatic_play_war_support = { target = c:TUR value = -200 }
+		}
     }
 
     option = {

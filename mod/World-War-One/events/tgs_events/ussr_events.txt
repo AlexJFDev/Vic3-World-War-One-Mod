@@ -21,9 +21,13 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
     option = {
         name = ussr_events.1.a
         default_option = yes
-        scope:world_war_one_diplo_play = {
-            add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
-        }
+        every_diplomatic_play = {
+			limit = {
+				initiator_is = c:AUS
+				target_is = c:SER
+			}
+			add_diplomatic_play_war_support = { target = c:RUS value = -200 }
+		}
 		trigger_event = {
             id = ussr_events.2
             years = 2

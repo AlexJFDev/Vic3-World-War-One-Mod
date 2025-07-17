@@ -415,6 +415,7 @@ combat_unit_type_cannon_artillery = {
         combat_unit_type_mobile_artillery
         combat_unit_type_shrapnel_artillery
         combat_unit_type_siege_artillery
+        combat_unit_type_heavy_tank
     }
 }
 
@@ -483,6 +484,7 @@ combat_unit_type_mobile_artillery = {
     upgrades = {
         combat_unit_type_shrapnel_artillery
         combat_unit_type_siege_artillery
+        combat_unit_type_heavy_tank
     }
 }
 
@@ -551,6 +553,7 @@ combat_unit_type_shrapnel_artillery = {
 
     upgrades = {
         combat_unit_type_siege_artillery
+        combat_unit_type_heavy_tank
     }
 }
 
@@ -617,6 +620,10 @@ combat_unit_type_siege_artillery = {
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_siege.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_heavy_tank
     }
 }
 
