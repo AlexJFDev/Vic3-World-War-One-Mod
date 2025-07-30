@@ -9,7 +9,7 @@ nazi_ascension_progress_bar = {
 	monthly_progress = {
 		if = {
 			limit = {
-				any_country = {
+				every_country = {
 					limit = {
                         country_rank >= rank_value:great_power
                         ruler = {
@@ -45,7 +45,7 @@ nazi_ascension_progress_bar = {
 
 		if = {
 			limit = {
-				any_country = {
+				every_country = {
 					limit = {
                            country_rank >= rank_value:great_power
                                OR = {

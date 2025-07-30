@@ -290,9 +290,9 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
             id = stabilization_buff_events.38
             days = 5
         }
-        add_treasury = -50000000
+        add_treasury = -100000000
         c:USA = {
-		   add_treasury = 50000000
+		   add_treasury = 100000000
 		}
         ai_chance = {
 			base = 10
@@ -300,7 +300,7 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
     }
 }
 
-usa_events.9 = { #Post war loans
+usa_events.9 = { #Post war loans initiation
     type = country_event
 
     event_image = {
@@ -320,25 +320,64 @@ usa_events.9 = { #Post war loans
     option = {
         name = usa_events.9.a
         default_option = yes
-        c:USA = {
-		   add_treasury = -100000000
-		}
-		c:GBR = {
-		   add_treasury = 35000000
-           set_variable = has_received_usa_loans
-		}
-        c:BEL = {
-		   add_treasury = 15000000
-           set_variable = has_received_usa_loans
-		}
-        c:FRA = {
-		   add_treasury = 35000000
-           set_variable = has_received_usa_loans
-		}
-        c:ITA = {
-		   add_treasury = 15000000
-           set_variable = has_received_usa_loans
-		}
+        set_global_variable = usa_proposes_big_loans
+        if = {
+            limit = c:GBR = { has_variable = entente_participant }
+            c:GBR = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:BEL = { has_variable = entente_participant }
+            c:BEL = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:FRA = { has_variable = entente_participant }
+            c:FRA = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:ITA = { has_variable = entente_participant }
+            c:ITA = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:YUG = { has_variable = entente_participant }
+            c:YUG = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:RUS = { 
+                has_variable = entente_participant 
+                NOT = { has_law = law_type:law_council_republic }
+            }
+            c:RUS = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
         c:USA = {
            trigger_event = {
                 id = usa_events.10
@@ -352,25 +391,64 @@ usa_events.9 = { #Post war loans
 
     option = {
         name = usa_events.9.b
-        c:USA = {
-		   add_treasury = -70000000
-		}
-		c:GBR = {
-		   add_treasury = 25000000
-           set_variable = has_received_usa_loans
-		}
-        c:BEL = {
-		   add_treasury = 10000000
-           set_variable = has_received_usa_loans
-		}
-        c:FRA = {
-		   add_treasury = 25000000
-           set_variable = has_received_usa_loans
-		}
-        c:ITA = {
-		   add_treasury = 10000000
-           set_variable = has_received_usa_loans
-		}
+        set_global_variable = usa_proposes_medium_loans
+        if = {
+            limit = c:GBR = { has_variable = entente_participant }
+            c:GBR = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:BEL = { has_variable = entente_participant }
+            c:BEL = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:FRA = { has_variable = entente_participant }
+            c:FRA = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:ITA = { has_variable = entente_participant }
+            c:ITA = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:YUG = { has_variable = entente_participant }
+            c:YUG = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:RUS = { 
+                has_variable = entente_participant 
+                NOT = { has_law = law_type:law_council_republic }
+            }
+            c:RUS = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
         c:USA = {
            trigger_event = {
                 id = usa_events.10
@@ -384,25 +462,64 @@ usa_events.9 = { #Post war loans
 
     option = {
         name = usa_events.9.c
-        c:USA = {
-		   add_treasury = -50000000
-		}
-		c:GBR = {
-		   add_treasury = 20000000
-           set_variable = has_received_usa_loans
-		}
-        c:BEL = {
-		   add_treasury = 5000000
-           set_variable = has_received_usa_loans
-		}
-        c:FRA = {
-		   add_treasury = 20000000
-           set_variable = has_received_usa_loans
-		}
-        c:ITA = {
-		   add_treasury = 5000000
-           set_variable = has_received_usa_loans
-		}
+        set_global_variable = usa_proposes_small_loans
+		if = {
+            limit = c:GBR = { has_variable = entente_participant }
+            c:GBR = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:BEL = { has_variable = entente_participant }
+            c:BEL = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:FRA = { has_variable = entente_participant }
+            c:FRA = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:ITA = { has_variable = entente_participant }
+            c:ITA = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:YUG = { has_variable = entente_participant }
+            c:YUG = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
+        if = {
+            limit = c:RUS = { 
+                has_variable = entente_participant 
+                NOT = { has_law = law_type:law_council_republic }
+            }
+            c:RUS = {
+		       trigger_event = {
+                  id = usa_events.18
+                  days = 5
+                }
+		    }
+        }
         c:USA = {
            trigger_event = {
                 id = usa_events.10
@@ -428,7 +545,7 @@ usa_events.9 = { #Post war loans
     }
 }
 
-usa_events.10 = { #Dawes Plan
+usa_events.10 = { #Dawes Plan initiation
     type = country_event
 
     event_image = {
@@ -448,13 +565,13 @@ usa_events.10 = { #Dawes Plan
     option = {
         name = usa_events.10.a
         default_option = yes
-        c:USA = {
-		   add_treasury = -50000000
-		}
-		c:GER = {
-		   add_treasury = 50000000
-           set_variable = has_received_dawes_plan
-		}
+        set_global_variable = usa_proposes_big_dawes_plan
+        c:GER = {
+            trigger_event = {
+                id = usa_events.19
+                days = 5
+            }
+        }
         ai_chance = {
 			base = 10
 		}
@@ -462,13 +579,13 @@ usa_events.10 = { #Dawes Plan
 
     option = {
         name = usa_events.10.b
-        c:USA = {
-		   add_treasury = -25000000
-		}
-		c:GER = {
-		   add_treasury = 25000000
-           set_variable = has_received_usa_loans
-		}
+        set_global_variable = usa_proposes_medium_dawes_plan
+        c:GER = {
+            trigger_event = {
+                id = usa_events.19
+                days = 5
+            }
+        }
         ai_chance = {
 			base = 0
 		}
@@ -476,13 +593,13 @@ usa_events.10 = { #Dawes Plan
 
     option = {
         name = usa_events.10.c
-        c:USA = {
-		   add_treasury = -15000000
-		}
-		c:GER = {
-		   add_treasury = 15000000
-           set_variable = has_received_usa_loans
-		}
+        set_global_variable = usa_proposes_small_dawes_plan
+        c:GER = {
+            trigger_event = {
+                id = usa_events.19
+                days = 5
+            }
+        }
         ai_chance = {
 			base = 0
 		}
@@ -1048,5 +1165,147 @@ usa_events.17 = { #Waco lynching
         ai_chance = {
             base = 0
         }
+    }
+}
+
+usa_events.18 = { ##Post war loans responses
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.18.t
+    desc = usa_events.18.d
+    flavor = usa_events.18.f
+
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = usa_events.18.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_big_loans }
+        c:USA = { add_treasury = -50000000 }
+        ROOT = {
+         add_treasury = 50000000
+         set_variable = has_received_usa_loans
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+    
+    option = {
+        name = usa_events.18.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_medium_loans }
+        c:USA = { add_treasury = -25000000 }
+        ROOT = {
+         add_treasury = 25000000
+         set_variable = has_received_usa_loans
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = usa_events.18.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_small_loans }
+        c:USA = { add_treasury = -10000000 }
+        ROOT = {
+         add_treasury = 10000000
+         set_variable = has_received_usa_loans
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = usa_events.18.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+usa_events.19 = { #Dawes Plan response
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.19.t
+    desc = usa_events.19.d
+    flavor = usa_events.19.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.19.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_big_dawes_plan }
+        c:USA = {
+		   add_treasury = -100000000
+		}
+		c:GER = {
+		   add_treasury = 100000000
+           set_variable = has_received_dawes_plan
+		}
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = usa_events.19.b
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_medium_dawes_plan }
+        c:USA = {
+		   add_treasury = -25000000
+		}
+		c:GER = {
+		   add_treasury = 25000000
+           set_variable = has_received_usa_loans
+		}
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.19.c
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_small_dawes_plan }
+        c:USA = {
+		   add_treasury = -15000000
+		}
+		c:GER = {
+		   add_treasury = 15000000
+           set_variable = has_received_usa_loans
+		}
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.19.e
+        ai_chance = {
+			base = 0
+		}
     }
 }

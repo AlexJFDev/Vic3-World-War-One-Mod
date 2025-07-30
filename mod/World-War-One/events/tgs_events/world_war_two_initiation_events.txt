@@ -1,0 +1,571 @@
+﻿namespace = world_war_two_initiation_events
+
+world_war_two_initiation_events.1 = { #WW2 initiation Germany invades Poland
+    type = country_event
+
+    title = world_war_two_initiation_events.1.t
+    desc = world_war_two_initiation_events.1.d
+    flavor = world_war_two_initiation_events.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.1.a
+        default_option = yes
+        set_global_variable = world_war_two_started
+        create_diplomatic_play = {
+            name = world_war_two
+
+            target_country = c:POL
+
+            type = dp_make_protectorate
+
+            escalation = 0
+        }
+        trigger_event = {
+            id = world_war_two_initiation_events.4
+            months = 7
+        }
+        trigger_event = {
+            id = world_war_two_initiation_events.5
+            months = 8
+        }
+        c:FRA = {
+          trigger_event = {
+              id = world_war_two_initiation_events.2
+              days = 5
+            }
+        }
+        c:GBR = {
+          trigger_event = {
+              id = world_war_two_initiation_events.2
+              days = 5
+            }
+        }
+        c:ITA = {
+          trigger_event = {
+              id = world_war_two_initiation_events.3
+              months = 8
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.40.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.2 = { #WW2 initiation Allies response
+    type = country_event
+
+    title = world_war_two_initiation_events.2.t
+    desc = world_war_two_initiation_events.2.d
+    flavor = world_war_two_initiation_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { c:POL ?= this }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.2.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_target_backers = { root }
+            add_war_goal = {
+                holder = root
+                type = contain_threat
+                target_country = c:GER
+            }
+            add_war_goal = {
+                holder = root
+                type = humiliation
+                target_country = c:GER
+            }
+            add_war_goal = {
+                holder = c:GER
+                type = conquer_state
+                target_state = root.capital
+            }
+		}
+        set_variable = allies_participant
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.2.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.3 = { #WW2 initiation Italy response
+    type = country_event
+
+    title = world_war_two_initiation_events.3.t
+    desc = world_war_two_initiation_events.3.d
+    flavor = world_war_two_initiation_events.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {
+        any_diplomatic_play = {
+           limit = {
+			  initiator = c:GER
+              target = c:POL
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.3.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_initiator_backers = {
+                who = root
+            }  
+		}
+        set_variable = axis_participant
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.3.b
+        
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark and Norway
+    type = country_event
+
+    title = world_war_two_initiation_events.4.t
+    desc = world_war_two_initiation_events.4.d
+    flavor = world_war_two_initiation_events.4.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.4.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = nazi_germany_army_buff_1
+          years = 1
+          is_decaying = yes
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:DEN
+            }  
+            add_target_backers = {
+                c:NOR
+            }
+		}
+        c:DEN = { set_variable = allies_participant }
+        c:NOR = { set_variable = allies_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.4.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = nazi_germany_army_buff_1
+          years = 1
+          is_decaying = yes
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:DEN
+            }  
+		}
+        c:DEN = { set_variable = allies_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.4.c
+        ai_chance = {
+            base = 0
+        }
+    }
+    
+    option = {
+        name = world_war_two_initiation_events.4.c
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium and Netherlands
+    type = country_event
+
+    title = world_war_two_initiation_events.5.t
+    desc = world_war_two_initiation_events.5.d
+    flavor = world_war_two_initiation_events.5.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.5.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = nazi_germany_army_buff_1
+          years = 1
+          is_decaying = yes
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:BEL
+            }  
+            add_target_backers = {
+                c:NET
+            }
+		}
+        c:BEL = { set_variable = allies_participant }
+        c:NET = { set_variable = allies_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.5.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+          name = nazi_germany_army_buff_2
+          years = 1
+          is_decaying = yes
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:BEL
+            }  
+            add_target_backers = {
+                c:NET
+            }
+		}
+        c:BEL = { set_variable = allies_participant }
+        c:NET = { set_variable = allies_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+   
+    option = {
+        name = world_war_two_initiation_events.5.b
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = nazi_germany_army_buff_1
+          years = 1
+          is_decaying = yes
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:BEL
+            }  
+		}
+        c:BEL = { set_variable = allies_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+
+    option = {
+        name = world_war_two_initiation_events.5.b
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+          name = nazi_germany_army_buff_2
+          years = 1
+          is_decaying = yes
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:BEL
+            }  
+		}
+        c:BEL = { set_variable = allies_participant }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.5.c
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
+    type = country_event
+
+    title = world_war_two_initiation_events.6.t
+    desc = world_war_two_initiation_events.6.d
+    flavor = world_war_two_initiation_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.6.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:RUS
+            }  
+		}
+        c:RUS = { set_variable = allies_participant }
+        c:RUS = {
+            trigger_event = {
+                id = ussr_events.10
+                years = 1
+            }
+        }
+        if = {
+            limit = {
+                c:ROM = {
+                    NOT = { 
+                        has_law = law_type:law_council_republic
+                        has_law = law_type:law_anarchy
+                    }
+                }
+            }
+            c:ROM = {
+               trigger_event = {
+                  id = world_war_two_initiation_events.7
+                  days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:FIN = {
+                    NOT = { 
+                        has_law = law_type:law_council_republic
+                        has_law = law_type:law_anarchy
+                    }
+                }
+            }
+            c:FIN = {
+               trigger_event = {
+                  id = world_war_two_initiation_events.7
+                  days = 5
+                }
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+    
+    option = {
+        name = world_war_two_initiation_events.6.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.7 = { #WW2 initiation Romania and Finland joins invasion of USSR
+    type = country_event
+
+    title = world_war_two_initiation_events.7.t
+    desc = world_war_two_initiation_events.7.d
+    flavor = world_war_two_initiation_events.7.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.7.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_initiator_backers = {
+               who = root
+            }  
+		}
+        ROOT = { set_variable = axis_participant }
+        ai_chance = {
+            base = 10
+        }
+    }
+    
+    option = {
+        name = world_war_two_initiation_events.7.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.8 = { #Germany declares war on USA
+    type = country_event
+
+    title = world_war_two_initiation_events.8.t
+    desc = world_war_two_initiation_events.8.d
+    flavor = world_war_two_initiation_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.8.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:USA
+                c:CHI
+            } 
+            add_initiator_backers = {
+                c:JAP
+            } 
+            add_war_goal = {
+                holder = c:USA
+                type = contain_threat
+                target_country = c:GER
+            } 
+            add_war_goal = {
+                holder = c:GER
+                type = conquer_state
+                target_state = s:STATE_NEW_YORK.region_state:USA
+            }
+		}
+        c:JAP = {
+            set_variable = axis_participant
+        }
+        c:USA = {
+            set_variable = allies_participant
+        }
+        c:CHI = {
+            set_variable = allies_participant
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.8.b
+        
+        ai_chance = {
+            base = 0
+        }
+    }
+}

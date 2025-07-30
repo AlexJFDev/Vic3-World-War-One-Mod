@@ -146,6 +146,10 @@ entente_peace_deal.1 = { #Entente victory
               days = 5
             }
 			trigger_event = {
+              id = stabilization_buff_events.45
+              days = 5
+            } 
+			trigger_event = {
               id = stabilization_buff_events.36
               days = 5
             } 
@@ -798,19 +802,19 @@ entente_peace_deal.1 = { #Entente victory
 			}
 		}
 		s:STATE_WEST_SLOVAKIA = { 
-			add_claim = HUN
+			add_claim = c:HUN
 		}
 		s:STATE_EAST_SLOVAKIA = { 
-			add_claim = HUN
+			add_claim = c:HUN
 		}
 		s:STATE_BEKES = { 
-			add_claim = HUN
+			add_claim = c:HUN
 		}
 		s:STATE_BANAT = { 
-			add_claim = HUN
+			add_claim = c:HUN
 		}
 		s:STATE_DELVIDEK = { 
-			add_claim = HUN
+			add_claim = c:HUN
 		}
 		create_country = { #Estonia
 			origin = root

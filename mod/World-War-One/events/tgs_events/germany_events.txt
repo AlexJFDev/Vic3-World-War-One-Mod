@@ -108,6 +108,7 @@ germany_events.2 = { #November Revolution
         activate_law = law_type:law_right_of_assembly
         activate_law = law_type:law_racial_segregation
         activate_law = law_type:law_subordinate_general_staff
+        activate_law = law_type:law_true_neutrality
         every_diplomatic_play = {
 			limit = {
 				initiator_is = c:AUS
@@ -115,6 +116,15 @@ germany_events.2 = { #November Revolution
 			}
 			add_diplomatic_play_war_support = { target = c:GER value = -200 }
 		}
+        add_modifier = {
+          name = socialist_buff_1
+          years = 20
+          is_decaying = yes
+        } 
+        trigger_event = {
+            id = stabilization_buff_events.45
+            days = 5
+        } 
     }
 }
 
@@ -180,6 +190,21 @@ germany_events.4 = { #Communist uprising
     
     event_image = {
         texture = "gfx/event_pictures/german_revolution.dds"
+    }
+
+    immediate = { 
+        random_scope_character = {
+            limit = {
+               has_template = pol_rosa_luxemburg_character_template
+            }
+            save_scope_as = rosa_luxemburg
+        }
+        random_scope_character = {
+            limit = {
+               has_template = agitator_karl_liebknecht
+            }
+            save_scope_as = karl_liebknecht
+        }
     }
 
     trigger = {}
@@ -262,6 +287,12 @@ germany_events.4 = { #Communist uprising
                 days = 90
             }
         }
+        scope:pol_rosa_luxemburg_character_template = {
+			transfer_character = c:BAV
+		}
+        scope:agitator_karl_liebknecht = {
+			transfer_character = c:BAV
+		}  
     }
 }
 
@@ -286,10 +317,10 @@ germany_events.5 = { #Socialists reconcilates
     option = {
         name = germany_events.5.a
         add_modifier = {
-        name = 
-        years = 5
-        is_decaying = yes
-        } 
+          name = socialist_buff_1
+          years = 20
+          is_decaying = yes
+        }  
     }
 }
 
@@ -546,6 +577,12 @@ germany_events.24 = { #Rhineland Renegotiation
 			    }
 		        }
 		      set_state_owner = c:GER
+            }
+        }
+        c:GER = {
+            trigger_event = {
+                id = germany_events.40
+                days = 5
             }
         }
         ai_chance = {
@@ -858,12 +895,15 @@ germany_events.28 = { #Nazi takeover
 
     option = {
         name = germany_events.28.a
+        trigger = { is_player = no }
+        default_option = yes
         activate_law = law_type:law_presidential_republic
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_outlawed_dissent
         activate_law = law_type:law_national_supremacy
         activate_law = law_type:law_secret_police
         activate_law = law_type:law_unitary
+        activate_law = law_type:law_imperialism
         ig:ig_petty_bourgeoisie = {
 			leader = {
 				set_character_as_ruler = yes
@@ -881,8 +921,39 @@ germany_events.28 = { #Nazi takeover
                 id = germany_events.39
                 years = 6
             }
+        c:AUS = {
+            trigger_event = {
+                id = germany_events.31
+                years = 5
+            }
+        }
+    }
 
-            
+    option = {
+        name = germany_events.28.a
+        trigger = { is_player = yes }
+        default_option = yes
+        activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_censorship
+        activate_law = law_type:law_secret_police
+        ig:ig_petty_bourgeoisie = {
+			leader = {
+				set_character_as_ruler = yes
+			}
+		}
+        trigger_event = {
+                id = germany_events.29
+                days = 5
+            }
+        trigger_event = {
+                id = germany_events.32
+                years = 5
+            }
+        trigger_event = {
+                id = germany_events.39
+                years = 6
+            }
         c:AUS = {
             trigger_event = {
                 id = germany_events.31
@@ -1396,11 +1467,45 @@ germany_events.39 = { #Molotov-Ribentrop pact
     option = {
         name = germany_events.39.a
         default_option = yes
+        set_global_variable = molotov_ribentrop_pact_signed
 		c:RUS = {
             create_bidirectional_truce = {
 			  country = c:GER
 			  months = 45
 		    }
+        }
+        s:STATE_WEST_KARELIA = {
+			add_claim = c:RUS
+		}
+        s:STATE_TALINN = {
+			add_claim = c:RUS
+		}
+        s:STATE_TARTU = {
+			add_claim = c:RUS
+		}
+        s:STATE_RIGA = {
+			add_claim = c:RUS
+		}
+        s:STATE_COURLAND = {
+			add_claim = c:RUS
+		}
+        s:STATE_KAUNAS = {
+			add_claim = c:RUS
+		}
+        s:STATE_VILNIUS = {
+           add_claim = c:RUS
+        }
+        s:STATE_BREST = {
+           add_claim = c:RUS
+        }
+        s:STATE_VOLHYNIA = {
+           add_claim = c:RUS
+        }
+        s:STATE_EAST_GALICIA = {
+          add_claim = c:RUS
+        }
+        s:STATE_BESSARABIA = {
+          add_claim = c:RUS
         }
         ai_chance = {
             base = 10
@@ -1415,7 +1520,7 @@ germany_events.39 = { #Molotov-Ribentrop pact
     }
 }
 
-germany_events.40 = { #WW2 initiation Germany invades Poland
+germany_events.40 = { #Rhineland restitution
     type = country_event
 
     title = germany_events.40.t
@@ -1430,7 +1535,7 @@ germany_events.40 = { #WW2 initiation Germany invades Poland
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
+        texture = "gfx/event_pictures/political_agreement.dds"
     }
 
     trigger = {}
@@ -1438,51 +1543,9 @@ germany_events.40 = { #WW2 initiation Germany invades Poland
     option = {
         name = germany_events.40.a
         default_option = yes
-        set_global_variable = world_war_two_started
-        create_diplomatic_play = {
-            name = world_war_two
-
-            target_country = c:POL
-
-            type = dp_make_protectorate
-
-            escalation = 0
-        }
-        trigger_event = {
-            id = germany_events.45
-            months = 7
-        }
-        trigger_event = {
-            id = germany_events.44
-            months = 8
-        }
-        c:FRA = {
-          trigger_event = {
-              id = germany_events.42
-              days = 5
-            }
-        }
-        c:GBR = {
-          trigger_event = {
-              id = germany_events.42
-              days = 5
-            }
-        }
-        c:ITA = {
-          trigger_event = {
-              id = germany_events.43
-              days = 15
-            }
-        }
+        je:je_nazi_threat = { add_progress = { value = -30 name = nazi_ascension_progress_bar } }
         ai_chance = {
             base = 10
-        }
-    }
-
-    option = {
-        name = germany_events.40.b
-        ai_chance = {
-            base = 0
         }
     }
 }
@@ -1536,7 +1599,7 @@ germany_events.41 = { #Sudet crisis France threatens Germany
     }
 }
 
-germany_events.42 = { #WW2 initiation Allies response
+germany_events.42 = { #Poland partition
     type = country_event
 
     title = germany_events.42.t
@@ -1548,15 +1611,7 @@ germany_events.42 = { #WW2 initiation Allies response
     
     duration = 3
     
-    immediate = {
-        random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { c:POL ?= this }
-		    }
-           save_scope_as = world_war_two_diplo_play
-        }
-    }
+    immediate = {}
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
@@ -1567,469 +1622,60 @@ germany_events.42 = { #WW2 initiation Allies response
     option = {
         name = germany_events.42.a
         default_option = yes
-        scope:world_war_two_diplo_play = {
-			add_target_backers = { root }
-            add_war_goal = {
-                holder = root
-                type = contain_threat
-                target_country = c:GER
-            }
-            add_war_goal = {
-                holder = root
-                type = humiliation
-                target_country = c:GER
-            }
-            add_war_goal = {
-                holder = c:GER
-                type = conquer_state
-                target_state = root.capital
-            }
-		}
-        set_variable = allies_participant
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = germany_events.42.b
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-germany_events.43 = { #WW2 initiation Italy response
-    type = country_event
-
-    title = germany_events.43.t
-    desc = germany_events.43.d
-    flavor = germany_events.43.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {
-        any_diplomatic_play = {
-           limit = {
-			  initiator = c:GER
-              target = c:POL
-		    }
-           save_scope_as = world_war_two_diplo_play
-        }
-    }
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.43.a
-        default_option = yes
-        scope:world_war_two_diplo_play = {
-			add_initiator_backers = {
-                who = root
-            }  
-		}
-        set_variable = axis_participant
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = germany_events.43.b
-        
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-germany_events.44 = { #WW2 initiation Germany invades Belgium and Netherlands
-    type = country_event
-
-    title = germany_events.44.t
-    desc = germany_events.44.d
-    flavor = germany_events.44.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.44.a
-        default_option = yes
-        trigger = { is_player = no }
-        add_modifier = {
-          name = nazi_germany_army_buff_1
-          years = 1
-          is_decaying = yes
-        }
-        scope:world_war_two_diplo_play = {
-			add_target_backers = {
-                c:BEL
-            }  
-            add_target_backers = {
-                c:NET
-            }
-		}
-        c:BEL = { set_variable = allies_participant }
-        c:NET = { set_variable = allies_participant }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = germany_events.44.a
-        default_option = yes
-        trigger = { is_player = yes }
-        add_modifier = {
-          name = nazi_germany_army_buff_2
-          years = 1
-          is_decaying = yes
-        }
-        scope:world_war_two_diplo_play = {
-			add_target_backers = {
-                c:BEL
-            }  
-            add_target_backers = {
-                c:NET
-            }
-		}
-        c:BEL = { set_variable = allies_participant }
-        c:NET = { set_variable = allies_participant }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-   
-    option = {
-        name = germany_events.44.b
-        default_option = yes
-        trigger = { is_player = no }
-        add_modifier = {
-          name = nazi_germany_army_buff_1
-          years = 1
-          is_decaying = yes
-        }
-        scope:world_war_two_diplo_play = {
-			add_target_backers = {
-                c:BEL
-            }  
-		}
-        c:BEL = { set_variable = allies_participant }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-
-    option = {
-        name = germany_events.44.b
-        default_option = yes
-        trigger = { is_player = yes }
-        add_modifier = {
-          name = nazi_germany_army_buff_2
-          years = 1
-          is_decaying = yes
-        }
-        scope:world_war_two_diplo_play = {
-			add_target_backers = {
-                c:BEL
-            }  
-		}
-        c:BEL = { set_variable = allies_participant }
-        ai_chance = {
-            base = 0
-        }
-    }
-
-    option = {
-        name = germany_events.44.c
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-germany_events.45 = { #WW2 initiation Germany invades Denmark and Norway
-    type = country_event
-
-    title = germany_events.45.t
-    desc = germany_events.45.d
-    flavor = germany_events.45.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.45.a
-        default_option = yes
-        trigger = { is_player = no }
-        add_modifier = {
-          name = nazi_germany_army_buff_1
-          years = 1
-          is_decaying = yes
-        }
-        scope:world_war_two_diplo_play = {
-			add_target_backers = {
-                c:DEN
-            }  
-            add_target_backers = {
-                c:NOR
-            }
-		}
-        c:DEN = { set_variable = allies_participant }
-        c:NOR = { set_variable = allies_participant }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = germany_events.45.a
-        default_option = yes
-        trigger = { is_player = no }
-        add_modifier = {
-          name = nazi_germany_army_buff_1
-          years = 1
-          is_decaying = yes
-        }
-        scope:world_war_two_diplo_play = {
-			add_target_backers = {
-                c:DEN
-            }  
-		}
-        c:DEN = { set_variable = allies_participant }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = germany_events.45.c
-        ai_chance = {
-            base = 0
-        }
-    }
-    
-    option = {
-        name = germany_events.44.c
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-germany_events.46 = { #WW2 initiation Germany invades USSR
-    type = country_event
-
-    title = germany_events.46.t
-    desc = germany_events.46.d
-    flavor = germany_events.46.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.46.a
-        default_option = yes
-        scope:world_war_two_diplo_play = {
-			add_target_backers = {
-                c:RUS
-            }  
-		}
-        c:RUS = { set_variable = allies_participant }
-        c:RUS = {
-            trigger_event = {
-                id = ussr_events.10
-                years = 1
+        s:STATE_VILNIUS = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:POL
+			    owner = {
+				  OR = {
+					c:POL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
             }
         }
-        if = {
-            limit = {
-                c:ROM = {
-                    NOT = { 
-                        has_law = law_type:law_council_republic
-                        has_law = law_type:law_anarchy
-                    }
-                }
-            }
-            c:ROM = {
-               trigger_event = {
-                  id = germany_events.47
-                  days = 5
-                }
+        s:STATE_BREST = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:POL
+			    owner = {
+				  OR = {
+					c:POL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
             }
         }
-        if = {
-            limit = {
-                c:FIN = {
-                    NOT = { 
-                        has_law = law_type:law_council_republic
-                        has_law = law_type:law_anarchy
-                    }
-                }
+        s:STATE_VOLHYNIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:POL
+			    owner = {
+				  OR = {
+					c:POL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
             }
-            c:FIN = {
-               trigger_event = {
-                  id = germany_events.47
-                  days = 5
-                }
+        }
+        s:STATE_EAST_GALICIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:POL
+			    owner = {
+				  OR = {
+					c:POL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
             }
         }
         ai_chance = {
             base = 10
-        }
-    }
-    
-    option = {
-        name = germany_events.46.b
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-germany_events.47 = { #WW2 initiation Romania joins invasion of USSR
-    type = country_event
-
-    title = germany_events.47.t
-    desc = germany_events.47.d
-    flavor = germany_events.47.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.47.a
-        default_option = yes
-        scope:world_war_two_diplo_play = {
-			add_initiator_backers = {
-               who = root
-            }  
-		}
-        ROOT = { set_variable = axis_participant }
-        ai_chance = {
-            base = 10
-        }
-    }
-    
-    option = {
-        name = germany_events.47.b
-        ai_chance = {
-            base = 0
-        }
-    }
-}
-
-germany_events.48 = { #Germany declares war on USA
-    type = country_event
-
-    title = germany_events.48.t
-    desc = germany_events.48.d
-    flavor = germany_events.48.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = germany_events.48.a
-        default_option = yes
-        scope:world_war_two_diplo_play = {
-			add_target_backers = {
-                c:USA
-                c:CHI
-            } 
-            add_initiator_backers = {
-                c:JAP
-            } 
-            add_war_goal = {
-                holder = c:USA
-                type = contain_threat
-                target_country = c:GER
-            } 
-            add_war_goal = {
-                holder = c:GER
-                type = conquer_state
-                target_state = s:STATE_NEW_YORK.region_state:USA
-            }
-		}
-        c:JAP = {
-            set_variable = axis_participant
-        }
-        c:USA = {
-            set_variable = allies_participant
-        }
-        c:CHI = {
-            set_variable = allies_participant
-        }
-        ai_chance = {
-            base = 10
-        }
-    }
-
-    option = {
-        name = germany_events.48.b
-        
-        ai_chance = {
-            base = 0
         }
     }
 }

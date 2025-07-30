@@ -1613,3 +1613,73 @@ stabilization_buff_events.44 = {
         remove_modifier = great_depression_effect_3
     }
 }
+
+stabilization_buff_events.45 = { 
+    type = country_event
+
+    title = stabilization_buff_events.25.t
+    desc = stabilization_buff_events.25.d
+    flavor = stabilization_buff_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.25.a
+        default_option = yes
+        add_modifier = {
+            name = starting_sol_buff
+            years = 2
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = stabilization_buff_events.26
+            days = 30
+        }
+    }
+}
+
+stabilization_buff_events.46 = { 
+    type = country_event
+
+    title = stabilization_buff_events.10.t
+    desc = stabilization_buff_events.10.d
+    flavor = stabilization_buff_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = army_nerf_modifier_2
+            years = 2
+            is_decaying = yes
+        }
+    }
+
+    option = {
+        name = stabilization_buff_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = army_nerf_modifier_1
+            years = 1
+            is_decaying = yes
+        }
+    }
+}
