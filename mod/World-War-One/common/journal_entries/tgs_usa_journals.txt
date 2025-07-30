@@ -1,4 +1,52 @@
-﻿je_american_cinema = {
+﻿je_american_neutrality = {
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:USA
+        THIS = c:USA
+    }
+    
+    possible = {
+        has_global_variable = world_war_1_ongoing
+    }
+
+    immediate = {}
+
+    complete = {
+        has_global_variable = world_war_1_over
+        NOT = {
+            has_variable = entente_participant
+            has_variable = central_powers_participant
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = usa_events.
+            days = 5
+        }
+    }
+
+    fail = {
+       OR = {
+            has_variable = entente_participant
+            has_variable = central_powers_participant
+        }
+    }
+
+    on_fail = {
+        trigger_event = {
+            id = usa_events.
+            days = 5
+        }
+    }
+    
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_american_cinema = {
     icon = "gfx/interface/icons/event_icons/event_cinema.dds"
     group = je_group_internal_affairs
 

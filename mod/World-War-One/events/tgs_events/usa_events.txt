@@ -1314,3 +1314,77 @@ usa_events.19 = { #Dawes Plan response
 		}
     }
 }
+
+usa_events.20 = { #American neutrality je complete
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/pacifism.dds"
+    }
+
+    title = usa_events.20.t
+    desc = usa_events.20.d
+    flavor = usa_events.20.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {
+        every_interest_group = {
+            limit = { is_in_government = yes }
+            add_modifier = {
+               name = peace_promise_kept
+               years = 10
+               is_decaying = yes
+            }
+        }
+    }
+
+    option = {
+        name = usa_events.20.a
+        default_option = yes
+        ai_chance = {
+			base = 10
+		}
+    }
+}
+
+usa_events.21 = { #American neutrality je failure
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/pacifism.dds"
+    }
+
+    title = usa_events.21.t
+    desc = usa_events.21.d
+    flavor = usa_events.21.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {
+        every_interest_group = {
+            limit = { is_in_government = yes }
+            add_modifier = {
+               name = peace_promise_broken
+               years = 10
+               is_decaying = yes
+            }
+        }
+    }
+
+    option = {
+        name = usa_events.21.a
+        default_option = yes
+        ai_chance = {
+			base = 10
+		}
+    }
+}
