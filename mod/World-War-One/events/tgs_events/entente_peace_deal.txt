@@ -217,10 +217,22 @@ entente_peace_deal.1 = { #Entente victory
 	        }
 		}
 		c:POL = {
-         trigger_event = {
-          id = stabilization_buff_events.10
-          days = 5
+            trigger_event = {
+              id = stabilization_buff_events.10
+              days = 5
             }
+			trigger_event = {
+              id = stabilization_buff_events.1
+              days = 5
+            }
+			trigger_event = {
+              id = stabilization_buff_events.45
+              days = 5
+            } 
+			trigger_event = {
+              id = stabilization_buff_events.36
+              days = 5
+            } 
         }
 		c:GBR = {
             trigger_event = {
