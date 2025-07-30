@@ -1,4 +1,4 @@
-﻿je_joining_world_war = { 
+﻿je_joining_world_war_one_one = { 
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
@@ -31,7 +31,7 @@
 	scripted_progress_bar = join_central_powers_progress_bar
 
     scripted_button = support_entente_button
-	scripted_button = maintain_neutrality_button
+	scripted_button = maintain_neutrality_button_1
 	scripted_button = support_central_powers_button
 
     complete = {
@@ -78,6 +78,72 @@
             8 = joining_world_war_events.27
 		}    	  
     }
+
+    should_be_pinned_by_default = yes
+}
+
+je_joining_world_war_two = { 
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_crises
+    
+	is_shown_when_inactive = {
+	  has_global_variable = world_war_two_started
+      is_country_type = recognized
+      is_subject = no
+      NOT = {
+           has_global_variable = world_war_2_over
+           has_modifier = fragile_unity_modifier
+           has_variable = warlord_state
+		   has_variable = allies_participant
+		   has_variable = axis_participant
+        }
+	}
+
+    possible = { 
+       country_rank >= rank_value:minor_power
+	   is_at_war = no
+       is_revolutionnary = no
+	}
+
+    immediate = {}
+
+    scripted_progress_bar = join_allies_progress_bar
+	scripted_progress_bar = join_axis_progress_bar
+
+    scripted_button = support_allies_button
+	scripted_button = maintain_neutrality_button_1
+	scripted_button = support_axis_button
+
+    complete = {
+        scope:journal_entry = {
+			"scripted_bar_progress(join_allies_progress_bar)" >= 199
+        } 	
+    }
+
+    on_complete = {
+        trigger_event = { id = joining_world_war_events.40 popup = yes}
+    }
+
+    fail = {
+        scope:journal_entry = {
+			"scripted_bar_progress(join_axis_progress_bar)" >= 199
+        } 
+    }
+
+    on_fail = {
+        trigger_event = { id = joining_world_war_events.41 popup = yes}
+    }
+ 
+    invalid = { 
+        OR = {
+          has_global_variable = world_war_2_over
+          has_variable = warlord_state
+          has_variable = allies_participant
+          has_variable = axis_participant
+        }
+    } 
 
     should_be_pinned_by_default = yes
 }

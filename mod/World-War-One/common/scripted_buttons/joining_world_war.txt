@@ -19,9 +19,9 @@
 	}
 }
 
-maintain_neutrality_button = {
-	name = maintain_neutrality_button
-	desc = maintain_neutrality_button_desc
+maintain_neutrality_button_1 = {
+	name = maintain_neutrality_button_1
+	desc = maintain_neutrality_button_1_desc
 
     possible = {}
 
@@ -54,6 +54,69 @@ support_central_powers_button = {
 
     selected = {
 		has_variable = supporting_central_powers_var
+	}
+
+    ai_chance = {
+		value = 0
+	}
+}
+
+support_allies_button = {
+	name = support_allies_button
+	desc = support_allies_button_desc
+
+    possible = {}
+
+    effect = {
+        set_variable = supporting_allies_var
+        remove_variable = maintain_neutrality_var
+        remove_variable = supporting_axis_var
+    }
+
+    selected = {
+		has_variable = supporting_allies_var
+	}
+
+    ai_chance = {
+		value = 0
+	}
+}
+
+maintain_neutrality_button_2 = {
+	name = maintain_neutrality_button_2
+	desc = maintain_neutrality_button_2_desc
+
+    possible = {}
+
+    effect = {
+        set_variable = maintain_neutrality_var
+        remove_variable = supporting_axis_var
+		    remove_variable = supporting_allies_var
+    }
+
+    selected = {
+		has_variable = maintain_neutrality_var
+	}
+
+    ai_chance = {
+	   value = 10
+	}
+}
+
+support_axis_button = {
+	name = support_axis_button
+	desc = support_axis_button_desc
+
+    possible = {}
+
+    effect = {
+        set_variable = supporting_axis_var
+		remove_variable = supporting_allies_var
+		remove_variable = maintain_neutrality_var
+    }
+
+    selected = {
+		has_variable = supporting_axis_var
 	}
 
     ai_chance = {

@@ -342,3 +342,348 @@ join_central_powers_progress_bar = {
     min_value = 0
     max_value = 200
 }
+
+join_allies_progress_bar = {
+    name = "join_allies_progress_bar"
+    desc = "join_allies_progress_bar_desc"
+
+    default = yes 
+
+    monthly_progress = { 
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = allies_participant
+                  country_rank >= rank_value:major_power
+                  has_friendly_diplomatic_pact = { TARGET = root }
+                }
+            }
+            add = {
+				desc = "allies_progress_from_diplomacy"
+				value = 5
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = allies_participant
+                  country_rank >= rank_value:major_power
+                  has_treaty_defensive_pact_with = { TARGET = root }
+                }
+            }
+            add = {
+				desc = "allies_progress_from_diplomacy"
+				value = 10
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = allies_participant
+                  country_rank >= rank_value:major_power
+                  has_treaty_alliance_with = { TARGET = root }
+                }
+            }
+            add = {
+				desc = "allies_progress_from_diplomacy"
+				value = 20
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = axis_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = rivalry
+			        }	
+                }
+            }
+            add = {
+				desc = "allies_progress_from_diplomacy"
+				value = 5
+			}
+        }
+        #From Lobbies
+        if = {
+		   limit = {
+                any_political_lobby = {
+			        is_political_lobby_type = lobby_pro_country
+			        target = {
+                        has_variable = allies_participant
+                    }
+	            }
+            }
+            add = {
+				desc = "allies_progress_from_lobbies"
+				value = 3
+			}
+        }
+        if = {
+		   limit = {
+                any_political_lobby = {
+			        is_political_lobby_type = lobby_anti_country
+			        target = {
+                        has_variable = allies_participant
+                    }
+	            }
+            }
+            add = {
+				desc = "allies_progress_from_lobbies_2"
+				value = -3
+			}
+        }
+        #From decisions
+        if = {
+		   limit = {
+                has_variable = supporting_axis_var
+            }
+            add = {
+				desc = "allies_progress_from_decision"
+				value = -5
+			}
+        }
+        if = {
+		   limit = {
+                has_variable = supporting_allies_var
+            }
+            add = {
+				desc = "allies_progress_from_decision"
+				value = 10
+			}
+        }
+        if = {
+		   limit = {
+                has_variable = maintain_neutrality_var
+            }
+            add = {
+				desc = "allies_progress_from_decision"
+				value = -20
+			}
+        }
+        #From laws
+        if = {
+		   limit = {
+                has_law = law_type:law_true_neutrality
+            }
+            add = {
+				desc = "allies_progress_from_legislation"
+				value = -15
+			}
+        }
+        if = {
+		   limit = {
+                has_law = law_type:law_armed_neutrality
+            }
+            add = {
+				desc = "allies_progress_from_legislation"
+				value = -10
+			}
+        }
+        if = {
+		   limit = {
+                has_law = law_type:law_limited_interventionism
+            }
+            add = {
+				desc = "allies_progress_from_legislation"
+				value = -2.5
+			}
+        }  
+        if = {
+		   limit = {
+                has_law = law_type:law_federated
+            }
+            add = {
+				desc = "allies_progress_from_legislation"
+				value = -5
+			}
+        } 
+        if = {
+		   limit = {
+                has_law = law_type:law_confederated
+            }
+            add = {
+				desc = "allies_progress_from_legislation"
+				value = -10
+			}
+        } 
+    }
+
+    start_value = 0
+    min_value = 0
+    max_value = 200
+}
+
+join_axis_progress_bar = {
+    name = "join_axis_progress_bar"
+    desc = "join_axis_progress_bar_desc"
+
+    default_green = yes
+
+    monthly_progress = { 
+        #From trade
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = axis_participant
+                  country_rank >= rank_value:major_power
+                  has_friendly_diplomatic_pact = { TARGET = root }
+                }
+            }
+            add = {
+				desc = "axis_progress_from_diplomacy"
+				value = 5
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = axis_participant
+                  country_rank >= rank_value:major_power
+                    has_treaty_defensive_pact_with = { TARGET = root }
+                }
+            }
+            add = {
+				desc = "axis_progress_from_diplomacy"
+				value = 10
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = axis_participant
+                  country_rank >= rank_value:major_power
+                    has_treaty_alliance_with = { TARGET = root }
+                }
+            }
+            add = {
+				desc = "axis_progress_from_diplomacy"
+				value = 20
+			}
+        }
+        if = {
+		   limit = {
+              any_country = {
+                  has_variable = allies_participant
+                  country_rank >= rank_value:major_power
+                    has_diplomatic_pact = {
+				      who = root
+				      type = rivalry
+			        }	
+                }
+            }
+            add = {
+				desc = "axis_progress_from_diplomacy"
+				value = 5
+			}
+        }
+        #From Lobbies
+        if = {
+		   limit = {
+                any_political_lobby = {
+			        is_political_lobby_type = lobby_pro_country
+			        target = {
+                        has_variable = axis_participant
+                    }
+	            }
+            }
+            add = {
+				desc = "axis_progress_from_lobbies"
+				value = 3
+			}
+        }
+        if = {
+		   limit = {
+                any_political_lobby = {
+			        is_political_lobby_type = lobby_anti_country
+			        target = {
+                        has_variable = axis_participant
+                    }
+	            }
+            }
+            add = {
+				desc = "axis_progress_from_lobbies_2"
+				value = -3
+			}
+        }
+        #From decisions
+        if = {
+		   limit = {
+                has_variable = supporting_axis_var
+            }
+            add = {
+				desc = "axis_progress_from_decision"
+				value = 10
+			}
+        }
+        if = {
+		   limit = {
+                has_variable = supporting_allies_var
+            }
+            add = {
+				desc = "axis_progress_from_decision"
+				value = -5
+			}
+        }
+        if = {
+		   limit = {
+                has_variable = maintain_neutrality_var
+            }
+            add = {
+				desc = "axis_progress_from_decision"
+				value = -20
+			}
+        }
+        #From laws
+        if = {
+		   limit = {
+                has_law = law_type:law_true_neutrality
+            }
+            add = {
+				desc = "axis_progress_from_legislation"
+				value = -15
+			}
+        }
+        if = {
+		   limit = {
+                has_law = law_type:law_armed_neutrality
+            }
+            add = {
+				desc = "axis_progress_from_legislation"
+				value = -10
+			}
+        }
+        if = {
+		   limit = {
+                has_law = law_type:law_limited_interventionism
+            }
+            add = {
+				desc = "axis_progress_from_legislation"
+				value = -2.5
+			}
+        } 
+        if = {
+		   limit = {
+                has_law = law_type:law_federated
+            }
+            add = {
+				desc = "axis_progress_from_legislation"
+				value = -5
+			}
+        } 
+        if = {
+		   limit = {
+                has_law = law_type:law_confederated
+            }
+            add = {
+				desc = "axis_progress_from_legislation"
+				value = -10
+			}
+        } 
+    }
+
+    start_value = 0
+    min_value = 0
+    max_value = 200
+}

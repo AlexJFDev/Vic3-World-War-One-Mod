@@ -132,7 +132,7 @@ joining_world_war_events.4 = { #Anti-War protests
     option = { #accept the demands
         name = joining_world_war_events.4.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -30 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
@@ -206,7 +206,7 @@ joining_world_war_events.6 = { #Anti-british rethoric
     option = { #do not encourage this rethoric
         name = joining_world_war_events.6.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -12 name = join_entente_progress_bar }
             add_progress = { value = 5 name = join_central_powers_progress_bar }
 		}
@@ -214,7 +214,7 @@ joining_world_war_events.6 = { #Anti-british rethoric
 
     option = { #encourage this rethoric
         name = joining_world_war_events.6.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -25 name = join_entente_progress_bar }
             add_progress = { value = 15 name = join_central_powers_progress_bar }
 		}
@@ -244,7 +244,7 @@ joining_world_war_events.7 = { #Anti-german rethoric
     option = { #do not encourage this rethoric
         name = joining_world_war_events.7.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 8 name = join_entente_progress_bar }
             add_progress = { value = -12 name = join_central_powers_progress_bar }
 		}
@@ -252,7 +252,7 @@ joining_world_war_events.7 = { #Anti-german rethoric
 
     option = { #encourage this rethoric
         name = joining_world_war_events.7.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 15 name = join_entente_progress_bar }
             add_progress = { value = -25 name = join_central_powers_progress_bar }
 		}
@@ -282,7 +282,7 @@ joining_world_war_events.8 = { #Not enough money
     option = {
         name = joining_world_war_events.8.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -20 name = join_entente_progress_bar }
             add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
@@ -312,7 +312,7 @@ joining_world_war_events.9 = { #TODO
     option = {
         name = joining_world_war_events.9.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -20 name = join_entente_progress_bar }
             add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
@@ -342,7 +342,7 @@ joining_world_war_events.10 = { #TODO
     option = {
         name = joining_world_war_events.10.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -20 name = join_entente_progress_bar }
             add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
@@ -372,7 +372,7 @@ joining_world_war_events.10 = { #TODO
     option = {
         name = joining_world_war_events.10.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -20 name = join_entente_progress_bar }
             add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
@@ -402,7 +402,7 @@ joining_world_war_events.11 = { #TODO
     option = {
         name = joining_world_war_events.11.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -20 name = join_entente_progress_bar }
             add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
@@ -432,7 +432,7 @@ joining_world_war_events.12 = { #TODO
     option = {
         name = joining_world_war_events.12.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -20 name = join_entente_progress_bar }
             add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
@@ -540,7 +540,7 @@ joining_world_war_events.13 = { #Ottoman Empire joins
 
     option = { #Show support but dont join now
         name = joining_world_war_events.13.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -30 name = join_entente_progress_bar }
             add_progress = { value = 30 name = join_central_powers_progress_bar }
 		}
@@ -552,7 +552,7 @@ joining_world_war_events.13 = { #Ottoman Empire joins
     option = { #Reject violently the offer
         name = joining_world_war_events.13.c
         trigger = { NOT = { has_law = law_type:law_military_oversight } }
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_central_powers_progress_bar }
 		}
         ai_chance = {
@@ -643,7 +643,7 @@ joining_world_war_events.14 = { #Italy joins
 
     option = { #Show support but dont join now
         name = joining_world_war_events.14.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 30 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
@@ -654,7 +654,7 @@ joining_world_war_events.14 = { #Italy joins
 
     option = { #Reject violently the offer
         name = joining_world_war_events.14.c
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_entente_progress_bar }
 		}
         ai_chance = {
@@ -702,7 +702,7 @@ joining_world_war_events.15 = { #Bulgaria joins
 
     option = { #Show support but dont join now
         name = joining_world_war_events.15.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -30 name = join_entente_progress_bar }
             add_progress = { value = 30 name = join_central_powers_progress_bar }
 		}
@@ -713,7 +713,7 @@ joining_world_war_events.15 = { #Bulgaria joins
 
     option = { #Reject violently the offer
         name = joining_world_war_events.15.c
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_central_powers_progress_bar }
 		}
         ai_chance = {
@@ -761,7 +761,7 @@ joining_world_war_events.16 = { #Romania joins
 
     option = { #Show support but dont join now
         name = joining_world_war_events.16.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 30 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
@@ -772,7 +772,7 @@ joining_world_war_events.16 = { #Romania joins
 
     option = { #Reject violently the offer
         name = joining_world_war_events.16.c
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_entente_progress_bar }
 		}
         ai_chance = {
@@ -820,7 +820,7 @@ joining_world_war_events.17 = { #Greece joins
 
     option = { #Show support but dont join now
         name = joining_world_war_events.17.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 30 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
@@ -831,7 +831,7 @@ joining_world_war_events.17 = { #Greece joins
 
     option = { #Reject violently the offer
         name = joining_world_war_events.17.c
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_entente_progress_bar }
 		}
         ai_chance = {
@@ -920,7 +920,7 @@ joining_world_war_events.18 = { #USA joins
     option = { #Join directly
         name = joining_world_war_events.18.b
         trigger = { is_player = yes }
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 90 name = join_entente_progress_bar }
             add_progress = { value = -90 name = join_central_powers_progress_bar }
 		}
@@ -931,7 +931,7 @@ joining_world_war_events.18 = { #USA joins
 
     option = { #Show support but dont join now
         name = joining_world_war_events.18.c
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 30 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
@@ -942,7 +942,7 @@ joining_world_war_events.18 = { #USA joins
 
     option = { #Reject violently the offer
         name = joining_world_war_events.18.e
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_entente_progress_bar }
 		}
         ai_chance = {
@@ -990,7 +990,7 @@ joining_world_war_events.19 = { #Portugal joins
 
     option = { #Show support but dont join now
         name = joining_world_war_events.19.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 30 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
@@ -1001,7 +1001,7 @@ joining_world_war_events.19 = { #Portugal joins
 
     option = { #Reject violently the offer
         name = joining_world_war_events.19.c
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_entente_progress_bar }
 		}
         ai_chance = {
@@ -1049,7 +1049,7 @@ joining_world_war_events.20 = { #Brazil joins
 
     option = { #Show support but dont join now
         name = joining_world_war_events.20.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 30 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
@@ -1060,7 +1060,7 @@ joining_world_war_events.20 = { #Brazil joins
 
     option = { #Reject violently the offer
         name = joining_world_war_events.20.c
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_entente_progress_bar }
 		}
         ai_chance = {
@@ -1155,7 +1155,7 @@ joining_world_war_events.22 = { #USA jewish minorities condemns Russia
     option = {
         name = joining_world_war_events.22.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -20 name = join_entente_progress_bar }
             add_progress = { value = 5 name = join_central_powers_progress_bar }
 		}
@@ -1189,7 +1189,7 @@ joining_world_war_events.23 = { #USA Irish minorities supports central powers
     option = {
         name = joining_world_war_events.23.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -30 name = join_entente_progress_bar }
             add_progress = { value = 15 name = join_central_powers_progress_bar }
 		}
@@ -1220,7 +1220,7 @@ joining_world_war_events.24 = { #USA german minorities supports central powers
     option = {
         name = joining_world_war_events.24.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -30 name = join_entente_progress_bar }
             add_progress = { value = 15 name = join_central_powers_progress_bar }
 		}
@@ -1251,7 +1251,7 @@ joining_world_war_events.25 = { #USA politician evokes the memory of the civil w
     option = {
         name = joining_world_war_events.25.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -20 name = join_entente_progress_bar }
             add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
@@ -1295,7 +1295,7 @@ joining_world_war_events.26 = { #liner sunk by german subs
     option = {
         name = joining_world_war_events.26.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 15 name = join_entente_progress_bar }
             add_progress = { value = -30 name = join_central_powers_progress_bar }
 		}
@@ -1339,7 +1339,7 @@ joining_world_war_events.27 = { #submarine warfare causes concern
     option = {
         name = joining_world_war_events.27.a
         default_option = yes
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = 10 name = join_entente_progress_bar }
             add_progress = { value = -20 name = join_central_powers_progress_bar }
 		}
@@ -1443,7 +1443,7 @@ joining_world_war_events.29 = { #Mexico receives zimmermann telegram
 
     option = { #Reject violently the offer
         name = joining_world_war_events.29.a
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
             add_progress = { value = -80 name = join_central_powers_progress_bar }
 		}
         ai_chance = {
@@ -1453,7 +1453,7 @@ joining_world_war_events.29 = { #Mexico receives zimmermann telegram
 
     option = { #Show support but dont join now
         name = joining_world_war_events.29.b
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -80 name = join_entente_progress_bar }
             add_progress = { value = 80 name = join_central_powers_progress_bar }
 		}
@@ -1464,12 +1464,92 @@ joining_world_war_events.29 = { #Mexico receives zimmermann telegram
 
     option = { #Join directly
         name = joining_world_war_events.29.c
-        je:je_joining_world_war = {
+        je:je_joining_world_war_one = {
 			add_progress = { value = -200 name = join_entente_progress_bar }
             add_progress = { value = 200 name = join_central_powers_progress_bar }
 		}
         ai_chance = {
             base = 0
         }
+    }
+}
+
+joining_world_war_events.40 = { #Joining the Allies
+    type = country_event
+
+    title = joining_world_war_events.40.t
+    desc = joining_world_war_events.40.d
+    flavor = joining_world_war_events.40.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 24
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = joining_world_war_events.40.a
+        default_option = yes
+        set_variable = entente_participant
+        scope:world_war_two_diplo_play = {
+            add_target_backers = {
+				who = root
+			}
+        }
+        ai_chance = {
+		base = 10
+	    }
+    }
+
+    option = {
+        name = joining_world_war_events.40.b
+        ai_chance = {
+		base = 0
+	    }
+    }
+}
+
+joining_world_war_events.41 = { #Joining the Axis
+    type = country_event
+
+    title = joining_world_war_events.41.t
+    desc = joining_world_war_events.41.d
+    flavor = joining_world_war_events.41.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 24
+    
+    event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = joining_world_war_events.41.a
+        default_option = yes
+        set_variable = central_powers_participant
+        scope:world_war_two_diplo_play = {
+          add_initiator_backers = {
+                who = root
+            }   
+        }
+        ai_chance = {
+		base = 10
+	    }
+    }
+
+    option = {
+        name = joining_world_war_events.41.b
+        ai_chance = {
+		base = 0
+	    }
     }
 }

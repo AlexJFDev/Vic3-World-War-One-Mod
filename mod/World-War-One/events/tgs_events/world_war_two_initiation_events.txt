@@ -65,7 +65,7 @@ world_war_two_initiation_events.1 = { #WW2 initiation Germany invades Poland
     }
 
     option = {
-        name = world_war_two_initiation_events.40.b
+        name = world_war_two_initiation_events.1.b
         ai_chance = {
             base = 0
         }
@@ -198,7 +198,15 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { c:POL ?= this }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
@@ -231,7 +239,7 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
     }
 
     option = {
-        name = world_war_two_initiation_events.4.a
+        name = world_war_two_initiation_events.4.b
         default_option = yes
         trigger = { is_player = no }
         add_modifier = {
@@ -256,13 +264,6 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
             base = 0
         }
     }
-    
-    option = {
-        name = world_war_two_initiation_events.4.c
-        ai_chance = {
-            base = 0
-        }
-    }
 }
 
 world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium and Netherlands
@@ -277,7 +278,15 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { c:FRA ?= this }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
@@ -395,7 +404,15 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { c:GBR ?= this }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
@@ -475,7 +492,15 @@ world_war_two_initiation_events.7 = { #WW2 initiation Romania and Finland joins 
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { c:GBR ?= this }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
@@ -517,7 +542,15 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
     
     duration = 3
     
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { c:GBR ?= this }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/fascist_leader.dds"
