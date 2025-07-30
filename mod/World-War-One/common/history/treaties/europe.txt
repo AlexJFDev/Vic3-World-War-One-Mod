@@ -459,6 +459,59 @@
 		}
 	}
 
+	# Transit Rights Agreement for Luxembourg
+	create_treaty = {
+		name = treaty_name_lux_transit_rights
+		first_country = c:LUX
+		second_country = c:GER
+
+		is_draft = no
+		entered_into_force_on = 1900.1.1
+		binding_period = { years = 200 } # 10 years
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:SWI
+			}
+		}
+	}
+	create_treaty = {
+		name = treaty_name_lux_transit_rights
+		first_country = c:LUX
+		second_country = c:FRA
+
+		is_draft = no
+		entered_into_force_on = 1900.1.1
+		binding_period = { years = 200 } # 10 years
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:FRA
+				target_country = c:SWI
+			}
+		}
+	}
+	create_treaty = {
+		name = treaty_name_lux_transit_rights
+		first_country = c:LUX
+		second_country = c:BEL
+
+		is_draft = no
+		entered_into_force_on = 1900.1.1
+		binding_period = { years = 200 } # 10 years
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:BEL
+				target_country = c:SWI
+			}
+		}
+	}
+
 	# Transit Rights Agreement for Switzerland
 	create_treaty = {
 		name = treaty_name_swi_transit_rights

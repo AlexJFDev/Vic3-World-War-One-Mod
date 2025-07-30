@@ -963,10 +963,10 @@ agitator_karl_liebknecht = { # Karl Liebknecht, or as I like to call him, Chucky
 	first_name = Karl
 	last_name = Liebknecht
 	historical = yes
-	culture = cu:north_german
+	culture = cu:german
 	religion = rel:protestant
 	female = no
-	interest_group = ig_intelligentsia
+	interest_group = ig_trade_unions
 	ideology = ideology_communist
 	birth_date = 1871.8.13
 	dna = dna_karl_liebknecht
@@ -974,26 +974,6 @@ agitator_karl_liebknecht = { # Karl Liebknecht, or as I like to call him, Chucky
 		erudite
 		experienced_political_operator
 		charismatic
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			OR = {
-				c:SAX ?= this
-				c:NGF ?= this
-				c:GER ?= this
-			}
-		}
-        interest_group_trigger = {
-            is_marginal = no
-            OR = {
-			    is_interest_group_type = ig_trade_unions
-			    is_interest_group_type = ig_intelligentsia
-			}
-        }   
-		earliest_usage_date = 1899.4.5
-		latest_usage_date = 1935.12.31
-		chance = 50
 	}
 }
 
