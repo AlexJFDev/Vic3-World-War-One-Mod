@@ -353,6 +353,7 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_council_republic
      activate_law = law_type:law_single_party_state
      activate_law = law_type:law_outlawed_dissent
+     activate_law = law_type:law_surveillance_state
      activate_law = law_type:law_command_economy
      activate_law = law_type:law_collectivized_agriculture
      activate_law = law_type:law_womens_suffrage
@@ -361,22 +362,23 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_public_schools
      activate_law = law_type:law_compulsory_primary_school
      activate_law = law_type:law_closed_borders
-        c:RUS = {
-            trigger_event = {
+        trigger_event = {
              id = russia_events.8
              days = 5
             }
-            trigger_event = {
+        trigger_event = {
              id = stabilization_buff_events.16
              days = 5
             }
-            trigger_event = {
+        trigger_event = {
              id = stabilization_buff_events.2
              days = 5
             }
-        }    
-	  c:RUS ?= { 
-		set_relations = { country = c:FIN value = -80 }
+        trigger_event = {
+              id = ussr_events.4
+               years = 5
+            }
+        set_relations = { country = c:FIN value = -80 }
 		set_relations = { country = c:GER value = -80 }
 		set_relations = { country = c:AUS value = -80 }
 		set_relations = { country = c:TUR value = -80 }
@@ -385,7 +387,6 @@ russia_events.7 = { #Soviet uprising
 		set_relations = { country = c:GBR value = -80 }
 		set_relations = { country = c:USA value = -80 }
 		set_relations = { country = c:JAP value = -80 }
-        }
 		remove_diplomatic_pact = {
 			country = c:FRA
 			type = alliance

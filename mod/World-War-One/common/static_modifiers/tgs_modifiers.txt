@@ -397,16 +397,13 @@ modifier_century_of_triumph_technology = {
 
 great_depression_effect_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-    country_minting_mult = -2
+    country_minting_mult = -3
     country_loan_interest_rate_mult = 0.5
-    state_aristocrats_investment_pool_efficiency_mult = -5
-    state_capitalists_investment_pool_efficiency_mult = -5
-    state_shopkeepers_investment_pool_efficiency_mult = -5
-    state_clergymen_investment_pool_efficiency_mult = -5
-    state_farmers_investment_pool_efficiency_mult = -5
-    state_dependent_wage_mult = -0.15
-    country_state_religion_wages_mult = -0.3
-	country_non_state_religion_wages_mult = -0.3
+    state_aristocrats_investment_pool_efficiency_mult = -3
+    state_capitalists_investment_pool_efficiency_mult = -3
+    state_shopkeepers_investment_pool_efficiency_mult = -3
+    state_clergymen_investment_pool_efficiency_mult = -3
+    state_farmers_investment_pool_efficiency_mult = -3
     state_lower_strata_standard_of_living_add = -8
     state_middle_strata_standard_of_living_add = -8
     state_upper_strata_standard_of_living_add = -2
@@ -416,25 +413,25 @@ great_depression_effect_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
     country_minting_mult = -1
     country_loan_interest_rate_mult = 0.5
-    state_aristocrats_investment_pool_efficiency_mult = -2
-    state_capitalists_investment_pool_efficiency_mult = -2
-    state_shopkeepers_investment_pool_efficiency_mult = -2
-    state_clergymen_investment_pool_efficiency_mult = -2
-    state_farmers_investment_pool_efficiency_mult = -2
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
     state_lower_strata_standard_of_living_add = -6
-    state_middle_strata_standard_of_living_add = -3
+    state_middle_strata_standard_of_living_add = -4
     state_upper_strata_standard_of_living_add = -1
 }
 
 great_depression_effect_3 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-    country_minting_mult = -3
+    country_minting_mult = -2
     country_loan_interest_rate_mult = 0.5
-    state_aristocrats_investment_pool_efficiency_mult = -5
-    state_capitalists_investment_pool_efficiency_mult = -5
-    state_shopkeepers_investment_pool_efficiency_mult = -5
-    state_clergymen_investment_pool_efficiency_mult = -5
-    state_farmers_investment_pool_efficiency_mult = -5
+    state_aristocrats_investment_pool_efficiency_mult = -2
+    state_capitalists_investment_pool_efficiency_mult = -2
+    state_shopkeepers_investment_pool_efficiency_mult = -2
+    state_clergymen_investment_pool_efficiency_mult = -2
+    state_farmers_investment_pool_efficiency_mult = -2
     state_lower_strata_standard_of_living_add = -8
     state_middle_strata_standard_of_living_add = -8
     state_upper_strata_standard_of_living_add = -2
@@ -850,4 +847,36 @@ authority_buff_1 = {
 socialist_buff_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
     interest_group_ig_trade_unions_pol_str_mult = 0.5
+}
+
+germany_economic_recovery_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_minting_mult = 0.2
+    state_lower_strata_standard_of_living_add = 3
+    state_middle_strata_standard_of_living_add = 3
+    state_construction_mult = 0.3
+    building_arms_industry_throughput_add = 0.3
+    building_artillery_foundries_throughput_add = 0.3
+    building_munition_plants_throughput_add = 0.3
+    building_aircraft_factory_throughput_add = 0.3
+    building_military_shipyards_throughput_add = 0.3
+}
+
+germany_economic_recovery_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_minting_mult = 0.2
+    state_lower_strata_standard_of_living_add = 3
+    state_middle_strata_standard_of_living_add = 3
+    state_construction_mult = 0.3
+    building_group_bg_manufacturing_throughput_add = 0.1
+    building_group_bg_heavy_industry_throughput_add = 0.1
+}
+
+germany_economic_recovery_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_minting_mult = 0.2
+    state_lower_strata_standard_of_living_add = 3
+    state_middle_strata_standard_of_living_add = 3
+    state_construction_mult = 0.3
+    building_group_bg_agriculture_throughput_add = 0.2
 }

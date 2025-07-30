@@ -1401,9 +1401,39 @@ stabilization_buff_events.37 = {
     option = {
         name = stabilization_buff_events.8.a
         default_option = yes
+        trigger = { is_player = yes }
+        add_radicals = {
+			strata = upper
+			value = -0.25
+		}
+		add_radicals = {
+			strata = middle
+            value = -0.25
+		}
+		add_radicals = {
+			strata = lower
+            value = -0.25
+		}
+    }
+
+    option = {
+        name = stabilization_buff_events.8.a
+        default_option = yes
         trigger = { is_player = no }
         activate_law = law_type:law_armed_neutrality
         add_treasury = -300000000
+        add_radicals = {
+			strata = upper
+			value = -0.25
+		}
+		add_radicals = {
+			strata = middle
+            value = -0.25
+		}
+		add_radicals = {
+			strata = lower
+            value = -0.25
+		}
     }
 }
 

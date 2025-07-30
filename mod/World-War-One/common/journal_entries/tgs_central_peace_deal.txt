@@ -48,6 +48,10 @@
 		}
 	}
 
+	invalid = {
+		has_global_variable = world_war_1_over
+	}
+
     on_complete = {}
 
     weight = 1000
@@ -108,6 +112,10 @@ je_central_peace_deal_round_2 = {
 		}
 	}
 
+	invalid = {
+		has_global_variable = world_war_1_over
+	}
+
     weight = 1000
     should_be_pinned_by_default = yes
 }
@@ -166,6 +174,10 @@ je_central_peace_deal_round_3 = {
             }
         }
 		set_global_variable = central_powers_complete_victory
+	}
+
+	invalid = {
+		has_global_variable = world_war_1_over
 	}
 
     weight = 1000

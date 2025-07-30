@@ -116,6 +116,7 @@ germany_events.2 = { #November Revolution
 			}
 			add_diplomatic_play_war_support = { target = c:GER value = -200 }
 		}
+        add_technology_progress = { progress = 5000 technology = political_agitation }
         add_modifier = {
           name = socialist_buff_1
           years = 20
@@ -901,7 +902,7 @@ germany_events.28 = { #Nazi takeover
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_outlawed_dissent
         activate_law = law_type:law_national_supremacy
-        activate_law = law_type:law_secret_police
+        activate_law = law_type:law_surveillance_state
         activate_law = law_type:law_unitary
         activate_law = law_type:law_imperialism
         ig:ig_petty_bourgeoisie = {
@@ -1676,6 +1677,183 @@ germany_events.42 = { #Poland partition
         }
         ai_chance = {
             base = 10
+        }
+    }
+}
+
+germany_events.43 = { #Great depression recovery
+    type = country_event
+
+    title = germany_events.43.t
+    desc = germany_events.43.d
+    flavor = germany_events.43.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/fascist_leader.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.43.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+          name = germany_economic_recovery_1
+          years = 5
+          is_decaying = yes
+        } 
+        add_radicals = {
+			strata = upper
+			value = -0.25
+		}
+		add_radicals = {
+			strata = middle
+            value = -0.25
+		}
+		add_radicals = {
+			strata = lower
+            value = -0.25
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.43.b
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+          name = germany_economic_recovery_2
+          years = 5
+          is_decaying = yes
+        } 
+        add_radicals = {
+			strata = upper
+			value = -0.25
+		}
+		add_radicals = {
+			strata = middle
+            value = -0.25
+		}
+		add_radicals = {
+			strata = lower
+            value = -0.25
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = germany_events.43.c
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+          name = germany_economic_recovery_3
+          years = 5
+          is_decaying = yes
+        } 
+        add_radicals = {
+			strata = upper
+			value = -0.25
+		}
+		add_radicals = {
+			strata = middle
+            value = -0.25
+		}
+		add_radicals = {
+			strata = lower
+            value = -0.25
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = germany_events.43.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = germany_economic_recovery_1
+          years = 10
+          is_decaying = yes
+        } 
+        add_radicals = {
+			strata = upper
+			value = -0.5
+		}
+		add_radicals = {
+			strata = middle
+            value = -0.5
+		}
+		add_radicals = {
+			strata = lower
+            value = -0.5
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = germany_events.43.b
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = germany_economic_recovery_2
+          years = 10
+          is_decaying = yes
+        } 
+        add_radicals = {
+			strata = upper
+			value = -0.5
+		}
+		add_radicals = {
+			strata = middle
+            value = -0.5
+		}
+		add_radicals = {
+			strata = lower
+            value = -0.5
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = germany_events.43.c
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+          name = germany_economic_recovery_3
+          years = 10
+          is_decaying = yes
+        } 
+        add_radicals = {
+			strata = upper
+			value = -0.35
+		}
+		add_radicals = {
+			strata = middle
+            value = -0.35
+		}
+		add_radicals = {
+			strata = lower
+            value = -0.35
+        }
+        ai_chance = {
+            base = 0
         }
     }
 }

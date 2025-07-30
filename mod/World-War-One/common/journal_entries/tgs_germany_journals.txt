@@ -276,12 +276,24 @@ je_nazi_threat = {
     complete = {}
     
     fail = { 
-        scope:journal_entry = {
-			"scripted_bar_progress(nazi_ascension_progress_bar)" >= 499
-        } 
+        OR = {
+            scope:journal_entry = {
+			   "scripted_bar_progress(nazi_ascension_progress_bar)" >= 499
+            } 
+            any_political_movement = {
+				is_political_movement_type = movement_fascist
+				is_insurrectionary = yes
+				civil_war ?= {
+					civil_war_progress >= 0.75
+				}
+			}
+        }
 	}
 
     on_fail = {
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
         trigger_event = { 
             id = germany_events.26 
             days = 5
@@ -289,6 +301,52 @@ je_nazi_threat = {
         }
     }
    
+    should_be_pinned_by_default = yes
+}
+
+je_new_germany = {
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:GER
+        THIS = c:GER
+        has_global_variable = world_war_1_over
+    }
+    
+    possible = {
+        OR = {
+            has_law = law_type:law_council_republic
+            has_global_variable = hitler_rise_to_power
+            c:GER = {
+                ruler = {
+                OR = {
+				   has_ideology = ideology:ideology_fascist
+                   has_ideology = ideology:ideology_authoritarian
+                }
+                }
+            }
+        }
+        OR = {
+            has_modifier = great_depression_effect_1
+            has_modifier = great_depression_effect_2
+            has_modifier = great_depression_effect_3
+        }
+    }
+
+    immediate = {}
+
+    complete = {
+        country_rank >= rank_value:great_power
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = germany_events.43
+            days = 5
+        }
+    }
+
     should_be_pinned_by_default = yes
 }
 
