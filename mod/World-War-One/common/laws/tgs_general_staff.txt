@@ -43,6 +43,10 @@ law_independant_general_staff = {
 	
 	progressiveness = 0
 
+	disallowing_laws = {
+		law_true_neutrality
+	}
+
 	modifier = {
 		unit_army_offense_mult = 0.05
 		military_formation_mobilization_speed_mult = 0.15
@@ -69,6 +73,8 @@ law_military_oversight = {
 	progressiveness = 0
 
     disallowing_laws = {
+		law_true_neutrality
+		law_armed_neutrality
 		law_guaranteed_liberties
 		law_universal_suffrage
 		law_anarchy

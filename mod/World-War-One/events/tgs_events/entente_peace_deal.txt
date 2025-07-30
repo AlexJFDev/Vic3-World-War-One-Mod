@@ -940,7 +940,19 @@ entente_peace_deal.1 = { #Entente victory
                 id = stabilization_buff_events.16
                 days = 5
             }
-        } 		
+        } 	
+		every_country = {
+			limit = { 
+				OR = {
+					has_variable = entente_participant
+					has_variable = central_powers_participant
+				}
+			}
+			trigger_event = {
+                id = entente_peace_deal.15
+                days = 30
+            }
+		}	
 	}
 	}
 }
@@ -4169,6 +4181,44 @@ entente_peace_deal.14 = { #Serbia changes to Yugoslavia
         name = entente_peace_deal.14.b
 		ai_chance = {
 			base = 0
+		}
+	}
+}
+
+entente_peace_deal.15 = { #Pacifism movements
+    type = country_event
+    
+    duration = 3
+
+    event_image = { 
+		texture = "gfx/event_pictures/pacifism.dds"
+	}
+
+	immediate = {
+		create_political_movement = { type = movement_pacifist }
+	}
+
+    title = entente_peace_deal.15.t
+	desc = entente_peace_deal.15.d
+	flavor = entente_peace_deal.15.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.15.a
+		default_option = yes
+		any_political_movement = {
+			is_political_movement_type = movement_pacifist
+			add_modifier = {
+				name = political_movement_buff_3
+				years = 50
+				is_decaying = yes
+			} 
+		}
+		ai_chance = {
+			base = 10
 		}
 	}
 }

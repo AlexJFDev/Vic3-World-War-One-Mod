@@ -95,6 +95,11 @@
  entente_peace_deal.14.a:0 "A new nation will rise"
  entente_peace_deal.14.b:0 "Better stick with Serbia"
 
+ entente_peace_deal.15.t:0 "A Call For Pacifism"
+ entente_peace_deal.15.d:0 "The traumatism of the Great War is engraved"
+ entente_peace_deal.15.f:0 "The unprecedented amount of violence and death during the Great War has mobilized a lot those past years. The shock will remain for a century at least. Now the priority for many is to avoid another war, which calls for a change of legislation. The pacifist movement will be very influential, and we will surely have to accept some compromises."
+ entente_peace_deal.15.a:0 "We'll see what we can do."
+
  je_entente_peace_deal_round_1:0 "Treaty of Versailles - Round 1 : Germany's dislocation"
  je_entente_peace_deal_round_1_name:0 "Entente Peace Deal - Round 1"
  je_entente_peace_deal_round_1_reason:0 "The victors of the Entente have sent their delegations to Versailles to decide on the peace deal clauses. \n\n#variable [GetGlobalVariable( 'je_entente_peace_deal_participants_var' ).GetValue]#! [Concept('concept_great_power', '$concept_great_powers$')] are participating in the Conference.\n#bold #tooltippable #tooltip:partition_1_button_desc $partition_1_button$#!#!#! has received #variable [GetGlobalVariable( 'entente_deal_round_1_germany_dislocation_prop_1' ).GetValue]#! votes\n#bold #tooltippable #tooltip:partition_2_button_desc $partition_2_button$#!#!#! has received #variable [GetGlobalVariable( 'entente_deal_round_1_germany_dislocation_prop_2' ).GetValue]#! votes\n#bold #tooltippable #tooltip:partition_3_button_desc $partition_3_button$#!#!#! has received #variable [GetGlobalVariable( 'entente_deal_round_1_germany_dislocation_prop_3' ).GetValue]#! votes\n\nThe conference will conclude in #variable [GetGlobalVariable('entente_peace_deal_timer_round_1').GetValue]#! months. The proposal with the most votes then be selected as the resolution of the current negotiation's round."
