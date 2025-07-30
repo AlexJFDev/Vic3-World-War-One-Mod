@@ -985,7 +985,7 @@ germany_events.28 = { #Nazi takeover
     }
 }
 
-germany_events.29 = { #Policy choice
+germany_events.29 = { #Policy choice 
     type = country_event
 
     title = germany_events.29.t
@@ -1129,6 +1129,10 @@ germany_events.31 = { #Anschluss
         default_option = yes
         c:GER = {
             annex = c:AUS
+            trigger_event = {
+                id = germany_events.55
+                days = 5
+            }
         }
         ai_chance = {
             base = 10
@@ -1214,6 +1218,7 @@ germany_events.33 = { #Sudet Crisis UK response
     option = {
         name = germany_events.33.a
         default_option = yes
+        set_global_variable = uk_dont_support_czh
         c:FRA = {
           trigger_event = {
               id = germany_events.34
@@ -1226,7 +1231,14 @@ germany_events.33 = { #Sudet Crisis UK response
     }
 
     option = {
-        name = germany_events.32.b
+        name = germany_events.33.b
+        set_global_variable = uk_supports_czh
+        c:FRA = {
+          trigger_event = {
+              id = germany_events.34
+              days = 5
+            }
+        }
         ai_chance = {
             base = 0
         }
@@ -1263,7 +1275,11 @@ germany_events.34 = { #Sudet Crisis France response
             }
         }
         ai_chance = {
-            base = 10
+            base = 0
+            modifier = {
+				trigger = { has_global_variable = uk_dont_support_czh }
+				add = 10
+			}
         }
     }
 
@@ -1277,6 +1293,10 @@ germany_events.34 = { #Sudet Crisis France response
         }
         ai_chance = {
             base = 0
+            modifier = {
+				trigger = { has_global_variable = uk_supports_czh }
+				add = 10
+			}
         }
     }
 }
@@ -1323,6 +1343,17 @@ germany_events.35 = { #Sudet Crisis CZH response
 
     option = {
         name = germany_events.35.b
+        c:GER = {
+        create_diplomatic_play = {
+            name = germany_protectorate_czech
+
+            target_country = c:CZH
+
+            type = dp_make_protectorate
+
+            escalation = 0
+        }
+        }
         ai_chance = {
             base = 0
         }
@@ -1602,6 +1633,7 @@ germany_events.41 = { #Sudet crisis France threatens Germany
 
     option = {
         name = germany_events.41.b
+        trigger = { has_global_variable = uk_dont_support_czh }
         c:GER = {
         create_diplomatic_play = {
             name = germany_protectorate_czech
@@ -1613,6 +1645,28 @@ germany_events.41 = { #Sudet crisis France threatens Germany
             escalation = 0
 
             add_target_backers = { c:FRA }
+        }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = germany_events.41.b
+        trigger = { has_global_variable = uk_supports_czh }
+        c:GER = {
+        create_diplomatic_play = {
+            name = germany_protectorate_czech
+
+            target_country = c:CZH
+
+            type = dp_make_protectorate
+
+            escalation = 0
+
+            add_target_backers = { c:FRA }
+            add_target_backers = { c:GBR }
         }
         }
         ai_chance = {
@@ -1875,6 +1929,35 @@ germany_events.43 = { #Great depression recovery
         }
         ai_chance = {
             base = 0
+        }
+    }
+}
+
+germany_events.44 = { #Austria accepts annexion
+    type = country_event
+
+    title = germany_events.44.t
+    desc = germany_events.44.d
+    flavor = germany_events.44.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/sudet_crisis.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = germany_events.44.a
+        default_option = yes
+        ai_chance = {
+            base = 10
         }
     }
 }
