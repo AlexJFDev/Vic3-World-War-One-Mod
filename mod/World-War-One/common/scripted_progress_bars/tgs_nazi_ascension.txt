@@ -9,7 +9,7 @@ nazi_ascension_progress_bar = {
 	monthly_progress = {
 		if = {
 			limit = {
-				every_country = {
+				any_country = {
 					limit = {
                         country_rank >= rank_value:great_power
                         ruler = {
@@ -24,28 +24,13 @@ nazi_ascension_progress_bar = {
 			}
 			add = {
 				desc = "nazi_progress_from_global_fascism"
-				owner = {
-					every_country = {
-					limit = {
-                        country_rank >= rank_value:great_power
-                        ruler = {
-                            OR = {
-				                has_ideology = ideology:ideology_fascist
-				                has_ideology = ideology:ideology_reactionary
-                                has_ideology = ideology:ideology_integralist
-                            }
-                        }
-                    }
-					   add = 0.5
-				    }
-
-				}
+				value = 0.5
 			}
 		}
 
 		if = {
 			limit = {
-				every_country = {
+				any_country = {
 					limit = {
                            country_rank >= rank_value:great_power
                                OR = {
@@ -58,36 +43,9 @@ nazi_ascension_progress_bar = {
 			}
 			add = {
 				desc = "nazi_progress_from_global_communism"
-				owner = {
-					every_country = {
-					limit = {
-                             country_rank >= rank_value:great_power
-                               OR = {
-                                       has_law = law_type:law_council_republic
-                                       has_law = law_type:law_anarchism
-                                       has_law = law_type:law_cooperative_ownership
-                                    }
-                            }
-					   add = 0.5
-				    }
-				}
+				value = 1
 			}
 		}
-		
-    every_country = {
-		limit = {
-            country_rank >= rank_value:great_power
-            OR = {
-                has_law = law_type:law_council_republic
-                has_law = law_type:law_anarchism
-                has_law = law_type:law_cooperative_ownership
-            }
-        }
-		add = {
-			desc = "nazi_progress_from_global_communism"
-			value = 0.5
-		}
-    }
 
     if = {
         limit = {
@@ -137,6 +95,7 @@ nazi_ascension_progress_bar = {
 						is_political_movement_type = movement_reactionary
 						is_political_movement_type = movement_corporatist
 					}
+					political_movement_radicalism >= 0.3
 				}
 			}
 			add = {

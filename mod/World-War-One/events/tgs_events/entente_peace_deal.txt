@@ -132,6 +132,7 @@ entente_peace_deal.1 = { #Entente victory
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
+		   activate_law = law_type:law_armed_neutrality
 		   remove_primary_culture = hungarian
            remove_diplomatic_pact = {
 			   country = c:UKR
@@ -931,7 +932,6 @@ entente_peace_deal.1 = { #Entente victory
                 id = stabilization_buff_events.16
                 days = 5
             }
-			activate_law = law_type:law_armed_neutrality
         } 
 		c:HUN = {
             trigger_event = {
