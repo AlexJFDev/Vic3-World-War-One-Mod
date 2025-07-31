@@ -9,13 +9,12 @@
 	}
 
 	modifier = {
-      can_start_own_diplomatic_plays = no
-	  can_offer_to_become_in_sway_offers = no
 	  country_military_tech_research_speed_mult = -0.1
       country_military_goods_cost_mult = -0.3
 	  country_improve_relations_speed_mult = 0.8
 	  interest_group_ig_armed_forces_pol_str_mult = -0.8
 	  country_loan_interest_rate_mult = -0.4
+	  country_diplomatic_play_maneuvers_add = -300
 	}
 
 	pop_support = {
@@ -37,11 +36,11 @@ law_armed_neutrality = {
 	}
 
 	modifier = {
-       can_start_own_diplomatic_plays = no
        country_military_goods_cost_mult = -0.15
 	   country_improve_relations_speed_mult = 0.4
 	   interest_group_ig_armed_forces_pol_str_mult = -0.3
 	   country_loan_interest_rate_mult = -0.2
+	   country_diplomatic_play_maneuvers_add = -200
 	}
 
     pop_support = {
@@ -59,7 +58,7 @@ law_limited_interventionism = {
 	progressiveness = 0
 
 	modifier = {
-       country_diplomatic_play_maneuvers_add = -80 
+       country_diplomatic_play_maneuvers_add = -100 
 	   interest_group_ig_armed_forces_pol_str_mult = -0.1
 	}
 
