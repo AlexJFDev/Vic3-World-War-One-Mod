@@ -1602,6 +1602,16 @@ china_events.22 = { #Call to arms against Japan
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:JAP ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = sino_japan_war_diplo_play
+        }
+    }
+
     option = {
         name = china_events.22.a
         default_option = yes

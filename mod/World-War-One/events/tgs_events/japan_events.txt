@@ -233,6 +233,7 @@ japan_events.17 = {#The Showa era
 			limit = { has_variable = hirohito }
             set_ideology = ideology:ideology_jingoist_leader
 		} 
+        set_variable = jingoist_emperor
         ai_chance = {
 		  base = 10
 	    }
@@ -356,6 +357,7 @@ japan_events.17 = {#The Showa era
 			limit = { has_variable = hirohito }
             set_ideology = ideology:ideology_fascist
 		} 
+        set_variable = jingoist_emperor
         ai_chance = {
 		  base = 0
 	    }
@@ -396,15 +398,16 @@ japan_events.18 = {#Invasion of Manchuria
         texture = "gfx/event_pictures/taisho.dds"
     }
 
-    immediate = {
-        s:STATE_SOUTHERN_MANCHURIA = {
-            owner = {
-				save_scope_as = manchuria_owner
-			}
-		}
-    }
+    immediate = {}
 
-    trigger = {}
+    trigger = {
+        AND = {
+            exists = c:MCH
+            c:MCH = {
+               is_subject = no
+            }
+        }
+    }
 
     option = {
         name = japan_events.18.a
@@ -412,17 +415,11 @@ japan_events.18 = {#Invasion of Manchuria
         create_diplomatic_play = {
             name = japan_invades_manchuria
 
-            target_state = s:STATE_SOUTHERN_MANCHURIA.region_state:manchuria_owner
+            target_country = c:MCH
 
-            type = dp_conquer_state
+            type = dp_make_protectorate
 
             escalation = 0
-
-			add_war_goal = {
-                holder = c:JAP
-                type = conquer_state
-                target_state = s:STATE_SHENGJING.region_state:manchuria_owner
-            }
 		}
         ai_chance = {
 		  base = 10
@@ -495,7 +492,13 @@ japan_events.20 = {#Invasion of China response
         texture = "gfx/event_pictures/taisho.dds"
     }
 
-    immediate = {}
+    immediate = {
+        s:STATE_CHONGQING = {
+           random_scope_state = {
+		      set_state_owner = c:CHI
+            }
+        }
+    }
 
     trigger = {}
 
@@ -524,6 +527,7 @@ japan_events.20 = {#Invasion of China response
 			        country_has_primary_culture = cu:manchu
 			        country_has_primary_culture = cu:yue
 		        }
+                NOT = { c:CHI = THIS }
 				NOT = { is_subject_of = c:JAP }
             } 
             trigger_event = {

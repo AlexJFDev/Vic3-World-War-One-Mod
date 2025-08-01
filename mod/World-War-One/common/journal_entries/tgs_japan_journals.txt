@@ -1,26 +1,4 @@
-﻿je_taisho_era = {
-    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
-    group = je_group_internal_affairs
-
-    is_shown_when_inactive = {}
-    
-    possible = {}
-
-    immediate = {}
-
-    complete = {}
-
-    on_complete = {
-        trigger_event = { 
-           id = 
-           days = 
-        }
-    }
-
-    should_be_pinned_by_default = yes
-}
-
-je_showa_era = {
+﻿je_showa_era = {
     icon = "gfx/interface/icons/event_icons/japan_coa.dds"
     group = je_group_internal_affairs
 
@@ -30,13 +8,7 @@ je_showa_era = {
     }
     
     possible = {
-        ruler = {
-            OR = {
-				has_ideology = ideology:ideology_fascist
-				has_ideology = ideology:ideology_reactionary
-                has_ideology = ideology:ideology_jingoist_leader
-            }
-        }
+        has_variable = jingoist_emperor
     }
 
     immediate = {}
