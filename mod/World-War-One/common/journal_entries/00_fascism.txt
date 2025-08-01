@@ -51,12 +51,14 @@
 	}
 
 	is_shown_when_inactive = {
+		NOT = { has_variable = incoming_fascist_movement }
 		NOT = { has_variable = completed_fascism_1_var }
 		has_technology_researched = political_agitation
 		NOT = { is_country_type = decentralized }
 	}
 
 	possible = {
+		NOT = { has_variable = incoming_fascist_movement }
 		has_technology_researched = mass_propaganda
 		OR = {
 			any_interest_group = {
@@ -272,7 +274,7 @@
 	}
 
 	invalid = {
-		# pelly_says = no
+		has_variable = incoming_fascist_movement
 	}
 
 	weight = 10000
