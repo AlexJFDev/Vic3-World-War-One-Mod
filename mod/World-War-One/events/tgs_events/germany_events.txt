@@ -100,6 +100,25 @@ germany_events.2 = { #November Revolution
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { 
+                OR = {
+                    c:SER ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+					c:ITA ?= this 
+					c:USA ?= this 
+                } 
+               }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
+
+
     option = {
         name = germany_events.2.a
         activate_law = law_type:law_parliamentary_republic
@@ -109,11 +128,7 @@ germany_events.2 = { #November Revolution
         activate_law = law_type:law_racial_segregation
         activate_law = law_type:law_subordinate_general_staff
         activate_law = law_type:law_true_neutrality
-        every_diplomatic_play = {
-			limit = {
-				initiator_is = c:AUS
-				target_is = c:SER
-			}
+        scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:GER value = -200 }
 		}
         add_technology_progress = { progress = 5000 technology = political_agitation }
@@ -344,6 +359,24 @@ germany_events.6 = { #Austria-Hungary capitulates
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { 
+                OR = {
+                    c:SER ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+					c:ITA ?= this 
+					c:USA ?= this 
+                } 
+               }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = {
         name = germany_events.6.a
         default_option = yes
@@ -351,11 +384,7 @@ germany_events.6 = { #Austria-Hungary capitulates
             base = 100
         }
         set_variable = small_austria
-        every_diplomatic_play = {
-			limit = {
-				initiator_is = c:AUS
-				target_is = c:SER
-			}
+        scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:AUS value = -200 }
 		}
     }
@@ -437,17 +466,31 @@ germany_events.9 = { #Ottoman Empire capitulates
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { 
+                OR = {
+                    c:SER ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+					c:ITA ?= this 
+					c:USA ?= this 
+                } 
+               }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = {
         name = germany_events.9.a
         default_option = yes
          ai_chance = {
             base = 100
         }
-        every_diplomatic_play = {
-			limit = {
-				initiator_is = c:AUS
-				target_is = c:SER
-			}
+        scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:TUR value = -200 }
 		}
     }

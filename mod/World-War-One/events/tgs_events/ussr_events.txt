@@ -18,14 +18,28 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 
     trigger = {}
 
+	immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { 
+                OR = {
+                    c:SER ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+					c:ITA ?= this 
+					c:USA ?= this 
+                } 
+               }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = {
         name = ussr_events.1.a
         default_option = yes
-        every_diplomatic_play = {
-			limit = {
-				initiator_is = c:AUS
-				target_is = c:SER
-			}
+        scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:RUS value = -200 }
 		}
 		trigger_event = {
