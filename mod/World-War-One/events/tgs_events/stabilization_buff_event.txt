@@ -1218,6 +1218,30 @@ stabilization_buff_events.32 = {
 		}
         }   
     }
+
+    option = {
+        name = stabilization_buff_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:JAP
+            } 
+        }
+        c:JAP = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_japan
+            name = ai_fighters_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_KYUSHU
+				count = 30
+			}
+		}
+        }   
+    }
 }
 
 stabilization_buff_events.33 = { 
