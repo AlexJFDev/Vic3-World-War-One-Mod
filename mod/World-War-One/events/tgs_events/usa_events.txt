@@ -20,6 +20,10 @@ usa_events.1 = { #Finish the Panama Canal
 		custom_tooltip = panama_canal_construction_available
         set_variable = panama_survey_complete
         set_next_election_date = 1916.11.7
+        trigger_event = {
+            id = stabilization_buff_events.49
+            days = 5
+        }
     }
 }
 
@@ -85,7 +89,7 @@ usa_events.6 = { #Black Tuesday
         add_investment_pool = -100000000
         add_modifier = {
             name = great_depression_effect_1
-            years = 20
+            years = 25
             is_decaying = yes
         }
         add_modifier = {
@@ -122,6 +126,12 @@ usa_events.6 = { #Black Tuesday
                 days = 30
             }
         }
+        c:JAP = {
+            trigger_event = {
+                id = stabilization_buff_events.48
+                days = 60
+            }
+        }
         set_variable = great_depression_started
         ai_chance = {
 			base = 10
@@ -134,7 +144,7 @@ usa_events.6 = { #Black Tuesday
         add_investment_pool = -100000000
         add_modifier = {
             name = great_depression_effect_1
-            years = 20
+            years = 25
             is_decaying = yes
         }
         add_modifier = {
@@ -174,6 +184,12 @@ usa_events.6 = { #Black Tuesday
             trigger_event = {
                 id = usa_events.8
                 days = 30
+            }
+        }
+        c:JAP = {
+            trigger_event = {
+                id = stabilization_buff_events.48
+                days = 60
             }
         }
         set_variable = great_depression_started
@@ -234,7 +250,7 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
 
     icon = "gfx/interface/icons/event_icons/event_trade.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    duration = 3
+    duration = 1
 
     trigger = {}
 
