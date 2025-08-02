@@ -141,6 +141,10 @@ germany_events.2 = { #November Revolution
             id = stabilization_buff_events.45
             days = 5
         } 
+        trigger_event = {
+            id = germany_events.22
+            days = 5
+        }
         set_variable = incoming_fascist_movement
     }
 }
@@ -206,28 +210,12 @@ germany_events.4 = { #Communist uprising
     duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/german_revolution.dds"
-    }
-
-    immediate = { 
-        random_scope_character = {
-            limit = {
-               has_template = pol_rosa_luxemburg_character_template
-            }
-            save_scope_as = rosa_luxemburg
-        }
-        random_scope_character = {
-            limit = {
-               has_template = agitator_karl_liebknecht
-            }
-            save_scope_as = karl_liebknecht
-        }
+        texture = "gfx/event_pictures/german_communism.dds"
     }
 
     trigger = {}
 
-    option = {
-        name = germany_events.4.a
+    immediate = {
         create_country = { 
 			origin = root
 			tag = BAV
@@ -298,6 +286,22 @@ germany_events.4 = { #Communist uprising
 				provinces = { x5101A0 }
 			}
 		}
+        random_scope_character = {
+            limit = {
+               has_template = pol_rosa_luxemburg_character_template
+            }
+            save_scope_as = rosa_luxemburg
+        }
+        random_scope_character = {
+            limit = {
+               has_template = agitator_karl_liebknecht
+            }
+            save_scope_as = karl_liebknecht
+        }
+    }
+
+    option = {
+        name = germany_events.4.a
         c:GER = {
             trigger_event = {
                 id = stabilization_buff_events.14
@@ -326,7 +330,7 @@ germany_events.5 = { #Socialists reconcilates
     duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/weimar_government.dds"
+        texture = "gfx/event_pictures/german_communism.dds"
     }
 
     trigger = {}
@@ -532,8 +536,17 @@ germany_events.22 = { #Negotiation with Communists
           years = 5
           is_decaying = yes
         } 
+        add_modifier = {
+           name = revolution_stabilization_buff_3
+           years = 2
+           is_decaying = yes
+        } 
+        trigger_event = {
+            id = germany_events.4
+            days = 5
+        }
         ai_chance = {
-            base = 9
+            base = 10
         }
     }
 
@@ -541,8 +554,12 @@ germany_events.22 = { #Negotiation with Communists
         set_variable = socialist_negotiations_over
         name = germany_events.22.b
         activate_law = law_type:law_graduated_taxation
+        trigger_event = {
+			id = germany_events.5
+            days = 5
+		}
         ai_chance = {
-            base = 1
+            base = 0
         }
     }
 
@@ -550,6 +567,10 @@ germany_events.22 = { #Negotiation with Communists
         set_variable = socialist_negotiations_over
         name = germany_events.22.c
         activate_law = law_type:law_collectivized_agriculture
+        trigger_event = {
+			id = germany_events.5
+            days = 5
+		}
         ai_chance = {
             base = 0
         }
@@ -559,6 +580,10 @@ germany_events.22 = { #Negotiation with Communists
         set_variable = socialist_negotiations_over
         name = germany_events.22.e
         activate_law = law_type:law_command_economy
+        trigger_event = {
+			id = germany_events.5
+            days = 5
+		}
         ai_chance = {
             base = 0
         }
@@ -570,6 +595,10 @@ germany_events.22 = { #Negotiation with Communists
         activate_law = law_type:law_command_economy
         activate_law = law_type:law_collectivized_agriculture
         activate_law = law_type:law_graduated_taxation
+        trigger_event = {
+			id = germany_events.5
+            days = 5
+		}
         ai_chance = {
             base = 0
         }
