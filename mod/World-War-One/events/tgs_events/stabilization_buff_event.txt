@@ -1456,11 +1456,10 @@ stabilization_buff_events.38 = {
     option = {
         name = stabilization_buff_events.8.a
         default_option = yes
-        trigger = { is_player = no }
-        add_treasury = 100000000
+        add_treasury = 15000000
         add_modifier = {
 			name = starting_minting_buff_6_modifier
-            years = 20
+            years = 5
             is_decaying = yes
 		}
     }
@@ -1697,7 +1696,7 @@ stabilization_buff_events.46 = {
         trigger = { is_player = no }
         add_modifier = {
             name = army_nerf_modifier_2
-            years = 2
+            years = 3
             is_decaying = yes
         }
     }
