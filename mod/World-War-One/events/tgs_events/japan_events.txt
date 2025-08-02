@@ -395,7 +395,7 @@ japan_events.18 = {#Invasion of Manchuria
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/taisho.dds"
+        texture = "gfx/event_pictures/warlord_china.dds"
     }
 
     immediate = {}
@@ -442,7 +442,7 @@ japan_events.19 = {#Invasion of China inititation
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/taisho.dds"
+        texture = "gfx/event_pictures/warlord_china.dds"
     }
 
     immediate = {}
@@ -484,12 +484,12 @@ japan_events.20 = {#Invasion of China response
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/taisho.dds"
+        texture = "gfx/event_pictures/warlord_china.dds"
     }
 
     immediate = {
         s:STATE_CHONGQING = {
-           random_scope_state = {
+            random_scope_state = {
 		      set_state_owner = c:CHI
             }
         }
@@ -543,6 +543,12 @@ japan_events.20 = {#Invasion of China response
 
 	option = {
         name = japan_events.20.b
+        c:JAP = {
+		    create_diplomatic_pact = {
+			  country = c:CHI
+			  type = protectorate
+		    }	
+		}
         ai_chance = {
 		  base = 0
 	    }
@@ -562,15 +568,17 @@ japan_events.21 = {#USA reacts to sino-japan war
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/taisho.dds"
+        texture = "gfx/event_pictures/warlord_china.dds"
     }
 
     immediate = {
-        s:STATE_CHONGQING = {
-            owner = {
-				save_scope_as = chongqing_owner
-			}
-		}
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:JAP ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = sino_japan_war_diplo_play
+        }
     }
 
     trigger = {}
@@ -656,10 +664,18 @@ japan_events.22 = {#Japan attacks USA and western nations
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/taisho.dds"
+        texture = "gfx/event_pictures/warlord_china.dds"
     }
 
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:JAP ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = sino_japan_war_diplo_play
+        }
+    }
 
     trigger = {}
 

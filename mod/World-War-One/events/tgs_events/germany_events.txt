@@ -933,6 +933,10 @@ germany_events.28 = { #Nazi takeover
 			}
 		}
         trigger_event = {
+                id = stabilization_buff_events.22
+                days = 5
+            }
+        trigger_event = {
                 id = germany_events.29
                 days = 5
             }
@@ -1604,7 +1608,7 @@ germany_events.40 = { #Rhineland restitution
     }
 }
 
-germany_events.41 = { #Sudet crisis France threatens Germany
+germany_events.41 = { #Sudet crisis allies threatens Germany
     type = country_event
 
     title = germany_events.41.t
@@ -1805,7 +1809,6 @@ germany_events.43 = { #Great depression recovery
 
     option = {
         name = germany_events.43.b
-        default_option = yes
         trigger = { is_player = yes }
         add_modifier = {
           name = germany_economic_recovery_2
@@ -1831,7 +1834,6 @@ germany_events.43 = { #Great depression recovery
 
     option = {
         name = germany_events.43.c
-        default_option = yes
         trigger = { is_player = yes }
         add_modifier = {
           name = germany_economic_recovery_3
@@ -1883,7 +1885,6 @@ germany_events.43 = { #Great depression recovery
 
     option = {
         name = germany_events.43.b
-        default_option = yes
         trigger = { is_player = no }
         add_modifier = {
           name = germany_economic_recovery_2
@@ -1909,7 +1910,6 @@ germany_events.43 = { #Great depression recovery
 
     option = {
         name = germany_events.43.c
-        default_option = yes
         trigger = { is_player = no }
         add_modifier = {
           name = germany_economic_recovery_3

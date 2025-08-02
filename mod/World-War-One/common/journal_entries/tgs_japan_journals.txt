@@ -1,4 +1,4 @@
-﻿je_showa_era = {
+﻿je_japan_expansion = {
     icon = "gfx/interface/icons/event_icons/japan_coa.dds"
     group = je_group_internal_affairs
 
@@ -35,7 +35,7 @@
     should_be_pinned_by_default = yes
 }
 
-dragon_and_eagle = {
+je_dragon_and_eagle = {
     icon = "gfx/interface/icons/event_icons/japan_coa.dds" 
     group = je_group_internal_affairs
 
@@ -53,6 +53,12 @@ dragon_and_eagle = {
 				has_ideology = ideology:ideology_reactionary
                 has_ideology = ideology:ideology_jingoist_leader
             }
+        }
+        c:USA = {
+            has_diplomatic_pact = {
+				who = c:JAP
+				type = embargo
+			}
         }
     }
 

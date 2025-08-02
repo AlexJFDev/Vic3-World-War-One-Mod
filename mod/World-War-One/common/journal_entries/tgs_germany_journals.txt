@@ -6,6 +6,7 @@
         exists = c:GER
         THIS = c:GER
         has_variable = central_powers_participant
+        NOT = { has_global_variable = world_war_1_over }
     }
     
     possible = {
@@ -14,6 +15,7 @@
         has_variable = central_powers_participant
         root.average_sol < 16
         is_at_war = yes
+        NOT = { has_global_variable = world_war_1_over }
     }
 
     complete = {
@@ -317,7 +319,7 @@ je_new_germany = {
     possible = {
         OR = {
             has_law = law_type:law_council_republic
-            has_global_variable = hitler_rise_to_power
+            has_global_variable = hitler_rise_to_power_local
             c:GER = {
                 ruler = {
                 OR = {
@@ -362,7 +364,7 @@ je_western_crusade = {
     
     possible = {
         OR = {
-            has_global_variable = hitler_rise_to_power
+            has_global_variable = hitler_rise_to_power_local
             c:GER = {
                 ruler = {
                 OR = {
@@ -377,9 +379,10 @@ je_western_crusade = {
     immediate = {}
 
     complete = {
-        game_date > 1939.8.15
+        game_date > 1939.7.1
         is_at_war = no
         average_sol > average_expected_sol
+        has_technology_researched = blitzkrieg_tech
         any_political_movement = {
             is_insurrectionary = no
         }
@@ -418,7 +421,7 @@ je_eastern_crusade = {
     
     possible = {
         OR = {
-            has_global_variable = hitler_rise_to_power
+            has_global_variable = hitler_rise_to_power_local
             c:GER = {
                 ruler = {
                 OR = {
@@ -428,12 +431,15 @@ je_eastern_crusade = {
                 }
             }
         }
+        c:RUS = {
+            has_law = law_type:law_council_republic
+        }
     }
 
     immediate = {}
 
     complete = {
-        game_date > 1941.6.1
+        game_date > 1941.4.1
         has_strategic_adjacency = c:RUS
         average_sol > average_expected_sol
         any_political_movement = {
@@ -463,7 +469,7 @@ je_poland_partition = {
     
     possible = {
         OR = {
-            has_global_variable = hitler_rise_to_power
+            has_global_variable = hitler_rise_to_power_local
             c:GER = {
                 ruler = {
                 OR = {

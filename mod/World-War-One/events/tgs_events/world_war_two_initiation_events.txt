@@ -202,7 +202,13 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:GER ?= this }
-              target = { c:POL ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_two_diplo_play
         }
@@ -218,11 +224,6 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
         name = world_war_two_initiation_events.4.a
         default_option = yes
         trigger = { is_player = no }
-        add_modifier = {
-          name = nazi_germany_army_buff_1
-          years = 1
-          is_decaying = yes
-        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:DEN
@@ -242,11 +243,6 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
         name = world_war_two_initiation_events.4.b
         default_option = yes
         trigger = { is_player = no }
-        add_modifier = {
-          name = nazi_germany_army_buff_1
-          years = 1
-          is_decaying = yes
-        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:DEN
@@ -282,7 +278,13 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:GER ?= this }
-              target = { c:FRA ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_two_diplo_play
         }
@@ -306,7 +308,10 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL
-            }  
+            } 
+            add_target_backers = {
+                c:LUX
+            }   
             add_target_backers = {
                 c:NET
             }
@@ -332,6 +337,9 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                 c:BEL
             }  
             add_target_backers = {
+                c:LUX
+            } 
+            add_target_backers = {
                 c:NET
             }
 		}
@@ -342,7 +350,6 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         }
     }
 
-   
     option = {
         name = world_war_two_initiation_events.5.b
         default_option = yes
@@ -356,6 +363,9 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
 			add_target_backers = {
                 c:BEL
             }  
+            add_target_backers = {
+                c:LUX
+            } 
 		}
         c:BEL = { set_variable = allies_participant }
         ai_chance = {
@@ -377,6 +387,9 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
 			add_target_backers = {
                 c:BEL
             }  
+            add_target_backers = {
+                c:LUX
+            } 
 		}
         c:BEL = { set_variable = allies_participant }
         ai_chance = {
@@ -408,7 +421,13 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:GER ?= this }
-              target = { c:GBR ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_two_diplo_play
         }
@@ -496,7 +515,13 @@ world_war_two_initiation_events.7 = { #WW2 initiation Romania and Finland joins 
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:GER ?= this }
-              target = { c:GBR ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_two_diplo_play
         }
@@ -546,7 +571,13 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:GER ?= this }
-              target = { c:GBR ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_two_diplo_play
         }
