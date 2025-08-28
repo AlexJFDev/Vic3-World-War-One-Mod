@@ -4785,13 +4785,26 @@ types military_formation_panel_types
 
 			flowcontainer = {
 				direction = horizontal
-				spacing = 10
+				spacing = 6
 
 				# Veterancy
 				icon = {
 					size = { 23 23 }
 					texture = "[CombatUnit.GetCurrentVeterancyLevelIcon]"
 					tooltip = "COMBAT_UNIT_VETERANCY_TOOLTIP"
+					parentanchor = vcenter
+				}
+
+				# Veterancy Experience
+				white_progressbar_vertical = {
+					size = { 6 20 }
+					
+					blockoverride "values" {
+						min = 0
+						max = "[CombatUnit.GetNeededExperienceForNextLevel]"
+						value = "[CombatUnit.GetCurrentExperienceTowardsNextLevel]"
+					}
+
 					parentanchor = vcenter
 				}
 				

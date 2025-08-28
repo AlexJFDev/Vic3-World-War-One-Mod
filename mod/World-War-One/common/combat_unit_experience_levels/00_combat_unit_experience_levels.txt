@@ -1,0 +1,63 @@
+﻿no_veterancy = {
+	level = 0
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/no_veterancy.dds"
+	unit_modifier = {
+        unit_offense_mult = -0.2
+        unit_defense_mult = -0.2
+		unit_kill_rate_add = -0.2
+		unit_recovery_rate_add = -0.2
+		unit_convoy_defense_mult = -0.2
+		unit_convoy_raiding_mult = -0.2
+		unit_blockade_mult = -0.2
+	}
+}
+
+veterancy1 = {
+	level = 1
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/veterancy1.dds"
+	needed_experience = 200 #Default: 100 / 100
+}
+
+veterancy2 = {
+	level = 2
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/veterancy2.dds"
+	needed_experience = 1000 #Default: 100 / 200
+	unit_modifier = {
+        unit_offense_mult = 0.1
+        unit_defense_mult = 0.1
+		unit_convoy_defense_mult = 0.1
+		unit_convoy_raiding_mult = 0.1
+		unit_blockade_mult = 0.1
+	}
+}
+
+veterancy3 = {
+	level = 3
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/veterancy3.dds"
+	needed_experience = 5000 #Default: 200 / 400
+	unit_modifier = {
+        unit_offense_mult = 0.25
+        unit_defense_mult = 0.25
+		unit_kill_rate_add = 0.1
+		unit_convoy_defense_mult = 0.25
+		unit_convoy_raiding_mult = 0.25
+		unit_blockade_mult = 0.25
+		unit_morale_damage_mult = 0.25
+	}
+}
+
+veterancy4 = {
+	level = 4
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/veterancy4.dds"
+	needed_experience = 10000 #Default: 400 / 800
+	unit_modifier = {
+        unit_offense_mult = 0.5
+        unit_defense_mult = 0.5
+		unit_kill_rate_add = 0.2
+		unit_convoy_defense_mult = 0.5
+		unit_convoy_raiding_mult = 0.5
+		unit_blockade_mult = 0.5
+		unit_morale_damage_mult = 0.5
+		unit_recovery_rate_add = 0.2
+	}
+}
