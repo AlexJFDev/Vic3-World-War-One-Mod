@@ -131,13 +131,13 @@ persia_events.3 = {
     trigger = {}
 
     immediate = { 
-      remove_modifier = persia_weak_government 
+        remove_modifier = persia_weak_government 
         add_modifier = {
          name = revolution_stabilization_buff_2
          years = 5
          is_decaying = yes
         }
-      random_scope_character = {
+        random_scope_character = {
             limit = {
                has_template = per_riza_pahlevi_character_template
             }
@@ -155,10 +155,6 @@ persia_events.3 = {
             set_character_as_ruler = yes
 		}
         set_variable = pahlevi_takeover
-        activate_law = law_type:law_monarchy
-		activate_law = law_type:law_autocracy
-		activate_law = law_type:law_unitary
-		activate_law = law_type:law_censorship
         ai_chance = {
 			base = 1
 		}
@@ -166,29 +162,13 @@ persia_events.3 = {
 
     option = {
         name = persia_events.3.b
-        activate_law = law_type:law_presidential_republic
-		activate_law = law_type:law_census_voting
-		activate_law = law_type:law_right_of_assembly
-        ai_chance = {
-			base = 0
+        scope:riza_pahlevi_scope = {
+			remove_character_role = general
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+            set_character_as_ruler = yes
 		}
-    }
-
-    option = {
-        name = persia_events.3.c
-        trigger = { 
-          OR = {
-           c:RUS = {
-               has_law = law_type:law_council_republic
-            }
-           c:TUR = {
-               has_law = law_type:law_council_republic
-            }
-          }
-        }
-        activate_law = law_type:law_council_republic
-		activate_law = law_type:law_single_party_state
-		activate_law = law_type:law_command_economy
+        activate_law = law_type:law_presidential_republic
         ai_chance = {
 			base = 0
 		}

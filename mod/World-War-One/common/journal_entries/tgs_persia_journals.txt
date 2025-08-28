@@ -45,13 +45,14 @@
         }
     }
 
+    invalid = {
+        NOT = {
+            has_law = law_type:law_monarchy
+        }
+    }
+
     fail = {
-       OR = { 
         is_subject = yes
-        any_civil_war = {
-			civil_war_progress >= 0.75
-		}
-       }
     }
 
     on_fail = {
@@ -59,11 +60,15 @@
            id = persia_events.3
            days = 5
         }
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
+    }
+
+    on_timeout = {
+        trigger_event = { 
+           id = persia_events.3
+           days = 5
+        }
     }
     
-    timeout = 3650
+    timeout = 4600
     should_be_pinned_by_default = yes
 }
