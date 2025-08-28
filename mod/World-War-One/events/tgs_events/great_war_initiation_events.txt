@@ -1348,6 +1348,16 @@ great_war_initiation_events.17 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { c:SER ?= this }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = { # Intervene
         name = great_war_initiation_events.17.a
         default_option = yes
