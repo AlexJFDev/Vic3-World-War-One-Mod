@@ -106,8 +106,8 @@ persia_events.2 = {
         name = persia_events.2.a
         default_option = yes
         add_modifier = {
-          name = persia_weak_government
-          years = 20
+          name = persia_weak_government_1
+          years = 12
           is_decaying = yes
         }
     }
@@ -124,17 +124,17 @@ persia_events.3 = {
     desc = persia_events.3.d
     flavor = persia_events.3.f
 
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     duration = 3
 
     trigger = {}
 
     immediate = { 
-        remove_modifier = persia_weak_government 
+        remove_modifier = persia_weak_government_1 
         add_modifier = {
          name = revolution_stabilization_buff_2
-         years = 5
+         years = 2
          is_decaying = yes
         }
         random_scope_character = {
@@ -154,6 +154,11 @@ persia_events.3 = {
             set_as_interest_group_leader = yes
             set_character_as_ruler = yes
 		}
+        add_modifier = {
+         name = persia_new_dynasty
+         years = 10
+         is_decaying = yes
+        }
         set_variable = pahlevi_takeover
         ai_chance = {
 			base = 1
@@ -169,6 +174,23 @@ persia_events.3 = {
             set_character_as_ruler = yes
 		}
         activate_law = law_type:law_presidential_republic
+        add_modifier = {
+         name = persia_new_dynasty
+         years = 10
+         is_decaying = yes
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = persia_events.3.c
+        add_modifier = {
+         name = persia_weak_government_2
+         years = 5
+         is_decaying = yes
+        }
         ai_chance = {
 			base = 0
 		}
