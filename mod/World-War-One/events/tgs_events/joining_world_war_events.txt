@@ -1492,6 +1492,22 @@ joining_world_war_events.40 = { #Joining the Allies
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
+
     option = {
         name = joining_world_war_events.40.a
         default_option = yes
@@ -1531,6 +1547,22 @@ joining_world_war_events.41 = { #Joining the Axis
     }
 
     trigger = {}
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     option = {
         name = joining_world_war_events.41.a
