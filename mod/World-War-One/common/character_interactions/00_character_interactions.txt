@@ -141,14 +141,6 @@ grant_leadership_to_agitator = {
 			is_female = no
 			scope:actor ?= { has_law = law_type:law_womens_suffrage }
 		}
-		custom_tooltip = {
-			text = grant_leadership_must_be_pressured_ig
-			political_movement ?= {
-				any_influenced_interest_group = {
-					this = root.interest_group
-				}
-			}
-		}
 	}
 
 	effect = {
