@@ -1959,6 +1959,34 @@ stabilization_buff_events.52 = {
     }
 }
 
+stabilization_buff_events.53 = {
+    type = country_event
+
+    title = stabilization_buff_events.8.t
+    desc = stabilization_buff_events.8.d
+    flavor = stabilization_buff_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.8.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = japan_ai_buff
+            years = 30
+            is_decaying = yes
+		}   
+    }
+}
+
 stabilization_buff_events.60 = {
     type = country_event
 
