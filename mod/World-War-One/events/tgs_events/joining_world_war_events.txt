@@ -1474,6 +1474,29 @@ joining_world_war_events.29 = { #Mexico receives zimmermann telegram
     }
 }
 
+joining_world_war_events.39 = { #Debate initiation
+    type = country_event
+
+    title = joining_world_war_events.39.t
+    desc = joining_world_war_events.39.d
+    flavor = joining_world_war_events.39.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/ww2.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = joining_world_war_events.39.a
+    }
+}
+
 joining_world_war_events.40 = { #Joining the Allies
     type = country_event
 
@@ -1487,7 +1510,7 @@ joining_world_war_events.40 = { #Joining the Allies
     duration = 24
     
     event_image = {
-        texture = "gfx/event_pictures/politics_europe.dds"
+        texture = "gfx/event_pictures/allies.dds"
     }
 
     trigger = {}
@@ -1543,7 +1566,7 @@ joining_world_war_events.41 = { #Joining the Axis
     duration = 24
     
     event_image = {
-        texture = "gfx/event_pictures/politics_europe.dds"
+        texture = "gfx/event_pictures/axis.dds"
     }
 
     trigger = {}

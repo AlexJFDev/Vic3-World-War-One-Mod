@@ -107,7 +107,9 @@ je_joining_world_war_two = {
        is_revolutionnary = no
 	}
 
-    immediate = {}
+    immediate = {
+		trigger_event = { id = joining_world_war_events.39 popup = yes }
+    }
 
     scripted_progress_bar = join_allies_progress_bar
 	scripted_progress_bar = join_axis_progress_bar
