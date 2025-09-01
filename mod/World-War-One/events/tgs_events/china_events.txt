@@ -760,6 +760,10 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+                id = china_events.23
+                years = 18
+            }
         }
         c:MCH = {
             trigger_event = {
@@ -768,10 +772,6 @@ china_events.5 = { #China collapse
             }
             trigger_event = {
                 id = china_events.7
-                days = 5
-            }
-            trigger_event = {
-                id = china_events.23
                 days = 5
             }
         }
@@ -1077,7 +1077,7 @@ china_events.7 = { #Policy choice
 			add_claim = ROOT
 		}
         ai_chance = {
-		  base = 20
+		  base = 25
 	    }
     }
     
@@ -1110,7 +1110,7 @@ china_events.7 = { #Policy choice
 			add_claim = ROOT
 		}
         ai_chance = {
-		  base = 20
+		  base = 25
 	    }
     }
 
@@ -1148,8 +1148,9 @@ china_events.7 = { #Policy choice
 			}
 			add_claim = ROOT
 		}
+        set_global_variable = communist_china_spawned
         ai_chance = {
-		  base = 5
+		  base = 0
 	    }
     }
 }
@@ -1625,6 +1626,66 @@ china_events.22 = { #Call to arms against Japan
 
     option = {
         name = china_events.22.b
+        ai_chance = {
+		base = 0
+	    }
+    }
+}
+
+china_events.23 = { #Shanxi becomes Communist
+    type = country_event
+
+    title = china_events.23.t
+    desc = china_events.23.d
+    flavor = china_events.23.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/warlord_china.dds"
+    }
+
+    trigger = {
+        NOT = {
+            has_global_variable = communist_china_spawned
+        }
+    }
+
+    option = {
+        name = china_events.23.a
+        default_option = yes
+        trigger = {
+            NOT = {
+               has_global_variable = communist_china_spawned
+            }
+        }
+        activate_law = law_type:law_council_republic
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_outlawed_dissent
+        activate_law = law_type:law_command_economy
+        activate_law = law_type:law_collectivized_agriculture
+        activate_law = law_type:law_womens_suffrage
+        activate_law = law_type:law_state_atheism
+        activate_law = law_type:law_compulsory_primary_school
+            add_modifier = {
+			  name = dictatorship_of_proletariat
+              years = 30
+              is_decaying = yes
+		    }
+            add_modifier = {
+              name = defeated_elites_modifier
+              years = 30
+            }
+        ai_chance = {
+		base = 10
+	    }
+	}
+
+    option = {
+        name = china_events.23.b
         ai_chance = {
 		base = 0
 	    }
