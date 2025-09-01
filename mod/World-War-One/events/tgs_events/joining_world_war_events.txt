@@ -1523,7 +1523,9 @@ joining_world_war_events.40 = { #Joining the Allies
                 OR = {
                     c:POL ?= this
                     c:FRA ?= this 
-                    c:GBR ?= this 
+                    c:GBR ?= this
+                    c:USA ?= this
+                    c:RUS ?= this   
                 } 
                }
 		    }
@@ -1534,7 +1536,7 @@ joining_world_war_events.40 = { #Joining the Allies
     option = {
         name = joining_world_war_events.40.a
         default_option = yes
-        set_variable = entente_participant
+        set_variable = allies_participant
         scope:world_war_two_diplo_play = {
             add_target_backers = {
 				who = root
@@ -1580,6 +1582,8 @@ joining_world_war_events.41 = { #Joining the Axis
                     c:POL ?= this
                     c:FRA ?= this 
                     c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
                 } 
                }
 		    }
@@ -1590,7 +1594,7 @@ joining_world_war_events.41 = { #Joining the Axis
     option = {
         name = joining_world_war_events.41.a
         default_option = yes
-        set_variable = central_powers_participant
+        set_variable = axis_participant
         scope:world_war_two_diplo_play = {
           add_initiator_backers = {
                 who = root

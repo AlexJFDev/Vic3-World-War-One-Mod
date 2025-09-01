@@ -148,10 +148,18 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
     duration = 3
     
     immediate = {
-        any_diplomatic_play = {
+        random_diplomatic_play = {
            limit = {
-			  initiator = c:GER
-              target = c:POL
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
+                } 
+               }
 		    }
            save_scope_as = world_war_two_diplo_play
         }
@@ -207,6 +215,8 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
                     c:POL ?= this
                     c:FRA ?= this 
                     c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
                 } 
                }
 		    }
@@ -283,6 +293,8 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                     c:POL ?= this
                     c:FRA ?= this 
                     c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
                 } 
                }
 		    }
@@ -426,6 +438,8 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
                     c:POL ?= this
                     c:FRA ?= this 
                     c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
                 } 
                }
 		    }
@@ -520,6 +534,8 @@ world_war_two_initiation_events.7 = { #WW2 initiation Romania and Finland joins 
                     c:POL ?= this
                     c:FRA ?= this 
                     c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
                 } 
                }
 		    }
@@ -576,6 +592,8 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
                     c:POL ?= this
                     c:FRA ?= this 
                     c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
                 } 
                }
 		    }
