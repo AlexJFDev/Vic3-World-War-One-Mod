@@ -154,6 +154,10 @@ persia_events.3 = {
             set_as_interest_group_leader = yes
             set_character_as_ruler = yes
 		}
+        any_character = {
+            limit = { is_heir = yes }
+            kill_character = yes
+        }
         add_modifier = {
          name = persia_new_dynasty
          years = 20
