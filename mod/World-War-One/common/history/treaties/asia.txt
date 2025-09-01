@@ -114,6 +114,44 @@
 		}
 	}
 
+	# Anglo-Russian Convention (1907) part 1
+	create_treaty = {
+		name = treaty_name_anglo_russian_afghanistan_agreement
+		first_country = c:GBR
+		second_country = c:AFG
+
+		is_draft = no
+		entered_into_force_on = 1907.8.31
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{
+				article = guarantee_independence
+				source_country = c:GBR
+				target_country = c:AFG
+			}
+		}
+	}
+
+	# Anglo-Russian Convention (1907) part 1
+	create_treaty = {
+		name = treaty_name_anglo_russian_afghanistan_agreement
+		first_country = c:RUS
+		second_country = c:AFG
+
+		is_draft = no
+		entered_into_force_on = 1907.8.31
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{
+				article = guarantee_independence
+				source_country = c:RUS
+				target_country = c:AFG
+			}
+		}
+	}
+
 	# Anglo-French Siam Agreement (1907) part 1
 	create_treaty = {
 		name = treaty_name_anglo_french_siam_agreement
