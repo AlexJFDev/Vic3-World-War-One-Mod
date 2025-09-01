@@ -243,6 +243,12 @@ entente_peace_deal.1 = { #Entente victory
             }
         }
 		c:GER = {
+            trigger_event = {
+                id = stabilization_buff_events.25
+                days = 5
+            }
+        }
+		c:GER = {
         create_bidirectional_truce = { 
             country = c:GBR 
             years = 20
