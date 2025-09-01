@@ -227,7 +227,7 @@ germany_events.4 = { #Communist uprising
                 activate_law = law_type:law_command_economy
                 activate_law = law_type:law_collectivized_agriculture
                 activate_law = law_type:law_womens_suffrage
-                activate_law = law_type:law_state_religion	
+                activate_law = law_type:law_state_atheism	
                 create_diplomatic_play = {
 		           target_country = c:GER
 		           type = dp_revolution
@@ -308,11 +308,17 @@ germany_events.4 = { #Communist uprising
                 days = 90
             }
         }
+        c:BAV = {
+            trigger_event = {
+                id = stabilization_buff_events.60
+                days = 5
+            }
+        }
         scope:pol_rosa_luxemburg_character_template = {
-			transfer_character = c:BAV
+			kill_character = yes
 		}
         scope:agitator_karl_liebknecht = {
-			transfer_character = c:BAV
+			kill_character = yes
 		}  
     }
 }

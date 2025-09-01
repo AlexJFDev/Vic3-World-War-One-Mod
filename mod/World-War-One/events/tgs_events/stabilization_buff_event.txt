@@ -1958,3 +1958,41 @@ stabilization_buff_events.52 = {
 		}
     }
 }
+
+stabilization_buff_events.60 = {
+    type = country_event
+
+    title = stabilization_buff_events.8.t
+    desc = stabilization_buff_events.8.d
+    flavor = stabilization_buff_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.8.a
+        default_option = yes
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 2
+            is_decaying = yes
+		}
+        create_character = {
+			template = pol_rosa_luxemburg_character_template
+        }
+        create_character = {
+			template = agitator_karl_liebknecht
+            on_created = {
+                remove_character_role = agitator
+		        add_character_role = politician
+                add_character_role = ruler
+            }
+        }
+    }
+}
