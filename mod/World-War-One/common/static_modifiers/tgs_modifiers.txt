@@ -597,11 +597,18 @@ starting_sol_buff = {
    state_upper_strata_standard_of_living_add = 2
 }
 
-starting_sol_nerf = {
+starting_sol_nerf_1 = {
    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
    state_lower_strata_standard_of_living_add = -5
    state_middle_strata_standard_of_living_add = -5
    state_upper_strata_standard_of_living_add = -5
+}
+
+starting_sol_nerf_2 = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+   state_lower_strata_standard_of_living_add = -3
+   state_middle_strata_standard_of_living_add = -3
+   state_upper_strata_standard_of_living_add = -3
 }
 
 great_depression_recovering_1 = {
@@ -938,4 +945,9 @@ peace_promise_broken = {
 trade_unions_nerf = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
     interest_group_ig_trade_unions_pol_str_mult = -2
+}
+
+great_power_nerf_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    state_construction_mult = -0.5
 }

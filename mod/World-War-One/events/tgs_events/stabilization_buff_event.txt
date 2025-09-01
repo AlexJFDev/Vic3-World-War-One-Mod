@@ -1356,6 +1356,7 @@ stabilization_buff_events.35 = {
         every_country = {
 			limit = {
 				country_rank < rank_value:major_power 
+                NOT = { c:BIC ?= this }
 			}
             trigger_event = {
                 id = stabilization_buff_events.36
@@ -1869,7 +1870,7 @@ stabilization_buff_events.50 = {
         name = stabilization_buff_events.8.a
         default_option = yes
         add_modifier = {
-            name = starting_sol_nerf
+            name = starting_sol_nerf_1
             years = 10
             is_decaying = yes
         }
@@ -1877,5 +1878,83 @@ stabilization_buff_events.50 = {
             id = stabilization_buff_events.26
             days = 30
         }
+    }
+}
+
+stabilization_buff_events.51 = { 
+    type = country_event
+
+    title = stabilization_buff_events.8.t
+    desc = stabilization_buff_events.8.d
+    flavor = stabilization_buff_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.8.a
+        trigger = { is_player = no }
+        default_option = yes
+        add_modifier = {
+            name = great_power_nerf_1
+            years = 30
+            is_decaying = yes
+        }
+        add_treasury = -800000000
+    }
+}
+
+stabilization_buff_events.52 = {
+    type = country_event
+
+    title = stabilization_buff_events.8.t
+    desc = stabilization_buff_events.8.d
+    flavor = stabilization_buff_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = stabilization_buff_events.8.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 3
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = starting_sol_nerf_2
+            years = 10
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = stabilization_buff_events.8.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 1
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = starting_sol_nerf_2
+            years = 20
+            is_decaying = yes
+		}
     }
 }
