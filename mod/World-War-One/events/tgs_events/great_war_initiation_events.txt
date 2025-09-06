@@ -1079,6 +1079,11 @@ great_war_initiation_events.14 = {
                 days = 5
             }
         }
+        add_modifier = {
+            name = schlieffen_plan_2_modifier
+            months = 10
+            is_decaying = yes
+        }
         scope:world_war_one_diplo_play = {
             add_target_backers = { c:BEL }
             add_target_backers = { c:LUX }
