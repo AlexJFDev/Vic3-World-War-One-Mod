@@ -52,17 +52,31 @@ dev_events.2 = {
             years = 4
             is_decaying = yes
 		}
-    }
+        c:GER = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_rhine
+            name = ger_army_help
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_NORTH_RHINE
+				count = 100
+			}
 
-    option = {
-        name = dev_events.2.a
-        default_option = yes
-        trigger = { is_player = yes }
-        add_modifier = {
-			name = army_buff_modifier_2
-            years = 4
-            is_decaying = yes
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_RUHR
+				count = 100
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_ALSACE_LORRAINE
+				count = 100
+			}
 		}
+        }   
     }
 }
 
