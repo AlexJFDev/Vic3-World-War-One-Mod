@@ -322,6 +322,13 @@ turkey_events.8 = { #Arab uprising
 		      set_state_owner = c:HDJ
             }
         }
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { c:SER ?= this }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
     }
 
     option = { 
@@ -332,29 +339,12 @@ turkey_events.8 = { #Arab uprising
                 id = dev_events.28
                 days = 5
             }
-            create_diplomatic_play = {
-            name = arab_revolt
-
-            target_country = c:TUR
-
-            type = dp_independence
-
-            escalation = 85
-            
-            add_war_goal = {
-                holder = c:TUR
-                type = annex_country
-                target_country : c:HDJ
-            }
-            
-            add_initiator_backers = {
-                c:GBR
-            }
-            add_target_backers = {
-                c:GER
-            }
-            }
         }
+        scope:world_war_one_diplo_play = {
+			add_target_backers = {
+				c:HDJ
+			}
+        }    
         ai_chance = {
 		  base = 10
 	    }
