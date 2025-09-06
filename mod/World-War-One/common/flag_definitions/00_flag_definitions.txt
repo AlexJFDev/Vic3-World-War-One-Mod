@@ -1932,6 +1932,29 @@ CHE = { # Cherokee
 }
 
 CHI = { # China
+    flag_definition = {
+		coa = CHI_republic
+		subject_canton = CHI_republic
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = { 
+			game_date < 1930.1.1
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+			}
+		}
+	}	
+	flag_definition = {
+		coa = CHI_dictatorship
+		subject_canton = CHI_dictatorship
+		priority = 100
+		trigger = { 
+			game_date > 1930.1.1
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+			}
+		}
+	}
 	flag_definition = {
 		coa = CHI_han_empire
 		coa_with_overlord_canton = CHI_han_empire
@@ -1944,13 +1967,6 @@ CHI = { # China
 		}
 	}
 	flag_definition = {
-		coa = CHI_republic
-		subject_canton = CHI_republic
-		coa_with_overlord_canton = CHI_subject
-		allow_overlord_canton = yes		
-		priority = 1
-	}
-	flag_definition = {
 		coa = CHI_absolute_monarchy
 		subject_canton = CHI_absolute_monarchy
 		coa_with_overlord_canton = CHI_subject
@@ -1961,23 +1977,6 @@ CHI = { # China
 				country_has_primary_culture = cu:manchu
 				has_law = law_type:law_monarchy
 			}
-		}
-	}	
-	flag_definition = {
-		coa = CHI_republic
-		subject_canton = CHI_republic
-		allow_overlord_canton = yes
-		priority = 10
-		trigger = { 
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = CHI_dictatorship
-		subject_canton = CHI_dictatorship
-		priority = 100
-		trigger = { 
-		   country_rank >= rank_value:great_power
 		}
 	}
 	flag_definition = {
