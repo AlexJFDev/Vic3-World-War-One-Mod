@@ -1321,6 +1321,30 @@ china_events.11 = { #China reunification
                 days = 30
             }
         }
+        create_character = {
+            first_name = Chiang
+	        last_name = Kai-shek
+	        historical = yes
+            birth_date = 1887.10.31
+	        culture = cu:han
+	        religion = rel:protestant
+	        female = no
+	        interest_group = ig_armed_forces
+            ig_leader = yes
+            ruler = yes
+            is_general = yes
+	        ideology = ideology_authoritarian
+	        traits = {
+             experienced_diplomat
+		     imposing
+             expert_defensive_planner
+	        }
+	        on_created = {
+               set_variable = {
+                  name = chiang_kai_shek
+                }                
+            }
+        }
         ai_chance = {
 		 base = 10
 	    }
@@ -1358,6 +1382,29 @@ china_events.11 = { #China reunification
             trigger_event = {
                 id = china_events.20
                 days = 30
+            }
+        }
+        create_character = {
+            first_name = Chiang
+	        last_name = Kai-shek
+	        historical = yes
+            birth_date = 1887.10.31
+	        culture = cu:han
+	        religion = rel:protestant
+	        female = no
+	        interest_group = ig_armed_forces
+            ig_leader = yes
+            ruler = yes
+            is_general = yes
+	        ideology = ideology_authoritarian
+	        traits = {
+		     bigoted
+             expert_defensive_planner
+	        }
+	        on_created = {
+               set_variable = {
+                  name = chiang_kai_shek
+                }                
             }
         }
         c:BEI = {
@@ -1679,6 +1726,51 @@ china_events.23 = { #Shanxi becomes Communist
               name = defeated_elites_modifier
               years = 30
             }
+        create_character = {
+            first_name = Mao
+	        last_name = Zedong
+	        historical = yes
+            birth_date = 1893.12.26
+	        culture = cu:han
+	        religion = rel:atheist
+	        female = no
+	        interest_group = ig_trade_unions
+            ig_leader = yes
+            ruler = yes
+            is_general = yes
+	        ideology = ideology_vanguardist
+	        traits = {
+		     bigoted
+             expert_offensive_planner
+	        }
+	        on_created = {
+               set_variable = {
+                  name = mao_zedong
+                }                
+            }
+        }
+        create_character = {
+            first_name = Zhou
+	        last_name = Enlai
+	        historical = yes
+            birth_date = 1898.3.5
+	        culture = cu:han
+	        religion = rel:atheist
+	        female = no
+            ig_leader = yes
+            is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_vanguardist
+	        traits = {
+             meticulous
+		     expert_defensive_planner
+	        }
+	        on_created = {
+               set_variable = {
+                  name = zhoul_enlai
+                }                
+            }
+        }
         ai_chance = {
 		base = 10
 	    }
