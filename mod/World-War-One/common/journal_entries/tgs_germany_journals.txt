@@ -297,6 +297,7 @@ je_western_crusade = {
                 OR = {
 				   has_ideology = ideology:ideology_fascist
                    has_ideology = ideology:ideology_authoritarian
+                   has_ideology = ideology:ideology_jingoist_leader
                 }
                 }
             }
@@ -349,11 +350,13 @@ je_eastern_crusade = {
     possible = {
         OR = {
             has_global_variable = hitler_rise_to_power_local
+            has_global_variable = france_defeat
             c:GER = {
                 ruler = {
                 OR = {
 				   has_ideology = ideology:ideology_fascist
                    has_ideology = ideology:ideology_authoritarian
+                   has_ideology = ideology:ideology_jingoist_leader
                 }
                 }
             }
