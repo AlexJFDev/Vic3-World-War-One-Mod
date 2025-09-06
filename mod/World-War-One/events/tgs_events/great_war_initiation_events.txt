@@ -1040,14 +1040,6 @@ great_war_initiation_events.14 = {
                 id = great_war_initiation_events.24
                 days = 5
             }
-            trigger_event = { 
-                id = great_war_initiation_events.24
-                days = 6
-            }
-            trigger_event = { 
-                id = great_war_initiation_events.24
-                days = 7
-            }
         }
         add_modifier = {
             name = schlieffen_plan_1_modifier
@@ -1078,6 +1070,12 @@ great_war_initiation_events.14 = {
         c:GBR = {
             trigger_event = { 
                 id = great_war_initiation_events.15
+                days = 5
+            }
+        }
+        c:LUX = {
+            trigger_event = { 
+                id = great_war_initiation_events.24
                 days = 5
             }
         }
@@ -1379,7 +1377,7 @@ great_war_initiation_events.17 = {
 great_war_initiation_events.24 = {
     type = country_event
 
-    duration = 0.1
+    duration = 1
     event_image = { 
         texture = "gfx/event_pictures/trenches.dds"
     }
@@ -1389,6 +1387,16 @@ great_war_initiation_events.24 = {
     flavor = great_war_initiation_events.24.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { c:SER ?= this }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
 
     option = { #Capitulate
         name = great_war_initiation_events.24.a
