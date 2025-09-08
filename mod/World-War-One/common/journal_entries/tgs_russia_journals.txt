@@ -55,15 +55,9 @@
                 days = 30
             }
         }
-        add_modifier = {
-          name = defeated_elites_modifier
-          years = 20
-        }
         random_civil_war = {
 			add_civil_war_progress = -100
 		}
-        remove_variable = no_reform_russia
-        set_global_variable = russian_revolution_1
     }
 
     invalid = {
@@ -83,11 +77,6 @@
     }
 
     on_invalid = {
-        add_modifier = {
-        name = revolution_stabilization_buff_2
-        years = 5
-        is_decaying = yes
-        } 
         random_civil_war = {
 			add_civil_war_progress = -100
 		}
@@ -114,7 +103,7 @@ je_war_fatigue_russia = {
     possible = {
         has_variable = entente_participant
         is_at_war = yes
-        game_date > 1916.6.1
+        game_date > 1916.4.1
         root.average_sol < 10
     }
 
@@ -213,11 +202,6 @@ je_soviet_threat = {
                 days = 30
             }
         }
-      add_modifier = {
-          name = revolution_stabilization_buff_2
-          years = 30
-          is_decaying = yes
-        }
       random_civil_war = {
 			add_civil_war_progress = -100
 		}
@@ -242,11 +226,6 @@ je_soviet_threat = {
     }
 
     on_invalid = {
-        add_modifier = {
-        name = revolution_stabilization_buff_2
-        years = 5
-        is_decaying = yes
-        } 
         random_civil_war = {
 			add_civil_war_progress = -100
 		}

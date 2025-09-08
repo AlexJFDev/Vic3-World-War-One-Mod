@@ -166,6 +166,12 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
                 }
 			}
         }
+        remove_variable = no_reform_russia
+        set_global_variable = russian_revolution_1
+        add_modifier = {
+          name = defeated_elites_modifier
+          years = 20
+        }
         ai_chance = {
 			base = 10
 		}
@@ -202,6 +208,12 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
                   name = lenin
                 }
 			}
+        }
+        remove_variable = no_reform_russia
+        set_global_variable = russian_revolution_1
+        add_modifier = {
+          name = defeated_elites_modifier
+          years = 20
         }
         ai_chance = {
 			base = 0
@@ -240,6 +252,12 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
                 }
 			}
         }
+        remove_variable = no_reform_russia
+        set_global_variable = russian_revolution_1
+        add_modifier = {
+          name = defeated_elites_modifier
+          years = 20
+        }
         ai_chance = {
 			base = 0
 		}
@@ -276,6 +294,12 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
                   name = lenin
                 }
 			}
+        }
+        remove_variable = no_reform_russia
+        set_global_variable = russian_revolution_1
+        add_modifier = {
+          name = defeated_elites_modifier
+          years = 20
         }
         ai_chance = {
 			base = 0
@@ -362,6 +386,8 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_public_schools
      activate_law = law_type:law_compulsory_primary_school
      activate_law = law_type:law_closed_borders
+     activate_law = law_type:law_appointed_bureaucrats
+     activate_law = law_type:law_graduated_taxation
         trigger_event = {
              id = russia_events.8
              days = 5
@@ -441,6 +467,11 @@ russia_events.7 = { #Soviet uprising
             years = 30
             is_decaying = yes
 		}
+        add_modifier = {
+          name = revolution_stabilization_buff_2
+          years = 30
+          is_decaying = yes
+        }
     }
 }
 
@@ -686,6 +717,11 @@ russia_events.9 = { #Reforms success
             years = 5
             is_decaying = yes
 		}
+        add_modifier = {
+            name = revolution_stabilization_buff_2
+            years = 5
+            is_decaying = yes
+        } 
     }
 }
 
