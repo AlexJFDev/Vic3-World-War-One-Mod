@@ -172,6 +172,7 @@ je_nazi_threat = {
     }
     
     possible = {
+        game_date > 1923.1.1
         OR = {
          has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
          has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
