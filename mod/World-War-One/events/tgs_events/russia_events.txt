@@ -172,6 +172,10 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           name = defeated_elites_modifier
           years = 20
         }
+        trigger_event = {
+            id = russia_events.4
+            days = 30
+        }
         ai_chance = {
 			base = 10
 		}
@@ -214,6 +218,10 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         add_modifier = {
           name = defeated_elites_modifier
           years = 20
+        }
+        trigger_event = {
+            id = russia_events.4
+            days = 30
         }
         ai_chance = {
 			base = 0
@@ -258,6 +266,10 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           name = defeated_elites_modifier
           years = 20
         }
+        trigger_event = {
+            id = russia_events.4
+            days = 30
+        }
         ai_chance = {
 			base = 0
 		}
@@ -301,6 +313,10 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           name = defeated_elites_modifier
           years = 20
         }
+        trigger_event = {
+            id = russia_events.4
+            days = 30
+        }
         ai_chance = {
 			base = 0
 		}
@@ -341,6 +357,10 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		    add_character_role = politician
             set_as_interest_group_leader = yes
 		}
+        trigger_event = {
+            id = russia_events.7
+            days = 270
+        }
 		ai_chance = {
 			base = 100
 		}
