@@ -280,13 +280,14 @@ ideology_caudillismo = {
 
 ideology_austrian_hegemony = {
 	icon = "gfx/interface/icons/ideology_icons/caudillismo.dds"
-	
+
 	lawgroup_citizenship = {
-		law_ethnostate = approve
-		law_national_supremacy = strongly_approve
-		law_racial_segregation = disapprove
-		law_cultural_exclusion = strongly_disapprove
-		law_multicultural = strongly_disapprove	
+		law_ethnostate = disapprove
+		law_subjecthood = approve
+		law_national_supremacy = disapprove
+		law_racial_segregation = neutral
+		law_cultural_exclusion = neutral
+		law_multicultural = disapprove
 	}
 }
 
@@ -493,10 +494,11 @@ ideology_sikh_militancy = {
 
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
-		law_national_supremacy = neutral
+		law_subjecthood = approve
+		law_national_supremacy = disapprove
 		law_racial_segregation = neutral
-		law_cultural_exclusion = neutral
-		law_multicultural = approve
+		law_cultural_exclusion = approve
+		law_multicultural = strongly_approve
 	}
 	
 	lawgroup_army_model = {
@@ -569,11 +571,12 @@ ideology_heavenly_kingdom_theocratic = {
 	}
 
 	lawgroup_citizenship = {
+		law_subjecthood = neutral
 		law_ethnostate = neutral
 		law_national_supremacy = approve
 		law_racial_segregation = neutral
 		law_cultural_exclusion = disapprove
-		law_multicultural = strongly_disapprove	
+		law_multicultural = strongly_disapprove
 	}
 }
 
@@ -758,10 +761,11 @@ ideology_sovereignist = {
 	
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
+		law_subjecthood = strongly_disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = disapprove
 		law_cultural_exclusion = neutral
-		law_multicultural = approve	
+		law_multicultural = approve
 	}
 }
 
@@ -794,7 +798,8 @@ ideology_enclavist = {
 		law_national_supremacy = approve
 		law_racial_segregation = approve
 		law_cultural_exclusion = disapprove
-		law_multicultural = strongly_disapprove	
+		law_multicultural = strongly_disapprove
+		law_subjecthood = strongly_disapprove
 	}
 
 	lawgroup_policing = {

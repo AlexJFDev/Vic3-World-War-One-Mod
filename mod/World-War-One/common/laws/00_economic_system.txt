@@ -511,6 +511,7 @@ law_cooperative_ownership = {
 		state_farmers_investment_pool_efficiency_mult = 0.25
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 1.0
+		country_company_worker_dividends_add = 0.75
 		country_free_charters_add = 1
 
 		building_group_bg_manufacturing_allowed_collectivization_add = 1.0
@@ -533,16 +534,9 @@ law_cooperative_ownership = {
 
 		if = {
 			limit = {
-				has_law = law_type:law_council_republic
+				has_law_or_variant = law_type:law_council_republic
 			}
-			add = 250
-		}
-
-		if = {
-			limit = {
-				has_law = law_type:law_council_republic
-			}
-			add = 100
+			add = 400
 		}
 	}
 
@@ -592,7 +586,9 @@ law_command_economy = {
 
 	unlocking_laws = {
 		law_autocracy
+		law_neo_absolutism
 		law_oligarchy
+		law_organic_regulation
 		law_single_party_state
 		law_technocracy
 	}
@@ -607,12 +603,14 @@ law_command_economy = {
 	modifier = {
 		country_disable_investment_pool_bool = yes
 
+		state_bureaucrats_investment_pool_efficiency_mult = 0.25
 		country_authority_mult = 0.25
 		country_bureaucrats_pol_str_mult = 0.25
 		building_nationalization_cost_mult = -0.5
 		building_nationalization_radicals_mult = -0.75
 		country_government_dividends_efficiency_add = 0.4
 		country_private_construction_allocation_mult = 0.1
+		country_company_government_dividends_add = 0.75
 		country_free_charters_add = 1
 
 		country_leverage_resistance_mult = 0.25
@@ -622,9 +620,9 @@ law_command_economy = {
 
 	ai_will_do = {
 		OR = {
-			has_law = law_type:law_technocracy
+			has_law_or_variant = law_type:law_technocracy
 			AND = {
-				has_law = law_type:law_council_republic
+				has_law_or_variant = law_type:law_council_republic
 				ruler ?= {
 					has_ideology = ideology:ideology_vanguardist
 					has_ideology = ideology:ideology_communist
@@ -643,14 +641,14 @@ law_command_economy = {
 
 		if = {
 			limit = {
-				has_law = law_type:law_council_republic
+				has_law_or_variant = law_type:law_council_republic
 			}
 			add = 250
 		}
 
 		if = {
 			limit = {
-				has_law = law_type:law_technocracy
+				has_law_or_variant = law_type:law_technocracy
 			}
 			add = 100
 		}

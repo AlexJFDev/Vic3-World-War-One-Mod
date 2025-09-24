@@ -13,8 +13,8 @@ citizenship_laws.1 = {
 	duration = 3
 
 	event_image = {
-        texture = "gfx/event_pictures/racism.dds"
-    }
+		video = "middleeast_engineer_blueprint"
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -105,8 +105,8 @@ citizenship_laws.2 = {
 	duration = 3
 
 	event_image = {
-        texture = "gfx/event_pictures/racism.dds"
-    }
+		video = "southamerica_aristocrats"
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -142,9 +142,9 @@ citizenship_laws.2 = {
 			has_building = building_arts_academy
 			any_scope_pop = {
 				state = {
-					state_cultural_acceptance = {  
+					state_cultural_acceptance = {
 						target = PREV.culture
-						value >= acceptance_status_4 
+						value >= acceptance_status_4
 					}
 				}
 				will_be_accepted_culture = no
@@ -163,9 +163,9 @@ citizenship_laws.2 = {
 				has_building = building_arts_academy
 				any_scope_pop = {
 					state = {
-						state_cultural_acceptance = {  
+						state_cultural_acceptance = {
 							target = PREV.culture
-							value >= acceptance_status_4 
+							value >= acceptance_status_4
 						}
 					}
 					will_be_accepted_culture = no
@@ -175,9 +175,9 @@ citizenship_laws.2 = {
 			random_scope_pop = {
 				limit = {
 					state = {
-						state_cultural_acceptance = {  
+						state_cultural_acceptance = {
 							target = PREV.culture
-							value >= acceptance_status_4 
+							value >= acceptance_status_4
 						}
 					}
 					will_be_accepted_culture = no
@@ -229,8 +229,8 @@ citizenship_laws.3 = {
 	duration = 3
 
 	event_image = {
-        texture = "gfx/event_pictures/protest.dds"
-    }
+		video = "unspecific_vandalized_storefront"
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -264,9 +264,9 @@ citizenship_laws.3 = {
 		}
 		any_scope_pop = {
 			state = {
-				state_cultural_acceptance = {  
+				state_cultural_acceptance = {
 					target = PREV.culture
-					value >= acceptance_status_4 
+					value >= acceptance_status_4
 				}
 			}
 			will_be_accepted_culture = no
@@ -282,9 +282,9 @@ citizenship_laws.3 = {
 		random_scope_pop = {
 			limit = {
 				state = {
-					state_cultural_acceptance = {  
+					state_cultural_acceptance = {
 						target = PREV.culture
-						value >= acceptance_status_4 
+						value >= acceptance_status_4
 					}
 				}
 				will_be_accepted_culture = no
@@ -330,8 +330,8 @@ citizenship_laws.4 = {
 	duration = 3
 
 	event_image = {
-        texture = "gfx/event_pictures/politics_europe.dds"
-    }
+		video = "asia_politician_parliament_motion"
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -365,9 +365,9 @@ citizenship_laws.4 = {
 		}
 		any_scope_pop = {
 			state = {
-				state_cultural_acceptance = {  
+				state_cultural_acceptance = {
 					target = PREV.culture
-					value < acceptance_status_4 
+					value < acceptance_status_4
 				}
 			}
 			will_be_accepted_culture = yes
@@ -391,9 +391,9 @@ citizenship_laws.4 = {
 		random_scope_pop = {
 			limit = {
 				state = {
-					state_cultural_acceptance = {  
+					state_cultural_acceptance = {
 						target = PREV.culture
-						value < acceptance_status_4 
+						value < acceptance_status_4
 					}
 				}
 				will_be_accepted_culture = yes
@@ -457,8 +457,8 @@ citizenship_laws.5 = {
 	duration = 3
 
 	event_image = {
-        texture = "gfx/event_pictures/protest.dds"
-    }
+		video = "unspecific_vandalized_storefront"
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -492,9 +492,9 @@ citizenship_laws.5 = {
 		}
 		any_scope_pop = {
 			state = {
-				state_cultural_acceptance = {  
+				state_cultural_acceptance = {
 					target = PREV.culture
-					value < acceptance_status_4 
+					value < acceptance_status_4
 				}
 			}
 			will_be_accepted_culture = yes
@@ -516,9 +516,9 @@ citizenship_laws.5 = {
 		random_scope_pop = {
 			limit = {
 				state = {
-					state_cultural_acceptance = {  
+					state_cultural_acceptance = {
 						target = PREV.culture
-						value < acceptance_status_4 
+						value < acceptance_status_4
 					}
 				}
 				will_be_accepted_culture = yes
@@ -576,8 +576,8 @@ citizenship_laws.6 = {
 	duration = 3
 
 	event_image = {
-        texture = "gfx/event_pictures/politics_europe.dds"
-    }
+		video = "middleeast_middleclass_cafe"
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -611,9 +611,9 @@ citizenship_laws.6 = {
 		}
 		any_scope_pop = {
 			state = {
-				state_cultural_acceptance = {  
+				state_cultural_acceptance = {
 					target = PREV.culture
-					value < acceptance_status_4 
+					value < acceptance_status_4
 				}
 			}
 			will_be_accepted_culture = yes
@@ -633,9 +633,9 @@ citizenship_laws.6 = {
 		random_scope_pop = {
 			limit = {
 				state = {
-					state_cultural_acceptance = {  
+					state_cultural_acceptance = {
 						target = PREV.culture
-						value < acceptance_status_4 
+						value < acceptance_status_4
 					}
 				}
 				will_be_accepted_culture = yes

@@ -3923,3 +3923,72 @@ state_migration_quota_mult_desc: "A bonus or penalty to the amount of people tha
  country_dalit_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $dalit$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
 
  modifier_untrustworthy_country: "Untrustworthy Country"
+
+ 
+ country_acceptance_primary_culture_add: "Acceptance from Primary Culture"
+ country_acceptance_primary_culture_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] is the same as their [concept_country] [concept_primary_cultures]"
+
+ country_acceptance_shared_heritage_trait_add: "Acceptance from Heritage Trait"
+ country_acceptance_shared_heritage_trait_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] shares a [concept_heritage_trait] with (one of) their [Concept('concept_country','$concept_country_possessive$')] [concept_primary_cultures]"
+
+ country_acceptance_shared_heritage_trait_group_add: "Acceptance from Heritage Trait Group"
+ country_acceptance_shared_heritage_trait_group_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with (one of) their [Concept('concept_country','$concept_country_possessive$')] [concept_primary_cultures]"
+
+ country_acceptance_no_shared_heritage_trait_add: "Acceptance from no shared Heritage Traits"
+ country_acceptance_no_shared_heritage_trait_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] does not share a [concept_heritage_trait] with (one of) their [Concept('concept_country','$concept_country_possessive$')] [concept_primary_cultures]"
+
+ country_acceptance_shared_language_trait_add: "Acceptance from Language Trait"
+ country_acceptance_shared_language_trait_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] shares a [concept_language_trait] with (one of) their [Concept('concept_country','$concept_country_possessive$')] [concept_primary_cultures]"
+
+ country_acceptance_shared_language_trait_group_add: "Acceptance from Language Trait Group"
+ country_acceptance_shared_language_trait_group_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] shares a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with (one of) their [Concept('concept_country','$concept_country_possessive$')] [concept_primary_cultures]"
+
+ country_acceptance_no_shared_language_trait_add: "Acceptance from no shared Language Traits"
+ country_acceptance_no_shared_language_trait_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] does not share a [concept_language_trait] with (one of) their [Concept('concept_country','$concept_country_possessive$')] [concept_primary_cultures]"
+
+ country_acceptance_shared_tradition_trait_add: "Acceptance from Tradition Trait"
+ country_acceptance_shared_tradition_trait_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] shares a [concept_tradition_trait] with (one of) their [Concept('concept_country','$concept_country_possessive$')] [concept_primary_cultures]"
+
+ country_acceptance_no_shared_tradition_trait_add: "Acceptance from no shared Tradition Traits"
+ country_acceptance_no_shared_tradition_trait_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_culture] does not share a [concept_tradition_trait] with (one of) their [Concept('concept_country','$concept_country_possessive$')] [concept_primary_cultures]"
+
+ country_acceptance_state_religion_add: "Acceptance from State Religion"
+ country_acceptance_state_religion_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_religion] is the same as their [concept_country] [concept_state_religion]"
+
+ country_acceptance_shared_religious_trait_add: "Acceptance from Religious Traits"
+ country_acceptance_shared_religious_trait_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_religion] shares a [Concept('concept_discrimination_trait','$concept_religious_trait$')] with their [Concept('concept_country','$concept_country_possessive$')] [concept_state_religion]"
+
+ country_acceptance_shared_religious_trait_group_add: "Acceptance from Religious Trait Groups"
+ country_acceptance_shared_religious_trait_group_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_religion] shares a [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with their [Concept('concept_country','$concept_country_possessive$')] [concept_state_religion]"
+
+ country_acceptance_no_shared_religious_trait_add: "Acceptance from no shared Religious Traits"
+ country_acceptance_no_shared_religious_trait_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to if their [concept_religion] does not share a [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with their [Concept('concept_country','$concept_country_possessive$')] [concept_state_religion]"
+
+ country_acceptance_homeland_add: "Acceptance from Homeland"
+ country_acceptance_homeland_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to from living in [concept_homeland]"
+
+ country_acceptance_not_homeland_add: "Acceptance from not Homeland"
+ country_acceptance_not_homeland_add_desc: "The amount of [concept_acceptance] a [concept_pop] is subject to from not living in [concept_homeland]"
+
+ ountry_education_fervor_add:0 "[GetInstitutionType('institution_schools').GetName] [concept_institution] [concept_fervor]"
+ country_education_fervor_add_desc:0 "A bonus or penalty to [concept_fervor] as a result of the country's [GetInstitutionType('institution_schools').GetName] [concept_institution]"
+
+ country_primary_culture_fervor_from_laws_add: "Primary Culture [concept_fervor] from Laws"
+ country_primary_culture_fervor_from_laws_add_desc: ""Primary Culture [concept_fervor] from Laws is a bonus or penalty to [concept_fervor] as a result of the country's laws that affect the primary culture"
+
+ country_support_separatism_strength_mult: "[GetDiplomaticActionType('support_separatism').GetName] Strength"
+ country_support_separatism_strength_mult_desc: "A percentage increase or decrease to the strength of the [GetDiplomaticActionType('support_separatism').GetName] [concept_diplomatic_action]"
+
+ country_support_separatism_resistance_mult: "[GetDiplomaticActionType('support_separatism').GetName] Resistance"
+ country_support_separatism_resistance_mult_desc: "A percentage increase or decrease to the mitigation of the [GetDiplomaticActionType('support_separatism').GetName] [concept_diplomatic_action]"
+
+ stockpile_army_requirement_small_arms_add:0 "Army @small_arms! Consumption"
+ stockpile_army_requirement_small_arms_add_desc:0 "Increases how much @small_arms! Small Arms the army consumes"
+ stockpile_army_requirement_ammunition_add:0 "Army $ammunition$ Ammunition Consumption"
+ stockpile_army_requirement_ammunition_add_desc:0 "Increases how much @ammunition! Ammunition the army consumes"
+ stockpile_navy_requirement_coal_add:0 "Navy @coal! Coal Consumption"
+ stockpile_navy_requirement_coal_add_desc:0 "Increases how much @coal! Coal the navy consumes"
+ stockpile_navy_requirement_artillery_add:0 "Navy @artillery! Artillery Consumption"
+ stockpile_navy_requirement_artillery_add_desc:0 "Increases how much @artillery! Artillery the navy consumes"
+ stockpile_navy_requirement_ammunition_add:0 "Navy @ammunition! Ammunition Consumption"
+ stockpile_navy_requirement_ammunition_add_desc:0 "Increases how much @ammunition! Ammunition the navy consumes"
