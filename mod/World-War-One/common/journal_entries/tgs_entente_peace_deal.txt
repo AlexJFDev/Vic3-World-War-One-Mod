@@ -356,7 +356,12 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 	}
 
     possible = { 
-	   has_global_variable = russian_revolution_2
+	   c:RUS = {
+		  OR = {
+			  has_law = law_type:law_council_republic
+			  has_law = law_type:law_anarchism
+		    } 
+		}
 	   has_variable = entente_participant
 	   country_rank >= rank_value:great_power
 	    NOT = {

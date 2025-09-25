@@ -66,6 +66,10 @@ entente_peace_deal.1 = { #Entente victory
 			type = protectorate
 		}
 		remove_diplomatic_pact = {
+			country = c:UKR
+			type = protectorate
+		}
+		remove_diplomatic_pact = {
 			country = c:KON
 			type = colony
 		}
@@ -135,13 +139,13 @@ entente_peace_deal.1 = { #Entente victory
            activate_law = law_type:law_right_of_assembly
 		   activate_law = law_type:law_armed_neutrality
 		   remove_primary_culture = hungarian
-           remove_diplomatic_pact = {
-			   country = c:UKR
-			   type = protectorate
-		    }
-		   remove_diplomatic_pact = {
+		    remove_diplomatic_pact = {
 			   country = c:SER
 			   type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			   country = c:SER
+			   type = puppet
 		    }
 			trigger_event = {
               id = dev_events.1
@@ -351,6 +355,19 @@ entente_peace_deal.1 = { #Entente victory
 		      set_state_owner = c:ROM
             }
         }
+		s:STATE_BUKOVINA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
 		If = {
            limit = {
 			  c:JAP = {
@@ -547,6 +564,32 @@ entente_peace_deal.1 = { #Entente victory
             }
         }
 		s:STATE_SLOVAKIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_UPPER_SILESIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_RUTHENIA = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:AUS
@@ -1862,7 +1905,7 @@ entente_peace_deal.4 = { #Round 3 result
 			  add_claim = c:GER
             }
         }
-		s:STATE_SILESIA = {
+		s:STATE_UPPER_SILESIA = {
            random_scope_state = {
 		      limit = {
 			   exists = c:GER

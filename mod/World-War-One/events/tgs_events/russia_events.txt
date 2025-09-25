@@ -170,11 +170,16 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         set_global_variable = russian_revolution_1
         add_modifier = {
           name = defeated_elites_modifier
-          years = 20
+          years = 30
+        }
+        add_modifier = {
+          name = revolution_stabilization_buff_2
+          years = 30
+          is_decaying = yes
         }
         trigger_event = {
             id = russia_events.4
-            days = 30
+            days = 5
         }
         ai_chance = {
 			base = 10
@@ -217,11 +222,16 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         set_global_variable = russian_revolution_1
         add_modifier = {
           name = defeated_elites_modifier
-          years = 20
+          years = 30
+        }
+        add_modifier = {
+          name = revolution_stabilization_buff_2
+          years = 30
+          is_decaying = yes
         }
         trigger_event = {
             id = russia_events.4
-            days = 30
+            days = 5
         }
         ai_chance = {
 			base = 0
@@ -264,11 +274,16 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         set_global_variable = russian_revolution_1
         add_modifier = {
           name = defeated_elites_modifier
-          years = 20
+          years = 30
+        }
+        add_modifier = {
+          name = revolution_stabilization_buff_2
+          years = 30
+          is_decaying = yes
         }
         trigger_event = {
             id = russia_events.4
-            days = 30
+            days = 5
         }
         ai_chance = {
 			base = 0
@@ -311,11 +326,16 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         set_global_variable = russian_revolution_1
         add_modifier = {
           name = defeated_elites_modifier
-          years = 20
+          years = 30
+        }
+        add_modifier = {
+          name = revolution_stabilization_buff_2
+          years = 30
+          is_decaying = yes
         }
         trigger_event = {
             id = russia_events.4
-            days = 30
+            days = 5
         }
         ai_chance = {
 			base = 0
@@ -339,7 +359,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         texture = "gfx/event_pictures/russian_revolution.dds"
     }
 
-    trigger = {}
+    trigger = {
+        is_at_war = yes
+    }
 
     option = {
         name = russia_events.4.a
@@ -408,6 +430,7 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_closed_borders
      activate_law = law_type:law_appointed_bureaucrats
      activate_law = law_type:law_graduated_taxation
+     activate_law = law_type:law_corporatized_unions
         trigger_event = {
              id = russia_events.8
              days = 5
@@ -417,8 +440,8 @@ russia_events.7 = { #Soviet uprising
              days = 5
             }
         trigger_event = {
-             id = dev_events.2
-             days = 5
+             id = ussr_events.1
+             days = 90
             }
         trigger_event = {
               id = ussr_events.4
@@ -487,11 +510,6 @@ russia_events.7 = { #Soviet uprising
             years = 30
             is_decaying = yes
 		}
-        add_modifier = {
-          name = revolution_stabilization_buff_2
-          years = 30
-          is_decaying = yes
-        }
     }
 }
 
@@ -531,7 +549,7 @@ russia_events.8 = { #The civil war begins
 	       create_diplomatic_play = {
 		      target_country = c:RUS
 		      type = dp_revolution
-	          war = yes
+	          escalation = 0
 	        }
            }
         }
