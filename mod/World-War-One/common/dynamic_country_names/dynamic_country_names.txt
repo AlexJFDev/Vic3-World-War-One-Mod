@@ -490,6 +490,20 @@ ITA = { # Italy
 			}
 		}
 	}
+	dynamic_country_name = { 
+		name = dyn_empire_of_italy
+		adjective = dyn_empire_of_italy_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				global_country_ranking > 4
+			}
+		}
+	}
 }
 
 GBR = { # Great Britain of United Kingdom
