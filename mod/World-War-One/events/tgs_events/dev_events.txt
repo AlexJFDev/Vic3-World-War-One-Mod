@@ -1950,8 +1950,8 @@ dev_events.52 = {
             is_decaying = yes
 		}
         add_modifier = {
-			name = starting_sol_nerf_2
-            years = 10
+			name = starting_sol_nerf_1
+            years = 30
             is_decaying = yes
 		}
     }
@@ -1966,8 +1966,8 @@ dev_events.52 = {
             is_decaying = yes
 		}
         add_modifier = {
-			name = starting_sol_nerf_2
-            years = 20
+			name = starting_sol_nerf_1
+            years = 30
             is_decaying = yes
 		}
     }
@@ -2060,6 +2060,74 @@ dev_events.60 = {
 		        add_character_role = politician
                 add_character_role = ruler
             }
+        }
+    }
+}
+
+dev_events.61 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        every_country = {
+            limit = { 
+                NOT = {
+                    OR = {
+                      c:EGY = THIS
+                      c:SAF = THIS
+                    }
+                }
+                country_is_in_africa = yes
+            }
+            trigger_event = {
+            id = dev_events.62
+            days = 5
+        }
+        }
+    }
+}
+
+dev_events.62 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        add_modifier = {
+            name = starting_sol_nerf_2
+            years = 30
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.26
+            days = 30
         }
     }
 }
