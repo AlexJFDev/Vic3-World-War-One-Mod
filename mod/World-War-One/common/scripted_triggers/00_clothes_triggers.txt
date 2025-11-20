@@ -1552,12 +1552,6 @@ executive_clothes_trigger = {
 should_be_naked_trigger = {
 	exists = scope:pop
 	scope:pop = {
-       	OR = {
-			is_pop_type = farmers
-			is_pop_type = peasants
-			is_pop_type = laborers
-			is_pop_type = slaves
-		}
 		OR = {
 			culture = cu:amazonian
 			culture = cu:nuba
