@@ -1,0 +1,228 @@
+﻿CULTURES = {
+	### Initialising baseline 5 fervour for every culture in the world
+	every_country = { # "every_culture" is not a thing
+		limit = {
+			NOT = {
+				any_scope_culture = {
+					culture_current_fervor > 0
+					count = all
+				}
+			}
+		}
+		every_scope_culture = { # This is more efficient than it looks, and less efficient than I'd like it to be.
+			limit = {
+				culture_current_fervor < 5
+			}
+			set_fervor = 5
+		}
+	}
+
+	### Overriding the baseline values
+	cu:british = {
+		set_fervor = 60
+	}
+	cu:scottish = {
+		set_fervor = 30
+	}
+	cu:welsh = {
+		set_fervor = 30
+	}
+	cu:irish = {
+		set_fervor = 30
+	}
+	cu:french = {
+		set_fervor = 60
+	}
+	cu:breton = {
+		set_fervor = 30
+	}
+	cu:belgian = {
+		set_fervor = 50
+	}
+	cu:spanish = {
+		set_fervor = 55
+	}
+	cu:catalan = {
+		set_fervor = 20
+	}
+	cu:basque = {
+		set_fervor = 30
+	}
+	cu:portuguese = {
+		set_fervor = 50
+	}
+	cu:swiss = {
+		set_fervor = 40
+	}
+	cu:german = {
+		set_fervor = 70
+	}
+	cu:dutch = {
+		set_fervor = 50
+	}
+	cu:hungarian = {
+		set_fervor = 50
+	}
+	cu:czech = {
+		set_fervor = 30
+	}
+	cu:polish = {
+		set_fervor = 30
+	}
+	cu:byelorussian = {
+		set_fervor = 10
+	}
+	cu:russian = {
+		set_fervor = 60
+	}
+	cu:ukrainian = {
+		set_fervor = 10
+	}
+	cu:ashkenazi = {
+		set_fervor = 20
+	}
+	cu:bulgarian = {
+		set_fervor = 40
+	}
+	cu:romanian = {
+		set_fervor = 40
+	}
+	cu:italian = {
+		set_fervor = 60
+	}
+	cu:greek = {
+		set_fervor = 50
+	}
+	cu:yugoslav = {
+		set_fervor = 35
+	}
+	cu:sephardic = {
+		set_fervor = 20
+	}
+	cu:norwegian = {
+		set_fervor = 40
+	}
+	cu:swedish = {
+		set_fervor = 60
+	}
+	cu:finnish = {
+		set_fervor = 20
+	}
+	cu:danish = {
+		set_fervor = 60
+	}
+	cu:euro_american = {
+		set_fervor = 70
+	}
+	cu:afro_american = {
+		set_fervor = 10
+	}
+	cu:anglo_canadian = {
+		set_fervor = 30
+	}
+	cu:franco_canadian = {
+		set_fervor = 15
+	}
+	cu:mexican = {
+		set_fervor = 50
+	}
+	cu:central_american = {
+		set_fervor = 20
+	}
+	cu:caribeno = {
+		set_fervor = 20
+	}
+	cu:afro_caribeno = {
+		set_fervor = 20
+	}
+	cu:colombian = {
+		set_fervor = 20
+	}
+	cu:venezuelan = {
+		set_fervor = 20
+	}
+	cu:ecuadorian = {
+		set_fervor = 20
+	}
+	cu:peruvian = {
+		set_fervor = 20
+	}
+	cu:bolivian = {
+		set_fervor = 20
+	}
+	cu:chilean = {
+		set_fervor = 20
+	}
+	cu:paraguayan = {
+		set_fervor = 20
+	}
+	cu:argentine = {
+		set_fervor = 20
+	}
+	cu:uruguayan = {
+		set_fervor = 20
+	}
+	cu:brazilian = {
+		set_fervor = 60
+	}
+	cu:afro_brazilian = {
+		set_fervor = 10
+	}
+	cu:north_andean = {
+		set_fervor = 20
+	}
+	cu:south_andean = {
+		set_fervor = 20
+	}
+	cu:platinean = {
+		set_fervor = 20
+	}
+	cu:arab = {
+		set_fervor = 35
+	}
+	cu:turkish = {
+		set_fervor = 45
+	}
+	cu:persian = {
+		set_fervor = 30
+	}
+	cu:cushitic = {
+		set_fervor = 15
+	}
+	cu:west_indian = {
+		set_fervor = 15
+	}
+	cu:north_indian = {
+		set_fervor = 15
+	}
+	cu:central_indian = {
+		set_fervor = 15
+	}
+	cu:south_indian = {
+		set_fervor = 15
+	}
+	cu:east_indian = {
+		set_fervor = 15
+	}
+	cu:han = {
+		set_fervor = 30
+	}
+	cu:manchu = {
+		set_fervor = 15
+	}
+	cu:yue = {
+		set_fervor = 15
+	}
+	cu:vietnamese = {
+		set_fervor = 15
+	}
+	cu:kmer = {
+		set_fervor = 15
+	}
+	cu:thai = {
+		set_fervor = 15
+	}
+	cu:japanese = {
+		set_fervor = 70
+	}
+}
