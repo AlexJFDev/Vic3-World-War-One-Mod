@@ -317,15 +317,15 @@ combat_unit_type_mechanized_infantry = {
 
     upkeep_modifier = {
         goods_input_small_arms_add = 1.5
-        goods_input_ammunition_add = 1.5
+        goods_input_ammunition_add = 2
         goods_input_oil_add = 2
         goods_input_radios_add = 1
         goods_input_tanks_add = 2
     }
     
     battle_modifier = {
-        unit_offense_add = 65
-        unit_defense_add = 60
+        unit_offense_add = 60
+        unit_defense_add = 75
         unit_morale_loss_add = 4
         unit_devastation_mult = 0.1
     }
@@ -638,9 +638,9 @@ combat_unit_type_heavy_tank = {
     }
     
     upkeep_modifier = {
-        goods_input_tanks_add = 3
-		goods_input_ammunition_add = 1.5
-        goods_input_radios_add = 6
+        goods_input_tanks_add = 6
+		goods_input_ammunition_add = 2
+        goods_input_radios_add = 1
         goods_input_oil_add = 4
     }
 
@@ -954,16 +954,16 @@ combat_unit_type_light_tanks = {
     upkeep_modifier = {
         goods_input_tanks_add = 3
         goods_input_oil_add = 2
-        goods_input_ammunition_add = 1
+        goods_input_ammunition_add = 1.5
         goods_input_radios_add = 1
     }
 
     battle_modifier = {
         unit_offense_add = 70
-        unit_defense_add = 60
+        unit_defense_add = 55
         unit_morale_loss_add = 4
         unit_devastation_mult = 0.1
-        unit_occupation_mult = 0.3
+        unit_occupation_mult = 0.4
     }
 
     formation_modifier = {
@@ -1124,7 +1124,7 @@ combat_unit_type_jet_fighter = {
     }
 
     battle_modifier = {
-      unit_offense_add = 60
+      unit_offense_add = 90
       unit_defense_add = 60
       unit_morale_loss_add = 2
 	  unit_occupation_mult = 0.4
