@@ -603,9 +603,14 @@ great_war_initiation_events.8 = {
 			  country = c:RUS
 			  type = embargo
 		    }
+            add_modifier = {
+                name = minting_buff_4_modifier
+                years = 6
+                is_decaying = yes
+            }
         }
         c:RUS = {
-		   create_diplomatic_pact = {
+		    create_diplomatic_pact = {
 			  country = c:GER
 			  type = embargo
 		    }
