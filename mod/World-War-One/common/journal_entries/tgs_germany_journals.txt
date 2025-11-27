@@ -11,15 +11,16 @@
     
     possible = {
         is_player = no
-        game_date > 1917.1.1
+        game_date > 1917.7.1
         has_variable = central_powers_participant
-        root.average_sol < 16
+        root.average_sol < 14
         is_at_war = yes
         NOT = { has_global_variable = world_war_1_over }
+        NOT = { has_variable = germany_war_fatigue }
     }
 
     complete = {
-        root.average_sol >= 17
+        root.average_sol >= 15
     }
 
     immediate = {
@@ -31,7 +32,9 @@
         }
     }
 
-    modifiers_while_active = { war_fatigue_1 }
+    modifiers_while_active = {
+		war_fatigue_1
+	}
     
     fail = { 
         OR = {
@@ -93,10 +96,12 @@ je_war_fatigue_player_germany = {
     
     possible = {
         is_player = yes
-        game_date > 1917.1.1
+        game_date > 1918.1.1
         has_variable = central_powers_participant
-        root.average_sol < 15
+        root.average_sol < 14
         is_at_war = yes
+        NOT = { has_global_variable = world_war_1_over }
+        NOT = { has_variable = germany_war_fatigue }
     }
 
     immediate = {
@@ -107,11 +112,13 @@ je_war_fatigue_player_germany = {
             }
         }
     }
-
-    modifiers_while_active = { war_fatigue_2 }
+    
+    modifiers_while_active = {
+		war_fatigue_2
+	}
 
     complete = {
-        root.average_sol >= 16
+        root.average_sol >= 14
     }
     
     fail = { 
