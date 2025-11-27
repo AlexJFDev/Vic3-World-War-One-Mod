@@ -2708,6 +2708,13 @@ entente_peace_deal.8 = { #Round 7 result
 	flavor = entente_peace_deal.8.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	immediate = {
+		random_scope_character = { 
+			limit = { has_variable = Lawrence_of_arabia }
+            kill_character = yes
+		}
+	}
     
     option = {
 		name = entente_peace_deal.8.a

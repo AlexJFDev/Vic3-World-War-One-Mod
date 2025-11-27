@@ -50,7 +50,7 @@ turkey_events.2 = {
     }
 }
 
-turkey_events.3 = { 
+turkey_events.3 = { #Armenian genocide
     type = country_event
 
     title = turkey_events.3.t
@@ -63,7 +63,7 @@ turkey_events.3 = {
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/"
+        texture = "gfx/event_pictures/armenian_genocide"
     }
 
     trigger = {}
@@ -71,6 +71,30 @@ turkey_events.3 = {
     option = {
         name = turkey_events.3.a
         default_option = yes
+        activate_law = law_type:law_ethnostate
+        trigger_event = {
+            id = turkey_events.8
+            years = 1
+        }
+        ai_chance = {
+		  base = 10
+	    }
+    }
+
+    option = {
+        name = turkey_events.3.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = turkey_events.3.c
+        trigger = { NOT = { has_law = law_type:law_military_oversight } }
+        activate_law = law_type:law_cultural_exclusion
+        ai_chance = {
+		  base = 0
+	    }
     }
 }
 
@@ -133,6 +157,11 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 		activate_law = law_type:law_right_of_assembly
         add_modifier = {
 			name = army_buff_modifier_3
+            years = 5
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = minting_buff_4_modifier
             years = 3
             is_decaying = yes
 		}
@@ -182,7 +211,7 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
         c:GRE = {
             trigger_event = {
                 id = turkey_events.7
-                days = 100
+                years = 2
             }
         } 
     } 
@@ -226,7 +255,7 @@ turkey_events.6 = { #Countries react to revolution
         }
         trigger_event = {
             id = turkey_events.7
-            days = 50
+            days = 90
         }
         ai_chance = {
 		  base = 10
@@ -302,12 +331,11 @@ turkey_events.8 = { #Arab uprising
 	       origin = this
 	       state = s:STATE_HEDJAZ.region_state:TUR
            on_created = { 
-           activate_law = law_type:law_monarchy
-           activate_law = law_type:law_census_voting
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
+             activate_law = law_type:law_monarchy
+             activate_law = law_type:law_autocracy
+             activate_law = law_type:law_state_religion
+             activate_law = law_type:law_agrarianism
+            }
 		}
         s:STATE_YEMEN = {
            random_scope_state = {
@@ -339,14 +367,34 @@ turkey_events.8 = { #Arab uprising
                 id = dev_events.28
                 days = 5
             }
+            create_character = {
+              first_name = Thomas
+	          last_name = Edward_Lawrence
+	          historical = yes
+              birth_date = 1888.08.16
+	          culture = cu:british
+	          religion = rel:protestant
+	          female = no
+              is_general = yes
+	          interest_group = ig_intelligentsia
+	          ideology = ideology_moderate
+	            traits = {
+		          brave
+                  erudite
+                  charismatic
+                  experienced_offensive_planner
+	            }
+	           on_created = {
+                  set_variable = {
+                     name = Lawrence_of_arabia
+                    }                
+                }
+            }
         }
         scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:HDJ
 			}
         }    
-        ai_chance = {
-		  base = 10
-	    }
     }
 }

@@ -482,8 +482,21 @@ joining_world_war_events.13 = { #Ottoman Empire joins
                 days = 15
             }
             trigger_event = {
-                id = turkey_events.8
-                years = 1
+                id = turkey_events.3
+                days = 180
+            }
+            create_diplomatic_pact = {
+			  country = c:FRA
+			  type = embargo
+		    }
+            create_diplomatic_pact = {
+			  country = c:GBR
+			  type = embargo
+		    }
+            add_modifier = {
+                name = minting_buff_4_modifier
+                years = 6
+                is_decaying = yes
             }
         }
         c:SEN = {
@@ -506,11 +519,6 @@ joining_world_war_events.13 = { #Ottoman Empire joins
             }
            }
         }
-        add_modifier = {
-          name = minting_buff_4_modifier
-          years = 5
-          is_decaying = yes
-        }
         c:GBR = {
 		   create_diplomatic_pact = {
 			  country = c:TUR
@@ -523,18 +531,8 @@ joining_world_war_events.13 = { #Ottoman Empire joins
 			  type = embargo
 		    }
         }
-        c:TUR = {
-		   create_diplomatic_pact = {
-			  country = c:FRA
-			  type = embargo
-		    }
-            create_diplomatic_pact = {
-			  country = c:GBR
-			  type = embargo
-		    }
-        }
         ai_chance = {
-            base = 100
+            base = 1
         }
     }
 
