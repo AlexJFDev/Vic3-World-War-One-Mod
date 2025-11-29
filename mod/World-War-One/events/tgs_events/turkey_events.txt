@@ -117,12 +117,12 @@ turkey_events.4 = { #Mustapha Kemal denounces the Sultan
     trigger = {}
 
     immediate = {
-        random_scope_character = {
-            limit = {
-               has_template = tur_ataturk_character_template
-            }
-            save_scope_as = ataturk_scope
-        }
+        create_character = {
+			template = tur_ataturk_character_template
+			on_created = {
+				save_scope_as = ataturk_scope
+			}
+		}
     }
 
     option = { 
@@ -153,11 +153,11 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
         name = turkey_events.5.a
         activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_census_voting
-		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_national_supremacy
 		activate_law = law_type:law_right_of_assembly
         add_modifier = {
-			name = army_buff_modifier_3
-            years = 5
+			name = army_buff_modifier_8
+            years = 4
             is_decaying = yes
 		}
         add_modifier = {
@@ -166,15 +166,12 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
             is_decaying = yes
 		}
         scope:ataturk_scope = {
-			remove_character_role = general
-		    add_character_role = politician
-            set_as_interest_group_leader = yes
             set_character_as_ruler = yes
 		}
 		create_diplomatic_play = {
 		    target_country = c:GRE
 		    type = dp_humiliation
-            escalation = 80
+            escalation = 99
 	        add_war_goal = {
                     holder = c:TUR
                     type = conquer_state
@@ -195,7 +192,23 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                     type = war_reparations
                     target_country = c:TUR
                 }
+            add_war_goal = {
+                    holder = c:GRE
+                    type = conquer_state
+                    target_state = s:STATE_EASTERN_THRACE.region_state:TUR
+                }
+            add_war_goal = {
+                    holder = c:GRE
+                    type = conquer_state
+                    target_state = s:STATE_HUDAVENDIGAR.region_state:TUR
+                }
 	    }
+        c:TUR = {
+            trigger_event = {
+                id = dev_events.65
+                days = 5
+            }
+        }
         c:GBR = {
             trigger_event = {
                 id = turkey_events.6
@@ -214,6 +227,19 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                 years = 2
             }
         } 
+        if = {
+            limit = {
+                c:ITA = {
+                    has_variable = entente_participant
+		        }
+            }
+            c:ITA = {
+                trigger_event = {
+                   id = turkey_events.6
+                   days = 5
+                }
+            } 
+        }
     } 
 }   
 
@@ -252,10 +278,26 @@ turkey_events.6 = { #Countries react to revolution
 			add_target_backers = {
 				who = root
 			}
+            add_target_backers = {
+				c:ARM
+			}
+            add_target_backers = {
+				c:KUR
+			}
+            add_war_goal = {
+                    holder = c:TUR
+                    type = annex_country
+                    target_country = c:ARM
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = annex_country
+                    target_country = c:KUR
+                }
         }
         trigger_event = {
             id = turkey_events.7
-            days = 90
+            days = 250
         }
         ai_chance = {
 		  base = 10
@@ -264,6 +306,14 @@ turkey_events.6 = { #Countries react to revolution
 
     option = { 
         name = turkey_events.6.b
+        scope:turkish_independance_war_diplo_play = {
+            add_target_backers = {
+				c:ARM
+			}
+            add_target_backers = {
+				c:KUR
+			}
+        }
         ai_chance = {
 		  base = 0
 	    }

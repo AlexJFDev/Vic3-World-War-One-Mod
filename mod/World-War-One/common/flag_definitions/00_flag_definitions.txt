@@ -6150,14 +6150,6 @@ NAL = { # Natal
 	}	
 }
 
-NAM = { # Namaland
-	flag_definition = {
-		coa = NAM
-		subject_canton = NAM		
-		priority = 1		
-	}	
-}
-
 NAS = { # Nassau
 	flag_definition = {
 		coa = NAS
@@ -11162,36 +11154,32 @@ DJB = {
 
 NAM = {
 	flag_definition = {
-		coa = NAI		
+		coa = TUS_republic		
 		subject_canton = NAI
 		priority = 1
 	}
 	flag_definition = {
-		coa = NAI_subject_SAF
+		coa = TUS_republic
 		priority = 150
-		trigger = {
-			exists = c:SAF
-			c:SAF = {
-				has_diplomatic_pact = {
-					who = c:NAM
-					type = colony
-					is_initiator = yes
+		trigger = { 
+			AND = {
+				exists = c:SAF
+				scope:actor ?= {
+					is_subject_of = c:SAF
 				}
-			}
+			} 
 		}
 	}
 	flag_definition = {
-		coa = NAI_subject_GBR
+		coa = TUS_republic
 		priority = 150
-		trigger = {
-			exists = c:GBR
-			c:GBR = {
-				has_diplomatic_pact = {
-					who = c:NAM
-					type = colony
-					is_initiator = yes
+		trigger = { 
+			AND = {
+				exists = c:GBR
+				scope:actor ?= {
+					is_subject_of = c:GBR
 				}
-			}
+			} 
 		}
 	}
 	flag_definition = {

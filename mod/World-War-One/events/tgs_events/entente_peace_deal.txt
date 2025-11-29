@@ -764,7 +764,7 @@ entente_peace_deal.1 = { #Entente victory
         }
 		c:TUR = {
          trigger_event = {
-          id = dev_events.16
+          id = dev_events.64
           days = 5
             }
 			activate_law = law_type:law_armed_neutrality
@@ -2657,6 +2657,29 @@ entente_peace_deal.7 = { #Round 6 result
 			  add_claim = c:TUR
             }
         }
+		If = {
+           limit = { NOT = { exists = c:KUR } }
+           create_country = {
+	          tag = KUR
+	          origin = this
+	          state = s:STATE_DIYARBAKIR.region_state:TUR
+              on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+		}
+		If = {
+           limit = { NOT = { exists = c:ARM } }
+           create_country = {
+	          tag = ARM
+	          origin = this
+	          state = s:STATE_ERZURUM.region_state:TUR
+              on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+		}
+		set_global_variable = treaty_of_sevres_1
 	}
 
 	option = {
@@ -2681,6 +2704,35 @@ entente_peace_deal.7 = { #Round 6 result
 			  add_claim = c:TUR
             }
         }
+		s:STATE_EASTERN_THRACE = {
+           set_owner_of_provinces = {
+				country = c:GRE
+				provinces = { x115006 x194E90 x2073F0 x608BB0 xF02082 xFCF160 }
+			}
+        }
+		If = {
+           limit = { NOT = { exists = c:KUR } }
+           create_country = {
+	          tag = KUR
+	          origin = this
+	          state = s:STATE_DIYARBAKIR.region_state:TUR
+              on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+		}
+		If = {
+           limit = { NOT = { exists = c:ARM } }
+           create_country = {
+	          tag = ARM
+	          origin = this
+	          state = s:STATE_ERZURUM.region_state:TUR
+              on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+		}
+		set_global_variable = treaty_of_sevres_2
 	}
 
 	option = {

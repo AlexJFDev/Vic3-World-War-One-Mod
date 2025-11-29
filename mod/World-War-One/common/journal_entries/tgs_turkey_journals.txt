@@ -11,8 +11,8 @@
     possible = {
         has_variable = central_powers_participant
         OR = {
-           has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
-           has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
+           has_global_variable = treaty_of_sevres_1
+           has_global_variable = treaty_of_sevres_2
         }
     }
 
@@ -22,11 +22,10 @@
 
     complete = {
        owns_entire_state_region = STATE_EASTERN_THRACE
-	    owns_entire_state_region = STATE_HUDAVENDIGAR
+	   owns_entire_state_region = STATE_HUDAVENDIGAR
        owns_entire_state_region = STATE_AYDIN
-       owns_entire_state_region = STATE_TRABZON
+       owns_entire_state_region = STATE_DIYARBAKIR
        owns_entire_state_region = STATE_ERZURUM
-       root.average_sol >= 14
     }
 
     on_complete = {
