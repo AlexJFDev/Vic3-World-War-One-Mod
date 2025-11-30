@@ -162,7 +162,7 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 		}
         add_modifier = {
 			name = minting_buff_4_modifier
-            years = 3
+            years = 6
             is_decaying = yes
 		}
         scope:ataturk_scope = {
@@ -226,6 +226,11 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                 id = turkey_events.7
                 years = 2
             }
+            add_modifier = {
+			    name = minting_buff_4_modifier
+                years = 6
+                is_decaying = yes
+		    }
         } 
         if = {
             limit = {
