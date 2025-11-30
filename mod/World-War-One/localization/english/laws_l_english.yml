@@ -412,7 +412,9 @@
  law_slave_trade_desc:0 "Demand for cheap labor is fulfilled through a dehumanizing trade in foreign bodies."
  law_legacy_slavery:0 "Legacy Slavery"
  law_legacy_slavery_desc:0 "As a compromise between abolitionists and slaveholders, the institution of slavery may continue as long as it does not expand."
-  
+ law_colonial_slavery: "Colonial Slavery"
+ law_colonial_slavery_desc: "The institution of slavery is legal in this country's colonies. Any slave that sets foot upon the mainland is made free."
+
   # Church and State group
  lawgroup_church_and_state:0 "Church and State"
  lawgroup_church_and_state_desc:0 "The relationship between physical and spiritual governors."
@@ -425,7 +427,11 @@
  law_total_separation_desc:0 "No church or faith may interfere in government functions. No religion may be discriminated against."
  law_atheist_state:0 "Atheist State"
  law_atheist_state_desc:0 "Preaching religious belief is prohibited, and practicing one is frowned upon. All religions are discriminated against."
-  
+ law_millet_system: "Millet System"
+ law_millet_system_desc:1 "The state upholds Sunni Islam as the official religion. Adherents of other Abrahamic religions are grouped under confessional communities, exempting them from conscription and granting them legal autonomy in return for paying a religious tax."
+ law_people_of_the_book: "People of the Book"
+ law_people_of_the_book_desc: "The state adheres to the principles of Islamic law. Adherents of other Abrahamic religions are recognized as #italic Dhimmi#!, exempting them from conscription and granting them legal autonomy in return for paying a religious tax." 
+
   # Citizenship group
  lawgroup_citizenship:0 "Citizenship"
  lawgroup_citizenship_desc:0 "Extending the rights of citizenship."
@@ -471,6 +477,9 @@
  law_laissez_faire_desc:0 "A liberal economy founded on the principles of comparative advantage and that fewer government interventions means greater growth"
  law_interventionism:0 "Interventionism"
  law_interventionism_desc:0 "To ensure the stability of our nation, government must curb the worst excesses of private businesses."
+ law_canton_system: "Canton System"
+ law_canton_system_desc: "A variant of $law_isolationism$ where trade is only permitted in a single coastal state."
+ canton_system_trade_center_trigger_tt: "Under the [GetLawType('law_canton_system').GetName] [concept_law], Trade Centers can only be constructed up to level #v 50#! in #v $STATE_GUANGDONG$#!"
 
  # Trade Policy group
  lawgroup_trade_policy:0 "Trade Policy"

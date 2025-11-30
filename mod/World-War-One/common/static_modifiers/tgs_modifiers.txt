@@ -272,6 +272,7 @@ army_buff_modifier_8 = {
     unit_army_offense_mult = 0.4
     unit_army_defense_mult = 0.6
     military_formation_mobilization_speed_mult = 0.8
+    military_formation_organization_gain_mult = 0.9
 }
 
 army_nerf_modifier_1 = {
@@ -1038,4 +1039,38 @@ japan_ai_buff = {
 wartime_legislation = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
     country_law_enactment_time_mult = -0.6
+}
+
+kemalism_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    country_law_enactment_time_mult = -0.2
+    interest_group_ig_intelligentsia_pol_str_mult = 0.5
+    country_authority_mult = 0.2
+}
+
+kemalist_reform_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_ig_intelligentsia_approval_add = 2
+    interest_group_ig_devout_approval_add = -1
+    interest_group_ig_landowners_approval_add = -1
+}
+
+kemalist_reform_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_ig_intelligentsia_approval_add = 5
+    interest_group_ig_devout_approval_add = -5
+    interest_group_ig_landowners_approval_add = -5
+    state_education_access_add = 0.3
+}
+
+kemalist_success = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_ig_intelligentsia_pol_str_mult = 0.5
+    interest_group_ig_devout_pol_str_mult = -0.5
+    interest_group_ig_landowners_pol_str_mult = -0.5
+    country_tech_research_speed_mult = 0.2
+	country_tech_spread_mult = 0.3
+    country_authority_mult = 0.3
+    country_minting_mult = 0.3
+    political_movement_radicalism_add = -0.15
 }

@@ -1,5 +1,5 @@
 ﻿je_nationalist_threat = {
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/turkish_revolution.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -31,7 +31,8 @@
     on_complete = {
         add_modifier = {
            name = revolution_stabilization_buff_2
-           years = 2
+           years = 5
+           is_decaying = yes
         }
     }
 
@@ -40,5 +41,92 @@
     }
 
     timeout = 365
+    should_be_pinned_by_default = yes
+}
+
+je_kemalist_reforms = {
+    icon = "gfx/interface/icons/event_icons/kemalism.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:TUR
+        THIS = c:TUR
+        has_variable = turkish_revolution
+    }
+    
+    possible = {
+        OR = {
+            has_law = law_type:law_presidential_republic
+            has_law = law_type:law_parliamentary_republic
+            has_law = law_type:law_corporate_state
+        }
+        has_variable = turkish_revolution
+    }
+
+    immediate = {
+       trigger_event = { id = turkey_events.9 popup = yes }
+    }
+
+    modifiers_while_active = {
+	   kemalism_modifier
+	}
+
+    complete = {
+        OR = {
+            has_law = law_type:law_presidential_republic
+            has_law = law_type:law_parliamentary_republic
+            has_law = law_type:law_corporate_state
+        }
+        OR = {
+            has_law = law_type:law_census_voting
+            has_law = law_type:law_universal_suffrage
+        }
+        OR = {
+            has_law = law_type:law_national_supremacy
+            has_law = law_type:law_racial_segregation
+        }
+        OR = {
+            has_law = law_type:law_total_separation
+            has_law = law_type:law_atheist_state
+        }
+        OR = {
+            has_law = law_type:law_interventionism
+            has_law = law_type:law_command_economy
+        }
+        OR = {
+            has_law = law_type:law_proportional_taxation
+            has_law = law_type:law_graduated_taxation
+        }
+        has_law = law_type:law_public_schools
+        has_law = law_type:law_public_health_insurance
+        OR = {
+            has_law = law_type:law_right_of_assembly
+            has_law = law_type:law_protected_speech
+        }
+        OR = {
+            has_law = law_type:law_anti_strike_laws
+            has_law = law_type:law_right_to_associate
+            has_law = law_type:law_corporatized_unions
+        }
+        has_law = law_type:law_compulsory_primary_school
+        NOT = {
+            has_law = law_type:law_no_womens_rights
+        }
+        has_law = law_type:law_slavery_banned
+        OR = {
+            has_law = law_type:law_true_neutrality
+            has_law = law_type:law_armed_neutrality
+        }
+    }
+
+    on_complete = {
+        trigger_event = { id = turkey_events.12 popup = yes }
+        add_modifier = {
+           name = revolution_stabilization_buff_2
+           years = 2
+           is_decaying = yes
+        }
+    }
+
     should_be_pinned_by_default = yes
 }

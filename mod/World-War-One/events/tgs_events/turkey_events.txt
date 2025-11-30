@@ -151,20 +151,25 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 
     option = { 
         name = turkey_events.5.a
-        activate_law = law_type:law_presidential_republic
-		activate_law = law_type:law_census_voting
+        activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_universal_suffrage
 		activate_law = law_type:law_national_supremacy
 		activate_law = law_type:law_right_of_assembly
+        add_treasury = 10000000
         add_modifier = {
 			name = army_buff_modifier_8
-            years = 4
-            is_decaying = yes
-		}
-        add_modifier = {
-			name = minting_buff_4_modifier
             years = 6
             is_decaying = yes
 		}
+        add_modifier = {
+			name = minting_buff_5_modifier
+            years = 5
+            is_decaying = yes
+		}
+        add_modifier = {
+           name = revolution_stabilization_buff_2
+           years = 5
+        }
         scope:ataturk_scope = {
             set_character_as_ruler = yes
 		}
@@ -228,7 +233,7 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
             }
             add_modifier = {
 			    name = minting_buff_4_modifier
-                years = 6
+                years = 2
                 is_decaying = yes
 		    }
         } 
@@ -245,6 +250,7 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                 }
             } 
         }
+        set_variable = turkish_revolution
     } 
 }   
 
@@ -279,6 +285,7 @@ turkey_events.6 = { #Countries react to revolution
     option = { 
         name = turkey_events.6.a
         default_option = yes
+        trigger = { NOT = { root = c:ITA } }
         scope:turkish_independance_war_diplo_play = {
 			add_target_backers = {
 				who = root
@@ -302,15 +309,16 @@ turkey_events.6 = { #Countries react to revolution
         }
         trigger_event = {
             id = turkey_events.7
-            days = 250
+            days = 180
         }
         ai_chance = {
-		  base = 10
+		  base = 1
 	    }
     }
 
     option = { 
         name = turkey_events.6.b
+        trigger = { NOT = { root = c:ITA } }
         scope:turkish_independance_war_diplo_play = {
             add_target_backers = {
 				c:ARM
@@ -321,6 +329,56 @@ turkey_events.6 = { #Countries react to revolution
         }
         ai_chance = {
 		  base = 0
+	    }
+    }
+
+    option = { 
+        name = turkey_events.6.a
+        default_option = yes
+        trigger = { root = c:ITA }
+        scope:turkish_independance_war_diplo_play = {
+			add_target_backers = {
+				who = root
+			}
+            add_target_backers = {
+				c:ARM
+			}
+            add_target_backers = {
+				c:KUR
+			}
+            add_war_goal = {
+                    holder = c:TUR
+                    type = annex_country
+                    target_country = c:ARM
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = annex_country
+                    target_country = c:KUR
+                }
+        }
+        trigger_event = {
+            id = turkey_events.7
+            days = 180
+        }
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = { 
+        name = turkey_events.6.b
+        trigger = { root = c:ITA }
+        scope:turkish_independance_war_diplo_play = {
+            add_target_backers = {
+				c:ARM
+			}
+            add_target_backers = {
+				c:KUR
+			}
+        }
+        ai_chance = {
+		  base = 1
 	    }
     }
 }
@@ -342,6 +400,16 @@ turkey_events.7 = { #Countries refrain from intervening furthermore
     }
 
     trigger = {}
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:TUR ?= this }
+              target = { c:GRE ?= this }
+		    }
+           save_scope_as = turkish_independance_war_diplo_play
+        }
+    }
 
     option = { 
         name = turkey_events.7.a
@@ -451,5 +519,148 @@ turkey_events.8 = { #Arab uprising
 				c:HDJ
 			}
         }    
+    }
+}
+
+turkey_events.9 = { #Kemalist reforms je initiation
+    type = country_event
+
+    title = turkey_events.9.t
+    desc = turkey_events.9.d
+    flavor = turkey_events.9.f
+    
+    icon = "gfx/interface/icons/event_icons/kemalism.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/kemalism.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = turkey_events.9.a
+        default_option = yes
+        trigger_event = {
+            id = turkey_events.10
+            years = 5
+        }
+    }
+}
+
+turkey_events.10 = { #Western clothing
+    type = country_event
+
+    title = turkey_events.10.t
+    desc = turkey_events.10.d
+    flavor = turkey_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/kemalism.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/kemalism.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = turkey_events.10.a
+        default_option = yes
+        add_modifier = {
+           name = kemalist_reform_1
+           years = 20
+           is_decaying = yes
+        }
+        trigger_event = {
+            id = turkey_events.11
+            years = 3
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = turkey_events.10.b
+        trigger_event = {
+            id = turkey_events.11
+            years = 3
+        }
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+turkey_events.11 = { #Turkish alphabet
+    type = country_event
+
+    title = turkey_events.11.t
+    desc = turkey_events.11.d
+    flavor = turkey_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/kemalism.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/kemalism.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = turkey_events.11.a
+        default_option = yes
+        add_modifier = {
+           name = kemalist_reform_2
+           years = 20
+           is_decaying = yes
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = turkey_events.11.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+turkey_events.12 = { #Kemalist reforms JE success
+    type = country_event
+
+    title = turkey_events.12.t
+    desc = turkey_events.12.d
+    flavor = turkey_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/kemalism.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/kemalism.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = turkey_events.12.a
+        default_option = yes
+        add_modifier = {
+           name = kemalist_success
+           years = 50
+           is_decaying = yes
+        }
     }
 }
