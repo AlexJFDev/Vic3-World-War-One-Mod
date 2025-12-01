@@ -478,6 +478,17 @@ dev_events.15 = {
             years = 30
         }
     }
+
+    option = {
+        name = dev_events.15.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 10
+            is_decaying = yes
+        }
+    }
 }
 
 dev_events.16 = { 
