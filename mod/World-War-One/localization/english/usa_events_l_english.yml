@@ -49,6 +49,8 @@
  great_depression_effect_3_desc:0 "The country is plunged in a deep financial and economic crisis."
  great_depression_effect_4:0 "The Great Depression"
  great_depression_effect_4_desc:0 "The country is plunged in a deep financial and economic crisis."
+ great_depression_cash_reserve_wipeout:0 "Cash Reserve Wipe Out"
+ great_depression_cash_reserve_wipeout_desc:0 "A temporary modifier to wipe out this building cash reserve."
 
  ideology_rooseveltian_progressivism:0 "Rooseveltian Progressivist"
  ideology_rooseveltian_progressivism_desc:0 "A reformism movement aiming to improving the human condition through government regulation and social protections. To achieve those goals, the Rooseveltian branch advocates for more regulations of capitalism."
@@ -174,6 +176,21 @@
  usa_events.21.f:0 "Due to many complications, we had been forced to intervene into the Great War. In result, we have gained lost of political momentum, as the americans blame us for sending their peers to the European butchery. This will greatly hinder our party in the coming years amid the political scene."
  usa_events.21.a:0 "We had no choice !"
 
+ usa_events.22.t:0 "The Federal Resegragation Act"
+ usa_events.22.d:0 "The president wants to impose the segregation of the admistration, which would anger the civil rights movements. Should we proceed ?"
+ usa_events.22.f:0 "After the Civil War, Republican Administrations appointed Black Americans to government positions. Through the Pendleton Civil Service Act of 1883, merit-based civil service examinations, and a Civil Service Commission that sought to assure qualified Black applicants were fairly considered for job openings and promotions, Black women and men gained positions at all levels of the federal government. Woodrow Wilson, the first Southerner president since the Civil War, now wants to reverse this decision in the name of the southern Jim Crow racial legislation."
+ usa_events.22.a:0 "If the president wants it then it shall be done."
+ usa_events.22.b:0 "Let's keep the administration as it is."
+
+ usa_events.23.t:0 "The Birth of a Nation"
+ usa_events.23.d:0 "The president wants to screen the controversial movie at the white house, which would anger the civil rights movements. Should we proceed ?"
+ usa_events.23.f:0 "Released in february, the movie is provoking lots of debates as it is openly advocating for the Klu Klux Klan, slavery and white supremacy. It has already been denied release in the state of Ohio and the cities of Chicago, Denver, Pittsburgh, St. Louis, and Minneapolis. To support the movie facing this boycott, president Wilson whishes to screen it at the White House, which is greatly opposed by many civil rights organizations and Republicans."
+ usa_events.23.a:0 "If the president wants it then it shall be done."
+ usa_events.23.b:0 "Let's not create more controversies."
+
+ angry_civil_rights_associations:0 "Angry civil rights associations"
+ angry_civil_rights_associations_desc:0 "The recent decisions made by the current administration have angered the civil rights associations across the country."
+
  je_american_neutrality:0 "American Neutrality"
  je_american_neutrality_reason:0 "Americans values isolationism and pacifism deer in their heart. The memory of the civil war is still present in many minds, favoring the pacifist stance. Republicans, Democrats, Progressists ; no matter who holds the White House and would make the nation enters into the world war would suffer greatly in the long term. If we want to make that decision, we need to be ready to pay an heavy price for our political formation. However, maintaining our neutrality would greatly benefits us."
  je_american_neutrality_name:0 "American Neutrality"
@@ -184,3 +201,18 @@
 
  peace_promise_broken:0 "Peace Promise Broken"
  peace_promise_broken_desc:0 "This government has failed to keep their nation out of the war, greatly harming the ruling political formations."
+
+ company_basic_movies:0 "Gold Studio Company"
+ company_walt_disney:0 "The Walt Disney Company"
+ not_prestige_good_generic_movies_var_tt: "Has #b not#! already developed @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
+
+ je_prestige_goods_movies: "$prestige_good_generic_movies$"
+ je_prestige_goods_movies_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!. If successful, it will be able to expand its competitiveness within the global @fine_art! #b $fine_art$#! market."
+ je_prestige_goods_movies_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_movies_timer_var').GetValue]#!): #indent_newline:3 "
+
+ je_prestige_goods_movies_complete_tt: "Has completed the #b $je_prestige_goods_movies$#! [concept_journal_entry]"
+ je_prestige_goods_movies_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
+
+ notification_prestige_goods_movies_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
+ notification_prestige_goods_movies_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
+ notification_prestige_goods_movies_unlocked_tooltip: "#header $notification_prestige_goods_movies_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_goods_movies_unlocked_desc$"

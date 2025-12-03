@@ -1,0 +1,114 @@
+﻿company_basic_movies = {
+	icon = "gfx/interface/icons/company_icons/basic_movies.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = no
+
+	building_types = {
+		building_arts_academy
+	}
+
+	extension_building_types = { }
+
+	possible_prestige_goods = {
+		prestige_good_generic_movies
+	}
+
+	possible = {
+		has_technology_researched = film
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 10
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		building_arts_academy_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 10
+			}
+		}
+	}
+}
+
+company_walt_disney = {
+	icon = "gfx/interface/icons/company_icons/walt_disney.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_arts_academy
+	}
+
+	extension_building_types = { }
+
+	possible_prestige_goods = {
+		prestige_good_disney_movies
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = film
+		NOT = { has_law = law_type:law_outlawed_dissent }
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 20
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.3
+		building_arts_academy_throughput_add = 0.2
+	}
+
+	ai_will_do = {
+		has_technology_researched = film
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_arts_academy = {
+			level = 20
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 5 # Higher base value for flavored companies
+	}
+}
