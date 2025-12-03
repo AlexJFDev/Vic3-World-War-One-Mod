@@ -52507,6 +52507,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 30
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_barracks
 				add_ownership = {
 					country = {
@@ -53841,7 +53854,7 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 10
+						levels = 30
 					}
 				}
 				reserves = 1
@@ -54730,7 +54743,7 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 10
+						levels = 30
 					}
 				}
 				reserves = 1
