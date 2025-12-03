@@ -2131,9 +2131,30 @@ dev_events.62 = {
     option = {
         name = dev_events.8.a
         default_option = yes
+        trigger = { is_player = yes }
         add_modifier = {
             name = starting_sol_nerf_2
-            years = 30
+            years = 40
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.26
+            days = 30
+        }
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = starting_sol_nerf_2
+            years = 40
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 40
             is_decaying = yes
         }
         trigger_event = {
