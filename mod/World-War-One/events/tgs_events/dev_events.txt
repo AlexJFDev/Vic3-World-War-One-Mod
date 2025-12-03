@@ -2439,3 +2439,29 @@ dev_events.65 = {
 		}
     }
 }
+
+dev_events.65 = { 
+    type = country_event
+
+    title = dev_events.16.t
+    desc = dev_events.16.d
+    flavor = dev_events.16.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.16.a
+        default_option = yes
+        add_modifier = {
+            name = 
+            months = 
+        }
+    }
+}

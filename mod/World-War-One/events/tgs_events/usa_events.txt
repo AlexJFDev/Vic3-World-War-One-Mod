@@ -1387,8 +1387,93 @@ usa_events.21 = { #American neutrality je failure
     option = {
         name = usa_events.21.a
         default_option = yes
+    }
+}
+
+usa_events.22 = { #Federal resegregation act
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/wilson_cabinet.dds"
+    }
+
+    title = usa_events.22.t
+    desc = usa_events.22.d
+    flavor = usa_events.22.f
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    option = {
+        name = usa_events.22.a
+		default_option = yes
+        add_modifier = {
+            name = angry_civil_rights_associations
+            years = 10
+            is_decaying = yes
+        }
+        trigger_event = { 
+			id = usa_events.23
+			months = 7
+		}
         ai_chance = {
-			base = 10
+			base = 1
+		}
+    }
+
+    option = {
+        name = usa_events.22.b
+        trigger_event = { 
+			id = usa_events.23
+			months = 7
+		}
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+usa_events.23 = { #Birth of a nation screening
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/birth_of_a_nation.dds"
+    }
+
+    title = usa_events.23.t
+    desc = usa_events.23.d
+    flavor = usa_events.23.f
+
+    icon = "gfx/interface/icons/invention_icons/film.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    option = {
+        name = usa_events.23.a
+		default_option = yes
+        add_modifier = {
+            name = angry_civil_rights_associations
+            years = 5
+            is_decaying = yes
+        }
+        trigger_event = { 
+			id = usa_events.17
+			months = 15
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+        name = usa_events.23.b
+        trigger_event = { 
+			id = usa_events.17
+			months = 15
+		}
+        ai_chance = {
+			base = 0
 		}
     }
 }
