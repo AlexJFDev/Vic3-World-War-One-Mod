@@ -25,6 +25,7 @@ arrange_accident = {
 			has_role = admiral
 			has_role = politician
 			has_role = agitator
+			has_role = executive
 		}
 		is_immortal = no
 	}
@@ -34,9 +35,6 @@ arrange_accident = {
 	possible = {
 		owner ?= {
 			has_law = law_type:law_surveillance_state
-		}
-		interest_group = {
-			is_marginal = no
 		}
 	}
 
@@ -49,32 +47,32 @@ arrange_accident = {
 		}
 		if = {
 			limit = {
-				exists = owner.institution:institution_home_affairs
+				exists = owner.institution:institution_surveillance
 			}
 			random_list = {
 				40 = {
 					modifier = {
 						if = {
 							limit = {
-								owner.institution:institution_home_affairs.investment >= 2
+								owner.institution:institution_surveillance.investment >= 2
 							}
 							add = 25
 						}
 						if = {
 							limit = {
-								owner.institution:institution_home_affairs.investment >= 3
+								owner.institution:institution_surveillance.investment >= 3
 							}
 							add = 25
 						}
 						if = {
 							limit = {
-								owner.institution:institution_home_affairs.investment >= 4
+								owner.institution:institution_surveillance.investment >= 4
 							}
 							add = 25
 						}
 						if = {
 							limit = {
-								owner.institution:institution_home_affairs.investment >= 5
+								owner.institution:institution_surveillance.investment >= 5
 							}
 							add = 25
 						}
@@ -91,25 +89,25 @@ arrange_accident = {
 					modifier = {
 						if = {
 							limit = {
-								owner.institution:institution_home_affairs.investment >= 2
+								owner.institution:institution_surveillance.investment >= 2
 							}
 							subtract = 5
 						}
 						if = {
 							limit = {
-								owner.institution:institution_home_affairs.investment >= 3
+								owner.institution:institution_surveillance.investment >= 3
 							}
 							subtract = 5
 						}
 						if = {
 							limit = {
-								owner.institution:institution_home_affairs.investment >= 4
+								owner.institution:institution_surveillance.investment >= 4
 							}
 							subtract = 5
 						}
 						if = {
 							limit = {
-								owner.institution:institution_home_affairs.investment >= 5
+								owner.institution:institution_surveillance.investment >= 5
 							}
 							subtract = 5
 						}
