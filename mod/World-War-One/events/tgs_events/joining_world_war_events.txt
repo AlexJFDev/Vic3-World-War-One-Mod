@@ -41,6 +41,16 @@ joining_world_war_events.2 = { #Joining the Entente
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { c:SER ?= this }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = {
         name = joining_world_war_events.2.a
         default_option = yes
@@ -80,6 +90,16 @@ joining_world_war_events.3 = { #Joining the Central Powers
     }
 
     trigger = {}
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { c:SER ?= this }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
 
     option = {
         name = joining_world_war_events.3.a
@@ -1378,6 +1398,36 @@ joining_world_war_events.28 = { #Senussi order joins WW1
                 c:SEN
             }            
 		}
+        trigger_event = {
+            id = dev_events.65
+            days = 5
+        }
+        s:STATE_CHAD = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:EQA
+			    owner = {
+				  OR = {
+					c:EQA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SEN
+            }
+        }
+		s:STATE_DARFUR = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:SUD
+			    owner = {
+				  OR = {
+					c:SUD = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SEN
+            }
+        }
         every_state = {
           limit = {
                 OR = {
@@ -1398,24 +1448,7 @@ joining_world_war_events.28 = { #Senussi order joins WW1
                is_decaying = yes
             }
         }
-        c:SEN = {
-			create_military_formation = {
-				type = army
-				hq_region = sr:region_north_africa
-                name = Senusi_peasent_levies
-	
-				combat_unit = {
-					type = unit_type:combat_unit_type_irregular_infantry
-					state_region = s:STATE_LIBYAN_DESERT
-					count = 30
-				}
-			}
-		}
-        add_modifier = {
-               name = senusi_army_buff
-               years = 5
-               is_decaying = yes
-            }
+        add_treasury = 5000000
         ai_chance = {
 		  base = 10
 	    }
