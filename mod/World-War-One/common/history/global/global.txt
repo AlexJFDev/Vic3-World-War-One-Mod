@@ -211,7 +211,7 @@
 		}
 		trigger_event = { #Starting sol buff for america
 			id = dev_events.27
-			days = 15
+			days = 5
 		}
         trigger_event = { #Starting minting bonus for every countries
 			id = dev_events.35
@@ -226,7 +226,7 @@
 	c:FRA = {
 		trigger_event = { #Minting bonus 3
 			id = dev_events.7
-			days = 15
+			days = 5
 		}
 		trigger_event = { #Loy and rads reset
 			id = dev_events.26
@@ -234,7 +234,7 @@
 		}
 		trigger_event = { #Outadated tactics
 			id = dev_events.21
-			days = 15
+			days = 5
 		}
 	}
 
@@ -245,14 +245,14 @@
 		}
 		trigger_event = { #Minting bonus 3
 			id = dev_events.7
-			days = 15
+			days = 5
 		}
 	}
 
 	c:RUS = {
 		trigger_event = { #Minting bonus 1
 			id = dev_events.5
-			days = 15
+			days = 5
 		}
 	}
 
@@ -274,18 +274,18 @@
 		}
 		trigger_event = { #Minting bonus 5
 			id = dev_events.8
-			days = 15
+			days = 5
 		}
 	}
 
 	c:JAP = {
 		trigger_event = { #Minting Bonus 2
 			id = dev_events.6
-			days = 15
+			days = 5
 		}
 		trigger_event = { #Ai Japan buff
 			id = dev_events.53
-			days = 15
+			days = 5
 		}
 		trigger_event = { #Kanto earthquake
 			id = japan_events.15
@@ -380,7 +380,7 @@
 	c:GER = {
 		trigger_event = { #Minting bonus 1
 			id = dev_events.5
-			days = 15
+			days = 5
 		}
 		trigger_event = { #Loy and rads reset
 			id = dev_events.26
@@ -427,17 +427,21 @@
 	}
 	
 	c:AUS = {
+        trigger_event = { #Fix debt
+			id = dev_events.67
+			days = 5
+		}
 		trigger_event = { #Minting bonus 2
 			id = dev_events.6
-			days = 15
+			days = 5
 		}
 		trigger_event = { #Change religion
 			id = dev_events.13
-			days = 15
+			days = 5
 		}
 		trigger_event = { #Nerf modifiers
 			id = dev_events.20
-			days = 15
+			days = 5
 		}
 		trigger_event = { #Sarajevo visit or no
 			id = great_war_initiation_events.25
