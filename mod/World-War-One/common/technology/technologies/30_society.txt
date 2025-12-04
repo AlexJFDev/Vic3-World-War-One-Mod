@@ -1327,6 +1327,27 @@ central_planning = {
 	}
 }
 
+technocracy = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/technocracy.dds"
+	category = society
+
+	modifier = {
+		country_tech_research_speed_mult = 0.05
+		country_engineers_pol_str_mult = 0.1
+		country_academics_pol_str_mult = 0.1
+		country_bureaucrats_pol_str_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		central_planning
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 political_agitation = {
 	# Unlocks Women's Suffrage - Rights of Women Law
 	# Increases political participation from poor pop types
