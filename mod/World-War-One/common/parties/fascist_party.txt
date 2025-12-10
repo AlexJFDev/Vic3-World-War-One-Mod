@@ -1,4 +1,4 @@
-﻿fascist_party = {
+﻿TRY_REPLACE:fascist_party = {
 	color = { 50 60 198 }
 	name = {
 		first_valid = {
@@ -145,10 +145,7 @@
 			triggered_desc = {
 				desc = party_nazis
 				trigger = {
-					OR = {
-						country_has_primary_culture = cu:north_german
-						country_has_primary_culture = cu:south_german
-					}
+						country_has_primary_culture = cu:german
 					any_interest_group = {
 						leader = {
 							OR = {
@@ -162,10 +159,7 @@
 			triggered_desc = {
 				desc = party_german_social_party
 				trigger = {
-					OR = {
-						country_has_primary_culture = cu:north_german
-						country_has_primary_culture = cu:south_german
-					}
+					country_has_primary_culture = cu:german
 					NOT = {
 						any_interest_group = {
 							leader = {

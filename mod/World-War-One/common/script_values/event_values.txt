@@ -1,4 +1,6 @@
-﻿small_radicals = 0.02
+﻿#IT breaking
+
+small_radicals = 0.02
 medium_radicals = 0.05
 large_radicals = 0.1
 very_large_radicals = 0.2
@@ -40,7 +42,7 @@ stupidly_long_modifier_time = 18250 # 50 years
 never_fire_again_modifier_time = 1000000 # Nevermore
 
 # 0.015% of GDP, rounded to nearest 10
-money_amount_multiplier_very_small = {
+TRY_REPLACE:money_amount_multiplier_very_small = {
 	value = root.gdp
 	divide = 10000
 	multiply = 0.075
@@ -50,7 +52,7 @@ money_amount_multiplier_very_small = {
 }
 
 # 0.025% of GDP, rounded to nearest 100
-money_amount_multiplier_small = {
+TRY_REPLACE:money_amount_multiplier_small = {
 	value = root.gdp
 	divide = 100000
 	multiply = 0.15
@@ -60,7 +62,7 @@ money_amount_multiplier_small = {
 }
 
 # 0.05% of GDP, rounded to nearest 100
-money_amount_multiplier_medium = {
+TRY_REPLACE:money_amount_multiplier_medium = {
 	value = root.gdp
 	divide = 100000
 	multiply = 0.25
@@ -70,7 +72,7 @@ money_amount_multiplier_medium = {
 }
 
 # 0.1% of GDP, rounded to nearest 1000
-money_amount_multiplier_large = {
+TRY_REPLACE:money_amount_multiplier_large = {
 	value = root.gdp
 	divide = 1000000
 	multiply = 0.5
@@ -80,7 +82,7 @@ money_amount_multiplier_large = {
 }
 
 # 0.2% of GDP, rounded to nearest 1000
-money_amount_multiplier_more_large = {
+TRY_REPLACE:money_amount_multiplier_more_large = {
 	value = root.gdp
 	divide = 1000000
 	multiply = 1
@@ -90,7 +92,7 @@ money_amount_multiplier_more_large = {
 }
 
 # 0.5% of GDP, rounded to nearest 1000
-money_amount_multiplier_very_large = {
+TRY_REPLACE:money_amount_multiplier_very_large = {
 	value = root.gdp
 	divide = 1000000
 	multiply = 2.5
@@ -99,7 +101,7 @@ money_amount_multiplier_very_large = {
 	min = 100
 }
 
-money_amount_multiplier_large_state = {
+TRY_REPLACE:money_amount_multiplier_large_state = {
 	multiply = 0.001
 }
 
@@ -140,7 +142,7 @@ religious_acceptance_medium = 15 # the amount all pops get in separation from ch
 religious_acceptance_high = 20
 religious_acceptance_very_high = 25 # highest possible value
 
-jail_three_year_value = {
+TRY_REPLACE:jail_three_year_value = {
 	if = {
 		limit = {
 			exists = scope:prisoner_scope
@@ -151,7 +153,7 @@ jail_three_year_value = {
 	}
 }
 
-jail_five_year_value = {
+TRY_REPLACE:jail_five_year_value = {
 	if = {
 		limit = {
 			exists = scope:prisoner_scope
@@ -162,7 +164,7 @@ jail_five_year_value = {
 	}
 }
 
-jail_ten_year_value = {
+TRY_REPLACE:jail_ten_year_value = {
 	if = {
 		limit = {
 			exists = scope:prisoner_scope
@@ -175,7 +177,7 @@ jail_ten_year_value = {
 
 divided_monarchists_upper_bound = 480
 
-controlled_colonies_in_africa = {
+TRY_REPLACE:controlled_colonies_in_africa = {
 	value = 0
 	every_scope_state = {
 		limit = {

@@ -1,4 +1,4 @@
-﻿pm_market_stalls = {
+﻿TRY_REPLACE:pm_market_stalls = {
 	texture = "gfx/interface/icons/production_method_icons/market_stalls.dds"
 
 	building_modifiers = {
@@ -14,7 +14,7 @@
 	}
 }
 
-pm_market_squares = {
+TRY_REPLACE:pm_market_squares = {
 	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
 
 	unlocking_technologies = { urban_planning }
@@ -34,7 +34,7 @@ pm_market_squares = {
 	}
 }
 
-pm_covered_markets = {
+TRY_REPLACE:pm_covered_markets = {
 	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
 	unlocking_technologies = {
 		steel_frame_buildings
@@ -55,7 +55,7 @@ pm_covered_markets = {
 	}
 }
 
-pm_arcades = {
+TRY_REPLACE:pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
 	unlocking_technologies = {
 		elevator
@@ -79,13 +79,13 @@ pm_arcades = {
 	required_input_goods = electricity
 }
 
-pm_no_street_lighting = {
+TRY_REPLACE:pm_no_street_lighting = {
 	texture = "gfx/interface/icons/production_method_icons/no_street_lighting.dds"
 
 	city_lights_color_index = 0	# Needs to match city_graphics_data.settings color array
 }
 
-pm_gas_streetlights = {
+TRY_REPLACE:pm_gas_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/gas_streetlights.dds"
 
 	city_lights_color_index = 1	# Needs to match city_graphics_data.settings color array
@@ -111,7 +111,7 @@ pm_gas_streetlights = {
 	}
 }
 
-pm_electric_streetlights = {
+TRY_REPLACE:pm_electric_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
@@ -141,7 +141,7 @@ pm_electric_streetlights = {
 	required_input_goods = electricity
 }
 
-pm_no_public_transport = {
+TRY_REPLACE:pm_no_public_transport = {
 	texture = "gfx/interface/icons/production_method_icons/no_public_transport.dds"
 
 	building_modifiers = {
@@ -151,7 +151,7 @@ pm_no_public_transport = {
 	}
 }
 
-pm_public_trams = {
+TRY_REPLACE:pm_public_trams = {
 	texture = "gfx/interface/icons/production_method_icons/public_trams.dds"
 
 	unlocking_technologies = {
@@ -178,7 +178,7 @@ pm_public_trams = {
 	}
 }
 
-pm_public_motor_carriages = {
+TRY_REPLACE:pm_public_motor_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/public_motor_carriages.dds"
 
 	unlocking_technologies = {
@@ -205,7 +205,7 @@ pm_public_motor_carriages = {
 	}
 }
 
-pm_state_urban_clergy = {
+TRY_REPLACE:pm_state_urban_clergy = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 
 	unlocking_laws = {
@@ -219,7 +219,7 @@ pm_state_urban_clergy = {
 	}
 }
 
-pm_free_urban_clergy = {
+TRY_REPLACE:pm_free_urban_clergy = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 
 	disallowing_laws = {
@@ -235,7 +235,7 @@ pm_free_urban_clergy = {
 	}
 }
 
-pm_no_urban_clergy = {
+TRY_REPLACE:pm_no_urban_clergy = {
 	texture = "gfx/interface/icons/production_method_icons/state_atheism.dds"
 	unlocking_laws = {
 		law_state_atheism
@@ -249,7 +249,7 @@ pm_no_urban_clergy = {
 	}
 }
 
-pm_traditional_art = {
+TRY_REPLACE:pm_traditional_art = {
 	texture = "gfx/interface/icons/production_method_icons/traditional_art.dds"
 
 	building_modifiers = {
@@ -260,7 +260,7 @@ pm_traditional_art = {
 	}
 }
 
-pm_realist_art = {
+TRY_REPLACE:pm_realist_art = {
 	texture = "gfx/interface/icons/production_method_icons/realist_art.dds"
 
 	unlocking_technologies = {
@@ -276,7 +276,7 @@ pm_realist_art = {
 	}
 }
 
-pm_photographic_art = {
+TRY_REPLACE:pm_photographic_art = {
 	texture = "gfx/interface/icons/production_method_icons/photographic_art.dds"
 
 	unlocking_technologies = {
@@ -294,7 +294,7 @@ pm_photographic_art = {
 	}
 }
 
-pm_film_art = {
+TRY_REPLACE:pm_film_art = {
 	texture = "gfx/interface/icons/production_method_icons/film_art.dds"
 
 	unlocking_technologies = {
@@ -315,7 +315,7 @@ pm_film_art = {
 	required_input_goods = electricity
 }
 
-pm_principle_freedom_of_movement_3 = {
+TRY_REPLACE:pm_principle_freedom_of_movement_3 = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 
 	is_hidden_when_unavailable = yes
@@ -331,13 +331,13 @@ pm_principle_freedom_of_movement_3 = {
 	}
 }
 
-pm_freedom_of_movement_no_effect = {
+TRY_REPLACE:pm_freedom_of_movement_no_effect = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 
 	replacement_if_valid = pm_principle_freedom_of_movement_3
 }
 
-pm_traditional_patronage = {
+TRY_REPLACE:pm_traditional_patronage = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 
 	disallowing_laws = {
@@ -354,7 +354,7 @@ pm_traditional_patronage = {
 	}
 }
 
-pm_bourgeoisie_patronage = {
+TRY_REPLACE:pm_bourgeoisie_patronage = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 
 	unlocking_technologies = {
@@ -375,7 +375,7 @@ pm_bourgeoisie_patronage = {
 	}
 }
 
-pm_independent_artists = {
+TRY_REPLACE:pm_independent_artists = {
 	texture = "gfx/interface/icons/production_method_icons/independent_artists.dds"
 
 	unlocking_technologies = {
@@ -392,7 +392,7 @@ pm_independent_artists = {
 }
 
 # We should bring this back later as an efficient & clean method only available in suitable states
-#pm_hydroelectric_plant = {
+#TRY_REPLACE:pm_hydroelectric_plant = {
 #	texture = "gfx/interface/icons/production_method_icons/hydroelectric_plant.dds"
 #
 #	state_modifiers = {
@@ -415,7 +415,7 @@ pm_independent_artists = {
 #	}
 #}
 
-pm_early_power_plant = {
+TRY_REPLACE:pm_early_power_plant = {
 	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
 
 	state_modifiers = {
@@ -441,7 +441,7 @@ pm_early_power_plant = {
 	}
 }
 
-pm_coal-fired_plant = {
+TRY_REPLACE:pm_coal-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
 
 	unlocking_technologies = {
@@ -470,7 +470,7 @@ pm_coal-fired_plant = {
 	}
 }
 
-pm_oil-fired_plant = {
+TRY_REPLACE:pm_oil-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
 
 	unlocking_technologies = {
