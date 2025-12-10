@@ -18,17 +18,14 @@ arrange_accident = {
 	potential = {
 		is_in_exile_pool = no
 		is_in_void = no
-		is_ruler = no
-		is_heir = no
+		is_immortal = no
 		OR = {
-			has_role = heir
 			has_role = general
 			has_role = admiral
 			has_role = politician
 			has_role = agitator
 			has_role = executive
 		}
-		is_immortal = no
 	}
 
 	show_requirements = yes
