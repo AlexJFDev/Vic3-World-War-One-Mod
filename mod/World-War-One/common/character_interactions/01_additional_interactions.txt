@@ -20,6 +20,7 @@ TRY_REPLACE:arrange_accident = {
 		is_in_void = no
 		is_immortal = no
 		OR = {
+			is_heir = yes
 			has_role = general
 			has_role = admiral
 			has_role = politician
@@ -32,12 +33,37 @@ TRY_REPLACE:arrange_accident = {
 
 	possible = {
 		owner ?= {
-			has_law = law_type:law_surveillance_state
+			has_law_or_variant = law_type:law_surveillance_state
+		}
+		interest_group ?= {
+			ig_counts_as_marginal = no
+		}
+		custom_tooltip = {
+			text = pending_coup_event_tt
+			NOT = {
+				owner = {
+					has_variable = coup_event_active
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				OR = {
+					has_dlc_feature = voice_of_the_people_content
+					has_dlc_feature = ip4_content
+				}
+			}
+			custom_tooltip = {
+				text = doing_coup_for_player_tt
+				NOT = {
+					has_variable = commander_doing_coup_on_player_behalf
+				}
+			}
 		}
 	}
 
 	effect = {
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = relevant_ig
 		}
 		this = {
@@ -73,6 +99,18 @@ TRY_REPLACE:arrange_accident = {
 								owner.institution:institution_surveillance.investment >= 5
 							}
 							add = 25
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								has_dlc_feature = ip3_content
+								scope:assassinated_scope ?= {
+									has_template = aus_klemens_von_metternich
+									is_immortal = yes
+								}
+							}
+							set_character_immortal = no
 						}
 					}
 					kill_character = yes
@@ -119,6 +157,19 @@ TRY_REPLACE:arrange_accident = {
 					}
 					if = {
 						limit = {
+							owner = {
+								has_journal_entry = je_ip4_coup
+							}
+							root = {
+								has_variable = golpista_var
+							}
+						}
+						owner = {
+							character_execute_immediate_coup = yes
+						}
+					}
+					if = {
+						limit = {
 							character_supports_political_movement = yes
 						}
 						this.political_movement = {
@@ -131,7 +182,7 @@ TRY_REPLACE:arrange_accident = {
 					else_if = {
 						limit = {
 							has_role = politician
-							THIS.interest_group = {
+							THIS.interest_group ?= {
 								interest_group_supports_political_movement = yes
 							}
 						}
@@ -173,6 +224,19 @@ TRY_REPLACE:arrange_accident = {
 					}
 					if = {
 						limit = {
+							owner = {
+								has_journal_entry = je_ip4_coup
+							}
+							root = {
+								has_variable = golpista_var
+							}
+						}
+						owner = {
+							character_execute_immediate_coup = yes
+						}
+					}
+					if = {
+						limit = {
 							character_supports_political_movement = yes
 						}
 						this.political_movement = {
@@ -185,7 +249,7 @@ TRY_REPLACE:arrange_accident = {
 					else_if = {
 						limit = {
 							has_role = politician
-							THIS.interest_group = {
+							THIS.interest_group ?= {
 								interest_group_supports_political_movement = yes
 							}
 						}
@@ -215,7 +279,7 @@ TRY_REPLACE:arrange_accident = {
 		value = -50
 		if = {
 			limit = {
-				interest_group = {
+				interest_group ?= {
 					ig_approval <= -5
 				}
 			}
@@ -223,7 +287,7 @@ TRY_REPLACE:arrange_accident = {
 		}
 		if = {
 			limit = {
-				interest_group = {
+				interest_group ?= {
 					ig_approval <= -10
 				}
 			}
@@ -233,9 +297,9 @@ TRY_REPLACE:arrange_accident = {
 			limit = {
 				scope:actor ?= {
 					NOR = {
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_single_party_state
+						has_law_or_variant = law_type:law_autocracy
+						has_law_or_variant = law_type:law_oligarchy
+						has_law_or_variant = law_type:law_single_party_state
 					}
 				}
 			}
@@ -244,7 +308,7 @@ TRY_REPLACE:arrange_accident = {
 		if = {
 			limit = {
 				scope:actor ?= {
-					has_law = law_type:law_outlawed_dissent
+					has_law_or_variant = law_type:law_outlawed_dissent
 				}
 			}
 			add = 30
@@ -252,7 +316,7 @@ TRY_REPLACE:arrange_accident = {
 		if = {
 			limit = {
 				scope:actor ?= {
-					has_law = law_type:law_censorship
+					has_law_or_variant = law_type:law_censorship
 				}
 			}
 			add = 10
@@ -260,7 +324,7 @@ TRY_REPLACE:arrange_accident = {
 		if = {
 			limit = {
 				scope:actor ?= {
-					has_law = law_type:law_right_of_assembly
+					has_law_or_variant = law_type:law_right_of_assembly
 				}
 			}
 			add = -10
@@ -268,7 +332,7 @@ TRY_REPLACE:arrange_accident = {
 		if = {
 			limit = {
 				scope:actor ?= {
-					has_law = law_type:law_protected_speech
+					has_law_or_variant = law_type:law_protected_speech
 				}
 			}
 			add = -20
@@ -277,7 +341,7 @@ TRY_REPLACE:arrange_accident = {
 			limit = {
 				scope:actor ?= {
 					any_interest_group = {
-						is_insurrectionary = yes
+						is_revolutionary = yes
 					}
 				}
 			}
@@ -306,6 +370,12 @@ TRY_REPLACE:arrange_accident = {
 				}
 			}
 			add = 10
+		}
+		if = {
+			limit = {
+				is_heir = yes # The AI won't kill its own heirs
+			}
+			add = -100
 		}
 	}
 }
