@@ -18,7 +18,7 @@ goldrush.1 = { #gold discovered in a state
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 
 	trigger = {
-		has_building = building_gold_fields
+		has_building = building_gold_field
 		NOT = { has_modifier = state_gold_rush }
 	}
 
@@ -67,7 +67,7 @@ goldrush.2 = { #gold fields depleted
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 
 	trigger = {
-		has_building = building_gold_fields
+		has_building = building_gold_field
 		NOT = { has_modifier = state_gold_rush }
 	}
 

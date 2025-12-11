@@ -511,7 +511,7 @@ revolution_pulse_events.4 = {
 		military_wage_level < medium
 		any_scope_state = {			
 			any_scope_building = {
-				is_building_type = building_barracks
+				is_building_type = building_barrack
 			}
 			is_incorporated = yes	
 		}
@@ -530,14 +530,14 @@ revolution_pulse_events.4 = {
 		random_scope_state = {
 			limit = {
 				any_scope_building = {
-					is_building_type = building_barracks
+					is_building_type = building_barrack
 				}
 				is_incorporated = yes				
 			}
 			save_scope_as = soldiers_council_state
 			random_scope_building = {
 				limit = {
-					is_building_type = building_barracks	
+					is_building_type = building_barrack	
 				}
 				save_scope_as = soldiers_council_building
 			}
@@ -1163,7 +1163,7 @@ revolution_pulse_events.9 = {
 		}
 		revolution_progress_low = yes
 		any_scope_building = {
-			is_building_type = building_barracks	
+			is_building_type = building_barrack	
 		}
 	}
 
@@ -1179,14 +1179,14 @@ revolution_pulse_events.9 = {
 		random_scope_state = {
 			limit = {
 				any_scope_building = {
-					is_building_type = building_barracks
+					is_building_type = building_barrack
 				}
 				is_incorporated = yes				
 			}
 			save_scope_as = agitation_af_state
 			random_scope_building = {
 				limit = {
-					is_building_type = building_barracks	
+					is_building_type = building_barrack	
 				}
 				save_scope_as = agitation_af_building
 			}
@@ -4273,7 +4273,7 @@ revolution_pulse_events.31 = {
 		}
 		any_scope_state = {
 			is_incorporated = yes
-			has_building = building_barracks
+			has_building = building_barrack
 		}
 	}
 
@@ -4300,7 +4300,7 @@ revolution_pulse_events.31 = {
 		ordered_scope_state = {
 			limit = {
 				is_incorporated = yes
-				has_building = building_barracks
+				has_building = building_barrack
 			}
 			order_by = state_population
 			save_scope_as = martial_laws_state
@@ -5188,7 +5188,7 @@ revolution_pulse_events.38 = {
 		}
 		any_scope_state = {
 			is_incorporated = yes
-			has_building = building_barracks
+			has_building = building_barrack
 		}
 	}
 
@@ -5215,7 +5215,7 @@ revolution_pulse_events.38 = {
 		ordered_scope_state = {
 			limit = {
 				is_incorporated = yes
-				has_building = building_barracks
+				has_building = building_barrack
 			}
 			order_by = state_population
 			save_scope_as = shall_not_be_infringed_state
@@ -5234,7 +5234,7 @@ revolution_pulse_events.38 = {
 		scope:shall_not_be_infringed_state = {
 			random_scope_building = {
 				limit = {
-					is_building_type = building_barracks
+					is_building_type = building_barrack
 				}
 				add_modifier = {
 					name = modifier_unp_barracks_malus

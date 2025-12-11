@@ -7,7 +7,7 @@
 	uses_dynamic_naming = no
 
 	building_types = {
-		building_arts_academy
+		building_art_academy
 	}
 
 	extension_building_types = { }
@@ -21,7 +21,7 @@
 		any_scope_state = {
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_arts_academy
+				is_building_type = building_art_academy
 				level >= 10
 			}
 		}
@@ -29,14 +29,14 @@
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.15
-		building_arts_academy_throughput_add = 0.1
+		building_art_academy_throughput_add = 0.1
 	}
 
 	ai_will_do = {
 		any_scope_state = {
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_arts_academy
+				is_building_type = building_art_academy
 				level >= 10
 			}
 		}
@@ -52,7 +52,7 @@ company_walt_disney = {
 	preferred_headquarters = { STATE_CALIFORNIA }
 
 	building_types = {
-		building_arts_academy
+		building_art_academy
 	}
 
 	extension_building_types = { }
@@ -80,7 +80,7 @@ company_walt_disney = {
 			state_region = s:STATE_CALIFORNIA
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_arts_academy
+				is_building_type = building_art_academy
 				level >= 20
 			}
 		}
@@ -88,7 +88,7 @@ company_walt_disney = {
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.3
-		building_arts_academy_throughput_add = 0.2
+		building_art_academy_throughput_add = 0.2
 	}
 
 	ai_will_do = {
@@ -100,7 +100,7 @@ company_walt_disney = {
 	}
 
 	ai_construction_targets = {
-		building_arts_academy = {
+		building_art_academy = {
 			level = 20
 			state_trigger = {
 				state_region = s:STATE_CALIFORNIA
@@ -122,7 +122,7 @@ company_chanel = {
 	preferred_headquarters = { STATE_ILE_DE_FRANCE }
 
 	building_types = {
-		building_textile_mills
+		building_textile_mill
 	}
 
 	extension_building_types = { 
@@ -150,7 +150,7 @@ company_chanel = {
 			state_region = s:STATE_ILE_DE_FRANCE
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_textile_mills
+				is_building_type = building_textile_mill
 				level >= 20
 			}
 		}
@@ -158,7 +158,7 @@ company_chanel = {
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.1
-		building_textile_mills_throughput_add = 0.1
+		building_textile_mill_throughput_add = 0.1
 		building_silk_plantation_throughput_add = 0.1
 	}
 
@@ -170,7 +170,7 @@ company_chanel = {
 	}
 
 	ai_construction_targets = {
-		building_textile_mills = {
+		building_textile_mill = {
 			level = 20
 			state_trigger = {
 				state_region = s:STATE_ILE_DE_FRANCE
