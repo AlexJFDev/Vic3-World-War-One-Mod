@@ -3,10 +3,8 @@
 		147 130 110 
 	}
 	religion = protestant
-	heritage = heritage_germanic
-	language = language_germanophone
-	obsessions = {
-		liquor
+	traits = {
+		german_speaking european_heritage 
 	}
 	male_common_first_names = {
 		Albrecht Lukas Jurgen Pascal Werner Stefan Haubold Nepomuk Rudolf Siegmund Wilhelm Helmuth Emil Nikolaus Franz Benignus Dieter Erich Joseph Alois Paul Gebhard Horst Thomas Edmund Kasimir Xaver Bruno Lorenz Philipp Otto Walther Erwin Moritz Valentin Alfons Konrad Esaias Hillart Eduard Wolfgang Heinrich Gunther Julius Alfred Oskar Burkhard Michael Adelbert Martin August Manfred Ruprecht Fritz Kurt Felix Anton Christian Arthur Klemens Hasso Eugen Edwin Hugo Leopold Jakob Emanuel Reinhold Karl Rupprecht Gustav Theodor Viktor Ludwig Joachim Giesebert Gerhard Theophil Bernhard Markus Gottleib Friedrich Luitpold Wolf Engelbert Veit Peter Albert Alexander Vitus Georg Hermann Reinhard Walter Arnulf Leonhard Adolf Ferdinand Johann Lothar Ignatz Florian Gottfried Maximilian Ernst 
@@ -36,11 +34,8 @@ euro_american = {
 		135 206 235 
 	}
 	religion = protestant
-	heritage = heritage_north_american_settler
-	language = language_anglophone
-	obsessions = {
-		meat
-		small_arms
+	traits = {
+		anglophone european_heritage 
 	}
 	male_common_first_names = {
 		Silas Jonas Willard Chiswell Philip Zadok Cephas Frederick Norvell Absalom Pinckney Rufus Archibald Byron Wesley Atlee Jacob Maxwell Gabriel Norborne John George Cyrus Isham Caleb Leland Philetus Colin Wilkinson Valentine_2 Jabez Quentin Aeneas Oswald Lester Augustus Gordon Lula Raphael Ezra Hunter Amos Micah Clarence Calvin Bartholomew Elihu Joseph Judah Joshua Lysander David Gregory Grenville Reuben Paul Needham Conrad Lunsford Oscar Moses Quincy Edmund Isaiah Thomas Joel Nicholas Purley Bushrod Atticus Wyndham Orson Abraham Thaddeus Daniel Lorenzo Eppa Benedict Andrew Arnold Catesby Millard Roger Jesse Ichabod Job Hiram Irving Palmetus Victor Hannibal Charles Cassius Earl Jeffrey Julius Alfred Sterling Harold Isaac Braxton Theodore_2 Hugh Angus James Lemuel Wilfred Howell Shubael Levi Kermit Sidney Auburn Noah Michael Hector Newton Telfair Henry Martin August Alpheus Elijah Tilghman Cornelius Wendell Oliver Elton Gideon Archer Cleland Leonard_2 Horace Lucius Patrick Horatio Abijah Danville Sylvester Upton Christian Philemon Arthur Carter Edward Jeptha Lloyd Richard Nelson Edwin Willis Mark Robert Hazen Raleigh Ebenezer Elam Westel Orville Zachary Alben Zebulon Alton Turner Milton Otis Alonzo Orrin Abner Enoch Josiah Zabdiel Jedediah Asa Dabney Erastus Stapleton Ormsby Christopher Marcus Cullen Barnabas Elbert Leonidas Eugene_2 Luther Ezekiel Ansel Gustavus Matthew Obadiah Adam Benjamin Marcellus Jefferson Francis Clifton Seth Jonathan Jubal Samuel Eli Winfield Nathaniel Peter Gorham Alwyn Erasmus Rutherford Donald Phineas Albert William Owen Matthias Aaron Woodrow Algernon Alexander Allen Colcord Evander Walter Simon Jeremiah Eustace Willoughby Clement Drury Gilbert Basil Abel Ambrose Bildad Chester Alvin Birkett Emory Lawrence Perry Zalmon Grover Kenton Mason Kenner Lafayette Lewis Marshall Franklin Mansfield Montgomery Dwight Ephraim Zachariah Ulysses Wilbur Stephen Othniel 
@@ -70,8 +65,9 @@ italian = {
 		160 219 177 
 	}
 	religion = catholic
-	heritage = heritage_italic
-	language = language_italian
+	traits = {
+		italophone european_heritage 
+	}
 	obsessions = {
 		wine 
 	}
@@ -97,8 +93,9 @@ swiss = {
 		165 45 38 
 	}
 	religion = protestant
-	heritage = heritage_germanic
-	language = language_germanophone
+	traits = {
+		italophone francophone german_speaking european_heritage 
+	}
 	male_common_first_names = {
 		Ernst_August Friedrich Carl-Friedrich Anton Constant Dominik Stephan Christian Johann_Peter Leo Samuel Philipp Otto Gottlieb Gabriel Klemens Moritz Peter Andreas Nazar Severin Eugen Rudolf Konrad Wilhelm Albert Jakob Eduard Wolfgang Benedicht Alexander Heinrich Oswald Emil Georg Augustus Hermann Johann_Konrad Nikolaus Ambros Placidus Walter Christoph Adolf Johann_Baptist Gustav Theodor Franz Franz_Xaver Ludwig Johann Ulrich Joseph Kajetan Silvan Florian Jakob_Christoph Alois Imbert Kaspar Gall Martin Xavier Manfred Carl Damian Gottfried Ernst CA_sar 
 	}
@@ -120,9 +117,10 @@ north_amerindian = {
 	color = {
 		105 145 40 
 	}
-	religion = animist
-	heritage = heritage_plains_indian
-	language = language_siouan
+	religion = protestant
+	traits = {
+		indigenous_american_heritage north_american_group 
+	}
 	male_common_first_names = {
 		Andrew Edward Thahca Thasunke Mangas Hehaka Amisoli John Tamaha Charles Wanata Wanbdisapa Thaoyate_Duta Inkpaduta Ipeelee Mahpiya Takatoka William Istahba Jeremiah Sinte Loco Taza Victorio Thathanka Geronimo Alchesay Frank Cochise Tahlonteeskee Markoosie Elias Dennis Lewis Nana Monkaushka Naiche Thomas Joel Germaine 
 	}
@@ -145,8 +143,9 @@ mesoamerican = {
 		131 129 240 
 	}
 	religion = catholic
-	heritage = heritage_mesoamerican
-	language = language_nahuan
+	traits = {
+		native_mesoamerican_culture_group indigenous_american_heritage 
+	}
 	male_common_first_names = {
 		Alejandro Lorenzo Roberto VI_ctor Felipe Rolando Jesus Francisco Luis Crescencio Santiago Yumil Cuautehmoc Juan Hernando Hilario JosE_ Miguel Diego Gaspar Julio Antonio Martin_2 Manuel Akbal Ignacio Oliverio Isaac Jacinto Andres Pedro Natalio Rodolfo Armando Fernando Marcial Emilio Bernardo Agustin Humberto Mario Ramiro Anibal Cristobal_2 Carlos Emiliano 
 	}
@@ -169,8 +168,9 @@ south_amerindian = {
 		189 94 81 
 	}
 	religion = catholic
-	heritage = heritage_andean
-	language = language_quechuan
+	traits = {
+		indigenous_american_heritage south_american_group 
+	}
 	male_common_first_names = {
 		Alejandro Daniel Roberto Augusto VI_ctor Victor_Hugo Graciano Donato Felipe Gregorio Claudio Duarte Zeferino Raoni Francisco Luis Santiago Gabriel Facundo JoA_o Oscar_2 Juan Kananoe Hugo Aquiles Eduardo Maximo Osvaldo Cesar Rafael_2 JosE_ Miguel Diego Aucan Julio Antonio Martin_2 Sebastiao Manuel Ignacio Gerardo Paulinho Simao Tupac Melchor Aurelio Bartolome Nuno Pedro Bento Ernesto Juan_Jose Enrique Nicolas_2 Leopoldo Ramon Arturo Lucas Estevao_2 David Fernando Vasco Vicente Bernardo Evo Agustin Sergio Mario Marcos Anibal Raul_2 Carlos Felix 
 	}
@@ -193,8 +193,9 @@ steppe_turk = {
 		50 147 168 
 	}
 	religion = sunni
-	heritage = heritage_turkmen
-	language = language_oghuz
+	traits = {
+		central_asian_heritage 
+	}
 	male_common_first_names = {
 		Abd_al-Ahad Abd_al-Karim Abu_al-Ghazi Abulfayz Alimqul Allah_Quli Aqim Haydar Husayn Iltazar Isfandiyar Jahangir Khudayar Madali Mahmud Muhammad Murad Nasir_al-Din Nasrallah Nurali Pulad Qilich Qutlugh Rahim Shir Umar Yadigar Yaqub Ablai Abu_al-Khayr Aryn Baitursyn Bukei Chokan Dulat Ibirai Isatai Ishim Jangir Kenisary Mashur Murat Nur_Ali Qayip Sadyk Sarzhan Sirim Tenek Tolshan Vali 
 	}
@@ -217,264 +218,20 @@ czechoslovakian = {
 		168 149 50 
 	}
 	religion = catholic
-	heritage = heritage_west_slavic
-	language = language_west_slavic
+	traits = {
+		west_slavic european_heritage 
+	}
 	male_common_first_names = {
-		Abraham
-		Alexander
-		Alfred
-		Alois
-		Antonin
-		August
-		Bedrich
-		Benedikt
-		Borivoj
-		Cenek
-		Drahoslav
-		David_2
-		Edvard
-		Emanuel
-		Emil
-		Evzen
-		Frantisek
-		Frantisek_Josef
-		Frantisek_Xaver
-		Hermenegild
-		Jaroslav
-		Jindrich
-		Jiri
-		Josef
-		Jan_2
-		Jan_Krtitel
-		Jan_Nepomuk
-		Kajetan
-		Karel
-		Konstantin
-		Ladislav
-		Luvik
-		Matyas
-		Maxmilian
-		Mikulas
-		Olbram
-		Otakar
-		Pavel
-		Petr
-		Radola
-		Rafael_2
-		Tomas
-		Vincenc
-		Vitezslav
-		Vlastimil
-		Vojtech
-		Vratislav
-		Vaclav
-		Zdenek
-		Albin
-		Alexander
-		Andrej
-		Andras
-		Augustin_2
-		Basil
-		Cyprian
-		Dalibor
-		Dezider
-		Dominik
-		Eugen
-		Fedor
-		Ferdinand
-		Frantisek
-		Frico
-		Gabriel
-		Gustav_2
-		Imrich
-		Janko
-		Jozef
-		Juraj
-		Jachym
-		Jan_2
-		Karol
-		Ladislav
-		Levoslav
-		Marian_2
-		Marko
-		Martin
-		Matej
-		Michal
-		Mikulas
-		Milan
-		Milos
-		Miloslav
-		Miroslav
-		Pavel
-		Pavol
-		Peter
-		Ratislav
-		Rudolf
-		Samuel
-		Sergej
-		Stefan
-		Svtozar
-		Tibor
-		Tomas
-		Viliam
-		Vladimir_2
-		Vojtech
+		 
 	}
 	female_common_first_names = {
-		Anna
-		Barbara
-		Blank
-		Eleonora
-		Ivana
-		Jaroslava
-		Jenovefa
-		Karolina
-		Katerina
-		Klara
-		Martha
-		Martina
-		Olga
-		Renata
-		Stanislava
-		Tereza
-		Zdena
-		Zuzana
-		Anna
-		Edita
-		Elena
-		Emilia
-		Irena
-		Jana
-		Jaroslava
-		Kristina
-		Ludmila
-		Margita
-		Olga
-		Vilma
-		Terezia
+		 
 	}
 	common_last_names = {
-		Balaban
-		Basch
-		Breisky
-		Celovsky
-		Dvorak
-		Fibich
-		Gajda
-		Gellner
-		Hrdlicka
-		Halek
-		Jirecek
-		Kadlec
-		Kafka
-		Koller
-		Krizkovsky
-		Kucera
-		Kuchar
-		Lederer
-		Makosky
-		Mik
-		Moravec
-		Nemecek
-		Neruda
-		Novotny
-		Novacek
-		Popper
-		Radecky
-		Rokytansky
-		Safranek
-		Safarik
-		Schack
-		Schubert
-		Skoda
-		Skuhersky
-		Smetana
-		Snejdarek
-		Suk
-		Svoboda
-		Syrovy
-		Tomasek
-		Tyl
-		Vitasek
-		Vorisek
-		Wankel
-		Weber
-		Zoubek
-		Zibrt
-		Zivr
-		Bella
-		Benes
-		Blaho
-		Bazlic
-		Catlos
-		Cikker
-		Clementis
-		Daxner
-		Dubcek
-		Figus-Bystry
-		Freso
-		Gojdic
-		Golian
-		Hlinka
-		Hodza
-		Hopko
-		Hurban
-		Hurban-Vajansky
-		Husak
-		Ivanka
-		Kafenda
-		Kardos
-		Kocak
-		Kupkovic
-		Mach
-		Macudzinski
-		Malovec
-		Malar
-		Markovic
-		Masaryk
-		Moyses
-		Mory
-		Rohacek
-		Rudnay
-		Razus
-		Selepceni
-		Sidor
-		Skultety-Gabris
-		Smik
-		Sokol
-		Stefanik
-		Suchon
-		Sverma
-		Tiso
-		Trcka
-		Tuka
-		Turanec
-		Viest
-		Zoch
-		Achim
+		 
 	}
 	noble_last_names = {
-		Albert
-		Clary_Aldringen
-		Colloredo-Mansfeld
-		Harrach
-		Lichnovsky
-		Thun-Hohenstein
-		von_Mittrowitz-Nettolitzky
-		von_Nostitz
-		Vratislav_z_Mitrovic
-		z_Bubna
-		z_Lichtenstejna
-		z_Lobkovic
-		Bernolak
-		Daxner
-		Durcansky
-		Jesensky
-		Kollar
-		Kosut
-		Mednansky
-		Matuska
-		Rakovsky
+		 
 	}
 	ethnicities = {
 		1 = caucasian
@@ -486,252 +243,20 @@ yugoslav = {
 		50 168 72 
 	}
 	religion = orthodox
-	heritage = heritage_south_slavic
-	language = language_south_slavic
+	traits = {
+		jugoslav european_heritage 
+	}
 	male_common_first_names = {
-		Abdulvehhab
-		Adnan
-		Ahmed
-		Ali
-		Alija
-		Asim
-		Atif
-		Beriz
-		Dzemal
-		Dzemaludin
-		Elvir
-		Enver
-		Fikret
-		Fuad
-		Gazi
-		Hakija
-		Hamdija
-		Hamid
-		Haris
-		Hasan
-		Husein
-		Irfan
-		Isa
-		Ivan
-		Izet
-		Jusuf
-		Mehmed
-		Meho
-		Mirsad
-		Muhamed
-		Musa
-		Mustafa
-		Naser
-		Osman
-		Raif
-		Rasim
-		Refik
-		Safet
-		Safvet
-		Sefer
-		Sejad
-		Seknab
-		Semezdin
-		Semir
-		Skender_2
-		Sokollu
-		Sulejman
-		Vedad
-		Zija
-		Zlatko
-		Zuko
-		Alaksandar
-		Arsenije
-		Blagoje
-		Bozidar
-		Branko
-		Danilo
-		Dejan
-		Djordje
-		Dragan
-		Dragisa
-		Dragoljub
-		Dragutin
-		Draza
-		Dusan
-		Gavrilo
-		Goran
-		Janko
-		Jovan
-		Koca
-		Kosta
-		Krsto
-		Ljubisa
-		Mihailo
-		Milan
-		Miliutin
-		Milivoje
-		Milojko
-		Milos
-		Miodrag
-		Mirko
-		Miroslav
-		Momcilo
-		Nebojsa
-		Nikola
-		Pavle
-		Peko
-		Petar
-		Radomir
-		Ratko
-		Sava
-		Slobodan
-		Stepa
-		Stojan
-		Vaselien
-		Veljko
-		Vladimir
-		Vojislav
-		Zivojin
-		Zivota
-		Zoran
-		Zvezdan
+		 
 	}
 	female_common_first_names = {
-		Aleksandra
-		Bisera
-		Edina
-		Nasiha
-		Nura
-		Ognjenka
-		Sabina
-		Samra
-		Alexandra
-		Anka
-		Darinka
-		Draga
-		Jekaterina
-		Jelena
-		Katarina
-		Maria
-		Milena
-		Natalia
-		Ruza
-		Simeona
-		Stamena
-		Stojna
-		Tomanija
-		Milica
+		 
 	}
 	common_last_names = {
-		Abdic
-		Arapovic
-		Basgic
-		Belkic
-		Bijedic
-		Catic
-		Causevic
-		Ceric
-		Colakovic
-		Dizdar
-		Dizdarevic
-		Dzikic
-		Dzumhur
-		Ekrem
-		Gradascevic
-		Halilovic
-		Husrev
-		Ibisevic
-		Ilhamija
-		Imamovic
-		Isakovic
-		Kodro
-		Konjic
-		Kulenovic
-		Lagumdzija
-		Ljajic
-		Ljubicic
-		Ljubijankic
-		Muzurovic
-		Peco
-		Plakalo
-		Prazina
-		Rizvanbegovic
-		Sabanadzovic
-		Salihovic
-		Sarajlic
-		Selimovic
-		Selmanagic
-		Silajdzic
-		Sokolovic
-		Spaho
-		Terzic
-		Tihic
-		Turaljic
-		Tukcan
-		Ugljanin
-		Adzic
-		Arandelovic
-		Belimarkovic
-		Blaznacac
-		Bojovic
-		Bozanovic
-		Bozinovic
-		Brankovic
-		Damjanic
-		Dapcevic
-		Dragutinovic
-		Grujic
-		Hadzilic
-		Horvatovic
-		Isakovic
-		Jankovic
-		Jokic
-		Jovanovic
-		Kadijevic
-		Karadordevic
-		Kundak
-		Lesjanin
-		Ljubicic
-		Maric
-		Maricic
-		Mihailovic
-		Miliutinovic
-		Miloradovic
-		Misic
-		Nad
-		Nedic
-		Novak
-		Ojdanic
-		Panic
-		Paskas
-		Pavkovic
-		Pesic
-		Petrovic
-		Popovic
-		Putnik
-		Radulovic
-		Rasic
-		Sijan
-		Simovic
-		Sokolovic
-		Stepanovic
-		Vasiljevic
-		Veric
-		Vojvodic
-		Vukotic
-		Zivkovic
+		 
 	}
 	noble_last_names = {
-		Izetbegovic
-		Kurtcehajic
-		Mehmedinovic
-		Muradbegovic
-		Osmanagic
-		Pozderac
-		Sijercic
-		Anastasijevic
-		Avakumovic
-		Bogicevic
-		Garasanin
-		Konstantinovic
-		Nenadovic
-		Obrenovic
+		 
 	}
 	ethnicities = {
 		1 = caucasian
@@ -743,75 +268,20 @@ asian_american = {
 		50 168 137 
 	}
 	religion = protestant
-	heritage = heritage_han
-	language = language_mandarin
+	traits = {
+		anglophone east_asian_heritage 
+	}
 	male_common_first_names = {
-		 Chen
-		Cheng
-		Deng
-		Dong
-		Gao
-		Hsia
-		Hu
-		Huang
-		Kong
-		Kwong
-		Li
-		Liang
-		Liao
-		Liu
-		Luo
-		Ma
-		Mao
-		Pan
-		Tan
-		Wang
-		Xie
-		Yang
-		Yu
-		Zhang
-		Zhu
+		 
 	}
 	female_common_first_names = {
-		Akew
-		Jin
-		Jinhong
-		Junying
-		Qingtang
-		Sanniang
-		Shanziang
-		Shih
-		Taiqing
-		Xiefen
-		Xiugu
-		Xuanjiao
-		Yu
-		Yunmei
+		 
 	}
 	common_last_names = {
-		Dong
-		Fang
-		Hu
-		Jiang
-		Jin
-		Lu
-		Ma
-		Peng
-		Qiu
-		Shen
-		Sun
-		Tian
-		Ting
-		Wei
-		Wu
-		Ye
-		Zhao
+		 
 	}
 	noble_last_names = {
-		Cui
-		Li
-		Nie
-		Zhang
+		 
 	}
 	ethnicities = {
 		1 = asian
@@ -823,8 +293,9 @@ austrian = {
 		153 96 106 
 	}
 	religion = catholic
-	heritage = heritage_germanic
-	language = language_germanophone
+	traits = {
+		german_speaking european_heritage 
+	}
 	male_common_first_names = {
 		 
 	}
@@ -947,8 +418,9 @@ ijaw = {
 		186 158 80 
 	}
 	religion = animist
-	heritage = heritage_guinean
-	language = language_tiv
+	traits = {
+		african_heritage west_african_culture_group 
+	}
 	male_common_first_names = {
 		 
 	}
@@ -971,100 +443,20 @@ central_indian = {
 		244 196 48 
 	}
 	religion = hindu
-	heritage = heritage_central
-	language = language_hindustani
+	traits = {
+		south_asian_heritage hindustani 
+	}
 	male_common_first_names = {
-		Bajirao
-		Balaji
-		Madhava
-		Narayan
-		Pratapsinha
-		Raghunath
-		Rajaram
-		Sawai
-		Shahuji
-		Shambhaji
-		Shivaji
-		Venkatji
-		Alif 
-		Abd_al-Quddus 
-		Abd_al-Rahman 
-		Abdallah 
-		Afzal 
-		Ahmad 
-		Akbar 
-		Akram 
-		Ayyub
-		Daud
-		Fath Firuz_al-Din Fateh_Mohammad
-		Habib_Alllah Haydar Humayun Himayat
-		Inayat_Allah Ishaq
-		Jamal
-		Kamran Kohandil Khizr
-		Mahmud Mahsud
-		Mihrdil Muhammad Murad Mohammad_Bahadur Mohammad_Hamid
-		Nadir Nasr_Allah
-		Omar
-		Qaysar
-		Shahpur Sher_Ali Shuja Suleyman
-		Timur
-		Yaqub
-		Zaman Zorawar_Mohammad
+		 
 	}
 	female_common_first_names = {
-		Ahilyabai 
-		Anandibai
-		Gangabai
-		Gopikabai
-		Radhabai
-		Rani
-		Soyarabai
-		Umabai
-		Aisha
-		Ghazala
-		Gulrukh 
-		Hazrat
-		Nazia
-		Nilofar
+		 
 	}
 	common_last_names = {
-		Baji_Rao
-		Bhat
-		Bhave
-		Bhonsle
-		Gaekwad
-		Holkar
-		Mehere
-		Newalkar
-		Nirban
-		Patwardhan
-		Pawar
-		Scindia
-		Arif
-		Babajan
-		Jan
-		Javed
-		Naqshbandi
-		Shinwari
-		Taunsvi
+		 
 	}
 	noble_last_names = {
-		Appa_Sahib
-		Ballal
-		Bhandari
-		Bowa_Sahib
-		Gujar
-		Kalash
-		Mohite
-		Narayan
-		Phadnis
-		Rao
-		Babi
-		Damani
-		Hotak
-		Jhalori
-		Khan
-		Panni
+		 
 	}
 	ethnicities = {
 		1 = indian
@@ -1076,38 +468,20 @@ east_indian = {
 		96 171 75 
 	}
 	religion = hindu
-	heritage = heritage_gangetic
-	language = language_magadhan
+	traits = {
+		south_asian_heritage hindustani 
+	}
 	male_common_first_names = {
-		Atal
-		Harishankar
-		Jitendra
-		Kishore Kailash
-		Makhanlal Mansoor
-		Ratnesh Rahat
-		Siddhartha
-		Tantia
+		 
 	}
 	female_common_first_names = {
-		Avantibai
-		Krishna
-		Rachna Rukmani
-		Sita Shyamkumari Savitri Sampatiya Sumitra
-		Vimla
+		 
 	}
 	common_last_names = {
-		Das
-		Chandels Chaubey
-		Kushwaha
-		Mangilal Moghe
-		Raghuwanshi
-		Shukla Shandilya
+		 
 	}
 	noble_last_names = {
-		Prasad
-		Sihan
-		Jaitely
-		Dixit
+		 
 	}
 	ethnicities = {
 		1 = indian
@@ -1119,37 +493,17 @@ north_indian = {
 		56 176 114 
 	}
 	religion = hindu
-	heritage = heritage_gangetic
-	language = language_hindustani
+	traits = {
+		south_asian_heritage hindustani 
+	}
 	male_common_first_names = {
-		Anupam 
-		Anku
-		Dalip
-		Janardan
-		Khadg
-		Lal_Mani
-		Nilamber Nain_Singh Nirmal
-		Ravindra
+		 
 	}
 	female_common_first_names = {
-		Asha
-		Barkha
-		Himani
-		Lavanya
-		Meena 
-		Neha Naima_Khan Nihaarika
-		Pooran
+		 
 	}
 	common_last_names = {
-		Bisht
-		Joshi
-		Kakkar
-		Negi
-		Pant Pandey
-		Rana Rawat
-		Tripathi
-		Upreti
-		Valdiya
+		 
 	}
 	noble_last_names = {
 		 
@@ -1164,45 +518,20 @@ south_indian = {
 		186 131 13 
 	}
 	religion = hindu
-	heritage = heritage_deccani
-	language = language_southern_indic
+	traits = {
+		south_asian_heritage dravidian 
+	}
 	male_common_first_names = {
-		Champakaraman
-		Chidambaram
-		Dheeran
-		Rajagopalachari
-		Ramaswami
-		Ramayyan
-		Ramiengar
-		Sathyamurthy
-		Seshadri
-		Seshayya
-		Shanmukham
-		Shungrasoobyer
-		Subramania
-		Tanay
-		Vanchinathan
+		 
 	}
 	female_common_first_names = {
-		Nageswari
-		Rajini
-		Rani
-		Rasamanohari
-		Thangamma
+		 
 	}
 	common_last_names = {
-		Dalawa
-		Krishnamachari
-		Mudaliar
-		Rajapopalachari
-		Sastri
+		 
 	}
 	noble_last_names = {
-		Bahadur
-		Rao
-		Sethupathi
-		Tondaiman
-		Iyer
+		 
 	}
 	ethnicities = {
 		1 = indian
@@ -1214,93 +543,20 @@ west_indian = {
 		115 102 56 
 	}
 	religion = sunni
-	heritage = heritage_gujarati
-	language = language_western_indic
+	traits = {
+		south_asian_heritage hindustani 
+	}
 	male_common_first_names = {
-		Anand Amratlal Akshay
-		Balwantry Bharatsingh
-		Chabildas Chetan Curumsey
-		Daishalji
-		Fakirbhai
-		Jivraj
-		Khemchand
-		Madhavsingh Maniraj
-		Nanji Neel
-		Pramanandas
-		Rajesh
-		Shubham
-		Valmik
-		Ahmad
-		Alauddin
-		Alivardi
-		Hasan
-		Mansur
-		Mir_Muhammad
-		Mubarak
-		Murshid
-		Najimuddin
-		Quli
-		Reza
-		Saifuddaula
-		Shujauddin
-		Sirajuddaula
-		Waris
-		Wasif
-		Zainul
+		 
 	}
 	female_common_first_names = {
-		Asha
-		Lata
-		Meena
-		Usha
-		Iffat
-		Indrani
-		Laila
-		Rahima
-		Rama
-		Raya
-		Razia
-		Selima
-		Sitara
-		Syeda
-		Tarana
-		Zohra
+		 
 	}
 	common_last_names = {
-		Ambani
-		Baro
-		Damjee
-		Jangla
-		Mehta
-		Modhvadia
-		Pansara
-		Parmar
-		Solanki
-		Vaghela
-		Ali
-		Chaudhury
-		Ganguly
-		Jafar
-		Muhammad
-		Najabut
-		Parvin
-		Sarkar
-		Qasim_Ali
-		Sarfaraz
-		Tajuddin
+		 
 	}
 	noble_last_names = {
-		Amarchand
-		Chaudhari
-		Jadeja Jivraj
-		Mangeshkar
-		Ranchordas
-		Bahadur
-		Bogra
-		Deva
-		Mirza
-		Roy
-		Suhrawardy
+		 
 	}
 	ethnicities = {
 		1 = indian
@@ -1312,180 +568,20 @@ arab = {
 		0 142 0 
 	}
 	religion = sunni
-	heritage = heritage_arab
-	language = language_arabic
+	traits = {
+		arab_speaking middle_eastern_heritage 
+	}
 	male_common_first_names = {
-		Abdulhamid
-		Abdulkerim
-		Abdullah
-		Ahmet
-		Ali
-		Bekir
-		Cemal
-		Enver
-		Fevzi
-		Fuat
-		Halil
-		Hasan
-		Ibrahim
-		Iskender
-		Ismet
-		Izzet
-		Kamil
-		Kazim
-		Kemal
-		Mehmet
-		Murat
-		Musa
-		Mustafa
-		Nazim
-		Nurettin
-		Nuri
-		Omar
-		Osman
-		Rauf
-		Rifat
-		Selim
-		Shukru
-		Suleyman
-		Urabi
-		Yunus
-		Yusuf
-		Ziya
-		Abd_Allah
-		Abd_al-Karim
-		Abd_al-Malik
-		Abd_al-Qadir
-		Abd_al-Rahman
-		Ahmad
-		Ali
-		Fawzi
-		Fuad
-		Halil
-		Hasan
-		Hisham
-		Ibrahim
-		Ishaq
-		Iskandar
-		Jamal
-		Kamil
-		Khalid
-		Muhammad
-		Mustafa
-		Nur_al-Din
-		Sa_d_al-Din
-		Salim
-		Shukri
-		Tawfiq
-		Umar
-		Uthman
-		Yahya
-		Yusuf
-		Zafir
+		 
 	}
 	female_common_first_names = {
-		Aisha
-		Amina
-		Maryam
-		Nawal
-		Nazli
-		Raya
-		Safinaz
-		Sakina
-		Salwa
-		Tafika
-		Zainab
-		Bahira
-		Fayza
-		Ghalia
-		Nadia
-		Noura
-		Samira
-		Sulafa
-		Zeina
-		Zuhur
+		 
 	}
 	common_last_names = {
-		Abd_al-Rahman
-		Abu_Shadi
-		al-Arusi
-		al-Attar
-		al-Bajuri
-		al-Biblawi
-		al-Bishri
-		al-Faransawi
-		al-Habashiya
-		al-Hasi
-		al-Maraghi
-		al-Nadeem
-		al_Nahhas
-		al-Nawawi
-		al-Quwaysini
-		al-Tahtawi
-		al-Taymuriyya
-		Bahgoury
-		Bin_Mesbah
-		Digna
-		El_Saadawi
-		Elbaroudy
-		Fehmy
-		Gorgi
-		Habachy
-		Ishaq
-		Kamil
-		Nagi
-		Urabi
-		Wanly
-		Zaghloul
-		al-Askari
-		al-Baghdadi
-		al-Basri
-		al-Ghazzawi
-		al-Halabi
-		al-Hamawi
-		al-Himsi
-		al-Mawsili
-		al-Nablusi
-		al-Qudsi
-		al-Shami
-		ibm_Kamil
-		ibn_Abd_Allah
-		ibn_Abd_al-Qadir
-		ibn_Abu_Bakr
-		ibn_Ahmad
-		ibn_Ali
-		ibn_Fuad
-		ibn_Halil
-		ibn_Hasan
-		ibn_Hisham
-		ibn_Ishaq
-		ibn_Ja_far
-		ibn_Khalid
-		ibn_Muhammad
-		ibn_Mustafa
-		ibn_Salim
-		ibn_Umar
-		ibn_Uthman
-		ibn_Yusuf
-		Asmar
-		Mokarzel
+		 
 	}
 	noble_last_names = {
-		Farid
-		Sabri
-		Zulficar
-		Bey
-		Pasha
-		al-Ali
-		al-Atassi
-		al-Atrash
-		al-Azma
-		Al_Faiz
-		al-Ghani_al-Nabulsi
-		al-Hiraki
-		Al-Rahman_Al-Gillani
-		al-Zaydani
-		Nuseibeh
+		 
 	}
 	ethnicities = {
 		1 = arab
@@ -1497,62 +593,20 @@ coloured = {
 		255 182 18 
 	}
 	religion = protestant
-	heritage = heritage_khoisan
-	language = language_anglophone
+	traits = {
+		anglophone african_heritage southern_african_culture_group 
+	}
 	male_common_first_names = {
-		Cetshwayo
-		Dabulamanzi
-		Dingiswayo
-		Gawozi
-		Hamu
-		Hehlokazulu
-		Mahubulwana
-		Manyonyoba
-		Mavumengwana
-		Mbilini
-		Mgojana
-		Mkhosana
-		Mnyamana
-		Ntshingwayo
-		Sekethwayo
-		Sekhukhune
-		Senzagkhona
-		Sigujana
-		Sihayo
-		Sikukuni
-		Somopho
-		Zibhebhu
+		 
 	}
 	female_common_first_names = {
-		Mabamba
-		Magogo
-		Mkabayi
-		Mthaniya
-		Nandi
-		Ngqumbazi
-		Mthethwa
-		Sibusile
+		 
 	}
 	common_last_names = {
-		Entabeni
-		KaMdlela
-		Khoza
-		kaMahole
-		kaMaphitha
-		kaMpande
-		kaMvundlana
-		kaSihayo
-		kaZikhala
-		waMswati
+		 
 	}
 	noble_last_names = {
-		Buthelezei
-		kaDinuzulu
-		kaJama
-		kaMaphitha
-		kaNdaba
-		kaSenzangakhona
-		Sibiya
+		 
 	}
 	ethnicities = {
 		1 = polynesian
@@ -1564,62 +618,20 @@ southern_bantu = {
 		214 188 41 
 	}
 	religion = protestant
-	heritage = heritage_southern_bantu
-	language = language_sotho
+	traits = {
+		southern_african_culture_group african_heritage bantu 
+	}
 	male_common_first_names = {
-		Cetshwayo
-		Dabulamanzi
-		Dingiswayo
-		Gawozi
-		Hamu
-		Hehlokazulu
-		Mahubulwana
-		Manyonyoba
-		Mavumengwana
-		Mbilini
-		Mgojana
-		Mkhosana
-		Mnyamana
-		Ntshingwayo
-		Sekethwayo
-		Sekhukhune
-		Senzagkhona
-		Sigujana
-		Sihayo
-		Sikukuni
-		Somopho
-		Zibhebhu
+		 
 	}
 	female_common_first_names = {
-		Mabamba
-		Magogo
-		Mkabayi
-		Mthaniya
-		Nandi
-		Ngqumbazi
-		Mthethwa
-		Sibusile
+		 
 	}
 	common_last_names = {
-		Entabeni
-		KaMdlela
-		Khoza
-		kaMahole
-		kaMaphitha
-		kaMpande
-		kaMvundlana
-		kaSihayo
-		kaZikhala
-		waMswati
+		 
 	}
 	noble_last_names = {
-		Buthelezei
-		kaDinuzulu
-		kaJama
-		kaMaphitha
-		kaNdaba
-		kaSenzangakhona
-		Sibiya
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -1631,47 +643,20 @@ western_bantu = {
 		24 186 67 
 	}
 	religion = animist
-	heritage = heritage_congolese
-	language = language_equatorial_bantu
+	traits = {
+		west_african_culture_group african_heritage bantu 
+	}
 	male_common_first_names = {
-		Bakar
-		Essomba
-		Fifen
-		Monjou
-		Ndengue
-		Ngapna
-		Ngouhouno
-		Nsangou
-		Ntsama
-		Omgba
+		 
 	}
 	female_common_first_names = {
-		Aissa
-		Assiga
-		Djaili
-		Edzimbi
-		Nizpah
-		Soukda
+		 
 	}
 	common_last_names = {
-		Atabong
-		Beyala
-		Boum
-		Chinje
-		Fomumbod
-		Fotso
-		Ngatansou
-		Njeuma
+		 
 	}
 	noble_last_names = {
-		a_Doo
-		a_Ewale
-		Atangana
-		Bissogo
-		Dgijama
-		Douala
-		Njoya
-		Sankre
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -1683,85 +668,20 @@ central_bantu = {
 		186 45 92 
 	}
 	religion = animist
-	heritage = heritage_congolese
-	language = language_fluvial_bantu
+	traits = {
+		central_african_culture_group african_heritage bantu 
+	}
 	male_common_first_names = {
-		Katuutire
-		Kongongolo
-		Ciasungu
-		Cikunyu
-		Cingi
-		Ciponge
-		Hungulu
-		Kahala
-		Kakembembe
-		Kapoko
-		Kayangula
-		Kinya
-		Livonge
-		Ngelo
-		Nguvenge
-		Vilombo
-		Wambu
-		Banyingela
-		Banza
-		Ilunga
-		Kalenga
-		Kisula
-		Kisempia
-		Koloso
-		Mabi
-		Mauva
-		Mosambaye
+		 
 	}
 	female_common_first_names = {
-		Mussasa
-		Njinga
-		Tembandumba
-		Katana
-		Kavidi
-		Masika
-		Moza
-		Mudima
-		Mwanakitata
-		Neema
+		 
 	}
 	common_last_names = {
-		Cilemo
-		Cimbungu
-		Cinene
-		Hundungulu
-		Kacingangu
-		Kaneketela
-		Kanene
-		Kapusukusu
-		Kiapungo
-		Ndunduma
-		Njambayamina
-		Vasovava
-		Yale
-		Haingura
-		Kaura
-		Mabuku
-		Mamili
-		Nyambe
-		Simbwaye
-		Bihamba
-		Katsuva
-		Kazadi
-		Mbangu
-		Munsensa
-		Muwayi
-		Nyirambarato
-		Pongo
-		Sungilanga
+		 
 	}
 	noble_last_names = {
-		Kaza
-		Matamba
-		Mbande
-		Alenga
-		Bukuru
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -1773,32 +693,20 @@ eastern_bantu = {
 		24 135 186 
 	}
 	religion = sunni
-	heritage = heritage_eastern_bantu
-	language = language_lacustrine_bantu
+	traits = {
+		east_african_culture_group african_heritage bantu 
+	}
 	male_common_first_names = {
-		Adongo
-		Kimoi
-		Matayo
-		Toroitich
-		Tuitoek 
+		 
 	}
 	female_common_first_names = {
-		Kabon
-		Zahra
+		 
 	}
 	common_last_names = {
-		Cham
-		Garang
-		Kandie
-		Kiplagat
-		Kulei
-		Mwaita
-		ole_Tameno
+		 
 	}
 	noble_last_names = {
-		arap_Chebii
-		arap_Moi
-		Cheptirim
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -1810,8 +718,9 @@ nilo_saharan = {
 		176 110 84 
 	}
 	religion = sunni
-	heritage = heritage_afro_arab
-	language = language_arabic
+	traits = {
+		central_african_culture_group african_heritage 
+	}
 	male_common_first_names = {
 		 
 	}
@@ -1834,8 +743,9 @@ ubangi = {
 		84 117 42 
 	}
 	religion = animist
-	heritage = heritage_congolese
-	language = language_lunda
+	traits = {
+		central_african_culture_group african_heritage 
+	}
 	male_common_first_names = {
 		 
 	}
@@ -1858,8 +768,9 @@ afro_arab = {
 		7 82 20 
 	}
 	religion = sunni
-	heritage = heritage_darfurian
-	language = language_fur
+	traits = {
+		arab_speaking african_heritage 
+	}
 	male_common_first_names = {
 		 
 	}
@@ -1882,52 +793,20 @@ gbe = {
 		50 60 110 
 	}
 	religion = animist
-	heritage = heritage_guinean
-	language = language_gbe
+	traits = {
+		west_african_culture_group african_heritage 
+	}
 	male_common_first_names = {
-		Alhassani
-		Amara
-		Aoua
-		Brima
-		Daba
-		Foda
-		Fodey
-		Hatab
-		Kaleefa
-		Kanji
-		Lansana
-		Losene
-		Massa
-		Neneh
-		Sekou
-		Sekouba
-		Sheka
-		Soumaila
-		Tejan
+		 
 	}
 	female_common_first_names = {
-		Aminata
-		Fatima
-		Fuambai
-		Moussa
-		Safiya
-		Tamara
+		 
 	}
 	common_last_names = {
-		Diawara
-		Jaabi
-		Jammeh
-		Kanneh
-		Keita
-		Konneh
-		Quiwonkpa
-		Sidibe
-		Suso
+		 
 	}
 	noble_last_names = {
-		Conde
-		Sankoh
-		Sekou
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -1939,54 +818,20 @@ gur = {
 		212 34 34 
 	}
 	religion = sunni
-	heritage = heritage_sahelian
-	language = language_manding
+	traits = {
+		west_african_culture_group african_heritage 
+	}
 	male_common_first_names = {
-		Alfa
-		Ali
-		Babato
-		Bako
-		Builsa
-		Coutoucou
-		Dyori
-		Gazari
-		Karamoko
-		Kokoroko
-		Koom
-		Korongo
-		Laganfyela
-		Nyambre
-		Pintyeba
-		Sabana
-		Salma
-		Sanum
-		Sapilem
-		Tigre
-		Tyeba
-		Yamba
-		Yameogo
-		Zoungrana
+		 
 	}
 	female_common_first_names = {
-		Fatimah
-		Koudpoko
+		 
 	}
 	common_last_names = {
-		Kandi
-		Kwande
-		Nikki
-		Ouattara
-		Paraku
-		Wobogu
+		 
 	}
 	noble_last_names = {
-		Dyan
-		Hamaria
-		Hano
-		Moru
-		Ouedraogo
-		Nyandane
-		Wattara
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -1998,41 +843,20 @@ tamazight = {
 		171 171 22 
 	}
 	religion = sunni
-	heritage = heritage_berber
-	language = language_berber
+	traits = {
+		middle_eastern_heritage afrian_heritage 
+	}
 	male_common_first_names = {
-		Abd_al-Karim
-		Ahmed
-		Khalid
-		Muhammad
-		Mustafa
+		 
 	}
 	female_common_first_names = {
-		Fatima
-		Khadija
-		Khalida
-		Malika
-		Tassadit
-		Zohra
+		 
 	}
 	common_last_names = {
-		Belkadi
-		Messaoudi 
-		Mukrani
-		Imalayen
-		Iftaten
-		Tanut
-		Tisbaa
-		al-Jazuli
-		al-Rifi
-		al-Sahrawi
-		al-Shawiyyati
-		al-Shiluhi
-		al-Zanatawi
+		 
 	}
 	noble_last_names = {
-		el_Krim
-		Al-Khattabi 
+		 
 	}
 	ethnicities = {
 		1 = arab
@@ -2044,54 +868,20 @@ african_minor = {
 		110 98 58 
 	}
 	religion = animist
-	heritage = heritage_sahelian
-	language = language_hausa
+	traits = {
+		african_heritage 
+	}
 	male_common_first_names = {
-		Alfa
-		Ali
-		Babato
-		Bako
-		Builsa
-		Coutoucou
-		Dyori
-		Gazari
-		Karamoko
-		Kokoroko
-		Koom
-		Korongo
-		Laganfyela
-		Nyambre
-		Pintyeba
-		Sabana
-		Salma
-		Sanum
-		Sapilem
-		Tigre
-		Tyeba
-		Yamba
-		Yameogo
-		Zoungrana
+		 
 	}
 	female_common_first_names = {
-		Fatimah
-		Koudpoko
+		 
 	}
 	common_last_names = {
-		Kandi
-		Kwande
-		Nikki
-		Ouattara
-		Paraku
-		Wobogu
+		 
 	}
 	noble_last_names = {
-		Dyan
-		Hamaria
-		Hano
-		Moru
-		Ouedraogo
-		Nyandane
-		Wattara
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -2103,104 +893,20 @@ cushitic = {
 		37 150 190 
 	}
 	religion = orthodox
-	heritage = heritage_abyssinian
-	language = language_galla
+	traits = {
+		east_african_culture_group african_heritage ethiopian 
+	}
 	male_common_first_names = {
-		Abadula
-		Abdus
-		Ahmad
-		Alemayehu
-		Debela
-		Dirribi
-		Galasa
-		Gobana
-		Hailu
-		Heile
-		Ras
-		Tilahun
-		Tsegaye
-		Waqo
-		Yilma
-		Ajang
-		Akoc
-		Aney
-		Awin
-		Dedunyal
-		Fadyet
-		Fafiti
-		Kodit
-		Kuikon
-		Kur
-		Kwadker
-		Muko
-		Nyadwai
-		Nyidok
-		Tyelgut
-		Wak
-		Yor
-		Amare
-		Amha
-		Bekele
-		Berhanu
-		Berihun
-		Demissie
-		Desta
-		Geteye
-		Girma
-		Haile
-		Kelile
-		Negasi
-		Saleh
+		 
 	}
 	female_common_first_names = {
-		Kameria
-		Maryam
-		Tirunesh
-		Kabon
-		Zahra
-		Menen_Asfaw
-		Belaynesh
-		Sehin_Mikael
-		Tsehai
-		Zenebework
-	}	
-	noble_last_names = {
-		Dinagde
-		Safo
-		Qallu
-		al_Suwaylih
-		El_Din
-		Ali_Aba_Deyas
-		Cherecha
-		Makonnen
-		Selassie
-		Solomon
+		 
 	}
 	common_last_names = {
-		Dacche
-		Demissie
-		Dinsa
-		Eabisa
-		Gemeda
-		Gessesse
-		Makonnen
-		Mideksa
-		Turnsaa
-		wad_Ajang
-		wad_Akoc
-		wad_Akwot
-		wad_Kudit
-		wad_Kur
-		wad_Kwadker
-		wad_Nyakwac
-		wad_Nyidok
-		wad_Yor
-		Mariam
-		Melekot
-		Mikael
-		Petros
-		Seged
-		Wossen
+		 
+	}
+	noble_last_names = {
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -2212,34 +918,20 @@ chadic = {
 		245 203 66 
 	}
 	religion = sunni
-	heritage = heritage_darfurian
-	language = language_fur
+	traits = {
+		west_african_culture_group african_heritage 
+	}
 	male_common_first_names = {
-		Alimirah
-		Amda
-		Baeda
-		Hanfere
-		Kadhafo
-		Kedafu
-		Mahammad
-		Sabraddin
-		Umar
+		 
 	}
 	female_common_first_names = {
-		Fatimah
-		Medina
-	}	
-	noble_last_names = {
-		Jasa
-		Kadafo
-		Yayyo
+		 
 	}
 	common_last_names = {
-		Aydahis
-		Hanfadhe
-		Maryam
-		Seyon
-		Yayyo
+		 
+	}
+	noble_last_names = {
+		 
 	}
 	ethnicities = {
 		1 = african
@@ -2251,496 +943,20 @@ belgian = {
 		237 237 17 
 	}
 	religion = catholic
-	heritage = heritage_netherlandish
-	language = language_francophone
+	traits = {
+		european_heritage beneluxian_culture_group francophone 
+	}
 	male_common_first_names = {
-		Albert
-		Alexandre
-		Alexis
-		Alphonse
-		Andre
-		Antoine
-		Auguste
-		Barthelemy
-		Baudouin
-		Blaise
-		Camille
-		Charles
-		Clement
-		Constant
-		Damien
-		David
-		Didier
-		Desire
-		Edmond
-		Emmanuel
-		Etienne
-		Eugene
-		Fernand
-		Feullien
-		Florent
-		Francois
-		Frederic
-		Felix
-		Georges
-		Gilles
-		Guillaume
-		Gustave
-		Gerard_2
-		Henri
-		Hercule
-		Hubert
-		Ignace
-		Isidore
-		Jacques
-		Jean
-		Jean-Baptiste
-		Jean_Francois
-		Jean-Jacques
-		Jean-Louis
-		Joseph
-		Jules
-		Lambert
-		Laurent
-		Louis
-		Lucien
-		Leon
-		Leonard
-		Leopold_2
-		Mathieu
-		Maxime
-		Maximilien
-		Nicolas
-		Olivier
-		Pascal
-		Patrice
-		Paul
-		Philippe
-		Philippe-Joseph
-		Pierre
-		Pierre-Guillaume
-		Sylvain
-		Sebastien
-		Theophile
-		Victor
-		Vincent
-		Werner
-		Edouard
-		Emile
-		Adolf
-		Adolphe
-		Adriaan
-		Albert
-		Alexander
-		Alexandre
-		Alfons
-		Alphonse
-		Andries
-		Antoine
-		Auguste
-		Bonifaas
-		Boudewijn
-		Camille
-		Charles
-		Constant
-		David
-		Diederik
-		Desire
-		Edmond
-		Emmanuel
-		Etienne
-		Eugene
-		Ferdinand
-		Filip
-		Frans
-		Francois
-		Frederik
-		Felix
-		Guillaume
-		Gustave
-		Hendrik
-		Henri
-		Herman
-		Ignaas
-		Ignace
-		Jan
-		Jean
-		Jean-Baptiste
-		Jean_Francois
-		Jean-Jacques
-		Jean-Louis
-		Jochem
-		Joseph
-		Josse
-		Jozef
-		Jules
-		Karel
-		Laurens
-		Leopold
-		Louis
-		Lucien
-		Leon
-		Leonard
-		Manfred
-		Mathias
-		Nicolas
-		Nikolaas
-		Olivier
-		Paul
-		Philippe
-		Philippe-Joseph
-		Pierre
-		Pieter
-		Robert
-		Sylvain
-		Theodoor
-		Victor
-		Vincent
-		Werner
-		Willem
+		 
 	}
 	female_common_first_names = {
-		Alix Amelie Andree 
-		Catherine Cecilia_2
-		Francoise
-		Helene
-		Jeanne
-		Louise
-		Marie Marguerite Madeleine Merie-Alix
-		Nathalie
-		Sophie
-		Vincentia
-		Yvonne
-		Clementine Charlotte Christine
-		Hendrika Henrieette
-		Josepha Josephine
-		Leocadie Louise
-		Marie Mathilde
-		Nathalie
-		Stefanie
-	}	
-	noble_last_names = {
-		de_Croy
-		Goubau
-		d_Harscamp
-		de_Laguiche
-		de_Merode
-		de_Thezan_Poujol
-		d_Ursel d_Udekem
-		
-		de_Selys_Longchamps
-		de_Coppin_de_Falaen
-		de_Theux_de_Meylandt
-		du_Val_de_Beaulieu
-		van_Asseliers
-		van_Boisschot du_Bois_de_Vroylande
-		Coomans_de_Brachene de_Croeser Coopieters_-t_Wallant
-		De_Duerwaerder
-		Goddyn
-		Van_Huele
-		de_Jaegher
-		de_Kerchove_de_Denterghem
-		De_Munck_Moerman
-		van_der_Noot Van_Naemen
-		De_Smedt
-		de_Watervliet
-		van_Zuylen_van_Nyevelt
-		Quarles_van_Ufford
-		
-		Annez_de_Zillebroeck
-		Boucqueau_de_Villeraye
-		Desmanet_de_Biesme
-		Surlet_de_Chokier
-		Surmont_de_Volsberghe
-		de_Jonghe_d_Ardoye
-		de_Meer_de_Moorsel
-		de_Theux_de_Meylandt
-		Vilain_XIIII
+		 
 	}
 	common_last_names = {
-		Allard
-		Barbanson
-		Barthelemy
-		Baugniet
-		Beaucarne
-		Berger
-		Berthels
-		Beyts
-		Biver
-		Blargnies
-		Bredart
-		Brialmont
-		Cauvin
-		Claus
-		Clerix
-		Collet
-		Cols
-		Coquilhat
-		David
-		Davignon
-		Defacqz
-		Deguise
-		Delacroix
-		Desmanet_de_Biesme
-		Destriveaux
-		Dethier
-		Devaux
-		Deville
-		Dewandre
-		Dhanis
-		Dreze
-		Dumont
-		Fallon
-		Fendius
-		Figeys
-		Fleury-Dubay
-		Fleussu
-		Forgeur
-		Frison
-		Fuchs
-		Gendebien
-		Goffint
-		Henry
-		Heusghem
-		Huysman_d_Annecroix
-		Jacques
-		Joos
-		Jottrand
-		Lahure
-		Lardinois
-		Lebeau
-		Leclercq
-		Lefebvre
-		Leman
-		Malou
-		Marcq
-		Marlet
-		Masbourg
-		Nagelmackers
-		Nalinne
-		Nothomb
-		Orban
-		Picquet
-		Pirmez
-		Pirson
-		Petillon
-		Raikem
-		Roeser
-		Rogier
-		Rouen
-		Rouppe
-		Seron
-		Thonus
-		Thorn
-		Tiberghien
-		Wahis
-		Wangermee
-		Wyvekens
-		Zoude
-		d_Arenberg
-		d_Huart
-		d_Omalius
-		d_Oreye
-		d_Oultremont
-		de_Baillet
-		de_Beaufort
-		de_Behr
-		de_Bocarme
-		de_Bousies
-		de_Broqueville
-		de_Brouckere
-		de_Burlet
-		de_Celles
-		de_Chasteler
-		de_Decker
-		de_Dixmude
-		de_Gerlache
-		de_Grez
-		de_Hemptinne
-		de_Labbeville
-		de_Lannoy
-		de_Leuze
-		de_Ligne
-		de_Melin
-		de_Merode
-		de_Pelichy
-		de_Quarre
-		de_Riquet
-		de_Robaulx
-		de_Rouille
-		de_Sauvage
-		de_Stassart
-		de_Stockem
-		de_Secus
-		de_Trazegnies
-		de_Trooz
-		de_Viron
-		de_Waha
-		du_Bois
-		du_Bus
-		du_Pont
-		le_Cocq
-		le_Hon
-		van_Snick
-		Andries
-		Barbanson
-		Barthelemy
-		Beaucarne
-		Beernaert
-		Berthels
-		Bethune
-		Beyts
-		Bischoff
-		Blomme
-		Bosmans
-		Buylaert
-		Buyse
-		Claes
-		Claus
-		Cogels
-		Cols
-		Coppens
-		Coppieters
-		Corten
-		Cruts
-		Dayeneux
-		Delberke
-		Delehaye
-		Delwarde
-		Destouvelles
-		Deswert
-		Devaux
-		Dhanis
-		Domis
-		Fransman
-		Gelders
-		Geudens
-		Goethals
-		Hennequin
-		Huysman_d_Annecroix
-		Jacobs
-		Janssens
-		Joos
-		Jottrand
-		Kockaert
-		Ledeganck
-		Lefebvre
-		Liedts
-		Marcq
-		Meeus
-		Morel
-		Moyersoen
-		Mulle
-		Nypels
-		Ooms
-		Osy
-		Peemans
-		Peeters
-		Petens
-		Rodenbach
-		Roels
-		Rosseuw
-		Rouppe
-		Rutten
-		Schollaert
-		Serruys
-		Simons
-		Speelman
-		Struye
-		Terlinden
-		Teuwens
-		Thienpont
-		Tilkens
-		Vandive
-		Verbeke
-		Vercruysse
-		Verduyn
-		Vergauwen
-		Verseyden_de_Varick
-		Verwilghen
-		Wallaert
-		Wannaar
-		Werbrouck
-		Wyvekens
-		d_Ansembourg
-		d_Arschot_Schoonhoven
-		d_Hanens
-		de_Brouckere
-		de_Celles
-		de_Coninck
-		de_Decker
-		de_Foere
-		de_Gaesebeke
-		de_Ghellink
-		de_Grez
-		de_Haerne
-		de_Jonghe
-		de_Langhe
-		de_Leeuw
-		de_Leuze
-		de_Man
-		de_Meester
-		de_Muelenaere
-		de_Merode
-		de_Pelichy
-		de_Renesse
-		de_Robiano
-		de_Rodes
-		de_Roo
-		de_Ryckere
-		de_Smet
-		de_Tiecken
-		de_Viron
-		de_Woelmont
-		du_Bois
-		van_Caloen
-		van_Casteel
-		van_Crombrugghe
-		van_Dievoet
-		van_Dorpe
-		van_Havre
-		van_Hoobrouck
-		van_Innis
-		van_Meenen
-		van_Neste
-		van_Snick
-		van_Tongerloo
-		van_Volden_de_Lombeke
-		van_Zeeland
-		van_de_Kerchove
-		van_de_Werve_de_Vorselaar
-		van_de_Weyer
-		van_den_Broucke
-		van_den_Hove
-		van_der_Belen
-		van_der_Bruggen
-		van_der_Burch
-		van_der_Eecken
-		van_der_Linden
-		van_der_Linden_d_Hooghvorst
-		van_der_Looy
+		 
 	}
-	male_regal_first_names = {
-		Albert
-		Baudouin
-		Charles
-		Leopold_2
-		Lucien
-		Philippe
-		Albert
-		Boudewijn
-		Karel
-		Leopold
-		Filip
-	}
-	female_regal_first_names = {
-		Charlotte ClE_mentine
-		Elisabeth
-		Louise
-		Marie 
-		Marie_Henriette Mathilde
-		Maria_Hendrika Mathilde
-		Stefanie
+	noble_last_names = {
+		 
 	}
 	ethnicities = {
 		1 = caucasian
