@@ -12,7 +12,7 @@
 
 #ai_chance				Scriptable value for the chance (0-100) that the AI will use this interaction when available, default 0
 
-TRY_REPLACE:grant_command_to_ruler = {
+REPLACE_OR_CREATE:grant_command_to_ruler = {
 	icon = "gfx/interface/character_panel/grant_command.dds"
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
@@ -61,7 +61,7 @@ TRY_REPLACE:grant_command_to_ruler = {
 	}
 }
 
-TRY_REPLACE:remove_command_from_ruler = {
+REPLACE_OR_CREATE:remove_command_from_ruler = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/UI/Military/command_remove"
 
@@ -99,7 +99,7 @@ TRY_REPLACE:remove_command_from_ruler = {
 	}
 }
 
-TRY_REPLACE:grant_leadership_to_agitator = {
+REPLACE_OR_CREATE:grant_leadership_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
 
@@ -191,7 +191,7 @@ TRY_REPLACE:grant_leadership_to_agitator = {
 	}
 }
 
-TRY_REPLACE:grant_command_to_agitator = {
+REPLACE_OR_CREATE:grant_command_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command.dds"
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
@@ -256,7 +256,7 @@ TRY_REPLACE:grant_command_to_agitator = {
 	}
 }
 
-TRY_REPLACE:marry_ruler_or_heir = {
+REPLACE_OR_CREATE:marry_ruler_or_heir = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_royalist.dds"
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
@@ -306,7 +306,7 @@ TRY_REPLACE:marry_ruler_or_heir = {
 	}
 }
 
-TRY_REPLACE:abdicate_monarch = {
+REPLACE_OR_CREATE:abdicate_monarch = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_republican.dds"
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
@@ -459,7 +459,7 @@ TRY_REPLACE:abdicate_monarch = {
 	}
 }
 
-TRY_REPLACE:exile_character = {
+REPLACE_OR_CREATE:exile_character = {
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
 
 	potential = {
@@ -820,7 +820,7 @@ TRY_REPLACE:exile_character = {
 	}
 }
 
-TRY_REPLACE:invite_exile = {
+REPLACE_OR_CREATE:invite_exile = {
 	# icon = ""
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/character_invite"
 
@@ -1013,7 +1013,7 @@ TRY_REPLACE:invite_exile = {
 	}
 }
 
-TRY_REPLACE:retire_commander = {
+REPLACE_OR_CREATE:retire_commander = {
 	# icon = ""
 	clicksound = "event:/SFX/UI/Military/commander_retire"
 
@@ -1174,7 +1174,7 @@ TRY_REPLACE:retire_commander = {
 	}
 }
 
-TRY_REPLACE:return_to_home_country = {
+REPLACE_OR_CREATE:return_to_home_country = {
 
 	potential = {
 		is_in_exile_pool = no
@@ -1227,7 +1227,7 @@ TRY_REPLACE:return_to_home_country = {
 	}
 }
 
-TRY_REPLACE:foster_national_agitation = {
+REPLACE_OR_CREATE:foster_national_agitation = {
 	potential = {
 		is_in_exile_pool = no
 		has_role = agitator

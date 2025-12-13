@@ -42,7 +42,7 @@ stupidly_long_modifier_time = 18250 # 50 years
 never_fire_again_modifier_time = 1000000 # Nevermore
 
 # 0.015% of GDP, rounded to nearest 10
-TRY_REPLACE:money_amount_multiplier_very_small = {
+REPLACE_OR_CREATE:money_amount_multiplier_very_small = {
 	value = root.gdp
 	divide = 10000
 	multiply = 0.075
@@ -52,7 +52,7 @@ TRY_REPLACE:money_amount_multiplier_very_small = {
 }
 
 # 0.025% of GDP, rounded to nearest 100
-TRY_REPLACE:money_amount_multiplier_small = {
+REPLACE_OR_CREATE:money_amount_multiplier_small = {
 	value = root.gdp
 	divide = 100000
 	multiply = 0.15
@@ -62,7 +62,7 @@ TRY_REPLACE:money_amount_multiplier_small = {
 }
 
 # 0.05% of GDP, rounded to nearest 100
-TRY_REPLACE:money_amount_multiplier_medium = {
+REPLACE_OR_CREATE:money_amount_multiplier_medium = {
 	value = root.gdp
 	divide = 100000
 	multiply = 0.25
@@ -72,7 +72,7 @@ TRY_REPLACE:money_amount_multiplier_medium = {
 }
 
 # 0.1% of GDP, rounded to nearest 1000
-TRY_REPLACE:money_amount_multiplier_large = {
+REPLACE_OR_CREATE:money_amount_multiplier_large = {
 	value = root.gdp
 	divide = 1000000
 	multiply = 0.5
@@ -82,7 +82,7 @@ TRY_REPLACE:money_amount_multiplier_large = {
 }
 
 # 0.2% of GDP, rounded to nearest 1000
-TRY_REPLACE:money_amount_multiplier_more_large = {
+REPLACE_OR_CREATE:money_amount_multiplier_more_large = {
 	value = root.gdp
 	divide = 1000000
 	multiply = 1
@@ -92,7 +92,7 @@ TRY_REPLACE:money_amount_multiplier_more_large = {
 }
 
 # 0.5% of GDP, rounded to nearest 1000
-TRY_REPLACE:money_amount_multiplier_very_large = {
+REPLACE_OR_CREATE:money_amount_multiplier_very_large = {
 	value = root.gdp
 	divide = 1000000
 	multiply = 2.5
@@ -101,7 +101,7 @@ TRY_REPLACE:money_amount_multiplier_very_large = {
 	min = 100
 }
 
-TRY_REPLACE:money_amount_multiplier_large_state = {
+REPLACE_OR_CREATE:money_amount_multiplier_large_state = {
 	multiply = 0.001
 }
 
@@ -142,7 +142,7 @@ religious_acceptance_medium = 15 # the amount all pops get in separation from ch
 religious_acceptance_high = 20
 religious_acceptance_very_high = 25 # highest possible value
 
-TRY_REPLACE:jail_three_year_value = {
+REPLACE_OR_CREATE:jail_three_year_value = {
 	if = {
 		limit = {
 			exists = scope:prisoner_scope
@@ -153,7 +153,7 @@ TRY_REPLACE:jail_three_year_value = {
 	}
 }
 
-TRY_REPLACE:jail_five_year_value = {
+REPLACE_OR_CREATE:jail_five_year_value = {
 	if = {
 		limit = {
 			exists = scope:prisoner_scope
@@ -164,7 +164,7 @@ TRY_REPLACE:jail_five_year_value = {
 	}
 }
 
-TRY_REPLACE:jail_ten_year_value = {
+REPLACE_OR_CREATE:jail_ten_year_value = {
 	if = {
 		limit = {
 			exists = scope:prisoner_scope
@@ -177,7 +177,7 @@ TRY_REPLACE:jail_ten_year_value = {
 
 divided_monarchists_upper_bound = 480
 
-TRY_REPLACE:controlled_colonies_in_africa = {
+REPLACE_OR_CREATE:controlled_colonies_in_africa = {
 	value = 0
 	every_scope_state = {
 		limit = {
