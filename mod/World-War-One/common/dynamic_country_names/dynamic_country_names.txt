@@ -585,7 +585,7 @@ REPLACE_OR_CREATE:SPA = { # Spain
 		
 		trigger = {
 			scope:actor ?= { 
-                country_rank >= rank_value:great_power
+                global_country_ranking > 4
 				has_law = law_type:law_monarchy 
 			}
 		}
@@ -600,6 +600,23 @@ REPLACE_OR_CREATE:SPA = { # Spain
 		trigger = {
 			scope:actor ?= { 
 				has_law = law_type:law_monarchy 
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_spanish_republic
+		adjective = SPA_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					has_law_or_variant = law_type:law_parliamentary_republic
+					has_law_or_variant = law_type:law_presidential_republic
+				}
 			}
 		}
 	}

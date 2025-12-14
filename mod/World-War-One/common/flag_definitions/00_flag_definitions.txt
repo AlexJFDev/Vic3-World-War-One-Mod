@@ -7257,25 +7257,67 @@ REPLACE_OR_CREATE:POR = { # Portugal
 		coa = POR
 		subject_canton = POR
 		allow_overlord_canton = yes
-		coa_with_overlord_canton = POR_subject			
+		coa_with_overlord_canton = POR_subject
 		priority = 1
+	}
+	flag_definition = {
+		coa = POR_uk
+		subject_canton = POR_uk
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = POR_subject
+		priority = 2
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				OR = {
+					any_subject_or_below = {
+						c:BRZ ?= this
+						is_subject_type = subject_type_personal_union
+					}
+					AND = {
+						owns_entire_state_region = STATE_RIO_DE_JANEIRO
+						owns_entire_state_region = STATE_SAO_PAULO
+					}
+				}
+			}
+		}
 	}
 	flag_definition = {
 		coa = POR_absolute_monarchy
 		subject_canton = POR_absolute_monarchy
 		priority = 20
-		trigger = { 
+		trigger = {
 			coa_def_absolute_monarchy_flag_trigger = yes
 		}
-	}	
+	}
+	flag_definition = {
+		coa = POR_absolute_monarchy_uk
+		subject_canton = POR_absolute_monarchy_uk
+		priority = 21
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				OR = {
+					any_subject_or_below = {
+						c:BRZ ?= this
+						is_subject_type = subject_type_personal_union
+					}
+					AND = {
+						owns_entire_state_region = STATE_RIO_DE_JANEIRO
+						owns_entire_state_region = STATE_SAO_PAULO
+					}
+				}
+			}
+		}
+	}
 	flag_definition = {
 		coa = POR_republic
 		subject_canton = POR_republic
 		priority = 10
-		trigger = { 
+		trigger = {
 			coa_def_republic_flag_trigger = yes
 		}
-	}	
+	}
 	flag_definition = {
 		coa = POR_dictatorship
 		subject_canton = POR_dictatorship
@@ -7283,22 +7325,30 @@ REPLACE_OR_CREATE:POR = { # Portugal
 		trigger = {
 			coa_def_dictatorship_flag_trigger = yes
 		}
-	}	
+	}
 	flag_definition = {
 		coa = POR_communist
 		priority = 1500
-		trigger = { 
+		trigger = {
 			coa_def_communist_flag_trigger = yes
 		}
-	}	
+	}
 	flag_definition = {
 		coa = POR_fascist
 		subject_canton = POR_fascist
 		priority = 1500
-		trigger = { 
+		trigger = {
 			coa_def_fascist_flag_trigger = yes
 		}
-	}			
+	}
+	flag_definition = {
+		coa = POR_anarchist
+		subject_canton = POR_anarchist
+		priority = 5000
+		trigger = {
+			coa_def_anarchy_flag_trigger = yes
+		}
+	}
 }
 
 REPLACE_OR_CREATE:NGG = { # Papua
@@ -8163,21 +8213,43 @@ REPLACE_OR_CREATE:SPA = { # Spain
 		coa = SPA
 		subject_canton = SPA
 		coa_with_overlord_canton = SPA_subject
-		allow_overlord_canton = yes
+		allow_overlord_canton = no
 	}
 	flag_definition = {
 		coa = SPA_republic
 		subject_canton = SPA_republic
 		priority = 10
-		trigger = { 
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SPA_republic_2
+		subject_canton = SPA_republic
+		priority = 11
+		trigger = {
+			scope:actor ?= {
+				has_variable = spain_republic_2
+			}
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SPA_republic_3
+		subject_canton = SPA_republic
+		priority = 12
+		trigger = {
+			scope:actor ?= {
+				has_variable = spain_republic_3
+			}
 			coa_def_republic_flag_trigger = yes
 		}
 	}
 	flag_definition = {
 		coa = SPA_absolute_monarchy
-		subject_canton = SPA_absolute_monarchy	
+		subject_canton = SPA_absolute_monarchy
 		priority = 10
-		trigger = { 
+		trigger = {
 			coa_def_absolute_monarchy_flag_trigger = yes
 		}
 	}
@@ -8193,26 +8265,46 @@ REPLACE_OR_CREATE:SPA = { # Spain
 		coa = SPA_communist
 		subject_canton = SPA_communist
 		priority = 1500
-		trigger = { 
+		trigger = {
 			coa_def_communist_flag_trigger = yes
 		}
-	}		
+	}
 	flag_definition = {
 		coa = SPA_theocracy
 		subject_canton = SPA_theocracy
 		priority = 20
-		trigger = { 
+		trigger = {
 			coa_def_theocracy_flag_trigger = yes
 		}
-	}	
+	}
+	flag_definition = {
+		coa = SPA_falangist
+		subject_canton = SPA_falangist
+		priority = 750
+		trigger = {
+			OR = {
+				coa_def_fascist_flag_trigger = yes
+				coa_def_corporate_state_flag_trigger = yes
+			}
+		}
+	}
 	flag_definition = {
 		coa = SPA_subject_GBR
-		allow_overlord_canton = yes		
+		allow_overlord_canton = yes
 		priority = 50
-		trigger = { 
+		trigger = {
 			coa_def_british_ensign_trigger = yes
 		}
-	}		
+	}
+	flag_definition = {
+		coa = SPA_anarchist
+		subject_canton = SPA_anarchist
+		allow_overlord_canton = no
+		priority = 5000
+		trigger = {
+			coa_def_anarchy_flag_trigger = yes
+		}
+	}
 }
 
 REPLACE_OR_CREATE:SRK = { # Surakarta
