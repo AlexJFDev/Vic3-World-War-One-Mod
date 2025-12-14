@@ -96,6 +96,7 @@ REPLACE_OR_CREATE:ideology_traditionalist = {
 		law_anti_strike_laws = neutral
 		law_corporatized_unions = neutral
 		law_right_to_associate = disapprove
+		law_factory_councils = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -227,6 +228,7 @@ REPLACE_OR_CREATE:ideology_traditionalist_minoritarian = {
 		law_anti_strike_laws = neutral
 		law_corporatized_unions = neutral
 		law_right_to_associate = disapprove
+		law_factory_councils = strongly_disapprove
 	}
 
 	interest_group_leader_trigger = {
@@ -709,6 +711,7 @@ REPLACE_OR_CREATE:ideology_radical = {
 		law_anti_strike_laws = neutral
 		law_corporatized_unions = disapprove
 		law_right_to_associate = neutral
+		law_factory_councils = strongly_disapprove
 	}
 	
 	country_trigger = {
@@ -946,6 +949,7 @@ REPLACE_OR_CREATE:ideology_reformer = {
 		law_anti_strike_laws = neutral
 		law_corporatized_unions = neutral
 		law_right_to_associate = approve
+		law_factory_councils = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -1941,6 +1945,7 @@ REPLACE_OR_CREATE:ideology_social_democrat = {
 		law_anti_strike_laws = neutral
 		law_corporatized_unions = neutral
 		law_right_to_associate = approve
+		law_factory_councils = disapprove
 	}
 
 	country_trigger = {
@@ -2150,6 +2155,7 @@ REPLACE_OR_CREATE:ideology_communist = {
 		law_anti_strike_laws = neutral
 		law_corporatized_unions = strongly_disapprove
 		law_right_to_associate = neutral
+		law_factory_councils = strongly_approve
 	}
 
 	country_trigger = {
@@ -2355,6 +2361,7 @@ REPLACE_OR_CREATE:ideology_vanguardist = {
 		law_anti_strike_laws = neutral
 		law_corporatized_unions = strongly_disapprove
 		law_right_to_associate = neutral
+		law_factory_councils = strongly_approve
 	}
 
 	country_trigger = {
@@ -2614,6 +2621,7 @@ REPLACE_OR_CREATE:ideology_fascist = {
 		law_anti_strike_laws = approve
 		law_corporatized_unions = strongly_approve
 		law_right_to_associate = disapprove
+		law_factory_councils = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -2859,6 +2867,15 @@ REPLACE_OR_CREATE:ideology_anarchist = {
 		law_laissez_faire = strongly_disapprove
 		law_industry_banned = disapprove
 		law_extraction_economy = strongly_disapprove
+	}
+
+	lawgroup_labour_associations = {
+		law_combination_acts = disapprove
+		law_guild_system = strongly_disapprove
+		law_anti_strike_laws = neutral
+		law_corporatized_unions = strongly_disapprove
+		law_right_to_associate = neutral
+		law_factory_councils = strongly_approve
 	}
 
 	lawgroup_army_model = {
@@ -3365,13 +3382,14 @@ REPLACE_OR_CREATE:ideology_market_liberal = {
 		law_homesteading = neutral
 		law_commercialized_agriculture = approve
 	}	
-
+    
 	lawgroup_labour_associations = {
 		law_combination_acts = approve
 		law_guild_system = strongly_disapprove
 		law_anti_strike_laws = neutral
-		law_corporatized_unions = strongly_disapprove
-		law_right_to_associate = disapprove
+		law_factory_councils = strongly_disapprove
+		law_corporatized_unions = disapprove
+		law_right_to_associate = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -4779,6 +4797,7 @@ REPLACE_OR_CREATE:ideology_integralist = {
 		law_anti_strike_laws = approve
 		law_corporatized_unions = strongly_approve
 		law_right_to_associate = disapprove
+		law_factory_councils = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -5137,6 +5156,7 @@ REPLACE_OR_CREATE:ideology_corporatist_leader = {
 		law_anti_strike_laws = approve
 		law_corporatized_unions = strongly_approve
 		law_right_to_associate = disapprove
+		law_factory_councils = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -6035,6 +6055,15 @@ REPLACE_OR_CREATE:ideology_modernizer_leader = {
 		law_private_schools = neutral
 		law_religious_schools = neutral
 		law_no_schools = disapprove
+	}
+
+	lawgroup_labour_associations = { # Just really hates the Guild System
+		law_combination_acts = neutral
+		law_guild_system = disapprove
+		law_anti_strike_laws = neutral
+		law_corporatized_unions = neutral
+		law_right_to_associate = neutral
+		law_factory_councils = strongly_disapprove
 	}
 
 	country_trigger = {
