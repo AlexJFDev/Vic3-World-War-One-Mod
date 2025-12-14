@@ -177,40 +177,15 @@ building_aircraft_factory = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 }
 
-REPLACE_OR_CREATE:building_shipyard = {
-	building_group = bg_shipyards
-	icon = "gfx/interface/icons/building_icons/shipyards.dds"
-	city_type = port
-	downsizeable = no
-	
-	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
-	
-	unlocking_technologies = {
-		navigation
-	}
-
-	production_method_groups = {
-		pmg_base_building_shipyard
-	}
-
-	required_construction = construction_cost_high
-	
-	potential = {
-		is_coastal = yes
-	}
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
-}
-
 REPLACE_OR_CREATE:building_military_shipyard = {
-	building_group = bg_military_shipyards
+	aliases = { building_military_shipyards }
+	building_group = bg_military_industry
 	icon = "gfx/interface/icons/building_icons/military_shipyards.dds"
 	city_type = port
-	downsizeable = no
-	
+	levels_per_mesh = 1
+
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
-	
+
 	unlocking_technologies = {
 		admiralty
 	}
@@ -220,7 +195,7 @@ REPLACE_OR_CREATE:building_military_shipyard = {
 	}
 
 	required_construction = construction_cost_big
-	
+
 	potential = {
 		is_coastal = yes
 	}
