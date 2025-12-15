@@ -6,7 +6,7 @@
 		199 102 22 
 	}
 	cultures = {
-		siouan 
+		north_amerindian 
 	}
 }
 ABU = {
@@ -17,7 +17,7 @@ ABU = {
 		113 112 96 
 	}
 	cultures = {
-		bedouin 
+		arab 
 	}
 	is_named_from_capital = yes
 }
@@ -29,7 +29,7 @@ ACE = {
 		73 152 76 
 	}
 	cultures = {
-		sumatran 
+		malay 
 	}
 	is_named_from_capital = yes
 }
@@ -41,7 +41,7 @@ ACH = {
 		166 225 217 
 	}
 	cultures = {
-		luo lacustrine_bantu 
+		eastern_bantu 
 	}
 }
 ADG = {
@@ -52,7 +52,7 @@ ADG = {
 		215 132 165 
 	}
 	cultures = {
-		tuareg 
+		tamazight 
 	}
 }
 AFG = {
@@ -96,19 +96,15 @@ AHG = {
 		138 168 70 
 	}
 	cultures = {
-		tuareg 
+		tamazight 
 	}
 }
-AHU = {
+AHU = { #Anhui
+	color = { 187 126 224 }
+	country_type = unrecognized
 	tier = kingdom
-	capital = STATE_SOUTHERN_ANHUI
-	country_type = recognized
-	color = {
-		187 126 224 
-	}
-	cultures = {
-		han 
-	}
+	cultures = { han }
+	capital = STATE_NANJING
 }
 AIN = {
 	tier = principality
@@ -129,7 +125,7 @@ AIR = {
 		30 31 162 
 	}
 	cultures = {
-		tuareg 
+		tamazight 
 	}
 }
 AIT = {
@@ -140,7 +136,7 @@ AIT = {
 		255 255 153 
 	}
 	cultures = {
-		berber 
+		tamazight 
 	}
 }
 ALB = {
@@ -163,7 +159,7 @@ ALD = {
 		220 202 96 
 	}
 	cultures = {
-		maghrebi berber 
+		maghrebi tamazight 
 	}
 }
 ALT = {
@@ -219,7 +215,7 @@ ANK = {
 		126 162 98 
 	}
 	cultures = {
-		baganda lacustrine_bantu 
+		eastern_bantu 
 	}
 }
 ANL = {
@@ -253,7 +249,7 @@ APC = {
 		198 158 109 
 	}
 	cultures = {
-		apache 
+		north_amerindian 
 	}
 }
 ARA = {
@@ -264,7 +260,7 @@ ARA = {
 		66 111 19 
 	}
 	cultures = {
-		mashriqi bedouin misri yemenite 
+		arab
 	}
 }
 ARG = {
@@ -298,7 +294,7 @@ ARP = {
 		223 204 125 
 	}
 	cultures = {
-		siouan 
+		north_amerindian 
 	}
 }
 ASA = {
@@ -331,7 +327,7 @@ ASM = {
 		163 5 77 
 	}
 	cultures = {
-		assamese 
+		east_indian
 	}
 }
 ASS = {
@@ -342,7 +338,7 @@ ASS = {
 		111 56 200 
 	}
 	cultures = {
-		assyrian 
+		kurdish
 	}
 }
 AST = {
@@ -364,7 +360,7 @@ ATB = {
 		88 105 137 
 	}
 	cultures = {
-		athabaskan 
+		north_amerindian
 	}
 }
 AUS = {
@@ -577,7 +573,7 @@ BHN = {
 		169 51 51 
 	}
 	cultures = {
-		bedouin 
+		arab 
 	}
 }
 BHO = {
@@ -676,7 +672,7 @@ BLF = {
 		49 72 153 
 	}
 	cultures = {
-		siouan 
+		north_amerindian 
 	}
 }
 BLG = {
@@ -720,7 +716,7 @@ BMB = {
 		192 90 121 
 	}
 	cultures = {
-		lacustrine_bantu 
+		eastern_bantu 
 	}
 }
 BMM = {
@@ -775,7 +771,7 @@ BNY = {
 		174 24 66 
 	}
 	cultures = {
-		baganda lacustrine_bantu 
+		baganda eastern_bantu 
 	}
 }
 BOB = {
@@ -1342,7 +1338,7 @@ CON = {
 		0228 3 16 
 	}
 	cultures = {
-		maghrebi berber 
+		maghrebi tamazight 
 	}
 }
 COR = {
@@ -1569,7 +1565,7 @@ DFR = {
 		44 160 70 
 	}
 	cultures = {
-		fur bedouin 
+		fur arab 
 	}
 }
 DFT = {
@@ -1704,7 +1700,7 @@ EOT = {
 		0212 11 27 
 	}
 	cultures = {
-		mashriqi bedouin 
+		mashriqi arab 
 	}
 }
 EQT = {
@@ -2037,7 +2033,7 @@ GGO = {
 		244 228 166 
 	}
 	cultures = {
-		lacustrine_bantu 
+		eastern_bantu 
 	}
 }
 GJM = {
@@ -2084,28 +2080,12 @@ GML = {
 		aborigine 
 	}
 }
-GNG = {
-	tier = kingdom
-	capital = STATE_GUANGXI
-	country_type = recognized
-	color = {
-		133 56 8 
-	}
-	cultures = {
-		han yue zhuang 
-	}
-}
-GNG = {
+GNG = { #Guangxi
+	color = { 133 56 8 }
+	country_type = unrecognized
 	tier = principality
+	cultures = { han yue zhuang }
 	capital = STATE_GUANGXI
-	country_type = recognized
-	color = {
-		187 211 150 
-	}
-	cultures = {
-		han yue zhuang 
-	}
-	is_named_from_capital = yes
 }
 GNI = {
 	tier = principality
@@ -2175,27 +2155,12 @@ GUA = {
 	}
 	is_named_from_capital = yes
 }
-GUI = {
-	tier = kingdom
-	capital = STATE_GUIZHOU
-	country_type = recognized
-	color = {
-		37 102 37 
-	}
-	cultures = {
-		han 
-	}
-}
-GUI = {
+GUI = { #Guizhou
+	color = { 37 102 37 }
+	country_type = unrecognized
 	tier = principality
+	cultures = { han miao }
 	capital = STATE_GUIZHOU
-	country_type = recognized
-	color = {
-		211 198 194 
-	}
-	cultures = {
-		han zhuang 
-	}
 }
 GWA = {
 	tier = principality
@@ -2306,7 +2271,7 @@ HDJ = {
 		121 229 215 
 	}
 	cultures = {
-		bedouin 
+		arab 
 	}
 }
 HEK = {
@@ -2340,7 +2305,7 @@ HHE = {
 		126 84 131 
 	}
 	cultures = {
-		lacustrine_bantu 
+		eastern_bantu 
 	}
 }
 HLA = {
@@ -2365,28 +2330,12 @@ HMB = {
 		fluvian_bantu 
 	}
 }
-HNA = {
+HNA = { #Hunan	
+	color = { 126 164 224 }
+	country_type = unrecognized
 	tier = kingdom
+	cultures = { han }
 	capital = STATE_HUNAN
-	country_type = recognized
-	color = {
-		126 164 224 
-	}
-	cultures = {
-		han 
-	}
-}
-HNA = {
-	tier = principality
-	capital = STATE_HUNAN
-	country_type = recognized
-	color = {
-		211 103 130 
-	}
-	cultures = {
-		han 
-	}
-	is_named_from_capital = yes
 }
 HND = {
 	tier = empire
@@ -2576,7 +2525,7 @@ IDN = {
 		0 128 128 
 	}
 	cultures = {
-		balinese batak bornean dayak javan malay moluccan sumatran 
+		balinese batak bornean dayak javan malay moluccan malay 
 	}
 }
 IND = {
@@ -2621,7 +2570,7 @@ IRC = {
 		61 158 124 
 	}
 	cultures = {
-		cree siouan 
+		cree north_amerindian 
 	}
 }
 IRE = {
@@ -2709,7 +2658,7 @@ JAB = {
 		183 62 62 
 	}
 	cultures = {
-		bedouin 
+		arab 
 	}
 }
 JAI = {
@@ -2798,7 +2747,7 @@ JMB = {
 		223 228 192 
 	}
 	cultures = {
-		sumatran 
+		malay 
 	}
 }
 JOD = {
@@ -2853,7 +2802,7 @@ KAT = {
 		79 152 64 
 	}
 	cultures = {
-		bedouin yemenite 
+		arab yemenite 
 	}
 }
 KAU = {
@@ -3073,7 +3022,7 @@ KRG = {
 		48 177 169 
 	}
 	cultures = {
-		lacustrine_bantu baganda 
+		eastern_bantu baganda 
 	}
 }
 KRN = {
@@ -3216,7 +3165,7 @@ LAH = {
 		209 41 41 
 	}
 	cultures = {
-		bedouin yemenite 
+		arab yemenite 
 	}
 }
 LAN = {
@@ -3483,7 +3432,7 @@ MAH = {
 		0 153 76 
 	}
 	cultures = {
-		bedouin yemenite 
+		arab yemenite 
 	}
 }
 MAK = {
@@ -3516,7 +3465,7 @@ MAS = {
 		0 129 48 
 	}
 	cultures = {
-		maghrebi berber 
+		maghrebi tamazight 
 	}
 }
 MAY = {
@@ -3617,7 +3566,7 @@ MGB = {
 		209 63 44 
 	}
 	cultures = {
-		maghrebi berber bidan 
+		maghrebi tamazight bidan 
 	}
 }
 MGD = {
@@ -3773,7 +3722,7 @@ MOR = {
 		224 146 113 
 	}
 	cultures = {
-		maghrebi berber 
+		maghrebi tamazight 
 	}
 }
 MOS = {
@@ -4051,7 +4000,7 @@ NEJ = {
 		209 219 116 
 	}
 	cultures = {
-		bedouin 
+		arab 
 	}
 	is_named_from_capital = yes
 }
@@ -4351,7 +4300,7 @@ OMA = {
 		98 134 153 
 	}
 	cultures = {
-		bedouin 
+		arab 
 	}
 	is_named_from_capital = yes
 }
@@ -4933,7 +4882,7 @@ SAH = {
 		220 202 96 
 	}
 	cultures = {
-		berber 
+		tamazight 
 	}
 }
 SAK = {
@@ -4944,7 +4893,7 @@ SAK = {
 		21 196 68 
 	}
 	cultures = {
-		sumatran 
+		malay 
 	}
 }
 SAR = {
@@ -5102,7 +5051,7 @@ SEQ = {
 		86 120 117 
 	}
 	cultures = {
-		cherokee siouan 
+		cherokee north_amerindian 
 	}
 }
 SER = {
@@ -5138,39 +5087,19 @@ SGU = {
 		bambara 
 	}
 }
-SHA = {
+SHA = { #Shandong
+	color = { 189 113 42 }
+	country_type = unrecognized
 	tier = kingdom
+	cultures = { han }
 	capital = STATE_SHANDONG
-	country_type = recognized
-	color = {
-		189 113 42 
-	}
-	cultures = {
-		han 
-	}
 }
-SHN = {
+SHN = { #Shanxi
+	color = { 94 209 94 }
+	country_type = unrecognized
 	tier = kingdom
+	cultures = { han }
 	capital = STATE_SHANXI
-	country_type = recognized
-	color = {
-		94 209 94 
-	}
-	cultures = {
-		han 
-	}
-}
-SHN = {
-	tier = principality
-	capital = STATE_SHANXI
-	country_type = recognized
-	color = {
-		180 226 147 
-	}
-	cultures = {
-		han 
-	}
-	is_named_from_capital = yes
 }
 SHW = {
 	tier = principality
@@ -5216,28 +5145,12 @@ SIC = {
 		italian 
 	}
 }
-SIH = {
+SIH = { #Sichuan
+	color = { 42 189 68 }
+	country_type = unrecognized
 	tier = kingdom
+	cultures = { han }
 	capital = STATE_SICHUAN
-	country_type = recognized
-	color = {
-		42 189 68 
-	}
-	cultures = {
-		han 
-	}
-}
-SIH = {
-	tier = principality
-	capital = STATE_SICHUAN
-	country_type = recognized
-	color = {
-		81 211 33 
-	}
-	cultures = {
-		han 
-	}
-	is_named_from_capital = yes
 }
 SIK = {
 	tier = principality
@@ -5382,7 +5295,7 @@ SNG = {
 		203 54 66 
 	}
 	cultures = {
-		lacustrine_bantu 
+		eastern_bantu 
 	}
 }
 SOK = {
@@ -5669,7 +5582,7 @@ TIS = {
 		190 133 82 
 	}
 	cultures = {
-		cherokee iroquoian siouan 
+		cherokee iroquoian north_amerindian 
 	}
 }
 TIV = {
@@ -5728,15 +5641,12 @@ TOB = {
 	}
 }
 TPG = {
-	tier = empire
+	color = { 100 150 20 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { han hakka }
+	religion = protestant
 	capital = STATE_NANJING
-	country_type = recognized
-	color = {
-		100 150 20 
-	}
-	cultures = {
-		han hakka 
-	}
 }
 TPI = {
 	tier = principality
@@ -5881,7 +5791,7 @@ TUA = {
 		142 88 74 
 	}
 	cultures = {
-		tuareg 
+		tamazight 
 	}
 }
 TUG = {
@@ -5892,7 +5802,7 @@ TUG = {
 		90 140 190 
 	}
 	cultures = {
-		berber 
+		tamazight 
 	}
 }
 TUN = {
@@ -6324,16 +6234,16 @@ XHO = {
 		xhosa 
 	}
 }
-XIB = {
+XIN = {
+	color = { 255  234  174 }
+	
+	country_type = unrecognized
+	
 	tier = kingdom
-	capital = STATE_NINGXIA
-	country_type = recognized
-	color = {
-		68 144 212 
-	}
-	cultures = {
-		han tibetan 
-	}
+	
+	cultures = { han steppe_turk }
+	religion = sunni
+	capital = STATE_TIANSHAN
 }
 XIN = {
 	tier = kingdom
@@ -6376,7 +6286,7 @@ YEM = {
 		255 191 191 
 	}
 	cultures = {
-		yemenite bedouin 
+		yemenite arab 
 	}
 	is_named_from_capital = yes
 }
@@ -6413,27 +6323,13 @@ YUC = {
 		mexican 
 	}
 }
-YUE = {
-	tier = principality
+YUE = { # Yue
+	color = { 89 113 223 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { yue han }
+	
 	capital = STATE_GUANGDONG
-	country_type = recognized
-	color = {
-		89 113 223 
-	}
-	cultures = {
-		yue 
-	}
-}
-YUE = {
-	tier = principality
-	capital = STATE_GUANGDONG
-	country_type = recognized
-	color = {
-		101 118 211 
-	}
-	cultures = {
-		han yue 
-	}
 }
 YUG = {
 	tier = empire
@@ -6446,40 +6342,25 @@ YUG = {
 		yugoslav 
 	}
 }
-YUN = {
-	tier = principality
+YUN = { # Yunnan
+	color = { 245 245 220 }
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { han zhuang }
+	
 	capital = STATE_YUNNAN
-	country_type = recognized
-	color = {
-		245 245 220 
-	}
-	cultures = {
-		yi 
-	}
-	is_named_from_capital = yes
 }
-YUN = {
+YUZ = { # Yuanzhumin
+	color = { 97 44 96 }
+	
+	country_type = unrecognized
+
 	tier = principality
-	capital = STATE_YUNNAN
-	country_type = recognized
-	color = {
-		211 95 57 
-	}
-	cultures = {
-		han 
-	}
-	is_named_from_capital = yes
-}
-YUZ = {
-	tier = principality
+	
+	cultures = { han polynesian }
 	capital = STATE_FORMOSA
-	country_type = recognized
-	color = {
-		97 44 96 
-	}
-	cultures = {
-		yuanzhumin 
-	}
 }
 ZAI = {
 	tier = principality
@@ -6489,7 +6370,7 @@ ZAI = {
 		153 76 0 
 	}
 	cultures = {
-		yemenite bedouin 
+		yemenite arab 
 	}
 }
 ZAM = {
@@ -6515,16 +6396,12 @@ ZAN = {
 	}
 	is_named_from_capital = yes
 }
-ZHI = {
+ZHI = { #Zhili
+	color = { 167 5 0 }
+	country_type = unrecognized
 	tier = kingdom
+	cultures = { han }
 	capital = STATE_ZHILI
-	country_type = recognized
-	color = {
-		207 64 88 
-	}
-	cultures = {
-		han 
-	}
 }
 ZIM = {
 	tier = kingdom
@@ -6890,97 +6767,69 @@ MRI = {
 		ugrian 
 	}
 }
-QIH = {
+QIH = { #Qinghai
+	color = { 9 171 190 }
+	country_type = unrecognized
 	tier = principality
+	cultures = { han tibetan }
+	religion = sunni
 	capital = STATE_QINGHAI
-	country_type = recognized
-	color = {
-		211 179 126 
-	}
-	cultures = {
-		han 
-	}
 }
-GAN = {
-	tier = principality
-	capital = STATE_GANSU
-	country_type = recognized
-	color = {
-		140 114 211 
-	}
-	cultures = {
-		han mongol 
-	}
-	is_named_from_capital = yes
+GAN = { #Gansu
+	color = { 140 169 183 }
+	country_type = unrecognized
+	tier = grand_principality
+	cultures = { han }
+	capital = STATE_NINGXIA
 }
-JXI = {
-	tier = principality
+JXI = { #Jiangxi
+	color = { 113 221 248 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { han }
 	capital = STATE_JIANGXI
-	country_type = recognized
-	color = {
-		12 142 84 
-	}
-	cultures = {
-		han 
-	}
-	is_named_from_capital = yes
 }
-FRS = {
+FRS = { # Fujian
+	color = { 218 234 15 }
+	
+	country_type = unrecognized
+	
 	tier = principality
+	
+	cultures = { han }
+	
 	capital = STATE_FUJIAN
-	country_type = recognized
-	color = {
-		160 0 0 
-	}
-	cultures = {
-		han 
-	}
 }
-ZHE = {
-	tier = principality
+ZHE = { #Zhejiang
+	color = { 221 156 121 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { han }
 	capital = STATE_ZHEJIANG
-	country_type = recognized
-	color = {
-		217 105 39 
-	}
-	cultures = {
-		han 
-	}
-	is_named_from_capital = yes
 }
-JSU = {
-	tier = principality
-	capital = STATE_JIANGSU
-	country_type = recognized
-	color = {
-		228 194 22 
-	}
-	cultures = {
-		han 
-	}
-	is_named_from_capital = yes
+JSU = { #Jiangsu
+	color = { 179 128 104 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { han }
+	capital = STATE_NANJING
 }
-QIN = {
-	tier = principality
+QIN = { #Shanxi
+	color = { 39 125 143 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { han }
 	capital = STATE_XIAN
-	country_type = recognized
-	color = {
-		226 81 86 
-	}
-	cultures = {
-		han 
-	}
 }
 MCH = {
-	tier = principality
-	capital = STATE_SOUTHERN_MANCHURIA
-	country_type = recognized
-	color = {
-		226 168 31 
-	}
-	cultures = {
-		manchu 
-	}
+	color = { 255  254  124 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { han manchu }
+	capital = STATE_SHENGJING
 }
 KMT = {
 	tier = principality
@@ -7982,4 +7831,47 @@ MRN = {
 	cultures = {
 		aborigine 
 	}
+}
+SYT = { #Shiyetuan
+	color = { 92 189 68 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han }
+	capital = STATE_CHONGQING
+}
+JRT = { #Jiurentuan
+	color = { 42 189 118 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han }
+	capital = STATE_SICHUAN
+}
+HEN = { #Henan
+	color = { 0 93 104 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { han }
+	capital = STATE_HENAN
+}
+HUB = { #Hubei
+	color = { 251 168 196 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { han }
+	capital = STATE_EASTERN_HUBEI
+}
+NIX = { #Ningxia
+	color = { 9 190 101 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han mongol }
+	religion = sunni
+	capital = STATE_ALXA
+}
+XIK = { #Xikang
+	color = { 53 158 127 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han tibetan }
+	capital = STATE_XIKANG
 }
