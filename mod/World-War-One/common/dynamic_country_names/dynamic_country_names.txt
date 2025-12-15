@@ -643,3 +643,24 @@ REPLACE_OR_CREATE:KMT = {
 		}
 	}	
 }
+
+REPLACE_OR_CREATE:SAF = {
+
+	dynamic_country_name = {
+		name = dyn_c_south_africa
+		adjective = dyn_c_south_africa_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			c:GBR ?= {
+				has_diplomatic_pact = {
+					who = c:SAF
+					type = colony
+					is_initiator = yes
+				}
+			}
+		}
+	}
+}
