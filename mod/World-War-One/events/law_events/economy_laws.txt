@@ -161,7 +161,7 @@ economy_laws.3 = { # Stall event
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
-	
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
@@ -172,7 +172,7 @@ economy_laws.3 = { # Stall event
 		is_enacting_law = law_type:law_command_economy
 		NOT = {
 			has_variable = command_economy_law_stall_timer
-		}	
+		}
 	}
 
 	immediate = {
@@ -191,7 +191,7 @@ economy_laws.3 = { # Stall event
 			save_scope_as = current_law_scope
 		}
 	}
-	
+
 	cancellation_trigger = {
 		NOT = { currently_enacting_law = scope:current_law_scope }
 	}
@@ -267,32 +267,14 @@ economy_laws.4 = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		# THIS IS GROSS AND I APOLOGIZE FOR IT
-		if = {
+		random_law = {
 			limit = {
-				has_law = law_type:law_mercantilism
+				type = law_type:law_mercantilism # To get the trade law category
 			}
-			law_type:law_mercantilism = {
-				save_scope_as = standing_law_scope
-			}		
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_protectionism
-			}
-			law_type:law_protectionism = {
+			currently_active_law_in_group = {
 				save_scope_as = standing_law_scope
 			}
 		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_isolationism
-			}
-			law_type:law_isolationism = {
-				save_scope_as = standing_law_scope
-			}
-		}
-
 		random_interest_group = {
 			limit = {
 				is_in_government = yes
@@ -357,7 +339,7 @@ economy_laws.5 = {
 		is_enacting_law = law_type:law_free_trade
 		any_interest_group = {
 			is_in_government = no
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value < neutral
@@ -369,7 +351,7 @@ economy_laws.5 = {
 		random_interest_group = {
 			limit = {
 				is_in_government = no
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value < neutral
@@ -492,7 +474,7 @@ economy_laws.6 = {
 			name = free_trade_stall
 		}
 	}
-	option = { 
+	option = {
 		name = economy_laws.6.b
 		trigger = {
 			enactment_setback_count < max_setbacks_minus_one
@@ -505,7 +487,7 @@ economy_laws.6 = {
 		}
 	}
 
-	option = { 
+	option = {
 		name = economy_laws.6.c
 		scope:industrial_protectionist_state = {
 			add_modifier = {

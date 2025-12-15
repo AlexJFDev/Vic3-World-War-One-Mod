@@ -4,13 +4,13 @@
 technocracy.1 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = technocracy.1.t
 	desc = technocracy.1.d
 	flavor = technocracy.1.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -18,15 +18,15 @@ technocracy.1 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-	
+
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_technocracy
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_intelligentsia
@@ -50,7 +50,7 @@ technocracy.1 = {
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				OR = {
 					is_interest_group_type = ig_industrialists
 					is_interest_group_type = ig_intelligentsia
@@ -137,14 +137,14 @@ technocracy.1 = {
 # advance event - The New Machine
 technocracy.2 = {
 	type = country_event
-	
+
 	title = technocracy.2.t
 	desc = technocracy.2.d
 	flavor = technocracy.2.f
 
 	category = enactment
 	placement = scope:new_machine_state
-	
+
 	event_image = {
         texture = "gfx/event_pictures/factory.dds"
     }
@@ -152,11 +152,11 @@ technocracy.2 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
-	
+
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_technocracy
 		any_scope_state = {
@@ -240,14 +240,14 @@ technocracy.2 = {
 # University debate
 technocracy.3 = {
 	type = country_event
-	
+
 	title = technocracy.3.t
 	desc = technocracy.3.d
 	flavor = technocracy.3.f
 
 	category = enactment
 	placement = scope:university_state
-	
+
 	event_image = {
         texture = "gfx/event_pictures/university.dds"
     }
@@ -255,11 +255,11 @@ technocracy.3 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
-	
+
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_technocracy
 		any_scope_state = {
@@ -314,6 +314,86 @@ technocracy.3 = {
 		add_modifier = {
 			name = anti_aristocratic_sentiment
 			days = normal_modifier_time
+		}
+	}
+}
+
+# Technocracy JE reward
+technocracy.4 = {
+	type = country_event
+
+	title = technocracy.4.t
+	desc = technocracy.4.d
+	flavor = technocracy.4.f
+
+	event_image = {
+        texture = "gfx/event_pictures/factory.dds"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		# Triggered by JE completion
+	}
+
+	immediate = {
+		ig:ig_intelligentsia ?= {
+			save_scope_as = intelligentsia_ig
+		}
+	}
+
+	option = {
+		name = technocracy.4.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_technocracy_brave_new_world
+			days = normal_modifier_time
+		}
+		scope:intelligentsia_ig = {
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_republican
+				}
+				remove_ideology = ideology_republican
+				add_ideology = ideology_technocratic
+			}
+			else_if = {
+				limit = {
+					has_ideology = ideology:ideology_constitutionalist
+				}
+				remove_ideology = ideology_constitutionalist
+				add_ideology = ideology_technocratic
+			}
+		}
+	}
+
+	option = {
+		name = technocracy.4.b
+		add_modifier = {
+			name = modifier_technocracy_scientific_management
+			days = long_modifier_time
+		}
+		scope:intelligentsia_ig = {
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_republican
+				}
+				remove_ideology = ideology_republican
+				add_ideology = ideology_technocratic
+			}
+			else_if = {
+				limit = {
+					has_ideology = ideology:ideology_constitutionalist
+				}
+				remove_ideology = ideology_constitutionalist
+				add_ideology = ideology_technocratic
+			}
 		}
 	}
 }

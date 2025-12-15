@@ -30,10 +30,15 @@ welfare_laws.1 = {
 		NOT = { has_modifier = promise_secular_workhouses }
 		any_scope_pop = {
 			state = {
-				state_religious_acceptance = {  
+				state_religious_acceptance = {
 					target = PREV.religion
 					value < religious_acceptance_low
 				}
+			}
+		}
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_religious_workhouses
 			}
 		}
 	}
@@ -42,13 +47,13 @@ welfare_laws.1 = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			save_scope_as = devout_ig
 		}
 		random_scope_pop = {
-			limit = { 
+			limit = {
 				state = {
-					state_religious_acceptance = {  
+					state_religious_acceptance = {
 						target = PREV.religion
 						value < religious_acceptance_low
 					}
@@ -69,10 +74,11 @@ welfare_laws.1 = {
 		add_enactment_modifier = {
 			name = promise_religious_workhouses
 		}
-		ig:ig_devout = {
-			add_modifier = {
-				name = religious_workhouses
-				days = normal_modifier_time
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_religious_workhouses
+				sponsor = scope:devout_ig
+				cooldown = 120
 			}
 		}
 		add_radicals = {
@@ -117,11 +123,19 @@ welfare_laws.2 = {
 		is_enacting_law = law_type:law_poor_laws
 		NOT = { has_modifier = malthusian_arguments }
 		NOT = { has_modifier = anti_malthusian_arguments }
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_malthusian_foundations
+			}
+		}
 	}
 
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
+		}
+		ig:ig_intelligentsia ?= {
+			save_scope_as = malthusian_ig
 		}
 	}
 
@@ -133,6 +147,13 @@ welfare_laws.2 = {
 		name = welfare_laws.2.a
 		add_enactment_modifier = {
 			name = malthusian_arguments
+		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_malthusian_foundations
+				sponsor = scope:malthusian_ig
+				cooldown = 120
+			}
 		}
 		add_radicals = {
 			value = small_radicals
@@ -147,7 +168,7 @@ welfare_laws.2 = {
 			name = anti_malthusian_arguments
 		}
 	}
-	
+
 	option = {
 		name = welfare_laws.2.c
 		trigger = {
@@ -160,7 +181,7 @@ welfare_laws.2 = {
 			multiplier = -1
 		}
 		add_radicals = {
-			value = small_radicals
+			value = medium_radicals
 			strata = upper
 		}
 	}
@@ -180,7 +201,7 @@ welfare_laws.3 = {
 	duration = 3
 
 	event_image = {
-        texture = "gfx/event_pictures/politics_europe.dds"
+        texture = "gfx/event_pictures/peasants.dds"
     }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -193,13 +214,18 @@ welfare_laws.3 = {
 		is_enacting_law = law_type:law_poor_laws
 		NOT = { has_modifier = workhouses_prison_comparison }
 		NOT = { has_modifier = workhouse_plan_reevaluation }
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_workhouse_regulations
+			}
+		}
 	}
 
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			save_scope_as = intelligentsia_ig
 		}
 	}
@@ -213,7 +239,7 @@ welfare_laws.3 = {
 		add_enactment_modifier = {
 			name = workhouses_prison_comparison
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = criminalization_of_poverty
 				days = normal_modifier_time
@@ -226,6 +252,13 @@ welfare_laws.3 = {
 		default_option = yes
 		add_enactment_modifier = {
 			name = workhouse_plan_reevaluation
+		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_workhouse_regulations
+				sponsor = scope:intelligentsia_ig
+				cooldown = 120
+			}
 		}
 	}
 }
@@ -340,7 +373,7 @@ welfare_laws.5 = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			save_scope_as = landowners_ig
 		}
 	}
@@ -354,7 +387,7 @@ welfare_laws.5 = {
 		add_enactment_modifier = {
 			name = anti_paternalist_argument
 		}
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			add_modifier = {
 				name = anti_paternalist_sentiment
 				days = normal_modifier_time
@@ -475,13 +508,18 @@ welfare_laws.8 = {
 		is_enacting_law = law_type:law_old_age_pension
 		NOT = { has_modifier = veteran_support }
 		NOT = { has_modifier = general_support }
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_veterans_pensions
+			}
+		}
 	}
 
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			save_scope_as = armed_forces_ig
 		}
 	}
@@ -495,13 +533,20 @@ welfare_laws.8 = {
 		add_enactment_modifier = {
 			name = veteran_support
 		}
-		ig:ig_armed_forces = {
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_veterans_pensions
+				sponsor = scope:armed_forces_ig
+				cooldown = 120
+			}
+		}
+		ig:ig_armed_forces ?= {
 			add_modifier = {
 				name = veterans_prioritized
 				days = normal_modifier_time
 			}
 		}
-		ig:ig_trade_unions = {
+		ig:ig_trade_unions ?= {
 			add_modifier = {
 				name = veterans_prioritized
 				days = normal_modifier_time
@@ -546,18 +591,29 @@ welfare_laws.9 = {
 			is_enacting_law = law_type:law_wage_subsidies
 			is_enacting_law = law_type:law_old_age_pension
 		}
+		ig:ig_industrialists ?= { # To account for woke capitalism
+			law_enactment_stance = {
+				law = currently_enacting_law.type
+				value < neutral
+			}
+		}
 		NOT = { has_modifier = pro_union_argument }
 		NOT = { has_modifier = anti_union_argument }
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_welfare_pro_employer_bias
+			}
+		}
 	}
 
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_industrialists = {
+		ig:ig_industrialists ?= {
 			save_scope_as = industrialists_ig
 		}
-		ig:ig_trade_unions = {
+		ig:ig_trade_unions ?= {
 			save_scope_as = trade_unions_ig
 		}
 	}
@@ -571,14 +627,14 @@ welfare_laws.9 = {
 		add_enactment_modifier = {
 			name = pro_union_argument
 		}
-		ig:ig_industrialists = {
+		ig:ig_industrialists ?= {
 			add_modifier = {
 				name = embraced_union_leverage
 				days = normal_modifier_time
 				multiplier = -2
 			}
 		}
-		ig:ig_trade_unions = {
+		ig:ig_trade_unions ?= {
 			add_modifier = {
 				name = embraced_union_leverage
 				days = normal_modifier_time
@@ -589,16 +645,21 @@ welfare_laws.9 = {
 	option = {
 		name = welfare_laws.9.b
 		default_option = yes
-		add_enactment_modifier = {
-			name = anti_union_argument
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_welfare_pro_employer_bias
+				sponsor = scope:industrialists_ig
+				cooldown = 120
+			}
 		}
-		ig:ig_industrialists = {
+		ig:ig_industrialists ?= {
+			improve_law_stance = yes
 			add_modifier = {
 				name = repudiated_union_leverage
 				days = normal_modifier_time
 			}
 		}
-		ig:ig_trade_unions = {
+		ig:ig_trade_unions ?= {
 			add_modifier = {
 				name = repudiated_union_leverage
 				days = normal_modifier_time

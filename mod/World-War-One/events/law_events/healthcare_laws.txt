@@ -3,13 +3,13 @@
 healthcare_laws.1 = { #famers want healthcare due to accidents
 	type = country_event
 	placement = scope:farming_accidents_state
-	
+
 	title = healthcare_laws.1.t
 	desc = healthcare_laws.1.d
 	flavor = healthcare_laws.1.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/serfdom.dds"
     }
@@ -17,9 +17,9 @@ healthcare_laws.1 = { #famers want healthcare due to accidents
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		has_law = law_type:law_no_health_system
 		or = {
@@ -40,7 +40,7 @@ healthcare_laws.1 = { #famers want healthcare due to accidents
 					is_building_type = building_millet_farm
 				}
 				NOT = {
-					has_active_production_method = pm_tools_disabled 
+					has_active_production_method = pm_tools_disabled
 				}
 			}
 		}
@@ -69,10 +69,10 @@ healthcare_laws.1 = { #famers want healthcare due to accidents
 						is_building_type = building_millet_farm
 					}
 					NOT = {
-						has_active_production_method = pm_tools_disabled 
-					}	
+						has_active_production_method = pm_tools_disabled
+					}
 				}
-			}	
+			}
 			save_scope_as = farming_accidents_state
 		}
 	}
@@ -121,13 +121,13 @@ healthcare_laws.1 = { #famers want healthcare due to accidents
 healthcare_laws.2 = { #who should be paying for this?
 	type = country_event
 	placement = ROOT
-	
+
 	title = healthcare_laws.2.t
 	desc = healthcare_laws.2.d
 	flavor = healthcare_laws.2.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -135,9 +135,9 @@ healthcare_laws.2 = { #who should be paying for this?
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		has_law = law_type:law_no_health_system
 		or = {
@@ -192,7 +192,7 @@ healthcare_laws.2 = { #who should be paying for this?
 		}
 	}
 
-	option = { 
+	option = {
 		name = healthcare_laws.2.c
 		add_enactment_modifier = {
 			name = taxing_health
@@ -203,13 +203,13 @@ healthcare_laws.2 = { #who should be paying for this?
 healthcare_laws.3 = { #sickness in the government
 	type = country_event
 	placement = ROOT
-	
+
 	title = healthcare_laws.3.t
 	desc = healthcare_laws.3.d
 	flavor = healthcare_laws.3.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/hospital.dds"
     }
@@ -217,9 +217,9 @@ healthcare_laws.3 = { #sickness in the government
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		has_law = law_type:law_no_health_system
 		or = {
@@ -279,13 +279,13 @@ healthcare_laws.3 = { #sickness in the government
 healthcare_laws.4 = { #not enough health care
 	type = country_event
 	placement = ROOT
-	
+
 	title = healthcare_laws.4.t
 	desc = healthcare_laws.4.d
 	flavor = healthcare_laws.4.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -293,9 +293,9 @@ healthcare_laws.4 = { #not enough health care
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		or = {
 			has_law = law_type:law_charitable_health_system
@@ -342,16 +342,16 @@ healthcare_laws.4 = { #not enough health care
 	}
 }
 
-healthcare_laws.5 = { 
+healthcare_laws.5 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = healthcare_laws.5.t
 	desc = healthcare_laws.5.d
 	flavor = healthcare_laws.5.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -359,9 +359,9 @@ healthcare_laws.5 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		or = {
 			has_law = law_type:law_charitable_health_system
@@ -372,7 +372,7 @@ healthcare_laws.5 = {
 			has_modifier = opening_up_healthcare
 		}
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = law_type:law_public_health_insurance
 				value < neutral
@@ -394,7 +394,7 @@ healthcare_laws.5 = {
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = law_type:law_public_health_insurance
 					value < neutral
@@ -407,7 +407,7 @@ healthcare_laws.5 = {
 		}
 	}
 
-	option = { 
+	option = {
 		name = healthcare_laws.5.a
 		default_option = yes
 		ai_chance = {
@@ -443,14 +443,14 @@ healthcare_laws.5 = {
 		}
 	}
 
-	option = { 
+	option = {
 		name = healthcare_laws.5.b
 		ai_chance = {
 			base = 50
 		}
 		scope:anti_public_healthcare_ig = {
 			add_modifier = {
-				name = healthcare_debate_ig_heard
+				name = healthcare_debate_ig_concerns_heard
 				days = normal_modifier_time
 			}
 		}
@@ -464,13 +464,13 @@ healthcare_laws.5 = {
 healthcare_laws.6 = { #Healthcare too expensive
 	type = country_event
 	placement = ROOT
-	
+
 	title = healthcare_laws.6.t
 	desc = healthcare_laws.6.d
 	flavor = healthcare_laws.6.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -478,9 +478,9 @@ healthcare_laws.6 = { #Healthcare too expensive
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		or = {
 			has_law = law_type:law_charitable_health_system

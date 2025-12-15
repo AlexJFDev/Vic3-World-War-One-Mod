@@ -5,13 +5,13 @@
 tax.1 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = tax.1.t
 	desc = tax.1.d
 	flavor = tax.1.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -19,9 +19,9 @@ tax.1 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		OR = {
 			is_enacting_law = law_type:law_proportional_taxation
@@ -35,7 +35,18 @@ tax.1 = {
 				value < neutral
 			}
 		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
 		NOT = { has_modifier = taxation_is_theft }
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_short_term_tax_cuts
+			}
+		}
 	}
 
 	immediate = {
@@ -47,6 +58,15 @@ tax.1 = {
 				}
 			}
 			save_scope_as = antitax_rebels
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = antitax_ig
 		}
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
@@ -65,7 +85,7 @@ tax.1 = {
 		# lose success chance
 		add_enactment_modifier = {
 			name = taxation_is_theft
-			multiplier = 2
+			multiplier = 3
 		}
 		# movement gets angrier
 		scope:antitax_rebels = {
@@ -81,9 +101,12 @@ tax.1 = {
 		add_enactment_modifier = {
 			name = taxation_is_theft
 		}
-		add_modifier = {
-			name = promised_to_lower_taxes
-			days = normal_modifier_time
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_short_term_tax_cuts
+				sponsor = scope:antitax_ig
+				cooldown = 30
+			}
 		}
 	}
 }
@@ -92,13 +115,13 @@ tax.1 = {
 tax.2 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = tax.2.t
 	desc = tax.2.d
 	flavor = tax.2.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -106,9 +129,9 @@ tax.2 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		OR = {
 			is_enacting_law = law_type:law_proportional_taxation
@@ -144,7 +167,7 @@ tax.2 = {
 			}
 			save_scope_as = antitax_rebels
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			save_scope_as = patriotic_military
 		}
 		random_diplomatic_play = {
@@ -204,13 +227,13 @@ tax.2 = {
 tax.3 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = tax.3.t
 	desc = tax.3.d
 	flavor = tax.3.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -218,9 +241,9 @@ tax.3 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		any_interest_group = {
 			is_in_government = yes
@@ -284,8 +307,8 @@ tax.3 = {
 			kill_character = yes
 		}
 	}
-	option = { 
-		name = tax.3.b # push on 
+	option = {
+		name = tax.3.b # push on
 		# faster but less likely
 		add_enactment_modifier = {
 			name = death_and_taxes_mod
@@ -301,13 +324,13 @@ tax.3 = {
 tax.4 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = tax.4.t
 	desc = tax.4.desc
 	flavor = tax.4.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -315,9 +338,9 @@ tax.4 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		OR = {
 			is_enacting_law = law_type:law_land_based_taxation
@@ -423,7 +446,7 @@ tax.4 = {
 			}
 		}
 	}
-	option = { # 
+	option = { #
 		name = tax.4.c
 		add_enactment_modifier = {
 			name = social_banditry
@@ -467,13 +490,13 @@ tax.4 = {
 tax.5 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = tax.5.t
 	desc = tax.5.d
 	flavor = tax.5.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -481,9 +504,9 @@ tax.5 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		OR = {
 			is_enacting_law = law_type:law_proportional_taxation
@@ -542,13 +565,13 @@ tax.5 = {
 tax.6 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = tax.6.t
 	desc = tax.6.d
 	flavor = tax.6.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/aristocracy.dds"
     }
@@ -556,9 +579,9 @@ tax.6 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		NOT = { has_law = law_type:law_consumption_based_taxation }
 		OR = {
@@ -571,10 +594,11 @@ tax.6 = {
 			strata = middle
 			pop_acceptance >= acceptance_status_4
 		}
-		NOT = { has_modifier = temporary_tax_cut_land_based }
-		NOT = { has_modifier = temporary_tax_cut_per_capita }
-		NOT = { has_modifier = temporary_tax_cut_graduated }
-		NOT = { has_modifier = temporary_tax_cut_proportional }
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_short_term_tax_cuts
+			}
+		}
 	}
 
 	immediate = {
@@ -589,6 +613,9 @@ tax.6 = {
     		}
     		save_scope_as = middle_class_pop
     	}
+		ig:ig_petty_bourgeoisie ?= {
+			save_scope_as = pb_ig
+		}
 	}
 
 	cancellation_trigger = {
@@ -618,40 +645,11 @@ tax.6 = {
 		add_enactment_modifier = {
 			name = temporary_embarrassment
 		}
-		if = {
-			limit = {
-				has_law = law_type:law_land_based_taxation
-			}
-			add_modifier = {
-				name = temporary_tax_cut_land_based
-				days = short_modifier_time
-			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_per_capita_based_taxation
-			}
-			add_modifier = {
-				name = temporary_tax_cut_per_capita
-				days = short_modifier_time
-			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_graduated_taxation
-			}
-			add_modifier = {
-				name = temporary_tax_cut_graduated
-				days = short_modifier_time
-			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_proportional_taxation
-			}
-			add_modifier = {
-				name = temporary_tax_cut_proportional
-				days = short_modifier_time
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_short_term_tax_cuts
+				sponsor = scope:pb_ig
+				cooldown = 30
 			}
 		}
 	}

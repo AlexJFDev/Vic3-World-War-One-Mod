@@ -21,7 +21,7 @@ slavery_law_events.1 = { # Advancing the cause of slavery
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		NOT = { has_modifier = natural_state_of_man }
 		has_law = law_type:law_slavery_banned
@@ -29,23 +29,24 @@ slavery_law_events.1 = { # Advancing the cause of slavery
 			is_enacting_law = law_type:law_debt_slavery
 			is_enacting_law = law_type:law_slave_trade
 			is_enacting_law = law_type:law_legacy_slavery
+			is_enacting_law = law_type:law_colonial_slavery
 		}
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value > neutral
 			}
 		}
 	}
-	
+
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value > neutral
@@ -113,16 +114,17 @@ slavery_law_events.2 = { # debating slavery
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		has_law = law_type:law_slavery_banned
 		OR = {
 			is_enacting_law = law_type:law_debt_slavery
 			is_enacting_law = law_type:law_slave_trade
 			is_enacting_law = law_type:law_legacy_slavery
+			is_enacting_law = law_type:law_colonial_slavery
 		}
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value > neutral
@@ -139,7 +141,7 @@ slavery_law_events.2 = { # debating slavery
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value > neutral
@@ -212,10 +214,11 @@ slavery_law_events.3 = { # Stall event
 			is_enacting_law = law_type:law_debt_slavery
 			is_enacting_law = law_type:law_slave_trade
 			is_enacting_law = law_type:law_legacy_slavery
+			is_enacting_law = law_type:law_colonial_slavery
 		}
 
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value > neutral
@@ -223,7 +226,7 @@ slavery_law_events.3 = { # Stall event
 		}
 		NOT = {
 			has_variable = slave_law_stall_timer
-		}	
+		}
 	}
 
 	immediate = {
@@ -233,7 +236,7 @@ slavery_law_events.3 = { # Stall event
 
     	random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value > neutral
@@ -259,7 +262,7 @@ slavery_law_events.3 = { # Stall event
 			name = slave_narrative_stall
 		}
 	}
-	option = { 
+	option = {
 		name = slavery_law_events.3.b
 		random_list = {
 			2 = {
@@ -297,23 +300,23 @@ slavery_law_events.4 = { # Advancing the cause of Abolition
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		NOT = { has_modifier = life_among_the_lowly_well_received }
 		is_enacting_law = law_type:law_slavery_banned
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = law_type:law_debt_slavery
 				value < neutral
 			}
 		}
 	}
-	
+
 	immediate = {
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = law_type:law_debt_slavery
 					value < neutral
@@ -336,7 +339,7 @@ slavery_law_events.4 = { # Advancing the cause of Abolition
 	option = {
 		name = slavery_law_events.4.a
         default_option = yes
-        
+
 		add_enactment_modifier = {
 			name = life_among_the_lowly_well_received
 		}
@@ -384,17 +387,18 @@ slavery_law_events.5 = { # debating abolition
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		has_law = law_type:law_slavery_banned
 		OR = {
 			is_enacting_law = law_type:law_debt_slavery
 			is_enacting_law = law_type:law_slave_trade
 			is_enacting_law = law_type:law_legacy_slavery
+			is_enacting_law = law_type:law_colonial_slavery
 		}
 		any_interest_group = {
 			is_in_government = no
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value > neutral
@@ -411,7 +415,7 @@ slavery_law_events.5 = { # debating abolition
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value > neutral
@@ -484,6 +488,7 @@ slavery_law_events.6 = { # Stall event
 			has_law = law_type:law_debt_slavery
 			has_law = law_type:law_slave_trade
 			has_law = law_type:law_legacy_slavery
+			has_law = law_type:law_colonial_slavery
 		}
 		NOT = {
 			has_variable = law_stall_timer
@@ -511,7 +516,7 @@ slavery_law_events.6 = { # Stall event
 			name = plantation_reaction_stall
 		}
 	}
-	option = { 
+	option = {
 		name = slavery_law_events.6.b
 		random_list = {
 			1 = {
@@ -553,20 +558,23 @@ slavery_law_events.7 = {
 	trigger = {
 		has_law = law_type:law_slavery_banned
 		any_interest_group = {
-			has_ideology = ideology:ideology_pro_slavery
+			OR = {
+				has_ideology = ideology:ideology_pro_slavery
+				has_ideology = ideology:ideology_pro_slavery_colonial
+			}
 		}
-		OR = {	
-			NOT = {
-				this = c:USA
+		OR = {
+			NOR = {
+				c:USA ?= this
 				has_variable = slavery_recently_abolished
 			}
 			AND = {
-				this = c:USA
+				c:USA ?= this
 				OR = {
 					has_variable = je_acw_countdown_complete
 					NOT = {
 						has_journal_entry = je_acw_countdown
-					}	
+					}
 				}
 			}
 		}
@@ -575,7 +583,10 @@ slavery_law_events.7 = {
 	immediate = {
 		random_interest_group = {
 			limit = {
-				has_ideology = ideology:ideology_pro_slavery
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					has_ideology = ideology:ideology_pro_slavery_colonial
+				}
 			}
 			save_scope_as = slaver_ig
 		}
@@ -601,12 +612,26 @@ slavery_law_events.7 = {
 		}
 		every_interest_group = {
 			limit = {
-				has_ideology = ideology:ideology_pro_slavery
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					has_ideology = ideology:ideology_pro_slavery_colonial
+				}
 			}
-			remove_ideology = ideology_pro_slavery
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_pro_slavery
+				}
+				remove_ideology = ideology_pro_slavery
+			}
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_pro_slavery_colonial
+				}
+				remove_ideology = ideology_pro_slavery_colonial
+			}
 		}
 	}
-	option = { 
+	option = {
 		name = slavery_law_events.7.b
 		scope:slaver_ig = {
 			add_modifier = {
@@ -620,9 +645,23 @@ slavery_law_events.7 = {
 		}
 		every_interest_group = {
 			limit = {
-				has_ideology = ideology:ideology_pro_slavery
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					has_ideology = ideology:ideology_pro_slavery_colonial
+				}
 			}
-			remove_ideology = ideology_pro_slavery
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_pro_slavery
+				}
+				remove_ideology = ideology_pro_slavery
+			}
+			if = {
+				limit = {
+					has_ideology = ideology:ideology_pro_slavery_colonial
+				}
+				remove_ideology = ideology_pro_slavery_colonial
+			}
 		}
 	}
 }

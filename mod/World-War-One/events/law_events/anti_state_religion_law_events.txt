@@ -21,15 +21,15 @@ anti_state_religion.1 = { # Advance
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
-		has_law = law_type:law_state_religion
+		has_law_or_variant = law_type:law_state_religion
 		OR = {
 			is_enacting_law = law_type:law_freedom_of_conscience
 			is_enacting_law = law_type:law_total_separation
 		}
 	}
-	
+
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
@@ -58,13 +58,14 @@ anti_state_religion.1 = { # Advance
 		trigger = {
 			any_scope_character = {
 				is_ruler = yes
-				OR = { 
+				OR = {
 					AND = {
-						NOT = { has_ideology = ideology:ideology_atheist }
+						owner = { coa_republic_trigger = yes }
+						NOT = { has_ideology = ideology:ideology_nihilist }
 					}
 					has_ideology = ideology:ideology_theocrat
 					has_ideology = ideology:ideology_traditionalist
-				} 
+				}
 			}
 		}
 
@@ -82,11 +83,12 @@ anti_state_religion.1 = { # Advance
 		}
 		else_if = {
 			limit = {
+				owner = { coa_republic_trigger = yes }
 				ruler = {
-					NOT = { has_ideology = ideology:ideology_atheist }
+					NOT = { has_ideology = ideology:ideology_nihilist }
 				}
 			}
-			ruler = { set_ideology = ideology:ideology_atheist }
+			ruler = { set_ideology = ideology:ideology_nihilist }
 		}
 	}
 }
@@ -115,7 +117,7 @@ anti_state_religion.2 = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	trigger = {
-		has_law = law_type:law_state_religion
+		has_law_or_variant = law_type:law_state_religion
 		OR = {
 			is_enacting_law = law_type:law_freedom_of_conscience
 			is_enacting_law = law_type:law_total_separation
@@ -124,11 +126,22 @@ anti_state_religion.2 = {
 			is_pop_type = clergymen # sanity check
 		}
 		any_interest_group = { # probably Devout but not necessarily
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_insurrectionary = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value < neutral
+			}
+		}
+		any_interest_group = { # probably Devout but not necessarily
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value > neutral
+			}
+		}
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_state_anti_clericalism
 			}
 		}
 	}
@@ -139,7 +152,7 @@ anti_state_religion.2 = {
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				is_insurrectionary = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
@@ -150,6 +163,15 @@ anti_state_religion.2 = {
 			leader = {
 				save_scope_as = community_rel_ig_leader_scope
 			}
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value > neutral
+				}
+			}
+			save_scope_as = anti_clerical_ig
 		}
 	}
 
@@ -162,6 +184,13 @@ anti_state_religion.2 = {
 		default_option = yes
 		add_enactment_modifier = {
 			name = anti_clericalism_pushed_through
+		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_state_anti_clericalism
+				sponsor = scope:anti_clerical_ig
+				cooldown = 120
+			}
 		}
 		add_radicals = {
 			value = medium_radicals
@@ -201,7 +230,7 @@ anti_state_religion.3 = {
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger = {
-		has_law = law_type:law_state_religion
+		has_law_or_variant = law_type:law_state_religion
 		OR = {
 			is_enacting_law = law_type:law_freedom_of_conscience
 			is_enacting_law = law_type:law_total_separation

@@ -4,24 +4,22 @@
 state_atheism.1 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = state_atheism.1.t
 	desc = state_atheism.1.d
 	flavor = state_atheism.1.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
+    
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+		icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	
-
-	icon = "gfx/interface/icons/event_icons/event_scales.dds"
-	
 	duration = 3
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_state_atheism
 	}
@@ -83,13 +81,13 @@ state_atheism.1 = {
 state_atheism.2 = {
 	type = country_event
 	placement = scope:godless_state
-	
+
 	title = state_atheism.2.t
 	desc = state_atheism.2.d
 	flavor = state_atheism.2.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/conspiring.dds"
     }
@@ -97,9 +95,9 @@ state_atheism.2 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_state_atheism
 		any_scope_state = {
@@ -145,7 +143,7 @@ state_atheism.2 = {
 				save_scope_as = godless_pop
 			}
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			save_scope_as = godless_ig
 			leader = {
 				save_scope_as = godless_leader
@@ -181,10 +179,10 @@ state_atheism.2 = {
 	option = { # new atheist intelligentsia leader
 		name = state_atheism.2.c
 		trigger = {
-			ig:ig_intelligentsia = {
-				is_marginal = no
+			ig:ig_intelligentsia ?= {
+				ig_counts_as_marginal = no
 				leader = {
-					NOT = { has_ideology = ideology:ideology_atheist }
+					NOT = { has_ideology = ideology:ideology_nihilist }
 				}
 			}
 		}
@@ -197,7 +195,7 @@ state_atheism.2 = {
 				ig_leader = yes
 				interest_group = ig_intelligentsia
 				religion = rel:atheist
-				ideology = ideology_atheist
+				ideology = ideology_nihilist
 			}
 		}
 	}
@@ -207,13 +205,13 @@ state_atheism.2 = {
 state_atheism.3 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = state_atheism.3.t
 	desc = state_atheism.3.d
 	flavor = state_atheism.3.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/aristocracy.dds"
     }
@@ -221,14 +219,14 @@ state_atheism.3 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-	
+
 	duration = 3
 
 	trigger = {
 		is_enacting_law = law_type:law_state_atheism
 		any_interest_group = {
 			is_in_government = no
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value < neutral
@@ -251,7 +249,7 @@ state_atheism.3 = {
 		random_interest_group = {
 			limit = {
 				is_in_government = no
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value < neutral
@@ -319,13 +317,13 @@ state_atheism.3 = {
 state_atheism.4 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = state_atheism.4.t
 	desc = state_atheism.4.d
 	flavor = state_atheism.4.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -333,7 +331,7 @@ state_atheism.4 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
-	
+
 	duration = 3
 
 	trigger = {
@@ -379,7 +377,7 @@ state_atheism.4 = {
 			}
 			save_scope_as = missionary_nation
 		}
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			save_scope_as = devout_ig
 		}
 		random_interest_group = {
@@ -423,7 +421,7 @@ state_atheism.4 = {
 
 	option = {
 		name = state_atheism.4.c
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_modifier = {
 				name = modifier_expelled_devouts_friends
 				days = short_modifier_time
@@ -443,13 +441,13 @@ state_atheism.4 = {
 state_atheism.5 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = state_atheism.5.t
 	desc = state_atheism.5.d
 	flavor = state_atheism.5.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -457,17 +455,17 @@ state_atheism.5 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
-	
+
 	duration = 3
 
 	trigger = {
 		is_enacting_law = law_type:law_state_atheism
-		ig:ig_intelligentsia = {
-			is_marginal = no
+		ig:ig_intelligentsia ?= {
+			ig_counts_as_marginal = no
 			leader = {
 				OR = {
 					has_ideology = ideology:ideology_radical
-					has_ideology = ideology:ideology_atheist
+					has_ideology = ideology:ideology_nihilist
 					has_ideology = ideology:ideology_communist
 					has_ideology = ideology:ideology_vanguardist
 					has_ideology = ideology:ideology_anarchist
@@ -488,10 +486,10 @@ state_atheism.5 = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			save_scope_as = intelligentsia_ig
 		}
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			save_scope_as = devout_ig
 		}
 	}
@@ -516,7 +514,7 @@ state_atheism.5 = {
 			name = modifier_atheist_progressivism
 		}
 		add_radicals = {
-			value = small_radicals 
+			value = small_radicals
 			interest_group = scope:devout_ig
 		}
 	}
@@ -529,7 +527,7 @@ state_atheism.5 = {
 		highlighted_option = yes
 		add_enactment_phase = 1
 		add_radicals = {
-			value = medium_radicals 
+			value = medium_radicals
 			interest_group = scope:devout_ig
 		}
 	}
@@ -539,31 +537,28 @@ state_atheism.5 = {
 state_atheism.6 = {
 	type = country_event
 	placement = scope:religion_seizures_state
-	
+
 	title = state_atheism.6.t
 	desc = state_atheism.6.d
 	flavor = state_atheism.6.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
-	
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
-	
+
 	duration = 3
 
 	trigger = {
 		is_enacting_law = law_type:law_state_atheism
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			ig_approval >= 0
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 	}
 
@@ -579,7 +574,7 @@ state_atheism.6 = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			save_scope_as = armed_forces_ig
 		}
 		random_scope_pop = {
@@ -593,6 +588,8 @@ state_atheism.6 = {
 				is_incorporated = yes
 			}
 			order_by = state_population
+			position = 0
+			check_range_bounds = no
 			save_scope_as = religion_seizures_state
 		}
 	}
@@ -612,6 +609,7 @@ state_atheism.6 = {
 		}
 		add_enactment_modifier = {
 			name = modifier_seizure_of_church_gold_minting
+			multiplier = money_amount_multiplier_medium
 		}
 	}
 

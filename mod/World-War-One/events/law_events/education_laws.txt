@@ -59,7 +59,7 @@ education_laws.1 = {
 			name = university_support
 		}
 	}
-	
+
 	option = {
 		name = education_laws.1.c
 		trigger = {
@@ -100,13 +100,18 @@ education_laws.2 = {
 		}
 		NOT = { has_modifier = curriculum_focus }
 		NOT = { has_modifier = discipline_focus }
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_prussian_education
+			}
+		}
 	}
 
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			save_scope_as = armed_forces_ig
 		}
 		currently_enacting_law = {
@@ -123,7 +128,7 @@ education_laws.2 = {
 		add_enactment_modifier = {
 			name = curriculum_focus
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			add_modifier = {
 				name = undisciplined_children
 				days = normal_modifier_time
@@ -136,6 +141,13 @@ education_laws.2 = {
 		default_option = yes
 		add_enactment_modifier = {
 			name = discipline_focus
+		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_prussian_education
+				sponsor = scope:armed_forces_ig
+				cooldown = 120
+			}
 		}
 	}
 }
@@ -207,7 +219,7 @@ education_laws.3 = {
 			name = extended_curriculum_discussions
 		}
 	}
-	
+
 	option = {
 		name = education_laws.3.c
 		trigger = {
@@ -259,7 +271,7 @@ education_laws.4 = {
 				name = literacy_teacher_mod
 				add = 1
 			}
-		}			
+		}
 
 		if = {
 			limit = { literacy_rate >= 0.20	}
@@ -267,7 +279,7 @@ education_laws.4 = {
 				name = literacy_teacher_mod
 				add = 1
 			}
-		}			
+		}
 
 		if = {
 			limit = { literacy_rate >= 0.30	}
@@ -275,23 +287,23 @@ education_laws.4 = {
 				name = literacy_teacher_mod
 				add = 1
 			}
-		}		
-		
+		}
+
 		if = {
 			limit = { literacy_rate >= 0.40	}
 			change_variable = {
 				name = literacy_teacher_mod
 				add = 1
 			}
-		}		
-		
+		}
+
 		if = {
 			limit = { literacy_rate >= 0.50	}
 			change_variable = {
 				name = literacy_teacher_mod
 				add = 1
 			}
-		}		
+		}
 
 		if = {
 			limit = { literacy_rate >= 0.60	}
@@ -307,7 +319,7 @@ education_laws.4 = {
 				name = literacy_teacher_mod
 				add = 1
 			}
-		}		
+		}
 
 		if = {
 			limit = { literacy_rate >= 0.80	}
@@ -315,7 +327,7 @@ education_laws.4 = {
 				name = literacy_teacher_mod
 				add = 1
 			}
-		}		
+		}
 
 		if = {
 			limit = { literacy_rate >= 0.90	}
@@ -379,11 +391,49 @@ education_laws.5 = {
 		is_enacting_law = law_type:law_public_schools
 		NOT = { has_modifier = coeducational_schools }
 		NOT = { has_modifier = single_sex_education }
+		any_interest_group = {
+			law_stance = {
+				law = law_type:law_women_in_the_workplace
+				value > neutral
+			}
+		}
+		any_interest_group = {
+			law_stance = {
+				law = law_type:law_no_womens_rights
+				value > neutral
+			}
+		}
+		NOT = {
+			currently_enacting_law = {
+				OR = {
+					has_amendment = amendment_co_ed_schools
+					has_amendment = amendment_single_sex_education
+				}
+			}
+		}
 	}
 
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = law_type:law_women_in_the_workplace
+					value > neutral
+				}
+			}
+			save_scope_as = pro_women_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = law_type:law_no_womens_rights
+					value > neutral
+				}
+			}
+			save_scope_as = anti_women_ig
 		}
 	}
 
@@ -408,6 +458,13 @@ education_laws.5 = {
 				days = normal_modifier_time
 			}
 		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_co_ed_schools
+				sponsor = scope:pro_women_ig
+				cooldown = 120
+			}
+		}
 	}
 
 	option = {
@@ -415,6 +472,13 @@ education_laws.5 = {
 		default_option = yes
 		add_enactment_modifier = {
 			name = single_sex_education
+		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_single_sex_education
+				sponsor = scope:anti_women_ig
+				cooldown = 120
+			}
 		}
 	}
 }
@@ -445,14 +509,25 @@ education_laws.6 = {
 		is_enacting_law = law_type:law_public_schools
 		NOT = { has_modifier = church_school_organization }
 		NOT = { has_modifier = building_secular_school_organization }
+		NOT = {
+			currently_enacting_law = {
+				OR = {
+					has_amendment = amendment_church_organised_schools
+					has_amendment = amendment_secular_school_system
+				}
+			}
+		}
 	}
 
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			save_scope_as = devout_ig
+		}
+		ig:ig_intelligentsia ?= {
+			save_scope_as = intelligentsia_ig
 		}
 	}
 
@@ -465,10 +540,17 @@ education_laws.6 = {
 		add_enactment_modifier = {
 			name = church_school_organization
 		}
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_modifier = {
 				name = public_school_responsibility
 				days = normal_modifier_time
+			}
+		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_church_organised_schools
+				sponsor = scope:devout_ig
+				cooldown = 120
 			}
 		}
 	}
@@ -478,6 +560,13 @@ education_laws.6 = {
 		default_option = yes
 		add_enactment_modifier = {
 			name = building_secular_school_organization
+		}
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_secular_school_system
+				sponsor = scope:intelligentsia_ig
+				cooldown = 120
+			}
 		}
 	}
 }

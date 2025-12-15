@@ -21,7 +21,7 @@ monarchy_law_events.1 = { # Republic-to-Monarchy Advancement
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		OR = {
 			has_law = law_type:law_presidential_republic
@@ -33,21 +33,21 @@ monarchy_law_events.1 = { # Republic-to-Monarchy Advancement
 		}
 		is_enacting_law = law_type:law_monarchy
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value > neutral
 			}
 		}
 	}
-	
+
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value > neutral
@@ -115,12 +115,12 @@ monarchy_law_events.2 = { # Theocracy-to-Monarchy Advancement
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		has_law = law_type:law_theocracy
 		is_enacting_law = law_type:law_monarchy
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value > neutral
@@ -130,14 +130,14 @@ monarchy_law_events.2 = { # Theocracy-to-Monarchy Advancement
 			has_modifier = monarchist_agitation
 		}
 	}
-	
+
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value > neutral
@@ -208,12 +208,12 @@ monarchy_law_events.3 = { # debate
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_monarchy
 		any_interest_group = {
 			is_in_government = no
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value > neutral
@@ -301,7 +301,7 @@ monarchy_law_events.4 = { # Stall event
 	trigger = {
 		is_enacting_law = law_type:law_monarchy
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value > neutral
@@ -309,7 +309,7 @@ monarchy_law_events.4 = { # Stall event
 		}
 		NOT = {
 			has_variable = monarchist_law_stall_timer
-		}	
+		}
 	}
 
 	immediate = {
@@ -319,7 +319,7 @@ monarchy_law_events.4 = { # Stall event
 
     	random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value > neutral
@@ -345,7 +345,7 @@ monarchy_law_events.4 = { # Stall event
 			name = monarchist_stall
 		}
 	}
-	option = { 
+	option = {
 		name = monarchy_law_events.4.b
 		random_list = {
 			1 = {

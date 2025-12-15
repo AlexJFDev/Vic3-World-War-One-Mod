@@ -26,12 +26,16 @@ bureaucracy.1 = {
 		OR = {
 			is_enacting_law = law_type:law_hereditary_bureaucrats
 			is_enacting_law = law_type:law_appointed_bureaucrats
-			is_enacting_law = law_type:law_meritocratic_bureaucracy
 			is_enacting_law = law_type:law_elected_bureaucrats
 		}
 		NOR = {
 			has_modifier = red_tape_reduced
 			has_modifier = red_tape
+		}
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_preserved_bureaucratic_caste
+			}
 		}
 	}
 
@@ -41,33 +45,25 @@ bureaucracy.1 = {
 		}
 		if = {
 			limit = {
-				has_law = law_type:law_hereditary_bureaucrats
+				has_law_or_variant = law_type:law_hereditary_bureaucrats
 			}
-			ig:ig_landowners = {
+			ig:ig_landowners ?= {
 				save_scope_as = bureaucrat_class
 			}
 		}
 		if = {
 			limit = {
-				has_law = law_type:law_appointed_bureaucrats
+				has_law_or_variant = law_type:law_appointed_bureaucrats
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				save_scope_as = bureaucrat_class
 			}
 		}
 		if = {
 			limit = {
-				has_law = law_type:law_meritocratic_bureaucracy
+				has_law_or_variant = law_type:law_elected_bureaucrats
 			}
-			ig:ig_intelligentsia = {
-				save_scope_as = bureaucrat_class
-			}
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_elected_bureaucrats
-			}
-			ig:ig_petty_bourgeoisie = {
+			ig:ig_petty_bourgeoisie ?= {
 				save_scope_as = bureaucrat_class
 			}
 		}
@@ -80,22 +76,18 @@ bureaucracy.1 = {
 	option = { # promise job retention
 		name = bureaucracy.1.a
 		default_option = yes
-		# lose 10% success chance
-		add_enactment_modifier = {
-			name = red_tape_reduced
-		}
-		# 10% polstr
-		scope:bureaucrat_class = {
-			add_modifier = {
-				name = red_tape_jobs
-				days = normal_modifier_time
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_preserved_bureaucratic_caste
+				sponsor = scope:bureaucrat_class
+				cooldown = 120
 			}
 		}
 	}
 	option = { # get back to work
 		name = bureaucracy.1.b
 		trigger = {
-			NOT = { has_law = law_type:law_secret_police }
+			NOT = { has_law_or_variant = law_type:law_secret_police }
 		}
 		# lose 15% success chance and bureaucracy mult
 		add_enactment_modifier = {
@@ -105,7 +97,7 @@ bureaucracy.1 = {
 	option = { # secret police will keep them in line
 		name = bureaucracy.1.c
 		trigger = {
-			has_law = law_type:law_secret_police
+			has_law_or_variant = law_type:law_secret_police
 		}
 		# lose 10% success chance
 		add_enactment_modifier = {
@@ -148,11 +140,10 @@ bureaucracy.2 = {
 	cooldown = { days = normal_modifier_time }
 
 	trigger = {
-		has_law = law_type:law_hereditary_bureaucrats
+		has_law_or_variant = law_type:law_hereditary_bureaucrats
 		OR = {
 			is_enacting_law = law_type:law_appointed_bureaucrats
 			is_enacting_law = law_type:law_elected_bureaucrats
-			is_enacting_law = law_type:law_meritocratic_bureaucracy
 		}
 		NOT = { has_modifier = meritocracy }
 	}
@@ -165,15 +156,7 @@ bureaucracy.2 = {
 			limit = {
 				is_enacting_law = law_type:law_appointed_bureaucrats
 			}
-			ig:ig_intelligentsia = {
-				save_scope_as = meritocracy_ig
-			}
-		}
-		if = {
-			limit = {
-				is_enacting_law = law_type:law_meritocratic_bureaucracy
-			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				save_scope_as = meritocracy_ig
 			}
 		}
@@ -181,11 +164,11 @@ bureaucracy.2 = {
 			limit = {
 				is_enacting_law = law_type:law_elected_bureaucrats
 			}
-			ig:ig_petty_bourgeoisie = {
+			ig:ig_petty_bourgeoisie ?= {
 				save_scope_as = meritocracy_ig
 			}
 		}
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			save_scope_as = bureaucrat_class
 		}
 	}
@@ -261,7 +244,6 @@ bureaucracy.3 = {
 			is_enacting_law = law_type:law_appointed_bureaucrats
 			is_enacting_law = law_type:law_elected_bureaucrats
 			is_enacting_law = law_type:law_hereditary_bureaucrats
-			is_enacting_law = law_type:law_meritocratic_bureaucracy
 		}
 		NOR = {
 			has_modifier = good_and_fast

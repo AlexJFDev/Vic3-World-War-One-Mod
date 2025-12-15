@@ -31,7 +31,7 @@ laws_police.1 = { # advance
 		}
 		any_interest_group = {
 			is_in_government = no
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value < neutral
@@ -52,7 +52,7 @@ laws_police.1 = { # advance
 		random_interest_group = {
 			limit = {
 				is_in_government = no
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value < neutral
@@ -96,7 +96,7 @@ laws_police.1 = { # advance
 	}
 }
 
-# The Papers' Police Polemics 
+# The Papers' Police Polemics
 laws_police.2 = { # debate
 	type = country_event
 	placement = root
@@ -203,7 +203,7 @@ laws_police.3 = { # stall event
 		any_political_movement = {
 			political_movement_support > 0.05
 			any_influenced_interest_group = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 			}
 		}
 		has_law = law_type:law_no_police
@@ -225,7 +225,7 @@ laws_police.3 = { # stall event
 			save_scope_as = rally_movement
 			random_influenced_interest_group = {
 				limit = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 				}
 				save_scope_as = rally_movement_ig
 			}
@@ -233,9 +233,9 @@ laws_police.3 = { # stall event
 	}
 
 	cancellation_trigger = {
-		OR = { 
+		OR = {
 			NOT = {
-				currently_enacting_law = scope:current_law_scope 
+				currently_enacting_law = scope:current_law_scope
 			}
 			NOT = {
 				exists = scope:rally_movement_ig

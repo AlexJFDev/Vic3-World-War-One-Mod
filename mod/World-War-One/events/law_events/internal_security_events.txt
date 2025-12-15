@@ -4,13 +4,13 @@
 internal_security_events.1 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = internal_security_events.1.t
 	desc = internal_security_events.1.d
 	flavor = internal_security_events.1.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -18,20 +18,20 @@ internal_security_events.1 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
-		is_enacting_law = law_type:law_surveillance_state
-		ig:ig_armed_forces = {
-			is_marginal = no
+		is_enacting_law = law_type:law_secret_police
+		ig:ig_armed_forces ?= {
+			ig_counts_as_marginal = no
 		}
 		NOT = {
 			has_modifier = forced_disappearance_modifier
 		}
 		any_interest_group = {
 			law_stance = {
-				law = law_type:law_surveillance_state
+				law = law_type:law_secret_police
 				value < neutral
 			}
 			leader = {
@@ -53,13 +53,13 @@ internal_security_events.1 = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			save_scope_as = internal_security_ig
 		}
 		random_interest_group = {
 			limit = {
 				law_stance = {
-					law = law_type:law_surveillance_state
+					law = law_type:law_secret_police
 					value < neutral
 				}
 				leader = {
@@ -106,13 +106,13 @@ internal_security_events.1 = {
 internal_security_events.2 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = internal_security_events.2.t
 	desc = internal_security_events.2.d
 	flavor = internal_security_events.2.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/intelligence.dds"
     }
@@ -120,15 +120,15 @@ internal_security_events.2 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
-		is_enacting_law = law_type:law_surveillance_state
-		ig:ig_armed_forces = {
-			is_marginal = no
+		is_enacting_law = law_type:law_secret_police
+		ig:ig_armed_forces ?= {
+			ig_counts_as_marginal = no
 		}
-		any_country = {	
+		any_country = {
 			relations:root < relations_threshold:neutral
 			is_player = no
 			NOT = { is_country_type = decentralized }
@@ -151,7 +151,7 @@ internal_security_events.2 = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			save_scope_as = internal_security_ig
 		}
 		random_country = {
@@ -207,7 +207,7 @@ internal_security_events.3 = {
 	flavor = internal_security_events.3.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/protest.dds"
     }
@@ -219,16 +219,16 @@ internal_security_events.3 = {
 	duration = 3
 
 	trigger = {
-		is_enacting_law = law_type:law_surveillance_state
-		ig:ig_armed_forces = {
-			is_marginal = no
+		is_enacting_law = law_type:law_secret_police
+		ig:ig_armed_forces ?= {
+			ig_counts_as_marginal = no
 		}
 		NOT = {
 			has_modifier = privacy_concerns_modifier
 		}
 		any_interest_group = {
 			law_stance = {
-				law = law_type:law_surveillance_state
+				law = law_type:law_secret_police
 				value < neutral
 			}
 		}
@@ -246,13 +246,13 @@ internal_security_events.3 = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			save_scope_as = internal_security_ig
 		}
 		random_interest_group = {
 			limit = {
 				law_stance = {
-					law = law_type:law_surveillance_state
+					law = law_type:law_secret_police
 					value < neutral
 				}
 			}
@@ -264,7 +264,7 @@ internal_security_events.3 = {
 		random_political_movement = {
 			limit = {
 				law_stance = {
-					law = law_type:law_surveillance_state
+					law = law_type:law_secret_police
 					value > neutral
 				}
 			}
@@ -304,7 +304,7 @@ internal_security_events.3 = {
 			}
 		}
 	}
-	
+
 	option = { # these are foolish concerns
 		name = internal_security_events.3.b
 		add_enactment_modifier = {
@@ -357,24 +357,23 @@ internal_security_events.3 = {
 internal_security_events.4 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = internal_security_events.4.t
 	desc = internal_security_events.4.d
 	flavor = internal_security_events.4.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/police.dds"
     }
 
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_guaranteed_liberties
 		OR = {
@@ -382,19 +381,19 @@ internal_security_events.4 = {
 				institution = institution_police
 				value >= 1
 			}
-			has_law = law_type:law_surveillance_state
+			has_law = law_type:law_secret_police
 			has_law = law_type:law_dedicated_police
 			has_law = law_type:law_militarized_police
 		}
 		any_political_movement = {
 			political_movement_support > 0.05
 			any_influenced_interest_group = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 			}
 			law_stance = {
 				law = law_type:law_guaranteed_liberties
 				value > neutral
-			}			
+			}
 		}
 	}
 
@@ -442,7 +441,7 @@ internal_security_events.4 = {
 				pop_type = soldiers
 			}
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			add_modifier = {
 				name = blamed_police_modifier
 				days = normal_modifier_time
@@ -455,13 +454,13 @@ internal_security_events.4 = {
 internal_security_events.5 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = internal_security_events.5.t
 	desc = internal_security_events.5.d
 	flavor = internal_security_events.5.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -469,9 +468,9 @@ internal_security_events.5 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_guaranteed_liberties
 	}
@@ -510,13 +509,13 @@ internal_security_events.5 = {
 internal_security_events.6 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = internal_security_events.6.t
 	desc = internal_security_events.6.d
 	flavor = internal_security_events.6.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/protest.dds"
     }
@@ -524,9 +523,9 @@ internal_security_events.6 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_guaranteed_liberties
 		OR = {
@@ -534,7 +533,7 @@ internal_security_events.6 = {
 				institution = institution_police
 				value >= 1
 			}
-			has_law = law_type:law_surveillance_state
+			has_law = law_type:law_secret_police
 			has_law = law_type:law_dedicated_police
 			has_law = law_type:law_militarized_police
 		}

@@ -5,13 +5,13 @@
 anarchy.1 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = anarchy.1.t
 	desc = anarchy.1.d
 	flavor = anarchy.1.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/assasination.dds"
     }
@@ -19,19 +19,22 @@ anarchy.1 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
+
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_anarchy
 		any_interest_group = {
 			OR = {
 				has_ideology = ideology:ideology_reactionary
 				has_ideology = ideology:ideology_paternalistic
+				has_ideology = ideology:ideology_magnatial
+				has_ideology = ideology:ideology_carlist_ig
+				has_ideology = ideology:ideology_moderantist
 			}
-			is_marginal = no
+			ig_counts_as_marginal = no
 			leader = {
 				is_busy = no
 				is_immortal = no
@@ -48,8 +51,11 @@ anarchy.1 = {
 				OR = {
 					has_ideology = ideology:ideology_reactionary
 					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_magnatial
+					has_ideology = ideology:ideology_carlist_ig
+					has_ideology = ideology:ideology_moderantist
 				}
-				is_marginal = no
+				ig_counts_as_marginal = no
 				leader = {
 					is_busy = no
 					is_immortal = no
@@ -111,13 +117,13 @@ anarchy.1 = {
 anarchy.2 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = anarchy.2.t
 	desc = anarchy.2.desc
 	flavor = anarchy.2.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/protest.dds"
     }
@@ -125,11 +131,11 @@ anarchy.2 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
-	
+
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_anarchy
 		any_interest_group = {
@@ -198,7 +204,7 @@ anarchy.2 = {
 			}
 			random_interest_group = {
 				limit = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					law_stance = {
 						law = law_type:law_dedicated_police
 						value > neutral
@@ -211,7 +217,7 @@ anarchy.2 = {
 			}
 		}
 	}
-	
+
 	option = { # remove home affairs
 		name = anarchy.2.c
 		trigger = {
@@ -238,7 +244,7 @@ anarchy.2 = {
 			}
 			random_interest_group = {
 				limit = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					law_stance = {
 						law = law_type:law_no_home_affairs
 						value < neutral
@@ -277,7 +283,7 @@ anarchy.2 = {
 			}
 			random_interest_group = {
 				limit = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					law_stance = {
 						law = law_type:law_no_colonial_affairs
 						value < neutral
@@ -311,13 +317,13 @@ anarchy.2 = {
 anarchy.3 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = anarchy.3.t
 	desc = anarchy.3.d
 	flavor = anarchy.3.f
 
 	category = enactment
-	
+
 	event_image = {
         texture = "gfx/event_pictures/farm.dds"
     }
@@ -325,18 +331,23 @@ anarchy.3 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-	
+
 	duration = 3
 
 	cooldown = { days = normal_modifier_time }
-	
+
 	trigger = {
 		is_enacting_law = law_type:law_anarchy
-		ig:ig_rural_folk = {
-			is_marginal = no
+		ig:ig_rural_folk ?= {
+			ig_counts_as_marginal = no
 		}
 		NOT = {
 			has_modifier = mutual_aid
+		}
+		NOT = {
+			currently_enacting_law = {
+				has_amendment = amendment_agricultural_communes
+			}
 		}
 	}
 
@@ -347,7 +358,7 @@ anarchy.3 = {
 			female = no
 			ideology = ideology_anarchist
 		}
-		ig:ig_rural_folk = {
+		ig:ig_rural_folk ?= {
 			save_scope_as = farmer_ig
 			leader = { save_scope_as = anarchist_farmer }
 		}
@@ -372,9 +383,12 @@ anarchy.3 = {
 	option = { # novel agricultural methods
 		name = anarchy.3.b
 		# agriculture throughput
-		add_modifier = {
-			name = anarchist_agriculture
-			days = short_modifier_time
+		currently_enacting_law = {
+			add_amendment = {
+				type = amendment_agricultural_communes
+				sponsor = scope:farmer_ig
+				cooldown = 120
+			}
 		}
 		# increase success chance
 		add_enactment_modifier = {
