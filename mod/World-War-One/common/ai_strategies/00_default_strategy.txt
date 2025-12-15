@@ -1587,9 +1587,9 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 						}
 					}
 					OR = {
-						country_is_in_north_america = yes
-						country_is_in_europe = yes
-						country_is_in_south_america = yes
+						is_in_geographic_region = geographic_region_north_america
+						is_in_geographic_region = geographic_region_europe
+						is_in_geographic_region = geographic_region_south_america
 					}
 					NOR = {
 						sr:region_north_china = {
@@ -1599,9 +1599,9 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 									NOT = { THIS = ROOT }
 									country_rank >= rank_value:major_power
 									OR = {
-										country_is_in_north_america = yes
-										country_is_in_europe = yes
-										country_is_in_south_america = yes
+										is_in_geographic_region = geographic_region_north_america
+										is_in_geographic_region = geographic_region_europe
+										is_in_geographic_region = geographic_region_south_america
 									}
 								}
 							}
@@ -1613,9 +1613,9 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 									NOT = { THIS = ROOT }
 									country_rank >= rank_value:major_power
 									OR = {
-										country_is_in_north_america = yes
-										country_is_in_europe = yes
-										country_is_in_south_america = yes
+										is_in_geographic_region = geographic_region_north_america
+										is_in_geographic_region = geographic_region_europe
+										is_in_geographic_region = geographic_region_south_america
 									}
 								}
 							}
@@ -1627,9 +1627,9 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 									NOT = { THIS = ROOT }
 									country_rank >= rank_value:major_power
 									OR = {
-										country_is_in_north_america = yes
-										country_is_in_europe = yes
-										country_is_in_south_america = yes
+										is_in_geographic_region = geographic_region_north_america
+										is_in_geographic_region = geographic_region_europe
+										is_in_geographic_region = geographic_region_south_america
 									}
 								}
 							}
@@ -1953,7 +1953,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 
 					# Scramble for Africa powers should only care about the Boers once diamonds are found
 					scope:target_country = {
-						country_is_in_africa = yes
+						is_in_geographic_region = geographic_region_africa
 						any_scope_building = {
 							OR = {
 								is_building_type = building_gold_mine
@@ -2038,7 +2038,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 							}
 						}
 						ROOT = {
-							country_is_in_europe = yes
+							is_in_geographic_region = geographic_region_europe
 							OR = {
 								any_scope_state = {
 									OR = {
@@ -3053,7 +3053,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 						has_journal_entry = je_conquest_of_central_asia
 					}
 					ROOT = {
-						country_is_in_europe = yes
+						is_in_geographic_region = geographic_region_europe
 		        		OR = {
 		        			any_scope_state = {
 		        				OR = {
@@ -4165,8 +4165,8 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 							has_global_variable = gp_hawaii_interest
 							country_rank = rank_value:great_power
 							OR = {
-								country_is_in_north_america = yes
-								country_is_in_south_america = yes
+								is_in_geographic_region = geographic_region_north_america
+								is_in_geographic_region = geographic_region_south_america
 							}
 						}
 					}
@@ -4299,7 +4299,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		region_north_germany = {
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 				}
 				add = 100
@@ -4314,7 +4314,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		region_south_germany = {
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 				}
 				add = 100
@@ -4329,7 +4329,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		region_italy = {
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 				}
 				add = 100
@@ -4360,7 +4360,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 			}
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 				}
 				add = 50
@@ -4369,7 +4369,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		region_england = {
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 				}
 				add = 50
@@ -4378,7 +4378,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		region_iberia = {
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 				}
 				add = 50
@@ -4387,7 +4387,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		region_rhine = {
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 				}
 				add = 50
@@ -4426,7 +4426,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		region_north_china = {
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 					navy_size >= 25
 				}
@@ -4436,7 +4436,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		region_manchuria = {
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 					navy_size >= 25
 				}
@@ -4452,7 +4452,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 			}
 			if = {
 				limit = {
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					country_rank >= rank_value:great_power
 					navy_size >= 25
 				}
@@ -5500,7 +5500,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 					limit = {
 						has_journal_entry = je_scramble_for_africa
 						scope:target_country = {
-							country_is_in_africa = yes
+							is_in_geographic_region = geographic_region_africa
 						}
 					}
 					add = 500
@@ -5837,7 +5837,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 					limit = {
 						has_journal_entry = je_scramble_for_africa
 						scope:target_country = {
-							country_is_in_africa = yes
+							is_in_geographic_region = geographic_region_africa
 						}
 					}
 					add = 250

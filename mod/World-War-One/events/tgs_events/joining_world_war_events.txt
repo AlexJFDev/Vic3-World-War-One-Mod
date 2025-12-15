@@ -1303,8 +1303,8 @@ joining_world_war_events.26 = { #liner sunk by german subs
     trigger = {
         ROOT = {
             OR = {
-                country_is_in_north_america = yes
-                country_is_in_south_america = yes
+                is_in_geographic_region = geographic_region_north_america
+                is_in_geographic_region = geographic_region_south_america
             }
         }
         c:GER = {
@@ -1347,8 +1347,8 @@ joining_world_war_events.27 = { #submarine warfare causes concern
     trigger = {
         ROOT = {
             OR = {
-                country_is_in_north_america = yes
-                country_is_in_south_america = yes
+                is_in_geographic_region = geographic_region_north_america
+                is_in_geographic_region = geographic_region_south_america
             }
         }
         c:GER = {
