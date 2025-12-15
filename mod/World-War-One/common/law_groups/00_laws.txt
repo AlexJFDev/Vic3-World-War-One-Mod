@@ -3,7 +3,7 @@
 
 # enable = {} trigger for whether laws in this group should be possible at all
 
-REPLACE_OR_CREATE:lawgroup_governance_principles = {
+lawgroup_governance_principles = {
 	law_group_category = power_structure
 	base_enactment_days = 200
 	enactment_approval_mult = 2.0
@@ -23,7 +23,7 @@ REPLACE_OR_CREATE:lawgroup_governance_principles = {
 	}
 }
 
-REPLACE_OR_CREATE:lawgroup_distribution_of_power = {
+lawgroup_distribution_of_power = {
 	law_group_category = power_structure
 	base_enactment_days = 150
 	affected_by_regime_change = yes
@@ -32,7 +32,7 @@ REPLACE_OR_CREATE:lawgroup_distribution_of_power = {
 	regressive_movement_chance = 0.25
 }
 
-REPLACE_OR_CREATE:lawgroup_citizenship = {
+lawgroup_citizenship = {
 	law_group_category = power_structure
 	affected_by_regime_change = yes
 	
@@ -40,7 +40,7 @@ REPLACE_OR_CREATE:lawgroup_citizenship = {
 	regressive_movement_chance = 0.25
 }
 
-REPLACE_OR_CREATE:lawgroup_caste_hegemony = {
+lawgroup_caste_hegemony = {
 	law_group_category = power_structure
 	affected_by_regime_change = yes
 	linked_social_hierarchy = british_indian_caste_system
@@ -49,7 +49,7 @@ REPLACE_OR_CREATE:lawgroup_caste_hegemony = {
 	regressive_movement_chance = 0.25
 }
 
-REPLACE_OR_CREATE:lawgroup_church_and_state = {
+lawgroup_church_and_state = {
 	law_group_category = power_structure
 	affected_by_regime_change = yes
 	
@@ -57,7 +57,7 @@ REPLACE_OR_CREATE:lawgroup_church_and_state = {
 	regressive_movement_chance = 0.25
 }
 
-REPLACE_OR_CREATE:lawgroup_bureaucracy = {
+lawgroup_bureaucracy = {
 	law_group_category = power_structure
 	affected_by_regime_change = yes
 	
@@ -65,14 +65,32 @@ REPLACE_OR_CREATE:lawgroup_bureaucracy = {
 	regressive_movement_chance = 0.05
 }
 
-REPLACE_OR_CREATE:lawgroup_army_model = {
+lawgroup_centralization = {
+	law_group_category = power_structure
+	base_enactment_days = 150
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
+lawgroup_army_model = {
 	law_group_category = power_structure
 	
 	progressive_movement_chance = 1.5
 	regressive_movement_chance = 0.1
 }
 
-REPLACE_OR_CREATE:lawgroup_internal_security = {
+lawgroup_military_governance = {
+	law_group_category = power_structure
+	base_enactment_days = 150
+	affected_by_regime_change = yes
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
+
+lawgroup_internal_security = {
 	law_group_category = human_rights
 	affected_by_regime_change = yes
 	
@@ -80,7 +98,7 @@ REPLACE_OR_CREATE:lawgroup_internal_security = {
 	regressive_movement_chance = 0.1
 }
 
-REPLACE_OR_CREATE:lawgroup_economic_system = {
+lawgroup_economic_system = {
 	law_group_category = economy	
 	base_enactment_days = 150
 	
@@ -88,7 +106,7 @@ REPLACE_OR_CREATE:lawgroup_economic_system = {
 	regressive_movement_chance = 0.15
 }
 
-REPLACE_OR_CREATE:lawgroup_trade_policy = {
+lawgroup_trade_policy = {
 	law_group_category = economy
 
 	progressive_movement_chance = 1.5
@@ -101,14 +119,21 @@ REPLACE_OR_CREATE:lawgroup_trade_policy = {
 	}	
 }
 
-REPLACE_OR_CREATE:lawgroup_taxation = {
+lawgroup_taxation = {
 	law_group_category = economy
 	
 	progressive_movement_chance = 1.5
 	regressive_movement_chance = 0.15
 }
 
-REPLACE_OR_CREATE:lawgroup_land_reform = {
+lawgroup_welfare = {
+	law_group_category = economy
+	
+	progressive_movement_chance = 2.5
+	regressive_movement_chance = 0.25	
+}
+
+lawgroup_land_reform = {
 	law_group_category = economy
 	enactment_approval_mult = 1.5 # people REALLY care about land reform
 
@@ -116,49 +141,58 @@ REPLACE_OR_CREATE:lawgroup_land_reform = {
 	regressive_movement_chance = 1
 }
 
-REPLACE_OR_CREATE:lawgroup_colonization = {
+lawgroup_colonization = {
 	law_group_category = economy
 	
 	progressive_movement_chance = 1.5
 	regressive_movement_chance = 0.05
 }
 
-REPLACE_OR_CREATE:lawgroup_policing = {
+lawgroup_policing = {
 	law_group_category = economy
 	
 	progressive_movement_chance = 1.5
 	regressive_movement_chance = 0.15
 }
 
-REPLACE_OR_CREATE:lawgroup_education_system = {
+lawgroup_education_system = {
 	law_group_category = economy
 	
 	progressive_movement_chance = 2.5
 	regressive_movement_chance = 0.25	
 }
 
-REPLACE_OR_CREATE:lawgroup_health_system = {
+lawgroup_health_system = {
 	law_group_category = economy
 	
 	progressive_movement_chance = 2.5
 	regressive_movement_chance = 0.25			
 }
 
-REPLACE_OR_CREATE:lawgroup_free_speech = {
+lawgroup_free_speech = {
 	law_group_category = human_rights
 	
 	progressive_movement_chance = 2.5
 	regressive_movement_chance = 0.25	
 }
 
-REPLACE_OR_CREATE:lawgroup_labor_rights = {
+lawgroup_surveillance = {
+	law_group_category = human_rights
+	base_enactment_days = 150
+	affected_by_regime_change = yes
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
+lawgroup_labor_rights = {
 	law_group_category = human_rights
 	
 	progressive_movement_chance = 2.5
 	regressive_movement_chance = 0.25	
 }
 
-REPLACE_OR_CREATE:lawgroup_labour_associations = {
+lawgroup_labour_associations = {
 	law_group_category = human_rights
 	ideological_opinion_impact = 0.5
 
@@ -166,35 +200,37 @@ REPLACE_OR_CREATE:lawgroup_labour_associations = {
 	regressive_movement_chance = 0.255
 }
 
-REPLACE_OR_CREATE:lawgroup_childrens_rights = {
+lawgroup_childrens_rights = {
 	law_group_category = human_rights
 	
 	progressive_movement_chance = 2.5
 	regressive_movement_chance = 0.25	
 }
 
-REPLACE_OR_CREATE:lawgroup_rights_of_women = {
+lawgroup_rights_of_women = {
 	law_group_category = human_rights
 	
 	progressive_movement_chance = 2.5
 	regressive_movement_chance = 0.25	
 }
 
-REPLACE_OR_CREATE:lawgroup_welfare = {
-	law_group_category = human_rights
-	
-	progressive_movement_chance = 2.5
-	regressive_movement_chance = 0.25	
-}
-
-REPLACE_OR_CREATE:lawgroup_migration = {
+lawgroup_migration = {
 	law_group_category = human_rights
 	
 	progressive_movement_chance = 1
 	regressive_movement_chance = 0.255
 }
 
-REPLACE_OR_CREATE:lawgroup_slavery = {
+lawgroup_foreign_policy = {
+	law_group_category = power_structure
+	base_enactment_days = 150
+	affected_by_regime_change = yes
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
+lawgroup_slavery = {
 	law_group_category = human_rights
 	enactment_approval_mult = 2.0
 	base_enactment_days = 150
@@ -208,39 +244,4 @@ REPLACE_OR_CREATE:lawgroup_slavery = {
 			has_modifier = forced_slavery_ban
 		}
 	}	
-}
-
-lawgroup_centralization = {
-	law_group_category = power_structure
-	base_enactment_days = 150
-	
-	progressive_movement_chance = 2
-	regressive_movement_chance = 0.25
-}
-
-lawgroup_military_governance = {
-	law_group_category = power_structure
-	base_enactment_days = 150
-	affected_by_regime_change = yes
-	
-	progressive_movement_chance = 2
-	regressive_movement_chance = 0.25
-}
-
-lawgroup_surveillance = {
-	law_group_category = human_rights
-	base_enactment_days = 150
-	affected_by_regime_change = yes
-	
-	progressive_movement_chance = 2
-	regressive_movement_chance = 0.25
-}
-
-lawgroup_foreign_policy = {
-	law_group_category = human_rights
-	base_enactment_days = 150
-	affected_by_regime_change = yes
-	
-	progressive_movement_chance = 2
-	regressive_movement_chance = 0.25
 }
