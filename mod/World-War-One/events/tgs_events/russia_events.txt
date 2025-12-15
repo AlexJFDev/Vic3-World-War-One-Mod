@@ -435,7 +435,6 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_council_republic
      activate_law = law_type:law_single_party_state
      activate_law = law_type:law_outlawed_dissent
-     activate_law = law_type:law_surveillance_state
      activate_law = law_type:law_command_economy
      activate_law = law_type:law_collectivized_agriculture
      activate_law = law_type:law_womens_suffrage
@@ -447,6 +446,23 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_appointed_bureaucrats
      activate_law = law_type:law_graduated_taxation
      activate_law = law_type:law_corporatized_unions
+     active_law:lawgroup_surveillance_state ?= {
+			add_amendment = {
+				type = extended_use_of_torture
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+            add_amendment = {
+				type = political_intimidation
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+            add_amendment = {
+				type = technological_stealing
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+		}
         trigger_event = {
              id = russia_events.8
              days = 5

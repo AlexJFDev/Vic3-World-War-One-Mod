@@ -1003,9 +1003,20 @@ germany_events.28 = { #Nazi takeover
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_outlawed_dissent
         activate_law = law_type:law_national_supremacy
-        activate_law = law_type:law_surveillance_state
         activate_law = law_type:law_unitary
         activate_law = law_type:law_imperialism
+        active_law:lawgroup_surveillance_state ?= {
+			add_amendment = {
+				type = extended_use_of_torture
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+			}
+            add_amendment = {
+				type = political_intimidation
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+			}
+		}
         ig:ig_petty_bourgeoisie = {
 			leader = {
 				set_character_as_ruler = yes

@@ -1,0 +1,484 @@
+﻿respect_of_legislative_process = {
+
+    parent = law_confederated
+
+	allowed_laws = {
+		law_unitary
+	}
+
+	modifier = {
+		country_law_enactment_time_mult = 0.1
+		state_radicals_from_political_movements_mult = -0.05
+		interest_group_ig_intelligentsia_approval_add = 2
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		OR = {
+			is_interest_group_type = ig_intelligentsia
+			is_interest_group_type = ig_rural_folks
+			has_ideology = ideology:ideology_liberal_leader
+			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_radical
+		}
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_unitary
+				value > neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+extensive_powers_for_mayors = {
+
+    parent = law_unitary
+
+	allowed_laws = {
+		law_devolved
+		law_federated
+		law_confederated
+	}
+
+	modifier = {
+		country_government_wages_mult = 0.15
+		country_authority_mult = 0.1
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		AND = {
+			exists = scope:approval
+			scope:approval > 2
+		}
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_unitary
+				value < neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+peasants_councils = {
+
+    parent = law_confederated
+
+	allowed_laws = {
+		law_devolved
+		law_federated
+		law_confederated
+	}
+
+	modifier = {
+		interest_group_ig_rural_folk_pol_str_mult = 0.2
+		interest_group_ig_rural_folk_approval_add = 3
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		is_interest_group_type = ig_rural_folk
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			is_interest_group_type = ig_landowners
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+extended_autonomy = {
+
+    parent = law_confederated
+
+	allowed_laws = {
+		law_devolved
+		law_federated
+		law_confederated
+	}
+
+	modifier = {
+		interest_group_ig_rural_folk_pol_str_mult = 0.2
+		interest_group_ig_rural_folk_approval_add = 3
+		state_decree_cost_mult = 0.3
+		state_radicals_from_political_movements_mult = -0.3
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		is_interest_group_type = ig_rural_folk
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_unitary
+				value > neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+extended_use_of_torture = {
+
+    parent = law_surveillance_state
+
+	allowed_laws = {
+		law_surveillance_state
+	}
+
+	modifier = {
+		state_radicals_from_political_movements_mult = -0.2
+		country_revolution_progress_mult = -0.3
+		interest_group_in_opposition_approval_add = 4
+	}
+
+	possible = {
+		NOT = { 
+			OR = {
+				has_law = law_type:law_guaranteed_liberties 
+				has_law = law_type:law_universal_suffrage
+				has_law = law_type:law_protected_speech
+			}
+		}
+	}
+
+	would_sponsor = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_outlawed_dissent
+				value > neutral
+			}
+		}
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_outlawed_dissent
+				value < neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+political_intimidation = {
+
+    parent = law_surveillance_state
+
+	allowed_laws = {
+		law_surveillance_state
+	}
+
+	modifier = {
+		state_radicals_from_political_movements_mult = -0.1
+		country_revolution_progress_mult = -0.15
+		interest_group_in_opposition_approval_add = 2
+	}
+
+	possible = {
+		NOT = { 
+			OR = {
+				has_law = law_type:law_guaranteed_liberties 
+				has_law = law_type:law_universal_suffrage
+				has_law = law_type:law_protected_speech
+			}
+		}
+	}
+
+	would_sponsor = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_outlawed_dissent
+				value > neutral
+			}
+		}
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_outlawed_dissent
+				value < neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+technological_stealing = {
+
+    parent = law_foreign_counterintelligence
+
+	allowed_laws = {
+		law_foreign_counterintelligence
+		law_surveillance_state
+	}
+
+	modifier = {
+		country_tech_spread_mult = 0.15
+		country_diplomatic_reputation_add = -2
+        country_improve_relations_speed_mult = -0.3
+	}
+
+	possible = {
+		NOT = { 
+			OR = { 
+				has_law = law_type:law_true_neutrality
+				has_law = law_type:law_armed_neutrality
+			}
+		}
+	}
+
+	would_sponsor = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_foreign_counterintelligence
+				value > neutral
+			}
+		}
+	}
+
+	ai_will_revoke = {
+		always = no
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+extended_diplomatic_corp = {
+
+    parent = law_true_neutrality
+
+	allowed_laws = {
+		law_true_neutrality
+		law_armed_neutrality
+		law_limited_interventionism
+		law_expansionism
+		law_imperialism
+	}
+
+	modifier = {
+		country_government_wages_mult = 0.2
+		country_diplomatic_reputation_add = 2
+        country_improve_relations_speed_mult = 0.3
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		leader = {
+			OR = {
+				has_ideology = ideology:ideology_pacifist
+				has_ideology = ideology:ideology_market_liberal
+				has_ideology = ideology:ideology_utopian
+				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
+				has_ideology = ideology:ideology_liberal_leader
+			}
+		}
+	}
+
+	ai_will_revoke = {
+		always = no
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+expensive_military_parades = {
+
+    parent = law_imperialism
+
+	allowed_laws = {
+		law_limited_interventionism
+		law_expansionism
+		law_imperialism
+	}
+
+	modifier = {
+		country_military_wages_mult = 0.1
+	    interest_group_ig_armed_forces_approval_add = 2
+		country_prestige_from_army_power_projection_mult = 0.2
+		country_prestige_from_navy_power_projection_mult = 0.2
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		leader = {
+			OR = {
+				has_ideology = ideology:ideology_pacifist
+				has_ideology = ideology:ideology_market_liberal
+				has_ideology = ideology:ideology_utopian
+				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
+				has_ideology = ideology:ideology_liberal_leader
+			}
+		}
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_limited_interventionism
+				value < neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+extended_staff = {
+
+    parent = law_military_oversight
+
+	allowed_laws = {
+		law_subordinate_general_staff
+		law_independant_general_staff
+		law_military_oversight
+	}
+
+	modifier = {
+		country_military_wages_mult = 0.2
+		interest_group_ig_armed_forces_pol_str_mult = 0.2
+	    interest_group_ig_armed_forces_approval_add = 3
+		military_formation_organization_gain_mult = 0.2
+		country_military_tech_research_speed_mult = 0.1
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		OR = {
+			is_interest_group_type = ig_petty_bourgeoisie
+			is_interest_group_type = ig_armed_forces
+		}
+		leader = {
+			OR = {
+				has_ideology = ideology:ideology_jingoist_leader
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_integralist
+			}
+		}
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_military_oversight
+				value < neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+army_hearings = {
+
+    parent = law_subordinate_general_staff
+
+	allowed_laws = {
+		law_subordinate_general_staff
+	}
+
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = -0.2
+	    interest_group_ig_armed_forces_approval_add = -3
+		interest_group_ig_intelligentsia_approval_add = 3
+		country_legitimacy_base_add = 15
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		leader = {
+			OR = {
+				has_ideology = ideology:ideology_pacifist
+				has_ideology = ideology:ideology_utopian
+				has_ideology = ideology:ideology_liberal_leader
+			}
+		}
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			is_interest_group_type = ig_armed_forces
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
