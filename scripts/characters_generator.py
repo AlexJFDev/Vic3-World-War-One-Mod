@@ -26,7 +26,7 @@ TRAITS = {
     'plains_commander', 'charismatic', 'traditionalist_commander', 'opium_addiction', 'shellshocked', 'basic_defensive_strategist'
 }
 IDEOLOGIES = {
-    'ideology_moderate', 'ideology_traditionalist', 'ideology_atheist', 'ideology_republican_leader', 'ideology_radical', 'ideology_abolitionist', 'ideology_slaver', 'ideology_feminist', 'ideology_reformer', 
+    'ideology_moderate', 'ideology_traditionalist', 'ideology_nihilist', 'ideology_republican_leader', 'ideology_radical', 'ideology_abolitionist', 'ideology_slaver', 'ideology_feminist', 'ideology_reformer', 
     'ideology_pacifist', 'ideology_jingoist_leader', 'ideology_royalist', 'ideology_social_democrat', 'ideology_communist', 'ideology_vanguardist', 'ideology_fascist', 'ideology_anarchist', 'ideology_ethno_nationalist', 
     'ideology_theocrat', 'ideology_market_liberal', 'ideology_liberal_leader', 'ideology_republican_paternalistic', 'ideology_scholar_paternalistic', 'ideology_junker_paternalistic', 'ideology_papal_paternalistic', 
     'ideology_confucian', 'ideology_bakufu', 'ideology_shinto_moralist', 'ideology_caudillismo', 'ideology_heavenly_kingdom_theocratic', 'ideology_papal_moralist', 'ideology_liberal_modern', 'ideology_egalitarian_modern', 

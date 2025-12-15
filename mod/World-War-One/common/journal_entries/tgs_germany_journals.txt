@@ -11,7 +11,7 @@
     
     possible = {
         is_player = no
-        game_date > 1918.1.1
+        game_date > 1917.6.1
         has_variable = central_powers_participant
         root.average_sol < 14
         is_at_war = yes
@@ -40,6 +40,7 @@
         OR = {
             any_civil_war = {
 			   civil_war_progress >= 0.75
+               is_civil_war_type = revolution
 		    }
             c:GER = {
               has_variable = central_powers_participant
@@ -96,7 +97,7 @@ je_war_fatigue_player_germany = {
     
     possible = {
         is_player = yes
-        game_date > 1918.1.1
+        game_date > 1917.6.1
         has_variable = central_powers_participant
         root.average_sol < 14
         is_at_war = yes
@@ -125,6 +126,7 @@ je_war_fatigue_player_germany = {
         OR = {
             any_civil_war = {
 			   civil_war_progress >= 0.75
+               is_civil_war_type = revolution
 		    }
             c:GER = {
               has_variable = central_powers_participant

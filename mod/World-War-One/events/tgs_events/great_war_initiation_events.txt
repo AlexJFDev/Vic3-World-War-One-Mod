@@ -227,10 +227,18 @@ great_war_initiation_events.4 = {
                 target_state = s:STATE_WESTERN_SERBIA.region_state:SER
                 type = dp_make_protectorate
                 add_war_goal = {
-                    holder = c:SER
-                    type = war_reparations
-                    target_country = c:AUS
-                }
+				    holder = c:SER
+				    target_country = c:AUS
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:AUS
+					   target_country = c:SER
+					   inputs = {
+						   { quantity = 100000 }
+					    }
+				    }
+			    }
             }
         }
         c:AUS = { set_variable = central_powers_participant }
@@ -313,10 +321,18 @@ great_war_initiation_events.5 = {
                 target_state = s:STATE_WESTERN_SERBIA.region_state:SER
                 type = dp_make_protectorate
                 add_war_goal = {
-                    holder = c:SER
-                    type = war_reparations
-                    target_country = c:AUS
-                }
+				    holder = c:SER
+				    target_country = c:AUS
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:AUS
+					   target_country = c:SER
+					   inputs = {
+						   { quantity = 100000 }
+					    }
+				    }
+			    }
             }
         }
         c:AUS = { 

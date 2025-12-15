@@ -715,10 +715,18 @@ joining_world_war_events.15 = { #Bulgaria joins
 				c:BUL
 			}
             add_war_goal = {
-                    holder = c:FRA
-                    type = war_reparations
-                    target_country = c:BUL
-                }
+				    holder = c:FRA
+				    target_country = c:BUL
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:BUL
+					   target_country = c:FRA
+					   inputs = {
+						   { quantity = 5000 }
+					    }
+				    }
+			    }
         }
         c:BUL = { set_variable = central_powers_participant }
         ai_chance = {
@@ -774,10 +782,18 @@ joining_world_war_events.16 = { #Romania joins
 				c:ROM
 			}
             add_war_goal = {
-                    holder = c:AUS
-                    type = war_reparations
-                    target_country = c:ROM
-                }
+				    holder = c:AUS
+				    target_country = c:ROM
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:ROM
+					   target_country = c:AUS
+					   inputs = {
+						   { quantity = 15000 }
+					    }
+				    }
+			    }
         }
         c:ROM = { set_variable = entente_participant }
         ai_chance = {
@@ -833,10 +849,18 @@ joining_world_war_events.17 = { #Greece joins
 				c:GRE
 			}
             add_war_goal = {
-                    holder = c:AUS
-                    type = war_reparations
-                    target_country = c:GRE
-                }
+				    holder = c:AUS
+				    target_country = c:GRE
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:GRE
+					   target_country = c:AUS
+					   inputs = {
+						   { quantity = 5000 }
+					    }
+				    }
+			    }
         }
         c:GRE = { set_variable = entente_participant }
         ai_chance = {
@@ -893,10 +917,18 @@ joining_world_war_events.18 = { #USA joins
 				c:USA
 			}
             add_war_goal = {
-                    holder = c:GER
-                    type = war_reparations
-                    target_country = c:USA
-                }
+				holder = c:GER
+				target_country = c:USA
+				type = enforce_treaty_article
+				article = {
+					article = money_transfer
+					source_country = c:USA
+					target_country = c:GER
+					inputs = {
+						{ quantity = 100000 }
+					}
+				}
+			}
             add_war_goal = {
                     holder = c:GER
                     type = conquer_state
@@ -1003,10 +1035,18 @@ joining_world_war_events.19 = { #Portugal joins
 				c:POR
 			}
             add_war_goal = {
-                    holder = c:GER
-                    type = war_reparations
-                    target_country = c:POR
-                }
+				    holder = c:GER
+				    target_country = c:POR
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:POR
+					   target_country = c:GER
+					   inputs = {
+						   { quantity = 5000 }
+					    }
+				    }
+			    }
         }
         c:POR = { set_variable = entente_participant }
         ai_chance = {
@@ -1062,10 +1102,18 @@ joining_world_war_events.20 = { #Brazil joins
 				c:BRZ
 			}
             add_war_goal = {
-                    holder = c:GER
-                    type = war_reparations
-                    target_country = c:BRZ
-                }
+				    holder = c:GER
+				    target_country = c:BRZ
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:BRZ
+					   target_country = c:GER
+					   inputs = {
+						   { quantity = 15000 }
+					    }
+				    }
+			    }
         }
         c:BRZ = { set_variable = entente_participant }
         ai_chance = {
@@ -1121,10 +1169,18 @@ joining_world_war_events.21 = { #Persia joins
 				c:PER
 			}
             add_war_goal = {
-                    holder = c:GER
-                    type = war_reparations
-                    target_country = c:PER
-                }
+				    holder = c:GER
+				    target_country = c:PER
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:PER
+					   target_country = c:GER
+					   inputs = {
+						   { quantity = 5000 }
+					    }
+				    }
+			    }
         }
         c:PER = {
             trigger_event = {
@@ -1145,10 +1201,18 @@ joining_world_war_events.21 = { #Persia joins
 				c:PER
 			}
             add_war_goal = {
-                    holder = c:GBR
-                    type = war_reparations
-                    target_country = c:PER
-                }
+				    holder = c:GBR
+				    target_country = c:PER
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:PER
+					   target_country = c:GBR
+					   inputs = {
+						   { quantity = 5000 }
+					    }
+				    }
+			    }
         }
         c:PER = { set_variable = central_powers_participant }
         ai_chance = {

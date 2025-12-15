@@ -156,6 +156,7 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 		activate_law = law_type:law_national_supremacy
 		activate_law = law_type:law_right_of_assembly
         add_treasury = 10000000
+        remove_modifier = declared_bankruptcy
         add_modifier = {
 			name = army_buff_modifier_8
             years = 6
@@ -193,10 +194,18 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                     target_state = s:STATE_AYDIN.region_state:GRE
                 }
             add_war_goal = {
-                    holder = c:GRE
-                    type = war_reparations
-                    target_country = c:TUR
-                }
+				    holder = c:GRE
+				    target_country = c:TUR
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:TUR
+					   target_country = c:GRE
+					   inputs = {
+						   { quantity = 8000 }
+					    }
+				    }
+			    }
             add_war_goal = {
                     holder = c:GRE
                     type = conquer_state

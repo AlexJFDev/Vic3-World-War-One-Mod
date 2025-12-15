@@ -501,6 +501,7 @@ REPLACE_OR_CREATE:ITA = { # Italy
 			exists = scope:actor
 			scope:actor ?= { 
 				global_country_ranking > 4
+				has_law = law_type:law_monarchy 
 			}
 		}
 	}
@@ -576,22 +577,6 @@ REPLACE_OR_CREATE:GBR = { # Great Britain of United Kingdom
 }
 
 REPLACE_OR_CREATE:SPA = { # Spain
-	dynamic_country_name = {
-		name = dyn_c_spanish_empire
-		adjective = SPA_ADJ
-		
-		is_main_tag_only = yes
-		priority = 1
-		
-		trigger = {
-			scope:actor ?= { 
-				AND = {
-					global_country_ranking > 4
-				    has_law = law_type:law_monarchy 
-				}
-			}
-		}
-	}	
 	dynamic_country_name = {
 		name = dyn_c_spanish_kingdom
 		adjective = SPA_ADJ
