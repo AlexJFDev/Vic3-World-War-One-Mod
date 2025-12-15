@@ -59,6 +59,43 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		value = 50
 	}
 
+	# The chance that the AI will negotiate with an IG when trying to enact a specific law, 1 = 100%
+	# Using this value in other strategies will function additively
+	# root = country
+	# scope:law = law type being enacted
+	# scope:interest_group = IG to negotiate with
+	# scope:amenability = IG amenability to negotiation divided by MAX_AMENABILITY (ie, if MAX_AMENABILITY is 100 and IG amenability is 50, this value will be 0.5)
+	# scope:advance_chance = Chance to advance law enactment
+	# scope:stall_chance = Chance for law enactment to stall
+	negotiation_chance = {
+		value = 0
+
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					amenability_level != 4
+				}
+			}
+			value = scope:amenability
+
+			add = scope:stall_chance
+
+			if = {
+				limit = {
+					ai_has_reasons_to_not_oppose_law = yes
+				}
+				multiply = 2
+			}
+
+			subtract = {
+				value = scope:advance_chance
+				multiply = 2
+			}
+		}
+
+		max = 1
+	}
+
 	# How progressive is the AI willing to be when passing laws
 	# Using a different value in a strategy will override this value
 	max_progressiveness = {
