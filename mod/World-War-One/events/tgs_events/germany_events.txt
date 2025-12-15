@@ -1000,20 +1000,28 @@ germany_events.28 = { #Nazi takeover
         trigger = { is_player = no }
         default_option = yes
         activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_surveillance_state
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_outlawed_dissent
         activate_law = law_type:law_national_supremacy
         activate_law = law_type:law_unitary
         activate_law = law_type:law_imperialism
-        active_law:lawgroup_surveillance_state ?= {
+        active_law:lawgroup_surveillance ?= {
 			add_amendment = {
 				type = extended_use_of_torture
-				sponsor = ig_petty_bourgeoisie
+				sponsor = ig_trade_unions
 				cooldown = 120
 			}
             add_amendment = {
 				type = political_intimidation
-				sponsor = ig_petty_bourgeoisie
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+		}
+        active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = amendment_cult_of_personality
+				sponsor = ig_trade_unions
 				cooldown = 120
 			}
 		}
@@ -1049,7 +1057,26 @@ germany_events.28 = { #Nazi takeover
         activate_law = law_type:law_presidential_republic
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_censorship
-        activate_law = law_type:law_secret_police
+        activate_law = law_type:law_surveillance_state
+        active_law:lawgroup_surveillance ?= {
+			add_amendment = {
+				type = extended_use_of_torture
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+            add_amendment = {
+				type = political_intimidation
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+		}
+        active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = amendment_cult_of_personality
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+		}
         ig:ig_petty_bourgeoisie = {
 			leader = {
 				set_character_as_ruler = yes

@@ -28,6 +28,7 @@ foreign_policy_laws.1 = {
 
     option = {
         name = foreign_policy_laws.1.a
+        default_option = yes
         add_enactment_modifier = { 
             name = true_neutrality_progress_1
         }
@@ -39,6 +40,21 @@ foreign_policy_laws.1 = {
             name = true_neutrality_progress_2
         }
         change_infamy = -50
+    }
+
+    option = {
+        name = foreign_policy_laws.1.c
+        add_enactment_modifier = { 
+            name = true_neutrality_progress_2
+        }
+        change_infamy = -50
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_diplomatic_corp
+				sponsor = ig_intelligentsia
+				cooldown = 120
+			}
+		}
     }
 }
 
@@ -68,6 +84,7 @@ foreign_policy_laws.2 = {
 
     option = {
         name = foreign_policy_laws.2.a
+        default_option = yes
         add_enactment_modifier = { 
             name = true_neutrality_compromise_1
         }
@@ -111,6 +128,7 @@ foreign_policy_laws.3 = {
     }
     option = {
         name = foreign_policy_laws.3.b
+        default_option = yes
         add_enactment_modifier = { name = true_neutrality_stall }
     }
 }
@@ -142,18 +160,34 @@ foreign_policy_laws.4 = {
     immediate = {}
 
     option = {
-        name = foreign_policy_laws.1.a
+        name = foreign_policy_laws.4.a
+        default_option = yes
         add_enactment_modifier = { 
             name = true_neutrality_progress_1
         }
     }
 
     option = {
-        name = foreign_policy_laws.1.b
+        name = foreign_policy_laws.4.b
         add_enactment_modifier = { 
             name = true_neutrality_progress_2
         }
         change_infamy = -30
+    }
+
+    option = {
+        name = foreign_policy_laws.4.c
+        add_enactment_modifier = { 
+            name = true_neutrality_progress_2
+        }
+        change_infamy = -50
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_diplomatic_corp
+				sponsor = ig_intelligentsia
+				cooldown = 120
+			}
+		}
     }
 }
 
@@ -183,6 +217,7 @@ foreign_policy_laws.5 = {
 
     option = {
         name = foreign_policy_laws.5.a
+        default_option = yes
         add_enactment_modifier = { 
             name = true_neutrality_compromise_1
         }
@@ -226,6 +261,7 @@ foreign_policy_laws.6 = {
     }
     option = {
         name = foreign_policy_laws.6.b
+        default_option = yes
         add_enactment_modifier = { name = true_neutrality_stall }
     }
 }
@@ -257,18 +293,40 @@ foreign_policy_laws.7 = {
     immediate = {}
 
     option = {
-        name = foreign_policy_laws.1.a
+        name = foreign_policy_laws.7.a
+        default_option = yes
         add_enactment_modifier = { 
             name = limited_interventionism_progress_1
         }
     }
 
     option = {
-        name = foreign_policy_laws.1.b
+        name = foreign_policy_laws.7.b
         add_enactment_modifier = { 
             name = limited_interventionism_progress_2
         }
         change_infamy = 10
+        currently_enacting_law = {
+			add_amendment = {
+				type = expensive_military_parades
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
+    }
+
+    option = {
+        name = foreign_policy_laws.7.c
+        add_enactment_modifier = { 
+            name = limited_interventionism_progress_2
+        }
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_diplomatic_corp
+				sponsor = ig_intelligentsia
+				cooldown = 120
+			}
+		}
     }
 }
 
@@ -297,14 +355,15 @@ foreign_policy_laws.8 = {
     immediate = {}
     
     option = {
-        name = foreign_policy_laws.5.a
+        name = foreign_policy_laws.8.a
+        default_option = yes
         add_enactment_modifier = { 
             name = true_neutrality_compromise_1
         }
         change_infamy = 30
     }
     option = {
-        name = foreign_policy_laws.5.b
+        name = foreign_policy_laws.8.b
         add_enactment_modifier = { 
             name = true_neutrality_compromise_2
         }
@@ -337,17 +396,18 @@ foreign_policy_laws.9 = {
     immediate = {}
 
     option = {
-        name = foreign_policy_laws.6.a
+        name = foreign_policy_laws.9.a
         trigger = { enactment_setback_count < max_setbacks_minus_one }
         add_enactment_setback = 1
     }
     option = {
-        name = foreign_policy_laws.6.b
+        name = foreign_policy_laws.9.a
+        default_option = yes
         add_enactment_modifier = { name = true_neutrality_stall }
     }
 }
 
-# --- INTERVENTIONISM ---
+# --- EXPANSIONISM ---
 
 foreign_policy_laws.10 = {
     type = country_event
@@ -364,30 +424,45 @@ foreign_policy_laws.10 = {
     cooldown = { days = normal_modifier_time }
 
     trigger = {
-        is_enacting_law = law_type:law_interventionism
+        is_enacting_law = law_type:law_expansionism
     }
 
     cancellation_trigger = {
-        NOT = { is_enacting_law = law_type:law_interventionism }
+        NOT = { is_enacting_law = law_type:law_expansionism }
     }
 
     immediate = {}
     
     option = {
-        name = foreign_policy_laws.1.a
+        name = foreign_policy_laws.10.a
+        default_option = yes
         add_enactment_modifier = { 
             name = interventionism_progress_1
         }
     }
 
     option = {
-        name = foreign_policy_laws.1.b
+        name = foreign_policy_laws.10.b
         add_enactment_modifier = { 
             name = interventionism_progress_2
         }
         change_infamy = 30
     }
-    
+
+    option = {
+        name = foreign_policy_laws.10.b
+        add_enactment_modifier = { 
+            name = interventionism_progress_2
+        }
+        change_infamy = 30
+        currently_enacting_law = {
+			add_amendment = {
+				type = expensive_military_parades
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
+    }
 }
 
 foreign_policy_laws.11 = {
@@ -405,29 +480,59 @@ foreign_policy_laws.11 = {
     cooldown = { days = normal_modifier_time }
 
     trigger = {
-        is_enacting_law = law_type:law_interventionism
+        is_enacting_law = law_type:law_expansionism
     }
 
     cancellation_trigger = {
-        NOT = { is_enacting_law = law_type:law_interventionism }
+        NOT = { is_enacting_law = law_type:law_expansionism }
     }
 
     immediate = {}
 
     option = {
-        name = foreign_policy_laws.5.a
+        name = foreign_policy_laws.11.a
+        default_option = yes
         add_enactment_modifier = { 
             name = true_neutrality_compromise_1
         }
         change_infamy = 40
     }
     option = {
-        name = foreign_policy_laws.5.b
+        name = foreign_policy_laws.11.b
         add_enactment_modifier = { 
             name = true_neutrality_compromise_2
         }
         change_infamy = -40
     } 
+    option = {
+        name = foreign_policy_laws.11.c
+        default_option = yes
+        add_enactment_modifier = { 
+            name = true_neutrality_compromise_1
+        }
+        change_infamy = 40
+        currently_enacting_law = {
+			add_amendment = {
+				type = expensive_military_parades
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
+    }
+    option = {
+        name = foreign_policy_laws.11.e
+        add_enactment_modifier = { 
+            name = true_neutrality_compromise_2
+        }
+        change_infamy = -40
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_diplomatic_corp
+				sponsor = ig_intelligentsia
+				cooldown = 120
+			}
+		}
+    }    
 }
 
 foreign_policy_laws.12 = {
@@ -445,22 +550,120 @@ foreign_policy_laws.12 = {
     cooldown = { days = normal_modifier_time }
 
     trigger = {
-        is_enacting_law = law_type:law_interventionism
+        is_enacting_law = law_type:law_expansionism
     }
 
     cancellation_trigger = {
-        NOT = { is_enacting_law = law_type:law_interventionism }
+        NOT = { is_enacting_law = law_type:law_expansionism }
     }
 
     immediate = {}
 
     option = {
-        name = foreign_policy_laws.6.a
+        name = foreign_policy_laws.12.a
         trigger = { enactment_setback_count < max_setbacks_minus_one }
         add_enactment_setback = 1
     }
     option = {
-        name = foreign_policy_laws.6.b
+        name = foreign_policy_laws.12.a
+        default_option = yes
         add_enactment_modifier = { name = true_neutrality_stall }
     }  
+}
+
+# ────────────────────────────────────────
+#  IMPERIALISM
+# ────────────────────────────────────────
+
+foreign_policy_laws.13 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.13.t
+    desc  = foreign_policy_laws.13.d
+    flavor= foreign_policy_laws.13.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_imperialism
+        NOT = { has_modifier = imperialism_progress }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_imperialism } }
+    option = {
+        name = foreign_policy_laws.13.a
+        default_option = yes
+        add_enactment_modifier = { name = imperialism_progress }
+    }
+    option = {
+        name = foreign_policy_laws.13.b
+        default_option = yes
+        change_infamy = 20
+        add_enactment_modifier = { name = imperialism_progress }
+        currently_enacting_law = {
+			add_amendment = {
+				type = expensive_military_parades
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
+    }
+}
+
+foreign_policy_laws.14 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.14.t
+    desc  = foreign_policy_laws.14.d
+    flavor= foreign_policy_laws.14.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_imperialism
+        NOT = { has_modifier = imperialism_compromise }
+        NOT = { has_modifier = contained_military }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_imperialism } }
+    option = {
+        name = foreign_policy_laws.14.a
+        default_option = yes
+        add_enactment_modifier = { name = imperialism_compromise }
+    }
+    option = {
+        name = foreign_policy_laws.14.b
+        default_option = yes
+        add_enactment_modifier = { name = imperialism_compromise_2 }
+        add_modifier = {
+          name = contained_military
+          years = 5
+          is_decaying = yes
+        }
+    }
+}
+
+foreign_policy_laws.15 = {
+    type = country_event
+    placement = root
+    title = foreign_policy_laws.15.t
+    desc  = foreign_policy_laws.15.d
+    flavor= foreign_policy_laws.15.f
+    category = enactment
+    event_image = { texture = "gfx/event_pictures/politics_europe.dds" }
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+    trigger = {
+        is_enacting_law = law_type:law_imperialism
+        NOT = { has_modifier = imperialism_stall }
+    }
+    cancellation_trigger = { NOT = { is_enacting_law = law_type:law_imperialism } }
+    option = {
+        name = foreign_policy_laws.15.a
+        default_option = yes
+        add_enactment_modifier = { name = imperialism_stall }
+    }
 }

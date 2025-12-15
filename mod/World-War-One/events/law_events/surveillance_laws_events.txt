@@ -21,6 +21,7 @@ surveillance_laws.1 = {
     }
     option = {
         name = surveillance_laws.1.a
+        default_option = yes
         add_enactment_modifier = { name = no_surveillance_progress_1 }
     }
 
@@ -51,6 +52,7 @@ surveillance_laws.2 = {
     }
     option = {
         name = surveillance_laws.2.a
+        default_option = yes
         add_enactment_modifier = { name = surveillance_compromise_1 }
     }
     option = {
@@ -79,12 +81,13 @@ surveillance_laws.3 = {
         NOT = { is_enacting_law = law_type:law_no_agencies }
     }
     option = {
-        name = foreign_policy_laws.6.a
+        name = surveillance_laws.3.a
         trigger = { enactment_setback_count < max_setbacks_minus_one }
         add_enactment_setback = 1
     }
     option = {
-        name = foreign_policy_laws.6.b
+        name = surveillance_laws.3.b
+        default_option = yes
         add_enactment_modifier = { name = true_neutrality_stall }
     }  
 }
@@ -109,13 +112,26 @@ surveillance_laws.4 = {
         NOT = { is_enacting_law = law_type:law_foreign_counterintelligence }
     }
     option = {
-        name = surveillance_laws.1.a
+        name = surveillance_laws.4.a
+        default_option = yes
         add_enactment_modifier = { name = surveillance_progress_1 }
     }
 
     option = {
-        name = surveillance_laws.1.b
+        name = surveillance_laws.4.b
         add_enactment_modifier = { name = surveillance_progress_2 }
+    }
+
+    option = {
+        name = surveillance_laws.4.c
+        add_enactment_modifier = { name = surveillance_progress_1 }
+        currently_enacting_law = {
+			add_amendment = {
+				type = technological_stealing
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
     }
 }
 
@@ -139,11 +155,12 @@ surveillance_laws.5 = {
         NOT = { is_enacting_law = law_type:law_foreign_counterintelligence }
     }
     option = {
-        name = surveillance_laws.2.a
+        name = surveillance_laws.5.a
+        default_option = yes
         add_enactment_modifier = { name = surveillance_compromise_1 }
     }
     option = {
-        name = surveillance_laws.2.b
+        name = surveillance_laws.5.b
         add_enactment_modifier = { name = surveillance_compromise_2 }
     }
 }
@@ -174,6 +191,7 @@ surveillance_laws.6 = {
     }
     option = {
         name = foreign_policy_laws.6.b
+        default_option = yes
         add_enactment_modifier = { name = true_neutrality_stall }
     }  
 }
@@ -198,13 +216,52 @@ surveillance_laws.7 = {
         NOT = { is_enacting_law = law_type:law_surveillance_state }
     }
     option = {
-        name = surveillance_laws.1.a
+        name = surveillance_laws.7.a
         add_enactment_modifier = { name = surveillance_progress_1 }
     }
 
     option = {
-        name = surveillance_laws.1.b
+        name = surveillance_laws.7.b
+        default_option = yes
         add_enactment_modifier = { name = surveillance_progress_2 }
+    }
+
+    option = {
+        name = surveillance_laws.7.c
+        add_enactment_modifier = { name = surveillance_progress_1 }
+        currently_enacting_law = {
+			add_amendment = {
+				type = political_intimidation
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
+        currently_enacting_law = {
+			add_amendment = {
+				type = technological_stealing
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
+    }
+
+    option = {
+        name = surveillance_laws.7.e
+        add_enactment_modifier = { name = surveillance_progress_1 }
+        currently_enacting_law = {
+			add_amendment = {
+				type = political_intimidation
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_use_of_torture
+				sponsor = ig_armed_forces
+				cooldown = 120
+			}
+		}
     }
 }
 
@@ -228,11 +285,12 @@ surveillance_laws.8 = {
         NOT = { is_enacting_law = law_type:law_surveillance_state }
     }
     option = {
-        name = surveillance_laws.2.a
+        name = surveillance_laws.8.a
+        default_option = yes
         add_enactment_modifier = { name = surveillance_compromise_1 }
     }
     option = {
-        name = surveillance_laws.2.b
+        name = surveillance_laws.8.b
         add_enactment_modifier = { name = surveillance_compromise_2 }
     }
 }
@@ -257,13 +315,13 @@ surveillance_laws.9 = {
         NOT = { is_enacting_law = law_type:law_surveillance_state }
     }
     option = {
-        name = foreign_policy_laws.6.a
+        name = foreign_policy_laws.9.a
         trigger = { enactment_setback_count < max_setbacks_minus_one }
         add_enactment_setback = 1
     }
     option = {
-        name = foreign_policy_laws.6.b
+        name = foreign_policy_laws.9.b
+        default_option = yes
         add_enactment_modifier = { name = true_neutrality_stall }
     }  
 }
-

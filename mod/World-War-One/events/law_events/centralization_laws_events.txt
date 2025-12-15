@@ -34,12 +34,22 @@ centralization_laws.1 = {
 
     option = {
         name = centralization_laws.1.a
-        add_loyalists = {
-			value = small_radicals
-		}
+        default_option = yes
         add_enactment_modifier = {
             name = confederation_progress
         }
+    }
+
+    option = {
+        name = centralization_laws.1.b
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_autonomy
+				sponsor = ig_rural_folk
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -78,7 +88,7 @@ centralization_laws.2 = {
         default_option = yes
         add_modifier = {
           name = authority_buff_1
-          years = 5
+          years = 10
         }
         add_enactment_modifier = {
             name = confederation_compromise
@@ -90,6 +100,21 @@ centralization_laws.2 = {
         add_enactment_modifier = {
             name = confederation_mitigation
         }
+    }
+
+    option = {
+        name = centralization_laws.2.c
+        add_enactment_modifier = {
+            name = confederation_progress
+        }
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_powers_for_mayors
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -134,9 +159,25 @@ centralization_laws.3 = {
 
     option = {
         name = centralization_laws.3.b
+        default_option = yes
         add_enactment_modifier = {
             name = confederation_pass_by_force
         }
+    }
+
+    option = {
+        name = centralization_laws.3.c
+        add_enactment_modifier = {
+            name = confederation_progress
+        }
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_powers_for_mayors
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -174,6 +215,7 @@ centralization_laws.4 = {
 
     option = {
         name = centralization_laws.4.a
+        default_option = yes
         add_enactment_modifier = {
             name = federal_progress_1
         }
@@ -184,6 +226,14 @@ centralization_laws.4 = {
         add_enactment_modifier = {
             name = federal_progress_2
         }
+        currently_enacting_law = {
+			add_amendment = {
+				type = peasants_councils
+				sponsor = ig_rural_folk
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -219,6 +269,7 @@ centralization_laws.5 = {
 
     option = {
         name = centralization_laws.5.a
+        default_option = yes
         add_enactment_modifier = {
             name = favor_local_bureaucrats
         }
@@ -229,6 +280,21 @@ centralization_laws.5 = {
         add_enactment_modifier = {
             name = favor_central_bureaucrats
         }
+    }
+
+    option = {
+        name = centralization_laws.5.c
+        add_enactment_modifier = {
+            name = federal_progress_1
+        }
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_powers_for_mayors
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -273,9 +339,25 @@ centralization_laws.6 = {
 
     option = {
         name = centralization_laws.6.b
+        default_option = yes
         add_enactment_modifier = {
             name = federal_gridlock_2
         }
+    }
+
+    option = {
+        name = centralization_laws.6.c
+        add_enactment_modifier = {
+            name = federal_progress_1
+        }
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_powers_for_mayors
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -313,6 +395,7 @@ centralization_laws.7 = {
 
     option = {
         name = centralization_laws.7.a
+        default_option = yes
         add_enactment_modifier = {
             name = devolved_success_1
         }
@@ -323,6 +406,18 @@ centralization_laws.7 = {
         add_enactment_modifier = {
             name = devolved_success_2
         }
+    }
+
+    option = {
+        name = centralization_laws.7.c
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_powers_for_mayors
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -357,17 +452,42 @@ centralization_laws.8 = {
     }
 
     option = {
-        name = centralization_laws.5.a
+        name = centralization_laws.8.a
+        default_option = yes
         add_enactment_modifier = {
             name = favor_local_bureaucrats
         }
     }
 
     option = {
-        name = centralization_laws.5.b
+        name = centralization_laws.8.b
         add_enactment_modifier = {
             name = favor_central_bureaucrats
         }
+    }
+
+    option = {
+        name = centralization_laws.8.c
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_powers_for_mayors
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+				timeout = 600
+			}
+		}
+    }
+
+    option = {
+        name = centralization_laws.8.e
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_autonomy
+				sponsor = ig_rural_folk
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -417,9 +537,34 @@ centralization_laws.9 = {
 
     option = {
         name = centralization_laws.9.b
+        default_option = yes
         add_enactment_modifier = {
             name = federal_gridlock_2
         }
+    }
+
+    option = {
+        name = centralization_laws.9.c
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_autonomy
+				sponsor = ig_rural_folk
+				cooldown = 120
+				timeout = 600
+			}
+		}
+    }
+
+    option = {
+        name = centralization_laws.9.e
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_powers_for_mayors
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -457,6 +602,7 @@ centralization_laws.10 = {
 
     option = {
         name = centralization_laws.10.a
+        default_option = yes
         add_enactment_modifier = {
             name = unitary_progress_1
         }
@@ -469,6 +615,24 @@ centralization_laws.10 = {
         }
         add_radicals = {
 			value = small_radicals
+		}
+    }
+
+    option = {
+        name = centralization_laws.10.c
+        add_enactment_modifier = {
+            name = unitary_progress_2
+        }
+        add_radicals = {
+			value = small_radicals
+		}
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_powers_for_mayors
+				sponsor = ig_petty_bourgeoisie
+				cooldown = 120
+				timeout = 600
+			}
 		}
     }
 }
@@ -505,6 +669,7 @@ centralization_laws.11 = {
 
     option = {
         name = centralization_laws.11.a
+        default_option = yes
         add_enactment_modifier = {
             name = unitary_compromise_1
         }
@@ -515,6 +680,21 @@ centralization_laws.11 = {
         add_enactment_modifier = {
             name = unitary_compromise_2
         }
+    }
+
+    option = {
+        name = centralization_laws.11.c
+        add_enactment_modifier = {
+            name = unitary_progress_1
+        }
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_autonomy
+				sponsor = ig_rural_folk
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
 
@@ -558,8 +738,33 @@ centralization_laws.12 = {
 
     option = {
         name = centralization_laws.12.b
+        default_option = yes
         add_enactment_modifier = {
             name = confederation_pass_by_force
         }
+    }
+
+    option = {
+        name = centralization_laws.12.c
+        currently_enacting_law = {
+			add_amendment = {
+				type = extended_autonomy
+				sponsor = ig_rural_folk
+				cooldown = 120
+				timeout = 600
+			}
+		}
+    }
+
+    option = {
+        name = centralization_laws.12.e
+        currently_enacting_law = {
+			add_amendment = {
+				type = peasants_councils
+				sponsor = ig_rural_folk
+				cooldown = 120
+				timeout = 600
+			}
+		}
     }
 }
