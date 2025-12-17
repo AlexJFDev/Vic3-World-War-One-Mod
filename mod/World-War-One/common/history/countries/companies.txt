@@ -35,6 +35,23 @@
 			set_company_state_region = s:STATE_VERACRUZ
 		}
 	}
+	c:CUB = {
+        add_company = company_type:company_rodriguez_arguelles_y_cia
+		company:company_rodriguez_arguelles_y_cia = {
+			set_company_establishment_date = 1875.5.2
+			set_company_state_region = s:STATE_WESTERN_CUBA
+		}
+		add_company = company_type:company_gran_azucarera
+		company:company_gran_azucarera = {
+			set_company_establishment_date = 1881.8.5
+			set_company_state_region = s:STATE_WESTERN_CUBA
+		}
+		add_company = company_type:company_bacardi
+		company:company_bacardi = {
+			set_company_establishment_date = 162.2.4
+			set_company_state_region = s:STATE_WESTERN_CUBA
+		}
+	}
 	c:VNZ = {
         add_company = company_type:company_electricidad_de_caracas
 		company:company_electricidad_de_caracas = {
