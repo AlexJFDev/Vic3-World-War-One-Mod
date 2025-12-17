@@ -222,6 +222,18 @@
 			set_company_state_region = s:STATE_PROVENCE
 		}
 	}
+	c:SWI = {
+        add_company = company_type:company_nestle
+		company:company_nestle = {
+			set_company_establishment_date = 1873.3.15
+			set_company_state_region = s:STATE_WEST_SWITZERLAND
+		}
+		add_company = company_type:company_lindt
+		company:company_lindt = {
+			set_company_establishment_date = 1845.5.8
+			set_company_state_region = s:STATE_EAST_SWITZERLAND
+		}
+	}
 	c:SPA = {
 		add_company = company_type:company_espana_industrial
 		company:company_espana_industrial = {

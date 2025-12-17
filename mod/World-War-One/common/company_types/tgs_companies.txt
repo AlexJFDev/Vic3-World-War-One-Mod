@@ -182,3 +182,125 @@ company_chanel = {
 		value = 5 # Higher base value for flavored companies
 	}
 }
+
+company_nestle = {
+	icon = "gfx/interface/icons/company_icons/nestle.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	uses_dynamic_naming = no
+
+	building_types = {
+		building_food_industry
+		building_livestock_ranches
+		building_coffee_plantation
+	}
+
+	extension_building_types = { }
+
+	possible_prestige_goods = {
+		prestige_good_nescafe
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WEST_SWITZERLAND
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_WEST_SWITZERLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 10
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		state_birth_rate_mult = 0.2
+		building_food_industry_throughput_add = 0.3
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_WEST_SWITZERLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 10
+			}
+		}
+	}
+}
+
+company_lindt = {
+	icon = "gfx/interface/icons/company_icons/lindt.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	uses_dynamic_naming = no
+
+	building_types = {
+		building_food_industry
+		building_livestock_ranches
+		building_coffee_plantation
+	}
+
+	extension_building_types = { }
+
+	possible_prestige_goods = {
+		prestige_good_lindor
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EAST_SWITZERLAND
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_EAST_SWITZERLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 10
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		state_birth_rate_mult = 0.2
+		building_food_industry_throughput_add = 0.3
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_EAST_SWITZERLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 10
+			}
+		}
+	}
+}
