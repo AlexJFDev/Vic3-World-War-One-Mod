@@ -1103,7 +1103,7 @@
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_no_home_affairs
-		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_agrarianism
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_tenant_farmers
@@ -1754,7 +1754,7 @@
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_national_guard
-		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_agrarianism
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_tenant_farmers
@@ -3651,7 +3651,7 @@
 	c:SWI = {
 		activate_law = law_type:law_parliamentary_republic
 		activate_law = law_type:law_universal_suffrage
-		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_racial_segregation
 		activate_law = law_type:law_total_separation
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_national_militia
@@ -3677,8 +3677,24 @@
 		activate_law = law_type:law_right_to_associate
 		activate_law = law_type:law_subordinate_general_staff
 		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_workplace_safety
+			level = 2
+		}
+		set_institution_investment_level = {
 			institution = institution_schools
 			level = 4
+		}
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 2
 		}
 	}
 	c:SWZ = {

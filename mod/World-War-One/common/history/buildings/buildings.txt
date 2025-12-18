@@ -30219,6 +30219,38 @@
 				}
 			}
 		}
+		region_state:USA = {
+			create_building = {
+				building = building_port
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:USA
+						levels = 1
+						region = STATE_EASTERN_CUBA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_railway
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:USA
+						levels = 1
+						region = STATE_EASTERN_CUBA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steam_trains pm_wooden_passenger_carriages 
+				}
+			}
+		}
 	}
 	s:STATE_LIBYA = {
 		region_state:CYR = {
@@ -94766,6 +94798,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:SWI
+						levels = 8
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_barrack
 				add_ownership = {
 					country = {
@@ -95137,6 +95182,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:SWI
+						levels = 8
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
