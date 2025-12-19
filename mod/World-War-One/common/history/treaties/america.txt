@@ -24,6 +24,37 @@
 		}
 	}
 
+    # Cuban–American Treaty of Relations
+	create_treaty = {
+		name = cuban_american_treaty_of_relations
+		first_country = c:CUB
+		second_country = c:USA
+
+		is_draft = no
+		entered_into_force_on = 1903.5.22
+		binding_period = { years = 50 }
+
+		articles_to_create = {
+			{ article = military_access source_country = c:CUB target_country = c:USA }
+			{
+				article = treaty_port
+				source_country = c:CUB
+				target_country = c:USA
+				inputs = {
+					{ state = s:STATE_EASTERN_CUBA.region_state:CUB }
+				}
+			}
+			{
+			  article = law_commitment
+			  source_country = c:CUB
+			  target_country = c:USA
+			  inputs = {
+				  { law_type = law_type:law_armed_neutrality }
+			    }
+		    }   
+		}
+	}
+
 	# GER–USA
 	create_treaty = {
 		name = treaty_name_ger_usa_trade
@@ -249,7 +280,7 @@
 			  source_country = c:USA
 			  target_country = c:RMX
 			  inputs = {
-				  { quantity = 30000 }
+				  { quantity = 5000 }
 			    }
 			}
 		}
@@ -271,7 +302,7 @@
 			  source_country = c:GER
 			  target_country = c:MEX
 			  inputs = {
-				  { quantity = 10000 }
+				  { quantity = 5000 }
 			    }
 			}
 		}
