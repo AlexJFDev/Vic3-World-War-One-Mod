@@ -7,7 +7,7 @@
 # state_trigger										A trigger in state context that determines if the Decree is permitted or not; should invalidate the Decree on a weekly basis if found invalid 
 # ai_weight											Scripted value which determines the chance of getting the Decree by AI
 
-REPLACE_OR_CREATE:decree_encourage_manufacturing_industry = {
+decree_encourage_manufacturing_industry = {
 	texture = "gfx/interface/icons/decree/decree_encourage_manufacturing_industry.dds"
 	unlocking_technologies = {
 		manufacturies
@@ -57,7 +57,7 @@ REPLACE_OR_CREATE:decree_encourage_manufacturing_industry = {
 	}
 }
 
-REPLACE_OR_CREATE:decree_encourage_agricultural_industry = {
+decree_encourage_agricultural_industry = {
 	texture = "gfx/interface/icons/decree/decree_encourage_agricultural_industry.dds"
 	unlocking_technologies = {
 		enclosure
@@ -124,7 +124,7 @@ REPLACE_OR_CREATE:decree_encourage_agricultural_industry = {
 	}
 }
 
-REPLACE_OR_CREATE:decree_encourage_resource_industry = {
+decree_encourage_resource_industry = {
 	texture = "gfx/interface/icons/decree/decree_encourage_resource_industry.dds"
 	unlocking_technologies = {
 		shaft_mining
@@ -197,7 +197,7 @@ REPLACE_OR_CREATE:decree_encourage_resource_industry = {
 	}
 }
 
-REPLACE_OR_CREATE:decree_promote_social_mobility = {
+decree_promote_social_mobility = {
 	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
 
 	state_trigger = {
@@ -277,7 +277,7 @@ REPLACE_OR_CREATE:decree_promote_social_mobility = {
 	}
 }
 
-REPLACE_OR_CREATE:decree_promote_national_values = {
+decree_promote_national_values = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
 		nationalism
@@ -516,7 +516,7 @@ REPLACE_OR_CREATE:decree_promote_national_values = {
 	}
 }
 
-REPLACE_OR_CREATE:decree_greener_grass_campaign = {
+decree_greener_grass_campaign = {
 	texture = "gfx/interface/icons/decree/decree_greener_grass_campaign.dds"
 	state_trigger = {
 		is_isolated_from_market = no
@@ -577,7 +577,7 @@ REPLACE_OR_CREATE:decree_greener_grass_campaign = {
 	}
 }
 
-REPLACE_OR_CREATE:decree_violent_suppression = {
+decree_violent_suppression = {
 	texture = "gfx/interface/icons/decree/decree_violent_suppression.dds"		
 	
 	unlocking_technologies = {
@@ -634,7 +634,7 @@ REPLACE_OR_CREATE:decree_violent_suppression = {
 	}
 }
 
-REPLACE_OR_CREATE:decree_enlistment_efforts = { 
+decree_enlistment_efforts = { 
 	texture = "gfx/interface/icons/decree/decree_enlistment_efforts.dds"			
 	modifier = {
 		state_conscription_rate_add = 0.1
@@ -709,7 +709,7 @@ REPLACE_OR_CREATE:decree_enlistment_efforts = {
 	}
 }
 
-REPLACE_OR_CREATE:decree_emergency_relief = {
+decree_emergency_relief = {
     texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
 	unlocking_technologies = {
 		centralization

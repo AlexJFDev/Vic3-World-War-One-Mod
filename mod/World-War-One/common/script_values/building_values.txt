@@ -6,6 +6,8 @@ construction_cost_high = 1200
 construction_cost_medium = 800
 construction_cost_low = 400
 construction_cost_very_low = 200
+construction_cost_construction_sector = 100
+construction_cost_sagrada_familia = 6000
 
 REPLACE_OR_CREATE:state_urbanization_rate = {
     value = total_urbanization
@@ -13,4 +15,32 @@ REPLACE_OR_CREATE:state_urbanization_rate = {
     multiply = 1000
     min = 0
     max = 1
+}
+
+REPLACE_OR_CREATE:country_total_urbanization = {
+    value = 0
+    every_scope_state = {
+        add = total_urbanization
+    }
+}
+
+REPLACE_OR_CREATE:country_urbanization_rate = {
+    value = country_total_urbanization
+    if = {
+        limit = {
+            total_population > 0
+        }
+        divide = total_population
+    }
+    else = {
+        multiply = 0.0001 # Fallback value in case of strange behaviour
+    }
+    multiply = 1000
+    min = 0
+    max = 1
+}
+
+REPLACE_OR_CREATE:max_canton_system_level = {
+	value = 50
+	subtract = scope:num_levels
 }

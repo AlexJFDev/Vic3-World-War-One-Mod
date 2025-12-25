@@ -1434,8 +1434,14 @@ generic_civilian_clothes_trigger = {
 
 communist_clothes_trigger = {
 	scope:character ?= {
-		owner = {
-			has_law_or_variant = law_type:law_council_republic
+		OR = {
+			owner ?= {
+				has_law_or_variant = law_type:law_council_republic
+			}
+			AND = {
+				is_in_exile_pool = yes
+				has_socialist_ideology = yes
+			}
 		}
 	}
 }
