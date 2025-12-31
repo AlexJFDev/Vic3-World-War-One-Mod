@@ -4436,15 +4436,15 @@ STATE_WINDWARD_COAST = {
 STATE_SENEGAL = {
 	id = 206
 	provinces = {
-		x008EC3 x12B16A x15407B x1F187B x2227E7 x267B18 x329831 x339E4C x3A5023 x696F38 x70B0C0 x7B4218 xA80844 xAACD3D xBCFFB5 xCBF5C9 xECB3CF xEF30C0 xEFAFC0 
+		x008EC3 x08DC87 x12B16A x15407B x186409 x1F187B x2227E7 x267B18 x269443 x307041 x30EF40 x329831 x339E4C x3A5023 x3D9C4C x4983E8 x656C64 x696F38 x70B0C0 x7B4218 x7B561C x8587D6 x969FBB xA80844 xA90C4B xAACD3D xB07040 xB0EF40 xB6C103 xBCFFB5 xCBF5C9 xCD9D60 xD633FE xD6E38D xE69A18 xE70946 xECB3CF xEF30C0 xEFAFC0 xF8E5E2 
 	}
 	subsistence_building = building_subsistence_orchard
 	city = xEF30C0
 	port = xBCFFB5
-	farm = x7B4218
+	farm = xB07040
 	mine = x70B0C0
-	wood = x12B16A
-	arable_land = 60
+	wood = x30EF40
+	arable_land = 120
 	traits = {
 		state_trait_malaria state_trait_sahel state_trait_cap_vert 
 	}
@@ -4454,37 +4454,10 @@ STATE_SENEGAL = {
 	capped_resources = {
 		building_iron_mine = 30
 		building_sulfur_mine = 40
-		building_fishing_wharf = 6
+		building_fishing_wharf = 10
 		building_rubber_plantation = 40
 	}
 	naval_exit_id = 3088
-}
-STATE_GAMBIA = {
-	id = 207
-	provinces = {
-		x04FDE5 x08DC87 x146701 x186409 x269443 x307041 x30EF40 x3D9C4C x4983E8 x5A627D x656C64 x6D295A x7486F1 x7B55A9 x7B561C x8587D6 x969FBB x97F797 x9933B7 xA90C4B xB07040 xB0EF40 xB6C103 xCD9D60 xD633FE xD6E38D xE69A18 xE70946 xEB469A xF8E5E2 
-	}
-	subsistence_building = building_subsistence_orchard
-	city = x7486F1
-	port = xB07040
-	farm = xD633FE
-	mine = xA90C4B
-	wood = x307041
-	arable_land = 100
-	traits = {
-		state_trait_malaria 
-	}
-	arable_resources = {
-		building_rice_farm building_millet_farm building_livestock_ranch building_cotton_plantation building_sugar_plantation 
-	}
-	capped_resources = {
-		building_fishing_wharf = 6
-		building_rubber_plantation = 40
-	}
-	naval_exit_id = 3088
-	prime_land = {
-		x9933B7 x146701 x04FDE5 x7486F1 xB07040 x7B561C 
-	}
 }
 STATE_SIERRA_LEONE = {
 	id = 208
@@ -4755,12 +4728,12 @@ STATE_EAST_HAUSALAND = {
 STATE_GUINEA = {
 	id = 219
 	provinces = {
-		x08502B x08E1DB x0E47FB x12A380 x14D406 x168505 x17E20B x181E0E x18F33E x1CBF4C x2000D0 x227115 x29C6D0 x2BB939 x3070C0 x324AE0 x339CE8 x366D0F x37ABFC x380214 x3D0B76 x482B8D x5512AF x5CB7F3 x5D1375 x63F919 x6B6FCF x6C8F72 x7062D6 x7EFED6 x8140A0 x83B875 x8F0D6B x91AD7F x91E57E xA04050 xA4C378 xAAA0DE xAEF471 xAFBE88 xB7BFEE xCB2DDE xCC84F1 xD00D92 xD52D82 xE02F10 xEE9F2D xF4618A xF57E66 
+		x04FDE5 x08502B x08E1DB x0E47FB x12A380 x146701 x14D406 x168505 x17E20B x181E0E x18F33E x1CBF4C x2000D0 x227115 x29C6D0 x2BB939 x3070C0 x324AE0 x339CE8 x366D0F x37ABFC x380214 x3D0B76 x482B8D x5512AF x5A627D x5CB7F3 x5D1375 x63F919 x6B6FCF x6C8F72 x6D295A x7062D6 x7486F1 x7B55A9 x7EFED6 x8140A0 x83B875 x8F0D6B x91AD7F x91E57E x97F797 x9933B7 xA04050 xA4C378 xAAA0DE xAEF471 xAFBE88 xB7BFEE xCB2DDE xCC84F1 xD00D92 xD52D82 xE02F10 xEB469A xEE9F2D xF4618A xF57E66 
 	}
 	subsistence_building = building_subsistence_farm
 	city = x2000D0
 	port = x0E47FB
-	farm = x37ABFC
+	farm = x7486F1
 	mine = x366D0F
 	wood = x380214
 	arable_land = 80
@@ -4781,15 +4754,15 @@ STATE_GUINEA = {
 		x37ABFC x5512AF xD52D82 
 	}
 }
-STATE_GHANA = {
+STATE_GOLD_COAST = {
 	id = 220
 	provinces = {
 		x111F0C x1472E7 x14F486 x15B10C x364DF5 x4B8CBE x589734 x61C0D0 x6A6B14 x6B5943 x6C8064 x6C9759 x6FFF10 x76AA0B x801552 x8504E6 x925167 x946D4E x961786 xA624EE xAAFDFC xB99E19 xB9D107 xBC1F14 xC2E0C0 xD14671 xD845A1 xDBB653 xDE4D17 xE0C0D0 xE0CF6C xE63565 xE797D7 xE80D2D xE9F5E6 xEC0AF9 xF02A4B xFBC3B8 
 	}
 	subsistence_building = building_subsistence_farm
 	city = x6A6B14
-	port = x8504E6
-	farm = x6C8064
+	port = x802111
+	farm = x8504E6
 	mine = xEC0AF9
 	wood = xE797D7
 	arable_land = 80

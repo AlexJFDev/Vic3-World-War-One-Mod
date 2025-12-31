@@ -44135,278 +44135,6 @@
 			}
 		}
 	}
-	s:STATE_GAMBIA = {
-		region_state:WAF = {
-			create_building = {
-				building = building_millet_farm
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:WAF
-						levels = 3
-						region = STATE_GAMBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fertilization pm_fig_orchards pm_tools 
-				}
-			}
-			create_building = {
-				building = building_livestock_ranch
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:WAF
-						levels = 1
-						region = STATE_GAMBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
-				}
-			}
-			create_building = {
-				building = building_port
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:FRA
-						levels = 1
-						region = STATE_ILE_DE_FRANCE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_industrial_port 
-				}
-			}
-			create_building = {
-				building = building_railway
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:FRA
-						levels = 1
-						region = STATE_ILE_DE_FRANCE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_no_passenger_trains pm_steam_trains 
-				}
-			}
-			create_building = {
-				building = building_barrack
-				add_ownership = {
-					country = {
-						country = c:WAF
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_training_streamlining 
-				}
-			}
-			create_building = {
-				building = building_trade_center
-				add_ownership = {
-					country = {
-						country = c:WAF
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_trade_center_trade_quantity_normal 
-				}
-			}
-		}
-		region_state:GBR = {
-			create_building = {
-				building = building_millet_farm
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:GBR
-						levels = 1
-						region = STATE_GAMBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fertilization pm_fig_orchards pm_tools 
-				}
-			}
-			create_building = {
-				building = building_sugar_plantation
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:GBR
-						levels = 1
-						region = STATE_GAMBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					default_building_sugar_plantation pm_road_carts 
-				}
-			}
-			create_building = {
-				building = building_railway
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
-						levels = 1
-						region = STATE_HOME_COUNTIES
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_no_passenger_trains pm_steam_trains 
-				}
-			}
-			create_building = {
-				building = building_port
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
-						levels = 1
-						region = STATE_HOME_COUNTIES
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_industrial_port 
-				}
-			}
-		}
-		region_state:POR = {
-			create_building = {
-				building = building_millet_farm
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:POR
-						levels = 5
-						region = STATE_ESTREMADURA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fertilization pm_fig_orchards pm_tools 
-				}
-			}
-			create_building = {
-				building = building_livestock_ranch
-				add_ownership = {
-					building = {
-						type = building_livestock_ranch
-						country = c:POR
-						levels = 1
-						region = STATE_GAMBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
-				}
-			}
-			create_building = {
-				building = building_cotton_plantation
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:POR
-						levels = 10
-						region = STATE_ESTREMADURA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					default_building_cotton_plantation pm_road_carts 
-				}
-			}
-			create_building = {
-				building = building_sugar_plantation
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:POR
-						levels = 3
-						region = STATE_GAMBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					default_building_sugar_plantation pm_road_carts 
-				}
-			}
-			create_building = {
-				building = building_fishing_wharf
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:POR
-						levels = 1
-						region = STATE_GAMBIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fishing_trawlers pm_unrefrigerated 
-				}
-			}
-			create_building = {
-				building = building_port
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:POR
-						levels = 1
-						region = STATE_ESTREMADURA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_industrial_port 
-				}
-			}
-			create_building = {
-				building = building_railway
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:POR
-						levels = 2
-						region = STATE_ESTREMADURA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_no_passenger_trains pm_steam_trains 
-				}
-			}
-			create_building = {
-				building = building_barrack
-				add_ownership = {
-					country = {
-						country = c:POR
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_training_streamlining 
-				}
-			}
-		}
-	}
 	s:STATE_GUINEA = {
 		region_state:WAF = {
 			create_building = {
@@ -44568,6 +44296,126 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_normal 
+				}
+			}
+		}
+		region_state:POR = {
+			create_building = {
+				building = building_millet_farm
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:POR
+						levels = 5
+						region = STATE_ESTREMADURA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_fertilization pm_fig_orchards pm_tools 
+				}
+			}
+			create_building = {
+				building = building_livestock_ranch
+				add_ownership = {
+					building = {
+						type = building_livestock_ranch
+						country = c:POR
+						levels = 1
+						region = STATE_GUINEA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+				}
+			}
+			create_building = {
+				building = building_cotton_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:POR
+						levels = 10
+						region = STATE_ESTREMADURA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_cotton_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_sugar_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:POR
+						levels = 3
+						region = STATE_GUINEA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_sugar_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_fishing_wharf
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:POR
+						levels = 1
+						region = STATE_GUINEA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_fishing_trawlers pm_unrefrigerated 
+				}
+			}
+			create_building = {
+				building = building_port
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:POR
+						levels = 1
+						region = STATE_ESTREMADURA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_railway
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:POR
+						levels = 2
+						region = STATE_ESTREMADURA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_no_passenger_trains pm_steam_trains 
+				}
+			}
+			create_building = {
+				building = building_barrack
+				add_ownership = {
+					country = {
+						country = c:POR
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_training_streamlining 
 				}
 			}
 		}
@@ -45178,7 +45026,7 @@
 					building = {
 						type = building_manor_house
 						country = c:WAF
-						levels = 5
+						levels = 12
 						region = STATE_SENEGAL
 					}
 				}
@@ -45193,7 +45041,7 @@
 					building = {
 						type = building_manor_house
 						country = c:WAF
-						levels = 1
+						levels = 3
 						region = STATE_SENEGAL
 					}
 				}
@@ -45282,6 +45130,68 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_very_high 
+				}
+			}
+		}
+		region_state:GBR = {
+			create_building = {
+				building = building_millet_farm
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:GBR
+						levels = 1
+						region = STATE_SENEGAL
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_fertilization pm_fig_orchards pm_tools 
+				}
+			}
+			create_building = {
+				building = building_sugar_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:GBR
+						levels = 1
+						region = STATE_SENEGAL
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_sugar_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_railway
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 1
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_no_passenger_trains pm_steam_trains 
+				}
+			}
+			create_building = {
+				building = building_port
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 1
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_industrial_port 
 				}
 			}
 		}
@@ -52059,7 +51969,7 @@
 			}
 		}
 	}
-	s:STATE_GHANA = {
+	s:STATE_GOLD_COAST = {
 		region_state:GHA = {
 			create_building = {
 				building = building_port
@@ -52083,7 +51993,7 @@
 						type = building_manor_house
 						country = c:GHA
 						levels = 5
-						region = STATE_GHANA
+						region = STATE_GOLD_COAST
 					}
 				}
 				reserves = 1
@@ -52098,7 +52008,7 @@
 						type = building_manor_house
 						country = c:GHA
 						levels = 5
-						region = STATE_GHANA
+						region = STATE_GOLD_COAST
 					}
 				}
 				reserves = 1
@@ -52128,7 +52038,7 @@
 						type = building_manor_house
 						country = c:GHA
 						levels = 3
-						region = STATE_GHANA
+						region = STATE_GOLD_COAST
 					}
 				}
 				reserves = 1
