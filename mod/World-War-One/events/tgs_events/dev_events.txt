@@ -2524,6 +2524,44 @@ dev_events.66 = {
     }
 }
 
+dev_events.67 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        every_country = {
+            limit = {
+                has_law = law_type:law_census_voting
+                NOT = {
+                    OR = {
+                      c:GBR = THIS
+                      c:USA = THIS
+                      c:BRZ = THIS
+                    }
+                }
+            }
+            trigger_event = {
+              id = dev_events.69
+              days = 5
+            }
+        }
+    }
+}
+
 dev_events.68 = {
     type = country_event
 
@@ -2549,5 +2587,56 @@ dev_events.68 = {
             years = 60
             is_decaying = yes
         }
+    }
+}
+
+dev_events.69 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        add_modifier = {
+            name = electoral_confidence_fix
+            years = 20
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.70 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        remove_modifier = modifier_not_recognized_by_spain
+        remove_modifier = regency_years
     }
 }

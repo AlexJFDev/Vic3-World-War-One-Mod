@@ -195,6 +195,13 @@
 		}
 	}
 
+	c:SPA = {
+		trigger_event = { #Remove IT modifiers
+			id = dev_events.70
+			days = 5
+		}
+	}
+
 	c:SWE = {
 		trigger_event = { #Starting sol buff
 			id = dev_events.25
@@ -211,6 +218,10 @@
 	}
 
 	c:SWI = {
+		trigger_event = { #Remove set up elections modifier
+			id = dev_events.67
+			days = 5
+		}
 		trigger_event = { #Money buff for Swi
 			id = dev_events.68
 			days = 5
