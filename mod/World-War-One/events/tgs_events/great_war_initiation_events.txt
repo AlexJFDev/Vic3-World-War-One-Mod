@@ -55,15 +55,9 @@ great_war_initiation_events.1 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
     immediate = {
-        random_scope_character = {
-            limit = { has_variable = is_franz_ferdinand }
-            kill_character = yes
-        }
-
-        random_scope_character = {
-            limit = { has_variable = is_franz_josef }
-            set_character_immortal = no   
-        }
+        owner.heir ?= {
+			kill_character = yes
+		}
 
         create_character = {
             first_name = Charles

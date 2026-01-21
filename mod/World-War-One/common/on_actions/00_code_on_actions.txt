@@ -2491,23 +2491,6 @@ on_character_death = {
 			}
 			# non-ETH rulers in the ethiopian_emperor succession will continue to style themselves 'Emperor' even if another tag forms ETH. This is fine! The other tag is obviously an upstart, and we've created two competing claims for the title. This is what wwe in the biz call 'dynamic storytelling'.
 		}
-		if = { # if Franz Joseph I of Austria dies before The Mayerling Incident in 1889, making Rudolf Emperor
-			limit = {
-				owner = {
-					c:AUS ?= this
-				}
-				is_ruler = yes
-				has_template = aus_franz_josef_I_habsburg_template
-				AND = {
-					game_date > 1875.6.29
-					game_date < 1889.1.30
-				}
-			}
-			owner = {
-				create_character = {
-					template = aus_franz_ferdinand
-				}
-			}
 		}
 
 		if = {
