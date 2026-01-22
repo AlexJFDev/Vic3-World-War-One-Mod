@@ -22,10 +22,15 @@
 
     complete = {
 		c:GER = {
-			has_variable = axis_participant
-		}
-		c:GBR = {
-			owns_entire_state_region = STATE_BRANDENBURG
+            has_variable = axis_participant
+		    NOT = {
+			   owns_entire_state_region = STATE_BRANDENBURG
+		    }
+        } 
+		c:RUS = {
+			NOT = {
+			   owns_entire_state_region = STATE_BRANDENBURG
+		    }
 		}
 	}
 
@@ -68,8 +73,11 @@ je_allies_peace_deal_round_2 = {
 
     complete = {
 		c:GER = {
-			has_variable = axis_participant
-		}
+            has_variable = axis_participant
+		    NOT = {
+			   owns_entire_state_region = STATE_BRANDENBURG
+		    }
+        } 
 		c:RUS = {
 			owns_entire_state_region = STATE_BRANDENBURG
 		}
@@ -116,8 +124,19 @@ je_allies_peace_deal_round_3 = {
 		c:JAP = {
 			has_variable = axis_participant
 		}
-		c:USA = {
-			owns_entire_state_region = STATE_RYUKYU_ISLANDS
+		OR = {
+			c:CHI = {
+			  owns_entire_state_region = STATE_RYUKYU_ISLANDS
+		    }
+            c:USA = {
+			  owns_entire_state_region = STATE_RYUKYU_ISLANDS
+		    }
+			c:GBR = {
+			  owns_entire_state_region = STATE_RYUKYU_ISLANDS
+		    }
+            c:FRA = {
+			  owns_entire_state_region = STATE_RYUKYU_ISLANDS
+		    }
 		}
 	}
 
