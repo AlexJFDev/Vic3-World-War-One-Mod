@@ -9391,6 +9391,15 @@ REPLACE_OR_CREATE:ideology_utopian = {
 		law_no_workers_rights = neutral
 	}
 
+	lawgroup_labour_associations = {
+		law_combination_acts = strongly_disapprove
+		law_guild_system = disapprove
+		law_anti_strike_laws = neutral
+		law_corporatized_unions = neutral
+		law_right_to_associate = strongly_approve
+		law_factory_councils = neutral
+	}
+
 	lawgroup_distribution_of_power = {
 		law_universal_suffrage = strongly_approve
 		law_census_voting = approve
@@ -9432,7 +9441,7 @@ REPLACE_OR_CREATE:ideology_utopian = {
 	}
 
 	lawgroup_slavery = {
-		law_slavery_banned = neutral
+		law_slavery_banned = strongly_approve
 		law_legacy_slavery = disapprove
 		law_colonial_slavery = disapprove
 		law_debt_slavery = strongly_disapprove
