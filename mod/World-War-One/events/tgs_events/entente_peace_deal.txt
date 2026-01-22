@@ -131,6 +131,19 @@ entente_peace_deal.1 = { #Entente victory
 		      set_state_owner = c:AUS
             }
         }
+		s:STATE_EMILIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
 		c:AUS = {
 		   activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_universal_suffrage

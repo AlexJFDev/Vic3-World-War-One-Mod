@@ -386,6 +386,12 @@ dev_events.13 = {
         name = dev_events.13.a
         default_option = yes
         set_state_religion = rel:catholic
+        any_scope_character = {
+            limit = {
+                has_template = AUS_franz_jospeh
+            }
+            set_character_immortal = yes
+        }
     }
 }
 
@@ -2638,5 +2644,6 @@ dev_events.70 = {
         default_option = yes
         remove_modifier = modifier_not_recognized_by_spain
         remove_modifier = regency_years
+        remove_modifier = modifier_regency
     }
 }

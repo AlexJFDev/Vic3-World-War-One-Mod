@@ -59,6 +59,13 @@ great_war_initiation_events.1 = {
 			kill_character = yes
 		}
 
+        any_scope_character = {
+            limit = {
+                has_template = AUS_franz_jospeh
+            }
+            set_character_immortal = no
+        }
+
         create_character = {
             first_name = Charles
             last_name = von_Habsburg
