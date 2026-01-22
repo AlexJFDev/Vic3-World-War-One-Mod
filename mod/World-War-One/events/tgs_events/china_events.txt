@@ -409,7 +409,15 @@ china_events.4 = { #Yuan Shikai abdication
 
     trigger = {}
 
-    immediate = {}
+    immediate = {
+        random_diplomatic_play = {
+            limit = {
+			  initiator = { c:YUN ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = national_protection_war_diplo_play
+        }
+    }
 
     option = {
         name = china_events.4.a
