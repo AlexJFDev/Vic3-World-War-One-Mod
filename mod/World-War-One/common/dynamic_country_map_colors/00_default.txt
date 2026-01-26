@@ -587,11 +587,10 @@ REPLACE_OR_CREATE:brazil_republican = {
 	possible = {
 		exists = c:BRZ
 		THIS = c:BRZ
-		OR = {
-			has_law = law_type:law_parliamentary_republic
-			has_law = law_type:law_presidential_republic
-			has_law = law_type:law_council_republic
-		}
+		has_law = law_type:law_parliamentary_republic
+		has_law = law_type:law_presidential_republic
+		has_law = law_type:law_council_republic
+		is_country_type = unrecognized
 		NOT = {
 			coa_fascist_trigger = yes
 		}
