@@ -78,5 +78,13 @@
         set_relations = { country = c:GER value = -20 }
         set_relations = { country = c:USA value = -20 }
         set_relations = { country = c:CHI value = -80 }
+        set_relations = { country = c:SIA value = 120 }
+    }
+
+    c:SIA ?= {
+        set_relations = { country = c:GBR value = 80 }
+        set_relations = { country = c:FRA value = 80 }
+        set_relations = { country = c:JAP value = 120 }
+        set_relations = { country = c:CHI value = -30 }
     }
 }
