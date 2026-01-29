@@ -386,6 +386,9 @@ dev_events.13 = {
         name = dev_events.13.a
         default_option = yes
         set_state_religion = rel:catholic
+        owner.ruler ?= {
+			set_character_immortal = yes
+		}
         any_scope_character = {
             limit = {
                 has_template = AUS_franz_jospeh
