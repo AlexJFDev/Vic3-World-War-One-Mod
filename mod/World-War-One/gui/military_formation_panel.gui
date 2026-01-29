@@ -214,127 +214,148 @@ types military_formation_change_name
 					widget = {
 								size = { 0 8 }
 								}
+								
+					scrollarea = {
+						scrollbarpolicy_horizontal = always_off
+						scrollbar_vertical = {
+							using = vertical_scrollbar
+						}
+						block "scrollarea_maximumsize" {
+							maximumsize = { -1 300 }
+						}
 
-					dynamicgridbox = {
-						visible = "[MilitaryFormation.IsArmy]"
-						datamodel = "[MilitaryFormationChangeNamePopup.GetArmyFormationFlags]"
-						datamodel_wrap = 5
-						flipdirection = yes
-						parentanchor = hcenter
+						block "above_header" {}
 
-						item = {
-							widget = {
-								size = { 85 95 }
+						autoresizescrollarea = yes
+						
+						scrollwidget = {
+							flowcontainer = {
+								margin = { 8 0 }
+								parentanchor = hcenter
+								direction = vertical
+								
+								dynamicgridbox = {
+									visible = "[MilitaryFormation.IsArmy]"
+									datamodel = "[MilitaryFormationChangeNamePopup.GetArmyFormationFlags]"
+									datamodel_wrap = 5
+									flipdirection = yes
+									parentanchor = hcenter
 
-								set_level_bar_item = {
-									
-									blockoverride "button_texture" {
-										texture = "[MilitaryFormationFlag.GetIcon]"
-										color = "[MilitaryFormationChangeNamePopup.GetSelectedColor]"
-									}
+									item = {
+										widget = {
+											size = { 85 95 }
 
-									blockoverride "size" {
-										size = { 85 95 }
-									}
+											set_level_bar_item = {
+												
+												blockoverride "button_texture" {
+													texture = "[MilitaryFormationFlag.GetIcon]"
+													color = "[MilitaryFormationChangeNamePopup.GetSelectedColor]"
+												}
 
-									blockoverride "button_size" {
-										size = { 80 80 }
-									}
+												blockoverride "size" {
+													size = { 85 95 }
+												}
 
-									blockoverride "texture_size" {
-										size = { 70 70 }
-									}
+												blockoverride "button_size" {
+													size = { 80 80 }
+												}
 
-									blockoverride "selected_frame_size" {
-										size = { 80 80 }
-									}
+												blockoverride "texture_size" {
+													size = { 70 70 }
+												}
 
-									blockoverride "selected_texture_size" {
-										size = { 70 70 }
-									}
+												blockoverride "selected_frame_size" {
+													size = { 80 80 }
+												}
 
-									blockoverride "selected_arrow_size" {	
-										size = { 30 17 }
-									}
+												blockoverride "selected_texture_size" {
+													size = { 70 70 }
+												}
 
-									blockoverride "click" {
-										using = budget_coins_lvl_1_button_sound
-										block "button_1_click" {
-											onclick = "[MilitaryFormationChangeNamePopup.OnSelectFlag(MilitaryFormationFlag.AccessSelf)]"
+												blockoverride "selected_arrow_size" {	
+													size = { 30 17 }
+												}
+
+												blockoverride "click" {
+													using = budget_coins_lvl_1_button_sound
+													block "button_1_click" {
+														onclick = "[MilitaryFormationChangeNamePopup.OnSelectFlag(MilitaryFormationFlag.AccessSelf)]"
+													}
+												}
+
+												blockoverride "is_selected_visibility" {
+													visible = "[MilitaryFormationChangeNamePopup.IsFlagSelected(MilitaryFormationFlag.Self)]"
+												}
+
+												blockoverride "is_clickable_alpha" {
+													alpha = "[TransparentIfFalse(MilitaryFormationChangeNamePopup.IsFlagSelected(MilitaryFormationFlag.Self))]"
+												}
+											}
 										}
 									}
+								}
 
-									blockoverride "is_selected_visibility" {
-										visible = "[MilitaryFormationChangeNamePopup.IsFlagSelected(MilitaryFormationFlag.Self)]"
-									}
+								dynamicgridbox = {
+									visible = "[MilitaryFormation.IsFleet]"
+									datamodel = "[MilitaryFormationChangeNamePopup.GetFleetFormationFlags]"
+									datamodel_wrap = 5
+									flipdirection = yes
 
-									blockoverride "is_clickable_alpha" {
-										alpha = "[TransparentIfFalse(MilitaryFormationChangeNamePopup.IsFlagSelected(MilitaryFormationFlag.Self))]"
+									item = {
+										widget = {
+											size = { 85 95 }
+
+											set_level_bar_item = {
+												blockoverride "button_texture" {
+													texture = "[MilitaryFormationFlag.GetIcon]"
+													color = "[MilitaryFormationChangeNamePopup.GetSelectedColor]"
+												}
+
+												blockoverride "size" {
+													size = { 85 95 }
+												}
+
+												blockoverride "button_size" {
+													size = { 80 80 }
+												}
+
+												blockoverride "texture_size" {
+													size = { 70 70 }
+												}
+
+												blockoverride "selected_frame_size" {
+													size = { 80 80 }
+												}
+
+												blockoverride "selected_texture_size" {
+													size = { 70 70 }
+												}
+
+												blockoverride "selected_arrow_size" {	
+													size = { 30 17 }
+												}
+
+												blockoverride "click" {
+													using = budget_coins_lvl_1_button_sound
+													block "button_1_click" {
+														onclick = "[MilitaryFormationChangeNamePopup.OnSelectFlag(MilitaryFormationFlag.AccessSelf)]"
+													}
+												}
+
+												blockoverride "is_selected_visibility" {
+													visible = "[MilitaryFormationChangeNamePopup.IsFlagSelected(MilitaryFormationFlag.Self)]"
+												}
+
+												blockoverride "is_clickable_alpha" {
+													alpha = "[TransparentIfFalse(MilitaryFormationChangeNamePopup.IsFlagSelected(MilitaryFormationFlag.Self))]"
+												}
+											}
+										}
 									}
 								}
 							}
 						}
 					}
-
-					dynamicgridbox = {
-						visible = "[MilitaryFormation.IsFleet]"
-						datamodel = "[MilitaryFormationChangeNamePopup.GetFleetFormationFlags]"
-						datamodel_wrap = 5
-						flipdirection = yes
-
-						item = {
-							widget = {
-								size = { 85 95 }
-
-								set_level_bar_item = {
-									blockoverride "button_texture" {
-										texture = "[MilitaryFormationFlag.GetIcon]"
-										color = "[MilitaryFormationChangeNamePopup.GetSelectedColor]"
-									}
-
-									blockoverride "size" {
-										size = { 85 95 }
-									}
-
-									blockoverride "button_size" {
-										size = { 80 80 }
-									}
-
-									blockoverride "texture_size" {
-										size = { 70 70 }
-									}
-
-									blockoverride "selected_frame_size" {
-										size = { 80 80 }
-									}
-
-									blockoverride "selected_texture_size" {
-										size = { 70 70 }
-									}
-
-									blockoverride "selected_arrow_size" {	
-										size = { 30 17 }
-									}
-
-									blockoverride "click" {
-										using = budget_coins_lvl_1_button_sound
-										block "button_1_click" {
-											onclick = "[MilitaryFormationChangeNamePopup.OnSelectFlag(MilitaryFormationFlag.AccessSelf)]"
-										}
-									}
-
-									blockoverride "is_selected_visibility" {
-										visible = "[MilitaryFormationChangeNamePopup.IsFlagSelected(MilitaryFormationFlag.Self)]"
-									}
-
-									blockoverride "is_clickable_alpha" {
-										alpha = "[TransparentIfFalse(MilitaryFormationChangeNamePopup.IsFlagSelected(MilitaryFormationFlag.Self))]"
-									}
-								}
-							}
-						}
-					}
-
 
 				# "Choose Flag Colour" section
 				flowcontainer = {
@@ -349,127 +370,148 @@ types military_formation_change_name
 						text = "CHOOSE_FORMATION_FLAG_COLOUR"
 					}
 					divider_clean = {}
+					
+					scrollarea = {
+						scrollbarpolicy_horizontal = always_off
+						scrollbar_vertical = {
+							using = vertical_scrollbar
+						}
+						block "scrollarea_maximumsize" {
+							maximumsize = { -1 300 }
+						}
 
-					dynamicgridbox = {
-						visible = "[MilitaryFormation.IsArmy]"
-						datamodel = "[MilitaryFormationChangeNamePopup.GetArmyFormationColors]"
-						datamodel_wrap = 7
-						flipdirection = yes
-						parentanchor = hcenter
+						block "above_header" {}
 
-						item = {
-							widget = {
-								size = { 61 75 }
+						autoresizescrollarea = yes
+						
+						scrollwidget = {
+							flowcontainer = {
+								margin = { 8 0 }
+								parentanchor = hcenter
+								direction = vertical
 
-								set_level_bar_item = {
-									blockoverride "button_texture" {
-										texture = "gfx/interface/backgrounds/simple_frame_mask.dds"
-										color = "[MilitaryFormationColor.GetColor]"
-									}
+								dynamicgridbox = {
+									visible = "[MilitaryFormation.IsArmy]"
+									datamodel = "[MilitaryFormationChangeNamePopup.GetArmyFormationColors]"
+									datamodel_wrap = 7
+									flipdirection = yes
+									parentanchor = hcenter
 
-									blockoverride "size" {
-										size = { 60 75 }
-									}
+									item = {
+										widget = {
+											size = { 61 75 }
 
-									blockoverride "button_size" {
-										size = { 56 56 }
-									}
+											set_level_bar_item = {
+												blockoverride "button_texture" {
+													texture = "gfx/interface/backgrounds/simple_frame_mask.dds"
+													color = "[MilitaryFormationColor.GetColor]"
+												}
 
-									blockoverride "texture_size" {
-										size = { 50 50 }
-									}
+												blockoverride "size" {
+													size = { 60 75 }
+												}
 
-									blockoverride "selected_frame_size" {
-										size = { 56 56 }
-									}
+												blockoverride "button_size" {
+													size = { 56 56 }
+												}
 
-									blockoverride "selected_texture_size" {
-										size = { 50 50 }
-									}
+												blockoverride "texture_size" {
+													size = { 50 50 }
+												}
 
-									blockoverride "selected_arrow_size" {	
-										size = { 30 17 }
-									}
+												blockoverride "selected_frame_size" {
+													size = { 56 56 }
+												}
 
-									blockoverride "click" {
-										using = budget_coins_lvl_1_button_sound
-										block "button_1_click" {
-											onclick = "[MilitaryFormationChangeNamePopup.OnSelectColor(MilitaryFormationColor.AccessSelf)]"
+												blockoverride "selected_texture_size" {
+													size = { 50 50 }
+												}
+
+												blockoverride "selected_arrow_size" {	
+													size = { 30 17 }
+												}
+
+												blockoverride "click" {
+													using = budget_coins_lvl_1_button_sound
+													block "button_1_click" {
+														onclick = "[MilitaryFormationChangeNamePopup.OnSelectColor(MilitaryFormationColor.AccessSelf)]"
+													}
+												}
+
+												blockoverride "is_selected_visibility" {
+													visible = "[MilitaryFormationChangeNamePopup.IsColorSelected(MilitaryFormationColor.Self)]"
+												}
+
+												blockoverride "is_clickable_alpha" {
+													alpha = "[TransparentIfFalse(MilitaryFormationChangeNamePopup.IsColorSelected(MilitaryFormationColor.Self))]"
+												}
+											}
 										}
 									}
+								}
 
-									blockoverride "is_selected_visibility" {
-										visible = "[MilitaryFormationChangeNamePopup.IsColorSelected(MilitaryFormationColor.Self)]"
-									}
+								dynamicgridbox = {
+									visible = "[MilitaryFormation.IsFleet]"
+									datamodel = "[MilitaryFormationChangeNamePopup.GetFleetFormationColors]"
+									datamodel_wrap = 7
+									flipdirection = yes
+									parentanchor = hcenter
 
-									blockoverride "is_clickable_alpha" {
-										alpha = "[TransparentIfFalse(MilitaryFormationChangeNamePopup.IsColorSelected(MilitaryFormationColor.Self))]"
+									item = {
+										widget = {
+											size = { 61 75 }
+
+											set_level_bar_item = {
+												blockoverride "button_texture" {
+													texture = "gfx/interface/backgrounds/simple_frame_mask.dds"
+													color = "[MilitaryFormationColor.GetColor]"
+												}
+
+												blockoverride "size" {
+													size = { 60 75 }
+												}
+
+												blockoverride "button_size" {
+													size = { 56 56 }
+												}
+
+												blockoverride "texture_size" {
+													size = { 40 40 }
+												}
+
+												blockoverride "selected_frame_size" {
+													size = { 56 56 }
+												}
+
+												blockoverride "selected_texture_size" {
+													size = { 43 43 }
+												}
+
+												blockoverride "selected_arrow_size" {	
+													size = { 30 17 }
+												}
+
+												blockoverride "click" {
+													using = budget_coins_lvl_1_button_sound
+													block "button_1_click" {
+														onclick = "[MilitaryFormationChangeNamePopup.OnSelectColor(MilitaryFormationColor.AccessSelf)]"
+													}
+												}
+
+												blockoverride "is_selected_visibility" {
+													visible = "[MilitaryFormationChangeNamePopup.IsColorSelected(MilitaryFormationColor.Self)]"
+												}
+
+												blockoverride "is_clickable_alpha" {
+													alpha = "[TransparentIfFalse(MilitaryFormationChangeNamePopup.IsColorSelected(MilitaryFormationColor.Self))]"
+												}
+											}
+										}
 									}
 								}
 							}
 						}
 					}
-
-					dynamicgridbox = {
-						visible = "[MilitaryFormation.IsFleet]"
-						datamodel = "[MilitaryFormationChangeNamePopup.GetFleetFormationColors]"
-						datamodel_wrap = 7
-						flipdirection = yes
-						parentanchor = hcenter
-
-						item = {
-							widget = {
-								size = { 61 75 }
-
-								set_level_bar_item = {
-									blockoverride "button_texture" {
-										texture = "gfx/interface/backgrounds/simple_frame_mask.dds"
-										color = "[MilitaryFormationColor.GetColor]"
-									}
-
-									blockoverride "size" {
-										size = { 60 75 }
-									}
-
-									blockoverride "button_size" {
-										size = { 56 56 }
-									}
-
-									blockoverride "texture_size" {
-										size = { 40 40 }
-									}
-
-									blockoverride "selected_frame_size" {
-										size = { 56 56 }
-									}
-
-									blockoverride "selected_texture_size" {
-										size = { 43 43 }
-									}
-
-									blockoverride "selected_arrow_size" {	
-										size = { 30 17 }
-									}
-
-									blockoverride "click" {
-										using = budget_coins_lvl_1_button_sound
-										block "button_1_click" {
-											onclick = "[MilitaryFormationChangeNamePopup.OnSelectColor(MilitaryFormationColor.AccessSelf)]"
-										}
-									}
-
-									blockoverride "is_selected_visibility" {
-										visible = "[MilitaryFormationChangeNamePopup.IsColorSelected(MilitaryFormationColor.Self)]"
-									}
-
-									blockoverride "is_clickable_alpha" {
-										alpha = "[TransparentIfFalse(MilitaryFormationChangeNamePopup.IsColorSelected(MilitaryFormationColor.Self))]"
-									}
-								}
-							}
-						}
-					}
-
 					widget = {
 						size = { 420 10 }
 					}
@@ -1326,29 +1368,15 @@ types military_formation_panel_types
 		}
 
 		### DEBUG INFO
-		flowcontainer = {
+		textbox = {
+			parentanchor = hcenter
+			text = "FORMATION_PANEL_DEBUG_INFO"
+			maximumsize = { @panel_width -1 }
 			max_width = @panel_width_minus_10
-			direction = vertical
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
 			visible = "[InDebugMode]"
-
-			textbox = {
-				text = "[MilitaryFormation.GetCommonDebugInfo]"
-				maximumsize = { @panel_width -1 }
-				max_width = @panel_width_minus_10
-				autoresize = yes
-				multiline = yes
-				align = left|nobaseline
-			}
-
-			textbox = {
-				visible = "[Not(MilitaryFormation.GetCountry.IsPlayer)]"
-				text = "[MilitaryFormation.GetAIDebugInfo]"
-				maximumsize = { @panel_width -1 }
-				max_width = @panel_width_minus_10
-				autoresize = yes
-				multiline = yes
-				align = left|nobaseline
-			}
 		}
 	}
 
