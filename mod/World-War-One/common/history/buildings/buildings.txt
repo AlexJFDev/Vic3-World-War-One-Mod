@@ -89112,7 +89112,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 2
+						levels = 3
 						region = STATE_SHAOZHOU
 					}
 				}
@@ -89185,7 +89185,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SIA
-						levels = 8
+						levels = 15
 						region = STATE_BANGKOK
 					}
 				}
@@ -89200,7 +89200,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SIA
-						levels = 12
+						levels = 8
 						region = STATE_BANGKOK
 					}
 				}
@@ -89240,18 +89240,18 @@
 				}
 			}
 			create_building = {
-				building = building_motor_industry
+				building = building_power_plant
 				add_ownership = {
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 3
+						levels = 1
 						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
+					pm_coal-fired_plant 
 				}
 			}
 			create_building = {
@@ -89260,7 +89260,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 6
+						levels = 2
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -89275,7 +89275,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SIA
-						levels = 10
+						levels = 12
 						region = STATE_BANGKOK
 					}
 				}
@@ -89320,7 +89320,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 3
+						levels = 1
 						region = STATE_KANTO
 					}
 				}
@@ -89378,7 +89378,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 4
+						levels = 5
 						region = STATE_BANGKOK
 					}
 				}
@@ -89406,7 +89406,7 @@
 					company = {
 						type = company_b_grimm
 						country = c:SIA
-						levels = 32
+						levels = 65
 					}
 				}
 				reserves = 1
@@ -89435,13 +89435,28 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 6
+						levels = 15
 						region = STATE_BANGKOK
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
 					pm_no_equipment pm_no_hardwood pm_road_carts pm_saw_mills 
+				}
+			}
+			create_building = {
+				building = building_sugar_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:SIA
+						levels = 6
+						region = STATE_BANGKOK
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_sugar_plantation pm_road_carts 
 				}
 			}
 			create_building = {
@@ -89476,7 +89491,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SIA
-						levels = 8
+						levels = 40
 						region = STATE_BANGKOK
 					}
 				}
@@ -89585,7 +89600,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 8
+						levels = 12
 						region = STATE_CHIANG_MAI
 					}
 				}
@@ -89692,7 +89707,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 14
+						levels = 20
 						region = STATE_NAKHON_RATCHASIMA
 					}
 				}
@@ -89707,7 +89722,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 2
+						levels = 6
 						region = STATE_NAKHON_RATCHASIMA
 					}
 				}
@@ -89751,7 +89766,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 1
+						levels = 18
 						region = STATE_NAKHON_RATCHASIMA
 					}
 				}
@@ -89811,7 +89826,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 8
+						levels = 15
 						region = STATE_NAKHON_RATCHASIMA
 					}
 				}
@@ -89861,6 +89876,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_automation_disabled pm_lathe pm_precision_tools 
+				}
+			}
+			create_building = {
+				building = building_banana_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:SIA
+						levels = 12
+						region = STATE_NAKHON_RATCHASIMA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_banana_plantation pm_road_carts 
 				}
 			}
 			create_building = {

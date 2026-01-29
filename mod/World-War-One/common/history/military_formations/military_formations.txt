@@ -18085,6 +18085,51 @@
 				state_region = s:STATE_CHIANG_MAI
 				count = 1
 			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_BANGKOK
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_NAKHON_RATCHASIMA
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TENASSERIM
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_CHIANG_MAI
+				count = 2
+			}
+		}
+		create_military_formation = {
+			name = Kxng_Seuxpa
+			type = army
+			hq_region = sr:region_indochina
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_BANGKOK
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_NAKHON_RATCHASIMA
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TENASSERIM
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_CHIANG_MAI
+				count = 1
+			}
 		}
 		create_military_formation = {
 			name = Kong_Thap_Ruea_Thai
@@ -18099,6 +18144,11 @@
 				type = unit_type:combat_unit_type_torpedo_boat
 				state_region = s:STATE_BANGKOK
 				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_scout_cruiser
+				state_region = s:STATE_BANGKOK
+				count = 1
 			}
 		}
 	}
