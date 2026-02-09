@@ -1965,7 +1965,7 @@ dev_events.49 = {
     }
 }
 
-dev_events.50 = { 
+dev_events.50 = {
     type = country_event
 
     title = dev_events.8.t
@@ -1986,12 +1986,20 @@ dev_events.50 = {
         default_option = yes
         add_modifier = {
             name = starting_sol_nerf_1
-            years = 10
+            years = 20
             is_decaying = yes
         }
         trigger_event = {
             id = dev_events.26
             days = 30
+        }
+        trigger_event = {
+            id = dev_events.26
+            days = 60
+        }
+        trigger_event = {
+            id = dev_events.26
+            days = 90
         }
     }
 }
