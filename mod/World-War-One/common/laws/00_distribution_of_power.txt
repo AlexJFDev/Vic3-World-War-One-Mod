@@ -553,13 +553,6 @@ REPLACE_OR_CREATE:law_landed_voting = {
 	}
 
 	on_activate = {
-		if = {
-			limit = {
-				game_date > 1836.1.1
-				country_has_voting_franchise = yes
-			}
-			initialize_electoral_confidence = yes
-		}
 		random_law = {
 			limit = {
 				type = law_type:law_landed_voting
@@ -690,13 +683,6 @@ REPLACE_OR_CREATE:law_wealth_voting = {
 	}
 
 	on_activate = {
-		if = {
-			limit = {
-				game_date > 1836.1.1
-				country_has_voting_franchise = yes
-			}
-			initialize_electoral_confidence = yes
-		}
 		random_law = {
 			limit = {
 				type = law_type:law_wealth_voting
@@ -821,13 +807,6 @@ REPLACE_OR_CREATE:law_census_voting = {
 	}
 
 	on_activate = {
-		if = {
-			limit = {
-				game_date > 1836.1.1
-				country_has_voting_franchise = yes
-			}
-			initialize_electoral_confidence = yes
-		}
 		random_law = {
 			limit = {
 				type = law_type:law_census_voting
@@ -948,13 +927,6 @@ REPLACE_OR_CREATE:law_universal_suffrage = {
 	}
 
 	on_activate = {
-		if = {
-			limit = {
-				game_date > 1836.1.1
-				country_has_voting_franchise = yes
-			}
-			initialize_electoral_confidence = yes
-		}
 		random_law = {
 			limit = {
 				type = law_type:law_universal_suffrage
@@ -1227,13 +1199,6 @@ REPLACE_OR_CREATE:law_single_party_state = {
 				text = king_in_parliament_tt
 				add_journal_entry = { type = je_king_in_parliament }
 			}
-		}
-		if = {
-			limit = {
-				game_date > 1836.1.1
-				country_has_voting_franchise = yes
-			}
-			initialize_electoral_confidence = yes
 		}
 	}
 

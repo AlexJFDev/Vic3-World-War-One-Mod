@@ -54,47 +54,6 @@ on_game_started_after_lobby = {
 				}
 			}
 		}
-		# Electoral Confidence
-		every_country = {
-			limit = {
-				country_has_voting_franchise = yes
-			}
-			if = {
-				limit = {
-					OR = {
-						c:GBR ?= this
-						c:SWI ?= this
-						c:NOR ?= this
-						c:BEL ?= this
-					}
-				}
-				set_electoral_confidence = 0.95
-			}
-			else_if = {
-				limit = {
-					OR = {
-						c:FRA ?= this
-						c:USA ?= this
-					}
-				}
-				set_electoral_confidence = 0.80
-			}
-			else_if = {
-				limit = {
-					c:NET ?= this
-				}
-				set_electoral_confidence = 0.70
-			}
-			else_if = {
-				limit = {
-					c:BRZ ?= this
-				}
-				set_electoral_confidence = 0.5
-			}
-			else = {
-				initialize_electoral_confidence = yes
-			}
-		}
 		set_global_variable = { # Ensures that Abraham Lincoln is not a valid leader of the Chinese Literati in 1836
 			name = ruler_selector_pool_invalidation_global_var
 			days = 30
@@ -1712,17 +1671,6 @@ on_decade_pulse_country = {
 
 # Only fires for countries with Elections enabled
 on_monthly_pulse_country_elections = {
-	effect = {
-		if = {
-			limit = {
-				NOT = {
-					has_variable = electoral_confidence_initialized
-				}
-			}
-			initialize_electoral_confidence = yes
-		}
-	}
-
 	on_actions = {
 		elections_monthly_events
 	}
