@@ -1433,6 +1433,18 @@ dev_events.34 = {
            years = 10
            is_decaying = yes
         }
+        every_country = {
+			limit = {
+				country_rank >= rank_value:major_power
+                is_player = no
+                NOT = { c:JAP ?= this }
+                NOT = { c:RUS ?= this }
+			}
+			trigger_event = {
+                id = dev_events.71
+                days = 5
+            }
+		}
     }
 
     option = {
@@ -1446,6 +1458,18 @@ dev_events.34 = {
            years = 10
            is_decaying = yes
         }
+        every_country = {
+			limit = {
+				country_rank >= rank_value:major_power
+                is_player = no
+                NOT = { c:JAP ?= this }
+                NOT = { c:RUS ?= this }
+			}
+			trigger_event = {
+                id = dev_events.71
+                days = 5
+            }
+		}
     }
 }
 
@@ -2656,5 +2680,39 @@ dev_events.70 = {
         remove_modifier = modifier_not_recognized_by_spain
         remove_modifier = regency_years
         remove_modifier = modifier_regency
+    }
+}
+
+dev_events.71 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        set_relations = { country = c:MCH value = 80 } 
+        set_relations = { country = c:CHI value = 80 }
+        set_relations = { country = c:BEI value = 80 }
+        set_relations = { country = c:ZHI value = 80 }
+        set_relations = { country = c:SHN value = 80 }
+        set_relations = { country = c:SHA value = 80 }
+        set_relations = { country = c:JSU value = 80 }
+        set_relations = { country = c:ZHE value = 80 }
+        set_relations = { country = c:FRS value = 80 }
+        set_relations = { country = c:YUE value = 80 }
+        set_relations = { country = c:GNG value = 80 }
+        set_relations = { country = c:YUN value = 80 } 
     }
 }

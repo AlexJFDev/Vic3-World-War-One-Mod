@@ -487,15 +487,6 @@ russia_events.7 = { #Soviet uprising
               id = ussr_events.4
                years = 5
             }
-        set_relations = { country = c:FIN value = -80 }
-		set_relations = { country = c:GER value = -80 }
-		set_relations = { country = c:AUS value = -80 }
-		set_relations = { country = c:TUR value = -80 }
-		set_relations = { country = c:ITA value = -80 }
-		set_relations = { country = c:FRA value = -80 }
-		set_relations = { country = c:GBR value = -80 }
-		set_relations = { country = c:USA value = -80 }
-		set_relations = { country = c:JAP value = -80 }
 		remove_diplomatic_pact = {
 			country = c:FRA
 			type = alliance
@@ -732,17 +723,6 @@ russia_events.8 = { #The civil war begins
 			limit = { has_variable = lenin }
             set_character_as_ruler = yes
 		}
-        c:SIB ?= { 
-		  set_relations = { country = c:FIN value = 80 }
-		  set_relations = { country = c:GER value = 80 }
-		  set_relations = { country = c:AUS value = 80 }
-		  set_relations = { country = c:TUR value = 80 }
-		  set_relations = { country = c:ITA value = 80 }
-		  set_relations = { country = c:FRA value = 80 }
-		  set_relations = { country = c:GBR value = 80 }
-		  set_relations = { country = c:USA value = 80 }
-		  set_relations = { country = c:JAP value = 80 }
-        }
         every_country = {
 			limit = {
                 country_rank >= rank_value:great_power
