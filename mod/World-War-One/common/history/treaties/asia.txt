@@ -157,11 +157,6 @@
 				source_country = c:GBR
 				target_country = c:AFG
 			}
-			{
-				article = transit_rights
-				source_country = c:GBR
-				target_country = c:AFG
-			}
 		}
 	}
 
@@ -184,6 +179,25 @@
 			{
 				article = transit_rights
 				source_country = c:RUS
+				target_country = c:AFG
+			}
+		}
+	}
+
+	# Anglo-Russian Convention (1907) part 3
+	create_treaty = {
+		name = treaty_name_anglo_russian_afghanistan_agreement
+		first_country = c:BIC
+		second_country = c:AFG
+
+		is_draft = no
+		entered_into_force_on = 1907.8.31
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:BIC
 				target_country = c:AFG
 			}
 		}
