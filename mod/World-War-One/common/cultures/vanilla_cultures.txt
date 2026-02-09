@@ -513,11 +513,179 @@ REPLACE_OR_CREATE:polish= {
 	graphics = european
 }
 
+REPLACE_OR_CREATE:turkish= {
+	color= hsv{ 0.99 0.48 0.80 }
+	religion = sunni
+	heritage = heritage_anatolian
+	language = language_oghuz
+	traditions = { tradition_rumelian }
+	obsessions = {
+		coffee
+		tea
+	}
+	male_common_first_names = {
+		Abdulhamid
+		Abdulkerim
+		Abdullah
+		Abdulrahim
+		Ahmet
+		Akif
+		Ali
+		Arif
+		Bahaeddin
+		Bekir
+		Celaleddin
+		Cemal
+		Cevad
+		Cevdet
+		Daud
+		Edhem
+		Emin
+		Enver
+		Fahri
+		Ferid
+		Fevzi
+		Fuat
+		Hafiz
+		Halil
+		Halim
+		Hamza
+		Hasan
+		Hayrullah
+		Husrev
+		Ibrahim
+		Iskender
+		Ismet
+		Izzet
+		Kamil
+		Kazim
+		Kemal
+		Lutfi
+		Mahmut
+		Mehmet
+		Mithat
+		Muhtar
+		Murat
+		Musa
+		Mustafa
+		Namik
+		Nazim
+		Numan
+		Nurettin
+		Nuri
+		Omar
+		Osman
+		Pertev
+		Rauf
+		Receb
+		Refet
+		Reshad
+		Rifat
+		Riza
+		Sabaheddin
+		Said
+		Selim
+		Shevket
+		Shukru
+		Suleyman
+		Talat
+		Tevfik
+		Vefik
+		Vahideddin
+		Yunus
+		Yusuf
+		Ziya
+		Ziyauddin
+	}
+	female_common_first_names = {
+		Ayse
+		Emina
+		Fatma
+		Hatice
+		Kap-Ipha
+		Mihrengiz
+		Nurefsun
+		Sadika Samiye Saffet Sefika Seniye
+		Zeliha
+	}
+	noble_last_names = {
+		Ankuap
+		Arpazli
+		Balyan
+		Benderli
+		Cengic
+		Cihci
+		Karaosmanoglu
+		Koprulu
+		Maan
+		Marshan
+		Osmanoglu
+		Shakir
+		Talhosten
+		Vocibe
+	}
+	common_last_names = {
+		Akbas
+		Burhan
+		Cakin
+		Eczacibashi
+		Engineri
+		Ercman
+		Hasagasi
+		Koc
+		Kosalay
+		Manas
+		Mulos
+		Oezal
+		Sabanci
+		Taymur
+		Yalaz
+		#
+		Bey
+		Pasha
+	}
+	male_regal_first_names = {
+		Abdulaziz Abdulmejid Abdulhamid Ahmet
+		Bayezid
+		Celaleddin
+		Kemaleddin
+		Murad Mehmet
+		Nizameddin Nureddin
+		Osman
+		Reshad
+		Suleyman
+		Vahideddin
+	}
+	female_regal_first_names = {
+		Atiye
+		Cemile
+		DU_zdidil
+		Edadil Emine
+		Fatma
+		Mihrimah
+		Pertevniyal
+		S_ehsuvar Saliha
+	}
+	regal_last_names = {
+		Osmanoglu
+	}
+
+	ethnicities = {
+		1 = arab
+		2 = north_caucasian
+		1 = slavic
+	}
+	graphics = arabic
+}
+
 REPLACE_OR_CREATE:japanese= {
 	color= hsv{ 0 0 90 }
 	religion = shinto
 	theritage = heritage_japanese
 	language = language_japanese
+	obsessions = {
+		tea
+	}
 	male_common_first_names = {
 		Aritomo
 		Gentaro
@@ -683,6 +851,259 @@ REPLACE_OR_CREATE:japanese= {
 		Yamaya
 		Yashiro
 		Yui
+	}
+	ethnicities = {
+		1 = asian
+	}
+	graphics = east_asian
+}
+
+REPLACE_OR_CREATE:manchu= {
+	color= rgb{ 233 207 84 }
+	religion = confucian
+	heritage = heritage_manchu
+	language = language_jurchenic
+	name_format = last_first
+	obsessions = {
+		opium
+		tea
+	}
+	traditions = { tradition_sinosphere }
+	male_common_first_names = {
+		Changlin
+		Deng
+		Fu
+		Guan
+		Hesehn
+		Ma
+		Mingzhu
+		Nalan
+		Oboi
+		Songgotu
+		Sonin
+		Suksaha
+		Tong
+		Zhao
+	}
+	female_common_first_names = {
+		Abahai
+		Huixing
+		Linggui
+		Quejing
+		Wanrong
+		Wengjing
+		Xingzhen
+	}
+	noble_last_names = { # Qing princely peerages
+		An
+		Cheng
+		Chun
+		Fu
+		Gong
+		Guo
+		He
+		Heng
+		Hui
+		Jingjin
+		Keqin
+		LiLu
+		Ning
+		Qian
+		Rong
+		Rui
+		Shen
+		Shuncheng
+		Su
+		Wen
+		Xian
+		Xun
+		Yi
+		Ying
+		Yu
+		Zheng
+		Zhi
+		Zhon
+		Zhuang
+		Guan
+	}
+	common_last_names = {
+		Kang_an
+		Linge
+		Shangzhi
+		Tiemei
+		Xiangying
+		Xingde
+		Zhanshan
+	}
+	ethnicities = {
+		1 = asian
+	}
+	graphics = east_asian
+}
+
+REPLACE_OR_CREATE:han= {
+	color= rgb{ 190 80 48 }
+	religion = confucian
+	heritage = heritage_han
+	language = language_mandarin
+	traditions = { tradition_sinosphere }
+	name_format = last_first
+	obsessions = {
+		opium
+		tea
+	}
+	male_common_first_names = {
+		Chen
+		Cheng
+		Deng
+		Dong
+		Gao
+		Hsia
+		Hu
+		Huang
+		Kong
+		Kwong
+		Li
+		Liang
+		Liao
+		Liu
+		Luo
+		Ma
+		Mao
+		Pan
+		Tan
+		Wang
+		Xie
+		Yang
+		Yu
+		Zhang
+		Zhu
+	}
+	female_common_first_names = {
+		Akew
+		Jin
+		Jinhong
+		Junying
+		Qingtang
+		Sanniang
+		Shanziang
+		Shih
+		Taiqing
+		Xiefen
+		Xiugu
+		Xuanjiao
+		Yu
+		Yunmei
+	}
+	noble_last_names = {
+		Cui
+		Li
+		Nie
+		Zhang
+	}
+	common_last_names = {
+		Dong
+		Fang
+		Hu
+		Jiang
+		Jin
+		Lu
+		Ma
+		Peng
+		Qiu
+		Shen
+		Sun
+		Tian
+		Ting
+		Wei
+		Wu
+		Ye
+		Zhao
+	}
+	ethnicities = {
+		1 = asian
+	}
+	graphics = east_asian
+}
+
+REPLACE_OR_CREATE:yue= {
+	color= hsv{ 0.80 0.36 0.39 }
+	religion = confucian
+	heritage = heritage_han
+	language = language_yue
+	obsessions = {
+		opium
+		tea
+	}
+	traditions = { tradition_sinosphere }
+	name_format = last_first
+	male_common_first_names = {
+		Chen
+		Cheng
+		Deng
+		Dong
+		Gao
+		Hsia
+		Hu
+		Huang
+		Kong
+		Kwong
+		Li
+		Liang
+		Liao
+		Liu
+		Luo
+		Ma
+		Mao
+		Pan
+		Tan
+		Wang
+		Xie
+		Yang
+		Yu
+		Zhang
+		Zhu
+	}
+	female_common_first_names = {
+		Akew
+		Jin
+		Jinhong
+		Junying
+		Qingtang
+		Sanniang
+		Shanziang
+		Shih
+		Taiqing
+		Xiefen
+		Xiugu
+		Xuanjiao
+		Yu
+		Yunmei
+	}
+	noble_last_names = {
+		Cui
+		Li
+		Nie
+		Zhang
+	}
+	common_last_names = {
+		Dong
+		Fang
+		Hu
+		Jiang
+		Jin
+		Lu
+		Ma
+		Peng
+		Qiu
+		Shen
+		Sun
+		Tian
+		Ting
+		Wei
+		Wu
+		Ye
+		Zhao
 	}
 	ethnicities = {
 		1 = asian

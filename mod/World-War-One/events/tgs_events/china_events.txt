@@ -1786,3 +1786,27 @@ china_events.23 = { #Shanxi becomes Communist
 	    }
     }
 }
+
+china_events.24 = { #Opium crisis resovled
+    type = country_event
+
+    title = china_events.24.t
+    desc = china_events.24.d
+    flavor = china_events.24.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/hospital.dds"
+    }
+
+    option = {
+        name = china_events.24.a
+        every_primary_culture = {
+			remove_cultural_obsession = opium
+		}
+    }
+}

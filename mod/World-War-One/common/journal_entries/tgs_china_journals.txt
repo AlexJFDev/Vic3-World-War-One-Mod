@@ -116,3 +116,61 @@ je_reunify_china = {
 	weight = 1000
 	should_be_pinned_by_default = yes
 }
+
+je_opium_crisis = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/goods_icons/opium.dds"
+
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:yue
+		}
+	}
+
+	possible = {
+		OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:yue
+		}
+	}
+
+	complete = {
+		institution_investment_level = {
+			institution = institution_health_system
+			value >= 4
+		}
+		has_law = law_type:law_public_health_insurance
+	}
+	
+	on_complete = {
+		trigger_event = { id = china_events.24 popup = yes }
+	}
+
+	invalid = {
+        AND = {
+            cu:han = {
+				NOT = {
+                    has_cultural_obsession = opium
+				}
+			}
+			cu:manchu = {
+				NOT = {
+                    has_cultural_obsession = opium
+				}
+			}
+            cu:yue = {
+				NOT = {
+                    has_cultural_obsession = opium
+				}
+			}
+	    }
+	}
+		
+	weight = 1000
+	should_be_pinned_by_default = yes
+}
