@@ -37,7 +37,9 @@
 		}
 		OR = {
 			has_ideology = ideology:ideology_pacifist
+			has_ideology = ideology:ideology_utopian
 			has_ideology = ideology:ideology_humanitarian
+			has_ideology = ideology:ideology_humanitarian_royalist
 		}
 	}
 	character_support_weight = {
@@ -53,11 +55,31 @@
 		else_if = {
 			limit = {
 				OR = {
+					has_ideology = ideology:ideology_utopian
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
 					has_ideology = ideology:ideology_humanitarian
 				}
 			}
 			multiply = {
-				value = 2
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_humanitarian_royalist
+				}
+			}
+			multiply = {
+				value = 5
 			}
 		}
 	}
