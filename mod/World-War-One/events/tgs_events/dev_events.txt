@@ -2623,10 +2623,20 @@ dev_events.68 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        add_treasury = 300000000
+        trigger = { is_player = no }
         add_modifier = {
             name = the_worlds_bank_1
-            years = 60
+            years = 100
+        }
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = the_worlds_bank_1
+            years = 50
             is_decaying = yes
         }
     }
