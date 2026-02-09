@@ -57,6 +57,13 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			}
 			create_political_movement = { type = movement_socialist }
 		}
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { c:SER ?= this }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
     }
 
     option = {
@@ -379,6 +386,16 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         is_at_war = yes
     }
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:AUS ?= this }
+              target = { c:SER ?= this }
+		    }
+           save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = {
         name = russia_events.4.a
         default_option = yes
@@ -408,6 +425,14 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         name = russia_events.4.b
         scope:world_war_one_diplo_play = {
             add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
+        }
+        trigger_event = {
+            id = dev_events.72
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.72
+            days = 10
         }
     }
 }
@@ -777,7 +802,7 @@ russia_events.9 = { #Reforms success
 		}
         add_modifier = {
             name = revolution_stabilization_buff_2
-            years = 5
+            years = 20
             is_decaying = yes
         } 
     }

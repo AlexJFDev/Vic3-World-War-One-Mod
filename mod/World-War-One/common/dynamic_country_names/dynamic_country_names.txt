@@ -500,7 +500,11 @@ REPLACE_OR_CREATE:ITA = { # Italy
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= { 
-				global_country_ranking > 4
+				OR = {
+					global_country_ranking = 1
+					global_country_ranking = 2
+					global_country_ranking = 3
+				}
 				has_law = law_type:law_monarchy 
 			}
 		}
@@ -604,6 +608,25 @@ REPLACE_OR_CREATE:SPA = { # Spain
 					has_law_or_variant = law_type:law_parliamentary_republic
 					has_law_or_variant = law_type:law_presidential_republic
 				}
+			}
+		}
+	}
+	dynamic_country_name = { 
+		name = dyn_c_spanish_empire
+		adjective = SPA_ADJ
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				OR = {
+					global_country_ranking = 1
+					global_country_ranking = 2
+					global_country_ranking = 3
+				}
+				has_law = law_type:law_monarchy 
 			}
 		}
 	}

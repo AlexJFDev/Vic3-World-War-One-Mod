@@ -2383,7 +2383,7 @@ dev_events.63 = {
     }
 }
 
-dev_events.64 = { 
+dev_events.64 = {
     type = country_event
 
     title = dev_events.16.t
@@ -2403,10 +2403,10 @@ dev_events.64 = {
         name = dev_events.16.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 10000000
+        add_treasury = 100000000
         add_modifier = {
             name = minting_buff_5_modifier
-            years = 2
+            years = 20
             is_decaying = yes
         }
         add_modifier = {
@@ -2414,6 +2414,7 @@ dev_events.64 = {
             years = 20
             is_decaying = yes
         }
+        remove_modifier = declared_bankruptcy
     }
 
     option = {
@@ -2423,7 +2424,7 @@ dev_events.64 = {
         add_treasury = 10000000
         add_modifier = {
             name = minting_buff_5_modifier
-            years = 1
+            years = 5
             is_decaying = yes
         }
     }
@@ -2714,5 +2715,34 @@ dev_events.71 = {
         set_relations = { country = c:YUE value = 80 }
         set_relations = { country = c:GNG value = 80 }
         set_relations = { country = c:YUN value = 80 } 
+    }
+}
+
+dev_events.72 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 50000000
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 10
+            is_decaying = yes
+		}
     }
 }
