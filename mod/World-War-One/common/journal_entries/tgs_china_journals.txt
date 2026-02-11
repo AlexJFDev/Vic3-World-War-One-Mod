@@ -1,5 +1,5 @@
-﻿je_warlord_china = {
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+﻿je_fragile_republic = {
+	icon = "gfx/interface/icons/event_icons/beiyang_gov.dds"
 
 	group = je_group_historical_content
 
@@ -25,6 +25,7 @@
 
     complete = {
         OR = {
+			root.average_sol >= 10
 			has_law = law_type:law_census_voting
             has_law = law_type:law_universal_suffrage
             has_law = law_type:law_anarchy
@@ -33,12 +34,17 @@
             has_law = law_type:law_collectivized_agriculture
 			has_law = law_type:law_proportional_taxation
 			has_law = law_type:law_graduated_taxation 
-			root.average_sol >= 12
+			global_country_ranking = 1
+			global_country_ranking = 2
+			global_country_ranking = 3
+			global_country_ranking = 4
+			global_country_ranking = 5
+			global_country_ranking = 6
 		}
     }
 
     on_complete = {
-		trigger_event = { id = warlord_china_events.11 }
+		trigger_event = { id = china_events.25 }
 	}
 
     fail = {
@@ -47,6 +53,7 @@
 		has_global_variable = china_central_government_collapse
 		any_civil_war = {
 			civil_war_progress >= 0.75
+            is_civil_war_type = revolution
 		}
 	  }
     }

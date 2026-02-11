@@ -131,6 +131,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:AFG
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_wooden_buildings 
+				}
+			}
+			create_building = {
 				building = building_trade_center
 				add_ownership = {
 					building = {
@@ -23243,6 +23256,21 @@
 				}
 			}
 			create_building = {
+				building = building_opium_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:KMT
+						levels = 60
+						region = STATE_CHONGQING
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_opium_plantation pm_road_carts 
+				}
+			}
+			create_building = {
 				building = building_construction_sector
 				add_ownership = {
 					country = {
@@ -24616,7 +24644,7 @@
 				add_ownership = {
 					country = {
 						country = c:CHI
-						levels = 80
+						levels = 20
 					}
 				}
 				reserves = 1
@@ -26761,9 +26789,11 @@
 			create_building = {
 				building = building_opium_plantation
 				add_ownership = {
-					country = {
-						country = c:CHI
-						levels = 8
+					building = {
+						type = building_manor_house
+						country = c:SIH
+						levels = 80
+						region = STATE_SICHUAN
 					}
 				}
 				reserves = 1
@@ -27717,8 +27747,8 @@
 				building = building_opium_plantation
 				add_ownership = {
 					country = {
-						country = c:CHI
-						levels = 120
+						country = c:YUN
+						levels = 50
 					}
 				}
 				reserves = 1

@@ -1,6 +1,6 @@
 ﻿namespace = china_events
 
-china_events.1 = { #Je warlord china initiator
+china_events.1 = { #Je fragile republic initiator
     type = country_event
 
     title = china_events.1.t
@@ -13,7 +13,7 @@ china_events.1 = { #Je warlord china initiator
     duration = 1
 
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/second_revolution.dds"
     }
 
     trigger = {}
@@ -58,13 +58,13 @@ china_events.2 = { #Imperial restoration
     desc = china_events.2.d
     flavor = china_events.2.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/objectives/hegemon.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
 
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/beiyang_government.dds"
     }
 
     trigger = {}
@@ -330,7 +330,7 @@ china_events.2 = { #Imperial restoration
             }
         }
         ai_chance = {
-		base = 100
+		base = 1
 	    }
     } 
 
@@ -349,7 +349,7 @@ china_events.3 = { #The National Protection War
     desc = china_events.3.d
     flavor = china_events.3.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -379,14 +379,14 @@ china_events.3 = { #The National Protection War
 			}
 		}
         ai_chance = {
-		 base = 75
+		 base = 7
 	    }
     } 
 
     option = {
         name = china_events.3.b
         ai_chance = {
-		 base = 25
+		 base = 3
 	    }
     } 
 }
@@ -437,15 +437,12 @@ china_events.4 = { #Yuan Shikai abdication
 			add_ruling_interest_group = yes
 		}
         ai_chance = {
-		   base = 10
+		   base = 1
 	    }
     }
 
     option = {
         name = china_events.4.b
-        scope:yuan_shikai = {
-			kill_character = yes
-		}
         ai_chance = {
 		   base = 0
 	    }
@@ -459,7 +456,7 @@ china_events.5 = { #China collapse
     desc = china_events.5.d
     flavor = china_events.5.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
@@ -469,8 +466,6 @@ china_events.5 = { #China collapse
     }
 
     trigger = {}
-
-    immediate = { set_global_variable = china_shatters }
 
     option = {
         name = china_events.5.a
@@ -771,10 +766,6 @@ china_events.5 = { #China collapse
         }
         c:MCH = {
             trigger_event = {
-                id = china_events.14
-                years = 5
-            }
-            trigger_event = {
                 id = china_events.7
                 days = 5
             }
@@ -815,7 +806,7 @@ china_events.6 = { #Bei offers presidency to a clique
     desc = china_events.6.d
     flavor = china_events.6.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -835,12 +826,6 @@ china_events.6 = { #Bei offers presidency to a clique
 				type = puppet
 			}
 		}
-        c:AHU = {
-            trigger_event = {
-                id = china_events.21
-                years = 10
-            }
-        }
         c:AHU = {
            set_variable = choosen_clique
         }
@@ -882,12 +867,6 @@ china_events.6 = { #Bei offers presidency to a clique
 			}
 		}
         c:ZHI = {
-            trigger_event = {
-                id = china_events.21
-                years = 10
-            }
-        }
-        c:ZHI = {
            set_variable = choosen_clique
         }
         c:AHU = {
@@ -928,12 +907,6 @@ china_events.6 = { #Bei offers presidency to a clique
 			}
 		}
         c:HUB = {
-            trigger_event = {
-                id = china_events.21
-                years = 10
-            }
-        }
-        c:HUB = {
            set_variable = choosen_clique
         }
         c:HUB = {
@@ -961,7 +934,7 @@ china_events.6 = { #Bei offers presidency to a clique
 		}
 	    }  
         ai_chance = {
-		  base = 0
+		  base = 10
 	    } 
     }
 
@@ -1166,7 +1139,7 @@ china_events.9 = { #Kuomintang decides to capitulate or not
     desc = china_events.9.d
     flavor = china_events.9.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1176,6 +1149,16 @@ china_events.9 = { #Kuomintang decides to capitulate or not
     }
 
     trigger = {}
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:CHI ?= this }
+              target = { c:KMT ?= this }
+		    }
+           save_scope_as = kuomintang_war_diplo_play
+        }
+    }
 
     option = {
         name = china_events.9.a
@@ -1195,7 +1178,7 @@ china_events.9 = { #Kuomintang decides to capitulate or not
         c:CHI = {
             trigger_event = {
                 id = china_events.10
-                days = 10
+                days = 30
             }
         }
         change_tag = YUE
@@ -1206,12 +1189,6 @@ china_events.9 = { #Kuomintang decides to capitulate or not
 
     option = {
         name = china_events.9.b
-        c:CHI = {
-            trigger_event = {
-                id = china_events.10
-                days = 60
-            }
-        }
         ai_chance = {
 		base = 0
 	    }
@@ -1275,7 +1252,7 @@ china_events.11 = { #China reunification
 	flavor = china_events.11.f
 
 	event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/republic_of_china.dds"
     }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -1409,12 +1386,6 @@ china_events.11 = { #China reunification
                set_variable = {
                   name = chiang_kai_shek
                 }                
-            }
-        }
-        c:BEI = {
-            trigger_event = {
-                id = china_events.20
-                days = 30
             }
         }
         ai_chance = {
@@ -1562,13 +1533,13 @@ china_events.20 = { #Join the central government ?
     desc = china_events.20.d
     flavor = china_events.20.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
 
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/republic_of_china.dds"
     }
 
     trigger = {}
@@ -1583,7 +1554,7 @@ china_events.20 = { #Join the central government ?
 			}
         }
         ai_chance = {
-		base = 10
+		base = 1
 	    }
 	}
 
@@ -1611,7 +1582,11 @@ china_events.21 = { #The president can annex Beiyang
         texture = "gfx/event_pictures/warlord_china.dds"
     }
 
-    trigger = {}
+    trigger = {
+        c:BEI = {
+            is_player = no
+        } 
+    }
 
     option = {
         name = china_events.21.a
@@ -1648,7 +1623,7 @@ china_events.22 = { #Call to arms against Japan
     duration = 3
 
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/second_sino_japanese_war.dds"
     }
 
     trigger = {}
@@ -1670,7 +1645,7 @@ china_events.22 = { #Call to arms against Japan
 			add_target_backers = { root }
 		}
         ai_chance = {
-		base = 10
+		base = 1
 	    }
 	}
 
@@ -1680,6 +1655,16 @@ china_events.22 = { #Call to arms against Japan
 		base = 0
 	    }
     }
+
+    option = {
+        name = china_events.22.c
+        scope:sino_japan_war_diplo_play = {
+			add_initiator_backers = { root }
+		}
+        ai_chance = {
+		base = 0
+	    }
+	}
 }
 
 china_events.23 = { #Shanxi becomes Communist
@@ -1702,6 +1687,15 @@ china_events.23 = { #Shanxi becomes Communist
         NOT = {
             has_global_variable = communist_china_spawned
         }
+        any_country = {
+            limit = { 
+                country_rank = rank_value:great_power
+                OR = {
+                    has_law = law_type:law_council_republic
+                    has_law = law_type:law_anarchism
+                }
+            }
+        }
     }
 
     option = {
@@ -1720,6 +1714,11 @@ china_events.23 = { #Shanxi becomes Communist
         activate_law = law_type:law_womens_suffrage
         activate_law = law_type:law_state_atheism
         activate_law = law_type:law_compulsory_primary_school
+            add_modifier = {
+			  name = army_buff_modifier_3
+              years = 50
+              is_decaying = yes
+		    }
             add_modifier = {
 			  name = dictatorship_of_proletariat
               years = 30
@@ -1775,7 +1774,7 @@ china_events.23 = { #Shanxi becomes Communist
             }
         }
         ai_chance = {
-		base = 10
+		base = 1
 	    }
 	}
 
@@ -1809,4 +1808,79 @@ china_events.24 = { #Opium crisis resovled
 			remove_cultural_obsession = opium
 		}
     }
+}
+
+china_events.25 = { #Je fragile republic completion
+    type = country_event
+
+    title = china_events.25.t
+    desc = china_events.25.d
+    flavor = china_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/republic_of_china.dds"
+    }
+    
+    option = {
+		name = china_events.25.a
+		add_modifier = {
+			name = modifier_century_of_triumph_technology
+			years = 20
+            is_decaying = yes
+		}
+		add_loyalists = {
+			value = large_radicals
+		}
+        every_country = {
+			limit = {
+                is_subject = no
+                OR = {
+                   country_has_primary_culture = cu:han
+			       country_has_primary_culture = cu:manchu
+			       country_has_primary_culture = cu:yue
+                }
+			}
+            trigger_event = {
+                id = china_events.20
+                days = 30
+            }
+        }
+        ai_chance = {
+		 base = 1
+	    }
+	}
+
+	option = {
+		name = china_events.25.b
+		add_modifier = {
+			name = modifier_century_of_triumph_politics
+			years = 20
+            is_decaying = yes
+		}
+		add_loyalists = {
+			value = large_radicals
+		}
+        every_country = {
+			limit = {
+                is_subject = no
+                OR = {
+                   country_has_primary_culture = cu:han
+			       country_has_primary_culture = cu:manchu
+			       country_has_primary_culture = cu:yue
+                }
+			}
+            trigger_event = {
+                id = china_events.20
+                days = 30
+            }
+        }
+        ai_chance = {
+		 base = 0
+	    }
+	}
 }
