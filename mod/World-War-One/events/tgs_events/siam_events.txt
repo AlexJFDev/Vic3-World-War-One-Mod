@@ -1,0 +1,47 @@
+﻿namespace = siam_events
+
+siam_events.5 = { #Flag selection
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/siam_monarchy.dds"
+    }
+
+    title = siam_events.5.t
+    desc = siam_events.5.d
+    flavor = siam_events.5.f
+
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {
+        has_law = law_type:law_monarchy
+    }
+
+    option = {
+        name = siam_events.5.a
+        default_option = yes
+        set_variable = siam_monarchy_flag_2
+        add_modifier = {
+			name = siam_changed_flag
+            years = 5
+            is_decaying = yes
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = siam_events.5.b
+        add_modifier = {
+			name = siam_kept_old_flag
+            years = 5
+            is_decaying = yes
+		}
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}

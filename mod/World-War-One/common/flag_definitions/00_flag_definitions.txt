@@ -8027,9 +8027,11 @@ REPLACE_OR_CREATE:SIA = { # Siam
 		allow_overlord_canton = yes				
 		priority = 20
 		trigger = { 
-			game_date < 1917.1.1
 			scope:actor ?= {
 				has_law = law_type:law_monarchy
+				NOT = {
+					has_variable = siam_monarchy_flag_2
+				}
 			}
 		}
 	}	
@@ -8040,9 +8042,9 @@ REPLACE_OR_CREATE:SIA = { # Siam
 		allow_overlord_canton = yes				
 		priority = 20
 		trigger = { 
-			game_date > 1917.1.1
 			scope:actor ?= {
 				has_law = law_type:law_monarchy
+				has_variable = siam_monarchy_flag_2
 			}
 		}
 	}	
