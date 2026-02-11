@@ -1947,9 +1947,9 @@ REPLACE_OR_CREATE:CHI = { # China
 		coa = CHI_han_empire
 		coa_with_overlord_canton = CHI_han_empire
 		priority = 5
-		trigger = { 
+		trigger = {
 			scope:actor ?= {
-				NOT = { country_has_primary_culture = cu:manchu }
+				country_has_primary_culture = cu:han
 				has_law = law_type:law_monarchy
 			}
 		}
@@ -1962,8 +1962,9 @@ REPLACE_OR_CREATE:CHI = { # China
 		priority = 20
 		trigger = { 
 			scope:actor ?= {
-				country_has_primary_culture = cu:manchu
 				has_law = law_type:law_monarchy
+				country_has_primary_culture = cu:manchu
+				NOT = { country_has_primary_culture = cu:han }
 			}
 		}
 	}

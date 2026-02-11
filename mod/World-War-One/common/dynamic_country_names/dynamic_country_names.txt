@@ -320,6 +320,7 @@ REPLACE_OR_CREATE:CHI = { # China
 			coa_def_monarchy_flag_trigger = yes
 			scope:actor ?= {
 				country_has_primary_culture = cu:manchu
+				NOT = { country_has_primary_culture = cu:han }
 			}
 		}
 	}
@@ -332,7 +333,7 @@ REPLACE_OR_CREATE:CHI = { # China
 		
 		trigger = {
 			scope:actor ?= {
-				NOT = { country_has_primary_culture = cu:manchu }
+				country_has_primary_culture = cu:han
 				has_law = law_type:law_monarchy
 			}
 		}
