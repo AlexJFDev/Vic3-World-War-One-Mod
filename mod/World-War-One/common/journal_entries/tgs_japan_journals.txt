@@ -1,5 +1,5 @@
 ﻿je_japan_expansion = {
-    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    icon = "gfx/interface/icons/event_icons/rising_sun.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -8,20 +8,36 @@
     }
     
     possible = {
-        has_variable = jingoist_emperor
+        ruler = {
+            OR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_reactionary
+                has_ideology = ideology:ideology_jingoist_leader
+            }
+        }
     }
 
     immediate = {}
 
     complete = {
         exists = c:CHI
+        NOR = {
+            has_treaty_alliance_with = c:CHI
+            has_treaty_defensive_pact_with = c:CHI
+        }
         army_size >= 200
         game_date > 1937.6.1
-        has_law = law_type:law_military_oversight
         is_at_war = no
         average_sol > average_expected_sol
         any_political_movement = {
             is_insurrectionary = no
+        }
+        ruler = {
+            OR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_reactionary
+                has_ideology = ideology:ideology_jingoist_leader
+            }
         }
     }
 
@@ -36,7 +52,7 @@
 }
 
 je_dragon_and_eagle = {
-    icon = "gfx/interface/icons/event_icons/japan_coa.dds" 
+    icon = "gfx/interface/icons/event_icons/rising_sun.dds" 
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -47,12 +63,10 @@ je_dragon_and_eagle = {
     possible = {
         has_global_variable = japan_invades_china
         has_global_variable = world_war_two_started
-        ruler = {
-            OR = {
-				has_ideology = ideology:ideology_fascist
-				has_ideology = ideology:ideology_reactionary
-                has_ideology = ideology:ideology_jingoist_leader
-            }
+        exists = c:USA
+        NOR = {
+            has_treaty_alliance_with = c:USA
+            has_treaty_defensive_pact_with = c:USA
         }
         c:USA = {
             has_diplomatic_pact = {
@@ -60,15 +74,21 @@ je_dragon_and_eagle = {
 				type = embargo
 			}
         }
+        ruler = {
+            OR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_reactionary
+                has_ideology = ideology:ideology_jingoist_leader
+            }
+        }
     }
 
     immediate = {}
 
     complete = {
         army_size >= 200
+        navy_size >= 200
         game_date > 1941.12.1
-        has_law = law_type:law_military_oversight
-        is_at_war = no
         average_sol > average_expected_sol
         any_political_movement = {
             is_insurrectionary = no
@@ -78,6 +98,13 @@ je_dragon_and_eagle = {
 				who = c:JAP
 				type = embargo
 			}
+        }
+        ruler = {
+            OR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_reactionary
+                has_ideology = ideology:ideology_jingoist_leader
+            }
         }
     }
 

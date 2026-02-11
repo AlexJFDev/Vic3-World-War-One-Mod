@@ -98,7 +98,7 @@ je_allies_peace_deal_round_2 = {
     should_be_pinned_by_default = yes
 }
 
-je_allies_peace_deal_round_3 = { 
+je_allies_peace_deal_round_3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -106,37 +106,20 @@ je_allies_peace_deal_round_3 = {
     
 	is_shown_when_inactive = {
 	  has_global_variable = world_war_two_started
-      is_diplomatic_play_enemy_of = c:JAP
 	  exists = c:USA
       THIS = c:USA
 	}
 
-    possible = { 
+    possible = {
 	  has_global_variable = world_war_two_started
 	  is_diplomatic_play_enemy_of = c:JAP
-	  exists = c:USA
-      THIS = c:USA
 	}
 
     immediate = {}
 
     complete = {
-		c:JAP = {
-			has_variable = axis_participant
-		}
-		OR = {
-			c:CHI = {
-			  owns_entire_state_region = STATE_RYUKYU_ISLANDS
-		    }
-            c:USA = {
-			  owns_entire_state_region = STATE_RYUKYU_ISLANDS
-		    }
-			c:GBR = {
-			  owns_entire_state_region = STATE_RYUKYU_ISLANDS
-		    }
-            c:FRA = {
-			  owns_entire_state_region = STATE_RYUKYU_ISLANDS
-		    }
+        c:USA = {
+			owns_entire_state_region = STATE_KANTO
 		}
 	}
 

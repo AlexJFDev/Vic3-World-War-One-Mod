@@ -235,7 +235,7 @@ japan_events.17 = {#The Showa era
 		} 
         set_variable = jingoist_emperor
         ai_chance = {
-		  base = 10
+		  base = 1
 	    }
     }
 
@@ -389,19 +389,25 @@ japan_events.18 = {#Invasion of Manchuria
     desc = japan_events.18.d
     flavor = japan_events.18.f
     
-    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    icon = "gfx/interface/icons/event_icons/rising_sun.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/japan_army_2.dds"
     }
 
     immediate = {}
 
     trigger = {
         exists = c:MCH
+        c:MCH = {
+            NOR = { 
+                is_subject_of = c:JAP
+                is_subject_of = c:RUS
+            }
+        }
     }
 
     option = {
@@ -417,7 +423,7 @@ japan_events.18 = {#Invasion of Manchuria
             escalation = 85
 		}
         ai_chance = {
-		  base = 10
+		  base = 1
 	    }
     }
 
@@ -436,13 +442,13 @@ japan_events.19 = {#Invasion of China inititation
     desc = japan_events.19.d
     flavor = japan_events.19.f
     
-    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    icon = "gfx/interface/icons/event_icons/rising_sun.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/japan_army_2.dds"
     }
 
     immediate = {}
@@ -478,13 +484,13 @@ japan_events.20 = {#Invasion of China response
     desc = japan_events.20.d
     flavor = japan_events.20.f
     
-    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/second_sino_japanese_war.dds"
     }
 
     immediate = {
@@ -562,13 +568,13 @@ japan_events.21 = {#USA reacts to sino-japan war
     desc = japan_events.21.d
     flavor = japan_events.21.f
     
-    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/japan_army_2.dds"
     }
 
     immediate = {
@@ -602,8 +608,14 @@ japan_events.21 = {#USA reacts to sino-japan war
 			type = rivalry
 		}	
 		}
+        c:JAP ?= { 
+           set_relations = { country = c:USA value = -100 }
+        }
+        c:USA ?= { 
+           set_relations = { country = c:JAP value = -100 }
+        }
         ai_chance = {
-		  base = 10
+		  base = 1
 	    }
     }
 
@@ -616,7 +628,7 @@ japan_events.21 = {#USA reacts to sino-japan war
             }
 		}
 		scope:sino_japan_war_diplo_play = {
-			add_target_backers = { root }
+			add_target_backers = { c:USA }
 		}
 		c:USA = {
 		create_diplomatic_pact = {
@@ -658,13 +670,13 @@ japan_events.22 = {#Japan attacks USA and western nations
     desc = japan_events.22.d
     flavor = japan_events.22.f
     
-    icon = "gfx/interface/icons/event_icons/japan_coa.dds"
+    icon = "gfx/interface/icons/event_icons/rising_sun.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/warlord_china.dds"
+        texture = "gfx/event_pictures/japan_army_2.dds"
     }
 
     immediate = {
@@ -697,6 +709,26 @@ japan_events.22 = {#Japan attacks USA and western nations
                 holder = c:JAP
                 type = take_treaty_port
                 target_state = s:STATE_CALIFORNIA.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = take_treaty_port
+                target_state = s:STATE_OREGON.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = take_treaty_port
+                target_state = s:STATE_WASHINGTON.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = regime_change
+                target_country = c:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_KANTO.region_state:JAP
             }
             add_war_goal = {
                 holder = c:USA

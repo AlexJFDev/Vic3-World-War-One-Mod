@@ -322,7 +322,7 @@ allies_peace_deal.3 = {
     desc = allies_peace_deal.3.d
     flavor = allies_peace_deal.3.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
@@ -330,13 +330,18 @@ allies_peace_deal.3 = {
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/______.dds"
+        texture = "gfx/event_pictures/japan_surrender.dds"
     }
 
     trigger = {}
 
     option = {
         name = allies_peace_deal.3.a
+		s:STATE_KANTO = {
+            random_scope_state = {
+		      set_state_owner = c:JAP
+            }
+        }
         c:JAP = {	
             every_state = {
 			if = {
@@ -396,6 +401,12 @@ allies_peace_deal.3 = {
 				remove_building = building_military_shipyard
 			}	
 		    }
+            activate_law = law_type:law_universal_suffrage
+            activate_law = law_type:law_right_of_assembly
+            activate_law = law_type:law_no_agencies
+			activate_law = law_type:law_free_trade
+			activate_law = law_type:law_subordinate_general_staff
+			activate_law = law_type:law_true_neutrality
         }
     }
 }
