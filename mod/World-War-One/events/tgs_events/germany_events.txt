@@ -157,7 +157,7 @@ germany_events.3 = { #Zimmermann telegram
     desc = germany_events.3.d
     flavor = germany_events.3.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -186,7 +186,7 @@ germany_events.3 = { #Zimmermann telegram
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -331,7 +331,7 @@ germany_events.5 = { #Socialists reconcilates
     desc = germany_events.5.d
     flavor = germany_events.5.f
     
-    icon = "gfx/interface/icons/event_icons/event_election.dds"
+    icon = "gfx/interface/icons/event_icons/red_star.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
@@ -365,7 +365,7 @@ germany_events.6 = { #Austria-Hungary capitulates
     duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/protest.dds"
+        texture = "gfx/event_pictures/german_revolution.dds"
     }
 
     trigger = {}
@@ -392,7 +392,7 @@ germany_events.6 = { #Austria-Hungary capitulates
         name = germany_events.6.a
         default_option = yes
         ai_chance = {
-            base = 100
+            base = 10
         }
         set_variable = small_austria
         scope:world_war_one_diplo_play = {
@@ -472,7 +472,7 @@ germany_events.9 = { #Ottoman Empire capitulates
     duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/protest.dds"
+        texture = "gfx/event_pictures/german_revolution.dds"
     }
 
     trigger = {}
@@ -499,7 +499,7 @@ germany_events.9 = { #Ottoman Empire capitulates
         name = germany_events.9.a
         default_option = yes
          ai_chance = {
-            base = 100
+            base = 10
         }
         scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:TUR value = -200 }
@@ -521,7 +521,7 @@ germany_events.22 = { #Negotiation with Communists
     desc = germany_events.22.d
     flavor = germany_events.22.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/red_star.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -553,7 +553,7 @@ germany_events.22 = { #Negotiation with Communists
             days = 5
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -619,7 +619,7 @@ germany_events.24 = { #Rhineland Renegotiation
     desc = germany_events.24.d
     flavor = germany_events.24.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -627,7 +627,7 @@ germany_events.24 = { #Rhineland Renegotiation
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/political_agreement.dds"
+        texture = "gfx/event_pictures/rhineland.dds"
     }
 
     trigger = {}
@@ -667,7 +667,7 @@ germany_events.24 = { #Rhineland Renegotiation
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -686,7 +686,7 @@ germany_events.25 = { #Nazi threat je initiation
     desc = germany_events.25.d
     flavor = germany_events.25.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
@@ -701,6 +701,10 @@ germany_events.25 = { #Nazi threat je initiation
         name = germany_events.25.a
         trigger = { is_player = no }
         add_technology_researched = political_agitation
+        add_modifier = {
+			name = starting_sol_buff
+            years = 7
+		}
     }
 
     option = {
@@ -716,7 +720,7 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
     desc = germany_events.26.d
     flavor = germany_events.26.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -898,7 +902,7 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -923,7 +927,7 @@ germany_events.27 = { #Invite fascists to government
     desc = germany_events.27.d
     flavor = germany_events.27.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -958,7 +962,7 @@ germany_events.27 = { #Invite fascists to government
         set_global_variable = hitler_rise_to_power_global
         set_variable = hitler_rise_to_power_local
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -982,7 +986,7 @@ germany_events.28 = { #Nazi takeover
     desc = germany_events.28.d
     flavor = germany_events.28.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1110,7 +1114,7 @@ germany_events.29 = { #Policy choice
     desc = germany_events.29.d
     flavor = germany_events.29.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1133,9 +1137,7 @@ germany_events.29 = { #Policy choice
 					is_in_geographic_region = geographic_region_europe
                 }
                 country_rank >= rank_value:minor_power
-                ruler = {
-				    has_ideology = ideology:ideology_fascist
-                }
+                ruler = { has_ideology = ideology:ideology_fascist }
                 NOT = {
                     c:GER ?= this
                 }
@@ -1146,7 +1148,7 @@ germany_events.29 = { #Policy choice
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1160,9 +1162,7 @@ germany_events.29 = { #Policy choice
 					is_in_geographic_region = geographic_region_europe
                 }
                 country_rank >= rank_value:minor_power
-                ruler = {
-				    has_ideology = ideology:ideology_fascist
-                }
+                ruler = { has_ideology = ideology:ideology_fascist }
                 NOT = {
                     c:GER ?= this
                 }
@@ -1185,7 +1185,7 @@ germany_events.30 = { #Germany proposes an alliance
     desc = germany_events.30.d
     flavor = germany_events.30.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1193,7 +1193,7 @@ germany_events.30 = { #Germany proposes an alliance
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
+        texture = "gfx/event_pictures/ger_sov_pact.dds"
     }
 
     trigger = {}
@@ -1210,7 +1210,7 @@ germany_events.30 = { #Germany proposes an alliance
 		    }
 	    }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1229,7 +1229,7 @@ germany_events.31 = { #Anschluss
     desc = germany_events.31.d
     flavor = germany_events.31.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1237,7 +1237,7 @@ germany_events.31 = { #Anschluss
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
+        texture = "gfx/event_pictures/sudet_crisis.dds"
     }
 
     trigger = {}
@@ -1253,7 +1253,7 @@ germany_events.31 = { #Anschluss
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1272,7 +1272,7 @@ germany_events.32 = { #Sudet Crisis initiation
     desc = germany_events.32.d
     flavor = germany_events.32.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1287,13 +1287,13 @@ germany_events.32 = { #Sudet Crisis initiation
 
     option = {
         name = germany_events.32.a
+        default_option = yes
         trigger = {
             exists = c:CZH
             CZH = {
                 is_subject = no
             }
         }
-        default_option = yes
         c:FRA = {
           trigger_event = {
               id = germany_events.33
@@ -1301,7 +1301,7 @@ germany_events.32 = { #Sudet Crisis initiation
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1320,7 +1320,7 @@ germany_events.33 = { #Sudet Crisis UK response
     desc = germany_events.33.d
     flavor = germany_events.33.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1344,7 +1344,7 @@ germany_events.33 = { #Sudet Crisis UK response
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1370,7 +1370,7 @@ germany_events.34 = { #Sudet Crisis France response
     desc = germany_events.34.d
     flavor = germany_events.34.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1396,7 +1396,7 @@ germany_events.34 = { #Sudet Crisis France response
             base = 0
             modifier = {
 				trigger = { has_global_variable = uk_dont_support_czh }
-				add = 10
+				add = 1
 			}
         }
     }
@@ -1413,7 +1413,7 @@ germany_events.34 = { #Sudet Crisis France response
             base = 0
             modifier = {
 				trigger = { has_global_variable = uk_supports_czh }
-				add = 10
+				add = 1
 			}
         }
     }
@@ -1426,7 +1426,7 @@ germany_events.35 = { #Sudet Crisis CZH response
     desc = germany_events.35.d
     flavor = germany_events.35.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1455,7 +1455,7 @@ germany_events.35 = { #Sudet Crisis CZH response
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1485,7 +1485,7 @@ germany_events.36 = { #Puppet CZH
     desc = germany_events.36.d
     flavor = germany_events.36.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1508,7 +1508,7 @@ germany_events.36 = { #Puppet CZH
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1527,7 +1527,7 @@ germany_events.37 = { #Puppet CZH
     desc = germany_events.37.d
     flavor = germany_events.37.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1550,7 +1550,7 @@ germany_events.37 = { #Puppet CZH
 		}	
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1580,7 +1580,7 @@ germany_events.38 = { #Molotov-Ribentrop pact
     desc = germany_events.38.d
     flavor = germany_events.38.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1588,7 +1588,7 @@ germany_events.38 = { #Molotov-Ribentrop pact
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
+        texture = "gfx/event_pictures/ger_sov_pact.dds"
     }
 
     trigger = {}
@@ -1603,7 +1603,7 @@ germany_events.38 = { #Molotov-Ribentrop pact
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1622,7 +1622,7 @@ germany_events.39 = { #Molotov-Ribentrop pact
     desc = germany_events.39.d
     flavor = germany_events.39.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1630,7 +1630,7 @@ germany_events.39 = { #Molotov-Ribentrop pact
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
+        texture = "gfx/event_pictures/ger_sov_pact.dds"
     }
 
     trigger = {}
@@ -1679,7 +1679,7 @@ germany_events.39 = { #Molotov-Ribentrop pact
           add_claim = c:RUS
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1698,7 +1698,7 @@ germany_events.40 = { #Rhineland restitution
     desc = germany_events.40.d
     flavor = germany_events.40.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1706,7 +1706,7 @@ germany_events.40 = { #Rhineland restitution
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/political_agreement.dds"
+        texture = "gfx/event_pictures/rhineland.dds"
     }
 
     trigger = {}
@@ -1716,7 +1716,7 @@ germany_events.40 = { #Rhineland restitution
         default_option = yes
         je:je_nazi_threat = { add_progress = { value = -30 name = nazi_ascension_progress_bar } }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 }
@@ -1728,7 +1728,7 @@ germany_events.41 = { #Sudet crisis allies threatens Germany
     desc = germany_events.41.d
     flavor = germany_events.41.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1745,7 +1745,7 @@ germany_events.41 = { #Sudet crisis allies threatens Germany
         name = germany_events.41.a
         default_option = yes
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1771,7 +1771,7 @@ germany_events.41 = { #Sudet crisis allies threatens Germany
     }
 
     option = {
-        name = germany_events.41.b
+        name = germany_events.41.c
         trigger = { has_global_variable = uk_supports_czh }
         c:GER = {
         create_diplomatic_play = {
@@ -1800,7 +1800,7 @@ germany_events.42 = { #Poland partition
     desc = germany_events.42.d
     flavor = germany_events.42.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/ideology_icons/egalitarian.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1808,7 +1808,7 @@ germany_events.42 = { #Poland partition
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
+        texture = "gfx/event_pictures/sudet_crisis.dds"
     }
 
     trigger = {}
@@ -1869,7 +1869,7 @@ germany_events.42 = { #Poland partition
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 }
@@ -1881,7 +1881,7 @@ germany_events.43 = { #Great depression recovery
     desc = germany_events.43.d
     flavor = germany_events.43.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1889,7 +1889,7 @@ germany_events.43 = { #Great depression recovery
     immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/fascist_leader.dds"
+        texture = "gfx/event_pictures/factory.dds"
     }
 
     trigger = {}
@@ -1916,7 +1916,7 @@ germany_events.43 = { #Great depression recovery
             value = -0.25
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -1992,7 +1992,7 @@ germany_events.43 = { #Great depression recovery
             value = -0.5
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -2054,7 +2054,7 @@ germany_events.44 = { #Austria accepts annexion
     desc = germany_events.44.d
     flavor = germany_events.44.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -2071,7 +2071,7 @@ germany_events.44 = { #Austria accepts annexion
         name = germany_events.44.a
         default_option = yes
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 }

@@ -40,7 +40,6 @@
         OR = {
             any_civil_war = {
 			   civil_war_progress >= 0.75
-               is_civil_war_type = revolution
 		    }
             c:GER = {
               has_variable = central_powers_participant
@@ -126,7 +125,6 @@ je_war_fatigue_player_germany = {
         OR = {
             any_civil_war = {
 			   civil_war_progress >= 0.75
-               is_civil_war_type = revolution
 		    }
             c:GER = {
               has_variable = central_powers_participant
@@ -172,7 +170,7 @@ je_war_fatigue_player_germany = {
 }
 
 je_nazi_threat = {
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -244,7 +242,7 @@ je_nazi_threat = {
 }
 
 je_new_germany = {
-    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -290,7 +288,7 @@ je_new_germany = {
 }
 
 je_western_crusade = {
-    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -348,7 +346,7 @@ je_western_crusade = {
 }
 
 je_eastern_crusade = {
-    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -398,7 +396,7 @@ je_eastern_crusade = {
 }
 
 je_poland_partition = {
-    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    icon = "gfx/interface/icons/ideology_icons/egalitarian.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {

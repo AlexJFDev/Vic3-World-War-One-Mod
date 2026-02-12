@@ -2782,3 +2782,31 @@ dev_events.72 = {
 		}
     }
 }
+
+dev_events.73 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            months = 18
+            is_decaying = yes
+        }
+    }
+}
