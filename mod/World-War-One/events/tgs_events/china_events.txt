@@ -806,7 +806,7 @@ china_events.6 = { #Bei offers presidency to a clique
     desc = china_events.6.d
     flavor = china_events.6.f
     
-    icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
+    icon = "gfx/interface/icons/objectives/egalitarian_society.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1264,7 +1264,28 @@ china_events.11 = { #China reunification
 	}
 
 	immediate = {
-		
+		create_character = {
+            first_name = Chiang
+	        last_name = Kai-shek
+	        historical = yes
+            birth_date = 1887.10.31
+	        culture = cu:han
+	        religion = protestant
+	        female = no
+	        interest_group = ig_armed_forces
+            is_general = yes
+	        ideology = ideology_authoritarian
+	        traits = {
+             experienced_diplomat
+		     imposing
+             expert_defensive_planner
+	        }
+	        on_created = {
+               set_variable = {
+                  name = chiang_kai_shek
+                }                
+            }
+        }
 	}
 
     option = {
@@ -1302,30 +1323,14 @@ china_events.11 = { #China reunification
                 days = 30
             }
         }
-        create_character = {
-            first_name = Chiang
-	        last_name = Kai-shek
-	        historical = yes
-            birth_date = 1887.10.31
-	        culture = cu:han
-	        religion = rel:protestant
-	        female = no
-	        interest_group = ig_armed_forces
-            ig_leader = yes
-            ruler = yes
-            is_general = yes
-	        ideology = ideology_authoritarian
-	        traits = {
-             experienced_diplomat
-		     imposing
-             expert_defensive_planner
-	        }
-	        on_created = {
-               set_variable = {
-                  name = chiang_kai_shek
-                }                
-            }
-        }
+        owner.ruler ?= {
+			kill_character = yes
+		}
+        random_scope_character = { 
+			limit = { has_variable = chiang_kai_shek }
+            set_character_as_ruler = yes
+            set_as_interest_group_leader = yes
+		}
         ai_chance = {
 		 base = 10
 	    }
@@ -1365,29 +1370,14 @@ china_events.11 = { #China reunification
                 days = 30
             }
         }
-        create_character = {
-            first_name = Chiang
-	        last_name = Kai-shek
-	        historical = yes
-            birth_date = 1887.10.31
-	        culture = cu:han
-	        religion = rel:protestant
-	        female = no
-	        interest_group = ig_armed_forces
-            ig_leader = yes
-            ruler = yes
-            is_general = yes
-	        ideology = ideology_authoritarian
-	        traits = {
-		     bigoted
-             expert_defensive_planner
-	        }
-	        on_created = {
-               set_variable = {
-                  name = chiang_kai_shek
-                }                
-            }
-        }
+        owner.ruler ?= {
+			kill_character = yes
+		}
+        random_scope_character = {
+			limit = { has_variable = chiang_kai_shek }
+            set_character_as_ruler = yes
+            set_as_interest_group_leader = yes
+		}
         ai_chance = {
 		 base = 0
 	    }
