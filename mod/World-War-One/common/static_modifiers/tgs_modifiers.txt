@@ -231,7 +231,7 @@ angry_fascists_1_modifier = {
 
 stabilization_buff_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    political_movement_radicalism_add = -0.8
+    political_movement_radicalism_add = -0.9
 }
 
 army_buff_modifier_1 = {
@@ -480,14 +480,15 @@ warlord_policy_communism = {
     country_minting_mult = 5
 }
 
-modifier_century_of_triumph_politics = {
+china_politics_focus_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_legitimacy_base_add = 25
 	state_decree_cost_mult = -0.5
-    law_enactment_chance = 0.1
+    country_authority_mult = 0.3
+    country_law_enactment_time_mult = -0.5
 }
 
-modifier_century_of_triumph_technology = {
+china_tech_focus_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_tech_research_speed_mult = 0.2
 	country_tech_spread_mult = 0.25

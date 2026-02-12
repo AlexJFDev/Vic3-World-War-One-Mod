@@ -633,19 +633,6 @@ china_events.5 = { #China collapse
 		      set_state_owner = c:YUE
             }
         }
-        s:STATE_HINGGAN = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:CHI
-			    owner = {
-				  OR = {
-					c:CHI = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:MCH
-            }
-        }
         c:CHI = {
             trigger_event = {
                 id = dev_events.34
@@ -1296,7 +1283,7 @@ china_events.11 = { #China reunification
         remove_modifier = warlord_policy_economy
         remove_modifier = warlord_policy_communism
 		add_modifier = {
-			name = modifier_century_of_triumph_technology
+			name = china_tech_focus_modifier
 			years = 20
             is_decaying = yes
 		}
@@ -1323,9 +1310,6 @@ china_events.11 = { #China reunification
                 days = 30
             }
         }
-        owner.ruler ?= {
-			kill_character = yes
-		}
         random_scope_character = { 
 			limit = { has_variable = chiang_kai_shek }
             set_character_as_ruler = yes
@@ -1343,7 +1327,7 @@ china_events.11 = { #China reunification
         remove_modifier = warlord_policy_economy
         remove_modifier = warlord_policy_communism
 		add_modifier = {
-			name = modifier_century_of_triumph_politics
+			name = china_politics_focus_modifier
 			years = 20
             is_decaying = yes
 		}
@@ -1370,9 +1354,6 @@ china_events.11 = { #China reunification
                 days = 30
             }
         }
-        owner.ruler ?= {
-			kill_character = yes
-		}
         random_scope_character = {
 			limit = { has_variable = chiang_kai_shek }
             set_character_as_ruler = yes
@@ -1819,7 +1800,7 @@ china_events.25 = { #Je fragile republic completion
     option = {
 		name = china_events.25.a
 		add_modifier = {
-			name = modifier_century_of_triumph_technology
+			name = china_tech_focus_modifier
 			years = 20
             is_decaying = yes
 		}
@@ -1848,7 +1829,7 @@ china_events.25 = { #Je fragile republic completion
 	option = {
 		name = china_events.25.b
 		add_modifier = {
-			name = modifier_century_of_triumph_politics
+			name = china_politics_focus_modifier
 			years = 20
             is_decaying = yes
 		}
