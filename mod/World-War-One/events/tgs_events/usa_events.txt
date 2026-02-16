@@ -109,17 +109,17 @@ usa_events.6 = { #Black Tuesday
         }
         every_country = {
 			limit = {
+                NOT = {
+                    c:USA ?= this
+                }
                 OR = {
 				  has_law = law_type:law_interventionism
                   has_law = law_type:law_laissez_faire
                 }
-                NOT = {
-                    c:USA ?= this
-                }
-                NOT = {
+                NOR = {
                     has_law = law_type:law_council_republic
+                    has_law = law_type:law_isolationism
                 }
-				country_rank >= rank_value:major_power 
 			}
             trigger_event = {
                 id = usa_events.8
@@ -129,7 +129,7 @@ usa_events.6 = { #Black Tuesday
         c:JAP = {
             trigger_event = {
                 id = dev_events.48
-                days = 60
+                days = 15
             }
         }
         set_variable = great_depression_started
@@ -169,17 +169,17 @@ usa_events.6 = { #Black Tuesday
         }
         every_country = {
 			limit = {
+                NOT = {
+                    c:USA ?= this
+                }
                 OR = {
 				  has_law = law_type:law_interventionism
                   has_law = law_type:law_laissez_faire
                 }
-                NOT = {
-                    c:USA ?= this
-                }
-                NOT = {
+                NOR = {
                     has_law = law_type:law_council_republic
+                    has_law = law_type:law_isolationism
                 }
-				country_rank >= rank_value:major_power 
 			}
             trigger_event = {
                 id = usa_events.8
@@ -189,7 +189,7 @@ usa_events.6 = { #Black Tuesday
         c:JAP = {
             trigger_event = {
                 id = dev_events.48
-                days = 60
+                days = 15
             }
         }
         set_variable = great_depression_started
@@ -257,17 +257,20 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
     option = {
         name = usa_events.8.a
         trigger = { 
-            NOT = {
-                OR = {
-                  has_variable = has_received_usa_loans
-                  has_variable = has_received_dawes_plan
-                }
+            NOR = {
+                has_variable = has_received_usa_loans
+                has_variable = has_received_dawes_plan
             }
+            average_sol >= 12
         }
         add_modifier = {
             name = great_depression_effect_2
-            years = 10
+            years = 15
             is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.15
+            days = 5
         }
         ai_chance = {
 			base = 10
@@ -275,12 +278,12 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
     }
 
     option = {
-        name = usa_events.8.b
+        name = usa_events.8.a
         trigger = { 
-            has_variable = has_received_usa_loans
+            average_sol < 12
         }
         add_modifier = {
-            name = great_depression_effect_3
+            name = great_depression_effect_5
             years = 15
             is_decaying = yes
         }
@@ -290,9 +293,30 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
     }
 
     option = {
-        name = usa_events.8.c
+        name = usa_events.8.a
+        trigger = { 
+            has_variable = has_received_usa_loans
+            average_sol >= 12
+        }
+        add_modifier = {
+            name = great_depression_effect_3
+            years = 15
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.15
+            days = 5
+        }
+        ai_chance = {
+			base = 10
+		}
+    }
+
+    option = {
+        name = usa_events.8.a
         trigger = { 
             has_variable = has_received_dawes_plan
+            average_sol >= 12
         }
         add_investment_pool = -100000000
         add_modifier = {
@@ -306,6 +330,10 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
 		}
         trigger_event = {
             id = dev_events.47
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.15
             days = 5
         }
         ai_chance = {

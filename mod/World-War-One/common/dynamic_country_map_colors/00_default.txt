@@ -564,10 +564,7 @@ REPLACE_OR_CREATE:spain_republican = {
 	possible = {
 		exists = c:SPA
 		THIS = c:SPA
-		OR = {
-			has_law = law_type:law_parliamentary_republic
-			has_law = law_type:law_presidential_republic
-		}
+		has_law = law_type:law_slave_trade
 	}
 }
 
@@ -598,12 +595,15 @@ REPLACE_OR_CREATE:brazil_republican = {
 }
 
 REPLACE_OR_CREATE:spain_communist = {
-	color = "communist_spain_pink"
+	color = "republican_spain_purple"
 
 	possible = {
 		exists = c:SPA
 		THIS = c:SPA
-		has_law = law_type:law_council_republic
+		OR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+		}
 	}
 }
 
