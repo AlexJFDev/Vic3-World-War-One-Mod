@@ -225,10 +225,6 @@ japan_events.17 = {#The Showa era
            set_relations = { country = c:MCH value = -100 }
 		   set_relations = { country = c:SHA value = -100 }
         }
-		trigger_event = {
-            id = japan_events.18
-            years = 5
-        }
         random_scope_character = { 
 			limit = { has_variable = hirohito }
             set_ideology = ideology:ideology_jingoist_leader
@@ -400,15 +396,7 @@ japan_events.18 = {#Invasion of Manchuria
 
     immediate = {}
 
-    trigger = {
-        exists = c:MCH
-        c:MCH = {
-            NOR = { 
-                is_subject_of = c:JAP
-                is_subject_of = c:RUS
-            }
-        }
-    }
+    trigger = { }
 
     option = {
         name = japan_events.18.a

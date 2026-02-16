@@ -2808,3 +2808,71 @@ dev_events.73 = {
         }
     }
 }
+
+dev_events.74 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { 
+            NOT = {
+               c:MCH = this
+            }
+            is_player = no 
+            root.gdp < 12000000
+        }
+        c:CHI = {
+            annex = ROOT
+        }
+        ai_chance = {
+		base = 1
+	    }
+    }
+
+    option = {
+        name = dev_events.17.b
+        ai_chance = {
+		base = 0
+	    }
+    }
+}
+
+dev_events.75 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        every_scope_state = {
+			limit = { owner = ROOT }
+			set_state_type = incorporated
+        }
+    }
+}

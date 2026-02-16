@@ -1,4 +1,68 @@
-﻿je_japan_expansion = {
+﻿je_japan_expansion_1 = {
+    icon = "gfx/interface/icons/event_icons/rising_sun.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:JAP
+        THIS = c:JAP
+    }
+    
+    possible = {
+        ruler = {
+            OR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_reactionary
+                has_ideology = ideology:ideology_jingoist_leader
+            }
+        }
+    }
+
+    immediate = {}
+
+    complete = {
+        exists = c:MCH
+        c:MCH = {
+            NOR = { 
+                is_subject_of = c:JAP
+                has_treaty_alliance_with = c:JAP
+                has_treaty_defensive_pact_with = c:JAP
+            }
+            OR = {
+                is_subject = no
+                is_subject_of = c:CHI
+            }
+        }
+        NOR = {
+            has_treaty_alliance_with = c:CHI
+            has_treaty_defensive_pact_with = c:CHI
+        }
+        army_size >= 200
+        game_date > 1931.8.1
+        is_at_war = no
+        average_sol > average_expected_sol
+        any_political_movement = {
+            is_insurrectionary = no
+        }
+        ruler = {
+            OR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_reactionary
+                has_ideology = ideology:ideology_jingoist_leader
+            }
+        }
+    }
+
+    on_complete = {
+        trigger_event = { 
+           id = japan_events.18
+           days = 5
+        }
+    }
+
+    should_be_pinned_by_default = yes
+}
+
+je_japan_expansion_2 = {
     icon = "gfx/interface/icons/event_icons/rising_sun.dds"
     group = je_group_internal_affairs
 
