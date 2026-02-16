@@ -360,7 +360,6 @@ je_eastern_crusade = {
     possible = {
         OR = {
             has_variable = hitler_rise_to_power_local
-            has_global_variable = france_defeat
             c:GER = {
                 ruler = {
                 OR = {
@@ -371,6 +370,7 @@ je_eastern_crusade = {
                 }
             }
         }
+        has_global_variable = france_defeat
         c:RUS = {
             has_law = law_type:law_council_republic
         }
@@ -379,7 +379,8 @@ je_eastern_crusade = {
     immediate = {}
 
     complete = {
-        game_date > 1941.4.1
+        has_global_variable = france_defeat
+        game_date > 1941.6.1
         has_strategic_adjacency = c:RUS
         average_sol > average_expected_sol
         any_political_movement = {

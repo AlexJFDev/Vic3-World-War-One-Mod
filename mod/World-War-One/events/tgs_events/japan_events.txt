@@ -525,13 +525,33 @@ japan_events.20 = {#Invasion of China response
         create_diplomatic_play = {
             name = sino_japan_war_diplo_play
 
-            target_state = s:STATE_CHONGQING.region_state:CHI
+            target_country = c:CHI
 
-            type = dp_conquer_state
+            type = dp_make_protectorate
 
             escalation = 85
 
 			save_scope_as = sino_japan_war_diplo_play
+
+            add_war_goal = {
+		        holder = c:CHI
+		        type = humiliation
+		        target_country = c:JAP
+            }
+
+            add_war_goal = {
+				holder = c:CHI
+				target_country = c:JAP
+				type = enforce_treaty_article
+				article = {
+					article = money_transfer
+					source_country = c:JAP
+					target_country = c:CHI
+					inputs = {
+						{ quantity = 100000 }
+					}
+				}
+			}
 		}
 		}
 		set_capital = STATE_CHONGQING
@@ -552,11 +572,21 @@ japan_events.20 = {#Invasion of China response
             }
         }
 		c:USA = {
-		   trigger_event = {
+		    trigger_event = {
               id = japan_events.21
               days = 5
             }
 		}
+        c:JAP = {
+		    trigger_event = {
+              id = dev_events.17
+              days = 5
+            }
+		}
+        trigger_event = {
+            id = dev_events.17
+            days = 5
+        }
         ai_chance = {
 		  base = 10
 	    }
@@ -629,6 +659,14 @@ japan_events.21 = {#USA reacts to sino-japan war
         c:USA ?= { 
            set_relations = { country = c:JAP value = -100 }
         }
+        if = {
+            limit = { 
+                c:MCH = { is_subject_of = c:JAP }
+            }
+            scope:sino_japan_war_diplo_play = {
+			   add_initiator_backers = { c:MCH }
+		    }
+        }
         ai_chance = {
 		  base = 1
 	    }
@@ -665,6 +703,14 @@ japan_events.21 = {#USA reacts to sino-japan war
 			type = rivalry
 		}	
 		}
+        if = {
+            limit = { 
+                c:MCH = { is_subject_of = c:JAP }
+            }
+            scope:sino_japan_war_diplo_play = {
+			   add_initiator_backers = { c:MCH }
+		    }
+        }
         ai_chance = {
 		  base = 0
 	    }
@@ -672,6 +718,14 @@ japan_events.21 = {#USA reacts to sino-japan war
 
 	option = {
         name = japan_events.21.c
+        if = {
+            limit = { 
+                c:MCH = { is_subject_of = c:JAP }
+            }
+            scope:sino_japan_war_diplo_play = {
+			   add_initiator_backers = { c:MCH }
+		    }
+        }
         ai_chance = {
 		  base = 0
 	    }
@@ -718,7 +772,7 @@ japan_events.22 = {#Japan attacks USA and western nations
             add_war_goal = {
                 holder = c:JAP
                 type = conquer_state
-                target_state = s:STATE_HAWAI.region_state:USA
+                target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
             }
             add_war_goal = {
                 holder = c:JAP

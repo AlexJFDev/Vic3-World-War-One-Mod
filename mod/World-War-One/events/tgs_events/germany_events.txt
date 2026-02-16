@@ -1139,6 +1139,33 @@ germany_events.29 = { #Policy choice
 
     option = {
         name = germany_events.29.a
+        trigger = { is_player = no }
+        add_technology_progress = { progress = 70000 technology = blitzkrieg_tech }
+        every_country = {
+            limit = {
+                OR = {
+                    is_in_geographic_region = geographic_region_north_america
+					is_in_geographic_region = geographic_region_europe
+                }
+                country_rank >= rank_value:minor_power
+                ruler = { has_ideology = ideology:ideology_fascist }
+                NOT = {
+                    c:GER ?= this
+                }
+            } 
+            trigger_event = {
+                id = germany_events.30
+                days = 30
+            }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = germany_events.29.a
+        trigger = { is_player = yes }
         add_technology_progress = { progress = 40000 technology = blitzkrieg_tech }
         every_country = {
             limit = {

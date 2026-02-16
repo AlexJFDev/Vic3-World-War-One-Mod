@@ -24,6 +24,7 @@ world_war_two_initiation_events.1 = { #WW2 initiation Germany invades Poland
         name = world_war_two_initiation_events.1.a
         default_option = yes
         set_global_variable = world_war_two_started
+        set_variable = axis_participant
         create_diplomatic_play = {
             name = world_war_two
 
@@ -233,13 +234,22 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
     option = {
         name = world_war_two_initiation_events.4.a
         default_option = yes
-        trigger = { is_player = no }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:DEN
             }  
             add_target_backers = {
                 c:NOR
+            }
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:DEN
+            } 
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:NOR
             }
 		}
         c:DEN = { set_variable = allies_participant }
@@ -251,16 +261,19 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
 
     option = {
         name = world_war_two_initiation_events.4.b
-        default_option = yes
-        trigger = { is_player = no }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:DEN
             }  
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:DEN
+            }
 		}
         c:DEN = { set_variable = allies_participant }
         ai_chance = {
-            base = 10
+            base = 0
         }
     }
 
@@ -314,7 +327,7 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         trigger = { is_player = no }
         add_modifier = {
           name = nazi_germany_army_buff_1
-          years = 1
+          years = 4
           is_decaying = yes
         }
         scope:world_war_two_diplo_play = {
@@ -327,6 +340,21 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             add_target_backers = {
                 c:NET
             }
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:BEL
+            } 
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:LUX
+            }
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:NET
+            } 
 		}
         c:BEL = { set_variable = allies_participant }
         c:NET = { set_variable = allies_participant }
@@ -354,6 +382,21 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             add_target_backers = {
                 c:NET
             }
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:BEL
+            } 
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:LUX
+            }
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:NET
+            } 
 		}
         c:BEL = { set_variable = allies_participant }
         c:NET = { set_variable = allies_participant }
@@ -368,7 +411,7 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         trigger = { is_player = no }
         add_modifier = {
           name = nazi_germany_army_buff_1
-          years = 1
+          years = 4
           is_decaying = yes
         }
         scope:world_war_two_diplo_play = {
@@ -378,10 +421,20 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             add_target_backers = {
                 c:LUX
             } 
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:BEL
+            } 
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:LUX
+            }
 		}
         c:BEL = { set_variable = allies_participant }
         ai_chance = {
-            base = 10
+            base = 0
         }
     }
 
@@ -402,6 +455,16 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             add_target_backers = {
                 c:LUX
             } 
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:BEL
+            } 
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:LUX
+            }
 		}
         c:BEL = { set_variable = allies_participant }
         ai_chance = {
@@ -459,7 +522,10 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:RUS
-            }  
+            } 
+            add_initiator_backers = {
+                c:POL
+            }   
 		}
         c:RUS = { set_variable = allies_participant }
         c:RUS = {
@@ -613,10 +679,6 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:USA
-                c:CHI
-            } 
-            add_initiator_backers = {
-                c:JAP
             } 
             add_war_goal = {
                 holder = c:USA
@@ -629,13 +691,7 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
                 target_state = s:STATE_NEW_YORK.region_state:USA
             }
 		}
-        c:JAP = {
-            set_variable = axis_participant
-        }
         c:USA = {
-            set_variable = allies_participant
-        }
-        c:CHI = {
             set_variable = allies_participant
         }
         ai_chance = {
