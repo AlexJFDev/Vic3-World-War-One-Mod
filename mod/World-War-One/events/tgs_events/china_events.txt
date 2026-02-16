@@ -1251,22 +1251,9 @@ china_events.11 = { #China reunification
 	}
 
 	immediate = {
+        change_tag = CHI
 		create_character = {
-            first_name = Chiang
-	        last_name = Kai-shek
-	        historical = yes
-            birth_date = 1887.10.31
-	        culture = cu:han
-	        religion = protestant
-	        female = no
-	        interest_group = ig_armed_forces
-            is_general = yes
-	        ideology = ideology_authoritarian
-	        traits = {
-             experienced_diplomat
-		     imposing
-             expert_defensive_planner
-	        }
+            template = chi_chiang_kai_shek_template
 	        on_created = {
                set_variable = {
                   name = chiang_kai_shek
@@ -1278,13 +1265,9 @@ china_events.11 = { #China reunification
     option = {
 		name = china_events.11.a
         default_option = yes
-        remove_modifier = warlord_policy_military
-        remove_modifier = warlord_policy_politics
-        remove_modifier = warlord_policy_economy
-        remove_modifier = warlord_policy_communism
 		add_modifier = {
 			name = china_tech_focus_modifier
-			years = 20
+			years = 30
             is_decaying = yes
 		}
 		add_loyalists = {
@@ -1294,7 +1277,6 @@ china_events.11 = { #China reunification
 			limit = { owner = ROOT }
 			set_state_type = incorporated
         }
-        change_tag = CHI
         every_country = {
 			limit = {
                 has_strategic_adjacency = ROOT
@@ -1307,7 +1289,7 @@ china_events.11 = { #China reunification
 			}
             trigger_event = {
                 id = china_events.20
-                days = 30
+                days = 10
             }
         }
         random_scope_character = { 
@@ -1315,6 +1297,10 @@ china_events.11 = { #China reunification
             set_character_as_ruler = yes
             set_as_interest_group_leader = yes
 		}
+        trigger_event = {
+            id = dev_events.75
+            days = 90
+        }
         ai_chance = {
 		 base = 10
 	    }
@@ -1322,13 +1308,9 @@ china_events.11 = { #China reunification
 
 	option = {
 		name = china_events.11.b
-        remove_modifier = warlord_policy_military
-        remove_modifier = warlord_policy_politics
-        remove_modifier = warlord_policy_economy
-        remove_modifier = warlord_policy_communism
 		add_modifier = {
 			name = china_politics_focus_modifier
-			years = 20
+			years = 30
             is_decaying = yes
 		}
 		add_loyalists = {
@@ -1338,7 +1320,6 @@ china_events.11 = { #China reunification
 			limit = { owner = ROOT }
 			set_state_type = incorporated
         }
-        change_tag = CHI
         every_country = {
 			limit = {
                 has_strategic_adjacency = ROOT
@@ -1351,7 +1332,7 @@ china_events.11 = { #China reunification
 			}
             trigger_event = {
                 id = china_events.20
-                days = 30
+                days = 10
             }
         }
         random_scope_character = {
@@ -1359,6 +1340,10 @@ china_events.11 = { #China reunification
             set_character_as_ruler = yes
             set_as_interest_group_leader = yes
 		}
+        trigger_event = {
+            id = dev_events.75
+            days = 90
+        }
         ai_chance = {
 		 base = 0
 	    }
@@ -1517,6 +1502,40 @@ china_events.20 = { #Join the central government ?
 
     option = {
         name = china_events.20.a
+        trigger = {
+            NOR = {
+                root = c:SHN
+                root = c:SIH
+                root = c:QIH
+                root = c:XIN
+            }
+        }
+        default_option = yes
+        c:CHI = {
+            create_diplomatic_pact = {
+				country = ROOT
+				type = protectorate
+			}
+        }
+        trigger_event = {
+            id = dev_events.74
+            days = 15
+        }
+        ai_chance = {
+		base = 1
+	    }
+	}
+
+    option = {
+        name = china_events.20.a
+        trigger = {
+            OR = {
+                root = c:SHN
+                root = c:SIH
+                root = c:QIH
+                root = c:XIN
+            }
+        }
         default_option = yes
         c:CHI = {
             create_diplomatic_pact = {
@@ -1525,14 +1544,37 @@ china_events.20 = { #Join the central government ?
 			}
         }
         ai_chance = {
-		base = 1
+		base = 0
 	    }
 	}
 
     option = {
         name = china_events.20.b
+        trigger = {
+            NOR = {
+                root = c:SHN
+                root = c:SIH
+                root = c:QIH
+                root = c:XIN
+            }
+        }
         ai_chance = {
 		base = 0
+	    }
+    }
+
+    option = {
+        name = china_events.20.b
+        trigger = {
+            OR = {
+                root = c:SHN
+                root = c:SIH
+                root = c:QIH
+                root = c:XIN
+            }
+        }
+        ai_chance = {
+		base = 1
 	    }
     }
 }
@@ -1736,7 +1778,7 @@ china_events.23 = { #Shanxi becomes Communist
 	        ideology = ideology_vanguardist
 	        traits = {
              meticulous
-		     expert_defensive_planner
+		     expert_defensive_strategist
 	        }
 	        on_created = {
                set_variable = {
