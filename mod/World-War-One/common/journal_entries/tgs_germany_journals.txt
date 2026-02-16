@@ -254,7 +254,7 @@ je_new_germany = {
     possible = {
         OR = {
             has_law = law_type:law_council_republic
-            has_global_variable = hitler_rise_to_power_local
+            has_variable = hitler_rise_to_power_local
             c:GER = {
                 ruler = {
                 OR = {
@@ -268,6 +268,7 @@ je_new_germany = {
             has_modifier = great_depression_effect_1
             has_modifier = great_depression_effect_2
             has_modifier = great_depression_effect_3
+            has_modifier = great_depression_effect_4
         }
     }
 
@@ -275,6 +276,7 @@ je_new_germany = {
 
     complete = {
         country_rank >= rank_value:great_power
+        root.average_sol >= 10
     }
 
     on_complete = {
@@ -299,7 +301,7 @@ je_western_crusade = {
     
     possible = {
         OR = {
-            has_global_variable = hitler_rise_to_power_local
+            has_variable = hitler_rise_to_power_local
             c:GER = {
                 ruler = {
                 OR = {
@@ -357,7 +359,7 @@ je_eastern_crusade = {
     
     possible = {
         OR = {
-            has_global_variable = hitler_rise_to_power_local
+            has_variable = hitler_rise_to_power_local
             has_global_variable = france_defeat
             c:GER = {
                 ruler = {
@@ -407,7 +409,7 @@ je_poland_partition = {
     
     possible = {
         OR = {
-            has_global_variable = hitler_rise_to_power_local
+            has_variable = hitler_rise_to_power_local
             c:GER = {
                 ruler = {
                 OR = {

@@ -15,10 +15,28 @@ axis_peace_deal.1 = {
     immediate = {}
 
     event_image = { 
-		texture = "gfx/event_pictures/central_victory.dds"
+		texture = "gfx/event_pictures/axis.dds"
 	}
 
     trigger = {}
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     option = {
         name = axis_peace_deal.1.a
@@ -66,6 +84,11 @@ axis_peace_deal.1 = {
 			  type = protectorate
 		    }		
         }
+        scope:world_war_two_diplo_play = {
+			add_initiator_backers = {
+                who = c:FRA
+            }  
+		}
     }
 }
 

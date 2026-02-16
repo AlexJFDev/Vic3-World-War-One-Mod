@@ -1009,7 +1009,7 @@ germany_events.28 = { #Nazi takeover
         activate_law = law_type:law_surveillance_state
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_outlawed_dissent
-        activate_law = law_type:law_national_supremacy
+        activate_law = law_type:law_ethnostate
         activate_law = law_type:law_unitary
         activate_law = law_type:law_imperialism
         active_law:lawgroup_surveillance ?= {
@@ -1042,6 +1042,10 @@ germany_events.28 = { #Nazi takeover
             }
         trigger_event = {
                 id = germany_events.32
+                years = 5
+            }
+        trigger_event = {
+                id = dev_events.78
                 years = 5
             }
         trigger_event = {
@@ -1094,6 +1098,10 @@ germany_events.28 = { #Nazi takeover
             }
         trigger_event = {
                 id = germany_events.32
+                years = 5
+            }
+        trigger_event = {
+                id = dev_events.78
                 years = 5
             }
         trigger_event = {

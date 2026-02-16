@@ -2876,3 +2876,121 @@ dev_events.75 = {
         }
     }
 }
+
+dev_events.76 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = army_buff_modifier_7
+            years = 2
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.77 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 100000000
+        add_modifier = {
+            name = starting_minting_buff_3_modifier
+            years = 20
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.78 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_north_germany
+            name = ger_navy_help
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_battleship
+				state_region = s:STATE_HANNOVER
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_scout_cruiser
+				state_region = s:STATE_ELBE
+				count = 30
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_destroyer
+				state_region = s:STATE_POMERANIA
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_submarine
+				state_region = s:STATE_MECKLENBURG
+				count = 40
+			}
+		} 
+        random_scope_state = {
+			limit = {
+				is_coastal = yes
+			}
+			create_building = {
+				building = building_military_shipyard
+				level = 12
+            }		
+		} 
+    }
+}
