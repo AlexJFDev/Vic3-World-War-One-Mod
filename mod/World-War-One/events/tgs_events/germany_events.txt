@@ -705,11 +705,13 @@ germany_events.25 = { #Nazi threat je initiation
 			name = starting_sol_buff
             years = 7
 		}
+        set_variable historical_fascism
     }
 
     option = {
         name = germany_events.25.a
         trigger = { is_player = yes }
+        set_variable historical_fascism
     }
 }
 
