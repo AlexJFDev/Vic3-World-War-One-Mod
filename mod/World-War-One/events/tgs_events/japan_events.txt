@@ -388,7 +388,7 @@ japan_events.18 = {#Invasion of Manchuria
     icon = "gfx/interface/icons/event_icons/rising_sun.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 3
+    duration = 12
     
     event_image = {
         texture = "gfx/event_pictures/japan_army_2.dds"
@@ -401,6 +401,7 @@ japan_events.18 = {#Invasion of Manchuria
     option = {
         name = japan_events.18.a
         default_option = yes
+        trigger = { c:MCH = { is_subject = no } }
         create_diplomatic_play = {
             name = japan_invades_manchuria
 
@@ -410,6 +411,28 @@ japan_events.18 = {#Invasion of Manchuria
 
             escalation = 85
 		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = japan_events.18.a
+        default_option = yes
+        trigger = { c:MCH = { is_subject_of = c:CHI } }
+        create_diplomatic_play = {
+            name = japan_invades_manchuria
+
+            target_country = c:MCH
+
+            type = dp_transfer_subject
+
+            escalation = 85
+		}
+        trigger_event = { 
+            id = dev_events.76
+            days = 5
+        }
         ai_chance = {
 		  base = 1
 	    }
