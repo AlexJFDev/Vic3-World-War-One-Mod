@@ -1892,19 +1892,6 @@ germany_events.42 = { #Poland partition
 		      set_state_owner = c:RUS
             }
         }
-        s:STATE_EAST_GALICIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:POL
-			    owner = {
-				  OR = {
-					c:POL = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:RUS
-            }
-        }
         ai_chance = {
             base = 1
         }

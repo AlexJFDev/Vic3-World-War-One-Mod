@@ -551,7 +551,7 @@ dev_events.16 = {
     }
 }
 
-dev_events.17 = { 
+dev_events.17 = {
     type = country_event
 
     title = dev_events.17.t
@@ -577,6 +577,7 @@ dev_events.17 = {
             years = 10
             is_decaying = yes
 		}
+        remove_modifier = declared_bankruptcy
     }
 
     option = {
@@ -586,7 +587,7 @@ dev_events.17 = {
         add_treasury = 5000000
         add_modifier = {
 			name = starting_minting_buff_4_modifier
-            years = 10
+            years = 5
             is_decaying = yes
 		}
     }
@@ -2988,6 +2989,12 @@ dev_events.78 = {
 				state_region = s:STATE_BRUNSWICK
 				count = 50
 			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_BRANDENBURG
+				count = 50
+			}
 		}
 		create_military_formation = {
 			type = fleet
@@ -3015,7 +3022,7 @@ dev_events.78 = {
             combat_unit = {
 				type = unit_type:combat_unit_type_submarine
 				state_region = s:STATE_MECKLENBURG
-				count = 40
+				count = 50
 			}
 		} 
         random_scope_state = {
@@ -3027,5 +3034,358 @@ dev_events.78 = {
 				level = 12
             }		
 		} 
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+            create_building = {
+				building = building_arms_industry
+				level = 10
+            }
+            create_building = {
+				building = building_artillery_foundry
+				level = 10
+            }
+			create_building = {
+				building = building_munition_plant
+				level = 12
+            }	
+            create_building = {
+				building = building_automotive_industry
+				level = 15
+            }
+            create_building = {
+				building = building_aircraft_factory
+				level = 8
+            }	
+		} 
+    }
+}
+
+dev_events.79 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_italy
+            name = ger_army_help
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_squad_infantry
+				state_region = s:STATE_EMILIA
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_EMILIA
+				count = 50
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_LAZIO
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_VENETIA
+				count = 5
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_VENETIA
+				count = 20
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_PIEDMONT
+				count = 30
+			}
+		}
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_italy
+            name = ger_navy_help
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_battleship
+				state_region = s:STATE_PIEDMONT
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_scout_cruiser
+				state_region = s:STATE_VENETIA
+				count = 30
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_destroyer
+				state_region = s:STATE_PIEDMONT
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_submarine
+				state_region = s:STATE_VENETIA
+				count = 50
+			}
+		} 
+        random_scope_state = {
+			limit = {
+				is_coastal = yes
+			}
+			create_building = {
+				building = building_military_shipyard
+				level = 12
+            }		
+		} 
+    }
+}
+
+dev_events.80 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = taken_by_suprise_1
+            years = 2
+            is_decaying = yes
+		}
+    }
+}
+
+dev_events.81 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = taken_by_suprise_2
+            years = 1
+            is_decaying = yes
+		}
+    }
+}
+
+dev_events.82 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 300000000
+    }
+}
+
+dev_events.83 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = colony_control_1
+            years = 6
+		}
+    }
+}
+
+dev_events.84 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_japan
+            name = ger_army_help
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_KANTO
+				count = 30
+			}
+		}
+    }
+}
+
+dev_events.85 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 10000000
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 3
+            is_decaying = yes
+		}
+        remove_modifier = declared_bankruptcy
+        add_modifier = {
+			name = taken_by_suprise_3
+            years = 2
+            is_decaying = yes
+		}
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 10
+            is_decaying = yes
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_treasury = 5000000
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 8
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.86 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = army_buff_modifier_9
+            years = 2
+            is_decaying = yes
+		}
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 10
+            is_decaying = yes
+        }
     }
 }

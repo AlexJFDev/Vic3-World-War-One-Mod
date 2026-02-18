@@ -33,6 +33,18 @@ world_war_two_initiation_events.1 = { #WW2 initiation Germany invades Poland
             type = dp_make_protectorate
 
             escalation = 85
+
+            add_war_goal = {
+                holder = c:GER
+                type = conquer_state
+                target_state = s:STATE_WEST_PRUSSIA.region_state:POL
+            }
+
+            add_war_goal = {
+                holder = c:GER
+                type = conquer_state
+                target_state = s:STATE_POSEN.region_state:POL
+            }
         }
         trigger_event = {
             id = world_war_two_initiation_events.4
@@ -55,7 +67,11 @@ world_war_two_initiation_events.1 = { #WW2 initiation Germany invades Poland
             }
         }
         c:ITA = {
-          trigger_event = {
+            trigger_event = {
+              id = world_war_two_initiation_events.9
+              days = 5
+            }
+            trigger_event = {
               id = world_war_two_initiation_events.3
               months = 8
             }
@@ -113,7 +129,7 @@ world_war_two_initiation_events.2 = { #WW2 initiation Allies response
             }
             add_war_goal = {
                 holder = root
-                type = humiliation
+                type = regime_change
                 target_country = c:GER
             }
             add_war_goal = {
@@ -174,12 +190,60 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
 
     option = {
         name = world_war_two_initiation_events.3.a
+        trigger = { 
+            c:GBR = { has_variable = allies_participant } 
+        }
         default_option = yes
         scope:world_war_two_diplo_play = {
 			add_initiator_backers = {
                 who = root
             }  
+            add_war_goal = {
+                holder = c:GBR
+                type = regime_change
+                target_country = c:ITA
+            }
+            add_war_goal = {
+                holder = c:GBR
+                type = contain_threat
+                target_country = c:ITA
+            }
 		}
+        trigger_event = {
+              id = world_war_two_initiation_events.10
+              months = 1
+            }
+        trigger_event = {
+              id = world_war_two_initiation_events.11
+              months = 1
+            }
+        set_variable = axis_participant
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.3.a
+        trigger = {
+            NOT = { 
+              c:GBR = { has_variable = allies_participant } 
+            } 
+        }
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_initiator_backers = {
+                who = root
+            }
+		}
+        trigger_event = {
+              id = world_war_two_initiation_events.10
+              months = 1
+            }
+        trigger_event = {
+              id = world_war_two_initiation_events.11
+              months = 3
+            }
         set_variable = axis_participant
         ai_chance = {
             base = 10
@@ -234,6 +298,14 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
     option = {
         name = world_war_two_initiation_events.4.a
         default_option = yes
+        trigger = {
+            NOR = {
+             has_treaty_alliance_with = c:DEN
+             has_treaty_defensive_pact_with = c:DEN
+             has_treaty_alliance_with = c:NOR
+             has_treaty_defensive_pact_with = c:NOR
+            }
+        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:DEN
@@ -261,6 +333,12 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
 
     option = {
         name = world_war_two_initiation_events.4.b
+        trigger = {
+            NOR = {
+             has_treaty_alliance_with = c:DEN
+             has_treaty_defensive_pact_with = c:DEN
+            }
+        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:DEN
@@ -324,7 +402,15 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     option = {
         name = world_war_two_initiation_events.5.a
         default_option = yes
-        trigger = { is_player = no }
+        trigger = { 
+            is_player = no 
+            NOR = {
+             has_treaty_alliance_with = c:BEL
+             has_treaty_defensive_pact_with = c:BEL
+             has_treaty_alliance_with = c:NET
+             has_treaty_defensive_pact_with = c:NET
+            }
+        }
         add_modifier = {
           name = nazi_germany_army_buff_1
           years = 4
@@ -358,6 +444,24 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
 		}
         c:BEL = { set_variable = allies_participant }
         c:NET = { set_variable = allies_participant }
+        c:NET = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
+        c:BEL = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
+        c:FRA = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
         ai_chance = {
             base = 10
         }
@@ -366,7 +470,15 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     option = {
         name = world_war_two_initiation_events.5.a
         default_option = yes
-        trigger = { is_player = yes }
+        trigger = { 
+            is_player = yes 
+            NOR = {
+             has_treaty_alliance_with = c:BEL
+             has_treaty_defensive_pact_with = c:BEL
+             has_treaty_alliance_with = c:NET
+             has_treaty_defensive_pact_with = c:NET
+            }
+        }
         add_modifier = {
           name = nazi_germany_army_buff_2
           years = 1
@@ -400,6 +512,24 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
 		}
         c:BEL = { set_variable = allies_participant }
         c:NET = { set_variable = allies_participant }
+        c:NET = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
+        c:BEL = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
+        c:FRA = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
         ai_chance = {
             base = 10
         }
@@ -408,7 +538,13 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     option = {
         name = world_war_two_initiation_events.5.b
         default_option = yes
-        trigger = { is_player = no }
+        trigger = { 
+            is_player = no 
+            NOR = {
+             has_treaty_alliance_with = c:BEL
+             has_treaty_defensive_pact_with = c:BEL
+            }
+        }
         add_modifier = {
           name = nazi_germany_army_buff_1
           years = 4
@@ -433,6 +569,18 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             }
 		}
         c:BEL = { set_variable = allies_participant }
+        c:BEL = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
+        c:FRA = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
         ai_chance = {
             base = 0
         }
@@ -442,7 +590,13 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     option = {
         name = world_war_two_initiation_events.5.b
         default_option = yes
-        trigger = { is_player = yes }
+        trigger = { 
+            is_player = yes 
+            NOR = {
+             has_treaty_alliance_with = c:BEL
+             has_treaty_defensive_pact_with = c:BEL
+            }
+        }
         add_modifier = {
           name = nazi_germany_army_buff_2
           years = 1
@@ -467,6 +621,18 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             }
 		}
         c:BEL = { set_variable = allies_participant }
+        c:BEL = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
+        c:FRA = {
+          trigger_event = {
+              id = dev_events.80
+              days = 5
+            }
+        }
         ai_chance = {
             base = 0
         }
@@ -530,8 +696,44 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
         c:RUS = { set_variable = allies_participant }
         c:RUS = {
             trigger_event = {
+                id = dev_events.81
+                days = 5
+            }
+            trigger_event = {
                 id = ussr_events.10
                 years = 1
+            }
+        }
+        if = {
+            limit = {
+                c:FIN = {
+                    NOT = { 
+                        has_law = law_type:law_council_republic
+                        has_law = law_type:law_anarchy
+                    }
+                }
+            }
+            c:FIN = {
+               trigger_event = {
+                  id = world_war_two_initiation_events.7
+                  days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:HUN = {
+                    NOT = { 
+                        has_law = law_type:law_council_republic
+                        has_law = law_type:law_anarchy
+                    }
+                }
+            }
+            c:HUN = {
+               trigger_event = {
+                  id = world_war_two_initiation_events.7
+                  days = 5
+                }
             }
         }
         if = {
@@ -552,14 +754,14 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
         }
         if = {
             limit = {
-                c:FIN = {
+                c:BUL = {
                     NOT = { 
                         has_law = law_type:law_council_republic
                         has_law = law_type:law_anarchy
                     }
                 }
             }
-            c:FIN = {
+            c:BUL = {
                trigger_event = {
                   id = world_war_two_initiation_events.7
                   days = 5
@@ -579,7 +781,7 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
     }
 }
 
-world_war_two_initiation_events.7 = { #WW2 initiation Romania and Finland joins invasion of USSR
+world_war_two_initiation_events.7 = { #WW2 initiation european countries join invasion of USSR
     type = country_event
 
     title = world_war_two_initiation_events.7.t
@@ -617,13 +819,19 @@ world_war_two_initiation_events.7 = { #WW2 initiation Romania and Finland joins 
 
     option = {
         name = world_war_two_initiation_events.7.a
+        trigger = {
+            NOR = {
+             has_treaty_alliance_with = c:RUS
+             has_treaty_defensive_pact_with = c:RUS
+            }
+        }
         default_option = yes
         scope:world_war_two_diplo_play = {
 			add_initiator_backers = {
                who = root
             }  
 		}
-        ROOT = { set_variable = axis_participant }
+        c:ROOT = { set_variable = axis_participant }
         ai_chance = {
             base = 10
         }
@@ -676,6 +884,12 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
     option = {
         name = world_war_two_initiation_events.8.a
         default_option = yes
+        trigger = {
+            NOR = {
+             has_treaty_alliance_with = c:USA
+             has_treaty_defensive_pact_with = c:USA
+            }
+        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:USA
@@ -694,6 +908,12 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
         c:USA = {
             set_variable = allies_participant
         }
+        c:USA = {
+            trigger_event = {
+              id = dev_events.82
+              days = 5
+            }
+        }
         ai_chance = {
             base = 10
         }
@@ -702,6 +922,177 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
     option = {
         name = world_war_two_initiation_events.8.b
         
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.9 = { #Italy declares war on Albania
+    type = country_event
+
+    title = world_war_two_initiation_events.9.t
+    desc = world_war_two_initiation_events.9.d
+    flavor = world_war_two_initiation_events.9.f
+    
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 12
+    
+    immediate = { }
+
+    event_image = {
+        texture = "gfx/event_pictures/italy_ww2.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.9.a
+        default_option = yes
+        trigger = {
+            exists = c:ALB
+            NOR = {
+             has_treaty_alliance_with = c:ALB
+             has_treaty_defensive_pact_with = c:ALB
+            }
+        }
+        create_diplomatic_play = {
+            name = italian_invasion_of_albania
+
+            target_country = c:ALB
+
+            type = dp_make_protectorate
+
+            escalation = 85
+
+            add_war_goal = {
+                holder = c:ALB
+                type = humiliation
+                target_country = c:ITA
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.9.b
+        
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.10 = { #Italy declares war on Yugoslavia
+    type = country_event
+
+    title = world_war_two_initiation_events.10.t
+    desc = world_war_two_initiation_events.10.d
+    flavor = world_war_two_initiation_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 12
+    
+    immediate = { }
+
+    event_image = {
+        texture = "gfx/event_pictures/italy_ww2.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.10.a
+        default_option = yes
+        trigger = {
+            exists = c:YUG
+            NOR = {
+             has_treaty_alliance_with = c:YUG
+             has_treaty_defensive_pact_with = c:YUG
+            }
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:YUG
+            } 
+            add_war_goal = {
+                holder = c:ITA
+                type = make_protectorate
+                target_country = c:YUG
+            }
+		}
+        c:YUG = {
+            set_variable = allies_participant
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.10.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.11 = { #Italy declares war on Greece
+    type = country_event
+
+    title = world_war_two_initiation_events.11.t
+    desc = world_war_two_initiation_events.11.d
+    flavor = world_war_two_initiation_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 12
+    
+    immediate = { }
+
+    event_image = {
+        texture = "gfx/event_pictures/italy_ww2.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.11.a
+        default_option = yes
+        trigger = {
+            exists = c:GRE
+            NOR = {
+             has_treaty_alliance_with = c:GRE
+             has_treaty_defensive_pact_with = c:GRE
+            }
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:GRE
+            } 
+            add_war_goal = {
+                holder = c:ITA
+                type = make_protectorate
+                target_country = c:GRE
+            }
+		}
+        c:GRE = {
+            set_variable = allies_participant
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.11.b
         ai_chance = {
             base = 0
         }

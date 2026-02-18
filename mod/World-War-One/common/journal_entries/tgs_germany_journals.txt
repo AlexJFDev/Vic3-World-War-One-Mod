@@ -321,6 +321,14 @@ je_western_crusade = {
         is_at_war = no
         average_sol > average_expected_sol
         has_technology_researched = blitzkrieg_tech
+        NOR = {
+            has_treaty_alliance_with = c:GBR
+            has_treaty_defensive_pact_with = c:GBR
+            has_treaty_alliance_with = c:FRA
+            has_treaty_defensive_pact_with = c:FRA
+            has_treaty_alliance_with = c:POL
+            has_treaty_defensive_pact_with = c:POL
+        }
         any_political_movement = {
             is_insurrectionary = no
         }
@@ -334,6 +342,7 @@ je_western_crusade = {
             c:POL = {
 			  has_truce_with = root
             }
+            has_modifier = declared_bankruptcy
         }
     }
 
@@ -385,6 +394,11 @@ je_eastern_crusade = {
         average_sol > average_expected_sol
         any_political_movement = {
             is_insurrectionary = no
+        }
+        NOR = {
+            has_treaty_alliance_with = c:RUS
+            has_treaty_defensive_pact_with = c:RUS
+            has_modifier = declared_bankruptcy
         }
     }
 

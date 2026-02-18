@@ -582,9 +582,13 @@ japan_events.20 = {#Invasion of China response
               id = dev_events.17
               days = 5
             }
+            trigger_event = {
+              id = dev_events.86
+              days = 5
+            }
 		}
         trigger_event = {
-            id = dev_events.17
+            id = dev_events.85
             days = 5
         }
         ai_chance = {
@@ -766,8 +770,8 @@ japan_events.22 = {#Japan attacks USA and western nations
 		scope:sino_japan_war_diplo_play = {
 			add_target_backers = { c:USA }
             add_target_backers = { c:GBR }
-            add_target_backers = { c:FRA }
-            add_target_backers = { c:NET }
+            add_target_backers = { c:ICH }
+            add_target_backers = { c:DEI }
             add_target_backers = { c:AST }
             add_war_goal = {
                 holder = c:JAP
@@ -803,6 +807,16 @@ japan_events.22 = {#Japan attacks USA and western nations
                 holder = c:USA
                 type = conquer_state
                 target_state = s:STATE_RYUKYU_ISLANDS.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = annex_country
+                target_country = c:ICH
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = annex_country
+                target_country = c:DEI
             }
 		}
         if = {

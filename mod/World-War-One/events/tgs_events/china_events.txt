@@ -1656,7 +1656,16 @@ china_events.22 = { #Call to arms against Japan
         default_option = yes
         scope:sino_japan_war_diplo_play = {
 			add_target_backers = { root }
+            add_war_goal = {
+		        holder = c:JAP
+		        type = make_protectorate
+		        target_country = ROOT
+            }
 		}
+        trigger_event = {
+              id = dev_events.17
+              days = 5
+            }
         ai_chance = {
 		base = 1
 	    }
@@ -1673,6 +1682,11 @@ china_events.22 = { #Call to arms against Japan
         name = china_events.22.c
         scope:sino_japan_war_diplo_play = {
 			add_initiator_backers = { root }
+            add_war_goal = {
+		        holder = c:CHI
+		        type = annex_country
+		        target_country = c:ROOT
+            }
 		}
         ai_chance = {
 		base = 0
