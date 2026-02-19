@@ -200,8 +200,15 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
         default_option = yes
         scope:world_war_two_diplo_play = {
 			add_initiator_backers = {
-                who = root
+                c:ITA
+                c:CYR
+                c:TRI
             }  
+            add_target_backers = {
+                c:BIC
+                c:EGY
+                c:CAN
+            } 
             add_war_goal = {
                 holder = c:GBR
                 type = regime_change
@@ -237,7 +244,9 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
         default_option = yes
         scope:world_war_two_diplo_play = {
 			add_initiator_backers = {
-                who = root
+                c:ITA
+                c:CYR
+                c:TRI
             }
 		}
         trigger_event = {
@@ -256,7 +265,6 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
 
     option = {
         name = world_war_two_initiation_events.3.b
-        
         ai_chance = {
             base = 0
         }

@@ -1,0 +1,28 @@
+﻿je_german_occupation = {
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        has_global_variable = world_war_two_started
+    }
+    
+    possible = {
+        ROOT = { is_subject_of = c:GER }
+    }
+
+    immediate = {}
+
+    modifiers_while_active = {
+		resistance
+	}
+
+    complete = {
+		NOT = {
+           ROOT = { is_subject_of = c:GER }
+        }
+    }
+
+    on_complete = {}
+
+    should_be_pinned_by_default = yes
+}

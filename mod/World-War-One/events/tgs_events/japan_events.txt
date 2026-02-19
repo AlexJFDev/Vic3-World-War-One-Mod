@@ -800,6 +800,11 @@ japan_events.22 = {#Japan attacks USA and western nations
             }
             add_war_goal = {
                 holder = c:USA
+                type = contain_threat
+                target_country = c:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
                 type = conquer_state
                 target_state = s:STATE_KANTO.region_state:JAP
             }

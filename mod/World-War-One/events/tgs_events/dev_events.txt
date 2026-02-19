@@ -3389,3 +3389,42 @@ dev_events.86 = {
         }
     }
 }
+
+dev_events.87 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        every_state = {
+			if = {
+				limit = {
+					owner = c:FRA
+					has_building = building_barrack
+					is_capital = no
+				}
+				remove_building = building_barrack
+			}
+			if = {
+				limit = {
+					owner = c:FRA
+					has_building = building_naval_base
+				}
+				remove_building = building_naval_base
+			}
+        }
+    }
+}

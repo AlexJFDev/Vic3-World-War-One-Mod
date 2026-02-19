@@ -176,10 +176,6 @@ ussr_events.4 = { #Lenin death
             set_character_as_ruler = yes
             set_as_interest_group_leader = yes
 		}
-        trigger_event = {
-            id = ussr_events.5
-            years = 13
-		}
 		add_modifier = {
 			name = stalin_reign
             years = 10
@@ -319,10 +315,6 @@ ussr_events.5 = { #Stalin purges
     option = {
         name = ussr_events.5.a
         default_option = yes
-        random_scope_character = { 
-			limit = { has_variable =  }
-            kill_character = yes
-		}
 		add_modifier = {
 			name = stalin_purges
             years = 8
@@ -371,7 +363,27 @@ ussr_events.10 = { #Moscow will not fall
     option = {
         name = ussr_events.10.a
         default_option = yes
-		trigger = { is_at_war = yes }
+		trigger = { 
+            is_at_war = yes
+            is_player = no 
+        }
+		add_modifier = {
+			name = moscow_will_not_fall
+            years = 5
+			is_decaying = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+    option = {
+        name = ussr_events.10.a
+        default_option = yes
+		trigger = { 
+            is_at_war = yes
+            is_player = yes 
+        }
 		add_modifier = {
 			name = moscow_will_not_fall
             years = 3

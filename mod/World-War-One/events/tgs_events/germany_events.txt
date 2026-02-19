@@ -1892,6 +1892,32 @@ germany_events.42 = { #Poland partition
 		      set_state_owner = c:RUS
             }
         }
+        s:STATE_WEST_PRUSSIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:POL
+			    owner = {
+				  OR = {
+					c:POL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GER
+            }
+        }
+        s:STATE_POSEN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:POL
+			    owner = {
+				  OR = {
+					c:POL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GER
+            }
+        }
         ai_chance = {
             base = 1
         }
