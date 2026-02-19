@@ -421,12 +421,18 @@ usa_events.9 = { #Post war loans initiation
                 }
 		    }
         }
-        trigger_event = {
-            id = usa_events.10
-            years = 5
+        c:USA = {
+            trigger_event = {
+                id = dev_events.90
+                days = 30
+            }
+            trigger_event = {
+                id = usa_events.10
+                years = 5
+            }
         }
         ai_chance = {
-			base = 7
+			base = 1
 		}
     }
 
@@ -492,13 +498,17 @@ usa_events.9 = { #Post war loans initiation
 		    }
         }
         c:USA = {
-           trigger_event = {
+            trigger_event = {
+                id = dev_events.90
+                days = 30
+            }
+            trigger_event = {
                 id = usa_events.10
                 years = 5
             }
         }
         ai_chance = {
-			base = 3
+			base = 0
 		}
     }
 
@@ -564,7 +574,11 @@ usa_events.9 = { #Post war loans initiation
 		    }
         }
         c:USA = {
-           trigger_event = {
+            trigger_event = {
+                id = dev_events.90
+                days = 30
+            }
+            trigger_event = {
                 id = usa_events.10
                 years = 5
             }
@@ -577,7 +591,7 @@ usa_events.9 = { #Post war loans initiation
     option = {
         name = usa_events.9.e
         c:USA = {
-           trigger_event = {
+            trigger_event = {
                 id = usa_events.10
                 years = 5
             }

@@ -224,17 +224,6 @@ dev_events.7 = {
             is_decaying = yes
 		}
     }
-
-    option = {
-        name = dev_events.7.a
-        default_option = yes
-        trigger = { is_player = yes }
-        add_modifier = {
-			name = starting_minting_buff_3_modifier
-            years = 3
-            is_decaying = yes
-		}
-    }
 }
 
 dev_events.8 = { 
@@ -674,7 +663,7 @@ dev_events.19 = {
 			}
 			add_modifier = {
 				name = political_movement_nerf_1
-				years = 6
+				years = 10
 			}
 		}     
     }
@@ -3516,5 +3505,34 @@ dev_events.89 = {
 			  type = rivalry
 		    }	
 	    }
+    }
+}
+
+dev_events.90 = {
+    type = country_event
+
+    title = dev_events.6.t
+    desc = dev_events.6.d
+    flavor = dev_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.6.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 200000000
+        add_modifier = {
+			name = starting_minting_buff_2_modifier
+            years = 2
+            is_decaying = yes
+		}
     }
 }
