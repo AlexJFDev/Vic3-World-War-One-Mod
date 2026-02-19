@@ -152,7 +152,7 @@ dev_events.5 = {
         default_option = yes
         add_modifier = {
 			name = starting_minting_buff_1_modifier
-            years = 5
+            years = 10
             is_decaying = yes
 		}
     }
@@ -179,7 +179,7 @@ dev_events.6 = {
         default_option = yes
         add_modifier = {
 			name = starting_minting_buff_2_modifier
-            years = 5
+            years = 10
             is_decaying = yes
 		}
     }
@@ -206,7 +206,7 @@ dev_events.7 = {
         default_option = yes
         add_modifier = {
 			name = starting_minting_buff_3_modifier
-            years = 5
+            years = 10
             is_decaying = yes
 		}
     }
@@ -233,7 +233,7 @@ dev_events.8 = {
         default_option = yes
         add_modifier = {
 			name = starting_minting_buff_4_modifier
-            years = 5
+            years = 10
             is_decaying = yes
 		}
     }
@@ -1586,7 +1586,7 @@ dev_events.37 = {
         default_option = yes
         trigger = { is_player = no }
         activate_law = law_type:law_armed_neutrality
-        add_treasury = -900000000
+        add_treasury = -300000000
         add_radicals = {
 			strata = upper
 			value = -0.25
@@ -3426,5 +3426,67 @@ dev_events.87 = {
 				remove_building = building_naval_base
 			}
         }
+    }
+}
+
+dev_events.88 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        random_scope_state = {
+			limit = {
+				state_region = s:STATE_PANAMA
+                owner = root
+			}
+			create_building={
+				building="building_panama_canal"
+				level = 1
+			}
+		}	
+    }
+}
+
+dev_events.89 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        c:JAP = {
+		    create_diplomatic_pact = {
+			  country = c:GBR
+			  type = rivalry
+		    }	
+	    }
     }
 }

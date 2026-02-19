@@ -169,9 +169,17 @@ entente_peace_deal.1 = { #Entente victory
               days = 5
             } 
 			trigger_event = {
+              id = dev_events.45
+              days = 5
+            }
+			trigger_event = {
               id = dev_events.36
               days = 5
             } 
+			trigger_event = {
+                id = dev_events.17
+                days = 5
+            }
 		}
 		If = {
            limit = {
@@ -562,6 +570,12 @@ entente_peace_deal.1 = { #Entente victory
                 activate_law = law_type:law_mass_conscription	
 			}
 		}
+		c:CZH = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         s:STATE_MORAVIA = {
 	       random_scope_state = {
 		      limit = {
@@ -635,6 +649,12 @@ entente_peace_deal.1 = { #Entente victory
 				activate_law = law_type:law_monarchy
                 activate_law = law_type:law_mass_conscription	
 			}
+		}
+		c:HUN = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
 		}
         s:STATE_TRANSDANUBIA = {
 	       random_scope_state = {
@@ -761,6 +781,12 @@ entente_peace_deal.1 = { #Entente victory
 				activate_law = law_type:law_monarchy
                 activate_law = law_type:law_mass_conscription	
 			}
+		}
+		c:GAL = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
 		}
         s:STATE_WEST_GALICIA = {
 	       random_scope_state = {
@@ -942,6 +968,12 @@ entente_peace_deal.1 = { #Entente victory
                 activate_law = law_type:law_mass_conscription	
 			}
 		}
+		c:EST = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         s:STATE_TARTU = {
 	       random_scope_state = {
 		      limit = {
@@ -964,6 +996,12 @@ entente_peace_deal.1 = { #Entente victory
                 activate_law = law_type:law_mass_conscription	
 			}
 		}
+		c:LAT = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         s:STATE_COURLAND = {
 	       random_scope_state = {
 		      limit = {
@@ -984,6 +1022,12 @@ entente_peace_deal.1 = { #Entente victory
 			on_created = {
 				activate_law = law_type:law_presidential_republic
                 activate_law = law_type:law_mass_conscription	  
+                }
+		}
+		c:LIT = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
                 }
 		}
 		c:EST = {
@@ -1159,6 +1203,12 @@ entente_peace_deal.2 = { #Round 1 result
          }
         }
        }
+	   c:RHE = {
+		trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+	   }
         create_country = { #Bavaria
 	       tag = BAV
 	       origin = this
@@ -1213,6 +1263,12 @@ entente_peace_deal.2 = { #Round 1 result
             }
         }
        }
+	   c:BAV = {
+		trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+	   }
         create_country = { #Saxony
 	       tag = SAX
 	       origin = this
@@ -1225,6 +1281,12 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_right_of_assembly
            }
         }
+		c:SAX = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         create_country = { #Anhlat
 	       tag = ANH
 	       origin = this
@@ -1237,6 +1299,12 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_right_of_assembly
            }
         }
+		c:ANH = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         create_country = { #Hanover
 	       tag = HAN
 	       origin = this
@@ -1277,6 +1345,12 @@ entente_peace_deal.2 = { #Round 1 result
             }
            }
         }
+		c:HAN = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         create_country = { #Holstein
 	       tag = HOL
 	       origin = this
@@ -1289,6 +1363,12 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_right_of_assembly
            }
         }  
+		c:HOL = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		c:SWI = {
             trigger_event = {
                 id = entente_peace_deal.12
@@ -1394,6 +1474,12 @@ entente_peace_deal.2 = { #Round 1 result
          }
         }
        }
+	   c:RHE = {
+		trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+	   }
         create_country = { #Bavaria
 	       tag = BAV
 	       origin = this
@@ -1448,6 +1534,12 @@ entente_peace_deal.2 = { #Round 1 result
             }
         }
        }
+	   c:BAV = {
+		trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+	   }
         create_country = { #Saxony
 	       tag = SAX
 	       origin = this
@@ -1460,6 +1552,12 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_right_of_assembly
            }
         }
+		c:SAX = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         create_country = { #Anhlat
 	       tag = ANH
 	       origin = this
@@ -1472,6 +1570,12 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_right_of_assembly
            }
         }
+		c:ANH = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         create_country = { #Hanover
 	       tag = HAN
 	       origin = this
@@ -1512,6 +1616,12 @@ entente_peace_deal.2 = { #Round 1 result
             }
            }
         }
+		c:HAN = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         create_country = { #Holstein
 	       tag = HOL
 	       origin = this
@@ -1524,6 +1634,12 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_right_of_assembly
            }
         } 
+		c:HOL = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         c:GER = {
 		create_diplomatic_pact = {
 			country = c:RHE
@@ -1600,6 +1716,12 @@ entente_peace_deal.2 = { #Round 1 result
            activate_law = law_type:law_right_of_assembly
            }
         }
+		c:RHE = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         s:STATE_RHINELAND = {
 	       random_scope_state = {
 		      limit = {
@@ -1903,6 +2025,12 @@ entente_peace_deal.4 = { #Round 3 result
            }
            }
         }
+		c:POL = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		s:STATE_POSEN = {
            random_scope_state = {
 		      limit = {
@@ -2029,6 +2157,12 @@ entente_peace_deal.4 = { #Round 3 result
            }
 		   }
 		}
+		c:POL = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
         s:STATE_POSEN = {
            random_scope_state = {
 		      limit = {
@@ -2120,6 +2254,12 @@ entente_peace_deal.4 = { #Round 3 result
            activate_law = law_type:law_right_of_assembly
            }
 		   }
+		}
+		c:POL = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
 		}
 		s:STATE_POSEN = {
            random_scope_state = {
@@ -2852,6 +2992,12 @@ entente_peace_deal.8 = { #Round 7 result
                }
 		    }
 		}
+		c:HDJ = {
+            trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		s:STATE_ALEPPO = {
            random_scope_state = {
 		      limit = {
@@ -3102,6 +3248,12 @@ entente_peace_deal.8 = { #Round 7 result
            activate_law = law_type:law_right_of_assembly
            }
 		}
+		c:SYR = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		s:STATE_ALEPPO = {
            random_scope_state = {
 		      limit = {
@@ -3142,6 +3294,12 @@ entente_peace_deal.8 = { #Round 7 result
            activate_law = law_type:law_right_of_assembly
            }
 		}
+		c:LEB = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		create_country = {
 	       tag = PAL
 	       origin = this
@@ -3153,6 +3311,12 @@ entente_peace_deal.8 = { #Round 7 result
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
            }
+		}
+		c:PAL = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
 		}
 		s:STATE_TRANSJORDAN = {
            random_scope_state = {
@@ -3179,6 +3343,12 @@ entente_peace_deal.8 = { #Round 7 result
                }
 		    }
 		}
+		c:HDJ = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		create_country = {
 	       tag = IRQ
 	       origin = this
@@ -3191,6 +3361,12 @@ entente_peace_deal.8 = { #Round 7 result
            activate_law = law_type:law_right_of_assembly
 		   set_state_religion = rel:sunni
            }
+		}
+		c:IRQ = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
 		}
         s:STATE_DEIR_EZ_ZOR = {
            random_scope_state = {
@@ -3276,6 +3452,12 @@ entente_peace_deal.8 = { #Round 7 result
            activate_law = law_type:law_right_of_assembly
            }
 		}
+		c:SYR = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		s:STATE_ALEPPO = {
            random_scope_state = {
 		      limit = {
@@ -3316,6 +3498,12 @@ entente_peace_deal.8 = { #Round 7 result
            activate_law = law_type:law_right_of_assembly
            }
 		}
+		c:LEB = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		create_country = {
 	       tag = PAL
 	       origin = this
@@ -3327,6 +3515,12 @@ entente_peace_deal.8 = { #Round 7 result
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_right_of_assembly
            }
+		}
+		c:PAL = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
 		}
 		s:STATE_TRANSJORDAN = {
            random_scope_state = {
@@ -3353,6 +3547,12 @@ entente_peace_deal.8 = { #Round 7 result
                }
 		    }
 		}
+		c:HDJ = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+		}
 		create_country = {
 	       tag = IRQ
 	       origin = this
@@ -3365,6 +3565,12 @@ entente_peace_deal.8 = { #Round 7 result
            activate_law = law_type:law_right_of_assembly
 		   set_state_religion = rel:sunni
            }
+		}
+		c:IRQ = {
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
 		}
         s:STATE_DEIR_EZ_ZOR = {
            random_scope_state = {
@@ -3803,10 +4009,10 @@ entente_peace_deal.10 = { #Round 9 result
     option = {
         name = entente_peace_deal.10.a
         trigger = {
-         has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
-		 NOT = {
-			has_global_variable = japan_refuse_round_9_prop
-		  }
+            has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
+		    NOT = {
+			  has_global_variable = japan_refuse_round_9_prop
+		    }
         }
 	}
 
@@ -3850,6 +4056,12 @@ entente_peace_deal.10 = { #Round 9 result
 				provinces = { x527F6C x808011 }
 			}
         }
+		c:JAP = {
+			trigger_event = {
+                id = dev_events.89
+                days = 5
+            }
+		}
 	}
 
 	option = {
@@ -3951,6 +4163,12 @@ entente_peace_deal.10 = { #Round 9 result
 		      set_state_owner = c:USA
             }
         }
+		c:JAP = {
+			trigger_event = {
+                id = dev_events.89
+                days = 5
+            }
+		}
 	}
 }
 
