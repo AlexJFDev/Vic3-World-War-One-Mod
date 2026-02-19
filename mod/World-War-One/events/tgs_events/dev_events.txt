@@ -158,7 +158,7 @@ dev_events.5 = {
     }
 }
 
-dev_events.6 = { 
+dev_events.6 = {
     type = country_event
 
     title = dev_events.6.t
@@ -177,15 +177,27 @@ dev_events.6 = {
     option = {
         name = dev_events.6.a
         default_option = yes
+        trigger = { is_player = no }
         add_modifier = {
 			name = starting_minting_buff_2_modifier
-            years = 10
+            years = 5
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = dev_events.6.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+			name = starting_minting_buff_2_modifier
+            years = 2
             is_decaying = yes
 		}
     }
 }
 
-dev_events.7 = { 
+dev_events.7 = {
     type = country_event
 
     title = dev_events.7.t
@@ -204,9 +216,22 @@ dev_events.7 = {
     option = {
         name = dev_events.7.a
         default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 30000000
         add_modifier = {
 			name = starting_minting_buff_3_modifier
-            years = 10
+            years = 5
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = dev_events.7.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+			name = starting_minting_buff_3_modifier
+            years = 3
             is_decaying = yes
 		}
     }
@@ -520,10 +545,10 @@ dev_events.16 = {
         name = dev_events.16.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 300000000
+        add_treasury = 50000000
         add_modifier = {
             name = minting_buff_5_modifier
-            years = 10
+            years = 2
             is_decaying = yes
         }
         add_modifier = {
@@ -542,10 +567,10 @@ dev_events.16 = {
         name = dev_events.16.a
         default_option = yes
         trigger = { is_player = yes }
-        add_treasury = 100000000
+        add_treasury = 25000000
         add_modifier = {
-            name = minting_buff_5_modifier
-            years = 10
+            name = starting_minting_buff_4_modifier
+            years = 5
             is_decaying = yes
         }
     }
@@ -1495,8 +1520,12 @@ dev_events.35 = {
         default_option = yes
         every_country = {
 			limit = {
-				country_rank < rank_value:major_power 
-                NOT = { c:BIC ?= this }
+                NOR = { 
+                    c:USA ?= this
+                    c:GBR ?= this
+                    c:BIC ?= this
+                    c:CHI ?= this 
+                }
 			}
             trigger_event = {
                 id = dev_events.36
@@ -1506,7 +1535,7 @@ dev_events.35 = {
     }
 }
 
-dev_events.36 = { 
+dev_events.36 = {
     type = country_event
 
     title = dev_events.8.t
@@ -1525,11 +1554,10 @@ dev_events.36 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { is_player = yes }
-        add_treasury = 5000000
+        trigger = { country_rank = rank_value:great_power }
         add_modifier = {
-			name = starting_minting_buff_4_modifier
-            years = 20
+			name = starting_minting_buff_3_modifier
+            years = 10
             is_decaying = yes
 		}
     }
@@ -1537,7 +1565,7 @@ dev_events.36 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { is_player = no }
+        trigger = { country_rank < rank_value:great_power }
         add_treasury = 10000000
         add_modifier = {
 			name = starting_minting_buff_4_modifier

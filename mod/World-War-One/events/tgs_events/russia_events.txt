@@ -511,15 +511,7 @@ russia_events.7 = { #Soviet uprising
         trigger_event = {
               id = ussr_events.4
                years = 5
-            }
-		remove_diplomatic_pact = {
-			country = c:FRA
-			type = alliance
-		}
-        remove_diplomatic_pact = {
-			country = c:GBR
-			type = alliance
-		}        
+            }      
         set_capital = STATE_MOSCOW
         create_character = {
 			template = sov_joseph_stalin_character_template
@@ -587,8 +579,7 @@ russia_events.8 = { #The civil war begins
 
     trigger = {}
 
-    option = {
-        name = russia_events.8.a 
+    immediate = {
         create_country = {
 	       tag = SIB
 	       origin = this
@@ -771,6 +762,10 @@ russia_events.8 = { #The civil war begins
 			strata = lower
             value = -10000000
 		}
+    }
+
+    option = {
+        name = russia_events.8.a
     }
 }
 

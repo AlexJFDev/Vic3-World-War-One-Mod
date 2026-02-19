@@ -78,10 +78,6 @@
 			id = dev_events.1
 			days = 5
 		}
-		trigger_event = { #Minting buff 3
-			id = starting_minting_buff_3_modifier
-			days = 5
-		}
 		trigger_event = { #Migration attraction buff
 			id = dev_events.40
 			days = 5
@@ -91,6 +87,10 @@
     c:CHI = {
 		trigger_event = { #Political movement nerf for AI
 			id = dev_events.1
+			days = 5
+		}
+        trigger_event = { #Special minting bonus
+			id = dev_events.6
 			days = 5
 		}
 		trigger_event = { #China army buff
@@ -307,10 +307,6 @@
 	}
 	
 	c:FRA = {
-		trigger_event = { #Minting bonus 3
-			id = dev_events.7
-			days = 5
-		}
 		trigger_event = { #Loy and rads reset
 			id = dev_events.26
 			days = 90
@@ -326,10 +322,6 @@
 			id = dev_events.25
 			days = 5
 		}
-		trigger_event = { #Minting bonus 3
-			id = dev_events.7
-			days = 5
-		}
 		trigger_event = { #Political movement nerf for AI
 			id = dev_events.1
 			days = 5
@@ -337,10 +329,6 @@
 	}
 
 	c:RUS = {
-		trigger_event = { #Minting bonus 3
-			id = dev_events.7
-			days = 5
-		}
 		trigger_event = { #Political movement nerf for AI
 			id = dev_events.73
 			days = 5
@@ -363,19 +351,11 @@
 			id = balkan_war_events.2
 			days = 14
 		}
-		trigger_event = { #Minting bonus 5
-			id = dev_events.8
-			days = 5
-		}
 	}
 
 	c:JAP = {
 		trigger_event = { #Stabilization buff for AI
 			id = dev_events.1
-			days = 5
-		}
-		trigger_event = { #Minting Bonus 3
-			id = dev_events.7
 			days = 5
 		}
 		trigger_event = { #Ai Japan buff
@@ -412,10 +392,10 @@
 			days = 5
 		}
 		trigger_event = { #Extra money
-			id = dev_events.18
+			id = dev_events.36
 			days = 5
 		}
-		trigger_event = { #Minting bonus 3
+		trigger_event = { #Extra money
 			id = dev_events.36
 			days = 5
 		}
@@ -427,16 +407,23 @@
 			days = 5
 		}
 		trigger_event = { #Extra money
-			id = dev_events.18
-			days = 5
-		}
-		trigger_event = { #Minting bonus 3
 			id = dev_events.36
 			days = 5
 		}
-		trigger_event = { #Minting bonus 3
+		trigger_event = { #Extra money
 			id = dev_events.36
-			days = 15
+			days = 5
+		}
+	}
+
+	c:MON = {
+		trigger_event = { #Political movement nerf for AI
+			id = dev_events.1
+			days = 5
+		}
+		trigger_event = { #Extra money
+			id = dev_events.36
+			days = 5
 		}
 	}
 
@@ -484,10 +471,6 @@
 	}
 
 	c:GER = {
-		trigger_event = { #Minting bonus 1
-			id = dev_events.7
-			days = 5
-		}
 		trigger_event = { #Loy and rads reset
 			id = dev_events.26
 			days = 90
@@ -537,10 +520,6 @@
 	}
 	
 	c:AUS = {
-		trigger_event = { #Minting bonus 2
-			id = dev_events.7
-			days = 5
-		}
 		trigger_event = { #Change religion
 			id = dev_events.13
 			days = 5

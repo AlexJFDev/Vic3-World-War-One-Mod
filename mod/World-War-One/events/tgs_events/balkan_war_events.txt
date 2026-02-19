@@ -183,13 +183,37 @@ balkan_war_events.4 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
-    option = {
+	option = {
         name = balkan_war_events.4.a
         default_option = yes
-        add_modifier = {
+        trigger = { is_player = yes }
+		add_treasury = 5000000
+		add_modifier = {
             name = army_buff_modifier_5
             months = 3
             is_decaying = yes
         }
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 2
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = balkan_war_events.4.a
+        default_option = yes
+        trigger = { is_player = no }
+		add_treasury = 10000000
+		add_modifier = {
+            name = army_buff_modifier_5
+            months = 6
+            is_decaying = yes
+        }
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 6
+            is_decaying = yes
+		}
     }
 }
