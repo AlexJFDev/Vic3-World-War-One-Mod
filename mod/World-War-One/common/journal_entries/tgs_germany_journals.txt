@@ -333,17 +333,12 @@ je_western_crusade = {
             is_insurrectionary = no
         }
         NOT = {
-            c:GBR = {
-			  has_truce_with = root
-            }
-            c:FRA = {
-			  has_truce_with = root
-            }
-            c:POL = {
-			  has_truce_with = root
-            }
             has_modifier = declared_bankruptcy
         }
+    }
+
+    invalid = {
+        has_global_variable = world_war_two_started
     }
 
     on_complete = {
@@ -391,7 +386,7 @@ je_eastern_crusade = {
         has_global_variable = france_defeat
         game_date > 1941.6.1
         has_strategic_adjacency = c:RUS
-        average_sol > average_expected_sol
+        root.average_sol > 12
         any_political_movement = {
             is_insurrectionary = no
         }
@@ -407,6 +402,10 @@ je_eastern_crusade = {
             id = world_war_two_initiation_events.6
             days = 5
         }
+    }
+
+    invalid = {
+       has_global_variable = germany_invades_ussr
     }
 
     should_be_pinned_by_default = yes
