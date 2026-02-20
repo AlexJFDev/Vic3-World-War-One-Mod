@@ -471,9 +471,9 @@
 	}
 
 	c:GER = {
-		trigger_event = { #Loy and rads reset
-			id = dev_events.26
-			days = 90
+		trigger_event = { #Starting sol buff
+			id = dev_events.25
+			days = 5
 		}
 	}
 
@@ -487,6 +487,10 @@
     c:USA = {
 		trigger_event = { #Panama canal
 			id = usa_events.1
+			days = 5
+		}
+		trigger_event = { #Starting sol buff
+			id = dev_events.25
 			days = 5
 		}
 		trigger_event = { #Starting sol buff
