@@ -498,6 +498,23 @@
 		}
 	}
 
+	# USA-CHI
+	create_treaty = {
+		name = treaty_name_usa_chi_invest
+		first_country = c:USA
+		second_country = c:CHI
+		is_draft = no
+		entered_into_force_on = 1895.5.12
+		binding_period = { years = 30 }
+		articles_to_create = {
+			{
+				article = foreign_investment_rights
+				source_country = c:CHI
+				target_country = c:USA
+			}
+		}
+	}
+
 	#Root-Takahira agreement
 	create_treaty = {
 		name = treaty_name_root_takahira_agreement

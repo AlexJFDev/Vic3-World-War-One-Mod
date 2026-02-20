@@ -2157,6 +2157,11 @@ dev_events.53 = {
 			name = starting_sol_buff
             years = 40
 		}  
+        add_modifier = {
+			name = starting_sol_buff
+            years = 40
+            is_decaying = yes
+		} 
     }
 
     option = {
@@ -2165,14 +2170,14 @@ dev_events.53 = {
         trigger = { is_player = yes }
         add_modifier = {
 			name = starting_sol_buff
-            years = 30
+            years = 40
             is_decaying = yes
 		}  
         add_modifier = {
 			name = starting_sol_buff
-            years = 30
+            years = 40
             is_decaying = yes
-		}   
+		}  
     }
 }
 
