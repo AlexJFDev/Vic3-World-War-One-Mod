@@ -282,6 +282,7 @@ je_western_crusade = {
     }
     
     possible = {
+        game_date > 1925.1.1
         OR = {
             has_variable = hitler_rise_to_power_local
             c:GER = {
@@ -344,6 +345,7 @@ je_eastern_crusade = {
     }
     
     possible = {
+        game_date > 1925.1.1
         OR = {
             has_variable = hitler_rise_to_power_local
             c:GER = {

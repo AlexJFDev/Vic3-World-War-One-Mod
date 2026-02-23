@@ -177,7 +177,13 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 		create_diplomatic_play = {
 		    target_country = c:GRE
 		    type = dp_humiliation
-            escalation = 99
+            escalation = 85
+            add_target_backers = {
+				c:ARM
+			}
+            add_target_backers = {
+				c:KUR
+			}
 	        add_war_goal = {
                     holder = c:TUR
                     type = conquer_state
@@ -192,6 +198,16 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                     holder = c:TUR
                     type = conquer_state
                     target_state = s:STATE_AYDIN.region_state:GRE
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = annex_country
+                    target_country = c:ARM
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = annex_country
+                    target_country = c:KUR
                 }
             add_war_goal = {
 				    holder = c:GRE
@@ -294,27 +310,10 @@ turkey_events.6 = { #Countries react to revolution
     option = { 
         name = turkey_events.6.a
         default_option = yes
-        trigger = { NOT = { root = c:ITA } }
         scope:turkish_independance_war_diplo_play = {
 			add_target_backers = {
 				who = root
 			}
-            add_target_backers = {
-				c:ARM
-			}
-            add_target_backers = {
-				c:KUR
-			}
-            add_war_goal = {
-                    holder = c:TUR
-                    type = annex_country
-                    target_country = c:ARM
-                }
-            add_war_goal = {
-                    holder = c:TUR
-                    type = annex_country
-                    target_country = c:KUR
-                }
         }
         trigger_event = {
             id = turkey_events.7
@@ -325,69 +324,10 @@ turkey_events.6 = { #Countries react to revolution
 	    }
     }
 
-    option = { 
+    option = {
         name = turkey_events.6.b
-        trigger = { NOT = { root = c:ITA } }
-        scope:turkish_independance_war_diplo_play = {
-            add_target_backers = {
-				c:ARM
-			}
-            add_target_backers = {
-				c:KUR
-			}
-        }
         ai_chance = {
 		  base = 0
-	    }
-    }
-
-    option = { 
-        name = turkey_events.6.a
-        default_option = yes
-        trigger = { root = c:ITA }
-        scope:turkish_independance_war_diplo_play = {
-			add_target_backers = {
-				who = root
-			}
-            add_target_backers = {
-				c:ARM
-			}
-            add_target_backers = {
-				c:KUR
-			}
-            add_war_goal = {
-                    holder = c:TUR
-                    type = annex_country
-                    target_country = c:ARM
-                }
-            add_war_goal = {
-                    holder = c:TUR
-                    type = annex_country
-                    target_country = c:KUR
-                }
-        }
-        trigger_event = {
-            id = turkey_events.7
-            days = 180
-        }
-        ai_chance = {
-		  base = 0
-	    }
-    }
-
-    option = { 
-        name = turkey_events.6.b
-        trigger = { root = c:ITA }
-        scope:turkish_independance_war_diplo_play = {
-            add_target_backers = {
-				c:ARM
-			}
-            add_target_backers = {
-				c:KUR
-			}
-        }
-        ai_chance = {
-		  base = 1
 	    }
     }
 }
