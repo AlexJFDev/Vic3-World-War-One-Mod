@@ -976,7 +976,6 @@ stormtroopers = {
 	category = military
 	
 	modifier = {
-		unit_army_offense_mult = 0.08
 		unit_combat_unit_type_trench_infantry_offense_add = 5
 	}
 	unlocking_technologies = {	
@@ -1027,8 +1026,7 @@ mobile_armor = {
 }
 
 military_aviation = {
-	# Unlocks Vehicles Industries
-	# Unlocks Tanks, Planes and Tanks PM in Barracks
+	# Unlocks fighter unit
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/military_aviation.dds"
 	category = military
@@ -1039,6 +1037,40 @@ military_aviation = {
 	
 	ai_weight = {
 		value = 10
+	}
+}
+
+aerial_bombardment = {
+	#Unlocks bomber unit
+    era = era_5
+    texture = "gfx/interface/icons/invention_icons/aerial_bombardment_tech.dds"
+    category = military
+
+    unlocking_technologies = {
+        military_aviation  
+    }
+
+    ai_weight = {
+		value = 1
+	}
+}
+
+aerial_ground_support = {
+	#More offense for fighters
+    era = era_5
+    texture = "gfx/interface/icons/invention_icons/aerial_ground_support_tech.dds"
+    category = military
+
+    modifier = {
+		unit_combat_unit_type_fighter_offense_add = 20
+	}
+
+    unlocking_technologies = {
+        military_aviation  
+    }
+
+    ai_weight = {
+		value = 1
 	}
 }
 
@@ -1120,25 +1152,6 @@ battlefleet_tactics = {
 	}
 }
 
-aerial_ground_support = {
-	#Unlocks Close Air Support PM in Barracks
-    era = era_5
-    texture = "gfx/interface/icons/invention_icons/aerial_ground_support_tech.dds"
-    category = military
-
-    unlocking_technologies = {
-        military_aviation  
-    }
-
-    unlocks = {
-        unit = "close_air_support"
-    }
-
-    ai_weight = {
-		value = 1
-	}
-}
-
 ### ERA 6
 
 blitzkrieg_tech = {
@@ -1155,7 +1168,7 @@ blitzkrieg_tech = {
     }
 
     modifier = {
-		unit_combat_unit_type_heavy_tank_offense_mult= 0.15
+		unit_combat_unit_type_heavy_tank_offense_add = 10
 	}
 
     ai_weight = {
