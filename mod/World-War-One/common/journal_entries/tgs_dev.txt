@@ -5,11 +5,13 @@
     is_shown_when_inactive = {
        country_rank >= rank_value:major_power
        has_technology_researched = trench_works
+       is_player = no
     }
     
     possible = {
         country_rank >= rank_value:major_power
         has_technology_researched = automatic_machine_guns
+        is_player = no
     }
 
     complete = {
@@ -24,7 +26,7 @@
 }
 
 je_usa_loans_verification = {
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -44,6 +46,78 @@ je_usa_loans_verification = {
     }
 
     on_complete = {}
+
+    on_timeout = {}
+}
+
+je_ai_allies_landings = {
+    icon = "gfx/interface/icons/invention_icons/landing_craft.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+       exists = c:USA
+       THIS = c:USA
+       is_player = no 
+       has_variable = allies_participant
+    }
+    
+    possible = {
+        c:USA = {
+          is_player = no
+          is_at_war = yes
+          has_variable = allies_participant
+        }
+        c:GBR = {
+          is_player = no
+          is_at_war = yes
+          has_variable = allies_participant
+        }
+        c:FFR = {
+          is_at_war = yes
+          has_variable = allies_participant
+        }
+        c:GER = {
+          is_player = no
+          is_at_war = yes
+          has_variable = axis_participant
+        }
+    }
+
+    immediate = { }
+
+    complete = {
+        exists = c:USA
+        exists = c:GBR
+        exists = c:FFR
+        exists = c:GER
+        game_date > 1944.6.1
+        c:USA = {
+          is_player = no
+          is_at_war = yes
+          has_variable = allies_participant
+        }
+        c:GBR = {
+          is_player = no
+          is_at_war = yes
+          has_variable = allies_participant
+        }
+        c:FFR = {
+          is_at_war = yes
+          has_variable = allies_participant
+        }
+        c:GER = {
+          is_player = no
+          is_at_war = yes
+          has_variable = axis_participant
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = dev_events.92
+            days = 5
+        }
+    }
 
     on_timeout = {}
 }
