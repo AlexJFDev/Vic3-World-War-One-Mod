@@ -1441,38 +1441,6 @@ dev_events.34 = {
     option = {
         name = dev_events.32.a
         default_option = yes
-        trigger = { is_player = no }   
-        remove_modifier = stabilization_buff_modifier 
-        add_modifier = {
-           name = recently_collapsed_1
-           years = 10
-           is_decaying = yes
-        }
-        every_country = {
-			limit = {
-				country_rank >= rank_value:major_power
-                is_player = no
-                NOT = { c:JAP ?= this }
-                NOT = { c:RUS ?= this }
-			}
-			trigger_event = {
-                id = dev_events.71
-                days = 5
-            }
-		}
-    }
-
-    option = {
-        name = dev_events.32.a
-        default_option = yes
-        trigger = { is_player = yes } 
-        c:BEI = { set_variable = warlord_state }
-        remove_modifier = stabilization_buff_modifier 
-        add_modifier = {
-           name = recently_collapsed_2
-           years = 10
-           is_decaying = yes
-        }
         every_country = {
 			limit = {
 				country_rank >= rank_value:major_power

@@ -467,10 +467,14 @@ china_events.5 = { #China collapse
 
     trigger = {}
 
+    immediate = {
+        change_tag = BEI
+    }
+
     option = {
         name = china_events.5.a
         set_global_variable = china_shatters
-        c:CHI = {
+        c:BEI = {
 		remove_diplomatic_pact = {
 			country = c:XIN
 			type = protectorate
@@ -563,7 +567,7 @@ china_events.5 = { #China collapse
         create_country = { #Shandong
 	       tag = SHA
 	       origin = this
-	       state = s:STATE_SHANDONG.region_state:CHI
+	       state = s:STATE_SHANDONG.region_state:BEI
            on_created = { 
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_autocracy
@@ -573,7 +577,7 @@ china_events.5 = { #China collapse
         create_country = { #Zhili
 	       tag = ZHI
 	       origin = this
-	       state = s:STATE_ZHILI.region_state:CHI
+	       state = s:STATE_ZHILI.region_state:BEI
            on_created = { 
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_autocracy
@@ -583,7 +587,7 @@ china_events.5 = { #China collapse
         create_country = { #Hubei
 	       tag = HUB
 	       origin = this
-	       state = s:STATE_WESTERN_HUBEI.region_state:chi
+	       state = s:STATE_WESTERN_HUBEI.region_state:BEI
            on_created = { 
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_autocracy
@@ -593,7 +597,7 @@ china_events.5 = { #China collapse
         create_country = { #Anhui
 	       tag = AHU
 	       origin = this
-	       state = s:STATE_NORTHERN_ANHUI.region_state:chi
+	       state = s:STATE_NORTHERN_ANHUI.region_state:BEI
            on_created = { 
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_autocracy
@@ -603,7 +607,7 @@ china_events.5 = { #China collapse
         create_country = { #Henan
 	       tag = HEN
 	       origin = this
-	       state = s:STATE_HENAN.region_state:CHI
+	       state = s:STATE_HENAN.region_state:BEI
            on_created = { 
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_autocracy
@@ -613,7 +617,7 @@ china_events.5 = { #China collapse
         create_country = { #Yue
 	       tag = YUE
 	       origin = this
-	       state = s:STATE_GUANGDONG.region_state:CHI
+	       state = s:STATE_GUANGDONG.region_state:BEI
            on_created = { 
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_autocracy
@@ -623,23 +627,28 @@ china_events.5 = { #China collapse
         s:STATE_SHAOZHOU = {
            random_scope_state = {
 		      limit = {
-			   exists = c:CHI
+			   exists = c:BEI
 			    owner = {
 				  OR = {
-					c:CHI = THIS
+					c:BEI = THIS
 				    }
 			    }
 		        }
 		      set_state_owner = c:YUE
             }
         }
-        c:CHI = {
+        c:BEI = {
+            add_modifier = {
+              name = recently_collapsed_2
+              years = 10
+              is_decaying = yes
+            }
             trigger_event = {
                 id = dev_events.34
                 days = 5
             }
             trigger_event = {
-                id = china_events.6
+                id = china_events.7
                 days = 5
             }
         }
@@ -781,7 +790,6 @@ china_events.5 = { #China collapse
                 days = 5
             }
         }
-        change_tag = BEI
 		set_global_variable = { name = chinese_central_government value = c:BEI }
     }
 }
