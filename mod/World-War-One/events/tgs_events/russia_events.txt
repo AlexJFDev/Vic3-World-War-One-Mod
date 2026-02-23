@@ -60,7 +60,19 @@ russia_events.2 = { #Russian empire decides to continue the war or not
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:AUS ?= this }
-              target = { c:SER ?= this }
+              target = { 
+                OR = {
+                    c:SER ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+					c:ITA ?= this 
+					c:USA ?= this
+                    c:BEL ?= this
+                    c:BRZ ?= this
+                    c:ROM ?= this
+                    c:GRE ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_one_diplo_play
         }
@@ -398,7 +410,19 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:AUS ?= this }
-              target = { c:SER ?= this }
+              target = { 
+                OR = {
+                    c:SER ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+					c:ITA ?= this 
+					c:USA ?= this
+                    c:BEL ?= this
+                    c:BRZ ?= this
+                    c:ROM ?= this
+                    c:GRE ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_one_diplo_play
         }
@@ -514,7 +538,7 @@ russia_events.7 = { #Soviet uprising
             }
         trigger_event = {
              id = ussr_events.1
-             days = 90
+             days = 15
             }
         trigger_event = {
               id = ussr_events.4

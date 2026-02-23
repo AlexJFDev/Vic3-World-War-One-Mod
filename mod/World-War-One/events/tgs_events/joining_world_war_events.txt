@@ -45,7 +45,19 @@ joining_world_war_events.2 = { #Joining the Entente
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:AUS ?= this }
-              target = { c:SER ?= this }
+              target = { 
+                OR = {
+                    c:SER ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+					c:ITA ?= this 
+					c:USA ?= this
+                    c:BEL ?= this
+                    c:BRZ ?= this
+                    c:ROM ?= this
+                    c:GRE ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_one_diplo_play
         }
@@ -95,7 +107,19 @@ joining_world_war_events.3 = { #Joining the Central Powers
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:AUS ?= this }
-              target = { c:SER ?= this }
+              target = { 
+                OR = {
+                    c:SER ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+					c:ITA ?= this 
+					c:USA ?= this
+                    c:BEL ?= this
+                    c:BRZ ?= this
+                    c:ROM ?= this
+                    c:GRE ?= this 
+                } 
+               }
 		    }
            save_scope_as = world_war_one_diplo_play
         }

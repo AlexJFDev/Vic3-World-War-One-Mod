@@ -36,19 +36,10 @@
 		war_fatigue_1
 	}
     
-    fail = { 
-        OR = {
-            any_civil_war = {
-			   civil_war_progress >= 0.75
-		    }
-            c:GER = {
-              has_variable = central_powers_participant
-		      has_modifier = country_humiliated
-            } 
-            NOT = {
-              owns_entire_state_region = STATE_ALSACE_LORRAINE
-            }
-        }
+    fail = {
+        any_civil_war = {
+			civil_war_progress >= 0.75
+		}
     }
 
     on_fail = { 
@@ -121,19 +112,10 @@ je_war_fatigue_player_germany = {
         root.average_sol >= 14
     }
     
-    fail = { 
-        OR = {
-            any_civil_war = {
-			   civil_war_progress >= 0.75
-		    }
-            c:GER = {
-              has_variable = central_powers_participant
-		      has_modifier = country_humiliated
-            } 
-            NOT = {
-              owns_entire_state_region = STATE_ALSACE_LORRAINE
-            }
-        }
+    fail = {
+        any_civil_war = {
+			civil_war_progress >= 0.75
+		}
     }
 
     on_fail = { 
