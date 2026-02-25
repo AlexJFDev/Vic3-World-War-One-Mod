@@ -1523,8 +1523,12 @@ dev_events.34 = {
 			limit = {
 				country_rank >= rank_value:major_power
                 is_player = no
-                NOT = { c:JAP ?= this }
-                NOT = { c:RUS ?= this }
+                NOR = { 
+                    c:MCH ?= this
+                    c:BEI ?= this
+                    c:CHI ?= this
+                    c:YUE ?= this 
+                }
 			}
 			trigger_event = {
                 id = dev_events.71
@@ -2806,18 +2810,223 @@ dev_events.71 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        set_relations = { country = c:MCH value = 80 } 
-        set_relations = { country = c:CHI value = 80 }
-        set_relations = { country = c:BEI value = 80 }
-        set_relations = { country = c:ZHI value = 80 }
-        set_relations = { country = c:SHN value = 80 }
-        set_relations = { country = c:SHA value = 80 }
-        set_relations = { country = c:JSU value = 80 }
-        set_relations = { country = c:ZHE value = 80 }
-        set_relations = { country = c:FRS value = 80 }
-        set_relations = { country = c:YUE value = 80 }
-        set_relations = { country = c:GNG value = 80 }
-        set_relations = { country = c:YUN value = 80 } 
+        trigger = {
+            is_player = no
+            NOT = { THIS = c:JAP }
+        }
+        set_relations = { country = c:MCH value = 50 } 
+        set_relations = { country = c:CHI value = 50 }
+        set_relations = { country = c:BEI value = 50 }
+        set_relations = { country = c:ZHI value = 50 }
+        set_relations = { country = c:SHN value = 50 }
+        set_relations = { country = c:SHA value = 50 }
+        set_relations = { country = c:JSU value = 50 }
+        set_relations = { country = c:ZHE value = 50 }
+        set_relations = { country = c:FRS value = 50 }
+        set_relations = { country = c:YUE value = 50 }
+        set_relations = { country = c:GNG value = 50 }
+        set_relations = { country = c:YUN value = 50 } 
+        create_bidirectional_truce = {
+			country = c:MCH
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:BEI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:SHN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:QIN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:GAN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:QIH
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:XIN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:SIH
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:HUB
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:SHA
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:ZHI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:AHU
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:CHI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:GNG
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:GUI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:HNA
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:HEN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:JXI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:JSU
+			months = 900
+		}
+		create_bidirectional_truce = {
+			country = c:ZHE
+			months = 900
+		}
+		create_bidirectional_truce = {
+			country = c:FRS
+			months = 900
+		}
+		create_bidirectional_truce = {
+			country = c:KMT
+			months = 900
+		}
+		create_bidirectional_truce = {
+			country = c:YUN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:TIB
+			months = 900
+		}
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        trigger = {
+            is_player = no
+            THIS = c:JAP
+        }
+        create_bidirectional_truce = {
+			country = c:MCH
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:BEI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:SHN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:QIN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:GAN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:QIH
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:XIN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:SIH
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:HUB
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:SHA
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:ZHI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:AHU
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:CHI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:GNG
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:GUI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:HNA
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:HEN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:JXI
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:JSU
+			months = 900
+		}
+		create_bidirectional_truce = {
+			country = c:ZHE
+			months = 900
+		}
+		create_bidirectional_truce = {
+			country = c:FRS
+			months = 900
+		}
+		create_bidirectional_truce = {
+			country = c:KMT
+			months = 900
+		}
+		create_bidirectional_truce = {
+			country = c:YUN
+			months = 900
+		}
+        create_bidirectional_truce = {
+			country = c:TIB
+			months = 900
+		}
     }
 }
 

@@ -133,19 +133,6 @@ china_events.2 = { #Imperial restoration
            activate_law = law_type:law_censorship
            }
         }
-        s:STATE_HINGGAN = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:CHI
-			    owner = {
-				  OR = {
-					c:CHI = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:MCH
-            }
-        }
         c:YUN = {
           create_diplomatic_play = {
 		    target_country = c:CHI
