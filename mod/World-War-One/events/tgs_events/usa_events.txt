@@ -86,7 +86,6 @@ usa_events.6 = { #Black Tuesday
     option = {
         name = usa_events.6.a
         default_option = yes
-        add_investment_pool = -900000000
         add_modifier = {
             name = great_depression_effect_1
             years = 25
@@ -132,6 +131,12 @@ usa_events.6 = { #Black Tuesday
                 days = 15
             }
         }
+        c:ITA = {
+            trigger_event = {
+                id = dev_events.48
+                days = 15
+            }
+        }
         set_variable = great_depression_started
         ai_chance = {
 			base = 10
@@ -141,7 +146,6 @@ usa_events.6 = { #Black Tuesday
     option = {
         name = usa_events.6.b
         add_treasury = -200000000
-        add_investment_pool = -900000000
         add_modifier = {
             name = great_depression_effect_1
             years = 25
@@ -187,6 +191,12 @@ usa_events.6 = { #Black Tuesday
             }
         }
         c:JAP = {
+            trigger_event = {
+                id = dev_events.48
+                days = 15
+            }
+        }
+        c:ITA = {
             trigger_event = {
                 id = dev_events.48
                 days = 15
@@ -318,7 +328,6 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
             has_variable = has_received_dawes_plan
             average_sol >= 12
         }
-        add_investment_pool = -100000000
         add_modifier = {
             name = great_depression_effect_4
             years = 15

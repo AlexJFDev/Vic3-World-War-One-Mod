@@ -304,16 +304,37 @@ je_western_crusade = {
         is_at_war = no
         average_sol > average_expected_sol
         has_technology_researched = blitzkrieg_tech
-        NOR = {
-            has_treaty_alliance_with = c:GBR
-            has_treaty_defensive_pact_with = c:GBR
-            has_treaty_alliance_with = c:FRA
-            has_treaty_defensive_pact_with = c:FRA
-            has_treaty_alliance_with = c:POL
-            has_treaty_defensive_pact_with = c:POL
-        }
-        any_political_movement = {
-            is_insurrectionary = no
+        NOT = {
+            c:GER = {
+                any_scope_treaty = {
+					binds = c:POL
+					any_scope_article = {
+					OR = {
+						has_type = alliance
+						has_type = defensive_pact
+						}
+					}
+				}
+                any_scope_treaty = {
+					binds = c:FRA
+					any_scope_article = {
+					OR = {
+						has_type = alliance
+						has_type = defensive_pact
+						}
+					}
+				}
+                any_scope_treaty = {
+					binds = c:GBR
+					any_scope_article = {
+					OR = {
+						has_type = alliance
+						has_type = defensive_pact
+						}
+					}
+				}
+            }
+            has_modifier = declared_bankruptcy
         }
         NOT = {
             has_modifier = declared_bankruptcy
@@ -371,12 +392,18 @@ je_eastern_crusade = {
         game_date > 1941.6.1
         has_strategic_adjacency = c:RUS
         root.average_sol > 12
-        any_political_movement = {
-            is_insurrectionary = no
-        }
-        NOR = {
-            has_treaty_alliance_with = c:RUS
-            has_treaty_defensive_pact_with = c:RUS
+        NOT = {
+            c:GER = {
+                any_scope_treaty = {
+					binds = c:RUS
+					any_scope_article = {
+					OR = {
+						has_type = alliance
+						has_type = defensive_pact
+						}
+					}
+				}
+            }
             has_modifier = declared_bankruptcy
         }
     }

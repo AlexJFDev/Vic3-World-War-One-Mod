@@ -3622,14 +3622,6 @@ REPLACE_OR_CREATE:GER = { # Germany
 		}
 	}
 	flag_definition = {
-		coa = GER_dictatorship
-		subject_canton = GER_dictatorship
-		priority = 15
-		trigger = { 
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}
-	flag_definition = {
 		coa = GER_spartakist
 		subject_canton = GER_spartakist
 		priority = 2000
@@ -3684,8 +3676,10 @@ REPLACE_OR_CREATE:GER = { # Germany
 		coa = GER_fascist
 		subject_canton = GER_fascist
 		priority = 1250
-		trigger = { 
-			coa_def_fascist_flag_trigger = yes
+		OR = {
+			coa_dictatorship_trigger = yes
+			coa_fascist_trigger = yes
+			coa_military_trigger = yes
 		}
 	}
     flag_definition = {

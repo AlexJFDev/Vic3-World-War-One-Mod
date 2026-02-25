@@ -322,7 +322,11 @@ REPLACE_OR_CREATE:unpleasant_germany = {
 	possible = {
 		exists = c:GER
 		THIS = c:GER
-		coa_fascist_trigger = yes
+		OR = {
+			coa_dictatorship_trigger = yes
+			coa_fascist_trigger = yes
+			coa_military_trigger = yes
+		}
 	}
 }
 

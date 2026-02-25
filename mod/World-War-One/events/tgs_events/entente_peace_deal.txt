@@ -272,7 +272,11 @@ entente_peace_deal.1 = { #Entente victory
             }
 			trigger_event = {
                 id = dev_events.25
-                days = 10
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.25
+                days = 5
             }
 			trigger_event = {
                 id = dev_events.7
@@ -1216,11 +1220,23 @@ entente_peace_deal.2 = { #Round 1 result
         }
        }
 	   c:RHE = {
-		trigger_event = {
+			trigger_event = {
                    id = dev_events.17
                    days = 5
                 }
-	   }
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+			trigger_event = {
+                   id = dev_events.15
+                   days = 5
+                }
+		}
         create_country = { #Bavaria
 	       tag = BAV
 	       origin = this
@@ -1487,11 +1503,23 @@ entente_peace_deal.2 = { #Round 1 result
         }
        }
 	   c:RHE = {
-		trigger_event = {
+			trigger_event = {
                    id = dev_events.17
                    days = 5
                 }
-	   }
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+			trigger_event = {
+                   id = dev_events.15
+                   days = 5
+                }
+		}
         create_country = { #Bavaria
 	       tag = BAV
 	       origin = this
@@ -1733,6 +1761,18 @@ entente_peace_deal.2 = { #Round 1 result
                    id = dev_events.17
                    days = 5
                 }
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+			trigger_event = {
+                   id = dev_events.17
+                   days = 5
+                }
+			trigger_event = {
+                   id = dev_events.15
+                   days = 5
+                }
 		}
         s:STATE_RHINELAND = {
 	       random_scope_state = {
@@ -1755,7 +1795,7 @@ entente_peace_deal.2 = { #Round 1 result
 		}	
         }
 		c:FRA = {
-         trigger_event = {
+            trigger_event = {
               id = germany_events.24
               years = 10
             }

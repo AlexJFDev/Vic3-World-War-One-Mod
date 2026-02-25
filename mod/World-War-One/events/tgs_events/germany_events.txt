@@ -273,7 +273,6 @@ germany_events.2 = { #November Revolution
 		}
     }
 
-
     option = {
         name = germany_events.2.a
         activate_law = law_type:law_parliamentary_republic
@@ -1283,7 +1282,7 @@ germany_events.28 = { #Nazi takeover
     }
 }
 
-germany_events.29 = { #Policy choice 
+germany_events.29 = { #Policy choice
     type = country_event
 
     title = germany_events.29.t
@@ -1305,6 +1304,7 @@ germany_events.29 = { #Policy choice
 
     option = {
         name = germany_events.29.a
+        default_option = yes
         trigger = { is_player = no }
         add_technology_progress = { progress = 70000 technology = blitzkrieg_tech }
         every_country = {
@@ -1331,6 +1331,7 @@ germany_events.29 = { #Policy choice
 
     option = {
         name = germany_events.29.a
+        default_option = yes
         trigger = { is_player = yes }
         add_technology_progress = { progress = 40000 technology = blitzkrieg_tech }
         every_country = {
@@ -2190,6 +2191,7 @@ germany_events.43 = { #Great depression recovery
         name = germany_events.43.a
         default_option = yes
         trigger = { is_player = no }
+        add_treasury = 50000000
         add_modifier = {
           name = germany_economic_recovery_1
           years = 10
@@ -2215,6 +2217,7 @@ germany_events.43 = { #Great depression recovery
     option = {
         name = germany_events.43.b
         trigger = { is_player = no }
+        add_treasury = 50000000
         add_modifier = {
           name = germany_economic_recovery_2
           years = 10
@@ -2240,6 +2243,7 @@ germany_events.43 = { #Great depression recovery
     option = {
         name = germany_events.43.c
         trigger = { is_player = no }
+        add_treasury = 50000000
         add_modifier = {
           name = germany_economic_recovery_3
           years = 10

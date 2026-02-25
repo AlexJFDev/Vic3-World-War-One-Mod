@@ -22,27 +22,31 @@
     complete = {
         exists = c:MCH
         c:MCH = {
-            NOR = { 
+            NOT = { 
                 is_subject_of = c:JAP
-                has_treaty_alliance_with = c:JAP
-                has_treaty_defensive_pact_with = c:JAP
             }
             OR = {
                 is_subject = no
                 is_subject_of = c:CHI
             }
         }
-        NOR = {
-            has_treaty_alliance_with = c:CHI
-            has_treaty_defensive_pact_with = c:CHI
+        NOT = {
+            c:JAP = {
+                any_scope_treaty = {
+					binds = c:MCH
+					any_scope_article = {
+					OR = {
+						has_type = alliance
+						has_type = defensive_pact
+						}
+					}
+				}
+            }
             has_modifier = declared_bankruptcy
         }
         army_size >= 200
         game_date > 1931.8.1
         is_at_war = no
-        any_political_movement = {
-            is_insurrectionary = no
-        }
         ruler = {
             OR = {
 				has_ideology = ideology:ideology_fascist
@@ -85,17 +89,23 @@ je_japan_expansion_2 = {
 
     complete = {
         exists = c:CHI
-        NOR = {
-            has_treaty_alliance_with = c:CHI
-            has_treaty_defensive_pact_with = c:CHI
+        NOT = {
+            c:JAP = {
+                any_scope_treaty = {
+					binds = c:CHI
+					any_scope_article = {
+					OR = {
+						has_type = alliance
+						has_type = defensive_pact
+						}
+					}
+				}
+            }
             has_modifier = declared_bankruptcy
         }
         army_size >= 200
         game_date > 1937.6.1
         is_at_war = no
-        any_political_movement = {
-            is_insurrectionary = no
-        }
         ruler = {
             OR = {
 				has_ideology = ideology:ideology_fascist
@@ -128,9 +138,18 @@ je_dragon_and_eagle = {
         has_global_variable = japan_invades_china
         has_global_variable = world_war_two_started
         exists = c:USA
-        NOR = {
-            has_treaty_alliance_with = c:USA
-            has_treaty_defensive_pact_with = c:USA
+        NOT = {
+            c:JAP = {
+                any_scope_treaty = {
+					binds = c:USA
+					any_scope_article = {
+					OR = {
+						has_type = alliance
+						has_type = defensive_pact
+						}
+					}
+				}
+            }
             has_modifier = declared_bankruptcy
         }
         c:USA = {
@@ -154,9 +173,6 @@ je_dragon_and_eagle = {
         army_size >= 200
         navy_size >= 120
         game_date > 1941.12.1
-        any_political_movement = {
-            is_insurrectionary = no
-        }
         c:USA = {
             has_diplomatic_pact = {
 				who = c:JAP

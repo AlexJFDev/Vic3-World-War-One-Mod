@@ -1652,8 +1652,13 @@ dev_events.37 = {
         name = dev_events.8.a
         default_option = yes
         trigger = { is_player = no }
+        add_treasury = 50000000
         activate_law = law_type:law_armed_neutrality
-        add_treasury = -300000000
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 20
+            is_decaying = yes
+		}
         add_radicals = {
 			strata = upper
 			value = -0.25
@@ -2002,30 +2007,7 @@ dev_events.48 = {
         }
         add_modifier = {
 			name = starting_minting_buff_3_modifier
-            years = 5
-            is_decaying = yes
-		}
-        add_modifier = {
-			name = starting_sol_buff
-            years = 5
-            is_decaying = yes
-		}
-    }
-
-    option = {
-        name = dev_events.8.a
-        default_option = yes
-        trigger = { 
-            is_player = no 
-            OR = {
-                has_modifier = great_depression_effect_1
-                has_modifier = great_depression_effect_2
-                has_modifier = great_depression_effect_3
-            }
-        }
-        add_modifier = {
-			name = starting_minting_buff_3_modifier
-            years = 1
+            years = 10
             is_decaying = yes
 		}
     }
@@ -3145,9 +3127,26 @@ dev_events.75 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
+    option = { 
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 50000000
+        add_modifier = {
+            name = starting_minting_buff_4_modifier
+            years = 10
+            is_decaying = yes
+        }
+        every_scope_state = {
+			limit = { owner = ROOT }
+			set_state_type = incorporated
+        }
+    }
+
     option = {
         name = dev_events.17.a
         default_option = yes
+        trigger = { is_player = yes }
         every_scope_state = {
 			limit = { owner = ROOT }
 			set_state_type = incorporated
