@@ -1,0 +1,50 @@
+﻿je_italian_civil_war = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:ITA
+        THIS = c:ITA
+        has_variable = axis_participant
+    }
+    
+    possible = {
+        has_variable = axis_participant
+        game_date > 1943.8.1
+        NOT = {
+           has_global_variable = ww2_britain_defeat
+           has_global_variable = ww2_russia_defeat
+           has_global_variable = ww2_usa_defeat
+        }
+    }
+
+    immediate = {
+        c:ITA = {
+            trigger_event = {
+                id = 
+                days = 5
+            }
+        }
+    }
+
+    modifiers_while_active = {
+	   war_fatigue_3
+	}
+
+    complete = {
+        OR = {
+           is_at_war = no
+           has_global_variable = ww2_italian_civil_war
+           has_global_variable = ww2_britain_defeat
+           has_global_variable = ww2_russia_defeat
+           has_global_variable = ww2_usa_defeat
+           institution_investment_level = {
+                institution = institution_propaganda
+                value = 4
+            }
+        }
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}

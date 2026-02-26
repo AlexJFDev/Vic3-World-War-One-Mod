@@ -512,6 +512,59 @@ REPLACE_OR_CREATE:ITA = { # Italy
 	}
 }
 
+FIT = { # Italian socialist republic
+	dynamic_country_name = {
+		name = dyn_c_italian_socialist_republic
+		adjective = ITA_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					has_law_or_variant = law_type:law_parliamentary_republic
+					has_law_or_variant = law_type:law_presidential_republic
+				}
+			}
+		}
+	}
+	dynamic_country_name = { 
+		name = dyn_kingdom_of_italy
+		adjective = dyn_kingdom_of_italy_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_monarchy 
+			}
+		}
+	}
+	dynamic_country_name = { 
+		name = dyn_empire_of_italy
+		adjective = dyn_empire_of_italy_adj
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				OR = {
+					global_country_ranking = 1
+					global_country_ranking = 2
+					global_country_ranking = 3
+				}
+				has_law = law_type:law_monarchy 
+			}
+		}
+	}
+}
+
 REPLACE_OR_CREATE:GBR = { # Great Britain of United Kingdom
 	dynamic_country_name = {
 		name = dyn_c_british_empire

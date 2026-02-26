@@ -25,7 +25,7 @@
 	}
 
 	on_complete = {
-		set_global_variable = france_defeat
+		set_global_variable = ww2_france_defeat
 		trigger_event = { 
 			id = axis_peace_deal.1 
 			popup = yes 
@@ -38,7 +38,7 @@
     should_be_pinned_by_default = yes
 }
 
-je_axis_peace_deal_round_2 = { 
+je_axis_peace_deal_round_2 = {
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -65,7 +65,7 @@ je_axis_peace_deal_round_2 = {
 	}
 
 	on_complete = {
-		set_global_variable = uk_defeat
+		set_global_variable = ww2_britain_defeat
 		trigger_event = { 
 			id = axis_peace_deal.2
 			popup = yes 
@@ -105,7 +105,7 @@ je_axis_peace_deal_round_3 = {
 	}
 
 	on_complete = {
-		set_global_variable = ussr_defeat
+		set_global_variable = ww2_russia_defeat
 		trigger_event = { 
 			id = axis_peace_deal.3
 			popup = yes 
@@ -145,7 +145,7 @@ je_axis_peace_deal_round_4 = {
 	}
 
 	on_complete = {
-		set_global_variable = usa_defeat
+		set_global_variable = ww2_usa_defeat
 		trigger_event = { 
 			id = axis_peace_deal.4
 			popup = yes 

@@ -215,6 +215,45 @@ dev_events.4 = {
 		      set_state_owner = c:FFR
             }
         }
+        s:STATE_AQUITAINE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_GUYENNE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_AUVERGNE_LIMOUSIN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
         s:STATE_RHONE = {
 	       random_scope_state = {
 		      limit = {
@@ -288,39 +327,39 @@ dev_events.4 = {
                 id = dev_events.93
                 days = 5
             }
+            trigger_event = {
+                id = dev_events.17
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.17
+                days = 5
+            }
         }
         c:USA = {
             add_modifier = {
 			  name = army_buff_modifier_9
-              years = 3
+              years = 4
               is_decaying = yes
 		    }
         }
         c:GBR = {
             add_modifier = {
 			  name = army_buff_modifier_9
-              years = 3
+              years = 4
               is_decaying = yes
 		    }
         }
         c:GER = {
+            trigger_event = {
+                id = dev_events.95
+                days = 5
+            }
             add_modifier = {
 			  name = taken_by_suprise_3
-              years = 3
+              years = 6
               is_decaying = yes
 		    }
-        }
-        if = {
-            limit = { 
-              c:ITA = { is_player = no } 
-            }
-            c:ITA = {
-                add_modifier = {
-			      name = taken_by_suprise_3
-                  years = 3
-                  is_decaying = yes
-		        }
-            }
         }
     }
 }
@@ -708,7 +747,7 @@ dev_events.15 = {
     }
 }
 
-dev_events.16 = { 
+dev_events.16 = {
     type = country_event
 
     title = dev_events.16.t
@@ -731,7 +770,7 @@ dev_events.16 = {
         add_treasury = 50000000
         add_modifier = {
             name = minting_buff_5_modifier
-            years = 4
+            years = 8
             is_decaying = yes
         }
         add_modifier = {
@@ -3655,7 +3694,10 @@ dev_events.80 = {
     option = {
         name = dev_events.2.a
         default_option = yes
-        trigger = { is_player = no }
+        trigger = { 
+            is_player = no
+            is_at_war = yes 
+        }
         add_modifier = {
 			name = taken_by_suprise_1
             years = 2
@@ -4139,5 +4181,187 @@ dev_events.93 = {
 				count = 50
 			}
 		} 
+    }
+}
+
+dev_events.94 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { 
+            is_player = no
+            navy_size < 300
+        }
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_pacific_coast
+            name = ger_navy_help
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_battleship
+				state_region = s:STATE_NEW_YORK
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_carrier
+				state_region = s:STATE_CALIFORNIA
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_scout_cruiser
+				state_region = s:STATE_NEW_JERSEY
+				count = 30
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_destroyer
+				state_region = s:STATE_CALIFORNIA
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_submarine
+				state_region = s:STATE_OREGON
+				count = 50
+			}
+		} 
+        random_scope_state = {
+			limit = {
+				is_coastal = yes
+			}
+			create_building = {
+				building = building_military_shipyard
+				level = 12
+            }		
+		}
+    }
+}
+
+dev_events.95 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+		s:STATE_RUHR = {
+			add_devastation = 30
+		}
+        s:STATE_RHINELAND = {
+			add_devastation = 30
+		}
+        s:STATE_NORTH_RHINE = {
+			add_devastation = 30
+		}
+        s:STATE_HESSE = {
+			add_devastation = 30
+		}
+        s:STATE_WESTPHALIA = {
+			add_devastation = 30
+		}
+        s:STATE_HANNOVER = {
+			add_devastation = 30
+		}
+        s:STATE_ELBE = {
+			add_devastation = 30
+		}
+        s:STATE_LOWER_SILESIA = {
+			add_devastation = 30
+		}
+        s:STATE_UPPER_SILESIA = {
+			add_devastation = 30
+		}
+        s:STATE_SAXONY = {
+			add_devastation = 30
+		}
+        s:STATE_BRANDENBURG = {
+			add_devastation = 30
+		}
+    }
+}
+
+dev_events.96 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = army_nerf_modifier_2
+            years = 3
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.97 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = starting_minting_buff_3_modifier
+            years = 16
+            is_decaying = yes
+        }
     }
 }

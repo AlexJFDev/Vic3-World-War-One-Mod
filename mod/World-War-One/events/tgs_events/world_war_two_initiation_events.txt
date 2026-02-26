@@ -470,21 +470,25 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         c:BEL = { set_variable = allies_participant }
         c:NET = { set_variable = allies_participant }
         c:NET = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
             }
         }
         c:BEL = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
             }
         }
         c:FRA = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
+            }
+            trigger_event = {
+              id = france_events.15
+              months = 4
             }
         }
         ai_chance = {
@@ -557,7 +561,7 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         trigger = { is_player = no }
         add_modifier = {
           name = nazi_germany_army_buff_1
-          years = 4
+          years = 3
           is_decaying = yes
         }
         scope:world_war_two_diplo_play = {
@@ -981,7 +985,28 @@ world_war_two_initiation_events.9 = { #Italy declares war on Albania
     
     duration = 12
     
-    immediate = { }
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
+                    c:DEN ?= this
+                    c:NOR ?= this
+                    c:NET ?= this
+                    c:YUG ?= this
+                    c:GRE ?= this
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/italy_ww2.dds"
@@ -1036,7 +1061,28 @@ world_war_two_initiation_events.10 = { #Italy declares war on Yugoslavia
     
     duration = 12
     
-    immediate = { }
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
+                    c:DEN ?= this
+                    c:NOR ?= this
+                    c:NET ?= this
+                    c:YUG ?= this
+                    c:GRE ?= this
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/italy_ww2.dds"
@@ -1088,7 +1134,28 @@ world_war_two_initiation_events.11 = { #Italy declares war on Greece
     
     duration = 12
     
-    immediate = { }
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
+                    c:DEN ?= this
+                    c:NOR ?= this
+                    c:NET ?= this
+                    c:YUG ?= this
+                    c:GRE ?= this
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
 
     event_image = {
         texture = "gfx/event_pictures/italy_ww2.dds"

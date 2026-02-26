@@ -37,3 +37,64 @@ france_events.5 = { #Jean Jaures assasination
 		} 
     }
 }
+
+france_events.15 = { #France surrender ww2
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/axis.dds"
+    }
+
+    title = france_events.15.t
+    desc = france_events.15.d
+    flavor = france_events.15.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {
+        is_at_war = yes
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
+                    c:DEN ?= this
+                    c:NOR ?= this
+                    c:NET ?= this
+                    c:YUG ?= this
+                    c:GRE ?= this
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
+
+    option = {
+        name = france_events.5.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+			add_diplomatic_play_war_support = { target = c:FRA value = -200 }
+		}
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = france_events.5.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}

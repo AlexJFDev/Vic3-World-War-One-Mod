@@ -4649,11 +4649,56 @@ REPLACE_OR_CREATE:ITA = { # Italy
 		}
 	}
 	flag_definition = {
-		coa = ITA_dictatorship
-		subject_canton = ITA_dictatorship
-		priority = 20
-		trigger = {
+		coa = ITA_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = ITA_fascist
+		subject_canton = ITA_fascist
+		priority = 1500
+		trigger = { 
 			coa_def_dictatorship_flag_trigger = yes
+			coa_def_fascist_flag_trigger = yes
+		}
+	}	
+}
+
+FIT = { # Italian Socialist Republic
+	flag_definition = {
+		coa = ITA_republic
+		subject_canton = ITA_republic
+		priority = 1
+	}
+	flag_definition = {
+		coa = ITA
+		subject_canton = ITA
+		priority = 15
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	flag_definition = {
+		coa = ITA_papal
+		subject_canton = ITA_papal
+		priority = 15
+		
+		trigger = {
+			NOT = { exists = c:PAP } # Can't be Pope if the Pope is still in control of another country!
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ITA_republic
+		subject_canton = ITA_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
 		}
 	}	
 	flag_definition = {
@@ -4668,9 +4713,21 @@ REPLACE_OR_CREATE:ITA = { # Italy
 		subject_canton = ITA_fascist
 		priority = 1500
 		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
 			coa_def_fascist_flag_trigger = yes
 		}
 	}	
+	flag_definition = {
+		coa = ITA_fascist
+		subject_canton = ITA_fascist
+		priority = 1500
+		trigger = { 
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_single_party_state
+			}
+		}
+	}
 }
 
 REPLACE_OR_CREATE:IUS = { # Idel-Ural State
@@ -11206,7 +11263,7 @@ REPLACE_OR_CREATE:CMR = {
  	}
 	flag_definition = {
 		coa = CMU_subject_FRA
-		allow_overlord_canton = yes
+		allow_overlord_canton = no
 		priority = 150
 		trigger = {
 			exists = c:FFR
@@ -11300,7 +11357,7 @@ REPLACE_OR_CREATE:TOG = {
 	}
 	flag_definition = {
 		coa = TOG_subject_FRA
-		allow_overlord_canton = yes
+		allow_overlord_canton = no
 		priority = 150
 		trigger = {
 			exists = c:FFR

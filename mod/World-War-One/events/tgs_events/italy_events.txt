@@ -26,7 +26,7 @@ italy_events.1 = {
     }
 }
 
-italy_events.10 = {
+italy_events.10 = { #Mussolini becomes leader of Petite Bourgeoisie
     type = country_event
 
     title = italy_events.10.t
@@ -84,7 +84,7 @@ italy_events.10 = {
     }
 }
 
-italy_events.11 = {
+italy_events.11 = { #Fascist takeover
     type = country_event
 
     title = italy_events.11.t
@@ -146,6 +146,9 @@ italy_events.11 = {
 			  type = rivalry
 		    }
         }
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_outlawed_dissent
+        activate_law = law_type:law_interventionism
         ai_chance = {
             base = 10
         }
@@ -186,6 +189,300 @@ italy_events.11 = {
 			name = political_movement_buff_1
 			years = 10
         }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+italy_events.15 = { #Italian civil war
+    type = country_event
+
+    title = italy_events.15.t
+    desc = italy_events.15.d
+    flavor = italy_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+
+    event_image = {
+        texture = "gfx/event_pictures/italy_ww2.dds"
+    }
+
+    trigger = {}
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
+                    c:DEN ?= this
+                    c:NOR ?= this
+                    c:NET ?= this
+                    c:YUG ?= this
+                    c:GRE ?= this
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+    }
+
+    option = {
+        name = italy_events.15.a
+        default_option = yes
+        set_global_variable = ww2_italian_civil_war
+        create_country = { #Italian Socialist Republic
+	       tag = FIT
+	       origin = this
+	       state = s:STATE_LOMBARDY.region_state:ITA
+            on_created = {
+             activate_law = law_type:law_presidential_republic
+             activate_law = law_type:law_single_party_state
+             activate_law = law_type:law_military_oversight
+             activate_law = law_type:law_outlawed_dissent
+             activate_law = law_type:law_interventionism
+            }
+        }
+        s:STATE_PIEDMONT = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        s:STATE_EMILIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        s:STATE_SOUTH_TYROL = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        s:STATE_VENETIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        s:STATE_ISTRIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        s:STATE_ROMAGNA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        s:STATE_TUSCANY = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        s:STATE_UMBRIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        s:STATE_LAZIO = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FIT
+            }
+        }
+        scope:world_war_two_diplo_play = {
+			remove_initiator_backers = {
+                c:ITA
+            }
+            remove_initiator_backers = {
+                c:YUG
+            }
+            remove_initiator_backers = {
+                c:ALB
+            }
+            remove_initiator_backers = {
+                c:GRE
+            }
+            add_target_backers = {
+                c:ITA
+            } 
+            add_target_backers = {
+                c:YUG
+            }
+            add_target_backers = {
+                c:ALB
+            }
+            add_target_backers = {
+                c:GRE
+            }
+            add_initiator_backers = {
+                c:FIT
+            } 
+            add_war_goal = {
+                holder = c:ITA
+                type = annex_country
+				target_country = c:FIT
+            }
+            add_war_goal = {
+                holder = c:FIT
+                type = annex_country
+				target_country = c:ITA
+            }
+            add_war_goal = {
+                holder = c:FIT
+                type = make_protectorate
+				target_country = c:YUG
+            }
+            add_war_goal = {
+                holder = c:FIT
+                type = make_protectorate
+				target_country = c:ALB
+            }
+            add_war_goal = {
+                holder = c:FIT
+                type = make_protectorate
+				target_country = c:GRE
+            }
+		}
+        set_capital = STATE_SICILY
+        activate_law = law_type:law_universal_suffrage
+        activate_law = law_type:law_right_of_assembly
+        random_scope_character =  {
+				limit = {
+					is_ruler = yes
+				}
+			set_ideology = ideology:ideology_moderate
+		}
+        random_scope_character =  {
+				limit = {
+					has_variable = benito_mussolini
+				}
+			kill_character = yes
+		}
+        c:ITA = {
+            remove_diplomatic_pact = {
+			  country = c:YUG
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:ALB
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:GRE
+			  type = protectorate
+		    }
+        }
+        c:ITA = {
+            trigger_event = {
+              id = dev_events.17
+              days = 5
+            }
+            trigger_event = {
+              id = dev_events.17
+              days = 5
+            }
+            trigger_event = {
+              id = dev_events.17
+              days = 5
+            }
+        }
+        c:FIT = {
+            trigger_event = {
+              id = dev_events.17
+              days = 5
+            }
+            trigger_event = {
+              id = dev_events.96
+              days = 30
+            }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = italy_events.15.b
         ai_chance = {
             base = 0
         }

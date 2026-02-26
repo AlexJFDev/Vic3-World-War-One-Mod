@@ -334,6 +334,12 @@ war_fatigue_2 = {
     unit_army_offense_mult = -0.2
 }
 
+war_fatigue_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    political_movement_radicalism_add = 0.3
+    country_legitimacy_base_add = -30
+}
+
 fragile_unity_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     country_prestige_mult = -0.3
@@ -1166,8 +1172,9 @@ taken_by_suprise_2  = {
 
 taken_by_suprise_3  = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    unit_army_offense_mult = -0.4
-    unit_army_defense_mult = -0.4
+    unit_army_offense_mult = -0.5
+    unit_army_defense_mult = -0.5
+    unit_morale_recovery_mult = -0.9
     unit_occupation_mult = -2
 }
 

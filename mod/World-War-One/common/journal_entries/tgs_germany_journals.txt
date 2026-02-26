@@ -379,7 +379,7 @@ je_eastern_crusade = {
                 }
             }
         }
-        has_global_variable = france_defeat
+        has_global_variable = ww2_france_defeat
         c:RUS = {
             has_law = law_type:law_council_republic
         }
@@ -388,7 +388,7 @@ je_eastern_crusade = {
     immediate = {}
 
     complete = {
-        has_global_variable = france_defeat
+        has_global_variable = ww2_france_defeat
         game_date > 1941.6.1
         has_strategic_adjacency = c:RUS
         root.average_sol > 12
@@ -429,7 +429,7 @@ je_poland_partition = {
     is_shown_when_inactive = {
         exists = c:GER
         THIS = c:GER
-        has_global_variable = world_war_1_over
+        has_global_variable = molotov_ribentrop_pact_signed
     }
     
     possible = {
@@ -439,13 +439,13 @@ je_poland_partition = {
                 ruler = {
                 OR = {
 				   has_ideology = ideology:ideology_fascist
-                   has_ideology = ideology:ideology_authoritarian
+                   has_ideology = ideology:ideology_integralist
+                   has_ideology = ideology:ideology_jingoist_leader
                 }
                 }
             }
         }
         has_global_variable = molotov_ribentrop_pact_signed
-        c:POL = { is_subject_of = c:GER }
     }
 
     immediate = {}
