@@ -3617,59 +3617,63 @@ REPLACE_OR_CREATE:GER = { # Germany
 		coa = GER_modern
 		subject_canton = GER_modern
 		priority = 10
-		trigger = { 
+		trigger = {
 			coa_def_republic_flag_trigger = yes
 		}
 	}
 	flag_definition = {
-		coa = GER_spartakist
-		subject_canton = GER_spartakist
-		priority = 2000
-		trigger = { 
-			coa_def_communist_flag_trigger = yes
+		coa = GER_fascist
+		subject_canton = GER_fascist
+		priority = 15
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
 		}
 	}
 	flag_definition = {
 		coa = GER_ddr
 		subject_canton = GER_ddr
+		priority = 2000
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_fascist
+		subject_canton = GER_fascist
+		priority = 1250
+		trigger = {
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_nihilist
+		subject_canton = GER_nihilist
 		priority = 1500
+		trigger = {
+			coa_def_nihilist_flag_trigger = yes
+		}
+	}
+}
+
+CGR = {
+	flag_definition = {
+		coa = GER_modern
+		subject_canton = GER_modern
+	}
+	flag_definition = {
+		coa = GER_modern
+		subject_canton = GER_modern
+		priority = 10
 		trigger = { 
-			scope:actor ?= {
-				OR = {
-					AND = {
-						has_law = law_type:law_single_party_state
-						py:communist_party ?= {
-							any_member = {
-								is_in_government = yes
-							}
-						}
-					}
-					AND = {
-						OR = {
-							has_law = law_type:law_autocracy
-							has_law = law_type:law_technocracy
-							has_law = law_type:law_oligarchy
-						}
-						ruler ?= {
-							OR = {
-								has_ideology = ideology:ideology_communist
-								has_ideology = ideology:ideology_vanguardist
-								has_ideology = ideology:ideology_anarchist
-							}
-						}
-					}
-					AND = {
-						is_subject = yes
-						overlord = {
-							has_law = law_type:law_council_republic
-						}
-					}
-				}
-				OR = {
-					has_law = law_type:law_parliamentary_republic
-					has_law = law_type:law_presidential_republic
-				}
-			}
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_ddr
+		subject_canton = GER_ddr
+		priority = 2000
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
 		}
 	}
 	flag_definition = {
@@ -3677,9 +3681,7 @@ REPLACE_OR_CREATE:GER = { # Germany
 		subject_canton = GER_fascist
 		priority = 1250
 		OR = {
-			coa_dictatorship_trigger = yes
 			coa_fascist_trigger = yes
-			coa_military_trigger = yes
 		}
 	}
     flag_definition = {
@@ -3691,118 +3693,6 @@ REPLACE_OR_CREATE:GER = { # Germany
 			scope:actor ?= {
 				has_law = law_type:law_monarchy
 			}
-		}
-	}
-### country-specific Germany variants ###
-
-	flag_definition = {
-		coa = GER_bavarian
-		subject_canton = GER_bavarian
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				was_formed_from = BAV
-			}
-		}
-	}	
-	flag_definition = {
-		coa = GER_austrian
-		subject_canton = GER
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				was_formed_from = AUS
-			}
-		}
-	}	
-
-	flag_definition = {
-		coa = GER_saxon
-		subject_canton = GER_saxon
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				was_formed_from = SAX
-			}
-		}
-	}
-
-	flag_definition = {
-		coa = GER_saxon_monarchist
-		subject_canton = GER_saxon_monarchist
-		priority = 150
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-			exists = scope:actor
-			scope:actor ?= {
-				was_formed_from = SAX
-			}
-		}
-	}
-
-	flag_definition = {
-		coa = GER_hannover
-		subject_canton = GER_hannover
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				was_formed_from = HAN
-			}
-		}
-	}
-
-	flag_definition = {
-		coa = GER_wurttemberg
-		subject_canton = GER_wurttemberg
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				was_formed_from = WUR
-			}
-		}
-	}
-	
-	# Black-White-Red tricolor is reserved for a Prussian monarchy
-	flag_definition = {
-		coa = GER
-		subject_canton = GER
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				was_formed_from = PRU
-			}
-		}
-	}
-	flag_definition = {
-		coa = GER_iron_cross
-		subject_canton = GER_iron_cross
-		priority = 5
-		trigger = {
-			coa_def_autocracy_flag_trigger = yes
-			exists = scope:actor
-			scope:actor ?= {
-				was_formed_from = PRU
-			}
-		}
-	}	
-	flag_definition = {
-		coa = GER_nihilist
-		subject_canton = GER_nihilist
-		priority = 1500
-		trigger = { 
-			coa_def_nihilist_flag_trigger = yes
 		}
 	}
 }
@@ -4889,8 +4779,8 @@ REPLACE_OR_CREATE:JAP = { # Japan
 		}
 	}
 	flag_definition = {
-		coa = JAP_republic
-		subject_canton = JAP_republic
+		coa = JAP
+		subject_canton = JAP
 		priority = 10
 		trigger = { 
 			coa_def_republic_flag_trigger = yes

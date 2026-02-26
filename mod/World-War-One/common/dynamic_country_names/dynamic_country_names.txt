@@ -291,6 +291,22 @@ REPLACE_OR_CREATE:GER = { # Germany
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_west_germany
+        adjective = GER_ADJ
+
+		is_main_tag_only = yes
+		priority = 10000
+
+        trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				NOT = {
+				   owns_entire_state_region = STATE_BRANDENBURG
+			    }
+			}
+		}
+	}
 }
 REPLACE_OR_CREATE:CHI = { # China
 	dynamic_country_name = {

@@ -1,269 +1,5 @@
 ﻿namespace = allies_peace_deal
 
-allies_peace_deal.1 = {
-    type = country_event
-
-    title = allies_peace_deal.1.t
-    desc = allies_peace_deal.1.d
-    flavor = allies_peace_deal.1.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/allies_victory.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = allies_peace_deal.1.a
-		c:FRA = { annex = c:FFR }
-		s:STATE_ALSACE_LORRAINE = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		        set_state_owner = c:FRA
-            }
-        }
-		s:STATE_GUAYANA = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:GBR
-			    owner = {
-				  OR = {
-					c:GBR = THIS
-				    }
-			    }
-		        }
-		        set_state_owner = c:NET
-            }
-        }
-        c:GER = {
-		    remove_diplomatic_pact = {
-			  country = c:FRA
-			  type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			  country = c:BEL
-			  type = protectorate
-		    }	
-            remove_diplomatic_pact = {
-			  country = c:LUX
-			  type = protectorate
-		    }	
-            remove_diplomatic_pact = {
-			  country = c:NET
-			  type = protectorate
-		    }	
-            remove_diplomatic_pact = {
-			  country = c:GBR
-			  type = protectorate
-		    }		
-            every_state = {
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_barrack
-					is_capital = no
-				}
-				remove_building = building_barrack
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_naval_base
-					is_capital = no
-				}
-				remove_building = building_naval_base
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_arms_industry
-					is_capital = no
-				}
-				remove_building = building_arms_industry
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_artillery_foundry
-					is_capital = no
-				}
-				remove_building = building_artillery_foundry
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_munition_plant
-					is_capital = no
-				}
-				remove_building = building_munition_plant
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_aircraft_factory
-					is_capital = no
-				}
-				remove_building = building_aircraft_factory
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_military_shipyard
-					is_capital = no
-				}
-				remove_building = building_military_shipyard
-			}	
-		    }
-        }
-    }
-}
-
-allies_peace_deal.2 = {
-    type = country_event
-
-    title = allies_peace_deal.2.t
-    desc = allies_peace_deal.2.d
-    flavor = allies_peace_deal.2.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/allies_victory.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = allies_peace_deal.2.a
-		c:FRA = { annex = c:FFR }
-		s:STATE_ALSACE_LORRAINE = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		        set_state_owner = c:FRA
-            }
-        }
-		s:STATE_GUAYANA = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:GBR
-			    owner = {
-				  OR = {
-					c:GBR = THIS
-				    }
-			    }
-		        }
-		        set_state_owner = c:NET
-            }
-        }
-        c:GER = {
-		    remove_diplomatic_pact = {
-			  country = c:FRA
-			  type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			  country = c:BEL
-			  type = protectorate
-		    }	
-            remove_diplomatic_pact = {
-			  country = c:LUX
-			  type = protectorate
-		    }	
-            remove_diplomatic_pact = {
-			  country = c:NET
-			  type = protectorate
-		    }	
-            remove_diplomatic_pact = {
-			  country = c:GBR
-			  type = protectorate
-		    }		
-            every_state = {
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_barrack
-					is_capital = no
-				}
-				remove_building = building_barrack
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_naval_base
-					is_capital = no
-				}
-				remove_building = building_naval_base
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_arms_industry
-					is_capital = no
-				}
-				remove_building = building_arms_industry
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_artillery_foundry
-					is_capital = no
-				}
-				remove_building = building_artillery_foundry
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_munition_plant
-					is_capital = no
-				}
-				remove_building = building_munition_plant
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_aircraft_factory
-					is_capital = no
-				}
-				remove_building = building_aircraft_factory
-			}
-			if = {
-				limit = {
-					owner = c:GER
-					has_building = building_military_shipyard
-					is_capital = no
-				}
-				remove_building = building_military_shipyard
-			}	
-		    }
-        }
-    }
-}
-
 allies_peace_deal.3 = {
     type = country_event
 
@@ -275,19 +11,60 @@ allies_peace_deal.3 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
-    
-    immediate = {}
 
     event_image = {
         texture = "gfx/event_pictures/soviet_victory.dds"
     }
 
+	immediate = {
+		create_country = { #Communist Germany
+	       tag = CGR
+	       origin = this
+	       state = s:STATE_BRANDENBURG.region_state:RUS
+            on_created = {
+             activate_law = law_type:law_council_republic
+             activate_law = law_type:law_single_party_state
+             activate_law = law_type:law_subordinate_general_staff
+             activate_law = law_type:law_censorship
+             activate_law = law_type:law_command_economy
+			 activate_law = law_type:law_state_atheism
+			 activate_law = law_type:law_armed_neutrality
+            }
+        }
+	}
+
     trigger = {}
 
     option = {
         name = allies_peace_deal.3.a
-		c:FRA = { annex = c:FFR }
-		s:STATE_ALSACE_LORRAINE = {
+		c:FRA = { 
+			annex = c:FFR 
+			create_diplomatic_pact = {
+			  country = c:WAF
+			  type = colony
+		    }
+            create_diplomatic_pact = {
+			  country = c:TOG
+			  type = colony
+		    }
+            create_diplomatic_pact = {
+			  country = c:EQA
+			  type = colony
+		    }
+            create_diplomatic_pact = {
+			  country = c:CMR
+			  type = colony
+		    }
+            create_diplomatic_pact = {
+			  country = c:MAD
+			  type = colony
+		    }
+            create_diplomatic_pact = {
+			  country = c:ICH
+			  type = colony
+		    }
+		}
+		s:STATE_POMERANIA = {
             random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -297,23 +74,75 @@ allies_peace_deal.3 = {
 				    }
 			    }
 		        }
-		        set_state_owner = c:FRA
+		        set_state_owner = c:CGR
             }
         }
-		s:STATE_GUAYANA = {
+		s:STATE_MECKLENBURG = {
             random_scope_state = {
 		      limit = {
-			   exists = c:GBR
+			   exists = c:GER
 			    owner = {
 				  OR = {
-					c:GBR = THIS
+					c:GER = THIS
 				    }
 			    }
 		        }
-		        set_state_owner = c:NET
+		        set_state_owner = c:CGR
             }
         }
+		s:STATE_ANHALT = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:CGR
+            }
+        }
+		s:STATE_SAXONY = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:CGR
+            }
+        }
+		c:RUS = {
+			create_diplomatic_pact = {
+			  country = c:CGR
+			  type = protectorate
+		    }
+			create_diplomatic_pact = {
+			  country = c:POL
+			  type = protectorate
+		    }
+			create_diplomatic_pact = {
+			  country = c:CZH
+			  type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:FIN
+			  type = protectorate
+		    }
+		}
         c:GER = {
+			set_capital = STATE_HESSE
+			activate_law = law_type:law_parliamentary_republic
+            activate_law = law_type:law_universal_suffrage
+            activate_law = law_type:law_right_of_assembly
+            activate_law = law_type:law_no_agencies
+			activate_law = law_type:law_free_trade
+			activate_law = law_type:law_subordinate_general_staff
+			activate_law = law_type:law_true_neutrality
 		    remove_diplomatic_pact = {
 			  country = c:FRA
 			  type = protectorate
@@ -333,7 +162,23 @@ allies_peace_deal.3 = {
             remove_diplomatic_pact = {
 			  country = c:GBR
 			  type = protectorate
-		    }		
+		    }
+			remove_diplomatic_pact = {
+			  country = c:USA
+			  type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:RUS
+			  type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:CZH
+			  type = protectorate
+		    }			
+			remove_diplomatic_pact = {
+			  country = c:POL
+			  type = protectorate
+		    }	
             every_state = {
 			if = {
 				limit = {
@@ -392,6 +237,97 @@ allies_peace_deal.3 = {
 				remove_building = building_military_shipyard
 			}	
 		    }
+        }
+		s:STATE_WEST_PRUSSIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:POL
+            }
+        }
+		s:STATE_EAST_PRUSSIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:POL
+            }
+        }
+		s:STATE_POSEN = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:POL
+            }
+        }
+		s:STATE_UPPER_SILESIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:POL
+            }
+        }
+		s:STATE_LOWER_SILESIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:POL
+            }
+        }
+		s:STATE_BOHEMIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:CZH
+            }
+        }
+		s:STATE_ALSACE_LORRAINE = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FRA
+            }
         }
     }
 }
@@ -420,7 +356,93 @@ allies_peace_deal.4 = {
         name = allies_peace_deal.4.a
 		s:STATE_KANTO = {
             random_scope_state = {
-		      set_state_owner = c:JAP
+		      limit = {
+			   exists = c:USA
+			    owner = {
+				  OR = {
+					c:USA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:JAP
+            }
+        }
+		s:STATE_SHENGJING = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:CHI
+            }
+        }
+		s:STATE_FORMOSA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:CHI
+            }
+        }
+		s:STATE_WEST_MICRONESIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:USA
+            }
+        }
+		s:STATE_EAST_MICRONESIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:USA
+            }
+        }
+		s:STATE_BOUGAINVILLE = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:USA
+            }
+        }
+		s:STATE_TONGA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				  OR = {
+					c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:USA
             }
         }
         c:JAP = {	
@@ -429,7 +451,6 @@ allies_peace_deal.4 = {
 				limit = {
 					owner = c:JAP
 					has_building = building_barrack
-					is_capital = no
 				}
 				remove_building = building_barrack
 			}
@@ -437,7 +458,6 @@ allies_peace_deal.4 = {
 				limit = {
 					owner = c:JAP
 					has_building = building_naval_base
-					is_capital = no
 				}
 				remove_building = building_naval_base
 			}
@@ -445,7 +465,6 @@ allies_peace_deal.4 = {
 				limit = {
 					owner = c:JAP
 					has_building = building_arms_industry
-					is_capital = no
 				}
 				remove_building = building_arms_industry
 			}
@@ -453,7 +472,6 @@ allies_peace_deal.4 = {
 				limit = {
 					owner = c:JAP
 					has_building = building_artillery_foundry
-					is_capital = no
 				}
 				remove_building = building_artillery_foundry
 			}
@@ -461,7 +479,6 @@ allies_peace_deal.4 = {
 				limit = {
 					owner = c:JAP
 					has_building = building_munition_plant
-					is_capital = no
 				}
 				remove_building = building_munition_plant
 			}
@@ -469,7 +486,6 @@ allies_peace_deal.4 = {
 				limit = {
 					owner = c:JAP
 					has_building = building_aircraft_factory
-					is_capital = no
 				}
 				remove_building = building_aircraft_factory
 			}
@@ -477,17 +493,81 @@ allies_peace_deal.4 = {
 				limit = {
 					owner = c:JAP
 					has_building = building_military_shipyard
-					is_capital = no
 				}
 				remove_building = building_military_shipyard
 			}	
 		    }
+			activate_law = law_type:law_parliamentary_republic
             activate_law = law_type:law_universal_suffrage
             activate_law = law_type:law_right_of_assembly
             activate_law = law_type:law_no_agencies
 			activate_law = law_type:law_free_trade
 			activate_law = law_type:law_subordinate_general_staff
 			activate_law = law_type:law_true_neutrality
+        }
+		create_country = { #Korea
+	       tag = KOR
+	       origin = this
+	       state = s:STATE_SEOUL.region_state:JAP
+            on_created = {
+             activate_law = law_type:law_presidential_republic
+             activate_law = law_type:law_oligarchy
+             activate_law = law_type:law_military_oversight
+             activate_law = law_type:law_censorship
+             activate_law = law_type:law_interventionism
+            }
+        }
+		s:STATE_BUSAN = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				    OR = {
+					   c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:KOR
+            }
+        }
+		s:STATE_PYONGYANG = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				    OR = {
+					   c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:KOR
+            }
+        }
+		s:STATE_SARIWON = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				    OR = {
+					   c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:KOR
+            }
+        }
+		s:STATE_YANGHO = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				    OR = {
+					   c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:KOR
+            }
         }
     }
 }

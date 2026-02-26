@@ -1,90 +1,4 @@
-﻿je_allies_peace_deal_round_1 = {
-
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-
-	group = je_group_crises
-    
-	is_shown_when_inactive = {
-	  has_global_variable = world_war_two_started
-      is_diplomatic_play_enemy_of = c:GER
-	  exists = c:FRA
-      THIS = c:FRA
-	}
-
-    possible = {
-	  has_global_variable = world_war_two_started
-	  is_diplomatic_play_enemy_of = c:GER
-	  exists = c:FRA
-      THIS = c:FRA
-	}
-
-    immediate = {}
-
-    complete = {
-		owns_entire_state_region = STATE_BRANDENBURG
-	}
-
-	on_complete = {
-		set_global_variable = allies_defeat_germany
-		set_global_variable = world_war_2_over
-		trigger_event = { 
-			id = allies_peace_deal.1 
-			popup = yes 
-		}
-	}
-
-	invalid = {
-		has_global_variable = world_war_2_over
-	}
-
-    weight = 1000
-    should_be_pinned_by_default = yes
-}
-
-je_allies_peace_deal_round_2 = { 
-
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-
-	group = je_group_crises
-    
-	is_shown_when_inactive = {
-	  has_global_variable = world_war_two_started
-      is_diplomatic_play_enemy_of = c:GER
-	  exists = c:GBR
-      THIS = c:GBR
-	}
-
-    possible = { 
-	  has_global_variable = world_war_two_started
-	  is_diplomatic_play_enemy_of = c:GER
-	  exists = c:GBR
-      THIS = c:GBR
-	}
-
-    immediate = {}
-
-    complete = {
-		owns_entire_state_region = STATE_BRANDENBURG
-	}
-
-	on_complete = {
-		set_global_variable = allies_defeat_germany
-		set_global_variable = world_war_2_over
-		trigger_event = { 
-			id = allies_peace_deal.1 
-			popup = yes 
-		}
-	}
-
-    invalid = {
-		has_global_variable = world_war_2_over
-	}
-
-    weight = 1000
-    should_be_pinned_by_default = yes
-}
-
-je_allies_peace_deal_round_3 = { 
+﻿je_allies_peace_deal_round_3 = { 
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -154,9 +68,8 @@ je_allies_peace_deal_round_4 = {
 
 	on_complete = {
 		set_global_variable = allies_defeat_jap
-		set_global_variable = world_war_2_over
 		trigger_event = { 
-			id = allies_peace_deal.3
+			id = allies_peace_deal.4
 			popup = yes 
 		}
 	}
