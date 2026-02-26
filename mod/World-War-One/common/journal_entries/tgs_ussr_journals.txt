@@ -1,0 +1,30 @@
+﻿je_war_fatigue_ussr = {
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:RUS
+        THIS = c:RUS
+        has_variable = entente_participant
+        has_law = law_type:law_council_republic
+    }
+    
+    possible = {
+        has_variable = entente_participant
+        has_variable = ussr_continues_ww1
+        is_at_war = yes
+        root.average_sol < 12
+    }
+
+    modifiers_while_active = { war_protests_2_modifier }
+
+    complete = {
+        OR = {
+            is_at_war = no
+            root.average_sol >= 12 
+        }
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}

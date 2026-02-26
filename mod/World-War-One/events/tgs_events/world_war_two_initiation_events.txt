@@ -136,6 +136,11 @@ world_war_two_initiation_events.2 = { #WW2 initiation Allies response
                 target_country = c:GER
             }
             add_war_goal = {
+                holder = root
+                type = conquer_state
+                target_state = s:STATE_BRANDENBURG.region_state:GER
+            }
+            add_war_goal = {
                 holder = c:GER
                 type = conquer_state
                 target_state = root.capital
