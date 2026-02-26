@@ -72,10 +72,6 @@ je_ai_allies_landings = {
           is_at_war = yes
           has_variable = allies_participant
         }
-        c:FFR = {
-          is_at_war = yes
-          has_variable = allies_participant
-        }
         c:GER = {
           is_player = no
           is_at_war = yes
@@ -88,9 +84,8 @@ je_ai_allies_landings = {
     complete = {
         exists = c:USA
         exists = c:GBR
-        exists = c:FFR
         exists = c:GER
-        game_date > 1944.6.1
+        game_date > 1944.4.1
         c:USA = {
           is_player = no
           is_at_war = yes
@@ -98,10 +93,6 @@ je_ai_allies_landings = {
         }
         c:GBR = {
           is_player = no
-          is_at_war = yes
-          has_variable = allies_participant
-        }
-        c:FFR = {
           is_at_war = yes
           has_variable = allies_participant
         }
@@ -114,7 +105,7 @@ je_ai_allies_landings = {
 
     on_complete = {
         trigger_event = {
-            id = dev_events.92
+            id = dev_events.4
             days = 5
         }
     }

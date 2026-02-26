@@ -36,6 +36,19 @@ allies_peace_deal.1 = {
 		        set_state_owner = c:FRA
             }
         }
+		s:STATE_GUAYANA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:GBR
+			    owner = {
+				  OR = {
+					c:GBR = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:NET
+            }
+        }
         c:GER = {
 		    remove_diplomatic_pact = {
 			  country = c:FRA

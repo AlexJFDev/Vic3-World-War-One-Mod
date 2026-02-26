@@ -46,6 +46,10 @@ world_war_two_initiation_events.1 = { #WW2 initiation Germany invades Poland
             }
         }
         trigger_event = {
+            id = dev_events.72
+            days = 5
+        }
+        trigger_event = {
             id = world_war_two_initiation_events.4
             months = 7
         }
@@ -228,6 +232,14 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
               id = world_war_two_initiation_events.11
               months = 1
             }
+        trigger_event = {
+              id = dev_events.79
+              days = 5
+            }
+        trigger_event = {
+                id = dev_events.72
+                days = 5
+            }
         set_variable = axis_participant
         ai_chance = {
             base = 10
@@ -256,6 +268,14 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
         trigger_event = {
               id = world_war_two_initiation_events.11
               months = 3
+            }
+        trigger_event = {
+              id = dev_events.79
+              days = 5
+            }
+        trigger_event = {
+                id = dev_events.72
+                days = 5
             }
         set_variable = axis_participant
         ai_chance = {
@@ -413,7 +433,7 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         trigger = { is_player = no }
         add_modifier = {
           name = nazi_germany_army_buff_1
-          years = 4
+          years = 3
           is_decaying = yes
         }
         scope:world_war_two_diplo_play = {
@@ -707,6 +727,10 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
                 id = dev_events.81
                 days = 5
             }
+            trigger_event = {
+                id = ussr_events.10
+                months = 18
+            }
         }
         if = {
             limit = {
@@ -840,6 +864,10 @@ world_war_two_initiation_events.7 = { #WW2 initiation european countries join in
                 target_country = root
             }
 		}
+        trigger_event = {
+            id = dev_events.77
+            days = 5
+        }
         set_variable = axis_participant
         ai_chance = {
             base = 10

@@ -291,6 +291,12 @@ army_buff_modifier_9 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     unit_army_offense_mult = 0.3
     unit_army_defense_mult = 0.3
+    unit_occupation_mult = 3
+}
+
+army_buff_modifier_10 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    unit_army_defense_mult = 0.45
 }
 
 army_nerf_modifier_1 = {
@@ -307,6 +313,7 @@ army_nerf_modifier_2 = {
     unit_army_defense_mult = -0.3
     military_formation_mobilization_speed_mult = -0.5
     military_formation_organization_gain_mult = -0.5
+    unit_occupation_mult = -2
 }
 
 mobilization_buff_modifier = {
@@ -973,10 +980,17 @@ stalin_purges = {
    country_authority_mult = 0.5
 }
 
-moscow_will_not_fall = {
+moscow_will_not_fall_1 = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+   unit_army_offense_mult = 0.5
+   unit_army_defense_mult = 0.3
+   unit_occupation_mult = 0.5
+}
+
+moscow_will_not_fall_2 = {
    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
    unit_army_offense_mult = 0.3
-   unit_army_defense_mult = 0.4
+   unit_army_defense_mult = 0.2
 }
 
 recently_collapsed_1 = {
@@ -1076,9 +1090,8 @@ great_power_nerf_1 = {
 
 japan_ai_buff = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-    state_construction_mult = 0.3
+    state_construction_mult = 0.2
     country_minting_mult = 2.5
-    building_military_shipyard_throughput_add = 0.2
 }
 
 wartime_legislation = {
@@ -1153,8 +1166,9 @@ taken_by_suprise_2  = {
 
 taken_by_suprise_3  = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    unit_army_offense_mult = -0.3
-    unit_army_defense_mult = -0.3
+    unit_army_offense_mult = -0.4
+    unit_army_defense_mult = -0.4
+    unit_occupation_mult = -2
 }
 
 colony_control_1 = {

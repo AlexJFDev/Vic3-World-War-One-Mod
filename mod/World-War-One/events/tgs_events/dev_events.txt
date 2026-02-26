@@ -103,12 +103,12 @@ dev_events.3 = {
     }
 }
 
-dev_events.4 = { 
+dev_events.4 = {
     type = country_event
 
-    title = dev_events.4.t
-    desc = dev_events.4.d
-    flavor = dev_events.4.f
+    title = dev_events.15.t
+    desc = dev_events.15.d
+    flavor = dev_events.15.f
     
     icon = "gfx/interface/icons/event_icons/event_portrait.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -119,15 +119,209 @@ dev_events.4 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:GER ?= this }
+              target = { 
+                OR = {
+                    c:POL ?= this
+                    c:FRA ?= this 
+                    c:GBR ?= this 
+                    c:USA ?= this
+                    c:RUS ?= this
+                    c:DEN ?= this
+                    c:NOR ?= this
+                    c:NET ?= this
+                    c:YUG ?= this
+                    c:GRE ?= this  
+                } 
+               }
+		    }
+           save_scope_as = world_war_two_diplo_play
+        }
+        if = {
+            limit = { 
+                NOT = { exists = c:FFR }
+            }
+            create_country = { #Free France
+	          tag = FFR
+	          origin = this
+	          state = s:STATE_BRITTANY.region_state:FRA
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_oligarchy
+                  activate_law = law_type:law_military_oversight
+                  activate_law = law_type:law_right_of_assembly
+                  activate_law = law_type:law_interventionism
+                }
+            }
+        }
+    }
+
     option = {
-        name = dev_events.4.a
+        name = dev_events.15.a
         default_option = yes
         trigger = { is_player = no }
-        add_modifier = {
-			name = war_fatigue_1
-            years = 3
-            is_decaying = yes
-		}
+        s:STATE_BRITTANY = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_NORMANDY = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_MAINE_ANJOU = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_POITOU = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_RHONE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_SAVOY = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_PROVENCE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        s:STATE_LANGUEDOC = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FFR
+            }
+        }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = {
+                c:FFR
+            } 
+            add_war_goal = {
+                holder = c:GER
+                type = annex_country
+				target_country = c:FFR
+            }
+        }
+        c:FRA = {
+            trigger_event = {
+                id = dev_events.92
+                days = 5
+            }
+        }
+        c:FFR = {
+            trigger_event = {
+                id = dev_events.93
+                days = 5
+            }
+        }
+        c:USA = {
+            add_modifier = {
+			  name = army_buff_modifier_9
+              years = 3
+              is_decaying = yes
+		    }
+        }
+        c:GBR = {
+            add_modifier = {
+			  name = army_buff_modifier_9
+              years = 3
+              is_decaying = yes
+		    }
+        }
+        c:GER = {
+            add_modifier = {
+			  name = taken_by_suprise_3
+              years = 3
+              is_decaying = yes
+		    }
+        }
+        if = {
+            limit = { 
+              c:ITA = { is_player = no } 
+            }
+            c:ITA = {
+                add_modifier = {
+			      name = taken_by_suprise_3
+                  years = 3
+                  is_decaying = yes
+		        }
+            }
+        }
     }
 }
 
@@ -604,6 +798,7 @@ dev_events.17 = {
             years = 5
             is_decaying = yes
 		}
+        remove_modifier = declared_bankruptcy
     }
 }
 
@@ -3203,6 +3398,7 @@ dev_events.77 = {
         default_option = yes
         trigger = { is_player = no }
         add_treasury = 100000000
+        remove_modifier = declared_bankruptcy
         add_modifier = {
             name = starting_minting_buff_3_modifier
             years = 20
@@ -3493,6 +3689,17 @@ dev_events.81 = {
             years = 1
             is_decaying = yes
 		}
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 10
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = revolution_stabilization_buff_4
+            years = 20
+		}
+        add_technology_researched = stormtroopers
+        add_technology_researched = nco_training
     }
 }
 
@@ -3602,20 +3809,20 @@ dev_events.85 = {
         default_option = yes
         trigger = { is_player = no }
         add_treasury = 10000000
+        remove_modifier = declared_bankruptcy
         add_modifier = {
 			name = starting_minting_buff_4_modifier
             years = 3
             is_decaying = yes
 		}
-        remove_modifier = declared_bankruptcy
-        add_modifier = {
-			name = taken_by_suprise_3
-            years = 2
-            is_decaying = yes
-		}
         add_modifier = {
             name = revolution_stabilization_buff_4
             years = 10
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = army_buff_modifier_10
+            years = 20
             is_decaying = yes
         }
     }
@@ -3625,6 +3832,7 @@ dev_events.85 = {
         default_option = yes
         trigger = { is_player = yes }
         add_treasury = 5000000
+        remove_modifier = declared_bankruptcy
         add_modifier = {
             name = revolution_stabilization_buff_4
             years = 8
@@ -3653,11 +3861,6 @@ dev_events.86 = {
         name = dev_events.2.a
         default_option = yes
         trigger = { is_player = no }
-        add_modifier = {
-			name = army_buff_modifier_9
-            years = 2
-            is_decaying = yes
-		}
         add_modifier = {
             name = revolution_stabilization_buff_4
             years = 10
@@ -3693,6 +3896,13 @@ dev_events.87 = {
 					is_capital = no
 				}
 				remove_building = building_barrack
+			}
+            if = {
+				limit = {
+					owner = c:FRA
+					has_building = building_conscription_center
+				}
+				remove_building = building_conscription_center
 			}
 			if = {
 				limit = {
@@ -3819,7 +4029,7 @@ dev_events.91 = {
         add_modifier = {
             name = revolution_stabilization_buff_4
             years = 10
-            is_decaying
+            is_decaying = yes
         }
     }
 }
@@ -3841,17 +4051,93 @@ dev_events.92 = {
     }
 
     option = {
-        name = dev_events.15.a
+        name = dev_events.2.a
         default_option = yes
         trigger = { is_player = no }
-        s:STATE_NORMANDY = {
-		   set_state_owner = c:FFR
+        every_state = {
+			if = {
+				limit = {
+					owner = c:FRA
+					has_building = building_barrack
+				}
+				remove_building = building_barrack
+			}
+            if = {
+				limit = {
+					owner = c:FRA
+					has_building = building_conscription_center
+				}
+				remove_building = building_conscription_center
+			}
+			if = {
+				limit = {
+					owner = c:FRA
+					has_building = building_naval_base
+				}
+				remove_building = building_naval_base
+			}
         }
-        s:STATE_BRITTANY = {
-		   set_state_owner = c:FFR
+        add_modifier = {
+            name = army_nerf_modifier_2
+            years = 5
+            is_decaying = yes
         }
-        s:STATE_PROVENCE = {
-		   set_state_owner = c:FFR
-        }
+    }
+}
+
+dev_events.93 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        add_treasury = 25000000
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_france
+            name = ger_army_help
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_BRITTANY
+				count = 50
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_NORMANDY
+				count = 50
+			}
+		} 
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_occitania
+            name = ger_army_help
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_PROVENCE
+				count = 50
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_LANGUEDOC
+				count = 50
+			}
+		} 
     }
 }

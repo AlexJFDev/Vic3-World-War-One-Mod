@@ -120,6 +120,19 @@ axis_peace_deal.1 = {
 		        set_state_owner = c:GER
             }
         }
+        s:STATE_GUAYANA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:NET
+			    owner = {
+				  OR = {
+					c:NET = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:GBR
+            }
+        }
         c:GER = {
 		    create_diplomatic_pact = {
 			  country = c:FRA
@@ -142,7 +155,7 @@ axis_peace_deal.1 = {
 			add_initiator_backers = {
                 who = c:FRA
             }
-            add_initiator_backers = {
+            add_target_backers = {
                 who = c:FFR
             }   
             add_war_goal = {
