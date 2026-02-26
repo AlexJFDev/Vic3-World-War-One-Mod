@@ -34,12 +34,7 @@
     immediate = {}
 
     complete = {
-        c:FRA = {
-            has_variable = entente_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_ILE_DE_FRANCE
-		    }
-        } 
+        owns_entire_state_region = STATE_ILE_DE_FRANCE
     }
 
 	on_complete = {
@@ -96,12 +91,7 @@ je_central_peace_deal_round_2 = {
     immediate = {}
 
     complete = {
-        c:RUS = {
-            has_variable = entente_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_INGRIA
-		    }
-        } 
+		owns_entire_state_region = STATE_INGRIA
     }
 
 	invalid = {
@@ -159,12 +149,7 @@ je_central_peace_deal_round_3 = {
     immediate = {}
 
     complete = {
-		c:GBR = {
-            has_variable = entente_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HOME_COUNTIES
-		    }
-        } 
+		owns_entire_state_region = STATE_HOME_COUNTIES
     }
 
     on_complete = {
