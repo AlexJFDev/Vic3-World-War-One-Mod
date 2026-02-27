@@ -118,7 +118,7 @@
  building_panama_canal_lens_option:0 "Construct $building_panama_canal$"
  UNEMPLOYED:0 "[concept_unemployed]"
 
-# Building Groups
+ # Building Groups
  bg_subsistence:0 "Subsistence Farms"
  bg_service:0 "Service Industries"
  bg_agriculture:0 "Agriculture"
@@ -145,7 +145,9 @@
  bg_banana_plantations:0 "Banana Plantations"
  bg_light_industry:0 "Light Industries"
  bg_heavy_industry:0 "Heavy Industries"
+ bg_military_industry: "Military Industries"
  bg_rye_farms:0 "Rye Farms"
+ bg_staple_crops: "Staple Crops"
  bg_wheat_farms:0 "Wheat Farms"
  bg_rice_farms:0 "Rice Farms"
  bg_maize_farms:0 "Maize Farms"
@@ -184,12 +186,14 @@
  bg_manor_houses: "Manor Houses"
  bg_financial_districts: "Financial Districts"
  bg_extraction: "Extraction"
+ bg_company_headquarter: "Company Headquarters"
+ bg_company_regional_headquarter: "Regional Company Headquarters"
 
-#Factories
+ # Factories
 
 
 
-  # Infrastructure
+ # Infrastructure
  building_port:0 "Port"
  building_railway:0 "Railway"
  building_trade_center:0 "Trade Center"
@@ -204,38 +208,38 @@
  building_trade_center_lens_option:0 "Create New Market"
  building_link_merge_markets_lens_option:0 "Merge Markets"
   
-  #Academies
+ # Academies
  building_university:0 "University"
  building_university_lens_option:0 "Expand $building_university$"
  building_art_academy:0 "Arts Academy"
  building_art_academy_lens_option:0 "Expand $building_art_academy$"
 
-  #Colonies
+ # Colonies
  building_colony_military:0 "Military Colony"
  building_colony_military_lens_option:0 "Establish $building_colony_military$"
- building_colony_military_hover:0 "Establish #variable Military Colony#! in #variable [STATE.GetName]"
+ building_colony_military_hover:0 "Establish #variable Military Colony#! in #variable [STATE.GetName]#!"
  building_colony_missionary:0 "Missionary Colony"
  building_colony_missionary_lens_option:0 "Establish $building_colony_missionary$"
  building_colony_missionary_hover:0 "Establish #variable Missionary Colony#! in #variable [STATE.GetName]#!"
  building_colony_trade:0 "Trade Colony"
  building_colony_trade_lens_option:0 "Establish $building_colony_trade$"
- building_colony_trade_hover:0 "Establish #variable Trade Colony#! in #variable [STATE.GetName]"
+ building_colony_trade_hover:0 "Establish #variable Trade Colony#! in #variable [STATE.GetName]#!"
 
-  #Barracks
+ # Barracks
  building_barrack:0 "Barracks"
  building_barrack_lens_option:0 "Expand $building_barrack$"
  building_naval_base:0 "Naval Base"
  building_naval_base_lens_option:0 "Expand $building_naval_base$"
  building_conscription_center:0 "Conscription Center"
 
-  #National Buildings
+ # National Buildings
  building_government_administration:0 "Government Administration"
  building_government_administration_lens_option:0 "Expand $building_government_administration$"
 
-  # Unlock tooltips
+ # Unlock tooltips
  tooltip_unlock_railways:0 "Allows construction of the Railway building"
   
-  # Monuments
+ # Monuments
  building_eiffel_tower:0 "The Eiffel Tower"
  
  building_dummy:1 "#This is a dummy building that serve no gameplay mechanical purpose but still need to be reacted to by city hub graphics. It (and this text) should never show up in the UI#!"
@@ -247,14 +251,22 @@
  building_khaju_bridge:0 "$building_dummy$"
  building_machu_picchu:0 "$building_dummy$"
  building_petra:0 "$building_dummy$"
-  # AP1
+
+ # AP1
  building_martandsuntemple:0 "$building_dummy$"
  building_observatorygreenwich:0 "$building_dummy$"
  building_temple_of_poseidon:0 "$building_dummy$"
  building_wat_arun:0 "$building_dummy$"
 
-  # BP1
+ # BP1
  building_cristo_redentor:0 "Cristo Redentor"
+
+ # Skyscraper
+ building_skyscraper:0 "Skyscraper"
+ building_power_bloc_statue:0 "Power Bloc Statue"
+ 
+ # Halloween
+ building_halloween_castledracula: "Castle Dracula"
 
  # IP2
  building_victoria_terminus: "Victoria Terminus"
@@ -276,15 +288,6 @@
  building_manila_cathedral_original: "Manila Cathedral"
  building_manila_cathedral_monument: "Manila Cathedral"
  building_manila_cathedral_ruins: "Manila Cathedral Ruins"
- 
-  # Skyscraper
- building_skyscraper:0 "Skyscraper"
- building_power_bloc_statue:0 "Power Bloc Statue"
- 
-
- # Halloween
- building_halloween_castledracula: "Castle Dracula" #IP2
- building_victoria_terminus: "Victoria Terminus"
 
  # Dynamic Company Buildings Default Name Loc
  COMPANY_HQ_NAME: "$COMPANY_NAME$ HQ"

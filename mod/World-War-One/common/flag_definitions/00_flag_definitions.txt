@@ -3614,6 +3614,17 @@ REPLACE_OR_CREATE:GER = { # Germany
 		subject_canton = GER_modern
 	}
 	flag_definition = {
+		coa = GER
+		subject_canton = GER
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	flag_definition = {
 		coa = GER_modern
 		subject_canton = GER_modern
 		priority = 10

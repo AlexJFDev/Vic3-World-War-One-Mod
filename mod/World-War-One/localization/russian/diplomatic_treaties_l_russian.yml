@@ -1,9 +1,10 @@
 ﻿l_russian:
- # Fallback treaty name is found in interfaces_l_english 
-  
- ###TGS 
-  
+ # Fallback treaty name is found in interfaces_l_english
+
+ ###TGS
+
  treaty_name_gbr_usa_trade: "Англо-американское торговое соглашение"
+ cuban_american_treaty_of_relations: "Кубино-американский договор об отношениях"
  treaty_name_ger_usa_trade: "Германо-американское инвестиционное соглашение"
  treaty_name_usa_gua_invest: "Соглашение об американских инвестициях в Гватемале"
  treaty_name_usa_hai_invest: "Соглашение об американских инвестициях на Гаити"
@@ -31,6 +32,7 @@
  treaty_name_gbr_arg_invest: "Британское инвестиционное соглашение с Аргентиной"
  treaty_name_gbr_brz_invest: "Британское инвестиционное соглашение с Бразилией"
  treaty_name_gbr_tur_invest: "Британское инвестиционное соглашение с Османской империей"
+ treaty_name_fra_tur_invest: "Фанцузское инвестиционное соглашение с Османской империи"
  treaty_name_gbr_por_trade: "Англо-португальское торговое соглашение"
  treaty_name_gbr_bel_trade: "Англо-бельгийское торговое соглашение"
  treaty_name_aus_ger_trade: "Австро-германское торговое соглашение"
@@ -53,6 +55,10 @@
  treaty_name_anglo_egyptian_agreement: "Англо-египетское соглашение"
  treaty_name_anglo_ottoman_cyprus_convention: "Англо-османская кипрская конвенция"
  treaty_name_anglo_ethiopian_friendship: "Англо-эфиопский договор о дружбе"
+ treaty_name_fra_eth_invest: "Соглашение о французских инвестициях в Эфиопии"
+ treaty_name_ita_eth_invest: "Соглашение об итальянских инвестициях в Эфиопии"
+ treaty_name_ger_eth_invest: "Соглашение о германских инвестициях в Эфиопии"
+ treaty_name_rus_eth_invest: "Соглашение о российских инвестициях в Эфиопии"
  treaty_name_usa_lib_assistance: "Американская помощь Либерии"
  treaty_name_anglo_french_sudan_agreement: "Англо-французское соглашение по Судану"
  treaty_name_anglo_japanese_alliance: "Англо-японский союз"
@@ -70,8 +76,9 @@
  treaty_name_british_hong_kong_extension: "Соглашение о расширении британского Гонконга"
  treaty_name_rus_chi_invest: "Российское инвестиционное соглашение с Китаем"
  treaty_name_jap_chi_invest: "Японское инвестиционное соглашение с Китаем"
-  
- ### Historical Treaties 
+ treaty_name_usa_chi_invest: "Американское инвестиционное соглашение с Китаем"
+
+ ### Historical Treaties
  treaty_name_hunkar_iskelesi: "Ункяр-Искелесийский договор"
  treaty_name_holy_alliance: "Договор Священного союза"
  treaty_name_quadruple_alliance: "Договор Четверного союза"
@@ -89,9 +96,9 @@
  treaty_name_ham_pru_trade: "Гамбургско-прусское торговое соглашение"
  treaty_name_swe_pru_trade: "Шведско-прусское торговое соглашение"
  treaty_name_prussian_military_mission_to_turkey: "Прусская миссия в Османскую Империю"
-  
- ### Dynamic Treaties 
- # Generic 
+
+ ### Dynamic Treaties
+ # Generic
  treaty_name_treaty_of_city: "Договор города $SIGNING_LOCATION$"
  treaty_name_city_protocol: "Протокол города $SIGNING_LOCATION$"
  treaty_name_city_convention: "Конвенция города $SIGNING_LOCATION$"
@@ -103,8 +110,8 @@
  treaty_name_treaty_between_country_and_country: "Договор между [FIRST_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')] и [SECOND_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"
  treaty_name_city_agreement: "Соглашение города $SIGNING_LOCATION$"
  treaty_name_agreement_between_country_and_country: "Соглашение между [FIRST_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')] и [SECOND_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"
-  
- # Commercial Treaties 
+
+ # Commercial Treaties
  treaty_name_country_country_treaty_of_peace_and_amity: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий договор о мире и дружбе"
  treaty_name_country_adj_country_adj_treaty_of_amity_and_commerce: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий договор о дружбе и навигации"
  treaty_name_country_adj_country_adj_friendship_and_peace_treaty: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий договор о дружбе и торговле"
@@ -113,23 +120,23 @@
  treaty_name_country_adj_country_adj_treaty_of_commerce_and_navigation: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий договор о торговле и навигации"
  treaty_name_treaty_of_amity_and_commerce_between_country_and_country: "Договор о дружбе и навигации между [FIRST_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')] и [SECOND_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"
  treaty_name_country_country_treaty_of_peace_friendship_commerce_and_navigation: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий договор о мире, дружбе, торговле и навигации"
-  
- # Military Access 
+
+ # Military Access
  treaty_name_country_adj_country_adj_treaty_of_transit_and_commerce: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий договор о транзите и навигации"
  treaty_name_country_adj_country_adj_treaty_of_transit_and_friendship: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий договор о транзите и дружбе"
  treaty_name_country_adj_country_adj_treaty_of_transit_commerce_and_friendship: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий договор о транзите, торговле и дружбе"
-  
- # Mutual Free Trade 
+
+ # Mutual Free Trade
  treaty_name_treaty_of_reciprocity_between_country_and_country: "Договор о взаимной помощи между [FIRST_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')] и [SECOND_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"
  treaty_name_treaty_of_reciprocity: "Договор о взаимной помощи"
-  
- # Investment Rights 
+
+ # Investment Rights
  treaty_name_name_concession: "Концессия города $SIGNING_LOCATION$"
-  
- # Offer Protectorate 
+
+ # Offer Protectorate
  treaty_name_perpetual_truce_of_peace_and_friendship: "Вечный договор о мире и дружбе"
-  
- # Alliances 
+
+ # Alliances
  treaty_name_country_adj_country_adj_alliance: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ий союз"
  treaty_name_country_adj_country_adj_joint_defense_agreement: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]о-[SECOND_COUNTRY.GetAdjectiveNoFormatting|l]ое соглашение о совместной обороне"
  treaty_name_treaty_of_defensive_alliance: "Договор оборонительного союза"
@@ -137,12 +144,12 @@
  treaty_name_dual_entente: "Двойственная Антанта"
  treaty_name_two_power_treaty: "Двухдержавный договор"
  treaty_name_pact_of_city: "Пакт города $SIGNING_LOCATION$"
-  
- # Peace Treaties 
+
+ # Peace Treaties
  treaty_name_treaty_of_peace_friendship_limits_and_settlement_between_country_and_country: "Договор о мире, дружбе, границах и урегулировании отношений между [FIRST_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')] и [SECOND_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"
  treaty_name_treaty_of_peace_between_country_and_country: "Договор о мире между [FIRST_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')] и [SECOND_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"
  treaty_name_convention_for_the_perfect_restoration_of_friendly_relations_between_country_and_country: "Конвенция о безупречном восстановлении дружественных отношений между [FIRST_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')] и [SECOND_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"
-  
- # Papal Treaties 
+
+ # Papal Treaties
  treaty_name_concordat_between_the_holy_see_and_country_first: "Конкордат между Святым Престолом и [SECOND_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"
  treaty_name_concordat_between_the_holy_see_and_country_second: "Конкордат между Святым Престолом и [FIRST_COUNTRY.GetAltNameNoFormatting('RU_CL_TP')]"

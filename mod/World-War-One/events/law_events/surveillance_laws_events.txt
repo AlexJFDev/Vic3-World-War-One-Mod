@@ -315,12 +315,12 @@ surveillance_laws.9 = {
         NOT = { is_enacting_law = law_type:law_surveillance_state }
     }
     option = {
-        name = foreign_policy_laws.9.a
+        name = surveillance_laws.9.a
         trigger = { enactment_setback_count < max_setbacks_minus_one }
         add_enactment_setback = 1
     }
     option = {
-        name = foreign_policy_laws.9.b
+        name = surveillance_laws.9.b
         default_option = yes
         add_enactment_modifier = { name = true_neutrality_stall }
     }  
