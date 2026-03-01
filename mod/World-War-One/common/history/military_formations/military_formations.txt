@@ -2810,16 +2810,6 @@
 			}
 		}
 		create_military_formation = {
-			name = Kuwait_Militia
-			type = army
-			hq_region = sr:region_arabic
-			combat_unit = {
-				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_BASRA
-				count = 5
-			}
-		}
-		create_military_formation = {
 			name = Hong_Kong_Garrison
 			type = army
 			hq_region = sr:region_south_china
@@ -3902,6 +3892,18 @@
 				type = unit_type:combat_unit_type_submarine
 				state_region = s:STATE_BAHAMAS
 				count = 3
+			}
+		}
+	}
+	c:KWT = {
+		create_military_formation = {
+			name = Kuwait_Militia
+			type = army
+			hq_region = sr:region_arabic
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BASRA
+				count = 5
 			}
 		}
 	}
