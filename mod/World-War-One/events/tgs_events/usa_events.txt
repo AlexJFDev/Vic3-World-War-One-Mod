@@ -20,10 +20,13 @@ usa_events.1 = { #Finish the Panama Canal
 		custom_tooltip = panama_canal_construction_available
         set_variable = panama_survey_complete
         set_next_election_date = 1916.11.7
-        trigger_event = {
-            id = dev_events.49
-            days = 5
-        }
+        active_law:lawgroup_internal_security ?= {
+			add_amendment = {
+				type = amendment_american_second_amendment
+				sponsor = ig_rural_folk
+				cooldown = 900
+			}
+		}
     }
 }
 
@@ -806,6 +809,10 @@ usa_events.14 = { #Amercian cinema JE completion
         cu:euro_american = {
            add_cultural_obsession = fine_art
         }
+        trigger_event = {
+            id = usa_events.24
+            years = 1
+        }
     }
 }
 
@@ -1523,6 +1530,44 @@ usa_events.23 = { #Birth of a nation screening
 			id = usa_events.17
 			months = 15
 		}
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+usa_events.24 = { #Hays Code
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/film_production.dds"
+    }
+
+    title = usa_events.24.t
+    desc = usa_events.24.d
+    flavor = usa_events.24.f
+
+    icon = "gfx/interface/icons/invention_icons/film.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    option = {
+        name = usa_events.24.a
+		default_option = yes
+        active_law:lawgroup_free_speech ?= {
+			add_amendment = {
+				type = hays_code
+				sponsor = ig_devout
+				cooldown = 120
+			}
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+        name = usa_events.24.b
         ai_chance = {
 			base = 0
 		}
