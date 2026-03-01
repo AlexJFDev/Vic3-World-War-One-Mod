@@ -324,6 +324,8 @@ company_broken_hill = {
 	extension_building_types = {
 		building_iron_mine
 		building_coal_mine
+		building_motor_industry
+		building_electrics_industry
 	}
 
 	possible_prestige_goods = {
@@ -349,7 +351,7 @@ company_broken_hill = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_copper_mine
-				level >= 5
+				level >= 15
 			}
 			has_building = building_railway
 		}
@@ -357,6 +359,7 @@ company_broken_hill = {
 
 	prosperity_modifier = {
 		country_production_tech_research_speed_mult = 0.15
+		building_motor_industry_throughput_add = 0.2
 	}
 
 	ai_will_do = {
@@ -369,7 +372,7 @@ company_broken_hill = {
 
 	ai_construction_targets = {
 		building_copper_mine = {
-			level = 5
+			level = 15
 			state_trigger = {
 				state_region = s:STATE_VICTORIA
 			}
@@ -384,5 +387,52 @@ company_broken_hill = {
 
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_basic_copper_mining = {
+	icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	building_types = {
+		building_copper_mine
+	}
+
+	extension_building_types = {
+		building_iron_mine
+		building_coal_mine
+		building_motor_industry
+		building_electrics_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_fine_copper_bars
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_copper_mine
+				level >= 15
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_production_tech_research_speed_mult = 0.1
+		building_motor_industry_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_copper_mine
+				level >= 15
+			}
+		}
 	}
 }

@@ -3374,11 +3374,10 @@
 			create_building = {
 				building = building_copper_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_broken_hill
 						country = c:AST
 						levels = 18
-						region = STATE_NEW_SOUTH_WALES
 					}
 				}
 				reserves = 1
@@ -3661,6 +3660,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_coal-fired_plant 
+				}
+			}
+			create_building = {
+				building = building_copper_mine
+				add_ownership = {
+					company = {
+						type = company_broken_hill
+						country = c:AST
+						levels = 28
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_copper_mine pm_nitroglycerin_building_copper_mine pm_rail_transport_mine pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -21607,11 +21620,10 @@
 			create_building = {
 				building = building_copper_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:CHL
+					company = {
+						type = company_broken_hill
+						country = c:AST
 						levels = 32
-						region = STATE_SANTIAGO
 					}
 				}
 				reserves = 1
