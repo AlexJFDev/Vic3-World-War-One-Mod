@@ -150,9 +150,7 @@ uk_events.6 = {#Irish question JE initiation
 
     trigger = {}
 
-    option = {
-        name = uk_events.6.a
-        default_option = yes
+    immediate = {
         if = {
 			limit = {
 				NOT = {
@@ -163,6 +161,11 @@ uk_events.6 = {#Irish question JE initiation
 			}
 			create_political_movement = { type = movement_cultural_minority }
 		}
+    }
+
+    option = {
+        name = uk_events.6.a
+        default_option = yes
 		random_political_movement = {
 			limit = {
 				is_political_movement_type = movement_cultural_minority

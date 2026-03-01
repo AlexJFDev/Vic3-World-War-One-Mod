@@ -1,0 +1,262 @@
+﻿namespace = egypt_events
+
+egypt_events.1 = {
+    type = country_event
+
+    title = egypt_events.1.t
+    desc = egypt_events.1.d
+    flavor = egypt_events.1.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/____"
+    }
+
+    trigger = {}
+
+    option = {
+        name = egypt_events.1.a
+        default_option = yes
+        
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+egypt_events.15 = {
+    type = country_event
+
+    title = egypt_events.15.t
+    desc = egypt_events.15.d
+    flavor = egypt_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/islam.dds"
+    }
+
+    trigger = {}
+
+    immediate = {
+        if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_religious_majority
+					}
+				}
+			}
+			create_political_movement = { type = movement_religious_majority }
+		}
+        create_character = {
+            first_name = Hassan
+	        last_name = al-Banna
+	        historical = yes
+            birth_date = 1906.10.14
+	        culture = cu:arab
+	        religion = rel:sunni
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_devout
+	        ideology = ideology_traditionalist
+	        traits = {
+		     erudite
+             expert_political_operator
+	        }
+        }
+        create_character = {
+            first_name = Sayyid
+	        last_name = Qutb
+	        historical = yes
+            birth_date = 1906.10.9
+	        culture = cu:arab
+	        religion = rel:sunni
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_devout
+	        ideology = ideology_traditionalist
+	        traits = {
+		     literary
+             charismatic
+	        }
+        }
+    }
+
+    option = {
+        name = egypt_events.15.a
+        default_option = yes 
+        random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_religious_majority
+			}
+			save_scope_as = sunni_movement_scope
+		}
+		scope:sunni_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_5
+				years = 30
+			} 
+		}
+        add_modifier = {
+			name = muslim_brotherhood_home
+			years = 30
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = muslim_brotherhood_banned
+			years = 20
+            is_decaying = yes
+		}
+        every_country = {
+            limit = { 
+                country_has_state_religion = rel:sunni
+                NOT = {
+                    c:EGY ?= this
+                } 
+            }
+            trigger_event = {
+               id = egypt_events.16
+               days = 5
+            }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = egypt_events.15.b
+        random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_religious_majority
+			}
+			save_scope_as = sunni_movement_scope
+		}
+		scope:sunni_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_6
+				years = 30
+			} 
+		}
+        add_modifier = {
+			name = muslim_brotherhood_home
+			years = 50
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = muslim_brotherhood_authorized
+			years = 20
+            is_decaying = yes
+		}
+        every_country = {
+            limit = { 
+                country_has_state_religion = rel:sunni
+                NOT = {
+                    c:EGY ?= this
+                }
+            }
+            trigger_event = {
+               id = egypt_events.16
+               days = 5
+            }
+        }      
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+egypt_events.16 = {
+    type = country_event
+
+    title = egypt_events.16.t
+    desc = egypt_events.16.d
+    flavor = egypt_events.16.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/islam.dds"
+    }
+
+    trigger = {}
+
+    immediate = {
+        if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_religious_majority
+					}
+				}
+			}
+			create_political_movement = { type = movement_religious_majority }
+		}
+    }
+
+    option = {
+        name = egypt_events.16.a
+        default_option = yes 
+        random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_religious_majority
+			}
+			save_scope_as = sunni_movement_scope
+		}
+		scope:sunni_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_5
+				years = 30
+			} 
+		}
+        add_modifier = {
+			name = muslim_brotherhood_banned
+			years = 20
+            is_decaying = yes
+		}
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = egypt_events.16.b
+        random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_religious_majority
+			}
+			save_scope_as = sunni_movement_scope
+		}
+		scope:sunni_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_6
+				years = 30
+			} 
+		}
+        add_modifier = {
+			name = muslim_brotherhood_home
+			years = 50
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = muslim_brotherhood_authorized
+			years = 20
+            is_decaying = yes
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}
