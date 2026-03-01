@@ -89,9 +89,8 @@ je_kemalist_reforms = {
             has_law = law_type:law_total_separation
             has_law = law_type:law_atheist_state
         }
-        OR = {
-            has_law = law_type:law_interventionism
-            has_law = law_type:law_command_economy
+        NOT = {
+            has_law = law_type:law_traditionalism
         }
         OR = {
             has_law = law_type:law_proportional_taxation
@@ -113,9 +112,9 @@ je_kemalist_reforms = {
             has_law = law_type:law_no_womens_rights
         }
         has_law = law_type:law_slavery_banned
-        OR = {
-            has_law = law_type:law_true_neutrality
-            has_law = law_type:law_armed_neutrality
+        institution_investment_level = {
+            institution = institution_schools
+            value = 4
         }
     }
 
@@ -123,9 +122,62 @@ je_kemalist_reforms = {
         trigger_event = { id = turkey_events.12 popup = yes }
         add_modifier = {
            name = revolution_stabilization_buff_2
-           years = 2
+           years = 5
            is_decaying = yes
         }
+    }
+
+    should_be_pinned_by_default = yes
+}
+
+je_saudi_arabia_unification = {
+    icon = "gfx/interface/icons/event_icons/saudi_arabia.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:NEJ
+        THIS = c:NEJ
+    }
+    
+    possible = {
+        is_subject = no
+        exists = c:HDJ
+        exists = c:JAB
+    }
+
+    complete = {
+        game_date > 1926.1.1
+        has_law = law_type:law_monarchy
+        is_subject = no
+        OR = {
+           has_law = law_type:law_state_religion
+           has_law = law_type:law_freedom_of_conscience
+        }
+        exists = c:HDJ
+        c:HDJ = {
+            is_subject = no
+            OR = {
+             has_law = law_type:law_state_religion
+             has_law = law_type:law_freedom_of_conscience
+            }
+        }
+        exists = c:JAB
+        c:JAB = {
+            is_subject = no
+            OR = {
+             has_law = law_type:law_state_religion
+             has_law = law_type:law_freedom_of_conscience
+            }
+        }
+    }
+
+    on_complete = {
+        trigger_event = { id = turkey_events.13 popup = yes }
+    }
+
+    invalid = {
+        owns_entire_state_region = STATE_HEDJAZ
+        owns_entire_state_region = STATE_HAIL
     }
 
     should_be_pinned_by_default = yes

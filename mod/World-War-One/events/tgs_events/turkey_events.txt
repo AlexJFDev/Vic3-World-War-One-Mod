@@ -639,3 +639,86 @@ turkey_events.12 = { #Kemalist reforms JE success
         }
     }
 }
+
+turkey_events.13 = { #Saudi Arabia formation part 1
+    type = country_event
+
+    title = turkey_events.13.t
+    desc = turkey_events.13.d
+    flavor = turkey_events.13.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/arab_revolt.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = turkey_events.13.a
+        default_option = yes
+        c:HDJ = {
+            trigger_event = {
+              id = turkey_events.14
+              days = 5
+            }
+        }
+        c:JAB = {
+            trigger_event = {
+              id = turkey_events.14
+              days = 5
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = turkey_events.13.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+turkey_events.14 = { #Saudi Arabia formation part 2
+    type = country_event
+
+    title = turkey_events.14.t
+    desc = turkey_events.14.d
+    flavor = turkey_events.14.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/arab_revolt.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = turkey_events.14.a
+        default_option = yes
+        c:NEJ = {
+            annex = ROOT
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = turkey_events.14.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
