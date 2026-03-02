@@ -266,18 +266,6 @@ entente_peace_deal.1 = { #Entente victory
                 id = dev_events.25
                 days = 5
             }
-            trigger_event = {
-                id = dev_events.25
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.25
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.25
-                days = 5
-            }
 			trigger_event = {
                 id = dev_events.7
                 days = 10
@@ -548,6 +536,10 @@ entente_peace_deal.1 = { #Entente victory
 			country = c:CMR
 			type = colony
 		}	
+		trigger_event = {
+            id = dev_events.7
+            days = 5
+            }
 		}
 		c:GBR = {
 		create_diplomatic_pact = {
@@ -1236,6 +1228,15 @@ entente_peace_deal.2 = { #Round 1 result
                    id = dev_events.15
                    days = 5
                 }
+			trigger_event = {
+                   id = dev_events.53
+                   days = 5
+                }
+			add_modifier = {
+				name = money_buff_1
+				years = 30
+				is_decaying = yes
+			}
 		}
         create_country = { #Bavaria
 	       tag = BAV
@@ -1519,6 +1520,15 @@ entente_peace_deal.2 = { #Round 1 result
                    id = dev_events.15
                    days = 5
                 }
+			trigger_event = {
+                   id = dev_events.53
+                   days = 5
+                }
+			add_modifier = {
+				name = money_buff_1
+				years = 30
+				is_decaying = yes
+			}
 		}
         create_country = { #Bavaria
 	       tag = BAV
@@ -1773,6 +1783,15 @@ entente_peace_deal.2 = { #Round 1 result
                    id = dev_events.15
                    days = 5
                 }
+			trigger_event = {
+                   id = dev_events.53
+                   days = 5
+                }
+			add_modifier = {
+				name = money_buff_1
+				years = 30
+				is_decaying = yes
+			}
 		}
         s:STATE_RHINELAND = {
 	       random_scope_state = {
@@ -3277,6 +3296,10 @@ entente_peace_deal.8 = { #Round 7 result
 			country = c:JAB
 			type = protectorate
 		}
+		remove_diplomatic_pact = {
+			country = c:JAB
+			type = puppet
+		}
 		}
 	}
 
@@ -3480,6 +3503,10 @@ entente_peace_deal.8 = { #Round 7 result
         remove_diplomatic_pact = {
 			country = c:JAB
 			type = protectorate
+		}
+		remove_diplomatic_pact = {
+			country = c:JAB
+			type = puppet
 		}
 		}
 	}
@@ -3718,6 +3745,10 @@ entente_peace_deal.8 = { #Round 7 result
         remove_diplomatic_pact = {
 			country = c:JAB
 			type = protectorate
+		}
+		remove_diplomatic_pact = {
+			country = c:JAB
+			type = puppet
 		}
 		}  
 	}

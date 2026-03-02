@@ -200,6 +200,10 @@
 	}
 
     c:GBR = {
+		trigger_event = { #Birth rate nerf
+			id = dev_events.100
+			days = 5
+		}
 		trigger_event = { #Loy and rads reset
 			id = dev_events.26
 			days = 90
@@ -319,17 +323,25 @@
 	}
 	
 	c:FRA = {
-		trigger_event = { #Loy and rads reset
-			id = dev_events.26
-			days = 90
+		trigger_event = { #Birth rate nerf
+			id = dev_events.99
+			days = 5
 		}
 		trigger_event = { #Outadated tactics
 			id = dev_events.21
 			days = 5
 		}
+		trigger_event = { #Loy and rads reset
+			id = dev_events.26
+			days = 90
+		}
 	}
 
 	c:ITA = {
+		trigger_event = { #Birth rate nerf
+			id = dev_events.97
+			days = 5
+		}
 		trigger_event = { #Starting sol buff
 			id = dev_events.25
 			days = 5
@@ -494,6 +506,10 @@
 			id = dev_events.25
 			days = 5
 		}
+		trigger_event = { #Birth rate nerf
+			id = dev_events.99
+			days = 5
+		}
 	}
 
 	c:ROM = {
@@ -505,11 +521,15 @@
 
     c:USA = {
 		trigger_event = { #Minting bonus for AI
-			id = dev_events.97
+			id = dev_events.101
 			days = 5
 		}
 		trigger_event = { #Panama canal
 			id = usa_events.1
+			days = 5
+		}
+		trigger_event = { #Birth rate nerf
+			id = dev_events.98
 			days = 5
 		}
 		trigger_event = { #Trade union ai nerf
