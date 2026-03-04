@@ -509,7 +509,7 @@ dev_events.9 = {
     }
 }
 
-dev_events.10 = { 
+dev_events.10 = {
     type = country_event
 
     title = dev_events.10.t
@@ -528,15 +528,27 @@ dev_events.10 = {
     option = {
         name = dev_events.10.a
         default_option = yes
+        trigger = { is_player = no }
         add_modifier = {
             name = army_nerf_modifier_1
             years = 2
             is_decaying = yes
         }
     }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = army_nerf_modifier_1
+            years = 1
+            is_decaying = yes
+        }
+    }
 }
 
-dev_events.11 = { 
+dev_events.11 = {
     type = country_event
 
     title = dev_events.11.t
@@ -555,6 +567,7 @@ dev_events.11 = {
     option = {
         name = dev_events.11.a
         default_option = yes
+        trigger = { is_player = no }
         add_modifier = {
             name = army_buff_modifier_4
             years = 1
@@ -767,6 +780,7 @@ dev_events.16 = {
         name = dev_events.16.a
         default_option = yes
         trigger = { is_player = no }
+        remove_modifier = declared_bankruptcy
         add_treasury = 50000000
         add_modifier = {
             name = minting_buff_5_modifier
@@ -789,6 +803,7 @@ dev_events.16 = {
         name = dev_events.16.a
         default_option = yes
         trigger = { is_player = yes }
+        remove_modifier = declared_bankruptcy
         add_treasury = 25000000
         add_modifier = {
             name = starting_minting_buff_4_modifier
@@ -2145,7 +2160,7 @@ dev_events.45 = {
     }
 }
 
-dev_events.46 = { 
+dev_events.46 = {
     type = country_event
 
     title = dev_events.10.t
@@ -2167,18 +2182,7 @@ dev_events.46 = {
         trigger = { is_player = no }
         add_modifier = {
             name = army_nerf_modifier_2
-            years = 3
-            is_decaying = yes
-        }
-    }
-
-    option = {
-        name = dev_events.10.a
-        default_option = yes
-        trigger = { is_player = yes }
-        add_modifier = {
-            name = army_nerf_modifier_1
-            years = 1
+            years = 2
             is_decaying = yes
         }
     }
@@ -4461,6 +4465,34 @@ dev_events.101 = {
         add_modifier = {
             name = starting_minting_buff_3_modifier
             years = 16
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.102 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = army_nerf_modifier_1
+            years = 2
             is_decaying = yes
         }
     }

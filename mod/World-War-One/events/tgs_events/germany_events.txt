@@ -1881,6 +1881,10 @@ germany_events.39 = { #Molotov-Ribentrop pact
         s:STATE_BESSARABIA = {
           add_claim = c:RUS
         }
+        trigger_event = {
+            id = ussr_events.9
+            years = 1
+        }
         ai_chance = {
             base = 1
         }

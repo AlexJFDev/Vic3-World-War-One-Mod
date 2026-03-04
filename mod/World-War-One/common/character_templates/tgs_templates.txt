@@ -1042,8 +1042,8 @@ sov_grigory_zinoviev_character_template = {
     female = no
     culture = cu:ashkenazi
     religion = rel:atheist
-	ig_leader = yes
-    interest_group = ig_rural_folk
+	is_agitator = yes
+    interest_group = ig_trade_unions
     ideology = ideology_vanguardist
     traits = {
         demagogue
@@ -1058,9 +1058,10 @@ sov_lev_kamenev_character_template = {
     historical = yes
     birth_date = 1883.7.18
     female = no
+	is_agitator = yes
     culture = cu:ashkenazi
     religion = rel:atheist
-    interest_group = ig_petty_bourgeoisie
+    interest_group = ig_trade_unions
     ideology = ideology_vanguardist
 	ig_leader = yes
     traits = {
@@ -1078,9 +1079,9 @@ sov_nikolai_bukharin_character_template = {
     female = no
     culture = cu:russian
     religion = rel:atheist
-    ig_leader = yes
-    interest_group = ig_intelligentsia
-    ideology = ideology_communist
+    is_agitator = yes
+    interest_group = ig_trade_unions
+    ideology = ideology_positivist
     traits = {
         erudite
         persistent
@@ -1093,16 +1094,34 @@ sov_alexei_rykov_character_template = {
     last_name = Rykov
     historical = yes
     birth_date = 1881.2.25
-    is_agitator = yes
     female = no
-	is_leader = yes
+	is_agitator = yes
     culture = cu:russian
     religion = rel:atheist
 	ig_leader = yes
-    interest_group = ig_industrialists
-    ideology = ideology_communist
+    interest_group = ig_trade_unions
+    ideology = ideology_market_liberal
     traits = {
         master_bureaucrat
+        experienced_political_operator
+    }
+}
+
+sov_georgy_zhukov_character_template = {
+    first_name = Georgy
+    last_name = Zhukov
+    historical = yes
+    birth_date = 1896.12.1
+    female = no
+	is_general = yes
+    culture = cu:russian
+    religion = rel:atheist
+	ig_leader = yes
+    interest_group = ig_armed_forces
+    ideology = ideology_vanguardist
+    traits = {
+		imposing
+        expert_offensive_planner
         experienced_political_operator
     }
 }
