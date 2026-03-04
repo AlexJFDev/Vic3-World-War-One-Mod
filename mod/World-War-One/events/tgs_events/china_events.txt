@@ -962,7 +962,6 @@ china_events.7 = { #Policy choice
 				save_scope_as = union_ig_leader_scope
 			}
 		}
-        set_variable = warlord_state
     }
 
     trigger = {}
@@ -1254,6 +1253,7 @@ china_events.11 = { #China reunification
     option = {
 		name = china_events.11.a
         default_option = yes
+        remove_variable = warlord_state
 		add_modifier = {
 			name = china_tech_focus_modifier
 			years = 30
@@ -1297,6 +1297,7 @@ china_events.11 = { #China reunification
 
 	option = {
 		name = china_events.11.b
+        remove_variable = warlord_state
 		add_modifier = {
 			name = china_politics_focus_modifier
 			years = 30

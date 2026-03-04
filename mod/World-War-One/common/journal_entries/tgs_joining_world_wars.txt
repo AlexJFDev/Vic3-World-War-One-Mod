@@ -5,10 +5,10 @@
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_global_variable = world_war_1_ongoing
-      is_country_type = recognized
-      is_subject = no
-      NOT = {
+	    has_global_variable = world_war_1_ongoing
+        is_country_type = recognized
+        is_subject = no
+        NOR = {
            has_global_variable = world_war_1_over
            has_modifier = fragile_unity_modifier
            has_variable = warlord_state
@@ -17,10 +17,17 @@
         }
 	}
 
-    possible = { 
-       country_rank >= rank_value:minor_power
-	   is_at_war = no
-       is_revolutionnary = no
+    possible = {
+        country_rank >= rank_value:minor_power
+	    is_at_war = no
+        is_revolutionnary = no
+        NOR = {
+           has_global_variable = world_war_1_over
+           has_modifier = fragile_unity_modifier
+           has_variable = warlord_state
+		   has_variable = entente_participant
+		   has_variable = central_powers_participant
+        }
 	}
 
     immediate = {
@@ -89,10 +96,10 @@ je_joining_world_war_two = {
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_global_variable = world_war_two_started
-      is_country_type = recognized
-      is_subject = no
-      NOT = {
+	    has_global_variable = world_war_two_started
+        is_country_type = recognized
+        is_subject = no
+        NOR = {
            has_global_variable = world_war_2_over
            has_modifier = fragile_unity_modifier
            has_variable = warlord_state
@@ -102,9 +109,16 @@ je_joining_world_war_two = {
 	}
 
     possible = { 
-       country_rank >= rank_value:minor_power
-	   is_at_war = no
-       is_revolutionnary = no
+        country_rank >= rank_value:minor_power
+	    is_at_war = no
+        is_revolutionnary = no
+        NOR = {
+           has_global_variable = world_war_2_over
+           has_modifier = fragile_unity_modifier
+           has_variable = warlord_state
+		   has_variable = allies_participant
+		   has_variable = axis_participant
+        }
 	}
 
     immediate = {
