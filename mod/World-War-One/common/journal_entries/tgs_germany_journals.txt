@@ -230,35 +230,23 @@ je_new_germany = {
     is_shown_when_inactive = {
         exists = c:GER
         THIS = c:GER
-        has_global_variable = world_war_1_over
+        has_variable = great_depression_victim
     }
     
     possible = {
         OR = {
             has_law = law_type:law_council_republic
-            has_variable = hitler_rise_to_power_local
-            c:GER = {
-                ruler = {
-                OR = {
-				   has_ideology = ideology:ideology_fascist
-                   has_ideology = ideology:ideology_authoritarian
-                }
-                }
-            }
+            has_law = law_type:law_single_party_state
         }
-        OR = {
-            has_modifier = great_depression_effect_1
-            has_modifier = great_depression_effect_2
-            has_modifier = great_depression_effect_3
-            has_modifier = great_depression_effect_4
-        }
+        has_variable = great_depression_victim
     }
 
     immediate = {}
 
     complete = {
+        game_date > 1935.1.1
         country_rank >= rank_value:great_power
-        root.average_sol >= 10
+        root.average_sol >= 12
     }
 
     on_complete = {

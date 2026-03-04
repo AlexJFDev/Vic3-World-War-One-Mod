@@ -2216,7 +2216,7 @@ dev_events.47 = {
     }
 }
 
-dev_events.48 = { 
+dev_events.48 = {
     type = country_event
 
     title = dev_events.8.t
@@ -2236,16 +2236,17 @@ dev_events.48 = {
         name = dev_events.8.a
         default_option = yes
         trigger = { 
-            is_player = no 
+            is_player = no
             OR = {
-                has_modifier = great_depression_effect_1
-                has_modifier = great_depression_effect_2
-                has_modifier = great_depression_effect_3
-            }
+              has_modifier = great_depression_effect_1
+              has_modifier = great_depression_effect_2
+              has_modifier = great_depression_effect_3
+              has_modifier = great_depression_effect_4
+            } 
         }
         add_modifier = {
-			name = starting_minting_buff_3_modifier
-            years = 10
+			name = starting_minting_buff_4_modifier
+            years = 20
             is_decaying = yes
 		}
     }
