@@ -1,4 +1,4 @@
-﻿je_italian_civil_war = {
+﻿je_war_fatigue_italy = {
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     group = je_group_internal_affairs
 
@@ -10,7 +10,7 @@
     
     possible = {
         has_variable = axis_participant
-        game_date > 1943.8.1
+        game_date > 1943.9.1
         NOT = {
            has_global_variable = ww2_britain_defeat
            has_global_variable = ww2_russia_defeat
@@ -21,7 +21,7 @@
     immediate = {
         c:ITA = {
             trigger_event = {
-                id = 
+                id = italy_events.15
                 days = 5
             }
         }

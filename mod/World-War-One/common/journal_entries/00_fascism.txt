@@ -84,8 +84,10 @@
 				}
 			}
 		}
-		NOT = {
+		NOR = {
 			has_variable = historical_fascism
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
 		}
 		radical_fraction = {
 			value >= 0.1
@@ -276,7 +278,11 @@
 	}
 
 	invalid = {
-		# pelly_says = no
+		OR = {
+			has_variable = historical_fascism
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+		}
 	}
 
 	weight = 10000
