@@ -1594,7 +1594,7 @@ dev_events.32 = {
 	
 			combat_unit = {
 				type = unit_type:combat_unit_type_fighter
-				state_region = s:STATE_BOHEMIA
+				state_region = s:STATE_AUSTRIA
 				count = 100
 			}
 		}
@@ -1660,7 +1660,7 @@ dev_events.32 = {
 	
 			combat_unit = {
 				type = unit_type:combat_unit_type_fighter
-				state_region = s:STATE_HUDAVENDIGAR
+				state_region = s:STATE_EASTERN_THRACE
 				count = 100
 			}
 		}
@@ -1693,7 +1693,7 @@ dev_events.32 = {
 	
 			combat_unit = {
 				type = unit_type:combat_unit_type_fighter
-				state_region = s:STATE_KYUSHU
+				state_region = s:STATE_KANTO
 				count = 100
 			}
 		}
@@ -4512,5 +4512,373 @@ dev_events.102 = {
             years = 2
             is_decaying = yes
         }
+    }
+}
+
+dev_events.103 = {
+    type = country_event
+
+    title = dev_events.32.t
+    desc = dev_events.32.d
+    flavor = dev_events.32.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:USA
+            } 
+        }
+        c:USA = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 30
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_england
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_NEW_YORK
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_NEW_YORK
+				count = 45
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:GBR
+            } 
+        }
+        c:GBR = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 20
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_england
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_HOME_COUNTIES
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_HOME_COUNTIES
+				count = 45
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:FRA
+            } 
+        }
+        c:FRA = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 20
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_france
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_ILE_DE_FRANCE
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_ILE_DE_FRANCE
+				count = 45
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:GER
+            } 
+        }
+        c:GER = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 20
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_germany
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_BRANDENBURG
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_BRANDENBURG
+				count = 45
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:ITA
+            } 
+        }
+        c:ITA = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 20
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_italy
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_LAZIO
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_LAZIO
+				count = 45
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:AUS
+            } 
+        }
+        c:AUS = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 10
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_germany
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_AUSTRIA
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_AUSTRIA
+				count = 45
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:RUS
+            } 
+        }
+        c:RUS = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 20
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_russia
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_MOSCOW
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_MOSCOW
+				count = 45
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:TUR
+            } 
+        }
+        c:TUR = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 10
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_anatolia
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_EASTERN_THRACE
+				count = 5
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_EASTERN_THRACE
+				count = 15
+			}
+		}
+        }   
+    }
+
+    option = {
+        name = dev_events.32.a
+        default_option = yes
+        trigger = { 
+            AND = {
+              is_player = no 
+              root = c:JAP
+            } 
+        }
+        c:JAP = {
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 20
+            }		
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_japan
+            name = ai_tanks_spawn
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_KANTO
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_KANTO
+				count = 45
+			}
+		}
+        }   
     }
 }

@@ -25,6 +25,33 @@
     weight = 1000
 }
 
+je_mechanized_warfare = {
+    icon = "gfx/interface/icons/goods_icons/tanks.dds"
+    group = je_group_technology
+
+    is_shown_when_inactive = {
+       country_rank >= rank_value:major_power
+       has_technology_researched = trench_works
+       is_player = no
+    }
+    
+    possible = {
+        country_rank >= rank_value:major_power
+        has_technology_researched = automatic_machine_guns
+        is_player = no
+    }
+
+    complete = {
+        has_technology_researched = mobile_armor
+    }
+
+    on_complete = {
+        trigger_event = { id = dev_events.103 }
+    }
+
+    weight = 1000
+}
+
 je_usa_loans_verification = {
     icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
     group = je_group_internal_affairs
