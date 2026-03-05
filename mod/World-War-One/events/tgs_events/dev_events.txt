@@ -2433,6 +2433,14 @@ dev_events.53 = {
             years = 40
             is_decaying = yes
 		} 
+        s:STATE_KANTO = {
+			random_scope_state = {
+			    set_hub_name = {
+			        type = city
+			        name = HUB_NAME_STATE_KANTO_city_meiji
+			    }
+		    }
+		}
     }
 
     option = {
@@ -2448,7 +2456,15 @@ dev_events.53 = {
 			name = starting_sol_buff
             years = 40
             is_decaying = yes
-		}  
+		}
+        s:STATE_KANTO = {
+			random_scope_state = {
+			    set_hub_name = {
+			        type = city
+			        name = HUB_NAME_STATE_KANTO_city_meiji
+			    }
+		    }
+		}
     }
 }
 

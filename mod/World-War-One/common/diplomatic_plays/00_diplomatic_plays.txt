@@ -37,11 +37,9 @@ REPLACE_OR_CREATE:dp_open_market = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
 		}
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -68,11 +66,9 @@ REPLACE_OR_CREATE:dp_regime_change = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
 		}
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -98,11 +94,9 @@ REPLACE_OR_CREATE:dp_ban_slavery = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
 		}
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -129,12 +123,10 @@ REPLACE_OR_CREATE:dp_conquer_state = {
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blockers = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-				has_law = law_type:law_limited_interventionism
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
+			has_law = law_type:law_limited_interventionism
 		}
 	}
 
@@ -162,11 +154,9 @@ REPLACE_OR_CREATE:dp_return_state = {
 			NOT = { is_country_type = decentralized }
 		}
 		diplomatic_play_has_no_relations_blockers = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -194,11 +184,9 @@ REPLACE_OR_CREATE:dp_liberate_subject = {
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blocker_with_overlord = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -221,11 +209,9 @@ REPLACE_OR_CREATE:dp_liberate_country = {
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		diplomatic_play_has_no_relations_blockers = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -360,11 +346,9 @@ REPLACE_OR_CREATE:dp_take_treaty_port = {
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blockers = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -384,11 +368,9 @@ REPLACE_OR_CREATE:dp_make_tributary = {
 
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -408,11 +390,9 @@ REPLACE_OR_CREATE:dp_make_dominion = {
 
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -432,11 +412,9 @@ REPLACE_OR_CREATE:dp_make_protectorate = {
 
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -483,11 +461,9 @@ REPLACE_OR_CREATE:dp_transfer_subject = {
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blocker_with_overlord = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -711,7 +687,7 @@ REPLACE_OR_CREATE:dp_contain_threat = {
 			"scope:target_country.infamy" >= infamy_threshold:pariah
 		}
 		NOT = {
-			has_law = law_type:law_armed_neutrality
+			has_law = law_type:law_true_neutrality
 		}
 	}
 
@@ -788,11 +764,9 @@ REPLACE_OR_CREATE:dp_join_power_bloc = {
 				target = scope:target_country
 			}
 		}
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -815,11 +789,9 @@ REPLACE_OR_CREATE:dp_force_nationalization = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
 		diplomatic_play_has_no_relations_blockers = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -847,11 +819,9 @@ REPLACE_OR_CREATE:dp_give_foreign_investment_rights = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
 		diplomatic_play_has_no_relations_blockers = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -911,13 +881,11 @@ REPLACE_OR_CREATE:dp_annex_war = {
 			country_rank <= rank_value:insignificant_power
 		}
 		diplomatic_play_has_no_relations_blockers = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-				has_law = law_type:law_limited_interventionism
-				has_law = law_type:law_expansionism
-			}
+		NOR = {
+		    has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
+			has_law = law_type:law_limited_interventionism
+			has_law = law_type:law_expansionism
 		}
 	}
 
@@ -1073,8 +1041,9 @@ REPLACE_OR_CREATE:dp_unify_china = {
 			OR = {
 				has_journal_entry = je_reunify_china
 				global_var:chinese_central_government ?= THIS
-				country_has_primary_culture = cu:han
 				country_has_primary_culture = cu:manchu
+				country_has_primary_culture = cu:han
+				country_has_primary_culture = cu:yue
 			}
 		}
 	}
@@ -1320,11 +1289,9 @@ REPLACE_OR_CREATE:dp_humiliation = {
 
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = {
-			OR = {
-				has_law = law_type:law_true_neutrality
-				has_law = law_type:law_armed_neutrality
-			}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
