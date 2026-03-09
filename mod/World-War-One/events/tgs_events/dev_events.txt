@@ -339,14 +339,14 @@ dev_events.4 = {
         c:USA = {
             add_modifier = {
 			  name = army_buff_modifier_9
-              years = 4
+              years = 2
               is_decaying = yes
 		    }
         }
         c:GBR = {
             add_modifier = {
 			  name = army_buff_modifier_9
-              years = 4
+              years = 2
               is_decaying = yes
 		    }
         }
@@ -357,7 +357,7 @@ dev_events.4 = {
             }
             add_modifier = {
 			  name = taken_by_suprise_3
-              years = 6
+              years = 2
               is_decaying = yes
 		    }
         }
@@ -3291,7 +3291,7 @@ dev_events.72 = {
         add_treasury = 50000000
         add_modifier = {
 			name = starting_minting_buff_4_modifier
-            years = 10
+            years = 6
             is_decaying = yes
 		}
     }
@@ -4881,5 +4881,44 @@ dev_events.103 = {
 			}
 		}
         }   
+    }
+}
+
+dev_events.104 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = money_buff_1
+            years = 10
+            is_decaying = yes
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = money_buff_1
+            years = 2
+            is_decaying = yes
+        }
     }
 }
