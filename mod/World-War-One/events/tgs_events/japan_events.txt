@@ -17,8 +17,8 @@ japan_events.15 = {#Tokyo earthquake
     }
 
     immediate = {
-        s:STATE_KANTO = {
-			add_devastation = 30
+        s:STATE_KANTO ?= {
+			start_harvest_condition = earthquake
 		}
     }
 
@@ -27,18 +27,21 @@ japan_events.15 = {#Tokyo earthquake
     option = {
         name = japan_events.15.a
         c:JAP = {
-        if = {
-         limit = { has_law = law_type:law_monarchy }
-            trigger_event = { 
-              id = japan_events.16
-               years = 3
+            if = {
+                limit = { has_law = law_type:law_monarchy }
+                trigger_event = { 
+                  id = japan_events.16
+                  years = 3
+                }
             }
-        }
         }
         trigger_event = { #Minting bonus
             id = dev_events.77
             days = 5
         }
+        s:STATE_KANTO ?= {
+			add_devastation = 30
+		}
     }
 }
 
