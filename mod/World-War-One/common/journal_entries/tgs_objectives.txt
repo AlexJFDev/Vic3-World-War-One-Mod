@@ -1,0 +1,127 @@
+﻿je_usa_victory = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/usa_icon.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		game_date > 1953.5.28
+		global_country_ranking = 1
+        leading_producer_of = g:steel
+		leading_producer_of = g:engines
+		leading_producer_of = g:automobiles
+	}
+
+	on_complete = {
+		trigger_event = { 
+           id = objectives_events.1
+           days = 5
+        }
+	}
+
+	weight = 1000
+	transferable = yes
+}
+
+je_uk_victory = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/gbr_icon.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		game_date > 1953.5.28
+		global_country_ranking = 1
+        leading_producer_of = g:ironclads
+		navy_size > 500
+	}
+
+	on_complete = {
+		trigger_event = { 
+           id = objectives_events.1
+           days = 5
+        }
+	}
+
+	weight = 1000
+	transferable = yes
+}
+
+je_germany_victory = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/ger_icon.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		game_date > 1953.5.28
+		global_country_ranking = 1
+        leading_producer_of = g:steel
+		army_size >= 1000
+	}
+
+	on_complete = {
+		trigger_event = { 
+           id = objectives_events.1
+           days = 5
+        }
+	}
+
+	weight = 1000
+	transferable = yes
+}
+
+je_russia_victory = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/rus_icon.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		game_date > 1953.5.28
+		OR = {
+			global_country_ranking = 1
+			global_country_ranking = 2
+		}
+		leading_producer_of = g:liquor
+		literacy_rate > 0.6
+	}
+
+	on_complete = {
+		trigger_event = { 
+           id = objectives_events.1
+           days = 5
+        }
+	}
+
+	weight = 1000
+	transferable = yes
+}
+
+je_japan_victory = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/jap_icon.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		game_date > 1953.5.28
+		OR = {
+			global_country_ranking = 1
+			global_country_ranking = 2
+			global_country_ranking = 3
+		}
+		leading_producer_of = g:ironclads
+		navy_size > 400
+	}
+
+	on_complete = {
+		trigger_event = { 
+           id = objectives_events.1
+           days = 5
+        }
+	}
+
+	weight = 1000
+	transferable = yes
+}

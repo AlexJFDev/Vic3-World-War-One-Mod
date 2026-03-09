@@ -1,0 +1,74 @@
+﻿sg_usa = {
+	category = sgcat_hegemon
+	is_repeatable = no
+
+	trigger = {
+	}
+
+	on_start = {
+		add_journal_entry = {
+			type = je_usa_victory
+			objective_subgoal = sg_usa
+		}
+	}
+}
+
+sg_gbr = {
+	category = sgcat_hegemon
+	is_repeatable = no
+
+	trigger = {
+	}
+
+	on_start = {
+		add_journal_entry = {
+			type = je_uk_victory
+			objective_subgoal = sg_gbr
+		}
+	}
+}
+
+sg_ger = {
+	category = sgcat_hegemon
+	is_repeatable = no
+
+	trigger = {
+	}
+
+	on_start = {
+		add_journal_entry = {
+			type = je_germany_victory
+			objective_subgoal = sg_ger
+		}
+	}
+}
+
+sg_rus = {
+	category = sgcat_hegemon
+	is_repeatable = no
+
+	trigger = {
+	}
+
+	on_start = {
+		add_journal_entry = {
+			type = je_russia_victory
+			objective_subgoal = sg_rus
+		}
+	}
+}
+
+sg_jap = {
+	category = sgcat_hegemon
+	is_repeatable = no
+
+	trigger = {
+	}
+
+	on_start = {
+		add_journal_entry = {
+			type = je_japan_victory
+			objective_subgoal = sg_jap
+		}
+	}
+}
