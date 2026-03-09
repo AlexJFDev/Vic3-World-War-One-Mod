@@ -19,6 +19,7 @@ great_war_initiation_events.25 = { # Triggered by global on June 20th.
     option = { # Franz goes to Sarajevo
         name = great_war_initiation_events.25.a
         default_option = yes
+        trigger = { has_game_rule = ww1_enabled }
         trigger_event = { 
             id = great_war_initiation_events.1
             days = 5
@@ -1084,11 +1085,10 @@ great_war_initiation_events.14 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    option = { # Intervene - Player
+    option = { # Invade Belgium
         name = great_war_initiation_events.14.a
         set_global_variable = german_invasion_of_belgium
         default_option = yes
-        trigger = { is_player = yes }
         ai_chance = {
             base = 1
         }
@@ -1102,6 +1102,20 @@ great_war_initiation_events.14 = {
             trigger_event = { 
                 id = great_war_initiation_events.24
                 days = 5
+            }
+        }
+        c:FRA = {
+            add_modifier = {
+              name = taken_by_suprise_2
+              months = 5
+              is_decaying = yes
+            }
+        }
+        c:BEL = {
+            add_modifier = {
+              name = taken_by_suprise_2
+              months = 5
+              is_decaying = yes
             }
         }
         add_modifier = {
@@ -1116,49 +1130,6 @@ great_war_initiation_events.14 = {
                 holder = c:GER
                 type = make_protectorate
                 target_country = c:BEL
-            }
-        }
-        c:BEL = { set_variable = entente_participant }
-        c:LUX = { set_variable = entente_participant }
-    }
-
-    option = { # Intervene - AI
-        name = great_war_initiation_events.14.b
-        set_global_variable = german_invasion_of_belgium
-        default_option = yes
-        trigger = { is_player = no }
-        ai_chance = {
-            base = 1
-        }
-        c:GBR = {
-            trigger_event = { 
-                id = great_war_initiation_events.15
-                days = 5
-            }
-        }
-        c:LUX = {
-            trigger_event = { 
-                id = great_war_initiation_events.24
-                days = 5
-            }
-        }
-        add_modifier = {
-            name = schlieffen_plan_2_modifier
-            months = 10
-            is_decaying = yes
-        }
-        scope:world_war_one_diplo_play = {
-            add_target_backers = { c:BEL }
-            add_target_backers = { c:LUX }
-            add_war_goal = {
-                holder = c:GER
-                type = make_protectorate
-                target_country = c:BEL
-            }
-            add_war_goal = {
-                holder = c:GER
-                type = puppet
-                target_country = c:LUX
             }
         }
         c:BEL = { set_variable = entente_participant }
