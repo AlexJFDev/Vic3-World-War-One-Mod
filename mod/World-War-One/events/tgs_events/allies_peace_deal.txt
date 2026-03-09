@@ -329,6 +329,15 @@ allies_peace_deal.3 = {
 		        set_state_owner = c:FRA
             }
         }
+		every_country = {
+            limit = {
+                has_variable = axis_participant
+            } 
+            trigger_event = {
+                id = allies_peace_deal.5
+                days = 60
+            }
+        }
     }
 }
 
@@ -569,5 +578,90 @@ allies_peace_deal.4 = {
 		        set_state_owner = c:KOR
             }
         }
+		c:JAP = {
+            trigger_event = {
+                id = allies_peace_deal.6
+                days = 60
+            }
+        }
+    }
+}
+
+allies_peace_deal.5 = {
+    type = country_event
+
+    title = allies_peace_deal.5.t
+    desc = allies_peace_deal.5.d
+    flavor = allies_peace_deal.5.f
+    
+    icon = "gfx/interface/icons/objectives/egalitarian_society.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/nuremberg_trial.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = allies_peace_deal.5.a
+		every_character = {
+			
+			limit = {
+				OR = {
+                    has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_integralist
+					has_ideology = ideology:ideology_jingoist_leader
+					has_ideology = ideology:ideology_ethno_nationalist
+				}
+				owner ?= ROOT
+			}
+			kill_character = yes
+		}
+    }
+}
+
+allies_peace_deal.6 = {
+    type = country_event
+
+    title = allies_peace_deal.6.t
+    desc = allies_peace_deal.6.d
+    flavor = allies_peace_deal.6.f
+    
+    icon = "gfx/interface/icons/objectives/egalitarian_society.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {
+		ROOT.ruler = {
+			set_ideology = ideology:ideology_moderate
+		}
+	}
+
+    event_image = {
+        texture = "gfx/event_pictures/tokyo_trial.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = allies_peace_deal.6.a
+		every_character = {
+			limit = {
+				OR = {
+                    has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_integralist
+					has_ideology = ideology:ideology_jingoist_leader
+					has_ideology = ideology:ideology_ethno_nationalist
+				}
+				owner ?= ROOT
+			}
+			kill_character = yes
+		}
     }
 }
