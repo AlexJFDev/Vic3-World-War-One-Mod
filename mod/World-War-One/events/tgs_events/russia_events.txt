@@ -159,6 +159,15 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 
     trigger = {}
 
+    immediate = {
+        c:RUS = {
+            remove_diplomatic_pact = {
+			 country = c:FIN
+			 type = puppet
+		    }
+        }
+    }
+
     option = {
         name = russia_events.3.a
         default_option = yes
@@ -707,7 +716,7 @@ russia_events.8 = { #The civil war begins
         c:RUS = {
             remove_diplomatic_pact = {
 			 country = c:FIN
-			 type = personal_union
+			 type = puppet
 		    }
         }
         c:RUS = {

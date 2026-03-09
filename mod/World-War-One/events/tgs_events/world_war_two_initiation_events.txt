@@ -495,11 +495,6 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         name = world_war_two_initiation_events.5.a
         default_option = yes
         trigger = { is_player = yes }
-        add_modifier = {
-          name = nazi_germany_army_buff_2
-          years = 1
-          is_decaying = yes
-        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL
@@ -599,11 +594,6 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     option = {
         name = world_war_two_initiation_events.5.b
         trigger = { is_player = yes }
-        add_modifier = {
-          name = nazi_germany_army_buff_2
-          years = 1
-          is_decaying = yes
-        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL

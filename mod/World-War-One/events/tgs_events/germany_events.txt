@@ -1305,7 +1305,12 @@ germany_events.29 = { #Policy choice
         name = germany_events.29.a
         default_option = yes
         trigger = { is_player = no }
-        add_technology_progress = { progress = 70000 technology = blitzkrieg_tech }
+        add_technology_researched = blitzkrieg_tech
+        add_modifier = {
+          name = nazi_germany_politics_land_army
+          years = 10
+          is_decaying = yes
+        }
         every_country = {
             limit = {
                 OR = {
@@ -1357,6 +1362,38 @@ germany_events.29 = { #Policy choice
 
     option = {
         name = germany_events.29.b
+        trigger = { is_player = no }
+        add_technology_progress = { progress = 8000 technology = carrier_tech }
+        add_modifier = {
+          name = nazi_germany_politics_navy
+          years = 10
+          is_decaying = yes
+        }
+        every_country = {
+            limit = {
+                OR = {
+                    is_in_geographic_region = geographic_region_north_america
+					is_in_geographic_region = geographic_region_europe
+                }
+                country_rank >= rank_value:minor_power
+                ruler = { has_ideology = ideology:ideology_fascist }
+                NOT = {
+                    c:GER ?= this
+                }
+            } 
+            trigger_event = {
+                id = germany_events.30
+                days = 30
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = germany_events.29.b
+        trigger = { is_player = yes }
         add_technology_progress = { progress = 8000 technology = carrier_tech }
         every_country = {
             limit = {

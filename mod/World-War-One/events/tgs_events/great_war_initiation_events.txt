@@ -654,6 +654,12 @@ great_war_initiation_events.8 = {
 			  type = embargo
 		    }
         }
+        c:USA = {
+            trigger_event = {
+                id = dev_events.105
+                days = 5
+            }
+        }
     }
     option = {
         name = great_war_initiation_events.8.b
@@ -1107,14 +1113,14 @@ great_war_initiation_events.14 = {
         c:FRA = {
             add_modifier = {
               name = taken_by_suprise_2
-              months = 5
+              months = 6
               is_decaying = yes
             }
         }
         c:BEL = {
             add_modifier = {
               name = taken_by_suprise_2
-              months = 5
+              months = 6
               is_decaying = yes
             }
         }

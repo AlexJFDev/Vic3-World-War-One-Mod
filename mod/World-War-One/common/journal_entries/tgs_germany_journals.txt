@@ -89,7 +89,7 @@ je_war_fatigue_player_germany = {
         is_player = yes
         game_date > 1917.3.1
         has_variable = central_powers_participant
-        root.average_sol < 14
+        root.average_sol < 12
         is_at_war = yes
         NOT = { has_global_variable = world_war_1_over }
         NOT = { has_variable = germany_war_fatigue }
@@ -109,7 +109,7 @@ je_war_fatigue_player_germany = {
 	}
 
     complete = {
-        root.average_sol >= 14
+        root.average_sol >= 13
     }
     
     fail = {

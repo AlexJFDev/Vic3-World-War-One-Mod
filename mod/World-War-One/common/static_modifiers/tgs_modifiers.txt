@@ -89,29 +89,20 @@ colossus_with_feet_of_clay_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     country_prestige_mult = -0.3
     political_movement_radicalism_add = 0.15
+    state_radicals_from_political_movements_mult = 0.3
     state_pop_support_movement_communist_mult = 0.8
-    state_pop_support_movement_anarchist_mult = 0.3
-    state_pop_support_movement_socialist_mult = 0.6
-    state_pop_support_movement_labor_mult = 1
-    interest_group_ig_trade_unions_pol_str_mult = 1.2
-    interest_group_ig_rural_folk_pol_str_mult = 0.6
-    interest_group_ig_intelligentsia_pol_str_mult = 0.2
-    unit_army_offense_mult = -0.3
-    military_formation_organization_gain_mult = -0.3
+    state_pop_support_movement_anarchist_mult = 0.8
+    state_pop_support_movement_socialist_mult = 0.8
+    state_pop_support_movement_labor_mult = 0.8
+    interest_group_ig_trade_unions_pol_str_mult = 0.5
+    interest_group_ig_rural_folk_pol_str_mult = 0.5
+    interest_group_ig_intelligentsia_pol_str_mult = 0.5
 }
 
-schlieffen_plan_1_modifier = { #Player
+schlieffen_plan_1_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.3
     unit_occupation_mult = 2
     military_formation_mobilization_speed_mult = 0.5
-}
-
-schlieffen_plan_2_modifier = { #AI
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.5
-    unit_occupation_mult = 3
-    military_formation_mobilization_speed_mult = 1
 }
 
 angry_elites_1_modifier = {
@@ -289,9 +280,9 @@ army_buff_modifier_8 = {
 
 army_buff_modifier_9 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.4
-    unit_army_defense_mult = 0.4
-    unit_occupation_mult = 9
+    unit_army_offense_mult = 0.15
+    unit_army_defense_mult = 0.15
+    unit_occupation_mult = 3
 }
 
 army_buff_modifier_10 = {
@@ -324,14 +315,12 @@ mobilization_buff_modifier = {
 war_fatigue_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     political_movement_radicalism_add = 0.8
-    unit_army_offense_mult = -0.3
-    unit_army_defense_mult = -0.1
+    unit_army_offense_mult = -0.15
 }
 
 war_fatigue_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     political_movement_radicalism_add = 0.5
-    unit_army_offense_mult = -0.2
 }
 
 war_fatigue_3 = {
@@ -669,26 +658,27 @@ nazi_germany_politics_land_army = {
 	building_artillery_foundry_throughput_add = 0.1
     building_war_machine_industry_throughput_add = 0.1
     state_construction_mult = 0.15
+    country_military_tech_research_speed_mult = 0.15
 }
 
 nazi_germany_politics_navy = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     building_military_shipyard_throughput_add = 0.2
     state_construction_mult = 0.15
+    country_military_tech_research_speed_mult = 0.15
 }
 
 nazi_germany_army_buff_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.4
-    unit_army_defense_mult = 0.4
-    unit_occupation_mult = 2
+    unit_army_offense_mult = 0.3
+    unit_occupation_mult = 3
     military_formation_mobilization_speed_mult = 0.9
 }
 
 nazi_germany_army_buff_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.2
-    unit_occupation_mult = 1
+    unit_army_offense_mult = 0.15
+    unit_occupation_mult = 0.3
     military_formation_mobilization_speed_mult = 0.2
 }
 
@@ -698,6 +688,7 @@ nazi_germany_politics_heavy_industry = {
     building_motor_industry_throughput_add = 0.1
     building_oil_rig_industry_throughput_add = 0.1
     state_construction_mult = 0.15
+    country_production_tech_research_speed_mult = 0.15
 }
 
 france_outdated_tactics = {
@@ -708,7 +699,7 @@ france_outdated_tactics = {
 
 austria_multilingual_army = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    unit_army_offense_mult = -0.45
+    unit_army_offense_mult = -0.3
     military_formation_organization_gain_mult = -0.4
 }
 
@@ -996,15 +987,16 @@ stalin_purges = {
 
 moscow_will_not_fall_1 = {
    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-   unit_army_offense_mult = 0.5
+   unit_army_offense_mult = 0.3
    unit_army_defense_mult = 0.3
-   unit_occupation_mult = 9
+   unit_occupation_mult = 3
 }
 
 moscow_will_not_fall_2 = {
    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-   unit_army_offense_mult = 0.3
-   unit_army_defense_mult = 0.2
+   unit_army_offense_mult = 0.15
+   unit_army_defense_mult = 0.15
+   unit_morale_recovery_mult = 0.3
    unit_occupation_mult = 0.3
 }
 
@@ -1022,7 +1014,7 @@ recently_collapsed_2 = {
    country_legitimacy_base_add = -20
    country_prestige_mult = -0.15
    country_pact_leverage_generation_mult = -0.2
-   unit_army_offense_mult = -0.25
+   unit_army_offense_mult = -0.3
    unit_army_defense_mult = -0.1
 }
 
@@ -1052,11 +1044,11 @@ germany_economic_recovery_1 = {
     state_lower_strata_standard_of_living_add = 3
     state_middle_strata_standard_of_living_add = 3
     state_construction_mult = 0.3
-    building_arms_industry_throughput_add = 0.3
-    building_artillery_foundry_throughput_add = 0.3
-    building_munition_plant_throughput_add = 0.3
-    building_aircraft_factory_throughput_add = 0.3
-    building_military_shipyard_throughput_add = 0.3
+    building_arms_industry_throughput_add = 0.15
+    building_artillery_foundry_throughput_add = 0.15
+    building_munition_plant_throughput_add = 0.15
+    building_aircraft_factory_throughput_add = 0.15
+    building_military_shipyard_throughput_add = 0.15
 }
 
 germany_economic_recovery_2 = {
@@ -1174,25 +1166,24 @@ siam_kept_old_flag = {
     interest_group_ig_intelligentsia_approval_add = -2
 }
 
-taken_by_suprise_1  = {
+taken_by_suprise_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    unit_army_offense_mult = -0.6
-    unit_army_defense_mult = -0.6
-    unit_morale_recovery_mult = -0.6
+    unit_army_offense_mult = -0.3
+    unit_army_defense_mult = -0.3
 }
 
-taken_by_suprise_2  = {
+taken_by_suprise_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     unit_army_offense_mult = -0.1
     unit_army_defense_mult = -0.3
 }
 
-taken_by_suprise_3  = {
+taken_by_suprise_3 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    unit_army_offense_mult = -0.5
-    unit_army_defense_mult = -0.5
-    unit_morale_recovery_mult = -0.9
-    unit_occupation_mult = -2
+    unit_army_offense_mult = -0.3
+    unit_army_defense_mult = -0.3
+    unit_morale_recovery_mult = -0.3
+    unit_occupation_mult = -1
 }
 
 colony_control_1 = {

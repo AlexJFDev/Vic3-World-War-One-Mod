@@ -1028,7 +1028,7 @@ dev_events.20 = {
     }
 }
 
-dev_events.21 = { 
+dev_events.21 = {
     type = country_event
 
     title = dev_events.21.t
@@ -1049,7 +1049,7 @@ dev_events.21 = {
         default_option = yes
         add_modifier = {
 			name = france_outdated_tactics
-			years = 3
+			months = 30
             is_decaying = yes
 		} 
     }
@@ -4920,5 +4920,29 @@ dev_events.104 = {
             years = 2
             is_decaying = yes
         }
+    }
+}
+
+dev_events.105 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        set_variable = usa_ai_neutrality
     }
 }

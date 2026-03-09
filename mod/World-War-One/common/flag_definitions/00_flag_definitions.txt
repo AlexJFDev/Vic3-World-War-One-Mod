@@ -5717,6 +5717,15 @@ REPLACE_OR_CREATE:MEX = { # Mexico
 		}
 	}	
 	flag_definition = {
+		coa = MEX_communist
+		priority = 1500
+		trigger = { 
+			scope:actor ?= {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}	
+	flag_definition = {
 		coa = MEX_subject_USA
 		priority = 50
 		trigger = { 
@@ -7668,10 +7677,19 @@ REPLACE_OR_CREATE:RUS = { # Russia
 		}
 	}	
 	flag_definition = {
-		coa = RUS_nihilist
+		coa = RUS_republic
 		priority = 1500 # need to override the DEFAULT
 		trigger = { 
 			coa_def_nihilist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_republic
+		priority = 1500 # need to override the DEFAULT
+		trigger = { 
+			scope:actor ?= {
+				has_law = law_type:law_anarchy
+			}
 		}
 	}
 }	

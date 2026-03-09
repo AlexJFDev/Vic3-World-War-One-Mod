@@ -177,6 +177,16 @@
 				value = -10
 			}
         } 
+        #From variables
+        if = {
+		   limit = {
+                has_variable = usa_ai_neutrality
+            }
+            add = {
+				desc = "entente_progress_from_legislation"
+				value = -100
+			}
+        }
     }
 
     start_value = 0
@@ -363,6 +373,16 @@ join_central_powers_progress_bar = {
 				value = -10
 			}
         } 
+        #From variables
+        if = {
+		   limit = {
+                has_variable = usa_ai_neutrality
+            }
+            add = {
+				desc = "entente_progress_from_legislation"
+				value = -100
+			}
+        }
     }
 
     start_value = 0
