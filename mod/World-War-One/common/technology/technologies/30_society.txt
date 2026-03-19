@@ -1527,7 +1527,7 @@ modern_financial_instruments = {
 	texture = "gfx/interface/icons/invention_icons/modern_financial_instruments.dds"
 	category = society
 	modifier = {
-		country_minting_mult = 0.1
+		country_minting_mult = 0.15
 		country_loan_interest_rate_add = -0.02
 		country_government_dividends_efficiency_add = 0.05
 	}
@@ -1546,7 +1546,7 @@ macroeconomics = {
 	category = society
 
 	modifier = {
-		country_max_companies_add = 1
+		state_max_trade_advantage_from_capacity_add = 0.15
 		state_market_access_price_impact = 0.05
 	}
 
@@ -1704,7 +1704,7 @@ market_studies = {
 	texture = "gfx/interface/icons/invention_icons/market_studies.dds"
 	category = society
 	modifier = {
-		state_trade_advantage_mult = 0.15
+		state_max_trade_advantage_from_capacity_add = 0.15
 	}
 	unlocking_technologies = {
 		behaviorism
