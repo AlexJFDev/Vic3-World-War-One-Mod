@@ -9,7 +9,7 @@ copper = {
 
 pharmaceuticals = {
 	texture = "gfx/interface/icons/goods_icons/pharmaceuticals.dds"
-	cost = 50
+	cost = 40
 	category = staple
 
 	prestige_factor = 10
@@ -20,7 +20,7 @@ pharmaceuticals = {
 
 televisions = {
 	texture = "gfx/interface/icons/goods_icons/television.dds"
-	cost = 140 
+	cost = 120 
 	category = luxury
 	
 	obsession_chance = 1.5
@@ -28,4 +28,15 @@ televisions = {
 	traded_quantity = 2 #280
 
 	consumption_tax_cost = 100
+}
+
+popular_art = {
+	texture = "gfx/interface/icons/goods_icons/popular_art.dds"
+	cost = 25
+	category = luxury
+
+	obsession_chance = 2.0
+	prestige_factor = 10
+
+	traded_quantity = 1.5 # 300
 }

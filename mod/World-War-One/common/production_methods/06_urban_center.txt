@@ -375,6 +375,26 @@ REPLACE_OR_CREATE:pm_bourgeoisie_patronage = {
 	}
 }
 
+pm_elitist_art = {
+	texture = "gfx/interface/icons/production_method_icons/no_popular_art.dds"
+}
+
+pm_popular_art = {
+	texture = "gfx/interface/icons/goods_icons/popular_art.dds"
+
+	unlocking_technologies = {
+		popular_art
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_fine_art_add = -3
+			goods_output_popular_art_add = 3
+		}
+	}
+}
+
 REPLACE_OR_CREATE:pm_independent_artists = {
 	texture = "gfx/interface/icons/production_method_icons/independent_artists.dds"
 
