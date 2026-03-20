@@ -1324,3 +1324,17 @@ REPLACE_OR_CREATE:dp_sepoy_mutiny = {
 
 	on_war_end = {}
 }
+
+dp_world_war = {
+	war_goal = make_protectorate
+	requires_interest_marker = no
+	war_goal = humiliation
+	texture = "gfx/interface/icons/war_goals/world_war.dds"
+	possible = { has_global_variable = world_wars_possible }
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+	
+	on_war_end = {}
+}

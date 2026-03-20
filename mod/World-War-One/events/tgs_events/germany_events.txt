@@ -178,26 +178,10 @@ germany_events.2 = { #November Revolution
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
         random_civil_war = {
 			add_civil_war_progress = -100
@@ -528,26 +512,10 @@ germany_events.6 = { #Austria-Hungary capitulates
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -642,26 +610,10 @@ germany_events.9 = { #Ottoman Empire capitulates
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 

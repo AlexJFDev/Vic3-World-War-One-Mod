@@ -121,24 +121,10 @@ dev_events.4 = {
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this  
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
         if = {
             limit = { 

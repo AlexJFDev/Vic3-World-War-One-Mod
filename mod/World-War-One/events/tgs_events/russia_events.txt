@@ -58,26 +58,10 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			create_political_movement = { type = movement_socialist }
 		}
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -420,26 +404,10 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 

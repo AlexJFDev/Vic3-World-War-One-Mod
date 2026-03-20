@@ -219,12 +219,10 @@ great_war_initiation_events.4 = {
             base = 10
         }
         c:AUS = {
-            create_diplomatic_play = { # c:SER is target, c:AUS is initiator
-                initiator = c:AUS
-                target = c:SER
+            create_diplomatic_play = {
                 escalation = 99
-                target_state = s:STATE_WESTERN_SERBIA.region_state:SER
-                type = dp_make_protectorate
+                target_country = c:SER
+                type = dp_world_war
                 add_war_goal = {
 				    holder = c:SER
 				    target_country = c:AUS
@@ -313,12 +311,10 @@ great_war_initiation_events.5 = {
             base = 0
         }
         c:AUS = {
-            create_diplomatic_play = { # c:SER is target, c:AUS is initiator
-                initiator = c:AUS
-                target = c:SER
+            create_diplomatic_play = {
                 escalation = 99
-                target_state = s:STATE_WESTERN_SERBIA.region_state:SER
-                type = dp_make_protectorate
+                target_country = c:SER
+                type = dp_world_war
                 add_war_goal = {
 				    holder = c:SER
 				    target_country = c:AUS
@@ -385,11 +381,10 @@ great_war_initiation_events.6 = {
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { c:SER ?= this }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1393,11 +1388,10 @@ great_war_initiation_events.17 = {
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { c:SER ?= this }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1439,11 +1433,10 @@ great_war_initiation_events.24 = {
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { c:SER ?= this }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 

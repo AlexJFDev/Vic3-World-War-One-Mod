@@ -43,26 +43,10 @@ joining_world_war_events.2 = { #Joining the Entente
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -108,26 +92,10 @@ joining_world_war_events.3 = { #Joining the Central Powers
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -509,26 +477,10 @@ joining_world_war_events.13 = { #Ottoman Empire joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -658,26 +610,10 @@ joining_world_war_events.14 = { #Italy joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -789,26 +725,10 @@ joining_world_war_events.15 = { #Bulgaria joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -881,26 +801,10 @@ joining_world_war_events.16 = { #Romania joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -973,26 +877,10 @@ joining_world_war_events.17 = { #Greece joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1065,26 +953,10 @@ joining_world_war_events.18 = { #USA joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1209,26 +1081,10 @@ joining_world_war_events.19 = { #Portugal joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1301,26 +1157,10 @@ joining_world_war_events.20 = { #Brazil joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1393,26 +1233,10 @@ joining_world_war_events.21 = { #Persia joins
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1711,26 +1535,10 @@ joining_world_war_events.28 = { #Senussi order joins WW1
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1826,26 +1634,10 @@ joining_world_war_events.29 = { #Mexico receives zimmermann telegram
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:AUS ?= this }
-              target = { 
-                OR = {
-                    c:SER ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-					c:ITA ?= this 
-					c:USA ?= this
-                    c:BEL ?= this
-                    c:BRZ ?= this
-                    c:ROM ?= this
-                    c:GRE ?= this
-                    c:POR ?= this
-                    c:PER ?= this
-                    c:JAP ?= this 
-                } 
-               }
-		    }
-           save_scope_as = world_war_one_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
         }
     }
 
@@ -1925,24 +1717,10 @@ joining_world_war_events.40 = { #Joining the Allies
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this   
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -1988,24 +1766,10 @@ joining_world_war_events.41 = { #Joining the Axis
 
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 

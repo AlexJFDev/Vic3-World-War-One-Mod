@@ -28,21 +28,21 @@ world_war_two_initiation_events.1 = { #WW2 initiation Germany invades Poland
         create_diplomatic_play = {
             name = world_war_two
 
-            target_state = s:STATE_WEST_PRUSSIA.region_state:POL
+            target_country = c:POL
 
-            type = dp_conquer_state
+            type = dp_world_war
 
             escalation = 85
             
             add_war_goal = {
                 holder = c:GER
                 type = conquer_state
-                target_state = s:STATE_POSEN.region_state:POL
+                target_state = s:STATE_WEST_PRUSSIA.region_state:POL
             }
             add_war_goal = {
                 holder = c:GER
-                type = make_protectorate
-                target_country = c:POL
+                type = conquer_state
+                target_state = s:STATE_POSEN.region_state:POL
             }
         }
         trigger_event = {
@@ -106,11 +106,10 @@ world_war_two_initiation_events.2 = { #WW2 initiation Allies response
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { c:POL ?= this }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -169,24 +168,10 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -305,24 +290,10 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -400,24 +371,10 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -652,24 +609,10 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this  
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -818,24 +761,10 @@ world_war_two_initiation_events.7 = { #WW2 initiation european countries join in
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -890,24 +819,10 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -972,24 +887,10 @@ world_war_two_initiation_events.9 = { #Italy declares war on Albania
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -1048,24 +949,10 @@ world_war_two_initiation_events.10 = { #Italy declares war on Yugoslavia
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
@@ -1121,24 +1008,10 @@ world_war_two_initiation_events.11 = { #Italy declares war on Greece
     
     immediate = {
         random_diplomatic_play = {
-           limit = {
-			  initiator = { c:GER ?= this }
-              target = { 
-                OR = {
-                    c:POL ?= this
-                    c:FRA ?= this 
-                    c:GBR ?= this 
-                    c:USA ?= this
-                    c:RUS ?= this
-                    c:DEN ?= this
-                    c:NOR ?= this
-                    c:NET ?= this
-                    c:YUG ?= this
-                    c:GRE ?= this
-                } 
-               }
-		    }
-           save_scope_as = world_war_two_diplo_play
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
         }
     }
 
