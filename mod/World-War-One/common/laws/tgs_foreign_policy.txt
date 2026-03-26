@@ -121,12 +121,16 @@ law_imperialism = {
         country_influence_mult = 0.1
 	}
 
+    can_enact = {
+	   country_rank >= rank_value:major_power
+	}
+
 	modifier = {
        country_improve_relations_speed_mult = -0.4
 	   country_diplomatic_play_maneuvers_add = 100
 	   interest_group_ig_armed_forces_pol_str_mult = 0.3
 	}
-	
+
 	pop_support = {
 		value = 0
 	} 
