@@ -31,6 +31,9 @@ great_war_initiation_events.25 = { # Triggered by global on June 20th.
 
     option = { # It's too dangerous ...
         name = great_war_initiation_events.25.b
+        owner.ruler ?= {
+			set_character_immortal = no
+		}
         ai_chance = {
             base = 0
         }

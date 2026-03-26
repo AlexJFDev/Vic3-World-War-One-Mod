@@ -1,6 +1,104 @@
 ﻿namespace = world_war_two_initiation_events
 
-world_war_two_initiation_events.1 = { #WW2 initiation Germany invades Poland
+world_war_two_initiation_events.12 = { #Germany send ultimatum to Poland
+    type = country_event
+
+    title = world_war_two_initiation_events.12.t
+    desc = world_war_two_initiation_events.12.d
+    flavor = world_war_two_initiation_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 6
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/axis.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.12.a
+        default_option = yes
+        trigger = { exists = c:POL }
+        c:POL = {
+            trigger_event = {
+              id = world_war_two_initiation_events.13
+              days = 5
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.12.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.13 = { #poland receives German ultimatum
+    type = country_event
+
+    title = world_war_two_initiation_events.13.t
+    desc = world_war_two_initiation_events.13.d
+    flavor = world_war_two_initiation_events.13.f
+    
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 6
+    
+    immediate = {}
+
+    event_image = {
+        texture = "gfx/event_pictures/axis.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = world_war_two_initiation_events.13.a
+        default_option = yes
+        c:GER = {
+          trigger_event = {
+              id = world_war_two_initiation_events.1
+              days = 5
+            }
+        }        
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.13.b
+        s:STATE_WEST_PRUSSIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:POL
+			    owner = {
+				  OR = {
+					c:POL = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:GER
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+world_war_two_initiation_events.1 = { #Germany invades Poland
     type = country_event
 
     title = world_war_two_initiation_events.1.t
