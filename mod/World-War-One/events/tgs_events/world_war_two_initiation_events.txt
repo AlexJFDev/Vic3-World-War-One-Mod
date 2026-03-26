@@ -23,7 +23,10 @@ world_war_two_initiation_events.12 = { #Germany send ultimatum to Poland
     option = {
         name = world_war_two_initiation_events.12.a
         default_option = yes
-        trigger = { exists = c:POL }
+        trigger = { 
+            exists = c:POL
+            has_game_rule = ww2_europe_enabled 
+        }
         c:POL = {
             trigger_event = {
               id = world_war_two_initiation_events.13

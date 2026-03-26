@@ -408,7 +408,10 @@ japan_events.18 = {#Invasion of Manchuria
     option = {
         name = japan_events.18.a
         default_option = yes
-        trigger = { c:MCH = { is_subject = no } }
+        trigger = { 
+            c:MCH = { is_subject = no } 
+            has_game_rule = ww2_asia_enabled
+        }
         create_diplomatic_play = {
             name = japan_invades_manchuria
 
@@ -426,7 +429,10 @@ japan_events.18 = {#Invasion of Manchuria
     option = {
         name = japan_events.18.a
         default_option = yes
-        trigger = { c:MCH = { is_subject_of = c:CHI } }
+        trigger = { 
+            c:MCH = { is_subject_of = c:CHI }
+            has_game_rule = ww2_asia_enabled 
+        }
         create_diplomatic_play = {
             name = japan_invades_manchuria
 
@@ -476,6 +482,7 @@ japan_events.19 = {#Invasion of China inititation
     option = {
         name = japan_events.19.a
         default_option = yes
+        trigger = { has_game_rule = ww2_asia_enabled }
         c:CHI = {
 			trigger_event = {
               id = japan_events.20
