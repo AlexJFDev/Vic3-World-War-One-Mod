@@ -1,6 +1,6 @@
 ﻿namespace = turkey_events
 
-turkey_events.1 = { 
+turkey_events.1 = { #Sick man je initiation
     type = country_event
 
     title = turkey_events.1.t
@@ -13,19 +13,50 @@ turkey_events.1 = {
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/"
+        texture = "gfx/event_pictures/me_siege.dds"
     }
 
-     trigger = {}
+    trigger = {}
 
     option = {
         name = turkey_events.1.a
         default_option = yes
+        add_modifier = {
+			name = ottoman_policy_economy
+            years = 10
+            is_decaying = yes
+		}
+        ai_chance = {
+		  base = 2
+	    }
+    }
 
+    option = {
+        name = turkey_events.1.b
+        add_modifier = {
+			name = ottoman_policy_military
+            years = 10
+            is_decaying = yes
+		}
+        ai_chance = {
+		  base = 8
+	    }
+    }
+
+    option = {
+        name = turkey_events.1.c
+        add_modifier = {
+			name = ottoman_policy_politics
+            years = 10
+            is_decaying = yes
+		}
+        ai_chance = {
+		  base = 2
+	    }
     }
 }
 
-turkey_events.2 = { 
+turkey_events.2 = { #Sick man je completion
     type = country_event
 
     title = turkey_events.2.t
@@ -38,15 +69,19 @@ turkey_events.2 = {
     duration = 3
     
     event_image = {
-        texture = "gfx/event_pictures/"
+        texture = "gfx/event_pictures/tur_military_parade.dds"
     }
 
-     trigger = {}
+    trigger = {}
 
     option = {
         name = turkey_events.2.a
         default_option = yes
-        
+        add_modifier = {
+			name = ottoman_renaissance
+            years = 10
+            is_decaying = yes
+		}
     }
 }
 
@@ -707,5 +742,34 @@ turkey_events.14 = { #Saudi Arabia formation part 2
         ai_chance = {
 		  base = 0
 	    }
+    }
+}
+
+turkey_events.15 = { #Sick man je failure
+    type = country_event
+
+    title = turkey_events.15.t
+    desc = turkey_events.15.d
+    flavor = turkey_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/me_siege.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = turkey_events.15.a
+        default_option = yes
+        add_modifier = {
+			name = sick_man_2
+            years = 10
+            is_decaying = yes
+		}
     }
 }

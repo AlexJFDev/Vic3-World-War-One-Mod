@@ -1,4 +1,73 @@
-﻿je_nationalist_threat = {
+﻿je_sick_man = {
+    icon = "gfx/interface/icons/event_icons/tur_icon.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:TUR
+        THIS = c:TUR
+    }
+    
+    possible = {
+        exists = c:TUR
+        THIS = c:TUR
+		has_technology_researched = nationalism
+    }
+
+    immediate = {
+        trigger_event = { 
+           id = turkey_events.1
+           days = 5
+        }
+    }
+
+    modifiers_while_active = {
+	   sick_man_1
+	}
+
+    complete = {
+        OR = {
+            gdp > 80000000
+            country_rank >= rank_value:great_power
+            has_global_variable = ottoman_victory_ww1
+        }
+    }
+
+    on_complete = {
+        trigger_event = { 
+           id = turkey_events.2
+           days = 5
+        }
+    }
+
+    invalid = {
+        NOT = {
+            has_law = law_type:law_monarchy
+        }
+    }
+
+    fail = {
+        is_subject = yes
+    }
+
+    on_fail = {
+        trigger_event = { 
+           id = turkey_events.15
+           days = 5
+        }
+    }
+
+    on_timeout = {
+        trigger_event = { 
+           id = turkey_events.15
+           days = 5
+        }
+    }
+    
+    timeout = 3650
+    should_be_pinned_by_default = yes
+}
+
+je_nationalist_threat = {
     icon = "gfx/interface/icons/event_icons/turkish_revolution.dds"
     group = je_group_internal_affairs
 
@@ -127,7 +196,7 @@ je_kemalist_reforms = {
 }
 
 je_saudi_arabia_unification = {
-    icon = "gfx/interface/icons/event_icons/saudi_arabia.dds"
+    icon = "gfx/interface/icons/event_icons/islam.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {

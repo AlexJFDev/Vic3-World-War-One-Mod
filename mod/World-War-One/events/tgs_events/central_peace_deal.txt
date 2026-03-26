@@ -1342,5 +1342,12 @@ central_peace_deal.5 = { #Ottoman Empire takes British possessions in Middle Eas
 		      set_state_owner = c:TUR
             }
             }
+		set_global_variable = ottoman_victory_ww1
+		if = {
+			limit = { 
+				c:PER = { has_variable = central_powers_participant }
+		    }
+			set_global_variable = persia_victory_ww1
+		}
 	}
 }

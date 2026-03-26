@@ -333,7 +333,7 @@ fragile_unity_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     country_prestige_mult = -0.3
     country_authority_mult = -0.5
-    state_construction_mult = -0.3
+    building_construction_sector_throughput_add = -0.3
     unit_army_offense_mult = -0.2
     unit_army_defense_mult = -0.1
 }
@@ -476,7 +476,7 @@ warlord_policy_economy = {
     country_production_tech_research_speed_mult = 0.2
     interest_group_ig_industrialists_pol_str_mult = 0.8
     country_minting_mult = 10
-    state_construction_mult = 0.15
+    building_construction_sector_throughput_add = 0.15
     building_group_bg_manufacturing_throughput_add = 0.1
 }
 
@@ -591,7 +591,7 @@ great_depression_cash_reserve_wipeout = {
 
 construction_buff_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-    state_construction_mult = 0.5
+    building_construction_sector_throughput_add = 0.5
 }
 
 banks_saved_modifier = {
@@ -657,14 +657,14 @@ nazi_germany_politics_land_army = {
     building_arms_industry_throughput_add = 0.1
 	building_artillery_foundry_throughput_add = 0.1
     building_war_machine_industry_throughput_add = 0.1
-    state_construction_mult = 0.15
+    building_construction_sector_throughput_add = 0.15
     country_military_tech_research_speed_mult = 0.15
 }
 
 nazi_germany_politics_navy = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     building_military_shipyard_throughput_add = 0.2
-    state_construction_mult = 0.15
+    building_construction_sector_throughput_add = 0.15
     country_military_tech_research_speed_mult = 0.15
 }
 
@@ -687,7 +687,7 @@ nazi_germany_politics_heavy_industry = {
     building_steel_mill_throughput_add = 0.1
     building_motor_industry_throughput_add = 0.1
     building_oil_rig_industry_throughput_add = 0.1
-    state_construction_mult = 0.15
+    building_construction_sector_throughput_add = 0.15
     country_production_tech_research_speed_mult = 0.15
 }
 
@@ -850,25 +850,25 @@ royal_scandal = {
 
 persia_policy_politics = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-    country_society_tech_research_speed_mult = 0.1
-    country_authority_mult = 0.1
-    country_law_enactment_time_mult = -0.1
-    interest_group_ig_intelligentsia_pol_str_mult = 0.1
+    country_society_tech_spread_mult = 0.15
+    country_authority_mult = 0.15
+    country_law_enactment_time_mult = -0.5
+    interest_group_ig_intelligentsia_pol_str_mult = 0.3
     country_agitator_slots_add = 1
 }
 
 persia_policy_economy = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-    country_production_tech_research_speed_mult = 0.1
-    country_minting_mult = 0.15
-    state_construction_mult = 0.1
-    interest_group_ig_industrialists_pol_str_mult = 0.1
+    country_production_tech_spread_mult = 0.15
+    country_minting_mult = 0.3
+    building_construction_sector_throughput_add = 0.2
+    interest_group_ig_industrialists_pol_str_mult = 0.3
 }
 
 persia_policy_military = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    country_military_tech_research_speed_mult = 0.2
-    interest_group_ig_armed_forces_pol_str_mult = 0.1
+    country_military_tech_spread_mult = 0.3
+    interest_group_ig_armed_forces_pol_str_mult = 0.3
 }
 
 persia_weak_government_1 = {
@@ -911,9 +911,55 @@ persia_ascension = {
   country_authority_mult = 0.3
   country_prestige_mult = 0.3
   country_legitimacy_base_add = 30
-  country_minting_mult = 0.2
+  country_minting_mult = 0.5
   political_movement_radicalism_add = -0.15
-  country_tech_spread_mult = 0.1
+  country_tech_spread_mult = 0.2
+}
+
+sick_man_1 = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+  political_movement_radicalism_add = 0.15
+  country_authority_mult = -0.2
+}
+
+sick_man_2 = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+  political_movement_radicalism_add = 0.3
+  country_authority_mult = -0.3
+  country_legitimacy_base_add = -15
+}
+
+ottoman_policy_economy = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_production_tech_spread_mult = 0.15
+    country_minting_mult = 0.3
+    building_construction_sector_throughput_add = 0.2
+    interest_group_ig_industrialists_pol_str_mult = 0.3
+}
+
+ottoman_policy_military = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    country_military_tech_spread_mult = 0.3
+    interest_group_ig_armed_forces_pol_str_mult = 0.3
+}
+
+ottoman_policy_politics = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    country_society_tech_spread_mult = 0.15
+    country_authority_mult = 0.15
+    country_law_enactment_time_mult = -0.5
+    interest_group_ig_intelligentsia_pol_str_mult = 0.3
+    country_agitator_slots_add = 1
+}
+
+ottoman_renaissance = {
+  icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+  country_authority_mult = 0.3
+  country_prestige_mult = 0.3
+  country_legitimacy_base_add = 30
+  country_minting_mult = 0.5
+  political_movement_radicalism_add = -0.15
+  country_tech_spread_mult = 0.2
 }
 
 monetary_supremacy_modifier = {
@@ -1043,7 +1089,7 @@ germany_economic_recovery_1 = {
     country_minting_mult = 5
     state_lower_strata_standard_of_living_add = 3
     state_middle_strata_standard_of_living_add = 3
-    state_construction_mult = 0.3
+    building_construction_sector_throughput_add = 0.3
     building_arms_industry_throughput_add = 0.15
     building_artillery_foundry_throughput_add = 0.15
     building_munition_plant_throughput_add = 0.15
@@ -1056,7 +1102,7 @@ germany_economic_recovery_2 = {
     country_minting_mult = 5
     state_lower_strata_standard_of_living_add = 3
     state_middle_strata_standard_of_living_add = 3
-    state_construction_mult = 0.3
+    building_construction_sector_throughput_add = 0.3
     building_group_bg_manufacturing_throughput_add = 0.1
     building_group_bg_heavy_industry_throughput_add = 0.1
 }
@@ -1066,7 +1112,7 @@ germany_economic_recovery_3 = {
     country_minting_mult = 5
     state_lower_strata_standard_of_living_add = 3
     state_middle_strata_standard_of_living_add = 3
-    state_construction_mult = 0.3
+    building_construction_sector_throughput_add = 0.3
     building_group_bg_agriculture_throughput_add = 0.2
 }
 
@@ -1092,12 +1138,12 @@ trade_unions_nerf = {
 
 great_power_nerf_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-    state_construction_mult = -0.5
+    building_construction_sector_throughput_add = -0.5
 }
 
 japan_ai_buff = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-    state_construction_mult = 0.2
+    building_construction_sector_throughput_add = 0.2
     country_minting_mult = 2.5
 }
 
@@ -1197,7 +1243,7 @@ resistance = {
     building_training_rate_mult = -0.9
     building_railway_throughput_add = -0.1
     country_authority_mult = -0.3
-    state_construction_mult = -0.15
+    building_construction_sector_throughput_add = -0.15
     building_arms_industry_throughput_add = -0.1
     building_artillery_foundry_throughput_add = -0.1
     building_munition_plant_throughput_add = -0.1
