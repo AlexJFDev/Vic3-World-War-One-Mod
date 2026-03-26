@@ -338,14 +338,9 @@ dev_events.4 = {
         }
         c:GER = {
             trigger_event = {
-                id = dev_events.95
+                id = world_war_two_initiation_events.14
                 days = 5
             }
-            add_modifier = {
-			  name = taken_by_suprise_3
-              years = 2
-              is_decaying = yes
-		    }
         }
     }
 }
@@ -4282,39 +4277,6 @@ dev_events.95 = {
         name = dev_events.2.a
         default_option = yes
         trigger = { is_player = no }
-		s:STATE_RUHR = {
-			add_devastation = 30
-		}
-        s:STATE_RHINELAND = {
-			add_devastation = 30
-		}
-        s:STATE_NORTH_RHINE = {
-			add_devastation = 30
-		}
-        s:STATE_HESSE = {
-			add_devastation = 30
-		}
-        s:STATE_WESTPHALIA = {
-			add_devastation = 30
-		}
-        s:STATE_HANNOVER = {
-			add_devastation = 30
-		}
-        s:STATE_ELBE = {
-			add_devastation = 30
-		}
-        s:STATE_LOWER_SILESIA = {
-			add_devastation = 30
-		}
-        s:STATE_UPPER_SILESIA = {
-			add_devastation = 30
-		}
-        s:STATE_SAXONY = {
-			add_devastation = 30
-		}
-        s:STATE_BRANDENBURG = {
-			add_devastation = 30
-		}
     }
 }
 
