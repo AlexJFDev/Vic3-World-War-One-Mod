@@ -48,14 +48,15 @@
 	}
 
     fail = {
-	  OR = {
-        has_modifier = country_humiliated
-		has_global_variable = china_central_government_collapse
-		any_civil_war = {
-			civil_war_progress >= 0.75
-            is_civil_war_type = revolution
-		}
-	  }
+	    OR = {
+		    is_subject = yes
+            has_modifier = country_humiliated
+		    has_global_variable = china_central_government_collapse
+		    any_civil_war = {
+			  civil_war_progress >= 0.75
+              is_civil_war_type = revolution
+		    }
+	    }
     }
 
 	on_fail = {
