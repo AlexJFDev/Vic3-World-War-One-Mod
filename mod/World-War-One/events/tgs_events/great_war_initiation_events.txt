@@ -1346,23 +1346,27 @@ great_war_initiation_events.16 = {
 			}
 		}
         c:JAP ?= {
-		create_bidirectional_truce = {
-			country = c:FRA
-		    years = 10 
-		}
-		create_bidirectional_truce = {
-			country = c:GBR
-			years = 10 
-		}
-		create_bidirectional_truce = {
-			country = c:RUS
-			years = 10 
-		}
-        trigger_event = { 
-            id = dev_events.42
-            days = 5
-        }
-        set_variable = entente_participant
+		    create_bidirectional_truce = {
+			  country = c:FRA
+		      years = 10 
+		    }
+		    create_bidirectional_truce = {
+			  country = c:GBR
+			  years = 10 
+		    } 
+		    create_bidirectional_truce = {
+			  country = c:RUS
+			  years = 10 
+		    } 
+            trigger_event = { 
+               id = dev_events.42
+               days = 5
+            }
+            trigger_event = {
+               id = japan_events.10
+               months = 4
+            }
+           set_variable = entente_participant
         }
     }
     option = { # Do nothing

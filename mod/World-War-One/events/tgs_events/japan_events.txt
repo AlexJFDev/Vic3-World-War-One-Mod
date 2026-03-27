@@ -1,5 +1,274 @@
 ﻿namespace = japan_events
 
+japan_events.10 = {#21 demands initiation
+    type = country_event
+
+    title = japan_events.10.t
+    desc = japan_events.10.d
+    flavor = japan_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/21_demands.dds"
+    }
+
+    immediate = {}
+
+    trigger = {}
+
+    option = {
+        name = japan_events.10.a
+        default_option = yes
+        c:CHI = { set_relations = { country = c:JAP value = -50 } }
+        c:GBR = { set_relations = { country = c:JAP value = -50 } }
+        c:USA = { set_relations = { country = c:JAP value = -50 } }
+        c:CHI = {
+            trigger_event = {
+              id = japan_events.11
+              days = 5
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = japan_events.10.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+japan_events.11 = {#21 demands China response
+    type = country_event
+
+    title = japan_events.11.t
+    desc = japan_events.11.d
+    flavor = japan_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 12
+    
+    event_image = {
+        texture = "gfx/event_pictures/21_demands.dds"
+    }
+
+    immediate = {}
+
+    trigger = {}
+
+    option = {
+        name = japan_events.11.a
+        default_option = yes
+        c:JAP = {
+            trigger_event = {
+              id = japan_events.12
+              days = 5
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = japan_events.11.b
+        c:JAP = {
+            trigger_event = {
+              id = japan_events.14
+              days = 5
+            }
+        }
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = japan_events.11.c
+        c:JAP = {
+            create_diplomatic_pact = {
+			  country = c:CHI
+			  type = protectorate
+		    }
+        }
+        s:STATE_FUJIAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRS
+			    owner = {
+				  OR = {
+					c:FRS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+			add_claim = c:FRS
+            add_claim = c:CHI
+        }
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+japan_events.12 = {#21 demands Japan gets China response
+    type = country_event
+
+    title = japan_events.12.t
+    desc = japan_events.12.d
+    flavor = japan_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/21_demands.dds"
+    }
+
+    immediate = {}
+
+    trigger = {}
+
+    option = {
+        name = japan_events.12.a
+        default_option = yes
+        c:JAP.power_bloc ?= {
+		   add_leverage = { target = c:CHI value = 300 }
+	    }
+        c:GBR = {
+            trigger_event = {
+              id = japan_events.13
+              days = 5
+            }
+        }
+        c:FRA = {
+            trigger_event = {
+              id = japan_events.13
+              days = 5
+            }
+        }
+        c:RUS = {
+            trigger_event = {
+              id = japan_events.13
+              days = 5
+            }
+        }
+        c:USA = {
+            trigger_event = {
+              id = japan_events.13
+              days = 5
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = japan_events.12.b
+        default_option = yes
+        create_diplomatic_play = {
+		    target_country = c:CHI
+		    type = dp_take_treaty_port
+            escalation = 0
+            target_state = s:STATE_JIANGSU.region_state:CHI
+	        add_war_goal = {
+		        holder = c:CHI
+		        type = humiliation
+		        target_country = c:JAP
+            }
+	    }
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+japan_events.13 = {#21 demands UK and USA reaction
+    type = country_event
+
+    title = japan_events.13.t
+    desc = japan_events.13.d
+    flavor = japan_events.13.f
+    
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/21_demands.dds"
+    }
+
+    immediate = {}
+
+    trigger = {}
+
+    option = {
+        name = japan_events.13.a
+        default_option = yes
+    }
+}
+
+japan_events.14 = {#21 demands Japan starts diplomatic play
+    type = country_event
+
+    title = japan_events.14.t
+    desc = japan_events.14.d
+    flavor = japan_events.14.f
+    
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 6
+    
+    event_image = {
+        texture = "gfx/event_pictures/21_demands.dds"
+    }
+
+    immediate = {}
+
+    trigger = {}
+
+    option = {
+        name = japan_events.14.a
+        default_option = yes
+        create_diplomatic_play = {
+		    target_country = c:CHI
+		    type = dp_take_treaty_port
+            escalation = 0
+            target_state = s:STATE_JIANGSU.region_state:CHI
+	        add_war_goal = {
+		        holder = c:CHI
+		        type = humiliation
+		        target_country = c:JAP
+            }
+	    }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = japan_events.14.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
 japan_events.15 = {#Tokyo earthquake
     type = country_event
 
@@ -894,3 +1163,4 @@ japan_events.22 = {#Japan attacks USA and western nations
 	    }
     }
 }
+
