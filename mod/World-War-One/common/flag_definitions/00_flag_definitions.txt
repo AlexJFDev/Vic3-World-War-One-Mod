@@ -10839,11 +10839,10 @@ REPLACE_OR_CREATE:WAF = {
 	}
 	flag_definition = {
 		coa = WAF
-		allow_overlord_canton = no
 		priority = 150
 		trigger = {
-			exists = c:FFR
-			c:FFR = {
+			exists = c:FRA
+			c:FRA = {
 				has_diplomatic_pact = {
 					who = c:WAF
 					type = colony
@@ -10854,11 +10853,10 @@ REPLACE_OR_CREATE:WAF = {
 	}
 	flag_definition = {
 		coa = WAF
-		allow_overlord_canton = no
 		priority = 150
 		trigger = {
-			exists = c:FRA
-			c:FRA = {
+			exists = c:FFR
+			c:FFR = {
 				has_diplomatic_pact = {
 					who = c:WAF
 					type = colony
@@ -10892,29 +10890,6 @@ REPLACE_OR_CREATE:EQA = {
 			c:FFR = {
 				has_diplomatic_pact = {
 					who = c:EQA
-					type = colony
-					is_initiator = yes
-				}
-			}
-		}
-	}
-}
-
-REPLACE_OR_CREATE:WAF = {
-	flag_definition = {
-		coa = MAL		
-		subject_canton = MAL
-		priority = 1
-	}
-	flag_definition = {
-		coa = FRA
-		allow_overlord_canton = no		
-		priority = 50
-		trigger = {
-			exists = c:FRA
-			c:FRA = {
-				has_diplomatic_pact = {
-					who = c:WAF
 					type = colony
 					is_initiator = yes
 				}
