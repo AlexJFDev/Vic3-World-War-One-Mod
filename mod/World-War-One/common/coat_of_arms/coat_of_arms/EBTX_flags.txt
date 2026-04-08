@@ -495,6 +495,35 @@ POR_BRZ = { # Portugal
 	}	
 }
 
+BRZ_communist_2 = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "red"
+	color3 = "red"
+	
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }		
+	}		
+
+	colored_emblem = {
+		texture = "ce_celestial_sphere_brazil.dds"
+		color1 = "red"
+		color2 = "red"
+		color3 = "red"
+		instance = { scale = { 0.66 0.66 } position = { 0.5 0.5 } }		
+	}		
+
+	colored_emblem = {
+		texture = "ce_hammer_and_sickle.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.49 } }		
+	}	
+}
+
 ITA_napoleon = {
 	# Flag of Napoleonic kingdom
 	
@@ -2498,7 +2527,7 @@ MAD_subject_FRA_2 = {
 		instance = { scale = { 0.30 0.40 } position = { 0.5 0.5 } }
 	}
 }
-MAL_subject_FRA = {
+ICH_subject_FRA = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -2509,7 +2538,37 @@ MAL_subject_FRA = {
 	}
 
 	textured_emblem = {
-		texture = "French_West_Africa.dds"
+		texture = "Indochina.dds"
+		instance = { scale = { 0.30 0.40 } position = { 0.5 0.5 } }
+	}
+}
+SML_subject_FRA = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+
+	textured_emblem = {
+		texture = "French_Somaliland.dds"
+		instance = { scale = { 0.30 0.40 } position = { 0.5 0.5 } }
+	}
+}
+WAF = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+
+	textured_emblem = {
+		texture = "WAF.dds"
 		instance = { scale = { 0.3 0.65 } position = { 0.5 0.5 } }
 	}
 }
