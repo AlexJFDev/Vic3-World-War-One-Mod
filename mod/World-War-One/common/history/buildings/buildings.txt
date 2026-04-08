@@ -12789,7 +12789,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 5
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -12951,6 +12951,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:NGA
+						levels = 15
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -18112,12 +18125,27 @@
 				add_ownership = {
 					country = {
 						country = c:BUL
-						levels = 5
+						levels = 6
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
 					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
+				}
+			}
+			create_building = {
+				building = building_motor_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:BUL
+						levels = 4
+						region = STATE_NORTHERN_THRACE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
 				}
 			}
 			create_building = {
@@ -18133,6 +18161,111 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_open_hearth_process pm_rotary_valve_engine_building_steel_mill 
+				}
+			}
+			create_building = {
+				building = building_paper_mill
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:BUL
+						levels = 5
+						region = STATE_NORTHERN_THRACE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bleached_paper pm_watertube_boiler_building_paper_mill 
+				}
+			}
+			create_building = {
+				building = building_chemical_plant
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:BUL
+						levels = 1
+						region = STATE_NORTHERN_THRACE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_improved_fertilizer 
+				}
+			}
+			create_building = {
+				building = building_arms_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:BUL
+						levels = 5
+						region = STATE_NORTHERN_THRACE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_artillery_foundry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:BUL
+						levels = 3
+						region = STATE_NORTHERN_THRACE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_recoiled_barrels pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
+				building = building_munition_plant
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:BUL
+						levels = 6
+						region = STATE_NORTHERN_THRACE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_explosive_shells pm_rotary_valve_engine_building_munition_plant 
+				}
+			}
+			create_building = {
+				building = building_shipyard
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:BUL
+						levels = 1
+						region = STATE_NORTHERN_THRACE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_metal_shipbuilding 
+				}
+			}
+			create_building = {
+				building = building_military_shipyard
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:BUL
+						levels = 1
+						region = STATE_NORTHERN_THRACE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_military_shipbuilding_steam 
 				}
 			}
 			create_building = {
@@ -19109,7 +19242,7 @@
 				add_ownership = {
 					country = {
 						country = c:BUL
-						levels = 8
+						levels = 6
 					}
 				}
 				reserves = 1
@@ -19145,21 +19278,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_mechanized_workshops pm_precision_tools pm_rotary_valve_engine_building_furniture_manufactory 
-				}
-			}
-			create_building = {
-				building = building_motor_industry
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:BUL
-						levels = 4
-						region = STATE_NORTHERN_THRACE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_automobiles_disabled pm_electric_engines pm_rotary_valve_engine_building_motor_industry 
 				}
 			}
 			create_building = {
@@ -19238,27 +19356,12 @@
 				}
 			}
 			create_building = {
-				building = building_chemical_plant
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:BUL
-						levels = 1
-						region = STATE_NORTHERN_THRACE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_improved_fertilizer 
-				}
-			}
-			create_building = {
 				building = building_arms_industry
 				add_ownership = {
 					building = {
 						type = building_financial_district
 						country = c:BUL
-						levels = 10
+						levels = 4
 						region = STATE_NORTHERN_THRACE
 					}
 				}
@@ -19273,7 +19376,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BUL
-						levels = 8
+						levels = 5
 						region = STATE_NORTHERN_THRACE
 					}
 				}
@@ -19288,43 +19391,13 @@
 					building = {
 						type = building_financial_district
 						country = c:BUL
-						levels = 12
+						levels = 4
 						region = STATE_NORTHERN_THRACE
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
 					pm_explosive_shells pm_rotary_valve_engine_building_munition_plant 
-				}
-			}
-			create_building = {
-				building = building_shipyard
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:BUL
-						levels = 1
-						region = STATE_NORTHERN_THRACE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_metal_shipbuilding 
-				}
-			}
-			create_building = {
-				building = building_military_shipyard
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:BUL
-						levels = 1
-						region = STATE_NORTHERN_THRACE
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_military_shipbuilding_steam 
 				}
 			}
 			create_building = {
