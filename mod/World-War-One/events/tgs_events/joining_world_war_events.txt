@@ -590,7 +590,7 @@ joining_world_war_events.13 = { #Ottoman Empire joins
     }
 }
 
-joining_world_war_events.14 = { #Italy joins
+joining_world_war_events.14 = { #Italy joins part 3
     type = country_event
 
     title = joining_world_war_events.14.t
@@ -603,7 +603,7 @@ joining_world_war_events.14 = { #Italy joins
     duration = 6
     
     event_image = {
-        texture = "gfx/event_pictures/politics_europe.dds"
+        texture = "gfx/event_pictures/italy_ww1.dds"
     }
 
     trigger = {}
@@ -1791,6 +1791,143 @@ joining_world_war_events.41 = { #Joining the Axis
         name = joining_world_war_events.41.b
         ai_chance = {
 		base = 0
+	    }
+    }
+}
+
+joining_world_war_events.42 = { #Italy joins part 1
+    type = country_event
+
+    title = joining_world_war_events.42.t
+    desc = joining_world_war_events.42.d
+    flavor = joining_world_war_events.42.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/italy_ww1.dds"
+    }
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = joining_world_war_events.42.a
+        default_option = yes
+        c:ITA = {
+            trigger_event = {
+                id = joining_world_war_events.14
+                days = 50
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = joining_world_war_events.42.b
+        trigger = { 
+            c:ITA = {
+                NOR = { 
+                    has_variable = entente_participant
+                    has_variable = central_powers_participant
+                }
+            }          
+        }
+        c:ITA = {
+            trigger_event = {
+                id = joining_world_war_events.43
+                days = 5
+            }
+        }
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+joining_world_war_events.43 = { #Italy joins part 2
+    type = country_event
+
+    title = joining_world_war_events.43.t
+    desc = joining_world_war_events.43.d
+    flavor = joining_world_war_events.43.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 12
+    
+    event_image = {
+        texture = "gfx/event_pictures/italy_ww1.dds"
+    }
+
+    trigger = {}
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
+    option = {
+        name = joining_world_war_events.43.a
+        default_option = yes
+        set_variable = central_powers_participant
+        scope:world_war_one_diplo_play = {
+            add_initiator_backers = {
+                who = root
+            }   
+        }
+        s:STATE_SOUTH_TYROL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+        s:STATE_ISTRIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = joining_world_war_events.43.b
+        c:ITA = {
+            trigger_event = {
+                id = joining_world_war_events.14
+                days = 50
+            }
+        }
+        ai_chance = {
+		  base = 0
 	    }
     }
 }

@@ -1,5 +1,124 @@
 ﻿namespace = france_events
 
+france_events.1 = { #Monarchist Movement
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/french_monarchism.dds"
+    }
+
+    title = france_events.1.t
+    desc = france_events.1.d
+    flavor = france_events.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {
+        create_character = {
+            first_name = Jacques
+	        last_name = de_Bourbon
+	        historical = yes
+            birth_date = 1870.06.27
+	        culture = cu:french
+	        religion = rel:catholic
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_legitimist
+	        traits = {
+             imposing
+             tactful
+	        }
+	        on_created = {
+               set_variable = {
+                  name = jacques_de_bourbon
+                }                
+            }
+        }
+        create_character = {
+            first_name = Phillipe
+	        last_name = de_Orleans
+	        historical = yes
+            birth_date = 1869.02.06
+	        culture = cu:french
+	        religion = rel:catholic
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_orleanist
+	        traits = {
+             explorer
+             literary
+	        }
+	        on_created = {
+               set_variable = {
+                  name = phillipe_de_orleans
+                }                
+            }
+        }
+        create_character = {
+            first_name = Victor
+	        last_name = Napoleon
+	        historical = yes
+            birth_date = 1862.07.18
+	        culture = cu:french
+	        religion = rel:catholic
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_bonapartist
+	        traits = {
+             explorer
+             literary
+	        }
+	        on_created = {
+               set_variable = {
+                  name = victor_napoleon
+                }                
+            }
+        }
+    }
+
+    option = {
+        name = france_events.1.a
+        default_option = yes
+    }
+
+    option = {
+        name = france_events.1.b
+        random_scope_character = { 
+			limit = { has_variable = jacques_de_bourbon }
+            remove_character_role = agitator
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+		} 
+    }
+
+    option = {
+        name = france_events.1.c
+        random_scope_character = { 
+			limit = { has_variable = victor_napoleon }
+            remove_character_role = agitator
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+		} 
+    }
+
+    option = {
+        name = france_events.1.e
+        random_scope_character = { 
+			limit = { has_variable = phillipe_de_orleans }
+            remove_character_role = agitator
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+		} 
+    }
+}
+
 france_events.5 = { #Jean Jaures assasination
     type = country_event
 
@@ -11,7 +130,7 @@ france_events.5 = { #Jean Jaures assasination
     desc = france_events.5.d
     flavor = france_events.5.f
 
-    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    icon = "gfx/interface/icons/event_icons/event_default.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     duration = 3
 

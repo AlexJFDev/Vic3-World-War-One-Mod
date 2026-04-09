@@ -856,9 +856,41 @@ great_war_initiation_events.12 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+    option = { # Do nothing
+        name = great_war_initiation_events.12.b
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        default_option = yes
+        c:AUS = {
+            trigger_event = {
+                id = joining_world_war_events.42
+                days = 250
+            }
+        }
+        c:ITA = {
+        create_bidirectional_truce = { 
+            country = c:GBR 
+            months = 12 
+        }
+        create_bidirectional_truce = { 
+            country = c:FRA
+            months = 12
+        }
+        remove_diplomatic_pact = {
+			country = c:GER
+			type = defensive_pact
+		}
+        remove_diplomatic_pact = {
+			country = c:AUS
+			type = defensive_pact
+		}
+        }
+    }
+
     option = { # Intervene
         name = great_war_initiation_events.12.a
-        default_option = yes
         ai_chance = {
             base = 0
         }
@@ -890,37 +922,6 @@ great_war_initiation_events.12 = {
                 id = ww1_war_policies_events.4
                 days = 15
             }
-        }
-    }
-    option = { # Do nothing
-        name = great_war_initiation_events.12.b
-        ai_chance = {
-            base = 1
-        }
-        default_option = yes
-        c:ITA = {
-            trigger_event = {
-                id = joining_world_war_events.14
-                days = 300
-            }
-        }
-        c:ITA = {
-        create_bidirectional_truce = { 
-            country = c:GBR 
-            months = 12 
-        }
-        create_bidirectional_truce = { 
-            country = c:FRA
-            months = 12
-        }
-        remove_diplomatic_pact = {
-			country = c:GER
-			type = defensive_pact
-		}
-        remove_diplomatic_pact = {
-			country = c:AUS
-			type = defensive_pact
-		}
         }
     }
 }

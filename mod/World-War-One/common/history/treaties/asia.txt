@@ -408,7 +408,7 @@
 		}
 	}
 
-	# French Treaty Port – Guangzhouwan Lease
+	# French Treaty Port – Guangzhouwan Lease part 1
 	create_treaty = {
 		name = treaty_name_french_guangzhouwan_lease
 		first_country = c:KMT
@@ -429,6 +429,29 @@
 				article = treaty_port
 				source_country = c:KMT
 				target_country = c:FRA
+				inputs = {
+					{ state = s:STATE_GUANGDONG.region_state:KMT }
+				}
+			}
+		}
+	}
+
+	# French Treaty Port – Guangzhouwan Lease part 2
+	create_treaty = {
+		name = treaty_name_french_guangzhouwan_lease
+		first_country = c:KMT
+		second_country = c:ICH
+
+		is_draft = no
+		entered_into_force_on = 1898.4.6
+		binding_period = { years = 99 }
+
+		articles_to_create = {
+			{ article = military_access source_country = c:KMT target_country = c:ICH }
+			{
+				article = treaty_port
+				source_country = c:KMT
+				target_country = c:ICH
 				inputs = {
 					{ state = s:STATE_GUANGDONG.region_state:KMT }
 				}
