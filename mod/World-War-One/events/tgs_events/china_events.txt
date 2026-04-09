@@ -1739,6 +1739,8 @@ china_events.23 = { #Shanxi becomes Communist
         activate_law = law_type:law_womens_suffrage
         activate_law = law_type:law_state_atheism
         activate_law = law_type:law_compulsory_primary_school
+        activate_law = law_type:law_factory_councils
+        activate_law = law_type:law_graduated_taxation
             add_modifier = {
 			  name = army_buff_modifier_3
               years = 50
@@ -1761,7 +1763,7 @@ china_events.23 = { #Shanxi becomes Communist
 	        culture = cu:han
 	        religion = rel:atheist
 	        female = no
-	        interest_group = ig_trade_unions
+	        interest_group = ig_rural_folk
             ig_leader = yes
             ruler = yes
             is_general = yes
@@ -1780,13 +1782,13 @@ china_events.23 = { #Shanxi becomes Communist
             first_name = Zhou
 	        last_name = Enlai
 	        historical = yes
-            birth_date = 1898.3.5
+            birth_date = 1898.03.05
 	        culture = cu:han
 	        religion = rel:atheist
 	        female = no
             ig_leader = yes
             is_general = yes
-	        interest_group = ig_armed_forces
+	        interest_group = ig_trade_unions
 	        ideology = ideology_vanguardist
 	        traits = {
              meticulous
@@ -1795,6 +1797,49 @@ china_events.23 = { #Shanxi becomes Communist
 	        on_created = {
                set_variable = {
                   name = zhoul_enlai
+                }                
+            }
+        }
+        create_character = {
+            first_name = Zhu
+	        last_name = De
+	        historical = yes
+            birth_date = 1886.12.01
+	        culture = cu:han
+	        religion = rel:atheist
+	        female = no
+            ig_leader = yes
+            is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_vanguardist
+	        traits = {
+             mountain_commander
+		     defense_in_depth_specialist
+	        }
+	        on_created = {
+               set_variable = {
+                  name = zhu_de
+                }                
+            }
+        }
+        create_character = {
+            first_name = Zhang
+	        last_name = Wentian
+	        historical = yes
+            birth_date = 1900.08.30
+	        culture = cu:han
+	        religion = rel:atheist
+	        female = no
+            ig_leader = yes
+	        interest_group = ig_intelligentsia
+	        ideology = ideology_vanguardist
+	        traits = {
+             demagogue
+             literary
+	        }
+	        on_created = {
+               set_variable = {
+                  name = zhang_wentian
                 }                
             }
         }

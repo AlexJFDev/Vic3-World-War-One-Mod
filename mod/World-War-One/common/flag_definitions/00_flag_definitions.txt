@@ -1920,7 +1920,10 @@ REPLACE_OR_CREATE:CHI = { # China
 		trigger = { 
 			game_date < 1926.1.1
 			scope:actor ?= {
-				has_law = law_type:law_presidential_republic
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
 			}
 		}
 	}	
@@ -1931,7 +1934,10 @@ REPLACE_OR_CREATE:CHI = { # China
 		trigger = { 
 			game_date > 1926.1.1
 			scope:actor ?= {
-				has_law = law_type:law_presidential_republic
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
 			}
 		}
 	}
@@ -11370,4 +11376,19 @@ KWT = {
 		subject_canton = CON
 		priority = 1
 	}
+}
+
+SHN = {
+    flag_definition = {
+		coa = SHN
+		subject_canton = SHN
+		priority = 1
+	}
+	flag_definition = {
+		coa = HRE_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
 }

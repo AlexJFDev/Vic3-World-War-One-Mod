@@ -223,17 +223,40 @@ REPLACE_OR_CREATE:soviet_red = {
 
 REPLACE_OR_CREATE:communist_china = {
 	color = "communist_china_red"
+
 	possible = {
-		OR = {
-			AND = {
-				exists = c:CHI
-				THIS = c:CHI
-			}
-			AND = {
-				exists = c:BEI
-				THIS = c:BEI
-			}
-		}
+		exists = c:CHI
+		THIS = c:CHI
+		has_law = law_type:law_council_republic
+	}
+}
+
+REPLACE_OR_CREATE:communist_beiyang = {
+	color = "communist_china_red"
+
+	possible = {
+		exists = c:BEI
+		THIS = c:BEI
+		has_law = law_type:law_council_republic
+	}
+}
+
+REPLACE_OR_CREATE:communist_shanxi = {
+	color = "communist_china_red"
+
+	possible = {
+		exists = c:SHN
+		THIS = c:SHN
+		has_law = law_type:law_council_republic
+	}
+}
+
+REPLACE_OR_CREATE:communist_yue = {
+	color = "communist_china_red"
+
+	possible = {
+		exists = c:YUE
+		THIS = c:YUE
 		has_law = law_type:law_council_republic
 	}
 }
