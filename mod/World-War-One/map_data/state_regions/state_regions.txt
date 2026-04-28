@@ -12864,7 +12864,7 @@ STATE_NAKHON_RATCHASIMA = {
 STATE_SAKHALIN = {
 	id = 527
 	provinces = {
-		x02BAB7 x041FF2 x1B4E8D x1CA52F x1CAAE0 x2010C0 x22C190 x2492AA x3405B2 x47B65C x4ED0E9 x503660 x7608FE x768145 x9628A0 x9E3A0A xA5E421 xB8277E xBE16C2 xC3C06E xD0294D xDFA060 xE99CEA xEAFA0A xF15B61 xF1B27F 
+		x02BAB7 x041FF2 x1B4E8D x1CA52F x1CAAE0 x1E5261 x2010C0 x22C190 x2492AA x3405B2 x47B65C x4ED0E9 x503660 x5B9D2D x601140 x7608FE x768145 x7F67EF x9628A0 x9E3A0A xA060DF xA5E421 xB8277E xBE16C2 xC3C06E xD0294D xDFA060 xE99CEA xEAFA0A xF15B61 xF1B27F 
 	}
 	subsistence_building = building_subsistence_pasture
 	city = x2492AA
@@ -12884,19 +12884,22 @@ STATE_SAKHALIN = {
 		building_fishing_wharf = 7
 		building_oil_rig = 10
 	}
-	naval_exit_id = 3059
+	naval_exit_id = 3118
+	prime_land = {
+		xDFA060 xE99CEA xEAFA0A xF15B61 xF1B27F 
+	}
 }
 STATE_HOKKAIDO = {
 	id = 528
 	provinces = {
-		x03E00D x103C2B x17C8CA x1E5261 x1E9A93 x2090C0 x210B6E x3974DA x3EA37A x40BDB8 x413F60 x420E86 x493B76 x5B9D2D x5F2A24 x601140 x6275D4 x65D8B2 x70C55B x7F67EF x85C158 x86757A x9E56C2 xA011C0 xA090C0 xC85C0C xEEB7F4 xF17C01 
+		x03E00D x103C2B x17C8CA x1E9A93 x2090C0 x210B6E x3974DA x3EA37A x40BDB8 x413F60 x420E86 x493B76 x5F2A24 x6275D4 x65D8B2 x70C55B x85C158 x86757A x9E56C2 xA011C0 xA090C0 xC85C0C xEEB7F4 xF17C01 
 	}
 	subsistence_building = building_subsistence_pasture
 	city = xA011C0
 	port = xA090C0
 	farm = x5F2A24
-	mine = x413F60
-	wood = x86757A
+	mine = x3974DA
+	wood = x9E56C2
 	arable_land = 30
 	traits = {
 		state_trait_ishikari_coalfield 
@@ -12970,53 +12973,55 @@ STATE_KANTO = {
 	}
 	naval_exit_id = 3059
 }
-STATE_CHUBU = {
+STATE_HOKUSHINETSU = {
+	id = 931
+	provinces = {
+		x5A57C3 x779089 x88595F xB050C0 xB0D040 xB5F9BD xD12DC5 xE76E8F xEF90C0 
+	}
+	subsistence_building = building_subsistence_rice_farm
+	city = x5A57C3
+	port = xE76E8F
+	farm = x779089
+	mine = xEF90C0
+	wood = xB0D040
+	arable_land = 50
+	arable_resources = {
+		building_rice_farm building_livestock_ranch building_cotton_plantation building_silk_plantation building_tobacco_plantation building_vineyard 
+	}
+	capped_resources = {
+		building_iron_mine = 15
+		building_lead_mine = 4
+		building_sulfur_mine = 6
+		building_logging_camp = 10
+		building_fishing_wharf = 16
+		building_gold_mine = 3
+		building_oil_rig = 7
+	}
+	naval_exit_id = 3059
+}
+STATE_TOKAI = {
 	id = 531
 	provinces = {
-		x205FEB x3050C0 x31D0C0 x4942D2 x5A57C3 x5E87A1 x779089 x88595F x910F25 x9B2E00 xADE732 xB050C0 xB0D040 xB5F9BD xC02285 xD12DC5 xE76E8F xEF90C0 
+		x205FEB x3050C0 x31D0C0 x4942D2 x5E87A1 x910F25 x9B2E00 xADE732 xC02285 xCCB03E 
 	}
 	subsistence_building = building_subsistence_rice_farm
 	city = x9B2E00
 	port = x31D0C0
-	farm = xE76E8F
-	mine = x779089
-	wood = xB0D040
-	arable_land = 90
+	farm = x31D0C0
+	mine = xC02285
+	wood = xCCB03E
+	arable_land = 50
 	arable_resources = {
 		building_rice_farm building_livestock_ranch building_cotton_plantation building_silk_plantation building_tea_plantation building_tobacco_plantation building_vineyard 
 	}
 	capped_resources = {
-		building_lead_mine = 20
-		building_logging_camp = 8
+		building_lead_mine = 38
+		building_sulfur_mine = 12
+		building_logging_camp = 16
 		building_fishing_wharf = 16
-		building_oil_rig = 30
-		building_copper_mine = 50
+		building_oil_rig = 2
 	}
-	naval_exit_id = 3059
-}
-STATE_KANSAI = {
-	id = 532
-	provinces = {
-		x305040 x614287 x705040 x70D040 x879C25 x8EC4C9 x9BD7C1 x9E58B2 xB03EF0 xB0D0C0 xCCB03E 
-	}
-	subsistence_building = building_subsistence_rice_farm
-	city = x8EC4C9
-	port = x70D040
-	farm = xCCB03E
-	mine = xB03EF0
-	wood = x614287
-	arable_land = 60
-	traits = {
-		state_trait_nara_basin state_trait_seto_inland_sea 
-	}
-	arable_resources = {
-		building_rice_farm building_livestock_ranch building_cotton_plantation building_silk_plantation building_tea_plantation building_tobacco_plantation 
-	}
-	capped_resources = {
-		building_logging_camp = 8
-		building_fishing_wharf = 10
-	}
-	naval_exit_id = 3059
+	naval_exit_id = 3086
 }
 STATE_KYUSHU = {
 	id = 533
@@ -13092,6 +13097,52 @@ STATE_CHUGOKU = {
 		building_fishing_wharf = 12
 	}
 	naval_exit_id = 3059
+}
+STATE_KYOTO = {
+	id = 930
+	provinces = {
+		x705040 x879C25 x8EC4C9 x9BD7C1 
+	}
+	subsistence_building = building_subsistence_rice_farm
+	city = x705040
+	port = x879C25
+	farm = x8EC4C9
+	mine = x8EC4C9
+	wood = x8EC4C9
+	arable_land = 44
+	arable_resources = {
+		building_rice_farm building_livestock_ranch building_cotton_plantation building_silk_plantation building_tea_plantation building_tobacco_plantation 
+	}
+	capped_resources = {
+		building_iron_mine = 2
+		building_logging_camp = 9
+		building_fishing_wharf = 10
+	}
+	naval_exit_id = 3059
+}
+STATE_KANSAI = {
+	id = 532
+	provinces = {
+		x305040 x614287 x70D040 x9E58B2 xB03EF0 xB0D0C0 
+	}
+	subsistence_building = building_subsistence_rice_farm
+	city = xB03EF0
+	port = x70D040
+	farm = x305040
+	mine = x70D040
+	wood = x614287
+	arable_land = 60
+	traits = {
+		state_trait_nara_basin state_trait_seto_inland_sea 
+	}
+	arable_resources = {
+		building_rice_farm building_livestock_ranch building_cotton_plantation building_silk_plantation building_tea_plantation building_tobacco_plantation 
+	}
+	capped_resources = {
+		building_logging_camp = 8
+		building_fishing_wharf = 10
+	}
+	naval_exit_id = 3086
 }
 STATE_SHIKOKU = {
 	id = 535
@@ -14447,7 +14498,7 @@ STATE_CHUKOTKA = {
 STATE_KAMCHATKA = {
 	id = 576
 	provinces = {
-		x004B8C x0314FE x0417E6 x043DBD x0573D5 x08B386 x08CAEE x09A166 x0A0213 x0AEF31 x0D5018 x0DFA6C x0E6740 x0EAAEB x10D8FE x1123B6 x11CDB2 x133363 x139DB9 x14F6D0 x1565FE x168DF4 x176BAC x184E50 x192F77 x19CF99 x19EBFE x1A1C92 x1A2DCD x1B4664 x1BDED4 x1D8B0E x1EBA82 x1EC3AB x203701 x212F49 x22C318 x2312AA x2388F2 x24343F x245A5A x260DFA x261B30 x263D36 x274777 x29D8DB x2B2B50 x2B6C15 x2C63E8 x2D6A68 x2EE193 x30F589 x324EE5 x33BBD3 x34C7D3 x35BD9C x3780BD x37B873 x38786B x38B274 x38C19A x3936E3 x3AA266 x3C376D x3CB138 x3E0D77 x3F9170 x3FC28B x40751C x417DB1 x431AB5 x43A611 x43B6F5 x441EB3 x44646A x4556C5 x458559 x459170 x468A91 x48C65E x4A137D x4AF92B x4EEBD6 x4FD9EE x50DD65 x518F91 x533CF3 x538E03 x545902 x55C877 x563C8E x567C2E x56A23A x571268 x5866FC x58C434 x590ACA x5A4450 x5AE5A8 x5D9427 x5F795E x6147DA x61DF32 x61FE07 x62F9A6 x645470 x64DC15 x65B54A x65C6FC x65C7D6 x65D81D x664DB4 x6A10BA x6A1F6E x6A5476 x6E03F9 x70CB55 x71A09D x71C984 x73742C x74CE4E x7505D1 x76C5E4 x76D5F3 x7819AE x799BD4 x799FFE x7ABFBD x7B0BEF x7C054A x7D2AB5 x82651F x83435B x86100C x8798FE x897958 x8A49F3 x8C9CDA x8CBEE9 x8EEB42 x901FC2 x90D326 x918104 x928313 x92E80A x940ED4 x942311 x9896E6 x99BA52 x99E30A x9C657B x9E6A2C x9E7369 x9EDD81 xA02F42 xA03389 xA060DF xA21ECC xA38D51 xA3E08A xA4757E xA4DBA8 xA52195 xA735AF xA8480C xA9ACB2 xAB1010 xABC95C xACC877 xADC54E xAEC3C5 xAFAB87 xB27206 xB29120 xB42AD1 xB44E90 xB48B35 xB9DAC4 xBA51A1 xBA5A18 xBB1BD7 xBCA852 xBCD13F xBD0F93 xBD77E5 xBD852A xBF1800 xBFD4E4 xC0AAD7 xC0DC08 xC15D5B xC2F85F xC30EE3 xC337C4 xC36B2E xC4BA3E xC604B8 xC78B7B xC7BF0B xC7D2DB xC89BE3 xCA6531 xCA6DF5 xCDF716 xCFF814 xD2F3C9 xD3A47B xD59A5A xD6248B xD87363 xDA5436 xDB379F xDB6212 xDBDA07 xDFC813 xE08E02 xE14119 xE16975 xE34E03 xE41E7D xE540BF xE599E7 xE6D321 xE762BD xE85425 xE935D8 xE994FA xEA00D9 xEA0A4A xEABC69 xEAE97B xEB29C6 xEB4BA3 xEBF0DD xEC39AB xEC9FAC xED86D8 xEE241F xEE4FF1 xEEA897 xEEADE1 xEFE4E6 xF21FE9 xF50C18 xF533CD xF7517C xF76FF0 xF9E2BD xFA12CA xFB3B7D xFB99BE xFD2436 xFE2590 xFF4B85 xFFAEC2 xFFB04E xFFE45A 
+		x004B8C x0314FE x0417E6 x043DBD x0573D5 x08B386 x08CAEE x09A166 x0A0213 x0AEF31 x0D5018 x0DFA6C x0E6740 x0EAAEB x10D8FE x1123B6 x11CDB2 x133363 x139DB9 x14F6D0 x1565FE x168DF4 x176BAC x184E50 x192F77 x19CF99 x19EBFE x1A1C92 x1A2DCD x1B4664 x1BDED4 x1D8B0E x1EBA82 x1EC3AB x203701 x212F49 x22C318 x2312AA x2388F2 x24343F x245A5A x260DFA x261B30 x263D36 x274777 x29D8DB x2B2B50 x2B6C15 x2C63E8 x2D6A68 x2EE193 x30F589 x324EE5 x33BBD3 x34C7D3 x35BD9C x3780BD x37B873 x38786B x38B274 x38C19A x3936E3 x3AA266 x3C376D x3CB138 x3E0D77 x3F9170 x3FC28B x40751C x417DB1 x431AB5 x43A611 x43B6F5 x441EB3 x44646A x4556C5 x458559 x459170 x468A91 x48C65E x4A137D x4AF92B x4EEBD6 x4FD9EE x50DD65 x518F91 x533CF3 x538E03 x545902 x55C877 x563C8E x567C2E x56A23A x571268 x5866FC x58C434 x590ACA x5A4450 x5AE5A8 x5D9427 x5F795E x6147DA x61DF32 x61FE07 x62F9A6 x645470 x64DC15 x65B54A x65C6FC x65C7D6 x65D81D x664DB4 x6A10BA x6A1F6E x6A5476 x6E03F9 x70CB55 x71A09D x71C984 x73742C x74CE4E x7505D1 x76C5E4 x76D5F3 x7819AE x799BD4 x799FFE x7ABFBD x7B0BEF x7C054A x7D2AB5 x82651F x83435B x86100C x8798FE x897958 x8A49F3 x8C9CDA x8CBEE9 x8EEB42 x901FC2 x90D326 x918104 x928313 x92E80A x940ED4 x942311 x9896E6 x99BA52 x99E30A x9C657B x9E6A2C x9E7369 x9EDD81 xA02F42 xA03389 xA21ECC xA38D51 xA3E08A xA4757E xA4DBA8 xA52195 xA735AF xA8480C xA9ACB2 xAB1010 xABC95C xACC877 xADC54E xAEC3C5 xAFAB87 xB27206 xB29120 xB42AD1 xB44E90 xB48B35 xB9DAC4 xBA51A1 xBA5A18 xBB1BD7 xBCA852 xBCD13F xBD0F93 xBD77E5 xBD852A xBF1800 xBFD4E4 xC0AAD7 xC0DC08 xC15D5B xC2F85F xC30EE3 xC337C4 xC36B2E xC4BA3E xC604B8 xC78B7B xC7BF0B xC7D2DB xC89BE3 xCA6531 xCA6DF5 xCDF716 xCFF814 xD2F3C9 xD3A47B xD59A5A xD6248B xD87363 xDA5436 xDB379F xDB6212 xDBDA07 xDFC813 xE08E02 xE14119 xE16975 xE34E03 xE41E7D xE540BF xE599E7 xE6D321 xE762BD xE85425 xE935D8 xE994FA xEA00D9 xEA0A4A xEABC69 xEAE97B xEB29C6 xEB4BA3 xEBF0DD xEC39AB xEC9FAC xED86D8 xEE241F xEE4FF1 xEEA897 xEEADE1 xEFE4E6 xF21FE9 xF50C18 xF533CD xF7517C xF76FF0 xF9E2BD xFA12CA xFB3B7D xFB99BE xFD2436 xFE2590 xFF4B85 xFFAEC2 xFFB04E xFFE45A 
 	}
 	subsistence_building = building_subsistence_fishing_village
 	city = xE14119
@@ -14455,7 +14506,7 @@ STATE_KAMCHATKA = {
 	farm = x61DF32
 	mine = x33BBD3
 	wood = x9E6A2C
-	arable_land = 4
+	arable_land = 8
 	arable_resources = {
 		building_livestock_ranch 
 	}
@@ -16148,13 +16199,13 @@ STATE_EASTERN_SERBIA = {
 STATE_UPPER_SILESIA = {
 	id = 924
 	provinces = {
-		x5E9091 x71E080 x7B2F62 x821F52 x88194B x9061E0 x90B12B xAF9F20 xF0E080 
+		x5E9091 x7B2F62 x821F52 x88194B x90B12B xAF9F20 
 	}
 	subsistence_building = building_subsistence_farm
 	city = x90B12B
-	farm = xF0E080
+	farm = xAF9F20
 	mine = x821F52
-	wood = x9061E0
+	wood = x5E9091
 	arable_land = 45
 	traits = {
 		state_trait_oder_river state_trait_upper_silesia_coalfield 
@@ -16241,1068 +16292,662 @@ STATE_RUTHENIA = {
 		building_lead_mine = 35
 	}
 }
-STATE_BALTIC_SEA = {
-	id = 3000
-	provinces = {
-		x08FAFA 
-	}
+
+STATE_NORTHERN_BALTIC_SEA = {
+    id = 3000
+    provinces = { "x08FAFA" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 1.0 -7.0 }
 }
-STATE_HAWAIIAN_SEAMOUNT_CHAIN = {
-	id = 3001
-	provinces = {
-		x340EEC 
-	}
-}
+
 STATE_MICRONESIAN_SEA = {
-	id = 3002
-	provinces = {
-		x341ABA 
-	}
+    id = 3002
+    provinces = { "x341ABA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_LANE_1 = {
-	id = 3003
-	provinces = {
-		xA729A6 
-	}
+
+STATE_EQUATORIAL_PACIFIC_OCEAN = {
+    id = 3006
+    provinces = { "x6644E1" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_LANE_2 = {
-	id = 3004
-	provinces = {
-		xE10DAD 
-	}
+
+STATE_NORTH_PACIFIC_OCEAN = {
+    id = 3011
+    provinces = { "xA87DDC" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_EASTER_ISLAND_LANE_1 = {
-	id = 3005
-	provinces = {
-		xDB3CA3 
-	}
-}
-STATE_EASTER_ISLAND_LANE_2 = {
-	id = 3006
-	provinces = {
-		x6644E1 
-	}
-}
-STATE_EASTER_ISLAND_LANE_3 = {
-	id = 3007
-	provinces = {
-		xDB3C7F 
-	}
-}
-STATE_PACIFIC_LANE_01 = {
-	id = 3008
-	provinces = {
-		xA685CF 
-	}
-}
-STATE_PACIFIC_LANE_02 = {
-	id = 3009
-	provinces = {
-		x561AA0 
-	}
-}
-STATE_PACIFIC_LANE_03 = {
-	id = 3010
-	provinces = {
-		xD26392 
-	}
-}
-STATE_PACIFIC_LANE_04 = {
-	id = 3011
-	provinces = {
-		xA87DDC 
-	}
-}
-STATE_PACIFIC_LANE_05 = {
-	id = 3012
-	provinces = {
-		xA63565 
-	}
-}
-STATE_PACIFIC_LANE_06 = {
-	id = 3013
-	provinces = {
-		x982455 
-	}
-}
-STATE_SOUTHERN_OCEAN_01 = {
-	id = 3014
-	provinces = {
-		x6FB3DE 
-	}
-	impassable = {
-		x6FB3DE 
-	}
-}
+
 STATE_SOUTHERN_OCEAN_02 = {
-	id = 3015
-	provinces = {
-		x316868 
-	}
-	impassable = {
-		x316868 
-	}
+    id = 3015
+    provinces = { "x316868" }
+    impassable = { "x316868" }
 }
-STATE_FAROE_BANK = {
-	id = 3016
-	provinces = {
-		x709ACF 
-	}
+
+STATE_GREENLAND_SEA = {
+    id = 3016
+    provinces = { "x709ACF" }
+    impassable = { "x709ACF" }
 }
-STATE_GULF_OF_MAINE = {
-	id = 3017
-	provinces = {
-		x0ECACA 
-	}
+
+STATE_NORTHEAST_ATLANTIC_COAST = {
+    id = 3017
+    provinces = { "x0ECACA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_HORN_OF_AFRICA = {
-	id = 3018
-	provinces = {
-		x2B5CB8 
-	}
+
+STATE_ZANZIBAR_COAST = {
+    id = 3018
+    provinces = { "x2B5CB8" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_DANISH_STRAITS = {
-	id = 3019
-	provinces = {
-		x0AC8FA 
-	}
+
+STATE_BALTIC_ENTRANCES = {
+    id = 3019
+    provinces = { "x0AC8FA" }
+    diorama_radius_multiplier = 1.5
 }
+
 STATE_NORWEGIAN_SEA = {
-	id = 3020
-	provinces = {
-		x0FDCFA 
-	}
+    id = 3020
+    provinces = { "x0FDCFA" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_LABRADOR_SEA = {
-	id = 3021
-	provinces = {
-		x69C9C9 
-	}
+    id = 3021
+    provinces = { "x69C9C9" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_IRMINGER_SEA = {
-	id = 3022
-	provinces = {
-		x16FAFA 
-	}
+
+STATE_LAPTEV_SEA = {
+    id = 3022
+    provinces = { "x16FAFA" }
+    impassable = { "x16FAFA" }
 }
+
 STATE_DAVIS_STRAIT = {
-	id = 3023
-	provinces = {
-		x6DFBFB 
-	}
+    id = 3023
+    provinces = { "x6DFBFB" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_GALAPAGOS_RISE = {
-	id = 3024
-	provinces = {
-		x0D61DC 
-	}
+    id = 3024
+    provinces = { "x0D61DC" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_EASTERN_CARIBBEAN_SEA = {
-	id = 3025
-	provinces = {
-		xA3CDF4 
-	}
+    id = 3025
+    provinces = { "xA3CDF4" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 1.0 55.0 }
 }
+
 STATE_WESTERN_CARIBBEAN_SEA = {
-	id = 3026
-	provinces = {
-		x1FC9E5 
-	}
+    id = 3026
+    provinces = { "x1FC9E5" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_NORTH_SEA = {
-	id = 3027
-	provinces = {
-		x14FAFA 
-	}
+    id = 3027
+    provinces = { "x14FAFA" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_ENGLISH_CHANNEL = {
-	id = 3028
-	provinces = {
-		x15C8C8 
-	}
+    id = 3028
+    provinces = { "x15C8C8" }
+    diorama_radius_multiplier = 1.5
+    diorama_center_offset = { 25.0 1.0 }
 }
+
 STATE_BAY_OF_BISCAY = {
-	id = 3029
-	provinces = {
-		x2A95FA 
-	}
+    id = 3029
+    provinces = { "x2A95FA" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 55.0 -15.0 }
 }
+
 STATE_IRISH_SEA = {
-	id = 3030
-	provinces = {
-		x1B77CD 
-	}
+    id = 3030
+    provinces = { "x1B77CD" }
+    diorama_radius_multiplier = 1.5
+    diorama_center_offset = { -1.0 3.0 }
 }
-STATE_STRAIT_OF_GIBRALTAR = {
-	id = 3031
-	provinces = {
-		x2CFAFA 
-	}
-}
+
 STATE_WESTERN_MEDITERRANEAN_SEA = {
-	id = 3032
-	provinces = {
-		x40D9DB 
-	}
+    id = 3032
+    provinces = { "x40D9DB" }
+    diorama_radius_multiplier = 1.5
+    diorama_center_offset = { 1.0 4.0 }
 }
+
 STATE_CENTRAL_MEDITERRANEAN_SEA = {
-	id = 3033
-	provinces = {
-		x3BDCFA 
-	}
+    id = 3033
+    provinces = { "x3BDCFA" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_EASTERN_MEDITERRANEAN_SEA = {
-	id = 3034
-	provinces = {
-		x46C8FA 
-	}
+    id = 3034
+    provinces = { "x46C8FA" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_SEA_OF_MARMARA = {
-	id = 3035
-	provinces = {
-		x47DCFA 
-	}
+    id = 3035
+    provinces = { "x47DCFA" }
+    diorama_radius_multiplier = 0.8
+    diorama_center_offset = { 3.0 0.0 }
 }
-STATE_BLACK_SEA = {
-	id = 3036
-	provinces = {
-		x48FAFA 
-	}
+
+STATE_WESTERN_BLACK_SEA = {
+    id = 3036
+    provinces = { "x48FAFA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_ARCTIC_OCEAN_01 = {
-	id = 3037
-	provinces = {
-		x39CACA 
-	}
-	impassable = {
-		x39CACA 
-	}
+
+STATE_CHUCKCHI_SEA = {
+    id = 3037
+    provinces = { "x39CACA" }
+    impassable = { "x39CACA" }
 }
-STATE_ARCTIC_OCEAN_02 = {
-	id = 3038
-	provinces = {
-		x70FBFB 
-	}
-	impassable = {
-		x70FBFB 
-	}
+
+STATE_NORTHWEST_PASSAGE = {
+    id = 3038
+    provinces = { "x70FBFB" }
+    impassable = { "x70FBFB" }
 }
+
 STATE_BARENTS_SEA = {
-	id = 3039
-	provinces = {
-		x0EC8FA 
-	}
-}
-STATE_ARCTIC_OCEAN_04 = {
-	id = 3040
-	provinces = {
-		x0D61A4 
-	}
-	impassable = {
-		x0D61A4 
-	}
-}
-STATE_ARCTIC_OCEAN_05 = {
-	id = 3041
-	provinces = {
-		x20CCE0 
-	}
-	impassable = {
-		x20CCE0 
-	}
-}
-STATE_ARCTIC_OCEAN_06 = {
-	id = 3042
-	provinces = {
-		x43DDFB 
-	}
-	impassable = {
-		x43DDFB 
-	}
-}
-STATE_ARCTIC_OCEAN_07 = {
-	id = 3043
-	provinces = {
-		x13CCFE 
-	}
-	impassable = {
-		x13CCFE 
-	}
-}
-STATE_HUDSON_BAY = {
-	id = 3044
-	provinces = {
-		x6FDDFB 
-	}
-	impassable = {
-		x6FDDFB 
-	}
-}
-STATE_GULF_OF_SAINT_LAWRENCE = {
-	id = 3045
-	provinces = {
-		x74FBFB 
-	}
-}
-STATE_PERSIAN_GULF = {
-	id = 3046
-	provinces = {
-		x56C8FA 
-	}
-}
-STATE_RED_SEA = {
-	id = 3047
-	provinces = {
-		x4FDCFA 
-	}
-}
-STATE_ARABIAN_SEA = {
-	id = 3048
-	provinces = {
-		x54FAFA 
-	}
-}
-STATE_LACCADIVE_SEA = {
-	id = 3049
-	provinces = {
-		x6FDEFC 
-	}
-}
-STATE_BAY_OF_BENGAL = {
-	id = 3050
-	provinces = {
-		x5CFAFA 
-	}
-}
-STATE_ANDAMAN_SEA = {
-	id = 3051
-	provinces = {
-		x61C8C8 
-	}
-}
-STATE_JAVA_SEA = {
-	id = 3052
-	provinces = {
-		x63DCFA 
-	}
-}
-STATE_GULF_OF_SIAM = {
-	id = 3053
-	provinces = {
-		x74FAFA 
-	}
-}
-STATE_GULF_OF_TONKIN = {
-	id = 3054
-	provinces = {
-		x75C8C8 
-	}
-}
-STATE_SULU_SEA = {
-	id = 3055
-	provinces = {
-		x76C8FA 
-	}
-}
-STATE_SOUTH_CHINA_SEA = {
-	id = 3056
-	provinces = {
-		x7BDCFA 
-	}
-}
-STATE_YELLOW_SEA = {
-	id = 3057
-	provinces = {
-		x7EC8FA 
-	}
-}
-STATE_EAST_CHINA_SEA = {
-	id = 3058
-	provinces = {
-		x0FDDFB 
-	}
-}
-STATE_SEA_OF_JAPAN = {
-	id = 3059
-	provinces = {
-		x00FBFB 
-	}
-}
-STATE_GULF_OF_MEXICO = {
-	id = 3060
-	provinces = {
-		x0D74CA 
-	}
-}
-STATE_CARIBBEAN_SEA = {
-	id = 3061
-	provinces = {
-		x0DCACA 
-	}
-}
-STATE_GUIANA_SEA = {
-	id = 3062
-	provinces = {
-		x18FCFC 
-	}
-}
-STATE_BRAZILIAN_SEA_NORTH = {
-	id = 3063
-	provinces = {
-		x1ACAFC 
-	}
-}
-STATE_BRAZILIAN_SEA_SOUTH = {
-	id = 3064
-	provinces = {
-		x4499CD 
-	}
-}
-STATE_ARGENTINE_SEA = {
-	id = 3065
-	provinces = {
-		x1FDEFC 
-	}
-}
-STATE_SCOTIA_SEA = {
-	id = 3066
-	provinces = {
-		x858CBF 
-	}
-}
-STATE_ATLANTIC_SEABOARD = {
-	id = 3067
-	provinces = {
-		xA3CEF4 
-	}
-}
-STATE_SARGASSO_SEA = {
-	id = 3068
-	provinces = {
-		x43DEFC 
-	}
-	impassable = {
-		x43DEFC 
-	}
-}
-STATE_AZORES_SEA = {
-	id = 3069
-	provinces = {
-		x3DCACA 
-	}
-}
-STATE_NORTH_ATLANTIC_OCEAN_01 = {
-	id = 3070
-	provinces = {
-		x2DAEF1 
-	}
-	impassable = {
-		x2DAEF1 
-	}
-}
-STATE_NORTH_ATLANTIC_OCEAN_02 = {
-	id = 3071
-	provinces = {
-		x837BBA 
-	}
-	impassable = {
-		x837BBA 
-	}
-}
-STATE_NORTH_ATLANTIC_OCEAN_03 = {
-	id = 3072
-	provinces = {
-		x807D97 
-	}
-	impassable = {
-		x807D97 
-	}
-}
-STATE_NORTH_ATLANTIC_OCEAN_04 = {
-	id = 3073
-	provinces = {
-		x807D98 
-	}
-	impassable = {
-		x807D98 
-	}
-}
-STATE_NORTH_ATLANTIC_OCEAN_05 = {
-	id = 3074
-	provinces = {
-		x807D99 
-	}
-	impassable = {
-		x807D99 
-	}
-}
-STATE_NORTH_ATLANTIC_OCEAN_06 = {
-	id = 3075
-	provinces = {
-		x6C8AB3 
-	}
-	impassable = {
-		x6C8AB3 
-	}
-}
-STATE_NORTH_ATLANTIC_01 = {
-	id = 3076
-	provinces = {
-		xC64499 
-	}
-}
-STATE_NORTH_ATLANTIC_02 = {
-	id = 3077
-	provinces = {
-		xDA6DF6 
-	}
-}
-STATE_NORTH_ATLANTIC_03 = {
-	id = 3078
-	provinces = {
-		x6643E1 
-	}
-}
-STATE_NORTH_ATLANTIC_04 = {
-	id = 3079
-	provinces = {
-		xA05EB0 
-	}
-}
-STATE_NORTH_ATLANTIC_05 = {
-	id = 3080
-	provinces = {
-		xB14DEF 
-	}
-}
-STATE_NORTH_ATLANTIC_06 = {
-	id = 3081
-	provinces = {
-		xCF4DEF 
-	}
-}
-STATE_NORTH_ATLANTIC_07 = {
-	id = 3082
-	provinces = {
-		x9F5EB0 
-	}
-}
-STATE_ATLANTIC_OCEAN_01 = {
-	id = 3083
-	provinces = {
-		xD55EAD 
-	}
-}
-STATE_ATLANTIC_OCEAN_02 = {
-	id = 3084
-	provinces = {
-		xC25EAE 
-	}
-}
-STATE_ATLANTIC_OCEAN_03 = {
-	id = 3085
-	provinces = {
-		x9137A4 
-	}
-}
-STATE_ATLANTIC_OCEAN_04 = {
-	id = 3086
-	provinces = {
-		x9F5EAE 
-	}
-}
-STATE_ATLANTIC_OCEAN_05 = {
-	id = 3087
-	provinces = {
-		x9F5CAE 
-	}
-}
-STATE_WEST_AFRICAN_COAST = {
-	id = 3088
-	provinces = {
-		x4989FF 
-	}
-}
-STATE_MACARONESIAN_SEA = {
-	id = 3089
-	provinces = {
-		x5FDDFB 
-	}
-}
-STATE_CENTRAL_ATLANTIC_OCEAN = {
-	id = 3090
-	provinces = {
-		x6DC9F4 
-	}
-	impassable = {
-		x6DC9F4 
-	}
-}
-STATE_GULF_OF_GUINEA = {
-	id = 3091
-	provinces = {
-		x386DCD 
-	}
-}
-STATE_SOUTH_ATLANTIC_OCEAN_01 = {
-	id = 3092
-	provinces = {
-		x2897CB 
-	}
-	impassable = {
-		x2897CB 
-	}
-}
-STATE_SOUTH_ATLANTIC_OCEAN_02 = {
-	id = 3093
-	provinces = {
-		x2861CB 
-	}
-	impassable = {
-		x2861CB 
-	}
-}
-STATE_SOUTH_ATLANTIC_OCEAN_03 = {
-	id = 3094
-	provinces = {
-		x405E94 
-	}
-	impassable = {
-		x405E94 
-	}
-}
-STATE_SOUTH_ATLANTIC_OCEAN_04 = {
-	id = 3095
-	provinces = {
-		x65CBFC 
-	}
-	impassable = {
-		x65CBFC 
-	}
-}
-STATE_SOUTH_ATLANTIC_OCEAN_05 = {
-	id = 3096
-	provinces = {
-		x72CBFD 
-	}
-	impassable = {
-		x72CBFD 
-	}
-}
-STATE_SOUTH_ATLANTIC_OCEAN_06 = {
-	id = 3097
-	provinces = {
-		x6AC3EC 
-	}
-	impassable = {
-		x6AC3EC 
-	}
-}
-STATE_SOUTH_ATLANTIC_SEA_LANE_01 = {
-	id = 3098
-	provinces = {
-		x8ADE90 
-	}
-}
-STATE_SOUTH_ATLANTIC_SEA_LANE_02 = {
-	id = 3099
-	provinces = {
-		x9F2781 
-	}
-}
-STATE_SOUTH_ATLANTIC_SEA_LANE_05 = {
-	id = 3102
-	provinces = {
-		xB56DB4 
-	}
-}
-STATE_COAST_OF_SAINT_HELENA = {
-	id = 3103
-	provinces = {
-		x79CBFD 
-	}
-}
-STATE_ANGOLAN_SEA = {
-	id = 3104
-	provinces = {
-		x51B8B8 
-	}
-}
-STATE_CAPE_OF_GOOD_HOPE = {
-	id = 3105
-	provinces = {
-		x56C9FB 
-	}
-}
-STATE_NATAL_COAST = {
-	id = 3106
-	provinces = {
-		x78FCFC 
-	}
-}
-STATE_MOZAMBIQUE_CHANNEL = {
-	id = 3107
-	provinces = {
-		x4FDDFB 
-	}
-}
-STATE_INDIAN_OCEAN_01 = {
-	id = 3108
-	provinces = {
-		x65CDFC 
-	}
-	impassable = {
-		x65CDFC 
-	}
-}
-STATE_INDIAN_OCEAN_02 = {
-	id = 3109
-	provinces = {
-		x405B94 
-	}
-	impassable = {
-		x405B94 
-	}
-}
-STATE_INDIAN_OCEAN_03 = {
-	id = 3110
-	provinces = {
-		x49C9C9 
-	}
-	impassable = {
-		x49C9C9 
-	}
-}
-STATE_MASCARENES = {
-	id = 3111
-	provinces = {
-		x6EDBDB 
-	}
-}
-STATE_INDIAN_OCEAN_LANE_01 = {
-	id = 3112
-	provinces = {
-		x6F4CE0 
-	}
-}
-STATE_INDIAN_OCEAN_LANE_02 = {
-	id = 3113
-	provinces = {
-		x924CE0 
-	}
-}
-STATE_INDIAN_OCEAN_LANE_05 = {
-	id = 3116
-	provinces = {
-		xDB38A3 
-	}
-}
-STATE_INDIAN_OCEAN_LANE_06 = {
-	id = 3117
-	provinces = {
-		x6640E1 
-	}
-}
-STATE_SEA_OF_OKHOTSK = {
-	id = 3118
-	provinces = {
-		x03DDFB 
-	}
-}
-STATE_GULF_OF_ALASKA = {
-	id = 3119
-	provinces = {
-		x36CAFC 
-	}
-}
-STATE_SUMATRA_SEA = {
-	id = 3120
-	provinces = {
-		x66C8FA 
-	}
-}
-STATE_GREAT_AUSTRALIAN_BIGHT = {
-	id = 3121
-	provinces = {
-		x28FBFB 
-	}
-}
-STATE_TASMAN_SEA = {
-	id = 3122
-	provinces = {
-		x32C9FB 
-	}
-}
-STATE_TIMOR_SEA = {
-	id = 3123
-	provinces = {
-		x6BDCFA 
-	}
-}
-STATE_CORAL_SEA = {
-	id = 3124
-	provinces = {
-		x0DFEE0 
-	}
-}
-STATE_MOLUCCA_SEA = {
-	id = 3125
-	provinces = {
-		x16C9FB 
-	}
-}
-STATE_ARAFURA_SEA = {
-	id = 3126
-	provinces = {
-		x21C9C9 
-	}
-}
-STATE_PHILIPPINES_SEA = {
-	id = 3127
-	provinces = {
-		x19C9C9 
-	}
-}
+    id = 3039
+    provinces = { "x0EC8FA" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_KARA_SEA = {
+    id = 3040
+    provinces = { "x0D61A4" }
+    impassable = { "x0D61A4" }
+}
+
 STATE_BERING_SEA = {
-	id = 3128
-	provinces = {
-		x22CBFD 
-	}
+    id = 3041
+    provinces = { "x20CCE0" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOLOMON_SEA = {
-	id = 3129
-	provinces = {
-		x39C9C9 
-	}
+
+STATE_EAST_SIBERIAN_SEA = {
+    id = 3042
+    provinces = { "x43DDFB" }
+    impassable = { "x43DDFB" }
 }
-STATE_NORTH_PACIFIC_OCEAN_01 = {
-	id = 3130
-	provinces = {
-		x405D92 
-	}
-	impassable = {
-		x405D92 
-	}
+
+STATE_HUDSON_BAY = {
+    id = 3044
+    provinces = { "x6FDDFB" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { -55.0 -10.0 }
 }
-STATE_NORTH_PACIFIC_OCEAN_02 = {
-	id = 3131
-	provinces = {
-		x80C2E0 
-	}
-	impassable = {
-		x80C2E0 
-	}
+
+STATE_GULF_OF_SAINT_LAWRENCE = {
+    id = 3045
+    provinces = { "x74FBFB" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 35.0 -10.0 }
 }
-STATE_NORTH_PACIFIC_OCEAN_03 = {
-	id = 3132
-	provinces = {
-		x405B92 
-	}
-	impassable = {
-		x405B92 
-	}
+
+STATE_PERSIAN_GULF = {
+    id = 3046
+    provinces = { "x56C8FA" }
+    diorama_radius_multiplier = 2.2
+    diorama_center_offset = { 15.0 -35.0 }
 }
-STATE_NORTH_PACIFIC_OCEAN_04 = {
-	id = 3133
-	provinces = {
-		x5684CF 
-	}
-	impassable = {
-		x5684CF 
-	}
+
+STATE_RED_SEA = {
+    id = 3047
+    provinces = { "x4FDCFA" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 15.0 -35.0 }
 }
-STATE_NORTH_PACIFIC_OCEAN_05 = {
-	id = 3134
-	provinces = {
-		x6147C1 
-	}
+
+STATE_ARABIAN_SEA = {
+    id = 3048
+    provinces = { "x54FAFA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_NORTH_PACIFIC_OCEAN_06 = {
-	id = 3135
-	provinces = {
-		xBD2C99 
-	}
+
+STATE_LACCADIVE_SEA = {
+    id = 3049
+    provinces = { "x6FDEFC" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_NORTH_PACIFIC_OCEAN_07 = {
-	id = 3136
-	provinces = {
-		x755BD2 
-	}
+
+STATE_BAY_OF_BENGAL = {
+    id = 3050
+    provinces = { "x5CFAFA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_NORTH_PACIFIC_OCEAN_08 = {
-	id = 3137
-	provinces = {
-		x721B9A 
-	}
+
+STATE_MALACCA_STRAIT = {
+    id = 3051
+    provinces = { "x61C8C8" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 0.0 -35.0 }
 }
-STATE_NORTH_PACIFIC_OCEAN_09 = {
-	id = 3138
-	provinces = {
-		xA63FD5 
-	}
+
+STATE_JAVA_SEA = {
+    id = 3052
+    provinces = { "x63DCFA" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { -60.0 0.0 }
 }
-STATE_NORTH_PACIFIC_OCEAN_10 = {
-	id = 3139
-	provinces = {
-		x9A1B99 
-	}
+
+STATE_SOUTH_CHINA_SEA = {
+    id = 3056
+    provinces = { "x7BDCFA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_NORTH_PACIFIC_OCEAN_11 = {
-	id = 3140
-	provinces = {
-		x85A2D7 
-	}
+
+STATE_EAST_CHINA_SEA = {
+    id = 3058
+    provinces = { "x0FDDFB" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_OCEAN_01 = {
-	id = 3141
-	provinces = {
-		x445572 
-	}
-	impassable = {
-		x445572 
-	}
+
+STATE_SEA_OF_JAPAN = {
+    id = 3059
+    provinces = { "x00FBFB" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { -70.0 -40.0 }
 }
-STATE_SOUTH_PACIFIC_OCEAN_02 = {
-	id = 3142
-	provinces = {
-		x3B70B1 
-	}
-	impassable = {
-		x3B70B1 
-	}
+
+STATE_GULF_OF_MEXICO = {
+    id = 3060
+    provinces = { "x0D74CA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_OCEAN_03 = {
-	id = 3143
-	provinces = {
-		x2D4F87 
-	}
-	impassable = {
-		x2D4F87 
-	}
+
+STATE_BAHAMA_BANKS = {
+    id = 3061
+    provinces = { "x0DCACA" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 35.0 -5.0 }
 }
-STATE_SOUTH_PACIFIC_OCEAN_04 = {
-	id = 3144
-	provinces = {
-		x2863CB 
-	}
-	impassable = {
-		x2863CB 
-	}
+
+STATE_COAST_OF_GUYANA = {
+    id = 3062
+    provinces = { "x18FCFC" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_OCEAN_05 = {
-	id = 3145
-	provinces = {
-		x80C3E0 
-	}
-	impassable = {
-		x80C3E0 
-	}
+
+STATE_CAPE_ST_ROQUE = {
+    id = 3063
+    provinces = { "x1ACAFC" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_OCEAN_06 = {
-	id = 3146
-	provinces = {
-		x340EED 
-	}
-	impassable = {
-		x340EED 
-	}
+
+STATE_SOUTH_BRAZIL_BIGHT = {
+    id = 3064
+    provinces = { "x4499CD" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_OCEAN_07 = {
-	id = 3147
-	provinces = {
-		x92AED0 
-	}
-	impassable = {
-		x92AED0 
-	}
+
+STATE_RIVER_PLATE = {
+    id = 3065
+    provinces = { "x1FDEFC" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_OCEAN_08 = {
-	id = 3148
-	provinces = {
-		x80C3E1 
-	}
-	impassable = {
-		x80C3E1 
-	}
+
+STATE_PATAGONIAN_SEA = {
+    id = 3066
+    provinces = { "x858CBF" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_EASTER_ISLAND = {
-	id = 3149
-	provinces = {
-		x91FFFF 
-	}
+
+STATE_MID_ATLANTIC_COAST = {
+    id = 3067
+    provinces = { "xA3CEF4" }
+    diorama_radius_multiplier = 2.5
 }
+
+STATE_SARGASSO_SEA = {
+    id = 3068
+    provinces = { "x43DEFC" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_EQUATORIAL_ATLANTIC_OCEAN = {
+    id = 3069
+    provinces = { "x3DCACA" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_NORTHERN_NORTH_ATLANTIC_OCEAN = {
+    id = 3070
+    provinces = { "x2DAEF1" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_GRAND_BANKS = {
+    id = 3071
+    provinces = { "x837BBA" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_MALAY_SEA = {
+    id = 3072
+    provinces = { "x807D97" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 35.0 -5.0 }
+}
+
+STATE_HORN_OF_AFRICA = {
+    id = 3073
+    provinces = { "x807D98" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { -5.0 -5.0 }
+}
+
+STATE_SOUTHERN_BALTIC_SEA = {
+    id = 3074
+    provinces = { "x807D99" }
+    diorama_radius_multiplier = 2.0
+}
+
+STATE_BAFFIN_BAY = {
+    id = 3076
+    provinces = { "xC64499" }
+    impassable = { "xC64499" }
+}
+
+STATE_CELTIC_SEA = {
+    id = 3077
+    provinces = { "xDA6DF6" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { -20.0 -5.0 }
+}
+
+STATE_NORTHEAST_PACIFIC_OCEAN = {
+    id = 3081
+    provinces = { "xCF4DEF" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_GULF_OF_FINLAND = {
+    id = 3082
+    provinces = { "x9F5EB0" }
+    diorama_radius_multiplier = 1.5
+    diorama_center_offset = { 9.0 0.0 }
+}
+
+STATE_BEAUFORT_SEA = {
+    id = 3083
+    provinces = { "xD55EAD" }
+    impassable = { "xD55EAD" }
+}
+
+STATE_NORTH_ATLANTIC_OCEAN = {
+    id = 3085
+    provinces = { "x9137A4" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_JAPAN_CURRENT = {
+    id = 3086
+    provinces = { "x9F5EAE" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_CAPE_VERDE_SEA = {
+    id = 3088
+    provinces = { "x4989FF" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_LUSITANIAN_SEA = {
+    id = 3089
+    provinces = { "x5FDDFB" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_MAIN_EQUATORIAL_CRURRENT = {
+    id = 3090
+    provinces = { "x6DC9F4" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_GULF_OF_GUINEA = {
+    id = 3091
+    provinces = { "x386DCD" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_ADRIATIC_SEA = {
+    id = 3093
+    provinces = { "x2861CB" }
+    diorama_radius_multiplier = 2.0
+    diorama_center_offset = { -17.0 10.0 }
+}
+
+STATE_EASTERN_BLACK_SEA = {
+    id = 3094
+    provinces = { "x405E94" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_BALEARIC_SEA = {
+    id = 3098
+    provinces = { "x8ADE90" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_SOUTH_ATLANTIC_OCEAN = {
+    id = 3099
+    provinces = { "x9F2781" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_TYRRHENIAN_SEA = {
+    id = 3102
+    provinces = { "xB56DB4" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_BENGUELA_COAST = {
+    id = 3104
+    provinces = { "x51B8B8" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_SOUTHERN_BIGHT = {
+    id = 3105
+    provinces = { "x56C9FB" }
+    diorama_radius_multiplier = 2.5
+    diorama_center_offset = { 1.0 1.0 }
+}
+
+STATE_CAPE_OF_GOOD_HOPE = {
+    id = 3106
+    provinces = { "x78FCFC" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_MOZAMBIQUE_CHANNEL = {
+    id = 3107
+    provinces = { "x4FDDFB" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_WESTERN_INDIAN_OCEAN = {
+    id = 3108
+    provinces = { "x65CDFC" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_SOUTH_INDIAN_OCEAN = {
+    id = 3110
+    provinces = { "x49C9C9" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_AEGEAN_SEA = {
+    id = 3117
+    provinces = { "x6640E1" }
+    diorama_radius_multiplier = 1.1
+    diorama_center_offset = { 1.0 13.0 }
+}
+
+STATE_SEA_OF_OKHOTSK = {
+    id = 3118
+    provinces = { "x03DDFB" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_GULF_OF_ALASKA = {
+    id = 3119
+    provinces = { "x36CAFC" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_GREAT_AUSTRALIAN_BIGHT = {
+    id = 3121
+    provinces = { "x28FBFB" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_TASMAN_SEA = {
+    id = 3122
+    provinces = { "x32C9FB" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_MOLUCCA_SEA = {
+    id = 3125
+    provinces = { "x16C9FB" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_CORAL_SEA = {
+    id = 3129
+    provinces = { "x39C9C9" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_NORTH_ATLANTIC_CURRENT = {
+    id = 3131
+    provinces = { "x80C2E0" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_NORTHWEST_PACIFIC_OCEAN = {
+    id = 3132
+    provinces = { "x405B92" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_GUINEA_CURRENT = {
+    id = 3136
+    provinces = { "x755BD2" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_YELLOW_SEA = {
+    id = 3138
+    provinces = { "xA63FD5" }
+    diorama_radius_multiplier = 2.2
+    diorama_center_offset = { 25.0 8.0 }
+}
+
+STATE_AMAZON_DELTA = {
+    id = 3142
+    provinces = { "x3B70B1" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_SOUTH_PACIFIC_OCEAN = {
+    id = 3143
+    provinces = { "x2D4F87" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_SOUTHERN_ATLANTIC_CRURRENT = {
+    id = 3144
+    provinces = { "x2863CB" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_SOUTH_ATLANTIC_COAST = {
+    id = 3146
+    provinces = { "x340EED" }
+    diorama_radius_multiplier = 2.5
+}
+
+STATE_NORTHERN_POLYNESIAN_SEA = {
+    id = 3147
+    provinces = { "x92AED0" }
+    diorama_radius_multiplier = 2.5
+}
+
 STATE_EASTERN_POLYNESIA = {
-	id = 3150
-	provinces = {
-		x81A0D2 
-	}
+    id = 3150
+    provinces = { "x81A0D2" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_CHILEAN_SEA = {
-	id = 3151
-	provinces = {
-		x26CAFC 
-	}
+
+STATE_PATAGONIAN_CHANNELS = {
+    id = 3151
+    provinces = { "x26CAFC" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_PERUVIAN_SEA = {
-	id = 3152
-	provinces = {
-		x29CACA 
-	}
+    id = 3152
+    provinces = { "x29CACA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_PACIFIC_SEABOARD_01 = {
-	id = 3153
-	provinces = {
-		x31CACA 
-	}
+
+STATE_PACIFIC_SEABOARD = {
+    id = 3153
+    provinces = { "x31CACA" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_PACIFIC_SEABOARD_02 = {
-	id = 3154
-	provinces = {
-		x16FCFA 
-	}
+
+STATE_INSIDE_PASSAGE = {
+    id = 3154
+    provinces = { "x16FCFA" }
+    diorama_radius_multiplier = 2.5
 }
+
 STATE_CENTROAMERICAN_SEA = {
-	id = 3155
-	provinces = {
-		x2BDEFC 
-	}
+    id = 3155
+    provinces = { "x2BDEFC" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PACIFIC_OCEAN_09 = {
-	id = 3156
-	provinces = {
-		x48FDFD 
-	}
+
+STATE_WESTERN_POLYNESIAN_SEA = {
+    id = 3156
+    provinces = { "x48FDFD" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_NORTH_PHILIPPINES_SEA = {
-	id = 3157
-	provinces = {
-		x3D6A6A 
-	}
-	impassable = {
-		x3D6A6A 
-	}
+
+STATE_PHILIPPINES_SEA = {
+    id = 3157
+    provinces = { "x3D6A6A" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_SOUTH_PHILIPPINES_SEA = {
-	id = 3158
-	provinces = {
-		xB6CECE 
-	}
+
+STATE_EASTERN_INDIAN_OCEAN = {
+    id = 3158
+    provinces = { "xB6CECE" }
+    diorama_radius_multiplier = 2.5
 }
-STATE_PATAGONIAN_LAKES = {
-	id = 3159
-	provinces = {
-		x20E0CC 
-	}
-	impassable = {
-		x20E0CC 
-	}
-}
-STATE_LAKE_NICARAGUA = {
-	id = 3160
-	provinces = {
-		x18FDFD 
-	}
-	impassable = {
-		x18FDFD 
-	}
+
+STATE_SOUTHERN_OCEAN_01 = {
+    id = 3148
+    provinces = { "x619BED" }
+    impassable = { "x619BED" }
 }
