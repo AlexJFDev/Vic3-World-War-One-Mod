@@ -26,7 +26,7 @@ REPLACE_OR_CREATE:grant_command_to_ruler = { #TGW
 	}
 
 	possible = {
-		age >= define:NCharacters|ADULT_AGE
+		is_adult = yes
 		OR = {
 			is_female = no
 			owner ?= {
@@ -77,7 +77,7 @@ REPLACE_OR_CREATE:remove_command_from_ruler = {
 	}
 
 	possible = {
-		commander_military_formation = {
+		commander_military_formation ?= {
 			is_mobilized = no
 		}
 	}
@@ -156,11 +156,20 @@ REPLACE_OR_CREATE:grant_leadership_to_agitator = {
 			is_female = no
 			scope:actor ?= { has_law_or_variant = law_type:law_womens_suffrage }
 		}
+		custom_tooltip = {
+			text = grant_leadership_must_be_pressured_ig
+			political_movement ?= {
+				any_influenced_interest_group = {
+					this = root.interest_group
+				}
+			}
+		}
 	}
 
 	effect = {
-		remove_character_role = agitator
-		add_character_role = politician
+		show_as_tooltip = {
+			remove_character_role = agitator
+		}
 		custom_tooltip = {
 			text = make_agitator_ig_leader_tt
 			set_as_interest_group_leader = yes
@@ -219,7 +228,7 @@ REPLACE_OR_CREATE:grant_command_to_agitator = {
 	}
 
 	possible = {
-		age >= define:NCharacters|ADULT_AGE
+		is_adult = yes
 		is_female = no
 		exists = owner.capital.land_hq
 	}
@@ -282,28 +291,31 @@ REPLACE_OR_CREATE:marry_ruler_or_heir = {
 			is_heir_of_own_country = yes
 		}
 		scope:actor ?= {
-			has_law = law_type:law_monarchy
+			country_has_monarchy_law = yes
+			NOT = { has_law = law_type:law_bakufu }
 			has_gov_regency = no
 			religion = {
 				has_discrimination_trait = heritage_christian
 			}
 		}
-		age >= 18
+		is_adult = yes
 		NOT = { has_variable = spouse_seeker }
 		NOT = { has_variable = is_married }
 	}
 
 	possible = {
-		any_country = {
-			NOT = { THIS = scope:actor }
-			NOT = { is_subject_type = subject_type_personal_union }
-			has_law = law_type:law_monarchy
-			religion = scope:actor.religion
-			ruler = {
-				age > 36
-				hidden_trigger = {
-					NOT = {
-						has_variable = marriage_target
+		owner ?= {
+			any_diplomatically_relevant_country = {
+				NOT = { THIS = scope:actor }
+				NOT = { is_subject_type = subject_type_personal_union }
+				country_has_monarchy_law = yes
+				religion = scope:actor.religion
+				ruler = {
+					age > 36
+					hidden_trigger = {
+						NOT = {
+							has_variable = marriage_target
+						}
 					}
 				}
 			}
@@ -331,7 +343,7 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 		owner ?= scope:actor
 		is_ruler_of_own_country = yes
 		owner ?= {
-			has_law = law_type:law_monarchy
+			country_has_monarchy_law = yes
 			has_gov_regency = no
 		}
 		exists = owner.heir
@@ -341,7 +353,7 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 	possible = {
 		OR = {
 			interest_group ?= {
-				ig_counts_as_marginal = yes
+				ig_clout < define:NPolitics|MARGINAL_IG_THRESHOLD
 			}
 			popularity <= -50
 			has_trait = psychological_affliction
@@ -354,10 +366,12 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 							exists = most_desired_law
 						}
 					}
-					any_political_movement = {
-						is_revolutionary = yes
-						exists = most_desired_law
-						most_desired_law ?= { save_temporary_scope_as = revolutionary_law }
+					AND = {
+						any_political_movement = {
+							is_revolutionary = yes
+							exists = most_desired_law
+							most_desired_law ?= { save_temporary_scope_as = revolutionary_law }
+						}
 						custom_tooltip = {
 							text = ruler_disapproves_of_revolutionary_law
 							root = {
@@ -401,7 +415,7 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 				}
 			}
 			owner.heir ?= {
-				age >= 18
+				is_adult = yes
 			}
 		}
 	}
@@ -496,8 +510,26 @@ REPLACE_OR_CREATE:exile_character = {
 		is_heir_of_own_country = no
 		# Cannot exile pure commanders, we have the retire interaction for that
 		OR = {
+			has_role_of_type = executive
+			has_role_of_type = magnate
 			has_role_of_type = politician
 			has_role_of_type = agitator
+		}
+		trigger_if = {
+			limit = {
+				owner ?= {
+					c:JAP ?= this
+					NOT = {
+						has_variable = japan_restoration_complete
+					}
+				}
+			}
+			custom_tooltip = {
+				text = daimyo_not_tt
+				NOT = {
+					has_variable = daimyo_var
+				}
+			}
 		}
 	}
 
@@ -581,6 +613,40 @@ REPLACE_OR_CREATE:exile_character = {
 				text = doing_coup_for_player_tt
 				NOT = {
 					has_variable = commander_doing_coup_on_player_behalf
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				c:JAP ?= owner
+			}
+			trigger_if = {
+				limit = {
+					owner ?= {
+						has_law = law_type:law_bakufu
+					}
+				}
+				custom_tooltip = {
+					text = house_tokugawa_not_tt
+					NOT = {
+						has_variable = house_tokugawa
+					}
+				}
+			}
+			trigger_if = {
+				limit = {
+					owner ?= {
+						NOR = {
+							has_law_or_variant = law_type:law_council_republic
+							has_law_or_variant = law_type:law_corporate_state
+						}
+					}
+				}
+				custom_tooltip = {
+					text = house_yamato_not_tt
+					NOT = {
+						has_variable = house_yamato
+					}
 				}
 			}
 		}
@@ -670,32 +736,6 @@ REPLACE_OR_CREATE:exile_character = {
 				}
 				owner ?= { set_variable = achievement_agitate_elsewhere_var }
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { has_role_of_type = agitator }
-					}
-					add_character_role = agitator
-				}
-				if = {
-					limit = {
-						has_role_of_type = general
-					}
-					remove_character_role = general
-				}
-				if = {
-					limit = {
-						has_role_of_type = admiral
-					}
-					remove_character_role = admiral
-				}
-				if = {
-					limit = {
-						has_role_of_type = politician
-					}
-					remove_character_role = politician
-				}
-			}
 			owner ?= {
 				custom_tooltip = exiling_dissident_radicals_factors
 			}
@@ -779,7 +819,7 @@ REPLACE_OR_CREATE:exile_character = {
 							on_created = {
 								exile_character = yes
 								set_character_immortal = yes
-								add_character_role = agitator
+								clean_up_exile_character_roles = yes
 							}
 						}
 					}
@@ -997,9 +1037,10 @@ REPLACE_OR_CREATE:invite_exile = {
 	effect = {
 		transfer_character = scope:actor
 		set_variable = exile_to_ruler_var
-		set_variable = {
-			name = memento_mori_immunity
+		add_career_length = {
+			role = agitator
 			months = 60
+			random_range = { 1.0 1.5 } # 60-90 months
 		}
 		custom_tooltip = invite_exile_start_join_movement_effect
 		hidden_effect = {
@@ -1200,21 +1241,11 @@ REPLACE_OR_CREATE:retire_commander = {
 		}
 		else = {
 			hidden_effect = {
-				if = {
-					limit = {
-						has_role_of_type = general
-					}
-					remove_character_role = general
-				}
-				if = {
-					limit = {
-						has_role_of_type = admiral
-					}
-					remove_character_role = admiral
-				}
+				replace_character_roles = { remove = { general admiral } }
+				retire_character_if_should_be_culled = yes
 			}
 
-		interest_group ?= {
+			interest_group ?= {
 				add_modifier = {
 					name = retired_commander_interest_group_impact
 					multiplier = {
@@ -1393,4 +1424,3 @@ REPLACE_OR_CREATE:return_to_home_country = {
 		value = -50
 	}
 }
-

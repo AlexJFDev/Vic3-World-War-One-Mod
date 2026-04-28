@@ -689,7 +689,7 @@ revolution_pulse_events.5 = {
 	}
 }
 
- revolution_pulse_events.6 = {
+revolution_pulse_events.6 = {
  	type = country_event
  	placement = scope:potemkin_state
 
@@ -702,8 +702,8 @@ revolution_pulse_events.5 = {
  	category = revolution
 
  	event_image = {
- 		video = "votp_garibaldi"
- 	}
+        texture = "gfx/event_pictures/battleship.dds"
+    }
 
  	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -712,26 +712,30 @@ revolution_pulse_events.5 = {
  	cooldown = { days = long_modifier_time }
 
  	trigger = {
- 		any_revolution_ongoing = yes
- 		ig:ig_armed_forces = {
- 			is_marginal = no
+ 		NOT = { has_variable = revolution_event_cooldown }
+		any_civil_war = {
+			is_civil_war_type = revolution
+ 			civil_war_progress_high = yes
+		}
+ 		ig:ig_armed_forces ?= {
+ 			ig_counts_as_marginal = no
  		}
  		military_wage_level < medium
  		any_scope_state = {
  			is_incorporated = yes
  			any_scope_building = {
- 				is_building_type = building_naval_base	
-				level >= 10
+ 				is_building_type = building_naval_administration
+				level >= 2
  			}
  		}
 		OR = {
-			country_navy_unit_type_fraction = {  
-				target = unit_type:combat_unit_type_battleship
-				value >= 0.1  
+			country_ship_type_fraction = {
+				target = ship_type:ship_type_pre_dreadnought
+				value >= 0.1
 			}
-			country_navy_unit_type_fraction = {  
-				target = unit_type:combat_unit_type_dreadnought
-				value >= 0.1  
+			country_ship_type_fraction = {
+				target = ship_type:ship_type_dreadnought
+				value >= 0.1
 			}
 		}
  		any_neighbouring_state = {
@@ -740,59 +744,70 @@ revolution_pulse_events.5 = {
  				owner = root
  			}
  		}
- 		revolution_progress_high = yes
  	}
 
  	cancellation_trigger = {
- 		NOT = { any_revolution_ongoing = yes }
+ 		NOT = {
+			any_civil_war = {
+				is_civil_war_type = revolution
+				civil_war_progress_high = yes
+			}
+		}
  	}
-	
+
  	immediate = {
- 		save_revolution_scopes = yes
+		random_civil_war = {
+			limit = {
+				is_civil_war_type = revolution
+				civil_war_progress_high = yes
+			}
+ 			civil_war_save_scopes = yes
+		}
  		random_scope_state = {
  			limit = {
  			is_incorporated = yes
 			 	any_scope_building = {
-					is_building_type = building_naval_base	
-					level >= 10
-				}			
+					is_building_type = building_naval_administration
+					level >= 2
+				}
  			}
  			save_scope_as = potemkin_state
  			set_variable = potemkin_destination_state
  			random_scope_building = {
  				limit = {
-					is_building_type = building_naval_base	
-					level >= 10
+					is_building_type = building_naval_administration
+					level >= 2
  				}
- 				save_scope_as = potemkin_naval_base
+ 				save_scope_as = potemkin_naval_administration
  			}
  		}
  		random_scope_state = {
  			save_scope_as = ship_name_state
- 		} 
+ 		}
  		voyage_of_potemkin = yes
+ 		set_variable = { name = revolution_event_cooldown days = 30 }
  	}
-	
+
  	option = {
- 		name = revolution_pulse_events.6.a 
+ 		name = revolution_pulse_events.6.a
  		default_option = yes
  		scope:ongoing_revolution_movement = {
- 			add_modifier = { 
+ 			add_modifier = {
  				name = modifier_movement_dreadnought_recovered
  				days = normal_modifier_time
  			}
  		}
  		random_scope_admiral = {
  			limit = {
-				commander_military_formation = {
+				commander_military_formation ?= {
 					OR = {
-						formation_navy_unit_type_fraction = {  
-							target = unit_type:combat_unit_type_battleship  
-							value >= 0.2  
+						formation_ship_type_fraction = {
+							target = ship_type:ship_type_pre_dreadnought
+							value >= 0.2
 						}
-						formation_navy_unit_type_fraction = {  
-							target = unit_type:combat_unit_type_dreadnought
-							value >= 0.2  
+						formation_ship_type_fraction = {
+							target = ship_type:ship_type_dreadnought
+							value >= 0.2
 						}
 					}
 				}
@@ -803,7 +818,7 @@ revolution_pulse_events.5 = {
  			}
  		}
  		scope:potemkin_state = {
- 			scope:potemkin_naval_base = {
+ 			scope:potemkin_naval_administration = {
  				add_modifier = {
  					name = modifier_dreadnought_refurbishing
  					days = normal_modifier_time
@@ -818,13 +833,13 @@ revolution_pulse_events.5 = {
  			add_civil_war_progress = revolution_advance_small
  		}
  		scope:ongoing_revolution_movement = {
- 			add_modifier = { 
+ 			add_modifier = {
  				name = modifier_movement_dreadnought_martyred
  				days = normal_modifier_time
  			}
  		}
  		scope:potemkin_state = {
- 			scope:potemkin_naval_base = {
+ 			scope:potemkin_naval_administration = {
  				add_modifier = {
  					name = modifier_dreadnought_defection
  					days = normal_modifier_time
@@ -838,7 +853,7 @@ revolution_pulse_events.5 = {
  			}
  		}
  	}
- }
+}
 
 revolution_pulse_events.7 = {
 	type = country_event

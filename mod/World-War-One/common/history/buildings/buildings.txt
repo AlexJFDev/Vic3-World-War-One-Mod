@@ -1,4 +1,4 @@
-﻿BUILDINGS = { #TGW
+﻿BUILDINGS = {
 	s:STATE_KABUL = {
 		region_state:AFG = {
 			create_building = {
@@ -1696,12 +1696,12 @@
 				add_ownership = {
 					country = {
 						country = c:ARG
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -1714,7 +1714,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -3233,7 +3233,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -3246,7 +3246,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -5160,7 +5160,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -5675,12 +5675,12 @@
 				add_ownership = {
 					country = {
 						country = c:AUS
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -5693,7 +5693,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -7842,12 +7842,12 @@
 				add_ownership = {
 					country = {
 						country = c:BEL
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_reinforced 
 				}
 			}
 		}
@@ -11350,12 +11350,12 @@
 				add_ownership = {
 					country = {
 						country = c:BRZ
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -11368,7 +11368,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -14193,7 +14193,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_1 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -18212,7 +18212,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_1 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -19002,12 +19002,12 @@
 				add_ownership = {
 					country = {
 						country = c:TUR
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -19020,7 +19020,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -21133,7 +21133,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_1 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -22502,12 +22502,12 @@
 				add_ownership = {
 					country = {
 						country = c:CHL
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -22520,7 +22520,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -23180,6 +23180,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:CHI
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -23189,7 +23202,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_1 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -24194,7 +24207,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -24207,7 +24220,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_1 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -26074,12 +26087,12 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 1
+						levels = 4
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_reinforced 
 				}
 			}
 		}
@@ -26172,6 +26185,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
 				}
 			}
 		}
@@ -26584,12 +26610,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -26602,7 +26628,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -26786,6 +26812,21 @@
 				}
 			}
 			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 1
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_high 
+				}
+			}
+			create_building = {
 				building = building_naval_fort
 				add_ownership = {
 					country = {
@@ -26795,7 +26836,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -27594,7 +27635,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -27607,7 +27648,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_1 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -30428,6 +30469,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -30437,7 +30491,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -31605,6 +31659,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:DEN
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -31614,7 +31681,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -33643,6 +33710,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:DEI
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
 		}
 	}
 	s:STATE_WESTERN_NEW_GUINEA = {
@@ -34719,6 +34799,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:EGY
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_MATRUH = {
@@ -34935,6 +35028,19 @@
 					pm_training_streamlining 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:EGY
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 		region_state:GBR = {
 			create_building = {
@@ -34984,12 +35090,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_advanced 
 				}
 			}
 		}
@@ -35957,6 +36063,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:MLA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
 		}
 		region_state:GBR = {
 			create_building = {
@@ -35985,6 +36104,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_advanced 
 				}
 			}
 		}
@@ -36463,6 +36595,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:FIN
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_WEST_KARELIA = {
@@ -36869,7 +37014,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -37452,7 +37597,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -37465,7 +37610,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -38204,6 +38349,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:FRA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -38213,7 +38371,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -38660,12 +38818,12 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -38678,7 +38836,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -39659,6 +39817,21 @@
 					pm_industrial_port 
 				}
 			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 1
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
 		}
 	}
 	s:STATE_LANGUEDOC = {
@@ -40516,12 +40689,12 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -40534,7 +40707,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -41416,12 +41589,12 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -41434,7 +41607,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -45389,6 +45562,21 @@
 					pm_industrial_port 
 				}
 			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 1
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
 		}
 	}
 	s:STATE_TIMBUKTU = {
@@ -48769,12 +48957,12 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -48787,7 +48975,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -49002,12 +49190,12 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -49020,7 +49208,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -49475,12 +49663,12 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -49493,7 +49681,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -50310,12 +50498,12 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -50328,7 +50516,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -50534,7 +50722,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_reinforced 
 				}
 			}
 		}
@@ -51442,12 +51630,12 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -51460,7 +51648,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -51879,12 +52067,12 @@
 				add_ownership = {
 					country = {
 						country = c:GER
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -51897,7 +52085,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -52512,6 +52700,21 @@
 					pm_no_passenger_trains pm_steam_trains 
 				}
 			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 1
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
 		}
 	}
 	s:STATE_BERMUDA = {
@@ -52529,6 +52732,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 1
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -52673,12 +52891,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 		}
@@ -52728,6 +52946,34 @@
 				reserves = 1
 				activate_production_methods = {
 					default_building_cotton_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 1
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_advanced 
 				}
 			}
 		}
@@ -53015,12 +53261,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -53033,7 +53279,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -53056,16 +53302,31 @@
 				}
 			}
 			create_building = {
-				building = building_naval_fort
+				building = building_trade_center
 				add_ownership = {
-					country = {
+					building = {
+						type = building_financial_district
 						country = c:GBR
 						levels = 1
+						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_advanced 
 				}
 			}
 		}
@@ -53251,12 +53512,12 @@
 				add_ownership = {
 					country = {
 						country = c:SPA
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 		}
@@ -53386,12 +53647,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -53404,7 +53665,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -53865,12 +54126,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -53883,7 +54144,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -54021,6 +54282,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -54370,12 +54644,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -54388,7 +54662,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -54602,12 +54876,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -54898,12 +55172,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -54916,7 +55190,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -54967,16 +55241,31 @@
 				}
 			}
 			create_building = {
-				building = building_naval_fort
+				building = building_trade_center
 				add_ownership = {
-					country = {
+					building = {
+						type = building_financial_district
 						country = c:GBR
 						levels = 1
+						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:GBR
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_advanced 
 				}
 			}
 		}
@@ -55296,12 +55585,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -55314,7 +55603,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -55459,12 +55748,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -55477,7 +55766,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -55497,6 +55786,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 1
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -55654,12 +55958,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -55890,12 +56194,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -55908,7 +56212,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -56139,12 +56443,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -56157,7 +56461,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -56377,12 +56681,12 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -56395,7 +56699,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -56499,7 +56803,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -57048,6 +57352,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:GRE
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -57057,7 +57374,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -57137,6 +57454,21 @@
 					pm_training_streamlining 
 				}
 			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GRE
+						levels = 1
+						region = STATE_ATTICA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
 		}
 	}
 	s:STATE_EAST_AEGEAN_ISLANDS = {
@@ -57182,6 +57514,34 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GRE
+						levels = 1
+						region = STATE_ATTICA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:GRE
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -57241,7 +57601,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -57289,6 +57649,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GRE
+						levels = 1
+						region = STATE_ATTICA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -57919,6 +58294,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GRE
+						levels = 1
+						region = STATE_ATTICA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -59684,6 +60074,19 @@
 					pm_trade_center_trade_quantity_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:ITA
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_advanced 
+				}
+			}
 		}
 	}
 	s:STATE_LOMBARDY = {
@@ -60393,12 +60796,12 @@
 				add_ownership = {
 					country = {
 						country = c:ITA
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -60411,7 +60814,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -60726,7 +61129,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -60739,7 +61142,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -60914,12 +61317,12 @@
 				add_ownership = {
 					country = {
 						country = c:ITA
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -60932,7 +61335,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -61506,12 +61909,12 @@
 				add_ownership = {
 					country = {
 						country = c:ITA
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -61524,7 +61927,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -62730,7 +63133,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 1
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -62745,7 +63148,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 1
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -62877,12 +63280,12 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_reinforced 
 				}
 			}
 		}
 	}
-	s:STATE_OSAKA = {
+	s:STATE_KANSAI = {
 		region_state:JAP = {
 			create_building = {
 				building = building_railway
@@ -62904,7 +63307,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 4
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -62919,7 +63322,7 @@
 						type = building_manor_house
 						country = c:JAP
 						levels = 10
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -62934,7 +63337,7 @@
 						type = building_manor_house
 						country = c:JAP
 						levels = 8
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -62949,7 +63352,7 @@
 						type = building_manor_house
 						country = c:JAP
 						levels = 8
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -62964,7 +63367,7 @@
 						type = building_manor_house
 						country = c:JAP
 						levels = 10
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -62979,7 +63382,7 @@
 						type = building_manor_house
 						country = c:JAP
 						levels = 6
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -62994,7 +63397,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 2
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63009,7 +63412,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 1
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63024,7 +63427,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 2
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63039,7 +63442,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 3
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63082,7 +63485,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 2
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63097,7 +63500,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 5
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63138,7 +63541,7 @@
 						type = building_manor_house
 						country = c:JAP
 						levels = 6
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63166,7 +63569,7 @@
 						type = building_financial_district
 						country = c:JAP
 						levels = 15
-						region = STATE_OSAKA
+						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63179,12 +63582,12 @@
 				add_ownership = {
 					country = {
 						country = c:JAP
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -63197,7 +63600,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -63703,12 +64106,12 @@
 				add_ownership = {
 					country = {
 						country = c:JAP
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -63721,7 +64124,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -64081,12 +64484,12 @@
 				add_ownership = {
 					country = {
 						country = c:JAP
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -64099,7 +64502,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -64149,6 +64552,21 @@
 					pm_training_streamlining 
 				}
 			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 1
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_high 
+				}
+			}
 		}
 	}
 	s:STATE_SAKHALIN = {
@@ -64194,6 +64612,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 1
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_high 
 				}
 			}
 		}
@@ -68400,6 +68833,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:MEX
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -68409,7 +68855,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_1 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -69389,6 +69835,19 @@
 					pm_training_streamlining 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:SPA
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
 		}
 	}
 	s:STATE_NEJD = {
@@ -70262,6 +70721,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:NET
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -70271,7 +70743,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -71621,6 +72093,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:NOR
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -71630,7 +72115,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -71738,6 +72223,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:NOR
+						levels = 1
+						region = STATE_EASTERN_NORWAY
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_very_high 
 				}
 			}
 		}
@@ -71890,6 +72390,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:NOR
+						levels = 5
+						region = STATE_EASTERN_NORWAY
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_very_high 
 				}
 			}
 		}
@@ -73686,12 +74201,12 @@
 				add_ownership = {
 					country = {
 						country = c:TUR
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 		}
@@ -75317,7 +75832,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 		}
@@ -76494,7 +77009,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_1 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -78805,6 +79320,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:PHI
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_VISAYAS = {
@@ -80214,12 +80742,12 @@
 				add_ownership = {
 					country = {
 						country = c:POR
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -80232,7 +80760,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -82325,6 +82853,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:RUS
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -82334,7 +82875,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -82723,12 +83264,12 @@
 				add_ownership = {
 					country = {
 						country = c:RUS
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -82741,7 +83282,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -83148,12 +83689,12 @@
 				add_ownership = {
 					country = {
 						country = c:RUS
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -83166,7 +83707,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -84113,6 +84654,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:RUS
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -84122,7 +84676,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -85467,7 +86021,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -88606,12 +89160,12 @@
 				add_ownership = {
 					country = {
 						country = c:RUS
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -88624,7 +89178,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -90009,7 +90563,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_2 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -90789,6 +91343,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:SAF
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
 		}
 	}
 	s:STATE_EASTERN_CAPE = {
@@ -91524,12 +92091,12 @@
 				add_ownership = {
 					country = {
 						country = c:SPA
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_2 
+					pm_naval_fortification_reinforced 
 				}
 			}
 			create_building = {
@@ -91542,7 +92109,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -95079,12 +95646,12 @@
 				add_ownership = {
 					country = {
 						country = c:SWE
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -95097,7 +95664,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -97197,12 +97764,12 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -97215,7 +97782,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -97879,12 +98446,12 @@
 				add_ownership = {
 					country = {
 						country = c:USA
-						levels = 1
+						levels = 4
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_3 
+					pm_naval_fortification_advanced 
 				}
 			}
 			create_building = {
@@ -97897,7 +98464,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -100014,7 +100581,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -100027,7 +100594,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -100755,7 +101322,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -100768,7 +101335,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -101428,7 +101995,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -102294,7 +102861,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -102307,7 +102874,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -102609,6 +103176,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_reinforced 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -102618,7 +103198,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -103249,7 +103829,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -103490,6 +104070,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_very_high 
+				}
+			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -104384,6 +104977,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_PENNSYLVANIA = {
@@ -104900,7 +105506,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -105091,7 +105697,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -105104,7 +105710,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -105316,6 +105922,19 @@
 				}
 			}
 			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
+			create_building = {
 				building = building_naval_administration
 				add_ownership = {
 					country = {
@@ -105325,7 +105944,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -105688,6 +106307,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_TEXAS = {
@@ -105951,7 +106583,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -105964,7 +106596,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}
@@ -106503,6 +107135,19 @@
 					pm_trade_center_trade_quantity_very_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fort
+				add_ownership = {
+					country = {
+						country = c:USA
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_WASHINGTON = {
@@ -106785,7 +107430,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_fort_1 
+					pm_naval_fortification_basic 
 				}
 			}
 			create_building = {
@@ -106798,7 +107443,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_naval_admin_3 
+					pm_simple_sailor_recruitment 
 				}
 			}
 		}

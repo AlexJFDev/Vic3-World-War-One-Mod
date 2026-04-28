@@ -9,7 +9,7 @@ nihilism.1 = { #TGW
 
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -28,26 +28,14 @@ nihilism.1 = { #TGW
 			}
 			if = {
 				limit = {
-					THIS = c:RUS
+					c:RUS ?= THIS
 					AND = {
 						game_date >= 1862.1.1
 						game_date <= 1882.1.1
 					}
 				}
 				create_character = {
-					first_name = Varfolomey
-					last_name = Zaitsev
-					culture = cu:russian
-					birth_date = 1842.9.11
-					is_agitator = yes 
-					historical = yes
-					interest_group = ig_intelligentsia
-					female = no
-					ideology = ideology_nihilist
-					traits = {	
-						firebrand
-						arrogant
-					}
+					template = RUS_varfolomey_zaitsev
 				}
 			}
 			else_if = {
@@ -75,19 +63,7 @@ nihilism.1 = { #TGW
 					NOT = { has_global_variable = stirner_spawn }
 				}
 				create_character = {
-					first_name = Max
-					last_name = Stirner
-					   culture = cu:south_german
-					birth_date = 1806.10.25
-					is_agitator = yes 
-					historical = yes
-					interest_group = ig_intelligentsia
-					female = no
-					ideology = ideology_nihilist
-					dna = dna_max_striner
-					traits = {	
-						reserved
-					}
+					template = BAV_max_stirner
 					on_created = {
 						set_variable = is_stirner_var
 						set_global_variable = stirner_spawn
@@ -96,77 +72,43 @@ nihilism.1 = { #TGW
 			}
 			else_if = {
 				limit = {
-					THIS = c:USA
+					c:USA ?= THIS
 					AND = {
 						game_date >= 1876.1.1
 						game_date <= 1930.1.1
 					}
 				}
 				create_character = {
-					first_name = Benjamin
-					last_name = Tucker
-					   culture = cu:yankee
-					birth_date = 1854.4.17
-					is_agitator = yes 
-					historical = yes
-					interest_group = ig_intelligentsia
-					female = no
-					ideology = ideology_nihilist
-					traits = {	
-						charismatic
-						persistent
-					}
+					template = USA_benjamin_tucker
 				}
 			}
 			else_if = {
 				limit = {
-					THIS = c:GBR
+					c:GBR ?= THIS
 					AND = {
 						game_date >= 1846.1.1
 						game_date <= 1906.1.1
 					}
 				}
 				create_character = {
-					first_name = George
-					last_name = Holyoake
-					   culture = cu:british
-					birth_date = 1817.4.13
-					is_agitator = yes 
-					historical = yes
-					interest_group = ig_intelligentsia
-					female = no
-					ideology = ideology_nihilist
-					traits = {	
-						tactful
-					}
+					template = GBR_george_holyoake
 				}
 			}
 			else_if = {
 				limit = {
-					THIS = c:JAP
+					c:JAP ?= THIS
 					AND = {
 						game_date >= 1878.1.1
 						game_date <= 1908.1.1
 					}
 				}
 				create_character = {
-					first_name = Kume
-					last_name = Kunitake
-					   culture = cu:japanese
-					birth_date = 1839.8.19
-					is_agitator = yes 
-					historical = yes
-					interest_group = ig_intelligentsia
-					female = no
-					ideology = ideology_nihilist
-					traits = {	
-						direct
-					}
+					template = JAP_kume_kunitake
 				}
 			}
 			else = {
 				create_character = {
-					is_agitator = yes 
+					is_agitator = yes
 					interest_group = ig_intelligentsia
 					ideology = ideology_nihilist
 				}
@@ -174,23 +116,26 @@ nihilism.1 = { #TGW
 		}
 		else = {
 			create_character = {
-				is_agitator = yes 
+				is_agitator = yes
 				interest_group = ig_intelligentsia
 				ideology = ideology_nihilist
 			}
 		}
-		
+
 		random_scope_character = {
 			limit = {
 				has_role_of_type = agitator
 				has_ideology = ideology:ideology_nihilist
 			}
 			save_scope_as = nihilist_scope
-			set_variable = { name = memento_mori_immunity years = 20 }
+			set_career_length = {
+				years = 20
+				random_range = { 1.0 1.5 } # 20-30 years
+			}
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.1.a
 		default_option = yes
 		add_modifier = {
@@ -220,14 +165,14 @@ nihilism.1 = { #TGW
 		set_variable = nihilism_je_started
 	}
 
-	option = { 
+	option = {
 		name = nihilism.1.b
-		
+
 		add_modifier = {
 			name = modifier_nihilist_movement_enhancement
 			days = long_modifier_time
 		}
-		
+
 		custom_tooltip = {
 			text = nihilism.1.tt
 		}
@@ -248,12 +193,12 @@ nihilism.1 = { #TGW
 		}
 		set_variable = nihilism_je_started
 	}
-	option = { 
+	option = {
 		name = nihilism.1.c
 		trigger = {
 			OR = {
-				has_law = law_type:law_outlawed_dissent
-				has_law = law_type:law_censorship
+				has_law_or_variant = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
 			}
 		}
 		custom_tooltip = {
@@ -289,7 +234,7 @@ nihilism.2 = {
 
 	event_image = {
         texture = "gfx/event_pictures/police.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -302,13 +247,13 @@ nihilism.2 = {
 	}
 
 	immediate = {
-		
+
 	}
 
-	option = { 
+	option = {
 		name = nihilism.2.a
 		default_option = yes
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_end_of_nihilism
 				days = normal_modifier_time
@@ -316,7 +261,7 @@ nihilism.2 = {
 		}
 		if = {
 			limit = {
-				ig:ig_intelligentsia = {
+				ig:ig_intelligentsia ?= {
 					leader = {
 						has_ideology = ideology:ideology_nihilist
 					}
@@ -334,10 +279,10 @@ nihilism.2 = {
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.2.b
 		default_option = yes
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_end_of_nihilism
 				days = normal_modifier_time
@@ -345,7 +290,7 @@ nihilism.2 = {
 		}
 		if = {
 			limit = {
-				ig:ig_intelligentsia = {
+				ig:ig_intelligentsia ?= {
 					leader = {
 						has_ideology = ideology:ideology_nihilist
 					}
@@ -375,7 +320,7 @@ nihilism.3 = {
 
 	event_image = {
         texture = "gfx/event_pictures/agitator_speaking.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -388,16 +333,16 @@ nihilism.3 = {
 	}
 
 	immediate = {
-		
+
 	}
 
-	option = { 
+	option = {
 		name = nihilism.3.a
 		default_option = yes
 		if = {
 			limit = {
 				has_technology_researched = socialism
-			} 
+			}
 			every_scope_character = {
 				limit = {
 					has_role_of_type = agitator
@@ -407,7 +352,7 @@ nihilism.3 = {
 			}
 			if = {
 				limit = {
-					ig:ig_intelligentsia = {
+					ig:ig_intelligentsia ?= {
 						leader = {
 							has_ideology = ideology:ideology_nihilist
 						}
@@ -421,13 +366,13 @@ nihilism.3 = {
 			}
 			if = {
 				limit = {
-					ig:ig_trade_unions = {
+					ig:ig_trade_unions ?= {
 						leader = {
 							has_ideology = ideology:ideology_nihilist
 						}
 					}
 				}
-				ig:ig_trade_unions = {
+				ig:ig_trade_unions ?= {
 					leader = {
 						set_ideology = ideology:ideology_communist
 					}
@@ -437,7 +382,7 @@ nihilism.3 = {
 		else = {
 			if = {
 				limit = {
-					ig:ig_intelligentsia = {
+					ig:ig_intelligentsia ?= {
 						leader = {
 							has_ideology = ideology:ideology_nihilist
 						}
@@ -451,13 +396,13 @@ nihilism.3 = {
 			}
 			if = {
 				limit = {
-					ig:ig_trade_unions = {
+					ig:ig_trade_unions ?= {
 						leader = {
 							has_ideology = ideology:ideology_nihilist
 						}
 					}
 				}
-				ig:ig_trade_unions = {
+				ig:ig_trade_unions ?= {
 					leader = {
 						set_ideology = ideology:ideology_radical
 					}
@@ -481,15 +426,15 @@ nihilism.3 = {
 			is_decaying = yes
 		}
 	}
-	option = { 
+	option = {
 		name = nihilism.3.b
 		if = {
 			limit = {
 				has_technology_researched = socialism
-			} 
+			}
 			if = {
 				limit = {
-					ig:ig_intelligentsia = {
+					ig:ig_intelligentsia ?= {
 						leader = {
 							has_ideology = ideology:ideology_nihilist
 						}
@@ -503,13 +448,13 @@ nihilism.3 = {
 			}
 			if = {
 				limit = {
-					ig:ig_trade_unions = {
+					ig:ig_trade_unions ?= {
 						leader = {
 							has_ideology = ideology:ideology_nihilist
 						}
 					}
 				}
-				ig:ig_trade_unions = {
+				ig:ig_trade_unions ?= {
 					leader = {
 						set_ideology = ideology:ideology_communist
 					}
@@ -526,7 +471,7 @@ nihilism.3 = {
 		else = {
 			if = {
 				limit = {
-					ig:ig_intelligentsia = {
+					ig:ig_intelligentsia ?= {
 						leader = {
 							has_ideology = ideology:ideology_nihilist
 						}
@@ -540,13 +485,13 @@ nihilism.3 = {
 			}
 			if = {
 				limit = {
-					ig:ig_trade_unions = {
+					ig:ig_trade_unions ?= {
 						leader = {
 							has_ideology = ideology:ideology_nihilist
 						}
 					}
 				}
-				ig:ig_trade_unions = {
+				ig:ig_trade_unions ?= {
 					leader = {
 						set_ideology = ideology:ideology_radical
 					}
@@ -574,7 +519,7 @@ nihilism.4 = {  #Fathers and Sons
 
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -585,7 +530,7 @@ nihilism.4 = {  #Fathers and Sons
 	cooldown = { days = long_modifier_time }
 
 	trigger = {
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			ig_approval < 0
 		}
 		any_scope_character = {
@@ -598,7 +543,7 @@ nihilism.4 = {  #Fathers and Sons
 		set_variable = {
 			name = nihilism_level_one
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			save_scope_as = intelligentsia_ig
 		}
 		random_scope_character = {
@@ -610,10 +555,10 @@ nihilism.4 = {  #Fathers and Sons
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.4.a
 		default_option = yes
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_fathers_and_sons
 				days = normal_modifier_time
@@ -625,30 +570,18 @@ nihilism.4 = {  #Fathers and Sons
 		}
 		if = {
 			limit = {
-				ROOT = c:RUS
+				c:RUS ?= ROOT
 			}
 			create_character = {
-				first_name = Ivan
-				last_name = Turgenev
-				historical = yes
-    			culture = cu:russian
-				birth_date = 1818.11.9
-				ig_leader = yes
-				interest_group = ig_intelligentsia
-				female = no
-				ideology = ideology_reformer
-				traits = {
-					persistent
-					romantic		
-				}
+				template = RUS_ivan_turgenev
 			}
 		}
 		else_if = {
 			limit = {
-				ROOT = c:FRA
+				c:FRA ?= ROOT
 				has_variable = orleanist_restoration_var
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				leader = {
 					set_ideology = ideology:ideology_orleanist
 				}
@@ -656,10 +589,10 @@ nihilism.4 = {  #Fathers and Sons
 		}
 		else_if = {
 			limit = {
-				ROOT = c:FRA
+				c:FRA ?= ROOT
 				has_variable = legitimist_restoration_var
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				leader = {
 					set_ideology = ideology:ideology_moderate
 				}
@@ -667,28 +600,28 @@ nihilism.4 = {  #Fathers and Sons
 		}
 		else_if = {
 			limit = {
-				ROOT = c:FRA
+				c:FRA ?= ROOT
 				has_variable = bonapartist_restoration_var
 			}
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				leader = {
 					set_ideology = ideology:ideology_moderate
 				}
 			}
 		}
 		else = {
-			ig:ig_intelligentsia = {
+			ig:ig_intelligentsia ?= {
 				leader = {
-					set_ideology = ideology:ideology_royalist	
+					set_ideology = ideology:ideology_royalist
 				}
 			}
 		}
 		set_variable = { name = royalist_ig_leader_cooldown days = short_modifier_time }
 	}
 
-	option = { 
+	option = {
 		name = nihilism.4.b
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_fathers_and_sons_ignored
 				days = normal_modifier_time
@@ -712,7 +645,7 @@ nihilism.5 = { #University Nihilists
 
 	event_image = {
         texture = "gfx/event_pictures/university.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -720,11 +653,11 @@ nihilism.5 = { #University Nihilists
 
 	duration = 3
 
-	cooldown = { days = normal_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		has_variable = nihilism_level_one
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			ig_approval < 0
 		}
 		any_scope_state = {
@@ -747,10 +680,10 @@ nihilism.5 = { #University Nihilists
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.5.a
 		default_option = yes
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_interference_in_academia
 				days = normal_modifier_time
@@ -768,7 +701,7 @@ nihilism.5 = { #University Nihilists
 			}
 		}
 	}
-	option = { 
+	option = {
 		name = nihilism.5.b
 		random_scope_state = {
 			limit = {
@@ -791,7 +724,7 @@ nihilism.6 = { #Noblewoman feels snubbed by nihilist students
 
 	event_image = {
         texture = "gfx/event_pictures/university.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -799,46 +732,46 @@ nihilism.6 = { #Noblewoman feels snubbed by nihilist students
 
 	duration = 3
 
-	cooldown = { days = normal_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		has_variable = nihilism_level_one
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			ig_approval < 0
 		}
 	}
 
 	immediate = {
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			save_scope_as = landowners_ig
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.6.a
 		default_option = yes
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			add_modifier = {
 				name = modifier_respect_enforced_pos
 				days = normal_modifier_time
 			}
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_respect_enforced_neg
 				days = normal_modifier_time
 			}
 		}
 	}
-	option = { 
+	option = {
 		name = nihilism.6.b
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			add_modifier = {
 				name = modifier_respect_unenforced_neg
 				days = normal_modifier_time
 			}
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_respect_unenforced_pos
 				days = normal_modifier_time
@@ -856,7 +789,7 @@ nihilism.7 = { #Turmoil at universities
 
 	event_image = {
         texture = "gfx/event_pictures/university.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -864,15 +797,15 @@ nihilism.7 = { #Turmoil at universities
 
 	duration = 3
 
-	cooldown = { days = normal_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		has_variable = nihilism_level_one
-		ig:ig_intelligentsia = {
-			ig_approval < 0	
+		ig:ig_intelligentsia ?= {
+			ig_approval < 0
 		}
 		any_interest_group = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			law_stance = {
 				law = law_type:law_state_religion
 				value > neutral
@@ -890,7 +823,7 @@ nihilism.7 = { #Turmoil at universities
 	immediate = {
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = law_type:law_state_religion
 					value > neutral
@@ -922,7 +855,7 @@ nihilism.7 = { #Turmoil at universities
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.7.a
 		default_option = yes
 		scope:courtyard_chaos_affected_state = {
@@ -936,14 +869,14 @@ nihilism.7 = { #Turmoil at universities
 				}
 			}
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_students_getting_arrested
 				days = normal_modifier_time
 			}
 		}
 	}
-	option = { 
+	option = {
 		name = nihilism.7.b
 		scope:nihilist_scope = {
 			add_modifier = {
@@ -975,7 +908,7 @@ nihilism.8 = { #Outrageous act of protest, Devout demand repressions
 
 	event_image = {
         texture = "gfx/event_pictures/protest.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -983,17 +916,17 @@ nihilism.8 = { #Outrageous act of protest, Devout demand repressions
 
 	duration = 3
 
-	cooldown = { days = normal_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	trigger = {
 		has_variable = nihilism_level_one
-		ig:ig_intelligentsia = {
-			ig_approval < 0	
+		ig:ig_intelligentsia ?= {
+			ig_approval < 0
 		}
 	}
 
 	immediate = {
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			save_scope_as = devout_ig
 		}
 		set_variable = {
@@ -1001,10 +934,10 @@ nihilism.8 = { #Outrageous act of protest, Devout demand repressions
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.8.a
 		default_option = yes
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_modifier = {
 				name = modifier_respect_enforced_pos
 				days = normal_modifier_time
@@ -1020,9 +953,9 @@ nihilism.8 = { #Outrageous act of protest, Devout demand repressions
 			}
 		}
 	}
-	option = { 
+	option = {
 		name = nihilism.8.b
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_modifier = {
 				name = modifier_respect_unenforced_neg
 				days = normal_modifier_time
@@ -1046,7 +979,7 @@ nihilism.9 = { #Nihilists commit arson on government buildings
 
 	event_image = {
         texture = "gfx/event_pictures/protest.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1058,8 +991,8 @@ nihilism.9 = { #Nihilists commit arson on government buildings
 
 	trigger = {
 		has_variable = nihilism_level_two
-		ig:ig_intelligentsia = {
-			ig_approval < 0	
+		ig:ig_intelligentsia ?= {
+			ig_approval < 0
 		}
 		any_scope_state = {
 			AND = {
@@ -1085,7 +1018,7 @@ nihilism.9 = { #Nihilists commit arson on government buildings
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.9.a
 		default_option = yes
 		scope:kissed_by_fire_state = {
@@ -1097,11 +1030,11 @@ nihilism.9 = { #Nihilists commit arson on government buildings
 					name = modifier_fire_damaged
 					days = short_modifier_time
 				}
-			}	
+			}
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = law_type:law_state_religion
 					value > neutral
@@ -1117,7 +1050,7 @@ nihilism.9 = { #Nihilists commit arson on government buildings
 			days = short_modifier_time
 		}
 	}
-	option = { 
+	option = {
 		name = nihilism.9.b
 		scope:kissed_by_fire_state = {
 			add_radicals_in_state = {
@@ -1145,7 +1078,7 @@ nihilism.9 = { #Nihilists commit arson on government buildings
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				law_stance = {
 					law = law_type:law_state_religion
 					value > neutral
@@ -1156,7 +1089,7 @@ nihilism.9 = { #Nihilists commit arson on government buildings
 				days = normal_modifier_time
 			}
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_abuses_of_students
 				days = normal_modifier_time
@@ -1186,8 +1119,8 @@ nihilism.10 = { #Intellectual leader becomes a nihilist
 
 	trigger = {
 		has_variable = nihilism_level_two
-		ig:ig_intelligentsia = {
-			ig_approval < 0	
+		ig:ig_intelligentsia ?= {
+			ig_approval < 0
 			leader = {
 				NOT = {
 					has_ideology = ideology:ideology_nihilist
@@ -1200,34 +1133,22 @@ nihilism.10 = { #Intellectual leader becomes a nihilist
 	}
 
 	immediate = {
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			save_scope_as = intelligentsia_ig
 		}
 		if = {
 			limit = {
-				THIS = c:RUS
+				c:RUS ?= THIS
 				AND = {
 					game_date >= 1858.1.1
 					game_date <= 1875.1.1
 				}
 			}
 			create_character = {
-				first_name = Dmitry
-				last_name = Pisarev
-				historical = yes
-    			culture = cu:russian
-				ig_leader = yes
-				birth_date = 1840.10.2
-				interest_group = ig_intelligentsia
-				female = no
-				ideology = ideology_nihilist
-				traits = {
-					direct
-					psychological_affliction		
-				}
+				template = RUS_dimitry_pisarev
 			}
 		}
-		else_if = { 
+		else_if = {
 			limit = {
 				OR = {
 					country_has_primary_culture = cu:north_german
@@ -1239,43 +1160,19 @@ nihilism.10 = { #Intellectual leader becomes a nihilist
 				}
 			}
 			create_character = {
-				first_name = Bruno
-				last_name = Bauer
-				historical = yes
-    			culture = cu:north_german
-				ig_leader = yes
-				birth_date = 1809.6.9
-				interest_group = ig_intelligentsia
-				female = no
-				ideology = ideology_nihilist
-				traits = {
-					direct
-					persistent		
-				}
+				template = PRU_bruno_bauer
 			}
 		}
-		else_if = { 
+		else_if = {
 			limit = {
-				THIS = c:GBR
+				c:GBR ?= THIS
 				AND = {
 					game_date >= 1853.1.1
 					game_date <= 1891.1.1
 				}
 			}
 			create_character = {
-				first_name = Charles
-				last_name = Bradlaugh
-				historical = yes
-    			culture = cu:british
-				ig_leader = yes
-				birth_date = 1833.9.26
-				interest_group = ig_intelligentsia
-				female = no
-				ideology = ideology_nihilist
-				traits = {
-					persistent
-					ambitious		
-				}
+				template = GBR_charles_bradlaugh
 			}
 		}
 		else = {
@@ -1285,15 +1182,18 @@ nihilism.10 = { #Intellectual leader becomes a nihilist
 				ideology = ideology_nihilist
 			}
 		}
-		ig:ig_intelligentsia = { 
+		ig:ig_intelligentsia ?= {
 			leader = {
 				save_scope_as = nihilist_leader
-				set_variable = { name = memento_mori_immunity years = 20 }
+				set_career_length = {
+					years = 20
+					random_range = { 1.0 1.5 } # 20-30 years
+				}
 			}
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.10.a
 		default_option = yes
 		show_as_tooltip = {
@@ -1314,7 +1214,7 @@ nihilism.10 = { #Intellectual leader becomes a nihilist
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.10.b
 		show_as_tooltip = {
 			create_character = {
@@ -1323,7 +1223,7 @@ nihilism.10 = { #Intellectual leader becomes a nihilist
 				ideology = ideology_nihilist
 			}
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_nihilists_triumphant
 				days = normal_modifier_time
@@ -1341,7 +1241,7 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1353,8 +1253,8 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 
 	trigger = {
 		has_variable = nihilism_level_two
-		ig:ig_intelligentsia = {
-			ig_approval < 0	
+		ig:ig_intelligentsia ?= {
+			ig_approval < 0
 			leader = {
 				has_ideology = ideology:ideology_nihilist
 			}
@@ -1405,10 +1305,10 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 				has_ideology = ideology:ideology_nihilist
 			}
 			save_scope_as = nihilist_scope
-		}	
+		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.11.a
 		default_option = yes
 		scope:nihilist_scope = {
@@ -1424,7 +1324,7 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 			}
 		}
 	}
-	option = { 
+	option = {
 		name = nihilism.11.b
 		scope:communist_scope = {
 			add_modifier = {
@@ -1437,9 +1337,9 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 				name = modifier_defeated_in_forum
 				days = normal_modifier_time
 			}
-		}	
+		}
 	}
-	option = { 
+	option = {
 		name = nihilism.11.c
 		capital = {
 			add_radicals_in_state = {
@@ -1451,7 +1351,7 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 	}
 }
 
-nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separation 
+nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separation
 	type = country_event
 
 	title = nihilism.12.t
@@ -1460,7 +1360,7 @@ nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separ
 
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1472,7 +1372,7 @@ nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separ
 
 	trigger = {
 		has_variable = nihilist_communist_front
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			ig_approval < 0
 			leader = {
 				has_ideology = ideology:ideology_nihilist
@@ -1491,15 +1391,15 @@ nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separ
 			}
 			save_scope_as = communist_ig
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			save_scope_as = intelligentsia_ig
 		}
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			save_scope_as = devout_ig
 		}
 	}
 
-	option = { 
+	option = {
 		name = nihilism.12.a
 		trigger = {
 			scope:communist_ig = {
@@ -1522,7 +1422,7 @@ nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separ
 				days = normal_modifier_time
 			}
 		}
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_modifier = {
 				name = modifier_academic_worker_unity
 				days = normal_modifier_time
@@ -1541,7 +1441,7 @@ nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separ
 			}
 		}
 	}
-	option = { 
+	option = {
 		name = nihilism.12.b
 		default_option = yes
 		scope:communist_ig = {
@@ -1583,7 +1483,7 @@ nihilism.13 = { #Instant law pass for abolishing state religion/instituting athe
 
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
-    }
+	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1594,7 +1494,7 @@ nihilism.13 = { #Instant law pass for abolishing state religion/instituting athe
 	trigger = {
 		has_journal_entry = je_nihilist_movement
 		OR = {
-			has_law = law_type:law_state_religion
+			has_law_or_variant = law_type:law_state_religion
 		}
 		OR = {
 			is_enacting_law = law_type:law_state_atheism
@@ -1612,7 +1512,7 @@ nihilism.13 = { #Instant law pass for abolishing state religion/instituting athe
 	}
 
 	immediate = {
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			save_scope_as = devout_ig
 		}
 		currently_enacting_law = {
@@ -1655,7 +1555,7 @@ nihilism.13 = { #Instant law pass for abolishing state religion/instituting athe
 			limit = {
 				is_enacting_law = law_type:law_state_atheism
 			}
-			activate_law = law_type:state_atheism
+			activate_law = law_type:law_state_atheism
 		}
 		if = {
 			limit = {
@@ -1678,7 +1578,7 @@ nihilism.13 = { #Instant law pass for abolishing state religion/instituting athe
 			}
 		}
 
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_modifier = {
 				name = modifier_deicide
 				days = long_modifier_time

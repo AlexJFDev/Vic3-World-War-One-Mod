@@ -3,36 +3,36 @@
  dreadnought_hoax.1 = { #TGW
  	type = country_event
  	placement = ROOT
-	
+
  	title = dreadnought_hoax.1.t
  	desc = dreadnought_hoax.1.d
  	flavor = dreadnought_hoax.1.f
-	
+
  	event_image = {
         texture = "gfx/event_pictures/battleship.dds"
-    }
+ 	}
 
  	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
  	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-	
+
  	duration = 3
-	
- 	trigger = {
- 		is_player = yes
- 		has_technology_researched = battleship_tech
- 		NOT = { has_variable = battleship_hoax_var }
- 		any_scope_building = {
- 			is_building_type = building_naval_base
-            level >= 15
-            state = {
-                is_incorporated = yes
-            }
- 		}
-        country_navy_unit_type_fraction = {  
-            target = unit_type:combat_unit_type_battleship
-            value >= 0.1  
-        }
+
+	trigger = {
+		is_player = yes
+		has_technology_researched = battleship_tech
+		NOT = { has_variable = battleship_hoax_var }
+		any_scope_building = {
+			is_building_type = building_naval_administration
+			level >= 3
+			state = {
+				is_incorporated = yes
+			}
+		}
+		country_ship_type_fraction = {
+			target = ship_type:ship_type_pre_dreadnought
+			value >= 0.1
+		}
  		any_scope_pop = {
  			is_pop_type = academics
  		}
@@ -41,15 +41,15 @@
  			has_law = law_type:law_monarchy
  			NOT = {
  				any_primary_culture = {
- 					shares_heritage_trait_with_any_primary_culture = ROOT
+ 					shares_heritage_trait_group_with_any_primary_culture = ROOT
  				}
  			}
  		}
- 		ig:ig_armed_forces = {
- 			is_marginal = no
+ 		ig:ig_armed_forces ?= {
+ 			ig_counts_as_marginal = no
  		}
- 		ig:ig_intelligentsia = {
- 			is_marginal = no
+ 		ig:ig_intelligentsia ?= {
+ 			ig_counts_as_marginal = no
  		}
  	}
 
@@ -57,8 +57,8 @@
  		set_variable = battleship_hoax_var
  		random_scope_building = {
  			limit = {
- 				is_building_type = building_naval_base
-                level >= 15
+ 				is_building_type = building_naval_administration
+                level >= 3
                 state = {
                     is_incorporated = yes
                 }
@@ -74,7 +74,7 @@
  				has_law = law_type:law_monarchy
  				NOT = {
  					any_primary_culture = {
- 						shares_heritage_trait_with_any_primary_culture = ROOT
+ 						shares_heritage_trait_group_with_any_primary_culture = ROOT
  					}
  				}
  			}
@@ -86,7 +86,7 @@
  				has_law = law_type:law_monarchy
  				NOT = {
  					any_primary_culture = {
- 						shares_heritage_trait_with_any_primary_culture = ROOT
+ 						shares_heritage_trait_group_with_any_primary_culture = ROOT
  					}
  				}
  				NOT = { THIS = scope:hoax_country }
@@ -99,7 +99,7 @@
  			}
  			save_scope_as = hoax_pop
  		}
- 		ig:ig_armed_forces = {
+ 		ig:ig_armed_forces ?= {
  			save_scope_as = navy_ig
  		}
  	}
@@ -107,13 +107,13 @@
  	option = {
  		name = dreadnought_hoax.1.a
  		default_option = yes
- 		ig:ig_armed_forces = {
+ 		ig:ig_armed_forces ?= {
  			add_modifier = {
  				name = battleship_hoax
  				days = normal_modifier_time
  			}
  		}
- 		ig:ig_intelligentsia = {
+ 		ig:ig_intelligentsia ?= {
  			add_modifier = {
  				name = battleship_hoax
  				days = normal_modifier_time
@@ -124,13 +124,13 @@
 
  	option = {
  		name = dreadnought_hoax.1.b
- 		ig:ig_intelligentsia = {
+ 		ig:ig_intelligentsia ?= {
  			add_modifier = {
  				name = battleship_hoax
  				days = normal_modifier_time
  			}
  		}
- 		ig:ig_armed_forces = {
+ 		ig:ig_armed_forces ?= {
  			add_modifier = {
  				name = battleship_hoax
  				days = normal_modifier_time
@@ -138,4 +138,4 @@
  			}
  		}
  	}
-}
+ }

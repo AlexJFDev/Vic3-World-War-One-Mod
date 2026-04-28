@@ -65,6 +65,16 @@ lawgroup_army_model = {
 	ideological_opinion_impact = 0.25
 }
 
+lawgroup_navy_model = {
+	law_group_category = power_structure
+	ideological_opinion_impact = 0.25
+	enable = {
+		any_scope_state = {
+			is_coastal = yes
+		}
+	}
+}
+
 lawgroup_military_governance = {
 	law_group_category = power_structure
 	ideological_opinion_impact = 0.25

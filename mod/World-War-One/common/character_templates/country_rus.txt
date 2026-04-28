@@ -2,8 +2,6 @@
 
 ### Tsars
 
-#TGW
-
 RUS_nicholas_i = { #Nicholas I
 	first_name = Nikolai
 	last_name = Romanov
@@ -13,9 +11,10 @@ RUS_nicholas_i = { #Nicholas I
 	ideology = ideology_traditionalist
 	ruler = yes
 	birth_date = 1796.7.6
+	home_region = STATE_INGRIA
 	dna = dna_tsar_nicolas_01
 	traits = {
-		arrogant 
+		arrogant
 		pious
 		imposing
 	}
@@ -34,15 +33,16 @@ RUS_alexander_ii = { #Alexander II, son of Nicholas I
 	culture = primary_culture
 	heir = yes
 	birth_date = 1818.4.29
+	home_region = STATE_INGRIA
 	dna = dna_tsar_alexander_02
 	interest_group = ig_landowners
 	ideology = ideology_market_liberal
 	traits = {
-		meticulous 
+		meticulous
 		romantic
 	}
 	trait_generation = {
-		
+
 	}
 }
 
@@ -53,15 +53,16 @@ RUS_tsarevich_nicholas_alexandrovich = { #Tsarevich Nicholas Alexandrovich, elde
 	culture = primary_culture
 	heir = yes
 	birth_date = 1843.9.8
+	home_region = STATE_INGRIA
 	dna = dna_tsarevich_nicholas
 	interest_group = ig_intelligentsia
 	ideology = ideology_reformer
 	traits = {
-		erudite 
+		erudite
 		romantic
 	}
 	trait_generation = {
-		
+
 	}
 }
 
@@ -72,6 +73,7 @@ RUS_alexander_iii = { #Alexander III, second son of Alexander II
 	culture = primary_culture
 	heir = yes
 	birth_date = 1845.3.10
+	home_region = STATE_INGRIA
 	dna = dna_tsar_alexander_03
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
@@ -81,7 +83,27 @@ RUS_alexander_iii = { #Alexander III, second son of Alexander II
 		bigoted
 	}
 	trait_generation = {
-		
+
+	}
+}
+
+RUS_nicholas_ii = { #Nicholas II, son of Alexander III
+	first_name = Nikolai
+	last_name = Romanov
+	historical = yes
+	culture = primary_culture
+	heir = yes
+	birth_date = 1868.5.18
+	home_region = STATE_INGRIA
+	dna = dna_tsar_nicolas_02
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	traits = {
+		imperious
+		pious
+	}
+	trait_generation = {
+
 	}
 }
 
@@ -92,15 +114,16 @@ RUS_george_i = { #Georgy Romanov
 	culture = primary_culture
 	heir = yes
 	birth_date = 1871.5.9
+	home_region = STATE_INGRIA
 	interest_group = ig_armed_forces
 	ideology = ideology_moderate
 	traits = {
-		erudite 
-		basic_naval_commander 
+		erudite
+		basic_naval_commander
 		sickly
 	}
 	trait_generation = {
-		
+
 	}
 }
 
@@ -111,18 +134,39 @@ RUS_michael_ii = { #Mikhail Romanov
 	culture = primary_culture
 	heir = yes
 	birth_date = 1878.5.9
+	home_region = STATE_INGRIA
 	interest_group = ig_landowners
 	ideology = ideology_moderate
 	traits = {
-		basic_artillery_commander 
-		tactful 
+		basic_artillery_commander
+		tactful
 	}
 	trait_generation = {
-		
+
 	}
 }
 
-### IG Leaders 
+RUS_alexei_ii = { #Alexei Romanov, son of Nicholas II
+	first_name = Alexei
+	last_name = Romanov
+	historical = yes
+	culture = primary_culture
+	heir = yes
+	birth_date = 1904.8.12
+	home_region = STATE_INGRIA
+	interest_group = ig_landowners
+	ideology = ideology_jingoist_leader
+	traits = {
+		sickly
+		romantic
+		arrogant
+	}
+	trait_generation = {
+
+	}
+}
+
+### IG Leaders
 
 # Starting IG Leaders
 
@@ -133,6 +177,7 @@ RUS_alexander_von_benckendorff = {
 	historical = yes
 	culture = primary_culture
 	birth_date = 1781.7.4
+	home_region = STATE_INGRIA
 	ig_leader = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_moderate
@@ -148,6 +193,7 @@ RUS_mikhail_speransky = {
 	historical = yes
 	culture = primary_culture
 	birth_date = 1772.1.12
+	home_region = STATE_INGRIA
 	ig_leader = yes
 	interest_group = ig_intelligentsia
 	ideology = ideology_reformer
@@ -164,6 +210,7 @@ RUS_sergei_uvarov = {
 	historical = yes
 	culture = primary_culture
 	birth_date = 1786.9.5
+	home_region = STATE_MOSCOW
 	ig_leader = yes
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
@@ -179,6 +226,7 @@ RUS_filaret_drozdov = {
 	historical = yes
 	culture = primary_culture
 	birth_date = 1783.1.6 # Gregorian calendar. Philaret was born on December 26, 1782 in the /Julian/ Calendar. Please don't write complaints about how his birthday should be in December. Please.
+	home_region = STATE_MOSCOW
 	ig_leader = yes
 	interest_group = ig_devout
 	ideology = ideology_traditionalist
@@ -194,6 +242,7 @@ RUS_aleksandr_herzen = {
 	historical = yes
 	culture = primary_culture
 	birth_date = 1812.4.6
+	home_region = STATE_MOSCOW
 	ig_leader = yes
 	interest_group = ig_trade_unions
 	ideology = ideology_republican_leader
@@ -208,6 +257,7 @@ RUS_yevhen_hrebinka = {
 	historical = yes
 	culture=cu:ukrainian
 	birth_date = 1812.2.2 # Gregorian Calendar
+	home_region = STATE_KHARKOV
 	ig_leader = yes
 	interest_group = ig_rural_folk
 	ideology = ideology_moderate
@@ -223,6 +273,7 @@ RUS_alexei_bobrinsky = {
 	historical = yes
 	culture = primary_culture
 	birth_date = 1800.1.17 # Gregorian Calendar
+	home_region = STATE_INGRIA
 	ig_leader = yes
 	interest_group = ig_industrialists
 	ideology = ideology_moderate
@@ -239,60 +290,62 @@ rus_witte_character_template = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_reformer
     interest_group = ig_industrialists
     birth_date = 1849.6.29
+    home_region = STATE_INGRIA
     traits = {
         experienced_political_operator
         meticulous
         innovative
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
         }
         interest_group_trigger = {
-            is_marginal = no
-            is_interest_group_type = ig_industrialists    
-        }   
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_industrialists
+        }
         earliest_usage_date = 1879.1.1
         latest_usage_date = 1915.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_elena_pavlovna_romanova = {
     first_name = Elena
     last_name = Romanova
     historical = yes
-    culture = cu:south_german
+    culture = cu:east_german
     female = yes
     dna = dna_elena_romanova
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_reformer
     interest_group = ig_intelligentsia
     birth_date = 1807.1.9
+    home_region = STATE_INGRIA
     traits = {
         erudite
         ambitious
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
-            has_law = law_type:law_monarchy
+            c:RUS ?= THIS
+            country_has_monarchy_law = yes
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
-        }   
+        }
         earliest_usage_date = 1845.1.1
         latest_usage_date = 1865.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_konstantin_nikolayevich_romanov = {
@@ -301,31 +354,32 @@ RUS_konstantin_nikolayevich_romanov = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     dna = dna_konstantin_romanov
     ideology = ideology_market_liberal
     interest_group = ig_landowners
     birth_date = 1827.9.21
+    home_region = STATE_INGRIA
     traits = {
         wrathful
         direct
         experienced_political_operator
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
-            has_law = law_type:law_monarchy
+            c:RUS ?= THIS
+            country_has_monarchy_law = yes
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
-            is_interest_group_type = ig_landowners 
-        }   
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_landowners
+        }
         earliest_usage_date = 1853.1.1
         latest_usage_date = 1870.1.1
-        chance = 100
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_nikolai_alekseevich_milyutin = {
@@ -334,59 +388,61 @@ RUS_nikolai_alekseevich_milyutin = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_land_reformer
     interest_group = ig_intelligentsia
     birth_date = 1818.6.6
+    home_region = STATE_INGRIA
     traits = {
         persistent
         ambitious
         basic_political_operator
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
-        }   
+        }
         earliest_usage_date = 1855.1.1
         latest_usage_date = 1870.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_egor_frantsevich_kankrin = {
     first_name = Egor
     last_name = Kankrin
     historical = yes
-    culture = cu:south_german
+    culture = cu:east_german
     female = no
-    religion = protestant
+    religion = rel:protestant
     ideology = ideology_protectionist
     interest_group = ig_landowners
     birth_date = 1774.11.27
+    home_region = STATE_INGRIA
     traits = {
         master_bureaucrat
         romantic
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
-            is_interest_group_type = ig_landowners    
-        }   
-        earliest_usage_date = 1836.1.1
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1839.1.1
         latest_usage_date = 1845.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_alexander_ageevich_abaza = {
@@ -395,31 +451,32 @@ RUS_alexander_ageevich_abaza = {
     historical = yes
     culture = cu:romanian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_protectionist
     interest_group = ig_industrialists
     birth_date = 1821.8.5
+    home_region = STATE_INGRIA
     traits = {
         expensive_tastes
         innovative
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
             NOT = {
-                has_law = law_type:law_ethnostate
+                has_law_or_variant = law_type:law_ethnostate
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_industrialists
-        }   
+        }
         earliest_usage_date = 1857.1.1
         latest_usage_date = 1893.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_ivan_evseevich_popov-veniaminov = {
@@ -428,29 +485,30 @@ RUS_ivan_evseevich_popov-veniaminov = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_reformer
     interest_group = ig_devout
     birth_date = 1797.8.28
+    home_region = STATE_MOSCOW
     traits = {
         explorer
         basic_diplomat
         pious
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1865.1.1
         latest_usage_date = 1880.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_nikolai_stepanovich_klementyevsky = {
@@ -459,88 +517,91 @@ RUS_nikolai_stepanovich_klementyevsky = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_moderate
     interest_group = ig_devout
     birth_date = 1787.11.26
+    home_region = STATE_INGRIA
     traits = {
         meticulous
         reserved
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1844.1.1
         latest_usage_date = 1856.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_yakov_sergeevich_nikolsky = {
-    first_name = Yakov 
+    first_name = Yakov
     last_name = Nikolsky
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_traditionalist
     interest_group = ig_devout
     birth_date = 1799.10.12
+    home_region = STATE_MOSCOW
     traits = {
         meticulous
         pious
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1856.1.1
         latest_usage_date = 1892.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_pavel_ivanovich_raev = {
-    first_name = Pavel 
+    first_name = Pavel
     last_name = Raev
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_moderate
     interest_group = ig_devout
     birth_date = 1827.6.2
+    home_region = STATE_INGRIA
     traits = {
         erudite
         pious
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1880.1.1
         latest_usage_date = 1900.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_alexander_vasilyevich_vadkovsky = {
@@ -549,28 +610,29 @@ RUS_alexander_vasilyevich_vadkovsky = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_reformer
     interest_group = ig_devout
     birth_date = 1846.8.15
+    home_region = STATE_INGRIA
     traits = {
         romantic
         pious
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1898.1.1
         latest_usage_date = 1912.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_vasily_nikiforovich_bogoyavlensky = {
@@ -579,28 +641,29 @@ RUS_vasily_nikiforovich_bogoyavlensky = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_moderate
     interest_group = ig_devout
     birth_date = 1848.1.13
+    home_region = STATE_MOSCOW
     traits = {
         pious
         imperious
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1905.1.1
         latest_usage_date = 1920.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_vasily_ivanovich_bellavin = {
@@ -609,28 +672,29 @@ RUS_vasily_ivanovich_bellavin = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_reformer
     interest_group = ig_devout
     birth_date = 1865.1.1
+    home_region = STATE_MOSCOW
     traits = {
         charismatic
         basic_political_operator
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1915.1.1
         latest_usage_date = 1925.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_alexey_pavlovich_khrapovitsky = {
@@ -639,29 +703,30 @@ RUS_alexey_pavlovich_khrapovitsky = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_traditionalist
     interest_group = ig_devout
     birth_date = 1863.3.29
+    home_region = STATE_KIEV
     traits = {
         experienced_political_operator
         bigoted
         pious
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1920.1.1
         latest_usage_date = 1936.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_peter_fedorovich_polyansky = {
@@ -670,58 +735,60 @@ RUS_peter_fedorovich_polyansky = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_moderate
     interest_group = ig_devout
     birth_date = 1862.7.10
+    home_region = STATE_MOSCOW
     traits = {
         pious
         brave
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
-        }   
+        }
         earliest_usage_date = 1923.1.1
         latest_usage_date = 1936.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_nikolai_christianovich_bunge = {
     first_name = Nikolai
-    last_name = Bunge 
+    last_name = Bunge
     historical = yes
-    culture = cu:south_german
+    culture = cu:east_german
     female = no
-    religion = protestant
+    religion = rel:protestant
     ideology = ideology_reformer
     interest_group = ig_industrialists
     birth_date = 1823.11.23
+    home_region = STATE_INGRIA
     traits = {
         experienced_political_operator
         meticulous
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_industrialists
-        }   
+        }
         earliest_usage_date = 1870.1.1
         latest_usage_date = 1890.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_konstantin_petrovich_pobedonostsev = {
@@ -730,29 +797,30 @@ RUS_konstantin_petrovich_pobedonostsev = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_authoritarian
     interest_group = ig_landowners
     birth_date = 1827.11.30
+    home_region = STATE_MOSCOW
     traits = {
         bigoted
         pious
         direct
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_landowners
-        }   
+        }
         earliest_usage_date = 1880.1.1
         latest_usage_date = 1905.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_pavel_nikolaevich_ignatiev = {
@@ -761,28 +829,29 @@ RUS_pavel_nikolaevich_ignatiev = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_moderate
     interest_group = ig_intelligentsia
     birth_date = 1870.7.12
+    home_region = STATE_KIEV
     traits = {
         erudite
         basic_political_operator
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
-        }   
+        }
         earliest_usage_date = 1900.1.1
         latest_usage_date = 1920.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_nikolai_dmitrievich_golitsyn = {
@@ -791,28 +860,29 @@ RUS_nikolai_dmitrievich_golitsyn = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_liberal_leader
     interest_group = ig_landowners
     birth_date = 1850.4.12
+    home_region = STATE_INGRIA
     traits = {
         meticulous
         experienced_political_operator
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_landowners
-        }   
+        }
         earliest_usage_date = 1910.1.1
         latest_usage_date = 1925.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_pyotr_arkadyevich_stolypin = {
@@ -821,30 +891,31 @@ RUS_pyotr_arkadyevich_stolypin = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     dna = dna_stolypin
     ideology = ideology_market_liberal
     interest_group = ig_landowners
     birth_date = 1862.4.14
+    home_region = STATE_INGRIA
     traits = {
         master_bureaucrat
         expert_political_operator
         romantic
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_landowners
-        }   
+        }
         earliest_usage_date = 1900.1.1
         latest_usage_date = 1926.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_viktor_mikhailovich_chernov = {
@@ -853,29 +924,30 @@ RUS_viktor_mikhailovich_chernov = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_radical
     interest_group = ig_rural_folk
     dna = dna_chernov
     birth_date = 1873.12.7
+    home_region = STATE_TARTARIA
     traits = {
         charismatic
         persistent
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_rural_folk
-        }   
+        }
         earliest_usage_date = 1900.1.1
         latest_usage_date = 1936.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_nikolai_konstantinovich_rerikh = {
@@ -888,28 +960,29 @@ RUS_nikolai_konstantinovich_rerikh = {
     ideology = ideology_moderate
     interest_group = ig_intelligentsia
     birth_date = 1874.10.9
+    home_region = STATE_INGRIA
     traits = {
         explorer
         basic_diplomat
         erudite
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
             NOR = {
-                has_law = law_type:law_state_religion
-                has_law = law_type:law_state_atheism
+                has_law_or_variant = law_type:law_state_religion
+                has_law_or_variant = law_type:law_state_atheism
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
-        }   
+        }
         earliest_usage_date = 1906.1.1
         latest_usage_date = 1936.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
     on_created = {
         change_character_religion = rel:gelugpa # Only way to keep him from converting to the state religion
@@ -922,31 +995,32 @@ RUS_alexander_fyodorovich_kerensky = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_social_democrat
     dna = dna_kerensky
     interest_group = ig_petty_bourgeoisie
     birth_date = 1881.5.4
+    home_region = STATE_TARTARIA
     traits = {
         arrogant
         inspirational_orator
         experienced_political_operator
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
             has_technology_researched = dialectics
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
-        }   
+        }
         earliest_usage_date = 1912.1.1
         latest_usage_date = 1936.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_pavel_nikolaevich_milyukov = {
@@ -955,28 +1029,29 @@ RUS_pavel_nikolaevich_milyukov = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_reformer
     interest_group = ig_intelligentsia
     birth_date = 1859.1.15
+    home_region = STATE_MOSCOW
     traits = {
         experienced_diplomat
         persistent
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
-        }   
+        }
         earliest_usage_date = 1900.1.1
         latest_usage_date = 1930.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_alexander_ivanovich_guchkov = {
@@ -985,28 +1060,29 @@ RUS_alexander_ivanovich_guchkov = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_liberal_leader
     interest_group = ig_petty_bourgeoisie
     birth_date = 1862.10.26
+    home_region = STATE_MOSCOW
     traits = {
         reckless
         experienced_political_operator
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
-        }   
+        }
         earliest_usage_date = 1905.1.1
         latest_usage_date = 1920.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_alexander_ivanovich_konovalov = {
@@ -1015,29 +1091,30 @@ RUS_alexander_ivanovich_konovalov = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_corporatist_leader
     interest_group = ig_industrialists
     birth_date = 1875.9.29
+    home_region = STATE_MOSCOW
     traits = {
         basic_political_operator
         innovative
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
             has_technology_researched = corporatism
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_industrialists
-        }   
+        }
         earliest_usage_date = 1905.1.1
         latest_usage_date = 1930.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_ivan_zakharovich_surikov = {
@@ -1046,27 +1123,28 @@ RUS_ivan_zakharovich_surikov = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     ideology = ideology_moderate
     interest_group = ig_rural_folk
     birth_date = 1841.4.6
+    home_region = STATE_MOSCOW
     traits = {
         literary
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_rural_folk
-        }   
+        }
         earliest_usage_date = 1865.1.1
         latest_usage_date = 1890.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_georgi_valentinovich_plekhanov = {
@@ -1076,30 +1154,65 @@ RUS_georgi_valentinovich_plekhanov = {
     dna = dna_plekhanov
     culture = cu:tatar
     female = no
-    religion = atheist
+    religion = rel:atheist
     ideology = ideology_social_democrat
     interest_group = ig_trade_unions
     birth_date = 1856.12.11
+    home_region = STATE_MOSCOW
     traits = {
         firebrand
         cautious
         literary
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
             has_technology_researched = dialectics
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_trade_unions
-        }   
+        }
         earliest_usage_date = 1877.1.1
         latest_usage_date = 1918.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
+}
+
+RUS_ivan_turgenev = {
+    first_name = Ivan
+    last_name = Turgenev
+    historical = yes
+    culture = cu:russian
+    birth_date = 1818.11.9
+    home_region = STATE_MOSCOW
+    ig_leader = yes
+    interest_group = ig_intelligentsia
+    female = no
+    ideology = ideology_reformer
+    traits = {
+        persistent
+        romantic
+    }
+}
+
+RUS_dimitry_pisarev = {
+    first_name = Dmitry
+    last_name = Pisarev
+    historical = yes
+    culture = cu:russian
+    ig_leader = yes
+    birth_date = 1840.10.2
+    home_region = STATE_MOSCOW
+    interest_group = ig_intelligentsia
+    female = no
+    ideology = ideology_nihilist
+    traits = {
+        direct
+        psychological_affliction
+    }
 }
 
 ### Generals
@@ -1113,6 +1226,7 @@ RUS_mikhail_vorontsov = { # General
 	historical = yes
 	culture = primary_culture
 	birth_date = 1782.5.30 # Gregorian Calendar
+	home_region = STATE_GREATER_CAUCASUS
 	interest_group = ig_landowners
 	ideology = ideology_reformer
 	hq = region_russia
@@ -1131,11 +1245,12 @@ RUS_aleksandr_chernyshyov = { # General
 	historical = yes
 	culture = primary_culture
 	birth_date = 1786.1.10 # Gregorian Calendar
+	home_region = STATE_MOSCOW
 	interest_group = ig_armed_forces
 	ideology = ideology_luddite
 	hq = region_eastern_europe
 	traits = {
-		brave 
+		brave
 		romantic
 	}
 }
@@ -1147,6 +1262,7 @@ RUS_ivan_paskevich = {
 	historical = yes
 	culture = primary_culture
 	age = 54
+	home_region = STATE_GREATER_CAUCASUS
 	interest_group = ig_landowners
 	ideology = ideology_royalist
 	hq = region_eastern_europe
@@ -1163,9 +1279,10 @@ RUS_matvey_khrapovitsky = {
 	historical = yes
 	culture = primary_culture
 	age = 52
+	home_region = STATE_MOSCOW
 	interest_group = ig_landowners
 	ideology = ideology_moderate
-	hq = region_greater_persia
+	hq = region_russia
 	traits = {
 		innovative
 		mountain_commander
@@ -1179,6 +1296,7 @@ RUS_nikolay_muravyov_karsky = {
 	historical = yes
 	culture = primary_culture
 	age = 49
+	home_region = STATE_GREATER_CAUCASUS
 	interest_group = ig_armed_forces
 	ideology = ideology_moderate
 	hq = region_central_asia
@@ -1194,6 +1312,7 @@ RUS_pavel_grabbe = {
 	historical = yes
 	culture = primary_culture
 	age = 47
+	home_region = STATE_CHERNIHIV
 	hq = region_siberia
 	commander_rank = commander_rank_2
 	interest_group = ig_landowners
@@ -1212,6 +1331,7 @@ RUS_friedrich_von_berg = {
 	culture = primary_culture
 	hq = region_russia
 	age = 42
+	home_region = STATE_INGRIA
 	interest_group = ig_intelligentsia
 	ideology = ideology_moderate
 	traits = {
@@ -1232,18 +1352,19 @@ rus_general_chicherin = {
 	commander_rank = default
 	interest_group = ig_armed_forces
 	birth_date = 1778.2.21
+	home_region = STATE_INGRIA
 	traits = {
 		plains_commander
 	}
 	commander_usage = {
 		country_trigger = {
 			exists = c:RUS
-			this = c:RUS
+			c:RUS ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1836.1.1
-		latest_usage_date = 1848.1.1	
-		chance = 50
+		latest_usage_date = 1848.1.1
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1251,12 +1372,13 @@ rus_general_von_tottleben = {
 	first_name = Franz_Eduard
 	last_name = von_Tottleben
 	historical = yes
-	culture = cu:north_german
+	culture = cu:east_german
 	female = no
 	ideology = ideology_moderate
 	commander_rank = default
 	interest_group = ig_landowners
 	birth_date = 1818.5.20
+	home_region = STATE_RIGA
 	traits = {
 		expert_defensive_strategist
 		innovative
@@ -1265,13 +1387,13 @@ rus_general_von_tottleben = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:RUS
-			this = c:RUS
-			c:RUS = { owns_entire_state_region = STATE_RIGA } 
+			c:RUS ?= THIS
+			c:RUS ?= { owns_entire_state_region = STATE_RIGA }
 		}
 		role = general
 		earliest_usage_date = 1850.1.1
-		latest_usage_date = 1884.1.1	
-		chance = 50
+		latest_usage_date = 1884.1.1
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1279,13 +1401,14 @@ rus_general_von_rennenkampf = {
 	first_name = Paul
 	last_name = von_Rennenkampf
 	historical = yes
-	culture = cu:north_german
+	culture = cu:east_german
 	female = no
 	ideology = ideology_royalist
 	commander_rank = default
     dna = dna_paul_von_rennenkampf
 	interest_group = ig_landowners
 	birth_date = 1854.4.17
+	home_region = STATE_TALINN
 	traits = {
 		basic_offensive_planner
 		reckless
@@ -1294,12 +1417,12 @@ rus_general_von_rennenkampf = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:RUS
-			this = c:RUS
-			c:RUS = { owns_entire_state_region = STATE_TALINN } 
+			c:RUS ?= THIS
+			c:RUS ?= { owns_entire_state_region = STATE_TALINN }
 		}
 		role = general
 		earliest_usage_date = 1884.1.1
-		latest_usage_date = 1920.1.1	
+		latest_usage_date = 1920.1.1
 		chance = 50
 	}
 }
@@ -1314,6 +1437,7 @@ rus_general_skobelev = {
 	commander_rank = default
 	interest_group = ig_armed_forces
 	birth_date = 1843.9.29
+	home_region = STATE_MOSCOW
 	traits = {
 		expert_offensive_planner
 		popular_commander
@@ -1322,12 +1446,12 @@ rus_general_skobelev = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:RUS
-			this = c:RUS
+			c:RUS ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1870.1.1
-		latest_usage_date = 1910.1.1	
-		chance = 50
+		latest_usage_date = 1910.1.1
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1337,34 +1461,35 @@ RUS_mikhail_tarielovich_loris-melikov = {
     historical = yes
     culture = cu:armenian
     female = no
-    religion = oriental_orthodox
+    religion = rel:oriental_orthodox
     ideology = ideology_reformer
-    dna = dna_loris_melikov 
+    dna = dna_loris_melikov
     interest_group = ig_armed_forces
     birth_date = 1824.10.31
+    home_region = STATE_ARMENIA
     traits = {
         charismatic
 		brave
 		experienced_offensive_planner
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
-            NOT = { has_law = law_type:law_ethnostate }
+            NOT = { has_law_or_variant = law_type:law_ethnostate }
             any_scope_state = {
                 state_region = s:STATE_ARMENIA
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_armed_forces
-        }   
+        }
         earliest_usage_date = 1860.1.1
         latest_usage_date = 1885.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_sergei_alexandrovich_romanov = {
@@ -1373,32 +1498,33 @@ RUS_sergei_alexandrovich_romanov = {
     historical = yes
     culture = cu:russian
     female = no
-    religion = orthodox
+    religion = rel:orthodox
     dna = dna_sergei_romanov
     ideology = ideology_ethno_nationalist
     interest_group = ig_armed_forces
     birth_date = 1857.5.11
+    home_region = STATE_MOSCOW
     traits = {
         meticulous
 		imperious
 		basic_offensive_planner
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:RUS
-            this = c:RUS
+            c:RUS ?= THIS
 			has_dlc_feature = ep1_content
-            has_law = law_type:law_monarchy
+            country_has_monarchy_law = yes
             has_technology_researched = pan-nationalism
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_armed_forces
-        }   
+        }
         earliest_usage_date = 1890.1.1
         latest_usage_date = 1910.1.1
-        chance = 50
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_dmitry_milyutin = { # Dmitri Milyutin - generated by event
@@ -1406,8 +1532,9 @@ RUS_dmitry_milyutin = { # Dmitri Milyutin - generated by event
 	last_name = Milyutin
 	historical = yes
     culture = cu:russian
-    religion = orthodox
+    religion = rel:orthodox
 	birth_date = 1818.7.10 # Je was born on June 28th 1816 /in the Julian Calendar/
+	home_region = STATE_MOSCOW
 	interest_group = ig_armed_forces
 	ideology = ideology_jingoist_leader
     is_general = yes
@@ -1425,15 +1552,16 @@ RUS_dmitry_milyutin = { # Dmitri Milyutin - generated by event
 
 RUS_mikhail_lazarev = { # Admiral
 	is_admiral = yes
-	first_name = Mikhail 
+	first_name = Mikhail
 	last_name = Lazarev
 	historical = yes
 	culture = primary_culture
 	birth_date = 1788.11.14 # Gregorian Calendar
+	home_region = STATE_CRIMEA
 	interest_group = ig_armed_forces
 	ideology = ideology_royalist
 	hq = region_russia
-	commander_rank = commander_rank_2
+	commander_rank = commander_rank_3
 	traits = {
 		explorer
 		experienced_naval_commander
@@ -1445,10 +1573,11 @@ RUS_fabian_gottlieb_von_bellingshausen = { # RUS, Admiral
 	first_name = Fabian_Gottlieb
 	last_name = von_Bellingshausen
 	historical = yes
-	culture = cu:north_german
+	culture = cu:east_german
 	interest_group = ig_landowners
 	ideology = ideology_moderate
 	birth_date = 1778.1.25
+	home_region = STATE_INGRIA
 	hq = region_russia
 	commander_rank = commander_rank_2
 	traits = {
@@ -1467,7 +1596,8 @@ RUS_vasily_zavoyko = { # RUS, Admiral
 	interest_group = ig_landowners
 	ideology = ideology_royalist
 	birth_date = 1809.7.15
-	hq = region_eastern_europe
+	home_region = STATE_KAMCHATKA
+	hq = region_northeast_asia
 	traits = {
 		explorer
 		brave
@@ -1483,7 +1613,8 @@ RUS_pyotr_ricord = { # RUS, Admiral
 	interest_group = ig_armed_forces
 	ideology = ideology_reformer
 	birth_date = 1776.2.9
-	hq = region_northeast_asia
+	home_region = STATE_INGRIA
+	hq = region_eastern_europe
 	traits = {
 		basic_naval_commander
 		experienced_diplomat
@@ -1491,19 +1622,33 @@ RUS_pyotr_ricord = { # RUS, Admiral
 	}
 }
 
-RUS_ivan_kupreyanov = { # ALK, Admiral
+RUS_ivan_kupreyanov = { # for ALK, Admiral
 	first_name = Ivan
 	last_name = Kupreyanov
 	historical = yes
 	culture = primary_culture
-    ruler = yes
+    # technically a ruler, but will be set as the ruler of ALK via the company
 	interest_group = ig_armed_forces
 	ideology = ideology_moderate
 	birth_date = 1794.08.17 # Only year known
+	home_region = STATE_INGRIA
+	company = company:company_russian_american_company
 	traits = {
+        special_character_colonial_military
 		dockyard_master
 		explorer
 	}
+    executive_usage = {
+        country_trigger = { # Must be the country that owns the company
+            c:RUS ?= this
+        }
+        company_trigger = {
+            is_company_type = company_type:company_russian_american_company
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1857.1.1
+        #guaranteed to spawn if possible
+    }
 }
 
 # Generated Admirals
@@ -1518,6 +1663,7 @@ rus_admiral_makarov = {
 	commander_rank = default
 	interest_group = ig_armed_forces
 	birth_date = 1849.1.8
+	home_region = STATE_INGRIA
 	traits = {
 		explorer
 		experienced_naval_commander
@@ -1526,12 +1672,12 @@ rus_admiral_makarov = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:RUS
-			this = c:RUS
+			c:RUS ?= THIS
 		}
 		role = admiral
 		earliest_usage_date = 1881.1.1
-		latest_usage_date = 1918.1.1	
-		chance = 50
+		latest_usage_date = 1918.1.1
+		#guaranteed to spawn if possible
 	}
 }
 
@@ -1545,6 +1691,7 @@ rus_admiral_nakhimov = {
 	commander_rank = default
 	interest_group = ig_armed_forces
 	birth_date = 1802.7.5
+	home_region = STATE_CRIMEA
 	traits = {
 		brave
 		experienced_naval_commander
@@ -1553,18 +1700,34 @@ rus_admiral_nakhimov = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:RUS
-			this = c:RUS
+			c:RUS ?= THIS
 		}
 		role = admiral
 		earliest_usage_date = 1836.1.1
-		latest_usage_date = 1870.1.1	
-		chance = 50
+		latest_usage_date = 1870.1.1
+		#guaranteed to spawn if possible
 	}
 }
 
 ### Agitators
 
 # Generated
+RUS_varfolomey_zaitsev = {
+    first_name = Varfolomey
+    last_name = Zaitsev
+    culture = cu:russian
+    birth_date = 1842.9.11
+    home_region = STATE_MOSCOW
+    is_agitator = yes
+    historical = yes
+    interest_group = ig_intelligentsia
+    female = no
+    ideology = ideology_nihilist
+    traits = {
+        firebrand
+        arrogant
+    }
+}
 
 RUS_nikolai_vasilyevich_tchaikovsky = {
 	first_name = Nikolai
@@ -1573,10 +1736,11 @@ RUS_nikolai_vasilyevich_tchaikovsky = {
 	female = no
 	is_agitator = yes
 	culture = cu:russian
-	religion = orthodox
+	religion = rel:orthodox
 	interest_group = ig_rural_folk
 	ideology = ideology_radical
 	birth_date = 1851.1.7
+	home_region = STATE_URAL
 	traits = {
 		pious
 		experienced_diplomat
@@ -1585,16 +1749,16 @@ RUS_nikolai_vasilyevich_tchaikovsky = {
     agitator_usage = {
         country_trigger = {
 			exists = c:RUS
-			this = c:RUS
+			c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
-        }   
+        }
         earliest_usage_date = 1872.1.1
         latest_usage_date = 1917.1.1
-        chance = 100
-    }   
+        #guaranteed to spawn if possible
+    }
 }
 
 RUS_sergei_gennadievich_nechaev = {
@@ -1604,11 +1768,12 @@ RUS_sergei_gennadievich_nechaev = {
 	female = no
 	is_agitator = yes
 	culture = cu:russian
-	religion = atheist
+	religion = rel:atheist
 	interest_group = ig_intelligentsia
     dna = dna_nechaev
 	ideology = ideology_nihilist
 	birth_date = 1847.12.3
+	home_region = STATE_MOSCOW
 	traits = {
 		direct
 		persistent
@@ -1617,16 +1782,16 @@ RUS_sergei_gennadievich_nechaev = {
     agitator_usage = {
         country_trigger = {
 			exists = c:RUS
-			this = c:RUS
+			c:RUS ?= THIS
 			has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
+        }
         earliest_usage_date = 1868.1.1
         latest_usage_date = 1880.1.1
         chance = 100
-    }   
+	}
 }
 
 agitator_dmitry_ivanovich_pisarev = {
@@ -1639,9 +1804,10 @@ agitator_dmitry_ivanovich_pisarev = {
 	interest_group = ig_intelligentsia
 	ideology = ideology_nihilist
 	birth_date = 1840.10.14 # October 2nd in the Old Style calendar
+	home_region = STATE_INGRIA
 	dna = dna_pisarev
 	traits = {
-		psychological_affliction 
+		psychological_affliction
 		literary
 		inspirational_orator
 	}
@@ -1654,12 +1820,12 @@ agitator_dmitry_ivanovich_pisarev = {
 			}
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_trade_unions
-            } 
-        }   
+            }
+        }
 		earliest_usage_date = 1858.1.1
 		latest_usage_date = 1868.1.1
 		chance = 50
@@ -1677,6 +1843,7 @@ rus_jaroslaw_dabrowski_character_template = { # Generatd by event
     interest_group = ig_armed_forces
     ideology = ideology_radical
     birth_date = 1836.11.13
+    home_region = STATE_GREATER_POLAND
     dna = dna_jaroslaw_dabrowski
     traits = {
         persistent
@@ -1696,6 +1863,7 @@ rus_mikhail_bakunin_character_template = { # Generated by event
 	interest_group = ig_trade_unions
 	ideology = ideology_anarchist
 	birth_date = 1814.7.1
+	home_region = STATE_MOSCOW
 	dna = dna_bakunin
 	traits = {
 		firebrand
@@ -1715,17 +1883,19 @@ rus_pyotr_kropotkin_character_template = { # Generated by event
 	interest_group = ig_trade_unions
 	ideology = ideology_anarchist
 	birth_date = 1842.12.9
+	home_region = STATE_MOSCOW
 	dna = dna_kropotkin
 	traits = {
 		direct
         inspirational_orator
-	}
+    }
 }
 
 kaz_kenesary_khan = {
     first_name = Kenesary
     last_name = Kasymuli
-    birth_date = 1802.6.1 
+    birth_date = 1802.6.1
+    home_region = STATE_SEMIRECHE
     historical = yes
     culture = cu:kazak
     religion = rel:sunni

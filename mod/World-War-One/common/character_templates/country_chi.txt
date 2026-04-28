@@ -1,7 +1,5 @@
 ﻿### China - CHI character template file ###
 
-#TGW
-
 ### Historical Leaders
 chi_gong_character_template = {
     first_name = Prince_Gong
@@ -11,6 +9,7 @@ chi_gong_character_template = {
     female = no
     ideology = ideology_royalist
     interest_group = ig_landowners
+    home_region = STATE_BEIJING
     birth_date = 1833.1.11
     traits = {
         experienced_diplomat
@@ -19,11 +18,13 @@ chi_gong_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:CHI
-            this = c:CHI
-            c:CHI = { has_law = law_type:law_monarchy }
+            c:CHI ?= THIS
+            c:CHI ?= {
+				country_has_monarchy_law = yes
+			}
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_landowners
             NOR = {
 				has_variable = communist_ig_var
@@ -35,7 +36,7 @@ chi_gong_character_template = {
         }
         earliest_usage_date = 1853.1.1
         latest_usage_date = 1898.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 chi_daoguang_template = {
@@ -49,6 +50,7 @@ chi_daoguang_template = {
     culture = cu:manchu
     interest_group = ig_landowners
     ideology = ideology_traditionalist
+    home_region = STATE_BEIJING
     traits = {
         cautious
     }
@@ -63,6 +65,7 @@ chi_xianfeng_template = {
     culture = cu:manchu
     interest_group = ig_landowners
     ideology = ideology_traditionalist
+    home_region = STATE_BEIJING
     traits = {
         trait_child
     }
@@ -75,6 +78,7 @@ chi_cixi_template = {
     female = yes
     ideology = ideology_royalist
     interest_group = ig_landowners
+    home_region = STATE_BEIJING
     birth_date = 1835.11.29
     dna = dna_empress_dowager_cixi
     traits = {
@@ -85,12 +89,14 @@ chi_cixi_template = {
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:CHI
-            this = c:CHI
-            c:CHI = { has_law = law_type:law_monarchy }
+            c:CHI ?= THIS
+            c:CHI ?= {
+				country_has_monarchy_law = yes
+			}
             has_dlc_feature = ep1_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_landowners
             NOR = {
                 has_variable = communist_ig_var
@@ -103,7 +109,7 @@ chi_cixi_template = {
         earliest_usage_date = 1852.6.26 # the day she entered the Forbidden City
         latest_usage_date = 1898.1.1
         chance = 50
-    }
+	}
 }
 
 ### Commanders
@@ -116,6 +122,7 @@ chi_admiral_ding_ruchang = {
 	ideology = ideology_moderate
 	commander_rank = default
 	interest_group = ig_armed_forces
+    home_region = STATE_SOUTHERN_ANHUI
 	birth_date = 1836.11.18
 	traits = {
 		basic_naval_commander
@@ -125,12 +132,12 @@ chi_admiral_ding_ruchang = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:CHI
-			this = c:CHI
+			c:CHI ?= THIS
 		}
 		role = admiral
 		earliest_usage_date = 1875.2.5
 		latest_usage_date = 1905.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 chi_admiral_sa_chenbing = {
@@ -142,6 +149,7 @@ chi_admiral_sa_chenbing = {
 	ideology = ideology_moderate
 	commander_rank = default
 	interest_group = ig_armed_forces
+    home_region = STATE_FUJIAN
 	birth_date = 1859.4.30
 	traits = {
 		basic_naval_commander
@@ -151,12 +159,12 @@ chi_admiral_sa_chenbing = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:CHI
-			this = c:CHI
+			c:CHI ?= THIS
 		}
 		role = admiral
 		earliest_usage_date = 1892.2.5
 		latest_usage_date = 1920.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 chi_general_yuan_shikai = {
@@ -168,6 +176,7 @@ chi_general_yuan_shikai = {
 	ideology = ideology_reformer
 	commander_rank = default
 	interest_group = ig_armed_forces
+    home_region = STATE_HENAN
 	birth_date = 1859.9.16
 	traits = {
 		ambitious
@@ -177,12 +186,12 @@ chi_general_yuan_shikai = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:CHI
-			this = c:CHI
+			c:CHI ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1885.1.1
 		latest_usage_date = 1920.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 chi_general_zeng_guofan = {
@@ -194,6 +203,7 @@ chi_general_zeng_guofan = {
 	ideology = ideology_traditionalist
 	commander_rank = default
 	interest_group = ig_armed_forces
+    home_region = STATE_HUNAN
 	birth_date = 1811.11.26
 	traits = {
 		plains_commander
@@ -203,12 +213,12 @@ chi_general_zeng_guofan = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:CHI
-			this = c:CHI
+			c:CHI ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1851.1.1
 		latest_usage_date = 1870.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }
 chi_general_sengge_rinchen = {
@@ -220,6 +230,7 @@ chi_general_sengge_rinchen = {
 	ideology = ideology_royalist
 	commander_rank = default
 	interest_group = ig_landowners
+    home_region = STATE_HINGGAN
 	birth_date = 1811.2.26
 	traits = {
 		stalwart_defender
@@ -229,9 +240,9 @@ chi_general_sengge_rinchen = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:CHI
-			this = c:CHI
-			c:CHI = {
-				has_law = law_type:law_monarchy
+			c:CHI ?= THIS
+			c:CHI ?= {
+				country_has_monarchy_law = yes
 				owns_entire_state_region = STATE_HINGGAN
 			}
 		}
@@ -253,6 +264,7 @@ CHI_zhou_xuexi = { #Zhou Xuexi, Kaiping Mines
     dna = dna_zhou_xuexi
     interest_group = ig_industrialists
     ideology = ideology_moderate
+    home_region = STATE_ZHILI
     traits = {
         basic_entrepreneur
         erudite
@@ -267,7 +279,7 @@ CHI_zhou_xuexi = { #Zhou Xuexi, Kaiping Mines
         }
 	    earliest_usage_date = 1901.1.1
 	    latest_usage_date = 1936.1.1
-        chance = 100
+        #guaranteed to spawn if possible
     }
 }
 
@@ -280,6 +292,7 @@ CHI_shen_baozhen = { #Shen Baozhen, Foochow Arsenal
     dna = dna_shen_baozhen
     interest_group = ig_armed_forces
     ideology = ideology_modernizer_leader
+    home_region = STATE_FUJIAN
     traits = {
         literary
         basic_entrepreneur
@@ -295,5 +308,5 @@ CHI_shen_baozhen = { #Shen Baozhen, Foochow Arsenal
 	    earliest_usage_date = 1866.1.1
 	    latest_usage_date = 1879.1.1
         chance = 100
-    }
+	}
 }

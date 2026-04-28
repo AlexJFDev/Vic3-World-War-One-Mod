@@ -6,6 +6,8 @@ REPLACE_OR_CREATE:dp_default_treaty_article = { #TGW
 
 	texture = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
 
+	add_infamy_for_starting_target_wargoals = yes
+
 	selectable_in_lens = {
 		always = no
 	}
@@ -85,6 +87,8 @@ REPLACE_OR_CREATE:dp_ban_slavery = {
 	war_goal = ban_slavery
 
 	texture = "gfx/interface/icons/war_goals/ban_slavery.dds"
+
+	add_infamy_for_starting_target_wargoals = yes
 
 	possible = {
 		NOT = { is_country_type = decentralized }
@@ -322,6 +326,12 @@ REPLACE_OR_CREATE:dp_reduce_autonomy = {
 			}
 			has_technology_researched = civilizing_mission
 		}
+		NAND = {
+			is_involved_in_journal_entry = je_ryukyu_rivalry
+			scope:target_country = {
+				c:RYU ?= this
+			}
+		}
 	}
 
 	on_weekly_pulse = {}
@@ -336,6 +346,8 @@ REPLACE_OR_CREATE:dp_take_treaty_port = {
 	war_goal = take_treaty_port
 
 	texture = "gfx/interface/icons/war_goals/take_treaty_port.dds"
+
+	add_infamy_for_starting_target_wargoals = yes
 
 	possible = {
 		NOT = { is_country_type = decentralized }
@@ -368,11 +380,13 @@ REPLACE_OR_CREATE:dp_make_tributary = {
 
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
+		highest_overlapping_interest_tier = { target = scope:target_country value >= 2 }
+		NOT = { scope:target_country = { has_modifier = modifier_ryukyu_rivalry_secured_neutrality } }
 		NOR = {
 			has_law = law_type:law_true_neutrality
 			has_law = law_type:law_armed_neutrality
 			has_law = law_type:law_limited_interventionism
-		}
+        }
 	}
 
 	ai_acceptance_max = 90
@@ -391,6 +405,8 @@ REPLACE_OR_CREATE:dp_make_dominion = {
 
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
+		highest_overlapping_interest_tier = { target = scope:target_country value >= 2 }
+		NOT = { scope:target_country = { has_modifier = modifier_ryukyu_rivalry_secured_neutrality } }
 		NOR = {
 			has_law = law_type:law_true_neutrality
 			has_law = law_type:law_armed_neutrality
@@ -414,6 +430,8 @@ REPLACE_OR_CREATE:dp_make_protectorate = {
 
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
+		highest_overlapping_interest_tier = { target = scope:target_country value >= 2 }
+		NOT = { scope:target_country = { has_modifier = modifier_ryukyu_rivalry_secured_neutrality } }
 		NOR = {
 			has_law = law_type:law_true_neutrality
 			has_law = law_type:law_armed_neutrality
@@ -513,16 +531,27 @@ REPLACE_OR_CREATE:dp_annex_subject = {
 				has_diplomatic_pact = { who = root type = colony }
 				has_diplomatic_pact = { who = root type = puppet }
 				has_diplomatic_pact = { who = root type = vassal }
+				has_diplomatic_pact = { who = root type = crown_land }
 			}
 		}
 		NAND = {
-			has_journal_entry = je_peru_bolivia
+			is_involved_in_journal_entry = je_peru_bolivia
 			scope:target_country = {
 				OR = {
 					country_has_primary_culture = cu:quechua
 					country_has_primary_culture = cu:south_andean
 				}
 			}
+		}
+		NAND = {
+			is_involved_in_journal_entry = je_ryukyu_rivalry
+			scope:target_country = {
+				c:RYU ?= this
+			}
+		}
+		NAND = {
+			c:JAP ?= this
+			has_law_or_variant = law_type:law_serfdom # Proxy for feudalism
 		}
 	}
 
@@ -723,7 +752,7 @@ REPLACE_OR_CREATE:dp_taiping_rebellion = {
 	possible = {
 		exists = c:TPG
 		scope:target_country = {
-			this = c:TPG
+			c:TPG ?= THIS
 		}
 	}
 
@@ -815,6 +844,7 @@ REPLACE_OR_CREATE:dp_give_foreign_investment_rights = {
 	war_goal = foreign_investment_rights
 
 	requires_interest_marker = yes
+	add_infamy_for_starting_target_wargoals = yes
 
 	texture = "gfx/interface/icons/war_goals/foreign_investment_rights.dds"
 
@@ -884,6 +914,7 @@ REPLACE_OR_CREATE:dp_annex_war = {
 			country_rank <= rank_value:insignificant_power
 		}
 		diplomatic_play_has_no_relations_blockers = yes
+		highest_overlapping_interest_tier = { target = scope:target_country value >= 3 }
 		NOR = {
 		    has_law = law_type:law_true_neutrality
 			has_law = law_type:law_armed_neutrality
@@ -1005,7 +1036,7 @@ REPLACE_OR_CREATE:dp_unify_ethiopia = {
 				text = ETH_tt
 				can_form_nation = ETH
 			}
-			aggressive_diplomatic_plays_permitted = yes		
+			aggressive_diplomatic_plays_permitted = yes
 		}
 	}
 
@@ -1123,7 +1154,7 @@ REPLACE_OR_CREATE:dp_unify_india = {
 					can_form_nation = BHT
 				}
 				AND = {
-					country_is_in_india = yes
+					is_in_geographic_region = geographic_region_india
 					custom_tooltip = {
 						text = indian_primary_culture_tt
 						has_indian_primary_culture = yes
@@ -1325,7 +1356,191 @@ REPLACE_OR_CREATE:dp_sepoy_mutiny = {
 
 	on_war_begins = {}
 
+	on_war_end = {
+
+	}
+}
+
+dp_balkan_war = {
+	war_goal = humiliation
+
+	requires_interest_marker = no
+	allow_negotiated_peace = no
+	add_infamy_for_starting_initiator_wargoals = no
+	initiator_can_add_war_goals = no
+
+	texture = "gfx/interface/icons/war_goals/return_state.dds"
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	possible = {
+		always = no
+	}
+
+	ai_acceptance_max = 75
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
 	on_war_end = {}
+}
+
+dp_enforce_trialist_manifesto = {
+	war_goal = humiliation
+
+	requires_interest_marker = no
+	allow_negotiated_peace = yes
+	add_infamy_for_starting_initiator_wargoals = no
+	initiator_can_add_war_goals = yes
+
+	texture = "gfx/interface/icons/war_goals/return_state.dds"
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	possible = {
+		always = no
+	}
+
+	ai_acceptance_max = 75
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_yugoslavia = {
+	war_goal = unification
+
+	requires_interest_marker = no
+	blocked_by_diplomatic_status = no
+	add_infamy_for_starting_initiator_wargoals = no
+
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	possible = {
+		NOT = { exists = c:YUG }
+		NOT = { is_country_type = decentralized }
+		is_subject = no
+		has_technology_researched = pan-nationalism
+	}
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_leadership_yugoslavia = {
+	war_goal = unification_leadership
+
+	requires_interest_marker = no
+	mirror_war_goal = yes
+
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_hungarian_revolution = {
+	war_goal = annex_country
+
+	allow_negotiated_peace = no
+	add_infamy_for_starting_initiator_wargoals = no
+	initiator_can_add_war_goals = no
+
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	possible = {}
+
+	ai_acceptance_max = 75
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {
+
+	}
+}
+
+dp_restore_union = {
+	war_goal = restore_union
+
+	texture = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
+
+	selectable_in_lens = {
+		has_law = law_type:law_monarchy
+		has_variable = por_seeking_restore_union_var
+	}
+
+	possible = {
+		aggressive_diplomatic_plays_permitted = yes
+	}
+
+	ai_acceptance_max = 90
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {
+		if = {
+			limit = {
+				any_scope_play_involved = {
+					has_variable = por_seeking_restore_union_var
+				}
+			}
+			random_scope_play_involved = { # This is typically a temp variable. Starting this war makes it permanent for the duration of the war.
+				limit = {
+					has_variable = por_seeking_restore_union_var
+				}
+				remove_variable = por_seeking_restore_union_var
+				set_variable = por_seeking_restore_union_var
+			}
+		}
+	}
+
+	on_war_end = {
+		if = {
+			limit = {
+				any_scope_play_involved = {
+					has_variable = por_seeking_restore_union_var
+				}
+			}
+			random_scope_play_involved = { # Removes variable upon war conclusion, regardless of outcome
+				limit = {
+					has_variable = por_seeking_restore_union_var
+				}
+				remove_variable = por_seeking_restore_union_var
+			}
+		}
+	}
 }
 
 dp_world_war = {
