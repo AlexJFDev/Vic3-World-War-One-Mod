@@ -1,4 +1,4 @@
-﻿MILITARY_FORMATIONS = {
+﻿MILITARY_FORMATIONS = { #TGW
 	c:CAN = {
 		create_military_formation = {
 			name = Permanent_Active_Militia
@@ -144,15 +144,13 @@
 			name = Royal_Canadian_Navy
 			type = fleet
 			hq_region = sr:region_canada
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_QUEBEC
-				count = 1
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NEW_BRUNSWICK
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 5
 			}
 		}
 	}
@@ -160,7 +158,7 @@
 		create_military_formation = {
 			name = Regular_Army
 			type = army
-			hq_region = sr:region_dixie
+			hq_region = sr:region_great_plains
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_MAINE
@@ -435,7 +433,7 @@
 		create_military_formation = {
 			name = National_Guard
 			type = army
-			hq_region = sr:region_dixie
+			hq_region = sr:region_great_plains
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_MAINE
@@ -725,7 +723,7 @@
 		create_military_formation = {
 			name = Border_Patrol
 			type = army
-			hq_region = sr:region_dixie
+			hq_region = sr:region_great_plains
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_TEXAS
@@ -735,7 +733,7 @@
 		create_military_formation = {
 			name = Ponce_Garrison
 			type = army
-			hq_region = sr:region_caribbean
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_PUERTO_RICO
@@ -763,618 +761,216 @@
 			}
 		}
 		create_military_formation = {
+			name = Marine_Corps
+			type = army
+			hq_region = sr:region_atlantic_coast
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_MAINE
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_NEW_HAMPSHIRE
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_MASSACHUSETTS
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_CONNECTICUT
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_NEW_YORK
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_NEW_JERSEY
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_MARYLAND
+				count = 3
+			}
+		}
+		create_military_formation = {
 			name = Atlantic_Fleet
 			type = fleet
-			hq_region = sr:region_new_england
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MAINE
+			hq_region = sr:region_atlantic_coast
+			ship = {
+				type = ship_type:ship_type_dreadnought
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 8
+			}
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 8
+			}
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_NEW_HAMPSHIRE
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 20
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 15
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 20
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
+			}
+		}
+		create_military_formation = {
+			name = Caribbean_Fleet
+			type = fleet
+			hq_region = sr:region_central_america
+			ship = {
+				type = ship_type:ship_type_dreadnought
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MASSACHUSETTS
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_CONNECTICUT
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_NEW_YORK
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_NEW_JERSEY
-				count = 3
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MARYLAND
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MAINE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MASSACHUSETTS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CONNECTICUT
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NEW_YORK
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NEW_JERSEY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MARYLAND
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NORTH_CAROLINA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SOUTH_CAROLINA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MAINE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MASSACHUSETTS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CONNECTICUT
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NEW_YORK
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NEW_JERSEY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MARYLAND
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NORTH_CAROLINA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SOUTH_CAROLINA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MAINE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MASSACHUSETTS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CONNECTICUT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NEW_YORK
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NEW_JERSEY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MARYLAND
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NORTH_CAROLINA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_SOUTH_CAROLINA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MAINE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MASSACHUSETTS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CONNECTICUT
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_NEW_YORK
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_NEW_JERSEY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MARYLAND
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_monitor
-				state_region = s:STATE_MAINE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_monitor
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_monitor
-				state_region = s:STATE_MASSACHUSETTS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_monitor
-				state_region = s:STATE_CONNECTICUT
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_monitor
-				state_region = s:STATE_NEW_YORK
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_monitor
-				state_region = s:STATE_NEW_JERSEY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_monitor
-				state_region = s:STATE_MARYLAND
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 		create_military_formation = {
 			name = Pacific_Fleet
 			type = fleet
 			hq_region = sr:region_pacific_coast
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_WASHINGTON
-				count = 2
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_OREGON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_CALIFORNIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ALASKA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WASHINGTON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_OREGON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CALIFORNIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ALASKA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WASHINGTON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_OREGON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CALIFORNIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ALASKA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WASHINGTON
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_OREGON
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CALIFORNIA
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 8
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
+			}
+		}
+		create_military_formation = {
+			name = Reserve_Fleet
+			type = fleet
+			hq_region = sr:region_atlantic_coast
+			ship = {
+				type = ship_type:ship_type_monitor
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 8
+			}
+			ship = {
+				type = ship_type:ship_type_coastal_defense_ship
+				count = 6
+			}
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 1
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ALASKA
+			ship = {
+				type = ship_type:ship_type_submarine
 				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WASHINGTON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_OREGON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CALIFORNIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ALASKA
-				count = 2
 			}
 		}
 		create_military_formation = {
 			name = Asiatic_Fleet
 			type = fleet
 			hq_region = sr:region_oceania
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WASHINGTON
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 1
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 3
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_OREGON
+			ship = {
+				type = ship_type:ship_type_submarine
 				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CALIFORNIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ALASKA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WASHINGTON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_OREGON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CALIFORNIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ALASKA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WASHINGTON
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_OREGON
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CALIFORNIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ALASKA
-				count = 1
-			}
-		}
-		create_military_formation = {
-			name = Caribbean_Squadron
-			type = fleet
-			hq_region = sr:region_caribbean
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_TEXAS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LOUISIANA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MISSISSIPPI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ALABAMA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_FLORIDA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_GEORGIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_SOUTH_CAROLINA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_TEXAS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LOUISIANA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MISSISSIPPI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ALABAMA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_FLORIDA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_GEORGIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SOUTH_CAROLINA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_TEXAS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LOUISIANA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MISSISSIPPI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ALABAMA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_FLORIDA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_GEORGIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SOUTH_CAROLINA
-				count = 1
-			}
-		}
-		create_military_formation = {
-			name = Reserve_Fleet
-			type = fleet
-			hq_region = sr:region_new_england
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MARYLAND
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MAINE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MASSACHUSETTS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CONNECTICUT
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NEW_YORK
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NEW_JERSEY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MARYLAND
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MAINE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MAINE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MASSACHUSETTS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CONNECTICUT
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NEW_YORK
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NEW_JERSEY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MARYLAND
-				count = 1
 			}
 		}
 	}
@@ -1382,7 +978,7 @@
 		create_military_formation = {
 			name = Carrancistas
 			type = army
-			hq_region = sr:region_mexico
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SONORA
@@ -1432,7 +1028,7 @@
 		create_military_formation = {
 			name = Division_Del_Norte
 			type = army
-			hq_region = sr:region_mexico
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SONORA
@@ -1482,7 +1078,7 @@
 		create_military_formation = {
 			name = Ejercito_Libertador_Del_Sur
 			type = army
-			hq_region = sr:region_mexico
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SONORA
@@ -1524,7 +1120,7 @@
 		create_military_formation = {
 			name = Ejercito_Del_Norte
 			type = army
-			hq_region = sr:region_mexico
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_MEXICO
@@ -1589,7 +1185,7 @@
 		create_military_formation = {
 			name = Ejercito_Del_Sur
 			type = army
-			hq_region = sr:region_mexico
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_MEXICO
@@ -1654,16 +1250,10 @@
 		create_military_formation = {
 			name = Armada_De_Mexico
 			type = fleet
-			hq_region = sr:region_mexico
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_VERACRUZ
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_ironclad
-				state_region = s:STATE_VERACRUZ
-				count = 1
+			hq_region = sr:region_central_america
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
 			}
 		}
 	}
@@ -1751,7 +1341,7 @@
 		create_military_formation = {
 			name = Ejercito_De_Cuba
 			type = army
-			hq_region = sr:region_caribbean
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_WESTERN_CUBA
@@ -1773,7 +1363,7 @@
 		create_military_formation = {
 			name = Corps-D'armee_D'Haiti
 			type = army
-			hq_region = sr:region_caribbean
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_HAITI
@@ -1790,7 +1380,7 @@
 		create_military_formation = {
 			name = Ejercito_De_La_RepÃºblica_Dominicana
 			type = army
-			hq_region = sr:region_caribbean
+			hq_region = sr:region_central_america
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SANTO_DOMINGO
@@ -1889,14 +1479,12 @@
 			name = Armada_De_Peru
 			type = fleet
 			hq_region = sr:region_andes
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LIMA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LIMA
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 2
 			}
 		}
@@ -1963,55 +1551,37 @@
 			name = Armada_De_Chile
 			type = fleet
 			hq_region = sr:region_la_plata
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LOS_RIOS
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_SANTIAGO
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LOS_RIOS
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 13
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SANTIAGO
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LOS_RIOS
-				count = 7
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SANTIAGO
-				count = 7
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LOS_RIOS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SANTIAGO
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LOS_RIOS
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_SANTIAGO
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 3
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 5
 			}
 		}
 	}
@@ -2065,45 +1635,33 @@
 			name = Armada_De_Argentina
 			type = fleet
 			hq_region = sr:region_la_plata
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_BUENOS_AIRES
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_SANTA_FE
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_BUENOS_AIRES
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 15
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SANTA_FE
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BUENOS_AIRES
-				count = 8
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SANTA_FE
-				count = 8
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BUENOS_AIRES
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SANTA_FE
-				count = 5
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 	}
@@ -2246,90 +1804,29 @@
 			name = Marinha_Brasileira
 			type = fleet
 			hq_region = sr:region_brazil
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_PARANA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_dreadnought
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_SAO_PAULO
-				count = 1
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_RIO_DE_JANEIRO
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 14
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_BAHIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_SANTA_CATARINA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_PARANA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SAO_PAULO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_RIO_DE_JANEIRO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_BAHIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_PARANA
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SAO_PAULO
-				count = 4
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_RIO_DE_JANEIRO
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BAHIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PARANA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SAO_PAULO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_RIO_DE_JANEIRO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BAHIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 8
 			}
 		}
 	}
@@ -2337,7 +1834,7 @@
 		create_military_formation = {
 			name = Regular_Army
 			type = army
-			hq_region = sr:region_england
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_HOME_COUNTIES
@@ -2577,7 +2074,7 @@
 		create_military_formation = {
 			name = Territorial_Army
 			type = army
-			hq_region = sr:region_england
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_HOME_COUNTIES
@@ -2792,7 +2289,7 @@
 		create_military_formation = {
 			name = Malta_Militia
 			type = army
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_MALTA
@@ -2802,7 +2299,7 @@
 		create_military_formation = {
 			name = Bermuda_Militia
 			type = army
-			hq_region = sr:region_new_england
+			hq_region = sr:region_atlantic_coast
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_JAMAICA
@@ -2820,1078 +2317,270 @@
 			}
 		}
 		create_military_formation = {
+			name = Royal_Marines
+			type = army
+			hq_region = sr:region_western_europe
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_HOME_COUNTIES
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_EAST_ANGLIA
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_WEST_COUNTRY
+				count = 9
+			}
+		}
+		create_military_formation = {
 			name = Grand_Fleet
 			type = fleet
-			hq_region = sr:region_north_sea_coast
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HOME_COUNTIES
-				count = 3
+			hq_region = sr:region_western_europe
+			ship = {
+				type = unit_type:ship_type_dreadnought
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_EAST_ANGLIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 9
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_WEST_COUNTRY
-				count = 3
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_WALES
-				count = 3
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 35
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MIDLANDS
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MIDLANDS
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 40
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LANCASHIRE
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 100
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_YORKSHIRE
-				count = 3
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 40
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LOWLANDS
-				count = 3
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 100
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HIGHLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HOME_COUNTIES
+		}
+		create_military_formation = {
+			name = Reserve_Fleet
+			type = fleet
+			hq_region = sr:region_western_europe
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EAST_ANGLIA
-				count = 4
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WEST_COUNTRY
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WALES
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MIDLANDS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MIDLANDS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LANCASHIRE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_YORKSHIRE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LOWLANDS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HIGHLANDS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HOME_COUNTIES
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
 				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EAST_ANGLIA
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_COUNTRY
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WALES
-				count = 5
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MIDLANDS
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MIDLANDS
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LANCASHIRE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_YORKSHIRE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LOWLANDS
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HIGHLANDS
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ULSTER
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LEINSTER
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CONNAUGHT
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MUNSTER
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_JAMAICA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BAHAMAS
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_HOME_COUNTIES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_EAST_ANGLIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WEST_COUNTRY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WALES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MIDLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MIDLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LANCASHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_YORKSHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LOWLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_HIGHLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ULSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LEINSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CONNAUGHT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MUNSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_JAMAICA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_BAHAMAS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HOME_COUNTIES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EAST_ANGLIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WEST_COUNTRY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WALES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MIDLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MIDLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LANCASHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_YORKSHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LOWLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HIGHLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ULSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LEINSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CONNAUGHT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MUNSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_JAMAICA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BAHAMAS
-				count = 2
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
 			}
 		}
 		create_military_formation = {
 			name = Mediterranean_Fleet
 			type = fleet
-			hq_region = sr:region_anatolia
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ULSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LEINSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_CONNAUGHT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MUNSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HOME_COUNTIES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EAST_ANGLIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WEST_COUNTRY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WALES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MIDLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MIDLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LANCASHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_YORKSHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LOWLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HIGHLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HOME_COUNTIES
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EAST_ANGLIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_COUNTRY
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WALES
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MIDLANDS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MIDLANDS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LANCASHIRE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_YORKSHIRE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LOWLANDS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HIGHLANDS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ULSTER
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LEINSTER
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CONNAUGHT
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MUNSTER
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_HOME_COUNTIES
+			hq_region = sr:region_near_east
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_EAST_ANGLIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WEST_COUNTRY
-				count = 3
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WALES
-				count = 3
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MIDLANDS
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MIDLANDS
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 15
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LANCASHIRE
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 30
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_YORKSHIRE
-				count = 3
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LOWLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_HIGHLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HOME_COUNTIES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EAST_ANGLIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WEST_COUNTRY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WALES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MIDLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MIDLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LANCASHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_YORKSHIRE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LOWLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HIGHLANDS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ULSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LEINSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CONNAUGHT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MUNSTER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_JAMAICA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BAHAMAS
-				count = 2
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 50
 			}
 		}
 		create_military_formation = {
 			name = Atlantic_Fleet
 			type = fleet
-			hq_region = sr:region_new_england
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HOME_COUNTIES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_EAST_ANGLIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_WEST_COUNTRY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_WALES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MIDLANDS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MIDLANDS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LANCASHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_YORKSHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LOWLANDS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HIGHLANDS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HOME_COUNTIES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EAST_ANGLIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WEST_COUNTRY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WALES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MIDLANDS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MIDLANDS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LANCASHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_YORKSHIRE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LOWLANDS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HIGHLANDS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HOME_COUNTIES
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EAST_ANGLIA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_COUNTRY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WALES
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MIDLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MIDLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LANCASHIRE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_YORKSHIRE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LOWLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HIGHLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ULSTER
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LEINSTER
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CONNAUGHT
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MUNSTER
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_HOME_COUNTIES
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_EAST_ANGLIA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WEST_COUNTRY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WALES
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MIDLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MIDLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LANCASHIRE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_YORKSHIRE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LOWLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_HIGHLANDS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HOME_COUNTIES
+			hq_region = sr:region_atlantic_coast
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EAST_ANGLIA
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 6
+			}
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WEST_COUNTRY
-				count = 2
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WALES
-				count = 2
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 15
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MIDLANDS
-				count = 2
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 30
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MIDLANDS
-				count = 2
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LANCASHIRE
-				count = 2
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 50
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_YORKSHIRE
-				count = 2
+		}
+		create_military_formation = {
+			name = Second_Fleet
+			type = fleet
+			hq_region = sr:region_western_europe
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LOWLANDS
-				count = 2
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HIGHLANDS
-				count = 2
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 15
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ULSTER
-				count = 2
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LEINSTER
-				count = 2
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 15
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CONNAUGHT
-				count = 2
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 30
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MUNSTER
-				count = 2
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_JAMAICA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BAHAMAS
-				count = 2
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 50
 			}
 		}
 		create_military_formation = {
 			name = China_Station
 			type = fleet
 			hq_region = sr:region_south_china
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SHAOZHOU
-				count = 8
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SHAOZHOU
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 1
+			}
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 3
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
 				count = 5
 			}
 		}
 		create_military_formation = {
 			name = East_Indies_Station
 			type = fleet
-			hq_region = sr:region_zanj
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CYPRUS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MALTA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CYPRUS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MALTA
-				count = 4
-			}
-		}
-		create_military_formation = {
-			name = Home_Fleet
-			type = fleet
-			hq_region = sr:region_england
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ULSTER
+			hq_region = sr:region_east_africa
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MUNSTER
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_JAMAICA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ULSTER
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LEINSTER
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CONNAUGHT
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MUNSTER
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_JAMAICA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_BAHAMAS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ULSTER
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LEINSTER
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CONNAUGHT
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MUNSTER
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_JAMAICA
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BAHAMAS
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ULSTER
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LEINSTER
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CONNAUGHT
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MUNSTER
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_JAMAICA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_BAHAMAS
-				count = 3
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 5
 			}
 		}
 	}
@@ -3899,7 +2588,7 @@
 		create_military_formation = {
 			name = Kuwait_Militia
 			type = army
-			hq_region = sr:region_arabic
+			hq_region = sr:region_near_east
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_BASRA
@@ -3911,7 +2600,7 @@
 		create_military_formation = {
 			name = 1ere_Armee_De_Dole
 			type = army
-			hq_region = sr:region_france
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_FRENCH_LOW_COUNTRIES
@@ -4316,7 +3005,7 @@
 		create_military_formation = {
 			name = 2nd_Armee_De_Dijon
 			type = army
-			hq_region = sr:region_france
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_FRENCH_LOW_COUNTRIES
@@ -4721,7 +3410,7 @@
 		create_military_formation = {
 			name = 3eme_Armee_De_Chalons
 			type = army
-			hq_region = sr:region_occitania
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_FRENCH_LOW_COUNTRIES
@@ -5026,7 +3715,7 @@
 		create_military_formation = {
 			name = 4eme_Armee_De_Fontainebleau
 			type = army
-			hq_region = sr:region_occitania
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_FRENCH_LOW_COUNTRIES
@@ -5246,7 +3935,7 @@
 		create_military_formation = {
 			name = 5eme_Armee_De_Paris
 			type = army
-			hq_region = sr:region_france
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_FRENCH_LOW_COUNTRIES
@@ -5514,338 +4203,167 @@
 			}
 		}
 		create_military_formation = {
+			name = Fusiliers_Marins
+			type = army
+			hq_region = sr:region_northern_europe
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_NORMANDY
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_FRENCH_LOW_COUNTRIES
+				count = 6
+			}
+		}
+		create_military_formation = {
 			name = Escadre_De_La_Mediterranee
 			type = fleet
-			hq_region = sr:region_occitania
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LANGUEDOC
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_PROVENCE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_CORSICA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ALGIERS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_LANGUEDOC
+			hq_region = sr:region_southern_europe
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_PROVENCE
-				count = 4
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CORSICA
-				count = 4
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ALGIERS
-				count = 4
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CONSTANTINE
-				count = 4
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 7
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ORAN
-				count = 4
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 110
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LANGUEDOC
-				count = 5
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 50
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_PROVENCE
-				count = 5
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 60
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CORSICA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ALGIERS
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CONSTANTINE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ORAN
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LANGUEDOC
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PROVENCE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CORSICA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ALGIERS
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CONSTANTINE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ORAN
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_LANGUEDOC
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_PROVENCE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CORSICA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ALGIERS
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CONSTANTINE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ORAN
-				count = 5
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 50
 			}
 		}
 		create_military_formation = {
 			name = Escadre_Du_Nord
 			type = fleet
-			hq_region = sr:region_france
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_FRENCH_LOW_COUNTRIES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_PICARDY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_NORMANDY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_BRITTANY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_FRENCH_LOW_COUNTRIES
+			hq_region = sr:region_western_europe
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_PICARDY
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NORMANDY
-				count = 2
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 50
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_BRITTANY
-				count = 2
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 15
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_FRENCH_LOW_COUNTRIES
-				count = 3
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_PICARDY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NORMANDY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BRITTANY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_FRENCH_LOW_COUNTRIES
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PICARDY
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_NORMANDY
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BRITTANY
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_FRENCH_LOW_COUNTRIES
-				count = 8
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_PICARDY
-				count = 8
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NORMANDY
-				count = 8
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_BRITTANY
-				count = 8
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 30
 			}
 		}
 		create_military_formation = {
 			name = Escadrille_De_L'Orient
 			type = fleet
-			hq_region = sr:region_madras
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MADRAS
-				count = 1
+			hq_region = sr:region_south_india
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_PICARDY
-				count = 1
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NORMANDY
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BRITTANY
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_FRENCH_LOW_COUNTRIES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PICARDY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_NORMANDY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BRITTANY
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
 			}
 		}
 		create_military_formation = {
 			name = Escadrille_De_L'Afrique
 			type = fleet
 			hq_region = sr:region_north_africa
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ORAN
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 2
+			}
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ORAN
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CONSTANTINE
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ORAN
-				count = 7
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
 			}
 		}
 		create_military_formation = {
 			name = Escadrille_Des_Caraibes
 			type = fleet
-			hq_region = sr:region_caribbean
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_INDIES
-				count = 2
+			hq_region = sr:region_central_america
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WEST_INDIES
-				count = 3
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 1
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 10
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 	}
@@ -5853,7 +4371,7 @@
 		create_military_formation = {
 			name = Ejercito_Espanol
 			type = army
-			hq_region = sr:region_iberia
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_CATALONIA
@@ -6073,7 +4591,7 @@
 		create_military_formation = {
 			name = Guarnicion_De_Bata
 			type = army
-			hq_region = sr:region_congo
+			hq_region = sr:region_equatorial_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_GABON
@@ -6083,91 +4601,38 @@
 		create_military_formation = {
 			name = Armada_Espanola
 			type = fleet
-			hq_region = sr:region_iberia
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_GALICIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CATALONIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_VALENCIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ASTURIAS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_GALICIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CATALONIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_VALENCIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ASTURIAS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_GALICIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CATALONIA
+			hq_region = sr:region_southern_europe
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_VALENCIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ASTURIAS
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_GALICIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 12
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CATALONIA
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 2
+			}
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_VALENCIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ASTURIAS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_GALICIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 30
 			}
 		}
 	}
@@ -6175,7 +4640,7 @@
 		create_military_formation = {
 			name = Exercito_Portugues
 			type = army
-			hq_region = sr:region_iberia
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_BEIRA
@@ -6225,7 +4690,7 @@
 		create_military_formation = {
 			name = Guarnicao_De_Ziguinchor
 			type = army
-			hq_region = sr:region_senegal
+			hq_region = sr:region_west_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_GUINEA
@@ -6245,51 +4710,26 @@
 		create_military_formation = {
 			name = Marinha_Portuguesa
 			type = fleet
-			hq_region = sr:region_iberia
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_BEIRA
+			hq_region = sr:region_southern_europe
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ESTREMADURA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ALENTEJO
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BEIRA
-				count = 2
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ESTREMADURA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ALENTEJO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BEIRA
-				count = 7
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ESTREMADURA
-				count = 7
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ALENTEJO
-				count = 7
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 	}
@@ -6297,7 +4737,7 @@
 		create_military_formation = {
 			name = Forces_Armees_Belges
 			type = army
-			hq_region = sr:region_rhine
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_WALLONIA
@@ -6342,7 +4782,7 @@
 		create_military_formation = {
 			name = Garde_Civique
 			type = army
-			hq_region = sr:region_rhine
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_WALLONIA
@@ -6357,15 +4797,17 @@
 		create_military_formation = {
 			name = Composante_Marine
 			type = fleet
-			hq_region = sr:region_rhine
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_FLANDERS
+			hq_region = sr:region_western_europe
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_FLANDERS
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
 				count = 5
 			}
 		}
@@ -6374,7 +4816,7 @@
 		create_military_formation = {
 			name = Koninklijke_Landmacht
 			type = army
-			hq_region = sr:region_rhine
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_HOLLAND
@@ -6424,46 +4866,26 @@
 		create_military_formation = {
 			name = Koninklijke_Marine
 			type = fleet
-			hq_region = sr:region_rhine
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HOLLAND
-				count = 2
+			hq_region = sr:region_western_europe
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_FRIESLAND
-				count = 2
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HOLLAND
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_FRIESLAND
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 47
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HOLLAND
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_FRIESLAND
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HOLLAND
-				count = 24
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_FRIESLAND
-				count = 24
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
 			}
 		}
 	}
@@ -6471,7 +4893,7 @@
 		create_military_formation = {
 			name = Swiss_Armed_Forces
 			type = army
-			hq_region = sr:region_south_germany
+			hq_region = sr:region_central_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_WEST_SWITZERLAND
@@ -6508,7 +4930,7 @@
 		create_military_formation = {
 			name = Corpo_d'Armata_I
 			type = army
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_PIEDMONT
@@ -6793,7 +5215,7 @@
 		create_military_formation = {
 			name = Corpo_d'Armata_II
 			type = army
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_PIEDMONT
@@ -7008,7 +5430,7 @@
 		create_military_formation = {
 			name = Corpo_d'Armata_III
 			type = army
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_PIEDMONT
@@ -7108,7 +5530,7 @@
 		create_military_formation = {
 			name = Corpo_d'Armata_IV
 			type = army
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_PIEDMONT
@@ -7136,383 +5558,129 @@
 			}
 		}
 		create_military_formation = {
+			name = Fanteria di Marina
+			type = army
+			hq_region = sr:region_southern_europe
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_PIEDMONT
+				count = 4
+			}
+		}
+		create_military_formation = {
 			name = Squadra_Navale
 			type = fleet
-			hq_region = sr:region_italy
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_PIEDMONT
+			hq_region = sr:region_southern_europe
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_VENETIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_EMILIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ROMAGNA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_TUSCANY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_UMBRIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_PIEDMONT
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_VENETIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EMILIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ROMAGNA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_TUSCANY
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_UMBRIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_PIEDMONT
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
 				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_VENETIA
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EMILIA
-				count = 5
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ROMAGNA
-				count = 5
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 7
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_TUSCANY
-				count = 5
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 60
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_UMBRIA
-				count = 5
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PIEDMONT
-				count = 5
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_VENETIA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EMILIA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ROMAGNA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_TUSCANY
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_UMBRIA
-				count = 5
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 50
 			}
 		}
 		create_military_formation = {
 			name = Forza_Navale_Speciale
 			type = fleet
-			hq_region = sr:region_italy
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_PIEDMONT
+			hq_region = sr:region_southern_europe
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_VENETIA
-				count = 2
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EMILIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ROMAGNA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_TUSCANY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_UMBRIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_PIEDMONT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_VENETIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EMILIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ROMAGNA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_TUSCANY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_UMBRIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PIEDMONT
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_VENETIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EMILIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ROMAGNA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_TUSCANY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_UMBRIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
 			}
 		}
 		create_military_formation = {
 			name = Flottiglie_Torpediniere_e_Sommergibili
 			type = fleet
-			hq_region = sr:region_italy
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PIEDMONT
+			hq_region = sr:region_southern_europe
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 31
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
 				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_VENETIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EMILIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ROMAGNA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_TUSCANY
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_UMBRIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_PIEDMONT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_VENETIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_EMILIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ROMAGNA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_TUSCANY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_UMBRIA
-				count = 2
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 10
 			}
 		}
 		create_military_formation = {
 			name = Servizio_Navale_delle_Colonie
 			type = fleet
-			hq_region = sr:region_italy
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_PIEDMONT
+			hq_region = sr:region_southern_europe
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_VENETIA
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EMILIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ROMAGNA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_TUSCANY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_UMBRIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_PIEDMONT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_VENETIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EMILIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ROMAGNA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_TUSCANY
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_UMBRIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PIEDMONT
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_VENETIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EMILIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ROMAGNA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_TUSCANY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_UMBRIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 	}
@@ -7520,7 +5688,7 @@
 		create_military_formation = {
 			name = Armeekorps_I
 			type = army
-			hq_region = sr:region_north_germany
+			hq_region = sr:region_central_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_RUHR
@@ -7990,7 +6158,7 @@
 		create_military_formation = {
 			name = Armeekorps_II
 			type = army
-			hq_region = sr:region_north_germany
+			hq_region = sr:region_central_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_EAST_PRUSSIA
@@ -8455,7 +6623,7 @@
 		create_military_formation = {
 			name = Armeekorps_III
 			type = army
-			hq_region = sr:region_rhine
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_RUHR
@@ -8820,7 +6988,7 @@
 		create_military_formation = {
 			name = Armeekorps_IV
 			type = army
-			hq_region = sr:region_poland
+			hq_region = sr:region_eastern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_ANHALT
@@ -8855,7 +7023,7 @@
 		create_military_formation = {
 			name = Gardekorps
 			type = army
-			hq_region = sr:region_north_germany
+			hq_region = sr:region_central_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_BRANDENBURG
@@ -8870,7 +7038,7 @@
 		create_military_formation = {
 			name = Bayerischeskorps
 			type = army
-			hq_region = sr:region_south_germany
+			hq_region = sr:region_central_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_FRANCONIA
@@ -8913,673 +7081,180 @@
 			}
 		}
 		create_military_formation = {
+			name = Seebataillone
+			type = army
+			hq_region = sr:region_central_europe
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_HANNOVER
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_ELBE
+				count = 3
+			}
+		}
+		create_military_formation = {
 			name = Hochseeflotte
 			type = fleet
-			hq_region = sr:region_north_germany
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 1
+			hq_region = sr:region_central_europe
+			ship = {
+				type = ship_type:ship_type_dreadnought
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_POSEN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_LOWER_SILESIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_POMERANIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_BRANDENBURG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_MECKLENBURG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ANHALT
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_SAXONY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ELBE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HANNOVER
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_BRUNSWICK
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_WESTPHALIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_RUHR
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_NORTH_RHINE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_RHINELAND
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ALSACE_LORRAINE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HESSE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_BADEN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_WURTTEMBERG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_FRANCONIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_BAVARIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HANNOVER
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
 				count = 7
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ELBE
-				count = 7
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 7
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MECKLENBURG
-				count = 7
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 13
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_POMERANIA
-				count = 7
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 7
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 60
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 7
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HANNOVER
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ELBE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MECKLENBURG
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_POMERANIA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HANNOVER
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ELBE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MECKLENBURG
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_POMERANIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_HANNOVER
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ELBE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MECKLENBURG
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_POMERANIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 4
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 50
 			}
 		}
 		create_military_formation = {
 			name = Ostseeflotte
 			type = fleet
-			hq_region = sr:region_poland
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HANNOVER
-				count = 1
+			hq_region = sr:region_eastern_europe
+			ship = {
+				type = ship_type:ship_type_dreadnought
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ELBE
-				count = 1
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HANNOVER
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ELBE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MECKLENBURG
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_POMERANIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HANNOVER
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ELBE
-				count = 3
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MECKLENBURG
-				count = 3
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 50
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_POMERANIA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HANNOVER
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ELBE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MECKLENBURG
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_POMERANIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 2
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
 			}
 		}
 		create_military_formation = {
-			name = Nordsee-Kommando
+			name = Reserveflotte
 			type = fleet
-			hq_region = sr:region_north_germany
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HANNOVER
-				count = 1
+			hq_region = sr:region_eastern_europe
+			ship = {
+				type = ship_type:ship_type_dreadnought
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ELBE
-				count = 1
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 9
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 1
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MECKLENBURG
-				count = 1
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_POMERANIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 15
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HANNOVER
-				count = 1
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ELBE
-				count = 1
+		}
+		create_military_formation = {
+			name = Mittelmeerdivision
+			type = fleet
+			hq_region = sr:region_central_europe
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MECKLENBURG
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_POMERANIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HANNOVER
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ELBE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MECKLENBURG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_POMERANIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 5
 			}
 		}
 		create_military_formation = {
 			name = U-Boot-Flottille
 			type = fleet
-			hq_region = sr:region_north_germany
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_HANNOVER
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ELBE
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MECKLENBURG
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_POMERANIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 4
-			}
-		}
-		create_military_formation = {
-			name = Uberseeflotte
-			type = fleet
-			hq_region = sr:region_north_germany
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HANNOVER
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ELBE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MECKLENBURG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_POMERANIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HANNOVER
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ELBE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MECKLENBURG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_POMERANIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 1
+			hq_region = sr:region_central_europe
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 20
 			}
 		}
 		create_military_formation = {
 			name = Ostasiengeschwader
 			type = fleet
 			hq_region = sr:region_north_china
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HANNOVER
-				count = 1
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ELBE
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MECKLENBURG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_POMERANIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HANNOVER
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ELBE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MECKLENBURG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_POMERANIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WEST_PRUSSIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EAST_PRUSSIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 5
 			}
 		}
 	}
@@ -9587,7 +7262,7 @@
 		create_military_formation = {
 			name = Dansk_Haeren
 			type = army
-			hq_region = sr:region_baltic
+			hq_region = sr:region_northern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_JUTLAND
@@ -9622,46 +7297,26 @@
 		create_military_formation = {
 			name = Dansk_Sovaernet
 			type = fleet
-			hq_region = sr:region_baltic
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_JUTLAND
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ZEALAND
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_JUTLAND
-				count = 6
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ZEALAND
-				count = 6
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_JUTLAND
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ZEALAND
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_JUTLAND
+			hq_region = sr:region_northern_europe
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ZEALAND
-				count = 2
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 12
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 6
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 5
 			}
 		}
 	}
@@ -9669,7 +7324,7 @@
 		create_military_formation = {
 			name = Norvegisk_Haeren
 			type = army
-			hq_region = sr:region_baltic
+			hq_region = sr:region_northern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_EASTERN_NORWAY
@@ -9704,46 +7359,22 @@
 		create_military_formation = {
 			name = Norvegisk_Sjoforsvaret
 			type = fleet
-			hq_region = sr:region_baltic
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_EASTERN_NORWAY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_WESTERN_NORWAY
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_EASTERN_NORWAY
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_WESTERN_NORWAY
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_EASTERN_NORWAY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_WESTERN_NORWAY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_EASTERN_NORWAY
+			hq_region = sr:region_northern_europe
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_WESTERN_NORWAY
-				count = 2
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 10
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 6
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 3
 			}
 		}
 	}
@@ -9751,7 +7382,7 @@
 		create_military_formation = {
 			name = Svenska_Armen
 			type = army
-			hq_region = sr:region_baltic
+			hq_region = sr:region_northern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SCANIA
@@ -9811,66 +7442,30 @@
 		create_military_formation = {
 			name = Svenska_Marinen
 			type = fleet
-			hq_region = sr:region_baltic
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SCANIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_GOTALAND
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SVEALAND
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SCANIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_GOTALAND
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SVEALAND
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SCANIA
+			hq_region = sr:region_northern_europe
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_GOTALAND
-				count = 6
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SVEALAND
-				count = 6
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_SCANIA
-				count = 2
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 53
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_GOTALAND
-				count = 2
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_SVEALAND
-				count = 2
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 5
 			}
 		}
 	}
@@ -9878,7 +7473,7 @@
 		create_military_formation = {
 			name = Gemeinsame_Armee
 			type = army
-			hq_region = sr:region_south_germany
+			hq_region = sr:region_central_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_BOHEMIA
@@ -10323,7 +7918,7 @@
 		create_military_formation = {
 			name = Osterreichische_Landwehr
 			type = army
-			hq_region = sr:region_south_germany
+			hq_region = sr:region_central_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_BOHEMIA
@@ -10428,7 +8023,7 @@
 		create_military_formation = {
 			name = Ungarisch_Honved
 			type = army
-			hq_region = sr:region_danubia
+			hq_region = sr:region_balkans
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_TRANSDANUBIA
@@ -10506,173 +8101,102 @@
 			}
 		}
 		create_military_formation = {
-			name = Hauptflotte
-			type = fleet
+			name = Seebataillon
+			type = army
 			hq_region = sr:region_balkans
 			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
+				type = unit_type:combat_unit_type_marines
 				state_region = s:STATE_ISTRIA
-				count = 2
+				count = 1
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
+				type = unit_type:combat_unit_type_marines
 				state_region = s:STATE_CROATIA
-				count = 2
+				count = 1
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
+				type = unit_type:combat_unit_type_marines
 				state_region = s:STATE_DALMATIA
-				count = 2
+				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ISTRIA
+		}
+		create_military_formation = {
+			name = K.U.K._Kriegsmarine
+			type = fleet
+			hq_region = sr:region_balkans
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CROATIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_DALMATIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ISTRIA
-				count = 7
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CROATIA
-				count = 7
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_DALMATIA
-				count = 7
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ISTRIA
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CROATIA
-				count = 6
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_DALMATIA
-				count = 6
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 50
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 10
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
 			}
 		}
 		create_military_formation = {
 			name = Aufklarungsgruppe
 			type = fleet
 			hq_region = sr:region_balkans
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ISTRIA
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 2
+			}
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CROATIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_DALMATIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ISTRIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CROATIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_DALMATIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ISTRIA
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CROATIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_DALMATIA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 15
 			}
-		}
-		create_military_formation = {
-			name = Torpedobootflottillen
-			type = fleet
-			hq_region = sr:region_balkans
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ISTRIA
-				count = 4
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CROATIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_DALMATIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ISTRIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CROATIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_DALMATIA
-				count = 4
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 		create_military_formation = {
 			name = U-Boot-Station
 			type = fleet
 			hq_region = sr:region_balkans
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ISTRIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CROATIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_DALMATIA
-				count = 2
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 6
 			}
 		}
 	}
@@ -11038,35 +8562,17 @@
 			name = Voennomorski_Sili_Na_Balgariya
 			type = fleet
 			hq_region = sr:region_balkans
-			combat_unit = {
-				type = unit_type:combat_unit_type_ironclad
-				state_region = s:STATE_BULGARIA
+			ship = {
+				type = ship_type:ship_type_modern_ironclad
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_ironclad
-				state_region = s:STATE_NORTHERN_THRACE
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BULGARIA
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NORTHERN_THRACE
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BULGARIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_NORTHERN_THRACE
-				count = 1
 			}
 		}
 	}
@@ -11155,80 +8661,25 @@
 			name = Polemiko_Naftiko
 			type = fleet
 			hq_region = sr:region_balkans
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CRETE
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 8
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 11
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_PELOPONNESE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ATTICA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_THESSALIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_MACEDONIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CRETE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_PELOPONNESE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ATTICA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_THESSALIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_MACEDONIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CRETE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_PELOPONNESE
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ATTICA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_THESSALIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_MACEDONIA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 5
 			}
 		}
 	}
@@ -11270,7 +8721,7 @@
 		create_military_formation = {
 			name = Fortele_Terestre_Romane
 			type = army
-			hq_region = sr:region_danubia
+			hq_region = sr:region_balkans
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_WALLACHIA
@@ -11320,21 +8771,14 @@
 		create_military_formation = {
 			name = Fortele_Navale_Romane
 			type = fleet
-			hq_region = sr:region_danubia
-			combat_unit = {
-				type = unit_type:combat_unit_type_ironclad
-				state_region = s:STATE_DOBRUDJA
+			hq_region = sr:region_balkans
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_DOBRUDJA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_DOBRUDJA
-				count = 3
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 21
 			}
 		}
 	}
@@ -13122,7 +10566,7 @@
 		create_military_formation = {
 			name = 3-Ya_Armeyskiy_Korpus
 			type = army
-			hq_region = sr:region_belarus
+			hq_region = sr:region_eastern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_INGRIA
@@ -13792,7 +11236,7 @@
 		create_military_formation = {
 			name = 4-Ya_Armeyskiy_Korpus
 			type = army
-			hq_region = sr:region_dnieper
+			hq_region = sr:region_eastern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_INGRIA
@@ -14462,7 +11906,7 @@
 		create_military_formation = {
 			name = 5-Ya_Armeyskiy_Korpus
 			type = army
-			hq_region = sr:region_urals
+			hq_region = sr:region_russia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_INGRIA
@@ -15132,7 +12576,7 @@
 		create_military_formation = {
 			name = 1-Ya_Kavaleriiskaya_Diviziya
 			type = army
-			hq_region = sr:region_urals
+			hq_region = sr:region_russia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_GREATER_CAUCASUS
@@ -15197,7 +12641,7 @@
 		create_military_formation = {
 			name = 2-Ya_Kavaleriiskaya_Diviziya
 			type = army
-			hq_region = sr:region_caucasus
+			hq_region = sr:region_russia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_KURSK
@@ -15250,302 +12694,122 @@
 			}
 		}
 		create_military_formation = {
+			name = Morskaya_Pekhota
+			type = army
+			hq_region = sr:region_russia
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_INGRIA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_TALINN
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_TARTU
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_marines
+				state_region = s:STATE_RIGA
+				count = 3
+			}
+		}
+		create_military_formation = {
 			name = Baltiyskiy_Flot
 			type = fleet
 			hq_region = sr:region_russia
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_INGRIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_TALINN
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_TARTU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_RIGA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_INGRIA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_TALINN
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_TARTU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_RIGA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_COURLAND
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KAUNAS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_INGRIA
-				count = 9
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_TALINN
-				count = 9
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_TARTU
-				count = 9
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_RIGA
-				count = 9
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_COURLAND
-				count = 9
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KAUNAS
-				count = 9
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_INGRIA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_TALINN
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_TARTU
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_RIGA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_COURLAND
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KAUNAS
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_INGRIA
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_TALINN
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
 				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_TARTU
-				count = 4
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_RIGA
-				count = 4
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_COURLAND
-				count = 4
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_KAUNAS
-				count = 4
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 38
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 82
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 22
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 20
 			}
 		}
 		create_military_formation = {
 			name = Chernomorskiy_Flot
 			type = fleet
-			hq_region = sr:region_dnieper
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_BESSARABIA
-				count = 1
+			hq_region = sr:region_eastern_europe
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_CHERSON
-				count = 1
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_CRIMEA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_TAURIDA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 14
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ROSTOV
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 25
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_KUBAN
-				count = 1
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 14
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHERSON
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CRIMEA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BESSARABIA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHERSON
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CRIMEA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_TAURIDA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ROSTOV
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KUBAN
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BESSARABIA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHERSON
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CRIMEA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_TAURIDA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ROSTOV
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KUBAN
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_BESSARABIA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CHERSON
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CRIMEA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_TAURIDA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_ROSTOV
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_KUBAN
-				count = 3
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 		create_military_formation = {
 			name = Tikhookeansky_Flot
 			type = fleet
-			hq_region = sr:region_manchuria
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_OUTER_MANCHURIA
+			hq_region = sr:region_northeast_asia
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_OUTER_MANCHURIA
-				count = 4
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_OUTER_MANCHURIA
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 1
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
 				count = 2
 			}
 		}
@@ -15554,7 +12818,7 @@
 		create_military_formation = {
 			name = Viimeistely_Miliisi
 			type = army
-			hq_region = sr:region_finland
+			hq_region = sr:region_northern_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_UUSIMAA
@@ -15571,7 +12835,7 @@
 		create_military_formation = {
 			name = Birinci_Ordu
 			type = army
-			hq_region = sr:region_anatolia
+			hq_region = sr:region_near_east
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_HUDAVENDIGAR
@@ -15776,7 +13040,7 @@
 		create_military_formation = {
 			name = Ikinci_Ordu
 			type = army
-			hq_region = sr:region_arabic
+			hq_region = sr:region_near_east
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_ALEPPO
@@ -15916,7 +13180,7 @@
 		create_military_formation = {
 			name = Ucuncu_Ordu
 			type = army
-			hq_region = sr:region_anatolia
+			hq_region = sr:region_near_east
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_HUDAVENDIGAR
@@ -16041,7 +13305,7 @@
 		create_military_formation = {
 			name = Dort_Ordu
 			type = army
-			hq_region = sr:region_arabic
+			hq_region = sr:region_near_east
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_ALEPPO
@@ -16181,126 +13445,26 @@
 		create_military_formation = {
 			name = Donanma-Yi_Humayun
 			type = fleet
-			hq_region = sr:region_anatolia
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_HUDAVENDIGAR
-				count = 1
+			hq_region = sr:region_near_east
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_AYDIN
-				count = 1
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_KONYA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_KASTAMONU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_TRABZON
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_ADANA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_HUDAVENDIGAR
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_AYDIN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KONYA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KASTAMONU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_TRABZON
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ADANA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_HUDAVENDIGAR
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_AYDIN
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KONYA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KASTAMONU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_TRABZON
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ADANA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_HUDAVENDIGAR
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_AYDIN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KONYA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KASTAMONU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_TRABZON
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ADANA
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 	}
@@ -16355,21 +13519,6 @@
 				count = 1
 			}
 		}
-		create_military_formation = {
-			name = Al-Quwwat_Al-Bahareya_Al-Masriyya
-			type = fleet
-			hq_region = sr:region_nile_basin
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_LOWER_EGYPT
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_LOWER_EGYPT
-				count = 3
-			}
-		}
 	}
 	c:SEN = {
 		create_military_formation = {
@@ -16404,7 +13553,7 @@
 		create_military_formation = {
 			name = Guarnigione_Di_Massawa
 			type = army
-			hq_region = sr:region_ethiopia
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_ERITREA
@@ -16416,7 +13565,7 @@
 		create_military_formation = {
 			name = Garnison_De_Djibouti
 			type = army
-			hq_region = sr:region_ethiopia
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_ERITREA
@@ -16428,7 +13577,7 @@
 		create_military_formation = {
 			name = Berbera_Garrison
 			type = army
-			hq_region = sr:region_ethiopia
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SOMALILAND
@@ -16440,7 +13589,7 @@
 		create_military_formation = {
 			name = Guarnigione_Di_Muqdisho
 			type = army
-			hq_region = sr:region_ethiopia
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SOMALILAND
@@ -16452,7 +13601,7 @@
 		create_military_formation = {
 			name = Ye-Ifederi_Mekelakeya_Serawit
 			type = army
-			hq_region = sr:region_ethiopia
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_GONDER
@@ -16519,7 +13668,7 @@
 		create_military_formation = {
 			name = Mbarara_Garrison
 			type = army
-			hq_region = sr:region_zanj
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_UGANDA
@@ -16531,7 +13680,7 @@
 		create_military_formation = {
 			name = Embu_Garrison
 			type = army
-			hq_region = sr:region_zanj
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_KENYA
@@ -16543,7 +13692,7 @@
 		create_military_formation = {
 			name = Askari_Armee
 			type = army
-			hq_region = sr:region_zanj
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_ZANZIBAR
@@ -16555,7 +13704,7 @@
 		create_military_formation = {
 			name = Lusaka_Garrison
 			type = army
-			hq_region = sr:region_congo
+			hq_region = sr:region_equatorial_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_ZAMBIA
@@ -16567,7 +13716,7 @@
 		create_military_formation = {
 			name = Guarnicao_De_Mapai
 			type = army
-			hq_region = sr:region_southern_africa
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_LOURENCO_MARQUES
@@ -16603,7 +13752,7 @@
 		create_military_formation = {
 			name = Garnison_De_Tananarive
 			type = army
-			hq_region = sr:region_zanj
+			hq_region = sr:region_east_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_NORTH_MADAGASCAR
@@ -16714,7 +13863,7 @@
 		create_military_formation = {
 			name = GuarniÃ§ao_De_Ambriz
 			type = army
-			hq_region = sr:region_congo
+			hq_region = sr:region_equatorial_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_NORTH_ANGOLA
@@ -16726,7 +13875,7 @@
 		create_military_formation = {
 			name = Force_Publique
 			type = army
-			hq_region = sr:region_congo
+			hq_region = sr:region_equatorial_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_BAS_CONGO
@@ -16778,7 +13927,7 @@
 		create_military_formation = {
 			name = 2eme_Armee_Coloniale
 			type = army
-			hq_region = sr:region_congo
+			hq_region = sr:region_equatorial_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_GABON
@@ -16795,7 +13944,7 @@
 		create_military_formation = {
 			name = Yeonde_Garnison
 			type = army
-			hq_region = sr:region_congo
+			hq_region = sr:region_equatorial_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_GABON
@@ -16817,7 +13966,7 @@
 		create_military_formation = {
 			name = Nigerian_Army
 			type = army
-			hq_region = sr:region_niger
+			hq_region = sr:region_west_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_YORUBA_STATES
@@ -16854,7 +14003,7 @@
 		create_military_formation = {
 			name = Sokode_Garnison
 			type = army
-			hq_region = sr:region_niger
+			hq_region = sr:region_west_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_TOGO
@@ -16866,7 +14015,7 @@
 		create_military_formation = {
 			name = Kumasi_Garrison
 			type = army
-			hq_region = sr:region_senegal
+			hq_region = sr:region_west_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_GOLD_COAST
@@ -16878,7 +14027,7 @@
 		create_military_formation = {
 			name = Liberian_Frontier_Force
 			type = army
-			hq_region = sr:region_senegal
+			hq_region = sr:region_west_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_LIBERIA
@@ -16890,7 +14039,7 @@
 		create_military_formation = {
 			name = Kenema_Garrison
 			type = army
-			hq_region = sr:region_senegal
+			hq_region = sr:region_west_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SIERRA_LEONE
@@ -16902,7 +14051,7 @@
 		create_military_formation = {
 			name = 1ere_Armee_Coloniale
 			type = army
-			hq_region = sr:region_senegal
+			hq_region = sr:region_west_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SENEGAL
@@ -16947,7 +14096,7 @@
 		create_military_formation = {
 			name = Tirailleurs_Senegalais
 			type = army
-			hq_region = sr:region_senegal
+			hq_region = sr:region_west_africa
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_SENEGAL
@@ -17000,7 +14149,7 @@
 		create_military_formation = {
 			name = Jab_Alshamr_Jaysh
 			type = army
-			hq_region = sr:region_arabic
+			hq_region = sr:region_arabia
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_HAIL
@@ -17012,7 +14161,7 @@
 		create_military_formation = {
 			name = Nej_Jaysh
 			type = army
-			hq_region = sr:region_arabic
+			hq_region = sr:region_arabia
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_NEJD
@@ -17024,7 +14173,7 @@
 		create_military_formation = {
 			name = Yemen_Jaysh
 			type = army
-			hq_region = sr:region_arabic
+			hq_region = sr:region_arabia
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_YEMEN
@@ -17036,7 +14185,7 @@
 		create_military_formation = {
 			name = Oman_Jaysh
 			type = army
-			hq_region = sr:region_arabic
+			hq_region = sr:region_arabia
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_OMAN
@@ -17048,7 +14197,7 @@
 		create_military_formation = {
 			name = Abu_Zaby_Jaysh
 			type = army
-			hq_region = sr:region_arabic
+			hq_region = sr:region_arabia
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_ABU_DHABI
@@ -17060,7 +14209,7 @@
 		create_military_formation = {
 			name = Berigad-E_Qazzaq
 			type = army
-			hq_region = sr:region_persia
+			hq_region = sr:region_greater_persia
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_IRAKAJEMI
@@ -17200,7 +14349,7 @@
 		create_military_formation = {
 			name = Andarmiri-Vous_Daulati
 			type = army
-			hq_region = sr:region_persia
+			hq_region = sr:region_greater_persia
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_IRAKAJEMI
@@ -17250,7 +14399,7 @@
 		create_military_formation = {
 			name = Nirohaye_Ghabileh_Ee
 			type = army
-			hq_region = sr:region_persia
+			hq_region = sr:region_greater_persia
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_IRAKAJEMI
@@ -17345,36 +14494,10 @@
 		create_military_formation = {
 			name = Niroi_Daryaayi_Faars
 			type = fleet
-			hq_region = sr:region_persia
-			combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_KHUZESTAN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_FARS
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_LARISTAN
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_KHUZESTAN
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_FARS
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_LARISTAN
-				count = 2
+			hq_region = sr:region_greater_persia
+			ship = {
+				type = ship_type:ship_type_early_ironclad
+				count = 8
 			}
 		}
 	}
@@ -17382,7 +14505,7 @@
 		create_military_formation = {
 			name = Artisi_Muqarrari
 			type = army
-			hq_region = sr:region_persia
+			hq_region = sr:region_greater_persia
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_HERAT
@@ -17447,7 +14570,7 @@
 		create_military_formation = {
 			name = Pardoxthoi_Qabilavi
 			type = army
-			hq_region = sr:region_persia
+			hq_region = sr:region_greater_persia
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_HERAT
@@ -17492,7 +14615,7 @@
 		create_military_formation = {
 			name = Gvardijai_Saxsii_Amir
 			type = army
-			hq_region = sr:region_persia
+			hq_region = sr:region_greater_persia
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_HERAT
@@ -17519,7 +14642,7 @@
 		create_military_formation = {
 			name = Bengal_Army
 			type = army
-			hq_region = sr:region_bengal
+			hq_region = sr:region_north_india
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_WEST_BENGAL
@@ -17584,7 +14707,7 @@
 		create_military_formation = {
 			name = Madras_Army
 			type = army
-			hq_region = sr:region_madras
+			hq_region = sr:region_south_india
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_MADRAS
@@ -17649,7 +14772,7 @@
 		create_military_formation = {
 			name = Bombay_Army
 			type = army
-			hq_region = sr:region_bombay
+			hq_region = sr:region_south_india
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_BOMBAY
@@ -17694,7 +14817,7 @@
 		create_military_formation = {
 			name = Punjab_Army
 			type = army
-			hq_region = sr:region_punjab
+			hq_region = sr:region_north_india
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_QUETTA
@@ -17784,7 +14907,7 @@
 		create_military_formation = {
 			name = Indian_Army
 			type = army
-			hq_region = sr:region_central_india
+			hq_region = sr:region_north_india
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_WEST_BENGAL
@@ -18009,16 +15132,18 @@
 		create_military_formation = {
 			name = Royal_Indian_Marine
 			type = fleet
-			hq_region = sr:region_bombay
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BOMBAY
+			hq_region = sr:region_south_india
+			ship = {
+				type = ship_type:ship_type_destroyer
 				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BOMBAY
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 3
+			}
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 50
 			}
 		}
 	}
@@ -18137,20 +15262,13 @@
 			name = Kong_Thap_Ruea_Thai
 			type = fleet
 			hq_region = sr:region_indochina
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BANGKOK
-				count = 5
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BANGKOK
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
 				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_BANGKOK
-				count = 1
 			}
 		}
 	}
@@ -18408,80 +15526,25 @@
 			name = Royal_Australian_Navy
 			type = fleet
 			hq_region = sr:region_oceania
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_NEW_SOUTH_WALES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_VICTORIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_QUEENSLAND
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_NEW_SOUTH_WALES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_VICTORIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_QUEENSLAND
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_NEW_SOUTH_WALES
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_VICTORIA
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_QUEENSLAND
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_NEW_SOUTH_WALES
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_VICTORIA
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 12
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_QUEENSLAND
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_NEW_SOUTH_WALES
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_VICTORIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_QUEENSLAND
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 15
 			}
 		}
 	}
@@ -18998,50 +16061,17 @@
 			name = Beiyang_Jiandui
 			type = fleet
 			hq_region = sr:region_north_china
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_BEIJING
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ZHILI
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SHANDONG
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_BEIJING
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 4
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_ZHILI
-				count = 4
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SHANDONG
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_BEIJING
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_ZHILI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SHANDONG
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 3
 			}
 		}
 	}
@@ -19244,35 +16274,17 @@
 			name = Guangdong_Shui_Shi
 			type = fleet
 			hq_region = sr:region_south_china
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_GUANGDONG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SHAOZHOU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_GUANGDONG
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SHAOZHOU
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 3
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
 				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_GUANGDONG
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SHAOZHOU
-				count = 1
 			}
 		}
 		create_military_formation = {
@@ -19362,7 +16374,7 @@
 		create_military_formation = {
 			name = Manzhou_Jun
 			type = army
-			hq_region = sr:region_manchuria
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SHENGJING
@@ -19414,7 +16426,7 @@
 		create_military_formation = {
 			name = Dai-Ichi_Shidan
 			type = army
-			hq_region = sr:region_japan
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_KANTO
@@ -19422,7 +16434,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_CHUBU
+				state_region = s:STATE_HOKUSHINETSU
 				count = 25
 			}
 			combat_unit = {
@@ -19432,7 +16444,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_CHUBU
+				state_region = s:STATE_HOKUSHINETSU
 				count = 5
 			}
 			combat_unit = {
@@ -19442,7 +16454,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_siege_artillery
-				state_region = s:STATE_CHUBU
+				state_region = s:STATE_HOKUSHINETSU
 				count = 8
 			}
 			combat_unit = {
@@ -19452,14 +16464,14 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_siege_artillery
-				state_region = s:STATE_CHUBU
+				state_region = s:STATE_HOKUSHINETSU
 				count = 13
 			}
 		}
 		create_military_formation = {
 			name = Dai-Ni_Shidan
 			type = army
-			hq_region = sr:region_japan
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_TOHOKU
@@ -19467,7 +16479,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_CHUBU
+				state_region = s:STATE_HOKUSHINETSU
 				count = 13
 			}
 			combat_unit = {
@@ -19477,7 +16489,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_CHUBU
+				state_region = s:STATE_HOKUSHINETSU
 				count = 3
 			}
 			combat_unit = {
@@ -19487,17 +16499,17 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_shrapnel_artillery
-				state_region = s:STATE_CHUBU
+				state_region = s:STATE_HOKUSHINETSU
 				count = 10
 			}
 		}
 		create_military_formation = {
 			name = Dai-San_Shidan
 			type = army
-			hq_region = sr:region_japan
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_KANSAI
+				state_region = s:STATE_KYOTO
 				count = 8
 			}
 			combat_unit = {
@@ -19507,7 +16519,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_KANSAI
+				state_region = s:STATE_KYOTO
 				count = 3
 			}
 			combat_unit = {
@@ -19517,7 +16529,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_shrapnel_artillery
-				state_region = s:STATE_KANSAI
+				state_region = s:STATE_KYOTO
 				count = 5
 			}
 			combat_unit = {
@@ -19529,10 +16541,10 @@
 		create_military_formation = {
 			name = Dai-Shi_Shidan
 			type = army
-			hq_region = sr:region_japan
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_KANSAI
+				state_region = s:STATE_KYOTO
 				count = 5
 			}
 			combat_unit = {
@@ -19542,7 +16554,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_KANSAI
+				state_region = s:STATE_KYOTO
 				count = 3
 			}
 			combat_unit = {
@@ -19552,7 +16564,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_shrapnel_artillery
-				state_region = s:STATE_KANSAI
+				state_region = s:STATE_KYOTO
 				count = 3
 			}
 			combat_unit = {
@@ -19564,10 +16576,10 @@
 		create_military_formation = {
 			name = Dai-So_Shidan
 			type = army
-			hq_region = sr:region_manchuria
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_CHUGOKU
+				state_region = s:STATE_CHUGOKUSTATE_SHIKOKU
 				count = 8
 			}
 			combat_unit = {
@@ -19577,7 +16589,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_CHUGOKU
+				state_region = s:STATE_CHUGOKUSTATE_SHIKOKU
 				count = 3
 			}
 			combat_unit = {
@@ -19589,7 +16601,7 @@
 		create_military_formation = {
 			name = Dai-Roku_Shidan
 			type = army
-			hq_region = sr:region_manchuria
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_KYUSHU
@@ -19609,7 +16621,7 @@
 		create_military_formation = {
 			name = Konoe_Shidan
 			type = army
-			hq_region = sr:region_japan
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_KANTO
@@ -19627,523 +16639,124 @@
 			}
 		}
 		create_military_formation = {
-			name = Rengo_Kantai
-			type = fleet
-			hq_region = sr:region_japan
+			name = Kaigun_Heitai
+			type = army
+			hq_region = sr:region_northeast_asia
 			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
+				type = unit_type:combat_unit_type_marines
 				state_region = s:STATE_KANTO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_CHUBU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_KANSAI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_SHIKOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_CHUGOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_KYUSHU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANTO
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHUBU
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANSAI
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SHIKOKU
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHUGOKU
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KYUSHU
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANTO
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUBU
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANSAI
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SHIKOKU
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUGOKU
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KYUSHU
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANTO
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUBU
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANSAI
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SHIKOKU
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUGOKU
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KYUSHU
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_KANTO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CHUBU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_KANSAI
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_SHIKOKU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CHUGOKU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_KYUSHU
-				count = 2
+				count = 7
 			}
 		}
 		create_military_formation = {
 			name = Dai-Ichi_Kantai
 			type = fleet
-			hq_region = sr:region_japan
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_KANTO
+			hq_region = sr:region_northeast_asia
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANTO
-				count = 1
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHUBU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 7
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANSAI
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SHIKOKU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHUGOKU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 25
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KYUSHU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 30
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANTO
-				count = 2
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUBU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANSAI
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SHIKOKU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUGOKU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KYUSHU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANTO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUBU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANSAI
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SHIKOKU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUGOKU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KYUSHU
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_KANTO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CHUBU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_KANSAI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_SHIKOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_CHUGOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_KYUSHU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 50
 			}
 		}
 		create_military_formation = {
 			name = Dai-Ni_Kantai
 			type = fleet
-			hq_region = sr:region_japan
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_KANTO
+			hq_region = sr:region_northeast_asia
+			ship = {
+				type = ship_type:ship_type_dreadnought
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANTO
-				count = 1
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHUBU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 6
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANSAI
-				count = 1
+			ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 8
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SHIKOKU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 3
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHUGOKU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 25
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KYUSHU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 30
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANTO
-				count = 1
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUBU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANSAI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SHIKOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUGOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KYUSHU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANTO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUBU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANSAI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SHIKOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUGOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KYUSHU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 30
 			}
 		}
 		create_military_formation = {
 			name = Dai-San_Kantai
 			type = fleet
-			hq_region = sr:region_japan
-			combat_unit = {
-				type = unit_type:combat_unit_type_dreadnought
-				state_region = s:STATE_KANTO
+			hq_region = sr:region_northeast_asia
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 2
+			}
+			ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANTO
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 2
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
 				count = 1
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHUBU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 2
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANSAI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_SHIKOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_CHUGOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KYUSHU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANTO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUBU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANSAI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_SHIKOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUGOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KYUSHU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANTO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUBU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANSAI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_SHIKOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUGOKU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KYUSHU
-				count = 1
-			}
-		}
-		create_military_formation = {
-			name = Tokumu_Kantai
-			type = fleet
-			hq_region = sr:region_south_china
-			combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_KANTO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANTO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_CHUBU
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_KANSAI
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_KANTO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_torpedo_boat
-				state_region = s:STATE_CHUBU
-				count = 1
+			ship = {
+				type = ship_type:ship_type_troopship
+				count = 10
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-﻿british_empire_clothes_trigger = {
+﻿british_empire_clothes_trigger = { #TGW
 	exists = scope:character
 	scope:character = {
 		exists = c:GBR
@@ -1016,7 +1016,7 @@ african_diaspora_pop_clothes_trigger = {
 japanese_imperial_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		is_ruler = yes
+		is_ruler_of_own_country = yes
 		exists = home_country
      	home_country = {
      		has_law = law_type:law_monarchy
@@ -1050,7 +1050,7 @@ japanese_imperial_clothes_trigger = {
 chinese_imperial_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		is_ruler = yes
+		is_ruler_of_own_country = yes
 		exists = home_country
      	home_country = {
      		has_law = law_type:law_monarchy
@@ -1073,7 +1073,7 @@ chinese_court_clothes_trigger = {
 		NOT = {
 			AND = {
 				exists = home_country
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 				culture = {
 					has_discrimination_trait = heritage_tai
 					has_discrimination_trait_group = heritage_group_southeast_asian
@@ -1270,7 +1270,7 @@ european_clothes_trigger = {
 				devout_clothes_trigger = no
 				NOT = {
 					has_ideology = ideology:ideology_traditionalist
-					is_ruler = yes
+					is_ruler_of_own_country = yes
 				}
 				owner ?= {
 					has_variable = meiji_restoration_complete
@@ -1380,8 +1380,8 @@ politician_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		AND = {
-			has_role = politician
-			is_ruler = no
+			has_role_of_type = politician
+			is_ruler_of_own_country = no
 		}
 	}
 }
@@ -1390,7 +1390,7 @@ junta_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		AND = {
-			is_ruler = yes
+			is_ruler_of_own_country = yes
 			is_interest_group_type = ig_armed_forces
 			owner ?= {
 				OR = {
@@ -1517,7 +1517,7 @@ armed_forces_clothes_trigger = {
 military_governor_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		is_ruler = yes
+		is_ruler_of_own_country = yes
 		has_trait = special_character_colonial_military
 		owner ?= {
 			has_law = law_type:law_colonial_administration
@@ -1528,7 +1528,7 @@ military_governor_clothes_trigger = {
 ruler_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		is_ruler = yes
+		is_ruler_of_own_country = yes
 	}
 }
 
@@ -1536,8 +1536,8 @@ military_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		OR = {
-			has_role = general
-			has_role = admiral
+			has_role_of_type = general
+			has_role_of_type = admiral
 		}
 	}
 }
@@ -1548,12 +1548,12 @@ military_marshal_clothes_trigger = {
 		OR = {
 			AND = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				OR = {
 					commander_rank >= 5
-					has_role = politician # If is IG leader
+					has_role_of_type = politician # If is IG leader
 				}
 			}
 		}
@@ -1571,9 +1571,9 @@ monarchy_clothes_trigger = {
 					is_female = yes # Female Regents wear more stylish clothes than male ones, as female regents trend towards being royals themselves
 					owner ?= { has_gov_regency = no }
 				}
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
-	     	is_heir = yes
+	     	is_heir_of_own_country = yes
 		}
      	owner = {
      		has_law = law_type:law_monarchy
@@ -1585,7 +1585,7 @@ republic_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		exists = home_country
-		is_ruler = yes
+		is_ruler_of_own_country = yes
 		OR = {
 			culture = cu:griqua
 			home_country = {
@@ -1599,7 +1599,7 @@ regency_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		exists = owner
-		is_ruler = yes
+		is_ruler_of_own_country = yes
 		owner ?= {
 			has_gov_regency = yes
 		}
@@ -2199,13 +2199,13 @@ struggling_pop_trigger = {
 
 agitator_character_trigger = {
 	scope:character ?= {
-		has_role = agitator
+		has_role_of_type = agitator
 	}
 }
 
 executive_clothes_trigger = {
 	scope:character ?= {
-		has_role = executive
+		has_role_of_type = executive
 	}
 }
 

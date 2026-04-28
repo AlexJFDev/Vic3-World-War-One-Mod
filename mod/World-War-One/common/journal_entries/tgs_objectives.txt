@@ -1,5 +1,5 @@
-﻿je_usa_victory = {
-	should_be_pinned_by_default = yes
+﻿je_usa_victory = { #TGW
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	icon = "gfx/interface/icons/event_icons/usa_icon.dds"
 
 	group = je_group_objectives
@@ -25,7 +25,7 @@
 }
 
 je_uk_victory = {
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	icon = "gfx/interface/icons/event_icons/gbr_icon.dds"
 
 	group = je_group_objectives
@@ -33,7 +33,6 @@ je_uk_victory = {
 	complete = {
 		game_date > 1953.5.28
 		global_country_ranking = 1
-        leading_producer_of = g:ironclads
 		navy_size > 500
 	}
 
@@ -49,7 +48,7 @@ je_uk_victory = {
 }
 
 je_germany_victory = {
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	icon = "gfx/interface/icons/event_icons/ger_icon.dds"
 
 	group = je_group_objectives
@@ -73,7 +72,7 @@ je_germany_victory = {
 }
 
 je_russia_victory = {
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	icon = "gfx/interface/icons/event_icons/rus_icon.dds"
 
 	group = je_group_objectives
@@ -100,7 +99,7 @@ je_russia_victory = {
 }
 
 je_japan_victory = {
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	icon = "gfx/interface/icons/event_icons/jap_icon.dds"
 
 	group = je_group_objectives
@@ -112,7 +111,6 @@ je_japan_victory = {
 			global_country_ranking = 2
 			global_country_ranking = 3
 		}
-		leading_producer_of = g:ironclads
 		navy_size > 400
 	}
 

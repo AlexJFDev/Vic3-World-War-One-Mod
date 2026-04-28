@@ -71,7 +71,7 @@ exiles_events.1 = {
 
 	trigger = {
 		any_scope_character = {
-			has_role = agitator
+			has_role_of_type = agitator
 			character_supports_political_movement = no
 		}
 	}
@@ -90,7 +90,7 @@ exiles_events.1 = {
 	immediate = {
 		random_scope_character = {	
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 				character_supports_political_movement = no
 			}
 			this.interest_group = {
@@ -158,8 +158,8 @@ exiles_events.2 = {
 	trigger = {
 		empty_agitator_slots >= 1
 		any_scope_character = {
-			is_ruler = no
-			is_heir = no
+			is_ruler_of_own_country = no
+			is_heir_of_own_country = no
 			this.interest_group = {
 				is_in_government = yes
 			}
@@ -196,8 +196,8 @@ exiles_events.2 = {
 	immediate = {
 		random_scope_character = {
 			limit = {
-				is_ruler = no
-				is_heir = no
+				is_ruler_of_own_country = no
+				is_heir_of_own_country = no
 				this.interest_group = {
 					is_in_government = yes
 				}
@@ -389,7 +389,7 @@ exiles_events.4 = {
 			}
 			any_scope_character = {
 				OR = {	
-					has_role = agitator
+					has_role_of_type = agitator
 					has_modifier = incompetent_coup_attempt
 				}
 			}
@@ -420,7 +420,7 @@ exiles_events.4 = {
 			random_scope_character = {
 				limit = {
 					OR = {	
-						has_role = agitator
+						has_role_of_type = agitator
 						has_modifier = incompetent_coup_attempt
 					}
 				}

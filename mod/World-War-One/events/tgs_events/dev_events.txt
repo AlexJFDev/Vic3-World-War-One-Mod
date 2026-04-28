@@ -1,6 +1,6 @@
 ﻿namespace = dev_events
 
-dev_events.1 = { 
+dev_events.1 = { #TGW
     type = country_event
 
     title = dev_events.1.t
@@ -50,7 +50,7 @@ dev_events.2 = {
         c:GER = {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_rhine
+			hq_region = sr:region_western_europe
             name = ger_army_help
 	
 			combat_unit = {
@@ -1405,7 +1405,7 @@ dev_events.32 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_new_england
+			hq_region = sr:region_atlantic_coast
             name = ai_fighters_spawn
 	
 			combat_unit = {
@@ -1438,7 +1438,7 @@ dev_events.32 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_england
+			hq_region = sr:region_western_europe
             name = ai_fighters_spawn
 	
 			combat_unit = {
@@ -1471,7 +1471,7 @@ dev_events.32 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_france
+			hq_region = sr:region_western_europe
             name = ai_fighters_spawn
 	
 			combat_unit = {
@@ -1504,7 +1504,7 @@ dev_events.32 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_north_germany
+			hq_region = sr:region_central_europe
             name = ai_fighters_spawn
 	
 			combat_unit = {
@@ -1537,7 +1537,7 @@ dev_events.32 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
             name = ai_fighters_spawn
 	
 			combat_unit = {
@@ -1570,7 +1570,7 @@ dev_events.32 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_south_germany
+			hq_region = sr:region_central_europe
             name = ai_fighters_spawn
 	
 			combat_unit = {
@@ -1636,7 +1636,7 @@ dev_events.32 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_anatolia
+			hq_region = sr:region_near_east
             name = ai_fighters_spawn
 	
 			combat_unit = {
@@ -1669,7 +1669,7 @@ dev_events.32 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_japan
+			hq_region = sr:region_northeast_asia
             name = ai_fighters_spawn
 	
 			combat_unit = {
@@ -1705,7 +1705,7 @@ dev_events.33 = {
         c:GER = {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_rhine
+			hq_region = sr:region_western_europe
             name = ger_army_help
 	
 			combat_unit = {
@@ -2764,7 +2764,7 @@ dev_events.65 = {
         trigger = { is_player = no }
         create_military_formation = {
 			type = army
-			hq_region = sr:region_anatolia
+			hq_region = sr:region_near_east
 			name = turkish_independance_fighters
 
 			combat_unit = {
@@ -2781,7 +2781,7 @@ dev_events.65 = {
         trigger = { is_player = yes }
         create_military_formation = {
 			type = army
-			hq_region = sr:region_anatolia
+			hq_region = sr:region_near_east
 			name = turkish_independance_fighters
 
 			combat_unit = {
@@ -3466,7 +3466,7 @@ dev_events.78 = {
         trigger = { is_player = no }
         create_military_formation = {
 			type = army
-			hq_region = sr:region_rhine
+			hq_region = sr:region_western_europe
             name = ger_army_help
 	
 			combat_unit = {
@@ -3507,31 +3507,37 @@ dev_events.78 = {
 		}
 		create_military_formation = {
 			type = fleet
-			hq_region = sr:region_north_germany
+			hq_region = sr:region_central_europe
             name = ger_navy_help
 	
-			combat_unit = {
-				type = unit_type:combat_unit_type_battleship
-				state_region = s:STATE_HANNOVER
-				count = 15
+			ship = {
+				type = ship_type:ship_type_super_dreadnought
+				count = 3
 			}
 
-            combat_unit = {
-				type = unit_type:combat_unit_type_scout_cruiser
-				state_region = s:STATE_ELBE
+            ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 10
+			}
+
+            ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 10
+			}
+
+            ship = {
+				type = ship_type:ship_type_light_cruiser
 				count = 30
 			}
-            
-            combat_unit = {
-				type = unit_type:combat_unit_type_destroyer
-				state_region = s:STATE_POMERANIA
-				count = 50
+
+            ship = {
+				type = ship_type:ship_type_destroyer
+				count = 60
 			}
 
-            combat_unit = {
-				type = unit_type:combat_unit_type_submarine
-				state_region = s:STATE_MECKLENBURG
-				count = 50
+            ship = {
+				type = ship_type:ship_type_submarine
+				count = 100
 			}
 		} 
         random_scope_state = {
@@ -3539,7 +3545,7 @@ dev_events.78 = {
 				is_coastal = yes
 			}
 			create_building = {
-				building = building_military_shipyard
+				building = building_shipyard
 				level = 12
             }		
 		} 
@@ -3593,7 +3599,7 @@ dev_events.79 = {
         trigger = { is_player = no }
         create_military_formation = {
 			type = army
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
             name = ger_army_help
 	
 			combat_unit = {
@@ -3634,7 +3640,7 @@ dev_events.79 = {
 		}
 		create_military_formation = {
 			type = fleet
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
             name = ger_navy_help
 	
 			combat_unit = {
@@ -3666,7 +3672,7 @@ dev_events.79 = {
 				is_coastal = yes
 			}
 			create_building = {
-				building = building_military_shipyard
+				building = building_shipyard
 				level = 12
             }		
 		} 
@@ -3816,7 +3822,7 @@ dev_events.84 = {
         trigger = { is_player = no }
         create_military_formation = {
 			type = army
-			hq_region = sr:region_japan
+			hq_region = sr:region_northeast_asia
             name = ger_army_help
 
             combat_unit = {
@@ -4147,7 +4153,7 @@ dev_events.93 = {
         add_treasury = 25000000
         create_military_formation = {
 			type = army
-			hq_region = sr:region_france
+			hq_region = sr:region_western_europe
             name = ger_army_help
 
             combat_unit = {
@@ -4164,7 +4170,7 @@ dev_events.93 = {
 		} 
         create_military_formation = {
 			type = army
-			hq_region = sr:region_occitania
+			hq_region = sr:region_southern_europe
             name = ger_army_help
 
             combat_unit = {
@@ -4245,7 +4251,7 @@ dev_events.94 = {
 				is_coastal = yes
 			}
 			create_building = {
-				building = building_military_shipyard
+				building = building_shipyard
 				level = 12
             }		
 		}
@@ -4496,7 +4502,7 @@ dev_events.103 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_new_england
+			hq_region = sr:region_atlantic_coast
             name = ai_tanks_spawn
 	
 			combat_unit = {
@@ -4535,7 +4541,7 @@ dev_events.103 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_england
+			hq_region = sr:region_western_europe
             name = ai_tanks_spawn
 	
 			combat_unit = {
@@ -4574,7 +4580,7 @@ dev_events.103 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_france
+			hq_region = sr:region_western_europe
             name = ai_tanks_spawn
 	
 			combat_unit = {
@@ -4613,7 +4619,7 @@ dev_events.103 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_north_germany
+			hq_region = sr:region_central_europe
             name = ai_tanks_spawn
 	
 			combat_unit = {
@@ -4652,7 +4658,7 @@ dev_events.103 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_italy
+			hq_region = sr:region_southern_europe
             name = ai_tanks_spawn
 	
 			combat_unit = {
@@ -4691,7 +4697,7 @@ dev_events.103 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_south_germany
+			hq_region = sr:region_central_europe
             name = ai_tanks_spawn
 	
 			combat_unit = {
@@ -4769,7 +4775,7 @@ dev_events.103 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_anatolia
+			hq_region = sr:region_near_east
             name = ai_tanks_spawn
 	
 			combat_unit = {
@@ -4808,7 +4814,7 @@ dev_events.103 = {
 		}
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_japan
+			hq_region = sr:region_northeast_asia
             name = ai_tanks_spawn
 	
 			combat_unit = {

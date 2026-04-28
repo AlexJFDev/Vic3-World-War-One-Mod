@@ -29,8 +29,8 @@ industrial_accident_events.1 = {
 		}
 		any_scope_character = {
 			AND = { # can be a politician but can't be, like, Queen Victoria
-				has_role = politician
-				is_ruler = no
+				has_role_of_type = politician
+				is_ruler_of_own_country = no
 				is_busy = no
 				is_immortal = no
 				age >= 18 # must be an adult
@@ -65,8 +65,8 @@ industrial_accident_events.1 = {
 		random_scope_character = {
 			limit = {
 				AND = { # can be a politician but can't be, like, Queen Victoria
-					has_role = politician
-					is_ruler = no
+					has_role_of_type = politician
+					is_ruler_of_own_country = no
 					is_busy = no
 					is_immortal = no
 				}

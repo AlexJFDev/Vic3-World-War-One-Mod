@@ -121,8 +121,8 @@
 		every_scope_character = {
 			limit = {
 				OR = {
-					has_role = politician
-					has_role = agitator
+					has_role_of_type = politician
+					has_role_of_type = agitator
 				}
 				OR = {
 					has_ideology = ideology:ideology_fascist
@@ -204,7 +204,7 @@
 					set_as_interest_group_leader = yes
 					if = {
 						limit = {
-							has_role = agitator
+							has_role_of_type = agitator
 						}
 						remove_character_role = politician
 					}
@@ -287,7 +287,7 @@
 
 	weight = 10000
 	can_deactivate = no
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_fascism_2 = {
@@ -411,7 +411,7 @@ je_fascism_2 = {
 
 	weight = 10000
 	can_deactivate = no
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_modernization_program = {
@@ -482,7 +482,7 @@ je_modernization_program = {
 
 	weight = 10000
 	can_deactivate = no
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_ethno_nationalist = {
@@ -495,8 +495,8 @@ je_ethno_nationalist = {
 		any_interest_group = {
 			any_scope_character = {
 				OR = {
-					has_role = politician
-					has_role = agitator
+					has_role_of_type = politician
+					has_role_of_type = agitator
 				}
 				OR = {
 					has_ideology = ideology:ideology_fascist
@@ -513,8 +513,8 @@ je_ethno_nationalist = {
 			is_in_government = yes
 			any_scope_character = {
 				OR = {
-					has_role = politician
-					has_role = agitator
+					has_role_of_type = politician
+					has_role_of_type = agitator
 				}
 				OR = {
 					has_ideology = ideology:ideology_fascist

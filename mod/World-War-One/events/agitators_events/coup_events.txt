@@ -1499,11 +1499,11 @@ coup_pulse_events.1 = {
 
 	trigger = {
 		any_scope_character = {
-			has_role = general
+			has_role_of_type = general
 			popularity >= 0
-			is_ruler = no
+			is_ruler_of_own_country = no
 			NOT = {
-				has_role = politician
+				has_role_of_type = politician
 			}
 		}
 	}
@@ -1511,11 +1511,11 @@ coup_pulse_events.1 = {
 	immediate = {
 		random_scope_character = {
 			limit = {
-				has_role = general
+				has_role_of_type = general
 				popularity >= 0
-				is_ruler = no
+				is_ruler_of_own_country = no
 				NOT = {
-					has_role = politician
+					has_role_of_type = politician
 				}
 			}
 			save_scope_as = accused_general
@@ -3392,7 +3392,7 @@ coup_aftermath_events.1 = {
 		}
 		random_scope_character = {
 			limit = {
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 			save_scope_as = coup_leader
 		}
@@ -3496,7 +3496,7 @@ coup_aftermath_events.2 = {
 		}
 		random_scope_character = {
 			limit = {
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 			save_scope_as = coup_leader
 		}
@@ -3606,7 +3606,7 @@ coup_aftermath_events.3 = {
 		}	
 		random_scope_character = {
 			limit = {
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 			save_scope_as = coup_leader
 		}	
@@ -3689,7 +3689,7 @@ coup_aftermath_events.4 = {
 		}
 		random_scope_character = {
 			limit = {
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 			save_scope_as = coup_leader
 		}

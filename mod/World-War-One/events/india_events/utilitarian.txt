@@ -93,8 +93,8 @@ utilitarian.1 = {
 			limit = {
 				any_scope_character = {
 					OR = {
-						has_role = agitator
-						has_role = politician
+						has_role_of_type = agitator
+						has_role_of_type = politician
 					}
 					has_ideology = ideology:ideology_utilitarian_leader	
 				}
@@ -181,8 +181,8 @@ utilitarian.2 = {
 			limit = {
 				any_scope_character = {
 					OR = {
-						has_role = agitator
-						has_role = politician
+						has_role_of_type = agitator
+						has_role_of_type = politician
 					}
 					has_ideology = ideology:ideology_utilitarian_leader	
 				}
@@ -335,8 +335,8 @@ utilitarian.3 = {
 				limit = {
 					any_scope_character = {
 						OR = {
-							has_role = agitator
-							has_role = politician
+							has_role_of_type = agitator
+							has_role_of_type = politician
 						}
 						has_ideology = ideology:ideology_utilitarian_leader	
 					}
@@ -405,8 +405,8 @@ utilitarian.4 = {
 			limit = {
 				any_scope_character = {
 					OR = {
-						has_role = agitator
-						has_role = politician
+						has_role_of_type = agitator
+						has_role_of_type = politician
 					}
 					has_ideology = ideology:ideology_utilitarian_leader	
 				}
@@ -415,8 +415,8 @@ utilitarian.4 = {
 			random_scope_character = {
 				limit = {
 					OR = {
-						has_role = agitator
-						has_role = politician
+						has_role_of_type = agitator
+						has_role_of_type = politician
 					}
 					has_ideology = ideology:ideology_utilitarian_leader	
 				}
@@ -505,8 +505,8 @@ utilitarian.5 = {
 		}
 		any_scope_character = {
 			OR = {
-				has_role = agitator
-				has_role = politician
+				has_role_of_type = agitator
+				has_role_of_type = politician
 			}
 			has_ideology = ideology:ideology_utilitarian_leader	
 		}
@@ -540,8 +540,8 @@ utilitarian.5 = {
 		random_scope_character = {
 			limit = {
 				OR = {
-					has_role = agitator
-					has_role = politician
+					has_role_of_type = agitator
+					has_role_of_type = politician
 				}
 				has_ideology = ideology:ideology_utilitarian_leader	
 			}
@@ -620,7 +620,7 @@ utilitarian.6 = {
 			}
 			any_lobby_member = {
 				leader = {
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 			}
 			target = { c:GBR ?= this }
@@ -636,7 +636,7 @@ utilitarian.6 = {
 				}
 				any_lobby_member = {
 					leader = {
-						is_ruler = no
+						is_ruler_of_own_country = no
 					}
 				}
 				target = { c:GBR ?= this }
@@ -645,7 +645,7 @@ utilitarian.6 = {
 			random_lobby_member = {
 				limit = {
 					leader = {
-						is_ruler = no
+						is_ruler_of_own_country = no
 					}		
 				}
 				leader = {
@@ -990,8 +990,8 @@ utilitarian.9 = {
 			limit = {
 				any_scope_character = {
 					OR = {
-						has_role = agitator
-						has_role = politician
+						has_role_of_type = agitator
+						has_role_of_type = politician
 					}
 					has_ideology = ideology:ideology_utilitarian_leader	
 				}
@@ -1000,8 +1000,8 @@ utilitarian.9 = {
 			random_scope_character = {
 				limit = {
 					OR = {
-						has_role = agitator
-						has_role = politician
+						has_role_of_type = agitator
+						has_role_of_type = politician
 					}
 					has_ideology = ideology:ideology_utilitarian_leader	
 				}
@@ -1087,8 +1087,8 @@ utilitarian.10 = {
 		}
 		any_scope_character = {
 			OR = {
-				has_role = agitator
-				has_role = politician
+				has_role_of_type = agitator
+				has_role_of_type = politician
 			}
 			has_ideology = ideology:ideology_utilitarian_leader	
 		}
@@ -1163,8 +1163,8 @@ utilitarian.10 = {
 			limit = {
 				any_scope_character = {
 					OR = {
-						has_role = agitator
-						has_role = politician
+						has_role_of_type = agitator
+						has_role_of_type = politician
 					}
 					has_ideology = ideology:ideology_utilitarian_leader	
 				}

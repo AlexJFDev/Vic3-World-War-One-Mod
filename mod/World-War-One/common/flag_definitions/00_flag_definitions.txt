@@ -44,7 +44,7 @@
 @canton_scale_denmark_y = @[ ( 220 / coa_height ) + 0.001 ]
 @third = @[1/3]
 
-REPLACE_OR_CREATE:DEFAULT = {
+REPLACE_OR_CREATE:DEFAULT = { #TGW
 	flag_definition = {
 		coa = list "communist"
 		priority = 1000
@@ -299,7 +299,7 @@ REPLACE_OR_CREATE:AFS = {
         priority = 100
         trigger = {
             exists= c:AFS
-            scope:actor ?= { capital ?= { region = sr:region_congo } }
+            scope:actor ?= { capital ?= { region = sr:region_equatorial_africa } }
         }
     }
     flag_definition = {
@@ -319,7 +319,7 @@ REPLACE_OR_CREATE:AFS = {
         priority = 100
         trigger = {
             exists= c:AFS
-            scope:actor ?= { capital ?= { region = sr:region_zanj } }
+            scope:actor ?= { capital ?= { region = sr:region_east_africa } }
         }
     }
     flag_definition = {
@@ -341,10 +341,7 @@ REPLACE_OR_CREATE:AFS = {
             exists= c:AFS
             scope:actor ?= {
             	capital ?= {
-            		OR = {
-            			region = sr:region_senegal
-            			region = sr:region_niger
-            		} 
+            		region = sr:region_west_africa
             	}
             }
         }

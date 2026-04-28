@@ -1,4 +1,4 @@
-﻿REPLACE_OR_CREATE:battle_condition_pursuit = {
+﻿REPLACE_OR_CREATE:battle_condition_pursuit = { #TGW
 	icon = "gfx/interface/icons/battle_conditions/battle_condition_pursuit.dds"
 
 	modifier = {
@@ -130,7 +130,7 @@ REPLACE_OR_CREATE:battle_condition_dug_in = { #defender only
 		scope:is_advancing_side = no
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 		NOT = { has_battle_condition = battle_condition_aggressive_maneuver }
 	}
@@ -170,7 +170,7 @@ REPLACE_OR_CREATE:battle_condition_charted_terrain = {
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 		NOT = { has_battle_condition = battle_condition_blunder }
 	}
@@ -198,7 +198,7 @@ REPLACE_OR_CREATE:battle_condition_rapid_advance = { #attacker only
 		scope:is_advancing_side = yes
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 	}
 	
@@ -265,7 +265,7 @@ REPLACE_OR_CREATE:battle_condition_camouflaged = { #defender only
 		scope:is_advancing_side = no
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 	}
 	
@@ -326,7 +326,7 @@ REPLACE_OR_CREATE:battle_condition_logistics_secured = { #attacker only
 		scope:is_advancing_side = yes
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 		NOT = { has_battle_condition = battle_condition_broken_supply_line }
 	}
@@ -361,7 +361,7 @@ REPLACE_OR_CREATE:battle_condition_mud = {
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 		NOT = { has_battle_condition = battle_condition_dug_in }
 	}
@@ -434,7 +434,7 @@ REPLACE_OR_CREATE:battle_condition_broken_supply_line = {
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 		NOT = { has_battle_condition = battle_condition_logistics_secured }
 	}
@@ -480,7 +480,7 @@ REPLACE_OR_CREATE:battle_condition_exhausted = {
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 	}
 	
@@ -552,7 +552,7 @@ REPLACE_OR_CREATE:battle_condition_lost = { #attacker only
 		scope:is_advancing_side = yes
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 	}
 	
@@ -609,7 +609,7 @@ REPLACE_OR_CREATE:battle_condition_surprise_maneuver = {
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 		NOT = { has_battle_condition = battle_condition_poor_visibility }
 	}
@@ -813,7 +813,7 @@ REPLACE_OR_CREATE:battle_condition_rough_waters = {
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = admiral 
+			has_role_of_type = admiral 
 		}
 	}
 	
@@ -839,7 +839,7 @@ REPLACE_OR_CREATE:battle_condition_death_from_below = {
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = admiral 
+			has_role_of_type = admiral 
 			commander_military_formation = {
 				formation_navy_unit_type_fraction = {  
 					target = unit_type:combat_unit_type_submarine

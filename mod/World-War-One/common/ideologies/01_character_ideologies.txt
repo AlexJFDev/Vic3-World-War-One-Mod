@@ -6,7 +6,7 @@
 	character_ideology = yes
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
+		NOT = { has_role_of_type = agitator }
 	}
 
 	interest_group_leader_weight = {
@@ -77,8 +77,8 @@
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 			}
 			add = 50
@@ -150,7 +150,7 @@ REPLACE_OR_CREATE:ideology_traditionalist = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_no_womens_rights
 				has_law_or_variant = law_type:law_state_religion
@@ -208,7 +208,7 @@ REPLACE_OR_CREATE:ideology_traditionalist = {
 				owner = {
 					any_scope_character = {
 						has_template = RUS_alexander_iii
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -270,7 +270,7 @@ REPLACE_OR_CREATE:ideology_traditionalist = {
 				owner = {
 					any_scope_character = {
 						has_template = RUS_alexander_iii
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -342,7 +342,7 @@ REPLACE_OR_CREATE:ideology_traditionalist_minoritarian = {
 			}
 		}
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_no_womens_rights
 				has_law_or_variant = law_type:law_total_separation
@@ -399,7 +399,7 @@ REPLACE_OR_CREATE:ideology_traditionalist_minoritarian = {
 				owner = {
 					any_scope_character = {
 						has_template = RUS_alexander_iii
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -451,7 +451,7 @@ REPLACE_OR_CREATE:ideology_traditionalist_minoritarian = {
 				owner = {
 					any_scope_character = {
 						has_template = RUS_alexander_iii
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -515,7 +515,7 @@ REPLACE_OR_CREATE:ideology_nihilist = { #
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				OR = {
 					has_law_or_variant = law_type:law_presidential_republic
@@ -532,8 +532,8 @@ REPLACE_OR_CREATE:ideology_nihilist = { #
 				has_law = law_type:law_monarchy
 			}
 			OR = {
-				is_ruler = yes
-				is_heir = yes
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
 			}
 		}
 		interest_group = {
@@ -798,7 +798,7 @@ REPLACE_OR_CREATE:ideology_republican_leader = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				OR = {
 					has_law_or_variant = law_type:law_presidential_republic
@@ -814,8 +814,8 @@ REPLACE_OR_CREATE:ideology_republican_leader = {
 				has_law = law_type:law_monarchy
 			}
 			OR = {
-				is_ruler = yes
-				is_heir = yes
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
 			}
 		}
 		interest_group = {
@@ -904,18 +904,11 @@ REPLACE_OR_CREATE:ideology_republican_leader = {
 				owner = {
 					has_global_variable = peoples_springtime_happening
 					OR = {
-						capital.region = sr:region_north_germany
-						capital.region = sr:region_south_germany
-						capital.region = sr:region_england
-						capital.region = sr:region_iberia
-						capital.region = sr:region_france
-						capital.region = sr:region_occitania
-						capital.region = sr:region_rhine
-						capital.region = sr:region_italy
-						capital.region = sr:region_poland
-						capital.region = sr:region_danubia
+						capital.region = sr:region_central_europe
+						capital.region = sr:region_western_europe
+						capital.region = sr:region_southern_europe
+						capital.region = sr:region_eastern_europe
 						capital.region = sr:region_balkans
-						capital.region = sr:region_baltic
 					}
 				}
 			}
@@ -992,8 +985,8 @@ REPLACE_OR_CREATE:ideology_republican_leader = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -1006,18 +999,11 @@ REPLACE_OR_CREATE:ideology_republican_leader = {
 				owner = {
 					has_global_variable = peoples_springtime_happening
 					OR = {
-						capital.region = sr:region_north_germany
-						capital.region = sr:region_south_germany
-						capital.region = sr:region_england
-						capital.region = sr:region_iberia
-						capital.region = sr:region_france
-						capital.region = sr:region_occitania
-						capital.region = sr:region_rhine
-						capital.region = sr:region_italy
-						capital.region = sr:region_poland
-						capital.region = sr:region_danubia
+						capital.region = sr:region_central_europe
+						capital.region = sr:region_western_europe
+						capital.region = sr:region_southern_europe
+						capital.region = sr:region_eastern_europe
 						capital.region = sr:region_balkans
-						capital.region = sr:region_baltic
 					}
 				}
 			}
@@ -1152,7 +1138,7 @@ REPLACE_OR_CREATE:ideology_radical = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				OR = {
 					has_law_or_variant = law_type:law_presidential_republic
@@ -1170,8 +1156,8 @@ REPLACE_OR_CREATE:ideology_radical = {
 				has_law = law_type:law_monarchy
 			}
 			OR = {
-				is_ruler = yes
-				is_heir = yes
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
 			}
 		}
 		interest_group = {
@@ -1298,18 +1284,11 @@ REPLACE_OR_CREATE:ideology_radical = {
 				owner = {
 					has_global_variable = peoples_springtime_happening
 					OR = {
-						capital.region = sr:region_north_germany
-						capital.region = sr:region_south_germany
-						capital.region = sr:region_england
-						capital.region = sr:region_iberia
-						capital.region = sr:region_france
-						capital.region = sr:region_occitania
-						capital.region = sr:region_rhine
-						capital.region = sr:region_italy
-						capital.region = sr:region_poland
-						capital.region = sr:region_danubia
+						capital.region = sr:region_central_europe
+						capital.region = sr:region_western_europe
+						capital.region = sr:region_southern_europe
+						capital.region = sr:region_eastern_europe
 						capital.region = sr:region_balkans
-						capital.region = sr:region_baltic
 					}
 				}
 			}
@@ -1393,8 +1372,8 @@ REPLACE_OR_CREATE:ideology_radical = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -1454,18 +1433,11 @@ REPLACE_OR_CREATE:ideology_radical = {
 				owner = {
 					has_global_variable = peoples_springtime_happening
 					OR = {
-						capital.region = sr:region_north_germany
-						capital.region = sr:region_south_germany
-						capital.region = sr:region_england
-						capital.region = sr:region_iberia
-						capital.region = sr:region_france
-						capital.region = sr:region_occitania
-						capital.region = sr:region_rhine
-						capital.region = sr:region_italy
-						capital.region = sr:region_poland
-						capital.region = sr:region_danubia
+						capital.region = sr:region_central_europe
+						capital.region = sr:region_western_europe
+						capital.region = sr:region_southern_europe
+						capital.region = sr:region_eastern_europe
 						capital.region = sr:region_balkans
-						capital.region = sr:region_baltic
 					}
 				}
 			}
@@ -1569,7 +1541,7 @@ REPLACE_OR_CREATE:ideology_reformer = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_cultural_exclusion
 				has_law_or_variant = law_type:law_compulsory_primary_school
@@ -1702,8 +1674,8 @@ REPLACE_OR_CREATE:ideology_reformer = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -1770,7 +1742,7 @@ REPLACE_OR_CREATE:ideology_feminist = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_womens_suffrage
 			}
@@ -1933,8 +1905,8 @@ REPLACE_OR_CREATE:ideology_feminist = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -2292,7 +2264,7 @@ REPLACE_OR_CREATE:ideology_pacifist = {
 	}
 
 	non_interest_group_leader_trigger = { # No pacifist agitators
-		NOT = { has_role = agitator }
+		NOT = { has_role_of_type = agitator }
 	}
 
 	interest_group_leader_weight = {
@@ -2455,8 +2427,8 @@ REPLACE_OR_CREATE:ideology_pacifist = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -2465,8 +2437,8 @@ REPLACE_OR_CREATE:ideology_pacifist = {
 		if = { # Fewer pacifist generals/admirals
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 			}
 			multiply = 0.25
@@ -2529,7 +2501,7 @@ REPLACE_OR_CREATE:ideology_jingoist_leader = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_mass_conscription
 				has_law_or_variant = law_type:law_colonial_exploitation
@@ -2622,7 +2594,7 @@ REPLACE_OR_CREATE:ideology_jingoist_leader = {
 				owner = {
 					any_scope_character = {
 						has_template = RUS_alexei_ii
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -2713,7 +2685,7 @@ REPLACE_OR_CREATE:ideology_jingoist_leader = {
 				owner = {
 					any_scope_character = {
 						has_template = RUS_alexei_ii
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -2776,7 +2748,7 @@ REPLACE_OR_CREATE:ideology_royalist = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law = law_type:law_monarchy
 			}
@@ -2971,7 +2943,7 @@ REPLACE_OR_CREATE:ideology_social_democrat = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_universal_suffrage
 				has_law_or_variant = law_type:law_graduated_taxation
@@ -3149,8 +3121,8 @@ REPLACE_OR_CREATE:ideology_social_democrat = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -3263,7 +3235,7 @@ REPLACE_OR_CREATE:ideology_communist = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_collectivized_agriculture
 				has_law_or_variant = law_type:law_state_atheism
@@ -3277,8 +3249,8 @@ REPLACE_OR_CREATE:ideology_communist = {
 				has_law = law_type:law_monarchy
 			}
 			OR = {
-				is_ruler = yes
-				is_heir = yes
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
 			}
 		}
 		interest_group = {
@@ -3661,7 +3633,7 @@ REPLACE_OR_CREATE:ideology_vanguardist = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_collectivized_agriculture
 				has_law_or_variant = law_type:law_council_republic
@@ -3676,8 +3648,8 @@ REPLACE_OR_CREATE:ideology_vanguardist = {
 				has_law = law_type:law_monarchy
 			}
 			OR = {
-				is_ruler = yes
-				is_heir = yes
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
 			}
 		}
 		interest_group = {
@@ -4204,7 +4176,7 @@ REPLACE_OR_CREATE:ideology_fascist = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_autocracy
 				has_law_or_variant = law_type:law_ethnostate
@@ -4748,7 +4720,7 @@ REPLACE_OR_CREATE:ideology_anarchist = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_anarchy
 				has_law_or_variant = law_type:law_national_militia
@@ -4763,8 +4735,8 @@ REPLACE_OR_CREATE:ideology_anarchist = {
 				has_law = law_type:law_monarchy
 			}
 			OR = {
-				is_ruler = yes
-				is_heir = yes
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
 			}
 		}
 		interest_group = {
@@ -5083,7 +5055,7 @@ REPLACE_OR_CREATE:ideology_ethno_nationalist = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_ethnostate
 				has_law_or_variant = law_type:law_migration_controls
@@ -5334,7 +5306,7 @@ REPLACE_OR_CREATE:ideology_theocrat = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_theocracy
 				has_law_or_variant = law_type:law_state_religion
@@ -5551,7 +5523,7 @@ REPLACE_OR_CREATE:ideology_market_liberal = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_laissez_faire
 				has_law_or_variant = law_type:law_child_labor_allowed
@@ -5681,7 +5653,7 @@ REPLACE_OR_CREATE:ideology_market_liberal = {
 				owner = {
 					any_scope_character = {
 						has_template = RUS_alexander_ii
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -5815,8 +5787,8 @@ REPLACE_OR_CREATE:ideology_market_liberal = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -5861,7 +5833,7 @@ REPLACE_OR_CREATE:ideology_market_liberal = {
 				owner = {
 					any_scope_character = {
 						has_template = RUS_alexander_ii
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -5925,7 +5897,7 @@ REPLACE_OR_CREATE:ideology_luddite = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_isolationism
 				has_law_or_variant = law_type:law_industry_banned
@@ -6133,7 +6105,7 @@ REPLACE_OR_CREATE:ideology_authoritarian = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_outlawed_dissent
 				has_law_or_variant = law_type:law_surveillance_state
@@ -6427,7 +6399,7 @@ REPLACE_OR_CREATE:ideology_protectionist = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_protectionism
 				has_law_or_variant = law_type:law_interventionism
@@ -6715,7 +6687,7 @@ REPLACE_OR_CREATE:ideology_humanitarian = {
 
 	non_interest_group_leader_trigger = {
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_multicultural
 				has_law_or_variant = law_type:law_guaranteed_liberties
@@ -6858,8 +6830,8 @@ REPLACE_OR_CREATE:ideology_humanitarian = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -6987,7 +6959,7 @@ REPLACE_OR_CREATE:ideology_jacksonian_democrat = {
 
 	non_interest_group_leader_trigger = {
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_racial_segregation
 				has_law_or_variant = law_type:law_legacy_slavery
@@ -7091,7 +7063,7 @@ REPLACE_OR_CREATE:ideology_positivist = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_appointed_bureaucrats
 				has_law_or_variant = law_type:law_technocracy
@@ -7105,8 +7077,8 @@ REPLACE_OR_CREATE:ideology_positivist = {
 				has_law = law_type:law_monarchy
 			}
 			OR = {
-				is_ruler = yes
-				is_heir = yes
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
 			}
 		}
 		interest_group = {
@@ -7317,8 +7289,8 @@ REPLACE_OR_CREATE:ideology_positivist = {
 					}
 				}
 				OR = {
-					has_role = admiral
-					has_role = general
+					has_role_of_type = admiral
+					has_role_of_type = general
 				}
 			}
 			add = 50
@@ -7375,7 +7347,7 @@ REPLACE_OR_CREATE:ideology_land_reformer = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				NOT = {
 					has_law_or_variant = law_type:law_land_based_taxation
@@ -7665,7 +7637,7 @@ REPLACE_OR_CREATE:ideology_integralist = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_autocracy
 				has_law_or_variant = law_type:law_cultural_exclusion
@@ -8107,7 +8079,7 @@ REPLACE_OR_CREATE:ideology_liberal_leader = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				OR = {
 					has_law_or_variant = law_type:law_universal_suffrage
@@ -8151,7 +8123,7 @@ REPLACE_OR_CREATE:ideology_liberal_leader = {
 				OR = {
 					is_in_government = yes
 					any_scope_character = {
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -8165,7 +8137,7 @@ REPLACE_OR_CREATE:ideology_liberal_leader = {
 				NOR = {
 					is_in_government = yes
 					any_scope_character = {
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}
 			}
@@ -8259,7 +8231,7 @@ REPLACE_OR_CREATE:ideology_liberal_leader = {
 					OR = {
 						is_in_government = yes
 						any_scope_character = {
-							is_ruler = yes
+							is_ruler_of_own_country = yes
 						}
 					}
 				}
@@ -8275,7 +8247,7 @@ REPLACE_OR_CREATE:ideology_liberal_leader = {
 					NOR = {
 						is_in_government = yes
 						any_scope_character = {
-							is_ruler = yes
+							is_ruler_of_own_country = yes
 						}
 					}
 				}
@@ -8290,8 +8262,8 @@ REPLACE_OR_CREATE:ideology_liberal_leader = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -8384,7 +8356,7 @@ REPLACE_OR_CREATE:ideology_corporatist_leader = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				NOT = {
 					has_law_or_variant = law_type:law_council_republic
@@ -8685,7 +8657,7 @@ REPLACE_OR_CREATE:ideology_humanitarian_royalist = {
 
 	non_interest_group_leader_trigger = {
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law = law_type:law_monarchy
 				has_law_or_variant = law_type:law_multicultural
@@ -8865,8 +8837,8 @@ REPLACE_OR_CREATE:ideology_humanitarian_royalist = {
 		if = {
 			limit = {
 				OR = {
-					has_role = general
-					has_role = admiral
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
 				has_variable = spa_liberal_military_var
 			}
@@ -8983,7 +8955,7 @@ REPLACE_OR_CREATE:ideology_despotic_utopian = {
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
+		NOT = { has_role_of_type = agitator }
 		interest_group = {
 			ideology_despotic_utopian_valid_trigger = yes
 		}
@@ -9197,7 +9169,7 @@ REPLACE_OR_CREATE:ideology_utilitarian_leader = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				OR = {
 					has_law_or_variant = law_type:law_compulsory_primary_school
@@ -9357,7 +9329,7 @@ REPLACE_OR_CREATE:ideology_sovereignist_leader = { # For colonised peoples
 		value = 100
 		if = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 			}
 			multiply = 2
 		}
@@ -9464,7 +9436,7 @@ REPLACE_OR_CREATE:ideology_utopian = {
 	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_cooperative_ownership
 				has_law_or_variant = law_type:law_universal_suffrage
@@ -9486,8 +9458,8 @@ REPLACE_OR_CREATE:ideology_utopian = {
 				has_law = law_type:law_monarchy
 			}
 			OR = {
-				is_ruler = yes
-				is_heir = yes
+				is_ruler_of_own_country = yes
+				is_heir_of_own_country = yes
 			}
 		}
 		interest_group = {
@@ -9568,7 +9540,7 @@ REPLACE_OR_CREATE:ideology_modernizer_leader = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_protectionism
 				has_law_or_variant = law_type:law_compulsory_primary_school
@@ -9740,7 +9712,7 @@ ideology_carlist = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law = law_type:law_monarchy
 				has_law = law_type:law_traditionalism
@@ -9978,7 +9950,7 @@ ideology_miguelist = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law = law_type:law_monarchy
 				has_law = law_type:law_traditionalism
@@ -10193,7 +10165,7 @@ ideology_ilustrado_leader = { 	# Flavoured variant of Liberal and Anti-Clerical 
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_public_schools
 				has_law_or_variant = law_type:law_protected_speech

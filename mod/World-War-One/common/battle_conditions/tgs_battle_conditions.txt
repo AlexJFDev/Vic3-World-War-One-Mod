@@ -9,7 +9,7 @@
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 		allied_air_dominance > ennemy_air_dominance
 	}
@@ -44,7 +44,7 @@ battle_condition_enemy_air_superiority = {
 	possible = {
 		exists = scope:character
 		scope:character = { 
-			has_role = general 
+			has_role_of_type = general 
 		}
 		allied_air_dominance < enemy_air_dominance
 	}

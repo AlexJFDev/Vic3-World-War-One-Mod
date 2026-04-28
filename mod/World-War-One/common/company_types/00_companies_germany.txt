@@ -1,5 +1,5 @@
-﻿# Friedrich Krupp AG
-REPLACE_OR_CREATE:company_krupp = {
+﻿# Friedrich Krupp AG 
+REPLACE_OR_CREATE:company_krupp = { #TGW
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_krupp.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -22,7 +22,7 @@ REPLACE_OR_CREATE:company_krupp = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_north_germany
+		has_interest_marker_in_region = region_central_europe
 	}
 
 	attainable = {
@@ -121,7 +121,7 @@ REPLACE_OR_CREATE:company_rheinmetall = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_north_germany
+		has_interest_marker_in_region = region_central_europe
 	}
 
 	attainable = {
@@ -220,7 +220,6 @@ REPLACE_OR_CREATE:company_schichau = {
 
 	building_types = {
 		building_motor_industry
-		building_military_shipyard
 		building_shipyard
 	}
 
@@ -235,7 +234,7 @@ REPLACE_OR_CREATE:company_schichau = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_poland
+		has_interest_marker_in_region = region_eastern_europe
 	}
 
 	attainable = {
@@ -260,7 +259,7 @@ REPLACE_OR_CREATE:company_schichau = {
 
 	prosperity_modifier = {
 		unit_navy_offense_mult = 0.05
-		unit_combat_unit_type_submarine_offense_mult = 0.1
+		ship_type_submarine_offense_mult = 0.1
 	}
 
 	ai_will_do = {
@@ -304,7 +303,7 @@ REPLACE_OR_CREATE:company_siemens_and_halske = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_north_germany
+		has_interest_marker_in_region = region_central_europe
 	}
 
 	attainable = {
@@ -381,10 +380,9 @@ REPLACE_OR_CREATE:company_prussian_state_railways = {
 		has_technology_researched = railways
 		any_scope_state = {
 			OR = {
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_rhine
-				region = sr:region_poland
+				region = sr:region_central_europe
+				region = sr:region_western_europe
+				region = sr:region_eastern_europe
 			}
 			is_incorporated = yes
 			any_scope_building = {
@@ -403,10 +401,9 @@ REPLACE_OR_CREATE:company_prussian_state_railways = {
 		has_technology_researched = railways
 		any_scope_state = {
 			OR = {
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_rhine
-				region = sr:region_poland
+				region = sr:region_central_europe
+				region = sr:region_western_europe
+				region = sr:region_eastern_europe
 			}
 			is_incorporated = yes
 		}
@@ -417,10 +414,9 @@ REPLACE_OR_CREATE:company_prussian_state_railways = {
 			level = 5
 			state_trigger = {
 				OR = {
-					region = sr:region_north_germany
-					region = sr:region_south_germany
-					region = sr:region_rhine
-					region = sr:region_poland
+					region = sr:region_central_europe
+					region = sr:region_western_europe
+					region = sr:region_eastern_europe
 				}
 				is_incorporated = yes
 			}
@@ -457,7 +453,7 @@ REPLACE_OR_CREATE:company_basf = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_germany
+		has_interest_marker_in_region = region_central_europe
 	}
 
 	attainable = {

@@ -1,6 +1,6 @@
 ﻿namespace = allies_peace_deal
 
-allies_peace_deal.3 = {
+allies_peace_deal.3 = { #TGW
     type = country_event
 
     title = allies_peace_deal.3.t
@@ -231,10 +231,10 @@ allies_peace_deal.3 = {
 			if = {
 				limit = {
 					owner = c:GER
-					has_building = building_military_shipyard
+					has_building = building_shipyard
 					is_capital = no
 				}
-				remove_building = building_military_shipyard
+				remove_building = building_shipyard
 			}	
 		    }
         }
@@ -501,9 +501,9 @@ allies_peace_deal.4 = {
 			if = {
 				limit = {
 					owner = c:JAP
-					has_building = building_military_shipyard
+					has_building = building_shipyard
 				}
-				remove_building = building_military_shipyard
+				remove_building = building_shipyard
 			}	
 		    }
 			activate_law = law_type:law_parliamentary_republic
