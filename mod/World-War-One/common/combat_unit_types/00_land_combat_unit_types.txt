@@ -12,6 +12,7 @@
 combat_unit_type_irregular_infantry = {
     group = combat_unit_group_infantry
     max_manpower = 1000
+    supply_capacity = 10
 
     upkeep_modifier = {
         goods_input_small_arms_add = 0.25
@@ -84,6 +85,7 @@ combat_unit_type_irregular_infantry = {
 combat_unit_type_line_infantry = {
     group = combat_unit_group_infantry
     max_manpower = 1000
+    supply_capacity = 12
 
     upkeep_modifier = {
         goods_input_small_arms_add = 0.5
@@ -141,6 +143,7 @@ combat_unit_type_line_infantry = {
 combat_unit_type_skirmish_infantry = {
     group = combat_unit_group_infantry
     max_manpower = 1000
+    supply_capacity = 15
 
     upkeep_modifier = {
         goods_input_small_arms_add = 1
@@ -198,6 +201,7 @@ combat_unit_type_skirmish_infantry = {
 combat_unit_type_trench_infantry = {
     group = combat_unit_group_infantry
     max_manpower = 1000
+    supply_capacity = 18
 
     upkeep_modifier = {
         goods_input_small_arms_add = 1.5
@@ -254,6 +258,7 @@ combat_unit_type_trench_infantry = {
 combat_unit_type_squad_infantry = {
     group = combat_unit_group_infantry
     max_manpower = 1000
+    supply_capacity = 22
 
     upkeep_modifier = {
         goods_input_small_arms_add = 1.5
@@ -310,6 +315,7 @@ combat_unit_type_squad_infantry = {
 combat_unit_type_mechanized_infantry = {
     group = combat_unit_group_infantry
     max_manpower = 1000
+    supply_capacity = 30
 
     can_build_conscript = {
         NOT = {
@@ -355,6 +361,7 @@ combat_unit_type_mechanized_infantry = {
 combat_unit_type_cannon_artillery = {
     group = combat_unit_group_artillery
     max_manpower = 500
+    supply_capacity = 12
 	
     can_build_conscript = {
         NOT = {
@@ -425,6 +432,7 @@ combat_unit_type_cannon_artillery = {
 combat_unit_type_mobile_artillery = {
     group = combat_unit_group_artillery
     max_manpower = 500
+    supply_capacity = 15
 	
     can_build_conscript = {
         NOT = {
@@ -494,6 +502,7 @@ combat_unit_type_mobile_artillery = {
 combat_unit_type_shrapnel_artillery = {
     group = combat_unit_group_artillery
     max_manpower = 500
+    supply_capacity = 20
 
     can_build_conscript = {
         NOT = {
@@ -563,6 +572,7 @@ combat_unit_type_shrapnel_artillery = {
 combat_unit_type_siege_artillery = {
     group = combat_unit_group_artillery
     max_manpower = 500
+    supply_capacity = 25
 
     can_build_conscript = {
         NOT = {
@@ -633,6 +643,7 @@ combat_unit_type_siege_artillery = {
 combat_unit_type_heavy_tank = {
     group = combat_unit_group_artillery
     max_manpower = 500
+    supply_capacity = 35
 
     can_build_conscript = {
         NOT = {
@@ -683,6 +694,7 @@ combat_unit_type_heavy_tank = {
 combat_unit_type_hussars = {
     group = combat_unit_group_cavalry
     max_manpower = 500
+    supply_capacity = 10
 	
     can_build_conscript = {
         NOT = {
@@ -751,6 +763,7 @@ combat_unit_type_hussars = {
 combat_unit_type_dragoons = {
     group = combat_unit_group_cavalry
     max_manpower = 500
+    supply_capacity = 14
 
     can_build_conscript = {
         NOT = {
@@ -816,6 +829,7 @@ combat_unit_type_dragoons = {
 combat_unit_type_cuirassiers = {
     group = combat_unit_group_cavalry
     max_manpower = 500
+    supply_capacity = 14
 	
     can_build_conscript = {
         NOT = {
@@ -880,6 +894,7 @@ combat_unit_type_cuirassiers = {
 combat_unit_type_lancers = {
     group = combat_unit_group_cavalry
     max_manpower = 500
+    supply_capacity = 18
 	
     can_build_conscript = {
         NOT = {
@@ -947,6 +962,7 @@ combat_unit_type_lancers = {
 combat_unit_type_light_tanks = {
     group = combat_unit_group_cavalry
     max_manpower = 500
+    supply_capacity = 30
 
     can_build_conscript = {
         NOT = {
@@ -980,11 +996,103 @@ combat_unit_type_light_tanks = {
     }
 }
 
+### marines
+
+combat_unit_type_low_tier_marines = {
+	group = combat_unit_group_marines
+	max_manpower = 1000
+	supply_capacity = 12
+
+	conscript_peasant_levies = yes
+
+	upkeep_modifier = {
+		goods_input_small_arms_add = 1.5
+    }
+
+    battle_modifier = {
+        unit_offense_add = 20
+        unit_defense_add = 25
+        unit_morale_loss_add = 10
+		# no naval invasion efficiency loss
+    }
+
+	unlocking_technologies = { line_infantry }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/marines_eu_low.dds"
+    }
+
+	upgrades = {
+        combat_unit_type_mid_tier_marines
+        combat_unit_type_high_tier_marines
+	}
+}
+
+combat_unit_type_mid_tier_marines = {
+	group = combat_unit_group_marines
+	max_manpower = 1000
+	supply_capacity = 18
+
+	conscript_peasant_levies = yes
+
+	upkeep_modifier = {
+		goods_input_small_arms_add = 2.5
+		goods_input_ammunition_add = 1.5
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 35
+        unit_morale_loss_add = 10
+        # no naval invasion efficiency loss
+    }
+
+	unlocking_technologies = { power_of_the_purse }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/marines_eu_mid.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_high_tier_marines
+    }
+}
+
+combat_unit_type_high_tier_marines = {
+	group = combat_unit_group_marines
+	max_manpower = 1000
+	supply_capacity = 25
+
+	conscript_peasant_levies = yes
+
+	upkeep_modifier = {
+		goods_input_small_arms_add = 4
+		goods_input_ammunition_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 40
+        unit_morale_loss_add = 8
+        # no naval invasion efficiency loss
+    }
+
+	unlocking_technologies = { landing_craft }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/marines_eu_high.dds"
+    }
+}
+
 ### Air
 
 combat_unit_type_bomber = {
     group = combat_unit_group_air
     max_manpower = 500
+    supply_capacity = 35
 
     can_build_conscript = {
         NOT = {
@@ -1029,6 +1137,7 @@ combat_unit_type_bomber = {
 combat_unit_type_fighter = {
     group = combat_unit_group_air
     max_manpower = 500
+    supply_capacity = 25
 
     can_build_conscript = {
         NOT = {
@@ -1074,6 +1183,7 @@ combat_unit_type_fighter = {
 combat_unit_type_jet_fighter = {
     group = combat_unit_group_air
     max_manpower = 500
+    supply_capacity = 45
 
     can_build_conscript = {
         NOT = {
