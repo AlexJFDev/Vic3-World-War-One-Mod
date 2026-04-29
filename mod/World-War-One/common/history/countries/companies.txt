@@ -432,6 +432,13 @@
 			set_company_state_region = s:STATE_BANGKOK
 		}
 	}
+	c:ICH = {
+        add_company = company_type:company_societe_francaise_charbonnages_du_tonkin
+		company:company_societe_francaise_charbonnages_du_tonkin = {
+			set_company_establishment_date = 1884.3.5
+			set_company_state_region = s:STATE_TONKIN
+		}
+	}
 	c:AST = {
 		add_company = company_type:company_william_sandford
 		company:company_william_sandford = {
@@ -474,5 +481,15 @@
 			set_company_establishment_date = 1870.11.4
 			set_company_state_region = s:STATE_KANTO
 		}	
+        add_company = company_type:company_noda_shoyu
+		company:company_noda_shoyu = {
+			set_company_establishment_date = 1603.5.6
+			set_company_state_region = s:STATE_KANTO
+		}
+		add_company = company_type:company_yasuda
+		company:company_yasuda = {
+			set_company_establishment_date = 1876.4.8
+			set_company_state_region = s:STATE_KANTO
+		}
 	}
 }

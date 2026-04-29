@@ -7311,6 +7311,19 @@
 					pm_industrial_port 
 				}
 			}
+			create_building = {
+				building = building_naval_fortification
+				add_ownership = {
+					country = {
+						country = c:OMA
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 		region_state:TUR = {
 			create_building = {
@@ -21557,8 +21570,8 @@
 		}
 	}
 	s:STATE_AREQUIPA = {
-		region_state:CHL = { #Error
-			create_building = { #Error
+		region_state:CHL = {
+			create_building = {
 				building = building_railway
 				add_ownership = {
 					building = {
@@ -21573,7 +21586,7 @@
 					pm_steam_trains pm_steel_passenger_carriages 
 				}
 			}
-			create_building = { #Error
+			create_building = {
 				building = building_port
 				add_ownership = {
 					building = {
@@ -21588,7 +21601,7 @@
 					pm_basic_port 
 				}
 			}
-			create_building = { #Error
+			create_building = {
 				building = building_livestock_ranch
 				add_ownership = {
 					building = {
@@ -21603,7 +21616,7 @@
 					pm_electric_fencing pm_mechanized_slaughtering pm_sheep_farms pm_unrefrigerated 
 				}
 			}
-			create_building = { #Error
+			create_building = {
 				building = building_trade_center
 				add_ownership = {
 					country = {
@@ -26756,11 +26769,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -31860,7 +31872,7 @@
 					pm_training_streamlining 
 				}
 			}
-			create_building = { 
+			create_building = {
 				building = building_financial_district
 				add_ownership = {
 					country = {
@@ -32826,6 +32838,19 @@
 					pm_trade_center_trade_quantity_normal 
 				}
 			}
+			create_building = {
+				building = building_naval_fortification
+				add_ownership = {
+					country = {
+						country = c:DEI
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_SOUTH_SUMATRA = {
@@ -32988,6 +33013,19 @@
 					pm_trade_center_trade_quantity_normal 
 				}
 			}
+			create_building = {
+				building = building_naval_fortification
+				add_ownership = {
+					country = {
+						country = c:DEI
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_SUNDA_ISLANDS = {
@@ -33076,6 +33114,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_naval_fortification
+				add_ownership = {
+					country = {
+						country = c:DEI
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -43139,11 +43190,10 @@
 			create_building = {
 				building = building_logging_camp
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_societe_francaise_charbonnages_du_tonkin
 						country = c:ICH
-						levels = 2
-						region = STATE_ANNAM
+						levels = 6
 					}
 				}
 				reserves = 1
@@ -43184,11 +43234,10 @@
 			create_building = {
 				building = building_coal_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:FRA
+					company = {
+						type = company_societe_francaise_charbonnages_du_tonkin
+						country = c:ICH
 						levels = 7
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -43533,11 +43582,10 @@
 			create_building = {
 				building = building_coal_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:FRA
+					company = {
+						type = company_societe_francaise_charbonnages_du_tonkin
+						country = c:ICH
 						levels = 5
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -43925,11 +43973,10 @@
 			create_building = {
 				building = building_coal_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:FRA
+					company = {
+						type = company_societe_francaise_charbonnages_du_tonkin
+						country = c:ICH
 						levels = 18
-						region = STATE_ILE_DE_FRANCE
 					}
 				}
 				reserves = 1
@@ -44154,6 +44201,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fortification
+				add_ownership = {
+					country = {
+						country = c:DJB
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -53321,7 +53381,7 @@
 				add_ownership = {
 					country = {
 						country = c:GBR
-						levels = 3
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -62029,7 +62089,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 3
 					}
@@ -62042,11 +62103,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -62250,11 +62310,10 @@
 			create_building = {
 				building = building_food_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_noda_shoyu
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -62297,7 +62356,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 3
 					}
@@ -62310,11 +62370,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -62713,11 +62772,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -62876,11 +62934,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -63026,7 +63083,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 6
 					}
@@ -63290,7 +63348,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 6
 					}
@@ -63303,11 +63362,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 4
-						region = STATE_KANSAI
 					}
 				}
 				reserves = 1
@@ -63610,7 +63668,8 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					country = {
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 25
 					}
@@ -63623,11 +63682,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 8
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -63830,11 +63888,10 @@
 			create_building = {
 				building = building_food_industry
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_noda_shoyu
 						country = c:JAP
-						levels = 15
-						region = STATE_KANTO
+						levels = 25
 					}
 				}
 				reserves = 1
@@ -64324,11 +64381,10 @@
 			create_building = {
 				building = building_sulfur_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 12
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -64527,11 +64583,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -64758,11 +64813,10 @@
 			create_building = {
 				building = building_sulfur_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 18
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -65103,11 +65157,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -65298,11 +65351,10 @@
 			create_building = {
 				building = building_port
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_yasuda
 						country = c:JAP
 						levels = 1
-						region = STATE_KANTO
 					}
 				}
 				reserves = 1
@@ -75552,6 +75604,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fortification
+				add_ownership = {
+					country = {
+						country = c:YEM
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
 				}
 			}
 		}
@@ -95197,6 +95262,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_trade_center_trade_quantity_normal 
+				}
+			}
+			create_building = {
+				building = building_naval_fortification
+				add_ownership = {
+					country = {
+						country = c:SWE
+						levels = 3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
 				}
 			}
 		}

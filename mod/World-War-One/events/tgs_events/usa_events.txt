@@ -17,14 +17,22 @@ usa_events.1 = { #Finish the Panama Canal
 
     option = {
         name = usa_events.1.a
-		custom_tooltip = panama_canal_construction_available
-        set_variable = panama_survey_complete
         set_next_election_date = 1916.11.7
         active_law:lawgroup_internal_security ?= {
 			add_amendment = {
 				type = amendment_american_second_amendment
 				sponsor = ig_rural_folk
 				cooldown = 900
+			}
+		}
+        random_scope_state = {
+			limit = {
+				state_region = s:STATE_PANAMA
+                owner = root
+			}
+			create_building={
+				building="building_panama_canal"
+				level = 1
 			}
 		}
     }

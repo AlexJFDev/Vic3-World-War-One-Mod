@@ -706,6 +706,79 @@ REPLACE_OR_CREATE:SPA = { # Spain
 	}
 }
 
+REPLACE_OR_CREATE:JAP = { # Japan
+	dynamic_country_name = { # Tokugawa Shogunate
+		name = dyn_c_tokugawa_shogunate
+		adjective = JAP_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+				OR = {
+					game_date < 1836.1.2 # Needed to get around initialization
+					ruler ?= {
+						has_variable = house_tokugawa
+					}
+					AND = {
+						has_gov_regency = yes
+						heir ?= {
+							has_variable = house_tokugawa
+						}
+					}
+				}
+				has_law = law_type:law_bakufu
+			}
+		}
+	}
+	dynamic_country_name = { # Japanese Taikunate
+		name = dyn_c_japanese_taikunate
+		adjective = JAP_ADJ
+
+		is_main_tag_only = yes
+		priority = 25
+
+		trigger = {
+			scope:actor ?= {
+				any_active_law = {
+					has_amendment = amendment_type:amendment_taikunate
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_empire_of_japan
+		adjective = JAP_ADJ
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+				NOT = {
+					has_law = law_type:law_bakufu
+				}
+			}
+		}
+	}
+	dynamic_country_name = { # Republic of Japan
+		name = dyn_c_republic_of_japan
+		adjective = JAP_ADJ
+
+		is_main_tag_only = yes
+		priority = 30
+
+		trigger = {
+			exists = scope:actor
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+}
+
 REPLACE_OR_CREATE:KMT = {
    dynamic_country_name = {
 		name = dyn_c_kuomintang

@@ -766,38 +766,8 @@
 			hq_region = sr:region_atlantic_coast
 			combat_unit = {
 				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_MAINE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_NEW_HAMPSHIRE
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_MASSACHUSETTS
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_CONNECTICUT
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_NEW_YORK
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_NEW_JERSEY
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_MARYLAND
-				count = 3
+				state_region = s:STATE_WASHINGTON
+				count = 15
 			}
 		}
 		create_military_formation = {
@@ -838,7 +808,7 @@
 			}
 			ship = {
 				type = ship_type:ship_type_troop_ship
-				count = 20
+				count = 60
 			}
 		}
 		create_military_formation = {
@@ -879,10 +849,10 @@
 			}
 			ship = {
 				type = ship_type:ship_type_troop_ship
-				count = 10
+				count = 20
 			}
 		}
-		create_military_formation = {
+		create_military_formation = { #Added 57 torpedo ships
 			name = Pacific_Fleet
 			type = fleet
 			hq_region = sr:region_pacific_coast
@@ -904,11 +874,11 @@
 			}
 			ship = {
 				type = ship_type:ship_type_destroyer
-				count = 8
+				count = 30
 			}
 			ship = {
 				type = ship_type:ship_type_torpedo_boat
-				count = 5
+				count = 40
 			}
 			ship = {
 				type = ship_type:ship_type_submarine
@@ -919,7 +889,7 @@
 				count = 10
 			}
 		}
-		create_military_formation = {
+		create_military_formation = { #Added 5 cuisers 47 torpedo ships
 			name = Reserve_Fleet
 			type = fleet
 			hq_region = sr:region_atlantic_coast
@@ -937,15 +907,15 @@
 			}
 			ship = {
 				type = ship_type:ship_type_light_cruiser
-				count = 1
+				count = 6
 			}
 			ship = {
 				type = ship_type:ship_type_destroyer
-				count = 5
+				count = 30
 			}
 			ship = {
 				type = ship_type:ship_type_torpedo_boat
-				count = 3
+				count = 25
 			}
 			ship = {
 				type = ship_type:ship_type_submarine
@@ -2312,18 +2282,8 @@
 			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_HOME_COUNTIES
-				count = 9
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
 				state_region = s:STATE_EAST_ANGLIA
-				count = 9
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_WEST_COUNTRY
-				count = 9
+				count = 50
 			}
 		}
 		create_military_formation = {
@@ -3400,7 +3360,7 @@
 		create_military_formation = {
 			name = 3eme_Armee_De_Chalons
 			type = army
-			hq_region = sr:region_southern_europe
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_FRENCH_LOW_COUNTRIES
@@ -3705,7 +3665,7 @@
 		create_military_formation = {
 			name = 4eme_Armee_De_Fontainebleau
 			type = army
-			hq_region = sr:region_southern_europe
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_FRENCH_LOW_COUNTRIES
@@ -4195,19 +4155,14 @@
 		create_military_formation = {
 			name = Fusiliers_Marins
 			type = army
-			hq_region = sr:region_northern_europe
+			hq_region = sr:region_western_europe
 			combat_unit = {
 				type = unit_type:combat_unit_type_high_tier_marines
 				state_region = s:STATE_NORMANDY
-				count = 6
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_FRENCH_LOW_COUNTRIES
-				count = 6
+				count = 30
 			}
 		}
-		create_military_formation = {
+		create_military_formation = { #Removed 40 subs 30 torpedo boats
 			name = Escadre_De_La_Mediterranee
 			type = fleet
 			hq_region = sr:region_southern_europe
@@ -4233,7 +4188,7 @@
 			}
 			ship = {
 				type = ship_type:ship_type_torpedo_boat
-				count = 110
+				count = 80
 			}
 			ship = {
 				type = ship_type:ship_type_destroyer
@@ -4241,7 +4196,7 @@
 			}
 			ship = {
 				type = ship_type:ship_type_submarine
-				count = 60
+				count = 20
 			}
 			ship = {
 				type = ship_type:ship_type_troop_ship
@@ -7077,15 +7032,10 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_high_tier_marines
 				state_region = s:STATE_HANNOVER
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_ELBE
-				count = 3
+				count = 6
 			}
 		}
-		create_military_formation = {
+		create_military_formation = { #Added 40 torpedo boats 10 cruisers
 			name = Hochseeflotte
 			type = fleet
 			hq_region = sr:region_central_europe
@@ -7103,23 +7053,23 @@
 			}
 			ship = {
 				type = ship_type:ship_type_protected_cruiser
-				count = 3
+				count = 5
 			}
 			ship = {
 				type = ship_type:ship_type_light_cruiser
-				count = 13
-			}
-			ship = {
-				type = ship_type:ship_type_torpedo_boat
 				count = 20
 			}
 			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 40
+			}
+			ship = {
 				type = ship_type:ship_type_destroyer
-				count = 60
+				count = 80
 			}
 			ship = {
 				type = ship_type:ship_type_troop_ship
-				count = 50
+				count = 80
 			}
 		}
 		create_military_formation = {
@@ -7221,13 +7171,13 @@
 				count = 5
 			}
 		}
-		create_military_formation = {
+		create_military_formation = { #Added 20 subs
 			name = U-Boot-Flottille
 			type = fleet
 			hq_region = sr:region_central_europe
 			ship = {
 				type = ship_type:ship_type_submarine
-				count = 20
+				count = 40
 			}
 		}
 		create_military_formation = {
@@ -8097,17 +8047,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_high_tier_marines
 				state_region = s:STATE_ISTRIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_CROATIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_DALMATIA
-				count = 1
+				count = 3
 			}
 		}
 		create_military_formation = {
@@ -12690,22 +12630,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_high_tier_marines
 				state_region = s:STATE_INGRIA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_TALINN
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_TARTU
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_high_tier_marines
-				state_region = s:STATE_RIGA
-				count = 3
+				count = 12
 			}
 		}
 		create_military_formation = {
