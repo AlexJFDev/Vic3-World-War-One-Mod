@@ -1782,21 +1782,11 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_siege_artillery
 				state_region = s:STATE_RIO_DE_JANEIRO
-				count = 1
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_siege_artillery
 				state_region = s:STATE_BAHIA
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_shrapnel_artillery
-				state_region = s:STATE_BUENOS_AIRES
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_shrapnel_artillery
-				state_region = s:STATE_SANTA_FE
 				count = 2
 			}
 		}
@@ -2341,7 +2331,7 @@
 			type = fleet
 			hq_region = sr:region_western_europe
 			ship = {
-				type = unit_type:ship_type_dreadnought
+				type = ship_type:ship_type_dreadnought
 				count = 20
 			}
 			ship = {
