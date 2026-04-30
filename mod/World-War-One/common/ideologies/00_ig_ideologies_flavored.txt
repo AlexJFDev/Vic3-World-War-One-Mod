@@ -1,11 +1,12 @@
 ﻿REPLACE_OR_CREATE:ideology_republican_paternalistic = {
 	icon = "gfx/interface/icons/ideology_icons/republican_paternalistic.dds"
 	
-	lawgroup_governance_principles = {		
+	lawgroup_governance_principles = {
 		law_presidential_republic = approve
-		law_parliamentary_republic = approve
+		law_parliamentary_republic = neutral
 		law_theocracy = approve
 		law_corporate_state = neutral
+		law_social_monarchy = neutral
 		law_monarchy = neutral
 		law_council_republic = disapprove
 	}
@@ -42,10 +43,11 @@ REPLACE_OR_CREATE:ideology_scholar_paternalistic = {
 	
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
-		law_theocracy = neutral			
+		law_theocracy = neutral
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = neutral
 		law_council_republic = strongly_disapprove
 	}
 	
@@ -81,10 +83,11 @@ REPLACE_OR_CREATE:ideology_junker_paternalistic = {
 	
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
-		law_theocracy = neutral			
+		law_theocracy = neutral
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = approve
 		law_council_republic = strongly_disapprove
 	}
 	
@@ -120,10 +123,11 @@ REPLACE_OR_CREATE:ideology_papal_paternalistic = {
 	
 	lawgroup_governance_principles = {
 		law_theocracy = strongly_approve
-		law_monarchy = approve		
+		law_monarchy = approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
-		law_corporate_state = approve
+		law_corporate_state = neutral
+		law_social_monarchy = approve
 		law_council_republic = disapprove
 	}
 	
@@ -162,7 +166,8 @@ REPLACE_OR_CREATE:ideology_papal_moralist = {
 		law_theocracy = strongly_approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
-		law_corporate_state = approve
+		law_corporate_state = neutral
+		law_social_monarchy = approve
 		law_council_republic = strongly_disapprove
 	}
 
@@ -185,11 +190,12 @@ REPLACE_OR_CREATE:ideology_confucian = {
 	}
 	
 	lawgroup_governance_principles = {
-		law_monarchy = strongly_approve	
+		law_monarchy = strongly_approve
 		law_theocracy = neutral
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = approve
 		law_council_republic = strongly_disapprove
 	}
 	
@@ -206,10 +212,11 @@ REPLACE_OR_CREATE:ideology_shinto_moralist = {
 	
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
-		law_theocracy = approve	
+		law_theocracy = approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = approve
 		law_council_republic = disapprove
 	}
 	
@@ -242,6 +249,7 @@ REPLACE_OR_CREATE:ideology_caudillismo = {
 		law_corporate_state = approve
 		law_monarchy = neutral
 		law_theocracy = disapprove
+		law_social_monarchy = neutral
 		law_council_republic = strongly_disapprove
 	}
 	
@@ -374,10 +382,11 @@ REPLACE_OR_CREATE:ideology_buddhist_moralist = {
 	
 	lawgroup_governance_principles = {
 		law_theocracy = strongly_approve
-		law_monarchy = approve	
+		law_monarchy = approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = neutral
 		law_council_republic = strongly_disapprove
 	}
 
@@ -394,10 +403,11 @@ REPLACE_OR_CREATE:ideology_hindu_moralist = {
 	
 	lawgroup_governance_principles = {
 		law_theocracy = approve
-		law_monarchy = strongly_approve	
+		law_monarchy = strongly_approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = neutral
 		law_council_republic = strongly_disapprove
 	}
 
@@ -428,10 +438,11 @@ REPLACE_OR_CREATE:ideology_hindu_moralist_british_india = {
 	
 	lawgroup_governance_principles = {
 		law_theocracy = disapprove
-		law_monarchy = strongly_approve	
+		law_monarchy = strongly_approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = neutral
 		law_council_republic = strongly_disapprove
 	}
 
@@ -556,11 +567,12 @@ REPLACE_OR_CREATE:ideology_heavenly_kingdom_theocratic = {
 	icon = "gfx/interface/icons/ideology_icons/moralist.dds"
 	
 	lawgroup_governance_principles = {
-		law_theocracy = strongly_approve	
-		law_monarchy = disapprove
+		law_theocracy = strongly_approve
+		law_monarchy = neutral
 		law_presidential_republic = disapprove
 		law_parliamentary_republic = disapprove
 		law_corporate_state = disapprove
+		law_social_monarchy = neutral
 		law_council_republic = strongly_disapprove
 	}
 
@@ -626,11 +638,12 @@ REPLACE_OR_CREATE:ideology_agrarian_jeffersonian = {
 REPLACE_OR_CREATE:ideology_constitutionalist = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 	
-	lawgroup_governance_principles = {	
+	lawgroup_governance_principles = {
 		law_presidential_republic = approve
 		law_parliamentary_republic = approve
 		law_corporate_state = neutral
-		law_monarchy = approve	
+		law_monarchy = approve
+		law_social_monarchy = neutral
 		law_theocracy = neutral
 		law_council_republic = disapprove
 	}
@@ -785,10 +798,11 @@ REPLACE_OR_CREATE:ideology_enclavist = {
 	}
 
 	lawgroup_governance_principles = {
-		law_monarchy = neutral			
+		law_monarchy = approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = neutral
 		law_theocracy = disapprove
 		law_council_republic = strongly_disapprove
 	}
@@ -863,6 +877,43 @@ REPLACE_OR_CREATE:ideology_malthusian = {
 	}
 }
 
+REPLACE_OR_CREATE:ideology_technocratic = {
+	icon = "gfx/interface/icons/ideology_icons/technocratic.dds"
+
+	lawgroup_governance_principles = {
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_corporate_state = approve
+		law_social_monarchy = neutral
+		law_monarchy = neutral
+		law_theocracy = neutral
+		law_council_republic = disapprove
+	}
+
+	lawgroup_distribution_of_power = {
+		law_universal_suffrage = disapprove
+		law_census_voting = disapprove
+		law_wealth_voting = neutral
+		law_landed_voting = disapprove
+		law_single_party_state = approve
+		law_technocracy = strongly_approve
+		law_oligarchy = neutral
+		law_autocracy = neutral
+		law_anarchy = strongly_disapprove
+	}
+
+	lawgroup_economic_system = {
+		law_laissez_faire = disapprove
+		law_interventionism = neutral
+		law_agrarianism = disapprove
+		law_traditionalism = strongly_disapprove
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = approve
+		law_industry_banned = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
+	}
+}
+
 REPLACE_OR_CREATE:ideology_magnatial = {
 	icon = "gfx/interface/icons/ideology_icons/paternalistic.dds"
 
@@ -872,6 +923,7 @@ REPLACE_OR_CREATE:ideology_magnatial = {
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_corporate_state = neutral
+		law_social_monarchy = approve
 		law_council_republic = strongly_disapprove
 	}
 
@@ -906,5 +958,27 @@ REPLACE_OR_CREATE:ideology_magnatial = {
 		law_mercantilism = approve
 		law_protectionism = approve
 		law_free_trade = disapprove
+	}
+}
+
+REPLACE_OR_CREATE:ideology_mercantile = {
+	icon = "gfx/interface/icons/ideology_icons/market_liberal.dds"
+
+	lawgroup_trade_policy = {
+		law_isolationism = disapprove
+		law_mercantilism = approve
+		law_protectionism = approve
+		law_free_trade = neutral
+	}
+
+	lawgroup_economic_system = {
+		law_extraction_economy = strongly_disapprove
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = neutral
+		law_interventionism = approve
+		law_agrarianism = disapprove
+		law_traditionalism = strongly_disapprove
+		law_laissez_faire = neutral
+		law_industry_banned = strongly_disapprove
 	}
 }

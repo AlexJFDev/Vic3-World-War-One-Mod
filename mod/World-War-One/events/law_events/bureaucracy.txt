@@ -87,7 +87,7 @@ bureaucracy.1 = {
 	option = { # get back to work
 		name = bureaucracy.1.b
 		trigger = {
-			NOT = { has_law_or_variant = law_type:law_secret_police }
+			NOT = { has_law_or_variant = law_type:law_surveillance_state }
 		}
 		# lose 15% success chance and bureaucracy mult
 		add_enactment_modifier = {
@@ -97,7 +97,7 @@ bureaucracy.1 = {
 	option = { # secret police will keep them in line
 		name = bureaucracy.1.c
 		trigger = {
-			has_law_or_variant = law_type:law_secret_police
+			has_law_or_variant = law_type:law_surveillance_state
 		}
 		# lose 10% success chance
 		add_enactment_modifier = {

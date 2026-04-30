@@ -345,14 +345,14 @@
  modifier_government_accident_attempt: "Неудавшееся покушение"
 
  arrange_accident: "Подстроить несчастный случай"
- arrange_accident_desc: "#lore Пусть [GetLawType('law_secret_police').GetName|l] организует убийство, цель — [Character.GetFullName].#!\n\n@information! Вероятность успеха этого взаимодействия #b увеличится#! в зависимости от уровня [Concept('concept_institution','института')] «Министерство внутренних дел»."
+ arrange_accident_desc: "#lore Пусть [GetLawType('law_surveillance_state').GetName|l] организует убийство, цель — [Character.GetFullName].#!\n\n@information! Вероятность успеха этого взаимодействия #b увеличится#! в зависимости от уровня [Concept('concept_institution','института')] «Министерство внутренних дел»."
 
  notification_arranged_accident_failed_name: "[SCOPE.sCharacter('assassinated_scope').GetFullName] [SelectLocalization(SCOPE.sCharacter('assassinated_scope').IsFemale, 'избежала', 'избежал' )] покушения"
- notification_arranged_accident_failed_desc: "[GetLawType('law_secret_police').GetName] организует неудачное покушение. [SCOPE.sCharacter('assassinated_scope').GetFullName] продолжает оставаться в неведении."
+ notification_arranged_accident_failed_desc: "[GetLawType('law_surveillance_state').GetName] организует неудачное покушение. [SCOPE.sCharacter('assassinated_scope').GetFullName] продолжает оставаться в неведении."
  notification_arranged_accident_failed_tooltip: "#header $notification_arranged_accident_failed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_arranged_accident_failed_desc$"
 
  notification_arranged_accident_failed_incrimination_name: "Обнародованная попытка покушения"
- notification_arranged_accident_failed_incrimination_desc: "[GetLawType('law_secret_police').GetName] организует неудачное покушение. [SCOPE.sCharacter('assassinated_scope').GetFullName] [SelectLocalization(SCOPE.sCharacter('assassinated_scope').IsFemale, 'осталась', 'остался' )] в живых, а [SCOPE.gsInterestGroup('relevant_ig').GetName|l] узнали о покушении и пришли в ярость."
+ notification_arranged_accident_failed_incrimination_desc: "[GetLawType('law_surveillance_state').GetName] организует неудачное покушение. [SCOPE.sCharacter('assassinated_scope').GetFullName] [SelectLocalization(SCOPE.sCharacter('assassinated_scope').IsFemale, 'осталась', 'остался' )] в живых, а [SCOPE.gsInterestGroup('relevant_ig').GetName|l] узнали о покушении и пришли в ярость."
  notification_arranged_accident_failed_incrimination_tooltip: "#header $notification_arranged_accident_failed_incrimination_name$#!\n$TOOLTIP_DELIMITER$\n$notification_arranged_accident_failed_incrimination_desc$"
 
  assassination_attempt_failed_tt: "Наше #bold покушение#! провалилось, но осталось незамеченным"
