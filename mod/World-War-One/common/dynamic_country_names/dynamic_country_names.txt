@@ -311,6 +311,17 @@ REPLACE_OR_CREATE:GER = { # Germany
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_german_soviet_republic
+        adjective = GER_ADJ
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
 }
 REPLACE_OR_CREATE:CHI = { # China
 	dynamic_country_name = {
@@ -507,7 +518,10 @@ REPLACE_OR_CREATE:ITA = { # Italy
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= { 
-				has_law = law_type:law_monarchy 
+				OR = {
+					has_law = law_type:law_monarchy 
+					has_law = law_type:law_social_monarchy 
+				}
 			}
 		}
 	}
@@ -526,7 +540,10 @@ REPLACE_OR_CREATE:ITA = { # Italy
 					global_country_ranking = 2
 					global_country_ranking = 3
 				}
-				has_law = law_type:law_monarchy 
+				OR = {
+					has_law = law_type:law_monarchy 
+					has_law = law_type:law_social_monarchy 
+				} 
 			}
 		}
 	}
@@ -815,6 +832,76 @@ REPLACE_OR_CREATE:SAF = {
 					type = colony
 					is_initiator = yes
 				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:FRA = {
+	dynamic_country_name = {
+		name = dyn_c_french_empire
+		adjective = dyn_c_french_empire_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+				has_variable = bonapartist_restoration_var
+				has_variable = one_true_french_dynasty
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_french_republic
+		adjective = dyn_c_french_republic_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					has_law_or_variant = law_type:law_parliamentary_republic
+					has_law_or_variant = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_corporate_state
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_french_kingdom
+		adjective = dyn_c_french_kingdom_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+				OR = {
+					has_variable = orleanist_restoration_var
+					has_variable = legitimist_restoration_var
+				}
+				has_variable = one_true_french_dynasty
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_french_commune
+		adjective = dyn_c_french_commune_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_council_republic
 			}
 		}
 	}

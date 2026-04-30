@@ -582,121 +582,41 @@ russia_events.8 = { #The civil war begins
            }
         }
         every_state = {
-	      limit = {
-		    exists = c:RUS
-		    owner = {
-			OR = {
-				c:RUS = THIS 
-			}
-		   }
-		   OR = {
-	          NOT = {
-			   region = sr:region_eastern_europe 
-			   region = sr:region_eastern_europe
-               region = sr:region_russia
-			   region = sr:region_eastern_europe_states
-               region = sr:region_eastern_europe
-               region = sr:region_balkans
-		       }
+	        limit = {
+		        exists = c:RUS
+		        owner = { c:RUS = THIS }
+                NOT = {
+                   state_region = s:STATE_TALINN
+                   state_region = s:STATE_TARTU
+                   state_region = s:STATE_RIGA
+                   state_region = s:STATE_COURLAND
+                   state_region = s:STATE_KAUNAS
+                   state_region = s:STATE_VILNIUS
+                   state_region = s:STATE_LESSER_POLAND
+                   state_region = s:STATE_GREATER_POLAND
+                   state_region = s:STATE_BREST
+                   state_region = s:STATE_MAZOVIA
+                   state_region = s:STATE_VOLHYNIA	
+                   state_region = s:STATE_MINSK
+                   state_region = s:STATE_CHERNIHIV
+                   state_region = s:STATE_MOGILEV
+                   state_region = s:STATE_ORYOL
+                   state_region = s:STATE_SMOLENSK
+                   state_region = s:STATE_VITEBSK
+                   state_region = s:STATE_PSKOV
+                   state_region = s:STATE_INGRIA
+                   state_region = s:STATE_NOVGOROD
+                   state_region = s:STATE_TVER
+                   state_region = s:STATE_MOSCOW
+                   state_region = s:STATE_RYANZAN
+                }
 		    }
-          }
-	        set_state_owner = c:SIB
-        }
-        s:STATE_YAROSLAVL = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SIB
-            }
-        }
-        s:STATE_RYAZAN = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SIB
-            }
-        }
-        s:STATE_NIZHNY_NOVGOROD = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SIB
-            }
-        }
-        s:STATE_CHUVASHIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SIB
-            }
-        }
-        s:STATE_TARTARIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SIB
-            }
-        }
-        s:STATE_TAMBOV = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SIB
-            }
-        }
-        s:STATE_BESSARABIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ROM
-            }
+            set_state_owner = c:SIB
         }
         c:RUS = {
             remove_diplomatic_pact = {
-			 country = c:FIN
-			 type = puppet
+			   country = c:FIN
+			   type = puppet
 		    }
         }
         c:RUS = {

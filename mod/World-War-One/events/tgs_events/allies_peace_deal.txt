@@ -232,10 +232,16 @@ allies_peace_deal.3 = { #TGW
 				limit = {
 					owner = c:GER
 					has_building = building_shipyard
-					is_capital = no
 				}
 				remove_building = building_shipyard
 			}	
+			if = {
+				limit = {
+					owner = c:GER
+					has_building = building_naval_administration
+				}
+				remove_building = building_naval_administration
+			}
 		    }
         }
 		s:STATE_WEST_PRUSSIA = {
@@ -505,6 +511,13 @@ allies_peace_deal.4 = {
 				}
 				remove_building = building_shipyard
 			}	
+			if = {
+				limit = {
+					owner = c:JAP
+					has_building = building_naval_administration
+				}
+				remove_building = building_naval_administration
+			}
 		    }
 			activate_law = law_type:law_parliamentary_republic
             activate_law = law_type:law_universal_suffrage

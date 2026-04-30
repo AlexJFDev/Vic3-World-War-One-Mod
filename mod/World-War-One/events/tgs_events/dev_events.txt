@@ -2169,7 +2169,7 @@ dev_events.46 = {
     }
 }
 
-dev_events.47 = { 
+dev_events.47 = {
     type = country_event
 
     title = dev_events.8.t
@@ -2189,11 +2189,17 @@ dev_events.47 = {
         name = dev_events.8.a
         default_option = yes
         trigger = { is_player = no }
+        add_treasury = 50000000
         add_modifier = {
 			name = starting_minting_buff_4_modifier
             years = 10
             is_decaying = yes
 		}
+        add_modifier = {
+            name = money_buff_1
+            years = 5
+            is_decaying = yes
+        }
     }
 }
 
@@ -4916,5 +4922,58 @@ dev_events.106 = {
         trigger = { has_modifier = modifier_regency }
         default_option = yes
         remove_modifier = modifier_regency
+    }
+}
+
+dev_events.107 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = no }
+        default_option = yes
+    }
+}
+
+dev_events.108 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = no }
+        default_option = yes
+        remove_modifier = declared_bankruptcy
+        add_treasury = 200000000
+        add_modifier = {
+            name = money_buff_2
+            years = 10
+            is_decaying = yes
+        }
     }
 }
