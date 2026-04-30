@@ -605,7 +605,6 @@ monitor_tech = {
 
 	unlocking_technologies = {
 		ironclad_tech
-		breech_loading_artillery
 	}
 
 	ai_weight = {
@@ -1140,7 +1139,6 @@ carrier_tech = {
 
 	unlocking_technologies = {
 		dreadnought_tech
-		military_aviation
 	}
 
 	ai_weight = {
@@ -1189,6 +1187,20 @@ battlefleet_tactics = {
 	unlocking_technologies = {
 		battleship_tech
 		sea_lane_strategies
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+amphibious_vehicles = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/amphibious_vehicles.dds"
+	category = military
+
+	unlocking_technologies = {
+		landing_craft
 	}
 
 	ai_weight = {

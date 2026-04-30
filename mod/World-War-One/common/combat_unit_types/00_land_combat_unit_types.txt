@@ -1006,7 +1006,7 @@ combat_unit_type_low_tier_marines = {
 	conscript_peasant_levies = yes
 
 	upkeep_modifier = {
-		goods_input_small_arms_add = 1.5
+		goods_input_small_arms_add = 0.5
     }
 
     battle_modifier = {
@@ -1026,6 +1026,7 @@ combat_unit_type_low_tier_marines = {
 	upgrades = {
         combat_unit_type_mid_tier_marines
         combat_unit_type_high_tier_marines
+        combat_unit_type_amphibious_vehicles
 	}
 }
 
@@ -1037,8 +1038,8 @@ combat_unit_type_mid_tier_marines = {
 	conscript_peasant_levies = yes
 
 	upkeep_modifier = {
-		goods_input_small_arms_add = 2.5
-		goods_input_ammunition_add = 1.5
+		goods_input_small_arms_add = 1
+        goods_input_ammunition_add = 1
     }
 
     battle_modifier = {
@@ -1057,6 +1058,7 @@ combat_unit_type_mid_tier_marines = {
 
     upgrades = {
         combat_unit_type_high_tier_marines
+        combat_unit_type_amphibious_vehicles
     }
 }
 
@@ -1068,8 +1070,8 @@ combat_unit_type_high_tier_marines = {
 	conscript_peasant_levies = yes
 
 	upkeep_modifier = {
-		goods_input_small_arms_add = 4
-		goods_input_ammunition_add = 3
+		goods_input_small_arms_add = 1.5
+        goods_input_ammunition_add = 1.5
     }
 
     battle_modifier = {
@@ -1084,6 +1086,40 @@ combat_unit_type_high_tier_marines = {
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/marines_eu_high.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_amphibious_vehicles
+    }
+}
+
+combat_unit_type_amphibious_vehicles = {
+	group = combat_unit_group_marines
+	max_manpower = 1000
+	supply_capacity = 30
+
+	conscript_peasant_levies = yes
+
+	upkeep_modifier = {
+        goods_input_tanks_add = 1
+        goods_input_oil_add = 1
+		goods_input_ammunition_add = 1.5
+    }
+
+    battle_modifier = {
+        unit_offense_add = 60
+        unit_defense_add = 55
+        unit_morale_loss_add = 4
+        unit_devastation_mult = 0.15
+        unit_occupation_mult = 0.3
+        # no naval invasion efficiency loss
+    }
+
+	unlocking_technologies = { amphibious_vehicles }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/amphibious_vehicles.dds"
     }
 }
 
