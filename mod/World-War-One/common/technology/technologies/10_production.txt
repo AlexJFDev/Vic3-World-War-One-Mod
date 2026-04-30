@@ -1122,25 +1122,8 @@ synthetic_polymers = {
 	}
 }
 
-### ERA 6
-
-oil_turbine = {
-	# Unlocks Oil-Fired Plant PM in Power Plants
-	era = era_6
-	texture = "gfx/interface/icons/invention_icons/oil_turbines.dds"
-	category = production
-
-	unlocking_technologies = {
-		steam_turbine
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 modern_physics = {
-	era = era_6
+	era = era_5
 	texture = "gfx/interface/icons/invention_icons/modern_physics.dds"
 	category = production
 
@@ -1158,6 +1141,22 @@ modern_physics = {
 	}
 }
 
+### ERA 6
+
+oil_turbine = {
+	# Unlocks Oil-Fired Plant PM in Power Plants
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/oil_turbines.dds"
+	category = production
+
+	unlocking_technologies = {
+		steam_turbine
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
 
 mechanical_computing_tech = {
 	#Beta = research bonus
@@ -1168,6 +1167,7 @@ mechanical_computing_tech = {
 	
 	unlocking_technologies = {
 		radio
+		modern_physics
 	}
     
     modifier = {
@@ -1175,6 +1175,63 @@ mechanical_computing_tech = {
 		country_production_tech_research_speed_mult = 0.1
 	}
 
+	ai_weight = {
+		value = 1
+	}
+}
+
+passive_sonar = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/passive_sonar.dds"
+	category = production
+	
+	modifier = {
+		ship_detection_mult = 0.3
+	}
+	
+	unlocking_technologies = {
+		modern_physics
+	}
+	
+	ai_weight = {
+		value = 1
+
+		# Important for naval powers
+		if = {
+			limit = { navy_size >= 30 }
+			add = 0.5
+		}	
+	}
+}
+
+molecular_biology = {
+    era = era_6
+	texture = "gfx/interface/icons/invention_icons/molecular_biology.dds"
+	category = production
+	
+	unlocking_technologies = {
+		pasteurization
+	}
+    
+    modifier = {
+		building_synthetics_plant_throughput_add = 0.2
+		country_production_tech_research_speed_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+modern_appliances = {
+    era = era_6
+	texture = "gfx/interface/icons/invention_icons/modern_appliances.dds"
+    category = production
+
+	unlocking_technologies = {
+		flash_freezing
+	}
+    
 	ai_weight = {
 		value = 1
 	}

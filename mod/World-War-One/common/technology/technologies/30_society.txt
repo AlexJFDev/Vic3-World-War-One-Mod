@@ -1773,7 +1773,44 @@ popular_art = {
 	}
 }
 
+internationalism = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/internationalism.dds"
+	category = society
+	
+	unlocking_technologies = {
+		multilateral_alliances
+	}
+
+	modifier = {
+		country_improve_relations_speed_mult = 0.2
+		country_pact_leverage_generation_mult = 0.3
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
 ### ERA 6
+
+star_system = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/star_system.dds"
+	category = society
+	
+	unlocking_technologies = {
+		popular_art
+	}
+
+	modifier = {
+		building_art_academy_throughput_add = 0.15
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
 
 modern_urban_planning = {
 	# Unlocks skyscrapers and modern cities
