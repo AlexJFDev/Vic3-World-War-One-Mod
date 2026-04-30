@@ -1554,32 +1554,6 @@ joining_world_war_events.28 = { #Senussi order joins WW1
             id = dev_events.66
             days = 5
         }
-        s:STATE_CHAD = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:EQA
-			    owner = {
-				  OR = {
-					c:EQA = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SEN
-            }
-        }
-		s:STATE_DARFUR = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SUD
-			    owner = {
-				  OR = {
-					c:SUD = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SEN
-            }
-        }
         every_state = {
           limit = {
                 OR = {

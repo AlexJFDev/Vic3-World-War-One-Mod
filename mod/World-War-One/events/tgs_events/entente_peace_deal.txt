@@ -830,32 +830,6 @@ entente_peace_deal.1 = { #TGW
 			activate_law = law_type:law_cultural_exclusion
 			set_capital = STATE_ANKARA
         }
-		s:STATE_CHAD = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SEN
-			    owner = {
-				  OR = {
-					c:SEN = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:EQA
-            }
-        }
-		s:STATE_DARFUR = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:SEN
-			    owner = {
-				  OR = {
-					c:SEN = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SUD
-            }
-        }
 		c:ITA = {
 		    create_diplomatic_pact = {
 			  country = c:SEN
