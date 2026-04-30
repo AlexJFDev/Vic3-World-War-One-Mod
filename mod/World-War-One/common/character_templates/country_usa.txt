@@ -5,22 +5,6 @@
 
 #TGW
 
-usa_woodrow_wilson_character_template = {
-	first_name = Thomas
-	last_name = Woodrow_Wilson
-	culture = cu:euro_american
-	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_wilsonian_progressivism
-	birth_date = 1856.12.28
-	ig_leader = yes
-	ruler = yes
-	historical = yes
-	dna = dna_woodrow_wilson
-	traits = {
-		literary master_bureaucrat masterful_diplomat 
-	}
-}
-
 usa_lincoln_character_template = {
     first_name = Abraham
     last_name = Lincoln
@@ -66,28 +50,6 @@ usa_lincoln_character_template = {
     }
 }
 
-usa_roosevelt_character_template = {
-    first_name = Theodore
-    last_name = Roosevelt
-    historical = yes
-    culture = cu:dixie
-    ruler = yes
-    ig_leader = yes
-    interest_group = ig_rural_folk
-    ideology = ideology_jacksonian_democrat
-    birth_date = 1767.3.15
-    dna = dna_andrew_jackson
-    traits = {
-        bigoted
-        demagogue
-        expert_political_operator
-    }
-    on_created = {
-        set_variable = {
-            name = is_andrew_jackson
-        }               
-    }
-}
 usa_carnegie_character_template = {
     first_name = Andrew
     last_name = Carnegie
