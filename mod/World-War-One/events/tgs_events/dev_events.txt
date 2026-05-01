@@ -762,10 +762,15 @@ dev_events.16 = {
         default_option = yes
         trigger = { is_player = no }
         remove_modifier = declared_bankruptcy
-        add_treasury = 50000000
+        add_treasury = 100000000
         add_modifier = {
             name = minting_buff_5_modifier
-            years = 8
+            years = 12
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = money_buff_2
+            years = 5
             is_decaying = yes
         }
         add_modifier = {
@@ -775,7 +780,7 @@ dev_events.16 = {
         }
         add_modifier = {
             name = army_buff_modifier_3
-            years = 6
+            years = 8
             is_decaying = yes
         }
     }
@@ -785,10 +790,15 @@ dev_events.16 = {
         default_option = yes
         trigger = { is_player = yes }
         remove_modifier = declared_bankruptcy
-        add_treasury = 25000000
+        add_treasury = 30000000
         add_modifier = {
             name = starting_minting_buff_4_modifier
             years = 5
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = army_buff_modifier_3
+            years = 3
             is_decaying = yes
         }
     }
@@ -1904,7 +1914,7 @@ dev_events.37 = {
     }
 }
 
-dev_events.38 = { 
+dev_events.38 = {
     type = country_event
 
     title = dev_events.8.t
@@ -1923,12 +1933,7 @@ dev_events.38 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        add_treasury = 15000000
-        add_modifier = {
-			name = starting_minting_buff_6_modifier
-            years = 5
-            is_decaying = yes
-		}
+        add_treasury = 5000000
     }
 }
 
@@ -2163,7 +2168,7 @@ dev_events.46 = {
         trigger = { is_player = no }
         add_modifier = {
             name = army_nerf_modifier_2
-            years = 2
+            years = 5
             is_decaying = yes
         }
     }
@@ -4464,7 +4469,7 @@ dev_events.102 = {
         trigger = { is_player = no }
         add_modifier = {
             name = army_nerf_modifier_1
-            years = 2
+            years = 4
             is_decaying = yes
         }
     }

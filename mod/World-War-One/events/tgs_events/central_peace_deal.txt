@@ -603,19 +603,6 @@ central_peace_deal.2 = { #Russia surrenders
 		      set_state_owner = c:UKR
             }
         }
-        s:STATE_CHERNIHIV = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:UKR
-            }
-        }
         s:STATE_KHARKOV = {
            random_scope_state = {
 		      limit = {

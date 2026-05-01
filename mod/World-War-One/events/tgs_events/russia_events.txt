@@ -522,10 +522,6 @@ russia_events.7 = { #Soviet uprising
              days = 5
             }
         trigger_event = {
-             id = dev_events.16
-             days = 5
-            }
-        trigger_event = {
              id = ussr_events.1
              days = 15
             }
@@ -599,6 +595,12 @@ russia_events.8 = { #The civil war begins
                    state_region = s:STATE_VOLHYNIA	
                    state_region = s:STATE_MINSK
                    state_region = s:STATE_CHERNIHIV
+                   state_region = s:STATE_KIEV
+                   state_region = s:STATE_CHERSON
+                   state_region = s:STATE_KHARKOV
+                   state_region = s:STATE_TAURIDA
+                   state_region = s:STATE_BESSARABIA
+                   state_region = s:STATE_CRIMEA
                    state_region = s:STATE_MOGILEV
                    state_region = s:STATE_ORYOL
                    state_region = s:STATE_SMOLENSK
@@ -609,6 +611,7 @@ russia_events.8 = { #The civil war begins
                    state_region = s:STATE_TVER
                    state_region = s:STATE_MOSCOW
                    state_region = s:STATE_RYANZAN
+                   state_region = s:STATE_KURSK
                 }
 		    }
             set_state_owner = c:SIB
