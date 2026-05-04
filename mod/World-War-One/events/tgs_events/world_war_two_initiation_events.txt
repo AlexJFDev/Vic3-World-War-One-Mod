@@ -133,8 +133,13 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
 
             type = dp_world_war
 
-            escalation = 85
+            escalation = 99
             
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:POL
+            }
             add_war_goal = {
                 holder = c:GER
                 type = conquer_state
@@ -148,6 +153,10 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
         }
         trigger_event = {
             id = dev_events.72
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.78
             days = 5
         }
         trigger_event = {
@@ -480,7 +489,17 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     option = {
         name = world_war_two_initiation_events.5.a
         default_option = yes
-        trigger = { is_player = no }
+        trigger = { 
+            is_player = no
+            NOT = {
+                c:NET = {
+                    has_variable = axis_participant
+                }
+                c:BEL = {
+                    has_variable = axis_participant
+                }
+            } 
+        }
         add_modifier = {
           name = nazi_germany_army_buff_1
           years = 3
@@ -586,7 +605,7 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             }
         }
         c:FRA = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
             }
@@ -598,7 +617,14 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
 
     option = {
         name = world_war_two_initiation_events.5.b
-        trigger = { is_player = no }
+        trigger = { 
+            is_player = no
+            NOT = {
+                c:BEL = {
+                    has_variable = axis_participant
+                }
+            }  
+        }
         add_modifier = {
           name = nazi_germany_army_buff_1
           years = 3
@@ -630,16 +656,19 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             }
         }
         c:FRA = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
+            }
+            trigger_event = {
+              id = france_events.15
+              months = 4
             }
         }
         ai_chance = {
             base = 0
         }
     }
-
 
     option = {
         name = world_war_two_initiation_events.5.b
