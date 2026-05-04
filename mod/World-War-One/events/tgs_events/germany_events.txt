@@ -427,18 +427,6 @@ germany_events.4 = { #Communist uprising
 				provinces = { x5101A0 }
 			}
 		}
-        random_scope_character = {
-            limit = {
-               has_template = pol_rosa_luxemburg_character_template
-            }
-            save_scope_as = rosa_luxemburg
-        }
-        random_scope_character = {
-            limit = {
-               has_template = agitator_karl_liebknecht
-            }
-            save_scope_as = karl_liebknecht
-        }
     }
 
     option = {
@@ -446,21 +434,30 @@ germany_events.4 = { #Communist uprising
         c:GER = {
             trigger_event = {
                 id = dev_events.14
-                days = 90
+                days = 100
             }
         }
+        every_character = {
+			limit = {
+				OR = {
+                    has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+				}
+				owner ?= ROOT
+			}
+			kill_character = yes
+		}
         c:BAV = {
             trigger_event = {
                 id = dev_events.60
                 days = 5
             }
         }
-        scope:pol_rosa_luxemburg_character_template = {
-			kill_character = yes
-		}
-        scope:agitator_karl_liebknecht = {
-			kill_character = yes
-		}  
+        add_modifier = {
+          name = communist_nerf_1
+          years = 10
+          is_decaying = yes
+        }
     }
 }
 
@@ -755,6 +752,59 @@ germany_events.24 = { #Rhineland Renegotiation
     trigger = {}
 
     option = {
+        trigger = { 
+            is_player = no 
+            c:GER = {
+                NOR = {
+                    has_law = law_type:law_council_republic
+				    has_law = law_type:law_single_party_state
+                    has_law = law_type:law_expansionism
+				    has_law = law_type:law_imperialism
+                }
+            }
+        }
+        name = germany_events.24.a
+        s:STATE_NORTH_RHINE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RHE
+			    owner = {
+				  OR = {
+					c:RHE = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GER
+            }
+        }
+        s:STATE_RHINELAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RHE
+			    owner = {
+				  OR = {
+					c:RHE = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GER
+            }
+        }
+        c:GER = {
+            trigger_event = {
+                id = germany_events.40
+                days = 5
+            }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        trigger = { 
+            is_player = yes
+        }
         name = germany_events.24.a
         s:STATE_NORTH_RHINE = {
 	       random_scope_state = {

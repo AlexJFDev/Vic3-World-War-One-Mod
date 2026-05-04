@@ -703,7 +703,7 @@ dev_events.14 = {
     }
 }
 
-dev_events.15 = { 
+dev_events.15 = {
     type = country_event
 
     title = dev_events.15.t
@@ -734,8 +734,8 @@ dev_events.15 = {
         default_option = yes
         trigger = { is_player = yes }
         add_modifier = {
-            name = revolution_stabilization_buff_4
-            years = 10
+            name = revolution_stabilization_buff_5
+            years = 2
             is_decaying = yes
         }
     }
@@ -1894,11 +1894,6 @@ dev_events.37 = {
         trigger = { is_player = no }
         add_treasury = 50000000
         activate_law = law_type:law_armed_neutrality
-        add_modifier = {
-			name = starting_minting_buff_4_modifier
-            years = 20
-            is_decaying = yes
-		}
         add_radicals = {
 			strata = upper
 			value = -0.25
@@ -5035,5 +5030,62 @@ dev_events.110 = {
         trigger = { has_modifier = modifier_recent_election_initialisation }
         default_option = yes
         remove_modifier = modifier_recent_election_initialisation
+    }
+}
+
+dev_events.111 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = no }
+        default_option = yes
+        c:RUS = {
+            annex = ROOT
+        }
+    }
+}
+
+dev_events.112 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { 
+            is_player = no
+            is_at_war = yes 
+        }
+        add_modifier = {
+			name = taken_by_suprise_4
+            months = 6
+            is_decaying = yes
+		}
     }
 }

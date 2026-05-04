@@ -1,8 +1,6 @@
 ﻿# All global modifiers are here.  They are applied from certain game-features.
-# TGS only changed company bonuses and devastation
 # Effects are fully scriptable here.
 #these names can NOT be removed or changed, as the code uses them....
-#TGW
 
 # Global Static Modifiers
 base_values = {
@@ -43,7 +41,7 @@ base_values = {
 	state_aristocrats_investment_pool_contribution_add = 0.20
 	state_capitalists_investment_pool_contribution_add = 0.30
 
-	state_literacy_growth_add = 0.005
+	state_literacy_growth_add = 0.001
 
 	# To balance for unincorporated states not paying taxes
 	state_unincorporated_starting_wages_mult = -0.20
@@ -80,7 +78,7 @@ base_values = {
 	state_blockade_resistance_add = 100
 	state_fortification_bombardment_resistance_add = 100
 
-	state_building_naval_fortificationification_max_level_add = 5
+	state_building_naval_fortification_max_level_add = 5
 
 	country_max_unassigned_generals_add = 3
 	country_max_unassigned_admirals_add = 3
@@ -726,7 +724,7 @@ state_region_devastation = {
 	state_mortality_mult = 1.0
 	state_migration_pull_mult = -2.0
 	state_construction_mult = -0.5
-	building_throughput_add = -0.9
+	building_throughput_add = -0.25
 	state_devastation_decay_mult = 3.0
 }
 

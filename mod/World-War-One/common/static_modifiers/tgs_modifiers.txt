@@ -177,6 +177,12 @@ revolution_stabilization_buff_4 = {
     political_movement_radicalism_add = -5
 }
 
+revolution_stabilization_buff_5 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    country_revolution_progress_mult = -0.3
+    political_movement_radicalism_add = -0.3
+}
+
 the_worlds_bank_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
     country_loan_interest_rate_mult = -2
@@ -241,8 +247,10 @@ army_buff_modifier_2 = {
 
 army_buff_modifier_3 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.3
-    unit_army_defense_mult = 0.4
+    unit_army_offense_mult = 0.4
+    unit_army_defense_mult = 0.5
+    unit_occupation_mult = 0.9
+    unit_morale_recovery_mult = 0.5
     military_formation_mobilization_speed_mult = 0.8
 }
 
@@ -1085,6 +1093,11 @@ socialist_buff_1 = {
     interest_group_ig_trade_unions_pol_str_mult = 0.5
 }
 
+communist_nerf_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_ig_trade_unions_pol_str_mult = -0.9
+}
+
 germany_economic_recovery_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
     country_minting_mult = 5
@@ -1233,6 +1246,12 @@ taken_by_suprise_3 = {
     unit_occupation_mult = -1
 }
 
+taken_by_suprise_4 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    unit_army_offense_mult = -0.3
+    unit_army_defense_mult = -0.1
+}
+
 colony_control_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
     country_liberty_desire_add = -0.9
@@ -1297,6 +1316,16 @@ money_buff_1 = {
 money_buff_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
     country_tax_income_add = 300000
+}
+
+money_buff_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_tax_income_add = 500000
+}
+
+money_buff_4 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_tax_income_add = 800000
 }
 
 proletarian_fervor = {

@@ -1130,12 +1130,20 @@ great_war_initiation_events.14 = {
               months = 6
               is_decaying = yes
             }
+            trigger_event = { 
+                id = dev_events.112
+                days = 5
+            }
         }
         c:BEL = {
             add_modifier = {
               name = taken_by_suprise_2
               months = 6
               is_decaying = yes
+            }
+            trigger_event = { 
+                id = dev_events.112
+                days = 5
             }
         }
         add_modifier = {
