@@ -1838,10 +1838,46 @@ market_studies = {
 	texture = "gfx/interface/icons/invention_icons/market_studies.dds"
 	category = society
 	modifier = {
-		state_max_trade_advantage_from_capacity_add = 0.15
+		state_max_trade_advantage_from_capacity_add = 0.3
 	}
 	unlocking_technologies = {
 		behaviorism
+	}
+		
+	ai_weight = {
+		value = 1
+	}
+}
+
+inflation_linked_bonds = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/inflation_linked_bonds.dds"
+	category = society
+	modifier = {
+		state_shopkeepers_investment_pool_efficiency_mult = 0.15
+		state_capitalists_investment_pool_efficiency_mult = 0.15
+		state_aristocrats_investment_pool_efficiency_mult = 0.15
+	}
+	unlocking_technologies = {
+		modern_financial_instruments
+	}
+		
+	ai_weight = {
+		value = 1
+	}
+}
+
+modern_statistics = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/modern_statistics.dds"
+	category = society
+	modifier = {
+		state_tax_capacity_mult = 0.2
+		country_authority_mult = 0.15
+		state_max_trade_advantage_from_capacity_add = 0.15
+	}
+	unlocking_technologies = {
+		macroeconomics
 	}
 		
 	ai_weight = {

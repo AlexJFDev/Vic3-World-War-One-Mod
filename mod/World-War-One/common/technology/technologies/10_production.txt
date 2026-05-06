@@ -1140,6 +1140,24 @@ modern_physics = {
 	}
 }
 
+advanced_oil_extraction = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/advanced_oil_extraction.dds"
+	category = production
+
+	unlocking_technologies = {
+		combustion_engine
+	}
+
+	modifier = {
+	   building_group_bg_oil_extraction_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 1 
+	}
+}
+
 ### ERA 6
 
 oil_turbine = {
@@ -1165,7 +1183,6 @@ mechanical_computing_tech = {
 	category = production
 	
 	unlocking_technologies = {
-		radio
 		modern_physics
 	}
     
@@ -1213,7 +1230,6 @@ molecular_biology = {
     
     modifier = {
 		building_synthetics_plant_throughput_add = 0.2
-		country_production_tech_research_speed_mult = 0.1
 	}
 
 	ai_weight = {
@@ -1236,6 +1252,25 @@ modern_appliances = {
 }
 
 ### ERA 7
+
+transistor = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/transistor.dds"
+	category = production
+
+    modifier = {
+		building_electrics_industry_throughput_add = 0.15
+		building_power_plant_throughput_add = 0.15
+	}
+
+	unlocking_technologies = {
+		modern_physics
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
 
 television = {
 	era = era_7
