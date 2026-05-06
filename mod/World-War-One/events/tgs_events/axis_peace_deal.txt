@@ -39,22 +39,6 @@ axis_peace_deal.1 = {
              activate_law = law_type:law_interventionism
             }
         }
-        c:NET = {
-            remove_diplomatic_pact = {
-			  country = c:DEI
-			  type = chartered_company
-		    }
-        }
-        c:BEL = {
-            remove_diplomatic_pact = {
-			  country = c:KON
-			  type = dominion
-		    }
-            remove_diplomatic_pact = {
-			  country = c:KON
-			  type = colony
-		    }
-        }
         c:FRA = {
             remove_diplomatic_pact = {
 			  country = c:WAF
@@ -112,36 +96,11 @@ axis_peace_deal.1 = {
 		        set_state_owner = c:GER
             }
         }
-        s:STATE_GUAYANA = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:NET
-			    owner = {
-				  OR = {
-					c:NET = THIS
-				    }
-			    }
-		        }
-		        set_state_owner = c:GBR
-            }
-        }
         c:GER = {
 		    create_diplomatic_pact = {
 			  country = c:FRA
 			  type = protectorate
-		    }
-            create_diplomatic_pact = {
-			  country = c:BEL
-			  type = protectorate
 		    }	
-            create_diplomatic_pact = {
-			  country = c:LUX
-			  type = protectorate
-		    }	
-            create_diplomatic_pact = {
-			  country = c:NET
-			  type = protectorate
-		    }		
         }
         scope:world_war_two_diplo_play = {
 			add_initiator_backers = {
@@ -245,12 +204,55 @@ axis_peace_deal.1 = {
               days = 5
             }
         }
-        c:DEI = {
-            trigger_event = {
-              id = dev_events.15
-              days = 5
+        if = {
+            limit = { c:NET = { has_variable = allies_participant } }
+            c:GER = {
+                create_diplomatic_pact = {
+			     country = c:NET
+			     type = protectorate
+		        }	
             }
-        } 
+            c:NET = {
+                remove_diplomatic_pact = {
+			      country = c:DEI
+			      type = chartered_company
+		        }
+                remove_diplomatic_pact = {
+			      country = c:DEI
+			      type = dominion
+		        }
+                remove_diplomatic_pact = {
+			      country = c:DEI
+			      type = colony
+		        }
+            }
+            c:DEI = {
+                trigger_event = {
+                  id = dev_events.15
+                  days = 5
+                }
+            }
+        }
+        if = {
+            limit = { c:BEL = { has_variable = allies_participant } }
+            c:GER = {
+                create_diplomatic_pact = {
+			     country = c:BEL
+			     type = protectorate
+		        }	
+            }
+            c:BEL = {
+                remove_diplomatic_pact = {
+			      country = c:KON
+			      type = dominion
+		        }
+                remove_diplomatic_pact = {
+			      country = c:KON
+			      type = colony
+		        }
+            }
+
+        }
     }
 }
 
