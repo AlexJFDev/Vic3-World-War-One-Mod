@@ -2263,6 +2263,22 @@ dev_events.49 = {
         add_modifier = {
 			name = trade_unions_nerf
 		}
+        add_modifier = {
+			name = devout_intelligentsia_buff
+            years = 20
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+			name = devout_intelligentsia_buff
+            years = 20
+            is_decaying = yes
+		}
     }
 }
 
@@ -5030,6 +5046,22 @@ dev_events.110 = {
         trigger = { has_modifier = modifier_recent_election_initialisation }
         default_option = yes
         remove_modifier = modifier_recent_election_initialisation
+        if = {
+            limit = { has_law = law_type:law_landed_voting }
+            set_electoral_confidence = 0.7
+        }
+        if = {
+            limit = { has_law = law_type:law_wealth_voting }
+            set_electoral_confidence = 0.8
+        }
+        if = {
+            limit = { has_law = law_type:law_census_voting }
+            set_electoral_confidence = 0.9
+        }
+        if = {
+            limit = { has_law = law_type:law_universal_suffrage }
+            set_electoral_confidence = 1
+        }
     }
 }
 
