@@ -114,6 +114,66 @@
 			}
         }
         if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -10
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
 		   limit = {
                 has_variable = supporting_entente_var
             }
@@ -123,6 +183,66 @@
 			}
         }
         if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = 10
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = 20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = 30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = 40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = 50
+            }
+        }
+        if = {
 		   limit = {
                 has_variable = maintain_neutrality_var
             }
@@ -130,6 +250,66 @@
 				desc = "entente_progress_from_decision"
 				value = -20
 			}
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "entente_progress_from_propaganda"
+               value = -60
+            }
         }
         #From laws
         if = {
@@ -175,16 +355,6 @@
             add = {
 				desc = "entente_progress_from_legislation"
 				value = -10
-			}
-        } 
-        #From variables
-        if = {
-		   limit = {
-                has_variable = usa_ai_neutrality
-            }
-            add = {
-				desc = "entente_progress_from_legislation"
-				value = -100
 			}
         }
     }
@@ -310,6 +480,66 @@ join_central_powers_progress_bar = {
 			}
         }
         if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = 10
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = 20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = 30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = 40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_central_powers_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = 50
+            }
+        }
+        if = {
 		   limit = {
                 has_variable = supporting_entente_var
             }
@@ -319,6 +549,66 @@ join_central_powers_progress_bar = {
 			}
         }
         if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -10
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_entente_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
 		   limit = {
                 has_variable = maintain_neutrality_var
             }
@@ -326,6 +616,66 @@ join_central_powers_progress_bar = {
 				desc = "central_powers_progress_from_decision"
 				value = -20
 			}
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "central_powers_progress_from_propaganda"
+               value = -60
+            }
         }
         #From laws
         if = {
@@ -371,16 +721,6 @@ join_central_powers_progress_bar = {
             add = {
 				desc = "central_powers_progress_from_legislation"
 				value = -10
-			}
-        } 
-        #From variables
-        if = {
-		   limit = {
-                has_variable = usa_ai_neutrality
-            }
-            add = {
-				desc = "entente_progress_from_legislation"
-				value = -100
 			}
         }
     }
@@ -506,6 +846,66 @@ join_allies_progress_bar = {
 			}
         }
         if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -10
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
 		   limit = {
                 has_variable = supporting_allies_var
             }
@@ -515,6 +915,66 @@ join_allies_progress_bar = {
 			}
         }
         if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = 10
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = 20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = 30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = 40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = 50
+            }
+        }
+        if = {
 		   limit = {
                 has_variable = maintain_neutrality_var
             }
@@ -522,6 +982,66 @@ join_allies_progress_bar = {
 				desc = "allies_progress_from_decision"
 				value = -20
 			}
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "allies_progress_from_propaganda"
+               value = -60
+            }
         }
         #From laws
         if = {
@@ -692,6 +1212,66 @@ join_axis_progress_bar = {
 			}
         }
         if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -10
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_axis_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
 		   limit = {
                 has_variable = supporting_allies_var
             }
@@ -701,6 +1281,66 @@ join_axis_progress_bar = {
 			}
         }
         if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -10
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = supporting_allies_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
 		   limit = {
                 has_variable = maintain_neutrality_var
             }
@@ -708,6 +1348,66 @@ join_axis_progress_bar = {
 				desc = "axis_progress_from_decision"
 				value = -20
 			}
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 1
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -20
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 2
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -30
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 3
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -40
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 4
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -50
+            }
+        }
+        if = {
+		    limit = {
+                AND = {
+                   has_variable = maintain_neutrality_var
+			       owner.institution:institution_propaganda.investment = 5
+                }
+		    }
+		    add = {
+               desc = "axis_progress_from_propaganda"
+               value = -60
+            }
         }
         #From laws
         if = {

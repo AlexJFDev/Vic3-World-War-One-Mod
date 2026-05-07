@@ -1028,11 +1028,11 @@ joining_world_war_events.18 = { #USA joins
     }
 
     option = { #Join directly
-        name = joining_world_war_events.18.b
+        name = joining_world_war_events.18.a
         trigger = { is_player = yes }
         je:je_joining_world_war_one = {
-			add_progress = { value = 90 name = join_entente_progress_bar }
-            add_progress = { value = -90 name = join_central_powers_progress_bar }
+			add_progress = { value = 120 name = join_entente_progress_bar }
+            add_progress = { value = -120 name = join_central_powers_progress_bar }
 		}
         ai_chance = {
             base = 10
@@ -1040,10 +1040,10 @@ joining_world_war_events.18 = { #USA joins
     }
 
     option = { #Show support but dont join now
-        name = joining_world_war_events.18.c
+        name = joining_world_war_events.18.b
         je:je_joining_world_war_one = {
-			add_progress = { value = 30 name = join_entente_progress_bar }
-            add_progress = { value = -30 name = join_central_powers_progress_bar }
+			add_progress = { value = 50 name = join_entente_progress_bar }
+            add_progress = { value = -50 name = join_central_powers_progress_bar }
 		}
         ai_chance = {
             base = 0
@@ -1051,7 +1051,7 @@ joining_world_war_events.18 = { #USA joins
     }
 
     option = { #Reject violently the offer
-        name = joining_world_war_events.18.e
+        name = joining_world_war_events.18.c
         je:je_joining_world_war_one = {
             add_progress = { value = -15 name = join_entente_progress_bar }
 		}

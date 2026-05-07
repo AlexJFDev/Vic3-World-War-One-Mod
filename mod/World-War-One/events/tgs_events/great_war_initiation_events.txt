@@ -662,12 +662,6 @@ great_war_initiation_events.8 = {
 			  type = embargo
 		    }
         }
-        c:USA = {
-            trigger_event = {
-                id = dev_events.105
-                days = 5
-            }
-        }
     }
     option = {
         name = great_war_initiation_events.8.b
@@ -1292,10 +1286,16 @@ great_war_initiation_events.15 = {
             }
         }
         c:GBR = {
-        create_bidirectional_truce = { 
-            country = c:FRA
-            years = 12
+            create_bidirectional_truce = { 
+              country = c:FRA
+              years = 12
+            }
         }
+        c:USA = {
+            trigger_event = {
+                id = usa_events.25
+                days = 365
+            }
         }
         c:GER = {
 		   create_diplomatic_pact = {

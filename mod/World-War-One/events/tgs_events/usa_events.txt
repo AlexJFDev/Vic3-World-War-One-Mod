@@ -360,9 +360,9 @@ usa_events.8 = { #Others countries gets Great Depression repercussions
             years = 15
             is_decaying = yes
         }
-        add_treasury = -100000000
+        add_treasury = -50000000
         c:USA = {
-		   add_treasury = 100000000
+		   add_treasury = 50000000
 		}
         trigger_event = {
             id = dev_events.47
@@ -1291,7 +1291,7 @@ usa_events.18 = { ##Post war loans responses
         trigger = { has_global_variable = usa_proposes_big_loans }
         c:USA = { add_treasury = -50000000 }
         ROOT = {
-         add_treasury = 50000000
+         add_treasury = 30000000
          set_variable = has_received_usa_loans
         }
         ai_chance = {
@@ -1305,7 +1305,7 @@ usa_events.18 = { ##Post war loans responses
         trigger = { has_global_variable = usa_proposes_medium_loans }
         c:USA = { add_treasury = -25000000 }
         ROOT = {
-         add_treasury = 25000000
+         add_treasury = 20000000
          set_variable = has_received_usa_loans
         }
         ai_chance = {
@@ -1357,9 +1357,9 @@ usa_events.19 = { #Dawes Plan response
         default_option = yes
         trigger = { has_global_variable = usa_proposes_big_dawes_plan }
         c:USA = {
-		   add_treasury = -100000000
+		   add_treasury = -50000000
 		}
-		add_treasury = 100000000
+		add_treasury = 50000000
         set_variable = has_received_dawes_plan
         ai_chance = {
 			base = 1
@@ -1371,12 +1371,12 @@ usa_events.19 = { #Dawes Plan response
         default_option = yes
         trigger = { has_global_variable = usa_proposes_medium_dawes_plan }
         c:USA = {
-		   add_treasury = -25000000
+		   add_treasury = -20000000
 		}
-		add_treasury = 25000000
+		add_treasury = 20000000
         set_variable = has_received_usa_loans
         ai_chance = {
-			base = 0
+			base = 1
 		}
     }
 
@@ -1385,12 +1385,12 @@ usa_events.19 = { #Dawes Plan response
         default_option = yes
         trigger = { has_global_variable = usa_proposes_small_dawes_plan }
         c:USA = {
-		   add_treasury = -15000000
+		   add_treasury = -10000000
 		}
-		add_treasury = 15000000
+		add_treasury = 10000000
         set_variable = has_received_usa_loans
         ai_chance = {
-			base = 0
+			base = 1
 		}
     }
 
@@ -1596,5 +1596,412 @@ usa_events.24 = { #Hays Code
         ai_chance = {
 			base = 0
 		}
+    }
+}
+
+usa_events.25 = { #WW1 loans initiation Entente
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.25.t
+    desc = usa_events.25.d
+    flavor = usa_events.25.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.25.a
+        default_option = yes
+        set_global_variable = usa_proposes_big_loans_ww1
+        if = {
+            limit = { c:GBR = { has_variable = entente_participant } }
+            c:GBR = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = 30 name = join_entente_progress_bar }
+              add_progress = { value = -30 name = join_central_powers_progress_bar }
+		    }
+        }
+        if = {
+            limit = { c:FRA = { has_variable = entente_participant } }
+            c:FRA = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = 30 name = join_entente_progress_bar }
+              add_progress = { value = -30 name = join_central_powers_progress_bar }
+		    }
+        }
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+        name = usa_events.25.b
+        set_global_variable = usa_proposes_medium_loans_ww1
+        if = {
+            limit = { c:GBR = { has_variable = entente_participant } }
+            c:GBR = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = 20 name = join_entente_progress_bar }
+              add_progress = { value = -20 name = join_central_powers_progress_bar }
+		    }
+        }
+        if = {
+            limit = { c:FRA = { has_variable = entente_participant } }
+            c:FRA = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = 20 name = join_entente_progress_bar }
+              add_progress = { value = -20 name = join_central_powers_progress_bar }
+		    }
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.25.c
+        set_global_variable = usa_proposes_small_loans_ww1
+		if = {
+            limit = { c:GBR = { has_variable = entente_participant } }
+            c:GBR = {
+		        trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = 10 name = join_entente_progress_bar }
+              add_progress = { value = -10 name = join_central_powers_progress_bar }
+		    }
+        }
+        if = {
+            limit = { c:FRA = { has_variable = entente_participant } }
+            c:FRA = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = 10 name = join_entente_progress_bar }
+              add_progress = { value = -10 name = join_central_powers_progress_bar }
+		    }
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.25.e
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.25.g
+        trigger_event = {
+            id = usa_events.26
+            days = 5
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+usa_events.26 = { #WW1 loans initiation Central Powers
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.26.t
+    desc = usa_events.26.d
+    flavor = usa_events.26.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = usa_events.26.a
+        default_option = yes
+        set_global_variable = usa_proposes_big_loans_ww1
+        if = {
+            limit = { c:GER = { has_variable = central_powers_participant } }
+            c:GER = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = -30 name = join_entente_progress_bar }
+              add_progress = { value = 30 name = join_central_powers_progress_bar }
+		    }
+        }
+        if = {
+            limit = { c:AUS = { has_variable = central_powers_participant } }
+            c:AUS = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = -30 name = join_entente_progress_bar }
+              add_progress = { value = 30 name = join_central_powers_progress_bar }
+		    }
+        }
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+        name = usa_events.26.b
+        set_global_variable = usa_proposes_medium_loans_ww1
+        if = {
+            limit = { c:GER = { has_variable = central_powers_participant } }
+            c:GER = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = -20 name = join_entente_progress_bar }
+              add_progress = { value = 20 name = join_central_powers_progress_bar }
+		    }
+        }
+        if = {
+            limit = { c:AUS = { has_variable = central_powers_participant } }
+            c:AUS = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = -20 name = join_entente_progress_bar }
+              add_progress = { value = 20 name = join_central_powers_progress_bar }
+		    }
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.26.c
+        set_global_variable = usa_proposes_small_loans_ww1
+		if = {
+            limit = { c:GER = { has_variable = central_powers_participant } }
+            c:GER = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = -10 name = join_entente_progress_bar }
+              add_progress = { value = 10 name = join_central_powers_progress_bar }
+		    }
+        }
+        if = {
+            limit = { c:AUS = { has_variable = central_powers_participant } }
+            c:AUS = {
+		       trigger_event = {
+                  id = usa_events.27
+                  days = 5
+                }
+		    }
+            je:je_joining_world_war_one = {
+			  add_progress = { value = -10 name = join_entente_progress_bar }
+              add_progress = { value = 10 name = join_central_powers_progress_bar }
+		    }
+        }
+        ai_chance = {
+			base = 0
+		}
+    }
+
+    option = {
+        name = usa_events.26.e
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+usa_events.27 = { #WW1 loans responses
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.27.t
+    desc = usa_events.27.d
+    flavor = usa_events.27.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = usa_events.27.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_big_loans_ww1 }
+        c:USA = { add_treasury = -20000000 }
+        ROOT = { add_treasury = 20000000 }
+        trigger_event = {
+            id = usa_events.28
+            years = 6
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+    
+    option = {
+        name = usa_events.27.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_medium_loans_ww1 }
+        c:USA = { add_treasury = -10000000 }
+        ROOT = { add_treasury = 10000000 }
+        trigger_event = {
+            id = usa_events.28
+            years = 6
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = usa_events.27.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_small_loans_ww1 }
+        c:USA = { add_treasury = -5000000 }
+        ROOT = { add_treasury = 5000000 }
+        trigger_event = {
+            id = usa_events.28
+            years = 6
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = usa_events.27.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+usa_events.28 = { #WW1 loans pay back
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.28.t
+    desc = usa_events.28.d
+    flavor = usa_events.28.f
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = usa_events.28.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_big_loans_ww1 }
+        c:USA = { add_treasury = 20000000 }
+        ROOT = { add_treasury = -20000000 }
+        ai_chance = {
+            base = 1
+        }
+    }
+    
+    option = {
+        name = usa_events.28.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_medium_loans_ww1 }
+        c:USA = { add_treasury = 10000000 }
+        ROOT = { add_treasury = -10000000 }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = usa_events.28.a
+        default_option = yes
+        trigger = { has_global_variable = usa_proposes_small_loans_ww1 }
+        c:USA = { add_treasury = 5000000 }
+        ROOT = { add_treasury = -5000000 }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = usa_events.28.b
+        c:USA ?= { 
+           set_relations = { country = c:ROOT value = -100 }
+        }
+        add_modifier = {
+            name = refused_to_pay_back
+            years = 20
+            is_decaying = yes
+        }
+        ai_chance = {
+            base = 0
+        }
     }
 }
