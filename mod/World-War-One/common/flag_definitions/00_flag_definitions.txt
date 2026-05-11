@@ -4807,6 +4807,43 @@ REPLACE_OR_CREATE:JAP = { # Japan
 			coa_def_fascist_flag_trigger = yes
 		}
 	}	
+	flag_definition = {
+		coa = JAP_communist
+		subject_canton = JAP_communist
+		priority = 5000
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = JAP_usa
+		priority = 30
+		trigger = {
+			coa_def_american_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = JAP_theocracy_buddhist
+		subject_canton = JAP_theocracy
+		priority = 20
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+			scope:actor ?= {
+				country_has_state_religion = rel:mahayana
+			}
+		}
+	}
+	flag_definition = {
+		coa = JAP_theocracy_shinto
+		subject_canton = JAP_theocracy
+		priority = 20
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+			scope:actor ?= {
+				country_has_state_religion = rel:shinto
+			}
+		}
+	}
 }
 
 REPLACE_OR_CREATE:JAS = { # Jaisalmer

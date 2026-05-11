@@ -2693,40 +2693,6 @@ on_character_death = {
 			}
 			else_if = {
 				limit = {
-					has_template = JAP_taisho_yamato
-					game_date >= 1901.4.29
-				}
-				owner = {
-					if = {
-						limit = {
-							has_dlc_feature = ep2_content
-						}
-						trigger_event = { id = japan_monarchy.4 }
-					}
-					else = {
-						if = {
-							limit = {
-								has_law = law_type:law_bakufu
-							}
-							create_character = {
-								template = JAP_showa_yamato
-								on_created = {
-									c:JAP ?= {
-										set_variable = { name = emperor_var value = PREV }
-									}
-									add_career_length = {
-										years = 75
-										random_range = { 1.0 1.5 } # 75-100 years
-									}
-									set_first_name = Showa
-								}
-							}
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
 					owner ?= {
 						has_variable = emperor_var
 						var:emperor_var ?= ROOT # The character that has just died

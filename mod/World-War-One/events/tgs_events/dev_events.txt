@@ -1177,7 +1177,7 @@ dev_events.25 = {
     }
 }
 
-dev_events.26 = { 
+dev_events.26 = {
     type = country_event
 
     title = dev_events.26.t
@@ -2432,6 +2432,15 @@ dev_events.53 = {
             years = 40
             is_decaying = yes
 		} 
+        add_modifier = {
+			name = radicals_nerf_1
+            years = 60
+            is_decaying = yes
+		}
+        trigger_event = {
+            id = dev_events.26
+            days = 365
+        }
         s:STATE_KANTO = {
 			random_scope_state = {
 			    set_hub_name = {
@@ -2439,6 +2448,18 @@ dev_events.53 = {
 			        name = HUB_NAME_STATE_KANTO_city_meiji
 			    }
 		    }
+		}
+        ig:ig_intelligentsia = {
+			set_interest_group_name = ig_intelligentsia
+			remove_ideology = ideology_rangaku
+			add_ideology = ideology_constitutionalist
+		}
+        ig:ig_industrialists = {
+			set_interest_group_name = ig_zaibatsu
+		}
+        ig:ig_petty_bourgeoisie = {
+			set_interest_group_name = ig_petty_bourgeoisie
+			remove_ideology = ideology_mercantile
 		}
     }
 
@@ -2456,6 +2477,15 @@ dev_events.53 = {
             years = 40
             is_decaying = yes
 		}
+        add_modifier = {
+			name = radicals_nerf_1
+            years = 40
+            is_decaying = yes
+		}
+        trigger_event = {
+            id = dev_events.26
+            days = 90
+        }
         s:STATE_KANTO = {
 			random_scope_state = {
 			    set_hub_name = {
@@ -2463,6 +2493,18 @@ dev_events.53 = {
 			        name = HUB_NAME_STATE_KANTO_city_meiji
 			    }
 		    }
+		}
+        ig:ig_intelligentsia = {
+			set_interest_group_name = ig_intelligentsia
+			remove_ideology = ideology_rangaku
+			add_ideology = ideology_constitutionalist
+		}
+        ig:ig_industrialists = {
+			set_interest_group_name = ig_zaibatsu
+		}
+        ig:ig_petty_bourgeoisie = {
+			set_interest_group_name = ig_petty_bourgeoisie
+			remove_ideology = ideology_mercantile
 		}
     }
 }
