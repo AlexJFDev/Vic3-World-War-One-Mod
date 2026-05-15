@@ -1,5 +1,5 @@
 ﻿je_populist_unrest = {
-	icon = "gfx/interface/icons/invention_icons/nationalism.dds"
+	icon = "gfx/interface/icons/event_icons/brz_populism.dds"
 
 	group = je_group_brazil
 
@@ -14,37 +14,19 @@
 	}
 
 	possible = {
-		has_technology_researched = political_agitation
+		NOT = {
+		    country_rank = rank_value:great_power
+		}
 		ig:ig_landowners ?= {
-			is_in_government = yes
-			trigger_if = {
-				limit = {
-					is_in_government = yes
-				}
-				is_strongest_ig_in_government = yes
-			}
-		}
-		ig:ig_petty_bourgeoisie ?= {
-			ig_counts_as_marginal = no
+			is_powerful = no
 		}
 		OR = {
-			AND = {
-				has_law = law_type:law_monarchy
-				custom_tooltip = {
-					text = completed_coffee_and_milk_je_tt
-					OR = {
-						has_variable = completed_coffee_and_milk_je_landowners
-						has_journal_entry = je_coffee_with_milk
-					}
-				}
-			}
-			has_law_or_variant = law_type:law_presidential_republic
-			has_law_or_variant = law_type:law_parliamentary_republic
-		}
-		OR = {
-			has_law_or_variant = law_type:law_wealth_voting
+			has_law_or_variant = law_type:law_autocracy
+			has_law_or_variant = law_type:law_oligarchy
+			has_law_or_variant = law_type:law_technocracy
 			has_law_or_variant = law_type:law_landed_voting
 		}
+		has_technology_researched = political_agitation
 	}
 
 	scripted_progress_bar = populist_unrest_progress_bar
@@ -153,7 +135,7 @@
 }
 
 je_new_republic = {
-	icon = "gfx/interface/icons/invention_icons/central_planning.dds"
+	icon = "gfx/interface/icons/event_icons/brz_new_republic.dds"
 
 	group = je_group_brazil
 

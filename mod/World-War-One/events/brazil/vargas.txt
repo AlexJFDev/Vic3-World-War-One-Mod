@@ -61,41 +61,6 @@ BRZ_populism.1 = {
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_modernizer
 		}
-		if = {
-			limit = {
-				game_date >= 1909.1.1
-			}
-			create_character = {
-				template = BRZ_getulio_vargas_character_template
-				on_created = {
-					set_variable = vargas_variable
-					set_career_length = {
-						years = 100
-					}
-				}
-			}
-		}
-		else = {
-			custom_tooltip = {
-				text = new_petit_bourgeois_leader_tt
-				create_character = {
-					ig_leader = yes
-					interest_group = ig_petty_bourgeoisie
-					ideology = ideology_authoritarian
-					traits = {
-						erudite
-						meticulous
-						ambitious
-					}
-					on_created = {
-						set_variable = vargas_variable
-						set_career_length = {
-							years = 100
-						}
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -139,38 +104,20 @@ BRZ_populism.2 = {
 	}
 
 	immediate = {
-		if = {
-			limit = {
-				game_date >= 1922.1.1
-				game_date <= 1928.1.1
+		create_character = {
+			is_agitator = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_communist
+			traits = {
+				engineer
+				persistent
 			}
-			create_character = {
-				template = BRZ_luis_carlos_prestes_template
-				on_created = {
-					add_modifier = {
-						name = modifier_knight_of_hope
-						days = normal_modifier_time
-					}
-					set_variable = prestes_variable
+			on_created = {
+				add_modifier = {
+					name = modifier_knight_of_hope_ersatz
+					days = normal_modifier_time
 				}
-			}
-		}
-		else = {
-			create_character = {
-				is_agitator = yes
-				interest_group = ig_armed_forces
-				ideology = ideology_communist
-				traits = {
-					engineer
-					persistent
-				}
-				on_created = {
-					add_modifier = {
-						name = modifier_knight_of_hope_ersatz
-						days = normal_modifier_time
-					}
-					set_variable = prestes_variable
-				}
+				set_variable = prestes_variable
 			}
 		}
 		random_scope_character = {
@@ -1370,26 +1317,15 @@ BRZ_vargas.6 = {
 
 	immediate = {
 		set_variable = integralism_var
-		if = {
-			limit = {
-				game_date >= 1926.1.1
+		create_character = {
+			is_agitator = yes
+			interest_group = ig_devout
+			ideology = ideology_integralist
+			traits = {
+				persistent
+				firebrand
 			}
-			create_character = {
-				template = BRZ_plinio_salgado
-				save_scope_as = integralist_agitator
-			}
-		}
-		else = {
-			create_character = {
-				is_agitator = yes
-				interest_group = ig_devout
-				ideology = ideology_integralist
-				traits = {
-					persistent
-					firebrand
-				}
-				save_scope_as = integralist_agitator
-			}
+			save_scope_as = integralist_agitator
 		}
 	}
 
