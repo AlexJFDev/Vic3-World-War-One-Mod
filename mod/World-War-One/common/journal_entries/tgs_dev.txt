@@ -58,12 +58,14 @@ je_usa_loans_verification = {
 
     is_shown_when_inactive = {
         country_rank >= rank_value:major_power
+        is_player = no
     }
     
     possible = {
        country_rank = rank_value:great_power
        has_variable = has_received_usa_loans 
        has_variable = has_received_dawes_plan
+       is_player = no
     }
 
     immediate = { }
@@ -102,6 +104,15 @@ je_ai_allies_landings = {
         c:GER = {
           is_at_war = yes
           has_variable = axis_participant
+        }
+        c:FRA = {
+            OR = {
+                AND = {
+                    has_variable = axis_participant
+                    is_at_war = yes
+                }
+                is_subject_of = c:GER
+            }
         }
     }
 

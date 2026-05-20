@@ -839,7 +839,7 @@ agitators_law_events.9 = {
 	title = agitators_law_events.9.t
 	desc = agitators_law_events.9.d
 	flavor = agitators_law_events.9.f
-	
+
 	category = enactment
 
 	event_image = {
@@ -873,7 +873,7 @@ agitators_law_events.9 = {
 			}
 		}
 	}
-	
+
 	immediate = {
 		save_agitator_law_scopes = yes
 		currently_enacting_law = {
@@ -881,7 +881,7 @@ agitators_law_events.9 = {
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				is_in_government = yes
 				law_stance = {
 					law = owner.currently_enacting_law.type
@@ -891,9 +891,9 @@ agitators_law_events.9 = {
 			save_scope_as = supporting_ig
 		}
 	}
-	
+
 	option = {
-		name = agitators_law_events.9.a 
+		name = agitators_law_events.9.a
 		default_option = yes
 		scope:supporting_ig = {
 			add_modifier = {
