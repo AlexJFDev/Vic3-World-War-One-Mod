@@ -33,12 +33,12 @@ je_uk_victory = {
 	complete = {
 		game_date > 1953.5.28
 		global_country_ranking = 1
-		navy_size > 500
+		navy_size > 1000
 	}
 
 	on_complete = {
 		trigger_event = { 
-           id = objectives_events.6
+           id = objectives_events.2
            days = 5
         }
 	}
@@ -57,7 +57,7 @@ je_germany_victory = {
 		game_date > 1953.5.28
 		global_country_ranking = 1
         leading_producer_of = g:steel
-		army_size >= 1000
+		army_size >= 2000
 	}
 
 	on_complete = {
@@ -111,7 +111,7 @@ je_japan_victory = {
 			global_country_ranking = 2
 			global_country_ranking = 3
 		}
-		navy_size > 400
+		navy_size > 600
 	}
 
 	on_complete = {
