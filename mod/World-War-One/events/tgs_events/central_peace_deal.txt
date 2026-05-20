@@ -17,10 +17,6 @@ central_peace_deal.1 = { #France surrenders
 
     option = {
         name = central_peace_deal.1.a
-        if = {
-			limit = {
-				c:GER = THIS
-			}
           set_global_variable = central_powers_partial_victory
           if = { #Belgium creation in case of annexion
            limit = {
@@ -408,7 +404,20 @@ central_peace_deal.1 = { #France surrenders
 		      set_state_owner = c:FRA
             }
             }
-        }
+			if = {
+				limit = {
+					c:GBR = { 
+					   has_variable = entente_participant
+					   is_at_war = yes
+				    } 
+			    }
+				c:GER = {
+                    trigger_event = {
+                      id = central_peace_deal.6
+                      days = 5
+                    }
+                }
+			}
     }
 }
 
@@ -429,10 +438,6 @@ central_peace_deal.2 = { #Russia surrenders
 
     option = {
         name = central_peace_deal.2.a
-		if = {
-			limit = {
-				c:GER = THIS
-			}
             set_global_variable = russia_surrenders
             create_country = { #United Baltic Provinces
 			origin = root
@@ -682,7 +687,6 @@ central_peace_deal.2 = { #Russia surrenders
 		      set_state_owner = c:RUS
             }
         }
-        }
     }
 }
 
@@ -703,10 +707,6 @@ central_peace_deal.3 = { #Great Britain
 
     option = {
         name = central_peace_deal.3.a
-        if = {
-			limit = {
-				c:GER = THIS
-			}
             remove_global_variable = world_war_1_ongoing
             set_global_variable = world_war_1_over
             set_global_variable = central_powers_complete_victory
@@ -1171,7 +1171,6 @@ central_peace_deal.3 = { #Great Britain
             }
             }
         }
-    }
  }
 }
 
@@ -1192,10 +1191,6 @@ central_peace_deal.4 = { #Colonies partition with Italy
 
     option = {
         name = central_peace_deal.4.a
-        if = {
-			limit = {
-				c:GER = THIS
-			}
          c:ITA = {
 		  create_diplomatic_pact = {
 			country = c:TUN
@@ -1233,7 +1228,6 @@ central_peace_deal.4 = { #Colonies partition with Italy
 		      set_state_owner = c:ITA
             }
           }
-		}
     }
 }
 
@@ -1336,5 +1330,109 @@ central_peace_deal.5 = { #Ottoman Empire takes British possessions in Middle Eas
 		    }
 			set_global_variable = persia_victory_ww1
 		}
+	}
+}
+
+central_peace_deal.6 = { #UK and USA sign white peace after France surrender part 1
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/central_victory.dds"
+	}
+
+    title = central_peace_deal.6.t
+	desc = central_peace_deal.6.d
+	flavor = central_peace_deal.6.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = {
+        name = central_peace_deal.6.a
+		default_option = yes
+		if = {
+			limit = {
+				c:GBR = { 
+					has_variable = entente_participant
+					is_at_war = yes
+				} 
+			}
+			c:GBR = {
+                trigger_event = {
+                    id = central_peace_deal.7
+                    days = 5
+                }
+            }
+		}
+		if = {
+			limit = {
+				c:USA = { 
+					has_variable = entente_participant
+					is_at_war = yes
+				} 
+			}
+			c:USA = {
+                trigger_event = {
+                    id = central_peace_deal.7
+                    days = 5
+                }
+            }
+		}
+		ai_chance = {
+		   value = 1
+	    }
+	}
+
+	option = {
+        name = central_peace_deal.6.b
+		ai_chance = {
+		   value = 0
+	    }
+	}
+}
+
+central_peace_deal.7 = { #UK and USA sign white peace after France surrender part 2
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+		texture = "gfx/event_pictures/central_victory.dds"
+	}
+
+    title = central_peace_deal.7.t
+	desc = central_peace_deal.7.d
+	flavor = central_peace_deal.7.f
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
+    option = {
+        name = central_peace_deal.7.a
+		default_option = yes
+		scope:world_war_one_diplo_play = {
+			remove_target_backers = {
+                who = root
+            }
+        }
+		ai_chance = {
+		   value = 1
+	    }
+	}
+
+	option = {
+        name = central_peace_deal.7.b
+		ai_chance = {
+		   value = 0
+	    }
 	}
 }

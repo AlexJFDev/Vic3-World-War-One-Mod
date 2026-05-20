@@ -514,6 +514,15 @@ great_war_initiation_events.8 = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     title = great_war_initiation_events.8.t
     desc = great_war_initiation_events.8.d
     flavor = great_war_initiation_events.8.f
@@ -693,6 +702,15 @@ great_war_initiation_events.9 = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = { # Back down
         name = great_war_initiation_events.9.a
         default_option = yes
@@ -732,6 +750,15 @@ great_war_initiation_events.10 = {
 
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
 
     option = { # Pursue diplomacy
         name = great_war_initiation_events.10.a
@@ -863,6 +890,15 @@ great_war_initiation_events.12 = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = { # Do nothing
         name = great_war_initiation_events.12.b
         default_option = yes
@@ -949,6 +985,15 @@ great_war_initiation_events.13 = {
 
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
 
     option = { # Strike first
         name = great_war_initiation_events.13.a
@@ -1099,6 +1144,15 @@ great_war_initiation_events.14 = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = { # Invade Belgium
         name = great_war_initiation_events.14.a
         set_global_variable = german_invasion_of_belgium
@@ -1197,6 +1251,15 @@ great_war_initiation_events.15 = {
 
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
 
     option = { # Intervene
         name = great_war_initiation_events.15.a
@@ -1352,6 +1415,15 @@ great_war_initiation_events.16 = {
 
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
 
     option = { # Intervene
         name = great_war_initiation_events.16.a
