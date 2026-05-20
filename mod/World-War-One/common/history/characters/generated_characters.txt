@@ -2462,7 +2462,7 @@
 			ig_leader = yes
 			historical = yes
 			traits = {
-				direct expert_political_operator persistent imposing
+				direct expert_political_operator imposing persistent 
 			}
 		}
 		create_character = {
@@ -2475,6 +2475,20 @@
 			is_agitator = yes
 			historical = yes
 			traits = {
+				cautious expert_political_operator 
+			}
+		}
+		create_character = {
+			first_name = Emile
+			last_name = Basly
+			culture = cu:french
+			interest_group = ig_trade_unions
+			ideology = ideology_social_democrat
+			birth_date = 1854.04.18
+			is_agitator = yes
+			historical = yes
+			traits = {
+				ambitious experienced_political_operator 
 			}
 		}
 		create_character = {
@@ -4304,7 +4318,20 @@
 			is_agitator = yes
 			historical = yes
 			traits = {
-				experienced_diplomat literary
+				experienced_diplomat literary 
+			}
+		}
+		create_character = {
+			first_name = Isoroku
+			last_name = Yamamoto
+			culture = cu:japanese
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			birth_date = 1884.04.04
+			is_admiral = yes
+			historical = yes
+			traits = {
+				expert_naval_commander tactful 
 			}
 		}
 	}
@@ -4602,7 +4629,7 @@
 			is_agitator = yes
 			historical = yes
 			traits = {
-				literary 
+				experienced_diplomat literary 
 			}
 		}
 	}
@@ -5825,6 +5852,19 @@
 				brave convoy_raider_commander popular_commander 
 			}
 		}
+		create_character = {
+			first_name = Alexei
+			last_name = Khvostov
+			culture = cu:russian
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_authoritarian
+			birth_date = 1872.07.1
+			is_agitator = yes
+			historical = yes
+			traits = {
+				basic_political_operator persistent 
+			}
+		}
 	}
 	c:SAF = {
 		create_character = {
@@ -6206,7 +6246,7 @@
 			ruler = yes
 			historical = yes
 			traits = {
-				basic_political_operator experienced_colonial_administrator explorer persistent 
+				basic_political_operator persistent 
 			}
 		}
 	}
@@ -7158,9 +7198,7 @@
 			is_general = yes
 			historical = yes
 			traits = {
-				experienced_offensive_planner
-				innovative
-				arrogant
+				arrogant experienced_offensive_planner innovative 
 			}
 		}
 		create_character = {

@@ -36064,7 +36064,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 3
 						region = STATE_SHAOZHOU
 					}
 				}
@@ -36084,6 +36084,20 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
+				}
+			}
+			create_building = {
+				building = building_food_industry
+				add_ownership = {
+					company = {
+						type = company_ayam
+						country = c:MLA
+						levels = 12
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_baking_powder pm_disabled_distillery pm_vacuum_canning 
 				}
 			}
 			create_building = {
@@ -36135,13 +36149,27 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 3
 						region = STATE_HOME_COUNTIES
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
 					pm_modern_port 
+				}
+			}
+			create_building = {
+				building = building_food_industry
+				add_ownership = {
+					company = {
+						type = company_ayam
+						country = c:MLA
+						levels = 8
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_baking_powder pm_patent_stills pm_vacuum_canning 
 				}
 			}
 			create_building = {
@@ -63365,7 +63393,7 @@
 					company = {
 						type = company_yasuda
 						country = c:JAP
-						levels = 4
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -63685,7 +63713,7 @@
 					company = {
 						type = company_yasuda
 						country = c:JAP
-						levels = 8
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -64207,7 +64235,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 3
+						levels = 6
 						region = STATE_HOME_COUNTIES
 					}
 				}
