@@ -954,7 +954,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SUD
-						levels = 2
+						levels = 10
 						region = STATE_BLUE_NILE
 					}
 				}
@@ -980,6 +980,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_no_passenger_trains pm_steam_trains 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:SUD
+						levels = 1
+						region = STATE_BLUE_NILE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -1012,6 +1027,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_no_passenger_trains pm_steam_trains 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:SUD
+						levels = 1
+						region = STATE_BLUE_NILE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -1063,6 +1093,21 @@
 					pm_no_passenger_trains pm_steam_trains 
 				}
 			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:SUD
+						levels = 1
+						region = STATE_BLUE_NILE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
 		}
 	}
 	s:STATE_KORDOFAN = {
@@ -1080,6 +1125,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_no_passenger_trains pm_steam_trains 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:SUD
+						levels = 1
+						region = STATE_BLUE_NILE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -6113,7 +6173,7 @@
 					building = {
 						type = building_financial_district
 						country = c:MON
-						levels = 1
+						levels = 4
 						region = STATE_MONTENEGRO
 					}
 				}
@@ -7409,7 +7469,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ABU
-						levels = 1
+						levels = 4
 						region = STATE_ABU_DHABI
 					}
 				}
@@ -8385,7 +8445,7 @@
 					building = {
 						type = building_financial_district
 						country = c:LUX
-						levels = 3
+						levels = 12
 						region = STATE_WALLONIA
 					}
 				}
@@ -8447,7 +8507,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BLZ
-						levels = 2
+						levels = 5
 						region = STATE_GUATEMALA
 					}
 				}
@@ -9638,7 +9698,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BRZ
-						levels = 1
+						levels = 5
 						region = STATE_BAHIA
 					}
 				}
@@ -9908,7 +9968,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BRZ
-						levels = 1
+						levels = 5
 						region = STATE_GOIAS
 					}
 				}
@@ -11972,7 +12032,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 8
+						levels = 25
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -12019,7 +12079,7 @@
 					building = {
 						type = building_manor_house
 						country = c:KEN
-						levels = 1
+						levels = 5
 						region = STATE_KENYA
 					}
 				}
@@ -12156,7 +12216,7 @@
 					building = {
 						type = building_manor_house
 						country = c:NGA
-						levels = 1
+						levels = 5
 						region = STATE_BENIN
 					}
 				}
@@ -12220,7 +12280,7 @@
 					building = {
 						type = building_manor_house
 						country = c:NGA
-						levels = 1
+						levels = 5
 						region = STATE_BORNU
 					}
 				}
@@ -12312,7 +12372,7 @@
 					building = {
 						type = building_manor_house
 						country = c:NGA
-						levels = 1
+						levels = 5
 						region = STATE_EAST_HAUSALAND
 					}
 				}
@@ -12404,7 +12464,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 3
+						levels = 8
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -12511,7 +12571,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 2
+						levels = 5
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -12904,7 +12964,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 18
+						levels = 25
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -13066,7 +13126,7 @@
 					building = {
 						type = building_manor_house
 						country = c:NBO
-						levels = 1
+						levels = 5
 						region = STATE_NORTH_BORNEO
 					}
 				}
@@ -13113,7 +13173,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BRU
-						levels = 1
+						levels = 4
 						region = STATE_NORTH_BORNEO
 					}
 				}
@@ -13261,7 +13321,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ROS
-						levels = 1
+						levels = 6
 						region = STATE_NORTH_BORNEO
 					}
 				}
@@ -13355,7 +13415,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 2
 						region = STATE_AGRA
 					}
 				}
@@ -13535,7 +13595,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 2
 						region = STATE_ASSAM
 					}
 				}
@@ -13659,7 +13719,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 2
 						region = STATE_BALUCHISTAN
 					}
 				}
@@ -13892,7 +13952,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 3
 						region = STATE_BIHAR
 					}
 				}
@@ -15003,7 +15063,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 8
 						region = STATE_GUJARAT
 					}
 				}
@@ -15166,7 +15226,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 15
 						region = STATE_HYDERABAD
 					}
 				}
@@ -15294,7 +15354,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 5
 						region = STATE_MALWA
 					}
 				}
@@ -16063,7 +16123,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 8
 						region = STATE_PUNJAB
 					}
 				}
@@ -16854,7 +16914,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 3
 						region = STATE_PEGU
 					}
 				}
@@ -16967,7 +17027,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 3
 						region = STATE_TENASSERIM
 					}
 				}
@@ -17087,7 +17147,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 1
+						levels = 4
 						region = STATE_TENASSERIM
 					}
 				}
@@ -17258,7 +17318,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 1
+						levels = 2
 						region = STATE_HILL_PUNJAB
 					}
 				}
@@ -17397,7 +17457,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SLD
-						levels = 1
+						levels = 3
 						region = STATE_SOMALILAND
 					}
 				}
@@ -17575,7 +17635,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BUG
-						levels = 1
+						levels = 3
 						region = STATE_UGANDA
 					}
 				}
@@ -17637,7 +17697,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 2
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -17754,7 +17814,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BUK
-						levels = 1
+						levels = 2
 						region = STATE_TAJIKISTAN
 					}
 				}
@@ -18294,7 +18354,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BUL
-						levels = 4
+						levels = 6
 						region = STATE_NORTHERN_THRACE
 					}
 				}
@@ -18605,7 +18665,7 @@
 				add_ownership = {
 					country = {
 						country = c:BUL
-						levels = 3
+						levels = 6
 					}
 				}
 				reserves = 1
@@ -19001,7 +19061,7 @@
 					building = {
 						type = building_financial_district
 						country = c:TUR
-						levels = 25
+						levels = 55
 						region = STATE_EASTERN_THRACE
 					}
 				}
@@ -19484,7 +19544,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BUL
-						levels = 1
+						levels = 4
 						region = STATE_WESTERN_THRACE
 					}
 				}
@@ -19604,7 +19664,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SER
-						levels = 1
+						levels = 4
 						region = STATE_SKOPIA
 					}
 				}
@@ -20226,7 +20286,7 @@
 					building = {
 						type = building_manor_house
 						country = c:CAN
-						levels = 4
+						levels = 6
 						region = STATE_MANITOBA
 					}
 				}
@@ -20433,7 +20493,7 @@
 				add_ownership = {
 					country = {
 						country = c:CAN
-						levels = 3
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -21442,7 +21502,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 3
+						levels = 6
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -21753,7 +21813,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PEU
-						levels = 1
+						levels = 9
 						region = STATE_AREQUIPA
 					}
 				}
@@ -22647,8 +22707,8 @@
 				building = building_trade_center
 				add_ownership = {
 					country = {
-						country = c:ICH
-						levels = 1
+						country = c:FPL
+						levels = 2
 					}
 				}
 				reserves = 1
@@ -24331,7 +24391,7 @@
 				add_ownership = {
 					country = {
 						country = c:ICH
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -26191,7 +26251,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 3
 						region = STATE_SHAOZHOU
 					}
 				}
@@ -29285,7 +29345,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BEL
-						levels = 8
+						levels = 12
 						region = STATE_FLANDERS
 					}
 				}
@@ -29377,7 +29437,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BEL
-						levels = 5
+						levels = 8
 						region = STATE_FLANDERS
 					}
 				}
@@ -29469,7 +29529,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BEL
-						levels = 4
+						levels = 6
 						region = STATE_FLANDERS
 					}
 				}
@@ -29666,7 +29726,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BEL
-						levels = 3
+						levels = 7
 						region = STATE_FLANDERS
 					}
 				}
@@ -29758,7 +29818,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BEL
-						levels = 4
+						levels = 8
 						region = STATE_FLANDERS
 					}
 				}
@@ -29932,7 +29992,7 @@
 					building = {
 						type = building_financial_district
 						country = c:COS
-						levels = 2
+						levels = 8
 						region = STATE_COSTA_RICA
 					}
 				}
@@ -30239,7 +30299,7 @@
 					building = {
 						type = building_financial_district
 						country = c:CUB
-						levels = 8
+						levels = 18
 						region = STATE_WESTERN_CUBA
 					}
 				}
@@ -30331,7 +30391,7 @@
 					building = {
 						type = building_financial_district
 						country = c:CUB
-						levels = 5
+						levels = 8
 						region = STATE_WESTERN_CUBA
 					}
 				}
@@ -30424,7 +30484,7 @@
 					building = {
 						type = building_financial_district
 						country = c:CUB
-						levels = 3
+						levels = 6
 						region = STATE_WESTERN_CUBA
 					}
 				}
@@ -30574,7 +30634,7 @@
 					building = {
 						type = building_financial_district
 						country = c:ITA
-						levels = 1
+						levels = 3
 						region = STATE_LOMBARDY
 					}
 				}
@@ -30938,7 +30998,7 @@
 					building = {
 						type = building_financial_district
 						country = c:DEN
-						levels = 5
+						levels = 25
 						region = STATE_ZEALAND
 					}
 				}
@@ -31891,7 +31951,7 @@
 					building = {
 						type = building_manor_house
 						country = c:DOM
-						levels = 1
+						levels = 5
 						region = STATE_SANTO_DOMINGO
 					}
 				}
@@ -32026,7 +32086,7 @@
 					building = {
 						type = building_manor_house
 						country = c:DEI
-						levels = 2
+						levels = 6
 						region = STATE_ACEH
 					}
 				}
@@ -32116,7 +32176,7 @@
 					building = {
 						type = building_manor_house
 						country = c:DEI
-						levels = 1
+						levels = 3
 						region = STATE_CELEBES
 					}
 				}
@@ -32397,7 +32457,7 @@
 					building = {
 						type = building_manor_house
 						country = c:DEI
-						levels = 1
+						levels = 6
 						region = STATE_EAST_BORNEO
 					}
 				}
@@ -32829,7 +32889,7 @@
 					building = {
 						type = building_manor_house
 						country = c:DEI
-						levels = 1
+						levels = 5
 						region = STATE_NORTH_SUMATRA
 					}
 				}
@@ -33004,7 +33064,7 @@
 					building = {
 						type = building_manor_house
 						country = c:DEI
-						levels = 2
+						levels = 6
 						region = STATE_SOUTH_SUMATRA
 					}
 				}
@@ -33373,7 +33433,7 @@
 					building = {
 						type = building_manor_house
 						country = c:DEI
-						levels = 3
+						levels = 8
 						region = STATE_WEST_BORNEO
 					}
 				}
@@ -33752,7 +33812,7 @@
 					building = {
 						type = building_financial_district
 						country = c:NET
-						levels = 35
+						levels = 50
 						region = STATE_HOLLAND
 					}
 				}
@@ -34841,7 +34901,7 @@
 					building = {
 						type = building_financial_district
 						country = c:EGY
-						levels = 38
+						levels = 55
 						region = STATE_LOWER_EGYPT
 					}
 				}
@@ -35008,7 +35068,7 @@
 					building = {
 						type = building_financial_district
 						country = c:EGY
-						levels = 25
+						levels = 35
 						region = STATE_LOWER_EGYPT
 					}
 				}
@@ -35262,7 +35322,7 @@
 					building = {
 						type = building_financial_district
 						country = c:EGY
-						levels = 15
+						levels = 18
 						region = STATE_LOWER_EGYPT
 					}
 				}
@@ -35584,7 +35644,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 2
+						levels = 8
 						region = STATE_AMHARA
 					}
 				}
@@ -35764,7 +35824,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 3
+						levels = 6
 						region = STATE_GONDER
 					}
 				}
@@ -35957,7 +36017,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 2
+						levels = 5
 						region = STATE_OROMIA
 					}
 				}
@@ -36119,7 +36179,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 5
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -36665,7 +36725,7 @@
 					building = {
 						type = building_financial_district
 						country = c:FIN
-						levels = 6
+						levels = 15
 						region = STATE_UUSIMAA
 					}
 				}
@@ -37658,7 +37718,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 5
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -37922,7 +37982,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 4
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -38600,7 +38660,7 @@
 					building = {
 						type = building_manor_house
 						country = c:FRA
-						levels = 3
+						levels = 6
 						region = STATE_FRANCHE_COMTE
 					}
 				}
@@ -38884,7 +38944,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 3
+						levels = 12
 					}
 				}
 				reserves = 1
@@ -39228,7 +39288,7 @@
 					building = {
 						type = building_financial_district
 						country = c:NET
-						levels = 1
+						levels = 3
 						region = STATE_HOLLAND
 					}
 				}
@@ -39349,7 +39409,7 @@
 					building = {
 						type = building_trade_center
 						country = c:FRA
-						levels = 1
+						levels = 5
 						region = STATE_GUYENNE
 					}
 				}
@@ -40755,7 +40815,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 4
+						levels = 40
 					}
 				}
 				reserves = 1
@@ -41233,7 +41293,7 @@
 					building = {
 						type = building_manor_house
 						country = c:FRA
-						levels = 3
+						levels = 5
 						region = STATE_PICARDY
 					}
 				}
@@ -41415,7 +41475,7 @@
 					building = {
 						type = building_manor_house
 						country = c:FRA
-						levels = 1
+						levels = 4
 						region = STATE_POITOU
 					}
 				}
@@ -42251,7 +42311,7 @@
 				add_ownership = {
 					country = {
 						country = c:FRA
-						levels = 1
+						levels = 4
 					}
 				}
 				reserves = 1
@@ -42551,7 +42611,7 @@
 				add_ownership = {
 					country = {
 						country = c:EQA
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -42594,7 +42654,7 @@
 				add_ownership = {
 					country = {
 						country = c:CMR
-						levels = 1
+						levels = 4
 					}
 				}
 				reserves = 1
@@ -42800,7 +42860,7 @@
 				add_ownership = {
 					country = {
 						country = c:EQA
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -42888,7 +42948,7 @@
 				add_ownership = {
 					country = {
 						country = c:CMR
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -43307,7 +43367,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ICH
-						levels = 1
+						levels = 5
 						region = STATE_ANNAM
 					}
 				}
@@ -43489,7 +43549,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ICH
-						levels = 1
+						levels = 4
 						region = STATE_CAMBODIA
 					}
 				}
@@ -43640,7 +43700,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ICH
-						levels = 1
+						levels = 6
 						region = STATE_LAOS
 					}
 				}
@@ -43792,7 +43852,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ICH
-						levels = 1
+						levels = 3
 						region = STATE_MEKONG
 					}
 				}
@@ -44030,7 +44090,7 @@
 				add_ownership = {
 					country = {
 						country = c:ICH
-						levels = 15
+						levels = 35
 					}
 				}
 				reserves = 1
@@ -44147,7 +44207,7 @@
 				building = building_trade_center
 				add_ownership = {
 					country = {
-						country = c:ICH
+						country = c:FPL
 						levels = 1
 					}
 				}
@@ -44222,7 +44282,7 @@
 				building = building_trade_center
 				add_ownership = {
 					country = {
-						country = c:ICH
+						country = c:DJB
 						levels = 1
 					}
 				}
@@ -44504,7 +44564,7 @@
 				add_ownership = {
 					country = {
 						country = c:WAF
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -45580,12 +45640,12 @@
 				add_ownership = {
 					country = {
 						country = c:WAF
-						levels = 8
+						levels = 25
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_trade_center_trade_quantity_very_high 
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -45656,7 +45716,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 5
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -45702,7 +45762,7 @@
 				add_ownership = {
 					country = {
 						country = c:WAF
-						levels = 1
+						levels = 28
 					}
 				}
 				reserves = 1
@@ -46019,7 +46079,7 @@
 				add_ownership = {
 					country = {
 						country = c:WAF
-						levels = 3
+						levels = 4
 					}
 				}
 				reserves = 1
@@ -46259,7 +46319,7 @@
 				add_ownership = {
 					country = {
 						country = c:CMR
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -46649,7 +46709,7 @@
 				add_ownership = {
 					country = {
 						country = c:TAN
-						levels = 1
+						levels = 20
 					}
 				}
 				reserves = 1
@@ -46724,7 +46784,7 @@
 				add_ownership = {
 					country = {
 						country = c:NGG
-						levels = 1
+						levels = 6
 					}
 				}
 				reserves = 1
@@ -47048,7 +47108,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TSW
-						levels = 1
+						levels = 4
 						region = STATE_BOTSWANA
 					}
 				}
@@ -47199,7 +47259,7 @@
 				add_ownership = {
 					country = {
 						country = c:NAM
-						levels = 1
+						levels = 6
 					}
 				}
 				reserves = 1
@@ -47377,7 +47437,7 @@
 				add_ownership = {
 					country = {
 						country = c:TOG
-						levels = 1
+						levels = 12
 					}
 				}
 				reserves = 1
@@ -47435,7 +47495,7 @@
 				add_ownership = {
 					country = {
 						country = c:GHA
-						levels = 1
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -52716,7 +52776,7 @@
 				add_ownership = {
 					country = {
 						country = c:GHA
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -52794,7 +52854,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 2
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -53042,7 +53102,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 3
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -53335,7 +53395,7 @@
 					building = {
 						type = building_manor_house
 						country = c:GBR
-						levels = 1
+						levels = 8
 						region = STATE_EAST_ANGLIA
 					}
 				}
@@ -53721,7 +53781,7 @@
 					building = {
 						type = building_manor_house
 						country = c:GBR
-						levels = 3
+						levels = 8
 						region = STATE_HIGHLANDS
 					}
 				}
@@ -54950,7 +55010,7 @@
 					building = {
 						type = building_manor_house
 						country = c:GBR
-						levels = 5
+						levels = 9
 						region = STATE_LEINSTER
 					}
 				}
@@ -55822,7 +55882,7 @@
 					building = {
 						type = building_manor_house
 						country = c:GBR
-						levels = 4
+						levels = 8
 						region = STATE_MUNSTER
 					}
 				}
@@ -56032,7 +56092,7 @@
 					building = {
 						type = building_manor_house
 						country = c:GBR
-						levels = 2
+						levels = 6
 						region = STATE_ULSTER
 					}
 				}
@@ -56268,7 +56328,7 @@
 					building = {
 						type = building_manor_house
 						country = c:GBR
-						levels = 4
+						levels = 8
 						region = STATE_WALES
 					}
 				}
@@ -56517,7 +56577,7 @@
 					building = {
 						type = building_manor_house
 						country = c:GBR
-						levels = 3
+						levels = 12
 						region = STATE_WEST_COUNTRY
 					}
 				}
@@ -56872,7 +56932,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 2
+						levels = 12
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -59069,7 +59129,7 @@
 				add_ownership = {
 					country = {
 						country = c:ITA
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -59235,7 +59295,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ITA
-						levels = 1
+						levels = 4
 						region = STATE_APULIA
 					}
 				}
@@ -59417,7 +59477,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ITA
-						levels = 1
+						levels = 6
 						region = STATE_CALABRIA
 					}
 				}
@@ -59652,7 +59712,7 @@
 				add_ownership = {
 					country = {
 						country = c:ITA
-						levels = 1
+						levels = 7
 					}
 				}
 				reserves = 1
@@ -59904,7 +59964,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ITA
-						levels = 1
+						levels = 8
 						region = STATE_EMILIA
 					}
 				}
@@ -61046,7 +61106,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ITA
-						levels = 1
+						levels = 5
 						region = STATE_ROMAGNA
 					}
 				}
@@ -61198,7 +61258,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ITA
-						levels = 2
+						levels = 5
 						region = STATE_SARDINIA
 					}
 				}
@@ -61625,7 +61685,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ITA
-						levels = 1
+						levels = 15
 						region = STATE_TUSCANY
 					}
 				}
@@ -61760,7 +61820,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ITA
-						levels = 1
+						levels = 10
 						region = STATE_UMBRIA
 					}
 				}
@@ -61983,7 +62043,7 @@
 					building = {
 						type = building_financial_district
 						country = c:ITA
-						levels = 12
+						levels = 40
 						region = STATE_LOMBARDY
 					}
 				}
@@ -62101,7 +62161,7 @@
 					building = {
 						type = building_manor_house
 						country = c:NEJ
-						levels = 1
+						levels = 8
 						region = STATE_HAIL
 					}
 				}
@@ -63095,7 +63155,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 1
+						levels = 2
 						region = STATE_HOKKAIDO
 					}
 				}
@@ -64944,7 +65004,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 2
+						levels = 4
 						region = STATE_SHIKOKU
 					}
 				}
@@ -65154,7 +65214,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 3
+						levels = 5
 						region = STATE_TOHOKU
 					}
 				}
@@ -65363,7 +65423,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 2
+						levels = 5
 						region = STATE_BUSAN
 					}
 				}
@@ -65544,7 +65604,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 1
+						levels = 6
 						region = STATE_PYONGYANG
 					}
 				}
@@ -65666,7 +65726,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 2
+						levels = 7
 						region = STATE_SARIWON
 					}
 				}
@@ -65932,7 +65992,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 7
+						levels = 15
 						region = STATE_KANTO
 					}
 				}
@@ -66127,7 +66187,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 1
+						levels = 8
 						region = STATE_YANGHO
 					}
 				}
@@ -66540,7 +66600,7 @@
 					building = {
 						type = building_financial_district
 						country = c:LIB
-						levels = 2
+						levels = 4
 						region = STATE_LIBERIA
 					}
 				}
@@ -66689,7 +66749,7 @@
 				add_ownership = {
 					country = {
 						country = c:MAD
-						levels = 1
+						levels = 6
 					}
 				}
 				reserves = 1
@@ -66839,7 +66899,7 @@
 				add_ownership = {
 					country = {
 						country = c:MAD
-						levels = 1
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -67108,7 +67168,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MEX
-						levels = 1
+						levels = 2
 						region = STATE_BAJIO
 					}
 				}
@@ -67247,7 +67307,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MEX
-						levels = 1
+						levels = 3
 						region = STATE_CHIAPAS
 					}
 				}
@@ -67626,7 +67686,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MEX
-						levels = 1
+						levels = 3
 						region = STATE_GUERRERO
 					}
 				}
@@ -68580,7 +68640,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MEX
-						levels = 1
+						levels = 4
 						region = STATE_SINALOA
 					}
 				}
@@ -68695,7 +68755,7 @@
 				add_ownership = {
 					country = {
 						country = c:MEX
-						levels = 1
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -68903,7 +68963,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MEX
-						levels = 1
+						levels = 3
 						region = STATE_VERACRUZ
 					}
 				}
@@ -69064,7 +69124,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MEX
-						levels = 1
+						levels = 5
 						region = STATE_YUCATAN
 					}
 				}
@@ -69226,7 +69286,7 @@
 				add_ownership = {
 					country = {
 						country = c:MEX
-						levels = 1
+						levels = 4
 					}
 				}
 				reserves = 1
@@ -69287,7 +69347,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MGL
-						levels = 1
+						levels = 3
 						region = STATE_ULIASTAI
 					}
 				}
@@ -69514,7 +69574,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MOR
-						levels = 2
+						levels = 15
 						region = STATE_FEZ
 					}
 				}
@@ -69754,7 +69814,7 @@
 					building = {
 						type = building_manor_house
 						country = c:MOR
-						levels = 4
+						levels = 25
 						region = STATE_MARRAKECH
 					}
 				}
@@ -70967,7 +71027,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 6
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -71074,7 +71134,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 7
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -71241,7 +71301,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 1
+						levels = 6
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -71571,7 +71631,7 @@
 					building = {
 						type = building_financial_district
 						country = c:POR
-						levels = 1
+						levels = 4
 						region = STATE_ESTREMADURA
 					}
 				}
@@ -71631,7 +71691,7 @@
 					building = {
 						type = building_financial_district
 						country = c:POR
-						levels = 1
+						levels = 4
 						region = STATE_ESTREMADURA
 					}
 				}
@@ -71751,7 +71811,7 @@
 					building = {
 						type = building_financial_district
 						country = c:POR
-						levels = 1
+						levels = 5
 						region = STATE_ESTREMADURA
 					}
 				}
@@ -72568,7 +72628,7 @@
 					building = {
 						type = building_manor_house
 						country = c:OMA
-						levels = 1
+						levels = 30
 						region = STATE_OMAN
 					}
 				}
@@ -72975,7 +73035,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TUR
-						levels = 6
+						levels = 12
 						region = STATE_ALEPPO
 					}
 				}
@@ -73152,7 +73212,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TUR
-						levels = 3
+						levels = 5
 						region = STATE_ANKARA
 					}
 				}
@@ -73613,7 +73673,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TUR
-						levels = 7
+						levels = 35
 						region = STATE_BAGHDAD
 					}
 				}
@@ -74267,7 +74327,7 @@
 					building = {
 						type = building_financial_district
 						country = c:TUR
-						levels = 3
+						levels = 25
 						region = STATE_EASTERN_THRACE
 					}
 				}
@@ -74639,7 +74699,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TUR
-						levels = 2
+						levels = 6
 						region = STATE_KONYA
 					}
 				}
@@ -74834,7 +74894,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TUR
-						levels = 3
+						levels = 12
 						region = STATE_LEBANON
 					}
 				}
@@ -75093,7 +75153,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TUR
-						levels = 1
+						levels = 3
 						region = STATE_PALESTINE
 					}
 				}
@@ -75229,7 +75289,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TUR
-						levels = 5
+						levels = 10
 						region = STATE_SYRIA
 					}
 				}
@@ -75458,7 +75518,7 @@
 					building = {
 						type = building_manor_house
 						country = c:TUR
-						levels = 1
+						levels = 4
 						region = STATE_TRANSJORDAN
 					}
 				}
@@ -75625,7 +75685,7 @@
 					building = {
 						type = building_manor_house
 						country = c:YEM
-						levels = 1
+						levels = 18
 						region = STATE_YEMEN
 					}
 				}
@@ -75831,7 +75891,7 @@
 					building = {
 						type = building_financial_district
 						country = c:PNM
-						levels = 1
+						levels = 5
 						region = STATE_PANAMA
 					}
 				}
@@ -76573,7 +76633,7 @@
 					building = {
 						type = building_financial_district
 						country = c:PER
-						levels = 18
+						levels = 35
 						region = STATE_IRAKAJEMI
 					}
 				}
@@ -76765,7 +76825,7 @@
 					building = {
 						type = building_financial_district
 						country = c:PER
-						levels = 12
+						levels = 25
 						region = STATE_IRAKAJEMI
 					}
 				}
@@ -76902,7 +76962,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PER
-						levels = 1
+						levels = 5
 						region = STATE_KHORASAN
 					}
 				}
@@ -77083,7 +77143,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 8
+						levels = 12
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -77203,7 +77263,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PER
-						levels = 1
+						levels = 6
 						region = STATE_LURISTAN
 					}
 				}
@@ -77355,7 +77415,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PER
-						levels = 8
+						levels = 15
 						region = STATE_MAZANDARAN
 					}
 				}
@@ -77644,7 +77704,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PER
-						levels = 1
+						levels = 3
 						region = STATE_SEMNAN
 					}
 				}
@@ -77978,7 +78038,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PER
-						levels = 1
+						levels = 4
 						region = STATE_LARISTAN
 					}
 				}
@@ -78323,7 +78383,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PER
-						levels = 1
+						levels = 3
 						region = STATE_SISTAN
 					}
 				}
@@ -78531,7 +78591,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PEU
-						levels = 1
+						levels = 5
 						region = STATE_CAJAMARCA
 					}
 				}
@@ -78784,7 +78844,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PEU
-						levels = 1
+						levels = 6
 						region = STATE_ICA
 					}
 				}
@@ -79181,7 +79241,7 @@
 					building = {
 						type = building_financial_district
 						country = c:PEU
-						levels = 12
+						levels = 35
 						region = STATE_LIMA
 					}
 				}
@@ -79404,7 +79464,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 12
+						levels = 25
 						region = STATE_CALIFORNIA
 					}
 				}
@@ -79565,7 +79625,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PHI
-						levels = 2
+						levels = 6
 						region = STATE_VISAYAS
 					}
 				}
@@ -79745,7 +79805,7 @@
 					building = {
 						type = building_manor_house
 						country = c:PHI
-						levels = 1
+						levels = 8
 						region = STATE_MINDANAO
 					}
 				}
@@ -81016,7 +81076,7 @@
 					building = {
 						type = building_financial_district
 						country = c:POR
-						levels = 1
+						levels = 4
 						region = STATE_ESTREMADURA
 					}
 				}
@@ -81193,7 +81253,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ANG
-						levels = 1
+						levels = 6
 						region = STATE_NORTH_ANGOLA
 					}
 				}
@@ -81255,7 +81315,7 @@
 					building = {
 						type = building_financial_district
 						country = c:POR
-						levels = 1
+						levels = 5
 						region = STATE_ESTREMADURA
 					}
 				}
@@ -86348,7 +86408,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 5
 						region = STATE_ROSTOV
 					}
 				}
@@ -86650,7 +86710,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 5
 						region = STATE_SMOLENSK
 					}
 				}
@@ -87244,7 +87304,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 3
 						region = STATE_MERZ
 					}
 				}
@@ -87728,7 +87788,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 4
 						region = STATE_GREATER_CAUCASUS
 					}
 				}
@@ -87818,7 +87878,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 3
 						region = STATE_STAVROPOL
 					}
 				}
@@ -87882,7 +87942,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 2
 						region = STATE_ELIZAVETPOL
 					}
 				}
@@ -87931,7 +87991,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 5
 						region = STATE_NORTH_CAUCASUS
 					}
 				}
@@ -88132,7 +88192,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 3
 						region = STATE_CHERNIHIV
 					}
 				}
@@ -88269,7 +88329,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 10
 						region = STATE_LESSER_POLAND
 					}
 				}
@@ -88461,7 +88521,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 12
+						levels = 25
 						region = STATE_GREATER_POLAND
 					}
 				}
@@ -88688,7 +88748,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 6
 						region = STATE_YAROSLAVL
 					}
 				}
@@ -88750,7 +88810,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 3
 						region = STATE_TARTARIA
 					}
 				}
@@ -88799,7 +88859,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 2
 						region = STATE_TAMBOV
 					}
 				}
@@ -89073,7 +89133,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 1
+						levels = 3
 						region = STATE_TAURIDA
 					}
 				}
@@ -89924,7 +89984,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SER
-						levels = 8
+						levels = 12
 						region = STATE_WESTERN_SERBIA
 					}
 				}
@@ -90190,7 +90250,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SER
-						levels = 2
+						levels = 4
 						region = STATE_EASTERN_SERBIA
 					}
 				}
@@ -90252,7 +90312,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SER
-						levels = 1
+						levels = 6
 						region = STATE_KOSOVO
 					}
 				}
@@ -91071,7 +91131,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SIA
-						levels = 2
+						levels = 15
 						region = STATE_NAKHON_RATCHASIMA
 					}
 				}
@@ -91188,7 +91248,7 @@
 				add_ownership = {
 					country = {
 						country = c:SIL
-						levels = 1
+						levels = 8
 					}
 				}
 				reserves = 1
@@ -91427,7 +91487,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SAF
-						levels = 8
+						levels = 15
 						region = STATE_CAPE_COLONY
 					}
 				}
@@ -91562,7 +91622,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SAF
-						levels = 1
+						levels = 4
 						region = STATE_EASTERN_CAPE
 					}
 				}
@@ -91639,7 +91699,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SAF
-						levels = 1
+						levels = 5
 						region = STATE_NORTHERN_CAPE
 					}
 				}
@@ -91733,7 +91793,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SWZ
-						levels = 1
+						levels = 4
 						region = STATE_TRANSVAAL
 					}
 				}
@@ -91810,7 +91870,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SAF
-						levels = 1
+						levels = 6
 						region = STATE_VRYSTAAT
 					}
 				}
@@ -91900,7 +91960,7 @@
 					building = {
 						type = building_manor_house
 						country = c:RHO
-						levels = 1
+						levels = 4
 						region = STATE_ZAMBEZI
 					}
 				}
@@ -92170,7 +92230,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SPA
-						levels = 8
+						levels = 35
 						region = STATE_LOWER_ANDALUSIA
 					}
 				}
@@ -92318,7 +92378,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SPA
-						levels = 1
+						levels = 4
 						region = STATE_ARAGON
 					}
 				}
@@ -92554,7 +92614,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SPA
-						levels = 1
+						levels = 5
 						region = STATE_ASTURIAS
 					}
 				}
@@ -92661,7 +92721,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SPA
-						levels = 1
+						levels = 3
 						region = STATE_EXTREMADURA
 					}
 				}
@@ -92798,7 +92858,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SPA
-						levels = 1
+						levels = 4
 						region = STATE_BALEARES
 					}
 				}
@@ -93407,7 +93467,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SPA
-						levels = 15
+						levels = 28
 						region = STATE_NEW_CASTILE
 					}
 				}
@@ -93750,7 +93810,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SPA
-						levels = 28
+						levels = 40
 						region = STATE_NEW_CASTILE
 					}
 				}
@@ -94019,7 +94079,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SPA
-						levels = 1
+						levels = 5
 						region = STATE_VALENCIA
 					}
 				}
@@ -94349,7 +94409,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SPA
-						levels = 25
+						levels = 42
 						region = STATE_NEW_CASTILE
 					}
 				}
@@ -94531,7 +94591,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SPA
-						levels = 1
+						levels = 6
 						region = STATE_GALICIA
 					}
 				}
@@ -94908,7 +94968,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SWE
-						levels = 7
+						levels = 10
 						region = STATE_SVEALAND
 					}
 				}
@@ -95059,7 +95119,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SWE
-						levels = 3
+						levels = 5
 						region = STATE_NORRLAND
 					}
 				}
@@ -95283,7 +95343,7 @@
 					building = {
 						type = building_manor_house
 						country = c:SWE
-						levels = 3
+						levels = 8
 						region = STATE_SCANIA
 					}
 				}
@@ -95738,7 +95798,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SWE
-						levels = 32
+						levels = 60
 						region = STATE_SVEALAND
 					}
 				}
@@ -96583,7 +96643,7 @@
 					building = {
 						type = building_financial_district
 						country = c:ITA
-						levels = 1
+						levels = 4
 						region = STATE_LOMBARDY
 					}
 				}
@@ -96791,7 +96851,7 @@
 					building = {
 						type = building_financial_district
 						country = c:FRA
-						levels = 4
+						levels = 12
 						region = STATE_PROVENCE
 					}
 				}
@@ -98092,7 +98152,7 @@
 					building = {
 						type = building_trade_center
 						country = c:USA
-						levels = 3
+						levels = 5
 						region = STATE_COLORADO
 					}
 				}
@@ -98270,7 +98330,7 @@
 					building = {
 						type = building_trade_center
 						country = c:USA
-						levels = 3
+						levels = 6
 						region = STATE_CONNECTICUT
 					}
 				}
@@ -98405,7 +98465,7 @@
 					building = {
 						type = building_trade_center
 						country = c:USA
-						levels = 2
+						levels = 4
 						region = STATE_DELAWARE
 					}
 				}
@@ -105484,7 +105544,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 65
+						levels = 85
 						region = STATE_NEW_YORK
 					}
 				}
@@ -106668,7 +106728,7 @@
 					building = {
 						type = building_trade_center
 						country = c:USA
-						levels = 55
+						levels = 65
 						region = STATE_TEXAS
 					}
 				}
@@ -108497,7 +108557,7 @@
 					building = {
 						type = building_manor_house
 						country = c:VNZ
-						levels = 1
+						levels = 4
 						region = STATE_BOLIVAR
 					}
 				}
@@ -108866,7 +108926,7 @@
 					building = {
 						type = building_financial_district
 						country = c:VNZ
-						levels = 12
+						levels = 20
 						region = STATE_MIRANDA
 					}
 				}
@@ -109063,7 +109123,7 @@
 					building = {
 						type = building_manor_house
 						country = c:VNZ
-						levels = 1
+						levels = 5
 						region = STATE_ZULIA
 					}
 				}
