@@ -46447,6 +46447,19 @@
 					pm_training_streamlining 
 				}
 			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					country = {
+						country = c:TAN
+						levels = 15
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
 		}
 	}
 	s:STATE_TANGANYIKA = {
@@ -46522,6 +46535,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					country = {
+						country = c:TAN
+						levels = 4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}
@@ -46709,7 +46735,7 @@
 				add_ownership = {
 					country = {
 						country = c:TAN
-						levels = 20
+						levels = 22
 					}
 				}
 				reserves = 1
