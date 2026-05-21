@@ -72,6 +72,33 @@ objectives_events.3 = {
     }
 }
 
+objectives_events.4 = {
+    type = country_event
+
+    title = objectives_events.6.t
+    desc = objectives_events.6.d
+    flavor = objectives_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/rus_icon.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/russia_victory.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = objectives_events.6.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
 objectives_events.5 = {
     type = country_event
 
@@ -93,32 +120,5 @@ objectives_events.5 = {
     option = {
         name = objectives_events.5.a
         default_option = yes
-    }
-}
-
-objectives_events.6 = {
-    type = country_event
-
-    title = objectives_events.6.t
-    desc = objectives_events.6.d
-    flavor = objectives_events.6.f
-    
-    icon = "gfx/interface/icons/event_icons/event_military.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
-    event_image = {
-        texture = "gfx/event_pictures/victory.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = objectives_events.6.a
-        default_option = yes
-        ai_chance = {
-            base = 1
-        }
     }
 }

@@ -344,6 +344,15 @@ allies_peace_deal.3 = {
                 days = 60
             }
         }
+		every_country = {
+            limit = {
+                is_subject_of = c:RUS
+            } 
+            trigger_event = {
+                id = dev_events.114
+                days = 5
+            }
+        }
     }
 }
 
