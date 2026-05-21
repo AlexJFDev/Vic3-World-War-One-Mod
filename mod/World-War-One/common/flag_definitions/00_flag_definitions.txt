@@ -3080,52 +3080,32 @@ REPLACE_OR_CREATE:FRA = { # France
 		}
 	}	
 	flag_definition = {
-		coa = FRA_military
-		subject_canton = FRA_military
+		coa = FRA_dictatorship
+		subject_canton = FRA
 		priority = 20
 		trigger = {
 			coa_def_dictatorship_flag_trigger = yes
 		}
 	}
 	flag_definition = {
-		coa = FRA_bourbon
-		subject_canton = FRA_bourbon
-		priority = 30
-		allow_overlord_canton = no
-		coa_with_overlord_canton = FRA_subject			
-		trigger = {	
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				ruler = { has_ideology = ideology:ideology_legitimist }
-			}
-		}
-	}
-	flag_definition = {
-		coa = FRA_absolute_monarchy
-		subject_canton = FRA_absolute_monarchy	
-		allow_overlord_canton = no
-		coa_with_overlord_canton = FRA_subject			
-		priority = 25
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = FRA_second_empire
+		coa = FRA_dictatorship
 		subject_canton = FRA
-		allow_overlord_canton = no
-		coa_with_overlord_canton = FRA_subject			
-		priority = 30
-		trigger = {
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				ruler = { has_ideology = ideology:ideology_bonapartist }
-			}
+		priority = 1500
+		trigger = { 
+			coa_def_military_junta_flag_trigger = yes
 		}
 	}	
 	flag_definition = {
-		coa = FRA_bourbon
-		subject_canton = FRA_bourbon
+		coa = FRA_dictatorship
+		subject_canton = FRA
+		priority = 1550
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = FRA
+		subject_canton = FRA
 		priority = 20
 		trigger = { 
 			coa_def_theocracy_flag_trigger = yes
@@ -3142,17 +3122,65 @@ REPLACE_OR_CREATE:FRA = { # France
 	flag_definition = {
 		coa = FRA_military
 		subject_canton = FRA_military
-		priority = 1500
+		priority = 5550
 		trigger = { 
-			coa_def_military_junta_flag_trigger = yes
+			AND = {
+				exists = c:GER
+				scope:actor ?= {
+					is_subject_of = c:GER
+				}
+			} 
 		}
-	}	
+	}
 	flag_definition = {
-		coa = FRA_military
-		subject_canton = FRA_military
-		priority = 1550
-		trigger = { 
-			coa_def_fascist_flag_trigger = yes
+		coa = FRA
+		subject_canton = FRA
+		priority = 30
+		allow_overlord_canton = no
+		coa_with_overlord_canton = FRA_subject			
+		trigger = {	
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	flag_definition = {
+		coa = FRA_absolute_monarchy
+		subject_canton = FRA
+		priority = 1000
+		allow_overlord_canton = no
+		coa_with_overlord_canton = FRA_subject			
+		trigger = {	
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				ruler = { has_ideology = ideology:ideology_legitimist }
+			}
+		}
+	}
+	flag_definition = {
+		coa = FRA
+		subject_canton = FRA
+		priority = 1000
+		allow_overlord_canton = no
+		coa_with_overlord_canton = FRA_subject			
+		trigger = {	
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				ruler = { has_ideology = ideology:ideology_orleanist }
+			}
+		}
+	}
+	flag_definition = {
+		coa = FRA_dictatorship
+		subject_canton = FRA
+		allow_overlord_canton = no
+		coa_with_overlord_canton = FRA_subject			
+		priority = 1000
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+				ruler = { has_ideology = ideology:ideology_bonapartist }
+			}
 		}
 	}		
 }

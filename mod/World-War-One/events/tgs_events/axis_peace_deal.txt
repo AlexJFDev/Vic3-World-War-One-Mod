@@ -65,6 +65,12 @@ axis_peace_deal.1 = {
 			  type = colony
 		    }
         }
+        random_scope_character = {
+			limit = {
+				has_variable = charles_de_gaulle
+			}
+			kill_character = yes
+		}
     }
 
     option = {
@@ -140,7 +146,7 @@ axis_peace_deal.1 = {
               days = 5
             }
             trigger_event = {
-              id = dev_events.17
+              id = dev_events.117
               days = 5
             }
             create_diplomatic_pact = {

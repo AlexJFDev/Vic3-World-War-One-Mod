@@ -335,6 +335,12 @@ allies_peace_deal.3 = {
 		        set_state_owner = c:FRA
             }
         }
+		c:FRA = {
+            trigger_event = {
+              id = dev_events.118
+              days = 5
+            }
+        }
 		every_country = {
             limit = {
                 has_variable = axis_participant

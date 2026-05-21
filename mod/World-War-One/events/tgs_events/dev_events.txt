@@ -1038,6 +1038,13 @@ dev_events.21 = {
     option = {
         name = dev_events.21.a
         default_option = yes
+        active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = la_grande_muette
+				sponsor = ig_intelligentsia
+				cooldown = 50
+			}
+		}
         add_modifier = {
 			name = france_outdated_tactics
 			months = 30
@@ -5245,5 +5252,275 @@ dev_events.114 = {
         activate_law = law_type:law_appointed_bureaucrats
         activate_law = law_type:law_graduated_taxation
         activate_law = law_type:law_corporatized_unions
+    }
+}
+
+dev_events.115 = { 
+    type = country_event
+
+    title = dev_events.19.t
+    desc = dev_events.19.d
+    flavor = dev_events.19.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+    
+    immediate = {
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+    }
+
+    option = {
+        name = dev_events.19.a
+        default_option = yes
+        trigger = { is_player = no }
+        every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority
+			}
+			add_modifier = {
+				name = political_movement_nerf_1
+				years = 10
+			}
+		}     
+    }
+}
+
+dev_events.116 = {
+    type = country_event
+
+    title = dev_events.19.t
+    desc = dev_events.19.d
+    flavor = dev_events.19.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+    
+    immediate = {
+        create_character = {
+            first_name = Charles
+	        last_name = de_Gaulle
+	        historical = yes
+            birth_date = 1890.11.22
+	        culture = cu:french
+	        religion = rel:catholic
+	        female = no
+            is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_republican_leader
+	        traits = {
+              expert_political_operator
+              expert_offensive_planner
+              innovative
+	        }
+            on_created = {
+                set_variable = {
+                  name = charles_de_gaulle
+                }
+            }
+        }
+        create_character = {
+            first_name = Henri
+	        last_name = de_Orleans
+	        historical = yes
+            birth_date = 1908.07.05
+	        culture = cu:french
+	        religion = rel:catholic
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_orleanist
+	        traits = {
+               ambitious
+		       experienced_political_operator
+		       arrogant
+	        }
+        }
+        create_character = {
+            first_name = Louis
+	        last_name = Bonaparte
+	        historical = yes
+            birth_date = 1862.07.18
+	        culture = cu:french
+	        religion = rel:catholic
+	        female = no
+            is_agitator = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_bonapartist
+	        traits = {
+              brave
+		      reckless
+		      mountain_commander
+	        }
+        }
+    }
+
+    option = {
+        name = dev_events.19.a
+        default_option = yes   
+    }
+}
+
+dev_events.117 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        create_character = {
+            first_name = Charles
+	        last_name = de_Gaulle
+	        historical = yes
+            birth_date = 1890.11.22
+	        culture = cu:french
+	        religion = rel:catholic
+	        female = no
+            ig_leader = yes
+			is_general = yes
+			ruler = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_republican_leader
+	        traits = {
+              expert_political_operator
+              expert_offensive_planner
+              innovative
+	        }
+            on_created = {
+                set_variable = {
+                  name = charles_de_gaulle
+                }
+            }
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = money_buff_1
+            years = 10
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = money_buff_1
+            years = 10
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = money_buff_1
+            years = 10
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = money_buff_1
+            years = 10
+            is_decaying = yes
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = money_buff_1
+            years = 10
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = money_buff_1
+            years = 10
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.118 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        create_character = {
+            first_name = Charles
+	        last_name = de_Gaulle
+	        historical = yes
+            birth_date = 1890.11.22
+	        culture = cu:french
+	        religion = rel:catholic
+	        female = no
+            ig_leader = yes
+			is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_republican_leader
+	        traits = {
+              expert_political_operator
+              expert_offensive_planner
+              innovative
+	        }
+            on_created = {
+                set_variable = {
+                  name = charles_de_gaulle
+                }
+            }
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = money_buff_1
+            years = 4
+            is_decaying = yes
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = money_buff_1
+            years = 2
+            is_decaying = yes
+        }
     }
 }

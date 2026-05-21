@@ -522,3 +522,37 @@ hays_code = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
 }
+
+la_grande_muette = {
+
+    parent = law_universal_suffrage
+
+	allowed_laws = {
+		law_census_voting
+		law_universal_suffrage
+	}
+
+	modifier = {
+		
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		leader = { has_ideology = ideology:ideology_pacifist }
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			is_powerful = yes
+			is_interest_group_type = ig_armed_forces
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
