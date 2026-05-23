@@ -9626,9 +9626,10 @@
 			create_building = {
 				building = building_shipyard
 				add_ownership = {
-					country = {
+					company = {
+						type = company_estaleiro_maua
 						country = c:BRZ
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
@@ -10359,7 +10360,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BRZ
-						levels = 12
+						levels = 45
 						region = STATE_RIO_DE_JANEIRO
 					}
 				}
@@ -10434,7 +10435,7 @@
 					company = {
 						type = company_rossi
 						country = c:BRZ
-						levels = 2
+						levels = 1
 					}
 				}
 				reserves = 1
@@ -10518,7 +10519,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BRZ
-						levels = 18
+						levels = 45
 						region = STATE_RIO_DE_JANEIRO
 					}
 				}
@@ -11323,11 +11324,10 @@
 			create_building = {
 				building = building_shipyard
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_estaleiro_maua
 						country = c:BRZ
-						levels = 6
-						region = STATE_RIO_DE_JANEIRO
+						levels = 7
 					}
 				}
 				reserves = 1
@@ -11613,6 +11613,20 @@
 				}
 			}
 			create_building = {
+				building = building_arms_industry
+				add_ownership = {
+					company = {
+						type = company_rossi
+						country = c:BRZ
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_bolt_action_rifles pm_rotary_valve_engine_building_arms_industry 
+				}
+			}
+			create_building = {
 				building = building_logging_camp
 				add_ownership = {
 					company = {
@@ -11884,7 +11898,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BRZ
-						levels = 25
+						levels = 50
 						region = STATE_RIO_DE_JANEIRO
 					}
 				}
