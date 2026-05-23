@@ -1361,3 +1361,32 @@ made_in_germany = {
     state_trade_advantage_mult = 0.5
     state_max_trade_advantage_from_capacity_add = 0.5
 }
+
+contestado_turmoil = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+   state_turmoil_effects_mult = 0.5
+}
+
+coronelist_infighting = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+   interest_group_ig_landowners_pol_str_mult = -0.5
+}
+
+lower_strata_nerf = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+   state_lower_strata_standard_of_living_add = -2
+}
+
+allow_royal_family_return = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+   interest_group_ig_landowners_approval_add = 2
+   interest_group_ig_petty_bourgeoisie_approval_add = 2
+   interest_group_ig_devout_approval_add = 6
+}
+
+disallowed_royal_family_return = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+   interest_group_ig_landowners_approval_add = -2
+   interest_group_ig_petty_bourgeoisie_approval_add = -2
+   interest_group_ig_devout_approval_add = -6
+}

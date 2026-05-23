@@ -1,0 +1,26 @@
+﻿ideology_rooseveltian_progressivism_valid_trigger = {
+	OR = {
+        is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_intelligentsia
+		is_interest_group_type = ig_trade_unions
+	}
+}
+
+ideology_wilsonian_progressivism_valid_trigger = {
+	OR = {
+        is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_intelligentsia
+		is_interest_group_type = ig_industrialists
+	}
+}
+
+ideology_tenetist_valid_trigger = {
+    OR = {
+        is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_petty_bourgeoisie
+	}
+}
+
+ideology_coronelist_valid_trigger = {
+    is_interest_group_type = ig_landowners
+}

@@ -33,7 +33,7 @@ IDEOLOGIES = {
     'ideology_luddite', 'ideology_jacksonian_democrat', 'ideology_authoritarian', 'ideology_socialist', 'ideology_humanitarian', 'ideology_protectionist', 'ideology_humanitarian_royalist', 'ideology_positivist', 
     'ideology_corporatist_leader', 'ideology_land_reformer', 'ideology_integralist', 'ideology_legitimist', 'ideology_orleanist', 'ideology_bonapartist',
     # Mod Ideologies
-    'ideology_rooseveltian_progressivism', 'ideology_wilsonian_progressivism'
+    'ideology_rooseveltian_progressivism', 'ideology_wilsonian_progressivism', 'ideology_tenentist', 'ideology_coronelist',
 }
 
 YES_VALUES = {
