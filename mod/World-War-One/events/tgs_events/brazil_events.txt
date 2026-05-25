@@ -40,23 +40,27 @@ brazil_events.1 = { #Coronelist infighting
         }
         add_modifier = {
             name = lower_strata_nerf
-            years = 10
+            years = 20
             is_decaying = yes
         }
-        s:STATE_PARANA = { 
-            add_modifier = {
+        trigger_event = {
+            id = dev_events.26
+            days = 30
+        }
+        s:STATE_PARANA.region_state:BRZ = {
+			add_modifier = {
                name = contestado_turmoil
                years = 10
                is_decaying = yes
             }
-        }
-        s:STATE_SANTA_CATARINA = { 
-            add_modifier = {
+		}
+        s:STATE_SANTA_CATARINA.region_state:BRZ = {
+			add_modifier = {
                name = contestado_turmoil
                years = 10
                is_decaying = yes
             }
-        }
+		}   
     }
 }
 
@@ -82,13 +86,13 @@ brazil_events.5 = { #Return of the royal family
         default_option = yes
         create_character = {
             first_name = Pedro
-	        last_name = de_Alcantara
+	        last_name = de_Alcantara_2
 	        historical = yes
             birth_date = 1875.10.15
 	        culture = cu:brazilian
 	        religion = rel:catholic
 	        female = no
-            is_agitator = yes
+            role = character_role_politician
 	        interest_group = ig_petty_bourgeoisie
 	        ideology = ideology_royalist
 	        traits = {
@@ -104,7 +108,7 @@ brazil_events.5 = { #Return of the royal family
 	        culture = cu:brazilian
 	        religion = rel:catholic
 	        female = no
-            is_agitator = yes
+            role = character_role_politician
 	        interest_group = ig_petty_bourgeoisie
 	        ideology = ideology_royalist
 	        traits = {
