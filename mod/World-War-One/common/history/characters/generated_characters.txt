@@ -1172,7 +1172,7 @@
 			interest_group = ig_trade_unions
 			ideology = ideology_vanguardist
 			birth_date = 1896.09.12
-			ig_leader = yes
+			is_agitator = yes
 			historical = yes
 			traits = {
 			}
@@ -1184,7 +1184,7 @@
 			interest_group = ig_trade_unions
 			ideology = ideology_anarchist
 			birth_date = 1882.7.22
-			is_agitator = yes
+			ig_leader = yes
 			historical = yes
 			traits = {
 				literary reckless 
@@ -1531,7 +1531,7 @@
 			interest_group = ig_intelligentsia
 			ideology = ideology_republican_leader
 			birth_date = 1883.05.04
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
 			}
@@ -2365,10 +2365,10 @@
 			interest_group = ig_intelligentsia
 			ideology = ideology_republican_leader
 			birth_date = 1855.02.13
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
-				syphilis 
+				reckless sickly 
 			}
 		}
 		create_character = {
@@ -2388,11 +2388,12 @@
 			last_name = Doumergue
 			culture = cu:french
 			interest_group = ig_intelligentsia
-			ideology = ideology_moderate
+			ideology = ideology_jingoist_leader
 			birth_date = 1863.08.01
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
+				charismatic experienced_diplomat 
 			}
 		}
 		create_character = {
@@ -2400,11 +2401,12 @@
 			last_name = Doumer
 			culture = cu:french
 			interest_group = ig_petty_bourgeoisie
-			ideology = ideology_market_liberal
+			ideology = ideology_social_democrat
 			birth_date = 1857.03.22
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
+				expert_colonial_administrator honorable 
 			}
 		}
 		create_character = {
@@ -2414,9 +2416,10 @@
 			interest_group = ig_petty_bourgeoisie
 			ideology = ideology_moderate
 			birth_date = 1871.08.29
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
+				basic_diplomat engineer 
 			}
 		}
 		create_character = {
@@ -2476,7 +2479,7 @@
 			interest_group = ig_trade_unions
 			ideology = ideology_social_democrat
 			birth_date = 1872.04.09
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
 				charismatic demagogue 
@@ -2489,10 +2492,10 @@
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
 			birth_date = 1862.03.28
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
-				masterful_diplomat 
+				honorable masterful_diplomat 
 			}
 		}
 		create_character = {
@@ -2502,9 +2505,10 @@
 			interest_group = ig_industrialists
 			ideology = ideology_market_liberal
 			birth_date = 1862.08.25
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
+				experienced_diplomat reckless 
 			}
 		}
 		create_character = {
@@ -2610,13 +2614,65 @@
 			}
 		}
 		create_character = {
+			first_name = Pierre
+			last_name = Loti
+			culture = cu:french
+			interest_group = ig_intelligentsia
+			ideology = ideology_pacifist
+			birth_date = 1850.01.14
+			is_agitator = yes
+			historical = yes
+			traits = {
+				charismatic experienced_naval_commander literary 
+			}
+		}
+		create_character = {
+			first_name = Madeleine
+			last_name = Pelletier
+			culture = cu:french
+			interest_group = ig_intelligentsia
+			ideology = ideology_feminist
+			birth_date = 1874.05.18
+			female = yes
+			is_agitator = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Marcel
+			last_name = Proust
+			culture = cu:french
+			interest_group = ig_intelligentsia
+			ideology = ideology_humanitarian
+			birth_date = 1871.07.10
+			is_agitator = yes
+			historical = yes
+			traits = {
+				charismatic literary romantic 
+			}
+		}
+		create_character = {
+			first_name = Leon
+			last_name = Daudet
+			culture = cu:french
+			interest_group = ig_landowners
+			ideology = ideology_royalist
+			birth_date = 1867.11.16
+			is_agitator = yes
+			historical = yes
+			traits = {
+				bigoted literary 
+			}
+		}
+		create_character = {
 			first_name = Edouard
 			last_name = Daladier
 			culture = cu:french
 			interest_group = ig_petty_bourgeoisie
 			ideology = ideology_protectionist
 			birth_date = 1884.06.18
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
 				experienced_diplomat tactful 
@@ -2942,7 +2998,7 @@
 			interest_group = ig_landowners
 			ideology = ideology_reformer
 			birth_date = 1867.08.03
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
 			}
@@ -2966,6 +3022,18 @@
 			interest_group = ig_trade_unions
 			ideology = ideology_social_democrat
 			birth_date = 1863.09.13
+			is_agitator = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Oswald
+			last_name = Mosley
+			culture = cu:british
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_fascist
+			birth_date = 1896.11.16
 			is_agitator = yes
 			historical = yes
 			traits = {
@@ -3251,7 +3319,7 @@
 			interest_group = ig_petty_bourgeoisie
 			ideology = ideology_jingoist_leader
 			birth_date = 1849.05.03
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
 				ambitious experienced_diplomat reckless 
@@ -4420,7 +4488,7 @@
 			interest_group = ig_armed_forces
 			ideology = ideology_fascist
 			birth_date = 1891.10.12
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
 				experienced_diplomat literary 
@@ -5724,7 +5792,7 @@
 			interest_group = ig_landowners
 			ideology = ideology_reformer
 			birth_date = 1887.03.24
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
 			}
@@ -5952,7 +6020,7 @@
 			interest_group = ig_petty_bourgeoisie
 			ideology = ideology_authoritarian
 			birth_date = 1872.07.1
-			is_agitator = yes
+			role = character_role_politician
 			historical = yes
 			traits = {
 				basic_political_operator persistent 

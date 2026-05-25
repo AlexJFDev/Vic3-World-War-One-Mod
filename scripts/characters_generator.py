@@ -37,7 +37,7 @@ IDEOLOGIES = {
 }
 
 YES_VALUES = {
-    'ruler', 'ig_leader', 'historical', 'female', 'noble', 'is_admiral', 'is_general', 'is_agitator', 'heir', 'magnate'
+    'ruler', 'ig_leader', 'historical', 'female', 'noble', 'is_admiral', 'is_general', 'is_agitator', 'heir', 'magnate', 'is_politician'
 }
 
 FULL_NAME_COLUMN = 0
