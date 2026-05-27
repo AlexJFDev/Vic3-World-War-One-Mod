@@ -1172,6 +1172,12 @@ great_war_initiation_events.14 = {
                 days = 5
             }
         }
+        c:BEL = {
+            trigger_event = { 
+                id = great_war_initiation_events.26
+                days = 10
+            }
+        }
         c:FRA = {
             add_modifier = {
               name = taken_by_suprise_2
@@ -1546,12 +1552,62 @@ great_war_initiation_events.24 = {
     option = { #Capitulate
         name = great_war_initiation_events.24.a
         default_option = yes
+        trigger = { is_player = no }
         scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:LUX value = -200 }
 		}
         c:GER = {
 		   create_diplomatic_pact = {
 			  country = c:LUX
+			  type = puppet
+		    }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+}
+
+#Belgium receives instant capitulation
+great_war_initiation_events.26 = {
+    type = country_event
+
+    duration = 1
+    event_image = { 
+        texture = "gfx/event_pictures/trenches.dds"
+    }
+
+    title = great_war_initiation_events.26.t
+    desc = great_war_initiation_events.26.d
+    flavor = great_war_initiation_events.26.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
+    option = { #Capitulate
+        name = great_war_initiation_events.26.a
+        default_option = yes
+        trigger = { is_player = no }
+        scope:world_war_one_diplo_play = {
+			remove_target_backers = {
+                c:BEL
+            }
+            add_initiator_backers = {
+                c:BEL
+            }  
+		}
+        c:GER = {
+		   create_diplomatic_pact = {
+			  country = c:BEL
 			  type = puppet
 		    }
         }

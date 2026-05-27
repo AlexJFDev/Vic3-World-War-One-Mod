@@ -903,10 +903,8 @@ REPLACE_OR_CREATE:BAV = { # Bavaria
 REPLACE_OR_CREATE:BEL = { # Belgium
 	flag_definition = {
 		coa = BEL
-		subject_canton = BEL
-		allow_overlord_canton = yes	
-		coa_with_overlord_canton = BEL_subject			
-		priority = 1
+		subject_canton = BEL		
+		priority = 50
 	}
 	flag_definition = {
 		coa = BEL_absolute_monarchy
@@ -940,35 +938,13 @@ REPLACE_OR_CREATE:BEL = { # Belgium
 		}
 	}	
 	flag_definition = {
-		coa = BEL_fascist
-		subject_canton = BEL_fascist
+		coa = BEL_dictatorship
+		subject_canton = BEL_dictatorship
 		priority = 1500
 		trigger = { 
 			coa_def_fascist_flag_trigger = yes
 		}
 	}	
-	flag_definition = {
-		coa = BEL_subject	
-		subject_canton = BEL
-		allow_overlord_canton = yes	
-		overlord_canton_offset = { 0.01 0.015 }
-		overlord_canton_scale = { 0.48 0.47 }			
-		priority = 50
-		trigger = { 
-			coa_def_french_ensign_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = BEL_subject	
-		subject_canton = BEL
-		allow_overlord_canton = yes	
-		overlord_canton_offset = { 0.01 0.015 }
-		overlord_canton_scale = { 0.48 0.47 }			
-		priority = 50
-		trigger = { 
-			coa_def_spanish_ensign_trigger = yes
-		}
-	}		
 }
 
 REPLACE_OR_CREATE:BER = { # Beroda
@@ -5982,46 +5958,19 @@ REPLACE_OR_CREATE:MOL = { # Moldavia
 }	
 
 REPLACE_OR_CREATE:MON = { # Montenegro
-	flag_definition = {
-		coa = MON_theocracy
-		subject_canton = MON_theocracy
-		priority = 1
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = MON_principality_constitutional
+    flag_definition = {
+		coa = MON_kingdom_absolute
 		priority = 10
 		trigger = {
 			coa_def_monarchy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
-		coa = MON_principality_absolute
-		priority = 20
+		coa = MON_theocracy
+		subject_canton = MON_theocracy
+		priority = 1
 		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = MON_kingdom_constitutional
-		priority = 30
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-			scope:actor ?= {
-				has_variable = king_sounds_better
-			}
-		}
-	}
-	flag_definition = {
-		coa = MON_kingdom_absolute
-		priority = 40
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-			scope:actor ?= {
-				has_variable = king_sounds_better
-			}
+			coa_def_theocracy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
