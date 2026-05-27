@@ -51724,6 +51724,21 @@
 				}
 			}
 			create_building = {
+				building = building_kiel_canal
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 1
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_canal 
+				}
+			}
+			create_building = {
 				building = building_government_administration
 				add_ownership = {
 					country = {
