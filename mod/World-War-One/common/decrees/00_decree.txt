@@ -762,3 +762,23 @@ decree_emergency_relief = {
 		}
 	}
 }
+
+decree_tax_cut = {
+    texture = "gfx/interface/icons/decree/decree_tax_cut.dds"
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	modifier = {
+		state_tax_collection_mult = -0.6
+        state_shopkeepers_investment_pool_efficiency_mult = 0.3
+        state_capitalists_investment_pool_efficiency_mult = 0.3 
+        state_aristocrats_investment_pool_efficiency_mult = 0.3
+	}
+
+	cost = 25
+	
+	ai_weight = {
+	   value = 0
+	}
+}
