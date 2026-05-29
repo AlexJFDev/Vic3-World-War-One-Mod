@@ -13,14 +13,14 @@
         is_player = no
         game_date > 1917.1.1
         has_variable = central_powers_participant
-        root.average_sol < 15
+        root.average_sol < 16
         is_at_war = yes
         NOT = { has_global_variable = world_war_1_over }
         NOT = { has_variable = germany_war_fatigue }
     }
 
     complete = {
-        root.average_sol >= 15
+        root.average_sol >= 17
     }
 
     immediate = {
