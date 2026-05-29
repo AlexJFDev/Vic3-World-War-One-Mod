@@ -3,17 +3,17 @@
 resignation.1 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = resignation.1.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				desc = resignation.1.d1
 				trigger = {
-					ruler.interest_group = {
+					ruler.interest_group ?= {
 						OR = {
 							ig_approval <= angry
-							is_marginal = yes
+							ig_clout < define:NPolitics|MARGINAL_IG_THRESHOLD
 						}
 					}
 				}
@@ -53,17 +53,17 @@ resignation.1 = {
 	flavor = resignation.1.f
 
 	gui_window = event_window_1char_tabloid
-	
+
 	left_icon = scope:resigning_politician
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-	
+
 	duration = 3
 
 	dlc = dlc004
-	
+
 	trigger = {
 		# triggered by resign_from_office interaction
 	}
@@ -71,7 +71,7 @@ resignation.1 = {
 	immediate = {
 		ruler = {
 			save_scope_as = resigning_politician
-			interest_group = {
+			interest_group ?= {
 				save_scope_as = resignation_ig
 			}
 		}
@@ -85,7 +85,7 @@ resignation.1 = {
 				scope:resignation_ig = {
 					OR = {
 						ig_approval <= angry
-						is_marginal = yes
+						ig_counts_as_marginal = yes
 					}
 				}
 				scope:resigning_politician = {
@@ -100,9 +100,7 @@ resignation.1 = {
 		custom_tooltip = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
-				kill_character = {
-					hidden = yes
-				}
+				resign_and_retire = yes
 			}
 		}
 	}
@@ -115,7 +113,7 @@ resignation.1 = {
 				scope:resignation_ig = {
 					OR = {
 						ig_approval <= angry
-						is_marginal = yes
+						ig_counts_as_marginal = yes
 					}
 				}
 				scope:resigning_politician = {
@@ -133,9 +131,7 @@ resignation.1 = {
 		custom_tooltip = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
-				kill_character = {
-					hidden = yes
-				}
+				resign_and_retire = yes
 			}
 		}
 	}
@@ -143,14 +139,12 @@ resignation.1 = {
 	option = { # Immediate snap election
 		name = resignation.1.c
 		trigger = {
-			has_law = law_type:law_parliamentary_republic
+			has_law_or_variant = law_type:law_parliamentary_republic
 		}
 		custom_tooltip = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
-				kill_character = {
-					hidden = yes
-				}
+				resign_and_retire = yes
 			}
 		}
 		call_election = {
@@ -163,23 +157,23 @@ resignation.1 = {
 resignation.2 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = resignation.2.t
 	desc = resignation.2.d
 	flavor = resignation.2.f
 
 	gui_window = event_window_1char_tabloid
-	
+
 	left_icon = scope:resigning_politician
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-	
+
 	duration = 3
 
 	dlc = dlc004
-	
+
 	trigger = {
 		# triggered by resign_from_office interaction
 	}
@@ -187,11 +181,16 @@ resignation.2 = {
 	immediate = {
 		ruler = {
 			save_scope_as = resigning_politician
-			interest_group = {
+			interest_group ?= {
 				save_scope_as = resignation_ig
 			}
 		}
-		save_revolution_scopes = yes
+		random_civil_war = {
+			limit = {
+				is_civil_war_type = revolution
+			}
+			civil_war_save_scopes = yes
+		}
 	}
 
 	option = {
@@ -200,9 +199,7 @@ resignation.2 = {
 		custom_tooltip = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
-				kill_character = {
-					hidden = yes
-				}
+				resign_and_retire = yes
 			}
 		}
 		if = {
@@ -211,7 +208,7 @@ resignation.2 = {
 					popularity >= 0
 				}
 			}
-			scope:ongoing_revolution = {
+			scope:ongoing_revolution_movement = {
 				add_modifier = {
 					name = modifier_ruler_resigned
 					days = long_modifier_time
@@ -219,7 +216,7 @@ resignation.2 = {
 			}
 		}
 		else = {
-			scope:ongoing_revolution = {
+			scope:ongoing_revolution_movement = {
 				add_modifier = {
 					name = modifier_ruler_resigned
 					days = long_modifier_time
@@ -234,9 +231,7 @@ resignation.2 = {
 		custom_tooltip = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
-				kill_character = {
-					hidden = yes
-				}
+				resign_and_retire = yes
 			}
 		}
 		capitulate_to_revolution = yes
@@ -251,15 +246,13 @@ resignation.2 = {
 		trigger = {
 			country_has_voting_franchise = yes
 			NOT = {
-				has_law = law_type:law_single_party_state
+				has_law_or_variant = law_type:law_single_party_state
 			}
 		}
 		custom_tooltip = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
-				kill_character = {
-					hidden = yes
-				}
+				resign_and_retire = yes
 			}
 		}
 		if = {
@@ -283,23 +276,23 @@ resignation.2 = {
 resignation.3 = {
 	type = country_event
 	placement = ROOT
-	
+
 	title = resignation.3.t
 	desc = resignation.3.d
 	flavor = resignation.3.f
 
 	gui_window = event_window_1char_tabloid
-	
+
 	left_icon = scope:abdicating_monarch
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-	
+
 	duration = 3
 
 	dlc = dlc004
-	
+
 	trigger = {
 		# triggered by resign_from_office interaction
 	}
@@ -311,12 +304,17 @@ resignation.3 = {
 		ROOT = {
 			save_scope_as = country_scope
 		}
-		save_revolution_scopes = yes
+		random_civil_war = {
+			limit = {
+				is_civil_war_type = revolution
+			}
+			civil_war_save_scopes = yes
+		}
 		if = {
 			limit = {
 				exists = heir
 			}
-			heir = {
+			heir ?= {
 				save_scope_as = heir_scope
 			}
 		}
@@ -327,13 +325,13 @@ resignation.3 = {
 		trigger = {
 			exists = heir
 		}
+		heir ?= {
+			set_character_as_ruler = yes
+		}
 		custom_tooltip = {
 			text = leader_abdicates_the_throne_tt
 			scope:abdicating_monarch = {
 				exile_character_with_martyrdom = yes
-			}
-			heir = {
-				set_character_as_ruler = yes
 			}
 		}
 		scope:ongoing_revolution = {
@@ -370,13 +368,10 @@ resignation.3 = {
 		default_option = yes
 		custom_tooltip = {
 			text = leader_abdicates_the_throne_tt
-			scope:abdicating_monarch = {
-				exile_character_with_martyrdom = yes
-			}
 			if = {
 				limit = {
 					NOT = {
-						exists = heir
+						exists = scope:heir_scope
 					}
 				}
 				if = {
@@ -405,9 +400,12 @@ resignation.3 = {
 				}
 			}
 			else = {
-				heir = {
+				heir ?= {
 					set_character_as_ruler = yes
 				}
+			}
+			scope:abdicating_monarch = {
+				exile_character_with_martyrdom = yes
 			}
 		}
 		scope:ongoing_revolution = {
@@ -425,18 +423,15 @@ resignation.3 = {
 		trigger = {
 			country_has_voting_franchise = yes
 			NOT = {
-				has_law = law_type:law_single_party_state
+				has_law_or_variant = law_type:law_single_party_state
 			}
 		}
 		custom_tooltip = {
 			text = leader_abdicates_the_throne_tt
-			scope:abdicating_monarch = {
-				exile_character_with_martyrdom = yes
-			}
 			if = {
 				limit = {
 					NOT = {
-						exists = heir
+						exists = scope:heir_scope
 					}
 				}
 				if = {
@@ -465,9 +460,12 @@ resignation.3 = {
 				}
 			}
 			else = {
-				heir = {
+				heir ?= {
 					set_character_as_ruler = yes
 				}
+			}
+			scope:abdicating_monarch = {
+				exile_character_with_martyrdom = yes
 			}
 		}
 		if = {

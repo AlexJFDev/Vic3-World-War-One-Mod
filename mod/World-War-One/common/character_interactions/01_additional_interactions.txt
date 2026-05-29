@@ -433,9 +433,9 @@ REPLACE_OR_CREATE:resign_from_office = {
 			interest_group ?= {
 				ig_clout < define:NPolitics|MARGINAL_IG_THRESHOLD
 			}
+			age >= 50
 			popularity <= -50
 			OR = {
-				age => 50
 				has_trait = psychological_affliction
 				has_trait = cancer
 				has_trait = senile
@@ -510,7 +510,7 @@ REPLACE_OR_CREATE:resign_from_office = {
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { months = 6 }
 	show_confirmation_box = yes
 
 	should_ai_evaluate = {
@@ -540,6 +540,12 @@ REPLACE_OR_CREATE:resign_from_office = {
 				popularity <= -50
 			}
 			add = 25
+		}
+		if = {
+			limit = {
+				age >= 70
+			}
+			add = 200
 		}
 		if = {
 			limit = {
