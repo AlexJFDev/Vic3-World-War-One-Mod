@@ -702,11 +702,11 @@ REPLACE_OR_CREATE:ideology_proletarian = {
 	icon = "gfx/interface/icons/ideology_icons/proletarian.dds"
 
 	lawgroup_taxation = {
-		law_land_based_taxation = oppose
-		law_consumption_based_taxation = neutral
-		law_per_capita_based_taxation = neutral
+		law_land_based_taxation = strongly_disapprove
+		law_per_capita_based_taxation = disapproved
 		law_proportional_taxation = approve
 		law_graduated_taxation = strongly_approve
+		law_consumption_based_taxation = neutral
 	}
 
 	lawgroup_economic_system = {
@@ -836,11 +836,11 @@ REPLACE_OR_CREATE:ideology_socialist = {
 	}
 
 	lawgroup_taxation = {
-		law_per_capita_based_taxation = disapprove
-		law_land_based_taxation = neutral
-		law_proportional_taxation = neutral
+		law_land_based_taxation = strongly_disapprove
+		law_per_capita_based_taxation = disapproved
+		law_proportional_taxation = approve
+		law_graduated_taxation = strongly_approve
 		law_consumption_based_taxation = neutral
-		law_graduated_taxation = approve
 	}
 
 	lawgroup_labor_rights = {
