@@ -528,7 +528,11 @@ russia_events.7 = { #Soviet uprising
         trigger_event = {
               id = ussr_events.4
                years = 5
-            }      
+            }    
+        trigger_event = {
+                id = dev_events.108
+                years = 10
+            }  
         set_capital = STATE_MOSCOW
         add_modifier = {
 			name = dictatorship_of_proletariat
@@ -572,7 +576,7 @@ russia_events.8 = { #The civil war begins
         create_country = {
 	       tag = SIB
 	       origin = this
-	       state = s:STATE_TOMSK.region_state:RUS
+	       state = s:STATE_CHELYABINSK.region_state:RUS
            on_created = { 
            activate_law = law_type:law_monarchy
            activate_law = law_type:law_oligarchy
