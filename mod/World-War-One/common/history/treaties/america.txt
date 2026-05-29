@@ -259,12 +259,44 @@
 
 		articles_to_create = {
 			{
+				article = host_power_bloc_embassy
+				source_country = c:RMX
+				target_country = c:USA
+			}
+			{
 			  article = money_transfer
 			  source_country = c:USA
 			  target_country = c:RMX
 			  inputs = {
-				  { quantity = 5000 }
+				  { quantity = 8000 }
 			    }
+			}
+			{ 
+				article = goods_transfer
+				source_country = c:USA
+				target_country = c:RMX
+				inputs = {
+					{ goods = g:small_arms }
+					{ quantity = 50 }
+				}
+			}
+			{ 
+				article = goods_transfer
+				source_country = c:USA
+				target_country = c:RMX
+				inputs = {
+					{ goods = g:ammunition }
+					{ quantity = 30 }
+				}
+			}
+			{ 
+				article = goods_transfer
+				source_country = c:USA
+				target_country = c:RMX
+				inputs = {
+					{ goods = g:artillery }
+					{ quantity = 20 }
+				}
 			}
 		}
 	}
