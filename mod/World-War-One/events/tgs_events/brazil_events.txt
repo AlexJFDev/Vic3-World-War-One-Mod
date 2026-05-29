@@ -33,6 +33,13 @@ brazil_events.1 = { #Coronelist infighting
     option = {
         name = brazil_events.1.a
         default_option = yes
+        active_law:lawgroup_centralization ?= {
+			add_amendment = {
+				type = coronelismo
+				sponsor = ig_landowners
+				cooldown = 1
+			}
+		}
         add_modifier = {
             name = coronelist_infighting
             years = 10
@@ -60,7 +67,19 @@ brazil_events.1 = { #Coronelist infighting
                years = 10
                is_decaying = yes
             }
-		}   
+		}
+        random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_tenentist
+			}
+			save_scope_as = tenentist_movement_scope
+		}
+		scope:tenentist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_2
+				years = 40
+			} 
+		} 
     }
 }
 

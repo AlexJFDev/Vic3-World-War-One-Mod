@@ -533,7 +533,8 @@ la_grande_muette = {
 	}
 
 	modifier = {
-		
+		country_officers_voting_power_add = -100
+		country_soldiers_voting_power_add = -100
 	}
 
 	possible = {
@@ -550,6 +551,53 @@ la_grande_muette = {
 			is_powerful = yes
 			is_interest_group_type = ig_armed_forces
 		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}
+
+coronelismo = {
+
+    parent = law_federated
+
+	allowed_laws = {
+		law_federated
+		law_devolved
+	}
+
+	modifier = {
+		country_authority_mult = 0.15
+		interest_group_ig_landowners_pol_str_mult = 0.6
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		leader = { has_ideology = ideology_coronelist }
+	}
+
+	ai_will_revoke = {
+		ruler = {
+            OR = {
+				has_ideology = ideology:ideology_tenentist
+				has_ideology = ideology:ideology_radical
+				has_ideology = ideology:ideology_republican_leader
+                has_ideology = ideology:ideology_liberal_leader
+				has_ideology = ideology:ideology_market_liberal
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_integralist
+				has_ideology = ideology:ideology_social_democrat
+				has_ideology = ideology:ideology_communist
+				has_ideology = ideology:ideology_vanguardist
+				has_ideology = ideology:ideology_utopian
+				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
+            }
+        }
 	}
 
 	can_repeal = {
