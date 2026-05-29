@@ -1113,7 +1113,13 @@ entente_peace_deal.1 = {
                 id = dev_events.16
                 days = 5
             }
-        } 	
+        }
+		s:STATE_SCHLESWIG_HOLSTEIN = {
+			set_owner_of_provinces = {
+				country = c:DEN
+				provinces = { x78B203 xE3C867 }
+			}
+		}
 		every_country = {
 			limit = { 
 				OR = {
