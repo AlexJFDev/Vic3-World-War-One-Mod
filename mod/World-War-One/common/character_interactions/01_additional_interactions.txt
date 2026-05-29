@@ -435,6 +435,7 @@ REPLACE_OR_CREATE:resign_from_office = {
 			}
 			popularity <= -50
 			OR = {
+				age => 50
 				has_trait = psychological_affliction
 				has_trait = cancer
 				has_trait = senile

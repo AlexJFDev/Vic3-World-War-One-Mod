@@ -349,7 +349,7 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 			}
 			popularity <= -50
 			has_trait = psychological_affliction
-			age >= 75
+			age >= 50
 			owner ?= { # Our thanks to UHM for reporting this
 				trigger_if = {
 					limit = {
