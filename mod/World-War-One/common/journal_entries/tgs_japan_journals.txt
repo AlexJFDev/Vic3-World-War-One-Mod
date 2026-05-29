@@ -3,6 +3,7 @@
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
+        exists = c:MCH
         exists = c:JAP
         THIS = c:JAP
     }
@@ -15,12 +16,13 @@
                 has_ideology = ideology:ideology_jingoist_leader
             }
         }
+        exists = c:MCH
+        game_date > 1925.1.1
     }
 
     immediate = {}
 
     complete = {
-        exists = c:MCH
         c:MCH = {
             NOT = { 
                 is_subject_of = c:JAP
@@ -63,6 +65,10 @@
         }
     }
 
+    invalid = {
+        NOT = { exists = c:MCH }
+    }
+
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -71,6 +77,7 @@ je_japan_expansion_2 = {
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
+        exists = c:CHI
         exists = c:JAP
         THIS = c:JAP
     }
@@ -83,12 +90,13 @@ je_japan_expansion_2 = {
                 has_ideology = ideology:ideology_jingoist_leader
             }
         }
+        exists = c:CHI
+        game_date > 1925.1.1
     }
 
     immediate = {}
 
     complete = {
-        exists = c:CHI
         NOT = {
             c:JAP = {
                 any_scope_treaty = {
@@ -122,6 +130,10 @@ je_japan_expansion_2 = {
         }
     }
 
+    invalid = {
+        NOT = { exists = c:CHI }
+    }
+
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -130,6 +142,7 @@ je_dragon_and_eagle = {
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
+        exists = c:USA
         exists = c:JAP
         THIS = c:JAP
     }
@@ -137,7 +150,6 @@ je_dragon_and_eagle = {
     possible = {
         has_global_variable = japan_invades_china
         has_global_variable = world_war_two_started
-        exists = c:USA
         NOT = {
             c:JAP = {
                 any_scope_treaty = {
@@ -165,6 +177,7 @@ je_dragon_and_eagle = {
                 has_ideology = ideology:ideology_jingoist_leader
             }
         }
+        exists = c:USA
     }
 
     immediate = {}
@@ -193,6 +206,10 @@ je_dragon_and_eagle = {
            id = japan_events.22
            days = 5
         }
+    }
+
+    invalid = {
+        NOT = { exists = c:USA }
     }
 
     should_be_pinned_by_default_uninvolved_or_context = yes
