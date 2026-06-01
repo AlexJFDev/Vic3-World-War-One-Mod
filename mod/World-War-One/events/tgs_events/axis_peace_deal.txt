@@ -123,6 +123,8 @@ axis_peace_deal.1 = {
 		}
         c:FRA = {
             set_capital = STATE_ILE_DE_FRANCE
+            activate_law = law_type:law_single_party_state
+            activate_law = law_type:law_outlawed_dissent
             trigger_event = {
               id = dev_events.87
               days = 5

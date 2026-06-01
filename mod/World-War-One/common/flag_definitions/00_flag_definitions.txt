@@ -3168,93 +3168,7 @@ REPLACE_OR_CREATE:FFR = { # Free France
 		allow_overlord_canton = no
 		coa_with_overlord_canton = FRA_subject		
 		priority = 1
-	}
-	flag_definition = {
-		coa = FRA
-		subject_canton = FRA
-		allow_overlord_canton = no		
-		overlord_canton_scale = { 0.337 0.337 }			
-		priority = 10
-		trigger = { 
-			coa_def_republic_flag_trigger = yes
-		}
 	}	
-	flag_definition = {
-		coa = FRA_dictatorship
-		subject_canton = FRA_dictatorship
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_bourbon
-		subject_canton = FRA_bourbon
-		priority = 30
-		allow_overlord_canton = no
-		coa_with_overlord_canton = FRA_subject			
-		trigger = {	
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				has_variable = legitimist_restoration_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = FRA_absolute_monarchy
-		subject_canton = FRA_absolute_monarchy	
-		allow_overlord_canton = no
-		coa_with_overlord_canton = FRA_subject			
-		priority = 25
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = FRA_second_empire
-		subject_canton = FRA
-		allow_overlord_canton = no
-		coa_with_overlord_canton = FRA_subject			
-		priority = 30
-		trigger = {
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				has_variable = bonapartist_restoration_var
-			}
-		}
-	}	
-	flag_definition = {
-		coa = FRA_theocracy
-		subject_canton = FRA_theocracy
-		priority = 20
-		trigger = { 
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_communist
-		subject_canton = FRA_communist
-		priority = 1500
-		trigger = { 
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = FRA_military
-		subject_canton = FRA_military
-		priority = 1500
-		trigger = { 
-			coa_def_military_junta_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = FRA_fascist
-		subject_canton = FRA_fascist
-		priority = 1550
-		trigger = { 
-			coa_def_fascist_flag_trigger = yes
-		}
-	}		
 }
 
 REPLACE_OR_CREATE:FRM = { # Frankfurt
@@ -6341,8 +6255,7 @@ REPLACE_OR_CREATE:NEP = { # Nepal
 REPLACE_OR_CREATE:NET = { # Netherlands
 	flag_definition = {
 		coa = NET
-		allow_overlord_canton = yes	
-		coa_with_overlord_canton = NET_subject		
+		allow_overlord_canton = no	
 		priority = 1
 	}
 	flag_definition = {

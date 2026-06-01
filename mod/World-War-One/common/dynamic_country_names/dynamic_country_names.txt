@@ -905,4 +905,21 @@ REPLACE_OR_CREATE:FRA = {
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_c_occupied_france
+		adjective = dyn_c_occupied_france_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:FRA
+			c:GER = {
+				has_diplomatic_pact = {
+					who = c:FRA
+					type = protectorate
+				}
+			}
+		}
+	}
 }
