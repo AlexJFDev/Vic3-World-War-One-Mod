@@ -1692,9 +1692,13 @@ germany_events.35 = { #Sudet Crisis CZH response
 			}
 		}
         c:GER = {
-          trigger_event = {
+            trigger_event = {
+              id = germany_events.38
+              months = 8
+            }
+            trigger_event = {
               id = germany_events.36
-              months = 10
+              months = 9
             }
         }
         ai_chance = {
@@ -1745,7 +1749,7 @@ germany_events.36 = { #Puppet CZH
         name = germany_events.36.a
         default_option = yes
         c:CZH = {
-          trigger_event = {
+            trigger_event = {
               id = germany_events.37
               days = 5
             }
@@ -1840,7 +1844,7 @@ germany_events.38 = { #Molotov-Ribentrop pact
         name = germany_events.37.a
         default_option = yes
 		c:RUS = {
-          trigger_event = {
+            trigger_event = {
               id = germany_events.39
               days = 5
             }
@@ -1887,6 +1891,24 @@ germany_events.39 = { #Molotov-Ribentrop pact
 			  country = c:GER
 			  months = 45
 		    }
+            trigger_event = {
+              id = ussr_events.9
+              months = 9
+            }
+        }
+        c:GER = {
+            remove_diplomatic_pact = {
+			  country = c:EST
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:LAT
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:LIT
+			  type = protectorate
+		    }
         }
         s:STATE_WEST_KARELIA = {
 			add_claim = c:RUS
@@ -1920,10 +1942,6 @@ germany_events.39 = { #Molotov-Ribentrop pact
         }
         s:STATE_BESSARABIA = {
           add_claim = c:RUS
-        }
-        trigger_event = {
-            id = ussr_events.9
-            years = 1
         }
         ai_chance = {
             base = 1
