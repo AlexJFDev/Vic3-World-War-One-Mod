@@ -4013,6 +4013,7 @@ dev_events.87 = {
 
     option = {
         name = dev_events.2.a
+        trigger = { is_player = no }
         default_option = yes
         every_state = {
 			if = {
@@ -4033,9 +4034,9 @@ dev_events.87 = {
 			if = {
 				limit = {
 					owner = c:FRA
-					has_building = building_naval_base
+					has_building = building_naval_administration
 				}
-				remove_building = building_naval_base
+				remove_building = building_naval_administration
 			}
         }
     }
@@ -4197,9 +4198,9 @@ dev_events.92 = {
 			if = {
 				limit = {
 					owner = c:FRA
-					has_building = building_naval_base
+					has_building = building_naval_administration
 				}
-				remove_building = building_naval_base
+				remove_building = building_naval_administration
 			}
         }
         add_modifier = {

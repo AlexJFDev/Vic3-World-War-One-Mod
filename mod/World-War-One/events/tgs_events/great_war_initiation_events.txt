@@ -1611,8 +1611,16 @@ great_war_initiation_events.26 = {
 			  type = puppet
 		    }
         }
-        ai_chance = {
-            base = 10
+        c:BEL = {
+            every_state = {
+			    if = {
+				    limit = {
+					   owner = c:BEL
+					   has_building = building_barrack
+				    }
+				    remove_building = building_barrack
+			    }
+		    }
         }
     }
 }

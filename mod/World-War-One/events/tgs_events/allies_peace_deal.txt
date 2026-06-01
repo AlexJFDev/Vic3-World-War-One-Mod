@@ -191,14 +191,6 @@ allies_peace_deal.3 = {
 			if = {
 				limit = {
 					owner = c:GER
-					has_building = building_naval_base
-					is_capital = no
-				}
-				remove_building = building_naval_base
-			}
-			if = {
-				limit = {
-					owner = c:GER
 					has_building = building_arms_industry
 					is_capital = no
 				}
@@ -487,13 +479,6 @@ allies_peace_deal.4 = {
 			if = {
 				limit = {
 					owner = c:JAP
-					has_building = building_naval_base
-				}
-				remove_building = building_naval_base
-			}
-			if = {
-				limit = {
-					owner = c:JAP
 					has_building = building_arms_industry
 				}
 				remove_building = building_arms_industry
@@ -669,6 +654,7 @@ allies_peace_deal.6 = {
 		ROOT.ruler = {
 			set_ideology = ideology:ideology_moderate
 		}
+		set_capital = STATE_KANTO
 	}
 
     event_image = {
