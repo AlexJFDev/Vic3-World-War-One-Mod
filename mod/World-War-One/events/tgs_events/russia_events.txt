@@ -198,10 +198,6 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         remove_variable = no_reform_russia
         set_global_variable = russian_revolution_1
         add_modifier = {
-          name = defeated_elites_modifier
-          years = 30
-        }
-        add_modifier = {
           name = revolution_stabilization_buff_2
           years = 30
           is_decaying = yes
@@ -536,9 +532,14 @@ russia_events.7 = { #Soviet uprising
         set_capital = STATE_MOSCOW
         add_modifier = {
 			name = dictatorship_of_proletariat
-            years = 30
+            years = 60
             is_decaying = yes
 		}
+        add_modifier = {
+          name = defeated_elites_modifier
+          years = 60
+          is_decaying = yes
+        }
         c:BUK = {
             trigger_event = {
                id = dev_events.111

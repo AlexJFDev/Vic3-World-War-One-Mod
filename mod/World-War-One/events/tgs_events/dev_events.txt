@@ -1,6 +1,6 @@
 ﻿namespace = dev_events
 
-dev_events.1 = { 
+dev_events.1 = {
     type = country_event
 
     title = dev_events.1.t
@@ -22,7 +22,7 @@ dev_events.1 = {
         trigger = { is_player = no }
         add_modifier = {
 			name = stabilization_buff_modifier
-            years = 50
+            years = 60
 		}
     }
 }
@@ -1161,7 +1161,7 @@ dev_events.24 = {
     }
 }
 
-dev_events.25 = { 
+dev_events.25 = {
     type = country_event
 
     title = dev_events.25.t
@@ -1182,12 +1182,12 @@ dev_events.25 = {
         default_option = yes
         add_modifier = {
             name = starting_sol_buff
-            years = 10
+            years = 30
             is_decaying = yes
         }
         trigger_event = {
             id = dev_events.26
-            days = 30
+            days = 60
         }
     }
 }
@@ -5044,12 +5044,7 @@ dev_events.108 = {
         trigger = { is_player = no }
         default_option = yes
         remove_modifier = declared_bankruptcy
-        add_treasury = 150000000
-        add_modifier = {
-            name = money_buff_1
-            years = 10
-            is_decaying = yes
-        }
+        add_treasury = 300000000
     }
 }
 
@@ -5529,6 +5524,119 @@ dev_events.118 = {
         add_modifier = {
             name = money_buff_1
             years = 2
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.119 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        trigger = { 
+            is_player = no
+            OR = {
+              has_modifier = great_depression_effect_1
+              has_modifier = great_depression_effect_2
+              has_modifier = great_depression_effect_3
+              has_modifier = great_depression_effect_4
+            } 
+        }
+        add_treasury = 10000000
+        add_modifier = {
+			name = starting_minting_buff_4_modifier
+            years = 5
+            is_decaying = yes
+		}
+    }
+}
+
+dev_events.120 = {
+    type = country_event
+
+    title = dev_events.15.t
+    desc = dev_events.15.d
+    flavor = dev_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.15.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 5
+        }
+    }
+
+    option = {
+        name = dev_events.15.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = revolution_stabilization_buff_5
+            years = 1
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.121 = {
+    type = country_event
+
+    title = dev_events.15.t
+    desc = dev_events.15.d
+    flavor = dev_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.15.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 10
+        }
+    }
+
+    option = {
+        name = dev_events.15.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 10
             is_decaying = yes
         }
     }
