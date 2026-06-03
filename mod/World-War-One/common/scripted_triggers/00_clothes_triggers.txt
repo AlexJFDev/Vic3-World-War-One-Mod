@@ -1008,7 +1008,7 @@ native_north_american_clothes_trigger = {
 }
 
 muslim_clothes_pop_trigger = {
-     exists = scope:pop
+    exists = scope:pop
   	scope:pop = {
 		religion = {
 			has_discrimination_trait = heritage_islamic
@@ -1233,6 +1233,7 @@ chinese_court_clothes_trigger = {
 		culture = {
 			NOT = { this = cu:kalmyk }
 			NOT = { this = cu:korean }
+			NOT = { this = cu:thai }
 			OR = {
 				has_discrimination_trait = tradition_sinosphere
 				has_discrimination_trait = heritage_han
@@ -1408,31 +1409,43 @@ arabic_clothes_trigger = {
 				}
 			}
 			culture = cu:circassian
-			AND = { # Albanian characters serving either the Ottomans or Egyptians should wear that country's clothing.
-				culture = cu:albanian
-				exists = home_country
-				OR = {
-					home_country = {
-						exists = c:TUR
-						c:TUR = this
-						c:TUR ?= {
-							OR = {
-								has_law = law_type:law_monarchy
-								has_law = law_type:law_social_monarchy
-							}
-						}
-					}
-					home_country = {
-						exists = c:EGY
-						c:EGY = this
-						c:EGY ?= {
-							OR = {
-								has_law = law_type:law_monarchy
-								has_law = law_type:law_social_monarchy
-							}
-						}
-					}
-				}
+		}
+		NOT = {
+            home_country = {
+				exists = c:MOR
+				c:MOR = this
+			}
+			home_country = {
+				exists = c:TUN
+				c:TUN = this
+			}
+			home_country = {
+				exists = c:EGY
+				c:EGY = this
+			}
+			home_country = {
+				exists = c:PAL
+				c:PAL = this
+			}
+			home_country = {
+				exists = c:LEB
+				c:LEB = this
+			}
+			home_country = {
+				exists = c:SYR
+				c:SYR = this
+			}
+			home_country = {
+				exists = c:TUR
+				c:TUR = this
+			}
+			home_country = {
+				exists = c:IRQ
+				c:IRQ = this
+			}
+			home_country = {
+				exists = c:PER
+				c:PER = this
 			}
 		}
 	}
@@ -1454,10 +1467,11 @@ european_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		OR = {
+			culture = cu:russian
+			culture = cu:thai
 			culture = cu:manchu
 			culture = cu:han
 			culture = cu:yue
-			culture = cu:russian
 			AND = {
 				culture = cu:japanese
 				devout_clothes_trigger = no
@@ -1477,22 +1491,42 @@ european_clothes_trigger = {
 				NOT = {
 					culture = cu:circassian
 				}
-				NOT = {
-					AND = { # Albanian characters serving either the Ottomans or Egyptians should wear that country's clothing.
-						culture = cu:albanian
-						exists = home_country
-						OR = {
-							home_country = {
-								exists = c:TUR
-								c:TUR = this
-							}
-							home_country = {
-								exists = c:EGY
-								c:EGY = this
-							}
-						}
-					}
-				}
+			}
+            home_country = {
+				exists = c:MOR
+				c:MOR = this
+			}
+			home_country = {
+				exists = c:TUN
+				c:TUN = this
+			}
+			home_country = {
+				exists = c:EGY
+				c:EGY = this
+			}
+			home_country = {
+				exists = c:PAL
+				c:PAL = this
+			}
+			home_country = {
+				exists = c:LEB
+				c:LEB = this
+			}
+			home_country = {
+				exists = c:SYR
+				c:SYR = this
+			}
+			home_country = {
+				exists = c:TUR
+				c:TUR = this
+			}
+			home_country = {
+				exists = c:IRQ
+				c:IRQ = this
+			}
+			home_country = {
+				exists = c:PER
+				c:PER = this
 			}
 		}
 	}
@@ -1522,6 +1556,7 @@ siamese_clothes_trigger = { #Pretty sure this is actual burmese
 		culture = {
 			has_discrimination_trait_group = heritage_group_southeast_asian
 		}
+		has_variable = old_siam
 	}
 }
 
