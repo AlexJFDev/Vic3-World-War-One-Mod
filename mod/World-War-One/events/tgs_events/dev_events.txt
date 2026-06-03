@@ -3782,9 +3782,13 @@ dev_events.80 = {
     option = {
         name = dev_events.2.a
         default_option = yes
-        trigger = { 
+        trigger = {
             is_player = no
             is_at_war = yes 
+            c:GER = {
+                is_player = no
+                is_at_war = yes 
+            }
         }
         add_modifier = {
 			name = taken_by_suprise_1

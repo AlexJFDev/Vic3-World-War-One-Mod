@@ -70,14 +70,22 @@ entente_peace_deal.1 = {
 			type = protectorate
 		}
 		remove_diplomatic_pact = {
-			country = c:KON
-			type = colony
-		}
-		remove_diplomatic_pact = {
 			country = c:AUS
 			type = alliance
 		}
 		}
+		c:FRA = {
+		    remove_diplomatic_pact = {
+			  country = c:KON
+			  type = colony
+		    }
+        }
+        c:BEL = {
+		    create_diplomatic_pact = {
+			  country = c:KON
+			  type = colony
+		    }
+        }
 		s:STATE_HESSE = {
            random_scope_state = {
 		      limit = {
@@ -540,12 +548,6 @@ entente_peace_deal.1 = {
 			country = c:BEL
 			type = puppet
 		}
-		}
-		c:BEL = {
-		create_diplomatic_pact = {
-			country = c:KON
-			type = colony
-		}	
 		}
 		c:FRA = {
 		create_diplomatic_pact = {

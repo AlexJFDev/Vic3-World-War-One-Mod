@@ -1606,9 +1606,21 @@ great_war_initiation_events.26 = {
             }  
 		}
         c:GER = {
-		   create_diplomatic_pact = {
+		    create_diplomatic_pact = {
 			  country = c:BEL
 			  type = puppet
+		    }
+        }
+        c:BEL = {
+		    remove_diplomatic_pact = {
+			  country = c:KON
+			  type = colony
+		    }
+        }
+        c:FRA = {
+		    create_diplomatic_pact = {
+			  country = c:KON
+			  type = colony
 		    }
         }
         c:BEL = {
