@@ -26,6 +26,11 @@ turkey_events.1 = { #Sick man je initiation
             years = 10
             is_decaying = yes
 		}
+        add_modifier = {
+			name = young_turks_coup
+            years = 5
+            is_decaying = yes
+		}
         ai_chance = {
 		  base = 2
 	    }
@@ -38,6 +43,11 @@ turkey_events.1 = { #Sick man je initiation
             years = 10
             is_decaying = yes
 		}
+        add_modifier = {
+			name = young_turks_coup
+            years = 5
+            is_decaying = yes
+		}
         ai_chance = {
 		  base = 8
 	    }
@@ -48,6 +58,11 @@ turkey_events.1 = { #Sick man je initiation
         add_modifier = {
 			name = ottoman_policy_politics
             years = 10
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = young_turks_coup
+            years = 5
             is_decaying = yes
 		}
         ai_chance = {
@@ -496,33 +511,18 @@ turkey_events.8 = { #Arab uprising
                years = 20
             }
             create_character = {
-              first_name = Thomas
-	          last_name = Edward_Lawrence
-	          historical = yes
-              birth_date = 1888.08.16
-	          culture = cu:british
-	          religion = rel:protestant
-	          female = no
-              is_general = yes
-	          interest_group = ig_intelligentsia
-	          ideology = ideology_moderate
-	            traits = {
-		          brave
-                  erudite
-                  charismatic
-                  experienced_offensive_planner
-	            }
-	           on_created = {
-                  set_variable = {
-                     name = Lawrence_of_arabia
-                    }                
-                }
+                template = gbr_lawrence_of_arabia
             }
         }
         scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:HDJ
 			}
+            add_war_goal = {
+                holder = c:TUR
+                type = annex_country
+				target_country = c:HDJ
+            }
         }    
     }
 }
@@ -779,5 +779,56 @@ turkey_events.15 = { #Sick man je failure
             years = 10
             is_decaying = yes
 		}
+    }
+}
+
+turkey_events.16 = { #Decide if Lawrence stays or not
+    type = country_event
+
+    title = turkey_events.16.t
+    desc = turkey_events.16.d
+    flavor = turkey_events.16.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/arab_revolt.dds"
+    }
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = turkey_events.8.a
+        default_option = yes
+        random_scope_character = {
+			limit = { has_template = gbr_lawrence_of_arabia }
+            retire_character = yes
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = { 
+        name = turkey_events.8.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = turkey_events.8.c
+        random_scope_character = { 
+			limit = { has_template = gbr_lawrence_of_arabia }
+            set_character_as_ruler = yes
+		}
+        ai_chance = {
+		  base = 0
+	    }
     }
 }

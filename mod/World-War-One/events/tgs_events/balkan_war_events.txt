@@ -1,6 +1,6 @@
 ﻿namespace = balkan_war_events
 
-# Romanian Intervention
+# Romanian Intervention part 1
 balkan_war_events.1 = {
 	type = country_event
 	
@@ -20,36 +20,21 @@ balkan_war_events.1 = {
 
 	trigger = {} # Triggered in global
 
-    immediate = {
-        random_diplomatic_play = {
-           limit = {
-			  initiator = { c:BUL ?= this }
-              target = { c:GRE ?= this }
-		    }
-           save_scope_as = balkan_war_diplo_play
-        }
-    }
-
-	option = { # Join the war
+	option = {
 		name = balkan_war_events.1.a
         default_option = yes
+		c:BUL = {
+            trigger_event = {
+                id = balkan_war_events.2
+                days = 1
+            }
+        }
 		ai_chance = {
 			base = 1
 		}
-
-		scope:balkan_war_diplo_play = {
-			add_target_backers = {
-				c:ROM
-			}
-			add_war_goal = {
-                holder = c:ROM
-                type = conquer_state
-                target_state = s:STATE_DOBRUDJA.region_state:BUL
-            }
-		}
 	}
 
-	option = { # Stay out
+	option = {
 		name = balkan_war_events.1.b
 		ai_chance = {
 			base = 0
@@ -57,7 +42,7 @@ balkan_war_events.1 = {
 	}
 }
 
-# Ottoman Intervention
+# Romanian Intervention part 2
 balkan_war_events.2 = {
 	type = country_event
 	
@@ -73,11 +58,11 @@ balkan_war_events.2 = {
 	desc = balkan_war_events.2.d
 	flavor = balkan_war_events.2.f
 
-	duration = 3
+	duration = 1
 
 	trigger = {} # Triggered in global
 
-	immediate = {
+    immediate = {
         random_diplomatic_play = {
            limit = {
 			  initiator = { c:BUL ?= this }
@@ -87,41 +72,52 @@ balkan_war_events.2 = {
         }
     }
 
-	option = { # Join the war
-		name = balkan_war_events.2.a
+	option = {
+		name = balkan_war_events.2
         default_option = yes
+		scope:balkan_war_diplo_play = {
+			add_target_backers = {
+				c:ROM
+			}
+			add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_DOBRUDJA.region_state:BUL
+            }
+			add_war_goal = {
+                holder = c:BUL
+                type = conquer_state
+                target_state = s:STATE_DOBRUDJA.region_state:ROM
+            }
+		}
 		ai_chance = {
 			base = 1
 		}
-
-        c:BUL = {
-            trigger_event = {
-                id = balkan_war_events.3
-                days = 25
-            }
-        }
-
-		scope:balkan_war_diplo_play = {
-			add_target_backers = {
-				c:TUR
-			}
-			add_war_goal = {
-                holder = c:TUR
-                type = conquer_state
-                target_state = s:STATE_EASTERN_THRACE.region_state:BUL
-            }
-		}
 	}
 
-	option = { # Stay out
-		name = balkan_war_events.2.b
+	option = {
+		name = balkan_war_events.2
+		s:STATE_DOBRUDJA = {
+            random_scope_state = {
+		       limit = {
+			      exists = c:BUL
+			        owner = {
+				        OR = {
+					      c:BUL = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:ROM
+			    add_claim = c:BUL
+            }
+        }
 		ai_chance = {
 			base = 0
 		}
 	}
 }
 
-# Bulgaria decides to continue or give up
+# Ottoman Intervention part 1
 balkan_war_events.3 = {
 	type = country_event
 	
@@ -139,23 +135,23 @@ balkan_war_events.3 = {
 
 	duration = 3
 
-	trigger = {}
+	trigger = {} # Triggered in global
 
-	immediate = {}
-
-	option = { # Give up the fight
+	option = {
 		name = balkan_war_events.3.a
         default_option = yes
-		scope:balkan_war_diplo_play = {
-			add_diplomatic_play_war_support = { target = c:BUL value = -200 }
-		}
+        c:BUL = {
+			trigger_event = {
+                id = balkan_war_events.4
+                days = 1
+            }
+        }
 		ai_chance = {
-			base = 100
+			base = 1
 		}
 	}
-	
 
-	option = { # Continue the fight
+	option = {
 		name = balkan_war_events.3.b
 		ai_chance = {
 			base = 0
@@ -163,6 +159,7 @@ balkan_war_events.3 = {
 	}
 }
 
+# Ottoman Intervention part 2
 balkan_war_events.4 = {
 	type = country_event
 	
@@ -170,9 +167,130 @@ balkan_war_events.4 = {
         texture = "gfx/event_pictures/second_balkan_war.dds"
     }
 
-    title = balkan_war_events.4.t
-    desc = balkan_war_events.4.d
-    flavor = balkan_war_events.4.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	title = balkan_war_events.4.t
+	desc = balkan_war_events.4.d
+	flavor = balkan_war_events.4.f
+
+	duration = 3
+
+	trigger = {} # Triggered in global
+
+	immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:BUL ?= this }
+              target = { c:GRE ?= this }
+		    }
+           save_scope_as = balkan_war_diplo_play
+        }
+    }
+
+	option = {
+		name = balkan_war_events.4.a
+        default_option = yes
+        c:BUL = {
+            trigger_event = {
+                id = balkan_war_events.5
+                days = 25
+            }
+        }
+		scope:balkan_war_diplo_play = {
+			add_target_backers = {
+				c:TUR
+			}
+			add_war_goal = {
+                holder = c:TUR
+                type = conquer_state
+                target_state = s:STATE_EASTERN_THRACE.region_state:BUL
+            }
+			add_war_goal = {
+                holder = c:BUL
+                type = conquer_state
+                target_state = s:STATE_EASTERN_THRACE.region_state:TUR
+            }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+		name = balkan_war_events.4.b
+		s:STATE_EASTERN_THRACE = {
+            random_scope_state = {
+		        limit = {
+			      exists = c:BUL
+			        owner = {
+				        OR = {
+					      c:BUL = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:TUR
+			    add_claim = c:BUL
+            }
+        }
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Bulgaria decides to continue or give up
+balkan_war_events.5 = {
+	type = country_event
+	
+	event_image = {
+        texture = "gfx/event_pictures/second_balkan_war.dds"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	title = balkan_war_events.5.t
+	desc = balkan_war_events.5.d
+	flavor = balkan_war_events.5.f
+
+	duration = 3
+
+	trigger = {}
+
+	immediate = {}
+
+	option = { # Give up the fight
+		name = balkan_war_events.5.a
+        default_option = yes
+		scope:balkan_war_diplo_play = {
+			add_diplomatic_play_war_support = { target = c:BUL value = -200 }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = { # Continue the fight
+		name = balkan_war_events.5.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+balkan_war_events.6 = {
+	type = country_event
+	
+	event_image = {
+        texture = "gfx/event_pictures/second_balkan_war.dds"
+    }
+
+    title = balkan_war_events.6.t
+    desc = balkan_war_events.6.d
+    flavor = balkan_war_events.6.f
     
     icon = "gfx/interface/icons/event_icons/event_portrait.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -184,7 +302,7 @@ balkan_war_events.4 = {
     }
 
 	option = {
-        name = balkan_war_events.4.a
+        name = balkan_war_events.6.a
         default_option = yes
         trigger = { is_player = yes }
 		add_treasury = 5000000
@@ -201,7 +319,7 @@ balkan_war_events.4 = {
     }
 
     option = {
-        name = balkan_war_events.4.a
+        name = balkan_war_events.6.a
         default_option = yes
         trigger = { is_player = no }
 		add_treasury = 10000000
