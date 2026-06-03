@@ -272,7 +272,6 @@ germany_events.2 = { #November Revolution
         scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:GER value = -200 }
 		}
-        add_technology_progress = { progress = 5000 technology = political_agitation }
         add_modifier = {
           name = socialist_buff_1
           years = 20
@@ -286,6 +285,15 @@ germany_events.2 = { #November Revolution
             id = germany_events.22
             days = 5
         }
+        owner.ruler ?= {
+			remove_character_role = ruler
+		    add_character_role = agitator
+		}
+        owner.heir ?= {
+			remove_character_role = heir
+		    add_character_role = agitator
+		}
+        add_technology_progress = { progress = 5000 technology = political_agitation }
         set_variable = incoming_fascist_movement
     }
 }
@@ -519,19 +527,27 @@ germany_events.6 = { #Austria-Hungary capitulates
     option = {
         name = germany_events.6.a
         default_option = yes
-        ai_chance = {
-            base = 10
-        }
-        set_variable = small_austria
         scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:AUS value = -200 }
 		}
+        owner.ruler ?= {
+			remove_character_role = ruler
+		    add_character_role = agitator
+		}
+        owner.heir ?= {
+			remove_character_role = heir
+		    add_character_role = agitator
+		}
+        set_variable = small_austria
+        ai_chance = {
+            base = 10
+        }
     }
 
     option = {
         name = germany_events.6.b
-         set_variable = small_austria
-         ai_chance = {
+        set_variable = small_austria
+        ai_chance = {
             base = 0
         }
     }
@@ -617,12 +633,12 @@ germany_events.9 = { #Ottoman Empire capitulates
     option = {
         name = germany_events.9.a
         default_option = yes
-         ai_chance = {
-            base = 10
-        }
         scope:world_war_one_diplo_play = {
 			add_diplomatic_play_war_support = { target = c:TUR value = -200 }
 		}
+        ai_chance = {
+            base = 10
+        }
     }
 
     option = {
