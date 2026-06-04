@@ -199,8 +199,21 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
 
     trigger = {}
 
+    immediate = {
+        owner.ruler ?= {
+			remove_character_role = ruler
+		    add_character_role = agitator
+		}
+        owner.heir ?= {
+			remove_character_role = heir
+		    add_character_role = agitator
+		}
+    }
+
     option = { 
         name = turkey_events.5.a
+        trigger = { is_player = no }
+        default_option = yes
         activate_law = law_type:law_parliamentary_republic
 		activate_law = law_type:law_universal_suffrage
 		activate_law = law_type:law_national_supremacy
@@ -217,10 +230,6 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
             years = 5
             is_decaying = yes
 		}
-        add_modifier = {
-           name = revolution_stabilization_buff_2
-           years = 5
-        }
         scope:ataturk_scope = {
             set_character_as_ruler = yes
 		}
@@ -283,12 +292,6 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                     target_state = s:STATE_HUDAVENDIGAR.region_state:TUR
                 }
 	    }
-        c:TUR = {
-            trigger_event = {
-                id = dev_events.65
-                days = 5
-            }
-        }
         c:GBR = {
             trigger_event = {
                 id = turkey_events.6
@@ -325,16 +328,123 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                 }
             } 
         }
-        owner.ruler ?= {
-			remove_character_role = ruler
-		    add_character_role = agitator
-		}
-        owner.heir ?= {
-			remove_character_role = heir
-		    add_character_role = agitator
-		}
         set_variable = turkish_revolution
     } 
+
+    option = {
+        name = turkey_events.5.a
+        trigger = { is_player = yes }
+        default_option = yes
+        activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_universal_suffrage
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_right_of_assembly
+        remove_modifier = declared_bankruptcy
+        add_modifier = {
+			name = army_buff_modifier_6
+            years = 3
+            is_decaying = yes
+		}
+        scope:ataturk_scope = {
+            set_character_as_ruler = yes
+		}
+		create_diplomatic_play = {
+		    target_country = c:GRE
+		    type = dp_humiliation
+            escalation = 85
+            add_target_backers = {
+				c:ARM
+			}
+            add_target_backers = {
+				c:KUR
+			}
+	        add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_EASTERN_THRACE.region_state:GRE
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_HUDAVENDIGAR.region_state:GRE
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_AYDIN.region_state:GRE
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = annex_country
+                    target_country = c:ARM
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = annex_country
+                    target_country = c:KUR
+                }
+            add_war_goal = {
+				    holder = c:GRE
+				    target_country = c:TUR
+				    type = enforce_treaty_article
+				    article = {
+					   article = money_transfer
+					   source_country = c:TUR
+					   target_country = c:GRE
+					   inputs = {
+						   { quantity = 8000 }
+					    }
+				    }
+			    }
+            add_war_goal = {
+                    holder = c:GRE
+                    type = conquer_state
+                    target_state = s:STATE_EASTERN_THRACE.region_state:TUR
+                }
+            add_war_goal = {
+                    holder = c:GRE
+                    type = conquer_state
+                    target_state = s:STATE_HUDAVENDIGAR.region_state:TUR
+                }
+	    }
+        c:GBR = {
+            trigger_event = {
+                id = turkey_events.6
+                days = 5
+            }
+        }   
+        c:FRA = {
+            trigger_event = {
+                id = turkey_events.6
+                days = 5
+            }
+        }  
+        c:GRE = {
+            trigger_event = {
+                id = turkey_events.7
+                years = 2
+            }
+            add_modifier = {
+			    name = minting_buff_4_modifier
+                years = 2
+                is_decaying = yes
+		    }
+        } 
+        if = {
+            limit = {
+                c:ITA = {
+                    has_variable = entente_participant
+		        }
+            }
+            c:ITA = {
+                trigger_event = {
+                   id = turkey_events.6
+                   days = 5
+                }
+            } 
+        }
+        set_variable = turkish_revolution
+    }
 }   
 
 turkey_events.6 = { #Countries react to revolution
