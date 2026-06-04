@@ -26,9 +26,10 @@
 
     complete = {
         OR = {
-            gdp > 80000000
+            gdp > 100000000
             country_rank >= rank_value:great_power
             has_global_variable = ottoman_victory_ww1
+            root.average_sol > 12
         }
     }
 
