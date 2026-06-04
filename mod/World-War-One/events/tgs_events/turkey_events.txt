@@ -306,14 +306,13 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
         }  
         c:GRE = {
             trigger_event = {
+                id = dev_events.123
+                days = 5
+            }
+            trigger_event = {
                 id = turkey_events.7
                 years = 2
             }
-            add_modifier = {
-			    name = minting_buff_4_modifier
-                years = 2
-                is_decaying = yes
-		    }
         } 
         if = {
             limit = {
@@ -421,14 +420,13 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
         }  
         c:GRE = {
             trigger_event = {
+                id = dev_events.123
+                days = 5
+            }
+            trigger_event = {
                 id = turkey_events.7
                 years = 2
             }
-            add_modifier = {
-			    name = minting_buff_4_modifier
-                years = 2
-                is_decaying = yes
-		    }
         } 
         if = {
             limit = {
