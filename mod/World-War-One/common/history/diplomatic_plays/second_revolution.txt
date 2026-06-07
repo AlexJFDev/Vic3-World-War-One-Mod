@@ -23,8 +23,14 @@
 
             add_war_goal = {
                 holder = c:SIH
-                type = conquer_state
-                target_state = s:STATE_CHONGQING.region_state:KMT
+                type = annex_country
+                target_country = c:CHQ
+            }
+
+            add_war_goal = {
+                holder = c:CHQ
+                type = annex_country
+                target_country = c:SIH
             }
 
             add_war_goal = {
@@ -56,6 +62,9 @@
             }
             add_target_backers = {
                 c:FRS
+            }
+            add_target_backers = {
+                c:CHQ
             }
             add_target_backers = {
                 c:HNA
