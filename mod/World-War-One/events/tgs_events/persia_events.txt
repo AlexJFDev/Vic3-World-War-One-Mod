@@ -130,7 +130,7 @@ persia_events.3 = {
 
     trigger = {}
 
-    immediate = { 
+    immediate = {
         remove_modifier = persia_weak_government_1 
         add_modifier = {
          name = revolution_stabilization_buff_2
@@ -148,16 +148,20 @@ persia_events.3 = {
     option = {
         name = persia_events.3.a
         default_option = yes
+        owner.ruler ?= {
+			remove_character_role = ruler
+		    add_character_role = agitator
+		}
+        owner.heir ?= {
+			remove_character_role = heir
+		    add_character_role = agitator
+		}
         scope:riza_pahlevi_scope = {
 			remove_character_role = general
 		    add_character_role = politician
             set_as_interest_group_leader = yes
             set_character_as_ruler = yes
 		}
-        any_character = {
-            limit = { is_heir_of_own_country = yes }
-            kill_character = yes
-        }
         add_modifier = {
          name = persia_new_dynasty
          years = 20
@@ -171,6 +175,14 @@ persia_events.3 = {
 
     option = {
         name = persia_events.3.b
+        owner.ruler ?= {
+			remove_character_role = ruler
+		    add_character_role = agitator
+		}
+        owner.heir ?= {
+			remove_character_role = heir
+		    add_character_role = agitator
+		}
         scope:riza_pahlevi_scope = {
 			remove_character_role = general
 		    add_character_role = politician

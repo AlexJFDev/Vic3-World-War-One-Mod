@@ -566,23 +566,22 @@ joining_world_war_events.13 = { #Ottoman Empire joins
         }
     }
 
-    option = { #Show support but dont join now
+    option = { #Reject the offer
         name = joining_world_war_events.13.b
-        je:je_joining_world_war_one = {
-			add_progress = { value = -30 name = join_entente_progress_bar }
-            add_progress = { value = 30 name = join_central_powers_progress_bar }
-		}
+        trigger = { has_law = law_type:law_military_oversight }
+        add_modifier = {
+            name = angry_military_modifier
+            years = 5
+            is_decaying = yes
+        }
         ai_chance = {
             base = 0
         }
     }
 
-    option = { #Reject violently the offer
-        name = joining_world_war_events.13.c
+    option = { #Reject the offer
+        name = joining_world_war_events.13.b
         trigger = { NOT = { has_law = law_type:law_military_oversight } }
-        je:je_joining_world_war_one = {
-            add_progress = { value = -15 name = join_central_powers_progress_bar }
-		}
         ai_chance = {
             base = 0
         }
