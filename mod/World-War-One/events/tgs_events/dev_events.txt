@@ -1038,6 +1038,7 @@ dev_events.21 = {
     option = {
         name = dev_events.21.a
         default_option = yes
+        trigger = { is_player = no }
         active_law:lawgroup_distribution_of_power ?= {
 			add_amendment = {
 				type = la_grande_muette
@@ -1058,6 +1059,58 @@ dev_events.21 = {
         s:STATE_ALSACE_LORRAINE = {
 			add_claim = c:FRA
         } 
+        s:STATE_SAHARA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		        set_state_type = incorporated
+            }
+        }
+        s:STATE_EAST_SAHARA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		        set_state_type = incorporated
+            }
+        }
+    }
+
+    option = {
+        name = dev_events.21.a
+        default_option = yes
+        trigger = { is_player = yes }
+        active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = la_grande_muette
+				sponsor = ig_intelligentsia
+				cooldown = 50
+			}
+		}
+        add_modifier = {
+			name = france_outdated_tactics
+			months = 30
+            is_decaying = yes
+		} 
+        add_modifier = {
+            name = lower_strata_nerf
+            years = 20
+            is_decaying = yes
+        }
+        s:STATE_ALSACE_LORRAINE = {
+			add_claim = c:FRA
+        }
     }
 }
 
