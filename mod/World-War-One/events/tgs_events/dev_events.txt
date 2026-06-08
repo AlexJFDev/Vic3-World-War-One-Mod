@@ -769,7 +769,7 @@ dev_events.16 = {
             is_decaying = yes
         }
         add_modifier = {
-            name = money_buff_2
+            name = money_buff_4
             years = 5
             is_decaying = yes
         }
@@ -797,13 +797,13 @@ dev_events.16 = {
             is_decaying = yes
         }
         add_modifier = {
-            name = money_buff_1
+            name = money_buff_4
             years = 5
             is_decaying = yes
         }
         add_modifier = {
             name = army_buff_modifier_3
-            years = 3
+            years = 6
             is_decaying = yes
         }
     }
@@ -5757,5 +5757,126 @@ dev_events.123 = {
             years = 3
             is_decaying = yes
 		}
+    }
+}
+
+dev_events.124 = {
+    type = country_event
+
+    title = dev_events.6.t
+    desc = dev_events.6.d
+    flavor = dev_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.6.a
+        default_option = yes
+        create_military_formation = {
+			name = Baltiyskiy_Flot
+			type = fleet
+			hq_region = sr:region_russia
+			ship = {
+				type = ship_type:ship_type_dreadnought
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 6
+			}
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 6
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 3
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 38
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 82
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 22
+			}
+			ship = {
+				type = ship_type:ship_type_troop_ship
+				count = 20
+			}
+		}
+    }
+}
+
+dev_events.125 = {
+    type = country_event
+
+    title = dev_events.16.t
+    desc = dev_events.16.d
+    flavor = dev_events.16.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.16.a
+        default_option = yes
+        trigger = { is_player = no }
+        remove_modifier = declared_bankruptcy
+        add_treasury = 100000000
+        add_modifier = {
+            name = minting_buff_5_modifier
+            years = 12
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = money_buff_2
+            years = 5
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = construction_buff_1
+            years = 20
+            is_decaying = yes
+        }
+    }
+
+    option = {
+        name = dev_events.16.a
+        default_option = yes
+        trigger = { is_player = yes }
+        remove_modifier = declared_bankruptcy
+        add_treasury = 30000000
+        add_modifier = {
+            name = starting_minting_buff_4_modifier
+            years = 5
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = money_buff_1
+            years = 5
+            is_decaying = yes
+        }
     }
 }

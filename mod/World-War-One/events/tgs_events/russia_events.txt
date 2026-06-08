@@ -179,6 +179,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         ig:ig_devout = {
 			remove_ruling_interest_group = yes
 		}
+        add_technology_researched = political_agitation
         create_character = {
 			template = rus_leon_trotsky_character_template
             on_created = {
@@ -231,6 +232,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         ig:ig_devout = {
 			remove_ruling_interest_group = yes
 		}
+        add_technology_researched = political_agitation
         create_character = {
 			template = rus_leon_trotsky_character_template
             on_created = {
@@ -287,6 +289,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         ig:ig_devout = {
 			remove_ruling_interest_group = yes
 		}
+        add_technology_researched = political_agitation
         create_character = {
 			template = rus_leon_trotsky_character_template
             on_created = {
@@ -343,6 +346,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         ig:ig_devout = {
 			remove_ruling_interest_group = yes
 		}
+        add_technology_researched = political_agitation
         create_character = {
 			template = rus_leon_trotsky_character_template
             on_created = {
@@ -492,27 +496,6 @@ russia_events.7 = { #Soviet uprising
      activate_law = law_type:law_appointed_bureaucrats
      activate_law = law_type:law_graduated_taxation
      activate_law = law_type:law_corporatized_unions
-        active_law:lawgroup_surveillance ?= {
-			add_amendment = {
-				type = extended_use_of_torture
-				sponsor = ig_trade_unions
-				cooldown = 120
-			}
-		}
-        active_law:lawgroup_free_speech ?= {
-			add_amendment = {
-				type = political_intimidation
-				sponsor = ig_trade_unions
-				cooldown = 120
-			}
-		}
-        active_law:lawgroup_distribution_of_power ?= {
-			add_amendment = {
-				type = amendment_cult_of_personality
-				sponsor = ig_trade_unions
-				cooldown = 120
-			}
-		}
         trigger_event = {
              id = russia_events.8
              days = 5
@@ -643,6 +626,18 @@ russia_events.8 = { #The civil war begins
             change_infamy = -100
         }
         c:SIB = {
+            trigger_event = {
+			   id = dev_events.1
+			   days = 5
+		    }
+            trigger_event = {
+			   id = dev_events.1
+			   days = 5
+		    }
+            trigger_event = {
+			   id = dev_events.1
+			   days = 5
+		    }
             trigger_event = {
 			   id = dev_events.1
 			   days = 5

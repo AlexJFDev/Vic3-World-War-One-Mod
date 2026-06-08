@@ -37,6 +37,10 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
             id = dev_events.16
             days = 5
         }
+        trigger_event = {
+            id = dev_events.124
+            days = 15
+        }
 		trigger_event = {
             id = ussr_events.2
             years = 2
@@ -44,6 +48,27 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		random_scope_character = { 
 			limit = { has_variable = lenin }
             set_character_as_ruler = yes
+		}
+        active_law:lawgroup_surveillance ?= {
+			add_amendment = {
+				type = extended_use_of_torture
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+		}
+        active_law:lawgroup_free_speech ?= {
+			add_amendment = {
+				type = political_intimidation
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+		}
+        active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = amendment_cult_of_personality
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
 		}
         create_character = {
 			template = sov_joseph_stalin_character_template
@@ -108,6 +133,27 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		random_scope_character = { 
 			limit = { has_variable = lenin }
             set_character_as_ruler = yes
+		}
+        active_law:lawgroup_surveillance ?= {
+			add_amendment = {
+				type = extended_use_of_torture
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+		}
+        active_law:lawgroup_free_speech ?= {
+			add_amendment = {
+				type = political_intimidation
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
+		}
+        active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = amendment_cult_of_personality
+				sponsor = ig_trade_unions
+				cooldown = 120
+			}
 		}
         create_character = {
 			template = sov_joseph_stalin_character_template
