@@ -434,7 +434,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             days = 15
         }
 		ai_chance = {
-			base = 100
+			base = 1
 		}
     }
 
@@ -451,6 +451,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             id = dev_events.72
             days = 10
         }
+        ai_chance = {
+			base = 0
+		}
     }
 }
  
@@ -495,13 +498,10 @@ russia_events.7 = { #Soviet uprising
 				sponsor = ig_trade_unions
 				cooldown = 120
 			}
-            add_amendment = {
+		}
+        active_law:lawgroup_free_speech ?= {
+			add_amendment = {
 				type = political_intimidation
-				sponsor = ig_trade_unions
-				cooldown = 120
-			}
-            add_amendment = {
-				type = technological_stealing
 				sponsor = ig_trade_unions
 				cooldown = 120
 			}
@@ -660,21 +660,6 @@ russia_events.8 = { #The civil war begins
 			limit = { has_variable = lenin }
             set_character_as_ruler = yes
 		}
-        every_country = {
-			limit = {
-                country_rank >= rank_value:great_power
-                is_subject = no
-                NOT = {
-					has_law = law_type:law_council_republic
-					has_law = law_type:law_anarchy
-                    has_law = law_type:law_true_neutrality
-				}
-			}
-            trigger_event = {
-                id = 
-                days = 30
-            }
-        }
 		add_radicals = {
 			strata = middle
             value = -10000000
@@ -707,6 +692,84 @@ russia_events.9 = { #Reforms success
     }
 
     trigger = {}
+
+    immediate = {
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+    }
 
     option = {
         name = russia_events.9.a

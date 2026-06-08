@@ -89,7 +89,7 @@ colossus_with_feet_of_clay_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     country_prestige_mult = -0.3
     political_movement_radicalism_add = 0.15
-    state_radicals_from_political_movements_mult = 0.3
+    political_movement_radicalism_add = 0.3
     state_pop_support_movement_communist_mult = 0.8
     state_pop_support_movement_anarchist_mult = 0.8
     state_pop_support_movement_socialist_mult = 0.8
@@ -129,7 +129,7 @@ angry_elites_3_modifier = {
 
 war_protests_1_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    political_movement_radicalism_add = 0.3
+    political_movement_radicalism_add = 0.5
     unit_army_offense_mult = -0.1
 }
 
@@ -1393,4 +1393,9 @@ disallowed_royal_family_return = {
 young_turks_coup = {
    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
    interest_group_ig_armed_forces_pol_str_mult = 0.6
+}
+
+state_radicalism_nerf = {
+   icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+   state_radicals_from_political_movements_mult = -0.3
 }
