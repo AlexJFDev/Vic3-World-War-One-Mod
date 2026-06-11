@@ -67,17 +67,6 @@ yeet_agitator_events.1 = {
 	option = {
 		name = yeet_agitator_events.1.a
 		default_option = yes
-		custom_tooltip = {
-			text = yeet_agitator_events.1.tt_1
-			scope:yeeted_agitator_scope_1 = {
-				hidden_effect = {
-					remove_variable = temp_event_target_in_use
-				}
-				kill_character = {
-					hidden = yes
-				}
-			}
-		}
 		scope:yeeted_agitator_ig_scope_1 = {
 			add_modifier = {
 				name = embittered_writings_modifier
@@ -85,6 +74,7 @@ yeet_agitator_events.1 = {
 			}
 		}
 	}
+	
 	option = {
 		name = yeet_agitator_events.1.b
 		scope:yeeted_agitator_scope_1 = {

@@ -145,3 +145,69 @@ je_war_fatigue_russia = {
     weight = 1000
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
+
+je_russian_civil_war_sov = {
+    icon = "gfx/interface/icons/event_icons/red_star.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:RUS
+        THIS = c:RUS
+        has_global_variable = russian_civil_war
+    }
+    
+    possible = {
+        has_global_variable = russian_civil_war
+        is_at_war = yes
+    }
+
+    modifiers_while_active = { russian_civil_war_sov }
+
+    complete = { 
+        is_at_war = no
+        owns_entire_state_region = STATE_CHELYABINSK
+    }
+
+    on_complete = {
+        trigger_event = {
+			id = dev_events.126
+            days = 15
+		}
+    }
+
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_russian_civil_war_rus = {
+    icon = "gfx/interface/icons/event_icons/rus_icon.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:SIB
+        THIS = c:SIB
+        has_global_variable = russian_civil_war
+    }
+    
+    possible = {
+        has_global_variable = russian_civil_war
+        is_at_war = yes
+    }
+
+    modifiers_while_active = { russian_civil_war_rus }
+
+    complete = { 
+        is_at_war = no
+        owns_entire_state_region = STATE_CHELYABINSK
+    }
+
+    on_complete = {
+        trigger_event = {
+			id = dev_events.126
+            days = 15
+		}
+    }
+
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

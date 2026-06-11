@@ -764,23 +764,8 @@ dev_events.16 = {
         remove_modifier = declared_bankruptcy
         add_treasury = 100000000
         add_modifier = {
-            name = minting_buff_5_modifier
-            years = 12
-            is_decaying = yes
-        }
-        add_modifier = {
-            name = money_buff_4
-            years = 5
-            is_decaying = yes
-        }
-        add_modifier = {
             name = construction_buff_1
             years = 20
-            is_decaying = yes
-        }
-        add_modifier = {
-            name = army_buff_modifier_3
-            years = 8
             is_decaying = yes
         }
     }
@@ -791,21 +776,6 @@ dev_events.16 = {
         trigger = { is_player = yes }
         remove_modifier = declared_bankruptcy
         add_treasury = 30000000
-        add_modifier = {
-            name = starting_minting_buff_4_modifier
-            years = 5
-            is_decaying = yes
-        }
-        add_modifier = {
-            name = money_buff_4
-            years = 5
-            is_decaying = yes
-        }
-        add_modifier = {
-            name = army_buff_modifier_3
-            years = 6
-            is_decaying = yes
-        }
     }
 }
 
@@ -2003,6 +1973,21 @@ dev_events.38 = {
         name = dev_events.8.a
         default_option = yes
         add_treasury = 5000000
+        create_character = {
+			template = sib_alexander_kolchack_template
+		}
+        create_character = {
+			template = sib_nicholas_nikolaevich_template
+		}
+        create_character = {
+			template = sib_alexander_mikhailovich_template
+		}
+        create_character = {
+			template = sib_xenia_alexandrovna_template
+		}
+        create_character = {
+			template = sib_olga_alexandrovna_template
+		}
     }
 }
 
@@ -2236,7 +2221,7 @@ dev_events.46 = {
         default_option = yes
         trigger = { is_player = no }
         add_modifier = {
-            name = army_nerf_modifier_2
+            name = army_nerf_modifier_3
             years = 5
             is_decaying = yes
         }
@@ -5904,5 +5889,29 @@ dev_events.126 = {
 			limit = { owner = ROOT }
 			set_state_type = incorporated
         }
+        add_loyalists = {
+			strata = upper
+			value = -10000000
+		}
+		add_loyalists = {
+			strata = middle
+            value = -10000000
+		}
+		add_loyalists = {
+			strata = lower
+            value = -10000000
+		}
+        add_radicals = {
+			strata = upper
+			value = -10000000
+		}
+		add_radicals = {
+			strata = middle
+            value = -10000000
+		}
+		add_radicals = {
+			strata = lower
+            value = -10000000
+		}
     }
 }

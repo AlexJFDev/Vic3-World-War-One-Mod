@@ -159,6 +159,14 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 			 type = puppet
 		    }
         }
+        owner.ruler ?= {
+			remove_character_role = ruler
+		    add_character_role = agitator
+		}
+        owner.heir ?= {
+			remove_character_role = heir
+		    add_character_role = agitator
+		}
     }
 
     option = {
@@ -199,9 +207,13 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         remove_variable = no_reform_russia
         set_global_variable = russian_revolution_1
         add_modifier = {
-          name = revolution_stabilization_buff_2
+          name = defeated_elites_modifier
           years = 30
           is_decaying = yes
+        }
+        add_modifier = {
+          name = revolution_stabilization_buff_2
+          years = 5
         }
         trigger_event = {
             id = dev_events.26
@@ -254,11 +266,11 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         add_modifier = {
           name = defeated_elites_modifier
           years = 30
+          is_decaying = yes
         }
         add_modifier = {
           name = revolution_stabilization_buff_2
-          years = 30
-          is_decaying = yes
+          years = 5
         }
         trigger_event = {
             id = dev_events.26
@@ -311,11 +323,11 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         add_modifier = {
           name = defeated_elites_modifier
           years = 30
+          is_decaying = yes
         }
         add_modifier = {
           name = revolution_stabilization_buff_2
-          years = 30
-          is_decaying = yes
+          years = 5
         }
         trigger_event = {
             id = dev_events.26
@@ -368,11 +380,11 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         add_modifier = {
           name = defeated_elites_modifier
           years = 30
+          is_decaying = yes
         }
         add_modifier = {
           name = revolution_stabilization_buff_2
-          years = 30
-          is_decaying = yes
+          years = 5
         }
         trigger_event = {
             id = dev_events.26
@@ -481,6 +493,7 @@ russia_events.7 = { #Soviet uprising
 
     option = {
      name = russia_events.7.a
+     set_capital = STATE_MOSCOW
      activate_law = law_type:law_council_republic
      activate_law = law_type:law_single_party_state
      activate_law = law_type:law_outlawed_dissent
@@ -501,6 +514,10 @@ russia_events.7 = { #Soviet uprising
              days = 5
             }
         trigger_event = {
+             id = russia_events.12
+             days = 270
+            }
+        trigger_event = {
              id = ussr_events.1
              days = 15
             }
@@ -511,18 +528,17 @@ russia_events.7 = { #Soviet uprising
         trigger_event = {
                 id = dev_events.108
                 years = 10
-            }  
-        set_capital = STATE_MOSCOW
+            }
         add_modifier = {
 			name = dictatorship_of_proletariat
             years = 60
             is_decaying = yes
 		}
         add_modifier = {
-          name = defeated_elites_modifier
-          years = 60
-          is_decaying = yes
-        }
+			name = armed_forces_nerf
+            years = 60
+            is_decaying = yes
+		}
         c:BUK = {
             trigger_event = {
                id = dev_events.111
@@ -557,14 +573,16 @@ russia_events.8 = { #The civil war begins
     trigger = {}
 
     immediate = {
+        set_global_variable = russian_civil_war
         create_country = {
 	       tag = SIB
 	       origin = this
 	       state = s:STATE_CHELYABINSK.region_state:RUS
-           on_created = { 
-           activate_law = law_type:law_monarchy
+           on_created = {
+           activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_oligarchy
            activate_law = law_type:law_mass_conscription
+           activate_law = law_type:law_military_oversight
            activate_law = law_type:law_racial_segregation
            activate_law = law_type:law_freedom_of_conscience
            activate_law = law_type:law_interventionism
@@ -639,10 +657,6 @@ russia_events.8 = { #The civil war begins
 			   days = 5
 		    }
             trigger_event = {
-			   id = dev_events.1
-			   days = 5
-		    }
-            trigger_event = {
 			   id = dev_events.38
 			   days = 5
 		    }
@@ -663,13 +677,33 @@ russia_events.8 = { #The civil war begins
 			strata = lower
             value = -10000000
 		}
+        random_scope_character = {
+            limit = {
+               has_template = rus_nicholas_nikolaevich_template
+            }
+            set_variable = {
+                name = nikolaevich
+            }
+        }
+        random_scope_character = {
+            limit = {
+               has_template = rus_alexander_kolchack_template
+            }
+            set_variable = {
+                name = kolchack
+            }
+        }
     }
 
     option = {
         name = russia_events.8.a
-        trigger_event = {
-			id = dev_events.126
-			years = 5
+        random_scope_character = { 
+			limit = { has_variable = nikolaevich }
+            kill_character = yes
+		}
+        random_scope_character = { 
+			limit = { has_variable = kolchack }
+            kill_character = yes
 		}
     }
 }
@@ -862,6 +896,77 @@ russia_events.11 = { #Other powers help White Russia
 
     option = {
         name = russia_events.11.a
+        ai_chance = {
+			base = 0
+		}
+    }
+}
+
+russia_events.12 = { #The fate of the imperial family
+    type = country_event
+
+    title = russia_events.12.t
+    desc = russia_events.12.d
+    flavor = russia_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/romanov_family.dds"
+    }
+
+    trigger = {}
+
+    immediate = {
+        random_scope_character = {
+            limit = {
+               has_template = RUS_nicholas_ii
+            }
+            set_variable = {
+                name = nicholas_2
+            }
+        }
+        random_scope_character = {
+            limit = {
+               has_template = RUS_alexei_ii
+            }
+            set_variable = {
+                name = alexei_2
+            }
+        }
+    }
+
+    option = {
+        name = russia_events.12.a
+        default_option = yes
+        every_character = {
+			limit = {
+				OR = {
+                    has_ideology = ideology:ideology_royalist
+					has_ideology = ideology:ideology_humanitarian_royalist
+				}
+				owner ?= ROOT
+			}
+			kill_character = yes
+		}
+        random_scope_character = {
+			limit = { has_variable = nicholas_2 }
+            kill_character = yes
+		}
+        random_scope_character = { 
+			limit = { has_variable = alexei_2 }
+            kill_character = yes
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+        name = russia_events.12.b
         ai_chance = {
 			base = 0
 		}
