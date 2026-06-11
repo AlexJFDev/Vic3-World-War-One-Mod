@@ -360,6 +360,24 @@ agitator_web_du_bois = { # W.E.B. Du Bois
 	}
 }
 
+usa_robert_oppenheimer_character_template = {
+    first_name = Robert
+    last_name = Oppenheimer
+    historical = yes
+    culture = cu:euro_american
+    female = no
+	is_agitator = yes
+    religion = atheist
+    ideology = ideology_communist
+    interest_group = ig_intelligentsia
+    birth_date = 1904.05.22
+    traits = {
+        special_character_great_scientist
+        engineer
+        reckless
+    }   
+}
+
 #Great-Britain
 
 is_gbr_george_05 = {
@@ -665,6 +683,24 @@ pol_rosa_luxemburg_character_template = {
 	}
 }
 
+ger_wernher_von_braun_character_template = {
+    first_name = Wernher
+    last_name = von_Braun
+    historical = yes
+    culture = cu:german
+    female = no
+	is_agitator = yes
+    religion = atheist
+    ideology = ideology_fascist
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1912.03.23
+    traits = {
+        special_character_great_scientist
+        engineer
+        cruel
+    }   
+}
+
 #Switzerland
 
 albert_einstein_template = {
@@ -680,8 +716,8 @@ albert_einstein_template = {
 	birth_date = 1879.3.14
 	dna = dna_albert_einstein
 	traits = {
-		innovative
-		ambitious
+		special_character_great_scientist
+        honorable
 		literary
 	}
 }
@@ -1057,9 +1093,10 @@ sib_alexander_kolchack_template = {
 	ideology = ideology_ethno_nationalist
 	birth_date = 1874.11.16
 	ruler = yes
+	is_general = yes
 	historical = yes
 	traits = {
-	   ambitious experienced_naval_commander explorer 
+	   ambitious explorer 
 	}
 }
 

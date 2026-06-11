@@ -1,6 +1,4 @@
-﻿### TGS Traits
-
-special_character_prophet = {
+﻿special_character_prophet = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/special_character_traits/special_character_john_brown_popularity.dds"
 
@@ -14,6 +12,41 @@ special_character_prophet = {
 
 	country_modifier = {
 
+	}
+
+	agitator_modifier = {
+
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = 0.15
+	}
+
+	weight = 0
+}
+
+special_character_great_scientist = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/special_character_traits/special_character_pedro_legitimacy.dds"
+
+	character_modifier = {
+		character_popularity_add = 30
+	}
+
+	command_modifier = {
+       
+	}
+
+	country_modifier = {
+        country_weekly_innovation_mult = 0.05
 	}
 
 	agitator_modifier = {

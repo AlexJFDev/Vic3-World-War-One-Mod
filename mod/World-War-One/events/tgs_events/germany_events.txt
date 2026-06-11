@@ -1992,6 +1992,12 @@ germany_events.40 = { #Rhineland restitution
 
     trigger = {}
 
+    immediate = {
+        create_character = {
+			template = ger_wernher_von_braun_character_template
+		}
+    }
+
     option = {
         name = germany_events.40.a
         default_option = yes
