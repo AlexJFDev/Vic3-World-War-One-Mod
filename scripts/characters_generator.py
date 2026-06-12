@@ -23,7 +23,7 @@ TRAITS = {
     'forest_commander', 'tactful', 'expert_convoy_raider', 'experienced_defensive_strategist', 'firebrand', 'beetle_ear', 'dockyard_master', 'expert_colonial_administrator', 'expert_offensive_planner', 
     'imposing', 'explorer', 'imperious', 'alcoholic', 'grifter', 'reserved', 'convoy_raider_commander', 'basic_offensive_planner', 'arrogant', 'trait_child', 'demagogue', 'stalwart_defender', 
     'meticulous', 'basic_artillery_commander', 'popular_commander', 'psychological_affliction', 'wounded', 'resupply_commander', 'experienced_political_operator', 'experienced_colonial_administrator', 
-    'plains_commander', 'charismatic', 'traditionalist_commander', 'opium_addiction', 'shellshocked', 'basic_defensive_strategist'
+    'plains_commander', 'charismatic', 'traditionalist_commander', 'opium_addiction', 'shellshocked', 'basic_defensive_strategist', 'special_character_prophet', 'special_character_great_scientist'
 }
 IDEOLOGIES = {
     'ideology_moderate', 'ideology_traditionalist', 'ideology_nihilist', 'ideology_republican_leader', 'ideology_radical', 'ideology_abolitionist', 'ideology_slaver', 'ideology_feminist', 'ideology_reformer', 

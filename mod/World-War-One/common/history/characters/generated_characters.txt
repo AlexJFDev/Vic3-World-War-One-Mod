@@ -2137,12 +2137,13 @@
 			first_name = Saad
 			last_name = Zaghloul
 			culture = cu:arab
-			interest_group = ig_landowners
-			ideology = ideology_moderate
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_radical
 			birth_date = 1857.07.01
 			ig_leader = yes
 			historical = yes
 			traits = {
+				charismatic reckless 
 			}
 		}
 		create_character = {
@@ -2161,8 +2162,8 @@
 			first_name = Adli
 			last_name = Yakan Pasha
 			culture = cu:arab
-			interest_group = ig_petty_bourgeoisie
-			ideology = ideology_moderate
+			interest_group = ig_landowners
+			ideology = ideology_royalist
 			birth_date = 1864.01.18
 			ig_leader = yes
 			historical = yes
@@ -2174,7 +2175,7 @@
 			last_name = Kamil_Pasha
 			culture = cu:arab
 			interest_group = ig_rural_folk
-			ideology = ideology_ethno_nationalist
+			ideology = ideology_radical
 			birth_date = 1874.08.14
 			ig_leader = yes
 			historical = yes
@@ -2232,18 +2233,6 @@
 			historical = yes
 			traits = {
 				engineer honorable stalwart_defender 
-			}
-		}
-		create_character = {
-			first_name = Ismail
-			last_name = Fahmi
-			culture = cu:arab
-			interest_group = ig_armed_forces
-			ideology = ideology_moderate
-			birth_date = 1860.01.01
-			is_admiral = yes
-			historical = yes
-			traits = {
 			}
 		}
 	}
@@ -6585,12 +6574,10 @@
 			traits = {
 			}
 		}
-	}
-	c:ESP = {
 		create_character = {
 			first_name = José
 			last_name = Marina_Vega
-			culture = cu:castilian
+			culture = cu:spanish
 			interest_group = ig_armed_forces
 			ideology = ideology_traditionalist
 			birth_date = 1850.04.13
@@ -6603,7 +6590,7 @@
 		create_character = {
 			first_name = Agustín
 			last_name = de_Luque_y_Coca
-			culture = cu:andalusian
+			culture = cu:spanish
 			interest_group = ig_armed_forces
 			ideology = ideology_authoritarian
 			birth_date = 1850.10.01
@@ -6616,7 +6603,7 @@
 		create_character = {
 			first_name = Felipe
 			last_name = Alfau_Mendoza
-			culture = cu:castilian
+			culture = cu:spanish
 			interest_group = ig_armed_forces
 			ideology = ideology_royalist
 			birth_date = 1845.01.01
@@ -6629,7 +6616,7 @@
 		create_character = {
 			first_name = Juan
 			last_name = Bautista_Topete
-			culture = cu:castilian
+			culture = cu:spanish
 			interest_group = ig_armed_forces
 			ideology = ideology_traditionalist
 			birth_date = 1821.05.24
@@ -6652,6 +6639,19 @@
 			historical = yes
 			traits = {
 				basic_colonial_administrator charismatic expert_offensive_planner 
+			}
+		}
+		create_character = {
+			first_name = Abdul
+			last_name = Rahman
+			culture = cu:sudanese
+			interest_group = ig_devout
+			ideology = ideology_traditionalist
+			birth_date = 1885.08.03
+			ig_leader = yes
+			historical = yes
+			traits = {
+				ambitious charismatic special_character_prophet 
 			}
 		}
 	}
@@ -7000,6 +7000,31 @@
 			}
 		}
 		create_character = {
+			first_name = Ahmed
+			last_name = Izzet_Pacha
+			culture = cu:albanian
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			birth_date = 1864.04.12
+			is_general = yes
+			historical = yes
+			traits = {
+			}
+		}
+		create_character = {
+			first_name = Ibrahim
+			last_name = Hakki_Pacha
+			culture = cu:turkish
+			interest_group = ig_intelligentsia
+			ideology = ideology_pacifist
+			birth_date = 1862.10.08
+			role = character_role_politician
+			historical = yes
+			traits = {
+				experienced_diplomat honorable 
+			}
+		}
+		create_character = {
 			first_name = Mehmed
 			last_name = Cavid
 			culture = cu:turkish
@@ -7164,31 +7189,6 @@
 			historical = yes
 			traits = {
 				erudite 
-			}
-		}
-		create_character = {
-			first_name = Ahmed
-			last_name = Izzet_Pacha
-			culture = cu:albanian
-			interest_group = ig_armed_forces
-			ideology = ideology_moderate
-			birth_date = 1864.04.12
-			is_general = yes
-			historical = yes
-			traits = {
-			}
-		}
-		create_character = {
-			first_name = Ibrahim
-			last_name = Hakki_Pacha
-			culture = cu:turkish
-			interest_group = ig_intelligentsia
-			ideology = ideology_pacifist
-			birth_date = 1862.10.08
-			role = character_role_politician
-			historical = yes
-			traits = {
-				experienced_diplomat honorable 
 			}
 		}
 	}
