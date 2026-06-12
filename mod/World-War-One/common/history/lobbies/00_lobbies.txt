@@ -134,17 +134,16 @@
 	}
 
     c:EGY = {
-        create_political_lobby = {  
+        create_political_lobby = {
 			type = lobby_pro_country 
 			target = c:GBR
-			add_interest_group = ig:ig_intelligentsia
 			add_interest_group = ig:ig_industrialists
 		}
-        create_political_lobby = {  
+        create_political_lobby = {
 			type = lobby_anti_country  
 			target = c:GBR
-			add_interest_group = ig:ig_landowners
-			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_intelligentsia
 			add_interest_group = ig:ig_devout
 		}
     }	

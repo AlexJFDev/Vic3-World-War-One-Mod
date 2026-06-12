@@ -1,6 +1,6 @@
 ﻿namespace = egypt_events
 
-egypt_events.1 = {
+egypt_events.1 = { #Abbas deposition part 1
     type = country_event
 
     title = egypt_events.1.t
@@ -16,14 +16,242 @@ egypt_events.1 = {
         texture = "gfx/event_pictures/____"
     }
 
-    trigger = {}
+    trigger = {
+        if Ottomans join ww1
+    }
 
-    option = {
+    option = { #Depose Abbas II
         name = egypt_events.1.a
         default_option = yes
         
         ai_chance = {
             base = 1
+        }
+    }
+
+    option = { #Increase Egypt Liberty Desire
+        name = egypt_events.1.b
+        
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+egypt_events.2 = { #Abbas deposition part 2
+    type = country_event
+
+    title = egypt_events.2.t
+    desc = egypt_events.2.d
+    flavor = egypt_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/____"
+    }
+
+    trigger = {}
+
+    option = { #Accept deposition
+        name = egypt_events.2.a
+        default_option = yes
+        create_character = {
+            first_name = Hussein
+	        last_name = Kamel
+	        historical = yes
+            birth_date = 1853.11.21
+	        culture = cu:arab
+	        religion = rel:sunni
+	        female = no
+            ruler = yes
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_modernizer_leader
+	        traits = {
+		       political_appointee 
+               tactful 
+               sickly
+	        }
+        }
+        create_character = {
+            first_name = Ahmed
+	        last_name = Fuad
+	        historical = yes
+            birth_date = 1868.03.26
+	        culture = cu:arab
+	        religion = rel:sunni
+	        female = no
+            heir = yes
+	        interest_group = ig_devout
+	        ideology = ideology_traditionalist
+	        traits = {
+		       erudite
+               ambitious
+	        }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { #Side with Ottomans
+        name = egypt_events.2.b
+        
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+egypt_events.3 = { #Exile of nationalists part 1
+    type = country_event
+
+    title = egypt_events.3.t
+    desc = egypt_events.3.d
+    flavor = egypt_events.3.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/____"
+    }
+
+    trigger = {
+        at the end of ww1
+    }
+
+    option = { #Demand exile of nationalists
+        name = egypt_events.3.a
+        default_option = yes
+        
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { #Increase Egypt Liberty Desire
+        name = egypt_events.3.b
+        
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+egypt_events.4 = { #Exile of nationalists part 2
+    type = country_event
+
+    title = egypt_events.4.t
+    desc = egypt_events.4.d
+    flavor = egypt_events.4.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/____"
+    }
+
+    trigger = {}
+
+    option = { #Accept but start revolution
+        name = egypt_events.4.a
+        default_option = yes
+        trigger = { is_subject = yes }
+        
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { #Refuse and start independance war + revolution nerf
+        name = egypt_events.4.b
+        trigger = { is_subject = yes }
+        
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+egypt_events.5 = { #Egyptian Revolution part 1
+    type = country_event
+
+    title = egypt_events.5.t
+    desc = egypt_events.5.d
+    flavor = egypt_events.5.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/____"
+    }
+
+    trigger = {}
+
+    option = { #Dont encourage
+        name = egypt_events.5.a
+        default_option = yes
+        add_modifier = {
+			name = egyptian_revolution
+			years = 30
+            is_decaying = yes
+		}
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { #Start a full independance war + revolution nerf
+        name = egypt_events.5.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+egypt_events.6 = { #Egyptian Revolution part 2
+    type = country_event
+
+    title = egypt_events.6.t
+    desc = egypt_events.6.d
+    flavor = egypt_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/____"
+    }
+
+    trigger = {}
+
+    option = { #Pretend to grant Egypt independance
+        name = egypt_events.6.a
+        default_option = yes
+        
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { #Grant independance to Egypt
+        name = egypt_events.6.b
+        ai_chance = {
+            base = 0
         }
     }
 }

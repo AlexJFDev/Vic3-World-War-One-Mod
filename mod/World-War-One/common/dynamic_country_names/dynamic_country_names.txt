@@ -923,3 +923,51 @@ REPLACE_OR_CREATE:FRA = {
 		}
 	}
 }
+
+REPLACE_OR_CREATE:EGY = {
+	dynamic_country_name = {
+		name = dyn_c_khedivate_egypt
+		adjective = dyn_c_khedivate_egypt_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_sultanate_egypt
+		adjective = dyn_c_sultanate_egypt_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+				has_variable = sultanate_of_egypt
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_kingdom_egypt
+		adjective = dyn_c_kingdom_egypt_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+				has_variable = kingdom_of_egypt
+			}
+		}
+	}
+	
+}
