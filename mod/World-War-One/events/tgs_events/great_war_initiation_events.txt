@@ -1357,7 +1357,7 @@ great_war_initiation_events.15 = {
         c:GBR = {
             create_bidirectional_truce = { 
               country = c:FRA
-              years = 12
+              months = 120
             }
         }
         c:USA = {
@@ -1448,16 +1448,12 @@ great_war_initiation_events.16 = {
         c:JAP ?= {
 		    create_bidirectional_truce = {
 			  country = c:FRA
-		      years = 10 
+		      months = 72 
 		    }
 		    create_bidirectional_truce = {
 			  country = c:GBR
-			  years = 10 
-		    } 
-		    create_bidirectional_truce = {
-			  country = c:RUS
-			  years = 10 
-		    } 
+			  months = 72
+		    }
             trigger_event = { 
                id = dev_events.42
                days = 5
