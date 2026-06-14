@@ -2853,11 +2853,29 @@ REPLACE_OR_CREATE:EGY = { # Egypt
 	flag_definition = {
 		coa = EGY_absolute_monarchy
 		subject_canton = EGY_absolute_monarchy
-		allow_overlord_canton = no
-		coa_with_overlord_canton = EGY_subject			
+		allow_overlord_canton = no			
 		priority = 20
 		trigger = { 
-			coa_def_absolute_monarchy_flag_trigger = yes
+			AND = {
+				exists = c:GBR
+				scope:actor ?= {
+					is_subject_of = c:GBR
+				}
+			} 
+		}
+	}
+	flag_definition = {
+		coa = EGY_absolute_monarchy
+		subject_canton = EGY_absolute_monarchy
+		allow_overlord_canton = no			
+		priority = 20
+		trigger = { 
+			AND = {
+				exists = c:TUR
+				scope:actor ?= {
+					is_subject_of = c:TUR
+				}
+			} 
 		}
 	}
 	flag_definition = {

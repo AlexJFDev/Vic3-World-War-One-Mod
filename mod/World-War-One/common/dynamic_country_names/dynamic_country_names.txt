@@ -959,14 +959,13 @@ REPLACE_OR_CREATE:EGY = {
 		adjective = dyn_c_kingdom_egypt_adj
 
 		is_main_tag_only = yes
-		priority = 1000
+		priority = 2000
 
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
 				country_has_monarchy_law = yes
-				has_variable = sultanate_of_egypt
-				has_variable = kingdom_of_egypt
+				is_subject = no
 			}
 		}
 	}	

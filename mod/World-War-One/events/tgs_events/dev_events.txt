@@ -5953,3 +5953,40 @@ dev_events.127 = {
         }
     }
 }
+
+dev_events.128 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        trigger = { is_player = no }
+        scope:world_war_two_diplo_play = {
+            add_target_backers = {
+                c:EGY
+            } 
+		}
+    }
+}

@@ -374,11 +374,62 @@ egypt_events.6 = { #Egyptian Revolution part 2
 
     trigger = {}
 
-    option = { #Pretend to grant Egypt independance
+    option = { #Partial Egyptian independance
         name = egypt_events.6.a
         default_option = yes
+        remove_diplomatic_pact = {
+			country = c:EGY
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:EGY
+			type = dominion
+		}
+        remove_diplomatic_pact = {
+			country = c:EGY
+			type = puppet
+		}
+	    create_treaty = {
+		   name = treaty_name_egyptian_independance
+		   first_country = c:GBR
+		   second_country = c:EGY
+
+		   is_draft = no
+		   binding_period = { years = 17 }
+
+		    articles_to_create = {
+			    {
+				  article = military_access
+				  source_country = c:EGY
+				  target_country = c:GBR
+			    }
+                {
+				  article = guarantee_independence
+				  source_country = c:GBR
+				  target_country = c:EGY
+			    }
+                { 
+				  article = trade_privilege
+				  source_country = c:EGY
+				  target_country = c:GBR
+			    }
+			    {
+				  article = foreign_investment_rights
+				  source_country = c:EGY
+				  target_country = c:GBR
+			    }
+                {
+				  article = host_power_bloc_embassy
+				  source_country = c:EGY
+				  target_country = c:GBR
+			    }
+		    }
+	    }
         c:EGY = {
-            set_variable = kingdom_of_egypt
+            trigger_event = {
+                id = dev_events.104
+                days = 5
+            }
         }
         ai_chance = {
             base = 1
@@ -391,6 +442,34 @@ egypt_events.6 = { #Egyptian Revolution part 2
 			country = c:EGY
 			type = protectorate
 		}
+        remove_diplomatic_pact = {
+			country = c:EGY
+			type = dominion
+		}
+        remove_diplomatic_pact = {
+			country = c:EGY
+			type = puppet
+		}
+        c:EGY = {
+            trigger_event = {
+                id = dev_events.104
+                days = 5
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Nothing changes
+        name = egypt_events.6.c
+        c:EGY = {
+            add_modifier = {
+              name = oppresive_overlord
+              years = 5
+              is_decaying = yes
+            }
+        }
         ai_chance = {
             base = 0
         }

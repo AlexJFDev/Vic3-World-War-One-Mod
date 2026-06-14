@@ -311,7 +311,6 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
             }  
             add_target_backers = {
                 c:BIC
-                c:EGY
                 c:CAN
             } 
             add_war_goal = {
@@ -337,6 +336,12 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
                 id = dev_events.72
                 days = 5
             }
+        c:EGY = {
+            trigger_event = {
+                id = dev_events.128
+                days = 5
+            }
+        }
         set_variable = axis_participant
         ai_chance = {
             base = 10
