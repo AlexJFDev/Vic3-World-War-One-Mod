@@ -564,14 +564,18 @@ entente_peace_deal.1 = {
             }
 		}
 		c:GBR = {
-		create_diplomatic_pact = {
-			country = c:NAM
-			type = colony
-		}	
-        create_diplomatic_pact = {
-			country = c:TAN
-			type = colony
-		}	
+		    create_diplomatic_pact = {
+			   country = c:NAM
+			   type = colony
+		    }	
+            create_diplomatic_pact = {
+			  country = c:TAN
+			  type = colony
+		    }	
+			trigger_event = {
+               id = egypt_events.3
+               days = 30
+            }
 		}
 		c:TOG = {
 			remove_primary_culture = cu:german
