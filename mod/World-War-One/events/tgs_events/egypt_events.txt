@@ -92,6 +92,7 @@ egypt_events.2 = { #Abbas deposition part 2
                ambitious
 	        }
         }
+        set_variable = sultanate_of_egypt
         ai_chance = {
             base = 1
         }
@@ -242,7 +243,9 @@ egypt_events.6 = { #Egyptian Revolution part 2
     option = { #Pretend to grant Egypt independance
         name = egypt_events.6.a
         default_option = yes
-        
+        c:EGY = {
+            set_variable = kingdom_of_egypt
+        }
         ai_chance = {
             base = 1
         }

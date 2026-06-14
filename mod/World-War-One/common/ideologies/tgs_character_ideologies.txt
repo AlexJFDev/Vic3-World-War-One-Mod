@@ -1333,3 +1333,471 @@ ideology_coronelist = {
 		}
 	}
 }
+
+ideology_islamic_modernist = {
+
+	character_ideology = yes
+
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_nihilist.dds"
+
+    lawgroup_distribution_of_power = {
+		law_autocracy = strongly_disapprove
+		law_oligarchy = strongly_disapprove
+		law_technocracy = approve
+		law_landed_voting = disapprove
+		law_wealth_voting = neutral
+		law_census_voting = approve
+		law_universal_suffrage = strongly_approve
+		law_single_party_state = neutral
+		law_anarchy = neutral
+	}    
+
+	lawgroup_church_and_state = {
+		law_state_religion = neutral
+		law_freedom_of_conscience = strongly_approve
+		law_total_separation = disapprove
+		law_state_atheism = strongly_disapprove
+	}
+
+	lawgroup_education_system = {
+        law_public_schools = strongly_approve
+		law_private_schools = disapprove
+		law_religious_schools = approve
+		law_no_schools = strongly_disapprove
+	}
+
+	lawgroup_childrens_rights = {
+		law_child_labor_allowed = strongly_disapprove
+		law_restricted_child_labor = approve
+		law_compulsory_primary_school = strongly_approve
+	}
+    
+    lawgroup_rights_of_women = {
+		law_no_womens_rights = strongly_disapprove
+		law_women_own_property = neutral
+		law_women_in_the_workplace = approve
+		law_womens_suffrage = strongly_approve
+	}
+
+	lawgroup_free_speech = {
+		law_outlawed_dissent = strongly_disapprove
+		law_censorship = disapprove
+		law_right_of_assembly = approve
+		law_protected_speech = strongly_approve
+	}
+
+	country_trigger = {
+		OR = {
+			country_has_state_religion = rel:sunni
+			country_has_state_religion = rel:shiite
+			country_has_state_religion = rel:ibadi
+		}
+	}
+
+	interest_group_leader_trigger = {
+		ideology_islamic_modernist_valid_trigger = yes
+	}
+    
+	non_interest_group_leader_trigger = {
+		interest_group ?= {
+			ideology_islamic_modernist_valid_trigger = yes
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = {
+			add = 100
+			desc = "base_value"
+		}
+		# More likely if people are angry
+		add = {
+			value = owner.radical_fraction
+			multiply = 100
+			desc = "COUNTRY_RADICALS"
+		}
+		# More likely if issues are relevant
+		if = {
+			limit = {
+				owner.ideology_radical_disfavoured_laws > 0
+			}
+			add = {
+				value = owner.ideology_radical_disfavoured_laws
+				multiply = 9
+				desc = "DISFAVORED_LAWS"
+			}
+		}
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner.ideology_radical_favoured_laws > 0
+			}
+			subtract = {
+				value = owner.ideology_radical_favoured_laws
+				multiply = 9
+				desc = "FAVORED_LAWS"
+			}
+		}
+		# Labour Association Laws
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						has_technology_researched = socialism
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner = {
+						has_law_or_variant = law_type:law_combination_acts
+					}
+				}
+				add = {
+					value = 50
+					desc = "COMBINATION_ACTS_LAW"
+				}
+			}
+			else_if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner = {
+						OR = {
+							has_law_or_variant = law_type:law_guild_system
+							has_law_or_variant = law_type:law_anti_strike_laws
+						}
+					}
+				}
+				add = {
+					value = 25
+					desc = "GUILDS_OR_ANTI_STRIKE_LAW"
+				}
+			}
+			else_if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner = {
+						has_law_or_variant = law_type:law_right_to_associate
+					}
+				}
+				add = {
+					value = -25
+					desc = "RIGHT_TO_ASSOCIATE_LAW"
+				}
+			}
+			else_if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner = {
+						has_law_or_variant = law_type:law_corporatized_unions
+					}
+				}
+				add = {
+					value = -50
+					desc = "CORPORATIZED_UNIONS_LAW"
+				}
+			}
+		}
+		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
+		if = {
+			limit = {
+				has_variable = dreyfusard_victory
+			}
+			add = {
+				value = 50
+				desc = "DREYFUSARD_VICTORY"
+			}
+		}
+		# liberal and/or radical leaders have a higher spawn chance if you win the Two Spains as the liberals.
+		if = {
+			limit = {
+				has_variable = spa_two_spains_liberal_victory
+			}
+			add = {
+				value = 50
+				desc = "SPA_LIBERAL_VICTORY"
+			}
+		}
+		# liberal and/or radical leaders have a higher spawn chance if you succeed in Portugal's Second Liberalism.
+		if = {
+			limit = {
+				has_variable = por_second_liberalism_victory
+			}
+			add = {
+				value = 50
+				desc = "POR_LIBERAL_VICTORY"
+			}
+		}
+		# liberal and/or radical leaders have a higher spawn chance if the Hungarian Revolution was successful.
+		if = {
+			limit = {
+				has_variable = hungarian_revolution_increased_liberalism
+			}
+			add = {
+				value = 50
+				desc = "HUNGARIAN_REVOLUTION"
+			}
+		}
+		# Pedro JE victory
+		if = {
+			limit = {
+				owner = {
+					has_variable = brz_enduring_empire
+				}
+			}
+			add = {
+				value = -25
+				desc = "BRZ_ENDURING_EMPIRE"
+			}
+		}
+
+		# 1848
+		if = {
+			limit = {
+				owner = {
+					has_global_variable = peoples_springtime_happening
+					capital = {
+					 	OR = {
+							is_in_geographic_region = geographic_region_north_germany_old
+							is_in_geographic_region = geographic_region_south_germany_old
+							is_in_geographic_region = geographic_region_england_old
+							is_in_geographic_region = geographic_region_iberia_old
+							is_in_geographic_region = geographic_region_france_old
+							is_in_geographic_region = geographic_region_occitania_old
+							is_in_geographic_region = geographic_region_rhine_old
+							is_in_geographic_region = geographic_region_italy_old
+							is_in_geographic_region = geographic_region_poland_old
+							is_in_geographic_region = geographic_region_danubia_old
+							is_in_geographic_region = geographic_region_balkans_old
+							is_in_geographic_region = geographic_region_baltic_old
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+				desc = "SPRINGTIME_OF_THE_PEOPLES_UNDERWAY"
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = post_revolutionary_fervor }
+			}
+			multiply = {
+				value = 1.5
+				desc = "SPRINGTIME_OF_THE_PEOPLES_RADICAL_VICTORY"
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = counter_revolutionary_fervor }
+			}
+			multiply = {
+				value = 0.5
+				desc = "SPRINGTIME_OF_THE_PEOPLES_CONSERVATIVE_VICTORY"
+			}
+		}
+		# Becomes less prevalent after socialism is researched
+		if = {
+			limit = {
+				owner = {
+					has_technology_researched = socialism
+				}
+			}
+			if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+				}
+				multiply = {
+					value = 0.05
+					desc = "SOCIALISM_RESEARCHED"
+				}
+			}
+			else = {
+				multiply = {
+					multiply = 0.5
+					desc = "SOCIALISM_RESEARCHED"
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = {
+				value = 0.1
+				desc = "CHOSE_A_DIFFERENT_PATH"
+			}
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		# More likely if people are angry
+		add = {
+			value = owner.radical_fraction
+			multiply = 100
+		}
+		# More likely if issues are relevant
+		if = {
+			limit = {
+				owner.ideology_radical_disfavoured_laws > 0
+			}
+			add = {
+				value = owner.ideology_radical_disfavoured_laws
+				multiply = 9
+			}
+		}
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner.ideology_radical_favoured_laws > 0
+			}
+			subtract = {
+				value = owner.ideology_radical_favoured_laws
+				multiply = 9
+			}
+		}
+		# liberal and/or radical leaders have a higher spawn chance if you win the Two Spains as the liberals and choose to have woke commanders.
+		if = {
+			limit = {
+				OR = {
+					has_role_of_type = general
+					has_role_of_type = admiral
+				}
+				has_variable = spa_liberal_military_var
+			}
+			add = 50
+		}
+		# Labour Association Laws
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						has_technology_researched = socialism
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner = {
+						has_law_or_variant = law_type:law_combination_acts
+					}
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner = {
+						OR = {
+							has_law_or_variant = law_type:law_guild_system
+							has_law_or_variant = law_type:law_anti_strike_laws
+						}
+					}
+				}
+				add = 25
+			}
+			else_if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner = {
+						has_law_or_variant = law_type:law_right_to_associate
+					}
+				}
+				add = -25
+			}
+			else_if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner = {
+						has_law_or_variant = law_type:law_corporatized_unions
+					}
+				}
+				add = -50
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_global_variable = peoples_springtime_happening
+					capital = {
+					 	OR = {
+							is_in_geographic_region = geographic_region_north_germany_old
+							is_in_geographic_region = geographic_region_south_germany_old
+							is_in_geographic_region = geographic_region_england_old
+							is_in_geographic_region = geographic_region_iberia_old
+							is_in_geographic_region = geographic_region_france_old
+							is_in_geographic_region = geographic_region_occitania_old
+							is_in_geographic_region = geographic_region_rhine_old
+							is_in_geographic_region = geographic_region_italy_old
+							is_in_geographic_region = geographic_region_poland_old
+							is_in_geographic_region = geographic_region_danubia_old
+							is_in_geographic_region = geographic_region_balkans_old
+							is_in_geographic_region = geographic_region_baltic_old
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = post_revolutionary_fervor }
+			}
+			multiply = { value = 1.5 }
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = counter_revolutionary_fervor }
+			}
+			multiply = { value = 0.5 }
+		}
+		# Becomes less prevalent after socialism is researched
+		if = {
+			limit = {
+				owner = {
+					has_technology_researched = socialism
+				}
+			}
+			if = {
+				limit = {
+					interest_group ?= {
+						is_interest_group_type = ig_trade_unions
+					}
+				}
+				multiply = 0.05
+			}
+			else = {
+				multiply = 0.5
+			}
+		}
+		if = {
+			limit = {
+				interest_group ?= {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}
+}
