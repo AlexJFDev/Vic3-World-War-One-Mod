@@ -1109,6 +1109,12 @@ great_war_initiation_events.13 = {
     option = { # Leave France alone
         name = great_war_initiation_events.13.b
         trigger = { NOT = { has_law = law_type:law_military_oversight } }
+        c:FRA = {
+            trigger_event = { 
+                id = great_war_initiation_events.27
+                days = 30
+            }
+        }
         ai_chance = {
             base = 0
         }
@@ -1116,6 +1122,12 @@ great_war_initiation_events.13 = {
     option = { # Leave France alone
         name = great_war_initiation_events.13.b
         trigger = { has_law = law_type:law_military_oversight }
+        c:FRA = {
+            trigger_event = { 
+                id = great_war_initiation_events.27
+                days = 30
+            }
+        }
         ai_chance = {
             base = 0
         }
@@ -1239,7 +1251,6 @@ great_war_initiation_events.14 = {
         }
     }
 }
-
 
 # The invasion of Belgium, Britain choosing whether or not to protect Belgium
 great_war_initiation_events.15 = {
@@ -1629,6 +1640,193 @@ great_war_initiation_events.26 = {
 				    remove_building = building_barrack
 			    }
 		    }
+        }
+    }
+}
+
+# France helps Russia later
+great_war_initiation_events.27 = {
+    type = country_event
+    
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/trenches.dds"
+    }
+
+    title = great_war_initiation_events.27.t
+    desc = great_war_initiation_events.27.d
+    flavor = great_war_initiation_events.27.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
+    option = { # Support Russia
+        name = great_war_initiation_events.27.a
+        c:GER = {
+            trigger_event = {
+                id = great_war_initiation_events.28
+                days = 5
+            }
+        }
+        c:ITA = {
+            trigger_event = { 
+                id = great_war_initiation_events.12 
+                days = 5
+            }
+        }
+        c:FRA = {
+            trigger_event = {
+              id = plague.1
+              years = 3
+            }
+        }
+        scope:world_war_one_diplo_play = {
+			add_target_backers = {
+				c:FRA
+			}
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_ILE_DE_FRANCE.region_state:FRA
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_HESSE.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_AUSTRIA.region_state:AUS
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = humiliation
+                    target_country = c:GER
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = humiliation
+                    target_country = c:FRA
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = humiliation
+                    target_country = c:AUS
+                }
+		}
+        c:FRA = { set_variable = entente_participant }
+        c:FRA = {
+            trigger_event = {
+                id = ww1_war_policies_events.2
+                days = 15
+            }
+            trigger_event = {
+                id = ww1_war_policies_events.4
+                days = 15
+            }
+        }
+        c:GER = {
+		   create_diplomatic_pact = {
+			  country = c:FRA
+			  type = embargo
+		    }
+        }
+        c:AUS = {
+		   create_diplomatic_pact = {
+			  country = c:FRA
+			  type = embargo
+		    }
+        }
+        c:FRA = {
+		   create_diplomatic_pact = {
+			  country = c:GER
+			  type = embargo
+		    }
+            create_diplomatic_pact = {
+			  country = c:AUS
+			  type = embargo
+		    }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { # Pursue diplomacy
+        name = great_war_initiation_events.27.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+# Botched Schlieffen Plan
+great_war_initiation_events.28 = {
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/trenches.dds"
+    }
+
+    title = great_war_initiation_events.28.t
+    desc = great_war_initiation_events.28.d
+    flavor = great_war_initiation_events.28.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
+    option = { # Invade Belgium
+        name = great_war_initiation_events.28.a
+        set_global_variable = german_invasion_of_belgium
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+        c:GBR = {
+            trigger_event = { 
+                id = great_war_initiation_events.15
+                days = 5
+            }
+        }
+        scope:world_war_one_diplo_play = {
+            add_target_backers = { c:BEL }
+            add_target_backers = { c:LUX }
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:BEL
+            }
+        }
+        c:BEL = { set_variable = entente_participant }
+        c:LUX = { set_variable = entente_participant }
+    }
+
+    option = { # Do nothing
+        name = great_war_initiation_events.28.b
+        ai_chance = {
+            base = 0
         }
     }
 }

@@ -26,3 +26,34 @@
 
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
+
+je_true_france = {
+    icon = "gfx/interface/icons/event_icons/fra_icon.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:FFR
+        THIS = c:FFR
+    }
+    
+    possible = {
+        has_technology_researched = standing_army
+    }
+
+    immediate = {}
+
+    modifiers_while_active = {
+		true_france
+	}
+
+    complete = {
+		is_at_war = no
+        is_subject = no
+    }
+
+    fail = {
+        is_subject = yes
+    }
+
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

@@ -813,6 +813,26 @@ japan_events.20 = {#Invasion of China response
 			save_scope_as = sino_japan_war_diplo_play
 
             add_war_goal = {
+		        holder = c:JAP
+		        type = humiliation
+		        target_country = c:CHI
+            }
+
+            add_war_goal = {
+				holder = c:JAP
+				target_country = c:CHI
+				type = enforce_treaty_article
+				article = {
+					article = money_transfer
+					source_country = c:CHI
+					target_country = c:JAP
+					inputs = {
+						{ quantity = 100000 }
+					}
+				}
+			}
+
+            add_war_goal = {
 		        holder = c:CHI
 		        type = humiliation
 		        target_country = c:JAP

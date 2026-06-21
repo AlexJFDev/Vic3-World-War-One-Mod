@@ -34,6 +34,7 @@ axis_peace_deal.1 = {
             on_created = { 
              activate_law = law_type:law_presidential_republic
              activate_law = law_type:law_oligarchy
+             activate_law = law_type:law_professional_army
              activate_law = law_type:law_military_oversight
              activate_law = law_type:law_right_of_assembly
              activate_law = law_type:law_interventionism
@@ -41,27 +42,11 @@ axis_peace_deal.1 = {
         }
         c:FRA = {
             remove_diplomatic_pact = {
-			  country = c:WAF
-			  type = colony
-		    }
-            remove_diplomatic_pact = {
-			  country = c:TOG
-			  type = colony
-		    }
-            remove_diplomatic_pact = {
 			  country = c:EQA
 			  type = colony
 		    }
             remove_diplomatic_pact = {
 			  country = c:CMR
-			  type = colony
-		    }
-            remove_diplomatic_pact = {
-			  country = c:MAD
-			  type = colony
-		    }
-            remove_diplomatic_pact = {
-			  country = c:ICH
 			  type = colony
 		    }
         }
@@ -116,7 +101,7 @@ axis_peace_deal.1 = {
                 who = c:FFR
             }   
             add_war_goal = {
-                holder = c:GER
+                holder = c:FRA
                 type = annex_country
 				target_country = c:FFR
             }
@@ -140,53 +125,17 @@ axis_peace_deal.1 = {
               days = 5
             }
             trigger_event = {
-              id = dev_events.17
-              days = 5
-            }
-            trigger_event = {
-              id = dev_events.17
-              days = 5
-            }
-            trigger_event = {
               id = dev_events.117
-              days = 5
+              days = 15
             }
-            create_diplomatic_pact = {
-			  country = c:WAF
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:TOG
-			  type = colony
-		    }
             create_diplomatic_pact = {
 			  country = c:EQA
-			  type = colony
+			  type = puppet
 		    }
             create_diplomatic_pact = {
 			  country = c:CMR
-			  type = colony
+			  type = puppet
 		    }
-            create_diplomatic_pact = {
-			  country = c:MAD
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:ICH
-			  type = colony
-		    }
-        }
-        c:WAF = {
-            trigger_event = {
-              id = dev_events.83
-              days = 5
-            }
-        }
-        c:TOG = {
-            trigger_event = {
-              id = dev_events.83
-              days = 5
-            }
         }
         c:EQA = {
             trigger_event = {
@@ -195,18 +144,6 @@ axis_peace_deal.1 = {
             }
         }
         c:CMR = {
-            trigger_event = {
-              id = dev_events.83
-              days = 5
-            }
-        }
-        c:MAD = {
-            trigger_event = {
-              id = dev_events.83
-              days = 5
-            }
-        }
-        c:ICH = {
             trigger_event = {
               id = dev_events.83
               days = 5
@@ -259,7 +196,17 @@ axis_peace_deal.1 = {
 			      type = colony
 		        }
             }
-
+        }
+        if = {
+            limit = {
+                NOT = {
+                    c:JAP = { has_variable = allies_participant }
+                }
+            }
+            trigger_event = {
+                id = axis_peace_deal.5
+                days = 5
+            }
         }
     }
 }
@@ -396,5 +343,53 @@ axis_peace_deal.4 = {
 			  type = protectorate
 		    }	
         }
+    }
+}
+
+axis_peace_deal.5 = {
+    type = country_event
+
+    title = axis_peace_deal.5.t
+    desc = axis_peace_deal.5.d
+    flavor = axis_peace_deal.5.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    immediate = {}
+
+    event_image = { 
+		texture = "gfx/event_pictures/japan_army_2.dds"
+	}
+
+    trigger = {}
+
+    option = {
+        name = axis_peace_deal.5.a
+        default_option = yes
+        c:FRA = {
+		    remove_diplomatic_pact = {
+			  country = c:ICH
+			  type = colony
+		    }	
+        }
+        c:JAP = {
+		    create_diplomatic_pact = {
+			  country = c:ICH
+			  type = puppet
+		    }	
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = axis_peace_deal.5.b
+        ai_chance = {
+		  base = 0
+	    }
     }
 }
