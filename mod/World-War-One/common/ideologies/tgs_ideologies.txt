@@ -1801,3 +1801,60 @@ ideology_islamic_modernist = {
 		}
 	}
 }
+
+ideology_american_constitutionalism = {
+	icon = "gfx/interface/icons/ideology_icons/republican_paternalistic.dds"
+
+	lawgroup_governance_principles = {
+		law_monarchy = strongly_disapprove
+		law_theocracy = strongly_disapprove
+		law_council_republic = strongly_disapprove
+		law_parliamentary_republic = neutral
+		law_corporate_state = disapprove
+		law_social_monarchy = strongly_disapprove
+		law_presidential_republic = strongly_approve
+	}
+
+	lawgroup_distribution_of_power = {
+		law_universal_suffrage = strongly_approve
+		law_census_voting = approve
+		law_wealth_voting = neutral
+		law_landed_voting = disapprove
+		law_anarchy = strongly_disapprove
+		law_oligarchy = strongly_disapprove
+		law_autocracy = strongly_disapprove
+		law_single_party_state = disapprove
+		law_technocracy = strongly_disapprove
+	}
+
+	lawgroup_centralization = {
+        law_confederated = disapprove
+        law_federated = strongly_approve
+        law_devolved = disapprove
+        law_unitary = strongly_disapprove
+	}
+
+    lawgroup_free_speech = {
+		law_outlawed_dissent = strongly_disapprove
+		law_censorship = disapprove
+		law_right_of_assembly = approve
+		law_protected_speech = strongly_approve
+	}
+
+	lawgroup_foreign_policy = {
+       law_true_neutrality = disapprove
+	   law_armed_neutrality = approve
+	   law_limited_interventionism = strongly_approve
+	   law_expansionism = disapprove
+	   law_imperialism = strongly_disapprove
+	}
+
+	lawgroup_citizenship = {
+		law_subjecthood = strongly_disapprove
+		law_ethnostate = disapprove
+		law_national_supremacy = neutral
+		law_racial_segregation = strongly_approve
+		law_cultural_exclusion = disapprove
+		law_multicultural = strongly_disapprove
+	}
+}

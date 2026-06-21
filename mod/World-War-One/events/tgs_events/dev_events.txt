@@ -2327,6 +2327,22 @@ dev_events.49 = {
             years = 20
             is_decaying = yes
 		}
+        set_next_election_date = 1916.11.7
+        active_law:lawgroup_internal_security ?= {
+			add_amendment = {
+				type = amendment_american_second_amendment
+				sponsor = ig_rural_folk
+				cooldown = 900
+			}
+		}
+        ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary
+			add_ideology = ideology_american_constitutionalism
+		}
+        ig:ig_landowners ?= {
+			remove_ideology = ideology_republican_paternalistic
+			add_ideology = ideology_american_constitutionalism
+		}
     }
 
     option = {
@@ -2337,6 +2353,22 @@ dev_events.49 = {
 			name = devout_intelligentsia_buff
             years = 20
             is_decaying = yes
+		}
+        set_next_election_date = 1916.11.7
+        active_law:lawgroup_internal_security ?= {
+			add_amendment = {
+				type = amendment_american_second_amendment
+				sponsor = ig_rural_folk
+				cooldown = 900
+			}
+		}
+        ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary
+			add_ideology = ideology_american_constitutionalism
+		}
+        ig:ig_landowners ?= {
+			remove_ideology = ideology_republican_paternalistic
+			add_ideology = ideology_american_constitutionalism
 		}
     }
 }

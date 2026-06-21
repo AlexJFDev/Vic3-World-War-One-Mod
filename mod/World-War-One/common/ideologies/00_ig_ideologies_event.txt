@@ -7,7 +7,8 @@
 		law_no_womens_rights = approve
 		law_women_own_property = neutral
 		law_women_in_the_workplace = neutral
-		law_womens_suffrage = neutral
+		law_womens_suffrage = disapprove
+		law_reproductive_rights = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -24,7 +25,8 @@ REPLACE_OR_CREATE:ideology_feminist_ig = {
 	priority = 250 # Overrides other non-leader ideologies with a lower prio
 	
 	lawgroup_rights_of_women = {
-		law_womens_suffrage = strongly_approve
+		law_reproductive_rights = strongly_approve
+		law_womens_suffrage = approve
 		law_women_in_the_workplace = approve
 		law_women_own_property = neutral
 		law_no_womens_rights = strongly_disapprove
@@ -106,6 +108,7 @@ REPLACE_OR_CREATE:ideology_liberal_modern = {
 		law_women_own_property = approve
 		law_women_in_the_workplace = approve
 		law_womens_suffrage = approve
+		law_reproductive_rights = strongly_approve
 	}
 }
 
@@ -136,8 +139,9 @@ REPLACE_OR_CREATE:ideology_egalitarian_modern = {
 	
 	lawgroup_rights_of_women = {
 		law_no_womens_rights = disapprove
-		law_women_own_property = approve
-		law_women_in_the_workplace = strongly_approve
-		law_womens_suffrage = strongly_approve
+		law_women_own_property = neutral
+		law_women_in_the_workplace = approve
+		law_womens_suffrage = approve
+		law_reproductive_rights = strongly_approve
 	}
 }
