@@ -1988,6 +1988,27 @@ dev_events.38 = {
         create_character = {
 			template = sib_olga_alexandrovna_template
 		}
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_aircraft_factory
+				level = 5
+            }	
+            create_building = {
+				building = building_automotive_industry
+				level = 5
+            }
+            create_building = {
+				building = building_munition_plant
+				level = 10
+            }	
+            create_building = {
+				building = building_arms_industry
+				level = 10
+            }			
+		}
     }
 }
 
@@ -5015,6 +5036,10 @@ dev_events.104 = {
             years = 10
             is_decaying = yes
         }
+        trigger_event = {
+			id = dev_events.26
+			days = 60
+		}
     }
 
     option = {
@@ -5026,6 +5051,10 @@ dev_events.104 = {
             years = 2
             is_decaying = yes
         }
+        trigger_event = {
+			id = dev_events.26
+			days = 60
+		}
     }
 }
 
@@ -5875,6 +5904,100 @@ dev_events.124 = {
     option = {
         name = dev_events.6.a
         default_option = yes
+        trigger = { is_player = no }
+        create_military_formation = {
+			name = Baltiyskiy_Flot
+			type = fleet
+			hq_region = sr:region_russia
+			ship = {
+				type = ship_type:ship_type_dreadnought
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_pre_dreadnought
+				count = 4
+			}
+			ship = {
+				type = ship_type:ship_type_armored_cruiser
+				count = 6
+			}
+			ship = {
+				type = ship_type:ship_type_protected_cruiser
+				count = 6
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat_destroyer
+				count = 3
+			}
+			ship = {
+				type = ship_type:ship_type_torpedo_boat
+				count = 38
+			}
+			ship = {
+				type = ship_type:ship_type_destroyer
+				count = 82
+			}
+			ship = {
+				type = ship_type:ship_type_submarine
+				count = 22
+			}
+			ship = {
+				type = ship_type:ship_type_troop_ship
+				count = 20
+			}
+		}
+        create_military_formation = {
+			name = Red_Partisans
+			type = army
+			hq_region = sr:region_russia
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_MOSCOW
+				count = 100
+			}
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_INGRIA
+				count = 100
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TVER
+				count = 100
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_shrapnel_artillery
+				state_region = s:STATE_ORYOL
+				count = 50
+			}
+		}
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_aircraft_factory
+				level = 15
+            }	
+            create_building = {
+				building = building_automotive_industry
+				level = 30
+            }
+            create_building = {
+				building = building_munition_plant
+				level = 30
+            }	
+            create_building = {
+				building = building_arms_industry
+				level = 30
+            }			
+		}
+    }
+
+    option = {
+        name = dev_events.6.a
+        default_option = yes
+        trigger = { is_player = yes }
         create_military_formation = {
 			name = Baltiyskiy_Flot
 			type = fleet
@@ -6099,6 +6222,179 @@ dev_events.128 = {
             add_target_backers = {
                 c:EGY
             } 
+		}
+    }
+}
+
+dev_events.129 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = no }
+        default_option = yes
+        c:SHN = {
+            annex = ROOT
+        }
+    }
+}
+
+dev_events.130 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = no }
+        default_option = yes
+        c:QIN = {
+            annex = ROOT
+        }
+    }
+}
+
+dev_events.131 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = no }
+        default_option = yes
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 4
+        }
+    }
+}
+
+dev_events.132 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { 
+            is_player = no
+            c:RUS = { is_player = no } 
+        }
+        default_option = yes
+        c:RUS = {
+            annex = ROOT
+        }
+    }
+}
+
+dev_events.133 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = money_buff_1
+            years = 10
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 10
+            is_decaying = yes
+        }
+        trigger_event = {
+			id = dev_events.26
+			days = 60
+		}
+        trigger_event = {
+			id = dev_events.26
+			days = 120
+		}
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = money_buff_1
+            years = 2
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = revolution_stabilization_buff_5
+            years = 10
+            is_decaying = yes
+        }
+        trigger_event = {
+			id = dev_events.26
+			days = 60
+		}
+        trigger_event = {
+			id = dev_events.26
+			days = 120
 		}
     }
 }

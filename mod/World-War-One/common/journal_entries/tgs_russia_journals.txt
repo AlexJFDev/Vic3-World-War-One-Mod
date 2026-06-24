@@ -157,6 +157,7 @@ je_russian_civil_war_sov = {
     
     possible = {
         has_global_variable = russian_civil_war
+        is_diplomatic_play_committed_participant = yes
         is_at_war = yes
     }
 
@@ -164,7 +165,7 @@ je_russian_civil_war_sov = {
 
     complete = { 
         is_at_war = no
-        owns_entire_state_region = STATE_CHELYABINSK
+        is_diplomatic_play_committed_participant = no
     }
 
     on_complete = {
@@ -190,14 +191,15 @@ je_russian_civil_war_rus = {
     
     possible = {
         has_global_variable = russian_civil_war
+        is_diplomatic_play_committed_participant = yes
         is_at_war = yes
     }
 
     modifiers_while_active = { russian_civil_war_rus }
 
     complete = { 
+        is_diplomatic_play_committed_participant = no
         is_at_war = no
-        owns_entire_state_region = STATE_MOSCOW
     }
 
     on_complete = {

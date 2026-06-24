@@ -64,11 +64,9 @@ great_war_initiation_events.1 = {
         owner.ruler ?= {
 			set_character_immortal = no
 		}
-
         owner.heir ?= {
 			kill_character = yes
 		}
-
         create_character = {
             first_name = Charles
             last_name = von_Habsburg
@@ -88,7 +86,6 @@ great_war_initiation_events.1 = {
                 }
             }
         }
-
         every_country = {
             limit = {
                 is_player = yes
@@ -104,6 +101,10 @@ great_war_initiation_events.1 = {
     option = {
         name = great_war_initiation_events.1.a
         default_option = yes
+        trigger_event = {
+            id = dev_events.131
+            days = 5
+        }
     }
 }
 

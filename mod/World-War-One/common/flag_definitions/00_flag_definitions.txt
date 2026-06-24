@@ -1886,6 +1886,11 @@ REPLACE_OR_CREATE:CHE = { # Cherokee
 
 REPLACE_OR_CREATE:CHI = { # China
     flag_definition = {
+		coa = CHI
+		allow_overlord_canton = no
+		priority = 1
+	}
+    flag_definition = {
 		coa = CHI_republic
 		subject_canton = CHI_republic
 		allow_overlord_canton = no
@@ -1922,20 +1927,6 @@ REPLACE_OR_CREATE:CHI = { # China
 			scope:actor ?= {
 				country_has_primary_culture = cu:han
 				has_law = law_type:law_monarchy
-			}
-		}
-	}
-	flag_definition = {
-		coa = CHI_absolute_monarchy
-		subject_canton = CHI_absolute_monarchy
-		coa_with_overlord_canton = CHI_subject
-		allow_overlord_canton = no				
-		priority = 20
-		trigger = { 
-			scope:actor ?= {
-				has_law = law_type:law_monarchy
-				country_has_primary_culture = cu:manchu
-				NOT = { country_has_primary_culture = cu:han }
 			}
 		}
 	}
@@ -10230,52 +10221,49 @@ REPLACE_OR_CREATE:UBD = { # United Baltic
 REPLACE_OR_CREATE:BEI = { # Beiyang Government
 	flag_definition = {
 		coa = CHI
-		subject_canton = CHI
-		coa_with_overlord_canton = CHI_subject
-		allow_overlord_canton = yes		
+		allow_overlord_canton = no
 		priority = 1
 	}
-	flag_definition = {
-		coa = CHI_absolute_monarchy
-		subject_canton = CHI_absolute_monarchy
-		coa_with_overlord_canton = CHI_subject
-		allow_overlord_canton = yes				
-		priority = 20
+    flag_definition = {
+		coa = CHI_republic
+		subject_canton = CHI_republic
+		allow_overlord_canton = no
+		priority = 10
 		trigger = { 
-			scope:actor = {
-				country_has_primary_culture = cu:manchu
+			game_date < 1926.1.1
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
 			}
-			coa_def_monarchy_flag_trigger = yes
 		}
 	}	
+	flag_definition = {
+		coa = CCN_republic
+		subject_canton = CCN_republic
+		priority = 100
+		trigger = { 
+			game_date > 1926.1.1
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+			}
+		}
+	}
 	flag_definition = {
 		coa = CHI_han_empire
 		coa_with_overlord_canton = CHI_han_empire
 		priority = 5
-		trigger = { 
+		trigger = {
 			scope:actor ?= {
-				NOT = { country_has_primary_culture = cu:manchu }
+				country_has_primary_culture = cu:han
 				has_law = law_type:law_monarchy
 			}
 		}
 	}
-	flag_definition = {
-		coa = CHI_republic
-		subject_canton = CHI_republic
-		allow_overlord_canton = yes
-		priority = 10
-		trigger = { 
-			coa_def_republic_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = BEI_dictatorship
-		subject_canton = BEI_dictatorship
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}	
 	flag_definition = {
 		coa = CHI_theocracy
 		subject_canton = CHI_theocracy
@@ -10291,7 +10279,7 @@ REPLACE_OR_CREATE:BEI = { # Beiyang Government
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
 		}
-	}		
+	}	
 }
 
 #Colonial flags
