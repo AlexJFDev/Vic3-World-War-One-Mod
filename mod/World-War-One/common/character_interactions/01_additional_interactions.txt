@@ -427,6 +427,7 @@ REPLACE_OR_CREATE:resign_from_office = {
 
 	possible = {
 		OR = {
+			government_legitimacy < 50
 			interest_group ?= {
 				ig_approval <= angry
 			}
