@@ -45,10 +45,6 @@ base_values = {
 
 	state_literacy_growth_add = 0.0005
 
-	# To balance for unincorporated states not paying taxes
-	state_unincorporated_starting_wages_mult = -0.20
-	building_unincorporated_subsistence_output_mult = -0.20
-
 	building_economy_of_scale_level_cap_add = 20
 
 	state_market_access_price_impact = 0.75
@@ -59,7 +55,7 @@ base_values = {
 	country_max_weekly_construction_progress_add = 10
 	country_ship_construction_progress_max_add = 0
 
-	military_formation_organization_gain_add = 0.5 # 200 days to get max organization
+	military_formation_organization_gain_add = 1.0 # 100 days to get max organization
 
 	state_urbanization_per_level_add = 100
 
@@ -262,6 +258,11 @@ unincorporated_state = {
 	building_group_bg_military_industry_construction_efficiency_add = -0.5
 	building_group_bg_light_industry_construction_efficiency_add = -0.3
 	building_group_bg_government_construction_efficiency_add = -0.3
+
+	# To balance for unincorporated states not paying taxes
+	building_minimum_wage_mult = -0.20
+	building_subsistence_output_mult = -0.20
+
 }
 
 treaty_port_state = {
@@ -456,7 +457,9 @@ prestige_goods_supply_army = {
 }
 
 prestige_goods_supply_navy = {
-	unit_morale_recovery_mult = 0.25
+	ship_hull_damage_mult = 0.1
+	ship_crew_damage_mult = 0.1
+	ship_armor_mult = 0.1
 }
 
 insurrectionary_ig = {
@@ -558,6 +561,7 @@ insufficient_urbanization = {
 	building_throughput_add = -0.05
 }
 
+# Excess BUR increases construction speed by +10% at 2x production to usage
 efficient_bureaucracy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_tax_capacity_mult = 0.5
@@ -1025,7 +1029,3 @@ successfully_met_foreign_imposition_legitimacy = {
 	country_legitimacy_base_add = 10
 }
 
-movement_suppressed_after_civil_war = {
-	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
-	political_movement_radicalism_add = -1
-}
