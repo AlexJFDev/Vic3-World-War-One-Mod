@@ -4436,7 +4436,7 @@ REPLACE_OR_CREATE:ITA = { # Italy
 	flag_definition = {
 		coa = ITA
 		subject_canton = ITA
-		priority = 15
+		priority = 1500
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
@@ -4448,16 +4448,6 @@ REPLACE_OR_CREATE:ITA = { # Italy
 		}
 	}
 	flag_definition = {
-		coa = ITA_papal
-		subject_canton = ITA_papal
-		priority = 15
-		
-		trigger = {
-			NOT = { exists = c:PAP } # Can't be Pope if the Pope is still in control of another country!
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
 		coa = ITA_republic
 		subject_canton = ITA_republic
 		priority = 10
@@ -4466,7 +4456,7 @@ REPLACE_OR_CREATE:ITA = { # Italy
 		}
 	}
 	flag_definition = {
-		coa = ITA_communist
+		coa = GBR_communist
 		priority = 1500
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
@@ -4478,9 +4468,16 @@ REPLACE_OR_CREATE:ITA = { # Italy
 		priority = 1500
 		trigger = { 
 			coa_def_dictatorship_flag_trigger = yes
-			coa_def_fascist_flag_trigger = yes
 		}
 	}	
+	flag_definition = {
+		coa = ITA_fascist
+		subject_canton = ITA_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
 }
 
 FIT = { # Italian Socialist Republic

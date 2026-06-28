@@ -84,6 +84,16 @@
 		}
 	}
 
+	c:ITA = {
+		create_political_lobby = {
+			type = lobby_anti_country  
+			target = c:AUS
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_armed_forces
+		}
+	}
+
 	c:AUS = {
 		create_political_lobby = {  
 			type = lobby_anti_country  

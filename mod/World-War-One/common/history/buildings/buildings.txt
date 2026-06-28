@@ -34479,11 +34479,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_egyptian_rail
+						country = c:EGY
 						levels = 1
-						region = STATE_EAST_ANGLIA
 					}
 				}
 				reserves = 1
@@ -34511,11 +34510,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_egyptian_rail
+						country = c:EGY
 						levels = 12
-						region = STATE_EAST_ANGLIA
 					}
 				}
 				reserves = 1
@@ -34937,11 +34935,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_egyptian_rail
+						country = c:EGY
 						levels = 1
-						region = STATE_EAST_ANGLIA
 					}
 				}
 				reserves = 1
@@ -34984,11 +34981,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_egyptian_rail
+						country = c:EGY
 						levels = 6
-						region = STATE_EAST_ANGLIA
 					}
 				}
 				reserves = 1
@@ -35091,11 +35087,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_egyptian_rail
+						country = c:EGY
 						levels = 1
-						region = STATE_EAST_ANGLIA
 					}
 				}
 				reserves = 1
@@ -35223,11 +35218,10 @@
 			create_building = {
 				building = building_railway
 				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
+					company = {
+						type = company_egyptian_rail
+						country = c:EGY
 						levels = 4
-						region = STATE_EAST_ANGLIA
 					}
 				}
 				reserves = 1
@@ -44219,6 +44213,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_industrial_port 
+				}
+			}
+			create_building = {
+				building = building_railway
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:FRA
+						levels = 1
+						region = STATE_PROVENCE
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_no_passenger_trains pm_steam_trains 
 				}
 			}
 			create_building = {
@@ -59447,7 +59456,7 @@
 						type = building_manor_house
 						country = c:ITA
 						levels = 32
-						region = STATE_SICILY
+						region = STATE_CALABRIA
 					}
 				}
 				reserves = 1
@@ -61372,11 +61381,10 @@
 			create_building = {
 				building = building_sulfur_mine
 				add_ownership = {
-					building = {
-						type = building_financial_district
+					company = {
+						type = company_anglo_sicilian_sulphur_company
 						country = c:ITA
 						levels = 120
-						region = STATE_LOMBARDY
 					}
 				}
 				reserves = 1
@@ -61448,7 +61456,7 @@
 					building = {
 						type = building_financial_district
 						country = c:ITA
-						levels = 35
+						levels = 56
 						region = STATE_LOMBARDY
 					}
 				}
