@@ -82,11 +82,11 @@
     }
 
     c:ITA ?= {
-        set_relations = { country = c:GBR value = 40 }
-        set_relations = { country = c:FRA value = 20 }
-        set_relations = { country = c:SWI value = 100 }
-        set_relations = { country = c:GER value = 30 }
-        set_relations = { country = c:AUS value = -50 }
+        set_relations = { country = c:GBR value = 15 }
+        set_relations = { country = c:FRA value = -10 }
+        set_relations = { country = c:SWI value = 80 }
+        set_relations = { country = c:GER value = 50 }
+        set_relations = { country = c:AUS value = -35 }
     }
 
     c:SER ?= {
@@ -123,6 +123,14 @@
         set_relations = { country = c:ARG value = 20 }
         set_relations = { country = c:USA value = 70 }
         set_relations = { country = c:SWI value = 100 }
+    }
+
+    c:ETH ?= {
+        set_relations = { country = c:GBR value = 10 }
+        set_relations = { country = c:FRA value = 30 }
+        set_relations = { country = c:ITA value = -90 }
+        set_relations = { country = c:GER value = 10 }
+        set_relations = { country = c:RUS value = 60 }
     }
 
     c:AFG ?= {

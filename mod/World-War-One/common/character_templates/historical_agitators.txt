@@ -45,30 +45,12 @@ agitator_errico_malatesta = {
 	birth_date = 1853.12.4
 	dna = dna_malatesta
 	home_region = STATE_CAMPANIA
+	is_agitator = yes
 	traits = {
 		persistent
 		charismatic
 		inspirational_orator
 	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			OR = {
-				c:SIC ?= this
-				c:ITA ?= this
-			}
-		}
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_trade_unions
-            }
-        }
-		earliest_usage_date = 1872.9.15 # Malatesta met Bakunin at the Saint-Inier Congress
-		latest_usage_date = 1900.1.1
-		chance = 50
-    }
 }
 
 agitator_louise_michel = {
