@@ -5032,7 +5032,7 @@ dev_events.104 = {
         default_option = yes
         trigger = { is_player = no }
         add_modifier = {
-            name = money_buff_1
+            name = money_buff_3
             years = 10
             is_decaying = yes
         }
@@ -5047,8 +5047,8 @@ dev_events.104 = {
         default_option = yes
         trigger = { is_player = yes }
         add_modifier = {
-            name = money_buff_1
-            years = 2
+            name = money_buff_2
+            years = 5
             is_decaying = yes
         }
         trigger_event = {
@@ -6395,6 +6395,58 @@ dev_events.133 = {
         trigger_event = {
 			id = dev_events.26
 			days = 120
+		}
+    }
+}
+
+dev_events.134 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = money_buff_3
+            years = 10
+            is_decaying = yes
+        }
+        add_modifier = {
+			name = army_buff_modifier_3
+            years = 50
+            is_decaying = yes
+		}
+        trigger_event = {
+			id = dev_events.26
+			days = 60
+		}
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = money_buff_2
+            years = 5
+            is_decaying = yes
+        }
+        trigger_event = {
+			id = dev_events.26
+			days = 60
 		}
     }
 }

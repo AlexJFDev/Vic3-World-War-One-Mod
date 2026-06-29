@@ -165,7 +165,7 @@ je_russian_civil_war_sov = {
 
     complete = { 
         is_at_war = no
-        is_diplomatic_play_committed_participant = no
+        is_diplomatic_play_initiator = no
     }
 
     on_complete = {
@@ -198,8 +198,8 @@ je_russian_civil_war_rus = {
     modifiers_while_active = { russian_civil_war_rus }
 
     complete = { 
-        is_diplomatic_play_committed_participant = no
         is_at_war = no
+        is_diplomatic_play_initiator = no
     }
 
     on_complete = {

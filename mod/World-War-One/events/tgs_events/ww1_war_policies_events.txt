@@ -150,7 +150,21 @@ ww1_war_policies_events.4 = {
     trigger = { }
     
     option = {
-        name = ww1_war_policies_events.4.a 
+        name = ww1_war_policies_events.4.a
+        trigger = { is_player = no }
+        default_option = yes
+        add_modifier = {
+          name = wartime_legislation
+          years = 2
+          is_decaying = yes
+        } 
+        activate_law = law_type:law_women_in_the_workplace
+        activate_law = law_type:law_mass_conscription
+    }
+
+    option = {
+        name = ww1_war_policies_events.4.a
+        trigger = { is_player = yes }
         default_option = yes
         add_modifier = {
         name = wartime_legislation
