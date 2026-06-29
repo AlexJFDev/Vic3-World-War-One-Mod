@@ -5758,205 +5758,6 @@
 			}
 		}
 	}
-	s:STATE_MOLDAVIA = {
-		region_state:AUS = {
-			create_building = {
-				building = building_wheat_farm
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:AUS
-						levels = 15
-						region = STATE_MOLDAVIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_fertilization pm_no_secondary pm_steam_threshers 
-				}
-			}
-			create_building = {
-				building = building_trade_center
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:AUS
-						levels = 1
-						region = STATE_MOLDAVIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_trade_center_trade_quantity_normal 
-				}
-			}
-		}
-		region_state:ROM = {
-			create_building = {
-				building = building_railway
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:AUS
-						levels = 2
-						region = STATE_AUSTRIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_steam_trains pm_wooden_passenger_carriages 
-				}
-			}
-			create_building = {
-				building = building_iron_mine
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:RUS
-						levels = 6
-						region = STATE_MOSCOW
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
-				}
-			}
-			create_building = {
-				building = building_wheat_farm
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:ROM
-						levels = 10
-						region = STATE_MOLDAVIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_citrus_orchards pm_fertilization pm_tractors 
-				}
-			}
-			create_building = {
-				building = building_livestock_ranch
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:ROM
-						levels = 1
-						region = STATE_MOLDAVIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
-				}
-			}
-			create_building = {
-				building = building_cotton_plantation
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:ROM
-						levels = 6
-						region = STATE_MOLDAVIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					default_building_cotton_plantation pm_road_carts 
-				}
-			}
-			create_building = {
-				building = building_logging_camp
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:ROM
-						levels = 2
-						region = STATE_WALLACHIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
-				}
-			}
-			create_building = {
-				building = building_power_plant
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:RUS
-						levels = 1
-						region = STATE_MOSCOW
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_coal-fired_plant 
-				}
-			}
-			create_building = {
-				building = building_food_industry
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:ROM
-						levels = 5
-						region = STATE_WALLACHIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_baking_powder pm_cannery pm_patent_stills 
-				}
-			}
-			create_building = {
-				building = building_oil_rig
-				add_ownership = {
-					building = {
-						type = building_financial_district
-						country = c:GBR
-						levels = 5
-						region = STATE_HOME_COUNTIES
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_combustion_derricks pm_road_carts 
-				}
-			}
-			create_building = {
-				building = building_barrack
-				add_ownership = {
-					country = {
-						country = c:ROM
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_training_streamlining 
-				}
-			}
-			create_building = {
-				building = building_trade_center
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:ROM
-						levels = 3
-						region = STATE_MOLDAVIA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_trade_center_trade_quantity_normal 
-				}
-			}
-		}
-	}
 	s:STATE_BUKOVINA = {
 		region_state:AUS = {
 			create_building = {
@@ -81374,6 +81175,173 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_training_streamlining 
+				}
+			}
+		}
+	}
+	s:STATE_MOLDAVIA = {
+		region_state:ROM = {
+			create_building = {
+				building = building_railway
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:AUS
+						levels = 2
+						region = STATE_AUSTRIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steam_trains pm_wooden_passenger_carriages 
+				}
+			}
+			create_building = {
+				building = building_iron_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:RUS
+						levels = 6
+						region = STATE_MOSCOW
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+				}
+			}
+			create_building = {
+				building = building_wheat_farm
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ROM
+						levels = 10
+						region = STATE_MOLDAVIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_citrus_orchards pm_fertilization pm_tractors 
+				}
+			}
+			create_building = {
+				building = building_livestock_ranch
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ROM
+						levels = 1
+						region = STATE_MOLDAVIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+				}
+			}
+			create_building = {
+				building = building_cotton_plantation
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ROM
+						levels = 6
+						region = STATE_MOLDAVIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_cotton_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:ROM
+						levels = 2
+						region = STATE_WALLACHIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_power_plant
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:RUS
+						levels = 1
+						region = STATE_MOSCOW
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_coal-fired_plant 
+				}
+			}
+			create_building = {
+				building = building_food_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:ROM
+						levels = 5
+						region = STATE_WALLACHIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_baking_powder pm_cannery pm_patent_stills 
+				}
+			}
+			create_building = {
+				building = building_oil_rig
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 5
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_combustion_derricks pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_barrack
+				add_ownership = {
+					country = {
+						country = c:ROM
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ROM
+						levels = 3
+						region = STATE_MOLDAVIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
 				}
 			}
 		}

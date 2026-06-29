@@ -351,19 +351,6 @@ entente_peace_deal.1 = {
             }
             }
 		}
-        s:STATE_MOLDAVIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ROM
-            }
-            }
 		s:STATE_NORTHERN_TRANSYLVANIA = {
            random_scope_state = {
 		      limit = {
