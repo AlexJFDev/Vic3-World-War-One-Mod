@@ -6450,3 +6450,46 @@ dev_events.134 = {
 		}
     }
 }
+
+dev_events.135 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        create_diplomatic_play = {
+            name = italo_french_war
+
+            target_state = s:STATE_CORSICA.region_state:FRA
+
+            type = dp_conquer_state
+
+            escalation = 85
+            
+            add_war_goal = {
+                holder = c:FRA
+                type = humiliation
+                target_country = c:ITA
+            }
+            
+            add_target_backers = {
+                c:MOR
+                c:TUN
+                c:DJB
+            }
+        }
+    }
+}
