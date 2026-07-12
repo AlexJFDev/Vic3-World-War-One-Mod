@@ -6493,3 +6493,42 @@ dev_events.135 = {
         }
     }
 }
+
+dev_events.136 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = no }
+        default_option = yes
+        add_modifier = {
+            name = money_buff_1
+            years = 5
+            is_decaying = yes
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = yes }
+        default_option = yes
+        add_modifier = {
+            name = money_buff_1
+            years = 1
+            is_decaying = yes
+        }
+    }
+}
