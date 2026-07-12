@@ -710,55 +710,59 @@ decree_enlistment_efforts = {
 }
 
 decree_emergency_relief = {
-    texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
+	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
 	unlocking_technologies = {
 		centralization
 	}
+	modifier = {
+		state_tax_collection_mult = -0.5
+		state_infrastructure_mult = 0.1
+		state_market_access_price_impact = 0.05
+		state_food_security_add = 0.05
+	}
 
 	state_trigger = {
-		AND = {
-			OR = {
-				custom_tooltip = {
-					any_scope_pop = {
-						is_in_starvation = yes
-					}
+		OR = {
+			has_famine = yes
+			devastation > 0.2
+			ROOT.state_region = {
+				OR = {
+					has_harvest_condition = flood
+					has_harvest_condition = wildfire
+					has_harvest_condition = drought
+					has_harvest_condition = disease_outbreak
+					has_harvest_condition = extreme_winds
+					has_harvest_condition = tsunami
 				}
-				devastation > 0.2
-				ROOT.state_region = {
-					OR = {
-						has_harvest_condition = flood
-						has_harvest_condition = wildfire
-						has_harvest_condition = drought
-						has_harvest_condition = disease_outbreak
-						has_harvest_condition = extreme_winds	
-					}
-				}	
 			}
-			NOR = {
-				has_decree = decree_violent_hostility
-				has_decree = decree_violent_suppression
+			any_scope_pop = {
+				percent >= 0.2
+				is_in_starvation = yes
 			}
 		}
 	}
 
-	modifier = {
-		state_welfare_payments_add = 0.8
-		state_tax_collection_mult = -0.5
-		state_food_security_add = 0.15
-		state_mortality_mult = -0.1
-		state_market_access_price_impact = 0.05
-	}
-
 	cost = 50
-	
+
 	ai_weight = {
 		value = 0
-		
+
 		if = {
-			limit = { 
+			limit = {
 				average_sol < average_expected_sol
 			}
 			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_nationalist_agenda
+						has_strategy = ai_strategy_reactionary_agenda
+					}
+				}
+			}
+			multiply = 0.5
 		}
 	}
 }
