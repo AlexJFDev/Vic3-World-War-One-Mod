@@ -708,3 +708,78 @@ egypt_events.8 = {
         }
     }
 }
+
+egypt_events.9 = {
+    type = country_event
+
+    title = egypt_events.9.t
+    desc = egypt_events.9.d
+    flavor = egypt_events.9.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/emperor_iyasu.dds"
+    }
+
+    trigger = {}
+
+    immediate = {
+        ig:ig_landowners ?= {
+			leader = {
+				set_variable = {
+                  name = pretender_zewditu
+                } 
+			}
+		}
+    }
+
+    option = {
+        name = egypt_events.9.a
+        default_option = yes 
+        owner.ruler ?= {
+			remove_character_role = ruler
+		    add_character_role = agitator
+		}
+        random_scope_character = { 
+			limit = { has_variable = pretender_zewditu }
+            set_character_as_ruler = yes
+		}
+        create_character = {
+            template = ETH_haile_selassie_template
+		}
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = egypt_events.9.b
+        owner.ruler ?= {
+			change_character_religion = rel:sunni
+		}
+        create_character = {
+            template = ETH_haile_selassie_template
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = egypt_events.9.c
+        set_state_religion = rel:sunni
+        owner.ruler ?= {
+			change_character_religion = rel:sunni
+		}
+        create_character = {
+            template = ETH_haile_selassie_template
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+}

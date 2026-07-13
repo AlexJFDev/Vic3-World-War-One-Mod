@@ -35428,6 +35428,21 @@
 				}
 			}
 			create_building = {
+				building = building_textile_mill
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ETH
+						levels = 2
+						region = STATE_AMHARA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_craftsman_sewing pm_dye_workshops pm_traditional_looms 
+				}
+			}
+			create_building = {
 				building = building_barrack
 				add_ownership = {
 					country = {
@@ -35508,7 +35523,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 16
+						levels = 28
 						region = STATE_GONDER
 					}
 				}
@@ -35608,6 +35623,51 @@
 				}
 			}
 			create_building = {
+				building = building_textile_mill
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ETH
+						levels = 4
+						region = STATE_GONDER
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_craftsman_sewing pm_dye_workshops pm_traditional_looms 
+				}
+			}
+			create_building = {
+				building = building_furniture_manufactory
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ETH
+						levels = 8
+						region = STATE_GONDER
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automation_disabled pm_handcrafted_furniture pm_precision_tools 
+				}
+			}
+			create_building = {
+				building = building_paper_mill
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ETH
+						levels = 5
+						region = STATE_OROMIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_automation_disabled pm_pulp_pressing 
+				}
+			}
+			create_building = {
 				building = building_barrack
 				add_ownership = {
 					country = {
@@ -35626,7 +35686,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 6
+						levels = 12
 						region = STATE_GONDER
 					}
 				}
@@ -35660,7 +35720,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 3
+						levels = 12
 						region = STATE_OROMIA
 					}
 				}
@@ -35674,7 +35734,7 @@
 				add_ownership = {
 					country = {
 						country = c:ETH
-						levels = 8
+						levels = 12
 					}
 				}
 				reserves = 1
@@ -35688,7 +35748,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 15
+						levels = 35
 						region = STATE_OROMIA
 					}
 				}
@@ -35703,7 +35763,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 10
+						levels = 15
 						region = STATE_OROMIA
 					}
 				}
@@ -35718,7 +35778,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 5
+						levels = 8
 						region = STATE_OROMIA
 					}
 				}
@@ -35733,7 +35793,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 1
+						levels = 5
 						region = STATE_MOSCOW
 					}
 				}
@@ -35748,7 +35808,7 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 1
+						levels = 2
 						region = STATE_MOSCOW
 					}
 				}
@@ -35758,11 +35818,26 @@
 				}
 			}
 			create_building = {
+				building = building_munition_plant
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:RUS
+						levels = 2
+						region = STATE_MOSCOW
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_explosive_shells pm_rotary_valve_engine_building_munition_plant 
+				}
+			}
+			create_building = {
 				building = building_university
 				add_ownership = {
 					country = {
 						country = c:ETH
-						levels = 2
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -35776,7 +35851,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 5
+						levels = 8
 						region = STATE_OROMIA
 					}
 				}
@@ -35819,7 +35894,7 @@
 					building = {
 						type = building_manor_house
 						country = c:ETH
-						levels = 5
+						levels = 18
 						region = STATE_OROMIA
 					}
 				}
