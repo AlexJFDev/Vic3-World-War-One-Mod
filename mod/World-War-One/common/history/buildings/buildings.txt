@@ -35743,6 +35743,21 @@
 				}
 			}
 			create_building = {
+				building = building_tooling_workshop
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ETH
+						levels = 8
+						region = STATE_OROMIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_rotary_valve_engine_building_tooling_workshop pm_steel 
+				}
+			}
+			create_building = {
 				building = building_government_administration
 				add_ownership = {
 					country = {
@@ -35886,6 +35901,34 @@
 				reserves = 1
 				activate_production_methods = {
 					default_building_coffee_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:ETH
+						levels = 7
+						region = STATE_OROMIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_hardwood pm_no_equipment pm_road_carts pm_saw_mills 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:ETH
+						levels = 10
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_wooden_buildings 
 				}
 			}
 			create_building = {

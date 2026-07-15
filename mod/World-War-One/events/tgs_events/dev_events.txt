@@ -3171,9 +3171,7 @@ dev_events.70 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        remove_modifier = modifier_not_recognized_by_spain
-        remove_modifier = regency_years
-        remove_modifier = modifier_regency
+        
     }
 }
 
@@ -6597,5 +6595,46 @@ dev_events.138 = {
 				years = 60
 			}
         }
+    }
+}
+
+dev_events.139 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        ig:ig_landowners ?= {
+			leader = {
+				set_variable = {
+                  name = pretender_zewditu
+                } 
+			}
+		}
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { has_modifier = modifier_regency }
+        remove_modifier = modifier_regency
+        random_scope_character = { 
+			limit = { has_variable = pretender_zewditu }
+            set_character_as_ruler = yes
+		}
+        create_character = {
+            template = ETH_haile_selassie_template
+		}
     }
 }

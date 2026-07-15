@@ -436,14 +436,17 @@ REPLACE_OR_CREATE:resign_from_office = {
 			interest_group ?= {
 				ig_clout < define:NPolitics|MARGINAL_IG_THRESHOLD
 			}
-			age >= 50
 			popularity <= -50
-			OR = {
-				has_trait = psychological_affliction
-				has_trait = cancer
-				has_trait = senile
-				has_trait = wounded
-			}
+			age >= 60
+			has_trait = psychological_affliction
+			has_trait = alcoholic
+			has_trait = opium_addiction
+			has_trait = sickly
+			has_trait = syphilis
+			has_trait = cancer
+			has_trait = senile
+			has_trait = cocaine_addiction
+			has_trait = kidney_stones
 			owner ?= {  # Our thanks to UHM for reporting this
 				trigger_if = {
 					limit = {

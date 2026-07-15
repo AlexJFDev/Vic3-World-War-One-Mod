@@ -725,36 +725,24 @@ egypt_events.9 = {
         texture = "gfx/event_pictures/emperor_iyasu.dds"
     }
 
-    trigger = {
-        owner.ruler ?= {
-			has_template = ETH_lij_iyasu_template
-		} 
-    }
-
-    immediate = {
-        ig:ig_landowners ?= {
-			leader = {
-				set_variable = {
-                  name = pretender_zewditu
-                } 
-			}
-		}
-    }
+    immediate = {}
 
     option = {
         name = egypt_events.9.a
         default_option = yes 
+        trigger = {
+            owner.ruler ?= {
+		 	  has_template = ETH_lij_iyasu_template
+		    } 
+        }
         owner.ruler ?= {
 			remove_character_role = ruler
 		    add_character_role = agitator
 		}
-        random_scope_character = { 
-			limit = { has_variable = pretender_zewditu }
-            set_character_as_ruler = yes
-		}
-        create_character = {
-            template = ETH_haile_selassie_template
-		}
+        trigger_event = {
+            id = dev_events.139
+            days = 30
+        }
         ai_chance = {
             base = 1
         }
@@ -762,6 +750,11 @@ egypt_events.9 = {
 
     option = {
         name = egypt_events.9.b
+        trigger = {
+            owner.ruler ?= {
+		 	  has_template = ETH_lij_iyasu_template
+		    } 
+        }
         owner.ruler ?= {
 			change_character_religion = rel:sunni
 		}
@@ -775,6 +768,11 @@ egypt_events.9 = {
 
     option = {
         name = egypt_events.9.c
+        trigger = {
+            owner.ruler ?= {
+		 	  has_template = ETH_lij_iyasu_template
+		    } 
+        }
         set_state_religion = rel:sunni
         owner.ruler ?= {
 			change_character_religion = rel:sunni

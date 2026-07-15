@@ -348,8 +348,16 @@ REPLACE_OR_CREATE:abdicate_monarch = {
 				ig_clout < define:NPolitics|MARGINAL_IG_THRESHOLD
 			}
 			popularity <= -50
+			age >= 60
 			has_trait = psychological_affliction
-			age >= 50
+			has_trait = alcoholic
+			has_trait = opium_addiction
+			has_trait = sickly
+			has_trait = syphilis
+			has_trait = cancer
+			has_trait = senile
+			has_trait = cocaine_addiction
+			has_trait = kidney_stones
 			owner ?= { # Our thanks to UHM for reporting this
 				trigger_if = {
 					limit = {
