@@ -1,0 +1,539 @@
+﻿naval_limitation = {
+	kind = directed
+	cost = 100
+
+	relations_progress_per_day = 0.5
+	relations_improvement_max = 50
+
+	max_target_involvement = 1000
+	target_involvement_applies_to = source_country
+
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/ship_transfer_treaties.dds"
+
+	flags = {
+		can_be_enforced
+		can_be_renegotiated
+		giftable
+		ai_consider_threaten_naval_hostilities
+	}
+
+	maintenance_paid_by = target_country
+	usage_limit = once_per_side
+
+	unlocked_by_technologies = {
+		internationalism
+	}
+
+	source_modifier = {
+		country_ship_group_torpedo_craft_construction_efficiency_add = -0.5
+		country_ship_group_cruisers_construction_efficiency_add = -0.5
+		country_ship_group_capital_ships_construction_efficiency_add = -0.5
+	}
+
+	visible = {
+		is_revolutionary = no
+	}
+
+	possible = {
+		NOT = {
+			is_subject_of = scope:other_country
+		}
+		trigger_if = {
+			limit = {
+				is_subject = yes
+				NOT = {
+					is_subject_of = scope:other_country
+				}
+			}
+			NOT = {
+				scope:other_country = {
+					any_scope_treaty = {
+						binds = root.top_overlord
+						any_scope_article = {
+							has_type = naval_limitation
+							source_country = root.top_overlord
+						}
+					}
+				}
+			}
+		}
+	}
+
+	can_ratify = {
+        custom_tooltip = {
+            text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
+            NOT = {
+                scope:source_country = {
+                    any_scope_treaty = {
+						binds = scope:target_country
+                        hidden_trigger = {
+							OR = {
+								scope:treaty = {
+									is_renegotiation = no
+								}
+								scope:treaty.amended_treaty != this
+							}
+						}
+						any_scope_article = {
+							has_type = naval_limitation
+							source_country = scope:source_country
+						}
+                    }
+                }
+            }
+        }
+	}
+
+	requirement_to_maintain = {
+		trigger = {
+			custom_tooltip = {
+				text = "DIPLOMATIC_PACT_REQUIREMENT_DIPLOMATIC_AUTONOMY"
+				scope:source_country = { aggressive_diplomatic_plays_permitted = yes }
+			}
+		}
+	}
+
+	on_entry_into_force = {}
+
+	on_withdrawal = {}
+	on_break = {
+		scope:withdrawing_country = {
+			change_relations = { country = scope:non_withdrawing_country value = -30 }
+		}
+	}
+
+	ai = {
+
+		treaty_categories = {
+			military
+		}
+
+		evaluation_chance = {
+			value = 0.1
+
+			add = {
+				value = country_rank
+				multiply = 0.05
+			}
+		}
+
+		article_ai_usage = {
+            request
+        }
+
+		inherent_accept_score = {
+			value = 0
+
+			if = {
+				limit = {
+					scope:source_country ?= this
+				}
+
+				# We are doing this to be able to reuse loc across treaties and diplomatic actions
+				scope:source_country = {
+					save_temporary_scope_as = target
+				}
+				scope:target_country = {
+					save_temporary_scope_as = actor
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
+					value = -50
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_merchant_navy
+					}
+					add = {
+						desc = "law_merchant_navy"
+						add = 30
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_diplomatic_navy
+					}
+					add = {
+						desc = "law_diplomatic_navy"
+						add = -10
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_jeune_ecole
+					}
+					add = {
+						desc = "law_jeune_ecole"
+						add = -50
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_professional_navy
+					}
+					add = {
+						desc = "law_professional_navy"
+						add = -100
+					}
+				}
+
+                if = {
+					limit = {
+						has_law_or_variant = law_type:law_true_neutrality
+					}
+					add = {
+						desc = "law_true_neutrality"
+						add = 50
+					}
+				}
+
+                if = {
+					limit = {
+						has_law_or_variant = law_type:law_armed_neutrality
+					}
+					add = {
+						desc = "law_armed_neutrality"
+						add = 10
+					}
+				}
+
+                if = {
+					limit = {
+						has_law_or_variant = law_type:law_limited_interventionism
+					}
+					add = {
+						desc = "law_limited_interventionism"
+						add = -50
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_expansionism
+					}
+					add = {
+						desc = "law_expansionism"
+						add = -100
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_imperialism
+					}
+					add = {
+						desc = "law_imperialism"
+						add = -150
+					}
+				}
+
+				if = {
+					limit = {
+						any_diplomatic_catalyst = {
+							is_diplomatic_catalyst_type = catalyst_declared_bankruptcy
+							target ?= scope:target_country
+						}
+					}
+					add = {
+						desc = "catalyst_declared_bankruptcy"
+						add = 25
+					}
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_GDP"
+					value = "scope:target_country.ai_gdp_comparison(scope:source_country)"
+					multiply = 10
+					min = -50
+					max = 10
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					if = {
+						limit = {
+							OR = {
+								has_attitude = {
+									who = scope:target_country
+									attitude = antagonistic
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = belligerent
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = rebellious
+								}
+							}
+						}
+						value = -1000
+					}
+				}
+			}
+			else = {
+				scope:source_country = {
+					save_temporary_scope_as = target
+				}
+				scope:target_country = {
+					save_temporary_scope_as = actor
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
+					value = -50
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_merchant_navy
+					}
+					add = {
+						desc = "law_merchant_navy"
+						add = 30
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_diplomatic_navy
+					}
+					add = {
+						desc = "law_diplomatic_navy"
+						add = -10
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_jeune_ecole
+					}
+					add = {
+						desc = "law_jeune_ecole"
+						add = -50
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_professional_navy
+					}
+					add = {
+						desc = "law_professional_navy"
+						add = -100
+					}
+				}
+
+                if = {
+					limit = {
+						has_law_or_variant = law_type:law_true_neutrality
+					}
+					add = {
+						desc = "law_true_neutrality"
+						add = 50
+					}
+				}
+
+                if = {
+					limit = {
+						has_law_or_variant = law_type:law_armed_neutrality
+					}
+					add = {
+						desc = "law_armed_neutrality"
+						add = 10
+					}
+				}
+
+                if = {
+					limit = {
+						has_law_or_variant = law_type:law_limited_interventionism
+					}
+					add = {
+						desc = "law_limited_interventionism"
+						add = -50
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_expansionism
+					}
+					add = {
+						desc = "law_expansionism"
+						add = -100
+					}
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_imperialism
+					}
+					add = {
+						desc = "law_imperialism"
+						add = -150
+					}
+				}
+
+				if = {
+					limit = {
+						any_diplomatic_catalyst = {
+							is_diplomatic_catalyst_type = catalyst_declared_bankruptcy
+							target ?= scope:target_country
+						}
+					}
+					add = {
+						desc = "catalyst_declared_bankruptcy"
+						add = 25
+					}
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_GDP"
+					value = "scope:target_country.ai_gdp_comparison(scope:source_country)"
+					multiply = 10
+					min = -50
+					max = 10
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					if = {
+						limit = {
+							OR = {
+								has_attitude = {
+									who = scope:target_country
+									attitude = antagonistic
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = belligerent
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = rebellious
+								}
+							}
+						}
+						value = -1000
+					}
+				}
+			}
+		}
+
+		contextual_accept_score = {
+			if = {
+				limit = {
+					scope:treaty ?= {
+						NOT = {
+							any_scope_article_option = {
+								NOT = { has_type = naval_limitation }
+								NOT = { is_desired_by = root }
+							}
+						}
+						any_scope_article_option = {
+							has_type = naval_limitation
+						}
+					}
+				}
+			}
+		}
+
+		wargoal_score_multiplier = {
+			value = 1
+
+			if = {
+				limit = {
+					scope:target_country = {
+						has_diplomatic_pact = {
+							who = root
+							type = embargo
+						}
+					}
+					can_reach_target_country = yes
+				}
+				add = 1
+			}
+
+			# Not worth doing by or against very small countries
+			if = {
+				limit = {
+					OR = {
+						gdp < 2000000
+						scope:target_country = {
+							gdp < 500000
+						}
+					}
+				}
+				multiply = 0
+			}
+		}
+	}
+
+	wargoal = {
+		execution_priority = 21
+
+		contestion_type = control_any_target_country_state
+
+		maneuvers = {
+			value = 0
+
+			add = {
+				desc = "MANEUVERS_BASE_VALUE"
+				value = 2.5
+			}
+
+			scope:target_country = {
+				multiply = {
+					desc = "MANEUVERS_TARGET_COUNTRY_POPULATION_FACTOR"
+					value = total_population
+					divide = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR
+					multiply = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER
+                    max = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+				}
+			}
+		}
+
+		infamy = {
+			value = 0
+
+			add = {
+				desc = "INFAMY_BASE_VALUE"
+				value = 0.25
+			}
+
+			scope:target_country = {
+				multiply = {
+					desc = "INFAMY_TARGET_COUNTRY_POPULATION_FACTOR"
+					add = {
+						every_scope_state = {
+							add = {
+								value = state_population
+								divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+								multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+
+								if = {
+									limit = {
+										is_incorporated = no
+									}
+									multiply = {
+										value = 1
+										add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
+									}
+								}
+								max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+							}
+						}
+					}
+					max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+				}
+			}
+
+			min = 0.25
+		}
+	}
+}
