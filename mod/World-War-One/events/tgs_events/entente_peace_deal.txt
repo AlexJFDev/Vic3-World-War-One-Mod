@@ -592,6 +592,10 @@ entente_peace_deal.1 = {
 			}
 		}
 		c:CZH = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -680,6 +684,10 @@ entente_peace_deal.1 = {
 			}
 		}
 		c:HUN = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -1107,7 +1115,7 @@ entente_peace_deal.1 = {
                 days = 5
             }
         }
-		s:STATE_SCHLESWIG_HOLSTEIN = {
+		s:STATE_SCHLEFRAG_HOLSTEIN = {
 			set_owner_of_provinces = {
 				country = c:DEN
 				provinces = { x78B203 xE3C876 }
@@ -1227,6 +1235,10 @@ entente_peace_deal.2 = { #Round 1 result
         }
        }
 	   c:RHE = {
+		    trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -1308,10 +1320,14 @@ entente_peace_deal.2 = { #Round 1 result
         }
        }
 	   c:BAV = {
+		trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 		trigger_event = {
-                   id = dev_events.17
-                   days = 5
-                }
+               id = dev_events.17
+               days = 5
+            }
 	   }
         create_country = { #Saxony
 	       tag = SAX
@@ -1326,6 +1342,10 @@ entente_peace_deal.2 = { #Round 1 result
            }
         }
 		c:SAX = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -1344,6 +1364,10 @@ entente_peace_deal.2 = { #Round 1 result
            }
         }
 		c:ANH = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -1398,7 +1422,7 @@ entente_peace_deal.2 = { #Round 1 result
         create_country = { #Holstein
 	       tag = HOL
 	       origin = this
-	       state = s:STATE_SCHLESWIG_HOLSTEIN.region_state:GER
+	       state = s:STATE_SCHLEFRAG_HOLSTEIN.region_state:GER
            on_created = { 
            activate_law = law_type:law_parliamentary_republic
            activate_law = law_type:law_universal_suffrage
@@ -1413,7 +1437,7 @@ entente_peace_deal.2 = { #Round 1 result
                    days = 5
                 }
 		}
-		c:SWI = {
+		c:FRA = {
             trigger_event = {
                 id = entente_peace_deal.12
                 days = 5
@@ -1440,7 +1464,7 @@ entente_peace_deal.2 = { #Round 1 result
 		s:STATE_RHINELAND = { 
 			add_claim = c:GER
 		}
-		s:STATE_SCHLESWIG_HOLSTEIN = { 
+		s:STATE_SCHLEFRAG_HOLSTEIN = { 
 			add_claim = c:GER
 		}        
     }
@@ -1519,6 +1543,10 @@ entente_peace_deal.2 = { #Round 1 result
         }
        }
 	   c:RHE = {
+		    trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -1600,6 +1628,10 @@ entente_peace_deal.2 = { #Round 1 result
         }
        }
 	   c:BAV = {
+		trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 		trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -1618,6 +1650,10 @@ entente_peace_deal.2 = { #Round 1 result
            }
         }
 		c:SAX = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -1636,6 +1672,10 @@ entente_peace_deal.2 = { #Round 1 result
            }
         }
 		c:ANH = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -1690,7 +1730,7 @@ entente_peace_deal.2 = { #Round 1 result
         create_country = { #Holstein
 	       tag = HOL
 	       origin = this
-	       state = s:STATE_SCHLESWIG_HOLSTEIN.region_state:GER
+	       state = s:STATE_SCHLEFRAG_HOLSTEIN.region_state:GER
            on_created = { 
            activate_law = law_type:law_parliamentary_republic
            activate_law = law_type:law_universal_suffrage
@@ -1731,7 +1771,7 @@ entente_peace_deal.2 = { #Round 1 result
 			type = protectorate
 		}	
         } 
-		c:SWI = {
+		c:FRA = {
             trigger_event = {
                 id = entente_peace_deal.12
                 days = 5
@@ -1758,7 +1798,7 @@ entente_peace_deal.2 = { #Round 1 result
 		s:STATE_RHINELAND = { 
 			add_claim = c:GER
 		}   
-		s:STATE_SCHLESWIG_HOLSTEIN = { 
+		s:STATE_SCHLEFRAG_HOLSTEIN = { 
 			add_claim = c:GER
 		}    
     }
@@ -1782,6 +1822,10 @@ entente_peace_deal.2 = { #Round 1 result
            }
         }
 		c:RHE = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -2197,7 +2241,7 @@ entente_peace_deal.4 = { #Round 3 result
 			  add_claim = c:GER
             }
         }
-		c:SWI = {
+		c:FRA = {
             trigger_event = {
                 id = entente_peace_deal.13
                 days = 5
@@ -2295,7 +2339,7 @@ entente_peace_deal.4 = { #Round 3 result
 				provinces = { X0180A0 x80A0A0 x41A021 xD180A0 x3E3572 x945000 x178C99 xBAF66D x7CB839 x611F2F }
 			}
 		}
-		c:SWI = {
+		c:FRA = {
             trigger_event = {
                 id = entente_peace_deal.13
                 days = 5
@@ -2340,6 +2384,10 @@ entente_peace_deal.4 = { #Round 3 result
 		   }
 		}
 		c:POL = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
 			trigger_event = {
                    id = dev_events.17
                    days = 5
@@ -2359,7 +2407,37 @@ entente_peace_deal.4 = { #Round 3 result
 			  add_claim = c:GER
             }
         }
-		c:SWI = {
+		create_treaty = {
+			first_country = C:GER
+			second_country = c:POL
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:POL
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = C:ROM
+			second_country = c:POL
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:ROM
+				target_country = c:POL
+			    }
+			}
+		}
+		c:FRA = {
             trigger_event = {
                 id = entente_peace_deal.13
                 days = 5

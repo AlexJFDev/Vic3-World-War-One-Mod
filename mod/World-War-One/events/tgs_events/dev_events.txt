@@ -2704,14 +2704,15 @@ dev_events.61 = {
         name = dev_events.8.a
         default_option = yes
         every_country = {
-            limit = { 
-                NOT = {
-                    OR = {
-                      c:EGY = THIS
-                      c:SAF = THIS
-                    }
-                }
+            limit = {
+                is_subject = yes
                 is_in_geographic_region = geographic_region_africa
+                NOR = {
+                    c:EGY = THIS
+                    c:SAF = THIS
+                    c:ETH = THIS
+                    c:LIB = THIS
+                }
             }
             trigger_event = {
             id = dev_events.62
@@ -2742,13 +2743,13 @@ dev_events.62 = {
         default_option = yes
         trigger = { is_player = yes }
         add_modifier = {
-            name = starting_sol_nerf_2
-            years = 40
+            name = starting_sol_nerf_3
+            years = 20
             is_decaying = yes
         }
         trigger_event = {
             id = dev_events.26
-            days = 30
+            days = 60
         }
     }
 
@@ -2757,18 +2758,18 @@ dev_events.62 = {
         default_option = yes
         trigger = { is_player = no }
         add_modifier = {
-            name = starting_sol_nerf_2
+            name = starting_sol_nerf_3
             years = 40
             is_decaying = yes
         }
         add_modifier = {
             name = revolution_stabilization_buff_4
-            years = 40
+            years = 35
             is_decaying = yes
         }
         trigger_event = {
             id = dev_events.26
-            days = 30
+            days = 60
         }
     }
 }
@@ -6554,8 +6555,47 @@ dev_events.137 = {
     option = {
         name = dev_events.10.a
         default_option = yes
+        trigger = { 
+            owner.ruler ?= {
+			    has_template = ETH_menelik_ii_template
+		    } 
+        }
         owner.ruler ?= {
 			kill_character = yes
 		}
+    }
+}
+
+dev_events.138 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        random_scope_state = {
+			limit = {
+				owner = ROOT
+                is_capital = yes
+			}
+			add_modifier = {
+				name = landlock_buff
+				years = 60
+			}
+        }
     }
 }

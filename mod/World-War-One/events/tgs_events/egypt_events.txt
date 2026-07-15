@@ -725,7 +725,11 @@ egypt_events.9 = {
         texture = "gfx/event_pictures/emperor_iyasu.dds"
     }
 
-    trigger = {}
+    trigger = {
+        owner.ruler ?= {
+			has_template = ETH_lij_iyasu_template
+		} 
+    }
 
     immediate = {
         ig:ig_landowners ?= {

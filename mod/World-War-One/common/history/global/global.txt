@@ -32,9 +32,17 @@
 	}
 
 	c:ETH = {
+        trigger_event = { #Landlock buff
+			id = dev_events.138
+			days = 5
+		}
+		trigger_event = { #Loyalists and radicals reset
+			id = dev_events.26
+			days = 90
+		}
         trigger_event = { #Menelik death
 			id = dev_events.137
-			days = 180
+			days = 160
 		}
 		trigger_event = { #Iyasu deposition
 			id = egypt_events.9
@@ -61,6 +69,14 @@
 	}
 
     c:AFG = {
+		trigger_event = { #Landlock buff
+			id = dev_events.138
+			days = 5
+		}
+		trigger_event = { #Loyalists and radicals reset
+			id = dev_events.26
+			days = 90
+		}
 		trigger_event = { #Political movement nerf for AI
 			id = dev_events.1
 			days = 5
@@ -363,6 +379,10 @@
 	}
 
 	c:LUX = {
+		trigger_event = { #Landlock buff
+			id = dev_events.138
+			days = 5
+		}
 		trigger_event = { #Starting sol buff
 			id = dev_events.25
 			days = 5
@@ -397,6 +417,10 @@
 	}
 
 	c:SWI = {
+		trigger_event = { #Landlock buff
+			id = dev_events.138
+			days = 5
+		}
 		trigger_event = { #Money buff for Swi
 			id = dev_events.68
 			days = 5
@@ -415,7 +439,7 @@
 		}
         trigger_event = { #Sol nerf for european colonies in africa
 			id = dev_events.61
-			days = 365
+			days = 90
 		}
 		trigger_event = { #Remove electoral confidence starting initialization
 			id = dev_events.109
@@ -609,6 +633,10 @@
 	}
 
 	c:SER = {
+		trigger_event = { #Landlock buff
+			id = dev_events.138
+			days = 5
+		}
 		trigger_event = { #Political movement nerf for AI
 			id = dev_events.1
 			days = 5
@@ -729,8 +757,33 @@
 	}
 
 	c:BOL = {
+		trigger_event = { #Landlock buff
+			id = dev_events.138
+			days = 5
+		}
 		trigger_event = { #Political movement nerf for AI
 			id = dev_events.1
+			days = 5
+		}
+	}
+
+	c:PRG = {
+		trigger_event = { #Landlock buff
+			id = dev_events.138
+			days = 5
+		}
+	}
+    
+	c:TIB = {
+		trigger_event = { #Landlock buff
+			id = dev_events.138
+			days = 5
+		}
+	}
+
+	c:MGL = {
+		trigger_event = { #Landlock buff
+			id = dev_events.138
 			days = 5
 		}
 	}
