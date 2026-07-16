@@ -1,0 +1,519 @@
+﻿namespace = decolonization_events
+
+decolonization_events.1 = { #Starting event France
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_africa.dds"
+    }
+
+    title = decolonization_events.1.t
+    desc = decolonization_events.1.d
+    flavor = decolonization_events.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.1.a
+        default_option = yes
+        every_country = {
+            limit = {
+			    country_is_in_europe = no
+                country_is_in_north_america = no
+                is_subject = yes
+                NOT = { c:AST = THIS }
+            }
+            trigger_event = {
+              id = decolonization_events.5
+              days = 5
+            }
+        }
+        c:GBR = {
+            trigger_event = {
+               id = decolonization_events.2
+               days = 5
+            }
+        }
+        c:NET = {
+            trigger_event = {
+               id = decolonization_events.3
+               days = 5
+            }
+        }
+        c:USA = {
+            trigger_event = {
+               id = decolonization_events.4
+               days = 5
+            }
+        }
+        trigger_event = { #Algeria
+            id = decolonization_events.6
+            days = 30
+        }
+        trigger_event = { #Syria
+            id = decolonization_events.7
+            years = 1
+        }
+        trigger_event = { #Lebanon
+            id = decolonization_events.8
+            years = 1
+        }
+    }
+}
+
+decolonization_events.2 = { #Starting event UK
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_india.dds"
+    }
+
+    title = decolonization_events.2.t
+    desc = decolonization_events.2.d
+    flavor = decolonization_events.2.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.2.a
+        default_option = yes
+        trigger_event = { #Raj
+            id = decolonization_events.9
+            years = 1
+        }
+        trigger_event = { #Israel
+            id = decolonization_events.10
+            years = 2
+        }
+    }
+}
+
+decolonization_events.3 = { #Starting event NET
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_asia.dds"
+    }
+
+    title = decolonization_events.3.t
+    desc = decolonization_events.3.d
+    flavor = decolonization_events.3.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.1.a
+        default_option = yes
+        trigger_event = { #Indonesia
+            id = decolonization_events.11
+            years = 3
+        }
+    }
+}
+
+decolonization_events.4 = { #Starting event USA
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_asia.dds"
+    }
+
+    title = decolonization_events.4.t
+    desc = decolonization_events.4.d
+    flavor = decolonization_events.4.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.4.a
+        default_option = yes
+        trigger_event = { #Philipines
+            id = decolonization_events.12
+            years = 1
+        }
+    }
+}
+
+decolonization_events.5 = { #Starting event colonies
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_africa.dds"
+    }
+
+    title = decolonization_events.5.t
+    desc = decolonization_events.5.d
+    flavor = decolonization_events.5.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.5.a
+        default_option = yes
+        add_modifier = {
+			name = decolonization_buff
+            years = 100
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = decolonization_events.5.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+decolonization_events.6 = { #Algerian uprising
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_algeria.dds"
+    }
+
+    title = decolonization_events.6.t
+    desc = decolonization_events.6.d
+    flavor = decolonization_events.6.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = { #Turmoil
+        name = decolonization_events.6.a
+        default_option = yes
+        #TODO
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = { #Create a vassal
+        name = decolonization_events.6.b
+
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = { #Give up Algeria
+        name = decolonization_events.6.c
+        
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+decolonization_events.7 = { #Syrian independance
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_maghreb.dds"
+    }
+
+    title = decolonization_events.7.t
+    desc = decolonization_events.7.d
+    flavor = decolonization_events.7.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.7.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:SYR
+			type = protectorate
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = decolonization_events.7.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+decolonization_events.8 = { #Lebanese independance
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_maghreb.dds"
+    }
+
+    title = decolonization_events.8.t
+    desc = decolonization_events.8.d
+    flavor = decolonization_events.8.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.8.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:LEB
+			type = protectorate
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = decolonization_events.8.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+decolonization_events.9 = { #Indian independance
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_india.dds"
+    }
+
+    title = decolonization_events.9.t
+    desc = decolonization_events.9.d
+    flavor = decolonization_events.9.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.9.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:BIC
+			type = colony
+		}
+        remove_diplomatic_pact = {
+			country = c:BIC
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:BIC
+			type = dominion
+		}
+        c:BIC = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:north_indian
+            add_primary_culture = cu:west_indian
+            add_primary_culture = cu:central_indian
+            add_primary_culture = cu:east_indian
+            add_primary_culture = cu:south_indian
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = decolonization_events.9.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+decolonization_events.10 = { #Palestinian independance
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_maghreb.dds"
+    }
+
+    title = decolonization_events.10.t
+    desc = decolonization_events.10.d
+    flavor = decolonization_events.10.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = { #TODO
+        name = decolonization_events.10.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:PAL
+			type = protectorate
+		}
+        c:PAL = {
+			remove_primary_culture = cu:british
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = decolonization_events.10.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = decolonization_events.10.c
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+decolonization_events.11 = { #Indonesian independance
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_asia.dds"
+    }
+
+    title = decolonization_events.11.t
+    desc = decolonization_events.11.d
+    flavor = decolonization_events.11.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.11.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:DEI
+			type = colony
+		}
+        remove_diplomatic_pact = {
+			country = c:DEI
+			type = dominion
+		}
+        c:DEI = {
+			remove_primary_culture = cu:dutch
+			add_primary_culture = cu:indonesian
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = decolonization_events.11.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+decolonization_events.12 = { #Filipino independance
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/decolonization_asia.dds"
+    }
+
+    title = decolonization_events.12.t
+    desc = decolonization_events.12.d
+    flavor = decolonization_events.12.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = decolonization_events.12.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:PHI
+			type = colony
+		}
+        remove_diplomatic_pact = {
+			country = c:PHI
+			type = dominion
+		}
+        c:PHI = {
+			remove_primary_culture = cu:euro_american
+            remove_primary_culture = cu:spanish
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = decolonization_events.12.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
