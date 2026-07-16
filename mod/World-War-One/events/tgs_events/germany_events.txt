@@ -1067,6 +1067,27 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
                 }                
             }
         }
+        create_character = {
+            first_name = Erwin
+            last_name = Rommel
+            historical = yes
+            culture = cu:german
+            female = no
+	        is_general = yes
+            religion = atheist
+            ideology = ideology_fascist
+            interest_group = ig_armed_forces
+            birth_date = 1891.11.15
+            traits = {
+		      plains_commander
+              innovative
+            }   
+            on_created = {
+               set_variable = {
+                  name = erwin_rommel
+                }                
+            }
+        }
     }
 
     event_image = {

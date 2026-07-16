@@ -268,8 +268,8 @@ je_new_germany = {
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
-je_western_crusade = {
-    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
+je_conquest_poland = {
+    icon = "gfx/interface/icons/event_icons/attack_poland.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -292,6 +292,7 @@ je_western_crusade = {
                 }
             }
         }
+        NOT = { owns_entire_state_region = STATE_WEST_PRUSSIA }
     }
 
     immediate = {}
@@ -339,6 +340,7 @@ je_western_crusade = {
     }
 
     invalid = {
+        owns_entire_state_region = STATE_WEST_PRUSSIA
         has_global_variable = world_war_two_started
     }
 
@@ -353,7 +355,7 @@ je_western_crusade = {
 }
 
 je_eastern_crusade = {
-    icon = "gfx/interface/icons/event_icons/nazi_expansion.dds"
+    icon = "gfx/interface/icons/event_icons/attack_ussr.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {

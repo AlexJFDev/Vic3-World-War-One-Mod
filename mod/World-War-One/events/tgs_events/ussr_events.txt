@@ -543,6 +543,10 @@ ussr_events.10 = { #Moscow will not fall
             years = 5
 			is_decaying = yes
 		}
+        trigger_event = {
+            id = ussr_events.11
+            years = 2
+        }
         add_technology_researched = blitzkrieg_tech
 		ai_chance = {
 			base = 1
@@ -558,9 +562,13 @@ ussr_events.10 = { #Moscow will not fall
         }
 		add_modifier = {
 			name = moscow_will_not_fall_2
-            years = 1
+            years = 2
 			is_decaying = yes
 		}
+        trigger_event = {
+            id = ussr_events.11
+            years = 2
+        }
 		ai_chance = {
 			base = 1
 		}
@@ -569,6 +577,63 @@ ussr_events.10 = { #Moscow will not fall
 	option = {
         name = ussr_events.10.b
 		trigger = { is_at_war = no }
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+ussr_events.11 = { #Invasion of Manchuria
+    type = country_event
+
+    title = ussr_events.11.t
+    desc = ussr_events.11.d
+    flavor = ussr_events.11.f
+    
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = { 
+		texture = "gfx/event_pictures/japan_army_2.dds"
+	}
+
+    trigger = {}
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:JAP ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = sino_japan_war_diplo_play
+        }
+    }
+
+    option = {
+        name = ussr_events.11.a
+        default_option = yes
+		scope:sino_japan_war_diplo_play = {
+			add_target_backers = { c:RUS }
+            add_war_goal = {
+                holder = c:RUS
+                type = conquer_state
+                target_state = s:STATE_SAKHALIN.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_SAKHALIN.region_state:RUS
+            }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+        name = ussr_events.10.b
 		ai_chance = {
 			base = 0
 		}
