@@ -76,10 +76,6 @@ je_reunify_china = {
 
 	group = je_group_foreign_affairs
 
-	modifiers_while_active = {
-		modifier_chinese_warlord_era
-	}
-
 	is_shown_when_inactive = {
 		OR = {
 			country_has_primary_culture = cu:han
@@ -98,6 +94,10 @@ je_reunify_china = {
 		NOT = {
 			has_global_variable = a_new_china
 		}
+	}
+
+	modifiers_while_active = {
+		modifier_chinese_warlord_era
 	}
 
 	complete = {
@@ -180,5 +180,102 @@ je_opium_crisis = {
 	}
 		
 	weight = 1000
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_revolutionary_fervor = {
+	icon = "gfx/interface/icons/event_icons/pcr_revolution.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+        OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:yue
+		}
+    }
+    
+    possible = {
+        OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:yue
+		}
+		has_law = law_type:law_council_republic
+		has_variable = chinese_soviet_republic
+    }
+
+    modifiers_while_active = {
+		revolutionary_fervor
+	}
+
+    complete = {
+		country_rank = rank_value:great_power
+    }
+
+    invalid = {
+		NOT = { has_law = law_type:law_council_republic }
+	}
+
+	weight = 10000
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_chinese_civil_war = {
+	icon = "gfx/interface/icons/event_icons/pcr_uprising.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+        OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:yue
+		}
+		has_law = law_type:law_council_republic
+		has_variable = chinese_soviet_republic
+		game_date > 1940.01.01
+		is_at_war = no
+		exists = c:CHI
+    }
+    
+    possible = {
+        OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:yue
+		}
+		has_law = law_type:law_council_republic
+		has_variable = chinese_soviet_republic
+		game_date > 1940.01.01
+		exists = c:CHI
+    }
+
+    modifiers_while_active = {
+		pcr_uprising
+	}
+
+    complete = {
+		has_law = law_type:law_council_republic
+		has_variable = chinese_soviet_republic
+		game_date > 1940.01.01
+		is_at_war = no
+		exists = c:CHI
+		c:CHI = { is_at_war = no }
+    }
+
+    on_complete = {
+		trigger_event = {
+            id = china_events.28
+            days = 130
+        }
+	}
+
+    invalid = {
+		NOT = { has_law = law_type:law_council_republic }
+	}
+
+	weight = 10000
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }

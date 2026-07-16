@@ -1919,6 +1919,7 @@ china_events.23 = { #Shanxi becomes Communist
                 days = 5
             }
         }
+        set_variable = chinese_soviet_republic
         ai_chance = {
 		base = 1
 	    }
@@ -2189,6 +2190,7 @@ china_events.26 = { #Xian becomes Communist
                 days = 5
             }
         }
+        set_variable = chinese_soviet_republic
         ai_chance = {
 		base = 1
 	    }
@@ -2356,6 +2358,7 @@ china_events.27 = { #Gansu becomes Communist
               id = dev_events.134
               days = 5
             }
+        set_variable = chinese_soviet_republic
         ai_chance = {
 		base = 1
 	    }
@@ -2365,6 +2368,55 @@ china_events.27 = { #Gansu becomes Communist
         name = china_events.27.b
         ai_chance = {
 		base = 0
+	    }
+    }
+}
+
+china_events.28 = { #Chinese civil war phase 2
+    type = country_event
+
+    title = china_events.28.t
+    desc = china_events.28.d
+    flavor = china_events.28.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/communist_china.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = china_events.28.a
+        default_option = yes
+        create_diplomatic_play = {
+		    target_country = c:CHI
+		    type = dp_revolution
+	        escalation = 85
+	    }
+        trigger_event = {
+            id = dev_events.143
+            days = 5
+        }
+        c:CHI = {
+            trigger_event = {
+               id = dev_events.144
+               days = 5
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+	}
+
+    option = {
+        name = china_events.28.b
+        ai_chance = {
+		  base = 0
 	    }
     }
 }

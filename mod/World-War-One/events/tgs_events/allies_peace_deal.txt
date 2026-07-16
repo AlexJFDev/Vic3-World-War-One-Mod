@@ -132,6 +132,12 @@ allies_peace_deal.3 = {
 			  type = protectorate
 		    }
 		}
+		c:NET = {
+			create_diplomatic_pact = {
+			  country = c:DEI
+			  type = colony
+		    }
+		}
         c:GER = {
 			set_capital = STATE_HESSE
 			activate_law = law_type:law_parliamentary_republic

@@ -1287,7 +1287,7 @@ dev_events.26 = {
     }
 }
 
-dev_events.27 = { 
+dev_events.27 = {
     type = country_event
 
     title = dev_events.27.t
@@ -6445,15 +6445,15 @@ dev_events.134 = {
         default_option = yes
         trigger = { is_player = no }
         add_modifier = {
+			name = army_buff_modifier_3
+            years = 20
+            is_decaying = yes
+		}
+        add_modifier = {
             name = money_buff_3
             years = 10
             is_decaying = yes
         }
-        add_modifier = {
-			name = army_buff_modifier_3
-            years = 50
-            is_decaying = yes
-		}
         trigger_event = {
 			id = dev_events.26
 			days = 60
@@ -6464,6 +6464,11 @@ dev_events.134 = {
         name = dev_events.10.a
         default_option = yes
         trigger = { is_player = yes }
+        add_modifier = {
+			name = army_buff_modifier_7
+            years = 20
+            is_decaying = yes
+		}
         add_modifier = {
             name = money_buff_2
             years = 5
@@ -6687,5 +6692,160 @@ dev_events.140 = {
         name = dev_events.10.a
         default_option = yes
         set_variable = thanks_for_the_mess_paradox
+    }
+}
+
+dev_events.141 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_technology_researched = transistor
+        add_technology_researched = nuclear_weapons
+    }
+}
+
+dev_events.142 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { 
+            is_at_war = yes
+            NOT = { has_variable = allies_participant }
+        }
+        scope:world_war_two_diplo_play = {
+            add_diplomatic_play_war_support = { target = root value = -200 }  
+        }
+    }
+}
+
+dev_events.143 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { 
+            is_player = no
+        }
+        add_modifier = {
+            name = army_buff_modifier_9
+            years = 10
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.144 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.10.a
+        trigger = { 
+            is_player = no
+        }
+        default_option = yes
+        add_modifier = {
+            name = army_nerf_modifier_3
+            years = 10
+            is_decaying = yes
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { 
+            is_player = yes
+        }
+        create_country = { #Taiwan
+	        tag = YUZ
+	        origin = this
+	        state = s:STATE_FORMOSA.region_state:CHI
+            on_created = { 
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_oligarchy
+                activate_law = law_type:law_military_oversight
+                activate_law = law_type:law_censorship
+                activate_law = law_type:law_interventionism
+            }
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { 
+            is_player = yes
+        }
     }
 }
