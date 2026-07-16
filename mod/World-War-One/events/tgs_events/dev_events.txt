@@ -1864,11 +1864,12 @@ dev_events.35 = {
         default_option = yes
         every_country = {
 			limit = {
-                NOR = { 
+                NOR = {
                     c:USA ?= this
                     c:GBR ?= this
                     c:BIC ?= this
-                    c:CHI ?= this 
+                    c:CHI ?= this
+                    c:KMT ?= this
                 }
 			}
             trigger_event = {
@@ -1898,7 +1899,7 @@ dev_events.36 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { country_rank = rank_value:great_power }
+        trigger = { gdp > 60000000 }
         add_modifier = {
 			name = starting_minting_buff_3_modifier
             years = 10
@@ -1909,10 +1910,15 @@ dev_events.36 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { country_rank < rank_value:great_power }
+        trigger = { gdp < 60000000 }
         add_treasury = 10000000
         add_modifier = {
 			name = starting_minting_buff_4_modifier
+            years = 30
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = construction_buff_1
             years = 30
             is_decaying = yes
 		}
@@ -3486,7 +3492,7 @@ dev_events.73 = {
         trigger = { is_player = no }
         add_modifier = {
             name = revolution_stabilization_buff_4
-            months = 12
+            months = 15
         }
     }
 }
@@ -4273,7 +4279,6 @@ dev_events.91 = {
         add_modifier = {
             name = revolution_stabilization_buff_4
             years = 10
-            is_decaying = yes
         }
     }
 }
@@ -6657,5 +6662,30 @@ dev_events.139 = {
         create_character = {
             template = ETH_haile_selassie_template
 		}
+    }
+}
+
+dev_events.140 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        set_variable = thanks_for_the_mess_paradox
     }
 }

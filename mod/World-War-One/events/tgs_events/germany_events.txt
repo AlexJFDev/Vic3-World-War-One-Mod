@@ -111,11 +111,9 @@ germany_events.1 = {
         name = germany_events.1.a
         trigger = { is_player = yes }
         default_option = yes
-        c:GER = {
-            trigger_event = {
-                id = dev_events.19
-                days = 1
-            }
+        trigger_event = {
+            id = dev_events.19
+            days = 1
         }
         any_political_movement = {
             limit = {
@@ -136,11 +134,13 @@ germany_events.1 = {
         name = germany_events.1.a
         trigger = { is_player = no }
         default_option = yes
-        c:GER = {
-            trigger_event = {
-                id = dev_events.19
-                days = 1
-            }
+        trigger_event = {
+            id = dev_events.19
+            days = 1
+        }
+        trigger_event = {
+            id = dev_events.140
+            days = 660
         }
         any_political_movement = {
             limit = {

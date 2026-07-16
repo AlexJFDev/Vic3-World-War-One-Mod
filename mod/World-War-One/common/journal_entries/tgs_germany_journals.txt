@@ -24,7 +24,7 @@
     }
 
     immediate = {
-       c:GER = {
+        c:GER = {
             trigger_event = {
                 id = germany_events.1
                 days = 5
@@ -37,9 +37,12 @@
 	}
     
     fail = {
-        any_civil_war = {
-			civil_war_progress >= 0.75
-		}
+        OR = {
+            has_variable = thanks_for_the_mess_paradox
+            any_civil_war = {
+			   civil_war_progress >= 0.75
+		    }
+        }
     }
 
     on_fail = { 

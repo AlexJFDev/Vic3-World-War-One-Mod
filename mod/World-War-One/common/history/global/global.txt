@@ -235,6 +235,10 @@
 	}
 
 	c:KMT = {
+		trigger_event = { #Special minting bonus
+			id = dev_events.6
+			days = 5
+		}
 		trigger_event = { #Nerf for Kuomintang side
 			id = dev_events.10
 			days = 5
@@ -435,7 +439,7 @@
 		}
         trigger_event = { #Starting minting bonus for every countries
 			id = dev_events.35
-			days = 5
+			days = 15
 		}
         trigger_event = { #Sol nerf for european colonies in africa
 			id = dev_events.61
