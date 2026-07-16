@@ -17,28 +17,26 @@ central_peace_deal.1 = { #France surrenders
 
     option = {
         name = central_peace_deal.1.a
-          set_global_variable = central_powers_partial_victory
-          if = { #Belgium creation in case of annexion
-           limit = {
-			 NOT = {
-               exists = c:BEL
-			}
-		   }
-           create_country = {
-	       tag = BEL
-	       origin = this
-	       state = s:STATE_FLANDERS.region_state:GER
-           on_created = { 
-           activate_law = law_type:law_monarchy
-           activate_law = law_type:law_universal_suffrage
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
-           }
-         } 
+            set_global_variable = central_powers_partial_victory
+            if = { #Belgium creation in case of annexion
+                limit = {
+			      NOT = { exists = c:BEL }
+		        }
+                create_country = {
+	                tag = BEL
+	                origin = this
+	                state = s:STATE_FLANDERS.region_state:GER
+                    on_created = { 
+                      activate_law = law_type:law_monarchy
+                      activate_law = law_type:law_universal_suffrage
+                      activate_law = law_type:law_freedom_of_conscience
+                      activate_law = law_type:law_interventionism
+                      activate_law = law_type:law_right_of_assembly
+                    }
+                }
+            } 
            s:STATE_WALLONIA = {
-           random_scope_state = {
+            random_scope_state = {
 		      limit = {
 			   exists = c:GER
 			    owner = {
@@ -63,47 +61,7 @@ central_peace_deal.1 = { #France surrenders
 		      set_state_owner = c:BEL
             }
             }
-            c:BEL = {
-            remove_diplomatic_pact = {
-			 country = c:KON
-			 type = colony
-		    }
-            }
-            c:FRA = {
-            remove_diplomatic_pact = {
-			 country = c:TUN
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:MOR
-			 type = colony
-		    } 
-		    remove_diplomatic_pact = {
-			 country = c:WAF
-			 type = colony
-		    }
-		    remove_diplomatic_pact = {
-			 country = c:EQA
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:MAD
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:DJB
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:ICH
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:FPL
-			 type = colony
-		    }
-		    }
-            s:STATE_CONSTANTINE = {
+			s:STATE_LORRAINE = {
             random_scope_state = {
 		      limit = {
 			   exists = c:FRA
@@ -116,140 +74,43 @@ central_peace_deal.1 = { #France surrenders
 		      set_state_owner = c:GER
             }
             }
-            s:STATE_ALGIERS = {
-            random_scope_state = {
+			s:STATE_ILE_DE_FRANCE = {
+	       random_scope_state = {
 		      limit = {
-			   exists = c:FRA
+			   exists = c:GER
 			    owner = {
 				  OR = {
-					c:FRA = THIS
+					c:GER = THIS
 				    }
 			    }
 		        }
-		      set_state_owner = c:GER
+		      set_state_owner = c:FRA
             }
             }
-            s:STATE_ORAN = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:FRA
-			    owner = {
-				  OR = {
-					c:FRA = THIS
-				    }
-			    }
+			c:GER = {
+                create_diplomatic_pact = {
+			        country = c:BEL
+			        type = puppet
+		        }	
+			    create_diplomatic_pact = {
+			       country = c:LUX
+			       type = puppet
 		        }
-		      set_state_owner = c:GER
             }
-            }
-            s:STATE_SAHARA = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:FRA
-			    owner = {
-				  OR = {
-					c:FRA = THIS
-				    }
+			if = {
+				limit = {
+					c:GBR = { 
+					   has_variable = entente_participant
+					   is_at_war = yes
+				    } 
 			    }
-		        }
-		      set_state_owner = c:GER
-            }
-            }
-            s:STATE_EAST_SAHARA = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:FRA
-			    owner = {
-				  OR = {
-					c:FRA = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GER
-            }
-            }
-            c:GER = {
-            create_diplomatic_pact = {
-			  country = c:BEL
-			  type = puppet
-		    }	
-			create_diplomatic_pact = {
-			  country = c:LUX
-			  type = puppet
-		    }	
-		    create_diplomatic_pact = {
-			  country = c:LUX
-			  type = puppet
-		    }	
-            create_diplomatic_pact = {
-			  country = c:MOR
-			  type = protectorate
-		    }
-            create_diplomatic_pact = {
-			  country = c:TUN
-			  type = protectorate
-		    }
-            create_diplomatic_pact = {
-			  country = c:WAF
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:EQA
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:KON
-			  type = colony
-		    }
-			create_diplomatic_pact = {
-			  country = c:DJB
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:MAD
-			  type = colony
-		    }
-			create_diplomatic_pact = {
-			  country = c:ICH
-			  type = colony
-		    }
-            }
-           c:TUN = {
-			remove_primary_culture = cu:magrebi
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
-           c:MOR = {
-			remove_primary_culture = cu:magrebi
-            remove_primary_culture = cu:amazigh
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
-           c:WAF = {
-			remove_primary_culture = cu:french
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
-           c:EQA = {
-			remove_primary_culture = cu:french
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
-           c:KON = {
-			remove_primary_culture = cu:belgian
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
-           c:MAD = {
-			remove_primary_culture = cu:french
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
-           c:ICH = {
-			remove_primary_culture = cu:french
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
+				c:GER = {
+                    trigger_event = {
+                      id = central_peace_deal.6
+                      days = 5
+                    }
+                }
+			}
            if = { #Italy takes french territories
            limit = {
 			  c:ITA = { 
@@ -289,135 +150,6 @@ central_peace_deal.1 = { #France surrenders
             }
             }
 		   }
-           if = { #Austria takes Italian territories
-           limit = {
-			  c:ITA = { 
-                has_variable = entente_participant
-              }
-			}
-			s:STATE_PIEDMONT = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-            }
-            }
-            s:STATE_VENETIA = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:ITA
-			    owner = {
-				  OR = {
-					c:ITA = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:AUS
-            }
-            }
-            s:STATE_LOMBARDY = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:ITA
-			    owner = {
-				  OR = {
-					c:ITA = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:AUS
-            }
-            }
-            c:ITA = {
-            remove_diplomatic_pact = {
-			 country = c:TRI
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:CYR
-			 type = colony
-		    } 
-		    remove_diplomatic_pact = {
-			 country = c:ERT
-			 type = colony
-		    }
-		    remove_diplomatic_pact = {
-			 country = c:SMA
-			 type = colony
-		    }
-		    }
-            c:AUS = {
-            create_diplomatic_pact = {
-			  country = c:TRI
-			  type = colony
-		    }	
-		    create_diplomatic_pact = {
-			  country = c:CYR
-			  type = colony
-		    }	
-            }
-            c:GER = {
-            create_diplomatic_pact = {
-			  country = c:ERT
-			  type = colony
-		    }	
-		    create_diplomatic_pact = {
-			  country = c:SMA
-			  type = colony
-		    }	
-            }
-           c:TRI = {
-			remove_primary_culture = cu:italian
-			add_primary_culture = cu:german
-		   }
-           c:CYR = {
-			remove_primary_culture = cu:italian
-            add_primary_culture = cu:german
-		   }
-           c:ERT = {
-			remove_primary_culture = cu:italian
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
-           c:SMA = {
-            remove_primary_culture = cu:italian
-			add_primary_culture = cu:german
-            set_state_religion = rel:protestant
-		   }
-		   }
-		   s:STATE_ILE_DE_FRANCE = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:FRA
-            }
-            }
-			if = {
-				limit = {
-					c:GBR = { 
-					   has_variable = entente_participant
-					   is_at_war = yes
-				    } 
-			    }
-				c:GER = {
-                    trigger_event = {
-                      id = central_peace_deal.6
-                      days = 5
-                    }
-                }
-			}
     }
 }
 
@@ -710,317 +442,8 @@ central_peace_deal.3 = { #Great Britain
             remove_global_variable = world_war_1_ongoing
             set_global_variable = world_war_1_over
             set_global_variable = central_powers_complete_victory
-            c:GBR = {
-            remove_diplomatic_pact = {
-			 country = c:SIL
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:GHA
-			 type = colony
-		    } 
-		    remove_diplomatic_pact = {
-			 country = c:NGA
-			 type = colony
-		    }
-		    remove_diplomatic_pact = {
-			 country = c:SAF
-			 type = dominion
-		    }
-            remove_diplomatic_pact = {
-			 country = c:TSW
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:BST
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:SWZ
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:TSW
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:RHO
-			 type = chartered_company
-		    }
-            remove_diplomatic_pact = {
-			 country = c:ZAM
-			 type = chartered_company
-		    }
-            remove_diplomatic_pact = {
-			 country = c:BUG
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:KEN
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:SUD
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:EGY
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:SLD
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:YEM
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:OMA
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:ABU
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:BHN
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:BIC
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:MLA
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:MLA
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:ROS
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:BRU
-			 type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			 country = c:NBO
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:AST
-			 type = dominion
-		    }
-            remove_diplomatic_pact = {
-			 country = c:WPT
-			 type = colony
-		    }
-            remove_diplomatic_pact = {
-			 country = c:NZL
-			 type = dominion
-		    }
-            remove_diplomatic_pact = {
-			 country = c:CAN
-			 type = dominion
-		    }
-            remove_diplomatic_pact = {
-			 country = c:BLZ
-			 type = colony
-		    }
-		    }
-            c:GER = {
-            create_diplomatic_pact = {
-			 country = c:SIL
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:GHA
-			 type = colony
-		    } 
-		    create_diplomatic_pact = {
-			 country = c:NGA
-			 type = colony
-		    }
-		    create_diplomatic_pact = {
-			 country = c:SAF
-			 type = dominion
-		    }
-            create_diplomatic_pact = {
-			 country = c:TSW
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:BST
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:SWZ
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:TSW
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:RHO
-			 type = chartered_company
-		    }
-            create_diplomatic_pact = {
-			 country = c:ZAM
-			 type = chartered_company
-		    }
-            create_diplomatic_pact = {
-			 country = c:BUG
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:KEN
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:SUD
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:EGY
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:SLD
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:YEM
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:OMA
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:ABU
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:BHN
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:BIC
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:MLA
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:MLA
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:ROS
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:BRU
-			 type = protectorate
-		    }
-            create_diplomatic_pact = {
-			 country = c:NBO
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:AST
-			 type = dominion
-		    }
-            create_diplomatic_pact = {
-			 country = c:WPT
-			 type = colony
-		    }
-            create_diplomatic_pact = {
-			 country = c:NZL
-			 type = dominion
-		    }
-            create_diplomatic_pact = {
-			 country = c:CAN
-			 type = dominion
-		    }
-            create_diplomatic_pact = {
-			 country = c:BLZ
-			 type = colony
-		    }
-            }
-           c:SIL = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:GHA = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:NGA = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:SAF = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:RHO = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:ZAM = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:KEN = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:SLD = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:SUD = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:BIC = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:MLA = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:ROS = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:NBO = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:AST = {
-			add_primary_culture = cu:german
-		   }
-           c:WPT = {
-            remove_primary_culture = cu:british
-			add_primary_culture = cu:german
-		   }
-           c:NZL = {
-			add_primary_culture = cu:german
-		   }
-           c:CAN = {
-			add_primary_culture = cu:german
-		   }
-           s:STATE_TAURIDA = {
-           random_scope_state = {
+            s:STATE_UPPER_ANDALUSIA = {
+            random_scope_state = {
 		      limit = {
 			   exists = c:GBR
 			    owner = {
@@ -1032,73 +455,8 @@ central_peace_deal.3 = { #Great Britain
 		      set_state_owner = c:GER
             }
             }
-            s:STATE_BERMUDA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:GBR
-			    owner = {
-				  OR = {
-					c:GBR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GER
-            }
-            }
-            s:STATE_BAHAMAS = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:GBR
-			    owner = {
-				  OR = {
-					c:GBR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GER
-            }
-            }
-            s:STATE_JAMAICA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:GBR
-			    owner = {
-				  OR = {
-					c:GBR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GER
-            }
-            }
-            s:STATE_WEST_INDIES = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:GBR
-			    owner = {
-				  OR = {
-					c:GBR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GER
-            }
-            }
-            s:STATE_GUAYANA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:GBR
-			    owner = {
-				  OR = {
-					c:GBR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GER
-            }
-            }
-            s:STATE_SENEGAL = {
-           random_scope_state = {
+            s:STATE_SINAI = {
+            random_scope_state = {
 		      limit = {
 			   exists = c:GBR
 			    owner = {
@@ -1111,8 +469,8 @@ central_peace_deal.3 = { #Great Britain
             }
             }
 			s:STATE_HOME_COUNTIES = {
-           random_scope_state = {
-		      limit = {
+               random_scope_state = {
+		         limit = {
 			   exists = c:GER
 			    owner = {
 				  OR = {
@@ -1123,55 +481,7 @@ central_peace_deal.3 = { #Great Britain
 		      set_state_owner = c:GBR
             }
             }
-           if = { 
-           limit = {
-			  c:POR = { 
-                has_variable = entente_participant
-              }
-			}
-            c:POR = {
-             remove_diplomatic_pact = {
-			 country = c:ANG
-			 type = colony
-		    }
-             remove_diplomatic_pact = {
-			 country = c:MOZ
-			 type = colony
-		    }
-            }
-            c:GER = {
-             create_diplomatic_pact = {
-			 country = c:ANG
-			 type = colony
-		    }
-             create_diplomatic_pact = {
-			 country = c:MOZ
-			 type = colony
-		    }
-            }
-           c:ANG = {
-			remove_primary_culture = cu:portuguese
-			add_primary_culture = cu:german
-		   }
-           c:MOZ = {
-			remove_primary_culture = cu:portuguese
-			add_primary_culture = cu:german
-		   }
-            s:STATE_SENEGAL = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:POR
-			    owner = {
-				  OR = {
-					c:POR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GER
-            }
-            }
         }
- }
 }
 
 central_peace_deal.4 = { #Colonies partition with Italy
