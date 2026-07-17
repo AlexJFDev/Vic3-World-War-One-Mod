@@ -611,3 +611,163 @@ uk_events.12 = {#Irish Independance
 		}
     }
 }
+
+uk_events.13 = { #Iraqi independance part 1
+    type = country_event
+
+    title = uk_events.13.t
+    desc = uk_events.13.d
+    flavor = uk_events.13.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/baghdad.dds"
+    }
+
+    trigger = {}
+
+    option = { #Ask for independance
+        name = uk_events.13.a
+        default_option = yes
+        c:GBR = {
+            trigger_event = {
+                id = uk_events.14
+                days = 15
+            }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { #Dont ask for indepandance
+        name = uk_events.13.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+uk_events.14 = { #Iraqi independance part 2
+    type = country_event
+
+    title = uk_events.14.t
+    desc = uk_events.14.d
+    flavor = uk_events.14.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/ukian_revolution.dds"
+    }
+
+    trigger = {}
+
+    option = { #Partial Iraqi independance
+        name = uk_events.14.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:IRQ
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:IRQ
+			type = dominion
+		}
+        remove_diplomatic_pact = {
+			country = c:IRQ
+			type = puppet
+		}
+	    create_treaty = {
+		   name = treaty_name_iraqi_independance
+		   first_country = c:GBR
+		   second_country = c:IRQ
+
+		   is_draft = no
+		   binding_period = { years = 17 }
+
+		    articles_to_create = {
+			    {
+				  article = military_access
+				  source_country = c:IRQ
+				  target_country = c:GBR
+			    }
+                {
+				  article = guarantee_independence
+				  source_country = c:GBR
+				  target_country = c:IRQ
+			    }
+                { 
+				  article = trade_privilege
+				  source_country = c:IRQ
+				  target_country = c:GBR
+			    }
+			    {
+				  article = foreign_investment_rights
+				  source_country = c:IRQ
+				  target_country = c:GBR
+			    }
+                {
+				  article = host_power_bloc_embassy
+				  source_country = c:IRQ
+				  target_country = c:GBR
+			    }
+		    }
+	    }
+        c:IRQ = {
+            trigger_event = {
+                id = dev_events.133
+                days = 15
+            }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { #Grant independance to Iraq
+        name = uk_events.14.b
+		remove_diplomatic_pact = {
+			country = c:IRQ
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:IRQ
+			type = dominion
+		}
+        remove_diplomatic_pact = {
+			country = c:IRQ
+			type = puppet
+		}
+        c:IRQ = {
+            trigger_event = {
+                id = dev_events.133
+                days = 13
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = { #Nothing changes
+        name = uk_events.14.c
+        c:IRQ = {
+            add_modifier = {
+              name = oppresive_overlord
+              years = 20
+              is_decaying = yes
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}

@@ -3735,9 +3735,13 @@ entente_peace_deal.8 = { #Round 7 result
 		}
 		c:IRQ = {
 			trigger_event = {
-                   id = dev_events.17
-                   days = 5
-                }
+                id = dev_events.17
+                days = 5
+            }
+			trigger_event = {
+                id = uk_events.13
+                years = 13
+            }
 		}
         s:STATE_DEIR_EZ_ZOR = {
            random_scope_state = {

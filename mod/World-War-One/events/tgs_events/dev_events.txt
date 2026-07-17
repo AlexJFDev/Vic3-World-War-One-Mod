@@ -6424,7 +6424,7 @@ dev_events.133 = {
     }
 }
 
-dev_events.134 = {
+dev_events.134 = { 
     type = country_event
 
     title = dev_events.10.t
@@ -6458,6 +6458,27 @@ dev_events.134 = {
 			id = dev_events.26
 			days = 60
 		}
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+            create_building = {
+				building = building_automotive_industry
+				level = 5
+            }
+            create_building = {
+				building = building_munition_plant
+				level = 10
+            }	
+            create_building = {
+				building = building_arms_industry
+				level = 10
+            }
+            create_building = {
+				building = building_artillery_foundry
+				level = 6
+            }				
+		}
     }
 
     option = {
@@ -6477,6 +6498,27 @@ dev_events.134 = {
         trigger_event = {
 			id = dev_events.26
 			days = 60
+		}
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+            create_building = {
+				building = building_automotive_industry
+				level = 2
+            }
+            create_building = {
+				building = building_munition_plant
+				level = 6
+            }	
+            create_building = {
+				building = building_arms_industry
+				level = 6
+            }
+            create_building = {
+				building = building_artillery_foundry
+				level = 3
+            }				
 		}
     }
 }
@@ -6847,5 +6889,70 @@ dev_events.144 = {
         trigger = { 
             is_player = yes
         }
+    }
+}
+
+dev_events.145 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.10.a
+        c:ISR = {
+            add_modifier = {
+               name = army_buff_modifier_11
+               years = 20
+               is_decaying = yes
+            }
+            add_modifier = {
+               name = money_buff_2
+               years = 20
+               is_decaying = yes
+            }
+        }
+        s:STATE_PALESTINE = {
+			set_owner_of_provinces = {
+				country = c:PAL
+				provinces = { x60D060 xE05060 x0EC997 }
+			}
+		}
+    }
+}
+
+dev_events.146 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.10.a
+        change_tag = HND
     }
 }

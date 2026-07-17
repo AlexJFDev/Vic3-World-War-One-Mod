@@ -438,20 +438,6 @@ REPLACE_OR_CREATE:republican_india = {
 	}
 }
 
-REPLACE_OR_CREATE:republican_hindustan = {
-	color = "hoi4_pakistan_blue"
-
-	possible = {
-		exists = c:HND
-		THIS = c:HND
-		OR = {
-			has_law = law_type:law_parliamentary_republic
-			has_law = law_type:law_presidential_republic
-			has_law = law_type:law_council_republic
-		}
-	}
-}
-
 REPLACE_OR_CREATE:nihilist_russia = {
 	color = "nihilist_russia_color"
 

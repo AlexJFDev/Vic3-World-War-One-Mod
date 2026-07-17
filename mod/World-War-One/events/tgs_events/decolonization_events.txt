@@ -64,6 +64,53 @@ decolonization_events.1 = { #Starting event France
             id = decolonization_events.8
             years = 1
         }
+        c:WAF = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:wolof
+            add_primary_culture = cu:mande
+            add_primary_culture = cu:gbe
+		}
+        c:TOG = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:gbe
+            add_primary_culture = cu:akan
+		}
+        c:EQA = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:central_bantu
+            add_primary_culture = cu:nilo_saharan
+		}
+        c:CMR = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:western_bantu
+            add_primary_culture = cu:central_bantu
+		}
+        c:KON = {
+			remove_primary_culture = cu:belgian
+			add_primary_culture = cu:central_bantu
+		}
+        c:ANG = {
+			remove_primary_culture = cu:portuguese
+			add_primary_culture = cu:central_bantu
+		}
+        c:MAD = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:malagasy
+		}
+        c:DJB = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:cushitic
+		}
+        c:ICH = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:vietnamese
+            add_primary_culture = cu:khmer
+            add_primary_culture = cu:lao
+		}
+        c:FPL = {
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:polynesian
+		}
     }
 }
 
@@ -89,14 +136,72 @@ decolonization_events.2 = { #Starting event UK
     option = {
         name = decolonization_events.2.a
         default_option = yes
-        trigger_event = { #Raj
+        trigger_event = { #India
             id = decolonization_events.9
             years = 1
         }
-        trigger_event = { #Israel
+        trigger_event = { #Palestine
             id = decolonization_events.10
             years = 2
         }
+        c:SIL = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:mande
+            add_primary_culture = cu:kru
+		}
+        c:GHA = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:akan
+            add_primary_culture = cu:gbe
+		}
+        c:NGA = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:yoruba
+            add_primary_culture = cu:hausa
+            add_primary_culture = cu:ibo
+		}
+        c:NAM = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:southern_bantu
+		}
+        c:TAN = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:eastern_bantu
+		}
+        c:KEN = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:eastern_bantu
+		}
+        c:SLD = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:cushitic
+		}
+        c:SUD = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:sudanese
+		}
+        c:BIC = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:north_indian
+            add_primary_culture = cu:west_indian
+            add_primary_culture = cu:central_indian
+            add_primary_culture = cu:east_indian
+            add_primary_culture = cu:south_indian
+            set_state_religion = rel:hindu
+		}
+        c:CEY = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:sinhala
+		}
+        c:MLA = {
+			remove_primary_culture = cu:british
+		}
+        c:ROS = {
+			remove_primary_culture = cu:british
+		}
+        c:NBO = {
+			remove_primary_culture = cu:british
+		}
     }
 }
 
@@ -126,6 +231,11 @@ decolonization_events.3 = { #Starting event NET
             id = decolonization_events.11
             years = 3
         }
+        c:DEI = {
+			remove_primary_culture = cu:dutch
+			add_primary_culture = cu:indonesian
+            set_state_religion = rel:sunni
+		}
     }
 }
 
@@ -155,6 +265,10 @@ decolonization_events.4 = { #Starting event USA
             id = decolonization_events.12
             years = 1
         }
+        c:PHI = {
+			remove_primary_culture = cu:euro_american
+            remove_primary_culture = cu:spanish
+		}
     }
 }
 
@@ -219,7 +333,76 @@ decolonization_events.6 = { #Algerian uprising
     option = { #Turmoil
         name = decolonization_events.6.a
         default_option = yes
-        #TODO
+        s:STATE_ORAN.region_state:FRA = {
+			add_modifier = {
+               name = algerian_independance_war
+               years = 30
+            }
+            add_radicals_in_state = {
+				culture = cu:maghrebi
+				value = 0.4
+			}
+            add_radicals_in_state = {
+				culture = cu:tamazight
+				value = 0.4
+			}
+		}
+        s:STATE_ALGIERS.region_state:FRA = {
+			add_modifier = {
+               name = algerian_independance_war
+               years = 30
+            }
+            add_radicals_in_state = {
+				culture = cu:maghrebi
+				value = 0.4
+			}
+            add_radicals_in_state = {
+				culture = cu:tamazight
+				value = 0.4
+			}
+		}
+        s:STATE_CONSTANTINE.region_state:FRA = {
+			add_modifier = {
+               name = algerian_independance_war
+               years = 30
+            }
+            add_radicals_in_state = {
+				culture = cu:maghrebi
+				value = 0.4
+			}
+            add_radicals_in_state = {
+				culture = cu:tamazight
+				value = 0.4
+			}
+		}
+        s:STATE_SAHARA.region_state:FRA = {
+			add_modifier = {
+               name = algerian_independance_war
+               years = 30
+            }
+            add_radicals_in_state = {
+				culture = cu:maghrebi
+				value = 0.4
+			}
+            add_radicals_in_state = {
+				culture = cu:tamazight
+				value = 0.4
+			}
+		}
+        s:STATE_EAST_SAHARA.region_state:FRA = {
+			add_modifier = {
+               name = algerian_independance_war
+               years = 30
+            }
+            add_radicals_in_state = {
+				culture = cu:maghrebi
+				value = 0.4
+			}
+            add_radicals_in_state = {
+				culture = cu:tamazight
+				value = 0.4
+			}
+		}
         ai_chance = {
 		  base = 1
 	    }
@@ -227,7 +410,93 @@ decolonization_events.6 = { #Algerian uprising
 
     option = { #Create a vassal
         name = decolonization_events.6.b
-
+        create_country = {
+	        tag = ALD
+	        origin = this
+	        state = s:STATE_ALGIERS.region_state:FRA
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+                add_modifier = {
+			      name = decolonization_buff
+                  years = 100
+		        }
+            }
+        }
+        s:STATE_ORAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        s:STATE_ALGIERS = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        s:STATE_CONSTANTINE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        s:STATE_SAHARA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        s:STATE_EAST_SAHARA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        c:FRA = {
+            create_diplomatic_pact = {
+			  country = c:ALD
+			  type = puppet
+		    }
+        }
         ai_chance = {
 		  base = 0
 	    }
@@ -235,7 +504,87 @@ decolonization_events.6 = { #Algerian uprising
 
     option = { #Give up Algeria
         name = decolonization_events.6.c
-        
+        create_country = {
+	        tag = ALD
+	        origin = this
+	        state = s:STATE_ALGIERS.region_state:FRA
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+                add_modifier = {
+			      name = decolonization_buff
+                  years = 100
+		        }
+            }
+        }
+        s:STATE_ORAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        s:STATE_ALGIERS = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        s:STATE_CONSTANTINE = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        s:STATE_SAHARA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
+        s:STATE_EAST_SAHARA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ALD
+            }
+        }
         ai_chance = {
 		  base = 0
 	    }
@@ -343,25 +692,195 @@ decolonization_events.9 = { #Indian independance
         name = decolonization_events.9.a
         default_option = yes
         remove_diplomatic_pact = {
-			country = c:BIC
+			country = c:BHT
 			type = colony
 		}
         remove_diplomatic_pact = {
-			country = c:BIC
+			country = c:BHT
 			type = protectorate
 		}
         remove_diplomatic_pact = {
-			country = c:BIC
+			country = c:BHT
 			type = dominion
 		}
-        c:BIC = {
-			remove_primary_culture = cu:british
-			add_primary_culture = cu:north_indian
-            add_primary_culture = cu:west_indian
-            add_primary_culture = cu:central_indian
-            add_primary_culture = cu:east_indian
-            add_primary_culture = cu:south_indian
-		}
+        create_country = {
+	        tag = PAK
+	        origin = this
+	        state = s:STATE_PUNJAB.region_state:BHT
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_KASHMIR = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PAK
+            }
+        }
+        s:STATE_PASHTUNISTAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PAK
+            }
+        }
+        s:STATE_QUETTA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PAK
+            }
+        }
+        s:STATE_BALUCHISTAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PAK
+            }
+        }
+        s:STATE_SINDH = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PAK
+            }
+        }
+        create_country = {
+	        tag = BGL
+	        origin = this
+	        state = s:STATE_EAST_BENGAL.region_state:BHT
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        c:PAK = {
+            create_diplomatic_pact = {
+			  country = c:BGL
+			  type = protectorate
+		    }
+        }
+        c:BHT = {
+            trigger_event = {
+              id = dev_events.146
+              days = 15
+            }
+        }
+        create_country = {
+	        tag = BUR
+	        origin = this
+	        state = s:STATE_PEGU.region_state:BHT
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_TENASSERIM = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BUR
+            }
+        }
+        s:STATE_SHAN_STATES = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BUR
+            }
+        }
+        s:STATE_KACHIN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BUR
+            }
+        }
+        s:STATE_MANDALAY = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BUR
+            }
+        }
+        s:STATE_ARAKAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BHT
+			    owner = {
+				  OR = {
+					c:BHT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BUR
+            }
+        }
         ai_chance = {
 		  base = 1
 	    }
@@ -392,17 +911,35 @@ decolonization_events.10 = { #Palestinian independance
 
     trigger = {}
 
-    immediate = {}
+    immediate = {
+        c:PAL = {
+            set_capital = STATE_TRANSJORDAN
+        }
+    }
 
-    option = { #TODO
+    option = {
         name = decolonization_events.10.a
         default_option = yes
+        create_country = {
+	        tag = ISR
+	        origin = this
+	        state = s:STATE_PALESTINE.region_state:PAL
+            on_created = {
+                activate_law = law_type:law_parliamentary_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_racial_segregation
+                activate_law = law_type:law_universal_suffrage
+                activate_law = law_type:law_right_of_assembly
+                activate_law = law_type:law_interventionism
+            }
+        }
+        trigger_event = {
+            id = dev_events.145
+            days = 5
+        }
         remove_diplomatic_pact = {
 			country = c:PAL
 			type = protectorate
-		}
-        c:PAL = {
-			remove_primary_culture = cu:british
 		}
         ai_chance = {
 		  base = 1
@@ -411,6 +948,10 @@ decolonization_events.10 = { #Palestinian independance
 
     option = {
         name = decolonization_events.10.b
+        remove_diplomatic_pact = {
+			country = c:PAL
+			type = protectorate
+		}
         ai_chance = {
 		  base = 0
 	    }
@@ -454,10 +995,6 @@ decolonization_events.11 = { #Indonesian independance
 			country = c:DEI
 			type = dominion
 		}
-        c:DEI = {
-			remove_primary_culture = cu:dutch
-			add_primary_culture = cu:indonesian
-		}
         ai_chance = {
 		  base = 1
 	    }
@@ -500,10 +1037,6 @@ decolonization_events.12 = { #Filipino independance
         remove_diplomatic_pact = {
 			country = c:PHI
 			type = dominion
-		}
-        c:PHI = {
-			remove_primary_culture = cu:euro_american
-            remove_primary_culture = cu:spanish
 		}
         ai_chance = {
 		  base = 1

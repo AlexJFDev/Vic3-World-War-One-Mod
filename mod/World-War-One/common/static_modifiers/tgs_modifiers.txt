@@ -200,12 +200,13 @@ defeated_elites_modifier = {
     interest_group_ig_devout_pol_str_mult = -1
 }
 
-dictatorship_of_proletariat = {
+dictatorship_of_proletariat = { 
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     interest_group_ig_trade_unions_pol_str_mult = 6
     interest_group_ig_industrialists_pol_str_mult = -1
     interest_group_ig_petty_bourgeoisie_pol_str_mult = -1
     interest_group_ig_trade_unions_approval_add = 12
+    political_movement_radicalism_add = -0.5
     country_legitimacy_base_add = 100
 }
 
@@ -1492,4 +1493,9 @@ revolutionary_fervor = {
 decolonization_buff = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
 	country_liberty_desire_add = 0.8
+}
+
+algerian_independance_war = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_turmoil_effects_mult = 1.5
 }
