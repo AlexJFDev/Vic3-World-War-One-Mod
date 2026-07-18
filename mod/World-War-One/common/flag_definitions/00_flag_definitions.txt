@@ -1569,7 +1569,7 @@ REPLACE_OR_CREATE:BUR = { # Burma
 		trigger = { 
 			coa_def_absolute_monarchy_flag_trigger = yes
 		}
-	}	
+	}
 	flag_definition = {
 		coa = BUR_republic
 		subject_canton = BUR_republic
@@ -1577,15 +1577,7 @@ REPLACE_OR_CREATE:BUR = { # Burma
 		trigger = { 
 			coa_def_republic_flag_trigger = yes
 		}
-	}	
-	flag_definition = {
-		coa = BUR_dictatorship
-		subject_canton = BUR_dictatorship
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}	
+	}
 	flag_definition = {
 		coa = BUR_theocracy
 		subject_canton = BUR_theocracy
@@ -10766,8 +10758,8 @@ REPLACE_OR_CREATE:MAD = {
 
 REPLACE_OR_CREATE:WAF = {
 	flag_definition = {
-		coa = MAL		
-		subject_canton = MAL
+		coa = KAL_theocracy 		
+		subject_canton = KAL_theocracy 
 		priority = 1
 	}
 	flag_definition = {
@@ -10802,8 +10794,8 @@ REPLACE_OR_CREATE:WAF = {
 
 REPLACE_OR_CREATE:EQA = {
 	flag_definition = {
-		coa = COG		
-		subject_canton = COG
+		coa = NAR		
+		subject_canton = NAR
 		priority = 1
 	}
 	flag_definition = {
@@ -11361,4 +11353,20 @@ SHN = {
 			coa_def_communist_flag_trigger = yes
 		}
 	}	
+}
+
+REPLACE_OR_CREATE:BGL = {
+	flag_definition = {
+		coa = BGL
+		subject_canton = BGL
+		priority = 1
+	}
+}
+
+TIR = {
+	flag_definition = {
+		coa = BUK_dictatorship
+		subject_canton = BUK_dictatorship
+		priority = 1
+	}
 }

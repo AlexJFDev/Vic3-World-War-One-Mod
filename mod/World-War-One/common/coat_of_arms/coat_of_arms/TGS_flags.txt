@@ -12,6 +12,8 @@
 @uru_canton_height = 0.556
 @sm_fra = 0.16
 
+#Flags by EBTX
+
 TUS_napoleon = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -28,10 +30,8 @@ TUS_napoleon = {
 	textured_emblem = {
 		texture = "te_crown.dds"
 		instance = { scale = { 0.44 0.44 } position = { 0.38 0.18 } }
-	}		
-	
+	}
 }
-
 LUC_napoleon = {
 	pattern = "pattern_solid.tga" 
 	color1 = "blue_light" 
@@ -49,7 +49,6 @@ LUC_napoleon = {
 		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }	
 	}	
 }
-
 NET_napoleon = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -3011,6 +3010,31 @@ MYY = {
 		}
 	}
 }
+FFR = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+
+	textured_emblem = {
+		texture = "Free_France.dds"
+		instance = { scale = { 0.40 0.60 } position = { 0.5 0.5 } }
+	}
+}
+BGL = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+}
 
 #Chinese warlords by Hathway
 
@@ -3027,7 +3051,6 @@ BEI_dictatorship = {
 		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }			
 	}	
 }
-
 YUN = {
 	# 红中旗
 	pattern = "pattern_solid.tga"
@@ -3039,7 +3062,6 @@ YUN = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}
 }
-
 YUE = {
 	#井田旗
 	pattern = "pattern_solid.tga"
@@ -3056,7 +3078,6 @@ YUE = {
 		instance = { scale = { 1.1 1.1 } position = { 0.25 0.25 } }			
 	}	
 }
-
 HNA = {
 	#红橙红旗
 	pattern = "pattern_solid.tga"
@@ -3068,7 +3089,6 @@ HNA = {
 		color2 = "red"
 	}
 }
-
 AHU = {
 	#人字旗
 	pattern = "pattern_solid.tga"
@@ -3080,7 +3100,6 @@ AHU = {
 		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }			
 	}
 }
-
 ZHI = {
 	#中华帝国草案国旗
 	pattern = "pattern_solid.tga"
@@ -3113,7 +3132,6 @@ ZHI = {
 		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }			
 	}
 }
-
 SHN = {
 	#太极八卦旗
 	pattern = "pattern_solid.tga"
@@ -3126,7 +3144,6 @@ SHN = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}
 }
-
 GUI = {
 	#白底红色汉字旗
 	pattern = "pattern_solid.tga"
@@ -3138,7 +3155,6 @@ GUI = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}
 }
-
 GNG = {
 	#铁血十八星旗变体
 	pattern = "pattern_solid.tga"
@@ -3150,7 +3166,6 @@ GNG = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}	
 }
-
 SIH = {
 	#大汉军政府旗
 	pattern = "pattern_solid.tga"
@@ -3163,7 +3178,6 @@ SIH = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}
 }
-
 SHA_qing = {
 	#五色旗变体-北洋海军旗
 	pattern = "pattern_solid.tga"
@@ -3194,7 +3208,6 @@ SHA_qing = {
 		instance = { scale = { 1.0 0.2 } position = { 0.5 0.9 } }			
 	}	
 }
-
 SHA_beiyang = {
 	#五色旗变体-中华帝国国旗草案之一
 	pattern = "pattern_solid.tga"
@@ -3225,7 +3238,6 @@ SHA_beiyang = {
 		instance = { scale = { 1.0 0.2 } position = { 0.5 0.9 } }			
 	}	
 }
-
 SHA = {
 	#九星太极满地红
 	pattern = "pattern_solid.tga"
@@ -3242,7 +3254,6 @@ SHA = {
 		instance = { scale = { 0.5 0.5 } position = { 0.25 0.25 } }			
 	}	
 }
-
 XIB = {
 	#光复旗
 	pattern = "pattern_solid.tga"
@@ -3254,7 +3265,6 @@ XIB = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}
 }
-
 XIN = {
 	#六星旗
 	pattern = "pattern_solid.tga"
@@ -3266,7 +3276,6 @@ XIN = {
 		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }	
 	}
 }
-
 FRS = {
 	#白版铁血十八星旗
 	pattern = "pattern_solid.tga"
@@ -3279,7 +3288,6 @@ FRS = {
 		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }			
 	}
 }
-
 FRS_republic = {
 	#中华共和国旗
 	pattern = "pattern_solid.tga"
@@ -3297,7 +3305,6 @@ FRS_republic = {
 		instance = { scale = { 0.40 0.40 } position = { 0.50 0.50 } }		
 	}	
 }
-
 YUZ = {
 	#台湾民主国旗
 	pattern = "pattern_solid.tga"
@@ -3308,7 +3315,6 @@ YUZ = {
 		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }			
 	}
 }
-
 HEN = {
 	#黄底黑色汉字旗
 	pattern = "pattern_solid.tga"
@@ -3320,7 +3326,6 @@ HEN = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}
 }
-
 HUB = {
 	#铁血十八星旗
 	pattern = "pattern_solid.tga"
@@ -3333,7 +3338,6 @@ HUB = {
 		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }			
 	}	
 }
-
 JXI = {
 	#九星太极旗
 	pattern = "pattern_solid.tga"
@@ -3345,7 +3349,6 @@ JXI = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}	
 }
-
 JSU = {
 	#九星向日旗
 	pattern = "pattern_solid.tga"
@@ -3357,7 +3360,6 @@ JSU = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}	
 }
-
 ZHE = {
 	#白天青日满地红旗
 	pattern = "pattern_solid.tga"
@@ -3374,7 +3376,6 @@ ZHE = {
 		instance = { scale = { 1.0 1.0 } position = { 0.25 0.25 } }			
 	}	
 }
-
 CHQ = {
 	#蜀字旗（假想）
 	pattern = "pattern_solid.tga"
@@ -3386,7 +3387,6 @@ CHQ = {
 		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }			
 	}
 }
-
 QIN = {
 	#兴汉灭满旗
 	pattern = "pattern_solid.tga"
@@ -3398,7 +3398,6 @@ QIN = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
 	}
 }
-
 GAN = {
 	#五色旗变体-红蓝白黑四色
 	pattern = "pattern_solid.tga"
@@ -3423,7 +3422,6 @@ GAN = {
 		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }			
 	}	
 }
-
 QIH = {
 	#马家军战旗
 	pattern = "pattern_solid.tga"
@@ -3435,7 +3433,6 @@ QIH = {
 		instance = { scale = { 0.75 0.75 } position = { 0.35 0.5 } }			
 	}
 }
-
 NIX = {
 	#“中华伊斯兰共和国”国旗（疑似虚构）
 	pattern = "pattern_solid.tga"
@@ -3452,20 +3449,4 @@ NIX = {
 		color1 = "white"
 		instance = { scale = { 0.9 0.9 } position = { 0.3 0.5 } }			
 	}	
-}
-
-FFR = {
-	pattern = "pattern_solid.tga"
-	color1 = "blue"
-
-	colored_emblem = {
-		texture = "ce_tricolor_vertical.dds"
-		color1 = "white"
-		color2 = "red"
-	}
-
-	textured_emblem = {
-		texture = "Free_France.dds"
-		instance = { scale = { 0.40 0.60 } position = { 0.5 0.5 } }
-	}
 }

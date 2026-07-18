@@ -17,7 +17,272 @@ decolonization_events.1 = { #Starting event France
 
     trigger = {}
 
-    immediate = {}
+    immediate = {
+        create_country = { #Mauritania
+	        tag = TIR
+	        origin = this
+	        state = s:STATE_MAURITANIA.region_state:WAF
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_INNER_MAURITANIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:WAF
+			    owner = {
+				  OR = {
+					c:WAF = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:TIR
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:TIR
+			type = puppet
+		}
+        create_country = { #Mali
+	        tag = MAL
+	        origin = this
+	        state = s:STATE_TIMBUKTU.region_state:WAF
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_EASTERN_MALI = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:WAF
+			    owner = {
+				  OR = {
+					c:WAF = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:MAL
+            }
+        }
+        s:STATE_WESTERN_MALI = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:WAF
+			    owner = {
+				  OR = {
+					c:WAF = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:MAL
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:MAL
+			type = puppet
+		}
+        create_country = { #Guinea
+	        tag = MDK
+	        origin = this
+	        state = s:STATE_GUINEA.region_state:WAF
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:MDK
+			type = puppet
+		}
+        create_country = { #Ivory Coast
+	        tag = AYI
+	        origin = this
+	        state = s:STATE_IVORY_COAST.region_state:WAF
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_WINDWARD_COAST = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:WAF
+			    owner = {
+				  OR = {
+					c:WAF = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:AYI
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:AYI
+			type = puppet
+		}
+        create_country = { #Burkina Faso
+	        tag = MOS
+	        origin = this
+	        state = s:STATE_VOLTA.region_state:WAF
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:MOS
+			type = puppet
+		}
+        create_country = { #Benin
+	        tag = DAH
+	        origin = this
+	        state = s:STATE_DAHOMEY.region_state:WAF
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:DAH
+			type = puppet
+		}
+        create_country = { #Niger
+	        tag = AIR
+	        origin = this
+	        state = s:STATE_NIGER.region_state:WAF
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_OUTER_HAUSALAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:WAF
+			    owner = {
+				  OR = {
+					c:WAF = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:AIR
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:AIR
+			type = puppet
+		}
+        create_country = { #Central African republic
+	        tag = SRA
+	        origin = this
+	        state = s:STATE_UBANGI_SHARI.region_state:EQA
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_UBANGI_SHARI = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:CMR
+			    owner = {
+				  OR = {
+					c:CMR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SRA
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:SRA
+			type = puppet
+		}
+        create_country = { #Congo
+	        tag = LNG
+	        origin = this
+	        state = s:STATE_CONGO.region_state:EQA
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_CONGO = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:CMR
+			    owner = {
+				  OR = {
+					c:CMR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:LNG
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:LNG
+			type = puppet
+		}
+        create_country = { #Gabon
+	        tag = FNG
+	        origin = this
+	        state = s:STATE_GABON.region_state:EQA
+            on_created = {
+                activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_freedom_of_conscience
+                activate_law = law_type:law_cultural_exclusion
+                activate_law = law_type:law_autocracy
+                activate_law = law_type:law_censorship
+            }
+        }
+        s:STATE_GABON = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:CMR
+			    owner = {
+				  OR = {
+					c:CMR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FNG
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:FNG
+			type = puppet
+		}
+    }
 
     option = {
         name = decolonization_events.1.a
@@ -69,21 +334,42 @@ decolonization_events.1 = { #Starting event France
 			add_primary_culture = cu:wolof
             add_primary_culture = cu:mande
             add_primary_culture = cu:gbe
+            set_state_religion = rel:sunni
+		}
+        c:MDK = {
+			set_state_religion = rel:sunni
+		}
+        c:AYI = {
+			set_state_religion = rel:catholic
 		}
         c:TOG = {
 			remove_primary_culture = cu:french
 			add_primary_culture = cu:gbe
             add_primary_culture = cu:akan
+            set_state_religion = rel:catholic
 		}
         c:EQA = {
 			remove_primary_culture = cu:french
 			add_primary_culture = cu:central_bantu
             add_primary_culture = cu:nilo_saharan
+            set_state_religion = rel:sunni
 		}
         c:CMR = {
 			remove_primary_culture = cu:french
 			add_primary_culture = cu:western_bantu
             add_primary_culture = cu:central_bantu
+		}
+        c:DAH = {
+			set_state_religion = rel:catholic
+		}
+        c:SRA = {
+			set_state_religion = rel:catholic
+		}
+        c:LNG = {
+			set_state_religion = rel:catholic
+		}
+        c:FNG = {
+			set_state_religion = rel:catholic
 		}
         c:KON = {
 			remove_primary_culture = cu:belgian
@@ -106,6 +392,7 @@ decolonization_events.1 = { #Starting event France
 			add_primary_culture = cu:vietnamese
             add_primary_culture = cu:khmer
             add_primary_culture = cu:lao
+            set_state_religion = rel:mahayana
 		}
         c:FPL = {
 			remove_primary_culture = cu:french
@@ -999,6 +1286,9 @@ decolonization_events.11 = { #Indonesian independance
 			country = c:DEI
 			type = dominion
 		}
+        c:DEI = {
+            activate_law = law_type:law_presidential_republic
+        }
         ai_chance = {
 		  base = 1
 	    }

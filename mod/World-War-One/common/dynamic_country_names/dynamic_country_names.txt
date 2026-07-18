@@ -108,7 +108,7 @@ REPLACE_OR_CREATE:MLA = { # Malaysia (Federated Malay States)
 		}
 	}
 }
-REPLACE_OR_CREATE:WAF = { # West Africa (French West Africa)
+REPLACE_OR_CREATE:WAF = { # West Africa
 	dynamic_country_name = {
 		use_overlord_prefix = yes
 
@@ -119,8 +119,26 @@ REPLACE_OR_CREATE:WAF = { # West Africa (French West Africa)
 			coa_def_subject_trigger = yes
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_c_waf
+		adjective = dyn_c_waf_adj
+
+        use_overlord_prefix = yes
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			exists = c:FRA
+			c:FRA = {
+				has_diplomatic_pact = {
+					who = c:WAF
+					type = colony
+				}
+			}
+		}
+	}
 }
-REPLACE_OR_CREATE:EQA = { # Equatorial Africa (French Equatorial Africa)
+REPLACE_OR_CREATE:EQA = { # Equatorial Africa
 	dynamic_country_name = {
 		use_overlord_prefix = yes
 
@@ -129,6 +147,24 @@ REPLACE_OR_CREATE:EQA = { # Equatorial Africa (French Equatorial Africa)
 		
 		trigger = {
 			coa_def_subject_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_eqa
+		adjective = dyn_c_eqa_adj
+
+        use_overlord_prefix = yes
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			exists = c:FRA
+			c:FRA = {
+				has_diplomatic_pact = {
+					who = c:WAF
+					type = colony
+				}
+			}
 		}
 	}
 }
@@ -969,4 +1005,22 @@ REPLACE_OR_CREATE:EGY = {
 			}
 		}
 	}	
+}
+REPLACE_OR_CREATE:BUR = {
+	dynamic_country_name = {
+		name = dyn_c_myanmar
+        adjective = dyn_c_myanmar_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			c:BUR = {
+				OR = {
+				 has_law = law_type:law_presidential_republic
+				 has_law = law_type:law_parliamentary_republic
+				}
+			}
+		}
+	}
 }
