@@ -6548,7 +6548,7 @@ dev_events.133 = {
     }
 }
 
-dev_events.134 = { 
+dev_events.134 = {
     type = country_event
 
     title = dev_events.10.t
@@ -6568,16 +6568,8 @@ dev_events.134 = {
         name = dev_events.10.a
         default_option = yes
         trigger = { is_player = no }
-        add_modifier = {
-			name = army_buff_modifier_3
-            years = 20
-            is_decaying = yes
-		}
-        add_modifier = {
-            name = money_buff_3
-            years = 10
-            is_decaying = yes
-        }
+        add_treasury = 8000000
+        remove_modifier = declared_bankruptcy
         trigger_event = {
 			id = dev_events.26
 			days = 60
@@ -6609,16 +6601,8 @@ dev_events.134 = {
         name = dev_events.10.a
         default_option = yes
         trigger = { is_player = yes }
-        add_modifier = {
-			name = army_buff_modifier_7
-            years = 20
-            is_decaying = yes
-		}
-        add_modifier = {
-            name = money_buff_2
-            years = 5
-            is_decaying = yes
-        }
+        add_treasury = 2000000
+        remove_modifier = declared_bankruptcy
         trigger_event = {
 			id = dev_events.26
 			days = 60
