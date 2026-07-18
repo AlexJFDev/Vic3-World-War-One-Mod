@@ -206,7 +206,6 @@ dictatorship_of_proletariat = {
     interest_group_ig_industrialists_pol_str_mult = -1
     interest_group_ig_petty_bourgeoisie_pol_str_mult = -1
     interest_group_ig_trade_unions_approval_add = 12
-    political_movement_radicalism_add = -0.5
     country_legitimacy_base_add = 100
 }
 
@@ -1498,4 +1497,17 @@ decolonization_buff = {
 algerian_independance_war = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	state_turmoil_effects_mult = 1.5
+}
+
+israel_buff = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_tax_income_add = 300000
+    state_migration_pull_mult = 0.8
+    state_lower_strata_standard_of_living_add = 3
+    state_middle_strata_standard_of_living_add = 3
+    state_upper_strata_standard_of_living_add = 3
+    unit_army_offense_mult = 0.3
+    unit_army_defense_mult = 0.3
+    unit_morale_recovery_mult = 0.3
+    military_formation_mobilization_speed_mult = 0.3
 }

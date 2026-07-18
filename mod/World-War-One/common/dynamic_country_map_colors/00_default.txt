@@ -393,12 +393,7 @@ REPLACE_OR_CREATE:republican_france = {
 	possible = {
 		exists = c:FRA
 		THIS = c:FRA
-		NOT = { has_law = law_type:law_autocracy }
-		OR = {
-			has_law = law_type:law_parliamentary_republic
-			has_law = law_type:law_presidential_republic
-			has_law = law_type:law_corporate_state
-		}
+		NOT = { has_law = law_type:law_industry_banned }
 	}
 }
 

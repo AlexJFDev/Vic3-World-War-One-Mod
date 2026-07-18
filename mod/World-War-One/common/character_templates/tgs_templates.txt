@@ -608,23 +608,51 @@ fra_maurras_character_template = {
     }  
 }
 
-agitator_phan_boi_chau = {
-	first_name = Phan
-	last_name = Chau
+fra_pierre_laval_template = {
+    first_name = Pierre
+    last_name = Laval
+    historical = yes
+    birth_date = 1883.06.28
+    culture = cu:french
+    role = character_role_politician
+    female = no
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_pacifist
+    traits = {
+        imposing
+		experienced_diplomat
+    }  
+}
+
+fra_philippe_petain_template = {
+	first_name = Philippe
+	last_name = Petain
+	culture = cu:french
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	birth_date = 1856.04.24
+	is_general = yes
 	historical = yes
-	culture = cu:vietnamese
-	religion = rel:mahayana
-	female = no
-	interest_group = ig_intelligentsia
-	is_agitator = yes
-	ideology = ideology_republican_leader
-	birth_date = 1867.2.11
 	traits = {
-		reckless
-		experienced_political_operator
+		expert_defensive_strategist 
 	}
 }
 
+fra_paul_reynaud_template = {
+    first_name = Paul
+    last_name = Reynaud
+    historical = yes
+    birth_date = 1878.10.15
+    culture = cu:french
+    role = character_role_politician
+    female = no
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_protectionist
+    traits = {
+        expert_colonial_administrator
+		meticulous
+    }  
+}
 
 #Germany
 
@@ -1183,6 +1211,28 @@ rus_alexander_kolchack_template = {
 	}
 }
 
+#Finland
+
+FIN_general_mannerheim_template = {
+	first_name = Carl_Gustav_Emil
+	last_name = Mannerheim
+	historical = yes
+	culture = cu:swedish
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate
+	dna = dna_carl_gustaf_emil_mannerheim
+	interest_group = ig_armed_forces
+	birth_date = 1867.6.4
+	is_general = yes
+	home_region = STATE_UUSIMAA
+	traits = {
+		direct
+		stalwart_defender
+		meticulous
+	}
+}
+
 #White Russia
 
 sib_alexander_kolchack_template = {
@@ -1368,6 +1418,23 @@ sov_georgy_zhukov_character_template = {
     }
 }
 
+#French Equatorial Africa
+
+EQA_felix_eboue_template = {
+	first_name = Felix
+	last_name = Eboue
+	culture = cu:afro_antillean
+	interest_group = ig_intelligentsia
+	ideology = ideology_social_democrat
+	birth_date = 1884.12.26
+	is_agitator = yes
+	historical = yes
+	traits = {
+		expert_colonial_administrator
+		experienced_diplomat
+	}
+}
+
 #Persia
 
 per_riza_pahlevi_character_template = {
@@ -1516,6 +1583,25 @@ BIC_charles_hardinge = {
 	dna = dna_charles_harding
 	traits = {
 		arrogant expert_colonial_administrator meticulous 
+	}
+}
+
+#Indochina
+
+agitator_phan_boi_chau = {
+	first_name = Phan
+	last_name = Chau
+	historical = yes
+	culture = cu:vietnamese
+	religion = rel:mahayana
+	female = no
+	interest_group = ig_intelligentsia
+	is_agitator = yes
+	ideology = ideology_republican_leader
+	birth_date = 1867.2.11
+	traits = {
+		reckless
+		experienced_political_operator
 	}
 }
 

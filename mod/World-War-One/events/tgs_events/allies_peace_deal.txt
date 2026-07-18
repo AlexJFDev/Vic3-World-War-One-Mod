@@ -41,26 +41,14 @@ allies_peace_deal.3 = {
 			annex = c:FFR
 			activate_law = law_type:law_universal_suffrage
             activate_law = law_type:law_right_of_assembly
-			create_diplomatic_pact = {
-			  country = c:WAF
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:TOG
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:EQA
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:CMR
-			  type = colony
-		    }
-            create_diplomatic_pact = {
-			  country = c:MAD
-			  type = colony
-		    }
+            trigger_event = {
+              id = allies_peace_deal.5
+              days = 60
+            }
+			trigger_event = {
+              id = dev_events.118
+              days = 5
+            }
 		}
 		s:STATE_POMERANIA = {
             random_scope_state = {
@@ -329,12 +317,6 @@ allies_peace_deal.3 = {
 			    }
 		        }
 		        set_state_owner = c:FRA
-            }
-        }
-		c:FRA = {
-            trigger_event = {
-              id = dev_events.118
-              days = 5
             }
         }
 		every_country = {

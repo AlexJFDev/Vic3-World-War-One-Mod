@@ -38,6 +38,10 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
             days = 5
         }
         trigger_event = {
+            id = dev_events.147
+            days = 5
+        }
+        trigger_event = {
             id = dev_events.124
             days = 15
         }
@@ -593,7 +597,7 @@ ussr_events.11 = { #Invasion of Manchuria
     icon = "gfx/interface/icons/event_icons/event_skull.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 3
+    duration = 12
     
     event_image = { 
 		texture = "gfx/event_pictures/japan_army_2.dds"
