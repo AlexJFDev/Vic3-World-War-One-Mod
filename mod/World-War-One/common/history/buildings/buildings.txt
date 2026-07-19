@@ -8415,9 +8415,9 @@
 				add_ownership = {
 					building = {
 						type = building_financial_district
-						country = c:GUA
+						country = c:USA
 						levels = 2
-						region = STATE_GUATEMALA
+						region = STATE_LOUISIANA
 					}
 				}
 				reserves = 1
@@ -8430,9 +8430,9 @@
 				add_ownership = {
 					building = {
 						type = building_financial_district
-						country = c:GRE
+						country = c:USA
 						levels = 1
-						region = STATE_ATTICA
+						region = STATE_LOUISIANA
 					}
 				}
 				reserves = 1
@@ -8474,10 +8474,10 @@
 				building = building_sugar_plantation
 				add_ownership = {
 					building = {
-						type = building_manor_house
-						country = c:GUA
+						type = building_financial_district
+						country = c:USA
 						levels = 4
-						region = STATE_GUATEMALA
+						region = STATE_LOUISIANA
 					}
 				}
 				reserves = 1
@@ -8687,6 +8687,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_metal_shipbuilding 
+				}
+			}
+			create_building = {
+				building = building_banana_plantation
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:USA
+						levels = 18
+						region = STATE_LOUISIANA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_banana_plantation pm_road_carts 
 				}
 			}
 			create_building = {

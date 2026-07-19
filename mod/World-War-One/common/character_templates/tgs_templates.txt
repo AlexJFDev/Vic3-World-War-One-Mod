@@ -6,7 +6,7 @@ usa_roosevelt_character_template = {
     historical = yes
     culture = cu:euro_american
     female = no
-    religion = rel:protestant
+    religion = protestant
     ig_leader = yes
     ideology = ideology_rooseveltian_progressivism
     interest_group = ig_intelligentsia
@@ -298,7 +298,7 @@ agitator_henry_ford = {
 	last_name = Ford
 	historical = yes
 	culture = cu:euro_american
-	religion = rel:protestant
+	religion = protestant
 	female = no
 	interest_group = ig_industrialists
 	ideology = ideology_ethno_nationalist
@@ -327,7 +327,7 @@ agitator_eugene_debs = {
 	last_name = Debs
 	historical = yes
 	culture = cu:yankee
-	religion = rel:protestant
+	religion = protestant
 	female = no
 	is_agitator = yes
 	interest_group = ig_trade_unions
@@ -346,7 +346,7 @@ agitator_web_du_bois = { # W.E.B. Du Bois
 	last_name = Du_Bois
 	historical = yes
 	culture = cu:afro_american
-	religion = rel:protestant
+	religion = protestant
 	female = no
 	is_agitator = yes
 	interest_group = ig_intelligentsia
@@ -367,7 +367,7 @@ usa_robert_oppenheimer_character_template = {
     culture = cu:euro_american
     female = no
 	is_agitator = yes
-    religion = rel:atheist
+    religion = atheist
     ideology = ideology_communist
     interest_group = ig_intelligentsia
     birth_date = 1904.05.22
@@ -377,24 +377,6 @@ usa_robert_oppenheimer_character_template = {
         reckless
     }   
 }
-
-usa_chester_william_nimitz_character_template = {
-    first_name = Chester
-    last_name = Nimitz
-    historical = yes
-    culture = cu:euro_american
-    female = no
-	is_agitator = yes
-    religion = rel:protestant
-    ideology = ideology_moderate
-    interest_group = ig_armed_forces
-    birth_date = 1885.02.24
-    traits = {
-        innovative
-		expert_naval_commander
-    }   
-}
-Chester William Nimitz
 
 #Great-Britain
 
@@ -541,7 +523,7 @@ gbr_lawrence_of_arabia = {
 	historical = yes
     birth_date = 1888.08.16
 	culture = cu:british
-	religion = rel:protestant
+	religion = protestant
 	female = no
     is_general = yes
 	interest_group = ig_intelligentsia
@@ -552,23 +534,6 @@ gbr_lawrence_of_arabia = {
         erudite
         charismatic
         experienced_offensive_planner
-	}
-}
-
-GBR_bernard_montgomery_template = {
-    first_name = Bernard
-	last_name = Montgomery
-	historical = yes
-    birth_date = 1887.11.17
-	culture = cu:british
-	religion = rel:protestant
-	female = no
-    is_general = yes
-	interest_group = ig_armed_forces
-	ideology = ideology_moderate
-	traits = {
-        expert_defensive_strategist
-		imposing
 	}
 }
 
@@ -595,7 +560,7 @@ agitator_jean_jaures = {
 	last_name = Jaures
 	historical = yes
 	culture = cu:french
-	religion = rel:catholic
+	religion = catholic
 	female = no
 	interest_group = ig_trade_unions
 	is_agitator = yes
@@ -626,51 +591,23 @@ fra_maurras_character_template = {
     }  
 }
 
-fra_pierre_laval_template = {
-    first_name = Pierre
-    last_name = Laval
-    historical = yes
-    birth_date = 1883.06.28
-    culture = cu:french
-    role = character_role_politician
-    female = no
-    interest_group = ig_petty_bourgeoisie
-    ideology = ideology_pacifist
-    traits = {
-        imposing
-		experienced_diplomat
-    }  
-}
-
-fra_philippe_petain_template = {
-	first_name = Philippe
-	last_name = Petain
-	culture = cu:french
-	interest_group = ig_armed_forces
-	ideology = ideology_authoritarian
-	birth_date = 1856.04.24
-	is_general = yes
+agitator_phan_boi_chau = {
+	first_name = Phan
+	last_name = Chau
 	historical = yes
+	culture = cu:vietnamese
+	religion = mahayana
+	female = no
+	interest_group = ig_intelligentsia
+	is_agitator = yes
+	ideology = ideology_republican_leader
+	birth_date = 1867.2.11
 	traits = {
-		expert_defensive_strategist 
+		reckless
+		experienced_political_operator
 	}
 }
 
-fra_paul_reynaud_template = {
-    first_name = Paul
-    last_name = Reynaud
-    historical = yes
-    birth_date = 1878.10.15
-    culture = cu:french
-    role = character_role_politician
-    female = no
-    interest_group = ig_petty_bourgeoisie
-    ideology = ideology_protectionist
-    traits = {
-        expert_colonial_administrator
-		meticulous
-    }  
-}
 
 #Germany
 
@@ -730,7 +667,7 @@ agitator_karl_liebknecht = { # Karl Liebknecht, or as I like to call him, Chucky
 	last_name = Liebknecht
 	historical = yes
 	culture = cu:german
-	religion = rel:protestant
+	religion = protestant
 	is_agitator = yes
 	female = no
 	interest_group = ig_trade_unions
@@ -749,7 +686,7 @@ pol_rosa_luxemburg_character_template = {
 	last_name = Luxemburg
 	historical = yes
 	culture = cu:polish
-	religion = rel:atheist
+	religion = atheist
 	female = yes
     is_agitator = yes
 	interest_group = ig_trade_unions
@@ -789,7 +726,7 @@ albert_einstein_template = {
 	last_name = Einstein
 	historical = yes
 	culture = cu:ashkenazi
-	religion = rel:jewish
+	religion = jewish
 	interest_group = ig_intelligentsia
 	ideology = ideology_utopian
 	female = no
@@ -825,7 +762,7 @@ agitator_gabriele_d_annunzio = {
 	last_name = D_Annunzio
 	historical = yes
 	culture = cu:italian
-	religion = rel:catholic
+	religion = catholic
 	female = no
 	is_agitator = yes
 	interest_group = ig_petty_bourgeoisie
@@ -893,7 +830,7 @@ tur_ataturk_character_template = {
 	last_name = Kemal_Atatürk
 	historical = yes
 	culture = cu:turkish
-	religion = rel:sunni
+	religion = sunni
 	female = no
     is_general = yes
 	ig_leader = yes
@@ -912,7 +849,7 @@ agitator_enver_pasha = {
 	last_name = Pasha
 	historical = yes
 	culture = cu:turkish
-	religion = rel:sunni
+	religion = sunni
 	female = no
 	ig_leader = yes
 	interest_group = ig_armed_forces
@@ -923,71 +860,6 @@ agitator_enver_pasha = {
 		celebrity_commander
 		ambitious
 		direct
-	}
-}
-
-agitator_ali_haydar_efendi = {
-	first_name = Ali
-	last_name = Haydar_Efendi
-	historical = yes
-	culture = cu:turkish
-	religion = rel:sunni
-	female = no
-	is_agitator = yes
-	interest_group = ig_devout
-	ideology = ideology_traditionalist
-	birth_date = 1870.03.11
-	traits = {
-		charismatic
-		pious
-		erudite
-	}
-}
-
-#Ethiopia
-
-ETH_menelik_ii_template = {
-	first_name = Menelik
-	last_name = of_Solomon
-	culture = cu:cushitic
-	interest_group = ig_armed_forces
-	ideology = ideology_modernizer_leader
-	birth_date = 1844.08.17
-	ruler = yes
-	historical = yes
-	traits = {
-		ambitious cruel sickly
-	}
-}
-
-ETH_lij_iyasu_template = {
-	first_name = Lij
-	last_name = Iyasu
-	culture = cu:cushitic
-	interest_group = ig_intelligentsia
-	ideology = ideology_modernizer_leader
-	birth_date = 1895.02.04
-	heir = yes
-	historical = yes
-	traits = {
-	   reserved 
-	}
-}
-
-ETH_haile_selassie_template = {
-	first_name = Haile
-	last_name = Selassie
-	historical = yes
-	culture = cu:cushitic
-	female = no
-	heir = yes
-	interest_group = ig_intelligentsia
-	ideology = ideology_liberal_leader
-	birth_date = 1892.07.23
-	traits = {
-		charismatic
-		innovative
-		ambitious
 	}
 }
 
@@ -1111,7 +983,7 @@ agitator_aleksei_aladin = { # Aleksei Feodorovich Aladin
 	last_name = Aladin
 	historical = yes
 	culture = cu:russian
-	religion = rel:orthodox
+	religion = orthodox
 	female = no
 	is_agitator = yes
 	interest_group = ig_rural_folk
@@ -1129,7 +1001,7 @@ agitator_nestor_makhno = {
 	last_name = Makhno
 	historical = yes
 	culture = cu:ukrainian
-	religion = rel:atheist
+	religion = atheist
 	female = no
 	is_agitator = yes
 	interest_group = ig_rural_folk
@@ -1148,7 +1020,7 @@ agitator_maxim_gorky = { # The Maximum Gorky
 	last_name = Gorky
 	historical = yes
 	culture = cu:russian
-	religion = rel:orthodox
+	religion = orthodox
 	female = no
 	ig_leader = yes
 	interest_group = ig_intelligentsia
@@ -1166,7 +1038,7 @@ rus_leon_trotsky_character_template = { # Generated by event
 	last_name = Trotsky
 	historical = yes
 	culture = cu:ashkenazi
-	religion = rel:atheist
+	religion = atheist
 	female = no
     is_agitator = yes
 	interest_group = ig_armed_forces
@@ -1188,7 +1060,7 @@ rus_lenin_character_template = {
     is_agitator = yes
     female = no
     culture = cu:russian
-    religion = rel:atheist
+    religion = atheist
     interest_group = ig_trade_unions
     ig_leader = yes
     ideology = ideology_vanguardist
@@ -1226,28 +1098,6 @@ rus_alexander_kolchack_template = {
 	historical = yes
 	traits = {
 	   ambitious experienced_naval_commander explorer 
-	}
-}
-
-#Finland
-
-FIN_general_mannerheim_template = {
-	first_name = Carl_Gustav_Emil
-	last_name = Mannerheim
-	historical = yes
-	culture = cu:swedish
-	female = no
-	religion = rel:protestant
-	ideology = ideology_moderate
-	dna = dna_carl_gustaf_emil_mannerheim
-	interest_group = ig_armed_forces
-	birth_date = 1867.6.4
-	is_general = yes
-	home_region = STATE_UUSIMAA
-	traits = {
-		direct
-		stalwart_defender
-		meticulous
 	}
 }
 
@@ -1332,7 +1182,7 @@ sov_joseph_stalin_character_template = {
     birth_date = 1878.12.18
     female = no
     culture = cu:georgian
-    religion = rel:atheist
+    religion = atheist
     interest_group = ig_trade_unions
 	is_general = yes
     ideology = ideology_vanguardist
@@ -1351,7 +1201,7 @@ sov_grigory_zinoviev_character_template = {
     birth_date = 1883.9.23
     female = no
     culture = cu:ashkenazi
-    religion = rel:atheist
+    religion = atheist
 	is_agitator = yes
     interest_group = ig_trade_unions
     ideology = ideology_vanguardist
@@ -1370,7 +1220,7 @@ sov_lev_kamenev_character_template = {
     female = no
 	is_agitator = yes
     culture = cu:ashkenazi
-    religion = rel:atheist
+    religion = atheist
     interest_group = ig_trade_unions
     ideology = ideology_vanguardist
 	is_agitator = yes
@@ -1388,7 +1238,7 @@ sov_nikolai_bukharin_character_template = {
     birth_date = 1888.10.9
     female = no
     culture = cu:russian
-    religion = rel:atheist
+    religion = atheist
     is_agitator = yes
     interest_group = ig_trade_unions
     ideology = ideology_positivist
@@ -1407,7 +1257,7 @@ sov_alexei_rykov_character_template = {
     female = no
 	is_agitator = yes
     culture = cu:russian
-    religion = rel:atheist
+    religion = atheist
 	is_agitator = yes
     interest_group = ig_trade_unions
     ideology = ideology_market_liberal
@@ -1425,7 +1275,7 @@ sov_georgy_zhukov_character_template = {
     female = no
 	is_general = yes
     culture = cu:russian
-    religion = rel:atheist
+    religion = atheist
 	is_general = yes
     interest_group = ig_armed_forces
     ideology = ideology_vanguardist
@@ -1434,23 +1284,6 @@ sov_georgy_zhukov_character_template = {
         expert_offensive_planner
         experienced_political_operator
     }
-}
-
-#French Equatorial Africa
-
-EQA_felix_eboue_template = {
-	first_name = Felix
-	last_name = Eboue
-	culture = cu:afro_antillean
-	interest_group = ig_intelligentsia
-	ideology = ideology_social_democrat
-	birth_date = 1884.12.26
-	is_agitator = yes
-	historical = yes
-	traits = {
-		expert_colonial_administrator
-		experienced_diplomat
-	}
 }
 
 #Persia
@@ -1482,7 +1315,7 @@ BIC_mohandas_karamchand_gandhi = { # Mohandas Karamchand Gandhi
 	female = no
 	is_agitator = yes 
 	culture = cu:central_indian
-	religion = rel:hindu
+	religion = hindu
 	interest_group = ig_intelligentsia
     dna = dna_mahatma_gandhi
 	ideology = ideology_humanitarian
@@ -1501,7 +1334,7 @@ BIC_muhammad_ali_jinnah = { # Muhammad Ali Jinnah
 	female = no
 	is_agitator = yes 
 	culture = cu:west_indian
-	religion = rel:sunni
+	religion = sunni
 	interest_group = ig_intelligentsia
     dna = dna_muhammad_ali_jinnah
 	ideology = ideology_social_democrat
@@ -1521,7 +1354,7 @@ BIC_bipin_chandra_pal = { # Bipin Chandra Pal
     dna = dna_bipin_chandra_pal
 	is_agitator = yes 
 	culture = cu:north_indian
-	religion = rel:hindu
+	religion = hindu
 	interest_group = ig_intelligentsia
 	ideology = ideology_social_democrat
 	birth_date = 1858.11.7
@@ -1538,7 +1371,7 @@ BIC_bal_gangadhar_tilak = { # Bal Gangadhar Tilak
 	female = no
 	is_agitator = yes 
 	culture = cu:central_indian
-	religion = rel:hindu
+	religion = hindu
 	interest_group = ig_devout
     dna = dna_bal_gangadhar_tilak
 	ideology = ideology_traditionalist_minoritarian
@@ -1558,7 +1391,7 @@ BIC_lala_lajpat_rai = { # Lala Lajpat Rai
     dna = dna_lala_lajpat_rai
 	is_agitator = yes 
 	culture = cu:north_indian
-	religion = rel:hindu
+	religion = hindu
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_radical
 	birth_date = 1865.1.28
@@ -1577,7 +1410,7 @@ BIC_pandita_ramabai_sarasvati = { # Pandita Ramabai Sarasvati
     dna = dna_pandita_ramabai
 	is_agitator = yes 
 	culture = cu:central_indian
-	religion = rel:hindu
+	religion = hindu
 	interest_group = ig_intelligentsia
 	ideology = ideology_feminist
 	birth_date = 1858.4.23
@@ -1604,41 +1437,6 @@ BIC_charles_hardinge = {
 	}
 }
 
-#Indochina
-
-agitator_phan_boi_chau = {
-	first_name = Phan
-	last_name = Chau
-	historical = yes
-	culture = cu:vietnamese
-	religion = rel:mahayana
-	female = no
-	interest_group = ig_intelligentsia
-	is_agitator = yes
-	ideology = ideology_republican_leader
-	birth_date = 1867.2.11
-	traits = {
-		reckless
-		experienced_political_operator
-	}
-}
-
-#Manchuria
-
-mch_pu_yi_template = {
-	first_name = Pu
-	last_name = Yi
-	culture = cu:manchu
-	interest_group = ig_landowners
-	ideology = ideology_royalist
-	birth_date = 1906.02.07
-	is_agitator = yes
-	historical = yes
-	traits = {
-		ambitious reckless 
-	}
-}
-
 #China
 
 chi_sun_yat_sen_character_template = {
@@ -1646,7 +1444,7 @@ chi_sun_yat_sen_character_template = {
 	last_name = Yat_Sen
 	historical = yes
 	culture = cu:han
-	religion = rel:protestant
+	religion = protestant
 	female = no
     ruler = yes
 	interest_group = ig_petty_bourgeoisie
@@ -1707,48 +1505,5 @@ JAP_hirohito_template = {
 	dna = dna_showa_yamato
 	traits = {
 		reserved special_character_japanese_emperor
-	}
-}
-
-JAP_hara_takashi_template = {
-	first_name = Hara
-	last_name = Takashi
-	culture = cu:japanese
-	interest_group = ig_intelligentsia
-	ideology = ideology_pacifist
-	religion = rel:protestant
-	birth_date = 1856.03.04
-	role = character_role_politician
-	historical = yes
-	traits = {
-		experienced_diplomat meticulous 
-	}
-}
-
-JAP_abe_isoo_template = {
-	first_name = Abe
-	last_name = Isoo
-	culture = cu:japanese
-	interest_group = ig_trade_unions
-	ideology = ideology_pacifist
-	religion = rel:protestant
-	birth_date = 1865.02.04
-	ig_leader = yes
-	historical = yes
-	traits = {
-	}
-}
-
-JAP_uchimura_kanzo_template = {
-	first_name = Uchimura
-	last_name = Kanzo
-	culture = cu:japanese
-	interest_group = ig_intelligentsia
-	ideology = ideology_pacifist
-	religion = rel:protestant
-	birth_date = 1861.03.26
-	role = character_role_politician
-	historical = yes
-	traits = {
 	}
 }
