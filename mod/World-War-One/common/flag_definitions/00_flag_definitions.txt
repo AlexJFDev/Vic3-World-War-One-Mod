@@ -11362,6 +11362,36 @@ SHN = {
 	}	
 }
 
+GAN = {
+    flag_definition = {
+		coa = GAN
+		subject_canton = GAN
+		priority = 1
+	}
+	flag_definition = {
+		coa = CSR
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+}
+
+QIN = {
+    flag_definition = {
+		coa = QIN
+		subject_canton = QIN
+		priority = 1
+	}
+	flag_definition = {
+		coa = CSR
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+}
+
 REPLACE_OR_CREATE:BGL = {
 	flag_definition = {
 		coa = BGL

@@ -6875,7 +6875,14 @@ dev_events.140 = {
     option = {
         name = dev_events.10.a
         default_option = yes
-        set_variable = thanks_for_the_mess_paradox
+        trigger = {
+            is_at_war = yes
+            has_variable = central_powers_participant
+        }
+        trigger_event = {
+            id = germany_events.2
+            days = 5
+        }
     }
 }
 

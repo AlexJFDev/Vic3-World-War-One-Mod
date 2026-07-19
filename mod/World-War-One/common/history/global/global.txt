@@ -87,7 +87,6 @@
 		}
 	}
 
-
 	c:YEM = {
 		trigger_event = { #Sol nerf
 			id = dev_events.50
@@ -192,48 +191,6 @@
 		}
 	}
 
-    c:XIN = {
-		trigger_event = { #Nerf for Kuomintang side
-			id = dev_events.10
-			days = 5
-		}
-	}
-
-	c:QIH = {
-		trigger_event = { #Nerf for Kuomintang side
-			id = dev_events.10
-			days = 5
-		}
-	}
-
-	c:GAN = {
-		trigger_event = { #Nerf for Kuomintang side
-			id = dev_events.10
-			days = 5
-		}
-	}
-
-	c:QIN = {
-		trigger_event = { #Nerf for Kuomintang side
-			id = dev_events.10
-			days = 5
-		}
-	}
-
-	c:SHN = {
-		trigger_event = { #Nerf for Kuomintang side
-			id = dev_events.10
-			days = 5
-		}
-	}
-
-	c:MCH = {
-		trigger_event = { #Nerf for Kuomintang side
-			id = dev_events.10
-			days = 5
-		}
-	}
-
 	c:KMT = {
 		trigger_event = { #Special minting bonus
 			id = dev_events.6
@@ -246,13 +203,6 @@
 		trigger_event = { #Infamy reduction
 			id = dev_events.9
 			days = 15
-		}
-	}
-
-	c:CHQ = {
-		trigger_event = { #Nerf for Kuomintang side
-			id = dev_events.10
-			days = 5
 		}
 	}
 
@@ -703,10 +653,14 @@
 			id = dev_events.99
 			days = 5
 		}
-		trigger_event = { #trade bonus
+		trigger_event = { #Trade bonus
 			id = dev_events.113
 			days = 5
 		}
+		trigger_event = {#WW1 capitulation
+            id = dev_events.140
+            days = 1975
+        }
 	}
 
 	c:ROM = {

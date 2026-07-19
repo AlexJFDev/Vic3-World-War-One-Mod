@@ -37,12 +37,9 @@
 	}
     
     fail = {
-        OR = {
-            has_variable = thanks_for_the_mess_paradox
-            any_civil_war = {
-			   civil_war_progress >= 0.75
-		    }
-        }
+        any_civil_war = {
+			civil_war_progress >= 0.75
+		}
     }
 
     on_fail = { 

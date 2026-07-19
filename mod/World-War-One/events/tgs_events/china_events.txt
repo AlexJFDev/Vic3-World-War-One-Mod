@@ -1022,11 +1022,41 @@ china_events.7 = { #Policy choice
     }
 
     immediate = {
+        add_treasury = 5000000
         ig:ig_trade_unions = {
 			leader = {
 				save_scope_as = union_ig_leader_scope
 			}
 		}
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+            create_building = {
+				building = building_trade_center
+				level = 20
+            }
+			create_building = {
+				building = building_government_administration
+				level = 10
+            }
+            create_building = {
+				building = building_construction_sector
+				level = 5
+            }	
+            create_building = {
+				building = building_munition_plant
+				level = 3
+            }	
+            create_building = {
+				building = building_arms_industry
+				level = 3
+            }
+            create_building = {
+				building = building_artillery_foundry
+				level = 1
+            }		
+		} 
     }
 
     trigger = {}
@@ -1340,6 +1370,7 @@ china_events.11 = { #China reunification
 			       country_has_primary_culture = cu:manchu
 			       country_has_primary_culture = cu:yue
                 }
+                NOT = { has_law = law_type:law_council_republic }
 			}
             trigger_event = {
                 id = china_events.20
@@ -1384,6 +1415,7 @@ china_events.11 = { #China reunification
 			       country_has_primary_culture = cu:manchu
 			       country_has_primary_culture = cu:yue
                 }
+                NOT = { has_law = law_type:law_council_republic }
 			}
             trigger_event = {
                 id = china_events.20
@@ -1995,6 +2027,7 @@ china_events.25 = { #Je fragile republic completion
 			       country_has_primary_culture = cu:manchu
 			       country_has_primary_culture = cu:yue
                 }
+                NOT = { has_law = law_type:law_council_republic }
 			}
             trigger_event = {
                 id = china_events.20
@@ -2024,6 +2057,7 @@ china_events.25 = { #Je fragile republic completion
 			       country_has_primary_culture = cu:manchu
 			       country_has_primary_culture = cu:yue
                 }
+                NOT = { has_law = law_type:law_council_republic }
 			}
             trigger_event = {
                 id = china_events.20

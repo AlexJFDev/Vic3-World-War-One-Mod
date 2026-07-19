@@ -235,7 +235,6 @@ je_chinese_civil_war = {
 		}
 		has_law = law_type:law_council_republic
 		has_variable = chinese_soviet_republic
-		game_date > 1940.01.01
 		is_at_war = no
 		exists = c:CHI
     }
@@ -250,6 +249,9 @@ je_chinese_civil_war = {
 		has_variable = chinese_soviet_republic
 		game_date > 1940.01.01
 		exists = c:CHI
+		NOT = {
+			c:CHI = { has_law = law_type:law_council_republic }
+		}
     }
 
     modifiers_while_active = {
