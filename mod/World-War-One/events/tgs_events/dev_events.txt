@@ -2574,9 +2574,13 @@ dev_events.53 = {
 		} 
         add_modifier = {
 			name = radicals_nerf_1
-            years = 60
+            years = 50
             is_decaying = yes
 		}
+        trigger_event = {
+            id = dev_events.26
+            days = 60
+        }
         trigger_event = {
             id = dev_events.26
             days = 365
@@ -2591,15 +2595,19 @@ dev_events.53 = {
 		}
         ig:ig_intelligentsia = {
 			set_interest_group_name = ig_intelligentsia
-			remove_ideology = ideology_rangaku
-			add_ideology = ideology_constitutionalist
 		}
         ig:ig_industrialists = {
 			set_interest_group_name = ig_zaibatsu
 		}
         ig:ig_petty_bourgeoisie = {
 			set_interest_group_name = ig_petty_bourgeoisie
-			remove_ideology = ideology_mercantile
+		}
+        active_law:lawgroup_economic_system ?= {
+			add_amendment = {
+				type = low_wages
+				sponsor = ig_industrialists
+				cooldown = 3
+			}
 		}
     }
 
@@ -2619,12 +2627,12 @@ dev_events.53 = {
 		}
         add_modifier = {
 			name = radicals_nerf_1
-            years = 40
+            years = 25
             is_decaying = yes
 		}
         trigger_event = {
             id = dev_events.26
-            days = 90
+            days = 60
         }
         s:STATE_KANTO = {
 			random_scope_state = {
@@ -2636,15 +2644,19 @@ dev_events.53 = {
 		}
         ig:ig_intelligentsia = {
 			set_interest_group_name = ig_intelligentsia
-			remove_ideology = ideology_rangaku
-			add_ideology = ideology_constitutionalist
 		}
         ig:ig_industrialists = {
 			set_interest_group_name = ig_zaibatsu
 		}
         ig:ig_petty_bourgeoisie = {
 			set_interest_group_name = ig_petty_bourgeoisie
-			remove_ideology = ideology_mercantile
+		}
+        active_law:lawgroup_economic_system ?= {
+			add_amendment = {
+				type = low_wages
+				sponsor = ig_industrialists
+				cooldown = 3
+			}
 		}
     }
 }

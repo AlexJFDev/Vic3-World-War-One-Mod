@@ -606,3 +606,39 @@ coronelismo = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
 }
+
+low_wages = {
+
+    parent = law_interventionism
+
+	allowed_laws = {
+		law_interventionism
+		law_agrarianism
+		law_extraction_economy
+	}
+
+	modifier = {
+		building_minimum_wage_mult = -0.2
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		leader = { has_ideology = ideology_market_liberal }
+	}
+
+	ai_will_revoke = {
+		ruler = {
+            NOT = {
+				has_ideology = ideology:ideology_market_liberal
+				has_ideology = ideology:ideology_authoritarian
+            }
+        }
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}

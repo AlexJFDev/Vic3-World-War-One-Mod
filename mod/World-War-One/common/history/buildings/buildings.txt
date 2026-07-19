@@ -62814,7 +62814,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 3
+						levels = 11
 						region = STATE_TOKAI
 					}
 				}
@@ -63059,6 +63059,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_coal-fired_plant 
+				}
+			}
+			create_building = {
+				building = building_shipyard
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 3
+						region = STATE_KANSAI
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_metal_shipbuilding 
 				}
 			}
 			create_building = {
@@ -63355,6 +63370,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_electric_saw_mills pm_increased_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
+				building = building_coal_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 3
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
 				}
 			}
 			create_building = {
@@ -63741,6 +63771,21 @@
 				}
 			}
 			create_building = {
+				building = building_textile_mill
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 18
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_craftsman_sewing pm_electric_sewing_machines pm_mechanized_looms 
+				}
+			}
+			create_building = {
 				building = building_tobacco_plantation
 				add_ownership = {
 					building = {
@@ -63871,6 +63916,21 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_coal-fired_plant 
+				}
+			}
+			create_building = {
+				building = building_fishing_wharf
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:JAP
+						levels = 8
+						region = STATE_KANSAI
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steam_trawlers pm_unrefrigerated 
 				}
 			}
 			create_building = {
@@ -64242,7 +64302,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 12
+						levels = 10
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -64440,6 +64500,21 @@
 				}
 			}
 			create_building = {
+				building = building_copper_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 5
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_copper_mine pm_nitroglycerin_building_copper_mine pm_rail_transport_mine pm_steam_donkey_mine 
+				}
+			}
+			create_building = {
 				building = building_glassworks
 				add_ownership = {
 					building = {
@@ -64633,7 +64708,7 @@
 					building = {
 						type = building_financial_district
 						country = c:FRA
-						levels = 3
+						levels = 5
 						region = STATE_PROVENCE
 					}
 				}
