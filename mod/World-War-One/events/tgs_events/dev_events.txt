@@ -552,7 +552,7 @@ dev_events.11 = {
         ig:ig_armed_forces ?= {
             set_ig_trait = ig_trait:ig_trait_materiel_waste
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
-			set_ig_trait = ig_trait:ig_trait_elan_vital
+			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
         }
     }
 
@@ -567,7 +567,7 @@ dev_events.11 = {
         ig:ig_armed_forces ?= {
             set_ig_trait = ig_trait:ig_trait_materiel_waste
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
-			set_ig_trait = ig_trait:ig_trait_elan_vital
+			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
         }
     }
 }
@@ -1080,7 +1080,7 @@ dev_events.21 = {
         ig:ig_armed_forces ?= {
             set_ig_trait = ig_trait:ig_trait_materiel_waste
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
-			set_ig_trait = ig_trait:ig_trait_elan_vital
+			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
         }
     }
 
@@ -2602,6 +2602,11 @@ dev_events.53 = {
         ig:ig_petty_bourgeoisie = {
 			set_interest_group_name = ig_petty_bourgeoisie
 		}
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_materiel_waste
+			set_ig_trait = ig_trait:ig_trait_veteran_consultation
+			set_ig_trait = ig_trait:ig_trait_bushido
+        }
         active_law:lawgroup_economic_system ?= {
 			add_amendment = {
 				type = low_wages
@@ -2651,6 +2656,11 @@ dev_events.53 = {
         ig:ig_petty_bourgeoisie = {
 			set_interest_group_name = ig_petty_bourgeoisie
 		}
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_materiel_waste
+			set_ig_trait = ig_trait:ig_trait_veteran_consultation
+			set_ig_trait = ig_trait:ig_trait_bushido
+        }
         active_law:lawgroup_economic_system ?= {
 			add_amendment = {
 				type = low_wages
@@ -7135,5 +7145,129 @@ dev_events.148 = {
             name = revolution_stabilization_buff_4
             years = 5
         }
+    }
+}
+
+dev_events.149 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:JAP ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = sino_japan_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 20000000
+        if = {
+            limit = { 
+                c:MCH = { is_subject_of = c:JAP }
+            }
+            scope:sino_japan_war_diplo_play = {
+			   add_initiator_backers = { c:MCH }
+		    }
+        }
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = yes }
+        if = {
+            limit = { 
+                c:MCH = { is_subject_of = c:JAP }
+            }
+            scope:sino_japan_war_diplo_play = {
+			   add_initiator_backers = { c:MCH }
+		    }
+        }
+    }
+}
+
+dev_events.150 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:JAP ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = sino_japan_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = {
+            is_player = no
+            is_subject = no 
+        }
+        scope:sino_japan_war_diplo_play = {
+			add_initiator_backers = { c:SIA }
+		}
+    }
+}
+
+dev_events.151 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 10000000
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_outlawed_dissent
+        activate_law = law_type:law_military_oversight
     }
 }

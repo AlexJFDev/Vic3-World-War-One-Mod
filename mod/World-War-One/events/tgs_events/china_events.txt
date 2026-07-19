@@ -2432,3 +2432,71 @@ china_events.28 = { #Chinese civil war phase 2
 	    }
     }
 }
+
+china_events.29 = { #Pu Yi becomes agitator in Manchuria
+    type = country_event
+
+    title = china_events.29.t
+    desc = china_events.29.d
+    flavor = china_events.29.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/puyi.dds"
+    }
+
+    trigger = {}
+
+    immediate = {
+        create_character = {
+			template = mch_pu_yi_template
+            on_created = {
+                set_variable = {
+                  name = puyi
+                }                
+            }
+		}
+    }
+
+    option = {
+        name = china_events.29.a
+        default_option = yes
+        ai_chance = {
+		  base = 1
+	    }
+	}
+
+    option = {
+        name = china_events.29.b
+        random_scope_character = {
+				limit = {
+					has_variable = puyi
+				}
+			remove_character_role = agitator
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+		}
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = china_events.29.c
+        random_scope_character = {
+				limit = {
+					has_variable = puyi
+				}
+			remove_character_role = agitator
+            set_character_as_ruler = yes
+		}
+        activate_law = law_type:law_monarchy
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}

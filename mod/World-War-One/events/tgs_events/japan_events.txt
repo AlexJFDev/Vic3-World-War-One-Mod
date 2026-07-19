@@ -178,7 +178,6 @@ japan_events.12 = {#21 demands Japan gets China response
 
     option = {
         name = japan_events.12.b
-        default_option = yes
         create_diplomatic_play = {
 		    target_country = c:CHI
 		    type = dp_take_treaty_port
@@ -309,7 +308,7 @@ japan_events.15 = {#Tokyo earthquake
             days = 5
         }
         s:STATE_KANTO ?= {
-			add_devastation = 30
+			add_devastation = 20
 		}
     }
 }
@@ -720,6 +719,72 @@ japan_events.18 = {#Invasion of Manchuria
 	    }
     }
 
+    option = {
+        name = japan_events.18.a
+        default_option = yes
+        trigger = {
+            c:CHI = {
+                owns_entire_state_region = STATE_NORTHERN_MANCHURIA
+				owns_entire_state_region = STATE_SHENGJING
+				owns_entire_state_region = STATE_SOUTHERN_MANCHURIA
+            }
+            has_game_rule = ww2_asia_enabled
+        }
+        create_diplomatic_play = {
+            name = japan_invades_manchuria
+
+            target_state = s:STATE_SOUTHERN_MANCHURIA.region_state:CHI
+
+            type = dp_conquer_state
+
+            war = yes
+            
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_SHENGJING.region_state:CHI
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_NORTHERN_MANCHURIA.region_state:CHI
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_SHENGJING.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_BUSAN.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_PYONGYANG.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_SARIWON.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_SEOUL.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_YANGHO.region_state:JAP
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
 	option = {
         name = japan_events.18.b
         ai_chance = {
@@ -870,19 +935,13 @@ japan_events.20 = {#Invasion of China response
                 days = 5
             }
         }
-		c:USA = {
-		    trigger_event = {
-              id = japan_events.21
-              days = 5
-            }
-		}
         c:JAP = {
-		    trigger_event = {
-              id = dev_events.17
+            trigger_event = {
+              id = dev_events.86
               days = 5
             }
             trigger_event = {
-              id = dev_events.86
+              id = dev_events.149
               days = 5
             }
 		}
@@ -910,7 +969,7 @@ japan_events.20 = {#Invasion of China response
     }
 }
 
-japan_events.21 = {#USA reacts to sino-japan war
+japan_events.21 = {#USA reacts to takeover of Indochina
     type = country_event
 
     title = japan_events.21.t
@@ -958,18 +1017,10 @@ japan_events.21 = {#USA reacts to sino-japan war
 		}	
 		}
         c:JAP ?= { 
-           set_relations = { country = c:USA value = -100 }
+           set_relations = { country = c:USA value = -60 }
         }
         c:USA ?= { 
-           set_relations = { country = c:JAP value = -100 }
-        }
-        if = {
-            limit = { 
-                c:MCH = { is_subject_of = c:JAP }
-            }
-            scope:sino_japan_war_diplo_play = {
-			   add_initiator_backers = { c:MCH }
-		    }
+           set_relations = { country = c:JAP value = -60 }
         }
         ai_chance = {
 		  base = 1
@@ -1007,14 +1058,6 @@ japan_events.21 = {#USA reacts to sino-japan war
 			type = rivalry
 		}	
 		}
-        if = {
-            limit = { 
-                c:MCH = { is_subject_of = c:JAP }
-            }
-            scope:sino_japan_war_diplo_play = {
-			   add_initiator_backers = { c:MCH }
-		    }
-        }
         ai_chance = {
 		  base = 0
 	    }
@@ -1022,14 +1065,6 @@ japan_events.21 = {#USA reacts to sino-japan war
 
 	option = {
         name = japan_events.21.c
-        if = {
-            limit = { 
-                c:MCH = { is_subject_of = c:JAP }
-            }
-            scope:sino_japan_war_diplo_play = {
-			   add_initiator_backers = { c:MCH }
-		    }
-        }
         ai_chance = {
 		  base = 0
 	    }
@@ -1070,28 +1105,12 @@ japan_events.22 = {#Japan attacks USA and western nations
 		scope:sino_japan_war_diplo_play = {
 			add_target_backers = { c:USA }
             add_target_backers = { c:GBR }
-            add_target_backers = { c:ICH }
             add_target_backers = { c:DEI }
             add_target_backers = { c:AST }
             add_war_goal = {
                 holder = c:JAP
                 type = conquer_state
                 target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
-            }
-            add_war_goal = {
-                holder = c:JAP
-                type = take_treaty_port
-                target_state = s:STATE_CALIFORNIA.region_state:USA
-            }
-            add_war_goal = {
-                holder = c:JAP
-                type = take_treaty_port
-                target_state = s:STATE_OREGON.region_state:USA
-            }
-            add_war_goal = {
-                holder = c:JAP
-                type = take_treaty_port
-                target_state = s:STATE_WASHINGTON.region_state:USA
             }
             add_war_goal = {
                 holder = c:USA
@@ -1115,15 +1134,20 @@ japan_events.22 = {#Japan attacks USA and western nations
             }
             add_war_goal = {
                 holder = c:JAP
-                type = annex_country
-                target_country = c:ICH
-            }
-            add_war_goal = {
-                holder = c:JAP
-                type = annex_country
+                type = make_protectorate
                 target_country = c:DEI
             }
 		}
+        c:SIA = {
+            trigger_event = {
+                id =  dev_events.150
+                days = 5
+            }
+        }
+        trigger_event = {
+            id =  dev_events.151
+            days = 5
+        }
         if = {
             limit = {
                 has_global_variable = world_war_two_started
@@ -1147,12 +1171,22 @@ japan_events.22 = {#Japan attacks USA and western nations
             add_war_goal = {
                 holder = c:JAP
                 type = conquer_state
-                target_state = s:STATE_HAWAI.region_state:USA
+                target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
             }
             add_war_goal = {
-                holder = c:JAP
-                type = take_treaty_port
-                target_state = s:STATE_CALIFORNIA.region_state:USA
+                holder = c:USA
+                type = regime_change
+                target_country = c:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = contain_threat
+                target_country = c:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_KANTO.region_state:JAP
             }
             add_war_goal = {
                 holder = c:USA
@@ -1160,6 +1194,16 @@ japan_events.22 = {#Japan attacks USA and western nations
                 target_state = s:STATE_RYUKYU_ISLANDS.region_state:JAP
             }
 		}
+        c:SIA = {
+            trigger_event = {
+                id =  dev_events.150
+                days = 5
+            }
+        }
+        trigger_event = {
+            id =  dev_events.151
+            days = 5
+        }
         if = {
             limit = {
                 has_global_variable = world_war_two_started

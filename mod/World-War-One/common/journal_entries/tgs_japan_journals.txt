@@ -1,5 +1,5 @@
 ﻿je_japan_expansion_1 = {
-    icon = "gfx/interface/icons/event_icons/rising_sun.dds"
+    icon = "gfx/interface/icons/event_icons/attack_manchuria.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -23,13 +23,20 @@
     immediate = {}
 
     complete = {
-        c:MCH = {
-            NOT = { 
-                is_subject_of = c:JAP
+        OR = {
+            c:MCH = {
+                NOT = { 
+                   is_subject_of = c:JAP
+                }
+                OR = {
+                  is_subject = no
+                  is_subject_of = c:CHI
+                }
             }
-            OR = {
-                is_subject = no
-                is_subject_of = c:CHI
+            c:CHI = {
+                owns_entire_state_region = STATE_NORTHERN_MANCHURIA
+				owns_entire_state_region = STATE_SHENGJING
+				owns_entire_state_region = STATE_SOUTHERN_MANCHURIA
             }
         }
         NOT = {
@@ -72,7 +79,7 @@
 }
 
 je_japan_expansion_2 = {
-    icon = "gfx/interface/icons/event_icons/rising_sun.dds"
+    icon = "gfx/interface/icons/event_icons/attack_china.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
@@ -136,7 +143,7 @@ je_japan_expansion_2 = {
 }
 
 je_dragon_and_eagle = {
-    icon = "gfx/interface/icons/event_icons/rising_sun.dds" 
+    icon = "gfx/interface/icons/event_icons/attack_usa.dds" 
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {

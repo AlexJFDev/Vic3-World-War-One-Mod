@@ -534,13 +534,34 @@
 		second_country = c:JAP
 
 		is_draft = no
-		entered_into_force_on = 1908.3.25
+		entered_into_force_on = 1908.03.25
 		binding_period = { years = 10 }
         articles_to_create = {
 		{
 			article = law_commitment
 			source_country = c:JAP
 			target_country = c:USA
+			inputs = {
+				{ law_type = law_type:law_migration_controls }
+			}
+		}
+		}
+	}
+
+	#Japan-Austalian Migration Agreement
+	create_treaty = {
+		name = treaty_name_jap_ast_agreement
+		first_country = c:AST
+		second_country = c:JAP
+
+		is_draft = no
+		entered_into_force_on = 1910.10.08
+		binding_period = { years = 10 }
+        articles_to_create = {
+		{
+			article = law_commitment
+			source_country = c:JAP
+			target_country = c:AST
 			inputs = {
 				{ law_type = law_type:law_migration_controls }
 			}
