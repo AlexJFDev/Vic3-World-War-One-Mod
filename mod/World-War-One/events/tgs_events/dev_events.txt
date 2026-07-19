@@ -7283,3 +7283,44 @@ dev_events.151 = {
         activate_law = law_type:law_military_oversight
     }
 }
+
+dev_events.152 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        create_character = {
+	       first_name = Carl_Gustav_Emil
+	       last_name = Mannerheim
+	       historical = yes
+	       culture = cu:swedish
+	       female = no
+	       religion = protestant
+	       ideology = ideology_moderate
+	       interest_group = ig_armed_forces
+	       birth_date = 1867.6.4
+	       is_general = yes
+	        traits = {
+		       direct
+		       stalwart_defender
+		       meticulous
+	        }
+        }
+    }
+}

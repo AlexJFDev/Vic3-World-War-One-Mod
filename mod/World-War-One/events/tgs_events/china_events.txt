@@ -2440,7 +2440,7 @@ china_events.29 = { #Pu Yi becomes agitator in Manchuria
     desc = china_events.29.d
     flavor = china_events.29.f
     
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -2454,11 +2454,6 @@ china_events.29 = { #Pu Yi becomes agitator in Manchuria
     immediate = {
         create_character = {
 			template = mch_pu_yi_template
-            on_created = {
-                set_variable = {
-                  name = puyi
-                }                
-            }
 		}
     }
 
@@ -2474,7 +2469,7 @@ china_events.29 = { #Pu Yi becomes agitator in Manchuria
         name = china_events.29.b
         random_scope_character = {
 				limit = {
-					has_variable = puyi
+					has_template = mch_pu_yi_template
 				}
 			remove_character_role = agitator
 		    add_character_role = politician
@@ -2489,7 +2484,7 @@ china_events.29 = { #Pu Yi becomes agitator in Manchuria
         name = china_events.29.c
         random_scope_character = {
 				limit = {
-					has_variable = puyi
+					has_template = mch_pu_yi_template
 				}
 			remove_character_role = agitator
             set_character_as_ruler = yes
