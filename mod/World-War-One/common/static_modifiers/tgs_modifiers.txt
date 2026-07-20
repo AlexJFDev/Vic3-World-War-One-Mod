@@ -514,7 +514,6 @@ warlord_policy_military = {
     unit_army_defense_mult = 0.05
     country_military_goods_cost_mult = -0.1
     country_minting_mult = 5
-    country_tax_income_add = 100000
 }
 
 warlord_policy_economy = {
@@ -524,7 +523,6 @@ warlord_policy_economy = {
     country_minting_mult = 10
     building_construction_sector_throughput_add = 0.15
     building_group_bg_manufacturing_throughput_add = 0.1
-    country_tax_income_add = 100000
 }
 
 warlord_policy_politics = {
@@ -536,7 +534,6 @@ warlord_policy_politics = {
     country_agitator_slots_add = 2
     building_government_administration_throughput_add = 0.35
     country_minting_mult = 5
-    country_tax_income_add = 100000
 }
 
 warlord_policy_communism = {
@@ -547,7 +544,6 @@ warlord_policy_communism = {
     interest_group_ig_landowners_pol_str_mult = -1.5
     interest_group_ig_devout_pol_str_mult = -1.5
     country_minting_mult = 5
-    country_tax_income_add = 100000
 }
 
 china_politics_focus_modifier = {
@@ -1367,6 +1363,11 @@ birth_rate_nerf_4 = {
     state_migration_pull_mult = -0.3
 }
 
+birth_rate_buff_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    state_birth_rate_mult = 0.3
+}
+
 money_buff_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
     country_tax_income_add = 200000
@@ -1385,6 +1386,11 @@ money_buff_3 = {
 money_buff_4 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
     country_tax_income_add = 1000000
+}
+
+money_buff_5 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_tax_income_add = 100000
 }
 
 proletarian_fervor = {

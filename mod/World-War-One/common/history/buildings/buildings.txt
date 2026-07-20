@@ -24105,6 +24105,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:KMT
+						levels = 20
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_fishing_wharf
 				add_ownership = {
 					building = {
@@ -24263,19 +24276,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_bleached_paper pm_watertube_boiler_building_paper_mill 
-				}
-			}
-			create_building = {
-				building = building_construction_sector
-				add_ownership = {
-					country = {
-						country = c:KMT
-						levels = 5
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_iron_frame_buildings 
 				}
 			}
 			create_building = {
@@ -25376,6 +25376,19 @@
 				}
 			}
 			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:CHI
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
+				}
+			}
+			create_building = {
 				building = building_barrack
 				add_ownership = {
 					country = {
@@ -25550,6 +25563,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:KMT
+						levels = 10
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -25823,6 +25849,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_no_secondary pm_simple_farming pm_tools_disabled 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:CHI
+						levels = 5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -26123,6 +26162,19 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				add_ownership = {
+					country = {
+						country = c:CHI
+						levels = 10
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel_frame_buildings 
 				}
 			}
 			create_building = {
@@ -26462,6 +26514,51 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_professional_bureaucrats pm_secular_bureaucrats pm_vertical_filing_cabinets 
+				}
+			}
+			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:SHN
+						levels = 3
+						region = STATE_SHANXI
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_hardwood pm_no_equipment pm_road_carts pm_saw_mills 
+				}
+			}
+			create_building = {
+				building = building_explosives_factory
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GER
+						levels = 2
+						region = STATE_BRANDENBURG
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_ammonia-soda_process 
+				}
+			}
+			create_building = {
+				building = building_tooling_workshop
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:USA
+						levels = 4
+						region = STATE_CALIFORNIA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steel pm_watertube_boiler_building_tooling_workshop 
 				}
 			}
 			create_building = {

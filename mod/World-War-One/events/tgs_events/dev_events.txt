@@ -1050,7 +1050,13 @@ dev_events.21 = {
         }
         s:STATE_ALSACE_LORRAINE = {
 			add_claim = c:FRA
-        } 
+        }
+        s:STATE_SOUTH_TYROL = {
+			add_claim = c:ITA
+		}
+        s:STATE_ISTRIA = {
+			add_claim = c:ITA
+		}
         s:STATE_SAHARA = {
 	       random_scope_state = {
 		      limit = {
@@ -1232,7 +1238,7 @@ dev_events.25 = {
         default_option = yes
         add_modifier = {
             name = starting_sol_buff
-            years = 30
+            years = 10
             is_decaying = yes
         }
         trigger_event = {
@@ -2573,6 +2579,10 @@ dev_events.53 = {
             is_decaying = yes
 		} 
         add_modifier = {
+			name = birth_rate_buff_1
+            years = 50
+		}
+        add_modifier = {
 			name = radicals_nerf_1
             years = 50
             is_decaying = yes
@@ -2631,6 +2641,11 @@ dev_events.53 = {
 		}  
         add_modifier = {
 			name = starting_sol_buff
+            years = 40
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = birth_rate_buff_1
             years = 40
             is_decaying = yes
 		}
@@ -6302,6 +6317,43 @@ dev_events.126 = {
     option = {
         name = dev_events.17.a
         default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 30000000
+        every_scope_state = {
+			limit = { owner = ROOT }
+			set_state_type = incorporated
+        }
+        add_loyalists = {
+			strata = upper
+			value = -10000000
+		}
+		add_loyalists = {
+			strata = middle
+            value = -10000000
+		}
+		add_loyalists = {
+			strata = lower
+            value = -10000000
+		}
+        add_radicals = {
+			strata = upper
+			value = -10000000
+		}
+		add_radicals = {
+			strata = middle
+            value = -10000000
+		}
+		add_radicals = {
+			strata = lower
+            value = -10000000
+		}
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_treasury = 5000000
         every_scope_state = {
 			limit = { owner = ROOT }
 			set_state_type = incorporated
@@ -7328,6 +7380,69 @@ dev_events.152 = {
 		       stalwart_defender
 		       meticulous
 	        }
+        }
+    }
+}
+
+dev_events.153 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { gdp < 20000000 }
+        if = {
+            limit = { gdp < 20000000 }
+            add_modifier = {
+			   name = money_buff_5
+               years = 20
+               is_decaying = yes
+		    }
+        }
+    }
+}
+
+dev_events.154 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_treasury = 100000000
+        remove_modifier = declared_bankruptcy
+        add_modifier = {
+            name = starting_minting_buff_3_modifier
+            years = 20
+            is_decaying = yes
         }
     }
 }
