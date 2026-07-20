@@ -2580,7 +2580,8 @@ dev_events.53 = {
 		} 
         add_modifier = {
 			name = birth_rate_buff_1
-            years = 50
+            years = 40
+            is_decaying = yes
 		}
         add_modifier = {
 			name = radicals_nerf_1
@@ -2646,7 +2647,7 @@ dev_events.53 = {
 		}
         add_modifier = {
 			name = birth_rate_buff_1
-            years = 40
+            years = 10
             is_decaying = yes
 		}
         add_modifier = {
@@ -6318,7 +6319,7 @@ dev_events.126 = {
         name = dev_events.17.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 30000000
+        add_treasury = 100000000
         every_scope_state = {
 			limit = { owner = ROOT }
 			set_state_type = incorporated
@@ -6353,7 +6354,7 @@ dev_events.126 = {
         name = dev_events.17.a
         default_option = yes
         trigger = { is_player = yes }
-        add_treasury = 5000000
+        add_treasury = 10000000
         every_scope_state = {
 			limit = { owner = ROOT }
 			set_state_type = incorporated
