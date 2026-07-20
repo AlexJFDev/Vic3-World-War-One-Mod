@@ -2345,7 +2345,7 @@ dev_events.48 = {
               has_modifier = great_depression_effect_4
             } 
         }
-        add_treasury = 10000000
+        add_treasury = 100000000
         add_modifier = {
 			name = starting_minting_buff_4_modifier
             years = 20
@@ -4109,11 +4109,11 @@ dev_events.85 = {
         name = dev_events.2.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 10000000
+        add_treasury = 100000000
         remove_modifier = declared_bankruptcy
         add_modifier = {
 			name = starting_minting_buff_4_modifier
-            years = 3
+            years = 5
             is_decaying = yes
 		}
         add_modifier = {
@@ -4132,11 +4132,10 @@ dev_events.85 = {
         name = dev_events.2.a
         default_option = yes
         trigger = { is_player = yes }
-        add_treasury = 5000000
         remove_modifier = declared_bankruptcy
         add_modifier = {
             name = revolution_stabilization_buff_4
-            years = 8
+            years = 10
             is_decaying = yes
         }
     }
@@ -4158,14 +4157,47 @@ dev_events.86 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:JAP ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = sino_japan_war_diplo_play
+        }
+    }
+
     option = {
-        name = dev_events.2.a
+        name = dev_events.17.a
         default_option = yes
         trigger = { is_player = no }
+        add_treasury = 100000000
         add_modifier = {
             name = revolution_stabilization_buff_4
             years = 10
             is_decaying = yes
+        }
+        if = {
+            limit = { 
+                c:MCH = { is_subject_of = c:JAP }
+            }
+            scope:sino_japan_war_diplo_play = {
+			   add_initiator_backers = { c:MCH }
+		    }
+        }
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = yes }
+        if = {
+            limit = { 
+                c:MCH = { is_subject_of = c:JAP }
+            }
+            scope:sino_japan_war_diplo_play = {
+			   add_initiator_backers = { c:MCH }
+		    }
         }
     }
 }
@@ -5942,7 +5974,7 @@ dev_events.119 = {
               has_modifier = great_depression_effect_4
             } 
         }
-        add_treasury = 10000000
+        add_treasury = 100000000
         add_modifier = {
 			name = starting_minting_buff_4_modifier
             years = 5
@@ -7250,7 +7282,7 @@ dev_events.149 = {
         name = dev_events.17.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 20000000
+        add_treasury = 100000000
         if = {
             limit = { 
                 c:MCH = { is_subject_of = c:JAP }
@@ -7445,5 +7477,78 @@ dev_events.154 = {
             years = 20
             is_decaying = yes
         }
+    }
+}
+
+dev_events.155 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { is_player = no }
+        default_option = yes
+        c:GAN = {
+            annex = ROOT
+        }
+    }
+}
+
+dev_events.156 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { c:RUS = { has_law = law_type:law_council_republic } }
+        default_option = yes
+        c:RUS ?= { 
+           set_relations = { country = ROOT value = 100 }
+        }
+        set_relations = { country = c:RUS value = 100 }
+        create_treaty = {
+			first_country = C:RUS
+			second_country = root
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				   article = transit_rights
+				   source_country = c:RUS
+				   target_country = root
+			    }
+                {
+				   article = foreign_investment_rights
+				   source_country = root
+				   target_country = c:RUS
+			    }
+			}
+		}
     }
 }
