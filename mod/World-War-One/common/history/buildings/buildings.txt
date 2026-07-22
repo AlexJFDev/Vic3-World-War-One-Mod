@@ -63056,7 +63056,7 @@
 					company = {
 						type = company_yasuda
 						country = c:JAP
-						levels = 1
+						levels = 2
 					}
 				}
 				reserves = 1
@@ -63095,6 +63095,21 @@
 				}
 			}
 			create_building = {
+				building = building_food_industry
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 6
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_baking_powder pm_cannery_fish pm_patent_stills 
+				}
+			}
+			create_building = {
 				building = building_tobacco_plantation
 				add_ownership = {
 					building = {
@@ -63130,7 +63145,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 1
+						levels = 8
 						region = STATE_KANTO
 					}
 				}
@@ -63195,6 +63210,36 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_coal-fired_plant 
+				}
+			}
+			create_building = {
+				building = building_explosives_factory
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 3
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_brine_electrolysis 
+				}
+			}
+			create_building = {
+				building = building_chemical_plant
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:JAP
+						levels = 4
+						region = STATE_KANTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_improved_fertilizer 
 				}
 			}
 			create_building = {

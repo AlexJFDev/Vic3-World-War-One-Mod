@@ -2564,6 +2564,7 @@ dev_events.53 = {
         name = dev_events.8.a
         default_option = yes
         trigger = { is_player = no }
+        add_treasury = 10000000
         add_modifier = {
 			name = starting_sol_buff
             years = 40
@@ -2594,6 +2595,13 @@ dev_events.53 = {
 			        name = HUB_NAME_STATE_KANTO_city_meiji
 			    }
 		    }
+		}
+        s:STATE_TOHOKU.region_state:JAP = {
+			add_modifier = {
+               name = grain_supply_1
+               years = 40
+               is_decaying = yes
+            }
 		}
         s:STATE_TOKAI.region_state:JAP = {
 			add_modifier = {
@@ -2626,7 +2634,7 @@ dev_events.53 = {
         s:STATE_SHIKOKU.region_state:JAP = {
 			add_modifier = {
                name = grain_supply_1
-               years = 40
+               years = 50
                is_decaying = yes
             }
 		}
@@ -2662,6 +2670,7 @@ dev_events.53 = {
         name = dev_events.8.a
         default_option = yes
         trigger = { is_player = yes }
+        add_treasury = 2000000
         add_modifier = {
 			name = starting_sol_buff
             years = 40
@@ -2682,6 +2691,10 @@ dev_events.53 = {
             years = 20
             is_decaying = yes
 		}
+        trigger_event = {
+            id = dev_events.26
+            days = 30
+        }
         s:STATE_KANTO = {
 			random_scope_state = {
 			    set_hub_name = {
@@ -7745,6 +7758,7 @@ dev_events.161 = {
     option = {
         name = dev_events.10.a
         default_option = yes
-        add_treasury = 50000000
+        trigger = { is_player = no }
+        add_treasury = 100000000
     }
 }
