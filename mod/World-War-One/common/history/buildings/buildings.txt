@@ -63023,7 +63023,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 3
+						levels = 8
 						region = STATE_HOKUSHINETSU
 					}
 				}
@@ -63203,7 +63203,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 5
+						levels = 10
 						region = STATE_TOKAI
 					}
 				}
@@ -63441,7 +63441,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 2
+						levels = 8
 						region = STATE_CHUGOKU
 					}
 				}
@@ -63601,7 +63601,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 1
+						levels = 5
 						region = STATE_FORMOSA
 					}
 				}
@@ -63644,18 +63644,18 @@
 				}
 			}
 			create_building = {
-				building = building_wheat_farm
+				building = building_rice_farm
 				add_ownership = {
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 4
+						levels = 10
 						region = STATE_HOKKAIDO
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_citrus_orchards pm_fertilization pm_tools 
+					pm_fertilization_building_rice_farm pm_no_secondary pm_tools_building_rice_farm 
 				}
 			}
 			create_building = {
@@ -63780,7 +63780,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 2
+						levels = 4
 						region = STATE_HOKKAIDO
 					}
 				}
@@ -63928,6 +63928,21 @@
 				}
 			}
 			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:JAP
+						levels = 9
+						region = STATE_KYOTO
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
 				building = building_government_administration
 				add_ownership = {
 					country = {
@@ -64032,7 +64047,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 8
+						levels = 25
 						region = STATE_KANTO
 					}
 				}
@@ -64280,6 +64295,21 @@
 				}
 			}
 			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:JAP
+						levels = 8
+						region = STATE_KANSAI
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
 				building = building_food_industry
 				add_ownership = {
 					building = {
@@ -64369,7 +64399,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 15
+						levels = 38
 						region = STATE_KANSAI
 					}
 				}
@@ -64980,7 +65010,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 6
+						levels = 12
 						region = STATE_KYUSHU
 					}
 				}
@@ -65284,7 +65314,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 25
+						levels = 32
 						region = STATE_KANTO
 					}
 				}
@@ -65514,7 +65544,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 5
+						levels = 8
 						region = STATE_SHIKOKU
 					}
 				}
@@ -65674,7 +65704,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 4
+						levels = 6
 						region = STATE_SHIKOKU
 					}
 				}
@@ -65884,7 +65914,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 5
+						levels = 10
 						region = STATE_TOHOKU
 					}
 				}
@@ -65932,7 +65962,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 5
+						levels = 18
 						region = STATE_BUSAN
 					}
 				}
@@ -66126,7 +66156,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 3
+						levels = 8
 						region = STATE_PYONGYANG
 					}
 				}
@@ -66308,7 +66338,7 @@
 					building = {
 						type = building_manor_house
 						country = c:JAP
-						levels = 2
+						levels = 4
 						region = STATE_SARIWON
 					}
 				}
@@ -66445,7 +66475,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 8
+						levels = 12
 						region = STATE_KANTO
 					}
 				}
@@ -66662,7 +66692,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 15
+						levels = 25
 						region = STATE_KANTO
 					}
 				}
@@ -66711,7 +66741,7 @@
 					building = {
 						type = building_financial_district
 						country = c:JAP
-						levels = 6
+						levels = 15
 						region = STATE_KANTO
 					}
 				}

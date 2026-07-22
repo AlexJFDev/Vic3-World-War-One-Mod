@@ -2587,18 +2587,6 @@ dev_events.53 = {
             years = 50
             is_decaying = yes
 		}
-        trigger_event = {
-            id = dev_events.26
-            days = 60
-        }
-        trigger_event = {
-            id = dev_events.26
-            days = 365
-        }
-        trigger_event = {
-            id = dev_events.26
-            days = 730
-        }
         s:STATE_KANTO = {
 			random_scope_state = {
 			    set_hub_name = {
@@ -2606,6 +2594,41 @@ dev_events.53 = {
 			        name = HUB_NAME_STATE_KANTO_city_meiji
 			    }
 		    }
+		}
+        s:STATE_TOKAI.region_state:JAP = {
+			add_modifier = {
+               name = grain_supply_1
+               years = 40
+               is_decaying = yes
+            }
+		}
+        s:STATE_KANSAI.region_state:JAP = {
+			add_modifier = {
+               name = grain_supply_1
+               years = 40
+               is_decaying = yes
+            }
+		}
+        s:STATE_KYOTO.region_state:JAP = {
+			add_modifier = {
+               name = grain_supply_1
+               years = 40
+               is_decaying = yes
+            }
+		}
+        s:STATE_CHUGOKU.region_state:JAP = {
+			add_modifier = {
+               name = grain_supply_1
+               years = 40
+               is_decaying = yes
+            }
+		}
+        s:STATE_SHIKOKU.region_state:JAP = {
+			add_modifier = {
+               name = grain_supply_1
+               years = 40
+               is_decaying = yes
+            }
 		}
         ig:ig_intelligentsia = {
 			set_interest_group_name = ig_intelligentsia
@@ -2620,6 +2643,11 @@ dev_events.53 = {
             set_ig_trait = ig_trait:ig_trait_materiel_waste
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
 			set_ig_trait = ig_trait:ig_trait_bushido
+        }
+        ig:ig_landowners ?= {
+            set_ig_trait = ig_trait:ig_trait_noble_privileges
+			set_ig_trait = ig_trait:ig_trait_family_ties
+			set_ig_trait = ig_trait:ig_trait_noblesse_oblige
         }
         active_law:lawgroup_economic_system ?= {
 			add_amendment = {
@@ -2645,27 +2673,15 @@ dev_events.53 = {
             is_decaying = yes
 		}
         add_modifier = {
-			name = birth_rate_buff_1
-            years = 10
+			name = starting_sol_buff
+            years = 20
             is_decaying = yes
 		}
         add_modifier = {
-			name = radicals_nerf_1
-            years = 25
+			name = birth_rate_buff_1
+            years = 20
             is_decaying = yes
 		}
-        trigger_event = {
-            id = dev_events.26
-            days = 60
-        }
-        trigger_event = {
-            id = dev_events.26
-            days = 365
-        }
-        trigger_event = {
-            id = dev_events.26
-            days = 730
-        }
         s:STATE_KANTO = {
 			random_scope_state = {
 			    set_hub_name = {
@@ -2687,6 +2703,11 @@ dev_events.53 = {
             set_ig_trait = ig_trait:ig_trait_materiel_waste
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
 			set_ig_trait = ig_trait:ig_trait_bushido
+        }
+        ig:ig_landowners ?= {
+            set_ig_trait = ig_trait:ig_trait_noble_privileges
+			set_ig_trait = ig_trait:ig_trait_family_ties
+			set_ig_trait = ig_trait:ig_trait_noblesse_oblige
         }
         active_law:lawgroup_economic_system ?= {
 			add_amendment = {
@@ -7580,6 +7601,7 @@ dev_events.157 = {
     option = {
         name = dev_events.26.a
         default_option = yes
+        trigger = { is_player = no }
         add_loyalists = {
 			strata = upper
 			value = -10000000
@@ -7701,5 +7723,28 @@ dev_events.160 = {
 				years = 60
 			}
         }
+    }
+}
+
+dev_events.161 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        add_treasury = 50000000
     }
 }

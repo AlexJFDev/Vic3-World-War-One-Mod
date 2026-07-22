@@ -32,6 +32,14 @@
 	}
 
 	c:ETH = {
+		trigger_event = { #Stabilization buff for AI
+			id = dev_events.1
+			days = 5
+		}
+		trigger_event = { #Stabilization buff for AI
+			id = dev_events.1
+			days = 5
+		}
         trigger_event = { #Landlock buff
 			id = dev_events.138
 			days = 5
@@ -497,17 +505,13 @@
 			id = dev_events.53
 			days = 5
 		}
+		trigger_event = { #Cash help
+			id = dev_events.161
+			years = 3
+		}
 		trigger_event = { #Kanto earthquake
 			id = japan_events.15
 			years = 10
-		}
-		trigger_event = { #Loyalists and radicals reset
-			id = dev_events.26
-			days = 60
-		}
-		trigger_event = { #Loyalists and radicals reset
-			id = dev_events.157
-			years = 1
 		}
 	}
 
@@ -817,10 +821,10 @@
 					limit = {
 						is_building_type = building_shipyard
 					}
-					add = 100
+					add = 1000
 				}
 			}
-			multiply = 20
+			multiply = 50
 		}
 	}
 
