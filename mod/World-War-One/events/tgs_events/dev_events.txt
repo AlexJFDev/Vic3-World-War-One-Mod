@@ -2518,7 +2518,7 @@ dev_events.52 = {
         trigger = { is_player = yes }
         add_modifier = {
 			name = starting_minting_buff_4_modifier
-            years = 3
+            years = 5
             is_decaying = yes
 		}
         add_modifier = {
@@ -2533,9 +2533,8 @@ dev_events.52 = {
         default_option = yes
         trigger = { is_player = no }
         add_modifier = {
-			name = starting_minting_buff_4_modifier
-            years = 6
-            is_decaying = yes
+			name = money_buff_3
+            years = 60
 		}
         add_modifier = {
 			name = starting_sol_nerf_1
@@ -6331,7 +6330,7 @@ dev_events.125 = {
     }
 }
 
-dev_events.126 = {
+dev_events.126 = { #Change
     type = country_event
 
     title = dev_events.17.t
@@ -6379,6 +6378,15 @@ dev_events.126 = {
 		add_radicals = {
 			strata = lower
             value = -10000000
+		}
+        every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority
+			}
+			add_modifier = {
+				name = political_movement_nerf_1
+				years = 50
+			}
 		}
     }
 
@@ -6891,7 +6899,7 @@ dev_events.138 = {
                 is_capital = yes
 			}
 			add_modifier = {
-				name = landlock_buff
+				name = landlock_buff_1
 				years = 60
 			}
         }
@@ -7550,5 +7558,148 @@ dev_events.156 = {
 			    }
 			}
 		}
+    }
+}
+
+dev_events.157 = {
+    type = country_event
+
+    title = dev_events.26.t
+    desc = dev_events.26.d
+    flavor = dev_events.26.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.26.a
+        default_option = yes
+        add_loyalists = {
+			strata = upper
+			value = -10000000
+		}
+		add_loyalists = {
+			strata = middle
+            value = -10000000
+		}
+		add_loyalists = {
+			strata = lower
+            value = -10000000
+		}
+        add_radicals = {
+			strata = upper
+			value = -10000000
+		}
+		add_radicals = {
+			strata = middle
+            value = -10000000
+		}
+		add_radicals = {
+			strata = lower
+            value = -10000000
+		}
+        trigger_event = {
+            id = dev_events.157
+            years = 5
+        }
+    }
+}
+
+dev_events.158 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        trigger = { 
+            is_player = no
+            is_subject = no
+            c:RUS = { is_player = no } 
+        }
+        default_option = yes
+        c:RUS = {
+            create_diplomatic_pact = {
+			  country = c:MGL
+			  type = protectorate
+		    }
+        }
+    }
+}
+
+dev_events.159 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        create_character = {
+			template = usa_thomas_dewey_character_template
+		}
+        create_character = {
+			template = usa_aldai_stevenson_character_template
+		}
+    }
+}
+
+dev_events.160 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        random_scope_state = {
+			limit = {
+				owner = ROOT
+                is_capital = yes
+			}
+			add_modifier = {
+				name = landlock_buff_2
+				years = 60
+			}
+        }
     }
 }

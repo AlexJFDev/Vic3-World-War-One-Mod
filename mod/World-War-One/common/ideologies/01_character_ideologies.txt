@@ -4655,7 +4655,7 @@ REPLACE_OR_CREATE:ideology_vanguardist = {
 	}
 }
 
-REPLACE_OR_CREATE:ideology_fascist = {
+REPLACE_OR_CREATE:ideology_fascist = { #Change
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_fascist.dds"
 
 	character_ideology = yes
@@ -4746,6 +4746,17 @@ REPLACE_OR_CREATE:ideology_fascist = {
 		law_corporatized_unions = strongly_approve
 		law_right_to_associate = disapprove
 		law_factory_councils = strongly_disapprove
+	}
+
+	lawgroup_economic_system = {
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = strongly_approve
+		law_interventionism = approve
+		law_agrarianism = disapprove
+		law_traditionalism = strongly_disapprove
+		law_laissez_faire = neutral
+		law_industry_banned = strongly_disapprove
+		law_extraction_economy = disapprove
 	}
 
 	country_trigger = {

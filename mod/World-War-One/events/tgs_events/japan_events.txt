@@ -709,11 +709,33 @@ japan_events.18 = {#Invasion of Manchuria
             type = dp_transfer_subject
 
             escalation = 85
+
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_BUSAN.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_PYONGYANG.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_SARIWON.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_SEOUL.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:CHI
+                type = conquer_state
+                target_state = s:STATE_YANGHO.region_state:JAP
+            }
 		}
-        trigger_event = { 
-            id = dev_events.76
-            days = 5
-        }
         ai_chance = {
 		  base = 1
 	    }

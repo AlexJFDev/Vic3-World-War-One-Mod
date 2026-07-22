@@ -385,7 +385,7 @@ fragile_unity_modifier = {
 
 political_movement_nerf_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-    political_movement_radicalism_add = -999
+    political_movement_radicalism_add = -9
     
 }
 
@@ -1476,9 +1476,19 @@ true_france = {
     state_migration_pull_mult = 0.5
 }
 
-landlock_buff = {
+landlock_buff_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	state_sell_orders_merchant_marine_add = 500
+}
+
+landlock_buff_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_sell_orders_merchant_marine_add = 500
+    state_sell_orders_grains_add = 500
+    state_sell_orders_tools_add = 500
+    state_sell_orders_iron_add = 500
+    state_sell_orders_wood_add = 500
+    state_sell_orders_coal_add = 500
 }
 
 construction_buff_1 = {
@@ -1488,15 +1498,23 @@ construction_buff_1 = {
 
 revolutionary_fervor = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-    unit_army_offense_mult = 0.35
-    unit_army_defense_mult = 0.35
-    unit_occupation_mult = 0.5
-    unit_morale_recovery_mult = 0.5
+    unit_army_offense_mult = 0.15
+    unit_army_defense_mult = 0.15
+    unit_occupation_mult = 0.25
+    unit_morale_recovery_mult = 0.25
     state_migration_pull_mult = 0.5
     political_movement_radicalism_add = -0.3
     country_tax_income_add = 300000
     building_construction_sector_throughput_add = 0.5
     country_society_tech_research_speed_mult = 0.2
+}
+
+csr_uprising = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    unit_army_offense_mult = 0.15
+    unit_army_defense_mult = 0.15
+    unit_occupation_mult = 0.25
+    unit_morale_recovery_mult = 0.25
 }
 
 decolonization_buff = {

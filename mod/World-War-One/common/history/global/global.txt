@@ -206,6 +206,13 @@
 		}
 	}
 
+    c:CHQ = {
+		trigger_event = { #Nerf for Kuomintang side
+			id = dev_events.10
+			days = 5
+		}
+	}
+
 	c:ZHE = {
 		trigger_event = { #Nerf for Kuomintang side
 			id = dev_events.10
@@ -494,9 +501,21 @@
 			id = japan_events.15
 			years = 10
 		}
+		trigger_event = { #Loyalists and radicals reset
+			id = dev_events.26
+			days = 60
+		}
+		trigger_event = { #Loyalists and radicals reset
+			id = dev_events.157
+			years = 1
+		}
 	}
 
 	c:DEI = {
+		trigger_event = { #Stabilization buff for AI
+			id = dev_events.1
+			days = 5
+		}
 		trigger_event = { #Stabilization buff for AI
 			id = dev_events.1
 			days = 5
@@ -564,6 +583,10 @@
 	}
 
 	c:NEJ = {
+		trigger_event = { #Political movement nerf for AI
+			id = dev_events.1
+			days = 5
+		}
 		trigger_event = { #Political movement nerf for AI
 			id = dev_events.1
 			days = 5
@@ -711,13 +734,9 @@
 			id = mexico_events.3
 			days = 330
 		}
-		trigger_event = { #Convention
-			id = usa_events.15
-			years = 2
-		}
-		trigger_event = { #Convention
-			id = usa_events.16
-			years = 2
+		trigger_event = { #New politicians
+			id = dev_events.159
+			years = 20
 		}
 		trigger_event = { #USA gets nuclear weapons
 			id = dev_events.141
@@ -798,10 +817,10 @@
 					limit = {
 						is_building_type = building_shipyard
 					}
-					add = 50
+					add = 100
 				}
 			}
-			multiply = 10
+			multiply = 20
 		}
 	}
 
