@@ -596,7 +596,7 @@ turkey_events.8 = { #Arab uprising
         }
     }
 
-    option = { 
+    option = {
         name = turkey_events.8.a
         default_option = yes
         c:HDJ = {
@@ -613,6 +613,11 @@ turkey_events.8 = { #Arab uprising
                years = 5
                is_decaying = yes
 		    }
+            add_modifier = {
+               name = money_buff_5
+               years = 5
+                is_decaying = yes
+            }
             add_treasury = 5000000
             add_modifier = {
                name = revolution_stabilization_buff_2

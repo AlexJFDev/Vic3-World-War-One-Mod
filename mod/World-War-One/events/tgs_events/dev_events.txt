@@ -6364,7 +6364,7 @@ dev_events.125 = {
     }
 }
 
-dev_events.126 = { #Change
+dev_events.126 = {
     type = country_event
 
     title = dev_events.17.t
@@ -6635,7 +6635,8 @@ dev_events.132 = {
         name = dev_events.10.a
         trigger = { 
             is_player = no
-            c:RUS = { is_player = no } 
+            c:RUS = { is_player = no }
+            is_diplomatic_play_enemy_of = c:RUS
         }
         default_option = yes
         c:RUS = {
@@ -7003,8 +7004,7 @@ dev_events.140 = {
         name = dev_events.10.a
         default_option = yes
         trigger = {
-            is_at_war = yes
-            has_variable = central_powers_participant
+            is_diplomatic_play_enemy_of = c:FRA
         }
         trigger_event = {
             id = germany_events.2
@@ -7514,11 +7514,6 @@ dev_events.154 = {
         trigger = { is_player = no }
         add_treasury = 100000000
         remove_modifier = declared_bankruptcy
-        add_modifier = {
-            name = starting_minting_buff_3_modifier
-            years = 20
-            is_decaying = yes
-        }
     }
 }
 
@@ -7676,6 +7671,20 @@ dev_events.158 = {
 			  type = protectorate
 		    }
         }
+        add_modifier = {
+            name = defeated_elites_modifier
+            years = 50
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = dictatorship_of_proletariat
+            years = 50
+            is_decaying = yes
+        }
+        activate_law = law_type:law_council_republic
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_censorship
+        activate_law = law_type:law_command_economy
     }
 }
 
@@ -7758,7 +7767,11 @@ dev_events.161 = {
     option = {
         name = dev_events.10.a
         default_option = yes
-        trigger = { is_player = no }
-        add_treasury = 100000000
+        add_treasury = 2000000
+        add_modifier = {
+            name = money_buff_5
+            years = 5
+            is_decaying = yes
+        }
     }
 }
