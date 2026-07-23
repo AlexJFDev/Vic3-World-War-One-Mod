@@ -4768,6 +4768,9 @@ REPLACE_OR_CREATE:ideology_fascist = { #Change
 
 	interest_group_leader_trigger = {
 		ideology_fascist_valid_trigger = yes
+		NOT = {
+			c:USA ?= this
+		}
 	}
 
 	non_interest_group_leader_trigger = {

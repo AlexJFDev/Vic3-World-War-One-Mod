@@ -16,7 +16,22 @@
                 has_ideology = ideology:ideology_jingoist_leader
             }
         }
-        exists = c:MCH
+        OR = {
+            c:MCH = {
+                NOT = { 
+                   is_subject_of = c:JAP
+                }
+                OR = {
+                  is_subject = no
+                  is_subject_of = c:CHI
+                }
+            }
+            c:CHI = {
+                owns_entire_state_region = STATE_NORTHERN_MANCHURIA
+				owns_entire_state_region = STATE_SHENGJING
+				owns_entire_state_region = STATE_SOUTHERN_MANCHURIA
+            }
+        }
         game_date > 1925.1.1
     }
 
@@ -53,7 +68,7 @@
             }
             has_modifier = declared_bankruptcy
         }
-        game_date > 1931.8.1
+        game_date > 1931.1.1
         is_at_war = no
         ruler = {
             OR = {
@@ -69,10 +84,6 @@
            id = japan_events.18
            days = 5
         }
-    }
-
-    invalid = {
-        NOT = { exists = c:MCH }
     }
 
     should_be_pinned_by_default_uninvolved_or_context = yes

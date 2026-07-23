@@ -1238,7 +1238,7 @@ dev_events.25 = {
         default_option = yes
         add_modifier = {
             name = starting_sol_buff
-            years = 10
+            years = 30
             is_decaying = yes
         }
         trigger_event = {
@@ -2245,7 +2245,7 @@ dev_events.45 = {
         default_option = yes
         add_modifier = {
             name = starting_sol_buff
-            years = 2
+            years = 10
             is_decaying = yes
         }
         trigger_event = {
@@ -2567,20 +2567,19 @@ dev_events.53 = {
         add_treasury = 10000000
         add_modifier = {
 			name = starting_sol_buff
-            years = 40
+            years = 50
 		}  
         add_modifier = {
 			name = starting_sol_buff
-            years = 40
+            years = 50
 		}  
         add_modifier = {
 			name = starting_sol_buff
-            years = 40
-            is_decaying = yes
+            years = 50
 		} 
         add_modifier = {
 			name = birth_rate_buff_1
-            years = 40
+            years = 50
             is_decaying = yes
 		}
         add_modifier = {
@@ -2599,43 +2598,37 @@ dev_events.53 = {
         s:STATE_TOHOKU.region_state:JAP = {
 			add_modifier = {
                name = grain_supply_1
-               years = 40
-               is_decaying = yes
+               years = 50
             }
 		}
         s:STATE_TOKAI.region_state:JAP = {
 			add_modifier = {
                name = grain_supply_1
-               years = 40
-               is_decaying = yes
+               years = 50
             }
 		}
         s:STATE_KANSAI.region_state:JAP = {
 			add_modifier = {
                name = grain_supply_1
-               years = 40
-               is_decaying = yes
+               years = 50
             }
 		}
         s:STATE_KYOTO.region_state:JAP = {
 			add_modifier = {
                name = grain_supply_1
-               years = 40
-               is_decaying = yes
+               years = 50
             }
 		}
         s:STATE_CHUGOKU.region_state:JAP = {
 			add_modifier = {
                name = grain_supply_1
-               years = 40
-               is_decaying = yes
+               years = 50
             }
 		}
         s:STATE_SHIKOKU.region_state:JAP = {
 			add_modifier = {
                name = grain_supply_1
                years = 50
-               is_decaying = yes
             }
 		}
         ig:ig_intelligentsia = {
@@ -4428,6 +4421,7 @@ dev_events.91 = {
         name = dev_events.15.a
         default_option = yes
         trigger = { is_player = no }
+        add_treasury = 100000000 
         add_modifier = {
             name = revolution_stabilization_buff_4
             years = 10
@@ -6422,6 +6416,14 @@ dev_events.126 = {
 				years = 50
 			}
 		}
+        trigger_event = {
+            id = dev_events.162
+            years = 5
+        }
+        trigger_event = {
+            id = dev_events.162
+            years = 10
+        }
     }
 
     option = {
@@ -6641,6 +6643,12 @@ dev_events.132 = {
         default_option = yes
         c:RUS = {
             annex = ROOT
+        }
+        c:MGL = {
+            trigger_event = {
+			    id = dev_events.158
+                days = 30
+		    }
         }
     }
 }
@@ -7387,6 +7395,27 @@ dev_events.150 = {
 			add_initiator_backers = { c:SIA }
 		}
     }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = {
+            is_player = yes
+            is_subject = no
+        }
+        scope:sino_japan_war_diplo_play = {
+			add_initiator_backers = { c:SIA }
+		}
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = {
+            is_player = yes
+            is_subject = no 
+        }
+    }
 }
 
 dev_events.151 = {
@@ -7514,6 +7543,10 @@ dev_events.154 = {
         trigger = { is_player = no }
         add_treasury = 100000000
         remove_modifier = declared_bankruptcy
+        trigger_event = {
+			id = dev_events.26
+			days = 5
+		}
     }
 }
 
@@ -7773,5 +7806,92 @@ dev_events.161 = {
             years = 5
             is_decaying = yes
         }
+    }
+}
+
+dev_events.162 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = no }
+        every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority
+			}
+			add_modifier = {
+				name = political_movement_nerf_1
+				years = 50
+			}
+		}
+    }
+}
+
+dev_events.163 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = army_nerf_modifier_2
+            years = 10
+            is_decaying = yes
+		}
+    }
+}
+
+dev_events.164 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        trigger_event = {
+			id = dev_events.26
+			days = 5
+		}
     }
 }

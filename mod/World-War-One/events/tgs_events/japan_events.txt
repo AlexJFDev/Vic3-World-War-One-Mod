@@ -689,6 +689,12 @@ japan_events.18 = {#Invasion of Manchuria
 
             escalation = 85
 		}
+        c:CHI = {
+            trigger_event = {
+               id = dev_events.163
+               days = 5
+            }
+        }
         ai_chance = {
 		  base = 1
 	    }
@@ -736,6 +742,12 @@ japan_events.18 = {#Invasion of Manchuria
                 target_state = s:STATE_YANGHO.region_state:JAP
             }
 		}
+        c:CHI = {
+            trigger_event = {
+               id = dev_events.163
+               days = 5
+            }
+        }
         ai_chance = {
 		  base = 1
 	    }
@@ -747,7 +759,6 @@ japan_events.18 = {#Invasion of Manchuria
         trigger = {
             c:CHI = {
                 owns_entire_state_region = STATE_NORTHERN_MANCHURIA
-				owns_entire_state_region = STATE_SHENGJING
 				owns_entire_state_region = STATE_SOUTHERN_MANCHURIA
             }
             has_game_rule = ww2_asia_enabled
@@ -759,7 +770,7 @@ japan_events.18 = {#Invasion of Manchuria
 
             type = dp_conquer_state
 
-            war = yes
+            escalation = 85
             
             add_war_goal = {
                 holder = c:JAP
@@ -802,6 +813,12 @@ japan_events.18 = {#Invasion of Manchuria
                 target_state = s:STATE_YANGHO.region_state:JAP
             }
         }
+        c:CHI = {
+            trigger_event = {
+               id = dev_events.163
+               days = 5
+            }
+        }
         ai_chance = {
 		  base = 1
 	    }
@@ -809,6 +826,12 @@ japan_events.18 = {#Invasion of Manchuria
 
 	option = {
         name = japan_events.18.b
+        c:CHI = {
+            trigger_event = {
+               id = dev_events.163
+               days = 5
+            }
+        }
         ai_chance = {
 		  base = 0
 	    }

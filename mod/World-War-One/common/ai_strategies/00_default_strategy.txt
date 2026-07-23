@@ -4485,7 +4485,7 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 	# scope:military_formation = military formation
 	combat_unit_group_weights = {
 		combat_unit_group_infantry = {
-			value = 100
+			value = 200
 		}
 		combat_unit_group_artillery = { #50
 			value = 0
@@ -4509,7 +4509,6 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 				limit = { has_technology_researched = mobile_armor }
 				add = 10
 			}
-
 			if = {
 				limit = { has_law_or_variant = law_type:law_peasant_levies }
 				multiply = 0.5
@@ -4523,13 +4522,12 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 				multiply = 1.25
 			}
 		}
-		combat_unit_group_cavalry = { #30
-			value = 20
+		combat_unit_group_cavalry = { #20
+			value = 10
 			if = {
 				limit = { has_technology_researched = mobile_armor }
 				add = 10
 			}
-
 			if = {
 				limit = { has_law_or_variant = law_type:law_national_militia }
 				multiply = 0.5
@@ -4543,13 +4541,12 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 				multiply = 1.5
 			}
 		}
-		combat_unit_group_air = { #90
+		combat_unit_group_air = { #70
 			value = 0
 			if = {
 				limit = { has_technology_researched = military_aviation }
-				add = 90
+				add = 70
 			}
-
 			if = {
 				limit = { has_law_or_variant = law_type:law_national_militia }
 				multiply = 1.5
