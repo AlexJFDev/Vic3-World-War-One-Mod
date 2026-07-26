@@ -76376,6 +76376,19 @@
 					pm_trade_center_trade_quantity_high 
 				}
 			}
+			create_building = {
+				building = building_naval_fortification
+				add_ownership = {
+					country = {
+						country = c:TUR
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_naval_fortification_basic 
+				}
+			}
 		}
 	}
 	s:STATE_YEMEN = {
