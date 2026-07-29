@@ -127,6 +127,10 @@
 			id = egypt_events.7
 			years = 16
 		}
+		trigger_event = { #Nasser spawn
+			id = dev_events.167
+			years = 25
+		}
 	}
 
 	c:SAF = {
@@ -197,6 +201,10 @@
 	}
 
     c:CHI = {
+		trigger_event = { #Second Revolution
+			id = china_events.1
+			days = 5
+		}
 		trigger_event = { #Political movement nerf for AI
 			id = dev_events.1
 			days = 5
@@ -205,13 +213,13 @@
 			id = dev_events.6
 			days = 5
 		}
-		trigger_event = { #China army buff
-			id = dev_events.11
-			days = 5
-		}
 		trigger_event = { #Truces with great powers
 			id = dev_events.34
 			days = 5
+		}
+        trigger_event = { #Remove opium addiction for ai
+			id = dev_events.166
+			years = 37
 		}
 	}
 
@@ -228,12 +236,20 @@
 			id = dev_events.9
 			days = 15
 		}
+		trigger_event = { #Remove opium addiction for ai
+			id = dev_events.166
+			years = 37
+		}
 	}
 
     c:CHQ = {
 		trigger_event = { #Nerf for Kuomintang side
 			id = dev_events.10
 			days = 5
+		}
+		trigger_event = { #Remove opium addiction for ai
+			id = dev_events.166
+			years = 37
 		}
 	}
 
@@ -242,12 +258,20 @@
 			id = dev_events.10
 			days = 5
 		}
+		trigger_event = { #Remove opium addiction for ai
+			id = dev_events.166
+			years = 37
+		}
 	}
 
 	c:FRS = {
 		trigger_event = { #Nerf for Kuomintang side
 			id = dev_events.10
 			days = 5
+		}
+		trigger_event = { #Remove opium addiction for ai
+			id = dev_events.166
+			years = 37
 		}
 	}
 
@@ -256,12 +280,16 @@
 			id = dev_events.10
 			days = 5
 		}
+		trigger_event = { #Remove opium addiction for ai
+			id = dev_events.166
+			years = 37
+		}
 	}
 
 	c:SIH = {
-		trigger_event = { #Nerf for Kuomintang side
-			id = dev_events.10
-			days = 5
+		trigger_event = { #Remove opium addiction for ai
+			id = dev_events.166
+			years = 37
 		}
 	}
 
@@ -534,10 +562,6 @@
 		}
 		trigger_event = { #Stabilization buff for AI
 			id = dev_events.1
-			days = 5
-		}
-		trigger_event = { #Reduced liberty desire
-			id = dev_events.165
 			days = 5
 		}
 	}

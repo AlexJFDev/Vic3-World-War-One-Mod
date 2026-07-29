@@ -398,17 +398,6 @@ dev_events.6 = {
             is_decaying = yes
 		}
     }
-
-    option = {
-        name = dev_events.6.a
-        default_option = yes
-        trigger = { is_player = yes }
-        add_modifier = {
-			name = starting_minting_buff_2_modifier
-            years = 2
-            is_decaying = yes
-		}
-    }
 }
 
 dev_events.7 = {
@@ -548,26 +537,10 @@ dev_events.11 = {
     option = {
         name = dev_events.11.a
         default_option = yes
-        trigger = { is_player = yes }
-        ig:ig_armed_forces ?= {
-            set_ig_trait = ig_trait:ig_trait_materiel_waste
-			set_ig_trait = ig_trait:ig_trait_veteran_consultation
-			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
-        }
-    }
-
-    option = {
-        name = dev_events.11.a
-        default_option = yes
         trigger = { is_player = no }
         add_modifier = {
             name = army_buff_modifier_4
             years = 1
-        }
-        ig:ig_armed_forces ?= {
-            set_ig_trait = ig_trait:ig_trait_materiel_waste
-			set_ig_trait = ig_trait:ig_trait_veteran_consultation
-			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
         }
     }
 }
@@ -1088,6 +1061,10 @@ dev_events.21 = {
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
 			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
         }
+        ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary
+			add_ideology = ideology_french_constitutionalism
+		}
     }
 
     option = {
@@ -1114,6 +1091,15 @@ dev_events.21 = {
         s:STATE_ALSACE_LORRAINE = {
 			add_claim = c:FRA
         }
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_materiel_waste
+			set_ig_trait = ig_trait:ig_trait_veteran_consultation
+			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+        }
+        ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary
+			add_ideology = ideology_french_constitutionalism
+		}
     }
 }
 
@@ -7456,6 +7442,7 @@ dev_events.151 = {
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_outlawed_dissent
         activate_law = law_type:law_military_oversight
+        activate_law = law_type:law_command_economy
     }
 }
 
@@ -7934,6 +7921,73 @@ dev_events.165 = {
         add_modifier = {
 			name = colony_control_2
             years = 30
+            is_decaying = yes
 		}
+    }
+}
+
+dev_events.166 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        every_primary_culture = {
+			remove_cultural_obsession = opium
+		}
+    }
+}
+
+dev_events.167 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        create_character = {
+            first_name = Gamal
+	        last_name = Nasser
+	        historical = yes
+            birth_date = 1918.01.15
+	        culture = cu:arab
+	        religion = rel:sunni
+	        female = no
+            is_agitator = yes
+            is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_republican_leader
+	        traits = {
+              charismatic
+              imposing
+              reckless
+	        }
+        }
     }
 }

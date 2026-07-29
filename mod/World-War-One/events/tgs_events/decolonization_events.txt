@@ -335,6 +335,22 @@ decolonization_events.1 = { #Starting event France
             add_primary_culture = cu:mande
             add_primary_culture = cu:gbe
             set_state_religion = rel:sunni
+            create_character = {
+			  first_name = Leopold
+			  last_name = Sedar_Senghor
+			  culture = cu:wolof
+			  interest_group = ig_petty_bourgeoisie
+			  ideology = ideology_social_democrat
+			  birth_date = 1906.10.09
+			  ruler = yes
+              ig_leader = yes
+			  historical = yes
+			    traits = {
+                  honorable
+                  literary
+                  expert_political_operator
+			    }
+		    }
 		}
         c:MDK = {
 			set_state_religion = rel:sunni
@@ -374,6 +390,21 @@ decolonization_events.1 = { #Starting event France
         c:KON = {
 			remove_primary_culture = cu:belgian
 			add_primary_culture = cu:central_bantu
+            create_character = {
+			  first_name = Patrice
+			  last_name = Lumumba
+			  culture = cu:central_bantu
+			  interest_group = ig_petty_bourgeoisie
+			  ideology = ideology_social_democrat
+			  birth_date = 1925.07.02
+			  ruler = yes
+              ig_leader = yes
+			  historical = yes
+			    traits = {
+                  charismatic
+                  reckless
+			    }
+		    }
 		}
         c:ANG = {
 			remove_primary_culture = cu:portuguese
