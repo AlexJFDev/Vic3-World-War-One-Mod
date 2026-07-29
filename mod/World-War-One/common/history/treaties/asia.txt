@@ -493,6 +493,36 @@
 		}
 	}
 
+	# Russo-Mongolian agreement
+	create_treaty = {
+		name = treaty_name_russo_mongolian_agreement
+		first_country = c:MGL
+		second_country = c:RUS
+
+		is_draft = no
+		entered_into_force_on = 1913.05.20
+		binding_period = { years = 5 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:MGL
+				target_country = c:RUS
+			}     
+			{
+				article = guarantee_independence
+				source_country = c:RUS
+				target_country = c:MGL
+			} 
+			{
+				article = foreign_investment_rights
+				source_country = c:MGL
+				target_country = c:RUS
+			}
+			{ article = host_power_bloc_embassy source_country = c:MGL target_country = c:RUS }
+		}
+	}
+
 	# JAP-CHI
 	create_treaty = {
 		name = treaty_name_jap_chi_invest

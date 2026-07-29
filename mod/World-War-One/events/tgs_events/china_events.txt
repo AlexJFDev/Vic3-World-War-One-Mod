@@ -1,6 +1,6 @@
 ﻿namespace = china_events
 
-china_events.1 = { #Je fragile republic initiator
+china_events.1 = { #Second Revolution initiation
     type = country_event
 
     title = china_events.1.t
@@ -31,12 +31,15 @@ china_events.1 = { #Je fragile republic initiator
 
     option = {
         name = china_events.1.a
-        change_infamy = -150
-        c:CHI = {
-            trigger_event = {
-                id = china_events.2
-                days = 900
-            }
+        default_option = yes
+        change_infamy = -50
+        trigger_event = {
+			id = dev_events.11
+			days = 5
+		}
+        trigger_event = {
+            id = china_events.2
+            days = 900
         }
         c:KMT = {
             trigger_event = {
@@ -48,7 +51,42 @@ china_events.1 = { #Je fragile republic initiator
         	strata = lower
         	value = medium_radicals
         }
-    } 
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_materiel_waste
+			set_ig_trait = ig_trait:ig_trait_veteran_consultation
+			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = china_events.1.b
+        change_infamy = -50
+        trigger_event = {
+			id = dev_events.11
+			days = 5
+		}
+        c:KMT = {
+            trigger_event = {
+                id = china_events.30
+                days = 10
+            }
+        }
+        add_radicals = {
+        	strata = lower
+        	value = medium_radicals
+        }
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_materiel_waste
+			set_ig_trait = ig_trait:ig_trait_veteran_consultation
+			set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+        }
+        ai_chance = {
+		  base = 0
+	    }
+    }
 }
 
 china_events.2 = { #Imperial restoration
@@ -72,6 +110,7 @@ china_events.2 = { #Imperial restoration
     option = {
         name = china_events.2.a
         default_option = yes
+        trigger = { is_at_war = no }
         activate_law = law_type:law_monarchy
         create_country = { #Zhili
 	       tag = ZHI
@@ -657,12 +696,20 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
+		    }
         }
         c:AHU = {
             trigger_event = {
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
+		    }
         }
         c:HEN = {
             trigger_event = {
@@ -672,6 +719,10 @@ china_events.5 = { #China collapse
             trigger_event = { #Landlock buff
 			   id = dev_events.160
 			   days = 5
+		    }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
 		    }
         }
         c:HUB = {
@@ -683,12 +734,20 @@ china_events.5 = { #China collapse
 			   id = dev_events.160
 			   days = 5
 		    }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
+		    }
         }
         c:SHA = {
             trigger_event = {
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
+		    }
         }
         c:YUN = {
             trigger_event = {
@@ -708,6 +767,10 @@ china_events.5 = { #China collapse
             trigger_event = { #Landlock buff
 			   id = dev_events.160
 			   days = 5
+		    }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
 		    }
         }
         c:SIH = {
@@ -735,6 +798,10 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
+		    }
         }
         c:JXI = {
             trigger_event = {
@@ -744,6 +811,10 @@ china_events.5 = { #China collapse
             trigger_event = { #Landlock buff
 			   id = dev_events.160
 			   days = 5
+		    }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
 		    }
         }
         c:ZHE = {
@@ -787,6 +858,10 @@ china_events.5 = { #China collapse
                 id = china_events.7
                 days = 5
             }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
+		    }
         }
         c:XIN = {
             trigger_event = {
@@ -797,6 +872,10 @@ china_events.5 = { #China collapse
 			   id = dev_events.160
 			   days = 5
 		    }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
+		    }
         }
         c:QIH = {
             trigger_event = {
@@ -806,6 +885,10 @@ china_events.5 = { #China collapse
             trigger_event = { #Landlock buff
 			   id = dev_events.160
 			   days = 5
+		    }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
 		    }
         }
         c:QIN = {
@@ -821,6 +904,10 @@ china_events.5 = { #China collapse
 			   id = dev_events.160
 			   days = 5
 		    }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
+		    }
         }
         c:GAN = {
             trigger_event = {
@@ -834,6 +921,10 @@ china_events.5 = { #China collapse
             trigger_event = { #Landlock buff
 			   id = dev_events.160
 			   days = 5
+		    }
+            trigger_event = {
+			   id = dev_events.166
+			   years = 34
 		    }
         }
 		set_global_variable = { name = chinese_central_government value = c:BEI }
@@ -2014,7 +2105,7 @@ china_events.24 = { #Opium crisis resovled
     duration = 3
 
     event_image = {
-        texture = "gfx/event_pictures/hospital.dds"
+        texture = "gfx/event_pictures/opium.dds"
     }
 
     option = {
@@ -2588,6 +2679,158 @@ china_events.29 = { #Pu Yi becomes agitator in Manchuria
             set_character_as_ruler = yes
 		}
         activate_law = law_type:law_monarchy
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+china_events.30 = {
+    type = country_event
+
+    title = china_events.30.t
+    desc = china_events.30.d
+    flavor = china_events.30.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/second_revolution.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:CHI ?= this }
+              target = { c:KMT ?= this }
+		    }
+           save_scope_as = kuomintang_war_diplo_play
+        }
+        random_scope_character = {
+            limit = {
+               has_template = KMT_chen_jiogming_template
+            }
+            set_variable = {
+                name = chen_jiogming
+            }
+        }
+    }
+
+    option = {
+        name = china_events.30.a
+        default_option = yes
+        scope:kuomintang_war_diplo_play = {
+            end_play = yes
+		}
+        c:CHI = {
+            create_diplomatic_pact = {
+			  country = c:KMT
+			  type = protectorate
+		    }
+            create_diplomatic_pact = {
+			  country = c:CHQ
+			  type = protectorate
+		    }
+            create_diplomatic_pact = {
+			  country = c:ZHE
+			  type = protectorate
+		    }
+            create_diplomatic_pact = {
+			  country = c:FRS
+			  type = protectorate
+		    }
+            create_diplomatic_pact = {
+			  country = c:HNA
+			  type = protectorate
+		    }
+            create_character = {
+			   template = chi_sun_yat_sen_character_template_2
+		    }
+            activate_law = law_type:law_wealth_voting
+        }
+        s:STATE_WESTERN_HUBEI = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KMT
+			    owner = {
+				  OR = {
+					c:KMT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CHI
+            }
+        }
+        s:STATE_EASTERN_HUBEI = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KMT
+			    owner = {
+				  OR = {
+					c:KMT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CHI
+            }
+        }
+        s:STATE_SOUTHERN_ANHUI = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KMT
+			    owner = {
+				  OR = {
+					c:KMT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CHI
+            }
+        }
+        s:STATE_NANJING = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KMT
+			    owner = {
+				  OR = {
+					c:KMT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CHI
+            }
+        }
+        s:STATE_SUZHOU = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:KMT
+			    owner = {
+				  OR = {
+					c:KMT = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CHI
+            }
+        }
+        change_tag = YUE
+        owner.ruler ?= {
+			kill_character = yes
+		}
+        random_scope_character = { 
+			limit = { has_variable = chen_jiogming }
+            set_character_as_ruler = yes
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = china_events.30.b
         ai_chance = {
 		  base = 0
 	    }
