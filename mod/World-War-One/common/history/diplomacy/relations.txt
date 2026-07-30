@@ -175,12 +175,23 @@
         set_relations = { country = c:BIC value = 80 }
     }
 
+    c:CHI ?= {
+        set_relations = { country = c:GBR value = 10 }
+        set_relations = { country = c:FRA value = 10 }
+        set_relations = { country = c:RUS value = 10 }
+        set_relations = { country = c:GER value = 25 }
+        set_relations = { country = c:USA value = 50 }
+        set_relations = { country = c:JAP value = -20 }
+        set_relations = { country = c:KMT value = -50 }
+        set_relations = { country = c:SIA value = 80 }
+    }
+
     c:JAP ?= {
         set_relations = { country = c:GBR value = 50 }
         set_relations = { country = c:RUS value = -20 }
         set_relations = { country = c:GER value = 10 }
         set_relations = { country = c:USA value = -30 }
-        set_relations = { country = c:CHI value = -80 }
+        set_relations = { country = c:CHI value = -30 }
         set_relations = { country = c:SIA value = 80 }
     }
 
