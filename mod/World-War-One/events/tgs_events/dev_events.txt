@@ -8070,8 +8070,18 @@ dev_events.168 = {
     option = {
         name = dev_events.2.a
         default_option = yes
-        ig:ig_intelligentsia ?= {
-            set_ig_trait = ig_trait:ig_trait_home_of_renaissance
+        trigger = { is_player = no }
+        create_bidirectional_truce = {
+			country = c:DEN
+			years = 50
+		}
+		create_bidirectional_truce = {
+			country = c:NOR
+			years = 50
+		}
+		create_bidirectional_truce = {
+			country = c:FIN
+			years = 50
 		}
     }
 }
