@@ -397,6 +397,18 @@ dev_events.6 = {
             years = 5
             is_decaying = yes
 		}
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_reformism
+		}
+    }
+
+    option = {
+        name = dev_events.6.a
+        default_option = yes
+        trigger = { is_player = yes }
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_reformism
+		}
     }
 }
 
@@ -1065,6 +1077,9 @@ dev_events.21 = {
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_french_constitutionalism
 		}
+        ig:ig_intelligentsia ?= {
+			set_ig_trait = ig_trait:ig_trait_lingua_franca
+        }
     }
 
     option = {
@@ -1100,6 +1115,9 @@ dev_events.21 = {
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_french_constitutionalism
 		}
+        ig:ig_intelligentsia ?= {
+			set_ig_trait = ig_trait:ig_trait_lingua_franca
+        }
     }
 }
 
@@ -2379,6 +2397,7 @@ dev_events.49 = {
         ig:ig_petty_bourgeoisie ?= {
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_american_constitutionalism
+            set_ig_trait = ig_trait:ig_trait_protectors_of_constitution
 		}
         ig:ig_landowners ?= {
 			remove_ideology = ideology_republican_paternalistic
@@ -2619,6 +2638,7 @@ dev_events.53 = {
 		}
         ig:ig_intelligentsia = {
 			set_interest_group_name = ig_intelligentsia
+            set_ig_trait = ig_trait:ig_trait_fukoku_kyohei
 		}
         ig:ig_industrialists = {
 			set_interest_group_name = ig_zaibatsu
@@ -2627,7 +2647,7 @@ dev_events.53 = {
 			set_interest_group_name = ig_petty_bourgeoisie
 		}
         ig:ig_armed_forces ?= {
-            set_ig_trait = ig_trait:ig_trait_materiel_waste
+            set_ig_trait = ig_trait:ig_trait_diplomatic_incidents
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
 			set_ig_trait = ig_trait:ig_trait_bushido
         }
@@ -2684,6 +2704,7 @@ dev_events.53 = {
 		}
         ig:ig_intelligentsia = {
 			set_interest_group_name = ig_intelligentsia
+            set_ig_trait = ig_trait:ig_trait_fukoku_kyohei
 		}
         ig:ig_industrialists = {
 			set_interest_group_name = ig_zaibatsu
@@ -2692,7 +2713,7 @@ dev_events.53 = {
 			set_interest_group_name = ig_petty_bourgeoisie
 		}
         ig:ig_armed_forces ?= {
-            set_ig_trait = ig_trait:ig_trait_materiel_waste
+            set_ig_trait = ig_trait:ig_trait_diplomatic_incidents
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
 			set_ig_trait = ig_trait:ig_trait_bushido
         }
@@ -4715,9 +4736,39 @@ dev_events.100 = {
     option = {
         name = dev_events.10.a
         default_option = yes
+        trigger = { is_player = no }
         add_modifier = {
             name = birth_rate_nerf_4
         }
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_imperial_enlightenment
+		}
+        ig:ig_industrialists ?= {
+            set_ig_trait = ig_trait:ig_trait_efficient_naval_industry
+		}
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_naval_tradition
+		}
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        add_modifier = {
+            name = birth_rate_nerf_4
+            years = 80
+            is_decaying = yes
+        }
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_imperial_enlightenment
+		}
+        ig:ig_industrialists ?= {
+            set_ig_trait = ig_trait:ig_trait_efficient_naval_industry
+		}
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_naval_tradition
+		}
     }
 }
 
@@ -5416,7 +5467,7 @@ dev_events.112 = {
     }
 }
 
-dev_events.113 = {
+dev_events.113 = { #change
     type = country_event
 
     title = dev_events.2.t
@@ -5443,6 +5494,10 @@ dev_events.113 = {
             years = 20
             is_decaying = yes
 		}
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_diplomatic_incidents
+            set_ig_trait = ig_trait:ig_trait_bewegungskrieg
+		}
     }
 
     option = {
@@ -5455,6 +5510,10 @@ dev_events.113 = {
 			name = made_in_germany
             years = 10
             is_decaying = yes
+		}
+        ig:ig_armed_forces ?= {
+            set_ig_trait = ig_trait:ig_trait_diplomatic_incidents
+            set_ig_trait = ig_trait:ig_trait_bewegungskrieg
 		}
     }
 }
@@ -7989,5 +8048,30 @@ dev_events.167 = {
               reckless
 	        }
         }
+    }
+}
+
+dev_events.168 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_home_of_renaissance
+		}
     }
 }

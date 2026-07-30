@@ -92,3 +92,63 @@ ig_trait_westernisation = {
 		state_radicalism_increases_open_prejudice_mult = -0.05
 	}
 }
+
+ig_trait_imperial_enlightenment = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_prestige_mult = 0.15
+	}
+}
+
+ig_trait_lingua_franca = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_influence_mult = 0.15
+		country_improve_relations_speed_mult = 0.15
+	}
+}
+
+ig_trait_home_of_renaissance = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_prestige_mult = 0.1
+        building_art_academy_throughput_add = 0.1
+	}
+}
+
+ig_trait_ottomanism = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		state_assimilation_mult = 0.15
+		state_radicalism_increases_violent_hostility_mult = -0.15
+		state_radicalism_increases_cultural_erasure_mult = -0.15
+		state_radicalism_increases_open_prejudice_mult = -0.15
+	}
+}
+
+ig_trait_reformism = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_tech_spread_mult = 0.125
+		country_law_enactment_speed_mult = 0.1
+	}
+}
+
+ig_trait_fukoku_kyohei = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_tech_spread_mult = 0.15
+	}
+}

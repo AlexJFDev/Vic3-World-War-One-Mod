@@ -110,3 +110,14 @@ ig_shipping_magnates = {
 		state_trade_capacity_mult = 0.05
 	}
 }
+
+ig_trait_efficient_naval_industry = {
+	icon = "gfx/interface/icons/ig_trait_icons/job_creators.dds"
+	min_approval = loyal
+
+	modifier = {
+		building_port_throughput_add = 0.1
+		building_shipyard_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
+	}
+}
