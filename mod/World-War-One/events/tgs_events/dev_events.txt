@@ -1019,7 +1019,7 @@ dev_events.21 = {
         active_law:lawgroup_distribution_of_power ?= {
 			add_amendment = {
 				type = la_grande_muette
-				sponsor = ig_intelligentsia
+				sponsor = PREV.ig:ig_intelligentsia
 				cooldown = 50
 			}
 		}
@@ -1089,7 +1089,7 @@ dev_events.21 = {
         active_law:lawgroup_distribution_of_power ?= {
 			add_amendment = {
 				type = la_grande_muette
-				sponsor = ig_intelligentsia
+				sponsor = PREV.ig:ig_intelligentsia
 				cooldown = 50
 			}
 		}
@@ -2387,11 +2387,10 @@ dev_events.49 = {
             is_decaying = yes
 		}
         set_next_election_date = 1916.11.7
-        active_law:lawgroup_internal_security ?= {
+        active_law:lawgroup_governance_principles ?= {
 			add_amendment = {
-				type = amendment_american_second_amendment
-				sponsor = ig_rural_folk
-				cooldown = 900
+				type = second_amendment
+				sponsor = PREV.ig:ig_rural_folk
 			}
 		}
         ig:ig_petty_bourgeoisie ?= {
@@ -2415,11 +2414,10 @@ dev_events.49 = {
             is_decaying = yes
 		}
         set_next_election_date = 1916.11.7
-        active_law:lawgroup_internal_security ?= {
+        active_law:lawgroup_governance_principles ?= {
 			add_amendment = {
-				type = amendment_american_second_amendment
-				sponsor = ig_rural_folk
-				cooldown = 900
+				type = second_amendment
+				sponsor = PREV.ig:ig_rural_folk
 			}
 		}
         ig:ig_petty_bourgeoisie ?= {
@@ -2659,7 +2657,7 @@ dev_events.53 = {
         active_law:lawgroup_economic_system ?= {
 			add_amendment = {
 				type = low_wages
-				sponsor = ig_industrialists
+				sponsor = PREV.ig:ig_industrialists
 				cooldown = 3
 			}
 		}
@@ -2725,7 +2723,7 @@ dev_events.53 = {
         active_law:lawgroup_economic_system ?= {
 			add_amendment = {
 				type = low_wages
-				sponsor = ig_industrialists
+				sponsor = PREV.ig:ig_industrialists
 				cooldown = 3
 			}
 		}
