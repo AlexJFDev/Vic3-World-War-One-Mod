@@ -669,7 +669,66 @@ ussr_events.11 = { #Invasion of Manchuria
 	}
 
 	option = {
-        name = ussr_events.10.b
+        name = ussr_events.11.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+ussr_events.12 = { #Flag selection
+    type = country_event
+
+    title = ussr_events.12.t
+    desc = ussr_events.12.d
+    flavor = ussr_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 12
+    
+    event_image = {
+        texture = "gfx/event_pictures/soviet_eco_propaganda.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = ussr_events.12.a
+        default_option = yes
+		set_variable = ussr_flag_1
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+        name = ussr_events.12.b
+        set_variable = ussr_flag_2
+		ai_chance = {
+			base = 0
+		}
+	}
+
+    option = {
+        name = ussr_events.12.c
+        set_variable = ussr_flag_3
+		ai_chance = {
+			base = 0
+		}
+	}
+
+    option = {
+        name = ussr_events.12.e
+        set_variable = ussr_flag_4
+		ai_chance = {
+			base = 0
+		}
+	}
+
+    option = {
+        name = ussr_events.12.g
 		ai_chance = {
 			base = 0
 		}

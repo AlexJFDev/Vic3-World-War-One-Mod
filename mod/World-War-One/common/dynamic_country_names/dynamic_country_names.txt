@@ -447,10 +447,17 @@ REPLACE_OR_CREATE:RUS = { # Russia
 		adjective = dyn_c_rsfsr_adj
 		
 		is_main_tag_only = yes
-		priority = 5
+		priority = 1000
 		
 		trigger = {
 			coa_def_communist_flag_trigger = yes
+			scope:actor = {
+				NOT = {
+					owns_entire_state_region = STATE_ASTRAKHAN
+					owns_entire_state_region = STATE_CHELYABINSK
+				    owns_entire_state_region = STATE_UPPER_YENISEYSK
+				}
+			}
 		}
 	}	
 	dynamic_country_name = {
@@ -470,21 +477,14 @@ REPLACE_OR_CREATE:RUS = { # Russia
 		adjective = dyn_c_soviet_union_adj
 		
 		is_main_tag_only = yes
-		priority = 25
+		priority = 2500
 		
 		trigger = {
 			coa_def_communist_flag_trigger = yes
 			scope:actor = {
-				OR = {
-					any_scope_state = {
-						state_region = {
-							NOT = {
-								is_homeland = cu:russian
-							}
-						}
-						count >= 15
-					}
-				}
+				owns_entire_state_region = STATE_ASTRAKHAN
+				owns_entire_state_region = STATE_CHELYABINSK
+				owns_entire_state_region = STATE_UPPER_YENISEYSK
 			}
 		}
 	}	
@@ -1034,6 +1034,26 @@ REPLACE_OR_CREATE:SIA = {
 		
 		trigger = {
 			game_date > 1939.1.1
+		}
+	}
+}
+REPLACE_OR_CREATE:FER = {
+	dynamic_country_name = {
+		name = dyn_c_far_eastern_republic
+		adjective = dyn_c_far_eastern_republic_adj
+
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			scope:actor ?= { 
+				OR = { 
+					has_law = law_type:law_presidential_republic 
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_corporate_state  
+					has_law = law_type:law_council_republic 
+				}
+			}
 		}
 	}
 }

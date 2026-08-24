@@ -7564,20 +7564,42 @@ REPLACE_OR_CREATE:RUS = { # Russia
 		}
 	}	
 	flag_definition = {
-		coa = RUS_soviet_union
-		priority = 1500 # need to override the DEFAULT
+		coa = RUS_soviet_russia
+		priority = 1000 # need to override the DEFAULT
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
 		}
 	}
 	flag_definition = {
 		coa = RUS_soviet_union
-		priority = 1750 # need to override the DEFAULT
+		priority = 5000 # need to override the DEFAULT
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
-			scope:actor ?= {
-				has_law = law_type:law_technocracy
-			}
+			has_variable = ussr_flag_1
+		}
+	}
+	flag_definition = {
+		coa = HRE_communist
+		priority = 5000 # need to override the DEFAULT
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+			has_variable = ussr_flag_2
+		}
+	}
+    flag_definition = {
+		coa = RUS_soviet_technocracy
+		priority = 5000 # need to override the DEFAULT
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+			has_variable = ussr_flag_3
+		}
+	}
+    flag_definition = {
+		coa = KUK_communist
+		priority = 5000 # need to override the DEFAULT
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+			has_variable = ussr_flag_4
 		}
 	}
 	flag_definition = {

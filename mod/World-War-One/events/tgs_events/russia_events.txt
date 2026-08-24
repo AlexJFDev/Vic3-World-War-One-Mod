@@ -497,93 +497,6 @@ russia_events.7 = { #Soviet uprising
 
     trigger = {}
 
-    option = {
-     name = russia_events.7.a
-     set_capital = STATE_MOSCOW
-     activate_law = law_type:law_council_republic
-     activate_law = law_type:law_single_party_state
-     activate_law = law_type:law_outlawed_dissent
-     activate_law = law_type:law_command_economy
-     activate_law = law_type:law_surveillance_state
-     activate_law = law_type:law_collectivized_agriculture
-     activate_law = law_type:law_womens_suffrage
-     activate_law = law_type:law_state_atheism
-     activate_law = law_type:law_public_health_insurance
-     activate_law = law_type:law_public_schools
-     activate_law = law_type:law_compulsory_primary_school
-     activate_law = law_type:law_closed_borders
-     activate_law = law_type:law_appointed_bureaucrats
-     activate_law = law_type:law_graduated_taxation
-     activate_law = law_type:law_corporatized_unions
-        trigger_event = {
-             id = russia_events.8
-             days = 5
-            }
-        trigger_event = {
-             id = russia_events.12
-             days = 270
-            }
-        trigger_event = {
-             id = ussr_events.1
-             days = 15
-            }
-        trigger_event = {
-              id = ussr_events.4
-               years = 5
-            }    
-        trigger_event = {
-                id = dev_events.108
-                years = 10
-            }
-        add_modifier = {
-			name = dictatorship_of_proletariat
-            years = 60
-            is_decaying = yes
-		}
-        add_modifier = {
-			name = armed_forces_nerf
-            years = 60
-            is_decaying = yes
-		}
-        c:BUK = {
-            trigger_event = {
-               id = dev_events.111
-               days = 5
-            }
-        }
-        c:KHI = {
-            trigger_event = {
-               id = dev_events.111
-               days = 5
-            }
-        }
-        c:TUV = {
-            trigger_event = {
-               id = dev_events.111
-               days = 5
-            }
-        }
-    }
-}
-
-russia_events.8 = { #The civil war begins
-    type = country_event
-
-    title = russia_events.8.t
-    desc = russia_events.8.d
-    flavor = russia_events.8.f
-    
-    icon = "gfx/interface/icons/event_icons/event_fire.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    event_image = {
-        texture = "gfx/event_pictures/russian_civil_war.dds"
-    }
-
-    trigger = {}
-
     immediate = {
         create_country = {
 	       tag = SIB
@@ -599,11 +512,6 @@ russia_events.8 = { #The civil war begins
            activate_law = law_type:law_interventionism
            activate_law = law_type:law_tenant_farmers
            activate_law = law_type:law_censorship
-	       create_diplomatic_play = {
-		      target_country = c:RUS
-		      type = dp_revolution
-	          escalation = 50
-	        }
            }
         }
         every_state = {
@@ -639,12 +547,248 @@ russia_events.8 = { #The civil war begins
                    state_region = s:STATE_NOVGOROD
                    state_region = s:STATE_TVER
                    state_region = s:STATE_MOSCOW
-                   state_region = s:STATE_RYANZAN
+                   state_region = s:STATE_RYAZAN
                    state_region = s:STATE_KURSK
+                   state_region = s:STATE_YAROSLAVL
+                   state_region = s:STATE_NIZHNY_NOVGOROD
+                   state_region = s:STATE_CHEBOKSARY
+                   state_region = s:STATE_TAMBOV
+                   state_region = s:STATE_ROSTOV
+                   state_region = s:STATE_OUTER_MANCHURIA
+                   state_region = s:STATE_CHUKOTKA
+                   state_region = s:STATE_KAMCHATKA
+                   state_region = s:STATE_OKHOTSK
+                   state_region = s:STATE_AMUR
+                   state_region = s:STATE_TRANS_BAIKAL
+                   state_region = s:STATE_SAKHALIN
+                   state_region = s:STATE_BURYATIA
                 }
 		    }
             set_state_owner = c:SIB
         }
+        create_country = {
+	       tag = FER
+	       origin = this
+	       state = s:STATE_OUTER_MANCHURIA.region_state:RUS
+            on_created = {
+               activate_law = law_type:law_council_republic
+               activate_law = law_type:law_single_party_state
+               activate_law = law_type:law_outlawed_dissent
+               activate_law = law_type:law_command_economy
+               activate_law = law_type:law_surveillance_state
+               activate_law = law_type:law_collectivized_agriculture
+               activate_law = law_type:law_womens_suffrage
+               activate_law = law_type:law_state_atheism
+               activate_law = law_type:law_public_health_insurance
+               activate_law = law_type:law_public_schools
+               activate_law = law_type:law_compulsory_primary_school
+               activate_law = law_type:law_closed_borders
+               activate_law = law_type:law_appointed_bureaucrats
+               activate_law = law_type:law_graduated_taxation
+               activate_law = law_type:law_corporatized_unions
+               remove_primary_culture = cu:siberian
+			   add_primary_culture = cu:russian
+           }
+        }
+        s:STATE_CHUKOTKA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FER
+            }
+        }
+        s:STATE_KAMCHATKA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FER
+            }
+        }
+        s:STATE_OKHOTSK = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FER
+            }
+        }
+        s:STATE_SAKHALIN = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FER
+            }
+        }
+        s:STATE_AMUR = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FER
+            }
+        }
+        s:STATE_TRANS_BAIKAL = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FER
+            }
+        }
+        s:STATE_BURYATIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FER
+            }
+        }
+        c:FER = {
+            trigger_event = {
+              id = dev_events.104
+              days = 5
+            }
+            trigger_event = {
+              id = dev_events.172
+              days = 5
+            }
+        }
+    }
+
+    option = {
+        name = russia_events.7.a
+        set_capital = STATE_MOSCOW
+        activate_law = law_type:law_council_republic
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_outlawed_dissent
+        activate_law = law_type:law_command_economy
+        activate_law = law_type:law_surveillance_state
+        activate_law = law_type:law_collectivized_agriculture
+        activate_law = law_type:law_womens_suffrage
+        activate_law = law_type:law_state_atheism
+        activate_law = law_type:law_public_health_insurance
+        activate_law = law_type:law_public_schools
+        activate_law = law_type:law_compulsory_primary_school
+        activate_law = law_type:law_closed_borders
+        activate_law = law_type:law_appointed_bureaucrats
+        activate_law = law_type:law_graduated_taxation
+        activate_law = law_type:law_corporatized_unions
+        trigger_event = {
+             id = russia_events.8
+             days = 5
+            }
+        trigger_event = {
+             id = russia_events.12
+             days = 270
+            }
+        trigger_event = {
+             id = ussr_events.1
+             days = 15
+            }
+        trigger_event = {
+              id = ussr_events.4
+               years = 5
+            }    
+        trigger_event = {
+              id = ussr_events.12
+               years = 5
+            }   
+        trigger_event = {
+                id = dev_events.108
+                years = 10
+            }
+        add_modifier = {
+			name = dictatorship_of_proletariat
+            years = 60
+            is_decaying = yes
+		}
+        add_modifier = {
+			name = armed_forces_nerf
+            years = 60
+            is_decaying = yes
+		}
+        c:BUK = {
+            trigger_event = {
+               id = dev_events.111
+               days = 5
+            }
+        }
+        c:KHI = {
+            trigger_event = {
+               id = dev_events.111
+               days = 5
+            }
+        }
+        c:TUV = {
+            trigger_event = {
+               id = dev_events.111
+               days = 5
+            }
+        }
+        create_diplomatic_pact = {
+			country = c:FER
+			type = puppet
+		}
+    }
+}
+
+russia_events.8 = { #The civil war begins
+    type = country_event
+
+    title = russia_events.8.t
+    desc = russia_events.8.d
+    flavor = russia_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/russian_civil_war.dds"
+    }
+
+    trigger = {}
+
+    immediate = {
         c:RUS = {
             remove_diplomatic_pact = {
 			   country = c:FIN
@@ -655,6 +799,11 @@ russia_events.8 = { #The civil war begins
             change_infamy = -100
         }
         c:SIB = {
+            create_diplomatic_play = {
+		      target_country = c:RUS
+		      type = dp_revolution
+	          escalation = 50
+	        }
             trigger_event = {
 			   id = dev_events.1
 			   days = 5
@@ -677,7 +826,7 @@ russia_events.8 = { #The civil war begins
 		    }
             trigger_event = {
 			   id = dev_events.132
-			   years = 3
+			   years = 4
 		    }
         }
         random_scope_character = { 
@@ -707,6 +856,30 @@ russia_events.8 = { #The civil war begins
             set_variable = {
                 name = kolchack
             }
+        }
+        c:JAP = {
+            trigger_event = {
+			   id = dev_events.170
+			   days = 80
+		    }
+        }
+        c:USA = {
+            trigger_event = {
+			   id = dev_events.171
+			   days = 80
+		    }
+        }
+        c:GBR = {
+            trigger_event = {
+			   id = dev_events.171
+			   days = 80
+		    }
+        }
+        c:FRA = {
+            trigger_event = {
+			   id = dev_events.171
+			   days = 80
+		    }
         }
     }
 

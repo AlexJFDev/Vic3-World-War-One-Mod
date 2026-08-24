@@ -604,6 +604,10 @@ entente_peace_deal.1 = {
                    id = dev_events.47
                    days = 5
                 }
+			trigger_event = {
+			       id = dev_events.171
+			       days = 5
+		        }
 		}
         s:STATE_MORAVIA = {
 	       random_scope_state = {
@@ -3346,6 +3350,20 @@ entente_peace_deal.8 = { #Round 7 result
            }
 		}
 		s:STATE_TRABZON = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ARM
+			  add_claim = c:TUR
+            }
+        }
+		s:STATE_KARS = {
            random_scope_state = {
 		      limit = {
 			   exists = c:TUR

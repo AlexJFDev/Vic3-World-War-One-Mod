@@ -6423,6 +6423,12 @@ dev_events.126 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
+    immediate = {
+        root = {
+           annex = c:FER
+        }
+    }
+
     option = {
         name = dev_events.17.a
         default_option = yes
@@ -8111,6 +8117,300 @@ dev_events.169 = {
         default_option = yes
         ig:ig_intelligentsia ?= {
             set_ig_trait = ig_trait:ig_trait_home_of_renaissance
+		}
+    }
+}
+
+dev_events.170 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:SIB ?= this }
+              target = { c:RUS ?= this }
+		    }
+           save_scope_as = russian_civil_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        scope:russian_civil_war_diplo_play = {
+			add_initiator_backers = {
+				who = c:JAP
+			}
+            add_war_goal = {
+                holder = c:JAP
+                type = transfer_subject
+				target_country = c:FER
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = regime_change
+				target_country = c:FER
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_SAKHALIN.region_state:FER
+            }
+        }
+    }
+}
+
+dev_events.171 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:SIB ?= this }
+              target = { c:RUS ?= this }
+		    }
+           save_scope_as = russian_civil_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        scope:russian_civil_war_diplo_play = {
+			add_initiator_backers = {
+				who = root
+			}
+        }
+    }
+}
+
+dev_events.172 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        set_capital = STATE_TRANS_BAIKAL
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        create_character = {
+			template = fer_alexander_krasnoshchyokov_character_template
+		}
+        create_character = {
+			template = fer_nikolai_matveyev_character_template
+		}
+        add_modifier = {
+            name = revolution_stabilization_buff_2
+            years = 50
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = defeated_elites_modifier
+            years = 50
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = dictatorship_of_proletariat
+            years = 50
+            is_decaying = yes
+        }
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_arms_industry
+				level = 3
+            }	
+            create_building = {
+				building = building_artillery_foundry
+				level = 1
+            }	
+            create_building = {
+				building = building_munition_plant
+				level = 2
+            }	
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_northeast_asia
+            name = fer_revolutionary_army
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_OUTER_MANCHURIA
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TRANS_BAIKAL
+				count = 60
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_AMUR
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_BURYATIA
+				count = 60
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_shrapnel_artillery
+				state_region = s:STATE_TRANS_BAIKAL
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_TRANS_BAIKAL
+				count = 30
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_TRANS_BAIKAL
+				count = 15
+			}
+		}
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = yes }
+        create_character = {
+			template = fer_alexander_krasnoshchyokov_character_template
+		}
+        create_character = {
+			template = fer_nikolai_matveyev_character_template
+		}
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 20
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = defeated_elites_modifier
+            years = 50
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = dictatorship_of_proletariat
+            years = 50
+            is_decaying = yes
+        }
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_arms_industry
+				level = 1
+            }	
+            create_building = {
+				building = building_artillery_foundry
+				level = 1
+            }	
+            create_building = {
+				building = building_munition_plant
+				level = 1
+            }	
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_northeast_asia
+            name = fer_revolutionary_army
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_OUTER_MANCHURIA
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TRANS_BAIKAL
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_AMUR
+				count = 20
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_BURYATIA
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_shrapnel_artillery
+				state_region = s:STATE_TRANS_BAIKAL
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_TRANS_BAIKAL
+				count = 15
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_TRANS_BAIKAL
+				count = 5
+			}
 		}
     }
 }
