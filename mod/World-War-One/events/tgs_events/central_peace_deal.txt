@@ -392,6 +392,19 @@ central_peace_deal.2 = { #Russia surrenders
 		      set_state_owner = c:UKR
             }
         }
+		s:STATE_KARS = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:TUR
+            }
+        }
         c:GER = {
 		create_diplomatic_pact = {
 			country = c:UBD

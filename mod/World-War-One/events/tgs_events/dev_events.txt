@@ -8089,3 +8089,28 @@ dev_events.168 = {
 		}
     }
 }
+
+dev_events.169 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_home_of_renaissance
+		}
+    }
+}
