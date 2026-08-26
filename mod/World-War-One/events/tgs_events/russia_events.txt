@@ -501,7 +501,7 @@ russia_events.7 = { #Soviet uprising
         create_country = {
 	       tag = SIB
 	       origin = this
-	       state = s:STATE_CHELYABINSK.region_state:RUS
+	       state = s:STATE_PERM.region_state:RUS
            on_created = {
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_oligarchy
@@ -562,9 +562,339 @@ russia_events.7 = { #Soviet uprising
                    state_region = s:STATE_TRANS_BAIKAL
                    state_region = s:STATE_SAKHALIN
                    state_region = s:STATE_BURYATIA
+                   state_region = s:STATE_GREATER_CAUCASUS
+                   state_region = s:STATE_ARMENIA
+                   state_region = s:STATE_ELIZAVETPOL
+                   state_region = s:STATE_AZERBAIJAN
+                   state_region = s:STATE_KAZAN
+                   state_region = s:STATE_SAMARA
+                   state_region = s:STATE_UFA
+                   state_region = s:STATE_CHELYABINSK
+                   state_region = s:STATE_ROSTOV
+                   state_region = s:STATE_KUBAN
+                   state_region = s:STATE_TARTARIA
+                   state_region = s:STATE_KHIVA
+                   state_region = s:STATE_TURKMENIA
+                   state_region = s:STATE_KIRGHIZIA
+                   state_region = s:STATE_TAJIKISTAN
+                   state_region = s:STATE_FERGANA
+                   state_region = s:STATE_SYRDARYA
+                   state_region = s:STATE_JETISY
+                   state_region = s:STATE_MERZ
+                   state_region = s:STATE_UZBEKIA
+                   state_region = s:STATE_KARS
+                   state_region = s:STATE_CHEBOKSARY
+                   state_region = s:STATE_STAVROPOL
+                   state_region = s:STATE_NORTH_CAUCASUS
+                   state_region = s:STATE_DAGESTAN
                 }
 		    }
             set_state_owner = c:SIB
+        }
+        if = {
+            limit = {
+                c:RUS = {
+                    owns_entire_state_region = STATE_ARMENIA
+                }
+                c:TUR = {
+                    NOT = { has_variable = central_powers_participant }
+                }
+            }
+            create_country = {
+	           tag = ARL
+	           origin = this
+	           state = s:STATE_ARMENIA.region_state:RUS
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+            s:STATE_KARS = {
+                random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				            OR = {
+					          c:RUS = THIS
+				            }
+			            }
+		            }
+		            set_state_owner = c:ARL
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:RUS = {
+                    owns_entire_state_region = STATE_GREATER_CAUCASUS
+                }
+                C:TUR = {
+                    NOT = { has_variable = central_powers_participant }
+                }
+            }
+            create_country = {
+	           tag = GEO
+	           origin = this
+	           state = s:STATE_GREATER_CAUCASUS.region_state:RUS
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+        }
+        if = {
+            limit = {
+                c:RUS = {
+                    owns_entire_state_region = STATE_ELIZAVETPOL
+                    owns_entire_state_region = STATE_AZERBAIJAN
+                }
+                C:TUR = {
+                    NOT = { has_variable = central_powers_participant }
+                }
+            }
+            create_country = {
+	           tag = AZB
+	           origin = this
+	           state = s:STATE_AZERBAIJAN.region_state:RUS
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+            s:STATE_ELIZAVETPOL = {
+                random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				            OR = {
+					          c:RUS = THIS
+				            }
+			            }
+		            }
+		            set_state_owner = c:AZB
+                }
+            }
+        }
+        create_country = {
+	        tag = IUS
+	        origin = this
+	        state = s:STATE_KAZAN.region_state:RUS
+            on_created = { 
+                activate_law = law_type:law_presidential_republic
+            }
+		}
+        s:STATE_SAMARA = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:IUS
+            }
+        }
+        s:STATE_UFA = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:IUS
+            }
+        }
+        s:STATE_CHELYABINSK = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:IUS
+            }
+        }
+        create_country = {
+	        tag = DON
+	        origin = this
+	        state = s:STATE_ROSTOV.region_state:RUS
+            on_created = { 
+                activate_law = law_type:law_presidential_republic
+            }
+		}
+        s:STATE_KUBAN = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:DON
+            }
+        }
+        s:STATE_STAVROPOL = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:DON
+            }
+        }
+        s:STATE_NORTH_CAUCASUS = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:DON
+            }
+        }
+        create_country = {
+	        tag = DAG
+	        origin = this
+	        state = s:STATE_DAGESTAN.region_state:RUS
+            on_created = { 
+                activate_law = law_type:law_presidential_republic
+            }
+		}
+        c:RUS = {
+            remove_diplomatic_pact = {
+			  country = c:KHI
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:BUK
+			  type = protectorate
+		    }
+        }
+        s:STATE_KHIVA = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:KHI
+            }
+        }
+        s:STATE_TURKMENIA = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:KHI
+            }
+        }
+        s:STATE_MERZ = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:BUK
+            }
+        }
+        s:STATE_UZBEKIA = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:BUK
+            }
+        }
+        create_country = {
+	        tag = KOK
+	        origin = this
+	        state = s:STATE_KIRGHIZIA.region_state:RUS
+            on_created = { 
+                activate_law = law_type:law_monarchy
+            }
+		}
+        s:STATE_TAJIKISTAN = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:KOK
+            }
+        }
+        s:STATE_FERGANA = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:KOK
+            }
+        }
+        s:STATE_SYRDARYA = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:KOK
+            }
+        }
+        s:STATE_JETISY = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:RUS
+			        owner = {
+				        OR = {
+					        c:RUS = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:KOK
+            }
         }
         create_country = {
 	       tag = FER
@@ -687,7 +1017,7 @@ russia_events.7 = { #Soviet uprising
               days = 5
             }
             trigger_event = {
-              id = dev_events.172
+              id = dev_events.174
               days = 5
             }
         }
@@ -745,18 +1075,6 @@ russia_events.7 = { #Soviet uprising
             years = 60
             is_decaying = yes
 		}
-        c:BUK = {
-            trigger_event = {
-               id = dev_events.111
-               days = 5
-            }
-        }
-        c:KHI = {
-            trigger_event = {
-               id = dev_events.111
-               days = 5
-            }
-        }
         c:TUV = {
             trigger_event = {
                id = dev_events.111
@@ -824,9 +1142,11 @@ russia_events.8 = { #The civil war begins
 			   id = dev_events.46
 			   days = 5
 		    }
+        }
+        c:MGL = {
             trigger_event = {
-			   id = dev_events.132
-			   years = 4
+			    id = dev_events.158
+                years = 4
 		    }
         }
         random_scope_character = { 
@@ -880,6 +1200,96 @@ russia_events.8 = { #The civil war begins
 			   id = dev_events.171
 			   days = 80
 		    }
+        }
+        c:DON = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+        c:DAG = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+        c:GEO = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+        c:ARL = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+        c:AZB = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+        c:IUS = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+        c:KHI = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+        c:BUK = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+        c:KOK = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
         }
     }
 

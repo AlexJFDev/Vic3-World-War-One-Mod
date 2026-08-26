@@ -2281,9 +2281,85 @@ dev_events.46 = {
         trigger = { is_player = no }
         add_modifier = {
             name = army_nerf_modifier_3
-            years = 5
+            years = 3
             is_decaying = yes
         }
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_russia
+            name = sib_white_partisans
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_URAL
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TOMSK
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TOBOLSK
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_shrapnel_artillery
+				state_region = s:STATE_TOMSK
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_TOMSK
+				count = 20
+			}
+		}
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { is_player = yes }
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_russia
+            name = sib_white_partisans
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_URAL
+				count = 10
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TOMSK
+				count = 30
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_TOBOLSK
+				count = 10
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_shrapnel_artillery
+				state_region = s:STATE_TOMSK
+				count = 15
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_TOMSK
+				count = 10
+			}
+		}
     }
 }
 
@@ -6434,6 +6510,11 @@ dev_events.126 = {
         default_option = yes
         trigger = { is_player = no }
         add_treasury = 100000000
+        add_modifier = {
+            name = money_buff_3
+            years = 3
+            is_decaying = yes
+        }
         every_scope_state = {
 			limit = { owner = ROOT }
 			set_state_type = incorporated
@@ -7072,18 +7153,6 @@ dev_events.140 = {
         trigger_event = {
             id = germany_events.2
             days = 5
-        }
-        c:AUS = {
-            trigger_event = {
-                id = germany_events.6
-                days = 15
-            }
-        }
-        c:TUR = {
-            trigger_event = {
-                id = germany_events.9
-                days = 15
-            }
         }
     }
 }
@@ -8081,18 +8150,20 @@ dev_events.168 = {
         name = dev_events.2.a
         default_option = yes
         trigger = { is_player = no }
-        create_bidirectional_truce = {
-			country = c:DEN
-			years = 50
-		}
-		create_bidirectional_truce = {
-			country = c:NOR
-			years = 50
-		}
-		create_bidirectional_truce = {
-			country = c:FIN
-			years = 50
-		}
+        c:SWE = {
+            create_bidirectional_truce = {
+			  country = c:DEN
+			  years = 50
+		    }
+		    create_bidirectional_truce = {
+			  country = c:NOR
+			  years = 50
+		    }
+		    create_bidirectional_truce = {
+			  country = c:FIN
+			  years = 50
+		    }
+        }
     }
 }
 
@@ -8150,7 +8221,6 @@ dev_events.170 = {
     option = {
         name = dev_events.2.a
         default_option = yes
-        trigger = { is_player = no }
         scope:russian_civil_war_diplo_play = {
 			add_initiator_backers = {
 				who = c:JAP
@@ -8170,6 +8240,16 @@ dev_events.170 = {
                 type = conquer_state
                 target_state = s:STATE_SAKHALIN.region_state:FER
             }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = dev_events.2.b
+        ai_chance = {
+            base = 0
         }
     }
 }
@@ -8213,6 +8293,168 @@ dev_events.171 = {
 }
 
 dev_events.172 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:SIB ?= this }
+              target = { c:RUS ?= this }
+		    }
+           save_scope_as = russian_civil_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = army_nerf_modifier_3
+            years = 1
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.15
+            days = 5
+        }
+		trigger_event = {
+            id = dev_events.15
+            days = 5
+        }
+        scope:russian_civil_war_diplo_play = {
+			add_initiator_backers = {
+				who = root
+			}
+            add_war_goal = {
+		        holder = c:RUS
+		        type = annex_country
+		        target_country = ROOT
+            }
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = yes }
+        trigger_event = {
+            id = dev_events.15
+            days = 5
+        }
+        scope:russian_civil_war_diplo_play = {
+			add_initiator_backers = {
+				who = root
+			}
+            add_war_goal = {
+		        holder = c:RUS
+		        type = annex_country
+		        target_country = ROOT
+            }
+        }
+    }
+}
+
+dev_events.173 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:SIB ?= this }
+              target = { c:RUS ?= this }
+		    }
+           save_scope_as = russian_civil_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = army_nerf_modifier_3
+            years = 1
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.15
+            days = 5
+        }
+		trigger_event = {
+            id = dev_events.15
+            days = 5
+        }
+        scope:russian_civil_war_diplo_play = {
+			add_initiator_backers = {
+				who = root
+			}
+            add_war_goal = {
+		        holder = c:RUS
+		        type = humiliation
+		        target_country = ROOT
+            }
+            add_war_goal = {
+		        holder = ROOT
+		        type = regime_change
+		        target_country = c:RUS
+            }
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = yes }
+        trigger_event = {
+            id = dev_events.15
+            days = 5
+        }
+        scope:russian_civil_war_diplo_play = {
+			add_initiator_backers = {
+				who = root
+			}
+            add_war_goal = {
+		        holder = c:RUS
+		        type = humiliation
+		        target_country = ROOT
+            }
+            add_war_goal = {
+		        holder = ROOT
+		        type = regime_change
+		        target_country = c:RUS
+            }
+        }
+    }
+}
+
+dev_events.174 = {
     type = country_event
 
     title = dev_events.2.t
@@ -8282,43 +8524,37 @@ dev_events.172 = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_OUTER_MANCHURIA
-				count = 30
+				count = 10
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_TRANS_BAIKAL
-				count = 60
+				count = 20
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_AMUR
-				count = 30
+				count = 10
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_BURYATIA
-				count = 60
+				count = 10
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_shrapnel_artillery
 				state_region = s:STATE_TRANS_BAIKAL
-				count = 30
+				count = 20
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_TRANS_BAIKAL
-				count = 30
-			}
-            
-            combat_unit = {
-				type = unit_type:combat_unit_type_fighter
-				state_region = s:STATE_TRANS_BAIKAL
-				count = 15
+				count = 10
 			}
 		}
     }
@@ -8373,44 +8609,76 @@ dev_events.172 = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_OUTER_MANCHURIA
-				count = 30
+				count = 10
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_TRANS_BAIKAL
-				count = 50
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_AMUR
 				count = 20
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_AMUR
+				count = 10
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_BURYATIA
-				count = 50
+				count = 10
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_shrapnel_artillery
 				state_region = s:STATE_TRANS_BAIKAL
-				count = 30
+				count = 20
 			}
 
             combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_TRANS_BAIKAL
-				count = 15
-			}
-            
-            combat_unit = {
-				type = unit_type:combat_unit_type_fighter
-				state_region = s:STATE_TRANS_BAIKAL
-				count = 5
+				count = 10
 			}
 		}
+    }
+}
+
+dev_events.175 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:SIB ?= this }
+              target = { c:RUS ?= this }
+		    }
+           save_scope_as = russian_civil_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        trigger = { is_player = no }
+        scope:russian_civil_war_diplo_play = {
+			remove_initiator_backers = {
+				who = root
+			}
+        }
     }
 }

@@ -281,6 +281,47 @@ germany_events.2 = { #November Revolution
             id = germany_events.22
             days = 5
         }
+        if = {
+            limit = { 
+                c:AUS = {
+                    is_at_war = yes
+                }
+            }
+            c:AUS = {
+                trigger_event = {
+                   id = germany_events.6
+                   days = 5
+                }
+            }
+        }
+        if = {
+            limit = { 
+                c:BUL = {
+                    is_at_war = yes
+                    has_variable = central_powers_participant
+                }
+            }
+            c:BUL = {
+                trigger_event = {
+                   id = germany_events.7
+                   days = 5
+                }
+            }
+        }
+        if = {
+            limit = { 
+                c:TUR = {
+                    is_at_war = yes
+                    has_variable = central_powers_participant
+                }
+            }
+            c:TUR = {
+                trigger_event = {
+                   id = germany_events.9
+                   days = 5
+                }
+            }
+        }
         owner.ruler ?= {
 			remove_character_role = ruler
 		    add_character_role = agitator
@@ -569,8 +610,31 @@ germany_events.7 = {
 
     trigger = {}
 
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_one_diplo_play
+        }
+    }
+
     option = {
         name = germany_events.7.a
+        default_option = yes
+        scope:world_war_one_diplo_play = {
+			add_diplomatic_play_war_support = { target = c:BUL value = -200 }
+		}
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = germany_events.7.b
+        ai_chance = {
+            base = 0
+        }
     }
 }
 

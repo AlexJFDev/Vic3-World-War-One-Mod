@@ -552,8 +552,7 @@ REPLACE_OR_CREATE:ARG = { # Argentina
 	}	
 }	
 
-
-REPLACE_OR_CREATE:ARM = { # Armenia
+REPLACE_OR_CREATE:ARM = { # Western Armenia
 	flag_definition = {
 		coa = ARM
 		subject_canton = ARM
@@ -567,6 +566,21 @@ REPLACE_OR_CREATE:ARM = { # Armenia
 		}
 	}	
 }	
+
+REPLACE_OR_CREATE:ARL = { # Eastern Armenia
+	flag_definition = {
+		coa = ARM
+		subject_canton = ARM
+		priority = 1
+	}
+	flag_definition = {
+		coa = ARM_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+}
 
 REPLACE_OR_CREATE:ASH = { # Ashanti
 	flag_definition = {
@@ -7574,32 +7588,40 @@ REPLACE_OR_CREATE:RUS = { # Russia
 		coa = RUS_soviet_union
 		priority = 5000 # need to override the DEFAULT
 		trigger = { 
-			coa_def_communist_flag_trigger = yes
-			has_variable = ussr_flag_1
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+			    has_variable = ussr_flag_1
+			}
+		}
+	}
+	flag_definition = {
+		coa = RUS_soviet_technocracy
+		priority = 5000 # need to override the DEFAULT
+		trigger = { 
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+			    has_variable = ussr_flag_2
+			}
 		}
 	}
 	flag_definition = {
 		coa = HRE_communist
 		priority = 5000 # need to override the DEFAULT
 		trigger = { 
-			coa_def_communist_flag_trigger = yes
-			has_variable = ussr_flag_2
-		}
-	}
-    flag_definition = {
-		coa = RUS_soviet_technocracy
-		priority = 5000 # need to override the DEFAULT
-		trigger = { 
-			coa_def_communist_flag_trigger = yes
-			has_variable = ussr_flag_3
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+			    has_variable = ussr_flag_3
+			}
 		}
 	}
     flag_definition = {
 		coa = KUK_communist
 		priority = 5000 # need to override the DEFAULT
 		trigger = { 
-			coa_def_communist_flag_trigger = yes
-			has_variable = ussr_flag_4
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+			    has_variable = ussr_flag_4
+			}
 		}
 	}
 	flag_definition = {
@@ -8935,8 +8957,10 @@ REPLACE_OR_CREATE:UKR = { # Ukraine
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
-				has_law = law_type:law_council_republic
-				has_law = law_type:law_anarchy
+				OR = {
+                   has_law = law_type:law_council_republic
+				   has_law = law_type:law_anarchy
+				}
 			}
 		}
 	}

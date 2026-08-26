@@ -230,40 +230,16 @@ entente_peace_deal.1 = {
             }
         }
 		c:UKR = {
-		create_diplomatic_play = {
-		      target_country = c:RUS
-		      type = dp_regime_change
-	          war = yes
-	          add_war_goal = {
-		        holder = c:RUS
-		        type = annex_country
-		        target_country = c:UKR
-              }
-	        }
-		}
-		c:UKR = {
-         trigger_event = {
-          id = dev_events.102
-          days = 5
+			trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+			trigger_event = {
+               id = dev_events.172
+               days = 5
             }
         }
 		c:POL = {
-		create_diplomatic_play = {
-		      target_country = c:RUS
-		      type = dp_regime_change
-	          war = yes
-	          add_war_goal = {
-		        holder = c:RUS
-		        type = humiliation
-		        target_country = c:POL
-              }
-	        }
-		}
-		c:POL = {
-            trigger_event = {
-              id = dev_events.102
-              days = 5
-            }
 			trigger_event = {
               id = dev_events.1
               days = 5
@@ -280,6 +256,14 @@ entente_peace_deal.1 = {
               id = dev_events.36
               days = 5
             } 
+			trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+			trigger_event = {
+              id = dev_events.173
+              days = 5
+            }
         }
 		c:GER = {
 			trigger_event = {
@@ -850,14 +834,111 @@ entente_peace_deal.1 = {
               days = 60
             }
         }
-		c:TUR = {
-            trigger_event = {
-              id = dev_events.64
-              days = 5
+		if = {
+			limit = {
+				c:TUR = { has_variable = central_powers_participant }
+			}
+			c:TUR = {
+                trigger_event = {
+                  id = dev_events.64
+                  days = 5
+                }
+				set_capital = STATE_ANKARA
+			    activate_law = law_type:law_armed_neutrality
+			    activate_law = law_type:law_cultural_exclusion
             }
-			activate_law = law_type:law_armed_neutrality
-			activate_law = law_type:law_cultural_exclusion
-			set_capital = STATE_ANKARA
+		}
+		if = {
+            limit = {
+                c:TUR = {
+                    owns_entire_state_region = STATE_ARMENIA
+                    has_variable = central_powers_participant
+                }
+            }
+            create_country = {
+	           tag = ARL
+	           origin = this
+	           state = s:STATE_ARMENIA.region_state:TUR
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+        }
+        c:ARL = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+		if = {
+            limit = {
+                c:TUR = {
+                    owns_entire_state_region = STATE_GREATER_CAUCASUS
+                    has_variable = central_powers_participant
+                }
+            }
+            create_country = {
+	           tag = GEO
+	           origin = this
+	           state = s:STATE_GREATER_CAUCASUS.region_state:TUR
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+        }
+        c:GEO = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
+        }
+		if = {
+            limit = {
+                c:TUR = {
+                    owns_entire_state_region = STATE_ELIZAVETPOL
+					owns_entire_state_region = STATE_AZERBAIJAN
+                    has_variable = central_powers_participant
+                }
+            }
+            create_country = {
+	           tag = AZB
+	           origin = this
+	           state = s:STATE_AZERBAIJAN.region_state:TUR
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+            s:STATE_ELIZAVETPOL = {
+                random_scope_state = {
+		            limit = {
+			            exists = c:TUR
+			            owner = {
+				            OR = {
+					          c:TUR = THIS
+				            }
+			            }
+		            }
+		            set_state_owner = c:AZB
+                }
+            }
+        }
+        c:AZB = {
+            trigger_event = {
+                id = dev_events.7
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.172
+                days = 5
+            }
         }
 		c:ITA = {
 		    create_diplomatic_pact = {
@@ -3034,6 +3115,20 @@ entente_peace_deal.7 = { #Round 6 result
                 }
 		    }
 		}
+		s:STATE_KARS = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ARM
+			  add_claim = c:TUR
+            }
+        }
 		set_global_variable = treaty_of_sevres_1
 	}
 
@@ -3087,6 +3182,20 @@ entente_peace_deal.7 = { #Round 6 result
                 }
 		    }
 		}
+		s:STATE_KARS = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ARM
+			  add_claim = c:TUR
+            }
+        }
 		set_global_variable = treaty_of_sevres_2
 	}
 

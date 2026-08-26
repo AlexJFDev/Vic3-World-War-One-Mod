@@ -392,19 +392,6 @@ central_peace_deal.2 = { #Russia surrenders
 		      set_state_owner = c:UKR
             }
         }
-		s:STATE_KARS = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:RUS
-			    owner = {
-				  OR = {
-					c:RUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:TUR
-            }
-        }
         c:GER = {
 		create_diplomatic_pact = {
 			country = c:UBD
@@ -432,6 +419,76 @@ central_peace_deal.2 = { #Russia surrenders
 		      set_state_owner = c:RUS
             }
         }
+		if = {
+			limit = {
+				c:TUR = { has_variable = central_powers_participant }
+			}
+			s:STATE_KARS = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+			s:STATE_ARMENIA = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+			s:STATE_GREATER_CAUCASUS = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+			s:STATE_ELIZAVETPOL = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+			s:STATE_AZERBAIJAN = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+		}
     }
 }
 
