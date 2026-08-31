@@ -567,11 +567,15 @@ REPLACE_OR_CREATE:pm_mechanized_workshops = {
 	}
 }
 
-pm_modern_appliances = {
-	texture = "gfx/interface/icons/production_method_icons/pm_modern_appliances.dds"
+pm_no_home_appliances = {
+	texture = "gfx/interface/icons/production_method_icons/no_home_appliances.dds"
+}
+
+pm_home_appliances = {
+	texture = "gfx/interface/icons/goods_icons/home_appliances.dds"
 
 	unlocking_technologies = {
-		modern_appliances
+		home_appliances
 	}
 
 	state_modifiers = {
@@ -582,20 +586,17 @@ pm_modern_appliances = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
-			goods_input_electricity_add = 5
+			goods_input_copper_add = 10
+			goods_input_electricity_add = 10
 			goods_input_steel_add = 10
-			goods_input_tools_add = 15
+			goods_input_tools_add = 10
 
-			# output goods
-			goods_output_furniture_add = 180
+			goods_output_furniture_add = -40
+			goods_output_home_appliances_add = 20
 		}
 
 		level_scaled = {
-		building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2750
-			building_employment_machinists_add = 1500
-			building_employment_engineers_add = 1000
+			building_employment_engineers_add = 500
 		}
 	}
 }
@@ -634,7 +635,6 @@ REPLACE_OR_CREATE:pm_precision_tools = {
 	unlocking_production_methods = {
 		pm_lathe
 		pm_mechanized_workshops
-		pm_modern_appliances
 	}
 
 	building_modifiers = {
@@ -2426,6 +2426,7 @@ REPLACE_OR_CREATE:pm_telephones = {
 	texture = "gfx/interface/icons/production_method_icons/telephones.dds"
 	building_modifiers = {
 		workforce_scaled = {
+			goods_input_electricity_add = 30
 			goods_input_copper_add = 15
 			goods_input_steel_add = 15
 			goods_input_rubber_add = 20
@@ -2455,7 +2456,8 @@ REPLACE_OR_CREATE:pm_radios = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 50
+			goods_input_electricity_add = 20
+
 			goods_output_telephones_add = -20
 			goods_output_radios_add = 40
 		}
@@ -2486,11 +2488,12 @@ pm_cathode_tube_televisions = {
 			goods_input_electricity_add = 10
 			goods_input_steel_add = 5
 
-			goods_output_televisions_add = 45 #4900
+            goods_output_telephones_add = -20
+			goods_output_televisions_add = 40
 		}
 
 		level_scaled = {
-			building_employment_engineers_add = 250
+			building_employment_engineers_add = 500
 		}		
 	}
 }

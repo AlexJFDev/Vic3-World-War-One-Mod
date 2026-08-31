@@ -1,4 +1,30 @@
-﻿REPLACE_OR_CREATE:building_synthetics_plant = { 
+﻿REPLACE_OR_CREATE:building_furniture_manufactory = {
+	aliases = { building_furniture_manufacturies }
+	building_group = bg_light_industry
+	icon = "gfx/interface/icons/building_icons/furniture_manufacturies.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
+
+	unlocking_technologies = {
+		manufacturies
+	}
+
+	production_method_groups = {
+		pmg_base_building_furniture_manufactory
+		pmg_luxury_building_furniture_manufactory
+		pmg_home_appliances
+		pmg_automation_building_furniture_manufactory
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+REPLACE_OR_CREATE:building_synthetics_plant = { 
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/synthetics_plants.dds"
 	city_type = city
