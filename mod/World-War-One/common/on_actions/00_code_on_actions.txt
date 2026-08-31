@@ -1656,12 +1656,6 @@ on_yearly_pulse_country = {
 		delay = { days = 21 }
 		lobby_yearly_events
 		delay = { days = 34 }
-		krakatoa_yearly_events
-		delay = { days = 55 }
-		tunguska_yearly_events
-		delay = { days = 89 }
-		british_dictate_yearly_events
-		delay = { days = 90 }
 	}
 }
 
@@ -7473,17 +7467,6 @@ on_impose_law = {
 		scope:initiator = {
 			post_notification = imposition_demand_sent
 			save_scope_as = foreign_imposition_country
-		}
-		if = {
-			limit = {
-				c:BIC ?= this
-				is_subject = yes
-				has_dlc_feature = ip2_content
-			}
-			trigger_event = { id = british_dictates.3 days = 0 popup = yes }
-		}
-		else = {
-			trigger_event = { id = law_imposition_events.1 days = 0 popup = yes }
 		}
 	}
 }
