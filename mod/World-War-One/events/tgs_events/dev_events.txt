@@ -2162,7 +2162,7 @@ dev_events.42 = { #Japan quits Mexican revolution
                 initiator = c:RMX
                 target = c:MEX
 			}
-            add_diplomatic_play_war_support = { target = c:JAP value = -200 }   
+            add_war_support_change = { target = c:JAP value = -200 }   
         }
     }
 }
@@ -7231,7 +7231,7 @@ dev_events.142 = {
             NOT = { has_variable = allies_participant }
         }
         scope:world_war_two_diplo_play = {
-            add_diplomatic_play_war_support = { target = root value = -200 }  
+            add_war_support_change = { target = root value = -200 }  
         }
     }
 }

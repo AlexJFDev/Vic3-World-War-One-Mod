@@ -132,7 +132,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
     option = { 
         name = russia_events.2.b
         scope:world_war_one_diplo_play = {
-            add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
+            add_war_support_change = { target = c:RUS value = -200 }   
         }
         ai_chance = {
 			base = 0
@@ -463,7 +463,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
     option = {
         name = russia_events.4.b
         scope:world_war_one_diplo_play = {
-            add_diplomatic_play_war_support = { target = c:RUS value = -200 }   
+            add_war_support_change = { target = c:RUS value = -200 }   
         }
         trigger_event = {
             id = dev_events.72

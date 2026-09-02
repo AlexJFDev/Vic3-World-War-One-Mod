@@ -266,7 +266,7 @@ germany_events.2 = { #November Revolution
         activate_law = law_type:law_subordinate_general_staff
         activate_law = law_type:law_true_neutrality
         scope:world_war_one_diplo_play = {
-			add_diplomatic_play_war_support = { target = c:GER value = -200 }
+			add_war_support_change = { target = c:GER value = -200 }
 		}
         add_modifier = {
           name = socialist_buff_1
@@ -565,7 +565,7 @@ germany_events.6 = { #Austria-Hungary capitulates
         name = germany_events.6.a
         default_option = yes
         scope:world_war_one_diplo_play = {
-			add_diplomatic_play_war_support = { target = c:AUS value = -200 }
+			add_war_support_change = { target = c:AUS value = -200 }
 		}
         owner.ruler ?= {
 			remove_character_role = ruler
@@ -623,7 +623,7 @@ germany_events.7 = {
         name = germany_events.7.a
         default_option = yes
         scope:world_war_one_diplo_play = {
-			add_diplomatic_play_war_support = { target = c:BUL value = -200 }
+			add_war_support_change = { target = c:BUL value = -200 }
 		}
         ai_chance = {
             base = 1
@@ -694,7 +694,7 @@ germany_events.9 = { #Ottoman Empire capitulates
         name = germany_events.9.a
         default_option = yes
         scope:world_war_one_diplo_play = {
-			add_diplomatic_play_war_support = { target = c:TUR value = -200 }
+			add_war_support_change = { target = c:TUR value = -200 }
 		}
         ai_chance = {
             base = 10

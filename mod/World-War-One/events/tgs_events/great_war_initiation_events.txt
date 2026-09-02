@@ -1563,7 +1563,7 @@ great_war_initiation_events.24 = {
         default_option = yes
         trigger = { is_player = no }
         scope:world_war_one_diplo_play = {
-			add_diplomatic_play_war_support = { target = c:LUX value = -200 }
+			add_war_support_change = { target = c:LUX value = -200 }
 		}
         c:GER = {
 		   create_diplomatic_pact = {

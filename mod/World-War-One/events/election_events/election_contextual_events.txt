@@ -11,6 +11,8 @@ election_contextual_events.1 = {
 
 	duration = 3
 
+	cooldown = { days = very_long_modifier_time }
+
 	event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
     }
@@ -20,31 +22,32 @@ election_contextual_events.1 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	trigger = {
-		NOT = { has_law = law_type:law_single_party_state }
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
 		in_election_campaign = yes
 		NOT = { has_variable = election_event_cooldown }
+		NOT = { has_variable = mute_election_events }
 		any_interest_group = {
 			has_party = yes
 			is_in_government = yes
 		}
 		market_capital.market = {
 			OR = {
-				mg:grain = { 	
+				mg:grain = {
 					market_goods_pricier > 0.25
 				}
-				mg:fish = { 
+				mg:fish = {
 					market_goods_pricier > 0.25
 				}
-				mg:meat = { 
+				mg:meat = {
 					market_goods_pricier > 0.25
 				}
-				mg:groceries = { 
+				mg:groceries = {
 					market_goods_pricier > 0.25
 				}
 			}
 		}
 	}
-	
+
 	immediate = {
 		set_variable = {
 			name = election_event_cooldown
@@ -55,68 +58,68 @@ election_contextual_events.1 = {
 				has_party = yes
 				is_in_government = yes
 			}
-			party = { 
-				save_scope_as = high_food_price_party 
+			party = {
+				save_scope_as = high_food_price_party
 			}
 		}
 		if = {
 			limit = {
 				market_capital.market = {
-					mg:grain = { 
-						market_goods_pricier > 0.25 
+					mg:grain = {
+						market_goods_pricier > 0.25
 					}
 				}
 			}
-			g:grain = { 
+			g:grain = {
 				save_scope_as = basic_foodstuff
 			}
 		}
 		else_if = {
 			limit = {
 				market_capital.market = {
-					mg:groceries = { 
-						market_goods_pricier > 0.25 
+					mg:groceries = {
+						market_goods_pricier > 0.25
 					}
 				}
 			}
 			g:groceries = {
-				save_scope_as = basic_foodstuff 
+				save_scope_as = basic_foodstuff
 			}
 		}
 		else_if = {
 			limit = {
 				market_capital.market = {
-					mg:fish = { 
-						market_goods_pricier > 0.25 
+					mg:fish = {
+						market_goods_pricier > 0.25
 					}
 				}
 			}
-			g:fish = { 
-				save_scope_as = basic_foodstuff 
+			g:fish = {
+				save_scope_as = basic_foodstuff
 			}
 		}
 		else_if = {
 			limit = {
 				market_capital.market = {
-					mg:meat = { 
-						market_goods_pricier > 0.25 
+					mg:meat = {
+						market_goods_pricier > 0.25
 					}
 				}
 			}
-			g:meat = { 
-				save_scope_as = basic_foodstuff 
+			g:meat = {
+				save_scope_as = basic_foodstuff
 			}
 		}
 	}
-	
+
 	cancellation_trigger = {
 		in_election_campaign = no
 	}
-	
+
 	option = { # They will have to rely on alms
 		name = election_contextual_events.1.a
 		default_option = yes
-		scope:high_food_price_party = { 
+		scope:high_food_price_party = {
 			add_momentum = momentum_medium_decrease
 		}
 	}
@@ -142,6 +145,8 @@ election_contextual_events.2 = {
 
 	duration = 3
 
+	cooldown = { days = very_long_modifier_time }
+
 	event_image = {
         texture = "gfx/event_pictures/protest.dds"
     }
@@ -153,13 +158,14 @@ election_contextual_events.2 = {
 	trigger = {
 		in_election_campaign = yes
 		NOT = { has_variable = election_event_cooldown }
+		NOT = { has_variable = mute_election_events }
 		scaled_debt > 0.5
 		any_interest_group = {
 			has_party = yes
 			is_in_government = yes
 		}
 	}
-	
+
 	immediate = {
 		set_variable = {
 			name = election_event_cooldown
@@ -170,15 +176,15 @@ election_contextual_events.2 = {
 				has_party = yes
 				is_in_government = yes
 			}
-			leader = { 
+			leader = {
 				save_scope_as = public_debt_scapegoat
 			}
-			party = { 
-				save_scope_as = public_debt_party 
+			party = {
+				save_scope_as = public_debt_party
 			}
 		}
 	}
-	
+
 	cancellation_trigger = {
 		in_election_campaign = no
 	}
@@ -186,19 +192,19 @@ election_contextual_events.2 = {
 	option = { # Loans are a cornerstone of any healthy economy!
 		name = election_contextual_events.2.a
 		default_option = yes
-		scope:public_debt_party = { 
+		scope:public_debt_party = {
 			add_momentum = momentum_medium_decrease
 		}
 	}
 
 	option = { # Find a scapegoat
 		name = election_contextual_events.2.b
-		scope:public_debt_party = { 
+		scope:public_debt_party = {
 			add_momentum = momentum_small_decrease
 		}
 		scope:public_debt_scapegoat = {
 			add_modifier = {
-				name = fiscally_irresponsible	
+				name = fiscally_irresponsible
 				days = normal_modifier_time
 			}
 		}
@@ -216,6 +222,8 @@ election_contextual_events.3 = {
 
 	duration = 3
 
+	cooldown = { days = very_long_modifier_time }
+
 	event_image = {
         texture = "gfx/event_pictures/agitator_speaking.dds"
     }
@@ -225,13 +233,14 @@ election_contextual_events.3 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	trigger = {
-		NOT = { has_law = law_type:law_single_party_state }
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
 		in_election_campaign = yes
 		NOT = { has_variable = election_event_cooldown }
+		NOT = { has_variable = mute_election_events }
 		any_interest_group = {
 			has_party = yes
 			is_in_government = no
-			leader = { 
+			leader = {
 				has_ideology = ideology:ideology_pacifist
 			}
 		}
@@ -241,13 +250,13 @@ election_contextual_events.3 = {
 		}
 		any_scope_war = {
 			attacker_warleader = ROOT
-		    has_war_exhaustion = {
+		    has_war_support_change = {
 		        target = ROOT
-		        value > 10
+		        value < -5
 		    }
 		}
 	}
-	
+
 	immediate = {
 		set_variable = {
 			name = election_event_cooldown
@@ -257,85 +266,85 @@ election_contextual_events.3 = {
 			limit = {
 				has_party = yes
 				is_in_government = no
-				leader = { 
+				leader = {
 					has_ideology = ideology:ideology_pacifist
 				}
 			}
 			save_scope_as = opposition_pacifist_ig
-			party = { 
-				save_scope_as = opposition_pacifist_party 
+			party = {
+				save_scope_as = opposition_pacifist_party
 			}
-			leader = { 
-				save_scope_as = pacifist_ig_leader 
+			leader = {
+				save_scope_as = pacifist_ig_leader
 			}
 		}
 		random_interest_group = {
 			limit = {
 				has_party = yes
-				is_in_government = yes	
+				is_in_government = yes
 			}
 			save_scope_as = government_war_ig
-			party = { 
-				save_scope_as = government_war_party 
+			party = {
+				save_scope_as = government_war_party
 			}
 		}
 		random_scope_war = {
 			limit = {
 				attacker_warleader = ROOT
-			    has_war_exhaustion = {
+			    has_war_support_change = {
 			        target = ROOT
-			        value > 10
+			        value < -5
 			    }
 			}
 			save_scope_as = pacifist_war
 		}
 	}
-	
+
 	cancellation_trigger = {
 		in_election_campaign = no
 	}
 
-	option = { # The man speaks										
+	option = { # The man speaks
 		name = election_contextual_events.3.a
 		default_option = yes
-		scope:government_war_party = { 
+		scope:government_war_party = {
 			add_momentum = momentum_medium_decrease
 		}
 		scope:pacifist_ig_leader = {
 			add_modifier = {
-				name = principled_pacifist	
+				name = principled_pacifist
 				days = normal_modifier_time
 			}
 		}
 	}
-	option = { # Censor it		
+	option = { # Censor it
 		name = election_contextual_events.3.b
 		trigger = {
-			NOT = { 
-				has_law = law_type:law_protected_speech
+			NOT = {
+				has_law_or_variant = law_type:law_protected_speech
 			}
 		}
 		random_list = {
 			25 = {
 				custom_tooltip = election_contextual_events.3.tt.2
-				scope:government_war_party = { 
+				scope:government_war_party = {
 					add_momentum = momentum_large_decrease
 				}
 				scope:pacifist_ig_leader = {
 					add_modifier = {
-						name = martyrized_pacifist	
+						name = martyrized_pacifist
 						days = normal_modifier_time
 					}
 				}
 			}
 			25 = {
 				custom_tooltip = election_contextual_events.3.tt.2
-				scope:government_war_party = { 
+				scope:government_war_party = {
 					add_momentum = momentum_medium_decrease
 				}
 				scope:pacifist_ig_leader = {
 					add_modifier = {
-						name = martyrized_pacifist	
+						name = martyrized_pacifist
 						days = normal_modifier_time
 						multiplier = 0.75
 					}
@@ -343,7 +352,7 @@ election_contextual_events.3 = {
 			}
 			50 = {
 				custom_tooltip = election_contextual_events.3.tt.1
-				scope:government_war_party = { 
+				scope:government_war_party = {
 					add_momentum = momentum_small
 				}
 			}
@@ -352,29 +361,29 @@ election_contextual_events.3 = {
 	option = { # Censor it, but worse.
 		name = election_contextual_events.3.c
 		trigger = {
-			has_law = law_type:law_protected_speech
+			has_law_or_variant = law_type:law_protected_speech
 		}
 		random_list = {
 			25 = {
 				custom_tooltip = election_contextual_events.3.tt.2
-				scope:government_war_party = { 
+				scope:government_war_party = {
 					add_momentum = momentum_large_decrease
 				}
 				scope:pacifist_ig_leader = {
 					add_modifier = {
-						name = martyrized_pacifist	
+						name = martyrized_pacifist
 						days = normal_modifier_time
 					}
 				}
 			}
 			50 = {
 				custom_tooltip = election_contextual_events.3.tt.2
-				scope:government_war_party = { 
+				scope:government_war_party = {
 					add_momentum = momentum_medium_decrease
 				}
 				scope:pacifist_ig_leader = {
 					add_modifier = {
-						name = martyrized_pacifist	
+						name = martyrized_pacifist
 						days = normal_modifier_time
 						multiplier = 0.75
 					}
@@ -382,7 +391,7 @@ election_contextual_events.3 = {
 			}
 			25 = {
 				custom_tooltip = election_contextual_events.3.tt.1
-				scope:government_war_party = { 
+				scope:government_war_party = {
 					add_momentum = momentum_small
 				}
 			}
@@ -401,24 +410,29 @@ election_contextual_events.4 = {
 
 	duration = 3
 
-	event_image = {
-        texture = "gfx/event_pictures/politics_europe.dds"
-    }
+	cooldown = { days = very_long_modifier_time }
+
+	gui_window = event_window_2char
+
+	left_icon = scope:popular_leader_scope
+	right_icon = scope:young_leader_scope
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/2Characters"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	trigger = {
 		in_election_campaign = yes
 		NOT = { has_variable = election_event_cooldown }
-		NOT = { 
-			has_variable = election_leader_death_cooldown 
+		NOT = { has_variable = mute_election_events }
+		NOT = {
+			has_variable = election_leader_death_cooldown
 		}
 		any_interest_group = {
 			has_party = yes
-			leader = { 
-				age > define:NCharacters|OLD_AGE 
+			leader = {
+				age > define:NCharacters|OLD_AGE
 				is_busy = no
 				is_immortal = no
 			}
@@ -433,18 +447,99 @@ election_contextual_events.4 = {
 		random_interest_group = {
 			limit = {
 				has_party = yes
-				leader = { 
+				leader = {
 					age > define:NCharacters|OLD_AGE
 					is_busy = no
 					is_immortal = no
 				}
 			}
-			leader = { 
-				save_scope_as = decrepit_leader 
+			leader = {
+				save_scope_as = decrepit_leader
 			}
 			save_scope_as = decrepit_leader_ig
-			party = { 
-				save_scope_as = decrepit_leader_party 
+			party = {
+				save_scope_as = decrepit_leader_party
+			}
+			if = {
+				limit = {
+					any_scope_character = {
+						popularity > 0
+						age > 24
+						has_trait = inept # Most important trait
+					}
+				}
+				ordered_scope_character = {
+					limit = {
+						popularity > 0
+						age > 24
+						has_trait = inept
+					}
+					order_by = popularity
+					position = 0
+					save_scope_as = popular_leader_scope
+				}
+			}
+			else = {
+				ROOT = {
+					create_character = {
+						role = character_role_politician
+						interest_group = scope:decrepit_leader_ig
+						age = 48
+						traits = {
+							expensive_tastes
+							hedonist
+							charismatic
+							inept
+						}
+						save_scope_as = popular_leader_scope
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_scope_character = {
+						age < scope:popular_leader_scope.age
+						OR = {
+							has_trait = ambitious # Most important traits
+							has_trait = imperious
+							has_trait = ruthless
+						}
+					}
+				}
+				ordered_scope_character = {
+					limit = {
+						age < scope:popular_leader_scope.age
+						OR = {
+							has_trait = ambitious
+							has_trait = imperious
+							has_trait = ruthless
+						}
+						NOT = {
+							scope:popular_leader_scope ?= this
+						}
+					}
+					order_by = {
+						value = popularity
+						multiply = -1
+					}
+					position = 0
+					save_scope_as = young_leader_scope
+				}
+			}
+			else = {
+				ROOT = {
+					create_character = {
+						role = character_role_politician
+						interest_group = scope:decrepit_leader_ig
+						age = 24
+						traits = {
+							ambitious
+							basic_political_operator
+							imperious
+						}
+						save_scope_as = young_leader_scope
+					}
+				}
 			}
 		}
 		set_variable = {
@@ -452,7 +547,7 @@ election_contextual_events.4 = {
 			days = long_modifier_time
 		}
 	}
-	
+
 	cancellation_trigger = {
 		in_election_campaign = no
 	}
@@ -460,48 +555,33 @@ election_contextual_events.4 = {
 	option = { # Popular, but useless replacement
 		name = election_contextual_events.4.a
 		default_option = yes
-		scope:decrepit_leader = {
-			kill_character = yes
-		}
-		scope:decrepit_leader_party = { 
-			add_momentum = momentum_small
-		}
-		create_character = {
-			ig_leader = yes
-			interest_group = scope:decrepit_leader_ig
-			age = 48
-			traits = { 
-				expensive_tastes
-				arrogant
-				hedonist
-			} 
-			on_created = {
-				add_modifier = {
-					name = well_connected
-					days = normal_modifier_time
-				}
+		show_as_tooltip = {
+			scope:decrepit_leader = {
+				kill_character = yes
 			}
+		}
+		scope:popular_leader_scope ?= {
+			set_as_interest_group_leader = yes
+		}
+		scope:decrepit_leader_party = {
+			add_momentum = momentum_large
 		}
 	}
 	option = { # Unpopular, but skilled replacement
 		name = election_contextual_events.4.b
-		scope:decrepit_leader = {
-			kill_character = yes
+		show_as_tooltip = {
+			scope:decrepit_leader = {
+				kill_character = yes
+			}
 		}
-		create_character = {
-			ig_leader = yes
-			interest_group = scope:decrepit_leader_ig
-			age = 24
-			traits = { 
-				ambitious
-				charismatic
-				imperious
-			} 
-			on_created = {
-				add_modifier = {
-					name = imperious_upstart
-					days = normal_modifier_time
-				}
+		scope:young_leader_scope ?= {
+			set_as_interest_group_leader = yes
+		}
+	}
+	after = {
+		hidden_effect = {
+			scope:decrepit_leader = {
+				kill_character = yes
 			}
 		}
 	}
@@ -518,6 +598,8 @@ election_contextual_events.5 = {
 
 	duration = 3
 
+	cooldown = { days = very_long_modifier_time }
+
 	event_image = {
         texture = "gfx/event_pictures/protest.dds"
     }
@@ -527,9 +609,10 @@ election_contextual_events.5 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	trigger = {
-		NOT = { has_law = law_type:law_single_party_state }
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
 		in_election_campaign = yes
 		NOT = { has_variable = election_event_cooldown }
+		NOT = { has_variable = mute_election_events }
 		average_sol < 10
 		any_interest_group = {
 			has_party = yes
@@ -551,8 +634,8 @@ election_contextual_events.5 = {
 				has_party = yes
 				is_in_government = yes
 			}
-			party = { 
-				save_scope_as = low_sol_party 
+			party = {
+				save_scope_as = low_sol_party
 			}
 		}
 		random_interest_group = {
@@ -560,16 +643,16 @@ election_contextual_events.5 = {
 				has_party = yes
 				is_in_government = no
 			}
-			leader = { 
+			leader = {
 				save_scope_as = low_sol_opposition_leader
 			}
-			party = { 
-				save_scope_as = low_sol_opposition_party 
+			party = {
+				save_scope_as = low_sol_opposition_party
 			}
 			save_scope_as = low_sol_opposition_ig
 		}
 	}
-	
+
 	cancellation_trigger = {
 		in_election_campaign = no
 	}
@@ -577,26 +660,26 @@ election_contextual_events.5 = {
 	option = { # Harm party election chance
 		name = election_contextual_events.5.a
 		default_option = yes
-		scope:low_sol_party = { 
+		scope:low_sol_party = {
 			add_momentum = momentum_medium_decrease
 		}
-		scope:low_sol_opposition_party = { 
+		scope:low_sol_opposition_party = {
 			add_momentum = momentum_small
 		}
 		scope:low_sol_opposition_leader = {
 			add_modifier = {
-				name = defender_of_the_downtrodden	
+				name = defender_of_the_downtrodden
 				days = normal_modifier_time
 			}
 		}
 	}
 	option = { # Harm government IG opinion
 		name = election_contextual_events.5.b
-		scope:low_sol_opposition_party = { 
+		scope:low_sol_opposition_party = {
 			add_momentum = momentum_small
 		}
 		add_modifier = {
-			name = indifferent_to_destitution	
+			name = indifferent_to_destitution
 			days = short_modifier_time
 		}
 	}
@@ -613,6 +696,8 @@ election_contextual_events.6 = {
 
 	duration = 3
 
+	cooldown = { days = very_long_modifier_time }
+
 	event_image = {
         texture = "gfx/event_pictures/aristocracy.dds"
     }
@@ -624,6 +709,7 @@ election_contextual_events.6 = {
 	trigger = {
 		in_election_campaign = yes
 		NOT = { has_variable = election_event_cooldown }
+		NOT = { has_variable = mute_election_events }
 		average_sol > 15
 		any_interest_group = {
 			has_party = yes
@@ -642,38 +728,38 @@ election_contextual_events.6 = {
 				is_in_government = yes
 			}
 			save_scope_as = high_sol_ig
-			leader = { 
+			leader = {
 				save_scope_as = high_sol_leader
 			}
-			party = { 
-				save_scope_as = high_sol_party 
+			party = {
+				save_scope_as = high_sol_party
 			}
 		}
 	}
-	
+
 	cancellation_trigger = {
 		in_election_campaign = no
 	}
-	
+
 	option = { # Gain momentum for election
 		name = election_contextual_events.6.a
 		default_option = yes
-		scope:high_sol_party = { 
+		scope:high_sol_party = {
 			add_momentum = momentum_medium
 		}
 	}
-	
+
 	option = { # Shine some light on the IG and IG leader
 		name = election_contextual_events.6.b
 		scope:high_sol_ig = {
 			add_modifier = {
-				name = patrons_of_prosperity	
+				name = patrons_of_prosperity
 				days = normal_modifier_time
 			}
 		}
 		scope:high_sol_leader = {
 			add_modifier = {
-				name = champion_of_prosperity	
+				name = champion_of_prosperity
 				days = long_modifier_time
 			}
 		}
@@ -691,6 +777,8 @@ election_contextual_events.7 = {
 
 	duration = 3
 
+	cooldown = { days = very_long_modifier_time }
+
 	event_image = {
         texture = "gfx/event_pictures/military_parade.dds"
     }
@@ -700,10 +788,11 @@ election_contextual_events.7 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	trigger = {
-		NOT = { has_law = law_type:law_single_party_state }
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
 		in_election_campaign = yes
 		NOT = { has_variable = election_event_cooldown }
-		NOT = { 
+		NOT = { has_variable = mute_election_events }
+		NOT = {
 			has_variable = coalition_coupons_cooldown
 		}
 		any_interest_group = {
@@ -713,11 +802,11 @@ election_contextual_events.7 = {
 		any_scope_war = {
 		    has_war_support = {
 		        target = ROOT
-		        value > 70
+		        value > 85
 		    }
 		}
 	}
-	
+
 	immediate = {
 		set_variable = {
 			name = election_event_cooldown
@@ -727,7 +816,7 @@ election_contextual_events.7 = {
 			limit = {
 			    has_war_support = {
 			        target = ROOT
-			        value > 70
+			        value > 85
 			    }
 			}
 			save_scope_as = ongoing_election_war
@@ -737,8 +826,8 @@ election_contextual_events.7 = {
 				has_party = yes
 				is_in_government = yes
 			}
-			party = { 
-				save_scope_as = ongoing_election_war_party 
+			party = {
+				save_scope_as = ongoing_election_war_party
 			}
 		}
 		set_variable = {
@@ -746,15 +835,15 @@ election_contextual_events.7 = {
 			days = long_modifier_time
 		}
 	}
-	
+
 	cancellation_trigger = {
 		in_election_campaign = no
 	}
-	
+
 	option = { # Use this to win the election
-		name = election_contextual_events.7.a 					
+		name = election_contextual_events.7.a
 		default_option = yes
-		scope:ongoing_election_war_party = { 
+		scope:ongoing_election_war_party = {
 			add_momentum = momentum_medium
 		}
 		if = {
@@ -780,9 +869,9 @@ election_contextual_events.7 = {
 			}
 		}
 	}
-	
+
 	option = { # Polarise society with jingoist rhetoric
-		name = election_contextual_events.7.b 					
+		name = election_contextual_events.7.b
 		add_modifier = {
 			name = jingoist_rhetoric
 			days = normal_modifier_time
@@ -813,7 +902,7 @@ election_contextual_events.7 = {
 }
 
 # A Torrent of Gin and Beer
-# The government is pursuing anti-liquor policies, and people get (understandably) angry. 
+# The government is pursuing anti-liquor policies, and people get (understandably) angry.
 election_contextual_events.8 = {
 	type = country_event
 	placement = ROOT
@@ -822,6 +911,8 @@ election_contextual_events.8 = {
 	flavor = election_contextual_events.8.f
 
 	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
 
 	event_image = {
         texture = "gfx/event_pictures/protest.dds"
@@ -832,23 +923,32 @@ election_contextual_events.8 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	trigger = {
-		NOT = { has_law = law_type:law_single_party_state }
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
 		in_election_campaign = yes
 		NOT = { has_variable = election_event_cooldown }
-		OR = { 
+		NOT = { has_variable = mute_election_events }
+		OR = {
 			is_banning_goods = g:liquor
 			has_consumption_tax = g:liquor
 		}
 		any_interest_group = {
 			has_party = yes
 			is_in_government = no
+			party = {
+				save_temporary_scope_as = anti_temperance_party
+			}
 		}
 		any_interest_group = {
 			has_party = yes
 			is_in_government = yes
+			party = {
+				NOT = {
+					scope:anti_temperance_party ?= this
+				}
+			}
 		}
 	}
-	
+
 	immediate = {
 		set_variable = {
 			name = election_event_cooldown
@@ -857,43 +957,48 @@ election_contextual_events.8 = {
 		random_interest_group = {
 			limit = {
 				has_party = yes
-				is_in_government = no	
+				is_in_government = no
 			}
 			save_scope_as = liquor_ig
-			party = { 
-				save_scope_as = anti_temperance_party 
+			party = {
+				save_scope_as = anti_temperance_party
 			}
 		}
 		random_interest_group = {
 			limit = {
 				has_party = yes
-				is_in_government = yes	
+				is_in_government = yes
+				party = {
+					NOT = {
+						scope:anti_temperance_party ?= this
+					}
+				}
 			}
 			save_scope_as = liquor_gov_ig
-			party = { 
-				save_scope_as = temperance_party 
+			party = {
+				save_scope_as = temperance_party
 			}
 		}
 	}
-	
+
 	cancellation_trigger = {
 		in_election_campaign = no
 	}
-	
+
 	option = { # Anti temperance party soars in popularity
-		name = election_contextual_events.8.a 					
+		name = election_contextual_events.8.a
 		default_option = yes
-		scope:anti_temperance_party = { 
+		scope:anti_temperance_party = {
 			add_momentum = momentum_large
 		}
 	}
-	
+
 	option = { # Run a smear campaign
-		name = election_contextual_events.8.b 					
-		scope:anti_temperance_party = { 
+		name = election_contextual_events.8.b
+		scope:anti_temperance_party = {
 			add_momentum = momentum_small
 		}
-		scope:temperance_party = { 
+		scope:temperance_party = {
 			add_momentum = momentum_small_decrease
 		}
 	}

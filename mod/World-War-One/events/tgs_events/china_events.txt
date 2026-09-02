@@ -1353,7 +1353,7 @@ china_events.9 = { #Kuomintang decides to capitulate or not
         name = china_events.9.a
         default_option = yes
         scope:kuomintang_war_diplo_play = {
-			add_diplomatic_play_war_support = { target = c:KMT value = -200 }
+			add_war_support_change = { target = c:KMT value = -200 }
 		}
         random_scope_character =  {
 			limit = {
