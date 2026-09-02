@@ -478,7 +478,7 @@ electric_telegraph = {
 	category = military
 
 	modifier = {
-		country_war_exhaustion_casualties_mult = -0.25
+		country_war_support_casualties_mult = -0.25
 	}
 
 	unlocking_technologies = {
@@ -1147,7 +1147,7 @@ carrier_tech = {
 
 		# Important for naval powers
 		if = {
-			limit = { navy_size >= 50 }
+			limit = { navy_size >= 80 }
 			add = 0.5
 		}
 	}
@@ -1168,7 +1168,7 @@ battleship_tech = {
 
 		# Important for naval powers
 		if = {
-			limit = { navy_size >= 20 }
+			limit = { navy_size >= 50 }
 			add = 0.5
 		}
 	}

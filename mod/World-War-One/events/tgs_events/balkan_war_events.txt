@@ -260,7 +260,15 @@ balkan_war_events.5 = {
 
 	trigger = {}
 
-	immediate = {}
+	immediate = {
+        random_diplomatic_play = {
+            limit = {
+			  initiator = { c:BUL ?= this }
+              target = { c:GRE ?= this }
+		    }
+           save_scope_as = balkan_war_diplo_play
+        }
+    }
 
 	option = { # Give up the fight
 		name = balkan_war_events.5.a

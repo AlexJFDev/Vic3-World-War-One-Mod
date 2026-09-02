@@ -870,7 +870,50 @@
 		}
 	}
 
-	#Vanilla global settings
+    #Vanilla global settings
+
+	every_country = {
+		limit = { NOT = { has_law_or_variant = law_type:law_slavery_banned } }
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_colonial_slavery
+			}
+			ig:ig_landowners ?= { add_ideology = ideology_pro_slavery_colonial }
+		}
+		else = {
+			ig:ig_landowners ?= { add_ideology = ideology_pro_slavery }
+		}
+	}
+
+	every_country = {
+		limit = {
+			country_has_monarchy_law = no
+		}
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_paternalistic
+			add_ideology = ideology_republican_paternalistic
+		}
+	}
+
+	every_country = {
+		limit = {
+			has_law = law_type:law_monarchy
+			has_law_or_variant = law_type:law_autocracy
+		}
+		set_variable = king_in_parliament_possible
+	}
+
+	every_country = { # Mercantile ideology
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_isolationism
+			}
+		}
+		ig:ig_petty_bourgeoisie = {
+			add_ideology = ideology_mercantile
+		}
+	}
 
 	every_country = {
 		limit = {
@@ -896,30 +939,7 @@
 		}
 	}
 
-	every_country = {
-		limit = { NOT = { has_law_or_variant = law_type:law_slavery_banned } }
-		if = {
-			limit = {
-				has_law_or_variant = law_type:law_colonial_slavery
-			}
-			ig:ig_landowners ?= { add_ideology = ideology_pro_slavery_colonial }
-		}
-		else = {
-			ig:ig_landowners ?= { add_ideology = ideology_pro_slavery }
-		}
-	}
-
-	every_country = {
-		limit = {
-			has_law = law_type:law_monarchy
-			has_law_or_variant = law_type:law_autocracy
-		}
-		set_variable = king_in_parliament_possible
-	}
-
-	set_global_variable = { name = num_coups value = 0 }
-	set_global_variable = { name = failed_coups value = 0 }
-	set_global_variable = { name = successful_coups value = 0 }
+    ###ACHIEVEMENT VARIABLES###
 
 	#Serf's Up
 	every_country = {
@@ -1208,6 +1228,8 @@
 		}
 		set_variable = full_circle_ach_possible
 	}
+
+	###EVENT VARIABLES###
 
 	set_global_variable = {
 		name = number_of_mega_earthquakes
