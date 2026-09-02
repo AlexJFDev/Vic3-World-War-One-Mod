@@ -2026,6 +2026,9 @@ dev_events.38 = {
         create_character = {
 			template = sib_olga_alexandrovna_template
 		}
+        create_character = {
+			template = sib_pyotr_krasnov_template
+		}
         random_scope_state = {
 			limit = {
 				is_capital = yes
@@ -5547,7 +5550,7 @@ dev_events.112 = {
     }
 }
 
-dev_events.113 = { #change
+dev_events.113 = {
     type = country_event
 
     title = dev_events.2.t
@@ -5578,6 +5581,9 @@ dev_events.113 = { #change
             set_ig_trait = ig_trait:ig_trait_diplomatic_incidents
             set_ig_trait = ig_trait:ig_trait_bewegungskrieg
 		}
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_beacon_of_science
+		}
     }
 
     option = {
@@ -5594,6 +5600,9 @@ dev_events.113 = { #change
         ig:ig_armed_forces ?= {
             set_ig_trait = ig_trait:ig_trait_diplomatic_incidents
             set_ig_trait = ig_trait:ig_trait_bewegungskrieg
+		}
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_beacon_of_science
 		}
     }
 }
@@ -7002,6 +7011,11 @@ dev_events.136 = {
         default_option = yes
         add_modifier = {
             name = money_buff_1
+            years = 5
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = production_buff_1
             years = 5
             is_decaying = yes
         }
