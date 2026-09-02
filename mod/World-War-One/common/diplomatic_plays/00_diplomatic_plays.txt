@@ -13,7 +13,10 @@ REPLACE_OR_CREATE:dp_default_treaty_article = {
 	}
 
 	possible = {
-		always = no
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
+		}
 	}
 
 	ai_acceptance_max = 100
@@ -1322,7 +1325,6 @@ REPLACE_OR_CREATE:dp_humiliation = {
 	texture = "gfx/interface/icons/war_goals/humiliation.dds"
 
 	possible = {
-		aggressive_diplomatic_plays_permitted = yes
 		NOR = {
 			has_law = law_type:law_true_neutrality
 			has_law = law_type:law_armed_neutrality
