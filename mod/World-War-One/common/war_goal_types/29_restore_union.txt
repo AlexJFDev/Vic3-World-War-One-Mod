@@ -1,12 +1,14 @@
 ﻿REPLACE_OR_CREATE:restore_union = {
 	icon = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
 
-	kind = custom
+	kind = make_subject
+	subject_type = subject_type_personal_union
 
 	settings = {
 		require_target_be_part_of_war
 		turns_into_subject
 		requires_interest
+		assent_required
 
 		# Validation
 		conflicts_with_make_subject
@@ -15,7 +17,7 @@
 
 	execution_priority = 12
 
-	contestion_type = control_target_country_capital
+	contestion_type = control_half_target_country_states
 
 	target_type = country
 
@@ -28,6 +30,10 @@
 		}
 		scope:target_country ?= {
 			c:BRZ ?= this
+		}
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
 		}
 	}
 
@@ -153,12 +159,6 @@
 		# script effect on top of the predefined code effect
 		scope:target_country ?= {
 			activate_law = law_type:law_monarchy
-		}
-		ROOT = {
-			create_diplomatic_pact = {
-				country = scope:target_country
-				type = personal_union
-			}
 		}
 	}
 

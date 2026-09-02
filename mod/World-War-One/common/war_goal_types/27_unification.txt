@@ -23,8 +23,10 @@
 	target_type = state
 
 	possible = {
-		# trigger to determine if a goal with its target data is listed when selecting a war goal in the diplo play panel
-		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
+		NOR = {
+			has_law = law_type:law_true_neutrality
+			has_law = law_type:law_armed_neutrality
+		}
 	}
 
 	valid = {
@@ -55,6 +57,10 @@
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = territorial
 	}
 
 	ai = {
