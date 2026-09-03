@@ -35,22 +35,315 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
               c:RUS
             }   
         }
-        create_treaty = {
-		    name = treaty_name_partition
-		    first_country = c:GER
-		    second_country = c:RUS
-
-		    is_draft = no
-		    binding_period = { years = 5 }
-
-		    articles_to_create = {
-			    {
-				    article = partition
-				    source_country = c:RUS
-				    target_country = c:GER
+        create_country = { #United Baltic Provinces
+			origin = root
+			tag = UBD
+			state = s:STATE_TALINN.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_universal_suffrage
+                activate_law = law_type:law_mass_conscription
+			}
+		}
+		s:STATE_TARTU = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
 			    }
-		    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+		s:STATE_RIGA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+		s:STATE_COURLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+		s:STATE_KAUNAS = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+        create_country = { #Poland
+			origin = root
+			tag = POL
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_universal_suffrage
+                activate_law = law_type:law_mass_conscription	
+				activate_law = law_type:law_national_supremacy
+			}
+		}
+        s:STATE_LESSER_POLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_MAZOVIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_VILNIUS = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_BREST = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_VOLHYNIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        create_country = { #Ukraine
+			origin = root
+			tag = UKR
+			state = s:STATE_KIEV.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_monarchy
+                activate_law = law_type:law_mass_conscription
+			}
+		}
+        s:STATE_CHERSON = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_KHARKOV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_TAURIDA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_BESSARABIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_CRIMEA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        c:GER = {
+		create_diplomatic_pact = {
+			country = c:UBD
+			type = protectorate
+		}		
+        create_diplomatic_pact = {
+			country = c:POL
+			type = protectorate
+		}	
+		create_diplomatic_pact = {
+			country = c:UKR
+			type = protectorate
+		}	
 	    }
+		s:STATE_INGRIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		if = {
+			limit = {
+				c:TUR = { has_variable = central_powers_participant }
+			}
+			s:STATE_KARS = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+			s:STATE_ARMENIA = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+			s:STATE_GREATER_CAUCASUS = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+			s:STATE_ELIZAVETPOL = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+			s:STATE_AZERBAIJAN = {
+	            random_scope_state = {
+		            limit = {
+			            exists = c:RUS
+			            owner = {
+				           OR = {
+					          c:RUS = THIS
+				           }
+			            }
+		            }
+		            set_state_owner = c:TUR
+                }
+            }
+		}
         trigger_event = {
             id = dev_events.16
             days = 5
