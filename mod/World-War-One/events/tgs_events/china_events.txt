@@ -1943,6 +1943,11 @@ china_events.22 = { #Call to arms against Japan
 		        type = make_protectorate
 		        target_country = ROOT
             }
+            add_war_goal = {
+		        holder = c:JAP
+		        type = regime_change
+		        target_country = ROOT
+            }
 		}
         trigger_event = {
             id = dev_events.85

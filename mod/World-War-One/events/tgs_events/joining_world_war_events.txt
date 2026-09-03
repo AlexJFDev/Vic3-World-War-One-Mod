@@ -467,7 +467,7 @@ joining_world_war_events.13 = { #Ottoman Empire joins
     icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 6
+    duration = 12
     
     event_image = {
 		texture = "gfx/event_pictures/central_victory.dds"
@@ -492,15 +492,50 @@ joining_world_war_events.13 = { #Ottoman Empire joins
                 c:TUR
             }      
             add_war_goal = {
+				holder = c:RUS
+				target_country = c:TUR
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:TUR
+					target_country = c:RUS
+				}
+			}
+            add_war_goal = {
                     holder = c:RUS
-                    type = humiliation
-                    target_country = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_TRABZON.region_state:TUR
                 }  
             add_war_goal = {
-                    holder = c:FRA
+                    holder = c:RUS
                     type = conquer_state
-                    target_state = s:STATE_HUDAVENDIGAR.region_state:TUR
-                }       
+                    target_state = s:STATE_ERZURUM.region_state:TUR
+                }  
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_KARS.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_ARMENIE.region_state:RUS
+                } 
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_GREATER_CAUCASUS.region_state:RUS
+                } 
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_ELIZAVETPOL.region_state:RUS
+                } 
+            add_war_goal = {
+                    holder = c:TUR
+                    type = conquer_state
+                    target_state = s:STATE_AZERBAIJAN.region_state:RUS
+                }        
 		}
         add_treasury = 3000000
         set_variable = central_powers_participant
@@ -608,7 +643,7 @@ joining_world_war_events.14 = { #Italy joins part 3
     icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 6
+    duration = 12
     
     event_image = {
         texture = "gfx/event_pictures/italy_ww1.dds"
@@ -633,20 +668,25 @@ joining_world_war_events.14 = { #Italy joins part 3
 				c:ITA
 			}  
             add_war_goal = {
-                    holder = c:AUS
-                    type = humiliation
-                    target_country = c:ITA
-                } 
+                holder = c:AUS
+                type = conquer_state
+                target_state = s:STATE_VENETIA.region_state:ITA
+            }
             add_war_goal = {
-                    holder = c:ITA
-                    type = humiliation
-                    target_country = c:AUS
-                } 
+                holder = c:AUS
+                type = conquer_state
+                target_state = s:STATE_LOMBARDY.region_state:ITA
+            }
             add_war_goal = {
-                    holder = c:AUS
-                    type = conquer_state
-                    target_state = s:STATE_PIEDMONT.region_state:ITA
-                }
+                holder = c:ITA
+                type = conquer_state
+                target_state = s:STATE_SOUTH_TYROL.region_state:AUS
+            }
+            add_war_goal = {
+                holder = c:ITA
+                type = conquer_state
+                target_state = s:STATE_ISTRIA.region_state:AUS
+            }
         }
         c:ITA = { set_variable = entente_participant }
         c:ITA ?= {
@@ -710,7 +750,7 @@ joining_world_war_events.15 = { #Bulgaria joins
     icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 6
+    duration = 12
     
     event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
@@ -735,18 +775,23 @@ joining_world_war_events.15 = { #Bulgaria joins
 				c:BUL
 			}
             add_war_goal = {
-				    holder = c:FRA
-				    target_country = c:BUL
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:BUL
-					   target_country = c:FRA
-					   inputs = {
-						   { quantity = 5000 }
-					    }
-				    }
-			    }
+				holder = c:FRA
+				target_country = c:BUL
+				type = enforce_treaty_article
+				article = {
+					article = money_transfer
+					source_country = c:BUL
+					target_country = c:FRA
+					inputs = {
+						{ quantity = 5000 }
+					}
+				}
+			}
+            add_war_goal = {
+                holder = c:BUL
+                type = conquer_state
+                target_state = s:STATE_SKOPIA.region_state:SER
+            }
         }
         c:BUL = { set_variable = central_powers_participant }
         ai_chance = {
@@ -786,7 +831,7 @@ joining_world_war_events.16 = { #Romania joins
     icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 6
+    duration = 12
     
     event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
@@ -811,18 +856,60 @@ joining_world_war_events.16 = { #Romania joins
 				c:ROM
 			}
             add_war_goal = {
-				    holder = c:AUS
-				    target_country = c:ROM
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:ROM
-					   target_country = c:AUS
-					   inputs = {
-						   { quantity = 15000 }
-					    }
-				    }
-			    }
+                holder = c:AUS
+                type = conquer_state
+                target_state = s:STATE_MOLDAVIA.region_state:ROM
+            }
+            add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_BUKOVINA.region_state:AUS
+            }
+            add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_NORTHERN_TRANSYLVANIA.region_state:AUS
+            }
+            add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_SOUTHERN_TRANSYLVANIA.region_state:AUS
+            }
+            add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_BEKES.region_state:AUS
+            }
+            add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_BANAT.region_state:AUS
+            }
+            add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_MOLDAVIA.region_state:AUS
+            }
+            add_war_goal = {
+                holder = c:ROM
+                type = conquer_state
+                target_state = s:STATE_MOLDAVIA.region_state:AUS
+            }
+        }
+        if = {
+            limit = {
+                c:BUL = { 
+                  is_at_war = yes
+                  has_variable = central_powers_participant 
+                }
+            }
+            scope:world_war_one_diplo_play = {
+                add_war_goal = {
+                  holder = c:BUL
+                  type = conquer_state
+                  target_state = s:STATE_DOBRUDJA.region_state:ROM
+                }
+            }
         }
         c:ROM = { set_variable = entente_participant }
         ai_chance = {
@@ -862,7 +949,7 @@ joining_world_war_events.17 = { #Greece joins
     icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 6
+    duration = 12
     
     event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
@@ -887,22 +974,47 @@ joining_world_war_events.17 = { #Greece joins
 				c:GRE
 			}
             add_war_goal = {
-				    holder = c:AUS
-				    target_country = c:GRE
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:GRE
-					   target_country = c:AUS
-					   inputs = {
-						   { quantity = 5000 }
-					    }
-				    }
-			    }
+				holder = c:AUS
+				target_country = c:GRE
+				type = enforce_treaty_article
+				article = {
+					article = money_transfer
+					source_country = c:GRE
+					target_country = c:AUS
+					inputs = {
+						{ quantity = 5000 }
+					}
+				}
+			}
+        }
+        if = {
+            limit = {
+                c:BUL = { 
+                  is_at_war = yes
+                  has_variable = central_powers_participant 
+                }
+            }
+            scope:world_war_one_diplo_play = {
+                add_war_goal = {
+                  holder = c:BUL
+                  type = conquer_state
+                  target_state = s:STATE_WESTERN_THRACE.region_state:GRE
+                }
+                add_war_goal = {
+                  holder = c:BUL
+                  type = conquer_state
+                  target_state = s:STATE_MACEDONIA.region_state:GRE
+                }
+                add_war_goal = {
+                  holder = c:GRE
+                  type = conquer_state
+                  target_state = s:STATE_WESTERN_THRACE.region_state:BUL
+                }
+            }
         }
         c:GRE = { set_variable = entente_participant }
         ai_chance = {
-            base = 100
+            base = 1
         }
     }
 
@@ -938,7 +1050,7 @@ joining_world_war_events.18 = { #USA joins
     icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 6
+    duration = 12
     
     event_image = {
         texture = "gfx/event_pictures/zimmermann_telegram.dds"
@@ -972,15 +1084,10 @@ joining_world_war_events.18 = { #USA joins
 					source_country = c:USA
 					target_country = c:GER
 					inputs = {
-						{ quantity = 100000 }
+						{ quantity = 500000 }
 					}
 				}
 			}
-            add_war_goal = {
-                    holder = c:GER
-                    type = conquer_state
-                    target_state = s:STATE_PANAMA.region_state:USA
-                } 
         }
         c:USA = { set_variable = entente_participant }
         c:USA = {
@@ -1062,7 +1169,7 @@ joining_world_war_events.19 = { #Portugal joins
     icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 6
+    duration = 12
     
     event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
@@ -1138,7 +1245,7 @@ joining_world_war_events.20 = { #Brazil joins
     icon = "gfx/interface/icons/event_icons/protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 6
+    duration = 12
     
     event_image = {
         texture = "gfx/event_pictures/politics_europe.dds"
@@ -1239,18 +1346,20 @@ joining_world_war_events.21 = { #Persia joins
 				c:PER
 			}
             add_war_goal = {
-				    holder = c:GER
-				    target_country = c:PER
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:PER
-					   target_country = c:GER
-					   inputs = {
-						   { quantity = 5000 }
-					    }
-				    }
-			    }
+				holder = c:FRA
+				target_country = c:TUR
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:TUR
+					target_country = c:FRA
+				}
+			}
+            add_war_goal = {
+                holder = c:TUR
+                type = make_protectorate
+                target_country = c:PER
+            }
         }
         c:PER = {
             trigger_event = {
@@ -1260,7 +1369,7 @@ joining_world_war_events.21 = { #Persia joins
         }
         c:PER = { set_variable = entente_participant }
         ai_chance = {
-            base = 100
+            base = 1
         }
     }
 
@@ -1271,18 +1380,20 @@ joining_world_war_events.21 = { #Persia joins
 				c:PER
 			}
             add_war_goal = {
-				    holder = c:GBR
-				    target_country = c:PER
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:PER
-					   target_country = c:GBR
-					   inputs = {
-						   { quantity = 5000 }
-					    }
-				    }
-			    }
+				holder = c:FRA
+				target_country = c:TUR
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:TUR
+					target_country = c:FRA
+				}
+			}
+            add_war_goal = {
+                holder = c:GBR
+                type = make_protectorate
+                target_country = c:PER
+            }
         }
         c:PER = { set_variable = central_powers_participant }
         ai_chance = {

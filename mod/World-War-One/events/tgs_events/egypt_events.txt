@@ -70,6 +70,18 @@ egypt_events.2 = { #Abbas deposition part 2
     option = { #Accept deposition
         name = egypt_events.2.a
         default_option = yes
+        scope:world_war_one_diplo_play = {
+            add_war_goal = {
+                holder = c:TUR
+                type = transfer_subject
+                target_country = c:EGY
+            }
+            add_war_goal = {
+                holder = c:TUR
+                type = conquer_state
+                target_state = s:STATE_SINAI.region_state:GBR
+            }  
+        }
         create_character = {
             first_name = Hussein
 	        last_name = Kamel

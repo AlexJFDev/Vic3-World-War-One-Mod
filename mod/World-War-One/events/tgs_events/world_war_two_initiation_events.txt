@@ -1,6 +1,6 @@
 ﻿namespace = world_war_two_initiation_events
 
-world_war_two_initiation_events.12 = { 
+world_war_two_initiation_events.12 = { #Initiation event
     type = country_event
 
     title = world_war_two_initiation_events.12.t
@@ -46,7 +46,7 @@ world_war_two_initiation_events.12 = {
     }
 }
 
-world_war_two_initiation_events.13 = { #poland receives German ultimatum
+world_war_two_initiation_events.13 = { #Poland receives German ultimatum
     type = country_event
 
     title = world_war_two_initiation_events.13.t
@@ -143,12 +143,27 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
             add_war_goal = {
                 holder = c:GER
                 type = conquer_state
+                target_state = s:STATE_EAST_PRUSSIA.region_state:POL
+            }
+            add_war_goal = {
+                holder = c:GER
+                type = conquer_state
                 target_state = s:STATE_WEST_PRUSSIA.region_state:POL
             }
             add_war_goal = {
                 holder = c:GER
                 type = conquer_state
                 target_state = s:STATE_POSEN.region_state:POL
+            }
+            add_war_goal = {
+                holder = c:POL
+                type = humiliation
+                target_country = c:GER
+            }
+            add_war_goal = {
+                holder = c:POL
+                type = conquer_state
+                target_state = s:STATE_EAST_PRUSSIA.region_state:GER
             }
         }
         trigger_event = {
@@ -192,7 +207,7 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
             }
             trigger_event = {
               id = world_war_two_initiation_events.3
-              months = 8
+              months = 10
             }
         }
         ai_chance = {
@@ -238,27 +253,76 @@ world_war_two_initiation_events.2 = { #WW2 initiation Allies response
     option = {
         name = world_war_two_initiation_events.2.a
         default_option = yes
+        trigger = { THIS = c:FRA }
         scope:world_war_two_diplo_play = {
-			add_target_backers = { root }
+			add_target_backers = { c:FRA }
             add_war_goal = {
-                holder = root
-                type = contain_threat
-                target_country = c:GER
+                holder = c:FRA
+                type = release_as_subject
+                target_country = c:RHE
             }
             add_war_goal = {
-                holder = root
-                type = regime_change
-                target_country = c:GER
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:FRA
             }
             add_war_goal = {
                 holder = c:GER
                 type = conquer_state
-                target_state = root.capital
+                target_state = s:STATE_ALSACE.region_state:FRA
             }
 		}
         set_variable = allies_participant
         ai_chance = {
-            base = 10
+            base = 1
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.2.a
+        default_option = yes
+        trigger = { THIS = c:GBR }
+        scope:world_war_two_diplo_play = {
+			add_target_backers = { c:GBR }
+            add_war_goal = {
+                holder = c:GBR
+                type = contain_threat
+                target_country = c:GER
+            }
+            add_war_goal = {
+                holder = c:GBR
+                type = regime_change
+                target_country = c:GER
+            }
+            add_war_goal = {
+				holder = c:GBR
+				target_country = c:GER
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:GER
+					target_country = c:GBR
+				}
+			}
+            add_war_goal = {
+				holder = c:GBR
+				target_country = c:GER
+				type = enforce_treaty_article
+				article = {
+					article = naval_limitation
+					source_country = c:GER
+					target_country = c:GBR
+				}
+			}
+            add_war_goal = {
+                holder = c:GER
+                type = make_protectorate
+                target_country = c:GBR
+            }
+		}
+        set_variable = allies_participant
+        ai_chance = {
+            base = 1
         }
     }
 
@@ -780,17 +844,27 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
             } 
             add_initiator_backers = {
                 c:POL
-            }  
+            }
             add_war_goal = {
                 holder = c:GER
-                type = conquer_state
-                target_state = s:STATE_MOSCOW.region_state:RUS
+                type = make_protectorate
+                target_country = c:RUS
             }
             add_war_goal = {
                 holder = c:GER
                 type = regime_change
                 target_country = c:RUS
             }
+            add_war_goal = {
+				holder = c:RUS
+				target_country = c:GER
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:GER
+					target_country = c:RUS
+				}
+			}
             add_war_goal = {
                 holder = c:RUS
                 type = contain_threat
@@ -799,12 +873,32 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
             add_war_goal = {
                 holder = c:RUS
                 type = conquer_state
-                target_state = s:STATE_BRANDENBURG.region_state:GER
+                target_state = s:STATE_EAST_PRUSSIA.region_state:GER
             }
             add_war_goal = {
                 holder = c:RUS
-                type = make_protectorate
+                type = conquer_state
+                target_state = s:STATE_WEST_PRUSSIA.region_state:GER
+            }
+            add_war_goal = {
+                holder = c:RUS
+                type = conquer_state
+                target_state = s:STATE_POSEN.region_state:GER
+            }
+            add_war_goal = {
+                holder = c:RUS
+                type = transfer_subject
                 target_country = c:POL
+            }
+            add_war_goal = {
+                holder = c:RUS
+                type = regime_change
+                target_country = c:POL
+            }
+            add_war_goal = {
+                holder = c:RUS
+                type = liberate_country
+                target_country = c:AUS
             }
 		}
         c:RUS = { set_variable = allies_participant }
@@ -935,6 +1029,11 @@ world_war_two_initiation_events.7 = { #WW2 initiation european countries join in
                 type = make_protectorate
                 target_country = root
             }
+            add_war_goal = {
+                holder = c:RUS
+                type = regime_change
+                target_country = root
+            }
 		}
         trigger_event = {
             id = dev_events.77
@@ -995,8 +1094,8 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
             } 
             add_war_goal = {
                 holder = c:GER
-                type = conquer_state
-                target_state = s:STATE_NEW_YORK.region_state:USA
+                type = make_protectorate
+                target_country = c:USA
             }
 		}
         c:USA = {
@@ -1199,72 +1298,5 @@ world_war_two_initiation_events.11 = { #Italy declares war on Greece
         ai_chance = {
             base = 0
         }
-    }
-}
-
-world_war_two_initiation_events.14 = {
-    type = country_event
-
-    title = world_war_two_initiation_events.14.t
-    desc = world_war_two_initiation_events.14.d
-    flavor = world_war_two_initiation_events.14.f
-    
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    event_image = {
-        texture = "gfx/event_pictures/dday.dds"
-    }
-    
-    option = {
-        name = world_war_two_initiation_events.14.a
-        default_option = yes
-        trigger = { is_player = yes }
-    }
-
-    option = {
-        name = world_war_two_initiation_events.14.a
-        default_option = yes
-        trigger = { is_player = no }
-        add_modifier = {
-			name = taken_by_suprise_3
-            years = 2
-            is_decaying = yes
-		}
-		s:STATE_RUHR = {
-			add_devastation = 30
-		}
-        s:STATE_RHINELAND = {
-			add_devastation = 30
-		}
-        s:STATE_NORTH_RHINE = {
-			add_devastation = 30
-		}
-        s:STATE_HESSE = {
-			add_devastation = 30
-		}
-        s:STATE_WESTPHALIA = {
-			add_devastation = 30
-		}
-        s:STATE_HANNOVER = {
-			add_devastation = 30
-		}
-        s:STATE_ELBE = {
-			add_devastation = 30
-		}
-        s:STATE_LOWER_SILESIA = {
-			add_devastation = 30
-		}
-        s:STATE_UPPER_SILESIA = {
-			add_devastation = 30
-		}
-        s:STATE_SAXONY = {
-			add_devastation = 30
-		}
-        s:STATE_BRANDENBURG = {
-			add_devastation = 30
-		}
     }
 }

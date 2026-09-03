@@ -924,7 +924,7 @@ japan_events.20 = {#Invasion of China response
 
             add_war_goal = {
 		        holder = c:JAP
-		        type = humiliation
+		        type = regime_change
 		        target_country = c:CHI
             }
 
@@ -937,15 +937,15 @@ japan_events.20 = {#Invasion of China response
 					source_country = c:CHI
 					target_country = c:JAP
 					inputs = {
-						{ quantity = 100000 }
+						{ quantity = 200000 }
 					}
 				}
 			}
 
             add_war_goal = {
 		        holder = c:CHI
-		        type = humiliation
-		        target_country = c:JAP
+		        type = liberate_country
+		        target_country = c:KOR
             }
 
             add_war_goal = {
@@ -957,7 +957,7 @@ japan_events.20 = {#Invasion of China response
 					source_country = c:JAP
 					target_country = c:CHI
 					inputs = {
-						{ quantity = 100000 }
+						{ quantity = 200000 }
 					}
 				}
 			}
@@ -1146,12 +1146,32 @@ japan_events.22 = {#Japan attacks USA and western nations
 		scope:sino_japan_war_diplo_play = {
 			add_target_backers = { c:USA }
             add_target_backers = { c:GBR }
-            add_target_backers = { c:DEI }
             add_target_backers = { c:AST }
+            add_target_backers = { c:BIC }
             add_war_goal = {
-                holder = c:JAP
-                type = conquer_state
-                target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
+				holder = c:USA
+				target_country = c:JAP
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:JAP
+					target_country = c:USA
+				}
+			}
+            add_war_goal = {
+				holder = c:USA
+				target_country = c:JAP
+				type = enforce_treaty_article
+				article = {
+					article = naval_limitation
+					source_country = c:JAP
+					target_country = c:USA
+				}
+			}
+            add_war_goal = {
+                holder = c:USA
+                type = make_protectorate
+                target_country = c:JAP
             }
             add_war_goal = {
                 holder = c:USA
@@ -1166,22 +1186,92 @@ japan_events.22 = {#Japan attacks USA and western nations
             add_war_goal = {
                 holder = c:USA
                 type = conquer_state
-                target_state = s:STATE_KANTO.region_state:JAP
-            }
-            add_war_goal = {
-                holder = c:USA
-                type = conquer_state
                 target_state = s:STATE_RYUKYU_ISLANDS.region_state:JAP
             }
             add_war_goal = {
                 holder = c:JAP
-                type = make_protectorate
-                target_country = c:DEI
+                type = conquer_state
+                target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = transfer_subject
+                target_country = c:PHI
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_SHANDONG.region_state:GBR
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_SHAOZHOU.region_state:GBR
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_MALAYA.region_state:GBR
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_EASTERN_NEW_GUINEA.region_state:AST
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = transfer_subject
+                target_country = c:NBO
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = transfer_subject
+                target_country = c:BRU
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = transfer_subject
+                target_country = c:ROS
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = transfer_subject
+                target_country = c:MLA
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = transfer_subject
+                target_country = c:BIC
             }
 		}
+        if = {
+            limit = { 
+                c:NET = { 
+                    is_subject_of = c:GER 
+                }
+                has_global_variable = germany_accepts_japan_transfer
+            }
+            c:NET = {
+                remove_diplomatic_pact = {
+			     country = c:DEI
+			     type = colony
+		        }
+            }
+            c:JAP = {
+                create_diplomatic_pact = {
+			     country = c:DEI
+			     type = puppet
+		        }
+            }
+            c:DEI = {
+               remove_primary_culture = cu:dutch
+			   add_primary_culture = cu:indonesian
+               set_state_religion = rel:sunni
+            }
+        }
         c:SIA = {
             trigger_event = {
-                id =  dev_events.150
+                id = dev_events.150
                 days = 5
             }
         }
@@ -1210,9 +1300,29 @@ japan_events.22 = {#Japan attacks USA and western nations
 		scope:sino_japan_war_diplo_play = {
 			add_target_backers = { c:USA }
             add_war_goal = {
-                holder = c:JAP
-                type = conquer_state
-                target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
+				holder = c:USA
+				target_country = c:JAP
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:JAP
+					target_country = c:USA
+				}
+			}
+            add_war_goal = {
+				holder = c:USA
+				target_country = c:JAP
+				type = enforce_treaty_article
+				article = {
+					article = naval_limitation
+					source_country = c:JAP
+					target_country = c:USA
+				}
+			}
+            add_war_goal = {
+                holder = c:USA
+                type = make_protectorate
+                target_country = c:JAP
             }
             add_war_goal = {
                 holder = c:USA
@@ -1227,20 +1337,19 @@ japan_events.22 = {#Japan attacks USA and western nations
             add_war_goal = {
                 holder = c:USA
                 type = conquer_state
-                target_state = s:STATE_KANTO.region_state:JAP
-            }
-            add_war_goal = {
-                holder = c:USA
-                type = conquer_state
                 target_state = s:STATE_RYUKYU_ISLANDS.region_state:JAP
             }
-		}
-        c:SIA = {
-            trigger_event = {
-                id =  dev_events.150
-                days = 5
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
             }
-        }
+            add_war_goal = {
+                holder = c:JAP
+                type = transfer_subject
+                target_country = c:PHI
+            }
+		}
         trigger_event = {
             id =  dev_events.151
             days = 5
@@ -1268,4 +1377,3 @@ japan_events.22 = {#Japan attacks USA and western nations
 	    }
     }
 }
-

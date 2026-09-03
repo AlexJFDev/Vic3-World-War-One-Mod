@@ -338,7 +338,7 @@ dev_events.4 = {
         }
         c:GER = {
             trigger_event = {
-                id = world_war_two_initiation_events.14
+                id = dev_events.178
                 days = 5
             }
         }
@@ -7521,6 +7521,31 @@ dev_events.150 = {
         }
         scope:sino_japan_war_diplo_play = {
 			add_initiator_backers = { c:SIA }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_TENASSERIM.region_state:BIC
+            }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_SHAN_STATES.region_state:BIC
+            }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_PEGU.region_state:BIC
+            }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_KACHIN.region_state:BIC
+            }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_BURMA.region_state:BIC
+            }
 		}
     }
 
@@ -7533,6 +7558,31 @@ dev_events.150 = {
         }
         scope:sino_japan_war_diplo_play = {
 			add_initiator_backers = { c:SIA }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_TENASSERIM.region_state:BIC
+            }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_SHAN_STATES.region_state:BIC
+            }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_PEGU.region_state:BIC
+            }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_KACHIN.region_state:BIC
+            }
+            add_war_goal = {
+                holder = c:SIA
+                type = conquer_state
+                target_state = s:STATE_BURMA.region_state:BIC
+            }
 		}
     }
 
@@ -8785,5 +8835,72 @@ dev_events.177 = {
 			    }
 		    }
 	    }
+    }
+}
+
+dev_events.178 = {
+    type = country_event
+
+    title = dev_events.178.t
+    desc = dev_events.178.d
+    flavor = dev_events.178.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/dday.dds"
+    }
+    
+    option = {
+        name = dev_events.178.a
+        default_option = yes
+        trigger = { is_player = yes }
+    }
+
+    option = {
+        name = dev_events.178.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = taken_by_suprise_3
+            years = 2
+            is_decaying = yes
+		}
+		s:STATE_RUHR = {
+			add_devastation = 30
+		}
+        s:STATE_RHINELAND = {
+			add_devastation = 30
+		}
+        s:STATE_NORTH_RHINE = {
+			add_devastation = 30
+		}
+        s:STATE_HESSE = {
+			add_devastation = 30
+		}
+        s:STATE_WESTPHALIA = {
+			add_devastation = 30
+		}
+        s:STATE_HANNOVER = {
+			add_devastation = 30
+		}
+        s:STATE_ELBE = {
+			add_devastation = 30
+		}
+        s:STATE_LOWER_SILESIA = {
+			add_devastation = 30
+		}
+        s:STATE_UPPER_SILESIA = {
+			add_devastation = 30
+		}
+        s:STATE_SAXONY = {
+			add_devastation = 30
+		}
+        s:STATE_BRANDENBURG = {
+			add_devastation = 30
+		}
     }
 }

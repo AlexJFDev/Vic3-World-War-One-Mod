@@ -20,7 +20,7 @@ allies_peace_deal.3 = {
 		create_country = { #Communist Germany
 	       tag = CGR
 	       origin = this
-	       state = s:STATE_BRANDENBURG.region_state:RUS
+	       state = s:STATE_BRANDENBURG.region_state:GER
             on_created = {
              activate_law = law_type:law_council_republic
              activate_law = law_type:law_single_party_state
@@ -118,12 +118,6 @@ allies_peace_deal.3 = {
 			remove_diplomatic_pact = {
 			  country = c:FIN
 			  type = protectorate
-		    }
-		}
-		c:NET = {
-			create_diplomatic_pact = {
-			  country = c:DEI
-			  type = colony
 		    }
 		}
         c:GER = {
@@ -233,8 +227,9 @@ allies_peace_deal.3 = {
 		      limit = {
 			   exists = c:GER
 			    owner = {
-				  OR = {
-					c:GER = THIS
+				    OR = {
+					  c:GER = THIS
+					  c:RUS = THIS
 				    }
 			    }
 		        }
@@ -246,8 +241,9 @@ allies_peace_deal.3 = {
 		      limit = {
 			   exists = c:GER
 			    owner = {
-				  OR = {
-					c:GER = THIS
+				    OR = {
+					  c:GER = THIS
+					  c:RUS = THIS
 				    }
 			    }
 		        }
@@ -259,8 +255,9 @@ allies_peace_deal.3 = {
 		      limit = {
 			   exists = c:GER
 			    owner = {
-				  OR = {
-					c:GER = THIS
+				    OR = {
+					  c:GER = THIS
+					  c:RUS = THIS
 				    }
 			    }
 		        }
@@ -586,10 +583,20 @@ allies_peace_deal.4 = {
 			  country = c:ICH
 			  type = puppet
 		    }
+			remove_diplomatic_pact = {
+			  country = c:DEI
+			  type = protectorate
+		    }
         }
 		c:FRA = {
 			create_diplomatic_pact = {
 			  country = c:ICH
+			  type = colony
+		    }
+        }
+		c:NET = {
+            create_diplomatic_pact = {
+			  country = c:DEI
 			  type = colony
 		    }
         }
@@ -649,7 +656,6 @@ allies_peace_deal.6 = {
 		ROOT.ruler = {
 			set_ideology = ideology:ideology_moderate
 		}
-		set_capital = STATE_KANTO
 	}
 
     event_image = {
