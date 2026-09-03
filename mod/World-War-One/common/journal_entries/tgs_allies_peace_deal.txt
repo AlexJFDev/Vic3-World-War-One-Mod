@@ -21,7 +21,13 @@
     immediate = {}
 
     complete = {
-		owns_entire_state_region = STATE_BRANDENBURG
+		c:GER = {
+            any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
+        }
 	}
 
 	on_complete = {
@@ -63,7 +69,13 @@ je_allies_peace_deal_round_4 = {
     immediate = {}
 
     complete = {
-		owns_entire_state_region = STATE_KANTO
+		c:JAP = {
+            any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
+        }
 	}
 
 	on_complete = {

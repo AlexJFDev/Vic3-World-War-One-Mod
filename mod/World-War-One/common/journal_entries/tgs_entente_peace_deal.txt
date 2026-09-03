@@ -5,8 +5,8 @@
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
@@ -15,29 +15,32 @@
 	}
 
     possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
-		    }
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 	    }
-	  c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
-        } 
-      c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
+	    c:GER = {
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
+        }
+        c:AUS = {
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
         } 
 	}
     
@@ -48,7 +51,7 @@
     immediate = {
 		trigger_event = { 
             id = entente_peace_deal.1
-            days = 30
+            days = 5
 			popup = yes
         }
 		set_global_variable = entente_victory
@@ -185,8 +188,8 @@ je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparation
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
             has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
             has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
@@ -194,31 +197,26 @@ je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparation
 		}
 	}
 
-    possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
-		    }
+    possible = {
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 	    }
-	  c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
-        } 
-      c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
-        } 
+	    c:GER = {
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
+        }
 	}
     
     scripted_button = war_rep_1_button 
@@ -358,8 +356,8 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
             has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
             has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
@@ -369,35 +367,30 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 
     possible = { 
 		c:RUS = {
-		  OR = {
+		    OR = {
 			  has_law = law_type:law_council_republic
 			  has_law = law_type:law_anarchy
 		    } 
 		}
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
-		    }
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 	    }
-	  c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
-        } 
-      c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
-        } 
+	    c:GER = {
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
+        }
 	}
     
     scripted_button = how_big_poland_1_button 
@@ -458,7 +451,7 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 		  limit = { 
 			c:FRA ?= this
 		  }
-		   c:FRA = {
+		   c:GER = {
             trigger_event = {
                 id = entente_peace_deal.4
                 days = 5
@@ -538,8 +531,8 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
             has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
             has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
@@ -550,33 +543,28 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 		}
 	}
 
-    possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
-		    }
+    possible = {
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 	    }
-	  c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
+        c:AUS = {
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
         } 
-      c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
-        } 
-	  c:ITA = {
-		  has_variable = entente_participant
+	    c:ITA = {
+		   has_variable = entente_participant
 	    }
 	}
     
@@ -637,7 +625,7 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 		  limit = { 
 			c:FRA ?= this
 		  }
-		   c:ITA = {
+		   c:AUS = {
             trigger_event = {
                 id = entente_peace_deal.5
                 days = 5
@@ -717,14 +705,14 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
             has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
             has_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
 			has_global_variable = entente_deal_round_5_complete
 		}
-	  c:ITA = {
+	    c:ITA = {
           has_variable = central_powers_participant
 		}
 	}
@@ -732,30 +720,22 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
     possible = { 
 	   has_variable = entente_participant
 	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
-             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
-		    }
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+            has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 	    }
-	  c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
-        } 
-      c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
-        } 
-	  c:ITA = {
-		   has_variable = central_powers_participant
+	    c:ITA = {
+		    has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
 	    }
 	}
     
@@ -896,51 +876,43 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
             has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
             has_global_variable = entente_deal_round_6_how_big_greece_prop_3_won
 			has_global_variable = entente_deal_round_6_complete
 		}
-	  c:GRE = {
+	    c:GRE = {
           has_variable = entente_participant
 		}
-	  c:TUR = {
+	    c:TUR = {
           has_variable = central_powers_participant
 		}	
 	}
 
     possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
-             has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
-             has_global_variable = entente_deal_round_6_how_big_greece_prop_3_won
-		    }
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
+            has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
+            has_global_variable = entente_deal_round_6_how_big_greece_prop_3_won
 	    }
-	    c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
-        } 
-        c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
-        } 
 		c:GRE = {
-          has_variable = entente_participant
+            has_variable = entente_participant
 		}	
 		c:TUR = {
-          has_variable = central_powers_participant
+		    has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
 		}	
 	}
     
@@ -1080,46 +1052,38 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_7_arab_states_prop_1_won
             has_global_variable = entente_deal_round_7_arab_states_prop_2_won
             has_global_variable = entente_deal_round_7_arab_states_prop_3_won
 			has_global_variable = entente_deal_round_7_complete
 		}
-	  c:TUR = {
+	    c:TUR = {
           has_variable = central_powers_participant
 		}
 	}
 
     possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_7_arab_states_prop_1_won
-             has_global_variable = entente_deal_round_7_arab_states_prop_2_won
-             has_global_variable = entente_deal_round_7_arab_states_prop_3_won
-			 has_global_variable = entente_deal_round_7_complete
-		    }
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_7_arab_states_prop_1_won
+            has_global_variable = entente_deal_round_7_arab_states_prop_2_won
+            has_global_variable = entente_deal_round_7_arab_states_prop_3_won
+			has_global_variable = entente_deal_round_7_complete
 	    }
-	    c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
-        } 
-        c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
-        } 
 		c:TUR = {
-          has_variable = central_powers_participant
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
 		}
 	}
     
@@ -1259,8 +1223,8 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_8_how_big_russia_prop_1_won
             has_global_variable = entente_deal_round_8_how_big_russia_prop_2_won
             has_global_variable = entente_deal_round_8_how_big_russia_prop_3_won
@@ -1270,36 +1234,40 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 	}
 
     possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_8_how_big_russia_prop_1_won
-             has_global_variable = entente_deal_round_8_how_big_russia_prop_2_won
-             has_global_variable = entente_deal_round_8_how_big_russia_prop_3_won
-			 has_global_variable = entente_deal_round_8_complete
-			 has_global_variable = russian_revolution_2
-		    }
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_8_how_big_russia_prop_1_won
+            has_global_variable = entente_deal_round_8_how_big_russia_prop_2_won
+            has_global_variable = entente_deal_round_8_how_big_russia_prop_3_won
+			has_global_variable = entente_deal_round_8_complete
+			has_global_variable = russian_revolution_2
 	    }
 	    c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
         } 
         c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
         }  
-	  c:RUS = {
-		  NOT = {
-			has_law = law_type:law_council_republic
-		  }
+	    c:RUS = {
+		    NOR = {
+			  has_law = law_type:law_council_republic
+			  has_law = law_type:law_anarchy
+		    }
 		}
 	}
     
@@ -1356,16 +1324,16 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 
     on_complete = {
         set_global_variable = entente_deal_round_8_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		  c:RUS = {
-            trigger_event = {
-                id = entente_peace_deal.9
-                days = 5
+        If = {
+		    limit = { 
+			 c:FRA ?= this
+		    }
+		    c:GER = {
+                trigger_event = {
+                  id = entente_peace_deal.9
+                  days = 5
+                }
             }
-           }
 		}
     }
 
@@ -1439,8 +1407,8 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
             has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
             has_global_variable = entente_deal_round_9_how_big_japan_prop_3_won
@@ -1454,35 +1422,29 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
 		}
 	}
 
-    possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
-             has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
-             has_global_variable = entente_deal_round_9_how_big_japan_prop_3_won
-			 has_global_variable = entente_deal_round_9_complete
-		    }
+    possible = {
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_anarchy
+			has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
+            has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
+            has_global_variable = entente_deal_round_9_how_big_japan_prop_3_won
+			has_global_variable = entente_deal_round_9_complete
 	    }
 	    c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
-        } 
-        c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
+			has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
         }  
-	  c:JAP = {
+	    c:JAP = {
 			has_variable = entente_participant
 		}
-	  c:USA = {
+	    c:USA = {
 			has_variable = entente_participant
 		}
 	}
@@ -1623,8 +1585,8 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_variable = entente_participant
-	  NOT = {
+	    has_variable = entente_participant
+	    NOR = {
 			has_global_variable = entente_deal_round_10_german_colonies_prop_1_won
             has_global_variable = entente_deal_round_10_german_colonies_prop_2_won
             has_global_variable = entente_deal_round_10_german_colonies_prop_3_won
@@ -1635,33 +1597,27 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
 		}
 	}
 
-    possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
-	    NOT = {
-		    OR = {
-			 has_law = law_type:law_council_republic
-			 country_has_primary_culture = cu:japanese
-			 country_has_primary_culture = cu:han
-			 has_global_variable = entente_deal_round_10_german_colonies_prop_1_won
-             has_global_variable = entente_deal_round_10_german_colonies_prop_2_won
-             has_global_variable = entente_deal_round_10_german_colonies_prop_3_won
-			 has_global_variable = entente_deal_round_10_complete
-		    }
+    possible = {
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
+	    NOR = {
+			has_law = law_type:law_council_republic
+			country_has_primary_culture = cu:japanese
+			country_has_primary_culture = cu:han
+			has_global_variable = entente_deal_round_10_german_colonies_prop_1_won
+            has_global_variable = entente_deal_round_10_german_colonies_prop_2_won
+            has_global_variable = entente_deal_round_10_german_colonies_prop_3_won
+			has_global_variable = entente_deal_round_10_complete
 	    }
 	    c:GER = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_HESSE
-		    }
-        } 
-        c:AUS = {
-          has_variable = central_powers_participant
-		    NOT = {
-			   owns_entire_state_region = STATE_AUSTRIA
-		    }
-        } 
-	  c:ITA = {
+            has_variable = central_powers_participant
+		    any_scope_treaty = {
+				any_scope_article = {
+				    has_type = partition
+				}
+			}
+        }  
+	    c:ITA = {
 			has_variable = entente_participant
 		}
 	}

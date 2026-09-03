@@ -286,6 +286,117 @@ germany_events.2 = { #November Revolution
 			    }
 		    }
 	    }
+        s:STATE_ALSACE_LORRAINE = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:FRA
+            }
+        }
+        If = {
+           limit = {
+			  c:JAP = {
+				has_variable = entente_participant
+			  }
+			}
+		  s:STATE_SHANDONG = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+            }
+          s:STATE_EASTERN_NEW_GUINEA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+           }
+		  s:STATE_BOUGAINVILLE = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+          }
+		  s:STATE_WEST_MICRONESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+          }
+		  s:STATE_EAST_MICRONESIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+         }
+		  s:STATE_NAURU = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+          }
+		  s:STATE_TONGA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:NGG
+			    owner = {
+				  OR = {
+					c:NGG = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+           }
+	    }
         add_modifier = {
           name = socialist_buff_1
           years = 20
@@ -603,6 +714,97 @@ germany_events.6 = { #Austria-Hungary capitulates
 			    }
 		    }
 	    }
+        s:STATE_SOUTH_TYROL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+        s:STATE_ISTRIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+        s:STATE_NORTHERN_TRANSYLVANIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+            }
+		s:STATE_SOUTHERN_TRANSYLVANIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BANAT = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BEKES = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BUKOVINA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
         owner.ruler ?= {
 			remove_character_role = ruler
 		    add_character_role = agitator

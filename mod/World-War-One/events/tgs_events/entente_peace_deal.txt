@@ -45,34 +45,34 @@ entente_peace_deal.1 = {
 				c:FRA = THIS
 			}
         c:GER = {
-		remove_diplomatic_pact = {
-			country = c:LUX
-			type = puppet
-		}
-        remove_diplomatic_pact = {
-			country = c:POL
-			type = protectorate
-		}
-        remove_diplomatic_pact = {
-			country = c:LIT
-			type = protectorate
-		}
-		remove_diplomatic_pact = {
-			country = c:LAT
-			type = protectorate
-		}
-		remove_diplomatic_pact = {
-			country = c:EST
-			type = protectorate
-		}
-		remove_diplomatic_pact = {
-			country = c:UKR
-			type = protectorate
-		}
-		remove_diplomatic_pact = {
-			country = c:AUS
-			type = alliance
-		}
+            remove_diplomatic_pact = {
+			  country = c:LUX
+			  type = puppet
+		    }
+            remove_diplomatic_pact = {
+			  country = c:POL
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:LIT
+			  type = protectorate
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:LAT
+			  type = protectorate
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:EST
+			  type = protectorate
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:UKR
+			  type = protectorate
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:AUS
+			  type = alliance
+		    }
 		}
 		c:FRA = {
 		    remove_diplomatic_pact = {
@@ -86,60 +86,20 @@ entente_peace_deal.1 = {
 			  type = colony
 		    }
         }
-		s:STATE_HESSE = {
+		s:STATE_VENETIA = {
            random_scope_state = {
 		      limit = {
-			   exists = c:FRA
+			   exists = c:AUS
 			    owner = {
 				  OR = {
-					c:FRA = THIS
+					c:AUS = THIS
 				    }
 			    }
 		        }
-		      set_state_owner = c:GER
+		      set_state_owner = c:ITA
             }
         }
-		s:STATE_ALSACE_LORRAINE = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:FRA
-            }
-			add_claim = c:GER
-        } 
-		s:STATE_HUDAVENDIGAR = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:FRA
-			    owner = {
-				  OR = {
-					c:FRA = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:TUR
-            }
-        }
-		s:STATE_AUSTRIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:FRA
-			    owner = {
-				  OR = {
-					c:FRA = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:AUS
-            }
-        }
-		s:STATE_PIEDMONT = {
+		s:STATE_LOMBARDY = {
            random_scope_state = {
 		      limit = {
 			   exists = c:AUS
@@ -197,38 +157,6 @@ entente_peace_deal.1 = {
                 days = 5
             }
 		}
-		If = {
-           limit = {
-			 NOT = {
-               exists = c:BEL
-			}
-		   }
-           create_country = {
-	       tag = BEL
-	       origin = this
-	       state = s:STATE_FLANDERS.region_state:GER
-           on_created = { 
-           activate_law = law_type:law_monarchy
-           activate_law = law_type:law_universal_suffrage
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
-           }
-           s:STATE_WALLONIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:BEL
-            }
-            }
-        }
 		c:UKR = {
 			trigger_event = {
                 id = dev_events.7
@@ -272,10 +200,6 @@ entente_peace_deal.1 = {
             }
         }
         c:ITA = {
-			trigger_event = {
-                id = dev_events.72
-                days = 15
-            }
 			trigger_event = {
                 id = dev_events.72
                 days = 15
@@ -376,104 +300,6 @@ entente_peace_deal.1 = {
 		      set_state_owner = c:ROM
             }
         }
-		If = {
-           limit = {
-			  c:JAP = {
-				has_variable = entente_participant
-			  }
-			}
-		  s:STATE_SHANDONG = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:JAP
-            }
-            }
-          s:STATE_EASTERN_NEW_GUINEA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:NGG
-			    owner = {
-				  OR = {
-					c:NGG = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:JAP
-            }
-           }
-		  s:STATE_BOUGAINVILLE = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:NGG
-			    owner = {
-				  OR = {
-					c:NGG = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:JAP
-            }
-          }
-		  s:STATE_WEST_MICRONESIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:NGG
-			    owner = {
-				  OR = {
-					c:NGG = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:JAP
-            }
-          }
-		  s:STATE_EAST_MICRONESIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:NGG
-			    owner = {
-				  OR = {
-					c:NGG = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:JAP
-            }
-         }
-		  s:STATE_NAURU = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:NGG
-			    owner = {
-				  OR = {
-					c:NGG = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:JAP
-            }
-          }
-		  s:STATE_TONGA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:NGG
-			    owner = {
-				  OR = {
-					c:NGG = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:JAP
-            }
-           }
-	    }
 		c:GER = {
         remove_diplomatic_pact = {
 			country = c:TOG
@@ -1176,7 +1002,7 @@ entente_peace_deal.1 = {
                 days = 5
             }
         }
-		s:STATE_SCHLEFRAG_HOLSTEIN = {
+		s:STATE_SCHLESWIG_HOLSTEIN = {
 			set_owner_of_provinces = {
 				country = c:DEN
 				provinces = { x78B203 xE3C876 }
@@ -1479,7 +1305,7 @@ entente_peace_deal.2 = { #Round 1 result
         create_country = { #Holstein
 	       tag = HOL
 	       origin = this
-	       state = s:STATE_SCHLEFRAG_HOLSTEIN.region_state:GER
+	       state = s:STATE_SCHLESWIG_HOLSTEIN.region_state:GER
            on_created = { 
            activate_law = law_type:law_parliamentary_republic
            activate_law = law_type:law_universal_suffrage
@@ -1521,7 +1347,7 @@ entente_peace_deal.2 = { #Round 1 result
 		s:STATE_RHINELAND = { 
 			add_claim = c:GER
 		}
-		s:STATE_SCHLEFRAG_HOLSTEIN = { 
+		s:STATE_SCHLESWIG_HOLSTEIN = { 
 			add_claim = c:GER
 		}        
     }
@@ -1783,7 +1609,7 @@ entente_peace_deal.2 = { #Round 1 result
         create_country = { #Holstein
 	       tag = HOL
 	       origin = this
-	       state = s:STATE_SCHLEFRAG_HOLSTEIN.region_state:GER
+	       state = s:STATE_SCHLESWIG_HOLSTEIN.region_state:GER
            on_created = { 
            activate_law = law_type:law_parliamentary_republic
            activate_law = law_type:law_universal_suffrage
@@ -1851,7 +1677,7 @@ entente_peace_deal.2 = { #Round 1 result
 		s:STATE_RHINELAND = { 
 			add_claim = c:GER
 		}   
-		s:STATE_SCHLEFRAG_HOLSTEIN = { 
+		s:STATE_SCHLESWIG_HOLSTEIN = { 
 			add_claim = c:GER
 		}    
     }
@@ -2527,20 +2353,6 @@ entente_peace_deal.5 = { #Round 4 result
         trigger = {
 			has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
 		}
-		s:STATE_SOUTH_TYROL = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-			  add_claim = c:AUS
-            }
-        }
 		s:STATE_TYROL = {
            random_scope_state = {
 		      limit = {
@@ -2576,20 +2388,6 @@ entente_peace_deal.5 = { #Round 4 result
 			    owner = {
 				  OR = {
 					c:YUG = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-			  add_claim = c:AUS
-            }
-        }
-		s:STATE_ISTRIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
 				    }
 			    }
 		        }
@@ -2638,34 +2436,6 @@ entente_peace_deal.5 = { #Round 4 result
         trigger = {
 			has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
 		}
-		s:STATE_SOUTH_TYROL = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-			  add_claim = c:AUS
-            }
-        }
-		s:STATE_ISTRIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-			  add_claim = c:AUS
-            }
-        }
 		s:STATE_DALMATIA = {
            random_scope_state = {
 		      limit = {
@@ -2693,34 +2463,6 @@ entente_peace_deal.5 = { #Round 4 result
         trigger = {
 			has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
 		}
-		s:STATE_SOUTH_TYROL = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-			  add_claim = c:AUS
-            }
-        }
-		s:STATE_ISTRIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-			  add_claim = c:AUS
-            }
-        }
 		c:ITA = {
             trigger_event = {
                 id = italy_events.10
