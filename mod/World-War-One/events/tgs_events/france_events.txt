@@ -70,8 +70,29 @@ france_events.15 = { #France surrender ww2
         name = france_events.5.a
         default_option = yes
         scope:world_war_two_diplo_play = {
-			add_war_support_change = { target = c:FRA value = -200 }
+			remove_target_backers = {
+              c:FRA
+            }
 		}
+        c:GER = {
+            create_diplomatic_pact = {
+			  country = c:FRA
+			  type = protectorate
+		    }
+        }
+        s:STATE_ALSACE_LORRAINE = {
+            random_scope_state = {
+		        limit = {
+			        exists = c:FRA
+			        owner = {
+				        OR = {
+					        c:FRA = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:GER
+            }
+        }
         ai_chance = {
             base = 1
         }

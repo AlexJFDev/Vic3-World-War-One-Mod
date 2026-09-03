@@ -171,20 +171,19 @@ je_atomic_bomb = {
 
     complete = {
         is_at_war = yes
-        has_variable = allies_participant
         has_technology_researched = nuclear_weapons
     }
 
     on_complete = {
         c:GER = {
             trigger_event = {
-               id = dev_events.142
+               id = dev_events.176
                days = 30
             }
         }
         c:JAP = {
             trigger_event = {
-               id = dev_events.142
+               id = dev_events.177
                days = 30
             }
         }

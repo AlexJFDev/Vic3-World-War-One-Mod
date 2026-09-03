@@ -535,11 +535,13 @@ turkey_events.7 = { #Countries refrain from intervening furthermore
         }
     }
 
-    option = { 
+    option = {
         name = turkey_events.7.a
         default_option = yes
         scope:turkish_independance_war_diplo_play = {
-			add_war_support_change = { target = root value = -200 }
+			remove_target_backers = {
+                who = root
+            } 
 		}
         ai_chance = {
 		base = 10

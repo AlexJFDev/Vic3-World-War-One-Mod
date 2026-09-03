@@ -11,7 +11,7 @@
       THIS = c:GER
 	}
 
-    possible = { 
+    possible = {
 	  has_global_variable = world_war_two_started
 	  is_diplomatic_play_enemy_of = c:FRA
 	  exists = c:GER
@@ -21,7 +21,7 @@
     immediate = {}
 
     complete = {
-		owns_entire_state_region = STATE_ILE_DE_FRANCE
+		c:FRA = { is_subject_of = c:GER }
 	}
 
 	on_complete = {

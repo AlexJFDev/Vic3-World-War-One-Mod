@@ -1467,10 +1467,6 @@ great_war_initiation_events.16 = {
 			  country = c:GBR
 			  months = 72
 		    }
-            trigger_event = { 
-               id = dev_events.42
-               days = 5
-            }
             trigger_event = {
                id = japan_events.10
                months = 4
@@ -1563,10 +1559,12 @@ great_war_initiation_events.24 = {
         default_option = yes
         trigger = { is_player = no }
         scope:world_war_one_diplo_play = {
-			add_war_support_change = { target = c:LUX value = -200 }
+			remove_target_backers = {
+              c:LUX
+            }
 		}
         c:GER = {
-		   create_diplomatic_pact = {
+		    create_diplomatic_pact = {
 			  country = c:LUX
 			  type = puppet
 		    }

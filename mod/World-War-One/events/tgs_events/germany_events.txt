@@ -266,8 +266,26 @@ germany_events.2 = { #November Revolution
         activate_law = law_type:law_subordinate_general_staff
         activate_law = law_type:law_true_neutrality
         scope:world_war_one_diplo_play = {
-			add_war_support_change = { target = c:GER value = -200 }
+			remove_initiator_backers = {
+               c:GER
+            }
 		}
+        create_treaty = {
+		  name = treaty_name_partition
+		  first_country = c:FRA
+		  second_country = c:GER
+
+		  is_draft = no
+		  binding_period = { years = 5 }
+
+		    articles_to_create = {
+			    {
+				  article = partition
+				  source_country = c:GER
+				  target_country = c:FRA
+			    }
+		    }
+	    }
         add_modifier = {
           name = socialist_buff_1
           years = 20
@@ -565,8 +583,26 @@ germany_events.6 = { #Austria-Hungary capitulates
         name = germany_events.6.a
         default_option = yes
         scope:world_war_one_diplo_play = {
-			add_war_support_change = { target = c:AUS value = -200 }
+			remove_initiator_backers = {
+               c:AUS
+            }
 		}
+        create_treaty = {
+		  name = treaty_name_partition
+		  first_country = c:FRA
+		  second_country = c:AUS
+
+		  is_draft = no
+		  binding_period = { years = 5 }
+
+		    articles_to_create = {
+			    {
+				  article = partition
+				  source_country = c:GER
+				  target_country = c:AUS
+			    }
+		    }
+	    }
         owner.ruler ?= {
 			remove_character_role = ruler
 		    add_character_role = agitator
@@ -623,8 +659,23 @@ germany_events.7 = {
         name = germany_events.7.a
         default_option = yes
         scope:world_war_one_diplo_play = {
-			add_war_support_change = { target = c:BUL value = -200 }
+			remove_initiator_backers = {
+               c:BUL
+            }
 		}
+        s:STATE_WESTERN_THRACE = {
+            random_scope_state = {
+		        limit = {
+			    exists = c:BUL
+			        owner = {
+				        OR = {
+					      c:BUL = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:GRE
+            }
+        }
         ai_chance = {
             base = 1
         }
@@ -694,8 +745,26 @@ germany_events.9 = { #Ottoman Empire capitulates
         name = germany_events.9.a
         default_option = yes
         scope:world_war_one_diplo_play = {
-			add_war_support_change = { target = c:TUR value = -200 }
+			remove_initiator_backers = {
+               c:TUR
+            }
 		}
+        create_treaty = {
+		  name = treaty_name_partition
+		  first_country = c:FRA
+		  second_country = c:TUR
+
+		  is_draft = no
+		  binding_period = { years = 5 }
+
+		    articles_to_create = {
+			    {
+				  article = partition
+				  source_country = c:TUR
+				  target_country = c:FRA
+			    }
+		    }
+	    }
         ai_chance = {
             base = 10
         }

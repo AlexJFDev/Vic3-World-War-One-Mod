@@ -60,39 +60,8 @@ axis_peace_deal.1 = {
 
     option = {
         name = axis_peace_deal.1.a
+        default_option = yes
         set_global_variable = ww2_france_defeat
-        s:STATE_ILE_DE_FRANCE = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		        set_state_owner = c:FRA
-            }
-        }
-        s:STATE_ALSACE_LORRAINE = {
-            random_scope_state = {
-		      limit = {
-			   exists = c:FRA
-			    owner = {
-				  OR = {
-					c:FRA = THIS
-				    }
-			    }
-		        }
-		        set_state_owner = c:GER
-            }
-        }
-        c:GER = {
-		    create_diplomatic_pact = {
-			  country = c:FRA
-			  type = protectorate
-		    }	
-        }
         scope:world_war_two_diplo_play = {
 			add_initiator_backers = {
                 who = c:FRA
@@ -106,8 +75,20 @@ axis_peace_deal.1 = {
 				target_country = c:FFR
             }
 		}
+        s:STATE_ALSACE_LORRAINE = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:GER
+            }
+        }
         c:FRA = {
-            set_capital = STATE_ILE_DE_FRANCE
             activate_law = law_type:law_single_party_state
             activate_law = law_type:law_outlawed_dissent
             trigger_event = {
@@ -163,54 +144,6 @@ axis_peace_deal.1 = {
             trigger_event = {
               id = dev_events.148
               days = 5
-            }
-        }
-        if = {
-            limit = { c:NET = { has_variable = allies_participant } }
-            c:GER = {
-                create_diplomatic_pact = {
-			     country = c:NET
-			     type = protectorate
-		        }	
-            }
-            c:NET = {
-                remove_diplomatic_pact = {
-			      country = c:DEI
-			      type = chartered_company
-		        }
-                remove_diplomatic_pact = {
-			      country = c:DEI
-			      type = dominion
-		        }
-                remove_diplomatic_pact = {
-			      country = c:DEI
-			      type = colony
-		        }
-            }
-            c:DEI = {
-                trigger_event = {
-                  id = dev_events.15
-                  days = 5
-                }
-            }
-        }
-        if = {
-            limit = { c:BEL = { has_variable = allies_participant } }
-            c:GER = {
-                create_diplomatic_pact = {
-			     country = c:BEL
-			     type = protectorate
-		        }	
-            }
-            c:BEL = {
-                remove_diplomatic_pact = {
-			      country = c:KON
-			      type = dominion
-		        }
-                remove_diplomatic_pact = {
-			      country = c:KON
-			      type = colony
-		        }
             }
         }
         if = {

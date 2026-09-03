@@ -2137,7 +2137,7 @@ dev_events.41 = { #Ai UK looses money after WW1
     }
 }
 
-dev_events.42 = { #Japan quits Mexican revolution
+dev_events.42 = {
     type = country_event
 
     title = dev_events.8.t
@@ -2156,14 +2156,6 @@ dev_events.42 = { #Japan quits Mexican revolution
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { is_player = no }
-        every_diplomatic_play = {
-			limit = {
-                initiator = c:RMX
-                target = c:MEX
-			}
-            add_war_support_change = { target = c:JAP value = -200 }   
-        }
     }
 }
 
@@ -7214,25 +7206,11 @@ dev_events.142 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
-    immediate = {
-        random_diplomatic_play = {
-			limit = { 
-              is_diplomatic_play_type = dp_world_war 
-            }
-            save_scope_as = world_war_two_diplo_play
-        }
-    }
+    immediate = {}
 
     option = {
         name = dev_events.10.a
         default_option = yes
-        trigger = { 
-            is_at_war = yes
-            NOT = { has_variable = allies_participant }
-        }
-        scope:world_war_two_diplo_play = {
-            add_war_support_change = { target = root value = -200 }  
-        }
     }
 }
 
@@ -8694,5 +8672,118 @@ dev_events.175 = {
 				who = root
 			}
         }
+    }
+}
+
+dev_events.176 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { 
+            is_at_war = yes
+            NOT = { has_variable = allies_participant }
+        }
+        scope:world_war_two_diplo_play = {
+            remove_initiator_backers = {
+              c:GER
+            }   
+        }
+        create_treaty = {
+		    name = treaty_name_partition
+		    first_country = c:GER
+		    second_country = c:USA
+
+		    is_draft = no
+		    binding_period = { years = 5 }
+
+		    articles_to_create = {
+			    {
+				    article = partition
+				    source_country = c:USA
+				    target_country = c:GER
+			    }
+		    }
+	    }
+    }
+}
+
+dev_events.177 = {
+    type = country_event
+
+    title = dev_events.10.t
+    desc = dev_events.10.d
+    flavor = dev_events.10.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:JAP ?= this }
+              target = { c:CHI ?= this }
+		    }
+           save_scope_as = sino_japan_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.10.a
+        default_option = yes
+        trigger = { 
+            is_at_war = yes
+            NOT = { has_variable = allies_participant }
+        }
+        scope:sino_japan_war_diplo_play = {
+            remove_initiator_backers = {
+              c:JAP
+            }   
+        }
+        create_treaty = {
+		    name = treaty_name_partition
+		    first_country = c:JAP
+		    second_country = c:USA
+
+		    is_draft = no
+		    binding_period = { years = 5 }
+
+		    articles_to_create = {
+			    {
+				    article = partition
+				    source_country = c:USA
+				    target_country = c:JAP
+			    }
+		    }
+	    }
     }
 }

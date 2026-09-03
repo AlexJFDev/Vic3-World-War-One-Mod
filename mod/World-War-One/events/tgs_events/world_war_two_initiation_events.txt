@@ -561,9 +561,17 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
               id = dev_events.80
               days = 5
             }
-            trigger_event = {
-              id = france_events.15
-              months = 4
+        }
+        if = {
+            limit = {
+               c:FRA = { is_player = no }
+               c:GER = { is_player = no }
+            }
+            c:FRA = {
+                trigger_event = {
+                   id = france_events.15
+                   months = 4
+                }
             }
         }
         ai_chance = {
@@ -671,9 +679,17 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
               id = dev_events.80
               days = 5
             }
-            trigger_event = {
-              id = france_events.15
-              months = 4
+        }
+        if = {
+            limit = {
+               c:FRA = { is_player = no }
+               c:GER = { is_player = no }
+            }
+            c:FRA = {
+                trigger_event = {
+                   id = france_events.15
+                   months = 4
+                }
             }
         }
         ai_chance = {

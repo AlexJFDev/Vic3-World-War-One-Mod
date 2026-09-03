@@ -129,11 +129,29 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		}
     }
 
-    option = { 
+    option = {
         name = russia_events.2.b
         scope:world_war_one_diplo_play = {
-            add_war_support_change = { target = c:RUS value = -200 }   
+            remove_target_backers = {
+              c:RUS
+            }   
         }
+        create_treaty = {
+		    name = treaty_name_partition
+		    first_country = c:GER
+		    second_country = c:RUS
+
+		    is_draft = no
+		    binding_period = { years = 5 }
+
+		    articles_to_create = {
+			    {
+				    article = partition
+				    source_country = c:RUS
+				    target_country = c:GER
+			    }
+		    }
+	    }
         ai_chance = {
 			base = 0
 		}
@@ -463,8 +481,26 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
     option = {
         name = russia_events.4.b
         scope:world_war_one_diplo_play = {
-            add_war_support_change = { target = c:RUS value = -200 }   
+            remove_target_backers = {
+              c:RUS
+            }   
         }
+        create_treaty = {
+		    name = treaty_name_partition
+		    first_country = c:GER
+		    second_country = c:RUS
+
+		    is_draft = no
+		    binding_period = { years = 5 }
+
+		    articles_to_create = {
+			    {
+				    article = partition
+				    source_country = c:RUS
+				    target_country = c:GER
+			    }
+		    }
+	    }
         trigger_event = {
             id = dev_events.72
             days = 5

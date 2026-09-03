@@ -311,26 +311,6 @@ entente_peace_deal.1 = {
             months = 120
         }
 		}
-		if = {
-           limit = {
-			  c:BUL = {
-				has_variable = central_powers_participant
-			  }
-			}
-           s:STATE_WESTERN_THRACE = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:BUL
-			    owner = {
-				  OR = {
-					c:BUL = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GRE
-            }
-            }
-		}
 		s:STATE_NORTHERN_TRANSYLVANIA = {
            random_scope_state = {
 		      limit = {

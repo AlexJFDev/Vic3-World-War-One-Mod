@@ -178,10 +178,7 @@ central_peace_deal.2 = { #Russia surrenders
 			on_created = {
 				activate_law = law_type:law_presidential_republic
                 activate_law = law_type:law_universal_suffrage
-                activate_law = law_type:law_mass_conscription	
-                scope:world_war_one_diplo_play = {
-                   add_war_support_change = { target = c:UBD value = -200 }   
-                }
+                activate_law = law_type:law_mass_conscription
 			}
 		}
 		s:STATE_TARTU = {
@@ -245,9 +242,6 @@ central_peace_deal.2 = { #Russia surrenders
                 activate_law = law_type:law_universal_suffrage
                 activate_law = law_type:law_mass_conscription	
 				activate_law = law_type:law_national_supremacy
-                scope:world_war_one_diplo_play = {
-                   add_war_support_change = { target = c:POL value = -200 }   
-                }
 			}
 		}
         s:STATE_LESSER_POLAND = {
@@ -321,10 +315,7 @@ central_peace_deal.2 = { #Russia surrenders
 			state = s:STATE_KIEV.region_state:RUS
 			on_created = {
 				activate_law = law_type:law_monarchy
-                activate_law = law_type:law_mass_conscription	
-                scope:world_war_one_diplo_play = {
-                   add_war_support_change = { target = c:UKR value = -200 }   
-                }
+                activate_law = law_type:law_mass_conscription
 			}
 		}
         s:STATE_CHERSON = {
