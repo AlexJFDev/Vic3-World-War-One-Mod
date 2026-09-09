@@ -792,6 +792,11 @@ joining_world_war_events.15 = { #Bulgaria joins
                 type = conquer_state
                 target_state = s:STATE_SKOPIA.region_state:SER
             }
+            add_war_goal = {
+                holder = c:BUL
+                type = conquer_state
+                target_state = s:STATE_EASTERN_SERBIA.region_state:SER
+            }
         }
         c:BUL = { set_variable = central_powers_participant }
         ai_chance = {
@@ -859,6 +864,11 @@ joining_world_war_events.16 = { #Romania joins
                 holder = c:AUS
                 type = conquer_state
                 target_state = s:STATE_MOLDAVIA.region_state:ROM
+            }
+            add_war_goal = {
+                holder = c:AUS
+                type = make_protectorate
+                target_country = c:ROM
             }
             add_war_goal = {
                 holder = c:ROM

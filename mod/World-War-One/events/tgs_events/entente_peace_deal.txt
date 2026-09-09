@@ -604,6 +604,32 @@ entente_peace_deal.1 = {
 		      set_state_owner = c:SER
             }
         }  
+		s:STATE_SKOPIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BUL
+			    owner = {
+				  OR = {
+					c:BUL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_EASTERN_SERBIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BUL
+			    owner = {
+				  OR = {
+					c:BUL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
 		create_country = { #Galicia
 			origin = root
 			tag = GAL

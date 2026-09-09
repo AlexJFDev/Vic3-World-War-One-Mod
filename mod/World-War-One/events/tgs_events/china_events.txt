@@ -1438,7 +1438,10 @@ china_events.9 = { #Kuomintang decides to capitulate or not
 		    add_character_role = agitator
             exile_character_with_martyrdom = yes
 		}
-        change_tag = YUE
+        trigger_event = {
+			id = dev_events.181
+			days = 5
+		}
         ai_chance = {
 		   base = 1
 	    }
@@ -2901,7 +2904,10 @@ china_events.30 = {
 		      set_state_owner = c:CHI
             }
         }
-        change_tag = YUE
+        trigger_event = {
+			id = dev_events.181
+			days = 5
+		}
         owner.ruler ?= {
 			kill_character = yes
 		}
