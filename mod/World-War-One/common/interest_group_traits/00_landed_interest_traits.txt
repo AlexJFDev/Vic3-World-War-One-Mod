@@ -140,3 +140,14 @@ ig_trait_outspoken_tozama = {
 		state_conscription_rate_mult = -0.1
 	}
 }
+
+ig_trait_samoderzhaviye = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_legitimacy_base_add = 10
+		country_authority_mult = 0.1
+		country_law_enactment_speed_mult = 0.1
+	}
+}

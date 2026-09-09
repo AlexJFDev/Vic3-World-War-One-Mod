@@ -98,7 +98,8 @@ ig_trait_imperial_enlightenment = {
 	min_approval = loyal
 
 	modifier = {
-		country_prestige_mult = 0.15
+		country_prestige_mult = 0.1
+		country_authority_mult = 0.1
 	}
 }
 
@@ -138,7 +139,7 @@ ig_trait_reformism = {
 	min_approval = loyal
 
 	modifier = {
-		country_tech_spread_mult = 0.125
+		country_tech_spread_mult = 0.15
 		country_law_enactment_speed_mult = 0.1
 	}
 }
@@ -148,7 +149,8 @@ ig_trait_fukoku_kyohei = {
 	min_approval = loyal
 
 	modifier = {
-		country_tech_spread_mult = 0.15
+		country_tech_spread_mult = 0.2
+		country_prestige_mult = 0.1
 	}
 }
 
@@ -158,5 +160,17 @@ ig_trait_beacon_of_science = {
 
 	modifier = {
 		country_tech_research_speed_mult = 0.05
+	}
+}
+
+ig_trait_home_of_the_free = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		state_migration_pull_mult = 0.15
+		state_radicalism_increases_violent_hostility_mult = -0.15
+		state_radicalism_increases_cultural_erasure_mult = -0.15
+		state_radicalism_increases_open_prejudice_mult = -0.15
 	}
 }

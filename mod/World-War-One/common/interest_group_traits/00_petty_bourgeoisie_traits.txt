@@ -149,3 +149,15 @@ ig_trait_protectors_of_constitution = {
 		country_legitimacy_base_add = 15
 	}
 }
+
+ig_trait_chauvinism = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_legitimacy_base_add = 10
+		country_prestige_mult = 0.1
+		state_loyalists_from_political_movements_mult = 0.1
+		military_formation_mobilization_speed_mult = 0.1
+	}
+}

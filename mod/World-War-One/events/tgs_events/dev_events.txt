@@ -1076,6 +1076,7 @@ dev_events.21 = {
         ig:ig_petty_bourgeoisie ?= {
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_french_constitutionalism
+            set_ig_trait = ig_trait:ig_trait_chauvinism
 		}
         ig:ig_intelligentsia ?= {
 			set_ig_trait = ig_trait:ig_trait_lingua_franca
@@ -1114,6 +1115,7 @@ dev_events.21 = {
         ig:ig_petty_bourgeoisie ?= {
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_french_constitutionalism
+            set_ig_trait = ig_trait:ig_trait_chauvinism
 		}
         ig:ig_intelligentsia ?= {
 			set_ig_trait = ig_trait:ig_trait_lingua_franca
@@ -2472,6 +2474,10 @@ dev_events.49 = {
         ig:ig_landowners ?= {
 			remove_ideology = ideology_republican_paternalistic
 			add_ideology = ideology_american_constitutionalism
+            set_ig_trait = ig_trait:ig_trait_xenophobia
+		}
+        ig:ig_intelligentsia ?= {
+			set_ig_trait = ig_trait:ig_trait_home_of_the_free
 		}
     }
 
@@ -2494,10 +2500,15 @@ dev_events.49 = {
         ig:ig_petty_bourgeoisie ?= {
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_american_constitutionalism
+            set_ig_trait = ig_trait:ig_trait_protectors_of_constitution
 		}
         ig:ig_landowners ?= {
 			remove_ideology = ideology_republican_paternalistic
 			add_ideology = ideology_american_constitutionalism
+            set_ig_trait = ig_trait:ig_trait_xenophobia
+		}
+        ig:ig_intelligentsia ?= {
+			set_ig_trait = ig_trait:ig_trait_home_of_the_free
 		}
     }
 }
@@ -8901,6 +8912,75 @@ dev_events.178 = {
 		}
         s:STATE_BRANDENBURG = {
 			add_devastation = 30
+		}
+    }
+}
+
+dev_events.179 = {
+    type = country_event
+
+    title = dev_events.27.t
+    desc = dev_events.27.d
+    flavor = dev_events.27.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.27.a
+        default_option = yes
+        every_country = {
+            limit = { 
+                OR = {
+                  is_in_geographic_region = geographic_region_africa
+                  is_in_geographic_region = geographic_region_asia
+                }
+                NOR = {
+                    c:TUR = THIS 
+                    c:JAP = THIS 
+                    c:GBR = THIS
+                    c:FRA = THIS
+                    c:RUS = THIS
+                    c:GER = THIS
+                    c:USA = THIS
+                    c:AST = THIS      
+                }
+            }
+            trigger_event = {
+               id = dev_events.180
+               days = 5
+            }
+        }
+    }
+}
+
+dev_events.180 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        ig:ig_intelligentsia ?= {
+            set_ig_trait = ig_trait:ig_trait_reformism
 		}
     }
 }
