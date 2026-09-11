@@ -97,9 +97,6 @@ law_frontier_colonization = {
 	modifier = {}
 
 	institution = institution_colonial_affairs
-	institution_modifier = {
-		state_migration_pull_unincorporated_mult = 0.05
-	}
 
 	can_impose = {
 		OR = {
@@ -186,9 +183,6 @@ law_colonial_resettlement = {
 	}
 
 	institution = institution_colonial_affairs
-	institution_modifier = {
-		state_migration_pull_unincorporated_mult = 0.1
-	}
 
 	can_impose = {
 		OR = {
@@ -287,17 +281,15 @@ law_colonial_exploitation = {
 	modifier = {
 		state_unincorporated_starting_wages_mult = -0.1
 		country_tension_decay_mult = -0.25
+		building_unincorporated_subsistence_output_mult = -0.1
+		building_group_bg_manufacturing_unincorporated_throughput_add = -0.1
+		building_group_bg_plantations_unincorporated_throughput_add = 0.1
+		building_group_bg_rubber_unincorporated_throughput_add = 0.1
+		building_group_bg_logging_unincorporated_throughput_add = 0.1
+		building_group_bg_mining_unincorporated_throughput_add = 0.1
 	}
 
 	institution = institution_colonial_affairs
-	institution_modifier = {
-		building_unincorporated_subsistence_output_mult = -0.05
-		building_group_bg_manufacturing_unincorporated_throughput_add = -0.05
-		building_group_bg_plantations_unincorporated_throughput_add = 0.05
-		building_group_bg_rubber_unincorporated_throughput_add = 0.05
-		building_group_bg_logging_unincorporated_throughput_add = 0.05
-		building_group_bg_mining_unincorporated_throughput_add = 0.05
-	}
 
 	can_impose = {
 		OR = {
