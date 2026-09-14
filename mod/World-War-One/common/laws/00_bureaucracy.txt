@@ -6,6 +6,7 @@
 		state_bureaucracy_population_base_cost_factor_mult = -0.3
 		country_aristocrats_pol_str_mult = 0.25
 		country_leverage_resistance_mult = 0.10
+		building_government_administration_throughput_add = -0.2
 	}
 	
 	on_enact = {
@@ -48,7 +49,8 @@ REPLACE_OR_CREATE:law_appointed_bureaucrats = {
 		country_bureaucrats_pol_str_mult = -0.1
 		political_movement_radicalism_add = 0.05
 		country_leverage_resistance_mult = 0.2
-		country_authority_add = 80
+		country_authority_add = 100
+		building_government_administration_throughput_add = -0.1
 	}
 
 	disallowing_laws = {
@@ -97,6 +99,7 @@ REPLACE_OR_CREATE:law_meritocratic_bureaucracy = {
 		country_bureaucrats_pol_str_mult = 0.2
 		country_academics_pol_str_mult = 0.05
 		country_leverage_resistance_mult = 0.1
+		building_government_administration_throughput_add = 0.1
 	}
 	on_enact = {
 		if = {
