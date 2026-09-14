@@ -21,7 +21,7 @@
             is_world_war = yes
 		    has_war_support = {
 		        target = ROOT
-		        value < 20
+		        value < 30
 		    }   
 		}
     }
@@ -42,14 +42,43 @@
     complete = {
         OR = {
             root.average_sol >= 13
+            c:FRA = { is_subject_of = c:GER }
+            c:GBR = { is_subject_of = c:GER }
             any_scope_war = {
                 is_world_war = yes
 		        has_war_support = {
 		          target = ROOT
-		          value > 30
+		          value > 40
 		        }   
 		    }
         }
+    }
+
+    on_complete = {
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
     }
     
     fail = {
@@ -143,6 +172,8 @@ je_war_fatigue_player_germany = {
     complete = {
         OR = {
             root.average_sol >= 13
+            c:FRA = { is_subject_of = c:GER }
+            c:GBR = { is_subject_of = c:GER }
             any_scope_war = {
                 is_world_war = yes
 		        has_war_support = {
@@ -151,6 +182,33 @@ je_war_fatigue_player_germany = {
 		        }   
 		    }
         }
+    }
+
+    on_complete = {
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
     }
     
     fail = {

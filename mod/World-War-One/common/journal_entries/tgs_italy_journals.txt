@@ -12,11 +12,11 @@
         has_variable = axis_participant
         game_date > 1943.9.1
         any_scope_war = {
-            is_diplomatic_play_type = dp_world_war
+            is_world_war = yes
 		    has_war_support = {
 		        target = ROOT
-		        value < 20
-		    }
+		        value < 30
+		    }   
 		}
         NOR = {
             c:USA = { is_subject_of = c:GER }
@@ -40,15 +40,22 @@
 
     complete = {
         OR = {
-           is_at_war = no
-           has_global_variable = ww2_italian_civil_war
-           c:USA = { is_subject_of = c:GER }
-           c:GBR = { is_subject_of = c:GER }
-           c:RUS = { is_subject_of = c:GER }
-           institution_investment_level = {
+            is_at_war = no
+            has_global_variable = ww2_italian_civil_war
+            c:USA = { is_subject_of = c:GER }
+            c:GBR = { is_subject_of = c:GER }
+            c:RUS = { is_subject_of = c:GER }
+            institution_investment_level = {
                 institution = institution_propaganda
                 value = 4
             }
+            any_scope_war = {
+                is_world_war = yes
+		        has_war_support = {
+		           target = ROOT
+		           value > 40
+		        }   
+		    }
         }
     }
 

@@ -14,6 +14,13 @@
         has_variable = ussr_continues_ww1
         is_at_war = yes
         root.average_sol < 12
+        any_scope_war = {
+            is_world_war = yes
+		    has_war_support = {
+		        target = ROOT
+		        value < 30
+		    }   
+		}
     }
 
     modifiers_while_active = { war_protests_2_modifier }
@@ -21,8 +28,42 @@
     complete = {
         OR = {
             is_at_war = no
-            root.average_sol >= 12 
+            root.average_sol >= 12
+            any_scope_war = {
+                is_world_war = yes
+		        has_war_support = {
+		          target = ROOT
+		          value > 40
+		        }   
+		    } 
         }
+    }
+
+    on_complete = {
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
     }
 
     weight = 1000
