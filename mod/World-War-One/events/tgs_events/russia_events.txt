@@ -277,6 +277,16 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      set_state_owner = c:POL
             }
         }
+        create_country = { #Belarus
+			origin = root
+			tag = BYE
+			state = s:STATE_MINSK.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_universal_suffrage
+                activate_law = law_type:law_mass_conscription
+			}
+		}
         create_country = { #Ukraine
 			origin = root
 			tag = UKR
@@ -360,6 +370,10 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			country = c:POL
 			type = protectorate
 		}	
+        create_diplomatic_pact = {
+			country = c:BYE
+			type = protectorate
+		}
 		create_diplomatic_pact = {
 			country = c:UKR
 			type = protectorate
@@ -486,6 +500,11 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         owner.heir ?= {
 			remove_character_role = heir
 		    add_character_role = agitator
+		}
+        add_modifier = {
+			name = petrograd_soviet
+            years = 10
+            is_decaying = yes
 		}
     }
 
@@ -919,6 +938,16 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      set_state_owner = c:POL
             }
         }
+        create_country = { #Belarus
+			origin = root
+			tag = BYE
+			state = s:STATE_MINSK.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_universal_suffrage
+                activate_law = law_type:law_mass_conscription
+			}
+		}
         create_country = { #Ukraine
 			origin = root
 			tag = UKR
@@ -1002,6 +1031,10 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 			country = c:POL
 			type = protectorate
 		}	
+        create_diplomatic_pact = {
+			country = c:BYE
+			type = protectorate
+		}
 		create_diplomatic_pact = {
 			country = c:UKR
 			type = protectorate
@@ -1098,6 +1131,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             id = dev_events.72
             days = 10
         }
+        remove_modifier = petrograd_soviet
         ai_chance = {
 			base = 0
 		}
@@ -1708,6 +1742,7 @@ russia_events.7 = { #Soviet uprising
 			country = c:FER
 			type = puppet
 		}
+        remove_modifier = petrograd_soviet
     }
 }
 

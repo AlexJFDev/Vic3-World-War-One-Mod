@@ -65,6 +65,10 @@ entente_peace_deal.1 = {
 			  country = c:EST
 			  type = protectorate
 		    }
+			remove_diplomatic_pact = {
+			  country = c:BYE
+			  type = protectorate
+		    }
 		    remove_diplomatic_pact = {
 			  country = c:UKR
 			  type = protectorate
@@ -398,10 +402,6 @@ entente_peace_deal.1 = {
                    id = dev_events.47
                    days = 5
                 }
-			trigger_event = {
-			       id = dev_events.171
-			       days = 5
-		        }
 		}
         s:STATE_MORAVIA = {
 	       random_scope_state = {
@@ -961,6 +961,10 @@ entente_peace_deal.1 = {
                 id = dev_events.47
                 days = 5
             }
+			trigger_event = {
+			    id = dev_events.171
+			    days = 5
+		    }
         } 
 		c:LAT = {
             trigger_event = {
@@ -983,6 +987,10 @@ entente_peace_deal.1 = {
                 id = dev_events.47
                 days = 5
             }
+			trigger_event = {
+			    id = dev_events.171
+			    days = 5
+		    }
         } 
 		c:LIT = {
             trigger_event = {
@@ -1001,7 +1009,17 @@ entente_peace_deal.1 = {
                 id = dev_events.47
                 days = 5
             }
+			trigger_event = {
+			    id = dev_events.171
+			    days = 5
+		    }
         } 
+		c:BYE = {
+			trigger_event = {
+			    id = dev_events.171
+			    days = 5
+		    }
+		}
 		c:CZH = {
             trigger_event = {
                 id = dev_events.1

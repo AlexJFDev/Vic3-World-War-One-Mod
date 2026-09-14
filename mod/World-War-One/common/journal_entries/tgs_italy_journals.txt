@@ -11,10 +11,17 @@
     possible = {
         has_variable = axis_participant
         game_date > 1943.9.1
-        NOT = {
-           has_global_variable = ww2_britain_defeat
-           has_global_variable = ww2_russia_defeat
-           has_global_variable = ww2_usa_defeat
+        any_scope_war = {
+            is_diplomatic_play_type = dp_world_war
+		    has_war_support = {
+		        target = ROOT
+		        value < 20
+		    }
+		}
+        NOR = {
+            c:USA = { is_subject_of = c:GER }
+            c:GBR = { is_subject_of = c:GER }
+            c:RUS = { is_subject_of = c:GER }
         }
     }
 
@@ -35,9 +42,9 @@
         OR = {
            is_at_war = no
            has_global_variable = ww2_italian_civil_war
-           has_global_variable = ww2_britain_defeat
-           has_global_variable = ww2_russia_defeat
-           has_global_variable = ww2_usa_defeat
+           c:USA = { is_subject_of = c:GER }
+           c:GBR = { is_subject_of = c:GER }
+           c:RUS = { is_subject_of = c:GER }
            institution_investment_level = {
                 institution = institution_propaganda
                 value = 4

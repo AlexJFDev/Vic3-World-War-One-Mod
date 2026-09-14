@@ -266,6 +266,7 @@ je_conquest_poland = {
             }
         }
         NOT = { owns_entire_state_region = STATE_WEST_PRUSSIA }
+        NOT = { is_diplomatic_play_enemy_of = c:POL }
     }
 
     immediate = {}
@@ -355,6 +356,7 @@ je_eastern_crusade = {
         c:RUS = {
             has_law = law_type:law_council_republic
         }
+        NOT = { is_diplomatic_play_enemy_of = c:RUS }
     }
 
     immediate = {}

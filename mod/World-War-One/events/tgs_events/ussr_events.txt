@@ -173,6 +173,16 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      set_state_owner = c:POL
             }
         }
+		create_country = { #Belarus
+			origin = root
+			tag = BYE
+			state = s:STATE_MINSK.region_state:RUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_universal_suffrage
+                activate_law = law_type:law_mass_conscription
+			}
+		}
         create_country = { #Ukraine
 			origin = root
 			tag = UKR
@@ -255,7 +265,11 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
         create_diplomatic_pact = {
 			country = c:POL
 			type = protectorate
-		}	
+		}
+		create_diplomatic_pact = {
+			country = c:BYE
+			type = protectorate
+		}
 		create_diplomatic_pact = {
 			country = c:UKR
 			type = protectorate
@@ -578,6 +592,7 @@ ussr_events.2 = { #The New Economic Policy part 1
         name = ussr_events.2.a
         default_option = yes
         activate_law = law_type:law_interventionism
+		activate_law = law_type:law_peasant_proprietorship
         trigger_event = {
             id = ussr_events.3
             years = 7
@@ -618,6 +633,7 @@ ussr_events.3 = { #The New Economic Policy part 2
         default_option = yes
         activate_law = law_type:law_command_economy
 		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_collectivized_agriculture
 		ai_chance = {
 			base = 1
 		}

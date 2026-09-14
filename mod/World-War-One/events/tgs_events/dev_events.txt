@@ -6514,6 +6514,7 @@ dev_events.126 = {
     immediate = {
         root = {
            annex = c:FER
+           annex = c:BYE
         }
     }
 
@@ -8949,7 +8950,8 @@ dev_events.179 = {
                     c:RUS = THIS
                     c:GER = THIS
                     c:USA = THIS
-                    c:AST = THIS      
+                    c:AST = THIS 
+                    c:POR = THIS     
                 }
             }
             trigger_event = {
@@ -9005,5 +9007,83 @@ dev_events.181 = {
         name = dev_events.8.a
         default_option = yes
         change_tag = YUE
+    }
+}
+
+dev_events.182 = {
+    type = country_event
+
+    title = dev_events.2.t
+    desc = dev_events.2.d
+    flavor = dev_events.2.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			  initiator = { c:SIB ?= this }
+              target = { c:RUS ?= this }
+		    }
+           save_scope_as = russian_civil_war_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        scope:russian_civil_war_diplo_play = {
+			add_target_backers = {
+				who = root
+			}
+            add_war_goal = {
+		        holder = c:SIB
+		        type = annex_country
+		        target_country = ROOT
+            }
+        }
+        activate_law = law_type:law_council_republic
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_outlawed_dissent
+        activate_law = law_type:law_command_economy
+        activate_law = law_type:law_surveillance_state
+        activate_law = law_type:law_collectivized_agriculture
+        activate_law = law_type:law_womens_suffrage
+        activate_law = law_type:law_state_atheism
+        activate_law = law_type:law_public_health_insurance
+        activate_law = law_type:law_public_schools
+        activate_law = law_type:law_compulsory_primary_school
+        activate_law = law_type:law_closed_borders
+        activate_law = law_type:law_appointed_bureaucrats
+        activate_law = law_type:law_graduated_taxation
+        activate_law = law_type:law_corporatized_unions
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = dev_events.2.a
+        default_option = yes
+        scope:russian_civil_war_diplo_play = {
+			add_initiator_backers = {
+				who = root
+			}
+            add_war_goal = {
+		        holder = c:RUS
+		        type = annex_country
+		        target_country = ROOT
+            }
+        }
+        ai_chance = {
+		  base = 0
+	    }
     }
 }

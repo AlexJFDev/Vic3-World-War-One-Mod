@@ -130,12 +130,14 @@ war_protests_1_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     political_movement_radicalism_add = 0.5
     unit_army_offense_mult = -0.1
+    building_training_rate_mult = -0.6
 }
 
 war_protests_2_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    political_movement_radicalism_add = 0.4
+    political_movement_radicalism_add = 0.7
     unit_army_offense_mult = -0.3
+    building_training_rate_mult = -0.6
 }
 
 war_protests_3_modifier = {
@@ -361,17 +363,20 @@ war_fatigue_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     political_movement_radicalism_add = 0.8
     unit_army_offense_mult = -0.15
+    building_training_rate_mult = -0.5
 }
 
 war_fatigue_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     political_movement_radicalism_add = 0.5
+    building_training_rate_mult = -0.3
 }
 
 war_fatigue_3 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     political_movement_radicalism_add = 0.3
     country_legitimacy_base_add = -30
+    building_training_rate_mult = -0.2
 }
 
 fragile_unity_modifier = {
@@ -1400,7 +1405,8 @@ money_buff_5 = {
 
 proletarian_fervor = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-    interest_group_ig_trade_unions_pol_str_mult = 0.3
+    interest_group_ig_trade_unions_pol_str_mult = 0.5
+    political_movement_radicalism_add = 0.15
 }
 
 made_in_germany = {
@@ -1559,4 +1565,10 @@ production_buff_1 = {
 recently_partitioned = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_prestige_mult = -0.3
+}
+
+petrograd_soviet = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	country_authority_mult = -0.3
+    interest_group_ig_trade_unions_pol_str_mult = 0.6
 }
