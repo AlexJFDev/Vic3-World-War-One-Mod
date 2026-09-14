@@ -156,6 +156,11 @@ je_russian_civil_war_sov = {
     
     possible = {
         is_diplomatic_play_enemy_of = c:SIB
+        NOR = {
+            is_diplomatic_play_enemy_of = c:GER
+            is_diplomatic_play_enemy_of = c:AUS
+            is_diplomatic_play_enemy_of = c:TUR
+        }
     }
 
     modifiers_while_active = { russian_civil_war_sov }

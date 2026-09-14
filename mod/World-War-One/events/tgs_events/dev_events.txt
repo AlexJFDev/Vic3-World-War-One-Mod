@@ -5547,7 +5547,7 @@ dev_events.112 = {
         }
         add_modifier = {
 			name = taken_by_suprise_4
-            months = 12
+            months = 6
             is_decaying = yes
 		}
     }
@@ -9085,5 +9085,39 @@ dev_events.182 = {
         ai_chance = {
 		  base = 0
 	    }
+    }
+}
+
+dev_events.183 = {
+    type = country_event
+
+    title = dev_events.8.t
+    desc = dev_events.8.d
+    flavor = dev_events.8.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_scope_war = {
+			save_scope_as = ongoing_war
+		}
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        scope:ongoing_war = {
+			add_war_war_support = {
+				target = ROOT
+				value = -90
+			}
+		}
     }
 }

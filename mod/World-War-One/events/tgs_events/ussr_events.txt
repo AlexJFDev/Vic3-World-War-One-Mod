@@ -564,6 +564,10 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
         set_relations = { country = c:SPA value = -50 }
         set_relations = { country = c:AUS value = -50 }
         set_relations = { country = c:JAP value = -50 }
+		if = {
+			limit = { has_modifier = revolution_stabilization_buff_2 }
+			remove_modifier = revolution_stabilization_buff_2
+		}
 		ai_chance = {
 			base = 0
 		}

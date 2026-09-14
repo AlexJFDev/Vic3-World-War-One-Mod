@@ -13,14 +13,17 @@
         is_player = no
         game_date > 1917.1.1
         has_variable = central_powers_participant
-        root.average_sol < 16
+        root.average_sol < 12
         is_at_war = yes
         NOT = { has_global_variable = world_war_1_over }
         NOT = { has_variable = germany_war_fatigue }
-    }
-
-    complete = {
-        root.average_sol >= 17
+        any_scope_war = {
+            is_world_war = yes
+		    has_war_support = {
+		        target = ROOT
+		        value < 20
+		    }   
+		}
     }
 
     immediate = {
@@ -35,6 +38,19 @@
     modifiers_while_active = {
 		war_fatigue_1
 	}
+
+    complete = {
+        OR = {
+            root.average_sol >= 13
+            any_scope_war = {
+                is_world_war = yes
+		        has_war_support = {
+		          target = ROOT
+		          value > 30
+		        }   
+		    }
+        }
+    }
     
     fail = {
         any_civil_war = {
@@ -42,7 +58,28 @@
 		}
     }
 
-    on_fail = { 
+    on_fail = {
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
         random_civil_war = {
 			add_civil_war_progress = -100
 		}
@@ -81,6 +118,13 @@ je_war_fatigue_player_germany = {
         is_at_war = yes
         NOT = { has_global_variable = world_war_1_over }
         NOT = { has_variable = germany_war_fatigue }
+        any_scope_war = {
+            is_world_war = yes
+		    has_war_support = {
+		        target = ROOT
+		        value < 20
+		    }   
+		}
     }
 
     immediate = {
@@ -97,7 +141,16 @@ je_war_fatigue_player_germany = {
 	}
 
     complete = {
-        root.average_sol >= 13
+        OR = {
+            root.average_sol >= 13
+            any_scope_war = {
+                is_world_war = yes
+		        has_war_support = {
+		          target = ROOT
+		          value > 30
+		        }   
+		    }
+        }
     }
     
     fail = {
@@ -107,6 +160,27 @@ je_war_fatigue_player_germany = {
     }
 
     on_fail = { 
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
         random_civil_war = {
 			add_civil_war_progress = -100
 		}
