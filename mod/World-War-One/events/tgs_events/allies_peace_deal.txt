@@ -372,6 +372,19 @@ allies_peace_deal.4 = {
 		        set_state_owner = c:JAP
             }
         }
+		s:STATE_SAKHALIN = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:JAP
+            }
+        }
 		s:STATE_SHENGJING = {
             random_scope_state = {
 		      limit = {

@@ -4350,14 +4350,13 @@ dev_events.87 = {
 
     option = {
         name = dev_events.2.a
-        trigger = { is_player = no }
         default_option = yes
         every_state = {
 			if = {
 				limit = {
 					owner = c:FRA
 					has_building = building_barrack
-					is_capital = no
+                    is_capital = no
 				}
 				remove_building = building_barrack
 			}
@@ -4365,29 +4364,19 @@ dev_events.87 = {
 				limit = {
 					owner = c:FRA
 					has_building = building_conscription_center
+                    is_capital = no
 				}
 				remove_building = building_conscription_center
 			}
+            if = {
+				limit = {
+					owner = c:FRA
+					has_building = building_naval_administration
+                    is_capital = no
+				}
+				remove_building = building_naval_administration
+			}
         }
-        random_scope_character = { 
-			limit = { has_variable = petain }
-            set_character_as_ruler = yes
-		}
-        every_country = {
-            limit = {
-                is_subject_of = c:FRA
-            } 
-            trigger_event = {
-                id = dev_events.148
-                days = 15
-            }
-        }
-    }
-
-    option = {
-        name = dev_events.2.a
-        trigger = { is_player = yes }
-        default_option = yes
         random_scope_character = { 
 			limit = { has_variable = petain }
             set_character_as_ruler = yes
@@ -6511,12 +6500,7 @@ dev_events.126 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
-    immediate = {
-        root = {
-           annex = c:FER
-           annex = c:BYE
-        }
-    }
+    immediate = {}
 
     option = {
         name = dev_events.17.a
@@ -6572,6 +6556,37 @@ dev_events.126 = {
         trigger_event = {
             id = dev_events.162
             years = 10
+        }
+        if = {
+            limit = {
+                THIS = c:RUS
+                NOT = {
+                    exists = c:SIB
+                }
+                c:FER = {
+                    has_law = law_type:law_council_republic
+                    NOT = { 
+                        is_subject_of = c:JAP
+                    }
+                }
+            }
+            c:RUS = {
+               annex = c:FER
+            }
+        }
+        if = {
+            limit = {
+                THIS = c:RUS
+                NOT = {
+                    exists = c:SIB
+                }
+                c:BYE = {
+                    has_law = law_type:law_council_republic
+                }
+            }
+            c:RUS = {
+               annex = c:BYE
+            }
         }
     }
 
