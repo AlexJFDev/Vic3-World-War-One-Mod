@@ -2489,7 +2489,7 @@ albanian= {
 }
 
 romanian= {
-	color = { 0.12 0.41 0.54 }
+	color = { 255 190 0 }
 	religion = orthodox
 	heritage = heritage_romanian
 	language = language_eastern_romance
@@ -3369,7 +3369,7 @@ byelorussian= {
 }
 
 ukrainian= {
-	color= hsv{ 0.16 0.32 0.62 }
+	color= { 81 202 255 }
 	religion = orthodox
 	heritage = heritage_east_slavic
 	language = language_east_slavic
@@ -3804,8 +3804,495 @@ estonian= {
 	graphics = european
 }
 
+slovene= {
+	color= { 
+		0 0 255
+	}
+	religion = catholic
+	heritage = heritage_south_slavic
+	language = language_slovene
+	traditions = { }
+	male_common_first_names = {
+		Alenka
+		Alfonz
+		Alfred
+		Andrej
+		Anton
+		Avgust
+		Bartolomej
+		Blaz
+		Bojan
+		Boris
+		Bostjian
+		Bozidar
+		Ciril
+		Danilo
+		Demeter
+		Drago
+		Dusan
+		Franc
+		Gregorij
+		Ivan
+		Ivo
+		Janez
+		Jernej
+		Joze
+		Jurij
+		Karpo
+		Lado
+		Leon_2
+		Lojze
+		Miha
+		Milan
+		Mladen
+		Odilo
+		Pino
+		Rado
+		Radovan
+		Rudolf
+		Slavko
+		Slavoj
+		Stane
+		Stanko
+		Tomasz
+		Toncka
+		Tone
+		Viktor
+		Vilko
+		Vladimir
+		Vladko
+		Vojko
+		Zeljko
+	}
+	female_common_first_names = {
+		Adela
+		Alenka
+		Alma
+		Angela
+		Draga
+		Felicita
+		Ivana
+		Jana
+		Jelena
+		Josipina
+		Katarina
+		Kristina
+		Marija
+		Pavlina
+		Terezija
+		Vera
+		Vilibalda
+		Zofka
+		Zora
+	}
+	noble_last_names = {
+		Barbo
+		Cobenzl
+		Einspieler
+		Kacijanar
+		Kuhar
+		Miklosic
+		Potiorek
+		Rozman
+		Turjaski
+		Vega
+	}
+	common_last_names = {
+		Arnic
+		Avbelj
+		Avsenik
+		Bajuk
+		Bitenc
+		Cankar
+		Cec
+		Cernigoj
+		Czipott
+		Dolar
+		Drolc
+		Duletic
+		Globocnik
+		Gobec
+		Godina
+		Golob
+		Haus
+		Hladnik
+		Ivanek
+		JankoviCH_
+		Kantuser
+		Kidric
+		Komar
+		Kopitar
+		Kraigher
+		Lipovsek
+		Lipuscek
+		Macek
+		Maister
+		Marinko
+		Miklosic
+		Mravlajk
+		Pengov
+		Pesek
+		Peterle
+		Pirec
+		Plecnik
+		Rozman
+		Rupnik
+		Sarh
+		Srebrnic
+		Tomazic
+		Tomsic
+		Urbancic
+		Vega
+		Von_Windisch-Gratz
+		Zagar
+		Zerjal
+		Zizke
+		Zornada
+		Zupancic
+	}
+	ethnicities = {
+		1 = slavic
+	}
+	graphics = balkan
+}
+
+croat= {
+	color= hsv{ 0.66 0.06 0.74 }
+	religion = catholic
+	heritage = heritage_south_slavic
+	language = language_south_slavic
+
+	obsessions = {
+		tobacco
+	}
+
+	traditions = { }
+	male_common_first_names = {
+		Andrija Antun Aleksandar Alojzije August Ambroz
+		Bazilije Breno Bernard Bartol Bogdan Baltazar
+		Dragutin Dzivo Dimitrije Dionizij
+		Filip Franjo
+		GaSH_par
+		Ivan Ilija
+		Janko Jero Jerolim Josip Juraj
+		Karlo KreSH_imir Krsto Koloman
+		Ljudevit Lucijan Luka Leon Lazar Ladislav
+		Marijan Marin Marko Matej Matko Maximilian Mihajlo Mirko Miroslav Milutin
+		Niko Nikola
+		Orsat Oskar Ognjeslav
+		Pavle Petar Paskoje
+		Rikard
+		Sebastijan Sismundo Slavko Stjepan Svetoslav Svetozar Srdjan
+		Teodozije Teodor Toma Tomislav
+		Viktor Vladimir Vlaho Vincencije Vatroslav Valter Velimir Vinko
+		Zlatan Zlatko
+	}
+	female_common_first_names = {
+		Aleksandra Ana
+		Dragojla
+		Ivana
+		Jelica Julka
+		Marija Marijana
+		Tereza
+	}
+	noble_last_names = {
+		Alagovic
+		BrankoviC_ BuniC_ Bajamonti
+		CrnkoviC_ Coronini Cuvaj
+		DraSH_koviC_
+		Eltz Erdody
+		Filipovic FeSH_tetiC_ Fodroczy
+		Gradi GusiC_
+		Haulik
+		JelaC_iC_
+		KegleviC_ Knezevic Kukuljevic Kulmer Kaboga Kalogjera KaCH_iC_
+		Mazuranic MoSH_insky MiSH_etiC_ Mamula
+		OrSH_iC_
+		Pejacevic Pilar PoglediC_
+		Rukavina Rakodczay Ratkaj
+		Sarkotic Sokcevic Sermage Skerlecz
+		TurkoviC_ Talovac
+		Vranyczany Vlasic Vakanovic VareSH_anin
+		Zrinski ZH_ivkoviC_
+	}
+	common_last_names = {
+		Alapic AndrijeviC_ AmruSH_ AbjaniC_ Aranicki
+		Bakaric Bettera Bilic Blazevic Bondic Boroevic Bizza Bosnajk Bunic BalokoviC_ Budicki BlaZH_eviC_ Badovinac BartoloviC_ BonaCH_i BudisavljeviC_ Badaj Broschan BedekoviC_
+		CrnkoviC_ Cuvaj CekuSH_ CariC_ CH_ingrija
+		Draskovic Dzamanjic Dabac DeliC_ DH_urDH_eviC_ DinariC_ Dobrila DerenCH_in DmitroviC_ DeZH_man DeliSH_imunoviC_
+		Eltz EvetoviC_ ElegoviC_
+		Frigan Flapp FolnegoviC_
+		Gaj Getaldic Gradic Gregoric Gucetic Gundulic GeorgieviC_ Grahovac GrSH_koviC_
+		Haulik Hatz Heinzel Holjac HraniloviC_ HarambaSH_iC_ HomotariC_ Horvat Hrvoj
+		IskriC_ IvandekiC_ IvaniSH_eviC_ IvCH_eviC_ IviC_
+		JelaC_iC_ JerkoviC_ JambriSH_ak JanCH_ariC_
+		Kabuzic KegleviC_ Kostrencic Krstulovic KlaiC_ KovaCH_iC_ Kamauf KuSH_eviC_ Krbek KriZH_iC_ Kubin Kronja KriSH_koviC_ KamenaroviC_
+		Lagimja LukareviC_ LjubibratiC_ LorkoviC_
+		Mazuranic Mihailovic Mohorovicic Mrazovic MartiC_ MaCH_ek MihaliC_ MioSH_iC_ MandiC_ MahniC_
+		Natali Nazor Njegovan NeZH_iC_ Nodilo Novak
+		OZH_egoviC_ OrSH_iC_
+		Palecek Philippovic Preradovic Pucic PejaC_eviC_ Prelog Petrovic PavliC_ PavliSH_iC_ Prica Podkapelski ParmaC_ PribiC_eviC_ Poljak Pomper Prodan Pernar
+		Ranjina RadiC_ RajiC_ Rittig Rojc
+		Sorkocevic Stankovaci Sieber SH_tedimlija SH_upljikac Srkulj SorkoCH_eviC_ SintiC_ SrebrniC_ Sterk Stupar SH_korpik Smodlaka Supilo
+		Tomasic Tomlejnovic TonCH_iC_ TerziC_ ToroSH_ Tartaglia TuniC_ Tomac Trnski
+		Vakanovic Vlasic VrabCH_eviC_ VonCH_ina
+		Zorn ZazinoviC_ ZH_upan
+	}
+	ethnicities = {
+		1 = slavic
+	}
+	graphics = balkan
+}
+
+bosniak= {
+	color= hsv{ 0.50 0.55 0.58 }
+	religion = sunni
+	heritage = heritage_south_slavic
+	language = language_south_slavic
+
+	obsessions = {
+		tobacco
+	}
+
+	traditions = { tradition_rumelian }
+	male_common_first_names = {
+		Abdulvehhab
+		Adnan
+		Ahmed
+		Ali
+		Alija
+		Asim
+		Atif
+		Beriz
+		Dzemal
+		Dzemaludin
+		Elvir
+		Enver
+		Fikret
+		Fuad
+		Gazi
+		Hakija
+		Hamdija
+		Hamid
+		Haris
+		Hasan
+		Husein
+		Irfan
+		Isa
+		Ivan
+		Izet
+		Jusuf
+		Mehmed
+		Meho
+		Mirsad
+		Muhamed
+		Musa
+		Mustafa
+		Naser
+		Osman
+		Raif
+		Rasim
+		Refik
+		Safet
+		Safvet
+		Sefer
+		Sejad
+		Seknab
+		Semezdin
+		Semir
+		Skender_2
+		Sokollu
+		Sulejman
+		Vedad
+		Zija
+		Zlatko
+		Zuko
+	}
+	female_common_first_names = {
+		Aleksandra
+		Bisera
+		Edina
+		Nasiha
+		Nura
+		Ognjenka
+		Sabina
+		Samra
+	}
+	noble_last_names = {
+		Izetbegovic
+		Kurtcehajic
+		Mehmedinovic
+		Muradbegovic
+		Osmanagic
+		Pozderac
+		Sijercic
+	}
+	common_last_names = {
+		Abdic
+		Arapovic
+		Basgic
+		Belkic
+		Bijedic
+		Catic
+		Causevic
+		Ceric
+		Colakovic
+		Dizdar
+		Dizdarevic
+		Dzikic
+		Dzumhur
+		Ekrem
+		Gradascevic
+		Halilovic
+		Husrev
+		Ibisevic
+		Ilhamija
+		Imamovic
+		Isakovic
+		Kodro
+		Konjic
+		Kulenovic
+		Lagumdzija
+		Ljajic
+		Ljubicic
+		Ljubijankic
+		Muzurovic
+		Peco
+		Plakalo
+		Prazina
+		Rizvanbegovic
+		Sabanadzovic
+		Salihovic
+		Sarajlic
+		Selimovic
+		Selmanagic
+		Silajdzic
+		Sokolovic
+		Spaho
+		Terzic
+		Tihic
+		Turaljic
+		Tukcan
+		Ugljanin
+	}
+	ethnicities = {
+		1 = slavic
+	}
+	graphics = balkan
+}
+
+serb= {
+	color = {
+		31 0 255 
+	}
+	religion = orthodox
+	heritage = heritage_south_slavic
+	language = language_south_slavic
+
+	obsessions = {
+		meat
+	}
+
+	traditions = { }
+	male_common_first_names = {
+		Alaksandar Arsenije
+		Blagoje Bozidar Branko
+		Danilo Dejan Djordje Dragan Dragisa Dragoljub Dragutin Draza Dusan Dimitrije
+		Gavrilo Goran
+		Ilija
+		Janko Jovan Jevrem
+		Koca Konstantin Krsto
+		Ljubisa Lazar
+		Mihailo Milan Miliutin Milivoje Milojko Milos Miodrag Mirko Miroslav Maksim Momcilo
+		Nebojsa Nikola
+		Pavle Peko Petar Pantelija
+		Radomir Ratko
+		Sava Slobodan Stepan Stojan Slavomir Svetomir
+		Vaselien Veljko Vladimir Vojislav
+		Zivojin Zivota Zoran Zvezdan
+	}
+	female_common_first_names = {
+		Alexandra Anka
+		Darinka Draga
+		Jekaterina Jelena
+		Katarina
+		Maria Milica Milena
+		Natalia
+		Ruza Radojka
+		Simeona Stamena Stojna
+		Tomanija
+	}
+	noble_last_names = {
+		Anastasijevic AvakumoviC_ AleksiC_ ApostoloviC_
+		BogiC_eviC_ BojaniC_ Beli-MarkoviC_
+		CukiC_ CeniC_ C_arapiC_ Cincar-MarkoviC_ Cincar-JankoviC_ C_olak-AntiC_
+		D_orD_eviC_ D_uriC_ Dobrnjac
+		GaraS_anin GrboviC_ GrujiC_
+		Hadija
+		Konstantinovic KatiC_ Kara-MarkoviC_ KeS_ko KarapandZ_iC_ KneZ_evic
+		LazareviC_ Lunjevica LeS_janin
+		MrdakoviC_ MarinoviC_ MilovanoviC_ MomiroviC_ MarkoviC_ MutapdZ_iC_ MagazinoviC_
+		Nenadovic NikolajeviC_ NaumoviC_
+		Obrenovic
+		PeriS_iC_ PljakiC_ PetronijeviC_ ProtiC_ PopoviC_ PaS_trmac
+		RuZ_iC_iC_ RistiC_ RaS_koviC_ RajiC_ RadojloviC_
+		SmiljaniC_ StojiC_eviC_ SimiC_ StefanoviC_ SinD_eliC_ StoS_iC_ SpuziC_ S_ljiviC_
+		TeodoroviC_ TadiC_
+		UroS_eviC_
+		VeliC_koviC_ VukotiC_-VukaloviC_ VukotiC_-PerkoviC_ VukotiC_-VukadinoviC_ VukomanoviC_
+		ZdravkoviC_
+	}
+	common_last_names = {
+		Adzic Arandelovic AvakumoviC_
+		Belimarkovic Blaznacac Bojovic Bozanovic Bozinovic Brankovic
+		Crnobarac CeniC_
+		Damjanic Dapcevic D_orDeviC_ Dragutinovic D_orD_eviC_
+		Grujic
+		Hadzilic Horvatovic Hranislav
+		Isakovic
+		Jankovic Jokic Jovanovic
+		Kadijevic Karadordevic Kundak
+		Lesjanin Ljubicic LazareviC_
+		Maric Maricic Mihailovic MilutinoviC_ Miloradovic Misic Murat MarinoviC_ MarkoviC_ MagazinoviC_
+		Nad Nedic Novak NikoliC_ NastasijeviC_ NedeljkoviC_
+		Ojdanic
+		Panic Paskas Pavkovic Pesic Petrovic Popovic Putnik PeC_anac PiroC_anac PavloviC_
+		Radulovic Rasic RadivojeviC_ RaoniC_ RajiC_
+		Sijan Simovic Sokolovic Stepanovic SreC_koviC_
+		TeodoroviC_
+		Vasiljevic Veric Vojvodic Vukotic Vidak VeliC_koviC_
+		Zivkovic
+	}
+	male_regal_first_names = {
+		Alaksandar
+		Danilo
+		Mihailo Milan Milos
+		Nikola
+		Pavle Petar
+	}
+	female_regal_first_names = {
+		Alexandra
+		Darinka Draga
+		Maria Milena
+		Natalia
+	}
+	regal_last_names = {
+		Karadordevic
+		NenadoviC_
+		Obrenovic
+		Petrovic_Njegos
+		VukotiC_-VukaloviC_ VukotiC_-PerkoviC_ VukotiC_-VukadinoviC_
+	}
+	ethnicities = {
+		1 = slavic
+	}
+	graphics = balkan
+}
+
 greek= {
-	color= hsv{ 0.94 0.45 0.48 }
+	color= { 
+		0 116 255 
+	}
 	religion = orthodox
 	heritage = heritage_greek
 	language = language_greek
