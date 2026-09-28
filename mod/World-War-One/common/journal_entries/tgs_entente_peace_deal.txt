@@ -117,6 +117,10 @@
 		}
     }
 
+	invalid = {
+		game_date > 1928.1.1
+	}
+
     on_monthly_pulse = {
         effect = {
             if = {
@@ -284,6 +288,10 @@ je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparation
            }
 		}
     }
+
+	invalid = {
+		game_date > 1928.1.1
+	}
 
     on_monthly_pulse = {
         effect = {
@@ -460,6 +468,10 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 		}
     }
 
+	invalid = {
+		game_date > 1928.1.1
+	}
+
     on_monthly_pulse = {
         effect = {
             if = {
@@ -634,6 +646,10 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 		}
     }
 
+	invalid = {
+		game_date > 1928.1.1
+	}
+
     on_monthly_pulse = {
         effect = {
             if = {
@@ -805,6 +821,10 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 		}
     }
 
+	invalid = {
+		game_date > 1928.1.1
+	}
+
     on_monthly_pulse = {
         effect = {
             if = {
@@ -891,7 +911,7 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 		}	
 	}
 
-    possible = { 
+    possible = {
 	    has_variable = entente_participant
 	    country_rank >= rank_value:great_power
 	    NOR = {
@@ -914,6 +934,9 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 				}
 			}
 		}	
+		NOT = {
+			c:RUS = { owns_entire_state_region = STATE_EASTERN_THRACE }
+		}
 	}
     
     scripted_button = how_big_greece_1_button 
@@ -981,6 +1004,10 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
            }
 		}
     }
+
+	invalid = {
+		game_date > 1928.1.1
+	}
 
     on_monthly_pulse = {
         effect = {
@@ -1152,6 +1179,10 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
            }
 		}
     }
+
+	invalid = {
+		game_date > 1928.1.1
+	}
 
     on_monthly_pulse = {
         effect = {
@@ -1337,6 +1368,10 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 		}
     }
 
+	invalid = {
+		game_date > 1928.1.1
+	}
+
     on_monthly_pulse = {
         effect = {
             if = {
@@ -1515,6 +1550,10 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
 		}
     }
 
+	invalid = {
+		game_date > 1928.1.1
+	}
+
     on_monthly_pulse = {
         effect = {
             if = {
@@ -1687,6 +1726,10 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
            }
 		}
     }
+
+	invalid = {
+		game_date > 1928.1.1
+	}
 
     on_monthly_pulse = {
         effect = {
