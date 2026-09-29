@@ -28,3 +28,46 @@
 
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
+
+je_world_bank = {
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:SWI
+        THIS = c:SWI
+    }
+    
+    possible = {
+        has_technology_researched = central_banking
+        OR = { 
+            has_law_or_variant = law_type:law_interventionism
+            has_law_or_variant = law_type:law_laissez_faire
+        }
+        OR = {
+            has_law_or_variant = law_type:law_true_neutrality
+            has_law_or_variant = law_type:law_armed_neutrality
+        }
+    }
+
+    immediate = {}
+
+    modifiers_while_active = {
+		world_bank
+	}
+
+    fail = {
+        OR = {
+            NOR = { 
+               has_law_or_variant = law_type:law_interventionism
+               has_law_or_variant = law_type:law_laissez_faire
+            }
+            NOR = {
+               has_law_or_variant = law_type:law_true_neutrality
+               has_law_or_variant = law_type:law_armed_neutrality
+            }
+        }
+    }
+
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
