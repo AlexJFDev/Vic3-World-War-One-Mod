@@ -1243,7 +1243,7 @@ dev_events.25 = {
         name = dev_events.25.a
         default_option = yes
         add_modifier = {
-            name = starting_sol_buff
+            name = starting_sol_buff_1
             years = 30
             is_decaying = yes
         }
@@ -1880,6 +1880,7 @@ dev_events.35 = {
                 NOR = {
                     c:USA ?= this
                     c:GBR ?= this
+                    c:GER ?= this
                     c:BIC ?= this
                     c:CHI ?= this
                     c:KMT ?= this
@@ -1912,7 +1913,24 @@ dev_events.36 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { gdp > 60000000 }
+        trigger = { 
+            country_rank = rank_value:great_power
+            gdp > 60000000 
+        }
+        add_modifier = {
+			name = money_buff_1
+            years = 10
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = dev_events.8.a
+        default_option = yes
+        trigger = { 
+            country_rank < rank_value:great_power
+            gdp > 60000000 
+        }
         add_modifier = {
 			name = starting_minting_buff_3_modifier
             years = 10
@@ -1923,7 +1941,10 @@ dev_events.36 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { gdp < 60000000 }
+        trigger = { 
+            country_rank < rank_value:great_power
+            gdp < 60000000 
+        }
         add_treasury = 10000000
         add_modifier = {
 			name = starting_minting_buff_4_modifier
@@ -2245,7 +2266,7 @@ dev_events.45 = {
         name = dev_events.25.a
         default_option = yes
         add_modifier = {
-            name = starting_sol_buff
+            name = starting_sol_buff_1
             years = 10
             is_decaying = yes
         }
@@ -2657,15 +2678,15 @@ dev_events.53 = {
         trigger = { is_player = no }
         add_treasury = 10000000
         add_modifier = {
-			name = starting_sol_buff
+			name = starting_sol_buff_1
             years = 50
 		}  
         add_modifier = {
-			name = starting_sol_buff
+			name = starting_sol_buff_1
             years = 50
 		}  
         add_modifier = {
-			name = starting_sol_buff
+			name = starting_sol_buff_1
             years = 50
 		} 
         add_modifier = {
@@ -2757,17 +2778,17 @@ dev_events.53 = {
         trigger = { is_player = yes }
         add_treasury = 2000000
         add_modifier = {
-			name = starting_sol_buff
+			name = starting_sol_buff_1
             years = 40
             is_decaying = yes
 		}  
         add_modifier = {
-			name = starting_sol_buff
+			name = starting_sol_buff_1
             years = 40
             is_decaying = yes
 		}
         add_modifier = {
-			name = starting_sol_buff
+			name = starting_sol_buff_1
             years = 20
             is_decaying = yes
 		}
@@ -3303,20 +3324,9 @@ dev_events.68 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { is_player = no }
         add_modifier = {
-            name = world_bank
-            years = 100
-        }
-    }
-
-    option = {
-        name = dev_events.8.a
-        default_option = yes
-        trigger = { is_player = yes }
-        add_modifier = {
-            name = world_bank
-            years = 50
+            name = money_buff_1
+            years = 10
             is_decaying = yes
         }
     }
@@ -3368,7 +3378,11 @@ dev_events.70 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        
+        add_modifier = {
+            name = money_buff_5
+            years = 5
+            is_decaying = yes
+        }
     }
 }
 
@@ -9134,5 +9148,36 @@ dev_events.183 = {
 				value = -90
 			}
 		}
+    }
+}
+
+dev_events.184 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        add_modifier = {
+            name = starting_sol_buff_1
+            years = 30
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.26
+            days = 60
+        }
     }
 }
