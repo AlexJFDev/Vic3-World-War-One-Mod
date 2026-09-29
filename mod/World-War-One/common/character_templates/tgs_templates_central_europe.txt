@@ -1,0 +1,201 @@
+﻿#Germany
+
+is_pru_wilhelm_02 = {
+	heir = yes
+	culture = cu:german
+	first_name = Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+    ruler = yes
+	dna = dna_pru_wilhelm_02
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	traits = {
+		wrathful
+		reckless
+		ambitious
+		arrogant
+	}
+	birth_date = 1859.1.27
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+is_pru_wilhelm_03 = {
+	heir = yes
+	culture = cu:german
+	first_name = Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+    heir = yes
+	dna = dna_pru_wilhelm_03
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	traits = {
+		reserved
+	}
+	birth_date = 1882.5.6
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
+
+agitator_karl_liebknecht = { # Karl Liebknecht, or as I like to call him, Chucky.
+	first_name = Karl
+	last_name = Liebknecht
+	historical = yes
+	culture = cu:german
+	religion = protestant
+	is_agitator = yes
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	birth_date = 1871.8.13
+	dna = dna_karl_liebknecht
+	traits = {
+		erudite
+		experienced_political_operator
+		charismatic
+	}
+}
+
+pol_rosa_luxemburg_character_template = {
+    first_name = Rosa
+	last_name = Luxemburg
+	historical = yes
+	culture = cu:polish
+	religion = atheist
+	female = yes
+    is_agitator = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_communist
+	birth_date = 1871.3.5
+	dna = dna_rosa_luxemburg
+	traits = {
+		firebrand
+        brave
+        romantic
+		special_character_luxemburg_in_exile
+	}
+}
+
+ger_wernher_von_braun_character_template = {
+    first_name = Wernher
+    last_name = von_Braun
+    historical = yes
+    culture = cu:german
+    female = no
+	is_agitator = yes
+    religion = atheist
+    ideology = ideology_fascist
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1912.03.23
+    traits = {
+        special_character_great_scientist
+        engineer
+        cruel
+    }   
+}
+
+ger_franz_von_papen_character_template = {
+    first_name = Franz
+    last_name = von_Papen
+    historical = yes
+    culture = cu:german
+    female = no
+    religion = protestant
+    ideology = ideology_royalist
+	role = character_role_politician
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1879.10.29
+    traits = {
+        experienced_diplomat
+        reckless
+        basic_political_operator
+    }   
+}
+
+#Switzerland
+
+albert_einstein_template = {
+	first_name = Albert
+	last_name = Einstein
+	historical = yes
+	culture = cu:ashkenazi
+	religion = jewish
+	interest_group = ig_intelligentsia
+	ideology = ideology_utopian
+	female = no
+	is_agitator = yes
+	birth_date = 1879.3.14
+	dna = dna_albert_einstein
+	traits = {
+		special_character_great_scientist
+        honorable
+		literary
+	}
+}
+
+#Italy
+
+ITA_vittorio_emnauele = {
+	first_name = Vittorio
+	last_name = Emanuele_Ferdinando_di_Savoia
+	culture = cu:italian
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_authoritarian
+	birth_date = 1869.11.11
+	ruler = yes
+	historical = yes
+	dna = dna_victor_emmanuel
+	traits = {
+	   reserved cautious
+	}
+}
+
+agitator_gabriele_d_annunzio = {
+	first_name = Gabriele
+	last_name = D_Annunzio
+	historical = yes
+	culture = cu:italian
+	religion = catholic
+	female = no
+	is_agitator = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_fascist
+	birth_date = 1863.3.12
+	dna = dna_gabriele_dannunzio
+	traits = {
+		hedonist
+		literary
+		ambitious
+	}
+}
+
+#Austria-Hungary
+
+AUS_franz_jospeh = {
+    first_name = Franz_Josef
+    last_name = von_Habsburg
+    historical = yes
+    culture = cu:german
+    ruler = yes
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+    birth_date = 1830.8.18
+	dna = dna_franz_joseph_i
+    traits = {
+        direct meticulous imposing master_bureaucrat
+    }
+}
