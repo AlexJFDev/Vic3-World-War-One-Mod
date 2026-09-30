@@ -432,10 +432,6 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                 id = dev_events.123
                 days = 5
             }
-            trigger_event = {
-                id = turkey_events.7
-                years = 2
-            }
         } 
         if = {
             limit = {
@@ -539,9 +535,7 @@ turkey_events.7 = { #Countries refrain from intervening furthermore
         name = turkey_events.7.a
         default_option = yes
         scope:turkish_independance_war_diplo_play = {
-			remove_target_backers = {
-                who = root
-            } 
+			resolve_play_for = root
 		}
         ai_chance = {
 		base = 10

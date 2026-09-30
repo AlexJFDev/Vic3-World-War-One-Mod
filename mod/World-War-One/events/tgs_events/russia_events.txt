@@ -139,6 +139,10 @@ russia_events.2 = { #Russian empire decides to continue the war or not
               c:RUS
             }   
         }
+        trigger_event = {
+            id = dev_events.185
+            days = 5
+        }
         create_country = { #United Baltic Provinces
 			origin = root
 			tag = UBD
@@ -287,6 +291,32 @@ russia_events.2 = { #Russian empire decides to continue the war or not
                 activate_law = law_type:law_mass_conscription
 			}
 		}
+        s:STATE_MOGILEV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BYE
+            }
+        }
+        s:STATE_VITEBSK = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BYE
+            }
+        }
         create_country = { #Ukraine
 			origin = root
 			tag = UKR
@@ -296,6 +326,19 @@ russia_events.2 = { #Russian empire decides to continue the war or not
                 activate_law = law_type:law_mass_conscription
 			}
 		}
+        s:STATE_CHERNIHIV = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
         s:STATE_CHERSON = {
 	       random_scope_state = {
 		      limit = {
@@ -373,7 +416,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
         create_diplomatic_pact = {
 			country = c:BYE
 			type = protectorate
-		}
+		}	
+	    }
+        c:AUS = {
 		create_diplomatic_pact = {
 			country = c:UKR
 			type = protectorate
@@ -800,6 +845,10 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
               c:RUS
             }   
         }
+        trigger_event = {
+            id = dev_events.185
+            days = 5
+        }
         create_country = { #United Baltic Provinces
 			origin = root
 			tag = UBD
@@ -948,6 +997,32 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
                 activate_law = law_type:law_mass_conscription
 			}
 		}
+        s:STATE_MOGILEV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BYE
+            }
+        }
+        s:STATE_VITEBSK = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BYE
+            }
+        }
         create_country = { #Ukraine
 			origin = root
 			tag = UKR
@@ -957,6 +1032,19 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
                 activate_law = law_type:law_mass_conscription
 			}
 		}
+        s:STATE_CHERNIHIV = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
         s:STATE_CHERSON = {
 	       random_scope_state = {
 		      limit = {
@@ -1034,7 +1122,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
         create_diplomatic_pact = {
 			country = c:BYE
 			type = protectorate
-		}
+		}	
+	    }
+        c:AUS = {
 		create_diplomatic_pact = {
 			country = c:UKR
 			type = protectorate

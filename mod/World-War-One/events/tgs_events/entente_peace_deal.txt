@@ -70,14 +70,16 @@ entente_peace_deal.1 = {
 			  type = protectorate
 		    }
 		    remove_diplomatic_pact = {
-			  country = c:UKR
-			  type = protectorate
-		    }
-		    remove_diplomatic_pact = {
 			  country = c:AUS
 			  type = alliance
 		    }
 		}
+		c:AUS = {
+		    remove_diplomatic_pact = {
+			  country = c:UKR
+			  type = protectorate
+		    }
+        }
 		c:FRA = {
 		    remove_diplomatic_pact = {
 			  country = c:KON

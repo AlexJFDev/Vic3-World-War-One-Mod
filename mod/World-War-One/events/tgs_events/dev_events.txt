@@ -9181,3 +9181,40 @@ dev_events.184 = {
         }
     }
 }
+
+dev_events.185 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        c:GER = {
+            create_diplomatic_pact = {
+                country = c:RUS
+			    type = protectorate
+            }
+        }
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        c:GER = {
+            remove_diplomatic_pact = {
+                country = c:RUS
+			    type = protectorate
+            }
+        }
+    }
+}

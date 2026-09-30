@@ -35,6 +35,10 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
               c:RUS
             }   
         }
+		trigger_event = {
+            id = dev_events.185
+            days = 5
+        }
         create_country = { #United Baltic Provinces
 			origin = root
 			tag = UBD
@@ -183,6 +187,32 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
                 activate_law = law_type:law_mass_conscription
 			}
 		}
+		s:STATE_MOGILEV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BYE
+            }
+        }
+        s:STATE_VITEBSK = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BYE
+            }
+        }
         create_country = { #Ukraine
 			origin = root
 			tag = UKR
@@ -192,6 +222,19 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
                 activate_law = law_type:law_mass_conscription
 			}
 		}
+		s:STATE_CHERNIHIV = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:RUS
+			    owner = {
+				  OR = {
+					c:RUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
         s:STATE_CHERSON = {
 	       random_scope_state = {
 		      limit = {
@@ -265,11 +308,13 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
         create_diplomatic_pact = {
 			country = c:POL
 			type = protectorate
-		}
-		create_diplomatic_pact = {
+		}	
+        create_diplomatic_pact = {
 			country = c:BYE
 			type = protectorate
-		}
+		}	
+	    }
+        c:AUS = {
 		create_diplomatic_pact = {
 			country = c:UKR
 			type = protectorate
