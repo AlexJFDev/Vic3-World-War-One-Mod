@@ -16,6 +16,7 @@
         goods_input_oil_mult = 0.25
         goods_input_radios_mult = 0.25
         goods_input_tanks_mult = 0.25
+		goods_input_aeroplanes_mult = 0.25
 	}
 	
 	unit_modifier = {
@@ -65,12 +66,13 @@ REPLACE_OR_CREATE:mobilization_option_extra_supplies = {
         goods_input_oil_mult = 0.25
         goods_input_radios_mult = 0.25
         goods_input_tanks_mult = 0.25
+		goods_input_aeroplanes_mult = 0.25
 	}	
 	
 	unit_modifier = {
 		unit_morale_loss_mult = -0.05
-		unit_offense_mult = 0.1
-		unit_defense_mult = 0.1
+		unit_offense_mult = 0.15
+		unit_defense_mult = 0.15
 	}
 	ai_weight = {
 		value = 1
@@ -121,12 +123,13 @@ REPLACE_OR_CREATE:mobilization_option_luxurious_supplies = {
         goods_input_oil_mult = 0.25
         goods_input_radios_mult = 0.25
         goods_input_tanks_mult = 0.25
+		goods_input_aeroplanes_mult = 0.25
 	}	
 	
 	unit_modifier = {
-		unit_morale_loss_mult = -0.05
-		unit_offense_mult = 0.1
-		unit_defense_mult = 0.1
+		unit_morale_loss_mult = -0.1
+		unit_offense_mult = 0.25
+		unit_defense_mult = 0.25
 	}
 	ai_weight = {
 		value = 1
@@ -378,7 +381,7 @@ REPLACE_OR_CREATE:mobilization_option_rail_transport = {
 	}
 	unit_modifier = {
 		military_formation_movement_speed_mult = 0.35
-		military_formation_mobilization_speed_mult = 0.3
+		military_formation_mobilization_speed_mult = 0.5
 	}
 	ai_weight = {
 		value = 1
@@ -433,7 +436,7 @@ REPLACE_OR_CREATE:mobilization_option_truck_transport = {
 	}
 	unit_modifier = {
 		military_formation_movement_speed_mult = 0.5
-		military_formation_mobilization_speed_mult = 0.4
+		military_formation_mobilization_speed_mult = 0.7
 	}
 	ai_weight = {
 		value = 1
@@ -528,7 +531,8 @@ REPLACE_OR_CREATE:mobilization_option_chemical_weapons = {
 		goods_input_fertilizer_add = 2
 	}
 	unit_modifier = {
-		unit_kill_rate_add = 0.1
+		unit_kill_rate_add = 0.05
+		unit_morale_damage_mult = 0.3
 		unit_provinces_captured_mult = -0.3
 		unit_devastation_mult = 0.2
 	}
@@ -578,7 +582,7 @@ REPLACE_OR_CREATE:mobilization_option_flamethrowers = {
 	}
 	unit_modifier = {
 		unit_offense_add = 8
-		unit_devastation_mult = 0.3
+		unit_devastation_mult = 0.1
 		unit_morale_damage_mult = 0.1
 	}
 	ai_weight = {
