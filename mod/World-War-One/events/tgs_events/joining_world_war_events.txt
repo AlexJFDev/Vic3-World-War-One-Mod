@@ -1135,6 +1135,16 @@ joining_world_war_events.18 = { #USA joins
 			months = 120
 		}
 	    }
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                has_variable = entente_participant
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 5
+            }
+        }
         ai_chance = {
             base = 10
         }
