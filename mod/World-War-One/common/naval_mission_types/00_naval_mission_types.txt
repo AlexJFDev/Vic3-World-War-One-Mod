@@ -16,7 +16,7 @@
 					is_at_war = yes
 				}
 			}
-			add = -10
+			add = -60
 		}
 	}
 }
@@ -47,6 +47,14 @@ naval_mission_type_protect_supply = {
 
     ai_weight = {
 		value = 5
+        if = {
+			limit = {
+				owner ?= {
+                    c:GBR ?= this
+				}
+			}
+			add = -100
+		}
 	}
 }
 

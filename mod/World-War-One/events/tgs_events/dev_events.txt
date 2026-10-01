@@ -9161,7 +9161,7 @@ dev_events.184 = {
         default_option = yes
         add_modifier = {
             name = starting_sol_buff_1
-            years = 30
+            years = 3
             is_decaying = yes
         }
         trigger_event = {
@@ -9437,6 +9437,37 @@ dev_events.192 = {
 }
 
 dev_events.193 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        add_modifier = {
+            name = starting_sol_buff_1
+            years = 30
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.26
+            days = 60
+        }
+    }
+}
+
+dev_events.194 = {
     type = country_event
 
     title = dev_events.25.t
