@@ -52,6 +52,141 @@ je_mechanized_warfare = {
     weight = 1000
 }
 
+je_american_expeditionary_forces = {
+    icon = "gfx/interface/icons/event_icons/usa_icon.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+       exists = c:USA
+       THIS = c:USA
+       is_player = no
+    }
+    
+    possible = {
+        c:USA = {
+          is_player = no
+        }
+        c:FRA = {
+          is_at_war = yes
+          has_variable = entente_participant
+        }
+    }
+
+    immediate = { }
+
+    complete = {
+        c:USA = {
+          is_player = no
+          is_at_war = yes
+          has_variable = entente_participant
+        }
+        c:FRA = {
+          is_at_war = yes
+          has_variable = entente_participant
+        }
+    }
+
+    on_complete = {
+        c:FRA = {
+            trigger_event = {
+              id = dev_events.195
+              days = 5
+            }
+        }
+    }
+
+    on_timeout = {}
+}
+
+je_germany_ai_blockade = {
+    icon = "gfx/interface/icons/commander_order_icons/blockade.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+       exists = c:GER
+       THIS = c:GER
+       is_player = no
+    }
+    
+    possible = {
+        c:GER = {
+          is_player = no
+          is_at_war = yes
+          has_variable = central_powers_participant
+          navy_size < 200
+        }
+        c:GBR = {
+          is_player = no
+          is_at_war = yes
+          has_variable = entente_participant
+          navy_size > 400
+        }
+        c:FRA = {
+          is_player = no
+          is_at_war = yes
+          has_variable = entente_participant
+        }
+    }
+
+    modifiers_while_active = {
+		germany_blockaded
+	}
+
+    complete = {
+        OR = {
+            is_at_war = no
+            c:GBR = {
+              navy_size < 200
+            }
+            c:GBR = {
+              is_at_war = no
+            }
+        }
+    }
+    
+    fail = {
+        any_civil_war = {
+			civil_war_progress >= 0.75
+		}
+    }
+
+    on_fail = {
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        random_civil_war = {
+			add_civil_war_progress = -100
+		}
+        c:GER = {
+            trigger_event = {
+                id = germany_events.2
+                days = 5
+            }
+        }
+        set_global_variable = german_revolution_1
+    }
+
+    on_timeout = {}
+}
+
 je_usa_loans_verification = {
     icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
     group = je_group_internal_affairs

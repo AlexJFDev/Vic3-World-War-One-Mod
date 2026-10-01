@@ -1103,6 +1103,34 @@ joining_world_war_events.18 = { #USA joins
 					}
 				}
 			}
+            add_war_goal = {
+				holder = c:USA
+				target_country = c:GER
+				type = enforce_treaty_article
+				article = {
+					article = money_transfer
+					source_country = c:GER
+					target_country = c:USA
+					inputs = {
+						{ quantity = 100000 }
+					}
+				}
+			}
+            add_war_goal = {
+				holder = c:USA
+				target_country = c:GER
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:GER
+					target_country = c:USA
+				}
+			}
+            add_war_goal = {
+                holder = c:USA
+                type = regime_change
+				target_country = c:GER
+            }
         }
         c:USA = { set_variable = entente_participant }
         c:USA = {

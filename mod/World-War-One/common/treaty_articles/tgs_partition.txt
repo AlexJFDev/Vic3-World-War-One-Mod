@@ -58,7 +58,17 @@
         }
 	}
 
-	on_entry_into_force = {}
+	on_entry_into_force = {
+		scope:article_options = {
+			source_country = {
+				add_modifier = {
+			       name = enforced_partition
+                   years = 10
+				   is_decaying = yes
+		        }
+			}
+		}
+	}
 
 	on_withdrawal = {}
 	on_break = {

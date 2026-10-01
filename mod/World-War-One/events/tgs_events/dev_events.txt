@@ -3680,7 +3680,7 @@ dev_events.73 = {
         trigger = { is_player = no }
         add_modifier = {
             name = revolution_stabilization_buff_4
-            months = 15
+            months = 20
         }
     }
 }
@@ -9082,6 +9082,12 @@ dev_events.182 = {
         activate_law = law_type:law_appointed_bureaucrats
         activate_law = law_type:law_graduated_taxation
         activate_law = law_type:law_corporatized_unions
+        c:RUS = {
+            create_diplomatic_pact = {
+                country = c:BYE
+			    type = protectorate
+            }
+        }
         ai_chance = {
 		  base = 1
 	    }
@@ -9503,5 +9509,74 @@ dev_events.194 = {
 			}
 			remove_modifier = starting_sol_buff_1
 		}
+    }
+}
+
+dev_events.195 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        c:FRA = {
+		    create_military_formation = {
+			   type = army
+			   hq_region = sr:region_western_europe
+               name = fra_army_help
+	
+			    combat_unit = {
+				   type = unit_type:combat_unit_type_trench_infantry
+				   state_region = s:STATE_AQUITAINE
+				   count = 100
+			    }
+
+                combat_unit = {
+				   type = unit_type:combat_unit_type_trench_infantry
+				   state_region = s:STATE_LANGUEDOC
+				   count = 100
+			    }
+            
+                combat_unit = {
+				   type = unit_type:combat_unit_type_trench_infantry
+				   state_region = s:STATE_RHONE
+				   count = 100
+			    }
+
+                combat_unit = {
+				   type = unit_type:combat_unit_type_trench_infantry
+				   state_region = s:STATE_BURGUNDY
+				   count = 100
+			    }
+
+                combat_unit = {
+				   type = unit_type:combat_unit_type_trench_infantry
+				   state_region = s:STATE_ORLEANS
+				   count = 100
+			    }
+		    }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = dev_events.25.a
+        ai_chance = {
+		  base = 0
+	    }
     }
 }

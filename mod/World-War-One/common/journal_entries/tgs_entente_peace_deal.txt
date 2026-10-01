@@ -28,19 +28,11 @@
 	    }
 	    c:GER = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         }
         c:AUS = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         } 
 	}
     
@@ -215,11 +207,7 @@ je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparation
 	    }
 	    c:GER = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         }
 	}
     
@@ -393,11 +381,7 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 	    }
 	    c:GER = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         }
 	}
     
@@ -569,11 +553,7 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 	    }
         c:AUS = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         } 
 	    c:ITA = {
 		   has_variable = entente_participant
@@ -747,11 +727,7 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 	    }
 	    c:ITA = {
 		    has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
 	    }
 	}
     
@@ -928,11 +904,7 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 		}	
 		c:TUR = {
 		    has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
 		}	
 		NOT = {
 			c:RUS = { owns_entire_state_region = STATE_EASTERN_THRACE }
@@ -1106,11 +1078,7 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
 	    }
 		c:TUR = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
 		}
 	}
     
@@ -1280,19 +1248,11 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 	    }
 	    c:GER = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         } 
         c:AUS = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         }  
 	    c:RUS = {
 		    NOR = {
@@ -1470,11 +1430,7 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
 	    }
 	    c:GER = {
 			has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         }  
 	    c:JAP = {
 			has_variable = entente_participant
@@ -1650,11 +1606,7 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
 	    }
 	    c:GER = {
             has_variable = central_powers_participant
-		    any_scope_treaty = {
-				any_scope_article = {
-				    has_type = partition
-				}
-			}
+		    has_modifier = enforced_partition
         }  
 	    c:ITA = {
 			has_variable = entente_participant
