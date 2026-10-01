@@ -295,9 +295,12 @@ dev_events.4 = {
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:FFR
-            } 
+            }
+            add_initiator_backers = {
+                c:FRA
+            }
             add_war_goal = {
-                holder = c:GER
+                holder = c:FRA
                 type = annex_country
 				target_country = c:FFR
             }
@@ -2073,6 +2076,7 @@ dev_events.38 = {
 				level = 10
             }			
 		}
+        change_infamy = -100
     }
 }
 
@@ -6813,21 +6817,6 @@ dev_events.132 = {
 
     option = {
         name = dev_events.10.a
-        trigger = { 
-            is_player = no
-            c:RUS = { is_player = no }
-            is_diplomatic_play_enemy_of = c:RUS
-        }
-        default_option = yes
-        c:RUS = {
-            annex_with_incorporation = ROOT
-        }
-        c:MGL = {
-            trigger_event = {
-			    id = dev_events.158
-                days = 30
-		    }
-        }
     }
 }
 
@@ -9443,6 +9432,45 @@ dev_events.192 = {
         default_option = yes
         scope:ongoing_war = {
 			resolve_play_for = target
+		}
+    }
+}
+
+dev_events.193 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+		random_scope_war = {
+			save_scope_as = ongoing_war
+		}
+	}
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        trigger = { 
+            is_player = no
+            is_at_war = yes
+            has_variable = central_powers_participant 
+        }
+        if = {
+			limit = {
+				has_modifier = starting_sol_buff_1
+			}
+			remove_modifier = starting_sol_buff_1
 		}
     }
 }

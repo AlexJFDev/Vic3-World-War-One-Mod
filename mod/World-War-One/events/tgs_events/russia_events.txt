@@ -1532,6 +1532,14 @@ russia_events.7 = { #Soviet uprising
 			  country = c:BUK
 			  type = protectorate
 		    }
+            remove_diplomatic_pact = {
+			  country = c:KHI
+			  type = puppet
+		    }
+            remove_diplomatic_pact = {
+			  country = c:BUK
+			  type = puppet
+		    }
         }
         s:STATE_KHIVA = {
             random_scope_state = {
@@ -1885,30 +1893,6 @@ russia_events.8 = { #The civil war begins
             trigger_event = {
 			   id = dev_events.38
 			   days = 5
-		    }
-            trigger_event = {
-			   id = dev_events.189
-			   days = 50
-		    }
-            trigger_event = {
-			   id = dev_events.189
-			   days = 100
-		    }
-            trigger_event = {
-			   id = dev_events.189
-			   days = 200
-		    }
-            trigger_event = {
-			   id = dev_events.189
-			   days = 300
-		    }
-            trigger_event = {
-			   id = dev_events.189
-			   days = 400
-		    }
-            trigger_event = {
-			   id = dev_events.189
-			   days = 500
 		    }
         }
         c:MGL = {
