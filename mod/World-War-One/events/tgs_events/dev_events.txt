@@ -6309,19 +6309,19 @@ dev_events.124 = {
 			hq_region = sr:region_russia
 			ship = {
 				type = ship_type:ship_type_dreadnought
-				count = 4
+				count = 2
 			}
 			ship = {
 				type = ship_type:ship_type_pre_dreadnought
-				count = 4
+				count = 2
 			}
 			ship = {
 				type = ship_type:ship_type_armored_cruiser
-				count = 6
+				count = 4
 			}
 			ship = {
 				type = ship_type:ship_type_protected_cruiser
-				count = 6
+				count = 4
 			}
 			ship = {
 				type = ship_type:ship_type_torpedo_boat_destroyer
@@ -6329,15 +6329,15 @@ dev_events.124 = {
 			}
 			ship = {
 				type = ship_type:ship_type_torpedo_boat
-				count = 38
+				count = 20
 			}
 			ship = {
 				type = ship_type:ship_type_destroyer
-				count = 82
+				count = 40
 			}
 			ship = {
 				type = ship_type:ship_type_submarine
-				count = 22
+				count = 10
 			}
 			ship = {
 				type = ship_type:ship_type_troop_ship
@@ -6402,19 +6402,19 @@ dev_events.124 = {
 			hq_region = sr:region_russia
 			ship = {
 				type = ship_type:ship_type_dreadnought
-				count = 4
+				count = 2
 			}
 			ship = {
 				type = ship_type:ship_type_pre_dreadnought
-				count = 4
+				count = 2
 			}
 			ship = {
 				type = ship_type:ship_type_armored_cruiser
-				count = 6
+				count = 4
 			}
 			ship = {
 				type = ship_type:ship_type_protected_cruiser
-				count = 6
+				count = 4
 			}
 			ship = {
 				type = ship_type:ship_type_torpedo_boat_destroyer
@@ -6422,15 +6422,15 @@ dev_events.124 = {
 			}
 			ship = {
 				type = ship_type:ship_type_torpedo_boat
-				count = 38
+				count = 20
 			}
 			ship = {
 				type = ship_type:ship_type_destroyer
-				count = 82
+				count = 40
 			}
 			ship = {
 				type = ship_type:ship_type_submarine
-				count = 22
+				count = 10
 			}
 			ship = {
 				type = ship_type:ship_type_troop_ship
@@ -9284,7 +9284,7 @@ dev_events.187 = {
         scope:ongoing_war = {
 			add_war_war_support = {
 				target = ROOT
-				value = 30
+				value = 50
 			}
 		}
     }
@@ -9307,22 +9307,142 @@ dev_events.188 = {
     }
 
     immediate = {
-        random_diplomatic_play = {
-			limit = { 
-              is_diplomatic_play_type = dp_world_war 
-            }
-            save_scope_as = world_war_two_diplo_play
-        }
+		random_scope_war = {
+			save_scope_as = ongoing_war
+		}
+	}
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        scope:ongoing_war = {
+			add_war_war_support = {
+				target = ROOT
+				value = 50
+			}
+		}
+    }
+}
+
+dev_events.189 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+		random_scope_war = {
+			save_scope_as = ongoing_war
+		}
+	}
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        scope:ongoing_war = {
+			add_war_war_support = {
+				target = ROOT
+				value = 100
+			}
+		}
+    }
+}
+
+dev_events.190 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
     }
 
     option = {
         name = dev_events.25.a
         default_option = yes
-        scope:world_war_two_diplo_play = {
-			add_war_war_support = {
-				target = ROOT
-				value = 50
-			}
+        ROOT = {
+            add_supply_ships = {
+			  value = 10000
+		    }
+        }
+    }
+}
+
+dev_events.191 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+		random_scope_war = {
+			save_scope_as = ongoing_war
+		}
+	}
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        scope:ongoing_war = {
+			resolve_play_for = initiator
+		}
+    }
+}
+
+dev_events.192 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+		random_scope_war = {
+			save_scope_as = ongoing_war
+		}
+	}
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        scope:ongoing_war = {
+			resolve_play_for = target
 		}
     }
 }

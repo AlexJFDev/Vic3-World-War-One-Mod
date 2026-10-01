@@ -306,6 +306,10 @@
 			id = dev_events.100
 			days = 5
 		}
+		trigger_event = { #More supply ships
+			id = dev_events.190
+			days = 5
+		}
 		trigger_event = { #Loy and rads reset
 			id = dev_events.26
 			days = 90
@@ -940,7 +944,7 @@
 					limit = {
 						is_building_type = building_shipyard
 					}
-					add = 1000
+					add = 300
 				}
 			}
 			multiply = 2

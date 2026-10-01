@@ -1472,6 +1472,16 @@ usa_events.21 = { #American neutrality je failure
     option = {
         name = usa_events.21.a
         default_option = yes
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                has_variable = entente_participant
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 5
+            }
+        }
     }
 }
 

@@ -685,6 +685,71 @@ entente_peace_deal.1 = {
 			    activate_law = law_type:law_armed_neutrality
 			    activate_law = law_type:law_cultural_exclusion
             }
+        s:STATE_URMIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+        s:STATE_TABRIZ = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+        s:STATE_PERSIAN_KURDISTAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+        s:STATE_LURISTAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+        s:STATE_KHUZESTAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
 		}
 		if = {
             limit = {

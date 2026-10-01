@@ -1,4 +1,4 @@
-﻿je_war_fatigue_ai_germany = {
+﻿je_war_fatigue_germany = {
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     group = je_group_internal_affairs
 
@@ -11,7 +11,7 @@
     
     possible = {
         is_player = no
-        game_date > 1917.1.1
+        game_date > 1916.1.1
         has_variable = central_powers_participant
         root.average_sol < 12
         is_at_war = yes
@@ -21,7 +21,7 @@
             is_world_war = yes
 		    has_war_support = {
 		        target = ROOT
-		        value < 30
+		        value < 45
 		    }   
 		}
     }
@@ -36,7 +36,7 @@
     }
 
     modifiers_while_active = {
-		war_fatigue_1
+		war_fatigue_2
 	}
 
     complete = {
@@ -48,7 +48,7 @@
                 is_world_war = yes
 		        has_war_support = {
 		          target = ROOT
-		          value > 40
+		          value > 50
 		        }   
 		    }
         }
@@ -88,136 +88,6 @@
     }
 
     on_fail = {
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        c:GER = {
-            trigger_event = {
-                id = germany_events.2
-                days = 5
-            }
-        }
-        set_global_variable = german_revolution_1
-    }
-
-    invalid = {
-       is_at_war = no
-    }
-
-    weight = 1000
-    should_be_pinned_by_default_uninvolved_or_context = yes
-}
-
-je_war_fatigue_player_germany = {
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    group = je_group_internal_affairs
-
-    is_shown_when_inactive = {
-        exists = c:GER
-        THIS = c:GER
-        has_variable = central_powers_participant
-    }
-    
-    possible = {
-        is_player = yes
-        game_date > 1917.1.1
-        has_variable = central_powers_participant
-        root.average_sol < 12
-        is_at_war = yes
-        NOT = { has_global_variable = world_war_1_over }
-        NOT = { has_variable = germany_war_fatigue }
-        any_scope_war = {
-            is_world_war = yes
-		    has_war_support = {
-		        target = ROOT
-		        value < 20
-		    }   
-		}
-    }
-
-    immediate = {
-       c:GER = {
-            trigger_event = {
-                id = germany_events.1
-                days = 5
-            }
-        }
-    }
-    
-    modifiers_while_active = {
-		war_fatigue_2
-	}
-
-    complete = {
-        OR = {
-            root.average_sol >= 13
-            c:FRA = { is_subject_of = c:GER }
-            c:GBR = { is_subject_of = c:GER }
-            any_scope_war = {
-                is_world_war = yes
-		        has_war_support = {
-		          target = ROOT
-		          value > 30
-		        }   
-		    }
-        }
-    }
-
-    on_complete = {
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-    }
-    
-    fail = {
-        any_civil_war = {
-			civil_war_progress >= 0.75
-		}
-    }
-
-    on_fail = { 
         random_civil_war = {
 			add_civil_war_progress = -100
 		}

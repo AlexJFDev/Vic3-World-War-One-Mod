@@ -100,6 +100,21 @@ mexico_events.4 = { #Tampico Affair part 2
 		      days = 5
             }
 		}
+        if = {
+            limit = {
+                c:MEX = { is_player = no }
+            }
+            c:MEX = {
+                trigger_event = {
+                   id = dev_events.191
+		           days = 30
+                }
+                trigger_event = {
+                  id = dev_events.191
+		          days = 60
+                }
+            }
+        }
         ai_chance = {
 			base = 10
 		}

@@ -1110,6 +1110,10 @@ joining_world_war_events.18 = { #USA joins
                 id = dev_events.3
                 days = 5
             }
+            trigger_event = {
+                id = dev_events.190
+                days = 5
+            }
         }
         c:BRZ = {
             trigger_event = {
@@ -1135,16 +1139,6 @@ joining_world_war_events.18 = { #USA joins
 			months = 120
 		}
 	    }
-        every_country = {
-            limit = { 
-                is_at_war = yes
-                has_variable = entente_participant
-            }
-            trigger_event = {
-              id = dev_events.187
-              days = 5
-            }
-        }
         ai_chance = {
             base = 10
         }
@@ -1382,8 +1376,28 @@ joining_world_war_events.21 = { #Persia joins
 			}
             add_war_goal = {
                 holder = c:TUR
-                type = make_protectorate
-                target_country = c:PER
+                type = conquer_state
+                target_state = s:STATE_URMIA.region_state:PER
+            }
+            add_war_goal = {
+                holder = c:TUR
+                type = conquer_state
+                target_state = s:STATE_TABRIZ.region_state:PER
+            }
+            add_war_goal = {
+                holder = c:TUR
+                type = conquer_state
+                target_state = s:STATE_PERSIAN_KURDISTAN.region_state:PER
+            }
+            add_war_goal = {
+                holder = c:TUR
+                type = conquer_state
+                target_state = s:STATE_LURISTAN.region_state:PER
+            }
+            add_war_goal = {
+                holder = c:TUR
+                type = conquer_state
+                target_state = s:STATE_KHUZESTAN.region_state:PER
             }
         }
         c:PER = {

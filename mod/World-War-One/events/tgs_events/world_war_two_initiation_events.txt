@@ -1107,6 +1107,16 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
               days = 5
             }
         }
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                has_variable = allies_participant
+            }
+            trigger_event = {
+              id = dev_events.188
+              days = 5
+            }
+        }
         ai_chance = {
             base = 10
         }
