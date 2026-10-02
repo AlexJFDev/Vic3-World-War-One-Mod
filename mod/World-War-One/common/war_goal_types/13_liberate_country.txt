@@ -22,8 +22,6 @@
 	target_type = country
 
 	possible = {
-		# trigger to determine if a goal with its target data is listed when selecting a war goal in the diplo play panel
-		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
 		NOR = {
 			has_law = law_type:law_true_neutrality
 			has_law = law_type:law_armed_neutrality
@@ -44,8 +42,19 @@
 		}
 	}
 
+	infamy_severity = 0.1
+
 	infamy = {
 		value = 0
+
+		add = {
+			desc = "INFAMY_RELEASED_STATES"
+			scope:target_country = {
+				every_releasable_state = {
+					add = state_infamy_value
+				}
+			}
+		}
 	}
 
 	on_enforced = {
