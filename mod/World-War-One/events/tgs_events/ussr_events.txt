@@ -35,6 +35,16 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
               c:RUS
             }   
         }
+		every_country = {
+            limit = { 
+                is_at_war = yes
+                has_variable = central_powers_participant
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 5
+            }
+        }
 		trigger_event = {
             id = dev_events.185
             days = 5

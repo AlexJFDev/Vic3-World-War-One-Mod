@@ -684,12 +684,12 @@ joining_world_war_events.14 = { #Italy joins part 3
             }
             add_war_goal = {
                 holder = c:ITA
-                type = conquer_state
+                type = return_state
                 target_state = s:STATE_SOUTH_TYROL.region_state:AUS
             }
             add_war_goal = {
                 holder = c:ITA
-                type = conquer_state
+                type = return_state
                 target_state = s:STATE_ISTRIA.region_state:AUS
             }
         }
@@ -780,19 +780,6 @@ joining_world_war_events.15 = { #Bulgaria joins
 				c:BUL
 			}
             add_war_goal = {
-				holder = c:FRA
-				target_country = c:BUL
-				type = enforce_treaty_article
-				article = {
-					article = money_transfer
-					source_country = c:BUL
-					target_country = c:FRA
-					inputs = {
-						{ quantity = 5000 }
-					}
-				}
-			}
-            add_war_goal = {
                 holder = c:BUL
                 type = conquer_state
                 target_state = s:STATE_SKOPIA.region_state:SER
@@ -801,6 +788,11 @@ joining_world_war_events.15 = { #Bulgaria joins
                 holder = c:BUL
                 type = conquer_state
                 target_state = s:STATE_EASTERN_SERBIA.region_state:SER
+            }
+            add_war_goal = {
+                holder = c:FRA
+                type = humiliation
+				target_country = c:BUL
             }
         }
         c:BUL = { set_variable = central_powers_participant }
@@ -989,18 +981,10 @@ joining_world_war_events.17 = { #Greece joins
 				c:GRE
 			}
             add_war_goal = {
-				holder = c:AUS
+                holder = c:AUS
+                type = humiliation
 				target_country = c:GRE
-				type = enforce_treaty_article
-				article = {
-					article = money_transfer
-					source_country = c:GRE
-					target_country = c:AUS
-					inputs = {
-						{ quantity = 5000 }
-					}
-				}
-			}
+            }
         }
         if = {
             limit = {
@@ -1091,32 +1075,6 @@ joining_world_war_events.18 = { #USA joins
 				c:USA
 			}
             add_war_goal = {
-				holder = c:GER
-				target_country = c:USA
-				type = enforce_treaty_article
-				article = {
-					article = money_transfer
-					source_country = c:USA
-					target_country = c:GER
-					inputs = {
-						{ quantity = 500000 }
-					}
-				}
-			}
-            add_war_goal = {
-				holder = c:USA
-				target_country = c:GER
-				type = enforce_treaty_article
-				article = {
-					article = money_transfer
-					source_country = c:GER
-					target_country = c:USA
-					inputs = {
-						{ quantity = 100000 }
-					}
-				}
-			}
-            add_war_goal = {
 				holder = c:USA
 				target_country = c:GER
 				type = enforce_treaty_article
@@ -1127,8 +1085,13 @@ joining_world_war_events.18 = { #USA joins
 				}
 			}
             add_war_goal = {
+                holder = c:GER
+                type = humiliation
+				target_country = c:USA
+            }
+            add_war_goal = {
                 holder = c:USA
-                type = regime_change
+                type = humiliation
 				target_country = c:GER
             }
         }
@@ -1242,18 +1205,10 @@ joining_world_war_events.19 = { #Portugal joins
 				c:POR
 			}
             add_war_goal = {
-				    holder = c:GER
-				    target_country = c:POR
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:POR
-					   target_country = c:GER
-					   inputs = {
-						   { quantity = 5000 }
-					    }
-				    }
-			    }
+                holder = c:GER
+                type = humiliation
+				target_country = c:POR
+            }
         }
         c:POR = { set_variable = entente_participant }
         ai_chance = {
@@ -1318,18 +1273,10 @@ joining_world_war_events.20 = { #Brazil joins
 				c:BRZ
 			}
             add_war_goal = {
-				    holder = c:GER
-				    target_country = c:BRZ
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:BRZ
-					   target_country = c:GER
-					   inputs = {
-						   { quantity = 15000 }
-					    }
-				    }
-			    }
+                holder = c:GER
+                type = humiliation
+				target_country = c:BRZ
+            }
         }
         c:BRZ = { set_variable = entente_participant }
         ai_chance = {

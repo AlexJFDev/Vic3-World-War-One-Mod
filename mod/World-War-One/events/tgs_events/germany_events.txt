@@ -561,6 +561,18 @@ germany_events.4 = { #Communist uprising
         c:BAV = {
             change_infamy = -100
         }
+        if = {
+            limit = {
+                c:BAV = { is_player = no }
+                c:GER = { is_player = no }
+            }
+            c:BAV = {
+                trigger_event = {
+                  id = dev_events.191
+		          days = 60
+                }
+            }
+        }
         s:STATE_FRANCONIA = {
 	       random_scope_state = {
 		      limit = {
@@ -1081,6 +1093,22 @@ germany_events.22 = { #Negotiation with Communists
     option = {
         set_variable = socialist_negotiations_over
         name = germany_events.22.g
+        activate_law = law_type:law_command_economy
+        activate_law = law_type:law_collectivized_agriculture
+        activate_law = law_type:law_graduated_taxation
+        trigger_event = {
+			id = germany_events.5
+            days = 5
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        set_variable = socialist_negotiations_over
+        name = germany_events.22.h
+        activate_law = law_type:law_council_republic
         activate_law = law_type:law_command_economy
         activate_law = law_type:law_collectivized_agriculture
         activate_law = law_type:law_graduated_taxation

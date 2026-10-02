@@ -139,6 +139,16 @@ russia_events.2 = { #Russian empire decides to continue the war or not
               c:RUS
             }   
         }
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                has_variable = central_powers_participant
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 5
+            }
+        }
         trigger_event = {
             id = dev_events.185
             days = 5
@@ -845,6 +855,16 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
               c:RUS
             }   
         }
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                has_variable = central_powers_participant
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 5
+            }
+        }
         trigger_event = {
             id = dev_events.185
             days = 5
@@ -1250,7 +1270,7 @@ russia_events.7 = { #Soviet uprising
         create_country = {
 	       tag = SIB
 	       origin = this
-	       state = s:STATE_PERM.region_state:RUS
+	       state = s:STATE_TOBOLSK.region_state:RUS
            on_created = {
            activate_law = law_type:law_presidential_republic
            activate_law = law_type:law_oligarchy

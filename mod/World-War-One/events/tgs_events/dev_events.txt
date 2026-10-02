@@ -3680,7 +3680,7 @@ dev_events.73 = {
         trigger = { is_player = no }
         add_modifier = {
             name = revolution_stabilization_buff_4
-            months = 20
+            months = 30
         }
     }
 }
@@ -9267,19 +9267,15 @@ dev_events.187 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
-    immediate = {
-		random_scope_war = {
-			save_scope_as = ongoing_war
-		}
-	}
+    immediate = {}
 
     option = {
         name = dev_events.25.a
         default_option = yes
-        scope:ongoing_war = {
+        every_scope_war = {
 			add_war_war_support = {
 				target = ROOT
-				value = 50
+				value = 100
 			}
 		}
     }
@@ -9301,21 +9297,11 @@ dev_events.188 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
-    immediate = {
-		random_scope_war = {
-			save_scope_as = ongoing_war
-		}
-	}
+    immediate = {}
 
     option = {
         name = dev_events.25.a
         default_option = yes
-        scope:ongoing_war = {
-			add_war_war_support = {
-				target = ROOT
-				value = 50
-			}
-		}
     }
 }
 

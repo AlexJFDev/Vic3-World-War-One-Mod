@@ -234,6 +234,11 @@ great_war_initiation_events.4 = {
                 target_country = c:SER
                 type = dp_world_war
                 add_war_goal = {
+                    holder = c:AUS
+                    type = make_protectorate
+                    target_country = c:SER
+                }
+                add_war_goal = {
                     holder = c:SER
                     type = conquer_state
                     target_state = s:STATE_SLAVONIA.region_state:AUS
@@ -263,19 +268,6 @@ great_war_initiation_events.4 = {
                     type = conquer_state
                     target_state = s:STATE_SLOVENIA.region_state:AUS
                 }
-                add_war_goal = {
-				    holder = c:SER
-				    target_country = c:AUS
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:AUS
-					   target_country = c:SER
-					   inputs = {
-						   { quantity = 100000 }
-					    }
-				    }
-			    }
             }
         }
         c:AUS = { set_variable = central_powers_participant }
@@ -357,23 +349,40 @@ great_war_initiation_events.5 = {
                 target_country = c:SER
                 type = dp_world_war
                 add_war_goal = {
+                    holder = c:AUS
+                    type = make_protectorate
+                    target_country = c:SER
+                }
+                add_war_goal = {
+                    holder = c:SER
+                    type = conquer_state
+                    target_state = s:STATE_SLAVONIA.region_state:AUS
+                }
+                add_war_goal = {
+                    holder = c:SER
+                    type = conquer_state
+                    target_state = s:STATE_DELVIDEK.region_state:AUS
+                }
+                add_war_goal = {
                     holder = c:SER
                     type = conquer_state
                     target_state = s:STATE_BOSNIA.region_state:AUS
                 }
                 add_war_goal = {
-				    holder = c:SER
-				    target_country = c:AUS
-				    type = enforce_treaty_article
-				    article = {
-					   article = money_transfer
-					   source_country = c:AUS
-					   target_country = c:SER
-					   inputs = {
-						   { quantity = 100000 }
-					    }
-				    }
-			    }
+                    holder = c:SER
+                    type = conquer_state
+                    target_state = s:STATE_DALMATIA.region_state:AUS
+                }
+                add_war_goal = {
+                    holder = c:SER
+                    type = conquer_state
+                    target_state = s:STATE_CROATIA.region_state:AUS
+                }
+                add_war_goal = {
+                    holder = c:SER
+                    type = conquer_state
+                    target_state = s:STATE_SLOVENIA.region_state:AUS
+                }
             }
         }
         c:AUS = { 
@@ -647,24 +656,109 @@ great_war_initiation_events.8 = {
                 }
             add_war_goal = {
                     holder = c:GER
-                    type = release_as_subject
-                    target_country = c:UBD
+                    type = conquer_state
+                    target_state = s:STATE_VILNIUS.region_state:RUS
                 }
             add_war_goal = {
                     holder = c:GER
-                    type = release_as_subject
-                    target_country = c:POL
+                    type = conquer_state
+                    target_state = s:STATE_KAUNAS.region_state:RUS
                 }
             add_war_goal = {
                     holder = c:GER
-                    type = release_as_subject
-                    target_country = c:BYE
+                    type = conquer_state
+                    target_state = s:STATE_COURLAND.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_RIGA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_TARTU.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_TALINN.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_GREATER_POLAND.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_LESSER_POLAND.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_MAZOVIA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_VOLHYNIA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_BREST.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_MOGILEV.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_MINSK.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_VITEBSK.region_state:RUS
                 }
             add_war_goal = {
                     holder = c:AUS
-                    type = release_as_subject
-                    target_country = c:UKR
+                    type = conquer_state
+                    target_state = s:STATE_KIEV.region_state:RUS
                 }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_BESSARABIA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_CHERSON.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_TAURIDA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_CRIMEA.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_KHARKOV.region_state:RUS
+                }
+            add_war_goal = {
+                    holder = c:AUS
+                    type = conquer_state
+                    target_state = s:STATE_CHERNIHIV.region_state:RUS
+                }   
 		}
         c:GER = { set_variable = central_powers_participant }
         c:RUS = { set_variable = entente_participant }
@@ -914,13 +1008,18 @@ great_war_initiation_events.10 = {
 			}
             add_war_goal = {
                     holder = c:FRA
-                    type = conquer_state
+                    type = return_state
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
                     holder = c:FRA
-                    type = release_as_subject
-                    target_country = c:RHE
+                    type = conquer_state
+                    target_state = s:STATE_RHINELAND.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_NORTH_RHINE.region_state:GER
                 }
             add_war_goal = {
                     holder = c:FRA
@@ -1156,18 +1255,18 @@ great_war_initiation_events.13 = {
 			}
             add_war_goal = {
                     holder = c:FRA
-                    type = conquer_state
+                    type = return_state
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
                     holder = c:FRA
-                    type = release_as_subject
-                    target_country = c:RHE
+                    type = conquer_state
+                    target_state = s:STATE_RHINELAND.region_state:GER
                 }
             add_war_goal = {
                     holder = c:FRA
-                    type = regime_change
-                    target_country = c:GER
+                    type = conquer_state
+                    target_state = s:STATE_NORTH_RHINE.region_state:GER
                 }
             add_war_goal = {
                     holder = c:GER
@@ -1396,19 +1495,6 @@ great_war_initiation_events.15 = {
 			}
             add_target_backers = {
 				c:BIC
-			}
-            add_war_goal = {
-				holder = c:GER
-				target_country = c:GBR
-				type = enforce_treaty_article
-				article = {
-					article = money_transfer
-					source_country = c:GBR
-					target_country = c:GER
-					inputs = {
-						{ quantity = 500000 }
-					}
-				}
 			}
             add_war_goal = {
 				holder = c:GBR
@@ -1815,13 +1901,18 @@ great_war_initiation_events.27 = {
 			}
             add_war_goal = {
                     holder = c:FRA
-                    type = conquer_state
+                    type = return_state
                     target_state = s:STATE_ALSACE_LORRAINE.region_state:GER
                 }
             add_war_goal = {
                     holder = c:FRA
-                    type = release_as_subject
-                    target_country = c:RHE
+                    type = conquer_state
+                    target_state = s:STATE_RHINELAND.region_state:GER
+                }
+            add_war_goal = {
+                    holder = c:FRA
+                    type = conquer_state
+                    target_state = s:STATE_NORTH_RHINE.region_state:GER
                 }
             add_war_goal = {
                     holder = c:FRA

@@ -109,6 +109,7 @@ je_germany_ai_blockade = {
     }
     
     possible = {
+        game_date > 1917.1.1
         c:GER = {
           is_player = no
           is_at_war = yes
@@ -145,9 +146,18 @@ je_germany_ai_blockade = {
     }
     
     fail = {
-        any_civil_war = {
-			civil_war_progress >= 0.75
-		}
+        OR = {
+            any_civil_war = {
+			   civil_war_progress >= 0.75
+		    }
+            any_scope_war = {
+                is_world_war = yes
+		        has_war_support = {
+		          target = ROOT
+		          value < 5
+		        }   
+		    }
+        }
     }
 
     on_fail = {

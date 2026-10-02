@@ -258,8 +258,13 @@ world_war_two_initiation_events.2 = { #WW2 initiation Allies response
 			add_target_backers = { c:FRA }
             add_war_goal = {
                 holder = c:FRA
-                type = release_as_subject
-                target_country = c:RHE
+                type = conquer_state
+                target_state = s:STATE_RHINELAND.region_state:GER
+            }
+            add_war_goal = {
+                holder = c:FRA
+                type = conquer_state
+                target_state = s:STATE_RHUR.region_state:GER
             }
             add_war_goal = {
                 holder = c:GER
@@ -1113,12 +1118,8 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
                 has_variable = allies_participant
             }
             trigger_event = {
-              id = dev_events.188
+              id = dev_events.187
               days = 5
-            }
-            trigger_event = {
-              id = dev_events.188
-              days = 120
             }
         }
         ai_chance = {
