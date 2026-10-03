@@ -89,7 +89,7 @@
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
-je_war_fatigue_russia = {
+je_war_fatigue_russia = { #Deactivated
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     group = je_group_internal_affairs
 
@@ -97,6 +97,7 @@ je_war_fatigue_russia = {
         exists = c:RUS
         THIS = c:RUS
         has_variable = entente_participant
+        has_variable = deactivated_je
     }
     
     possible = {
@@ -105,7 +106,6 @@ je_war_fatigue_russia = {
         game_date > 1916.1.1
         root.average_sol < 10
         any_scope_war = {
-            is_world_war = yes
 		    has_war_support = {
 		        target = ROOT
 		        value < 45

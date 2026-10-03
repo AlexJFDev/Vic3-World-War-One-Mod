@@ -225,6 +225,15 @@ mexico_events.10 = { #Revolutionnary victory
 		        set_state_owner = c:MEX
             }
         }
+        if = {
+            limit = { c:MEX = is_player = no }
+            c:MEX = {
+                trigger_event = {
+                   id = dev_events.188
+                   days = 5
+                }
+            }
+        }
         ai_chance = {
 			base = 3
 		}
@@ -255,6 +264,15 @@ mexico_events.10 = { #Revolutionnary victory
 			        }
 		        }
 		        set_state_owner = c:MEX
+            }
+        }
+        if = {
+            limit = { c:MEX = is_player = no }
+            c:MEX = {
+                trigger_event = {
+                   id = dev_events.188
+                   days = 5
+                }
             }
         }
         ai_chance = {
@@ -288,6 +306,15 @@ mexico_events.10 = { #Revolutionnary victory
 		        set_state_owner = c:MEX
             }
         }
+        if = {
+            limit = { c:MEX = is_player = no }
+            c:MEX = {
+                trigger_event = {
+                   id = dev_events.188
+                   days = 5
+                }
+            }
+        }
         ai_chance = {
 			base = 1
 		}
@@ -312,6 +339,15 @@ mexico_events.10 = { #Revolutionnary victory
 			        }
 		        }
 		        set_state_owner = c:MEX
+            }
+        }
+        if = {
+            limit = { c:MEX = is_player = no }
+            c:MEX = {
+                trigger_event = {
+                   id = dev_events.188
+                   days = 5
+                }
             }
         }
         ai_chance = {

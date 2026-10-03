@@ -2,9 +2,24 @@ NAI = {
     MOBILIZATION_OPTION_RANDOM_FACTOR = 0.2					# The higher this is, the more random AI is about which mobilization options to activate
 	MOBILIZATION_OPTION_MONEY_COST_FACTOR = 100		        # When checking whether the AI should activate a mobilization option, the monetary cost of activation is multiplied by this and compared against AI value to determine if it's worth it
     
-    FRONT_IMPORTANCE_OWN_FRONT_WEIGHT_MULT = 6.0 # Fronts that we 'own' have the importance of their states multiplied by this
+    FRONT_IMPORTANCE_OWN_FRONT_WEIGHT_MULT = 9.0 # Fronts that we 'own' have the importance of their states multiplied by this
+	HQ_STATIONING_IMPORTANCE_NOT_OWN_HQ_WEIGHT_MULT = 0.25 # HQs of allies have their importance multiplied by this as the AI prefers stationing in its own HQs
+    HQ_OR_FRONT_UNDEFENDED_ASSIGNMENT_WEIGHT = 2.0 # Undefended HQs and Fronts are given preference by this multiplier for assignment of formations there
 
-    AI_PEACE_AGREEMENT_BASE_VALUE = -30
+    FRONT_CAPITAL_HQ_IMPORTANCE_MULT = 6.0 		# Fronts that threaten the AI's own capital HQ have their importance multiplied by this
+	FRONT_NON_WAR_ZONE_IMPORTANCE_MULT = 1.0 	# Fronts that are not being contested by the enemy have their importance multiplied by this
+	FRONT_WAR_ZONE_IMPORTANCE_MULT = 4.0		# Fronts that *are* being contested by the enemy have their importance multiplied by this
+	HQ_LANDLOCKED_IMPORTANCE_MULT = 0.0 	    # Friendly HQs without a coast have their importance multiplied by this
+	HQ_COASTAL_NON_WAR_ZONE_IMPORTANCE_MULT = 0.5 	# Friendly HQs with a coast that are not under naval invasion have their importance multiplied by this
+	HQ_COASTAL_WAR_ZONE_IMPORTANCE_MULT = 3.0		# Friendly HQs that *are* under naval invasion have their importance multiplied by this
+
+    FRONT_MIN_MORALE_TO_ATTACK = 0.6							# As a fraction of max morale (1)
+	FRONT_MIN_ORGANIZATION_TO_ATTACK = 0.6						# As a fraction of formation's max organization
+
+    BLOCKADE_STATE_WEIGHT = 0.5								# Score weight for state blockade based on the total score. The higher this is the more likely AI will choose to blockade the state rather than other offensive orders in the sea node
+
+	FLEET_BLOCKADE_TASK_SCORE_FROM_STRENGTH = 5.0					# The higher this is the more likely fleets with high blockade strength would blockade enemy states
+	FLEET_BLOCKADE_TASK_SCORE_NO_HOSTILES = 2.5 					# Gives a boost to priority if there are no hostiles present
 
     MILITARY_UNITS_PER_FORMATION_ARMY = 200
 }

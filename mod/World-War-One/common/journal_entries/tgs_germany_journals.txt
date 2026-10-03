@@ -1,4 +1,4 @@
-﻿je_war_fatigue_germany = {
+﻿je_war_fatigue_germany = { #Deactivated
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     group = je_group_internal_affairs
 
@@ -7,9 +7,11 @@
         THIS = c:GER
         has_variable = central_powers_participant
         NOT = { has_global_variable = world_war_1_over }
+        has_variable = deactivated_je
     }
     
     possible = {
+        has_variable = deactivated_je
         is_player = no
         game_date > 1916.1.1
         has_variable = central_powers_participant
@@ -18,7 +20,6 @@
         NOT = { has_global_variable = world_war_1_over }
         NOT = { has_variable = germany_war_fatigue }
         any_scope_war = {
-            is_world_war = yes
 		    has_war_support = {
 		        target = ROOT
 		        value < 45

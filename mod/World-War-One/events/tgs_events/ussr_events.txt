@@ -421,10 +421,6 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
             id = dev_events.147
             days = 5
         }
-        trigger_event = {
-            id = dev_events.124
-            days = 15
-        }
 		trigger_event = {
             id = ussr_events.2
             years = 2
@@ -901,11 +897,6 @@ ussr_events.9 = { #Baltic conquest
 
             escalation = 85
             
-            add_war_goal = {
-                holder = c:EST
-                type = regime_change
-                target_country = c:RUS
-            }
             add_war_goal = {
                 holder = c:RUS
                 type = annex_country

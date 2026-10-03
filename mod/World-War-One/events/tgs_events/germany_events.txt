@@ -561,18 +561,6 @@ germany_events.4 = { #Communist uprising
         c:BAV = {
             change_infamy = -100
         }
-        if = {
-            limit = {
-                c:BAV = { is_player = no }
-                c:GER = { is_player = no }
-            }
-            c:BAV = {
-                trigger_event = {
-                  id = dev_events.191
-		          days = 60
-                }
-            }
-        }
         s:STATE_FRANCONIA = {
 	       random_scope_state = {
 		      limit = {
@@ -625,6 +613,18 @@ germany_events.4 = { #Communist uprising
             trigger_event = {
                 id = dev_events.14
                 days = 100
+            }
+        }
+        if = {
+            limit = {
+                c:GER = { is_player = no }
+                c:BAV = { is_player = no }
+            }
+            c:BAV = {
+                trigger_event = {
+                  id = dev_events.196
+		          days = 30
+                }
             }
         }
         every_character = {

@@ -114,13 +114,13 @@ je_germany_ai_blockade = {
           is_player = no
           is_at_war = yes
           has_variable = central_powers_participant
-          navy_size < 200
+          navy_size < 250
         }
         c:GBR = {
           is_player = no
           is_at_war = yes
           has_variable = entente_participant
-          navy_size > 400
+          navy_size > 450
         }
         c:FRA = {
           is_player = no
@@ -151,7 +151,6 @@ je_germany_ai_blockade = {
 			   civil_war_progress >= 0.75
 		    }
             any_scope_war = {
-                is_world_war = yes
 		        has_war_support = {
 		          target = ROOT
 		          value < 5

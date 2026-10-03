@@ -175,7 +175,7 @@ china_events.2 = { #Imperial restoration
         c:YUN = {
           create_diplomatic_play = {
 		    target_country = c:CHI
-		    type = dp_regime_change
+		    type = dp_humiliation
             escalation = 99
 	        add_war_goal = {
 		        holder = c:CHI
@@ -1944,11 +1944,6 @@ china_events.22 = { #Call to arms against Japan
             add_war_goal = {
 		        holder = c:JAP
 		        type = make_protectorate
-		        target_country = ROOT
-            }
-            add_war_goal = {
-		        holder = c:JAP
-		        type = regime_change
 		        target_country = ROOT
             }
 		}
