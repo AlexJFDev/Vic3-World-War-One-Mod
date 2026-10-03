@@ -3680,7 +3680,7 @@ dev_events.73 = {
         trigger = { is_player = no }
         add_modifier = {
             name = revolution_stabilization_buff_4
-            months = 30
+            months = 28
         }
     }
 }
@@ -6598,6 +6598,20 @@ dev_events.126 = {
                annex_with_incorporation = c:BYE
             }
         }
+        s:STATE_OUTER_MANCHURIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:MCH
+			    owner = {
+				    OR = {
+					   c:MCH = THIS
+                       c:BEI = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
     }
 
     option = {
@@ -8284,16 +8298,43 @@ dev_events.170 = {
 
     option = {
         name = dev_events.2.a
+        trigger = { is_player = no }
         default_option = yes
         scope:russian_civil_war_diplo_play = {
 			add_initiator_backers = {
 				who = c:JAP
 			}
-            add_war_goal = {
-                holder = c:JAP
-                type = conquer_state
-                target_state = s:STATE_SAKHALIN.region_state:FER
+        }
+        s:STATE_OUTER_MANCHURIA = {
+            set_owner_of_provinces = {
+                country = c:MCH
+                provinces = { x60D080 }
             }
+        }
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_northeast_asia
+            name = jap_sakhalin_army
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_SAKHALIN
+				count = 30
+			}
+		}
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = dev_events.2.a
+        trigger = { is_player = yes }
+        default_option = yes
+        scope:russian_civil_war_diplo_play = {
+			add_initiator_backers = {
+				who = c:JAP
+			}
         }
         ai_chance = {
             base = 1
@@ -9574,5 +9615,67 @@ dev_events.196 = {
         c:GER = {
             annex_with_incorporation = c:BAV
         }   
+    }
+}
+
+dev_events.197 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        every_country = {
+            limit = { 
+                is_subject = yes
+                NOR = { 
+                    c:FIN = THIS 
+                    c:EGY = THIS
+                }
+            }
+            trigger_event = {
+              id = dev_events.198
+              days = 5
+            }
+        }
+    }
+}
+
+dev_events.198 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        add_modifier = {
+			name = revolution_stabilization_buff_2
+            years = 15
+            is_decaying = yes
+		}
     }
 }

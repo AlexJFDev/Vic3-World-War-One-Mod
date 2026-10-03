@@ -786,7 +786,7 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         }
         trigger_event = {
             id = russia_events.4
-            days = 260
+            days = 200
         }
         ai_chance = {
 			base = 0
@@ -1861,6 +1861,15 @@ russia_events.7 = { #Soviet uprising
 			type = puppet
 		}
         remove_modifier = petrograd_soviet
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+            create_building = {
+				building = building_naval_administration
+				level = 200
+            }	
+		} 
     }
 }
 
