@@ -1264,17 +1264,13 @@ germany_events.25 = { #Nazi threat je initiation
         name = germany_events.25.a
         trigger = { is_player = no }
         add_technology_researched = political_agitation
-        add_modifier = {
-			name = starting_sol_buff_1
-            years = 7
-		}
         set_variable historical_fascism
     }
 
     option = {
         name = germany_events.25.a
         trigger = { is_player = yes }
-        set_variable historical_fascism
+        set_variable = historical_fascism
     }
 }
 
@@ -1577,6 +1573,9 @@ germany_events.28 = { #Nazi takeover
             }
         }
         create_character = {
+			template = ger_wernher_von_braun_character_template
+		}
+        create_character = {
             first_name = Rudolf
 	        last_name = Hess
 	        historical = yes
@@ -1710,6 +1709,9 @@ germany_events.28 = { #Nazi takeover
             }
         }
         create_character = {
+			template = ger_wernher_von_braun_character_template
+		}
+        create_character = {
             first_name = Rudolf
 	        last_name = Hess
 	        historical = yes
@@ -1768,6 +1770,27 @@ germany_events.28 = { #Nazi takeover
 	        on_created = {
                set_variable = {
                   name = albert_speer
+                }                
+            }
+        }
+        create_character = {
+            first_name = Adolf
+	        last_name = Eichmann
+	        historical = yes
+            birth_date = 1906.03.19
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            role = character_role_politician
+	        interest_group = ig_petty_bourgeoisie
+	        ideology = ideology_fascist
+	        traits = {
+               cruel
+               meticulous
+	        }
+	        on_created = {
+               set_variable = {
+                  name = adolf_eichmann
                 }                
             }
         }
@@ -1856,7 +1879,7 @@ germany_events.29 = { #Policy choice
     option = {
         name = germany_events.29.b
         trigger = { is_player = no }
-        add_technology_progress = { progress = 50000 technology = carrier_tech }
+        add_technology_researched = battlefleet_tactics
         add_modifier = {
           name = nazi_germany_politics_navy
           years = 10
@@ -1887,7 +1910,7 @@ germany_events.29 = { #Policy choice
     option = {
         name = germany_events.29.b
         trigger = { is_player = yes }
-        add_technology_progress = { progress = 8000 technology = carrier_tech }
+        add_technology_progress = { progress = 8000 technology = battlefleet_tactics }
         every_country = {
             limit = {
                 OR = {
@@ -2466,19 +2489,24 @@ germany_events.40 = { #Rhineland restitution
 
     trigger = {}
 
-    immediate = {
-        create_character = {
-			template = ger_wernher_von_braun_character_template
-		}
+    immediate = {}
+
+    option = {
+        name = germany_events.40.a
+        default_option = yes
+        trigger = { is_player = no }
+        je:je_nazi_threat = { add_progress = { value = -30 name = nazi_ascension_progress_bar } }
+        set_relations = { country = c:USA value = 50 } 
+        set_relations = { country = c:GBR value = 50 }
+        set_relations = { country = c:FRA value = 50 }
+        set_relations = { country = c:ITA value = 50 }
     }
 
     option = {
         name = germany_events.40.a
         default_option = yes
+        trigger = { is_player = yes }
         je:je_nazi_threat = { add_progress = { value = -30 name = nazi_ascension_progress_bar } }
-        ai_chance = {
-            base = 1
-        }
     }
 }
 
@@ -2671,7 +2699,6 @@ germany_events.43 = { #Great depression recovery
     option = {
         name = germany_events.43.a
         default_option = yes
-        trigger = { is_player = yes }
         add_modifier = {
           name = germany_economic_recovery_1
           years = 5
@@ -2696,7 +2723,6 @@ germany_events.43 = { #Great depression recovery
 
     option = {
         name = germany_events.43.b
-        trigger = { is_player = yes }
         add_modifier = {
           name = germany_economic_recovery_2
           years = 5
@@ -2721,7 +2747,6 @@ germany_events.43 = { #Great depression recovery
 
     option = {
         name = germany_events.43.c
-        trigger = { is_player = yes }
         add_modifier = {
           name = germany_economic_recovery_3
           years = 5
@@ -2738,85 +2763,6 @@ germany_events.43 = { #Great depression recovery
 		add_radicals = {
 			strata = lower
             value = -0.25
-        }
-        ai_chance = {
-            base = 0
-        }
-    }
-
-    option = {
-        name = germany_events.43.a
-        default_option = yes
-        trigger = { is_player = no }
-        add_treasury = 50000000
-        add_modifier = {
-          name = germany_economic_recovery_1
-          years = 10
-          is_decaying = yes
-        } 
-        add_radicals = {
-			strata = upper
-			value = -0.5
-		}
-		add_radicals = {
-			strata = middle
-            value = -0.5
-		}
-		add_radicals = {
-			strata = lower
-            value = -0.5
-        }
-        ai_chance = {
-            base = 1
-        }
-    }
-
-    option = {
-        name = germany_events.43.b
-        trigger = { is_player = no }
-        add_treasury = 50000000
-        add_modifier = {
-          name = germany_economic_recovery_2
-          years = 10
-          is_decaying = yes
-        } 
-        add_radicals = {
-			strata = upper
-			value = -0.5
-		}
-		add_radicals = {
-			strata = middle
-            value = -0.5
-		}
-		add_radicals = {
-			strata = lower
-            value = -0.5
-        }
-        ai_chance = {
-            base = 0
-        }
-    }
-
-    option = {
-        name = germany_events.43.c
-        trigger = { is_player = no }
-        add_treasury = 50000000
-        add_modifier = {
-          name = germany_economic_recovery_3
-          years = 10
-          is_decaying = yes
-        } 
-        add_radicals = {
-			strata = upper
-			value = -0.35
-		}
-		add_radicals = {
-			strata = middle
-            value = -0.35
-		}
-		add_radicals = {
-			strata = lower
-            value = -0.35
         }
         ai_chance = {
             base = 0

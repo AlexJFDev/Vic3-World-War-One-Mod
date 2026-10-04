@@ -3747,12 +3747,7 @@ dev_events.75 = {
         name = dev_events.17.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 50000000
-        add_modifier = {
-            name = starting_minting_buff_4_modifier
-            years = 10
-            is_decaying = yes
-        }
+        add_treasury = 10000000
         every_scope_state = {
 			limit = { owner = ROOT }
 			set_state_type = incorporated
@@ -4463,12 +4458,9 @@ dev_events.89 = {
         name = dev_events.2.a
         default_option = yes
         trigger = { is_player = no }
-        c:JAP = {
-		    create_diplomatic_pact = {
-			  country = c:GBR
-			  type = rivalry
-		    }	
-	    }
+        c:RUS ?= {
+           set_relations = { country = c:GBR value = -30 }
+        }
     }
 }
 
@@ -7961,6 +7953,9 @@ dev_events.159 = {
         create_character = {
 			template = usa_aldai_stevenson_character_template
 		}
+        create_character = {
+			template = usa_robert_oppenheimer_character_template
+		}
     }
 }
 
@@ -9744,6 +9739,20 @@ dev_events.199 = {
         }
         if = {
             limit = {
+                c:ITA = { 
+                    is_player = no
+                    has_variable = entente_participant
+                }
+            }
+            c:ITA = {
+                trigger_event = {
+                   id = dev_events.200
+                   days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
                 c:RUS = { 
                     is_player = no
                     has_variable = entente_participant
@@ -9752,7 +9761,7 @@ dev_events.199 = {
             }
             c:RUS = {
                 trigger_event = {
-                   id = dev_events.201
+                   id = dev_events.202
                    days = 5
                 }
             }
@@ -9778,7 +9787,7 @@ dev_events.199 = {
             }
             c:JAP = {
                 trigger_event = {
-                   id = dev_events.200
+                   id = dev_events.201
                    days = 5
                 }
             }
@@ -9878,6 +9887,177 @@ dev_events.201 = {
 		add_radicals = {
 			strata = lower
             value = -10000000
+		}
+    }
+}
+
+dev_events.202 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        remove_modifier = declared_bankruptcy
+        add_treasury = 200000000
+        add_loyalists = {
+			strata = upper
+			value = -10000000
+		}
+		add_loyalists = {
+			strata = middle
+            value = -10000000
+		}
+		add_loyalists = {
+			strata = lower
+            value = -10000000
+		}
+        add_radicals = {
+			strata = upper
+			value = -10000000
+		}
+		add_radicals = {
+			strata = middle
+            value = -10000000
+		}
+		add_radicals = {
+			strata = lower
+            value = -10000000
+		}
+    }
+}
+
+dev_events.203 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        remove_modifier = declared_bankruptcy
+        add_treasury = 300000000
+        add_loyalists = {
+			strata = upper
+			value = -10000000
+		}
+		add_loyalists = {
+			strata = middle
+            value = -10000000
+		}
+		add_loyalists = {
+			strata = lower
+            value = -10000000
+		}
+        add_radicals = {
+			strata = upper
+			value = -10000000
+		}
+		add_radicals = {
+			strata = middle
+            value = -10000000
+		}
+		add_radicals = {
+			strata = lower
+            value = -10000000
+		}
+    }
+}
+
+dev_events.204 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { has_variable = entente_participant }
+        annex = c:NGG
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = dev_events.17.a
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+dev_events.205 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+ 
+    immediate = {
+        random_diplomatic_play = {
+           limit = {
+			    initiator = { c:JAP ?= this }
+                target = {
+                    OR = {
+                        c:MCH ?= this 
+                        c:CHI ?= this 
+                    } 
+                }
+		    }
+           save_scope_as = invasion_of_manchuria
+        }
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+        scope:invasion_of_manchuria = {
+			resolve_play_for = c:JAP
 		}
     }
 }

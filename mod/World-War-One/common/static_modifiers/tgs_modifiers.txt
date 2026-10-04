@@ -88,7 +88,7 @@ no_federal_reserve_modifier = {
 colossus_with_feet_of_clay_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     country_prestige_mult = -0.3
-    political_movement_radicalism_add = 0.15
+    political_movement_radicalism_add = 0.2
     state_pop_support_movement_communist_mult = 0.8
     state_pop_support_movement_anarchist_mult = 0.8
     state_pop_support_movement_socialist_mult = 0.8
@@ -586,9 +586,9 @@ great_depression_effect_1 = { #USA
     state_shopkeepers_investment_pool_efficiency_mult = -5
     state_clergymen_investment_pool_efficiency_mult = -5
     state_farmers_investment_pool_efficiency_mult = -5
-    state_lower_strata_standard_of_living_add = -7
-    state_middle_strata_standard_of_living_add = -7
-    state_upper_strata_standard_of_living_add = -7
+    state_lower_strata_standard_of_living_add = -8
+    state_middle_strata_standard_of_living_add = -8
+    state_upper_strata_standard_of_living_add = -8
 }
 
 great_depression_effect_2 = { #Less impacted countries
@@ -660,6 +660,9 @@ banks_saved_modifier = {
     state_dependent_wage_mult = 0.05
     country_state_religion_wages_mult = 0.1
 	country_non_state_religion_wages_mult = 0.05
+    state_lower_strata_standard_of_living_add = 2
+    state_middle_strata_standard_of_living_add = 2
+    state_upper_strata_standard_of_living_add = 2
 }
 
 angry_industrialists_1_modifier = {
@@ -1160,33 +1163,30 @@ communist_nerf_1 = {
 
 germany_economic_recovery_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-    country_minting_mult = 5
+    country_minting_mult = 0.3
     state_lower_strata_standard_of_living_add = 3
     state_middle_strata_standard_of_living_add = 3
-    building_construction_sector_throughput_add = 0.3
-    building_arms_industry_throughput_add = 0.15
-    building_artillery_foundry_throughput_add = 0.15
-    building_munition_plant_throughput_add = 0.15
-    building_aircraft_factory_throughput_add = 0.15
-    building_shipyard_throughput_add = 0.15
+    building_arms_industry_throughput_add = 0.1
+    building_artillery_foundry_throughput_add = 0.1
+    building_munition_plant_throughput_add = 0.1
+    building_aircraft_factory_throughput_add = 0.1
+    building_shipyard_throughput_add = 0.1
 }
 
 germany_economic_recovery_2 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-    country_minting_mult = 5
+    country_minting_mult = 0.3
     state_lower_strata_standard_of_living_add = 3
     state_middle_strata_standard_of_living_add = 3
-    building_construction_sector_throughput_add = 0.3
     building_group_bg_manufacturing_throughput_add = 0.1
     building_group_bg_heavy_industry_throughput_add = 0.1
 }
 
 germany_economic_recovery_3 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-    country_minting_mult = 5
+    country_minting_mult = 0.3
     state_lower_strata_standard_of_living_add = 3
     state_middle_strata_standard_of_living_add = 3
-    building_construction_sector_throughput_add = 0.3
     building_group_bg_agriculture_throughput_add = 0.2
 }
 
@@ -1426,7 +1426,7 @@ money_buff_5 = {
 proletarian_fervor = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     interest_group_ig_trade_unions_pol_str_mult = 0.5
-    political_movement_radicalism_add = 0.15
+    political_movement_radicalism_add = 0.1
 }
 
 made_in_germany = {
@@ -1595,11 +1595,11 @@ petrograd_soviet = {
 
 germany_blockaded = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-    political_movement_radicalism_add = 0.3
+    political_movement_radicalism_add = 0.5
     building_training_rate_mult = -0.3
-    state_lower_strata_standard_of_living_add = -3
-    state_middle_strata_standard_of_living_add = -3
-    state_upper_strata_standard_of_living_add = -3
+    state_lower_strata_standard_of_living_add = -5
+    state_middle_strata_standard_of_living_add = -5
+    state_upper_strata_standard_of_living_add = -5
 }
 
 enforced_partition = {
@@ -1610,8 +1610,8 @@ enforced_partition = {
 turkish_independance_war = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     country_tax_income_add = 50000
-    unit_army_offense_mult = 0.3
-    unit_army_defense_mult = 0.3
+    unit_army_offense_mult = 0.15
+    unit_army_defense_mult = 0.15
     unit_morale_recovery_mult = 0.5
     military_formation_mobilization_speed_mult = 0.5
     country_authority_mult = 0.15

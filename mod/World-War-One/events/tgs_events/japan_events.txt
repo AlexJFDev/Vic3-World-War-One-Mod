@@ -685,6 +685,18 @@ japan_events.18 = {#Invasion of Manchuria
 
             escalation = 85
 		}
+        if = {
+            limit = {
+              c:MCH = { is_player = no }
+              c:JAP = { is_player = no }
+            }   
+            c:MCH = {
+                trigger_event = { 
+                   id = dev_events.205
+                   days = 30
+                }
+            }
+        }
         ai_chance = {
 		  base = 1
 	    }
@@ -732,6 +744,19 @@ japan_events.18 = {#Invasion of Manchuria
                 target_state = s:STATE_YANGHO.region_state:JAP
             }
 		}
+        if = {
+            limit = {
+              c:CHI = { is_player = no }
+              c:MCH = { is_player = no }
+              c:JAP = { is_player = no }
+            }   
+            c:MCH = {
+                trigger_event = { 
+                   id = dev_events.205
+                   days = 30
+                }
+            }
+        }
         ai_chance = {
 		  base = 1
 	    }
@@ -742,8 +767,9 @@ japan_events.18 = {#Invasion of Manchuria
         default_option = yes
         trigger = {
             c:CHI = {
-                owns_entire_state_region = STATE_NORTHERN_MANCHURIA
-				owns_entire_state_region = STATE_SOUTHERN_MANCHURIA
+                has_state_in_state_region = STATE_NORTHERN_MANCHURIA
+				has_state_in_state_region = STATE_SHENGJING
+				has_state_in_state_region = STATE_SOUTHERN_MANCHURIA
             }
             has_game_rule = ww2_asia_enabled
         }
@@ -795,6 +821,19 @@ japan_events.18 = {#Invasion of Manchuria
                 holder = c:CHI
                 type = conquer_state
                 target_state = s:STATE_YANGHO.region_state:JAP
+            }
+        }
+        if = {
+            limit = {
+              c:CHI = { is_player = no }
+              c:MCH = { is_player = no }
+              c:JAP = { is_player = no }
+            }   
+            c:CHI = {
+                trigger_event = { 
+                   id = dev_events.205
+                   days = 30
+                }
             }
         }
         ai_chance = {

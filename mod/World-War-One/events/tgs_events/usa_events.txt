@@ -86,11 +86,7 @@ usa_events.6 = { #Black Tuesday
 
     trigger = {}
 
-    immediate = {
-        create_character = {
-			template = usa_robert_oppenheimer_character_template
-		}
-    }
+    immediate = {}
 
     option = {
         name = usa_events.6.a
@@ -163,15 +159,15 @@ usa_events.6 = { #Black Tuesday
 
     option = {
         name = usa_events.6.b
-        add_treasury = -200000000
+        add_treasury = -100000000
         add_modifier = {
             name = great_depression_effect_1
-            years = 25
+            years = 20
             is_decaying = yes
         }
         add_modifier = {
             name = banks_saved_modifier
-            years = 3
+            years = 10
             is_decaying = yes
         }
         add_modifier = {

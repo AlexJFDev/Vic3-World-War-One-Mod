@@ -287,37 +287,12 @@ turkey_events.5 = { #Mustapha Kemal launches the revolution
                     type = conquer_state
                     target_state = s:STATE_HUDAVENDIGAR.region_state:TUR
                 }
-	    }
-        c:GBR = {
-            trigger_event = {
-                id = turkey_events.6
-                days = 5
-            }
-        }   
-        c:FRA = {
-            trigger_event = {
-                id = turkey_events.6
-                days = 5
-            }
-        }  
+	    }  
         c:GRE = {
             trigger_event = {
                 id = dev_events.123
                 days = 5
             }
-        } 
-        if = {
-            limit = {
-                c:ITA = {
-                    has_variable = entente_participant
-		        }
-            }
-            c:ITA = {
-                trigger_event = {
-                   id = turkey_events.6
-                   days = 5
-                }
-            } 
         }
         set_variable = turkish_revolution
     } 
