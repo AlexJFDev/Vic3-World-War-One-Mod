@@ -303,10 +303,6 @@ japan_events.15 = {#Kanto earthquake
                 }
             }
         }
-        trigger_event = {
-            id = dev_events.154
-            days = 5
-        }
         s:STATE_KANTO ?= {
 			add_devastation = 20
 		}
@@ -1154,9 +1150,39 @@ japan_events.22 = {#Japan attacks USA and western nations
                 target_state = s:STATE_RYUKYU_ISLANDS.region_state:JAP
             }
             add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_WEST_MICRONESIA.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_EAST_MICRONESIA.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_EASTERN_NEW_GUINEA.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_NAURU.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_TONGA.region_state:JAP
+            }
+            add_war_goal = {
                 holder = c:JAP
                 type = conquer_state
                 target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_TONGA.region_state:USA
             }
             add_war_goal = {
                 holder = c:JAP
@@ -1310,9 +1336,39 @@ japan_events.22 = {#Japan attacks USA and western nations
                 target_state = s:STATE_RYUKYU_ISLANDS.region_state:JAP
             }
             add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_WEST_MICRONESIA.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_EAST_MICRONESIA.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_EASTERN_NEW_GUINEA.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_NAURU.region_state:JAP
+            }
+            add_war_goal = {
+                holder = c:USA
+                type = conquer_state
+                target_state = s:STATE_TONGA.region_state:JAP
+            }
+            add_war_goal = {
                 holder = c:JAP
                 type = conquer_state
                 target_state = s:STATE_HAWAIIAN_ISLANDS.region_state:USA
+            }
+            add_war_goal = {
+                holder = c:JAP
+                type = conquer_state
+                target_state = s:STATE_TONGA.region_state:USA
             }
             add_war_goal = {
                 holder = c:JAP

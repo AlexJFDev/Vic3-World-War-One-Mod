@@ -215,9 +215,21 @@ armed_forces_nerf = {
     interest_group_ig_armed_forces_pol_str_mult = -0.9
 }
 
-russian_civil_war_sov = {
+russian_civil_war_sov_player = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     country_tax_income_add = 800000
+    country_authority_mult = 0.2
+    unit_army_offense_mult = 0.3
+    unit_army_defense_mult = 0.3
+    unit_occupation_mult = 0.5
+    unit_morale_recovery_mult = 0.5
+    military_formation_mobilization_speed_mult = 0.5
+}
+
+russian_civil_war_sov_ai = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    country_tax_income_add = 800000
+    country_authority_mult = 0.4
     unit_army_offense_mult = 0.4
     unit_army_defense_mult = 0.4
     unit_occupation_mult = 0.5
@@ -759,7 +771,8 @@ austria_disorganized_railway_network = {
 
 broken_promise_ig = {
    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-   interest_group_pol_str_mult = -2
+   interest_group_pol_str_mult = -1
+   
 }
 
 ejercito_federal_nerf = {
@@ -1184,11 +1197,13 @@ modifier_bank_robbery_payments = {
 
 peace_promise_kept = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_pol_str_mult = 0.15
     interest_group_pop_attraction_mult = 0.5
 }
 
 peace_promise_broken = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    interest_group_pol_str_mult = -0.5
     interest_group_pop_attraction_mult = -0.8
 }
 
@@ -1590,4 +1605,15 @@ germany_blockaded = {
 enforced_partition = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_prestige_mult = -0.3
+}
+
+turkish_independance_war = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    country_tax_income_add = 50000
+    unit_army_offense_mult = 0.3
+    unit_army_defense_mult = 0.3
+    unit_morale_recovery_mult = 0.5
+    military_formation_mobilization_speed_mult = 0.5
+    country_authority_mult = 0.15
+	political_movement_radicalism_add = -0.15
 }

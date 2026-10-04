@@ -4586,57 +4586,131 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		value = 10
 	}
 
-	# Set the weights for ship groups, this determines the ratio that the AI aims to have of each, and thus what ship classes it adds to fleets
+	# Set the weights for AI ship categories, this determines the ratio that the AI aims to have of each, and thus what ship classes it adds to fleets
 	# Using this value in other strategies will function additively
 	# root = country
-	ship_group_weights = {
-		ship_group_capital_ships = {
+	ai_ship_category_weights = {
+		ai_ship_category_battle_line = {
 			value = 30
 
 			if = {
-				limit = { has_law_or_variant = law_type:law_professional_navy }
-				add = 10
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_merchant_navy }
-				subtract = 15
-			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_jeune_ecole }
-				subtract = 10
-			}
-		}
-		ship_group_cruisers = {
-			value = 60
-			if = {
 				limit = { has_technology_researched = self_propelled_torpedoes }
-				subtract = 20
+				subtract = 10
 			}
 
 			if = {
 				limit = { has_law_or_variant = law_type:law_professional_navy }
+				add = 10
+			}
+			else_if = {
+				limit = { has_law_or_variant = law_type:law_jeune_ecole }
 				subtract = 10
 			}
 			else_if = {
 				limit = { has_law_or_variant = law_type:law_merchant_navy }
-				add = 15
+				subtract = 10
 			}
-			else_if = {
-				limit = { has_law_or_variant = law_type:law_jeune_ecole }
+
+			if = { # Are we in the coastal defense ship era? Swap some capital ships for coastal defense ones under some laws
+				limit = {
+					 has_technology_researched = ironclad_tech
+					 NOT = { has_technology_researched = pre_dreadnought_tech }
+				}
+
+				if = {
+					limit =  {
+						OR = {
+							has_law_or_variant = law_type:law_merchant_navy
+							has_law_or_variant = law_type:law_jeune_ecole
+						}
+					}
+					subtract = 10
+				}
+			}
+		}
+		ai_ship_category_coastal_defense = {
+			value = 0
+
+			if = { # Are we in the coastal defense ship era?
+				limit = {
+					has_technology_researched = ironclad_tech
+					NOT = { has_technology_researched = pre_dreadnought_tech }
+				}
+
+				if = {
+					limit =  { has_law_or_variant = law_type:law_merchant_navy }
+					add = 20
+				}
+				else_if = {
+					limit = { has_law_or_variant = law_type:law_jeune_ecole }
+					add = 10
+				}
+			}
+		}
+		ai_ship_category_screens = {
+			value = 30
+			if = {
+				limit = { has_technology_researched = self_propelled_torpedoes }
+				subtract = 10
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_law_or_variant = law_type:law_merchant_navy
+						has_law_or_variant = law_type:law_diplomatic_navy
+						has_law_or_variant = law_type:law_jeune_ecole
+					}
+				}
 				add = 10
 			}
 		}
-		ship_group_torpedo_craft = {
+		ai_ship_category_torpedo_craft = {
 			value = 0
 			if = {
 				limit = { has_technology_researched = self_propelled_torpedoes }
-				add = 30
+				add = 20
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_jeune_ecole
+					}
+					add = 20
+				}
+				else_if = {
+					limit = {
+						has_law_or_variant = law_type:law_merchant_navy
+					}
+					add = 10
+				}
+			}
+		}
+		ai_ship_category_carriers = {
+			value = 0
+
+			if = { # Seaplane Tenders
+				limit = {
+					has_technology_researched = dreadnought_tech
+					OR = {
+						has_law_or_variant = law_type:law_professional_navy
+						has_law_or_variant = law_type:law_jeune_ecole
+					}
+				}
+
+				add = 5
 			}
 
-			if = {
-				limit = { has_law_or_variant = law_type:law_jeune_ecole }
-				add = 20
+			if = { # Carriers
+				limit = {
+					has_technology_researched = carrier_tech
+					has_law_or_variant = law_type:law_professional_navy
+				}
+
+				add = 5
 			}
+		}
+		ai_ship_category_transports = {
+			value = 20
 		}
 	}
 

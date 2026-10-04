@@ -69,17 +69,18 @@
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
-
-je_russian_civil_war_sov = {
+je_russian_civil_war_sov_player = {
     icon = "gfx/interface/icons/event_icons/red_star.dds"
     group = je_group_internal_affairs
 
     is_shown_when_inactive = {
         exists = c:RUS
         THIS = c:RUS
+        is_player = yes
     }
     
     possible = {
+        is_player = yes
         is_diplomatic_play_enemy_of = c:SIB
         NOR = {
             is_diplomatic_play_enemy_of = c:GER
@@ -88,7 +89,47 @@ je_russian_civil_war_sov = {
         }
     }
 
-    modifiers_while_active = { russian_civil_war_sov }
+    modifiers_while_active = { russian_civil_war_sov_player }
+
+    complete = {
+        NOR = {
+            is_diplomatic_play_enemy_of = c:SIB
+            is_diplomatic_play_enemy_of = c:UKR
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+			id = dev_events.126
+            days = 15
+		}
+    }
+
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_russian_civil_war_sov_ai = {
+    icon = "gfx/interface/icons/event_icons/red_star.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:RUS
+        THIS = c:RUS
+        is_player = no
+    }
+    
+    possible = {
+        is_player = no
+        is_diplomatic_play_enemy_of = c:SIB
+        NOR = {
+            is_diplomatic_play_enemy_of = c:GER
+            is_diplomatic_play_enemy_of = c:AUS
+            is_diplomatic_play_enemy_of = c:TUR
+        }
+    }
+
+    modifiers_while_active = { russian_civil_war_sov_ai }
 
     complete = {
         NOR = {

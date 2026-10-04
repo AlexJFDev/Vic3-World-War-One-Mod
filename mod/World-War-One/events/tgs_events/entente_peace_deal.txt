@@ -89,6 +89,10 @@ entente_peace_deal.1 = {
                 id = dev_events.189
                 days = 5
             }
+			trigger_event = { #Stabilization buff for all new subjects
+			   id = dev_events.197
+			   days = 400
+		    }
         }
         c:BEL = {
 		    create_diplomatic_pact = {
@@ -209,7 +213,7 @@ entente_peace_deal.1 = {
         }
 		c:GER = {
 			trigger_event = {
-                id = dev_events.7
+                id = dev_events.200
                 days = 10
             }
         }
@@ -682,7 +686,7 @@ entente_peace_deal.1 = {
 			}
 			c:TUR = {
                 trigger_event = {
-                  id = dev_events.64
+                  id = dev_events.200
                   days = 5
                 }
 				set_capital = STATE_ANKARA
@@ -3480,6 +3484,10 @@ entente_peace_deal.8 = { #Round 7 result
 		c:IRQ = {
 			trigger_event = {
                    id = dev_events.17
+                   days = 5
+                }
+			trigger_event = {
+                   id = dev_events.70
                    days = 5
                 }
 		}

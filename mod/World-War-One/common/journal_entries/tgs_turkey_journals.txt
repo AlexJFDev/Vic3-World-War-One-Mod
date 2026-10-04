@@ -118,6 +118,32 @@ je_nationalist_threat = {
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
+je_turkish_war_of_independence = {
+    icon = "gfx/interface/icons/event_icons/tur_icon.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:TUR
+        THIS = c:TUR
+    }
+    
+    possible = {
+        has_variable = turkish_revolution
+        is_diplomatic_play_enemy_of = c:GRE
+    }
+
+    modifiers_while_active = { turkish_independance_war }
+
+    complete = {
+        NOT = {
+            is_diplomatic_play_enemy_of = c:GRE
+        }
+    }
+
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
 je_kemalist_reforms = {
     icon = "gfx/interface/icons/event_icons/kemalism.dds"
     group = je_group_internal_affairs

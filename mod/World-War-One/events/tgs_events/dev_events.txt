@@ -9641,8 +9641,10 @@ dev_events.197 = {
             limit = { 
                 is_subject = yes
                 NOR = { 
+                    c:CAN = THIS
                     c:FIN = THIS 
                     c:EGY = THIS
+                    c:AST = THIS
                 }
             }
             trigger_event = {
@@ -9672,10 +9674,210 @@ dev_events.198 = {
     option = {
         name = dev_events.25.a
         default_option = yes
+        trigger = { 
+            is_player = no
+            NOT = {
+                has_modifier = revolution_stabilization_buff_2
+            } 
+        }
         add_modifier = {
 			name = revolution_stabilization_buff_2
-            years = 15
+            years = 30
             is_decaying = yes
+		}
+        add_modifier = {
+			name = colony_control_2
+            years = 30
+            is_decaying = yes
+		}
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        trigger = { 
+            is_player = yes
+            NOT = {
+                has_modifier = revolution_stabilization_buff_5
+            } 
+        }
+        add_modifier = {
+			name = revolution_stabilization_buff_5
+            years = 10
+            is_decaying = yes
+		}
+    }
+}
+
+dev_events.199 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        if = {
+            limit = {
+                c:FRA = { 
+                    is_player = no
+                    has_variable = entente_participant
+                }
+            }
+            c:FRA = {
+                trigger_event = {
+                   id = dev_events.200
+                   days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:RUS = { 
+                    is_player = no
+                    has_variable = entente_participant
+                    has_law_or_variant = law_type:law_council_republic
+                }
+            }
+            c:RUS = {
+                trigger_event = {
+                   id = dev_events.201
+                   days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:BIC = { 
+                    is_player = no
+                }
+            }
+            c:BIC = {
+                trigger_event = {
+                   id = dev_events.201
+                   days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:JAP = { 
+                    is_player = no
+                }
+            }
+            c:JAP = {
+                trigger_event = {
+                   id = dev_events.200
+                   days = 5
+                }
+            }
+        } 
+    }
+}
+
+dev_events.200 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        remove_modifier = declared_bankruptcy
+        add_treasury = 50000000
+        add_loyalists = {
+			strata = upper
+			value = -10000000
+		}
+		add_loyalists = {
+			strata = middle
+            value = -10000000
+		}
+		add_loyalists = {
+			strata = lower
+            value = -10000000
+		}
+        add_radicals = {
+			strata = upper
+			value = -10000000
+		}
+		add_radicals = {
+			strata = middle
+            value = -10000000
+		}
+		add_radicals = {
+			strata = lower
+            value = -10000000
+		}
+    }
+}
+
+dev_events.201 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        remove_modifier = declared_bankruptcy
+        add_treasury = 100000000
+        add_loyalists = {
+			strata = upper
+			value = -10000000
+		}
+		add_loyalists = {
+			strata = middle
+            value = -10000000
+		}
+		add_loyalists = {
+			strata = lower
+            value = -10000000
+		}
+        add_radicals = {
+			strata = upper
+			value = -10000000
+		}
+		add_radicals = {
+			strata = middle
+            value = -10000000
+		}
+		add_radicals = {
+			strata = lower
+            value = -10000000
 		}
     }
 }

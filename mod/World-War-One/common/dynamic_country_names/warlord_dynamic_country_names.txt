@@ -49,23 +49,6 @@ REPLACE_OR_CREATE:FRS = { # Min
 		}
 	}
 	dynamic_country_name = {
-		name = FRS_republic
-		adjective = FRS_ADJ
-		
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			OR = {
-				AND = {
-					NOT = { has_law = law_type:law_monarchy }
-					country_has_voting_franchise = yes
-				}
-				coa_def_communist_flag_trigger = yes
-			}
-		}
-	}
-	dynamic_country_name = {
 		name = FRS_imperial
 		adjective = FRS_ADJ
 		
