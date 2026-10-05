@@ -1543,10 +1543,7 @@
                 scope:character ?= {
                     exists = home_country
                     home_country = {
-                        OR = {
-                            c:PRU ?= this
-                            was_formed_from = PRU
-                        }
+                        c:GER ?= this
                     }
                     is_adult = yes
                     NOR = {

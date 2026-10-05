@@ -5151,9 +5151,9 @@
                 scope:character = {
                     NOT = {
                         AND = {
-                            exists = c:PRU
+                            exists = c:GER
                             exists = home_country
-                            home_country = c:PRU
+                            home_country = c:GER
                         }
                     }
                     owner ?= {
@@ -5235,9 +5235,9 @@
                 scope:character = {
                     NOT = {
                         AND = {
-                            exists = c:PRU
+                            exists = c:GER
                             exists = home_country
-                            home_country = c:PRU
+                            home_country = c:GER
                         }
                     }
                     owner ?= {
@@ -5310,9 +5310,9 @@
                 scope:character = {
                     NOT = {
                         AND = {
-                            exists = c:PRU
+                            exists = c:GER
                             exists = home_country
-                            home_country = c:PRU
+                            home_country = c:GER
                         }
                     }
                     owner ?= {
@@ -13704,10 +13704,7 @@
                 scope:character = {
                     exists = home_country
                     home_country = {
-                        OR = {
-                            c:PRU ?= this
-                            was_formed_from = PRU
-                        }
+                        c:GER ?= this
                     }
                     is_adult = yes
                     OR = {
@@ -16381,8 +16378,8 @@ indigenous_oceanic_pop_clothes = {
                         exists = scope:pop
                         scope:pop = {
                             home_country = {
-                                exists = c:PRU
-                                c:PRU = this
+                                exists = c:GER
+                                c:GER = this
                             }
                         }
                         OR = {
@@ -16400,8 +16397,8 @@ indigenous_oceanic_pop_clothes = {
                             }
                             exists = home_country
                             home_country = {
-                                exists = c:PRU
-                                c:PRU = this
+                                exists = c:GER
+                                c:GER = this
                             }
                         }
                     }
