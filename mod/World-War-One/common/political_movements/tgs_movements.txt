@@ -101,14 +101,23 @@
 
 	pop_support_weight = {
 		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
 			if = {
 				limit = {
-					scope:affected_movement = {
+					scope:political_movement = {
 						is_being_suppressed = yes
 					}
 				}
 				add = {
-					value = 10
+					value = suppression_base_value
 					multiply = {
 						value = -0.5
 						add = owner.modifier:country_suppression_attraction_factor
@@ -118,7 +127,7 @@
 			}
 			else = {
 				add = {
-					value = 10
+					value = bolstering_base_value
 					multiply = {
 						value = 0.5
 						add = owner.modifier:country_bolster_attraction_factor
@@ -127,36 +136,95 @@
 				}
 			}
 		}
+
 		add = {
-			value = 5
+			value = 3
 			desc = "POP_BASE_SUPPORT"
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
 		}
 
 		if = {
 			limit = {
 				strata = upper
 			}
-			add = {
-				value = 10
-				desc = "UPPER_NO_ICON"
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 50
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				if = {
+					limit = {
+						culture = cu:hungarian
+						owner ?= {
+							has_journal_entry = je_hungarian_revolution
+						}
+					}
+					add = {
+						value = 25
+						desc = "je_hungarian_revolution"
+					}
+				}
+				else = {
+				add = {
+					value = 6
+					desc = "POP_ARISTOCRATS"
+				}
+			}
+			}
+			else = {
+				add = {
+					value = 9
+					desc = "UPPER_NO_ICON"
+				}
 			}
 		}
 		else_if = {
 			limit = {
 				strata = middle
 			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 20
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
 			else_if = {
 				limit = {
-					is_pop_type = farmers
+					is_pop_type = academics
+				}
+				add = {
+					value = 35
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
 				}
 				add = {
 					value = 15
-					desc = "POP_FARMERS"
+					desc = "POP_BUREAUCRATS"
 				}
 			}
 			else = {
 				add = {
-					value = 12
+					value = 13
 					desc = "MIDDLE_NO_ICON"
 				}
 			}
@@ -170,7 +238,7 @@
 					is_pop_type = clerks
 				}
 				add = {
-					value = 20
+					value = 9
 					desc = "POP_CLERKS"
 				}
 			}
@@ -179,35 +247,22 @@
 					is_pop_type = peasants
 				}
 				add = {
-					value = 10
-					desc = "POP_SOLDIERS"
+					value = 0
+					desc = "POP_PEASANTS"
 				}
 			}
 			else = {
 				add = {
-					value = 5
+					value = 3
 					desc = "LOWER_NO_ICON"
 				}
 			}
 		}
 
-		if = {
-			limit = {
-				state = {
-					is_incorporated = no
-				}
-			}
-			multiply = {
-				value = 2
-				desc = "COLONIAL_SETTLERS"
-			}
-		}
-
-		multiply = { # Illiterate pops participate at 1/8 the rate of fully literate pops
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
 			desc = "POP_LITERACY"
 			value = literacy_rate
-			add = 0.15
-			max = 1 # Caps out below ideological movements.
+			add = 0.10
 		}
 	}
 
@@ -254,18 +309,6 @@
 					primary_cultures_percent_state >= 0.05
 				}
 				add = 10
-			}
-		}
-	}
-
-	additional_radicalism_factors = {
-		if = {
-			limit = {
-				is_at_war = yes
-			}
-			add = {
-				value = 0.1
-				desc = "COUNTRY_AT_WAR"
 			}
 		}
 	}
@@ -374,14 +417,23 @@ movement_tenentist = {
 
 	pop_support_weight = {
 		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
 			if = {
 				limit = {
-					scope:affected_movement = {
+					scope:political_movement = {
 						is_being_suppressed = yes
 					}
 				}
 				add = {
-					value = 10
+					value = suppression_base_value
 					multiply = {
 						value = -0.5
 						add = owner.modifier:country_suppression_attraction_factor
@@ -391,7 +443,7 @@ movement_tenentist = {
 			}
 			else = {
 				add = {
-					value = 10
+					value = bolstering_base_value
 					multiply = {
 						value = 0.5
 						add = owner.modifier:country_bolster_attraction_factor
@@ -401,7 +453,7 @@ movement_tenentist = {
 			}
 		}
 		add = {
-			value = 5
+			value = 1
 			desc = "POP_BASE_SUPPORT"
 		}
 
@@ -409,28 +461,103 @@ movement_tenentist = {
 			limit = {
 				strata = upper
 			}
-			add = {
-				value = 10
-				desc = "UPPER_NO_ICON"
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				add = {
+					value = 18
+					desc = "POP_ARISTOCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "UPPER_NO_ICON"
+				}
+			}
+			if = {
+				limit = {
+					owner ?= {
+						any_political_movement = {
+							OR = {
+								is_political_movement_type = movement_socialist
+								is_political_movement_type = movement_anarchist
+								is_political_movement_type = movement_communist
+							}
+							political_movement_support >= 0.10 # (chuckles) im in danger
+						}
+					}
+				}
+				multiply = {
+					value = 1.5
+					desc = "STRONG_SOCIALIST_MOVEMENT"
+				}
 			}
 		}
 		else_if = {
 			limit = {
 				strata = middle
 			}
+			if = {
+				limit = {
+					is_pop_type = clergymen
+				}
+				add = {
+					value = 25
+					desc = "POP_CLERGYMEN"
+				}
+			}
 			else_if = {
 				limit = {
 					is_pop_type = farmers
 				}
 				add = {
-					value = 30
+					value = 15
 					desc = "POP_FARMERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = officers
+				}
+				add = {
+					value = 12
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 10
+					desc = "POP_SHOPKEEPERS"
 				}
 			}
 			else = {
 				add = {
-					value = 12
+					value = 9
 					desc = "MIDDLE_NO_ICON"
+				}
+			}
+
+			if = {
+				limit = {
+					owner ?= {
+						any_political_movement = {
+							OR = {
+								is_political_movement_type = movement_socialist
+								is_political_movement_type = movement_anarchist
+								is_political_movement_type = movement_communist
+							}
+							political_movement_support >= 0.10
+						}
+					}
+				}
+				multiply = {
+					value = 1.25
+					desc = "STRONG_SOCIALIST_MOVEMENT"
 				}
 			}
 		}
@@ -440,10 +567,10 @@ movement_tenentist = {
 			}
 			if = {
 				limit = {
-					is_pop_type = clerks
+					is_pop_type = soldiers
 				}
 				add = {
-					value = 20
+					value = 6
 					desc = "POP_CLERKS"
 				}
 			}
@@ -452,13 +579,13 @@ movement_tenentist = {
 					is_pop_type = peasants
 				}
 				add = {
-					value = 30
-					desc = "POP_SOLDIERS"
+					value = 15
+					desc = "POP_PEASANTS"
 				}
 			}
 			else = {
 				add = {
-					value = 5
+					value = 3
 					desc = "LOWER_NO_ICON"
 				}
 			}
@@ -466,21 +593,50 @@ movement_tenentist = {
 
 		if = {
 			limit = {
-				state = {
-					is_incorporated = no
-				}
+				standard_of_living < state.average_expected_sol
+				strata = middle
 			}
-			multiply = {
-				value = 2
-				desc = "COLONIAL_SETTLERS"
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+		}
+		else_if = {
+			limit = {
+				standard_of_living > state.average_expected_sol
+				strata = middle
+			}
+			add = { # Decreases likelihood of support if well-off
+				desc = "IS_ABOVE_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				min = -5
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/8 the rate of fully literate pops
+		if = {
+			limit = {
+				is_employed = no
+			}
+			multiply = {
+				value = 1.5
+				desc = "UNEMPLOYED"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
 			desc = "POP_LITERACY"
 			value = literacy_rate
-			add = 0.15
-			max = 1 # Caps out below ideological movements.
+			add = 0.10
+		}
+
+		multiply = { # Intentional that this is different from fascism
+			value = 0.01
+			multiply = pop_acceptance
+			add = 0.20
+			desc = "ACCEPTANCE"
 		}
 	}
 

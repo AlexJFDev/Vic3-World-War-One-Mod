@@ -9136,19 +9136,13 @@ dev_events.183 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
-    immediate = {
-        random_scope_war = {
-			save_scope_as = ongoing_war
-		}
-    }
-
     option = {
-        name = dev_events.8.a
+        name = dev_events.25.a
         default_option = yes
-        scope:ongoing_war = {
+        every_scope_war = {
 			add_war_war_support = {
 				target = ROOT
-				value = -90
+				value = -100
 			}
 		}
     }
@@ -9274,8 +9268,6 @@ dev_events.187 = {
     event_image = {
         texture = "gfx/event_pictures/world_map.dds"
     }
-
-    immediate = {}
 
     option = {
         name = dev_events.25.a
@@ -10058,6 +10050,40 @@ dev_events.205 = {
         trigger = { is_player = no }
         scope:invasion_of_manchuria = {
 			resolve_play_for = c:JAP
+		}
+    }
+}
+
+dev_events.206 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {
+        random_diplomatic_play = {
+			limit = { 
+              is_diplomatic_play_type = dp_world_war 
+            }
+            save_scope_as = world_war_two_diplo_play
+        }
+    }
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        scope:world_war_two_diplo_play = {
+            end_play = yes
 		}
     }
 }

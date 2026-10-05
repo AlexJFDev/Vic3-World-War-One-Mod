@@ -141,10 +141,7 @@ german_clothes_trigger = {
 			NOT = {
 				c:AUS ?= this
 			}
-			OR = {
-				country_has_primary_culture = cu:north_german
-				country_has_primary_culture = cu:south_german
-			}
+			country_has_primary_culture = cu:german
 		}
 	}
 }
@@ -157,10 +154,7 @@ german_clothes_pop_trigger = {
 			NOT = {
 				c:AUS ?= this
 			}
-			OR = {
-				country_has_primary_culture = cu:north_german
-				country_has_primary_culture = cu:south_german
-			}
+			country_has_primary_culture = cu:german
 		}
 	}
 }
@@ -936,7 +930,7 @@ riograndese_clothes_trigger = {
 		home_country = {
 			is_subject = no
 			OR = {
-				country_has_primary_culture = cu:sulista
+				country_has_primary_culture = cu:brazilian
 				c:PNI ?= this
 			}
 		}
@@ -950,7 +944,7 @@ riograndese_clothes_pop_trigger = {
 		home_country = {
 			is_subject = no
 			OR = {
-				country_has_primary_culture = cu:sulista
+				country_has_primary_culture = cu:brazilian
 				c:PNI ?= this
 			}
 		}
@@ -1035,14 +1029,14 @@ hindu_clothes_pop_trigger = {
 african_diaspora_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-	    culture = cu:griqua
+	    culture = cu:coloured
 	}
 }
 
 african_diaspora_pop_clothes_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		culture = cu:griqua
+		culture = cu:coloured
 	}
 }
 
@@ -1217,7 +1211,6 @@ chinese_court_clothes_trigger = {
 			}
 		}
 		culture = {
-			NOT = { this = cu:kalmyk }
 			NOT = { this = cu:korean }
 			NOT = { this = cu:thai }
 			OR = {
@@ -1537,7 +1530,7 @@ european_clothes_trigger = {
 indian_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		culture = { cu:pathan ?= this }
+		culture = { cu:north_indian ?= this }
 	}
 }
 
@@ -1765,7 +1758,7 @@ monarchy_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		exists = owner
-		NOT = { culture = cu:griqua } # Griqua captains wear plainer clothing
+		NOT = { culture = cu:coloured } # Griqua captains wear plainer clothing
 		OR = {
 			AND = {
 				OR = {
@@ -1791,7 +1784,7 @@ republic_clothes_trigger = {
 		exists = home_country
 		is_ruler_of_own_country = yes
 		OR = {
-			culture = cu:griqua
+			culture = cu:coloured
 			home_country = {
 				NOR = {
 					has_law_or_variant = law_type:law_monarchy
@@ -1869,8 +1862,7 @@ navy_traits_trigger = {
 east_asian_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		NOR = {
-			culture = cu:yakut
+		NOT = {
 			culture = cu:siberian
 		}
 		culture = {
@@ -1946,7 +1938,7 @@ circumpolar_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		OR = {
-			culture = cu:inuit
+			culture = cu:siberian
 			culture = {
 				has_discrimination_trait = heritage_siberian
 			}
@@ -2036,10 +2028,7 @@ integrated_south_american_natives_pop_trigger = { # Represents those South Ameri
 				has_discrimination_trait = heritage_caribbean
 			}
 			NOT = {
-				OR = {
-					this = cu:patagonian
-					this = cu:amazonian
-				}
+				this = cu:south_amerindian
 			}
 		}
 	}
@@ -2048,11 +2037,7 @@ integrated_south_american_natives_pop_trigger = { # Represents those South Ameri
 cold_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		OR = {
-			has_pop_culture = inuit
-			has_pop_culture = athabaskan
-			has_pop_culture = siberian
-		}
+		has_pop_culture = siberian
 	}
 }
 
@@ -2081,10 +2066,7 @@ japanese_restoration_trigger = {
 japanese_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		OR = {
-			culture = cu:ryukyuan
-			culture = cu:japanese
-		}
+		culture = cu:japanese
 	}
 	owner ?= {
         NOT = {
@@ -2096,10 +2078,7 @@ japanese_clothes_pop_trigger = {
 japanese_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		OR = {
-			culture = cu:ryukyuan
-        	culture = cu:japanese
-        }
+		culture = cu:japanese
 		owner ?= {
             NOT = {
 			  has_variable = japan_restoration_complete
@@ -2462,16 +2441,10 @@ magnate_clothes_trigger = {
 should_be_naked_trigger = {
 	exists = scope:pop
 	scope:pop = {
-       	OR = {
-			is_pop_type = farmers
-			is_pop_type = peasants
-			is_pop_type = laborers
-			is_pop_type = slaves
-		}
-		OR = {
-			culture = cu:amazonian
-			culture = cu:nuba
-			culture = cu:dinka
+       	home_country = {
+			exists = c:AMZ
+			c:AMZ = this
+			is_country_type = unrecognized
 		}
 	}
 }
