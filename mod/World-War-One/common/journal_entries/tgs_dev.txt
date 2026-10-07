@@ -331,6 +331,16 @@ je_atomic_bomb = {
                days = 60
             }
         }
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                has_variable = allies_participant
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 5
+            }
+        }
     }
 
     weight = 1000
