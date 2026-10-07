@@ -2089,8 +2089,8 @@ REPLACE_OR_CREATE:CIR = { # Circassia
 
 REPLACE_OR_CREATE:CLM = { # Colombia
 	flag_definition = {
-		coa = CLM_dictatorship
-		subject_canton = CLM_dictatorship
+		coa = ECU
+		subject_canton = ECU
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = CLM_subject
 		priority = 1
@@ -2101,14 +2101,6 @@ REPLACE_OR_CREATE:CLM = { # Colombia
 		priority = 20
 		trigger = {
 			coa_def_dictatorship_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = CLM_oligarchy
-		subject_canton = CLM_oligarchy
-		priority = 25
-		trigger = {
-			coa_def_oligarchy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
@@ -2665,12 +2657,12 @@ REPLACE_OR_CREATE:DAI = { # Dai Nam
 
 REPLACE_OR_CREATE:DEI = { # Dutch East India Company
 	flag_definition = {
-		coa = DEI
+		coa = DEI_subject_NET
 		subject_canton = DEI
 		priority = 10
 	}
 	flag_definition = {
-		coa = DEI
+		coa = DEI_subject_NET
 		priority = 100
 		trigger = {
 			AND = {
@@ -2802,40 +2794,17 @@ REPLACE_OR_CREATE:DZG = { # Danzig
 
 REPLACE_OR_CREATE:ECU = { # Ecuador
 	flag_definition = {
-		coa = ECU
+		coa = ECU_modern
 		subject_canton = ECU
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = ECU_subject
 		priority = 1
 	}
 	flag_definition = {
-		coa = ECU_dictatorship
-		subject_canton = ECU_dictatorship
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = ECU_oligarchy
-		subject_canton = ECU_oligarchy
-		priority = 25
-		trigger = {
-			coa_def_oligarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
 		coa = ECU_communist
 		priority = 1500
 		trigger = {
 			coa_def_communist_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = ECU_subject_USA
-		priority = 50
-		trigger = {
-			coa_def_american_ensign_trigger = yes
 		}
 	}
 }
@@ -6226,10 +6195,10 @@ REPLACE_OR_CREATE:NEJ = { # Nejd
 		trigger = {
 			scope:actor ?= {
 			   owns_entire_state_region = STATE_HEDJAZ
-			    has_law = law_type:law_monarchy
+			    has_law_or_variant = law_type:law_monarchy
 			    OR = {
-                 has_law = law_type:law_state_religion
-                 has_law = law_type:law_freedom_of_conscience
+                 has_law_or_variant = law_type:law_state_religion
+                 has_law_or_variant = law_type:law_freedom_of_conscience
                 }
 			}
 		}

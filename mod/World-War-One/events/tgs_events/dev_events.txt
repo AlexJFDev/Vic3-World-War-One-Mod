@@ -4241,21 +4241,11 @@ dev_events.85 = {
         name = dev_events.2.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 100000000
+        add_treasury = 50000000
         remove_modifier = declared_bankruptcy
-        add_modifier = {
-			name = starting_minting_buff_4_modifier
-            years = 5
-            is_decaying = yes
-		}
         add_modifier = {
             name = revolution_stabilization_buff_4
             years = 10
-            is_decaying = yes
-        }
-        add_modifier = {
-            name = army_buff_modifier_10
-            years = 20
             is_decaying = yes
         }
     }

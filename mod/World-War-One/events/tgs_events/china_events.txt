@@ -586,6 +586,94 @@ china_events.5 = { #China collapse
 		}
 		remove_diplomatic_pact = {
 			country = c:MCH
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:XIN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:QIH
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:GAN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:SIH
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:ZHI
+			type = puppet
+		}
+        remove_diplomatic_pact = {
+			country = c:HUB
+			type = puppet
+		}
+        remove_diplomatic_pact = {
+			country = c:HEN
+			type = puppet
+		}
+        remove_diplomatic_pact = {
+			country = c:HUB
+			type = puppet
+		}
+        remove_diplomatic_pact = {
+			country = c:AHU
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:GUI
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:GNG
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:HNA
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:JXI
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:FRS
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:ZHE
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:JSU
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:QIN
+			type = puppet
+		}
+        remove_diplomatic_pact = {
+			country = c:YUE
+			type = puppet
+		}
+        remove_diplomatic_pact = {
+			country = c:SHA
+			type = puppet
+		}
+        remove_diplomatic_pact = {
+			country = c:YUN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:SHN
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:MCH
 			type = puppet
 		}
 	    }
@@ -660,6 +748,19 @@ china_events.5 = { #China collapse
 			    }
 		        }
 		      set_state_owner = c:YUE
+            }
+        }
+        s:STATE_HINGGAN = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:BEI
+			    owner = {
+				  OR = {
+					c:BEI = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:MCH
             }
         }
         c:BEI = {
