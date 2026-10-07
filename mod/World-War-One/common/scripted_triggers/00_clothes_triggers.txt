@@ -613,7 +613,7 @@ argentine_clothes_trigger = {
 		home_country = {
 			is_subject = no
 			OR = {
-				country_has_primary_culture = cu:argentine
+				country_has_primary_culture = cu:latino_american
 				c:PLT ?= this
 				c:ARG ?= this
 			}
@@ -628,7 +628,7 @@ argentine_clothes_pop_trigger = {
 		home_country = {
 			is_subject = no
 			OR = {
-				country_has_primary_culture = cu:argentine
+				country_has_primary_culture = cu:latino_american
 				c:PLT ?= this
 				c:ARG ?= this
 			}
@@ -643,7 +643,7 @@ peruvian_clothes_trigger = {
 		home_country = {
 			is_subject = no
 			OR = {
-				country_has_primary_culture = cu:peruvian
+				country_has_primary_culture = cu:latino_american
 				c:PEU ?= this
 				c:NPU ?= this
 				c:SPU ?= this
@@ -659,7 +659,7 @@ peruvian_clothes_pop_trigger = {
 		home_country = {
 			is_subject = no
 			OR = {
-				country_has_primary_culture = cu:peruvian
+				country_has_primary_culture = cu:latino_american
 				c:PEU ?= this
 				c:NPU ?= this
 				c:SPU ?= this
@@ -702,7 +702,11 @@ central_american_clothes_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			country_has_primary_culture = cu:central_american
+			OR = {
+				c:HON ?= this
+				c:ELS ?= this
+				c:PNM ?= this
+			}
 		}
 	}
 }
@@ -713,7 +717,15 @@ central_american_clothes_pop_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			country_has_primary_culture = cu:central_american
+			country_has_primary_culture = cu:latino_american
+		}
+		home_country = {
+			is_subject = no
+			OR = {
+				c:HON ?= this
+				c:ELS ?= this
+				c:PNM ?= this
+			}
 		}
 	}
 }
@@ -724,8 +736,8 @@ uruguayan_clothes_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:uruguayan
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:URU ?= this
 			}
 		}
@@ -738,8 +750,8 @@ uruguayan_clothes_pop_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:uruguayan
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:URU ?= this
 			}
 		}
@@ -753,9 +765,7 @@ gran_colombian_clothes_trigger = {
 		home_country = {
 			is_subject = no
 			OR = {
-				country_has_primary_culture = cu:colombian
-				country_has_primary_culture = cu:venezuelan
-				country_has_primary_culture = cu:ecuadorian
+				country_has_primary_culture = cu:latino_american
 				c:ECU ?= this
 				c:VNZ ?= this
 				c:CLM ?= this
@@ -772,9 +782,7 @@ gran_colombian_clothes_pop_trigger = {
 		home_country = {
 			is_subject = no
 			OR = {
-				country_has_primary_culture = cu:colombian
-				country_has_primary_culture = cu:venezuelan
-				country_has_primary_culture = cu:ecuadorian
+				country_has_primary_culture = cu:latino_american
 				c:ECU ?= this
 				c:VNZ ?= this
 				c:CLM ?= this
@@ -790,8 +798,8 @@ bolivian_clothes_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:bolivian
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:BOL ?= this
 			}
 		}
@@ -804,8 +812,8 @@ bolivian_clothes_pop_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:bolivian
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:BOL ?= this
 			}
 		}
@@ -845,8 +853,8 @@ chilean_clothes_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:chilean
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:CHL ?= this
 			}
 		}
@@ -859,8 +867,8 @@ chilean_clothes_pop_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:chilean
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:CHL ?= this
 			}
 		}
@@ -873,8 +881,8 @@ paraguayan_clothes_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:paraguayan
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:PRG ?= this
 			}
 		}
@@ -887,8 +895,8 @@ paraguayan_clothes_pop_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:paraguayan
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:PRG ?= this
 			}
 		}
@@ -901,8 +909,8 @@ mexican_clothes_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:mexican
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:MEX ?= this
 			}
 		}
@@ -915,8 +923,8 @@ mexican_clothes_pop_trigger = {
 		exists = home_country
 		home_country = {
 			is_subject = no
-			OR = {
-				country_has_primary_culture = cu:mexican
+			AND = {
+				country_has_primary_culture = cu:latino_american
 				c:MEX ?= this
 			}
 		}
