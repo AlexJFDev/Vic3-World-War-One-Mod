@@ -17,12 +17,13 @@ entente_peace_deal.1 = {
     
     option = {
 		name = entente_peace_deal.1.a
-        trigger = {}
-		ai_chance = {
-			base = 100
+		default_option = yes
+        trigger = {
+			c:FRA = THIS
 		}
 		remove_global_variable = world_war_1_ongoing
 		set_global_variable = world_war_1_over
+		set_global_variable = entente_victory
 		if = {
 			limit = {
 				NOT = {
@@ -38,1103 +39,6 @@ entente_peace_deal.1 = {
 			change_global_variable = {
 				name = je_entente_peace_deal_participants_var
 				add = 1
-			}
-		}
-		if = {
-			limit = {
-				c:FRA = THIS
-			}
-        c:GER = {
-            remove_diplomatic_pact = {
-			  country = c:LUX
-			  type = puppet
-		    }
-            remove_diplomatic_pact = {
-			  country = c:POL
-			  type = protectorate
-		    }
-            remove_diplomatic_pact = {
-			  country = c:LIT
-			  type = protectorate
-		    }
-		    remove_diplomatic_pact = {
-			  country = c:LAT
-			  type = protectorate
-		    }
-		    remove_diplomatic_pact = {
-			  country = c:EST
-			  type = protectorate
-		    }
-			remove_diplomatic_pact = {
-			  country = c:BYE
-			  type = protectorate
-		    }
-		    remove_diplomatic_pact = {
-			  country = c:AUS
-			  type = alliance
-		    }
-		}
-		c:AUS = {
-		    remove_diplomatic_pact = {
-			  country = c:UKR
-			  type = protectorate
-		    }
-        }
-		c:FRA = {
-		    remove_diplomatic_pact = {
-			  country = c:KON
-			  type = colony
-		    }
-			trigger_event = {
-                id = dev_events.189
-                days = 5
-            }
-			trigger_event = { #Stabilization buff for all new subjects
-			   id = dev_events.197
-			   days = 400
-		    }
-        }
-        c:BEL = {
-		    create_diplomatic_pact = {
-			  country = c:KON
-			  type = colony
-		    }
-        }
-		s:STATE_VENETIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-            }
-        }
-		s:STATE_LOMBARDY = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ITA
-            }
-        }
-		c:AUS = {
-		   activate_law = law_type:law_presidential_republic
-           activate_law = law_type:law_universal_suffrage
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-		   activate_law = law_type:law_armed_neutrality
-		   remove_primary_culture = hungarian
-		    remove_diplomatic_pact = {
-			   country = c:SER
-			   type = protectorate
-		    }
-			remove_diplomatic_pact = {
-			   country = c:SER
-			   type = puppet
-		    }
-			remove_diplomatic_pact = {
-			   country = c:MON
-			   type = protectorate
-		    }
-			trigger_event = {
-              id = dev_events.1
-              days = 5
-            }
-			trigger_event = {
-              id = dev_events.25
-              days = 5
-            } 
-			trigger_event = {
-              id = dev_events.25
-              days = 5
-            }
-			trigger_event = {
-              id = dev_events.25
-              days = 5
-            }
-			trigger_event = {
-              id = dev_events.36
-              days = 5
-            } 
-			trigger_event = {
-                id = dev_events.17
-                days = 5
-            }
-            trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-		}
-		c:UKR = {
-			trigger_event = {
-                id = dev_events.7
-                days = 5
-            }
-			trigger_event = {
-               id = dev_events.172
-               days = 5
-            }
-        }
-		c:POL = {
-			trigger_event = {
-              id = dev_events.1
-              days = 5
-            }
-			trigger_event = {
-              id = dev_events.1
-              days = 5
-            }
-			trigger_event = {
-              id = dev_events.45
-              days = 5
-            } 
-			trigger_event = {
-              id = dev_events.36
-              days = 5
-            } 
-			trigger_event = {
-                id = dev_events.7
-                days = 5
-            }
-			trigger_event = {
-              id = dev_events.173
-              days = 5
-            }
-        }
-		c:GER = {
-			trigger_event = {
-                id = dev_events.200
-                days = 10
-            }
-        }
-        c:ITA = {
-			trigger_event = {
-                id = dev_events.72
-                days = 15
-            }
-        }
-		c:ROM = {
-			trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-		}
-		c:BUL = {
-			trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-		}
-		c:JAP = {
-			trigger_event = {
-                id = dev_events.204
-                days = 5
-            }
-		}
-		c:GER = {
-        create_bidirectional_truce = { 
-            country = c:GBR 
-            months = 120
-        }
-        create_bidirectional_truce = { 
-            country = c:FRA
-            months = 120
-        }
-		create_bidirectional_truce = { 
-            country = c:AUS
-            months = 120
-        }
-		create_bidirectional_truce = { 
-            country = c:POL
-            months = 120
-        }
-		}
-		s:STATE_NORTHERN_TRANSYLVANIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ROM
-            }
-            }
-		s:STATE_SOUTHERN_TRANSYLVANIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ROM
-            }
-        }
-		s:STATE_BANAT = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ROM
-            }
-        }
-		s:STATE_BEKES = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ROM
-            }
-        }
-		s:STATE_BUKOVINA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:ROM
-            }
-        }
-		c:GER = {
-        remove_diplomatic_pact = {
-			country = c:TOG
-			type = colony
-		}
-        remove_diplomatic_pact = {
-			country = c:CMR
-			type = colony
-		}
-		remove_diplomatic_pact = {
-			country = c:NAM
-			type = colony
-		}
-		remove_diplomatic_pact = {
-			country = c:TAN
-			type = colony
-		}
-		remove_diplomatic_pact = {
-			country = c:BEL
-			type = puppet
-		}
-		}
-		c:FRA = {
-		create_diplomatic_pact = {
-			country = c:TOG
-			type = colony
-		}	
-        create_diplomatic_pact = {
-			country = c:CMR
-			type = colony
-		}	
-		trigger_event = {
-            id = dev_events.7
-            days = 5
-            }
-		}
-		c:GBR = {
-		    create_diplomatic_pact = {
-			   country = c:NAM
-			   type = colony
-		    }	
-            create_diplomatic_pact = {
-			  country = c:TAN
-			  type = colony
-		    }	
-			trigger_event = {
-               id = egypt_events.3
-               days = 30
-            }
-		}
-		c:TOG = {
-			remove_primary_culture = cu:german
-			add_primary_culture = cu:french
-			set_state_religion = rel:catholic
-		}
-		c:CMR = {
-			remove_primary_culture = cu:german
-			add_primary_culture = cu:french
-			set_state_religion = rel:catholic
-		}
-		c:NAM = {
-			remove_primary_culture = cu:german
-			add_primary_culture = cu:british
-		}
-		c:TAN = {
-			remove_primary_culture = cu:german
-			add_primary_culture = cu:british
-		}
-		create_country = { #Czechoslovakia
-			origin = root
-			tag = CZH
-			state = s:STATE_BOHEMIA.region_state:AUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-			}
-		}
-		c:CZH = {
-			trigger_event = { #Landlock buff
-			   id = dev_events.138
-			   days = 5
-		    }
-			trigger_event = {
-                   id = dev_events.17
-                   days = 5
-                }
-			trigger_event = {
-                   id = dev_events.47
-                   days = 5
-                }
-			trigger_event = {
-                   id = dev_events.47
-                   days = 5
-                }
-		}
-        s:STATE_MORAVIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:CZH
-            }
-        }
-		s:STATE_SLOVAKIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:CZH
-            }
-        }
-		s:STATE_SLOVAKIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:CZH
-            }
-        }
-		s:STATE_UPPER_SILESIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:CZH
-            }
-        }
-		s:STATE_RUTHENIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:CZH
-            }
-        }
-		create_country = { #Hungary
-			origin = root
-			tag = HUN
-			state = s:STATE_CENTRAL_HUNGARY.region_state:AUS
-			on_created = {
-				activate_law = law_type:law_monarchy
-                activate_law = law_type:law_mass_conscription	
-			}
-		}
-		c:HUN = {
-			trigger_event = { #Landlock buff
-			   id = dev_events.138
-			   days = 5
-		    }
-			trigger_event = {
-                   id = dev_events.17
-                   days = 5
-                }
-		}
-        s:STATE_TRANSDANUBIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:HUN
-            }
-        }
-		s:STATE_DELVIDEK = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		s:STATE_SLAVONIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		s:STATE_BOSNIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		s:STATE_MONTENEGRO = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		s:STATE_MONTENEGRO = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:MON
-			    owner = {
-				  OR = {
-					c:MON = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		s:STATE_DALMATIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		s:STATE_CROATIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		s:STATE_SLOVENIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }  
-		s:STATE_SKOPIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:BUL
-			    owner = {
-				  OR = {
-					c:BUL = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		s:STATE_EASTERN_SERBIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:BUL
-			    owner = {
-				  OR = {
-					c:BUL = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:SER
-            }
-        }
-		create_country = { #Galicia
-			origin = root
-			tag = GAL
-			state = s:STATE_EAST_GALICIA.region_state:AUS
-			on_created = {
-				activate_law = law_type:law_monarchy
-                activate_law = law_type:law_mass_conscription	
-			}
-		}
-		c:GAL = {
-			trigger_event = {
-                   id = dev_events.17
-                   days = 5
-                }
-		}
-        s:STATE_WEST_GALICIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:AUS
-			    owner = {
-				  OR = {
-					c:AUS = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:GAL
-            }
-        }
-		c:SER = {
-            trigger_event = {
-                id = entente_peace_deal.14
-                days = 5
-            }
-        } 
-		c:USA = {
-         trigger_event = {
-              id = usa_events.9
-              days = 60
-            }
-        }
-		if = {
-			limit = {
-				c:TUR = { has_variable = central_powers_participant }
-			}
-			c:TUR = {
-                trigger_event = {
-                  id = dev_events.200
-                  days = 5
-                }
-				set_capital = STATE_ANKARA
-			    activate_law = law_type:law_armed_neutrality
-			    activate_law = law_type:law_cultural_exclusion
-            }
-        s:STATE_URMIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:TUR
-			    owner = {
-				  OR = {
-					c:TUR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:PER
-            }
-        }
-        s:STATE_TABRIZ = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:TUR
-			    owner = {
-				  OR = {
-					c:TUR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:PER
-            }
-        }
-        s:STATE_PERSIAN_KURDISTAN = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:TUR
-			    owner = {
-				  OR = {
-					c:TUR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:PER
-            }
-        }
-        s:STATE_LURISTAN = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:TUR
-			    owner = {
-				  OR = {
-					c:TUR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:PER
-            }
-        }
-        s:STATE_KHUZESTAN = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:TUR
-			    owner = {
-				  OR = {
-					c:TUR = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:PER
-            }
-        }
-		}
-		if = {
-            limit = {
-                c:TUR = {
-                    owns_entire_state_region = STATE_ARMENIA
-                    has_variable = central_powers_participant
-                }
-            }
-            create_country = {
-	           tag = ARL
-	           origin = this
-	           state = s:STATE_ARMENIA.region_state:TUR
-                on_created = { 
-                  activate_law = law_type:law_presidential_republic
-                }
-		    }
-        }
-        c:ARL = {
-            trigger_event = {
-                id = dev_events.7
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.172
-                days = 5
-            }
-        }
-		if = {
-            limit = {
-                c:TUR = {
-                    owns_entire_state_region = STATE_GREATER_CAUCASUS
-                    has_variable = central_powers_participant
-                }
-            }
-            create_country = {
-	           tag = GEO
-	           origin = this
-	           state = s:STATE_GREATER_CAUCASUS.region_state:TUR
-                on_created = { 
-                  activate_law = law_type:law_presidential_republic
-                }
-		    }
-        }
-        c:GEO = {
-            trigger_event = {
-                id = dev_events.7
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.172
-                days = 5
-            }
-        }
-		if = {
-            limit = {
-                c:TUR = {
-                    owns_entire_state_region = STATE_ELIZAVETPOL
-					owns_entire_state_region = STATE_AZERBAIJAN
-                    has_variable = central_powers_participant
-                }
-            }
-            create_country = {
-	           tag = AZB
-	           origin = this
-	           state = s:STATE_AZERBAIJAN.region_state:TUR
-                on_created = { 
-                  activate_law = law_type:law_presidential_republic
-                }
-		    }
-            s:STATE_ELIZAVETPOL = {
-                random_scope_state = {
-		            limit = {
-			            exists = c:TUR
-			            owner = {
-				            OR = {
-					          c:TUR = THIS
-				            }
-			            }
-		            }
-		            set_state_owner = c:AZB
-                }
-            }
-        }
-        c:AZB = {
-            trigger_event = {
-                id = dev_events.7
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.172
-                days = 5
-            }
-        }
-		c:ITA = {
-		    create_diplomatic_pact = {
-			  country = c:SEN
-			  type = puppet
-		    }	
-		}
-		create_treaty = {
-			first_country = C:GER
-			second_country = c:AUS
-
-			is_draft = no
-			binding_period = { years = 50 }
-
-			articles_to_create = {
-				{
-				article = transit_rights
-				source_country = c:GER
-				target_country = c:AUS
-			    }
-			}
-		}
-		create_treaty = {
-			first_country = C:GER
-			second_country = c:CZH
-
-			is_draft = no
-			binding_period = { years = 50 }
-
-			articles_to_create = {
-				{
-				article = transit_rights
-				source_country = c:GER
-				target_country = c:CZE
-			    }
-			}
-		}
-		create_treaty = {
-			first_country = C:ROM
-			second_country = c:HUN
-
-			is_draft = no
-			binding_period = { years = 50 }
-
-			articles_to_create = {
-				{
-				article = transit_rights
-				source_country = c:ROM
-				target_country = c:HUN
-			    }
-			}
-		}
-		create_treaty = {
-			first_country = C:YUG
-			second_country = c:HUN
-
-			is_draft = no
-			binding_period = { years = 50 }
-
-			articles_to_create = {
-				{
-				article = transit_rights
-				source_country = c:YUG
-				target_country = c:HUN
-			    }
-			}
-		}
-		create_treaty = {
-			first_country = C:ROM
-			second_country = c:GAL
-
-			is_draft = no
-			binding_period = { years = 50 }
-
-			articles_to_create = {
-				{
-				article = transit_rights
-				source_country = c:ROM
-				target_country = c:GAL
-			    }
-			}
-		}
-		create_treaty = {
-			first_country = C:POL
-			second_country = c:GAL
-
-			is_draft = no
-			binding_period = { years = 50 }
-
-			articles_to_create = {
-				{
-				article = transit_rights
-				source_country = c:POL
-				target_country = c:GAL
-			    }
-			}
-		}
-		s:STATE_SLOVAKIA = { 
-			add_claim = c:HUN
-		}
-		s:STATE_SLOVAKIA = { 
-			add_claim = c:HUN
-		}
-		s:STATE_BEKES = { 
-			add_claim = c:HUN
-		}
-		s:STATE_BANAT = { 
-			add_claim = c:HUN
-		}
-		s:STATE_DELVIDEK = { 
-			add_claim = c:HUN
-		}
-		create_country = { #Estonia
-			origin = root
-			tag = EST
-			state = s:STATE_TALINN.region_state:UBD
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-			}
-		}
-        s:STATE_TARTU = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:UBD
-			    owner = {
-				  OR = {
-					c:UBD = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:EST
-            }
-        }
-        create_country = { #Latvia
-			origin = root
-			tag = LAT
-			state = s:STATE_RIGA.region_state:UBD
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	
-			}
-		}
-        s:STATE_COURLAND = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:UBD
-			    owner = {
-				  OR = {
-					c:UBD = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:LAT
-            }
-        }
-        create_country = { #Lithuania
-			origin = root
-			tag = LIT
-			state = s:STATE_KAUNAS.region_state:UBD
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_mass_conscription	  
-                }
-		}
-		c:EST = {
-            trigger_event = {
-                id = dev_events.1
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.125
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.17
-                days = 5
-                }
-			trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-			trigger_event = {
-			    id = dev_events.171
-			    days = 5
-		    }
-        } 
-		c:LAT = {
-            trigger_event = {
-                id = dev_events.1
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.125
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.17
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-			trigger_event = {
-			    id = dev_events.171
-			    days = 5
-		    }
-        } 
-		c:LIT = {
-            trigger_event = {
-                id = dev_events.1
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.125
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.17
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-			trigger_event = {
-			    id = dev_events.171
-			    days = 5
-		    }
-        } 
-		c:BYE = {
-			trigger_event = {
-			    id = dev_events.182
-			    days = 5
-		    }
-		}
-		c:CZH = {
-            trigger_event = {
-                id = dev_events.1
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.125
-                days = 5
-            }
-        } 
-		c:AUS = {
-            trigger_event = {
-                id = dev_events.1
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.125
-                days = 5
-            }
-        } 
-		c:HUN = {
-            trigger_event = {
-                id = dev_events.1
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.125
-                days = 5
-            }
-        }
-		s:STATE_SCHLESWIG_HOLSTEIN = {
-			set_owner_of_provinces = {
-				country = c:DEN
-				provinces = { x78B203 xE3C876 }
 			}
 		}
 		every_country = {
@@ -1155,8 +59,44 @@ entente_peace_deal.1 = {
                 id = entente_peace_deal.16
                 days = 40
             }
-		}	
+		}
+		trigger_event = { #Stabilization buff for all new subjects
+			id = dev_events.197
+			days = 400
+		}
+		c:USA = {
+            trigger_event = {
+              id = usa_events.9
+              days = 60
+            }
+        }
 	}
+
+	option = {
+		name = entente_peace_deal.1.a
+		default_option = yes
+        trigger = {
+			NOT = {
+                c:FRA = THIS
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = global_var:je_entente_peace_deal_participants_var
+				}
+			}
+			set_global_variable = {
+				name = je_entente_peace_deal_participants_var
+				value = 1
+			}
+		}
+		else = {
+			change_global_variable = {
+				name = je_entente_peace_deal_participants_var
+				add = 1
+			}
+		}
 	}
 }
 
@@ -2138,31 +1078,6 @@ entente_peace_deal.4 = { #Round 3 result
         trigger = {  
            has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
 		}
-        If = {
-           limit = {
-			 NOT = {
-               exists = c:POL
-			 }
-		   }
-           create_country = {
-	       tag = POL
-	       origin = this
-	       state = s:STATE_POSEN.region_state:POL
-           on_created = { 
-           activate_law = law_type:law_parliamentary_republic
-           activate_law = law_type:law_universal_suffrage
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
-           }
-        }
-		c:POL = {
-			trigger_event = {
-                   id = dev_events.17
-                   days = 5
-                }
-		}
 		s:STATE_POSEN = {
            random_scope_state = {
 		      limit = {
@@ -2270,32 +1185,7 @@ entente_peace_deal.4 = { #Round 3 result
         trigger = { 
           has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
 		}
-		If = {
-           limit = {
-             NOT = {
-               exists = c:POL
-			 }
-		   }
-           create_country = {
-	       tag = POL
-	       origin = this
-	       state = s:STATE_POSEN.region_state:POL
-           on_created = { 
-           activate_law = law_type:law_parliamentary_republic
-           activate_law = law_type:law_universal_suffrage
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
-		   }
-		}
-		c:POL = {
-			trigger_event = {
-                   id = dev_events.17
-                   days = 5
-                }
-		}
-        s:STATE_POSEN = {
+		s:STATE_POSEN = {
            random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -2368,34 +1258,11 @@ entente_peace_deal.4 = { #Round 3 result
         trigger = { 
           has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
 		}
-		If = {
-           limit = {
-             NOT = {
-               exists = c:POL
-			 }
-		   }
-           create_country = {
-	       tag = POL
-	       origin = this
-	       state = s:STATE_POSEN.region_state:POL
-           on_created = { 
-           activate_law = law_type:law_parliamentary_republic
-           activate_law = law_type:law_universal_suffrage
-           activate_law = law_type:law_freedom_of_conscience
-           activate_law = law_type:law_interventionism
-           activate_law = law_type:law_right_of_assembly
-           }
-		   }
-		}
 		c:POL = {
 			trigger_event = { #Landlock buff
 			   id = dev_events.138
 			   days = 5
 		    }
-			trigger_event = {
-                   id = dev_events.17
-                   days = 5
-                }
 		}
 		s:STATE_POSEN = {
            random_scope_state = {
@@ -2412,7 +1279,7 @@ entente_peace_deal.4 = { #Round 3 result
             }
         }
 		create_treaty = {
-			first_country = C:GER
+			first_country = c:GER
 			second_country = c:POL
 
 			is_draft = no
@@ -2427,7 +1294,7 @@ entente_peace_deal.4 = { #Round 3 result
 			}
 		}
 		create_treaty = {
-			first_country = C:ROM
+			first_country = c:ROM
 			second_country = c:POL
 
 			is_draft = no
@@ -3833,6 +2700,354 @@ entente_peace_deal.9 = { #Round 8 result
     
     trigger = {}
 
+	immediate = {
+		if = {
+			limit = {
+				exists = c:UBD
+			}
+			c:RUS = {
+				annex_with_incorporation = c:UBD
+			}
+		}
+		if = {
+			limit = {
+				exists = c:EST
+			}
+			c:RUS = {
+				annex_with_incorporation = c:UBD
+			}
+		}
+		if = {
+			limit = {
+				exists = c:LAT
+			}
+			c:RUS = {
+				annex_with_incorporation = c:UBD
+			}
+		}
+		if = {
+			limit = {
+				exists = c:LIT
+			}
+			c:RUS = {
+				annex_with_incorporation = c:UBD
+			}
+		}
+		if = {
+			limit = {
+				exists = c:POL
+			}
+			c:RUS = {
+				annex_with_incorporation = c:UBD
+			}
+		}
+		if = {
+			limit = {
+				exists = c:UKR
+			}
+			c:RUS = {
+				annex_with_incorporation = c:UBD
+			}
+		}
+		if = {
+			limit = {
+				exists = c:GEO
+			}
+			c:RUS = {
+				annex_with_incorporation = c:GEO
+			}
+		}
+		if = {
+			limit = {
+				exists = c:ARL
+			}
+			c:RUS = {
+				annex_with_incorporation = c:ARL
+			}
+		}
+		if = {
+			limit = {
+				exists = c:AZB
+			}
+			c:RUS = {
+				annex_with_incorporation = c:UBD
+			}
+		}
+		s:STATE_TALINN = {
+           random_scope_state = {
+		        limit = {
+			       exists = c:GER
+			        owner = {
+				        OR = {
+					     c:GER = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:RUS
+            }
+        }
+		s:STATE_TARTU = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_RIGA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_COURLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_KAUNAS = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_GREATER_POLAND = {
+	        random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_LESSER_POLAND = {
+	        random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_MAZOVIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_VILNIUS = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_BREST = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_VOLHYNIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_MINSK = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_MOGILEV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_VITEBSK = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_KIEV = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_CHERNIHIV = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_CHERSON = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_KHARKOV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+        s:STATE_TAURIDA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_CRIMEA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_BESSARABIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+	}
+
     option = {
         name = entente_peace_deal.9.a
         trigger = {
@@ -4700,27 +3915,31 @@ entente_peace_deal.14 = { #Serbia changes to Yugoslavia
     
     trigger = {}
 
+	immmediate = {
+		change_tag = YUG
+		s:STATE_MONTENEGRO = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:MON
+            }
+        }
+	}
+
     option = {
         name = entente_peace_deal.14.a
 		default_option = yes
-		change_tag = YUG
-		trigger_event = {
-            id = dev_events.47
-            days = 5
-        }
-		ai_chance = {
-			base = 10
-		}
-	}
-
-	option = {
-        name = entente_peace_deal.14.b
-		trigger_event = {
-            id = dev_events.47
-            days = 5
-        }
-		ai_chance = {
-			base = 0
+		if = {
+			limit = { c:MON = is_player = no }
+			c:YUG = { 
+				annex = c:MON
+			}
 		}
 	}
 }
@@ -4785,7 +4004,7 @@ entente_peace_deal.16 = { #Feminist movements
     trigger = {}
 
     option = {
-        name = entente_peace_deal.15.a
+        name = entente_peace_deal.16.a
 		default_option = yes
 		random_political_movement = {
 			limit = {
@@ -4797,5 +4016,1458 @@ entente_peace_deal.16 = { #Feminist movements
 				is_decaying = yes
 			} 
 		}
+	}
+}
+
+entente_peace_deal.17 = { #German empire dismantling
+    type = country_event
+    
+    duration = 3
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+	immediate = {}
+
+    title = entente_peace_deal.17.t
+	desc = entente_peace_deal.17.d
+	flavor = entente_peace_deal.17.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.17.a
+		default_option = yes
+		c:GBR = {
+		    create_diplomatic_pact = {
+			   country = c:NAM
+			   type = colony
+		    }	
+            create_diplomatic_pact = {
+			  country = c:TAN
+			  type = colony
+		    }	
+			trigger_event = {
+               id = egypt_events.3
+               days = 30
+            }
+		}
+		c:NAM = {
+			remove_primary_culture = cu:german
+			add_primary_culture = cu:british
+		}
+		c:TAN = {
+			remove_primary_culture = cu:german
+			add_primary_culture = cu:british
+		}
+		c:FRA = {
+			create_diplomatic_pact = {
+			  country = c:TOG
+			  type = colony
+		    }	
+            create_diplomatic_pact = {
+			  country = c:CMR
+			  type = colony
+		    }	
+		    remove_diplomatic_pact = {
+			  country = c:KON
+			  type = colony
+		    }
+        }
+		c:TOG = {
+			remove_primary_culture = cu:german
+			add_primary_culture = cu:french
+			set_state_religion = rel:catholic
+		}
+		c:CMR = {
+			remove_primary_culture = cu:german
+			add_primary_culture = cu:french
+			set_state_religion = rel:catholic
+		}
+		c:BEL = {
+		    create_diplomatic_pact = {
+			  country = c:KON
+			  type = colony
+		    }
+        }
+        c:GER = {
+			remove_diplomatic_pact = {
+			  country = c:BEL
+			  type = puppet
+		    }
+            remove_diplomatic_pact = {
+			  country = c:LUX
+			  type = puppet
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:AUS
+			  type = alliance
+		    }
+			remove_diplomatic_pact = {
+			  country = c:TOG
+			  type = colony
+		    }
+            remove_diplomatic_pact = {
+			  country = c:CMR
+			  type = colony
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:NAM
+			  type = colony
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:TAN
+			  type = colony
+		    }
+			create_bidirectional_truce = { 
+              country = c:GBR 
+              months = 120
+            }
+            create_bidirectional_truce = { 
+              country = c:FRA
+              months = 120
+            }
+		    create_bidirectional_truce = { 
+              country = c:AUS
+              months = 120
+            }
+		    create_bidirectional_truce = { 
+              country = c:POL
+              months = 120
+            }
+		}
+		s:STATE_SCHLESWIG_HOLSTEIN = {
+			set_owner_of_provinces = {
+				country = c:DEN
+				provinces = { x78B203 xE3C876 }
+			}
+		}
+		c:JAP = {
+			trigger_event = {
+                id = dev_events.204
+                days = 5
+            }
+		}
+	}
+}
+
+entente_peace_deal.18 = { #East Germany partition
+    type = country_event
+    
+    duration = 3
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+	immediate = {}
+
+    title = entente_peace_deal.18.t
+	desc = entente_peace_deal.18.d
+	flavor = entente_peace_deal.18.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+	immediate = {
+		If = {
+            limit = {
+			    NOT = {
+                  exists = c:POL
+			    }
+		    }
+            create_country = {
+	            tag = POL
+	            origin = this
+	            state = s:STATE_POSEN.region_state:GER
+                on_created = { 
+                  activate_law = law_type:law_parliamentary_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_freedom_of_conscience
+                  activate_law = law_type:law_interventionism
+                  activate_law = law_type:law_right_of_assembly
+                }
+            }
+        }
+		s:STATE_LESSER_POLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_MAZOVIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_VILNIUS = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_BREST = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+        s:STATE_VOLHYNIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
+		If = {
+            limit = {
+			    NOT = {
+                  exists = c:UBD
+			    }
+		    }
+            create_country = { #United Baltic Provinces
+			    origin = root
+			    tag = UBD
+			    state = s:STATE_TALINN.region_state:GER
+			    on_created = {
+				   activate_law = law_type:law_presidential_republic
+                   activate_law = law_type:law_universal_suffrage
+                   activate_law = law_type:law_mass_conscription
+			    }
+		    }
+        }
+		s:STATE_TARTU = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+		s:STATE_RIGA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+		s:STATE_COURLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+		s:STATE_KAUNAS = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UBD
+            }
+        }
+		If = {
+            limit = {
+			    NOT = {
+                  exists = c:BYE
+			    }
+		    }
+            create_country = {
+			    origin = root
+			    tag = BYE
+			    state = s:STATE_MINSK.region_state:GER
+			    on_created = {
+				   activate_law = law_type:law_presidential_republic
+                   activate_law = law_type:law_universal_suffrage
+                   activate_law = law_type:law_mass_conscription
+			    }
+		    }
+        }
+		s:STATE_MOGILEV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BYE
+            }
+        }
+        s:STATE_VITEBSK = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:BYE
+            }
+        }
+		If = {
+            limit = {
+			    NOT = {
+                  exists = c:UKR
+			    }
+		    }
+            create_country = {
+			    origin = root
+			    tag = UKR
+			    state = s:STATE_KIEV.region_state:AUS
+			    on_created = {
+				   activate_law = law_type:law_monarchy
+                   activate_law = law_type:law_mass_conscription
+			    }
+		    }
+        }
+		s:STATE_CHERNIHIV = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_CHERSON = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_KHARKOV = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+        s:STATE_TAURIDA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+		s:STATE_CRIMEA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:UKR
+            }
+        }
+	}
+
+    option = {
+        name = entente_peace_deal.18.a
+		default_option = yes
+		c:GER = {
+            remove_diplomatic_pact = {
+			  country = c:POL
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:UBD
+			  type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:LIT
+			  type = protectorate
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:LAT
+			  type = protectorate
+		    }
+		    remove_diplomatic_pact = {
+			  country = c:EST
+			  type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:BYE
+			  type = protectorate
+		    }
+		}
+		c:POL = {
+			trigger_event = {
+              id = dev_events.1
+              days = 5
+            }
+			trigger_event = {
+              id = dev_events.45
+              days = 5
+            } 
+			trigger_event = {
+              id = dev_events.173
+              days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.201
+                days = 5
+            }
+        }
+		create_treaty = {
+			first_country = c:POL
+			second_country = c:GAL
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:POL
+				target_country = c:GAL
+			    }
+			}
+		}
+		c:UKR = {
+			trigger_event = {
+               id = dev_events.172
+               days = 5
+            }
+			trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.201
+                days = 5
+            }
+        }
+		create_country = { #Estonia
+			origin = root
+			tag = EST
+			state = s:STATE_TALINN.region_state:UBD
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+        s:STATE_TARTU = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:UBD
+			    owner = {
+				  OR = {
+					c:UBD = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:EST
+            }
+        }
+		c:EST = {
+            trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.125
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.17
+                days = 5
+                }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+			    id = dev_events.171
+			    days = 5
+		    }
+        }
+        create_country = { #Latvia
+			origin = root
+			tag = LAT
+			state = s:STATE_RIGA.region_state:UBD
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+        s:STATE_COURLAND = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:UBD
+			    owner = {
+				  OR = {
+					c:UBD = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:LAT
+            }
+        }
+		c:LAT = {
+            trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.125
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.17
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+			    id = dev_events.171
+			    days = 5
+		    }
+        } 
+        create_country = { #Lithuania
+			origin = root
+			tag = LIT
+			state = s:STATE_KAUNAS.region_state:UBD
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	  
+            }
+		} 
+		c:LIT = {
+            trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.125
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.17
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+			    id = dev_events.171
+			    days = 5
+		    }
+        } 
+		c:BYE = {
+			trigger_event = {
+			    id = dev_events.182
+			    days = 5
+		    }
+		}
+	}
+}
+
+entente_peace_deal.19 = { #Ottoman empire dislocation
+    type = country_event
+    
+    duration = 3
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+	immediate = {}
+
+    title = entente_peace_deal.19.t
+	desc = entente_peace_deal.19.d
+	flavor = entente_peace_deal.19.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.19.a
+		default_option = yes
+		c:TUR = {
+			set_capital = STATE_ANKARA
+			activate_law = law_type:law_armed_neutrality
+			activate_law = law_type:law_cultural_exclusion
+            if = {
+                limit = { 
+                   c:GER = { is_player = no }
+                }
+				c:TUR = {
+					trigger_event = {
+                       id = dev_events.200
+                       days = 5
+                    }
+				}
+            }
+        }
+        s:STATE_URMIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+        s:STATE_TABRIZ = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+        s:STATE_PERSIAN_KURDISTAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+        s:STATE_LURISTAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+        s:STATE_KHUZESTAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:TUR
+			    owner = {
+				  OR = {
+					c:TUR = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:PER
+            }
+        }
+		if = {
+            limit = {
+                c:TUR = {
+                    owns_entire_state_region = STATE_ARMENIA
+                    has_variable = central_powers_participant
+                }
+            }
+            create_country = {
+	           tag = ARL
+	           origin = this
+	           state = s:STATE_ARMENIA.region_state:TUR
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+			c:ARL = {
+                trigger_event = {
+                  id = dev_events.7
+                  days = 5
+                }
+			    trigger_event = {
+                  id = dev_events.172
+                  days = 5
+                }
+            }
+        }
+		if = {
+            limit = {
+                c:TUR = {
+                    owns_entire_state_region = STATE_GREATER_CAUCASUS
+                    has_variable = central_powers_participant
+                }
+            }
+            create_country = {
+	           tag = GEO
+	           origin = this
+	           state = s:STATE_GREATER_CAUCASUS.region_state:TUR
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+			c:GEO = {
+                trigger_event = {
+                  id = dev_events.7
+                  days = 5
+                }
+			    trigger_event = {
+                  id = dev_events.172
+                  days = 5
+                }
+            }
+        }
+		if = {
+            limit = {
+                c:TUR = {
+                    owns_entire_state_region = STATE_ELIZAVETPOL
+					owns_entire_state_region = STATE_AZERBAIJAN
+                    has_variable = central_powers_participant
+                }
+            }
+            create_country = {
+	           tag = AZB
+	           origin = this
+	           state = s:STATE_AZERBAIJAN.region_state:TUR
+                on_created = { 
+                  activate_law = law_type:law_presidential_republic
+                }
+		    }
+            s:STATE_ELIZAVETPOL = {
+                random_scope_state = {
+		            limit = {
+			            exists = c:TUR
+			            owner = {
+				            OR = {
+					          c:TUR = THIS
+				            }
+			            }
+		            }
+		            set_state_owner = c:AZB
+                }
+            }
+			c:AZB = {
+                trigger_event = {
+                  id = dev_events.7
+                  days = 5
+                }
+			    trigger_event = {
+                  id = dev_events.172
+                  days = 5
+                }
+            }
+        }
+		if = {
+			c:SEN = { has_variable = central_powers_participant }
+			c:ITA = {
+		        create_diplomatic_pact = {
+			     country = c:SEN
+			     type = protectorate
+		        }	
+		    }
+		}
+	}
+}
+
+entente_peace_deal.20 = { #Austro-Hungarian empire dislocation
+    type = country_event
+    
+    duration = 3
+
+    event_image = { 
+		texture = "gfx/event_pictures/entente_peace_deal.dds"
+	}
+
+	immediate = {}
+
+    title = entente_peace_deal.20.t
+	desc = entente_peace_deal.20.d
+	flavor = entente_peace_deal.20.f
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    trigger = {}
+
+    option = {
+        name = entente_peace_deal.20.a
+		default_option = yes
+		c:AUS = {
+			remove_primary_culture = hungarian
+			activate_law = law_type:law_presidential_republic
+            activate_law = law_type:law_universal_suffrage
+            activate_law = law_type:law_freedom_of_conscience
+            activate_law = law_type:law_interventionism
+            activate_law = law_type:law_right_of_assembly
+		    activate_law = law_type:law_armed_neutrality
+		    remove_diplomatic_pact = {
+			   country = c:SER
+			   type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			   country = c:SER
+			   type = puppet
+		    }
+			remove_diplomatic_pact = {
+			   country = c:MON
+			   type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:UKR
+			  type = protectorate
+		    }
+			trigger_event = {
+              id = dev_events.1
+              days = 5
+            }
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            } 
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            }
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            }
+            trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+        }
+		s:STATE_VENETIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+		s:STATE_LOMBARDY = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+		create_treaty = {
+			first_country = c:GER
+			second_country = c:AUS
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:AUS
+			    }
+			}
+		}
+		create_country = { #Czechoslovakia
+			origin = root
+			tag = CZH
+			state = s:STATE_BOHEMIA.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+		c:CZH = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
+			trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.201
+                days = 5
+            }
+		}
+        s:STATE_MORAVIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_SLOVAKIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_SLOVAKIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_UPPER_SILESIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_RUTHENIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		create_treaty = {
+			first_country = c:GER
+			second_country = c:CZH
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:CZE
+			    }
+			}
+		}
+		create_country = { #Hungary
+			origin = root
+			tag = HUN
+			state = s:STATE_CENTRAL_HUNGARY.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_monarchy
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+		c:HUN = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
+			trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.201
+                days = 5
+            }
+		}
+        s:STATE_TRANSDANUBIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HUN
+            }
+        }
+		s:STATE_WEST_SLOVAKIA = { 
+			add_claim = c:HUN
+		}
+		s:STATE_EAST_SLOVAKIA = { 
+			add_claim = c:HUN
+		}
+		s:STATE_BEKES = { 
+			add_claim = c:HUN
+		}
+		s:STATE_BANAT = { 
+			add_claim = c:HUN
+		}
+		s:STATE_DELVIDEK = { 
+			add_claim = c:HUN
+		}
+		create_treaty = {
+			first_country = c:ROM
+			second_country = c:HUN
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:ROM
+				target_country = c:HUN
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = c:YUG
+			second_country = c:HUN
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:YUG
+				target_country = c:HUN
+			    }
+			}
+		}
+		create_country = { #Galicia
+			origin = root
+			tag = GAL
+			state = s:STATE_EAST_GALICIA.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_monarchy
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+		c:GAL = {
+			trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.201
+                days = 5
+            }
+		}
+        s:STATE_WEST_GALICIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GAL
+            }
+        }
+		create_treaty = {
+			first_country = c:ROM
+			second_country = c:GAL
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:ROM
+				target_country = c:GAL
+			    }
+			}
+		}
+		c:ROM = {
+			trigger_event = {
+                id = dev_events.200
+                days = 5
+            }
+		}
+		s:STATE_NORTHERN_TRANSYLVANIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_SOUTHERN_TRANSYLVANIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BANAT = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BEKES = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BUKOVINA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BESSARABIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		c:BUL = {
+			trigger_event = {
+                id = dev_events.200
+                days = 5
+            }
+		}
+		c:SER = {
+            trigger_event = {
+                id = entente_peace_deal.14
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.200
+                days = 5
+            }
+        }
+		s:STATE_DELVIDEK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_SLAVONIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_BOSNIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_MONTENEGRO = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_MONTENEGRO = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:MON
+			    owner = {
+				  OR = {
+					c:MON = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_DALMATIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_CROATIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_SLOVENIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }  
+		s:STATE_SKOPIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BUL
+			    owner = {
+				  OR = {
+					c:BUL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_EASTERN_SERBIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BUL
+			    owner = {
+				  OR = {
+					c:BUL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
 	}
 }

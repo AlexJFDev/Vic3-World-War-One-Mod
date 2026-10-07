@@ -23,5 +23,7 @@ NAI = {
 	FLEET_BLOCKADE_TASK_SCORE_FROM_STRENGTH = 5.0					# The higher this is the more likely fleets with high blockade strength would blockade enemy states
 	FLEET_BLOCKADE_TASK_SCORE_NO_HOSTILES = 2.5 					# Gives a boost to priority if there are no hostiles present
 
+    AI_CAPITULATE_WAR_SUPPORT_MAX = 5000 # War support contributes linearly to capitulation desire, zero at the penalty threshold and reaching this magnitude at the floor and once confidently winning
+
     MILITARY_UNITS_PER_FORMATION_ARMY = 200
 }

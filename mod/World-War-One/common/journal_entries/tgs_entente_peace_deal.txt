@@ -6,6 +6,7 @@
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
             has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
@@ -27,13 +28,9 @@
             has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
 	    }
 	    c:GER = {
-            has_variable = central_powers_participant
-		    has_modifier = enforced_partition
+			has_variable = central_powers_participant
+            has_modifier = enforced_partition
         }
-        c:AUS = {
-            has_variable = central_powers_participant
-		    has_modifier = enforced_partition
-        } 
 	}
     
     scripted_button = partition_1_button #Westphalia + Hanover + Saxony + Bavaria becomes independent
@@ -44,10 +41,13 @@
 		trigger_event = { 
             id = entente_peace_deal.1
             days = 5
-			popup = yes
         }
-		set_global_variable = entente_victory
-
+		c:FRA = {
+			trigger_event = { 
+               id = entente_peace_deal.17
+               days = 5
+            }
+		}
 		if = {
 			limit = {
 				NOT = { exists = global_var:entente_deal_round_1_germany_dislocation_prop_1 }
@@ -97,10 +97,10 @@
     on_complete = {
         set_global_variable = entente_deal_round_1_complete
         If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:GER = {
+		    limit = { 
+			   c:FRA ?= this
+		    }
+		    c:GER = {
             trigger_event = {
                 id = entente_peace_deal.2
                 days = 5
@@ -185,6 +185,7 @@ je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparation
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
             has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
@@ -353,6 +354,7 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
             has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
@@ -383,6 +385,10 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
         }
+		c:AUS = {
+            has_variable = central_powers_participant
+		    has_modifier = enforced_partition
+        }
 	}
     
     scripted_button = how_big_poland_1_button 
@@ -390,6 +396,12 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
     scripted_button = how_big_poland_3_button 
 
     immediate = {
+		c:FRA = {
+			trigger_event = { 
+               id = entente_peace_deal.18
+               days = 5
+            }
+		}
 		if = {
 			limit = {
 				NOT = { exists = global_var:entente_deal_round_3_how_big_poland_prop_1 }
@@ -528,6 +540,7 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
             has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
@@ -556,7 +569,7 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 		    has_modifier = enforced_partition
         } 
 	    c:ITA = {
-		   has_variable = entente_participant
+		    has_variable = entente_participant
 	    }
 	}
     
@@ -702,6 +715,7 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
             has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
@@ -714,8 +728,8 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 	}
 
     possible = { 
-	   has_variable = entente_participant
-	   country_rank >= rank_value:great_power
+	    has_variable = entente_participant
+	    country_rank >= rank_value:great_power
 	    NOR = {
 			has_law = law_type:law_council_republic
 			has_law = law_type:law_anarchy
@@ -873,6 +887,7 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
             has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
@@ -1052,6 +1067,7 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_7_arab_states_prop_1_won
             has_global_variable = entente_deal_round_7_arab_states_prop_2_won
@@ -1087,6 +1103,12 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
     scripted_button = arab_states_3_button 
 
     immediate = {
+		c:FRA = {
+			trigger_event = { 
+               id = entente_peace_deal.19
+               days = 5
+            }
+		}
 		if = {
 			limit = {
 				NOT = { exists = global_var:entente_deal_round_7_arab_states_prop_1 }
@@ -1223,6 +1245,7 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_8_how_big_russia_prop_1_won
             has_global_variable = entente_deal_round_8_how_big_russia_prop_2_won
@@ -1403,6 +1426,7 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
             has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
@@ -1581,6 +1605,7 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
     
 	is_shown_when_inactive = {
 	    has_variable = entente_participant
+		country_rank >= rank_value:great_power
 	    NOR = {
 			has_global_variable = entente_deal_round_10_german_colonies_prop_1_won
             has_global_variable = entente_deal_round_10_german_colonies_prop_2_won

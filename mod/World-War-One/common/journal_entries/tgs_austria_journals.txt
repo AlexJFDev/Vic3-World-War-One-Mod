@@ -1,0 +1,34 @@
+﻿je_fragile_union = {
+    icon = "gfx/interface/icons/event_icons/aus_icon.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:AUS
+        THIS = c:AUS
+    }
+    
+    possible = {
+        exists = c:AUS
+        THIS = c:AUS
+        has_technology_researched = nationalism
+    }
+
+    immediate = {}
+
+    fail = {
+        OR = {
+           has_modifier = enforced_partition
+           has_modifier = declared_bankruptcy
+        }
+    }
+
+    on_fail = {
+        trigger_event = {
+            id = austria_events.5
+            days = 5
+        }
+    }
+
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

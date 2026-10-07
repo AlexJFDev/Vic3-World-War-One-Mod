@@ -1,0 +1,613 @@
+﻿namespace = austria_events
+
+austria_events.5 = { #Austro-Hungarian empire dislocation
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/protest.dds"
+    }
+
+    title = austria_events.5.t
+    desc = austria_events.5.d
+    flavor = austria_events.5.f
+
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    trigger = {}
+
+    option = {
+        name = austria_events.5.a
+		default_option = yes
+		c:AUS = {
+			remove_primary_culture = hungarian
+			activate_law = law_type:law_presidential_republic
+            activate_law = law_type:law_universal_suffrage
+            activate_law = law_type:law_freedom_of_conscience
+            activate_law = law_type:law_interventionism
+            activate_law = law_type:law_right_of_assembly
+		    activate_law = law_type:law_armed_neutrality
+		    remove_diplomatic_pact = {
+			   country = c:SER
+			   type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			   country = c:SER
+			   type = puppet
+		    }
+			remove_diplomatic_pact = {
+			   country = c:MON
+			   type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:UKR
+			  type = protectorate
+		    }
+			trigger_event = {
+              id = dev_events.1
+              days = 5
+            }
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            } 
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            }
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            }
+            trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+        }
+		s:STATE_VENETIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+		s:STATE_LOMBARDY = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+        s:STATE_SOUTH_TYROL = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+        s:STATE_ISTRIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ITA
+            }
+        }
+		create_treaty = {
+			first_country = c:GER
+			second_country = c:AUS
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:AUS
+			    }
+			}
+		}
+		create_country = { #Czechoslovakia
+			origin = root
+			tag = CZH
+			state = s:STATE_BOHEMIA.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+		c:CZH = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
+			trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.201
+                days = 5
+            }
+		}
+        s:STATE_MORAVIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_SLOVAKIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_SLOVAKIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_UPPER_SILESIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		s:STATE_RUTHENIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:CZH
+            }
+        }
+		create_treaty = {
+			first_country = c:GER
+			second_country = c:CZH
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:GER
+				target_country = c:CZE
+			    }
+			}
+		}
+		create_country = { #Hungary
+			origin = root
+			tag = HUN
+			state = s:STATE_CENTRAL_HUNGARY.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_monarchy
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+		c:HUN = {
+			trigger_event = { #Landlock buff
+			   id = dev_events.138
+			   days = 5
+		    }
+			trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.201
+                days = 5
+            }
+		}
+        s:STATE_TRANSDANUBIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:HUN
+            }
+        }
+		s:STATE_WEST_SLOVAKIA = { 
+			add_claim = c:HUN
+		}
+		s:STATE_EAST_SLOVAKIA = { 
+			add_claim = c:HUN
+		}
+		s:STATE_BEKES = { 
+			add_claim = c:HUN
+		}
+		s:STATE_BANAT = { 
+			add_claim = c:HUN
+		}
+		s:STATE_DELVIDEK = { 
+			add_claim = c:HUN
+		}
+		create_treaty = {
+			first_country = c:ROM
+			second_country = c:HUN
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:ROM
+				target_country = c:HUN
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = c:YUG
+			second_country = c:HUN
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:YUG
+				target_country = c:HUN
+			    }
+			}
+		}
+		create_country = { #Galicia
+			origin = root
+			tag = GAL
+			state = s:STATE_EAST_GALICIA.region_state:AUS
+			on_created = {
+				activate_law = law_type:law_monarchy
+                activate_law = law_type:law_mass_conscription	
+			}
+		}
+		c:GAL = {
+			trigger_event = {
+                id = dev_events.1
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.47
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.201
+                days = 5
+            }
+		}
+        s:STATE_WEST_GALICIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:GAL
+            }
+        }
+		create_treaty = {
+			first_country = c:ROM
+			second_country = c:GAL
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:ROM
+				target_country = c:GAL
+			    }
+			}
+		}
+		c:ROM = {
+			trigger_event = {
+                id = dev_events.200
+                days = 5
+            }
+		}
+		s:STATE_NORTHERN_TRANSYLVANIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_SOUTHERN_TRANSYLVANIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BANAT = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BEKES = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BUKOVINA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		s:STATE_BESSARABIA = {
+           random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:ROM
+            }
+        }
+		c:BUL = {
+			trigger_event = {
+                id = dev_events.200
+                days = 5
+            }
+		}
+		c:SER = {
+            trigger_event = {
+                id = entente_peace_deal.14
+                days = 5
+            }
+			trigger_event = {
+                id = dev_events.200
+                days = 5
+            }
+        }
+		s:STATE_DELVIDEK = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_SLAVONIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_BOSNIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_MONTENEGRO = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_MONTENEGRO = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:MON
+			    owner = {
+				  OR = {
+					c:MON = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_DALMATIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_CROATIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_SLOVENIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:AUS
+			    owner = {
+				  OR = {
+					c:AUS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }  
+		s:STATE_SKOPIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BUL
+			    owner = {
+				  OR = {
+					c:BUL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+		s:STATE_EASTERN_SERBIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:BUL
+			    owner = {
+				  OR = {
+					c:BUL = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:SER
+            }
+        }
+	}
+}
