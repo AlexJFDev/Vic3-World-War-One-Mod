@@ -2208,13 +2208,6 @@ REPLACE_OR_CREATE:COS = { # Costa Rica
 		allow_overlord_canton = yes		
 		coa_with_overlord_canton = COS_subject			
 		priority = 1
-	}
-	flag_definition = {
-		coa = COS_subject_MEX
-		priority = 30
-		trigger = { 
-			coa_def_latino_american_ensign_trigger = yes
-		}
 	}	
 }
 
@@ -2349,13 +2342,6 @@ REPLACE_OR_CREATE:CSA = { # Confederate States of America
 				}
 			}
 			coa_def_communist_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = CSA_subject_MEX
-		priority = 30
-		trigger = { 
-			coa_def_latino_american_ensign_trigger = yes
 		}
 	}
 
@@ -3224,14 +3210,7 @@ REPLACE_OR_CREATE:FSA = { # Free States of America
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
 		}
-	}	
-	flag_definition = {
-		coa = FSA_subject_MEX
-		priority = 30
-		trigger = { 
-			coa_def_latino_american_ensign_trigger = yes
-		}
-	}		
+	}			
 }
 
 REPLACE_OR_CREATE:GAL = { # Galicia (Halych)	
@@ -3671,13 +3650,6 @@ REPLACE_OR_CREATE:GUA = { # Guatemala
 		priority = 30
 		trigger = { 
 			coa_def_spanish_ensign_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = GUA_subject_MEX
-		priority = 30
-		trigger = { 
-			coa_def_latino_american_ensign_trigger = yes
 		}
 	}		
 }
@@ -4144,13 +4116,6 @@ REPLACE_OR_CREATE:HON = { # Honduras
 		priority = 1500
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = HON_subject_MEX
-		priority = 30
-		trigger = { 
-			coa_def_latino_american_ensign_trigger = yes
 		}
 	}	
 }
@@ -6370,13 +6335,6 @@ REPLACE_OR_CREATE:NIC = { # Nicaragua
 		allow_overlord_canton = yes		
 		priority = 1
 	}
-	flag_definition = {
-		coa = NIC_subject_MEX
-		priority = 30
-		trigger = { 
-			coa_def_latino_american_ensign_trigger = yes
-		}
-	}	
 }
 
 REPLACE_OR_CREATE:NNV = { # Nunavut
@@ -7106,13 +7064,6 @@ REPLACE_OR_CREATE:PNM = { # Panama
 		coa_with_overlord_canton = PNM_subject	
 		allow_overlord_canton = yes	
 		priority = 1
-	}
-	flag_definition = {
-		coa = PNM_subject_MEX
-		priority = 30
-		trigger = { 
-			coa_def_latino_american_ensign_trigger = yes
-		}
 	}	
 }
 
@@ -7330,8 +7281,8 @@ REPLACE_OR_CREATE:NGG = { # Papua
 
 REPLACE_OR_CREATE:PRG = { # Paraguay
 	flag_definition = {
-		coa = PRG
-		subject_canton = PRG
+		coa = PRG_dictatorship
+		subject_canton = PRG_dictatorship
 		allow_overlord_canton = yes	
 		coa_with_overlord_canton = PRG_subject			
 		priority = 1
@@ -7342,26 +7293,6 @@ REPLACE_OR_CREATE:PRG = { # Paraguay
 		priority = 5
 		trigger = { 
 			coa_def_monarchy_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = PRG_dictatorship
-		subject_canton = PRG_dictatorship
-		allow_overlord_canton = yes	
-		coa_with_overlord_canton = PRG_subject			
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = PRG_oligarchy
-		subject_canton = PRG_oligarchy
-		allow_overlord_canton = yes	
-		coa_with_overlord_canton = PRG_subject			
-		priority = 25
-		trigger = {
-			coa_def_oligarchy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
@@ -8559,14 +8490,7 @@ REPLACE_OR_CREATE:TEX = { # Texas
 		trigger = { 
 			coa_def_spanish_ensign_trigger = yes
 		}
-	}	
-	flag_definition = {
-		coa = TEX_subject_MEX
-		priority = 30
-		trigger = { 
-			coa_def_latino_american_ensign_trigger = yes
-		}
-	}	
+	}		
 }
 
 REPLACE_OR_CREATE:TIB = { # Tibet
