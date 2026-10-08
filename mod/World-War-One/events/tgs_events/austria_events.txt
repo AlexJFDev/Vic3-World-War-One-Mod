@@ -11,63 +11,77 @@ austria_events.5 = { #Austro-Hungarian empire dislocation
     desc = austria_events.5.d
     flavor = austria_events.5.f
 
-    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    duration = 3
+    duration = 1
 
     trigger = {}
 
     option = {
         name = austria_events.5.a
 		default_option = yes
-		c:AUS = {
-			remove_primary_culture = hungarian
-			activate_law = law_type:law_presidential_republic
-            activate_law = law_type:law_universal_suffrage
-            activate_law = law_type:law_freedom_of_conscience
-            activate_law = law_type:law_interventionism
-            activate_law = law_type:law_right_of_assembly
-		    activate_law = law_type:law_armed_neutrality
-		    remove_diplomatic_pact = {
-			   country = c:SER
-			   type = protectorate
-		    }
-			remove_diplomatic_pact = {
-			   country = c:SER
-			   type = puppet
-		    }
-			remove_diplomatic_pact = {
-			   country = c:MON
-			   type = protectorate
-		    }
-			remove_diplomatic_pact = {
-			  country = c:UKR
-			  type = protectorate
-		    }
-			trigger_event = {
-              id = dev_events.1
-              days = 5
-            }
-			trigger_event = {
-              id = dev_events.25
-              days = 5
-            } 
-			trigger_event = {
-              id = dev_events.25
-              days = 5
-            }
-			trigger_event = {
-              id = dev_events.25
-              days = 5
-            }
-            trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
-			trigger_event = {
-                id = dev_events.47
-                days = 5
-            }
+		owner.ruler ?= {
+			remove_character_role = ruler
+		    add_character_role = agitator
+		}
+        owner.heir ?= {
+			remove_character_role = heir
+		    add_character_role = agitator
+		}
+		remove_primary_culture = cu:hungarian
+		activate_law = law_type:law_presidential_republic
+        activate_law = law_type:law_universal_suffrage
+        activate_law = law_type:law_freedom_of_conscience
+        activate_law = law_type:law_interventionism
+        activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_armed_neutrality
+		remove_diplomatic_pact = {
+			country = c:SER
+			type = protectorate
+		}
+		remove_diplomatic_pact = {
+			country = c:SER
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:MON
+			type = protectorate
+		}
+		remove_diplomatic_pact = {
+			country = c:MON
+			type = puppet
+		}
+		remove_diplomatic_pact = {
+			country = c:UKR
+			type = protectorate
+		}
+		remove_diplomatic_pact = {
+			country = c:UKR
+			type = puppet
+		}
+		trigger_event = {
+            id = dev_events.1
+            days = 5
+        }
+		trigger_event = {
+            id = dev_events.25
+            days = 5
+        } 
+		trigger_event = {
+            id = dev_events.25
+            days = 5
+        }
+		trigger_event = {
+            id = dev_events.25
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.47
+            days = 5
+        }
+		trigger_event = {
+            id = dev_events.47
+            days = 5
         }
 		s:STATE_VENETIA = {
            random_scope_state = {

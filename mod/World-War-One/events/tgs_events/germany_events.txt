@@ -738,14 +738,6 @@ germany_events.6 = { #Austria-Hungary capitulates
             id = dev_events.183
             days = 5
         }
-        owner.ruler ?= {
-			remove_character_role = ruler
-		    add_character_role = agitator
-		}
-        owner.heir ?= {
-			remove_character_role = heir
-		    add_character_role = agitator
-		}
         set_variable = small_austria
         ai_chance = {
             base = 10
@@ -802,7 +794,59 @@ germany_events.7 = {
             id = dev_events.183
             days = 5
         }
+        s:STATE_DOBRUDJA = {
+            random_scope_state = {
+		        limit = {
+			    exists = c:BUL
+			        owner = {
+				        OR = {
+					      c:BUL = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:ROM
+            }
+        }
+        s:STATE_EASTERN_SERBIA = {
+            random_scope_state = {
+		        limit = {
+			    exists = c:BUL
+			        owner = {
+				        OR = {
+					      c:BUL = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:SER
+            }
+        }
+        s:STATE_SKOPIA = {
+            random_scope_state = {
+		        limit = {
+			    exists = c:BUL
+			        owner = {
+				        OR = {
+					      c:BUL = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:SER
+            }
+        }
         s:STATE_WESTERN_THRACE = {
+            random_scope_state = {
+		        limit = {
+			    exists = c:BUL
+			        owner = {
+				        OR = {
+					      c:BUL = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:GRE
+            }
+        }
+        s:STATE_MACEDONIA = {
             random_scope_state = {
 		        limit = {
 			    exists = c:BUL

@@ -1243,7 +1243,7 @@ usa_events.17 = { #Waco lynching
         default_option = yes
         add_modifier = {
             name = waco_lynching_no_repression
-            years = 2
+            years = 5
             is_decaying = yes
         }
         ai_chance = {
@@ -1255,7 +1255,7 @@ usa_events.17 = { #Waco lynching
         name = usa_events.17.b
         add_modifier = {
             name = waco_lynching_repression
-            years = 2
+            years = 5
             is_decaying = yes
         }
         ai_chance = {
@@ -1469,8 +1469,7 @@ usa_events.21 = { #American neutrality je failure
         }
         every_country = {
             limit = { 
-                NOR = {
-                    c:USA = THIS
+                NOT = {
                     c:RUS = THIS
                 }
                 is_at_war = yes
@@ -1479,6 +1478,14 @@ usa_events.21 = { #American neutrality je failure
             trigger_event = {
               id = dev_events.187
               days = 5
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 182
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 365
             }
         }
     }
