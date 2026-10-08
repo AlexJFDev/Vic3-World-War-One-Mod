@@ -502,6 +502,16 @@ joining_world_war_events.13 = { #Ottoman Empire joins
 				}
 			}
             add_war_goal = {
+				holder = c:FRA
+				target_country = c:TUR
+				type = enforce_treaty_article
+				article = {
+					article = partition
+					source_country = c:TUR
+					target_country = c:FRA
+				}
+			}
+            add_war_goal = {
                     holder = c:RUS
                     type = conquer_state
                     target_state = s:STATE_EASTERN_THRACE.region_state:TUR

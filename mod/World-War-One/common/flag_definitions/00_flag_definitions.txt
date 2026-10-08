@@ -3706,29 +3706,20 @@ REPLACE_OR_CREATE:GWA = { # Gwalior
 
 REPLACE_OR_CREATE:HAI = { # Haiti
 	flag_definition = {
-		coa = HAI
+		coa = HAI_modern
 		allow_overlord_canton = yes		
 		coa_with_overlord_canton = HAI_subject			
-		subject_canton = HAI
+		subject_canton = HAI_modern
 		priority = 1
 	}	
 	flag_definition = {
-		coa = HAI_republic
-		subject_canton = HAI_republic
-		allow_overlord_canton = yes				
-		priority = 10
-		trigger = { 
-			coa_def_republic_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = HAI_absolute_monarchy
-		subject_canton = HAI_absolute_monarchy
+		coa = HAI_monarchy
+		subject_canton = HAI_monarchy
 		allow_overlord_canton = yes		
 		coa_with_overlord_canton = HAI_subject		
-		priority = 20
+		priority = 1500
 		trigger = { 
-			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 	}	
 	flag_definition = {
@@ -3736,20 +3727,6 @@ REPLACE_OR_CREATE:HAI = { # Haiti
 		priority = 1500
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = HAI_subject_SPA
-		priority = 50
-		trigger = { 
-			coa_def_spanish_ensign_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = HAI_subject_USA
-		priority = 50
-		trigger = { 
-			coa_def_american_ensign_trigger = yes
 		}
 	}		
 }	
