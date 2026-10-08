@@ -12,6 +12,30 @@ NDiplomacy = {
 	RECENTLY_LIBERATED_DURATION_MONTHS = 12
 }
 
+NPops = {
+	LOYALTIES_GAIN_GRACE_PERIOD_SHORT = "1914.1.1"		# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Short game rule is applied
+	LOYALTIES_GAIN_GRACE_PERIOD_LONG = "1917.1.1"		# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Long game rule is applied
+    LOYALTIES_GAIN_GRACE_PERIOD_EXTRA_LONG = "1923.1.1"	# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Extra Long game rule is applied
+
+    ALLOW_ASSIMILATION_REQUIRE_HERITAGE_GROUP = yes		# Can pops assimilate into pops of a different heritage group (weaker condition)
+	ALLOW_ASSIMILATION_REQUIRE_HERITAGE_TRAIT = yes		# Can pops assimilate into pops of a different heritage trait (stronger condition)
+
+	ASSIMILATION_RATE = 0.05					# Percentage of pops who will Assimilate into a different Culture each month, if eligible
+	MIN_ASSIMILATION = 50000					    # If there is any assmiliation at least this many people will assimilate
+
+	CONVERSION_RATE = 0.05						# Percentage of pops who will Convert into a different Religion each month, if eligible
+	MIN_CONVERSION = 50000						# If there is any conversion at least this many people will convert
+
+	POP_MERGE_MAX_WORKFORCE_MINOR_CONSOLIDATION = 10000		# Determines how small the pop needs to be in terms of Workforce in order to qualify to be merged with others in their same building or the unemployment pool
+	POP_MERGE_MIN_NUM_POPS_SAME_PROFESSION_MINOR_CONSOLIDATION = 3		# Employed pops will not get merged with others in their same building if there aren't at least this many pops of the same type in the building
+	POP_MERGE_MAX_WORKFORCE_MODERATE_CONSOLIDATION = 25000
+	POP_MERGE_MIN_NUM_POPS_SAME_PROFESSION_MODERATE_CONSOLIDATION = 2
+	POP_MERGE_MAX_WORKFORCE_AGGRESSIVE_CONSOLIDATION = 50000
+	POP_MERGE_MIN_NUM_POPS_SAME_PROFESSION_AGGRESSIVE_CONSOLIDATION = 1
+	POP_MERGE_MAX_WORKFORCE_MAX_CONSOLIDATION = 100000
+	WORKFORCE_RATIO_MAX_UNEMPLOYMENT_FACTOR_MAX_CONSOLIDATION = 1
+}
+
 NWar = {
 	WAR_SUPPORT_CHANGE_KIA_FACTOR = -0.5
 	WAR_SUPPORT_CHANGE_TURMOIL_FACTOR = -3
