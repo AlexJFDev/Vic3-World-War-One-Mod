@@ -5559,8 +5559,8 @@ REPLACE_OR_CREATE:MEW = { # Mewar
 
 REPLACE_OR_CREATE:MEX = { # Mexico
 	flag_definition = {
-		coa = MEX
-		subject_canton = MEX
+		coa = MEX_modern
+		subject_canton = MEX_modern
 		allow_overlord_canton = yes		
 		coa_with_overlord_canton = MEX_subject			
 		priority = 1
@@ -5576,13 +5576,24 @@ REPLACE_OR_CREATE:MEX = { # Mexico
 		}
 	}	
 	flag_definition = {
-		coa = MEX_dictatorship
-		subject_canton = MEX_dictatorship
+		coa = MEX_dictatorship_2
+		subject_canton = MEX_dictatorship_2
 		priority = 20
 		trigger = {
 			coa_def_dictatorship_flag_trigger = yes
 		}
 	}	
+	flag_definition = {
+		coa = MEX_dictatorship_2
+		subject_canton = MEX_dictatorship_2
+		priority = 2000
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_oligarchy
+			}
+		}
+	}
 	flag_definition = {
 		coa = MEX_communist
 		priority = 1500
@@ -5608,10 +5619,10 @@ REPLACE_OR_CREATE:MEX = { # Mexico
 	}	
 }
 
-REPLACE_OR_CREATE:RMX = { # Mexico
+REPLACE_OR_CREATE:RMX = { # Revolutionnary Mexico
 	flag_definition = {
-		coa = MEX
-		subject_canton = MEX
+		coa = MEX_modern
+		subject_canton = MEX_modern
 		allow_overlord_canton = yes		
 		coa_with_overlord_canton = MEX_subject			
 		priority = 1

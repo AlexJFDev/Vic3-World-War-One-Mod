@@ -150,6 +150,36 @@ austria_events.5 = { #Austro-Hungarian empire dislocation
 			    }
 			}
 		}
+		create_treaty = {
+			first_country = c:ITA
+			second_country = c:AUS
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:ITA
+				target_country = c:AUS
+			    }
+			}
+		}
+		create_treaty = {
+			first_country = c:YUG
+			second_country = c:AUS
+
+			is_draft = no
+			binding_period = { years = 50 }
+
+			articles_to_create = {
+				{
+				article = transit_rights
+				source_country = c:YUG
+				target_country = c:AUS
+			    }
+			}
+		}
 		create_country = { #Czechoslovakia
 			origin = root
 			tag = CZH

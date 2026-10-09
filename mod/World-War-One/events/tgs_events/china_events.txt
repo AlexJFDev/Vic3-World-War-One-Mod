@@ -750,19 +750,6 @@ china_events.5 = { #China collapse
 		      set_state_owner = c:YUE
             }
         }
-        s:STATE_HINGGAN = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:BEI
-			    owner = {
-				  OR = {
-					c:BEI = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:MCH
-            }
-        }
         c:BEI = {
             add_modifier = {
               name = recently_collapsed_2
