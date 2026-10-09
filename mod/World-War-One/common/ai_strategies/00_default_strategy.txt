@@ -5200,13 +5200,6 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 
 		# We care about the things happening at home
 		if = {
-			limit = {
-				any_scope_state = {
-					region = scope:region
-				}
-			}
-			add = 50
-
 			if = {
 				limit = {
 					scope:region = {
@@ -5216,14 +5209,14 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 						}
 					}
 				}
-				add = 50
+				add = 100
 			}
 
 			if = {
 				limit = {
 					scope:region = capital.region
 				}
-				add = 100
+				add = 200
 			}
 		}
 
