@@ -50,12 +50,6 @@ axis_peace_deal.1 = {
 			  type = colony
 		    }
         }
-        random_scope_character = {
-			limit = {
-				has_variable = charles_de_gaulle
-			}
-			kill_character = yes
-		}
     }
 
     option = {
@@ -107,6 +101,12 @@ axis_peace_deal.1 = {
               id = decolonization_events.1
               years = 6
             }
+            random_scope_character = {
+			    limit = {
+				   has_variable = charles_de_gaulle
+			    }
+			    kill_character = yes
+		    }
         }
         c:FFR = {
             trigger_event = {
