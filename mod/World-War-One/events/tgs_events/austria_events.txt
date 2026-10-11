@@ -1,15 +1,15 @@
-﻿namespace = austria_events
+﻿namespace = kuk_events
 
-austria_events.5 = { #Austro-Hungarian empire dislocation
+kuk_events.5 = { #Austro-Hungarian empire dislocation
     type = country_event
 
     event_image = {
         texture = "gfx/event_pictures/protest.dds"
     }
 
-    title = austria_events.5.t
-    desc = austria_events.5.d
-    flavor = austria_events.5.f
+    title = kuk_events.5.t
+    desc = kuk_events.5.d
+    flavor = kuk_events.5.f
 
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -18,8 +18,9 @@ austria_events.5 = { #Austro-Hungarian empire dislocation
     trigger = {}
 
     option = {
-        name = austria_events.5.a
+        name = kuk_events.5.a
 		default_option = yes
+		set_variable = austro_hungarian_dislocation
 		owner.ruler ?= {
 			remove_character_role = ruler
 		    add_character_role = agitator
