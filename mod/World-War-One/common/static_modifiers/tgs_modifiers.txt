@@ -577,24 +577,108 @@ china_tech_focus_modifier = {
     interest_group_ig_landowners_pol_str_mult = -0.5
 }
 
-great_depression_effect_1 = { #USA
+great_depression_effect_A1 = { #USA and Germany
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
     country_minting_mult = -5
     country_loan_interest_rate_mult = 0.5
-    state_aristocrats_investment_pool_efficiency_mult = -5
-    state_capitalists_investment_pool_efficiency_mult = -5
-    state_shopkeepers_investment_pool_efficiency_mult = -5
-    state_clergymen_investment_pool_efficiency_mult = -5
-    state_farmers_investment_pool_efficiency_mult = -5
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
+    state_lower_strata_standard_of_living_add = -7
+    state_middle_strata_standard_of_living_add = -7
+    state_upper_strata_standard_of_living_add = -7
+}
+
+great_depression_effect_A2 = { #USA and Germany
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_minting_mult = -5
+    country_loan_interest_rate_mult = 0.5
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
     state_lower_strata_standard_of_living_add = -8
     state_middle_strata_standard_of_living_add = -8
     state_upper_strata_standard_of_living_add = -8
 }
 
-great_depression_effect_2 = { #Less impacted countries
+great_depression_effect_A3 = { #USA and Germany
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_minting_mult = -5
+    country_loan_interest_rate_mult = 0.5
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
+    state_lower_strata_standard_of_living_add = -9
+    state_middle_strata_standard_of_living_add = -9
+    state_upper_strata_standard_of_living_add = -9
+}
+
+great_depression_effect_B1 = { #Has received us help
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_minting_mult = -2
+    country_loan_interest_rate_mult = 0.5
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
+    state_lower_strata_standard_of_living_add = -5
+    state_middle_strata_standard_of_living_add = -5
+    state_upper_strata_standard_of_living_add = -5
+}
+
+great_depression_effect_B2 = { #Has received us help
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_minting_mult = -2
+    country_loan_interest_rate_mult = 0.5
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
+    state_lower_strata_standard_of_living_add = -6
+    state_middle_strata_standard_of_living_add = -6
+    state_upper_strata_standard_of_living_add = -6
+}
+
+great_depression_effect_B3 = { #Has received us help
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_minting_mult = -2
+    country_loan_interest_rate_mult = 0.5
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
+    state_lower_strata_standard_of_living_add = -7
+    state_middle_strata_standard_of_living_add = -7
+    state_upper_strata_standard_of_living_add = -7
+}
+
+great_depression_effect_C1 = { #Less impacted countries
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
     country_minting_mult = -1
     country_loan_interest_rate_mult = 0.5
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
     state_aristocrats_investment_pool_efficiency_mult = -1
     state_capitalists_investment_pool_efficiency_mult = -1
     state_shopkeepers_investment_pool_efficiency_mult = -1
@@ -605,43 +689,36 @@ great_depression_effect_2 = { #Less impacted countries
     state_upper_strata_standard_of_living_add = -2
 }
 
-great_depression_effect_3 = { #Has received us help
+great_depression_effect_C2 = { #Less impacted countries
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-    country_minting_mult = -2
+    country_minting_mult = -1
     country_loan_interest_rate_mult = 0.5
-    state_aristocrats_investment_pool_efficiency_mult = -2
-    state_capitalists_investment_pool_efficiency_mult = -2
-    state_shopkeepers_investment_pool_efficiency_mult = -2
-    state_clergymen_investment_pool_efficiency_mult = -2
-    state_farmers_investment_pool_efficiency_mult = -2
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
+    state_lower_strata_standard_of_living_add = -3
+    state_middle_strata_standard_of_living_add = -3
+    state_upper_strata_standard_of_living_add = -3
+}
+
+great_depression_effect_C3 = { #Less impacted countries
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_minting_mult = -1
+    country_loan_interest_rate_mult = 0.5
+    country_company_throughput_bonus_add = -0.5
+    country_company_construction_efficiency_bonus_add = -0.5
+    state_aristocrats_investment_pool_efficiency_mult = -1
+    state_capitalists_investment_pool_efficiency_mult = -1
+    state_shopkeepers_investment_pool_efficiency_mult = -1
+    state_clergymen_investment_pool_efficiency_mult = -1
+    state_farmers_investment_pool_efficiency_mult = -1
     state_lower_strata_standard_of_living_add = -5
     state_middle_strata_standard_of_living_add = -5
     state_upper_strata_standard_of_living_add = -5
-}
-
-great_depression_effect_4 = { #Germany
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-    country_minting_mult = -3
-    country_loan_interest_rate_mult = 0.5
-    state_aristocrats_investment_pool_efficiency_mult = -2
-    state_capitalists_investment_pool_efficiency_mult = -2
-    state_shopkeepers_investment_pool_efficiency_mult = -2
-    state_clergymen_investment_pool_efficiency_mult = -2
-    state_farmers_investment_pool_efficiency_mult = -2
-    state_lower_strata_standard_of_living_add = -7
-    state_middle_strata_standard_of_living_add = -7
-    state_upper_strata_standard_of_living_add = -7
-}
-
-great_depression_effect_5 = { #Below 10 sols countries
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-    country_minting_mult = -1
-    country_loan_interest_rate_mult = 0.1
-    state_aristocrats_investment_pool_efficiency_mult = -2
-    state_capitalists_investment_pool_efficiency_mult = -2
-    state_shopkeepers_investment_pool_efficiency_mult = -2
-    state_clergymen_investment_pool_efficiency_mult = -2
-    state_farmers_investment_pool_efficiency_mult = -2
 }
 
 great_depression_cash_reserve_wipeout = {
@@ -663,6 +740,7 @@ banks_saved_modifier = {
     state_lower_strata_standard_of_living_add = 2
     state_middle_strata_standard_of_living_add = 2
     state_upper_strata_standard_of_living_add = 2
+    interest_group_ig_industrialists_approval_add = -5
 }
 
 angry_industrialists_1_modifier = {

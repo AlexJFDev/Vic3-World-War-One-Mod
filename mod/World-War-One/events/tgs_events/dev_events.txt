@@ -10136,12 +10136,7 @@ dev_events.208 = {
     option = {
         name = dev_events.25.a
         default_option = yes
-        trigger = { 
-            NOT = { has_variable = austro_hungarian_dislocation }
-        }
-        trigger_event = {
-            id = austria_events.5
-            days = 5
-        }
+        trigger = { is_player = no }
+        add_treasury = 300000000
     }
 }
