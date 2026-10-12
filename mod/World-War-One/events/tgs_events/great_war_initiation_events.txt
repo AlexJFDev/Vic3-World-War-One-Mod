@@ -1211,6 +1211,10 @@ great_war_initiation_events.13 = {
                 id = great_war_initiation_events.14
                 days = 2
             }
+            trigger_event = {
+                id = dev_events.2
+                days = 2
+            }
         }
         c:ITA = {
             trigger_event = { 
@@ -1325,13 +1329,13 @@ great_war_initiation_events.13 = {
                 days = 30
             }
         }
-        ai_chance = {
-            base = 0
-        }
         add_modifier = {
             name = angry_military_modifier
             years = 10
             is_decaying = yes
+        }
+        ai_chance = {
+            base = 0
         }
     }
 }

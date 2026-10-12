@@ -80,7 +80,7 @@ usa_events.6 = { #Black Tuesday
     desc = usa_events.6.d
     flavor = usa_events.6.f
 
-    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    icon = "gfx/interface/icons/event_icons/financial_crash.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     duration = 3
 
@@ -113,36 +113,6 @@ usa_events.6 = { #Black Tuesday
 			base = 1
 		}
     }
-
-    option = {
-        name = usa_events.6.b
-        add_treasury = -100000000
-        add_modifier = {
-            name = banks_saved_modifier
-            years = 10
-            is_decaying = yes
-        }
-        every_country = {
-			limit = {
-                OR = {
-				  has_law = law_type:law_interventionism
-                  has_law = law_type:law_laissez_faire
-                }
-                NOR = {
-                    has_law = law_type:law_council_republic
-                    has_law = law_type:law_isolationism
-                }
-			}
-            trigger_event = {
-                id = usa_events.8
-                days = 30
-            }
-        }
-        set_variable = great_depression_started
-        ai_chance = {
-			base = 0
-		}
-    }
 }
 
 usa_events.7 = {
@@ -156,7 +126,7 @@ usa_events.7 = {
     desc = usa_events.7.d
     flavor = usa_events.7.f
 
-    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    icon = "gfx/interface/icons/event_icons/financial_crash.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     duration = 3
 
@@ -172,6 +142,12 @@ usa_events.7 = {
 
     option = {
         name = usa_events.7.b
+        add_treasury = -100000000
+        add_modifier = {
+            name = banks_saved_modifier
+            years = 10
+            is_decaying = yes
+        }
         ai_chance = {
 			base = 0
 		}
@@ -189,7 +165,7 @@ usa_events.8 = { #Great Depression effects are applied
     desc = usa_events.8.d
     flavor = usa_events.8.f
 
-    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+    icon = "gfx/interface/icons/event_icons/financial_crash.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     duration = 1
 
@@ -220,6 +196,10 @@ usa_events.8 = { #Great Depression effects are applied
             id = dev_events.208
             days = 5
         }
+        trigger_event = {
+            id = usa_events.7
+            days = 15
+        }
         set_variable = great_depression_victim
     }
 
@@ -248,6 +228,10 @@ usa_events.8 = { #Great Depression effects are applied
             id = dev_events.208
             days = 5
         }
+        trigger_event = {
+            id = usa_events.7
+            days = 15
+        }
         set_variable = great_depression_victim
     }
 
@@ -274,6 +258,10 @@ usa_events.8 = { #Great Depression effects are applied
         trigger_event = {
             id = dev_events.208
             days = 5
+        }
+        trigger_event = {
+            id = usa_events.7
+            days = 15
         }
         set_variable = great_depression_victim
     }

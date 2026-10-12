@@ -60,15 +60,33 @@ dev_events.2 = {
 			}
 
             combat_unit = {
+				type = unit_type:combat_unit_type_siege_artillery
+				state_region = s:STATE_NORTH_RHINE
+				count = 50
+			}
+
+            combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_RUHR
 				count = 100
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_siege_artillery
+				state_region = s:STATE_RUHR
+				count = 50
 			}
             
             combat_unit = {
 				type = unit_type:combat_unit_type_trench_infantry
 				state_region = s:STATE_ALSACE_LORRAINE
 				count = 100
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_siege_artillery
+				state_region = s:STATE_ALSACE_LORRAINE
+				count = 50
 			}
 		}
         }   
