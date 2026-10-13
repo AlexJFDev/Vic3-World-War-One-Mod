@@ -11,9 +11,64 @@
         exists = c:AUS
         THIS = c:AUS
         has_technology_researched = nationalism
+        owns_entire_state_region = STATE_AUSTRIA
+        owns_entire_state_region = STATE_CENTRAL_HUNGARY
+        OR = {
+            owns_entire_state_region = STATE_BOHEMIA
+            owns_entire_state_region = STATE_SLOVENIA
+            owns_entire_state_region = STATE_CROATIA
+        }
     }
 
     immediate = {}
+
+    complete = {
+        owns_entire_state_region = STATE_AUSTRIA
+        owns_entire_state_region = STATE_CENTRAL_HUNGARY
+        OR = {
+            owns_entire_state_region = STATE_BOHEMIA
+            owns_entire_state_region = STATE_SLOVENIA
+            owns_entire_state_region = STATE_CROATIA
+        }
+        is_at_war = no
+        is_revolutionary = no
+		is_secessionist = no
+        OR = {
+            has_law_or_variant = law_type:law_census_voting
+            has_law_or_variant = law_type:law_universal_suffrage
+        }
+        NOT = {
+            has_law_or_variant = law_type:law_state_religion
+            has_law_or_variant = law_type:law_serfdom
+        }
+        OR = {
+            has_law_or_variant = law_type:law_cultural_exclusion
+            has_law_or_variant = law_type:law_multicultural
+        }
+        OR = {
+            has_law_or_variant = law_type:law_federated
+            has_law_or_variant = law_type:law_confederated
+        }
+        OR = {
+            has_law_or_variant = law_type:law_right_of_assembly
+            has_law_or_variant = law_type:law_protected_speech
+        }
+        institution_investment_level = {
+            institution = institution_propaganda
+            value = 4
+        }
+        institution_investment_level = {
+            institution = institution_home_affairs
+            value = 4
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = kuk_events.6
+            days = 5
+        }
+    }
 
     fail = {
         OR = {
