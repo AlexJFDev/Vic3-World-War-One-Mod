@@ -681,6 +681,8 @@ joining_world_war_events.14 = { #Italy joins part 3
         scope:world_war_one_diplo_play = {
 			add_target_backers = {
 				c:ITA
+                c:TRI
+                c:CYR
 			}  
             add_war_goal = {
                 holder = c:AUS
@@ -701,6 +703,31 @@ joining_world_war_events.14 = { #Italy joins part 3
                 holder = c:ITA
                 type = return_state
                 target_state = s:STATE_ISTRIA.region_state:AUS
+            }
+        }
+        if = {
+            limit = {
+                c:SEN = { 
+                  is_at_war = yes
+                  has_variable = central_powers_participant 
+                }
+            }
+            scope:world_war_one_diplo_play = {
+                add_war_goal = {
+                  holder = c:SEN
+                  type = conquer_state
+                  target_state = s:STATE_LYBIA.region_state:CYR
+                }
+                add_war_goal = {
+                  holder = c:SEN
+                  type = conquer_state
+                  target_state = s:STATE_TRIPOLI.region_state:TRI
+                }
+                add_war_goal = {
+                  holder = c:ITA
+                  type = make_protectorate
+                  target_country = c:SEN
+                }
             }
         }
         c:ITA = { set_variable = entente_participant }

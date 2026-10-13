@@ -35,7 +35,7 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
               c:RUS
             }   
         }
-		every_country = {
+        every_country = {
             limit = { 
                 is_at_war = yes
                 has_variable = central_powers_participant
@@ -53,7 +53,7 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
               days = 365
             }
         }
-		trigger_event = {
+        trigger_event = {
             id = dev_events.185
             days = 5
         }
@@ -72,8 +72,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -85,8 +86,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -98,8 +100,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -111,8 +114,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -135,8 +139,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -148,8 +153,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -161,8 +167,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -174,8 +181,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -187,15 +195,16 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
 		      set_state_owner = c:POL
             }
         }
-		create_country = { #Belarus
+        create_country = { #Belarus
 			origin = root
 			tag = BYE
 			state = s:STATE_MINSK.region_state:RUS
@@ -205,13 +214,14 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
                 activate_law = law_type:law_mass_conscription
 			}
 		}
-		s:STATE_MOGILEV = {
+        s:STATE_MOGILEV = {
            random_scope_state = {
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -223,8 +233,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -240,13 +251,14 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
                 activate_law = law_type:law_mass_conscription
 			}
 		}
-		s:STATE_CHERNIHIV = {
+        s:STATE_CHERNIHIV = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -258,8 +270,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -271,8 +284,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				   OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -284,8 +298,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -297,8 +312,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				   OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -310,8 +326,9 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -338,19 +355,6 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
 			type = protectorate
 		}	
 	    }
-		s:STATE_INGRIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:RUS
-            }
-        }
 		if = {
 			limit = {
 				c:TUR = { has_variable = central_powers_participant }

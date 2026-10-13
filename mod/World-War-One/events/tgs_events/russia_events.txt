@@ -176,8 +176,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -189,8 +190,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -202,8 +204,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -215,8 +218,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -239,8 +243,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -252,8 +257,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -265,8 +271,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -278,8 +285,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -291,8 +299,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -314,8 +323,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -327,8 +337,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -349,8 +360,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -362,8 +374,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -375,8 +388,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				   OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -388,8 +402,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -401,8 +416,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				   OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -414,8 +430,9 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -442,19 +459,6 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			type = protectorate
 		}	
 	    }
-		s:STATE_INGRIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:RUS
-            }
-        }
 		if = {
 			limit = {
 				c:TUR = { has_variable = central_powers_participant }
@@ -900,8 +904,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -913,8 +918,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -926,8 +932,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -939,8 +946,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -963,8 +971,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -976,8 +985,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -989,8 +999,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1002,8 +1013,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1015,8 +1027,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1038,8 +1051,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1051,8 +1065,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1073,8 +1088,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1086,8 +1102,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1099,8 +1116,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				   OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1112,8 +1130,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1125,8 +1144,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				   OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1138,8 +1158,9 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      limit = {
 			   exists = c:RUS
 			    owner = {
-				  OR = {
-					c:RUS = THIS
+				    OR = {
+                        c:GER = THIS
+					    c:RUS = THIS
 				    }
 			    }
 		        }
@@ -1166,19 +1187,6 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 			type = protectorate
 		}	
 	    }
-		s:STATE_INGRIA = {
-	       random_scope_state = {
-		      limit = {
-			   exists = c:GER
-			    owner = {
-				  OR = {
-					c:GER = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:RUS
-            }
-        }
 		if = {
 			limit = {
 				c:TUR = { has_variable = central_powers_participant }

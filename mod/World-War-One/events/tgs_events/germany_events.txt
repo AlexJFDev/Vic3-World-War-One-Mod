@@ -12,94 +12,7 @@ germany_events.1 = {
     
     duration = 1
     
-    immediate = {
-        if = {
-			limit = {
-				NOT = {
-					any_political_movement = {
-						is_political_movement_type = movement_socialist
-					}
-				}
-			}
-			create_political_movement = { type = movement_socialist }
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        set_variable = germany_war_fatigue
-    }
+    immediate = {}
 
     event_image = {
         texture = "gfx/event_pictures/german_revolution.dds"
@@ -109,48 +22,27 @@ germany_events.1 = {
 
     option = {
         name = germany_events.1.a
-        trigger = { is_player = yes }
         default_option = yes
-        trigger_event = {
-            id = dev_events.19
-            days = 1
+        add_modifier = {
+           name = emergency_military_measures
+           years = 2
+           is_decaying = yes
         }
-        any_political_movement = {
-            limit = {
-                is_political_movement_type = movement_socialist
-            }
-            add_modifier = {
-				name = political_movement_buff_1
-				years = 2
-			}
+        ai_chance = {
+            base = 1
         }
-        add_radicals = {
-			strata = lower
-            value = medium_radicals
-		}
     }
 
     option = {
-        name = germany_events.1.a
-        trigger = { is_player = no }
-        default_option = yes
-        trigger_event = {
-            id = dev_events.19
-            days = 1
+        name = germany_events.1.b
+        add_modifier = {
+           name = emergency_political_measures
+           years = 2
+           is_decaying = yes
         }
-        any_political_movement = {
-            limit = {
-                is_political_movement_type = movement_socialist
-            }
-            add_modifier = {
-				name = political_movement_buff_1
-				years = 2
-			}
+        ai_chance = {
+            base = 0
         }
-        add_radicals = {
-			strata = lower
-            value = medium_radicals
-		}
     }
 }
 

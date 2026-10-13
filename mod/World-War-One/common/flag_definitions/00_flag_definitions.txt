@@ -11335,3 +11335,35 @@ TIR = {
 		priority = 1
 	}
 }
+
+REPLACE_OR_CREATE:KUK = {
+	flag_definition = {
+		coa = FND_fascist
+		subject_canton = FND_fascist
+		priority = 1
+	}
+	flag_definition = {
+		coa = KUK_monarchy
+		subject_canton = KUK_monarchy
+		priority = 1500
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = AUS_dictatorship
+		subject_canton = AUS_dictatorship
+		priority = 1500
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = KUK_communist
+		subject_canton = KUK_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}

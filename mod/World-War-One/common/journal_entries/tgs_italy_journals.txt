@@ -10,11 +10,11 @@
     
     possible = {
         has_variable = axis_participant
-        game_date > 1943.9.1
+        game_date > 1943.1.1
         any_scope_war = {
 		    has_war_support = {
 		        target = ROOT
-		        value < 30
+		        value < 40
 		    }   
 		}
         NOR = {
@@ -44,15 +44,11 @@
             c:USA = { is_subject_of = c:GER }
             c:GBR = { is_subject_of = c:GER }
             c:RUS = { is_subject_of = c:GER }
-            institution_investment_level = {
-                institution = institution_propaganda
-                value = 4
-            }
             any_scope_war = {
                 is_world_war = yes
 		        has_war_support = {
 		           target = ROOT
-		           value > 40
+		           value > 50
 		        }   
 		    }
         }

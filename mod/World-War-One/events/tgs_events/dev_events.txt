@@ -9538,6 +9538,7 @@ dev_events.195 = {
     option = {
         name = dev_events.25.a
         default_option = yes
+        trigger = { is_player = no }
         c:FRA = {
 		    create_military_formation = {
 			   type = army
@@ -9575,16 +9576,6 @@ dev_events.195 = {
 			    }
 		    }
         }
-        ai_chance = {
-		  base = 1
-	    }
-    }
-
-    option = {
-        name = dev_events.25.a
-        ai_chance = {
-		  base = 0
-	    }
     }
 }
 

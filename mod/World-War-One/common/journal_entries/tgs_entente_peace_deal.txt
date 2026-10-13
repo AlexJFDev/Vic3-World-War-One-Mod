@@ -42,11 +42,16 @@
             id = entente_peace_deal.1
             days = 5
         }
-		c:FRA = {
-			trigger_event = { 
-               id = entente_peace_deal.17
-               days = 5
-            }
+		if = {
+			limit = {
+				THIS = c:FRA
+			}
+			c:FRA = {
+			    trigger_event = { 
+                  id = entente_peace_deal.17
+                  days = 5
+                }
+		    }
 		}
 		if = {
 			limit = {
@@ -396,11 +401,16 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
     scripted_button = how_big_poland_3_button 
 
     immediate = {
-		c:FRA = {
-			trigger_event = { 
-               id = entente_peace_deal.18
-               days = 5
-            }
+		if = {
+			limit = {
+				THIS = c:FRA
+			}
+			c:FRA = {
+			    trigger_event = { 
+                  id = entente_peace_deal.18
+                  days = 5
+                }
+		    }
 		}
 		if = {
 			limit = {
@@ -1103,11 +1113,16 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
     scripted_button = arab_states_3_button 
 
     immediate = {
-		c:FRA = {
-			trigger_event = { 
-               id = entente_peace_deal.19
-               days = 5
-            }
+		if = {
+			limit = {
+				THIS = c:FRA
+			}
+			c:FRA = {
+			    trigger_event = { 
+                  id = entente_peace_deal.19
+                  days = 5
+                }
+		    }
 		}
 		if = {
 			limit = {
