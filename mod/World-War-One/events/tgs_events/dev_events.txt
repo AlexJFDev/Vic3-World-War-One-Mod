@@ -508,7 +508,7 @@ dev_events.9 = {
     option = {
         name = dev_events.9.a
         default_option = yes
-        change_infamy = -150
+        change_infamy = -200
     }
 }
 
@@ -4109,7 +4109,7 @@ dev_events.80 = {
         }
         add_modifier = {
 			name = taken_by_suprise_1
-            years = 2
+            years = 1
             is_decaying = yes
 		}
     }
@@ -10147,5 +10147,46 @@ dev_events.208 = {
         default_option = yes
         trigger = { is_player = no }
         add_treasury = 300000000
+    }
+}
+
+dev_events.209 = {
+    type = country_event
+
+    title = dev_events.25.t
+    desc = dev_events.25.d
+    flavor = dev_events.25.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = dev_events.25.a
+        default_option = yes
+        create_character = {
+            first_name = Frida
+	        last_name = Kahlo
+	        historical = yes
+            birth_date = 1907.07.06
+	        culture = cu:latino_american
+	        religion = rel:atheist
+	        female = yes
+            is_agitator = yes
+	        interest_group = ig_trade_unions
+	        ideology = ideology_feminist
+	        traits = {
+              reckless
+              charismatic
+              innovative
+	        }
+        }
     }
 }

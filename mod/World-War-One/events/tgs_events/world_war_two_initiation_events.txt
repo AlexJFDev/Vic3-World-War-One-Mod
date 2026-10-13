@@ -70,7 +70,7 @@ world_war_two_initiation_events.13 = { #Poland receives German ultimatum
         name = world_war_two_initiation_events.13.a
         default_option = yes
         c:GER = {
-          trigger_event = {
+            trigger_event = {
               id = world_war_two_initiation_events.1
               days = 5
             }
@@ -171,10 +171,6 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
             days = 5
         }
         trigger_event = {
-            id = dev_events.78
-            days = 5
-        }
-        trigger_event = {
             id = world_war_two_initiation_events.4
             months = 7
         }
@@ -188,8 +184,22 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
               days = 5
             }
         }
+        if = {
+            limit = {
+                c:GER = { is_player = no }
+                c:POL = { is_player = no }
+                c:FRA = { is_player = no }
+                c:GBR = { is_player = no }
+            }
+            c:POL = {
+                trigger_event = {
+                   id = dev_events.183
+                   days = 15
+                }
+            }
+        }
         c:FRA = {
-          trigger_event = {
+            trigger_event = {
               id = world_war_two_initiation_events.2
               days = 5
             }
@@ -373,10 +383,6 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
                 c:CYR
                 c:TRI
             }  
-            add_target_backers = {
-                c:BIC
-                c:CAN
-            }
             add_war_goal = {
                 holder = c:GBR
                 type = contain_threat
@@ -395,11 +401,37 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
                 id = dev_events.72
                 days = 5
             }
-        c:EGY = {
-            trigger_event = {
-                id = dev_events.128
-                days = 5
+        if = {
+            limit = {
+                c:GBR = { has_state_in_state_region = STATE_SINAI }
+                c:EGY = { is_subject = no } 
             }
+            scope:world_war_two_diplo_play = {
+                add_target_backers = {
+                  c:EGY
+                }
+                add_war_goal = {
+                   holder = c:ITA
+                   type = make_protectorate
+                  target_country = c:EGY
+                }
+		    }
+        }
+        if = {
+            limit = {
+                c:GBR = { has_state_in_state_region = STATE_SINAI }
+                c:EGY = { is_subject_of = c:GBR } 
+            }
+            scope:world_war_two_diplo_play = {
+                add_target_backers = {
+                  c:EGY
+                }
+                add_war_goal = {
+                   holder = c:ITA
+                   type = transfer_subject
+                  target_country = c:EGY
+                }
+		    }
         }
         set_variable = axis_participant
         ai_chance = {
@@ -561,7 +593,7 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         default_option = yes
         trigger = { 
             is_player = no
-            NOT = {
+            NOR = {
                 c:NET = {
                     has_variable = axis_participant
                 }
@@ -633,6 +665,32 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                 }
             }
         }
+        if = {
+            limit = {
+               c:BEL = { is_player = no }
+               c:FRA = { is_player = no }
+               c:GER = { is_player = no }
+            }
+            c:BEL = {
+                trigger_event = {
+                    id = dev_events.183
+                    days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
+               c:NET = { is_player = no }
+               c:FRA = { is_player = no }
+               c:GER = { is_player = no }
+            }
+            c:NET = {
+                trigger_event = {
+                    id = dev_events.183
+                    days = 5
+                }
+            }
+        }
         ai_chance = {
             base = 10
         }
@@ -641,7 +699,17 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
     option = {
         name = world_war_two_initiation_events.5.a
         default_option = yes
-        trigger = { is_player = yes }
+        trigger = { 
+            is_player = yes 
+            NOR = {
+                c:NET = {
+                    has_variable = axis_participant
+                }
+                c:BEL = {
+                    has_variable = axis_participant
+                }
+            } 
+        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL
@@ -751,6 +819,32 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                 }
             }
         }
+        if = {
+            limit = {
+               c:BEL = { is_player = no }
+               c:FRA = { is_player = no }
+               c:GER = { is_player = no }
+            }
+            c:BEL = {
+                trigger_event = {
+                    id = dev_events.183
+                    days = 5
+                }
+            }
+        }
+        if = {
+            limit = {
+               c:NET = { is_player = no }
+               c:FRA = { is_player = no }
+               c:GER = { is_player = no }
+            }
+            c:NET = {
+                trigger_event = {
+                    id = dev_events.183
+                    days = 5
+                }
+            }
+        }
         ai_chance = {
             base = 0
         }
@@ -758,7 +852,14 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
 
     option = {
         name = world_war_two_initiation_events.5.b
-        trigger = { is_player = yes }
+        trigger = { 
+            is_player = yes
+            NOT = {
+                c:BEL = {
+                    has_variable = axis_participant
+                }
+            }  
+        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL

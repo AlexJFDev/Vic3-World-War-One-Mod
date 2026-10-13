@@ -1216,6 +1216,10 @@ great_war_initiation_events.13 = {
         }
         c:FRA = {
             trigger_event = {
+              id = great_war_initiation_events.29
+              days = 1
+            }
+            trigger_event = {
               id = plague.1
               years = 4
             }
@@ -2014,5 +2018,30 @@ great_war_initiation_events.28 = {
         ai_chance = {
             base = 0
         }
+    }
+}
+
+# France receives alert of German invasion
+great_war_initiation_events.29 = {
+    type = country_event
+
+    duration = 1
+
+    event_image = { 
+        texture = "gfx/event_pictures/ger_army_ww1.dds"
+    }
+
+    title = great_war_initiation_events.29.t
+    desc = great_war_initiation_events.29.d
+    flavor = great_war_initiation_events.29.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    immediate = {}
+
+    option = {
+        name = great_war_initiation_events.29.a
+        default_option = yes
     }
 }

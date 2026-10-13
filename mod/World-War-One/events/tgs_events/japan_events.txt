@@ -990,10 +990,53 @@ japan_events.20 = {#Invasion of China response
               id = dev_events.86
               days = 5
             }
+            trigger_event = {
+              id = dev_events.9
+              days = 5
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 2
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 4
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 6
+            }
 		}
+        if = {
+            limit = {
+                c:JAP = { is_player = no }
+            }
+            c:JAP = {
+                trigger_event = {
+                   id = dev_events.26
+                   days = 5
+                }
+            }
+        }
         trigger_event = {
             id = dev_events.85
             days = 5
+        }
+        trigger_event = {
+            id = dev_events.26
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.187
+            years = 2
+        }
+        trigger_event = {
+            id = dev_events.187
+            years = 4
+        }
+        trigger_event = {
+            id = dev_events.187
+            years = 6
         }
         remove_modifier = declared_bankruptcy
         ai_chance = {

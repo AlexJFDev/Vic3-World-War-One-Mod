@@ -109,12 +109,11 @@ je_germany_ai_blockade = {
     }
     
     possible = {
-        game_date > 1917.1.1
+        game_date > 1917.6.1
         c:GER = {
           is_player = no
           is_at_war = yes
           has_variable = central_powers_participant
-          has_variable = blockade_test
           navy_size < 300
         }
         c:GBR = {
@@ -139,7 +138,7 @@ je_germany_ai_blockade = {
             is_at_war = no
             navy_size > 315
             c:GBR = {
-              navy_size < 200
+              navy_size < 350
             }
             c:GBR = {
               is_at_war = no
