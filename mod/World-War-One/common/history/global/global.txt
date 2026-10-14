@@ -173,6 +173,13 @@
 		}
 	}
 
+    c:CAN = {
+		trigger_event = { #Special money buff
+			id = dev_events.136
+			days = 5
+		}
+	}
+
 	c:ARG = {
 		trigger_event = { #Special money buff
 			id = dev_events.136
@@ -759,6 +766,17 @@
 		}
 		trigger_event = { #Special minting buff and sol nerf
 			id = dev_events.52
+			days = 5
+		}
+	}
+
+    c:NEP = {
+		trigger_event = { #Sol buff
+			id = dev_events.193
+			days = 5
+		}
+		trigger_event = { #Sol buff
+			id = dev_events.193
 			days = 5
 		}
 	}

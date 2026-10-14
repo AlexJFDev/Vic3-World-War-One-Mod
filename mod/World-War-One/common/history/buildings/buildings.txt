@@ -13494,13 +13494,26 @@
 				}
 			}
 			create_building = {
+				building = building_coal_mine
+				add_ownership = {
+					company = {
+						type = company_bengal_coal_company
+						country = c:BIC
+						levels = 25
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+				}
+			}
+			create_building = {
 				building = building_tea_plantation
 				add_ownership = {
-					building = {
-						type = building_manor_house
+					company = {
+						type = company_assam_company
 						country = c:BIC
-						levels = 10
-						region = STATE_ASSAM
+						levels = 75
 					}
 				}
 				reserves = 1
@@ -13514,7 +13527,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 3
+						levels = 8
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -13555,7 +13568,7 @@
 					building = {
 						type = building_manor_house
 						country = c:BIC
-						levels = 2
+						levels = 45
 						region = STATE_ASSAM
 					}
 				}
@@ -13926,6 +13939,21 @@
 	s:STATE_BOMBAY = {
 		region_state:BIC = {
 			create_building = {
+				building = building_iron_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 20
+						region = STATE_WEST_COUNTRY
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
+				}
+			}
+			create_building = {
 				building = building_textile_mill
 				add_ownership = {
 					company = {
@@ -14121,7 +14149,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 5
+						levels = 28
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -14155,7 +14183,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steel_frame_buildings 
+					pm_iron_frame_buildings 
 				}
 			}
 			create_building = {
@@ -14520,7 +14548,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BIC
-						levels = 5
+						levels = 20
 						region = STATE_BOMBAY
 					}
 				}
@@ -14873,7 +14901,7 @@
 					building = {
 						type = building_financial_district
 						country = c:BIC
-						levels = 15
+						levels = 35
 						region = STATE_DELHI
 					}
 				}
@@ -15346,7 +15374,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 5
+						levels = 10
 						region = STATE_WEST_COUNTRY
 					}
 				}
@@ -15620,6 +15648,21 @@
 				reserves = 1
 				activate_production_methods = {
 					default_building_coffee_plantation pm_road_carts 
+				}
+			}
+			create_building = {
+				building = building_iron_mine
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 15
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_iron_mine pm_nitroglycerin_building_iron_mine pm_road_carts pm_steam_donkey_mine 
 				}
 			}
 			create_building = {
@@ -16341,12 +16384,40 @@
 				}
 			}
 			create_building = {
+				building = building_coal_mine
+				add_ownership = {
+					company = {
+						type = company_bengal_coal_company
+						country = c:BIC
+						levels = 4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_condensing_engine_pump_building_coal_mine pm_nitroglycerin_building_coal_mine pm_steam_donkey_building_coal_mine 
+				}
+			}
+			create_building = {
+				building = building_tea_plantation
+				add_ownership = {
+					company = {
+						type = company_assam_company
+						country = c:BIC
+						levels = 115
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					default_building_tea_plantation pm_road_carts 
+				}
+			}
+			create_building = {
 				building = building_paper_mill
 				add_ownership = {
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 5
+						levels = 25
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -16425,7 +16496,7 @@
 				}
 				reserves = 1
 				activate_production_methods = {
-					pm_steel_frame_buildings 
+					pm_iron_frame_buildings 
 				}
 			}
 			create_building = {
@@ -16591,7 +16662,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 15
+						levels = 65
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -54637,7 +54708,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 20
+						levels = 48
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -55240,7 +55311,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 18
+						levels = 28
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -98950,7 +99021,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 20
+						levels = 48
 						region = STATE_CALIFORNIA
 					}
 				}
@@ -104980,7 +105051,7 @@
 					building = {
 						type = building_financial_district
 						country = c:USA
-						levels = 28
+						levels = 62
 						region = STATE_NEW_YORK
 					}
 				}

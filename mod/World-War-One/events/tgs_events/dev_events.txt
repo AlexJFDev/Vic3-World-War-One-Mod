@@ -2645,17 +2645,23 @@ dev_events.52 = {
         default_option = yes
         trigger = { is_player = yes }
         add_modifier = {
-			name = starting_minting_buff_4_modifier
-            years = 5
+			name = money_buff_3
+            years = 20
             is_decaying = yes
 		}
         add_modifier = {
-			name = starting_sol_nerf_1
+			name = starting_sol_nerf_4
             years = 30
             is_decaying = yes
 		}
-        ig:ig_intelligentsia ?= {
-            set_ig_trait = ig_trait:ig_trait_reformism
+        ig:ig_armed_forces = {
+			set_interest_group_name = ig_indian_army
+            set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+            set_ig_trait = ig_trait:ig_trait_veteran_consultation
+            set_ig_trait = ig_trait:ig_trait_materiel_waste
+		}
+        ig:ig_petty_bourgeoisie = {
+            set_ig_trait = ig_trait:ig_trait_treasury_bonds
 		}
     }
 
@@ -2668,12 +2674,18 @@ dev_events.52 = {
             years = 60
 		}
         add_modifier = {
-			name = starting_sol_nerf_1
+			name = starting_sol_nerf_4
             years = 30
             is_decaying = yes
 		}
-        ig:ig_intelligentsia ?= {
-            set_ig_trait = ig_trait:ig_trait_reformism
+        ig:ig_armed_forces = {
+			set_interest_group_name = ig_indian_army
+            set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+            set_ig_trait = ig_trait:ig_trait_veteran_consultation
+            set_ig_trait = ig_trait:ig_trait_materiel_waste
+		}
+        ig:ig_petty_bourgeoisie = {
+            set_ig_trait = ig_trait:ig_trait_treasury_bonds
 		}
     }
 }
