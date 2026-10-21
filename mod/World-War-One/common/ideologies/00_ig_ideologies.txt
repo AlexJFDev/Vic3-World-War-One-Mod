@@ -567,6 +567,7 @@ REPLACE_OR_CREATE:ideology_jingoist = {
 	}
 
 	lawgroup_military_governance = { 
+	   law_politicized_military = strongly_disapprove
        law_subordinate_general_staff = disapprove
        law_independant_general_staff = approve
 	   law_military_oversight = strongly_approve
@@ -687,6 +688,7 @@ REPLACE_OR_CREATE:ideology_republican = {
 	}
 
 	lawgroup_military_governance = { 
+	   law_politicized_military = neutral
        law_subordinate_general_staff = approve
        law_independant_general_staff = disapprove
 	   law_military_oversight = strongly_disapprove
@@ -803,6 +805,13 @@ REPLACE_OR_CREATE:ideology_populist = {
 		law_mass_conscription = approve
 		law_peasant_levies = neutral
 		law_professional_army = disapprove
+	}
+
+	lawgroup_military_governance = {
+	   law_politicized_military = strongly_approve 
+       law_subordinate_general_staff = approve
+       law_independant_general_staff = neutral
+	   law_military_oversight = disapprove
 	}
 
 	lawgroup_caste_hegemony = {

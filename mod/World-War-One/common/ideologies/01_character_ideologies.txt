@@ -873,7 +873,8 @@ REPLACE_OR_CREATE:ideology_republican_leader = {
 		law_hereditary_bureaucrats = disapprove
 	}
 
-	lawgroup_military_governance = { 
+	lawgroup_military_governance = {
+	   law_politicized_military = neutral 
        law_subordinate_general_staff = approve
        law_independant_general_staff = disapprove
 	   law_military_oversight = strongly_disapprove
@@ -1238,7 +1239,8 @@ REPLACE_OR_CREATE:ideology_radical = {
 		law_factory_councils = strongly_disapprove
 	}
 
-	lawgroup_military_governance = { 
+	lawgroup_military_governance = {
+	   law_politicized_military = strongly_approve	 
        law_subordinate_general_staff = approve
        law_independant_general_staff = disapprove
 	   law_military_oversight = strongly_disapprove
@@ -2590,7 +2592,8 @@ REPLACE_OR_CREATE:ideology_pacifist = {
 		law_frontier_colonization = strongly_disapprove
 	}
 
-	lawgroup_military_governance = { 
+	lawgroup_military_governance = {
+	   law_politicized_military = neutral 
        law_subordinate_general_staff = strongly_approve
        law_independant_general_staff = disapprove
 	   law_military_oversight = strongly_disapprove
@@ -2863,7 +2866,8 @@ REPLACE_OR_CREATE:ideology_jingoist_leader = {
 		law_colonial_exploitation = strongly_approve
 	}
 	
-	lawgroup_military_governance = { 
+	lawgroup_military_governance = {
+	   law_politicized_military = strongly_disapprove 
        law_subordinate_general_staff = strongly_disapprove
        law_independant_general_staff = approve
 	   law_military_oversight = strongly_approve
@@ -4133,6 +4137,13 @@ REPLACE_OR_CREATE:ideology_vanguardist = {
         law_unitary = strongly_approve
 	}
 
+	lawgroup_military_governance = {
+	   law_politicized_military = strongly_approve 
+       law_subordinate_general_staff = approve
+       law_independant_general_staff = neutral
+	   law_military_oversight = disapprove
+	}
+
 	lawgroup_free_speech = {
         law_protected_speech = strongly_disapprove
         law_right_of_assembly = disapprove
@@ -5321,7 +5332,8 @@ REPLACE_OR_CREATE:ideology_anarchist = {
         law_unitary = strongly_disapprove
 	}
 
-	lawgroup_military_governance = { 
+	lawgroup_military_governance = {
+	   law_politicized_military = strongly_approve 
        law_subordinate_general_staff = approve
        law_independant_general_staff = disapprove
 	   law_military_oversight = strongly_disapprove
