@@ -568,11 +568,6 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
 			remove_character_role = heir
 		    add_character_role = agitator
 		}
-        add_modifier = {
-			name = petrograd_soviet
-            years = 10
-            is_decaying = yes
-		}
     }
 
     option = {
@@ -581,10 +576,14 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         activate_law = law_type:law_presidential_republic
         activate_law = law_type:law_universal_suffrage
         activate_law = law_type:law_right_of_assembly
-        activate_law = law_type:law_wage_subsidies
         activate_law = law_type:law_public_schools
         activate_law = law_type:law_dedicated_police
-        ig:ig_rural_folk = {
+        random_scope_character = { 
+			limit = { has_template = RUS_alexander_fyodorovich_kerensky }
+            set_as_interest_group_leader = yes
+            set_character_as_ruler = yes
+		}
+        ig:ig_petty_bourgeoisie = {
 			add_ruling_interest_group = yes
 		}
         ig:ig_landowners = {
@@ -618,13 +617,18 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           is_decaying = yes
         }
         add_modifier = {
-          name = revolution_stabilization_buff_2
-          years = 5
+          name = revolution_stabilization_buff_4
+          years = 3
+          is_decaying = yes
         }
-        trigger_event = {
-            id = dev_events.26
-            days = 5
-        }
+        s:STATE_INGRIA = {
+			random_scope_state = {
+			    set_hub_name = {
+			        type = city
+			        name = HUB_NAME_STATE_INGRIA_city_russian_imp
+			    }
+		    }
+		}
         trigger_event = {
             id = russia_events.4
             days = 260
@@ -675,13 +679,18 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           is_decaying = yes
         }
         add_modifier = {
-          name = revolution_stabilization_buff_2
-          years = 5
+          name = revolution_stabilization_buff_4
+          years = 3
+          is_decaying = yes
         }
-        trigger_event = {
-            id = dev_events.26
-            days = 5
-        }
+        s:STATE_INGRIA = {
+			random_scope_state = {
+			    set_hub_name = {
+			        type = city
+			        name = HUB_NAME_STATE_INGRIA_city_russian_imp
+			    }
+		    }
+		}
         trigger_event = {
             id = russia_events.4
             days = 260
@@ -732,13 +741,18 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           is_decaying = yes
         }
         add_modifier = {
-          name = revolution_stabilization_buff_2
-          years = 5
+          name = revolution_stabilization_buff_4
+          years = 3
+          is_decaying = yes
         }
-        trigger_event = {
-            id = dev_events.26
-            days = 5
-        }
+        s:STATE_INGRIA = {
+			random_scope_state = {
+			    set_hub_name = {
+			        type = city
+			        name = HUB_NAME_STATE_INGRIA_city_russian_imp
+			    }
+		    }
+		}
         trigger_event = {
             id = russia_events.4
             days = 260
@@ -789,13 +803,18 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           is_decaying = yes
         }
         add_modifier = {
-          name = revolution_stabilization_buff_2
+          name = revolution_stabilization_buff_4
           years = 5
+          is_decaying = yes
         }
-        trigger_event = {
-            id = dev_events.26
-            days = 5
-        }
+        s:STATE_INGRIA = {
+			random_scope_state = {
+			    set_hub_name = {
+			        type = city
+			        name = HUB_NAME_STATE_INGRIA_city_russian_imp
+			    }
+		    }
+		}
         trigger_event = {
             id = russia_events.4
             days = 200
@@ -842,7 +861,6 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             has_variable = entente_participant
             is_at_war = yes 
         }
-        set_variable = russian_rep_continues_war
         random_scope_character =  {
 				limit = {
 					has_variable = trotsky
@@ -851,10 +869,8 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		    add_character_role = politician
             set_as_interest_group_leader = yes
 		}
-        trigger_event = {
-            id = russia_events.7
-            days = 15
-        }
+        set_variable = russian_rep_continues_war
+        custom_tooltip = imminent_soviet_takeover
 		ai_chance = {
 			base = 1
 		}
@@ -1265,7 +1281,6 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             id = dev_events.72
             days = 10
         }
-        remove_modifier = petrograd_soviet
         ai_chance = {
 			base = 0
 		}
@@ -1837,6 +1852,7 @@ russia_events.7 = { #Soviet uprising
         activate_law = law_type:law_public_schools
         activate_law = law_type:law_compulsory_primary_school
         activate_law = law_type:law_closed_borders
+        activate_law = law_type:law_politicized_military
         activate_law = law_type:law_appointed_bureaucrats
         activate_law = law_type:law_graduated_taxation
         activate_law = law_type:law_corporatized_unions
@@ -1880,15 +1896,22 @@ russia_events.7 = { #Soviet uprising
 			country = c:FER
 			type = puppet
 		}
-        remove_modifier = petrograd_soviet
         random_scope_state = {
 			limit = {
 				is_capital = yes
 			}
             create_building = {
 				building = building_naval_administration
-				level = 200
+				level = 100
             }	
+		}
+        s:STATE_INGRIA = {
+			random_scope_state = {
+			    set_hub_name = {
+			        type = city
+			        name = HUB_NAME_STATE_INGRIA_city_russian_sov
+			    }
+		    }
 		} 
     }
 }
@@ -2218,8 +2241,8 @@ russia_events.9 = { #Reforms success
             is_decaying = yes
 		}
         add_modifier = {
-            name = revolution_stabilization_buff_2
-            years = 20
+            name = revolution_stabilization_buff_5
+            years = 5
             is_decaying = yes
         } 
     }
