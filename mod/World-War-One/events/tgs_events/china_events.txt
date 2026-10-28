@@ -1513,6 +1513,10 @@ china_events.9 = { #Kuomintang decides to capitulate or not
 			  country = c:HNA
 			  type = protectorate
 		    }
+            trigger_event = {
+			   id = dev_events.210
+			   days = 15
+		    }
         }
         c:SIH = {
             annex_with_incorporation = c:CHQ
@@ -1537,6 +1541,12 @@ china_events.9 = { #Kuomintang decides to capitulate or not
 
     option = {
         name = china_events.9.b
+        c:CHI = {
+            trigger_event = {
+			   id = dev_events.210
+			   days = 365
+		    }
+        }
         ai_chance = {
 		   base = 0
 	    }
@@ -1629,7 +1639,7 @@ china_events.11 = { #China reunification
         remove_variable = warlord_state
 		add_modifier = {
 			name = china_tech_focus_modifier
-			years = 30
+			years = 10
             is_decaying = yes
 		}
 		add_loyalists = {
@@ -1674,7 +1684,7 @@ china_events.11 = { #China reunification
         remove_variable = warlord_state
 		add_modifier = {
 			name = china_politics_focus_modifier
-			years = 30
+			years = 10
             is_decaying = yes
 		}
 		add_loyalists = {
@@ -2305,29 +2315,12 @@ china_events.25 = { #Je fragile republic completion
     
     option = {
 		name = china_events.25.a
+        default_option = yes
 		add_modifier = {
 			name = china_tech_focus_modifier
-			years = 20
+			years = 10
             is_decaying = yes
 		}
-		add_loyalists = {
-			value = large_radicals
-		}
-        every_country = {
-			limit = {
-                is_subject = no
-                OR = {
-                   country_has_primary_culture = cu:han
-			       country_has_primary_culture = cu:manchu
-			       country_has_primary_culture = cu:yue
-                }
-                NOT = { has_law = law_type:law_council_republic }
-			}
-            trigger_event = {
-                id = china_events.20
-                days = 30
-            }
-        }
         ai_chance = {
 		 base = 1
 	    }
@@ -2337,27 +2330,9 @@ china_events.25 = { #Je fragile republic completion
 		name = china_events.25.b
 		add_modifier = {
 			name = china_politics_focus_modifier
-			years = 20
+			years = 10
             is_decaying = yes
 		}
-		add_loyalists = {
-			value = large_radicals
-		}
-        every_country = {
-			limit = {
-                is_subject = no
-                OR = {
-                   country_has_primary_culture = cu:han
-			       country_has_primary_culture = cu:manchu
-			       country_has_primary_culture = cu:yue
-                }
-                NOT = { has_law = law_type:law_council_republic }
-			}
-            trigger_event = {
-                id = china_events.20
-                days = 30
-            }
-        }
         ai_chance = {
 		 base = 0
 	    }

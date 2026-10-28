@@ -22,20 +22,23 @@
     complete = {
         OR = {
 			root.average_sol >= 10
+			has_law = law_type:law_council_republic
 			has_law = law_type:law_census_voting
             has_law = law_type:law_universal_suffrage
-            has_law = law_type:law_anarchy
-            has_law = law_type:law_council_republic
-            has_law = law_type:law_homesteading
-            has_law = law_type:law_collectivized_agriculture
 			has_law = law_type:law_proportional_taxation
-			has_law = law_type:law_graduated_taxation 
+			has_law = law_type:law_graduated_taxation
+			has_law = law_type:law_commercialized_agriculture
+			has_law = law_type:law_homesteading
+			has_law = law_type:law_collectivized_agriculture
 			global_country_ranking = 1
 			global_country_ranking = 2
 			global_country_ranking = 3
 			global_country_ranking = 4
-			global_country_ranking = 5
-			global_country_ranking = 6
+		}
+		NOT = {
+			has_law = law_type:law_hereditary_bureaucrats
+			has_law = law_type:law_no_police
+			has_law = law_type:law_no_schools
 		}
     }
 

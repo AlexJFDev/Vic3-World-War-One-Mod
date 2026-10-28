@@ -393,9 +393,9 @@ fragile_unity_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
     country_prestige_mult = -0.3
     country_authority_mult = -0.5
-    building_construction_sector_throughput_add = -0.3
-    unit_army_offense_mult = -0.2
-    unit_army_defense_mult = -0.1
+    building_construction_sector_throughput_add = -0.15
+    unit_army_offense_mult = -0.3
+    unit_army_defense_mult = -0.15
 }
 
 political_movement_nerf_1 = {
@@ -561,20 +561,16 @@ warlord_policy_communism = {
     country_minting_mult = 5
 }
 
-china_politics_focus_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_legitimacy_base_add = 25
-	state_decree_cost_mult = -0.5
-    country_authority_mult = 0.3
-    country_law_enactment_speed_mult = 0.5
-    interest_group_ig_landowners_pol_str_mult = -0.9
-}
-
 china_tech_focus_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_tech_research_speed_mult = 0.2
-	country_tech_spread_mult = 0.25
-    interest_group_ig_landowners_pol_str_mult = -0.5
+	country_tech_research_speed_mult = 0.1
+	country_tech_spread_mult = 0.3
+}
+
+china_politics_focus_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_authority_mult = 0.3
+    country_law_enactment_speed_mult = 0.3
 }
 
 great_depression_effect_A1 = { #USA and Germany

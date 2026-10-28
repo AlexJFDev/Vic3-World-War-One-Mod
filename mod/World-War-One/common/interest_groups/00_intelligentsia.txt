@@ -93,18 +93,6 @@
 				remove_ideology = ideology_anti_clerical
 			}
 		}
-		# Literati
-		else_if = {
-			limit = {
-				any_primary_culture = {
-					has_discrimination_trait = heritage_han
-				}
-			}
-			ig:ig_intelligentsia ?= {
-				set_interest_group_name = ig_literati
-				remove_ideology = ideology_anti_clerical
-			}
-		}
 		# Brazilian Intelligentsia
 		else_if = {
 			limit = {
