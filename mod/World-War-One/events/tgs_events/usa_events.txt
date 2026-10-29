@@ -82,7 +82,7 @@ usa_events.6 = { #Black Tuesday
 
     icon = "gfx/interface/icons/event_icons/financial_crash.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    duration = 3
+    duration = 1
 
     trigger = {}
 
@@ -91,6 +91,11 @@ usa_events.6 = { #Black Tuesday
     option = {
         name = usa_events.6.a
         default_option = yes
+        set_variable = great_depression_home
+        trigger_event = {
+            id = usa_events.29
+            days = 7
+        }
         every_country = {
 			limit = {
                 OR = {
@@ -102,13 +107,51 @@ usa_events.6 = { #Black Tuesday
                     has_law = law_type:law_isolationism
                     has_law = law_type:law_colonial_administration
                 }
+                has_variable = has_received_dawes_plan
 			}
             trigger_event = {
-                id = usa_events.8
+                id = usa_events.30
                 days = 30
             }
         }
-        set_variable = great_depression_started
+        every_country = {
+			limit = {
+                OR = {
+				  has_law = law_type:law_interventionism
+                  has_law = law_type:law_laissez_faire
+                }
+                NOR = {
+                    has_law = law_type:law_council_republic
+                    has_law = law_type:law_isolationism
+                    has_law = law_type:law_colonial_administration
+                }
+                has_variable = has_received_usa_loans
+			}
+            trigger_event = {
+                id = usa_events.31
+                days = 31
+            }
+        }
+        every_country = {
+			limit = {
+                OR = {
+				  has_law = law_type:law_interventionism
+                  has_law = law_type:law_laissez_faire
+                }
+                NOR = {
+                    has_law = law_type:law_council_republic
+                    has_law = law_type:law_isolationism
+                    has_law = law_type:law_colonial_administration
+                    has_variable = great_depression_home
+                    has_variable = has_received_dawes_plan
+                    has_variable = has_received_usa_loans
+                }
+			}
+            trigger_event = {
+                id = usa_events.32
+                days = 30
+            }
+        }
         ai_chance = {
 			base = 1
 		}
@@ -170,361 +213,10 @@ usa_events.8 = { #Great Depression effects are applied
     duration = 1
 
     trigger = {}
-
-    option = { #USA
+    
+    option = {
         name = usa_events.8.a
         default_option = yes
-        trigger = { 
-            root.average_sol > 16
-            root.average_sol < 17
-            THIS = c:USA
-        }
-        add_modifier = {
-            name = great_depression_effect_A1
-            years = 20
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.37
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.208
-            days = 5
-        }
-        trigger_event = {
-            id = usa_events.7
-            days = 15
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #USA
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 17
-            root.average_sol < 19
-            THIS = c:USA
-        }
-        add_modifier = {
-            name = great_depression_effect_A2
-            years = 20
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.37
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.208
-            days = 5
-        }
-        trigger_event = {
-            id = usa_events.7
-            days = 15
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #USA
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 19
-            THIS = c:USA
-        }
-        add_modifier = {
-            name = great_depression_effect_A3
-            years = 20
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.37
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.208
-            days = 5
-        }
-        trigger_event = {
-            id = usa_events.7
-            days = 15
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Germany
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 14
-            root.average_sol < 16
-            has_variable = has_received_dawes_plan
-        }
-        add_modifier = {
-            name = great_depression_effect_B2
-            years = 12
-            is_decaying = yes
-        }
-        add_treasury = -50000000
-        c:USA = {
-		   add_treasury = 50000000
-		}
-        trigger_event = {
-            id = dev_events.47
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Germany
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 16
-            root.average_sol < 17
-            has_variable = has_received_dawes_plan
-        }
-        add_modifier = {
-            name = great_depression_effect_A1
-            years = 12
-            is_decaying = yes
-        }
-        add_treasury = -50000000
-        c:USA = {
-		   add_treasury = 50000000
-		}
-        trigger_event = {
-            id = dev_events.47
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Germany
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 17
-            root.average_sol < 19
-            has_variable = has_received_dawes_plan
-        }
-        add_modifier = {
-            name = great_depression_effect_A2
-            years = 12
-            is_decaying = yes
-        }
-        add_treasury = -50000000
-        c:USA = {
-		   add_treasury = 50000000
-		}
-        trigger_event = {
-            id = dev_events.47
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Germany
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 19
-            has_variable = has_received_dawes_plan
-        }
-        add_modifier = {
-            name = great_depression_effect_A3
-            years = 12
-            is_decaying = yes
-        }
-        add_treasury = -50000000
-        c:USA = {
-		   add_treasury = 50000000
-		}
-        trigger_event = {
-            id = dev_events.47
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Received USA help
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 14
-            root.average_sol < 16
-            has_variable = has_received_usa_loans
-        }
-        add_modifier = {
-            name = great_depression_effect_C1
-            years = 12
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Received USA help
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 16
-            root.average_sol < 17
-            has_variable = has_received_usa_loans
-        }
-        add_modifier = {
-            name = great_depression_effect_B1
-            years = 12
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Received USA help
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 17
-            root.average_sol < 19
-            has_variable = has_received_usa_loans
-        }
-        add_modifier = {
-            name = great_depression_effect_B2
-            years = 12
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Received USA help
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 19
-            has_variable = has_received_usa_loans
-        }
-        add_modifier = {
-            name = great_depression_effect_B3
-            years = 12
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Other liberal countries
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 11
-            root.average_sol < 16
-            NOR = {
-                has_variable = has_received_usa_loans
-                has_variable = has_received_dawes_plan
-                THIS = c:USA
-            }
-        }
-        add_modifier = {
-            name = great_depression_effect_C1
-            years = 10
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Other liberal countries
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 16
-            root.average_sol < 19
-            NOR = {
-                has_variable = has_received_usa_loans
-                has_variable = has_received_dawes_plan
-                THIS = c:USA
-            }
-        }
-        add_modifier = {
-            name = great_depression_effect_C2
-            years = 10
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
-    }
-
-    option = { #Other liberal countries
-        name = usa_events.8.a
-        default_option = yes
-        trigger = { 
-            root.average_sol > 19
-            NOR = {
-                has_variable = has_received_usa_loans
-                has_variable = has_received_dawes_plan
-                THIS = c:USA
-            }
-        }
-        add_modifier = {
-            name = great_depression_effect_C3
-            years = 10
-            is_decaying = yes
-        }
-        trigger_event = {
-            id = dev_events.120
-            days = 5
-        }
-        set_variable = great_depression_victim
     }
 }
 
@@ -2172,5 +1864,508 @@ usa_events.28 = { #WW1 loans pay back
         ai_chance = {
             base = 0
         }
+    }
+}
+
+usa_events.29 = { #Great Depression effects for USA
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.29.t
+    desc = usa_events.29.d
+    flavor = usa_events.29.f
+
+    icon = "gfx/interface/icons/event_icons/financial_crash.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 1
+
+    trigger = {}
+
+    option = { #USA
+        name = usa_events.29.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 14
+            root.average_sol < 16
+        }
+        add_modifier = {
+            name = great_depression_effect_B2
+            years = 25
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.37
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.208
+            days = 5
+        }
+        trigger_event = {
+            id = usa_events.7
+            days = 15
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #USA
+        name = usa_events.29.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 16
+            root.average_sol < 17
+        }
+        add_modifier = {
+            name = great_depression_effect_A1
+            years = 25
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.37
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.208
+            days = 5
+        }
+        trigger_event = {
+            id = usa_events.7
+            days = 15
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #USA
+        name = usa_events.29.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 17
+            root.average_sol < 19
+        }
+        add_modifier = {
+            name = great_depression_effect_A2
+            years = 25
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.37
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.208
+            days = 5
+        }
+        trigger_event = {
+            id = usa_events.7
+            days = 15
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #USA
+        name = usa_events.29.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 19
+        }
+        add_modifier = {
+            name = great_depression_effect_A3
+            years = 25
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.37
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.208
+            days = 5
+        }
+        trigger_event = {
+            id = usa_events.7
+            days = 15
+        }
+        set_variable = great_depression_victim
+    }
+}
+
+usa_events.30 = { #Great Depression effects are applied for Germany
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.30.t
+    desc = usa_events.30.d
+    flavor = usa_events.30.f
+
+    icon = "gfx/interface/icons/event_icons/financial_crash.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 1
+
+    trigger = {}
+
+    option = { #Germany
+        name = usa_events.30.b
+        default_option = yes
+        trigger = { 
+            root.average_sol < 11
+        }
+    }
+
+    option = { #Germany
+        name = usa_events.30.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 11
+            root.average_sol < 14
+        }
+        add_modifier = {
+            name = great_depression_effect_C2
+            years = 15
+            is_decaying = yes
+        }
+        add_treasury = -50000000
+        c:USA = {
+		   add_treasury = 50000000
+		}
+        trigger_event = {
+            id = dev_events.47
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Germany
+        name = usa_events.30.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 14
+            root.average_sol < 16
+        }
+        add_modifier = {
+            name = great_depression_effect_B2
+            years = 15
+            is_decaying = yes
+        }
+        add_treasury = -50000000
+        c:USA = {
+		   add_treasury = 50000000
+		}
+        trigger_event = {
+            id = dev_events.47
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Germany
+        name = usa_events.30.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 16
+            root.average_sol < 17
+        }
+        add_modifier = {
+            name = great_depression_effect_A1
+            years = 15
+            is_decaying = yes
+        }
+        add_treasury = -50000000
+        c:USA = {
+		   add_treasury = 50000000
+		}
+        trigger_event = {
+            id = dev_events.47
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Germany
+        name = usa_events.30.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 17
+            root.average_sol < 19
+        }
+        add_modifier = {
+            name = great_depression_effect_A2
+            years = 15
+            is_decaying = yes
+        }
+        add_treasury = -50000000
+        c:USA = {
+		   add_treasury = 50000000
+		}
+        trigger_event = {
+            id = dev_events.47
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Germany
+        name = usa_events.30.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 19
+        }
+        add_modifier = {
+            name = great_depression_effect_A3
+            years = 15
+            is_decaying = yes
+        }
+        add_treasury = -50000000
+        c:USA = {
+		   add_treasury = 50000000
+		}
+        trigger_event = {
+            id = dev_events.47
+            days = 5
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+}
+
+usa_events.31 = { #Great Depression effects are applied
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.31.t
+    desc = usa_events.31.d
+    flavor = usa_events.31.f
+
+    icon = "gfx/interface/icons/event_icons/financial_crash.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 1
+
+    trigger = {}
+
+    option = { #Received USA help
+        name = usa_events.31.b
+        default_option = yes
+        trigger = { 
+            root.average_sol < 11
+        }
+    }
+
+    option = { #Received USA help
+        name = usa_events.31.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 11
+            root.average_sol < 14
+        }
+        add_modifier = {
+            name = great_depression_effect_C1
+            years = 15
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Received USA help
+        name = usa_events.31.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 14
+            root.average_sol < 16
+        }
+        add_modifier = {
+            name = great_depression_effect_C2
+            years = 15
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Received USA help
+        name = usa_events.31.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 16
+            root.average_sol < 17
+        }
+        add_modifier = {
+            name = great_depression_effect_B1
+            years = 15
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Received USA help
+        name = usa_events.31.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 17
+            root.average_sol < 19
+        }
+        add_modifier = {
+            name = great_depression_effect_B2
+            years = 15
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Received USA help
+        name = usa_events.31.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 19
+        }
+        add_modifier = {
+            name = great_depression_effect_B3
+            years = 15
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+}
+
+usa_events.32 = { #Great Depression effects are applied for other liberal countries
+    type = country_event
+
+    event_image = {
+        texture = "gfx/event_pictures/finance.dds"
+    }
+
+    title = usa_events.32.t
+    desc = usa_events.32.d
+    flavor = usa_events.32.f
+
+    icon = "gfx/interface/icons/event_icons/financial_crash.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 1
+
+    trigger = {}
+
+    option = { #Other liberal countries
+        name = usa_events.32.b
+        default_option = yes
+        trigger = { 
+            root.average_sol < 11
+        }
+    }
+
+    option = { #Other liberal countries
+        name = usa_events.32.b
+        default_option = yes
+        trigger = { 
+            root.average_sol > 11
+            root.average_sol < 14
+        }
+        add_modifier = {
+            name = great_depression_effect_C1
+            years = 10
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Other liberal countries
+        name = usa_events.32.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 14
+            root.average_sol < 19
+        }
+        add_modifier = {
+            name = great_depression_effect_C2
+            years = 10
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
+    }
+
+    option = { #Other liberal countries
+        name = usa_events.32.a
+        default_option = yes
+        trigger = { 
+            root.average_sol > 19
+        }
+        add_modifier = {
+            name = great_depression_effect_C3
+            years = 10
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.120
+            days = 5
+        }
+        set_variable = great_depression_victim
     }
 }
