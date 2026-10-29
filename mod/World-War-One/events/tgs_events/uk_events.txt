@@ -156,10 +156,11 @@ uk_events.6 = {#Irish question JE initiation
 				NOT = {
 					any_political_movement = {
 						is_political_movement_type = movement_cultural_minority
+                        culture ?= cu:irish
 					}
 				}
 			}
-			create_political_movement = { type = movement_cultural_minority }
+			create_political_movement = { type = movement_cultural_minority culture = cu:irish }
 		}
     }
 
@@ -169,6 +170,7 @@ uk_events.6 = {#Irish question JE initiation
 		random_political_movement = {
 			limit = {
 				is_political_movement_type = movement_cultural_minority
+                culture ?= cu:irish
 			}
 			save_scope_as = irish_movement_scope
 		}
@@ -269,6 +271,7 @@ uk_events.7 = {#Easter uprising
         random_political_movement = {
 			limit = {
 				is_political_movement_type = movement_cultural_minority
+                culture ?= cu:irish
 			}
 			save_scope_as = irish_movement_scope
 		}

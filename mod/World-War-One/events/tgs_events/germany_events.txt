@@ -325,6 +325,23 @@ germany_events.2 = { #November Revolution
               days = 5
             }
         }
+        every_country = {
+            limit = { 
+                is_player = no
+                is_at_war = yes
+                has_variable = central_powers_participant
+                NOR = {
+                    THIS = c:GER
+                    THIS = c:AUS
+                    THIS = c:BUL
+                    THIS = c:TUR
+                }
+            }
+            trigger_event = {
+              id = dev_events.183
+              days = 5
+            }
+        }
         if = {
             limit = { 
                 c:AUS = {

@@ -508,7 +508,7 @@ dev_events.9 = {
     option = {
         name = dev_events.9.a
         default_option = yes
-        change_infamy = -200
+        change_infamy = -300
     }
 }
 
@@ -6610,20 +6610,6 @@ dev_events.126 = {
                annex_with_incorporation = c:BYE
             }
         }
-        s:STATE_OUTER_MANCHURIA = {
-           random_scope_state = {
-		      limit = {
-			   exists = c:MCH
-			    owner = {
-				    OR = {
-					   c:MCH = THIS
-                       c:BEI = THIS
-				    }
-			    }
-		        }
-		      set_state_owner = c:RUS
-            }
-        }
     }
 
     option = {
@@ -8337,30 +8323,6 @@ dev_events.170 = {
 				count = 30
 			}
 		}
-        ai_chance = {
-            base = 1
-        }
-    }
-
-    option = {
-        name = dev_events.2.a
-        trigger = { is_player = yes }
-        default_option = yes
-        scope:russian_civil_war_diplo_play = {
-			add_initiator_backers = {
-				who = c:JAP
-			}
-        }
-        ai_chance = {
-            base = 1
-        }
-    }
-
-    option = {
-        name = dev_events.2.b
-        ai_chance = {
-            base = 0
-        }
     }
 }
 

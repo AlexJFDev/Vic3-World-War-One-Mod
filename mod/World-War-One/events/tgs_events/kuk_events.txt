@@ -60,28 +60,43 @@ kuk_events.5 = { #Austro-Hungarian empire dislocation
 			country = c:UKR
 			type = puppet
 		}
+		if = {
+			c:AUS = { is_player = no }
+			trigger_event = {
+               id = dev_events.1
+               days = 5
+            }
+			trigger_event = {
+               id = dev_events.1
+               days = 5
+            }
+			trigger_event = {
+               id = dev_events.125
+               days = 5
+            }
+			trigger_event = {
+              id = dev_events.47
+              days = 5
+            }
+		    trigger_event = {
+              id = dev_events.47
+              days = 5
+            }
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            }
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            }
+			trigger_event = {
+              id = dev_events.25
+              days = 5
+            }
+		}
 		trigger_event = {
-            id = dev_events.1
-            days = 5
-        }
-		trigger_event = {
-            id = dev_events.25
-            days = 5
-        } 
-		trigger_event = {
-            id = dev_events.25
-            days = 5
-        }
-		trigger_event = {
-            id = dev_events.25
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.47
-            days = 5
-        }
-		trigger_event = {
-            id = dev_events.47
+            id = dev_events.161
             days = 5
         }
 		s:STATE_VENETIA = {

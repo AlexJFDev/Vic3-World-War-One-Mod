@@ -580,7 +580,6 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
         activate_law = law_type:law_dedicated_police
         random_scope_character = { 
 			limit = { has_template = RUS_alexander_fyodorovich_kerensky }
-            set_as_interest_group_leader = yes
             set_character_as_ruler = yes
 		}
         ig:ig_petty_bourgeoisie = {
@@ -622,12 +621,10 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           is_decaying = yes
         }
         s:STATE_INGRIA = {
-			random_scope_state = {
-			    set_hub_name = {
-			        type = city
-			        name = HUB_NAME_STATE_INGRIA_city_russian_imp
-			    }
-		    }
+			set_hub_name = {
+			    type = city
+			    name = HUB_NAME_STATE_INGRIA_city_russian_imp
+			}
 		}
         trigger_event = {
             id = russia_events.4
@@ -684,12 +681,10 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           is_decaying = yes
         }
         s:STATE_INGRIA = {
-			random_scope_state = {
-			    set_hub_name = {
-			        type = city
-			        name = HUB_NAME_STATE_INGRIA_city_russian_imp
-			    }
-		    }
+			set_hub_name = {
+			    type = city
+			    name = HUB_NAME_STATE_INGRIA_city_russian_imp
+			}
 		}
         trigger_event = {
             id = russia_events.4
@@ -746,12 +741,10 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           is_decaying = yes
         }
         s:STATE_INGRIA = {
-			random_scope_state = {
-			    set_hub_name = {
-			        type = city
-			        name = HUB_NAME_STATE_INGRIA_city_russian_imp
-			    }
-		    }
+			set_hub_name = {
+			    type = city
+			    name = HUB_NAME_STATE_INGRIA_city_russian_imp
+			}
 		}
         trigger_event = {
             id = russia_events.4
@@ -808,12 +801,10 @@ russia_events.3 = { #Russian provisionnal governement draft a new constitution
           is_decaying = yes
         }
         s:STATE_INGRIA = {
-			random_scope_state = {
-			    set_hub_name = {
-			        type = city
-			        name = HUB_NAME_STATE_INGRIA_city_russian_imp
-			    }
-		    }
+			set_hub_name = {
+			    type = city
+			    name = HUB_NAME_STATE_INGRIA_city_russian_imp
+			}
 		}
         trigger_event = {
             id = russia_events.4
@@ -1906,13 +1897,11 @@ russia_events.7 = { #Soviet uprising
             }	
 		}
         s:STATE_INGRIA = {
-			random_scope_state = {
-			    set_hub_name = {
-			        type = city
-			        name = HUB_NAME_STATE_INGRIA_city_russian_sov
-			    }
-		    }
-		} 
+			set_hub_name = {
+			    type = city
+			    name = HUB_NAME_STATE_INGRIA_city_russian_sov
+			}
+		}
     }
 }
 
@@ -2000,30 +1989,6 @@ russia_events.8 = { #The civil war begins
             set_variable = {
                 name = kolchack
             }
-        }
-        c:JAP = {
-            trigger_event = {
-			   id = dev_events.170
-			   days = 80
-		    }
-        }
-        c:USA = {
-            trigger_event = {
-			   id = dev_events.171
-			   days = 80
-		    }
-        }
-        c:GBR = {
-            trigger_event = {
-			   id = dev_events.171
-			   days = 80
-		    }
-        }
-        c:FRA = {
-            trigger_event = {
-			   id = dev_events.171
-			   days = 80
-		    }
         }
         c:DON = {
             trigger_event = {
