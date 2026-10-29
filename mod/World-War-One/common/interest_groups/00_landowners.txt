@@ -157,16 +157,6 @@
 				set_interest_group_name = ig_yangban
 			}
 		}
-		else_if = { # Scholar Officials
-			limit = {
-				c:CHI ?= this
-			}
-			ig:ig_landowners ?= {
-				set_interest_group_name = ig_scholar_officials
-				remove_ideology = ideology_paternalistic
-				add_ideology = ideology_scholar_paternalistic
-			}
-		}
 		else_if = { # Pious Spanish Landowners (and Magnatial Liberal Landowners)
 			limit = {
 				country_has_primary_culture = cu:spanish
