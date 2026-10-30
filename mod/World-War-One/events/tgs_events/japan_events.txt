@@ -294,14 +294,21 @@ japan_events.15 = {#Kanto earthquake
 
     option = {
         name = japan_events.15.a
-        c:JAP = {
-            if = {
-                limit = { has_law = law_type:law_monarchy }
-                trigger_event = { 
-                  id = japan_events.16
-                  years = 3
-                }
+        if = {
+            limit = { has_law = law_type:law_monarchy }
+            trigger_event = { 
+                id = japan_events.16
+                years = 3
             }
+        }
+        if = {
+            limit = { 
+                c:JAP = { is_player = no }
+            }
+            trigger_event = { #Loyalists and radicals reset
+			   id = dev_events.26
+			   years = 10
+		    }
         }
         s:STATE_KANTO ?= {
 			add_devastation = 20

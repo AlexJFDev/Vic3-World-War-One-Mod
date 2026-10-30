@@ -22,8 +22,9 @@
     }
 
     fail = {
-       any_political_movement = {
+        any_political_movement = {
 			is_political_movement_type = movement_cultural_minority
+            culture ?= cu:irish
             is_insurrectionary = yes
 			civil_war ?= {
                 OR = {
