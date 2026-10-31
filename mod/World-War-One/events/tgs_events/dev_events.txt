@@ -2018,8 +2018,11 @@ dev_events.37 = {
         name = dev_events.8.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 50000000
         activate_law = law_type:law_armed_neutrality
+        add_modifier = {
+			name = construction_nerf_1
+            years = 12
+		}
         add_radicals = {
 			strata = upper
 			value = -0.25
@@ -6992,25 +6995,13 @@ dev_events.135 = {
         name = dev_events.10.a
         default_option = yes
         create_diplomatic_play = {
-            name = italo_french_war
+            name = sino_soviet_war
 
-            target_state = s:STATE_CORSICA.region_state:FRA
+            target_state = s:STATE_OUTER_MANCHURIA.region_state:RUS
 
             type = dp_conquer_state
 
-            escalation = 85
-            
-            add_war_goal = {
-                holder = c:FRA
-                type = humiliation
-                target_country = c:ITA
-            }
-            
-            add_target_backers = {
-                c:MOR
-                c:TUN
-                c:DJB
-            }
+            escalation = 0
         }
     }
 }
@@ -10284,7 +10275,7 @@ dev_events.212 = {
             }
             c:RUS = {
                 trigger_event = {
-                   id = dev_events.201
+                   id = dev_events.203
                    days = 5
                 }
             }
@@ -10315,5 +10306,29 @@ dev_events.212 = {
                 }
             }
         } 
+    }
+}
+
+dev_events.213 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.17.a
+        default_option = yes
+        trigger = { is_player = no }
+
     }
 }
