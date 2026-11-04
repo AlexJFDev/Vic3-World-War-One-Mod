@@ -30,6 +30,9 @@
 	    c:GER = {
 			has_variable = central_powers_participant
             has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         }
 	}
     
@@ -214,6 +217,9 @@ je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparation
 	    c:GER = {
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         }
 	}
     
@@ -389,10 +395,16 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 	    c:GER = {
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         }
 		c:AUS = {
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         }
 	}
     
@@ -558,7 +570,10 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 			has_global_variable = entente_deal_round_4_complete
 		}
 		c:ITA = {
-          has_variable = entente_participant
+            has_variable = entente_participant
+			NOT = {
+				is_diplomatic_play_enemy_of = c:AUS
+			}
 		}
 	}
 
@@ -733,7 +748,10 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 			has_global_variable = entente_deal_round_5_complete
 		}
 	    c:ITA = {
-          has_variable = central_powers_participant
+            has_variable = central_powers_participant
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
 		}
 	}
 
@@ -905,10 +923,13 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 			has_global_variable = entente_deal_round_6_complete
 		}
 	    c:GRE = {
-          has_variable = entente_participant
+            has_variable = entente_participant
 		}
 	    c:TUR = {
-          has_variable = central_powers_participant
+            has_variable = central_powers_participant
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
 		}	
 	}
 
@@ -1085,7 +1106,10 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
 			has_global_variable = entente_deal_round_7_complete
 		}
 	    c:TUR = {
-          has_variable = central_powers_participant
+            has_variable = central_powers_participant
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
 		}
 	}
 
@@ -1287,10 +1311,16 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 	    c:GER = {
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         } 
         c:AUS = {
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         }  
 	    c:RUS = {
 		    NOR = {
@@ -1450,9 +1480,15 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
 		}
 		c:JAP = {
 			has_variable = entente_participant
+			NOT = {
+				is_diplomatic_play_enemy_of = c:GER
+			}
 		}
 		c:USA = {
 			has_variable = entente_participant
+			NOT = {
+				is_diplomatic_play_enemy_of = c:GER
+			}
 		}
 	}
 
@@ -1629,6 +1665,9 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
 		}
 		c:ITA = {
 			has_variable = entente_participant
+			NOT = {
+				is_diplomatic_play_enemy_of = c:GER
+			}
 		}
 	}
 
