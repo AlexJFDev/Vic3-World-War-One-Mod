@@ -25,91 +25,88 @@
         }
     }
 
-    complete = {
-        root.average_sol >= 14
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_german_revolution_completion_desc
+        trigger = { root.average_sol >= 14 }
+        effect = {
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+        }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-    on_complete = {
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-    }
-    
-    fail = {
-        any_civil_war = {
-			civil_war_progress >= 0.75
-		}
-    }
-
-    on_fail = {
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        trigger_event = {
-            id = germany_events.2
-            days = 5
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_german_revolution_failure_desc
+        trigger = {
+            any_civil_war = {
+			  civil_war_progress >= 0.75
+		    }
+        }
+        effect = {
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
         }
     }
 
-    invalid = {
-       is_at_war = no
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_german_revolution_failure_desc
+        trigger = { is_at_war = no }
+        effect = {
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			  add_civil_war_progress = -100
+		    }
+        }
     }
 
     weight = 1000
+    highlight = yes
+    transferable = no
+    can_revolution_inherit = no
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -152,43 +149,62 @@ je_nazi_threat = {
 	}
 
     on_monthly_pulse = {
-      random_events = {
-			
-		}      	  
+        random_events = {}      	  
     }
 
-    complete = {}
-    
-    fail = { 
-        OR = {
-            scope:journal_entry = {
-			   "scripted_bar_progress(nazi_ascension_progress_bar)" >= 499
-            } 
-            any_political_movement = {
-				is_political_movement_type = movement_fascist
-				is_insurrectionary = yes
-				civil_war ?= {
-					civil_war_progress >= 0.75
-				}
-			}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_nazi_threat_failure_desc
+        trigger = {
+            OR = {
+                scope:journal_entry = {
+			      "scripted_bar_progress(nazi_ascension_progress_bar)" >= 499
+                } 
+                any_political_movement = {
+				    is_political_movement_type = movement_fascist
+				    is_insurrectionary = yes
+				    civil_war ?= {
+					   civil_war_progress >= 0.75
+				    }
+			    }
+            }
         }
-	}
-
-    on_fail = {
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        trigger_event = { 
-            id = germany_events.26 
-            days = 5
-            popup = yes 
+        effect = {
+            random_civil_war = {
+			   add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			   add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			   add_civil_war_progress = -100
+		    }
+            random_civil_war = {
+			   add_civil_war_progress = -100
+		    }
+            trigger_event = { 
+              id = germany_events.26 
+              days = 5
+              popup = yes 
+            }
         }
     }
 
-    invalid = {
-        has_law = law_type:law_council_republic
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_nazi_threat_failure_desc
+        trigger = { has_law = law_type:law_council_republic }
+        effect = {
+            set_variable = communist_germany
+        }
     }
    
+    weight = 100
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -211,19 +227,29 @@ je_new_germany = {
 
     immediate = {}
 
-    complete = {
-        game_date > 1935.1.1
-        country_rank >= rank_value:great_power
-        root.average_sol >= 12
-    }
-
-    on_complete = {
-        trigger_event = {
-            id = germany_events.43
-            days = 5
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_new_germany_completion_desc
+        trigger = {
+            game_date > 1935.1.1
+            country_rank >= rank_value:great_power
+            root.average_sol >= 12
         }
+        effect = {
+            trigger_event = {
+              id = germany_events.43
+              days = 5
+            }
+        }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
+    weight = 100
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -257,60 +283,141 @@ je_conquest_poland = {
 
     immediate = {}
 
-    complete = {
-        game_date > 1939.7.1
-        is_at_war = no
-        average_sol > average_expected_sol
-        has_technology_researched = blitzkrieg_tech
-        NOT = {
-            c:GER = {
-                any_scope_treaty = {
-					binds = c:POL
-					any_scope_article = {
-					OR = {
-						has_type = alliance
-						has_type = defensive_pact
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_conquest_poland_completion_desc
+        trigger = {
+            game_date > 1939.7.1
+            is_at_war = no
+            average_sol > average_expected_sol
+            has_technology_researched = blitzkrieg_tech
+            NOT = {
+                c:GER = {
+                    any_scope_treaty = {
+					    binds = c:POL
+					    any_scope_article = {
+					    OR = {
+						   has_type = alliance
+						   has_type = defensive_pact
 						}
-					}
-				}
-                any_scope_treaty = {
-					binds = c:FRA
-					any_scope_article = {
-					OR = {
-						has_type = alliance
-						has_type = defensive_pact
+					    }
+				    }
+                    any_scope_treaty = {
+					    binds = c:FRA
+					    any_scope_article = {
+					    OR = {
+						   has_type = alliance
+						   has_type = defensive_pact
 						}
-					}
-				}
-                any_scope_treaty = {
-					binds = c:GBR
-					any_scope_article = {
-					OR = {
-						has_type = alliance
-						has_type = defensive_pact
+					    }
+				    }
+                    any_scope_treaty = {
+					    binds = c:GBR
+					    any_scope_article = {
+					    OR = {
+						   has_type = alliance
+						   has_type = defensive_pact
 						}
-					}
-				}
+					    }
+				    }
+                }
+                has_modifier = declared_bankruptcy
             }
-            has_modifier = declared_bankruptcy
         }
-        NOT = {
-            has_modifier = declared_bankruptcy
+        effect = {
+            trigger_event = {
+               id = world_war_two_initiation_events.12
+               days = 5
+            }
         }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-    invalid = {
-        owns_entire_state_region = STATE_WEST_PRUSSIA
-        has_global_variable = world_war_two_started
-    }
-
-    on_complete = {
-        trigger_event = {
-            id = world_war_two_initiation_events.12
-            days = 5
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            invalid = {
+              owns_entire_state_region = STATE_WEST_PRUSSIA
+              has_global_variable = world_war_two_started
+            }
         }
+        effect = {}
     }
 
+    weight = 100
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_poland_partition = {
+    icon = "gfx/interface/icons/objectives/egalitarian_society.dds"
+    group = je_group_internal_affairs
+
+    is_shown_when_inactive = {
+        exists = c:GER
+        THIS = c:GER
+        has_global_variable = molotov_ribentrop_pact_signed
+    }
+    
+    possible = {
+        OR = {
+            has_variable = hitler_rise_to_power_local
+            c:GER = {
+                ruler = {
+                OR = {
+				   has_ideology = ideology:ideology_fascist
+                   has_ideology = ideology:ideology_integralist
+                   has_ideology = ideology:ideology_jingoist_leader
+                }
+                }
+            }
+        }
+        has_global_variable = molotov_ribentrop_pact_signed
+    }
+
+    immediate = {}
+
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_poland_partition_completion_desc
+        trigger = {
+            OR = {
+               c:POL = { is_subject_of = c:GER }
+               c:POL = { is_subject_of = c:RUS }
+            }
+            NOT = { 
+               c:GER = { is_diplomatic_play_enemy_of = c:RUS }
+            }
+        }
+        effect = {
+            c:RUS = {
+                trigger_event = {
+                   id = germany_events.42
+                   days = 5
+                }
+            }
+        }
+        event_outcome_desc = {} # complex desc like a status_desc field
+    }
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { c:GER = { is_diplomatic_play_enemy_of = c:RUS } }
+        effect = { set_variable = broken_mr_pact }
+    }
+
+    weight = 100
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -347,89 +454,55 @@ je_eastern_crusade = {
 
     immediate = {}
 
-    complete = {
-        has_global_variable = ww2_france_defeat
-        game_date > 1941.6.1
-        has_strategic_adjacency = c:RUS
-        root.average_sol > 12
-        NOT = {
-            c:GER = {
-                any_scope_treaty = {
-					binds = c:RUS
-					any_scope_article = {
-					OR = {
-						has_type = alliance
-						has_type = defensive_pact
-						}
-					}
-				}
-            }
-            has_modifier = declared_bankruptcy
-        }
-    }
-
-    on_complete = {
-        trigger_event = {
-            id = world_war_two_initiation_events.6
-            days = 5
-        }
-    }
-
     invalid = {
        has_global_variable = germany_invades_ussr
     }
 
-    should_be_pinned_by_default_uninvolved_or_context = yes
-}
-
-je_poland_partition = {
-    icon = "gfx/interface/icons/objectives/egalitarian_society.dds"
-    group = je_group_internal_affairs
-
-    is_shown_when_inactive = {
-        exists = c:GER
-        THIS = c:GER
-        has_global_variable = molotov_ribentrop_pact_signed
-    }
-    
-    possible = {
-        OR = {
-            has_variable = hitler_rise_to_power_local
-            c:GER = {
-                ruler = {
-                OR = {
-				   has_ideology = ideology:ideology_fascist
-                   has_ideology = ideology:ideology_integralist
-                   has_ideology = ideology:ideology_jingoist_leader
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_eastern_crusade_completion_desc
+        trigger = {
+            has_global_variable = ww2_france_defeat
+            game_date > 1941.6.1
+            has_strategic_adjacency = c:RUS
+            root.average_sol > 12
+            NOT = {
+                c:GER = {
+                    any_scope_treaty = {
+					    binds = c:RUS
+					    any_scope_article = {
+					        OR = {
+						      has_type = alliance
+						       has_type = defensive_pact
+						    }
+					    }
+				    }
                 }
-                }
+                has_modifier = declared_bankruptcy
             }
         }
-        has_global_variable = molotov_ribentrop_pact_signed
-    }
-
-    immediate = {}
-
-    complete = {
-        OR = {
-            c:POL = { is_subject_of = c:GER }
-            c:POL = { is_subject_of = c:RUS }
-        }
-    }
-
-    invalid = {
-        c:GER = { is_diplomatic_play_enemy_of = c:RUS }
-    }
-
-    on_complete = {
-        c:RUS = {
+        effect = {
             trigger_event = {
-              id = germany_events.42
+               id = world_war_two_initiation_events.6
               days = 5
             }
         }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { has_global_variable = germany_invades_ussr }
+        effect = { set_variable = germany_alt_invasion_sov }
+    }
+
+    weight = 100
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -451,13 +524,23 @@ je_german_occupation = {
 		resistance
 	}
 
-    complete = {
-		NOT = {
-           ROOT = { is_subject_of = c:GER }
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            NOT = {
+               ROOT = { is_subject_of = c:GER }
+            }
         }
+        effect = { set_variable = liberated_from_germany }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-    on_complete = {}
-
+    weight = 100
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }

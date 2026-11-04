@@ -17,15 +17,22 @@
 		true_france
 	}
 
-    complete = {
-		is_at_war = no
-        is_subject = no
+	outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { 
+            OR = {
+               is_subject = yes 
+               is_at_war = no
+            }
+        }
+        effect = {}
     }
 
-    fail = {
-        is_subject = yes
-    }
-
+    weight = 100
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -56,18 +63,33 @@ je_world_bank = {
 		world_bank
 	}
 
-    fail = {
-        OR = {
-            NOR = { 
-               has_law_or_variant = law_type:law_interventionism
-               has_law_or_variant = law_type:law_laissez_faire
+	outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_world_bank_failure_desc
+        trigger = {
+			OR = {
+                NOR = { 
+                  has_law_or_variant = law_type:law_interventionism
+                  has_law_or_variant = law_type:law_laissez_faire
+                }
+                NOR = {
+                  has_law_or_variant = law_type:law_true_neutrality
+                  has_law_or_variant = law_type:law_armed_neutrality
+                }
+                has_law_or_variant = law_type:law_council_republic
             }
-            NOR = {
-               has_law_or_variant = law_type:law_true_neutrality
-               has_law_or_variant = law_type:law_armed_neutrality
-            }
+		}
+        effect = {
+            set_variable = end_of_swiss_banking
         }
+        event_outcome_desc = {}
     }
 
+    weight = 100
+    highlight = yes
+    transferable = no
+    can_revolution_inherit = no
     should_be_pinned_by_default_uninvolved_or_context = yes
 }

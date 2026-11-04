@@ -94,32 +94,41 @@
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
-         has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
-         has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_1_complete
-        If = { 
-		    limit = { 
-			   c:FRA ?= this
-		    }
-		    c:GER = {
-            trigger_event = {
-                id = entente_peace_deal.2
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
+                has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
+                has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_1_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:GER = {
+                    trigger_event = {
+                        id = entente_peace_deal.2
+                        days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -181,8 +190,10 @@
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparations
@@ -266,32 +277,41 @@ je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparation
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
-         has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
-         has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_2_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:GER = {
-            trigger_event = {
-                id = entente_peace_deal.3
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_2_germany_war_rep_prop_1_won
+                has_global_variable = entente_deal_round_2_germany_war_rep_prop_2_won
+                has_global_variable = entente_deal_round_2_germany_war_rep_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_2_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:GER = {
+                    trigger_event = {
+                        id = entente_peace_deal.3
+                        days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -353,8 +373,10 @@ je_entente_peace_deal_round_2 = { #Round 2: how much Germany pays war reparation
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
@@ -462,33 +484,41 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
-         has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
-         has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
-		 has_global_variable = entente_deal_round_3_complete
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_3_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:GER = {
-            trigger_event = {
-                id = entente_peace_deal.4
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_3_how_big_poland_prop_1_won
+                has_global_variable = entente_deal_round_3_how_big_poland_prop_2_won
+                has_global_variable = entente_deal_round_3_how_big_poland_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_3_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:GER = {
+                    trigger_event = {
+                        id = entente_peace_deal.4
+                        days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -550,8 +580,10 @@ je_entente_peace_deal_round_3 = { #Round 3: how big Poland becomes ?
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states from Austria ?
@@ -641,32 +673,41 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
-         has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
-         has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_4_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:AUS = {
-            trigger_event = {
-                id = entente_peace_deal.5
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_4_italy_iredentist_prop_1_won
+                has_global_variable = entente_deal_round_4_italy_iredentist_prop_2_won
+                has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_4_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:AUS = {
+                    trigger_event = {
+                      id = entente_peace_deal.5
+                      days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -728,8 +769,10 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
@@ -816,32 +859,41 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
-         has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
-         has_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_5_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:ITA = {
-            trigger_event = {
-                id = entente_peace_deal.6
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_5_italy_defeat_prop_1_won
+                has_global_variable = entente_deal_round_5_italy_defeat_prop_2_won
+                has_global_variable = entente_deal_round_5_italy_defeat_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_5_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:ITA = {
+                    trigger_event = {
+                      id = entente_peace_deal.6
+                      days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -903,8 +955,10 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
@@ -1000,32 +1054,41 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
-         has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
-         has_global_variable = entente_deal_round_6_how_big_greece_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_6_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:GRE = {
-            trigger_event = {
-                id = entente_peace_deal.7
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_6_how_big_greece_prop_1_won
+                has_global_variable = entente_deal_round_6_how_big_greece_prop_2_won
+                has_global_variable = entente_deal_round_6_how_big_greece_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_6_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:TUR = {
+                    trigger_event = {
+                      id = entente_peace_deal.7
+                      days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -1087,8 +1150,10 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms or not ?
@@ -1186,32 +1251,41 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_7_arab_states_prop_1_won
-         has_global_variable = entente_deal_round_7_arab_states_prop_2_won
-         has_global_variable = entente_deal_round_7_arab_states_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_7_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:TUR = {
-            trigger_event = {
-                id = entente_peace_deal.8
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_7_arab_states_prop_1_won
+                has_global_variable = entente_deal_round_7_arab_states_prop_2_won
+                has_global_variable = entente_deal_round_7_arab_states_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_7_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:TUR = {
+                    trigger_event = {
+                      id = entente_peace_deal.8
+                      days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -1273,8 +1347,10 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_8 = { #Round 8: what Russia gets 
@@ -1373,32 +1449,41 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_8_how_big_russia_prop_1_won
-         has_global_variable = entente_deal_round_8_how_big_russia_prop_2_won
-         has_global_variable = entente_deal_round_8_how_big_russia_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_8_complete
-        If = {
-		    limit = { 
-			 c:FRA ?= this
-		    }
-		    c:GER = {
-                trigger_event = {
-                  id = entente_peace_deal.9
-                  days = 5
-                }
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_8_how_big_russia_prop_1_won
+                has_global_variable = entente_deal_round_8_how_big_russia_prop_2_won
+                has_global_variable = entente_deal_round_8_how_big_russia_prop_3_won
             }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_8_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:GER = {
+                    trigger_event = {
+                      id = entente_peace_deal.9
+                      days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -1460,8 +1545,10 @@ je_entente_peace_deal_round_8 = { #Round 8: what Russia gets
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german colonies in asia
@@ -1558,32 +1645,41 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
-         has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
-         has_global_variable = entente_deal_round_9_how_big_japan_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_9_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:JAP = {
-            trigger_event = {
-                id = entente_peace_deal.10
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_9_how_big_japan_prop_1_won
+                has_global_variable = entente_deal_round_9_how_big_japan_prop_2_won
+                has_global_variable = entente_deal_round_9_how_big_japan_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_9_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:JAP = {
+                    trigger_event = {
+                      id = entente_peace_deal.10
+                      days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -1645,8 +1741,10 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colonies ?
@@ -1735,32 +1833,41 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
 		}
     }
 
-    complete = {
-        OR = {
-         has_global_variable = entente_deal_round_10_german_colonies_prop_1_won
-         has_global_variable = entente_deal_round_10_german_colonies_prop_2_won
-         has_global_variable = entente_deal_round_10_german_colonies_prop_3_won
-        }
-    }
-
-    on_complete = {
-        set_global_variable = entente_deal_round_10_complete
-        If = { 
-		  limit = { 
-			c:FRA ?= this
-		  }
-		   c:FRA = {
-            trigger_event = {
-                id = entente_peace_deal.11
-                days = 5
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_entente_peace_completion_desc
+        trigger = {
+			OR = {
+                has_global_variable = entente_deal_round_10_german_colonies_prop_1_won
+                has_global_variable = entente_deal_round_10_german_colonies_prop_2_won
+                has_global_variable = entente_deal_round_10_german_colonies_prop_3_won
             }
-           }
 		}
+        effect = {
+            set_global_variable = entente_deal_round_10_complete
+            If = { 
+		        limit = { 
+			       c:FRA ?= this
+		        }
+		        c:FRA = {
+                    trigger_event = {
+                      id = entente_peace_deal.11
+                      days = 5
+                    }
+                }
+		    }
+		}
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-	invalid = {
-		game_date > 1928.1.1
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { game_date > 1928.1.1 }
+        effect = {}
+    }
 
     on_monthly_pulse = {
         effect = {
@@ -1822,8 +1929,10 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
     }
 
     weight = 100
-
-	should_be_pinned_by_default_uninvolved_or_context = yes 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes 
 }
 
 #Round 1: is Germany dislocated ?

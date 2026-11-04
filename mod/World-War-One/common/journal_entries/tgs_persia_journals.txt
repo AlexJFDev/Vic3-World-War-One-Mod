@@ -24,57 +24,81 @@
 	   persia_weak_dynasty
 	}
 
-    complete = {
-        OR = {
-            gdp > 30000000
-            country_rank >= rank_value:major_power
-            owns_entire_state_region = STATE_BAGHDAD
-			owns_entire_state_region = STATE_BASRA
-			owns_entire_state_region = STATE_AZERBAIJAN
-			owns_entire_state_region = STATE_ELIZAVETPOL
-			owns_entire_state_region = STATE_TURKMENIA
-			owns_entire_state_region = STATE_HERAT
-            owns_entire_state_region = STATE_BALUCHISTAN
-            has_global_variable = persia_victory_ww1
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_fragile_dynasty_completion_desc
+        trigger = {
+            OR = {
+              gdp > 30000000
+              root.average_sol >= 9
+              country_rank >= rank_value:major_power
+              owns_entire_state_region = STATE_BAGHDAD
+			  owns_entire_state_region = STATE_BASRA
+			  owns_entire_state_region = STATE_AZERBAIJAN
+			  owns_entire_state_region = STATE_ELIZAVETPOL
+			  owns_entire_state_region = STATE_TURKMENIA
+			  owns_entire_state_region = STATE_HERAT
+              owns_entire_state_region = STATE_BALUCHISTAN
+              has_global_variable = persia_victory_ww1
+            }
+        }
+        effect = {
+            trigger_event = { 
+              id = persia_events.4
+              days = 5
+            }
+        }
+        event_outcome_desc = {} # complex desc like a status_desc field
+    }
+
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_fragile_dynasty_failure_desc
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                is_subject = yes
+                any_civil_war = {
+			     civil_war_progress >= 0.75
+		        }
+            }
+        }
+        effect = {
+            trigger_event = { 
+              id = persia_events.3
+              days = 5
+            }
         }
     }
 
-    on_complete = {
-        trigger_event = { 
-           id = persia_events.4
-           days = 5
+    outcome = {
+        flags = { timeout }
+        conclusion_desc = je_fragile_dynasty_failure_desc
+        effect = {
+            trigger_event = { 
+              id = persia_events.3
+              days = 5
+            }
         }
     }
 
-    invalid = {
-        NOT = {
-            has_law = law_type:law_monarchy
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_fragile_dynasty_failure_desc
+        trigger = {
+            NOT = {
+              has_law = law_type:law_monarchy
+            }
         }
-    }
-
-    fail = {
-        OR = {
-            is_subject = yes
-            any_civil_war = {
-			   civil_war_progress >= 0.75
-		    }
-        }
-    }
-
-    on_fail = {
-        trigger_event = { 
-           id = persia_events.3
-           days = 5
-        }
-    }
-
-    on_timeout = {
-        trigger_event = { 
-           id = persia_events.3
-           days = 5
-        }
+        effect = { set_variable = monarchy_end_persia }
     }
     
     timeout = 4530
+    highlight = yes
+    transferable = no
+    can_revolution_inherit = no
     should_be_pinned_by_default_uninvolved_or_context = yes
 }

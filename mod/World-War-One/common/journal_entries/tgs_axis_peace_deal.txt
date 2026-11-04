@@ -5,35 +5,51 @@
 	group = je_group_crises
     
 	is_shown_when_inactive = {
-	  has_global_variable = world_war_two_started
-      is_diplomatic_play_enemy_of = c:FRA
 	  exists = c:GER
       THIS = c:GER
+	  has_global_variable = world_war_two_started
+      is_diplomatic_play_enemy_of = c:FRA
+	  is_diplomatic_play_enemy_of = c:GBR
 	}
 
     possible = {
-	  has_global_variable = world_war_two_started
-	  is_diplomatic_play_enemy_of = c:FRA
 	  exists = c:GER
       THIS = c:GER
+	  has_global_variable = world_war_two_started
+	  is_diplomatic_play_enemy_of = c:FRA
+	  is_diplomatic_play_enemy_of = c:GBR
 	}
 
     immediate = {}
 
-    complete = {
-		c:FRA = { is_subject_of = c:GER }
-	}
-
-	on_complete = {
-		set_global_variable = ww2_france_defeat
-		trigger_event = { 
-			id = axis_peace_deal.1 
-			popup = yes 
+	outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_axis_peace_deal_round_1_completion_desc
+        trigger = {
+			c:FRA = { is_subject_of = c:GER }
 		}
-	}
+        effect = {
+			set_global_variable = ww2_france_defeat
+		    trigger_event = { 
+			   id = axis_peace_deal.1 
+			   popup = yes 
+		    }
+		}
+        event_outcome_desc = {}
+    }
 
-    on_complete = {}
+	outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { is_subject = yes }
+        effect = {}
+    }
 
-    weight = 1000
+    weight = 1000 
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }

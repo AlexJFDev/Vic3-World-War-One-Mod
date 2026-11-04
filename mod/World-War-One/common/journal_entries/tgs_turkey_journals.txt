@@ -24,52 +24,78 @@
 	   sick_man_1
 	}
 
-    complete = {
-        OR = {
-            gdp > 60000000
-            root.average_sol > 10
-            global_country_ranking = 1
-			global_country_ranking = 2
-            global_country_ranking = 3
-            global_country_ranking = 4
-            global_country_ranking = 5
-            has_global_variable = ottoman_victory_ww1
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_sick_man_completion_desc
+        trigger = {
+            OR = {
+               gdp > 60000000
+               root.average_sol > 10
+               global_country_ranking = 1
+			   global_country_ranking = 2
+               global_country_ranking = 3
+               global_country_ranking = 4
+               global_country_ranking = 5
+               has_global_variable = ottoman_victory_ww1
+            }
+           is_at_war = no
         }
-        is_at_war = no
+        effect = {
+            trigger_event = { 
+              id = turkey_events.2
+              days = 5
+            }
+        }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-    on_complete = {
-        trigger_event = { 
-           id = turkey_events.2
-           days = 5
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_sick_man_failure_desc
+        trigger = {
+            is_subject = yes
+        }
+        effect = {
+            trigger_event = { 
+              id = turkey_events.15
+              days = 5
+            }
         }
     }
 
-    invalid = {
-        NOT = {
-            has_law_or_variant = law_type:law_monarchy
+    outcome = {
+        flags = { timeout }
+        conclusion_desc = je_sick_man_failure_desc
+        effect = {
+            trigger_event = { 
+              id = turkey_events.15
+              days = 5
+            }
         }
     }
 
-    fail = {
-        is_subject = yes
-    }
-
-    on_fail = {
-        trigger_event = { 
-           id = turkey_events.15
-           days = 5
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_sick_man_failure_desc
+        trigger = {
+            NOT = {
+              has_law_or_variant = law_type:law_monarchy
+            }
         }
-    }
-
-    on_timeout = {
-        trigger_event = { 
-           id = turkey_events.15
-           days = 5
+        effect = {
+            set_variable = turkish_republic
         }
     }
     
     timeout = 3650
+    weight = 1000
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -95,27 +121,58 @@ je_nationalist_threat = {
        trigger_event = { id = turkey_events.4 popup = yes }
     }
 
-    complete = {
-       owns_entire_state_region = STATE_EASTERN_THRACE
-	   owns_entire_state_region = STATE_HUDAVENDIGAR
-       owns_entire_state_region = STATE_AYDIN
-       owns_entire_state_region = STATE_DIYARBAKIR
-       owns_entire_state_region = STATE_ERZURUM
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_nationalist_threat_completion_desc
+        trigger = {
+            owns_entire_state_region = STATE_EASTERN_THRACE
+	        owns_entire_state_region = STATE_HUDAVENDIGAR
+            owns_entire_state_region = STATE_AYDIN
+            owns_entire_state_region = STATE_DIYARBAKIR
+            owns_entire_state_region = STATE_ERZURUM
+        }
+        effect = {
+            add_modifier = {
+               name = revolution_stabilization_buff_2
+               years = 5
+               is_decaying = yes
+            }
+        }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-    on_complete = {
-        add_modifier = {
-           name = revolution_stabilization_buff_2
-           years = 5
-           is_decaying = yes
+    outcome = {
+        flags = { timeout }
+        conclusion_desc = je_nationalist_threat_failure_desc
+        effect = {
+            trigger_event = { 
+              id = turkey_events.5
+              days = 5
+            }
         }
     }
 
-    on_timeout = { 
-       trigger_event = { id = turkey_events.5 popup = yes }
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_nationalist_threat_failure_desc
+        trigger = { 
+            NOR = {
+               has_law_or_variant = law_type:law_monarchy
+               has_law_or_variant = law_type:law_theocracy
+            }
+        }
+        effect = {
+            set_variable = turkish_republic
+        }
     }
 
     timeout = 365
+    weight = 1000
+    highlight = yes
+    transferable = no
+    can_revolution_inherit = no
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -135,13 +192,27 @@ je_turkish_war_of_independence = {
 
     modifiers_while_active = { turkish_independance_war }
 
-    complete = {
-        NOT = {
-            is_diplomatic_play_enemy_of = c:GRE
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            NOT = {
+              is_diplomatic_play_enemy_of = c:GRE
+            }
         }
+        effect = {
+            set_variable = independance_war_ended
+        }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
     weight = 1000
+    weight = 1000
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -172,59 +243,64 @@ je_kemalist_reforms = {
 	   kemalism_modifier
 	}
 
-    complete = {
-        OR = {
-            has_law_or_variant = law_type:law_presidential_republic
-            has_law_or_variant = law_type:law_parliamentary_republic
-            has_law_or_variant = law_type:law_corporate_state
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_kemalist_reforms_completion_desc
+        trigger = {
+                OR = {
+                    has_law_or_variant = law_type:law_presidential_republic
+                    has_law_or_variant = law_type:law_parliamentary_republic
+                    has_law_or_variant = law_type:law_corporate_state
+                }
+                OR = {
+                    has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_universal_suffrage
+                }
+                OR = {
+                    has_law_or_variant = law_type:law_total_separation
+                    has_law_or_variant = law_type:law_state_atheism
+                }
+                NOT = {
+                    has_law_or_variant = law_type:law_traditionalism
+                }
+                OR = {
+                    has_law_or_variant = law_type:law_proportional_taxation
+                    has_law_or_variant = law_type:law_graduated_taxation
+                }
+                    has_law_or_variant = law_type:law_public_schools
+                    has_law_or_variant = law_type:law_public_health_insurance
+                OR = {
+                    has_law_or_variant = law_type:law_right_of_assembly
+                    has_law_or_variant = law_type:law_protected_speech
+                }
+                OR = {
+                    has_law_or_variant = law_type:law_anti_strike_laws
+                    has_law_or_variant = law_type:law_right_to_associate
+                    has_law_or_variant = law_type:law_corporatized_unions
+                }
+                has_law_or_variant = law_type:law_compulsory_primary_school
+                OR = {
+                    has_law_or_variant = law_type:law_womens_suffrage
+                    has_law_or_variant = law_type:law_reproductive_rights
+                }
+                has_law_or_variant = law_type:law_slavery_banned
+            institution_investment_level = {
+                institution = institution_schools
+                value = 4
+            }
         }
-        OR = {
-            has_law_or_variant = law_type:law_census_voting
-            has_law_or_variant = law_type:law_universal_suffrage
+        effect = {
+            trigger_event = { id = turkey_events.12 popup = yes }
         }
-        OR = {
-            has_law_or_variant = law_type:law_total_separation
-            has_law_or_variant = law_type:law_state_atheism
-        }
-        NOT = {
-            has_law_or_variant = law_type:law_traditionalism
-        }
-        OR = {
-            has_law_or_variant = law_type:law_proportional_taxation
-            has_law_or_variant = law_type:law_graduated_taxation
-        }
-        has_law_or_variant = law_type:law_public_schools
-        has_law_or_variant = law_type:law_public_health_insurance
-        OR = {
-            has_law_or_variant = law_type:law_right_of_assembly
-            has_law_or_variant = law_type:law_protected_speech
-        }
-        OR = {
-            has_law_or_variant = law_type:law_anti_strike_laws
-            has_law_or_variant = law_type:law_right_to_associate
-            has_law_or_variant = law_type:law_corporatized_unions
-        }
-        has_law_or_variant = law_type:law_compulsory_primary_school
-        OR = {
-            has_law_or_variant = law_type:law_womens_suffrage
-            has_law_or_variant = law_type:law_reproductive_rights
-        }
-        has_law_or_variant = law_type:law_slavery_banned
-        institution_investment_level = {
-            institution = institution_schools
-            value = 4
-        }
+        event_outcome_desc = {} # complex desc like a status_desc field
     }
 
-    on_complete = {
-        trigger_event = { id = turkey_events.12 popup = yes }
-        add_modifier = {
-           name = revolution_stabilization_buff_2
-           years = 5
-           is_decaying = yes
-        }
-    }
-
+    weight = 1000
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -243,40 +319,55 @@ je_saudi_arabia_unification = {
         exists = c:JAB
     }
 
-    complete = {
-        game_date > 1926.1.1
-        has_law_or_variant = law_type:law_monarchy
-        is_subject = no
-        OR = {
-           has_law_or_variant = law_type:law_state_religion
-           has_law_or_variant = law_type:law_freedom_of_conscience
-        }
-        exists = c:HDJ
-        c:HDJ = {
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_sa_formation_completion_desc
+        trigger = {
+            game_date > 1926.1.1
+            has_law_or_variant = law_type:law_monarchy
             is_subject = no
             OR = {
-             has_law_or_variant = law_type:law_state_religion
-             has_law_or_variant = law_type:law_freedom_of_conscience
+              has_law_or_variant = law_type:law_state_religion
+              has_law_or_variant = law_type:law_freedom_of_conscience
+            }
+            exists = c:HDJ
+            c:HDJ = {
+                is_subject = no
+                OR = {
+                   has_law_or_variant = law_type:law_state_religion
+                   has_law_or_variant = law_type:law_freedom_of_conscience
+                }
+            }
+            exists = c:JAB
+            c:JAB = {
+                is_subject = no
+                OR = {
+                  has_law_or_variant = law_type:law_state_religion
+                  has_law_or_variant = law_type:law_freedom_of_conscience
+                }
             }
         }
-        exists = c:JAB
-        c:JAB = {
-            is_subject = no
-            OR = {
-             has_law_or_variant = law_type:law_state_religion
-             has_law_or_variant = law_type:law_freedom_of_conscience
-            }
+        effect = { trigger_event = { id = turkey_events.13 popup = yes } }
+        event_outcome_desc = {} # complex desc like a status_desc field
+    }
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            owns_entire_state_region = STATE_HEDJAZ
+            owns_entire_state_region = STATE_HAIL
+        }
+        effect = {
+            set_variable = alt_sa
         }
     }
 
-    on_complete = {
-        trigger_event = { id = turkey_events.13 popup = yes }
-    }
-
-    invalid = {
-        owns_entire_state_region = STATE_HEDJAZ
-        owns_entire_state_region = STATE_HAIL
-    }
-
+    weight = 1000
+    highlight = yes
+    transferable = yes
+    can_revolution_inherit = yes
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
