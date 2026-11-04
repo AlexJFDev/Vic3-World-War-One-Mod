@@ -1324,6 +1324,13 @@ REPLACE_OR_CREATE:company_basic_motors = {
 		prestige_good_luxury_car
 	}
 
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_luxury_cars_complete_tt
+			has_variable = prestige_good_luxury_car_var
+		}
+	}
+
 	possible = {
 		any_scope_state = {
 			is_incorporated = yes

@@ -279,23 +279,6 @@
  peace_promise_broken:0 "Peace Promise Broken"
  peace_promise_broken_desc:0 "This government has failed to keep their nation out of the war, greatly harming the ruling political formations."
 
- company_basic_movies:0 "Gold Studio Company"
- company_walt_disney:0 "Walt Disney Company"
- not_prestige_good_generic_movies_var_tt: "Has #b not#! already developed @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
- prestige_good_generic_movies: "Five Star Movies"
- prestige_good_disney_movies: "Disney Movies"
-
- je_prestige_goods_movies: "$prestige_good_generic_movies$"
- je_prestige_goods_movies_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!. If successful, it will be able to expand its competitiveness within the global @fine_art! #b $fine_art$#! market."
- je_prestige_goods_movies_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_movies_timer_var').GetValue]#!): #indent_newline:3 "
-
- je_prestige_goods_movies_complete_tt: "Has completed the #b $je_prestige_goods_movies$#! [concept_journal_entry]"
- je_prestige_goods_movies_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
-
- notification_prestige_goods_movies_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
- notification_prestige_goods_movies_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
- notification_prestige_goods_movies_unlocked_tooltip: "#header $notification_prestige_goods_movies_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_goods_movies_unlocked_desc$"
-
  je_prohibition_usa:0 "The Temperance Movement"
  je_prohibition_usa_reason:0 "Although their stances come from very different premises, both the [SCOPE.gsInterestGroup('devout_ig').GetName] and [SCOPE.gsInterestGroup('intelligentsia_ig').GetName] have agreed that alcohol is a poison to the mind. Only a government ban will end this evil."
  je_prohibition_usa_goal:0 "The following conditions must be true for a total of 10 years (can be interrupted):"

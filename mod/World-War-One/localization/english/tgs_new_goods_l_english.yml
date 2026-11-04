@@ -1,19 +1,5 @@
 ﻿l_english:
 
- #Copper
- copper:0 "Copper"
- prestige_good_fine_copper_bars:0 "Fine Copper Bars"
- company_basic_copper_mining:0 "Copper Mining Consortium"
- company_broken_hill:0 "Broken Hill Proprietary Company"
- trade_route_export_lens_option_copper_tooltip:0 "Establish a Copper export trade route"
- trade_route_import_lens_option_copper_tooltip:0 "Establish a Copper import trade route"
- modifier_goods_output_copper_add:0 "@copper! Copper output per level"
- modifier_goods_output_copper_add_desc:0 "The amount of @copper! Copper produced by buildings"
- modifier_goods_input_copper_add:0 "@copper! Copper input per level"
- modifier_goods_input_copper_add_desc:0 "The amount of @copper! Copper consumed by buildings"
- state_building_copper_mine_max_level_add:0 "Copper Mine Max Level"
- state_building_copper_mine_max_level_add_desc:0 "A bonus or penalty to the maximum level of Copper Mine buildings."
-
  #Pharmaceuticals
  pharmaceuticals:0 "Pharmaceuticals"
  trade_route_export_lens_option_pharmaceuticals_tooltip:0 "Estabilish a Pharmaceuticals export trade route"
@@ -61,6 +47,8 @@
  modifier_goods_input_televisions_add_desc: "The amount of @television! Televisions consumed by buildings"
 
  #Prestige goods
+ prestige_good_generic_movies: "Five Star Movies"
+ prestige_good_disney_movies: "Disney Movies"
  prestige_good_chanel_apparel:0 "Chanel Apparel"
  prestige_good_celtaquatre:0 "Celtaquatre"
  prestige_good_nescafe:0 "Nescafe"
@@ -78,12 +66,56 @@
  prestige_good_beetle:0 "Beetle"
  
  #Companies
+ company_basic_tanks:0 "Heavy Armor Corporation"
+ company_basic_aeroplanes:0 "Aircraft Manufacturing Conglomerate"
+ company_basic_movies:0 "Gold Studio Company"
+ company_walt_disney:0 "Walt Disney Company"
  company_chanel:0 "Chanel"
  company_renault:0 "Renault"
  company_nestle:0 "Nestle"
  company_lindt:0 "Lindt"
  company_ayam:0 "Ayam"
- company_basic_tanks:0 "Heavy Armor Corporation"
- company_basic_aeroplanes:0 "Aircraft Manufacturing Conglomerate"
  company_boeing:0 "Boeing Airplane Company"
  company_volkswagen:0 "Volkswagen"
+
+ #Journal entries 
+
+ not_prestige_good_generic_movies_var_tt: "Has #b not#! already developed @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
+ je_prestige_goods_movies: "$prestige_good_generic_movies|q$"
+ je_prestige_goods_movies_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!. If successful, it will be able to expand its competitiveness within the global @fine_art! #b $fine_art$#! market."
+ je_prestige_goods_movies_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_movies_timer_var').GetValue]#!): #indent_newline:3 "
+ je_prestige_goods_movies_complete_tt: "Has completed the #b $je_prestige_goods_movies$#! [concept_journal_entry]"
+ je_prestige_goods_movies_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
+ notification_prestige_goods_movies_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
+ notification_prestige_goods_movies_unlocked_desc: "[Concept('concept_building', '$concept_buildings|q$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_generic_movies! #b $prestige_good_generic_movies$#!"
+ notification_prestige_goods_movies_unlocked_tooltip: "#header $notification_prestige_goods_movies_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_goods_movies_unlocked_desc$"
+
+ not_prestige_good_modern_monoplane_var_tt: "Has #b not#! already developed @prestige_good_modern_monoplane! #b $prestige_good_modern_monoplane$#!"
+ je_prestige_goods_planes: "$prestige_good_modern_monoplane|q$"
+ je_prestige_goods_planes_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_modern_monoplane! #b $prestige_good_modern_monoplane$#!. If successful, it will be able to expand its competitiveness within the global @fine_art! #b $fine_art$#! market."
+ je_prestige_goods_planes_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_movies_timer_var').GetValue]#!): #indent_newline:3 "
+ je_prestige_goods_planes_complete_tt: "Has completed the #b $je_prestige_goods_planes$#! [concept_journal_entry]"
+ je_prestige_goods_planes_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_modern_monoplane! #b $prestige_good_modern_monoplane$#!"
+ notification_prestige_good_modern_monoplane_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_modern_monoplane! #b $prestige_good_modern_monoplane$#!"
+ notification_prestige_good_modern_monoplane_unlocked_desc: "[Concept('concept_building', '$concept_buildings|q$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_modern_monoplane! #b $prestige_good_modern_monoplane$#!"
+ notification_prestige_good_modern_monoplane_unlocked_tooltip: "#header $notification_prestige_good_modern_monoplane_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_good_modern_monoplane_unlocked_desc$"
+ 
+ not_prestige_good_modern_heavy_tank_var_tt: "Has #b not#! already developed @prestige_good_modern_heavy_tank! #b $prestige_good_modern_heavy_tank$#!"
+ je_prestige_goods_tanks: "$prestige_good_modern_heavy_tank|q$"
+ je_prestige_goods_tanks_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_modern_heavy_tank! #b $prestige_good_modern_heavy_tank$#!. If successful, it will be able to expand its competitiveness within the global @fine_art! #b $fine_art$#! market."
+ je_prestige_goods_tanks_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_movies_timer_var').GetValue]#!): #indent_newline:3 "
+ je_prestige_goods_tanks_complete_tt: "Has completed the #b $je_prestige_goods_tanks$#! [concept_journal_entry]"
+ je_prestige_goods_tanks_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_modern_heavy_tank! #b $prestige_good_modern_heavy_tank$#!"
+ notification_prestige_good_modern_heavy_tank_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_modern_heavy_tank! #b $prestige_good_modern_heavy_tank$#!"
+ notification_prestige_good_modern_heavy_tank_unlocked_desc: "[Concept('concept_building', '$concept_buildings|q$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_modern_heavy_tank! #b $prestige_good_modern_heavy_tank$#!"
+ notification_prestige_good_modern_heavy_tank_unlocked_tooltip: "#header $notification_prestige_good_modern_heavy_tank_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_good_modern_heavy_tank_unlocked_desc$"
+
+ not_prestige_good_luxury_car_var_tt: "Has #b not#! already developed @prestige_good_luxury_car! #b $prestige_good_luxury_car$#!"
+ je_prestige_goods_luxury_cars: "$prestige_good_luxury_car|q$"
+ je_prestige_goods_luxury_cars_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_luxury_car! #b $prestige_good_luxury_car$#!. If successful, it will be able to expand its competitiveness within the global @fine_art! #b $fine_art$#! market."
+ je_prestige_goods_luxury_cars_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_movies_timer_var').GetValue]#!): #indent_newline:3 "
+ je_prestige_goods_luxury_cars_complete_tt: "Has completed the #b $je_prestige_goods_luxury_cars$#! [concept_journal_entry]"
+ je_prestige_goods_luxury_cars_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_luxury_car! #b $prestige_good_luxury_car$#!"
+ notification_prestige_good_luxury_car_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_luxury_car! #b $prestige_good_luxury_car$#!"
+ notification_prestige_good_luxury_car_unlocked_desc: "[Concept('concept_building', '$concept_buildings|q$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_luxury_car! #b $prestige_good_luxury_car$#!"
+ notification_prestige_good_luxury_car_unlocked_tooltip: "#header $notification_prestige_good_luxury_car_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_good_luxury_car_unlocked_desc$"

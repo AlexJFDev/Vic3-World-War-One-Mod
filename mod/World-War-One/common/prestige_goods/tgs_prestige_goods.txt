@@ -1,8 +1,36 @@
-﻿prestige_good_generic_movies = {
+﻿#Generic
+
+prestige_good_generic_movies = {
 	base_good = popular_art
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_generic_movies.dds"
 }
+
+prestige_good_modern_monoplane = {
+	possible = {
+		game_date > 1935.1.1
+	}
+    base_good = aeroplanes
+	prestige_bonus = 0.2
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_modern_monoplane.dds"
+}
+
+prestige_good_luxury_car = {
+    base_good = automobiles
+	prestige_bonus = 0.2
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_luxury_car.dds"
+}
+
+prestige_good_modern_heavy_tank = {
+	possible = {
+		game_date > 1930.1.1
+	}
+    base_good = tanks
+	prestige_bonus = 0.2
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_modern_heavy_tank.dds"
+}
+
+#Flavored
 
 prestige_good_disney_movies = {
 	base_good = popular_art
@@ -40,27 +68,6 @@ prestige_good_lindor = {
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_lindor.dds"
 }
 
-prestige_good_fine_copper_bars = {
-    base_good = copper
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_fine_copper_bars.dds"
-}
-
-prestige_good_luxury_car = {
-    base_good = automobiles
-	prestige_bonus = 0.2
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_luxury_car.dds"
-}
-
-prestige_good_modern_heavy_tank = {
-	possible = {
-		game_date > 1930.1.1
-	}
-    base_good = tanks
-	prestige_bonus = 0.2
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_modern_heavy_tank.dds"
-}
-
 prestige_good_tiger = {
 	possible = {
 		game_date > 1941.1.1
@@ -68,15 +75,6 @@ prestige_good_tiger = {
     base_good = tanks
 	prestige_bonus = 0.3
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_tiger.dds"
-}
-
-prestige_good_modern_monoplane = {
-	possible = {
-		game_date > 1935.1.1
-	}
-    base_good = aeroplanes
-	prestige_bonus = 0.2
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_modern_monoplane.dds"
 }
 
 prestige_good_a6m_zero = {
