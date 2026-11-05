@@ -2825,7 +2825,7 @@ entente_peace_deal.9 = { #Round 8 result
 		      set_state_owner = c:RUS
             }
         }
-		s:STATE_KAUNAS = {
+		s:STATE_LITHUANIA = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -4315,7 +4315,7 @@ entente_peace_deal.18 = { #East Germany partition
 		      set_state_owner = c:UBD
             }
         }
-		s:STATE_KAUNAS = {
+		s:STATE_LITHUANIA = {
 	       random_scope_state = {
 		      limit = {
 			   exists = c:GER
@@ -4637,7 +4637,7 @@ entente_peace_deal.18 = { #East Germany partition
         create_country = { #Lithuania
 			origin = root
 			tag = LIT
-			state = s:STATE_KAUNAS.region_state:UBD
+			state = s:STATE_LITHUANIA.region_state:UBD
 			on_created = {
 				activate_law = law_type:law_presidential_republic
                 activate_law = law_type:law_mass_conscription	  

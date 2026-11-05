@@ -1,4 +1,4 @@
-# Post effect for camera height and volumes
+﻿# Post effect for camera height and volumes
 
 # Console commands:
 	# Tweak post
@@ -23,9 +23,9 @@
 	# exposure = 0.5
 
 	# - Bloom
-	# bloom_width = 1.0
-	# bloom_scale = 1.0
-	# bright_threshold = 1.0
+	# bloom_strength
+	# bloom_steepness
+	# bloom_threshold
 
 	# - Color
 	# hue_offset = -0.00
@@ -256,8 +256,7 @@ posteffect_values = {
 	saturation_scale = 0.8
 	value_scale = 1.0
 	levels_min = hsv{ 0.17 1.0 0.04 } 	# Color values adjusment
-	levels_max = hsv{ 0.2 0.1 0.8 } 	# Color values adjusment
-#	colorbalance = { 0.9 0.99 1.13 }	# Color balance
+	levels_max = hsv{ 0.2 0.1 0.95 } 	# Color values adjusment
 	colorbalance = { 0.9 0.99 1.03 }	# Color balance
 
 	fog_color = { 0.74 0.76 0.8 }
