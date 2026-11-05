@@ -4,6 +4,10 @@
 
 	group = je_group_historical_content
 
+	activation_description = {
+		always = yes
+	}
+
 	is_shown_when_inactive = {
         exists = c:CHI
         THIS = c:CHI
@@ -90,6 +94,10 @@ je_reunify_china = {
 
 	group = je_group_foreign_affairs
 
+	activation_description = {
+		always = yes
+	}
+
 	is_shown_when_inactive = {
 		OR = {
 			country_has_primary_culture = cu:han
@@ -156,6 +164,10 @@ je_opium_crisis = {
 	icon = "gfx/interface/icons/goods_icons/opium.dds"
 
 	group = je_group_foreign_affairs
+
+	activation_description = {
+		always = yes
+	}
 
 	is_shown_when_inactive = {
 		OR = {
@@ -230,6 +242,10 @@ je_revolutionary_fervor = {
 
 	group = je_group_historical_content
 
+	activation_description = {
+		always = yes
+	}
+
 	is_shown_when_inactive = {
         OR = {
 			country_has_primary_culture = cu:han
@@ -281,6 +297,10 @@ je_chinese_civil_war = {
 	icon = "gfx/interface/icons/event_icons/pcr_uprising.dds"
 
 	group = je_group_historical_content
+
+	activation_description = {
+		always = yes
+	}
 
 	is_shown_when_inactive = {
         OR = {

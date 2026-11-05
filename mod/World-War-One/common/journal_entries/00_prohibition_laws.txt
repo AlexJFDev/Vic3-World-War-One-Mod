@@ -3,6 +3,10 @@
 
 	group = je_group_internal_affairs
 
+	activation_description = {
+		always = yes
+	}
+
 	is_shown_when_inactive = {
 		OR = {
 			has_technology_researched = anarchism
@@ -30,7 +34,7 @@
 		any_scope_building = {
 			is_building_type = building_food_industry
 			is_distillery = yes
-			level >= 10
+			level >= 5
 		}
 	}
 
@@ -74,34 +78,55 @@
 		}
 	}
 
-	invalid = { # event prohibition.1.b ends the JE and applies these modifiers
-		OR = {
-			ig:ig_devout ?= {
-				has_modifier = rejected_prohibition_modifier
+	outcome = { # event prohibition.1.b ends the JE and applies these modifiers
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				ig:ig_devout ?= {
+					has_modifier = rejected_prohibition_modifier
+				}
+				ig:ig_intelligentsia ?= {
+					has_modifier = rejected_prohibition_modifier
+				}
 			}
-			ig:ig_intelligentsia ?= {
-				has_modifier = rejected_prohibition_modifier
-			}
+		}
+		effect = {
+			je_prohibition_cleanup = yes
 		}
 	}
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = prohibition_laws_var
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = prohibition_laws_var
+				}
+				scope:journal_entry = { is_goal_complete = yes }
 			}
-			scope:journal_entry = { is_goal_complete = yes }
+			custom_tooltip = {
+				text = liquor_ban_tt
+				is_banning_goods = liquor
+			}
 		}
-		custom_tooltip = {
-			text = liquor_ban_tt
-			is_banning_goods = liquor
+		effect = {
+			custom_tooltip = prohibition_success.tt
+			trigger_event = { id = prohibition.8 }
 		}
 	}
 
-
-	on_complete = {
-		custom_tooltip = prohibition_success.tt
-		trigger_event = { id = prohibition.8 }
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			je_prohibition_cleanup = yes
+		}
 	}
 
 	timeout = 5475
@@ -118,17 +143,18 @@
 
 	transferable = no
 	weight = 100
-	    weight = 1000
-    highlight = yes
-    transferable = no
-    can_revolution_inherit = no
-    should_be_pinned_by_default_uninvolved_or_context = yes
+		
+	should_be_pinned_by_default_uninvolved_or_context = no
 }
 
 je_prohibition_usa = {
 	icon = "gfx/interface/icons/goods_icons/liquor.dds"
 
 	group = je_group_internal_affairs
+
+	activation_description = {
+		always = yes
+	}
 
 	is_shown_when_inactive = {
 		OR = {
@@ -138,7 +164,8 @@ je_prohibition_usa = {
 		}
 		has_distillery = yes
 		is_junior_in_customs_union = no
-		THIS = c:USA
+		exists = c:USA
+        THIS = c:USA
 	}
 
 	possible = {
@@ -155,7 +182,7 @@ je_prohibition_usa = {
 		any_scope_building = {
 			is_building_type = building_food_industry
 			is_distillery = yes
-			level >= 10
+			level >= 15
 		}
 	}
 
@@ -199,34 +226,55 @@ je_prohibition_usa = {
 		}
 	}
 
-	invalid = { # event prohibition.1.b ends the JE and applies these modifiers
-		OR = {
-			ig:ig_devout ?= {
-				has_modifier = rejected_prohibition_modifier
+	outcome = { # event prohibition.1.b ends the JE and applies these modifiers
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				ig:ig_devout ?= {
+					has_modifier = rejected_prohibition_modifier
+				}
+				ig:ig_intelligentsia ?= {
+					has_modifier = rejected_prohibition_modifier
+				}
 			}
-			ig:ig_intelligentsia ?= {
-				has_modifier = rejected_prohibition_modifier
-			}
+		}
+		effect = {
+			je_prohibition_cleanup = yes
 		}
 	}
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = prohibition_laws_var
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					has_variable = prohibition_laws_var
+				}
+				scope:journal_entry = { is_goal_complete = yes }
 			}
-			scope:journal_entry = { is_goal_complete = yes }
+			custom_tooltip = {
+				text = liquor_ban_tt
+				is_banning_goods = liquor
+			}
 		}
-		custom_tooltip = {
-			text = liquor_ban_tt
-			is_banning_goods = liquor
+		effect = {
+			custom_tooltip = prohibition_success.tt
+			trigger_event = { id = prohibition.8 }
 		}
 	}
 
-
-	on_complete = {
-		custom_tooltip = prohibition_success.tt
-		trigger_event = { id = prohibition.8 }
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			je_prohibition_cleanup = yes
+		}
 	}
 
 	timeout = 5475
@@ -243,9 +291,6 @@ je_prohibition_usa = {
 
 	transferable = no
 	weight = 100
-	    weight = 1000
-    highlight = yes
-    transferable = no
-    can_revolution_inherit = no
-    should_be_pinned_by_default_uninvolved_or_context = yes
+		
+	should_be_pinned_by_default_uninvolved_or_context = no
 }

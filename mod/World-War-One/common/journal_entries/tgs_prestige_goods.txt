@@ -3,6 +3,10 @@
 
     group = je_group_technology
 
+    activation_description = {
+		always = yes
+	}
+
     is_shown_when_inactive = {
         has_dlc_feature = mp1_content
         any_company = {
@@ -49,7 +53,12 @@
         }
     }
 
-    complete = {
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
         trigger_if = {
             limit = {
                 has_variable = prestige_good_generic_movies_var
@@ -75,6 +84,21 @@
                 "goods_production_rank(scope:relevant_goods)" <= 3
             }
         }
+        }
+        effect = {
+        if = {
+            limit = {
+                exists = scope:relevant_company
+            }
+            custom_tooltip = {
+                text = je_prestige_goods_popular_art_reward_tt
+                scope:relevant_company ?= {
+                    set_variable = prestige_good_generic_movies_var
+                }
+            }
+        }
+        post_notification = prestige_goods_popular_art_unlocked
+        }
     }
 
     on_monthly_pulse = {
@@ -88,27 +112,6 @@
                 }
                 change_variable = { name = prestige_good_generic_movies_var add = 1 }
             }
-        }
-    }
-
-    on_complete = {
-        if = {
-            limit = {
-                exists = scope:relevant_company
-            }
-            custom_tooltip = {
-                text = je_prestige_goods_popular_art_reward_tt
-                scope:relevant_company ?= {
-                    set_variable = prestige_good_generic_movies_var
-                }
-            }
-        }
-        post_notification = prestige_goods_popular_art_unlocked
-    }
-
-    invalid = {
-        NOT = {
-            exists = scope:relevant_company
         }
     }
 
@@ -134,6 +137,10 @@ je_prestige_goods_planes = {
     icon = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_modern_monoplane.dds"
 
     group = je_group_technology
+
+    activation_description = {
+		always = yes
+	}
 
     is_shown_when_inactive = {
         has_dlc_feature = mp1_content
@@ -181,8 +188,13 @@ je_prestige_goods_planes = {
         }
     }
 
-    complete = {
-        trigger_if = {
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            trigger_if = {
             limit = {
                 has_variable = prestige_good_modern_monoplane_var
             }
@@ -207,6 +219,21 @@ je_prestige_goods_planes = {
                 "goods_production_rank(scope:relevant_goods)" <= 3
             }
         }
+        }
+        effect = {
+        if = {
+            limit = {
+                exists = scope:relevant_company
+            }
+            custom_tooltip = {
+                text = je_prestige_goods_aeroplanes_reward_tt
+                scope:relevant_company ?= {
+                    set_variable = prestige_good_modern_monoplane_var
+                }
+            }
+        }
+        post_notification = prestige_goods_aeroplanes_unlocked
+        }
     }
 
     on_monthly_pulse = {
@@ -220,27 +247,6 @@ je_prestige_goods_planes = {
                 }
                 change_variable = { name = prestige_good_modern_monoplane_var add = 1 }
             }
-        }
-    }
-
-    on_complete = {
-        if = {
-            limit = {
-                exists = scope:relevant_company
-            }
-            custom_tooltip = {
-                text = je_prestige_goods_aeroplanes_reward_tt
-                scope:relevant_company ?= {
-                    set_variable = prestige_good_modern_monoplane_var
-                }
-            }
-        }
-        post_notification = prestige_goods_aeroplanes_unlocked
-    }
-
-    invalid = {
-        NOT = {
-            exists = scope:relevant_company
         }
     }
 
@@ -266,6 +272,10 @@ je_prestige_goods_tanks = {
     icon = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_modern_heavy_tank.dds"
 
     group = je_group_technology
+
+    activation_description = {
+		always = yes
+	}
 
     is_shown_when_inactive = {
         has_dlc_feature = mp1_content
@@ -313,8 +323,14 @@ je_prestige_goods_tanks = {
         }
     }
 
-    complete = {
-        trigger_if = {
+
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+           trigger_if = {
             limit = {
                 has_variable = prestige_good_modern_heavy_tank_var
             }
@@ -339,6 +355,21 @@ je_prestige_goods_tanks = {
                 "goods_production_rank(scope:relevant_goods)" <= 3
             }
         }
+        }
+        effect = {
+             if = {
+            limit = {
+                exists = scope:relevant_company
+            }
+            custom_tooltip = {
+                text = je_prestige_goods_tanks_reward_tt
+                scope:relevant_company ?= {
+                    set_variable = prestige_good_modern_heavy_tank_var
+                }
+            }
+        }
+        post_notification = prestige_goods_tanks_unlocked
+        }
     }
 
     on_monthly_pulse = {
@@ -352,27 +383,6 @@ je_prestige_goods_tanks = {
                 }
                 change_variable = { name = prestige_good_modern_heavy_tank_var add = 1 }
             }
-        }
-    }
-
-    on_complete = {
-        if = {
-            limit = {
-                exists = scope:relevant_company
-            }
-            custom_tooltip = {
-                text = je_prestige_goods_tanks_reward_tt
-                scope:relevant_company ?= {
-                    set_variable = prestige_good_modern_heavy_tank_var
-                }
-            }
-        }
-        post_notification = prestige_goods_tanks_unlocked
-    }
-
-    invalid = {
-        NOT = {
-            exists = scope:relevant_company
         }
     }
 
@@ -398,6 +408,10 @@ je_prestige_goods_luxury_cars = {
     icon = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_luxury_car.dds"
 
     group = je_group_technology
+
+    activation_description = {
+		always = yes
+	}
 
     is_shown_when_inactive = {
         has_dlc_feature = mp1_content
@@ -445,8 +459,13 @@ je_prestige_goods_luxury_cars = {
         }
     }
 
-    complete = {
-        trigger_if = {
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+              trigger_if = {
             limit = {
                 has_variable = prestige_good_luxury_car_var
             }
@@ -471,6 +490,21 @@ je_prestige_goods_luxury_cars = {
                 "goods_production_rank(scope:relevant_goods)" <= 3
             }
         }
+        }
+        effect = {
+             if = {
+            limit = {
+                exists = scope:relevant_company
+            }
+            custom_tooltip = {
+                text = je_prestige_goods_automobiles_reward_tt
+                scope:relevant_company ?= {
+                    set_variable = prestige_good_luxury_car_var
+                }
+            }
+        }
+        post_notification = prestige_goods_automobiles_unlocked
+        }
     }
 
     on_monthly_pulse = {
@@ -484,27 +518,6 @@ je_prestige_goods_luxury_cars = {
                 }
                 change_variable = { name = prestige_good_luxury_car_var add = 1 }
             }
-        }
-    }
-
-    on_complete = {
-        if = {
-            limit = {
-                exists = scope:relevant_company
-            }
-            custom_tooltip = {
-                text = je_prestige_goods_automobiles_reward_tt
-                scope:relevant_company ?= {
-                    set_variable = prestige_good_luxury_car_var
-                }
-            }
-        }
-        post_notification = prestige_goods_automobiles_unlocked
-    }
-
-    invalid = {
-        NOT = {
-            exists = scope:relevant_company
         }
     }
 

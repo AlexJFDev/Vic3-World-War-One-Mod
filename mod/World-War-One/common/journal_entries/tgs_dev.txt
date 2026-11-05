@@ -2,6 +2,10 @@
     icon = "gfx/interface/icons/goods_icons/aeroplanes.dds"
     group = je_group_technology
 
+    activation_description = {
+		always = yes
+	}
+
     is_shown_when_inactive = {
        country_rank >= rank_value:major_power
        has_technology_researched = trench_works
@@ -38,6 +42,10 @@ je_mechanized_warfare = {
     icon = "gfx/interface/icons/goods_icons/tanks.dds"
     group = je_group_technology
 
+    activation_description = {
+		always = yes
+	}
+
     is_shown_when_inactive = {
        country_rank >= rank_value:major_power
        has_technology_researched = trench_works
@@ -73,6 +81,10 @@ je_mechanized_warfare = {
 je_american_expeditionary_forces = {
     icon = "gfx/interface/icons/event_icons/usa_icon.dds"
     group = je_group_internal_affairs
+
+    activation_description = {
+		always = yes
+	}
 
     is_shown_when_inactive = {
        exists = c:USA
@@ -128,6 +140,10 @@ je_american_expeditionary_forces = {
 je_germany_ai_blockade = {
     icon = "gfx/interface/icons/commander_order_icons/blockade.dds"
     group = je_group_internal_affairs
+
+    activation_description = {
+		always = yes
+	}
 
     is_shown_when_inactive = {
        exists = c:GER
@@ -188,6 +204,10 @@ je_germany_ai_blockade = {
 je_ai_allies_landings = {
     icon = "gfx/interface/icons/invention_icons/landing_craft.dds"
     group = je_group_internal_affairs
+
+    activation_description = {
+		always = yes
+	}
 
     is_shown_when_inactive = {
        exists = c:USA
@@ -267,6 +287,10 @@ je_ai_allies_landings = {
 je_atomic_bomb = {
     texture = "gfx/interface/icons/invention_icons/nuclear_weapons.dds"
     group = je_group_technology
+
+    activation_description = {
+		always = yes
+	}
 
     is_shown_when_inactive = {
        exists = c:USA
