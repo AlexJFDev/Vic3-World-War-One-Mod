@@ -99,18 +99,51 @@ french_empire_clothes_pop_trigger = {
 	}
 }
 
+russian_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = home_country
+		OR = {
+			c:RUS ?= owner
+			owner ?= {
+				has_variable = russian_warlord_country
+			}
+		}
+	}
+}
+
+russian_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			c:RUS ?= this
+			owner ?= {
+				has_variable = russian_warlord_country
+			}
+		}
+	}
+}
+
 russian_empire_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		exists = c:RUS
 		exists = home_country
-		home_country = {
-			OR = {
-				AND = {
-					c:RUS = this
-					is_subject = no # preventing uniform conflicts if RUS becomes a subject of another country with puppet uniforms
+
+		OR = {
+			AND = {
+				exists = c:RUS
+				home_country = {
+					OR = {
+						AND = {
+							c:RUS = this
+							is_subject = no # preventing uniform conflicts if RUS becomes a subject of another country with puppet uniforms
+						}
+						is_subject_of = c:RUS
+					}
 				}
-				is_subject_of = c:RUS
+			}
+			owner ?= {
+				has_variable = russian_warlord_country
 			}
 		}
 	}
@@ -119,14 +152,21 @@ russian_empire_clothes_trigger = {
 russian_empire_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		exists = c:RUS
-		home_country = {
-			OR = {
-				AND = {
-					c:RUS = this
-					is_subject = no # preventing uniform conflicts if RUS becomes a subject of another country with puppet uniforms
+		OR = {
+			AND = {
+				exists = c:RUS
+				owner ?= {
+					OR = {
+						AND = {
+							c:RUS = this
+							is_subject = no # preventing uniform conflicts if RUS becomes a subject of another country with puppet uniforms
+						}
+						is_subject_of = c:RUS
+					}
 				}
-				is_subject_of = c:RUS
+			}
+			owner ?= {
+				has_variable = russian_warlord_country
 			}
 		}
 	}
@@ -141,7 +181,10 @@ german_clothes_trigger = {
 			NOT = {
 				c:AUS ?= this
 			}
-			country_has_primary_culture = cu:german
+			OR = {
+				country_has_primary_culture = cu:north_german
+				country_has_primary_culture = cu:south_german
+			}
 		}
 	}
 }
@@ -154,7 +197,10 @@ german_clothes_pop_trigger = {
 			NOT = {
 				c:AUS ?= this
 			}
-			country_has_primary_culture = cu:german
+			OR = {
+				country_has_primary_culture = cu:north_german
+				country_has_primary_culture = cu:south_german
+			}
 		}
 	}
 }
@@ -280,6 +326,128 @@ independent_hungarian_clothes_pop_trigger = {
 				c:AUS ?= this
 				c:KUK ?= this
 			}
+		}
+	}
+}
+
+polish_early_clothes_trigger = {
+	exists = scope:character
+	scope:character ?= {
+		home_country ?= {
+			country_has_primary_culture = cu:polish
+			OR = {
+				is_subject = no
+				AND = {
+					exists = overlord
+					is_diplomatic_play_enemy_of = overlord
+				}
+			}
+			NOT = {
+				has_technology_researched = general_staff
+			}
+		}
+	}
+}
+
+polish_early_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop ?= {
+		home_country ?= {
+			country_has_primary_culture = cu:polish
+			OR = {
+				is_subject = no
+				AND = {
+					exists = overlord
+					is_diplomatic_play_enemy_of = overlord
+				}
+			}
+			NOT = {
+				has_technology_researched = general_staff
+			}
+		}
+	}
+}
+
+polish_insurgent_clothes_trigger = {
+	exists = scope:character
+	scope:character ?= {
+		home_country ?= {
+			country_has_primary_culture = cu:polish
+			is_subject = yes
+			is_diplomatic_play_enemy_of = overlord
+		}
+	}
+}
+
+polish_insurgent_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop ?= {
+		home_country ?= {
+			country_has_primary_culture = cu:polish
+			is_subject = yes
+			is_diplomatic_play_enemy_of = overlord
+		}
+	}
+}
+
+polish_independent_clothes_trigger = {
+	exists = scope:character
+	scope:character ?= {
+		home_country ?= {
+			country_has_primary_culture = cu:polish
+			is_subject = no
+			has_technology_researched = general_staff
+			NOT = {
+				has_technology_researched = automatic_machine_guns
+			}
+		}
+	}
+}
+
+polish_independent_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop ?= {
+		home_country ?= {
+			country_has_primary_culture = cu:polish
+			is_subject = no
+			has_technology_researched = general_staff
+			NOT = {
+				has_technology_researched = automatic_machine_guns
+			}
+		}
+	}
+}
+
+polish_late_clothes_trigger = {
+	exists = scope:character
+	scope:character ?= {
+		home_country ?= {
+			country_has_primary_culture = cu:polish
+			OR = {
+				is_subject = no
+				AND = {
+					exists = overlord
+					is_diplomatic_play_enemy_of = overlord
+				}
+			}
+			has_technology_researched = automatic_machine_guns
+		}
+	}
+}
+
+polish_late_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop ?= {
+		home_country ?= {
+			country_has_primary_culture = cu:polish
+			OR = {
+				is_subject = no
+				AND = {
+					exists = overlord
+					is_diplomatic_play_enemy_of = overlord
+				}
+			}
+			has_technology_researched = automatic_machine_guns
 		}
 	}
 }

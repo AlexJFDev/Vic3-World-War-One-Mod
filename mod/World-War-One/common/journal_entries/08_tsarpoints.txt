@@ -1,0 +1,109 @@
+﻿je_tp_fav_rasputin = {
+	icon = "gfx/interface/icons/event_icons/event_imperial_eagle.dds"
+
+	group = je_group_tsarpoints
+	dlc = dlc019
+
+	activation_description = {
+		always = yes
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = RUS_grigoriy_rasputin
+			}
+			save_scope_as = je_tp_fav_rasputin_scope
+		}
+		random_scope_character = {
+			limit = {
+				has_template = RUS_alexei_ii
+			}
+			save_scope_as = alexei_scope
+		}
+		scope:je_tp_fav_rasputin_scope.interest_group ?= {
+			save_scope_as = je_tp_fav_rasputin_ig
+		}
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			100 = 0
+			10 = rasputin.2 # demands of Rasputin's dismissal
+			10 = rasputin.3 # Khioniya Guseva's attempt to kill Rasputin
+			10 = rasputin.4 # general assassination attempts
+			50 = rasputin.5 # introducing Prince Felix Yusupov
+		}
+	}
+
+	outcome = { # success
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			scope:fav_character_scope ?= {
+				custom_tooltip = {
+					text = je_tp_fav_rasputin_is_rasputin_tt
+					has_template = RUS_grigoriy_rasputin
+				}
+				current_career_length = {
+					role = character_role_favorite
+					years = 10
+				}
+			}
+			scope:je_tp_fav_rasputin_ig ?= {
+				is_marginal = no
+			}
+		}
+		effect = {
+			scope:fav_character_scope ?= {
+				custom_tooltip = {
+					text = je_tp_fav_rasputin_name_change_tt
+					set_last_name = Rasputin-Noviy
+				}
+				add_modifier = {
+					name = modifier_miracle_worker
+					days = moderately_long_modifier_time
+				}
+			}
+			scope:alexei_scope ?= {
+				add_modifier = {
+					name = modifier_holy_blessing
+				}
+				custom_tooltip_no_bullet = {
+					text = je_tp_fav_rasputin_alexei_health_tt
+				}
+			}
+			hidden_effect = {
+				set_variable = je_tp_fav_rasputin_complete_var # This is used to make sure Alexei won't get russian_character_is_marked_for_death_chance, it should NOT be cleared on je_tsarpoints_cleanup_fav_rasputin_variables. It is cleared on_action in on_character_death for Alexei.
+			}
+		}
+	}
+
+	outcome = { # fail
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				custom_tooltip = {
+					text = je_tp_fav_rasputin_not_favorite_tt
+					je_tsarpoints_favourite_check = yes
+				}
+				custom_tooltip = {
+					text = je_tp_fav_rasputin_no_alexei_tt
+					NOT = { scope:alexei_scope ?= { is_character_alive = yes } }
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				set_variable = je_tp_fav_rasputin_fail_var # This is used to make sure je_tp_fav_rasputin isn't selected again in the je_tsarpoints_draw_favourite_mission scripted effect nested within je_tsarpoints_determine_favourite_mission. It should NOT be cleared on je_tsarpoints_cleanup_fav_rasputin_variables. It is cleared in the je_tsarpoints_cleanup_master_variables scripted effect when je_tsarpoints_master concludes.
+			}
+		}
+	}
+
+	weight = 1000
+}

@@ -41,13 +41,13 @@ ship_type_ship_of_the_line = {
 
         ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.5
         ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.5
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
     }
 
     construction_goods = {
-        goods_input_hardwood_add = 650
-        goods_input_fabric_add = 390
+        goods_input_hardwood_add = 420
+        goods_input_fabric_add = 250
     }
 
     materiel_goods = {
@@ -123,7 +123,7 @@ ship_type_monitor = {
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 17
-        ship_screening_add = 5
+        ship_screening_add = 17
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 15
@@ -133,13 +133,13 @@ ship_type_monitor = {
 
         ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.2
         ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.2
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.1
     }
 
     construction_goods = {
-        goods_input_iron_add = 780
-        goods_input_engines_add = 260
+        goods_input_iron_add = 500
+        goods_input_engines_add = 165
     }
 
     materiel_goods = {
@@ -229,13 +229,13 @@ ship_type_early_ironclad = {
 
         ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.5
         ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.5
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
     }
 
     construction_goods = {
-        goods_input_iron_add = 2500
-        goods_input_engines_add = 800
+        goods_input_iron_add = 1540
+        goods_input_engines_add = 490
     }
 
     materiel_goods = {
@@ -310,7 +310,7 @@ ship_type_coastal_defense_ship = {
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 36
-        ship_screening_add = 10
+        ship_screening_add = 36
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 25
@@ -320,7 +320,7 @@ ship_type_coastal_defense_ship = {
 
         ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.5
         ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.5
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
     }
 
@@ -330,8 +330,8 @@ ship_type_coastal_defense_ship = {
     }
 
     construction_goods = {
-        goods_input_iron_add = 2500
-        goods_input_engines_add = 800
+        goods_input_iron_add = 1530
+        goods_input_engines_add = 490
     }
 
     materiel_goods = {
@@ -418,14 +418,14 @@ ship_type_modern_ironclad = {
 
         ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.66
         ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.66
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.66
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 2000
-        goods_input_iron_add = 900
-        goods_input_engines_add = 900
+        goods_input_steel_add = 1230
+        goods_input_iron_add = 550
+        goods_input_engines_add = 550
     }
 
     materiel_goods = {
@@ -468,6 +468,7 @@ ship_type_modern_ironclad = {
             utility_mod_extended_sick_bay
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
+            utility_mod_searchlights
         }
     }
 }
@@ -515,14 +516,14 @@ ship_type_pre_dreadnought = {
 
         ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.66
         ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.66
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.66
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 3000
-        goods_input_iron_add = 2000
-        goods_input_engines_add = 2000
+        goods_input_steel_add = 1830
+        goods_input_iron_add = 1210
+        goods_input_engines_add = 1210
     }
 
     materiel_goods = {
@@ -566,6 +567,7 @@ ship_type_pre_dreadnought = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
         ship_mod_slot_utility_2 = {
             utility_mod_patrol_boats
@@ -575,6 +577,7 @@ ship_type_pre_dreadnought = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
     }
 }
@@ -618,14 +621,14 @@ ship_type_dreadnought = {
 
         ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.66
         ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.66
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.66
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 4000
-        goods_input_iron_add = 2600
-        goods_input_engines_add = 2600
+        goods_input_steel_add = 2450
+        goods_input_iron_add = 1570
+        goods_input_engines_add = 1570
     }
 
     materiel_goods = {
@@ -669,6 +672,7 @@ ship_type_dreadnought = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
         ship_mod_slot_utility_2 = {
             utility_mod_patrol_boats
@@ -678,6 +682,7 @@ ship_type_dreadnought = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
     }
 }
@@ -717,14 +722,14 @@ ship_type_super_dreadnought = {
 
         ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.66
         ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.66
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.66
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.8
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 5200
-        goods_input_iron_add = 2600
-        goods_input_engines_add = 2600
+        goods_input_steel_add = 3150
+        goods_input_iron_add = 1580
+        goods_input_engines_add = 1580
     }
 
     materiel_goods = {
@@ -768,6 +773,7 @@ ship_type_super_dreadnought = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
         ship_mod_slot_utility_2 = {
             utility_mod_patrol_boats
@@ -777,6 +783,7 @@ ship_type_super_dreadnought = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
         ship_mod_slot_utility_3 = {
             utility_mod_patrol_boats
@@ -786,6 +793,7 @@ ship_type_super_dreadnought = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
     }
 }
@@ -832,11 +840,13 @@ ship_type_frigate = {
         ship_blockade_strength_add = 25
         ship_carrying_capacity_add = 0.15
         ship_marine_capacity_add = 0.10
+
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_hardwood_add = 358
-        goods_input_fabric_add = 215
+        goods_input_hardwood_add = 230
+        goods_input_fabric_add = 140
     }
 
     materiel_goods = {
@@ -919,12 +929,14 @@ ship_type_iron_frigate = {
         ship_blockade_strength_add = 75
         ship_carrying_capacity_add = 0.15
         ship_marine_capacity_add = 0.10
+
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_hardwood_add = 390
-        goods_input_iron_add = 650
-        goods_input_fabric_add = 390
+        goods_input_hardwood_add = 250
+        goods_input_iron_add = 410
+        goods_input_fabric_add = 250
     }
 
     materiel_goods = {
@@ -998,8 +1010,8 @@ ship_type_early_troop_ship = {
     }
 
     construction_goods = {
-        goods_input_hardwood_add = 345
-        goods_input_fabric_add = 170
+        goods_input_hardwood_add = 230
+        goods_input_fabric_add = 110
     }
 
     materiel_goods = {
@@ -1008,7 +1020,7 @@ ship_type_early_troop_ship = {
     }
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
-    profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_troop_ship.dds"
+    profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_early_troop_ship.dds"
 
     modifications = {
         ship_mod_slot_armor = {
@@ -1030,6 +1042,9 @@ ship_type_early_troop_ship = {
             ship_mod_early_troop_ship_range_light
             ship_mod_early_troop_ship_range_medium
             ship_mod_early_troop_ship_range_high
+        }
+        ship_mod_slot_utility_1 = {
+            utility_mod_landing_skiffs
         }
     }
 
@@ -1068,8 +1083,8 @@ ship_type_troop_ship = {
     }
 
     construction_goods = {
-        goods_input_hardwood_add = 520
-        goods_input_fabric_add = 260
+        goods_input_hardwood_add = 340
+        goods_input_fabric_add = 165
     }
 
     materiel_goods = {
@@ -1103,6 +1118,10 @@ ship_type_troop_ship = {
             ship_mod_troop_ship_range_light
             ship_mod_troop_ship_range_medium
             ship_mod_troop_ship_range_high
+        }
+        ship_mod_slot_utility_1 = {
+            utility_mod_landing_skiffs
+            utility_mod_camouflage
         }
     }
 }
@@ -1147,11 +1166,12 @@ ship_type_protected_cruiser = {
         ship_blockade_strength_add = 150
         ship_carrying_capacity_add = 0.15
         ship_marine_capacity_add = 0.075
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 1300
-        goods_input_engines_add = 650
+        goods_input_steel_add = 810
+        goods_input_engines_add = 410
     }
 
     materiel_goods = {
@@ -1195,6 +1215,7 @@ ship_type_protected_cruiser = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
     }
 }
@@ -1235,11 +1256,12 @@ ship_type_armored_cruiser = {
         ship_blockade_strength_add = 250
         ship_carrying_capacity_add = 0.3
         ship_marine_capacity_add = 0.15
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 1709
-        goods_input_engines_add = 569
+        goods_input_steel_add = 1060
+        goods_input_engines_add = 350
     }
 
     materiel_goods = {
@@ -1282,6 +1304,7 @@ ship_type_armored_cruiser = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
     }
 }
@@ -1318,11 +1341,12 @@ ship_type_light_cruiser = {
         ship_blockade_strength_add = 350
         ship_carrying_capacity_add = 0.3
         ship_marine_capacity_add = 0.15
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 1645
-        goods_input_engines_add = 822
+        goods_input_steel_add = 1020
+        goods_input_engines_add = 510
     }
 
     materiel_goods = {
@@ -1365,6 +1389,7 @@ ship_type_light_cruiser = {
             utility_mod_fire_control_system
             utility_mod_advanced_explosives
             utility_mod_camouflage
+            utility_mod_searchlights
         }
     }
 }
@@ -1403,12 +1428,13 @@ ship_type_seaplane_tender = {
         ship_visibility_add = 25
         ship_detection_add = 150
         ship_blockade_strength_add = 350
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 1300
-        goods_input_iron_add = 650
-        goods_input_engines_add = 650
+        goods_input_steel_add = 800
+        goods_input_iron_add = 400
+        goods_input_engines_add = 400
     }
 
     materiel_goods = {
@@ -1482,12 +1508,13 @@ ship_type_aircraft_carrier = {
         ship_visibility_add = 100
         ship_detection_add = 300
         ship_blockade_strength_add = 1000
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 2500
-        goods_input_iron_add = 900
-        goods_input_engines_add = 900
+        goods_input_steel_add = 1540
+        goods_input_iron_add = 560
+        goods_input_engines_add = 560
     }
 
     materiel_goods = {
@@ -1584,12 +1611,13 @@ ship_type_torpedo_boat = {
         ship_battle_against_ship_type_pre_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_super_dreadnought_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 650
-        goods_input_iron_add = 325
-        goods_input_engines_add = 325
+        goods_input_steel_add = 400
+        goods_input_iron_add = 200
+        goods_input_engines_add = 200
     }
 
     materiel_goods = {
@@ -1655,7 +1683,7 @@ ship_type_torpedo_boat_destroyer = {
         ship_hull_damage_add = 50
         ship_crew_damage_add = 30
         ship_armor_add = 20
-        ship_critical_hit_chance_add = 0.10
+        ship_critical_hit_chance_add = 0.15
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 24
         ship_screening_add = 55
@@ -1672,12 +1700,13 @@ ship_type_torpedo_boat_destroyer = {
         ship_battle_against_ship_type_pre_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_super_dreadnought_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
 
     construction_goods = {
-        goods_input_steel_add = 1170
-        goods_input_engines_add = 390
+        goods_input_steel_add = 730
+        goods_input_engines_add = 240
     }
 
     materiel_goods = {
@@ -1722,7 +1751,7 @@ ship_type_torpedo_boat_destroyer = {
 ship_type_submarine = {
 
     ship_group = ship_group_torpedo_craft
-    ai_ship_category = ai_ship_category_torpedo_craft
+    ai_ship_category = ai_ship_category_submarines
 
     modification_construction_cost = 80
 
@@ -1741,10 +1770,11 @@ ship_type_submarine = {
         ship_critical_hit_chance_add = 0.15
         ship_critical_hit_multiplier_add = 0.5
         ship_vulnerability_add = 4
-        ship_screening_add = 5
+        ship_screening_add = 6
         ship_readiness_gain_add = 10
         ship_accuracy_add = 7
         ship_visibility_add = 5
+        ship_suffered_accuracy_mult = -0.5
         ship_detection_add = 20
         ship_blockade_strength_add = 25
 
@@ -1755,11 +1785,12 @@ ship_type_submarine = {
         ship_battle_against_ship_type_pre_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_super_dreadnought_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_submarine_accuracy_mult = 0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 1658
-        goods_input_engines_add = 553
+        goods_input_steel_add = 1020
+        goods_input_engines_add = 340
     }
 
     materiel_goods = {
@@ -1837,12 +1868,13 @@ ship_type_destroyer = {
         ship_battle_against_ship_type_pre_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_super_dreadnought_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_submarine_accuracy_mult = 1.0
     }
 
     construction_goods = {
-        goods_input_steel_add = 1300
-        goods_input_iron_add = 650
-        goods_input_engines_add = 650
+        goods_input_steel_add = 800
+        goods_input_iron_add = 400
+        goods_input_engines_add = 400
     }
 
     materiel_goods = {

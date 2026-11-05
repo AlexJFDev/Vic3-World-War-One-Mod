@@ -12,8 +12,8 @@ utility_mod_patrol_boats = { #Steel and engines
 	}
 
 	construction_goods = {
-		goods_input_steel_add = 4
-		goods_input_engines_add = 1
+		goods_input_steel_add = 50
+		goods_input_engines_add = 10
 	}
 
 	ai_weight = {
@@ -31,12 +31,12 @@ utility_mod_extended_sick_bay = {
 	icon = "gfx/interface/icons/military_icons/navy_icons/crew_casualties.dds"
 
 	modifier = {
-		ship_suffered_crew_damage_mult = -0.5
+		ship_suffered_crew_damage_mult = -0.25
 	}
 
 	construction_goods = {
-		goods_input_fabric_add = 5
-		goods_input_pharmaceuticals_add = 5
+		goods_input_fabric_add = 50
+		goods_input_pharmaceuticals_add = 50
 	}
 
 	ai_weight = {
@@ -47,7 +47,6 @@ utility_mod_extended_sick_bay = {
 	}
 }
 
-
 # Landing Skiffs
 
 utility_mod_landing_skiffs = {
@@ -55,12 +54,12 @@ utility_mod_landing_skiffs = {
 	icon = "gfx/interface/icons/military_icons/navy_icons/marine_capacity.dds"
 
 	modifier = {
-		ship_naval_invasion_efficiency_mult = 0.3
+		ship_naval_invasion_efficiency_mult = 0.33
 	}
 
 	construction_goods = {
-		goods_input_steel_add = 5
-		goods_input_engines_add = 2
+		goods_input_steel_add = 100
+		goods_input_engines_add = 30
 	}
 
 	ai_weight = {
@@ -81,7 +80,7 @@ utility_mod_large_carronades = {
 	}
 
 	construction_goods = {
-		goods_input_artillery_add = 8
+		goods_input_artillery_add = 45
 	}
 
 	ai_weight = {
@@ -89,7 +88,6 @@ utility_mod_large_carronades = {
 		multiply = ship_mod_market_multiplier
 	}
 }
-
 
 # Fire-Control System
 
@@ -98,12 +96,14 @@ utility_mod_fire_control_system = {
 	icon = "gfx/interface/icons/military_icons/navy_icons/accuracy.dds"
 
 	modifier = {
-		ship_accuracy_mult = 0.3
-		ship_readiness_gain_mult = 0.1
+		ship_readiness_gain_mult = 0.15
+		ship_battle_against_ship_type_torpedo_boat_accuracy_mult = 0.2
+		ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = 0.2
+		ship_battle_against_ship_type_destroyer_accuracy_mult = 0.2
 	}
 
 	construction_goods = {
-		goods_input_radios_add = 6
+		goods_input_radios_add = 100
 	}
 
 	ai_weight = {
@@ -112,7 +112,6 @@ utility_mod_fire_control_system = {
 		multiply = ship_mod_capital_doctrine
 	}
 }
-
 
 # Range Finder
 
@@ -121,12 +120,12 @@ utility_mod_range_finder = {
 	icon = "gfx/interface/icons/military_icons/navy_icons/accuracy.dds"
 
 	modifier = {
-		ship_accuracy_mult = 0.15
+		ship_accuracy_mult = 0.2
 		ship_screening_mult = 0.2
 	}
 
 	construction_goods = {
-		goods_input_radios_add = 3
+		goods_input_radios_add = 200
 	}
 
 	ai_weight = {
@@ -135,7 +134,6 @@ utility_mod_range_finder = {
 		multiply = ship_mod_capital_doctrine
 	}
 }
-
 
 # Searchlights
 
@@ -149,7 +147,7 @@ utility_mod_searchlights = {
 	}
 
 	construction_goods = {
-		goods_input_glass_add = 3
+		goods_input_glass_add = 50
 	}
 
 	ai_weight = {
@@ -157,7 +155,6 @@ utility_mod_searchlights = {
 		multiply = ship_mod_market_multiplier
 	}
 }
-
 
 # Advanced Explosives
 
@@ -167,11 +164,11 @@ utility_mod_advanced_explosives = {
 
 	modifier = {
 		ship_critical_hit_chance_mult = 0.5
-		ship_crew_damage_mult = 0.25
+		ship_crew_damage_mult = 0.1
 	}
 
 	construction_goods = {
-		goods_input_explosives_add = 5
+		goods_input_explosives_add = 100
 	}
 
 	ai_weight = {
@@ -180,7 +177,6 @@ utility_mod_advanced_explosives = {
 	}
 }
 
-
 # Camouflage
 
 utility_mod_camouflage = {
@@ -188,12 +184,12 @@ utility_mod_camouflage = {
 	icon = "gfx/interface/icons/military_icons/navy_icons/armor_navy.dds"
 
 	modifier = {
-		ship_suffered_accuracy_mult = -0.15
+		ship_suffered_accuracy_mult = -0.1
 		ship_visibility_mult = -0.25
 	}
 
 	construction_goods = {
-		goods_input_dye_add = 5
+		goods_input_dye_add = 50
 	}
 
 	ai_weight = {
