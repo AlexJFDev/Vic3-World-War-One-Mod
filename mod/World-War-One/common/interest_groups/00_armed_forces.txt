@@ -1,4 +1,4 @@
-﻿REPLACE_OR_CREATE:ig_armed_forces = {
+﻿ig_armed_forces = {
 	color = hsv{ 0.09 0.29 0.39 }
 	texture = "gfx/interface/icons/ig_icons/armed_forces.dds"
 	layer = "revolution_dynamic_armed_forces"
@@ -7,12 +7,13 @@
 	ideologies = {
 		ideology_jingoist
 		ideology_loyalist
-		ideology_patriotic
+		ideology_militarist
 	}
 
 	character_ideologies = {
 		ideology_moderate
 		ideology_authoritarian
+		ideology_jingoist
 	}
 
 	enable = {
@@ -29,29 +30,6 @@
 	on_enable = {
 		# ONLY HANDLE IG TRAITS IN THIS BLOCK
 		ig:ig_armed_forces ?= {
-			if = {
-				limit = {
-					owner = {
-						c:CHI ?= this
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_newly_created_army
-				set_ig_trait = ig_trait:ig_trait_self_strengthening
-				set_ig_trait = ig_trait:ig_trait_parochial_leadership
-			}
-			else_if = {
-				limit = {
-					owner = {
-						OR = {
-							c:FRA ?= this
-							country_has_primary_culture = cu:french
-						}
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_materiel_waste
-				set_ig_trait = ig_trait:ig_trait_veteran_consultation
-				set_ig_trait = ig_trait:ig_trait_elan_vital
-			}
 			else_if = {
 				limit = {
 					owner = {
@@ -88,27 +66,6 @@
 				set_ig_trait = ig_trait:ig_trait_imperial_service
 				set_ig_trait = ig_trait:ig_trait_veerta
 			}
-			else_if = {
-				limit = {
-					owner = {
-						c:PAN ?= this
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_materiel_waste
-				set_ig_trait = ig_trait:ig_trait_khalsa
-				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
-			}
-			else_if = {
-				limit = {
-					owner = {
-						c:ZAN ?= this
-						any_primary_culture = { cu:arab = this }
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_divided_ranks
-				set_ig_trait = ig_trait:ig_trait_veteran_consultation
-				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
-			}
 			else = {
 				set_ig_trait = ig_trait:ig_trait_materiel_waste
 				set_ig_trait = ig_trait:ig_trait_veteran_consultation
@@ -120,21 +77,17 @@
 		if = { # Caudillo Ideology
 			limit = {
 				is_in_geographic_region = geographic_region_latin_america
-				country_has_primary_culture = cu:latino_american
+				OR = {
+					country_has_primary_culture = cu:platinean
+					country_has_primary_culture = cu:south_andean
+					country_has_primary_culture = cu:north_andean
+					country_has_primary_culture = cu:central_american
+					country_has_primary_culture = cu:mexican
+				}
 			}
 			add_modifier = age_of_caudillos_modifier
 			ig:ig_armed_forces ?= {
 				add_ideology = ideology_caudillismo
-			}
-		}
-		else_if = { # Samurai
-			limit = {
-				country_has_primary_culture = cu:japanese
-				NOT = { has_global_variable = fall_of_the_samurai_global_var }
-			}
-			ig:ig_armed_forces ?= {
-				add_ideology = ideology_bakufu
-				set_interest_group_name = ig_samurai
 			}
 		}
 		else_if = { # British India
@@ -145,14 +98,12 @@
 				set_interest_group_name = ig_presidency_armies
 			}
 		}
-		else_if = { # Sikh Empire
+		else_if = {
 			limit = {
-				c:PAN ?= this
+				c:RUS ?= this
 			}
 			ig:ig_armed_forces ?= {
-				set_interest_group_name = ig_khalsaji
-				remove_ideology = ideology_jingoist
-				add_ideology = ideology_sikh_militancy
+				add_ideology = ideology_tsarist
 			}
 		}
 	}
@@ -174,11 +125,11 @@
 			trigger = {
 				c:ZAN ?= this
 				any_primary_culture = {
-					cu:arab = this
+					cu:bedouin = this
 				}
 			}
 			cultures = {
-				arab swahili baluchi
+				bedouin swahili baluchi
 			}
 		}
 		rule = {
@@ -186,6 +137,7 @@
 				c:PHI ?= this
 				NOT = { has_variable = je_philippines_main_reliance_happened }
 				NOT = { any_primary_culture = { cu:filipino = this } }
+				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
 				any_primary_culture = { cu:spanish = this }
 			}
 			cultures = {
@@ -198,12 +150,12 @@
 				any_primary_culture = {
 					AND = {
 						cu:spanish = this
-						cu:filipino = this
+						cu:filipino_hispanophone = this
 					}
 				}
 			}
 			cultures = {
-				spanish filipino
+				spanish filipino_hispanophone
 			}
 		}
 	}
@@ -240,6 +192,7 @@
 							OR = {
 								has_law_or_variant = law_type:law_colonial_resettlement
 								has_law_or_variant = law_type:law_frontier_colonization
+								has_law_or_variant = law_type:law_internal_colonization
 							}
 						}
 						state = {
@@ -352,6 +305,14 @@
 					}
 					add = 50
 				}
+				if = {
+					limit = {
+						owner = {
+							has_law = law_type:law_military_bureaucrats
+						}
+					}
+					add = 50
+				}
 			}
 		}
 
@@ -408,16 +369,15 @@
 			}
 		}
 
-		add = {
-			desc = "POP_MILITARY_BUREAUCRACY"
-			if = {
-				limit = {
-					is_pop_type = bureaucrats
-					owner = {
-						c:ALK ?= this
-						has_government_type = gov_chartered_company
-					}
+		if = {
+			limit = {
+				is_pop_type = bureaucrats
+				owner = {
+					has_law = law_type:law_military_bureaucrats
 				}
+			}
+			add = {
+				desc = "POP_MILITARY_BUREAUCRACY"
 				value = 100
 			}
 		}

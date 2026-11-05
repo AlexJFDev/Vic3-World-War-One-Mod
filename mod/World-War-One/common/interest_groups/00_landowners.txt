@@ -1,4 +1,4 @@
-﻿REPLACE_OR_CREATE:ig_landowners = {
+﻿ig_landowners = {
 	color = hsv{ 0.63 0.40 0.69 }
 	texture = "gfx/interface/icons/ig_icons/landowners.dds"
 	layer = "revolution_dynamic_landowners"
@@ -48,17 +48,7 @@
 			}
 			else_if = {
 				limit = {
-					OR = {
-						owner = { c:PRU ?= this}
-						AND = {
-							owner = { c:NGF ?= this}
-							c:NGF ?= { was_formed_from = PRU }
-						}
-						AND = {
-							owner = { c:GER ?= this }
-							c:GER ?= { was_formed_from = PRU }
-						}
-					}
+					owner = { c:GER ?= this}
 				}
 				set_ig_trait = ig_trait:ig_trait_noble_privileges
 				set_ig_trait = ig_trait:ig_trait_family_ties
@@ -66,17 +56,29 @@
 			}
 			else_if = {
 				limit = {
-					OR = {
-						owner = { c:AUS ?= this}
-						AND = {
-							owner = { c:GER ?= this }
-							c:GER ?= { was_formed_from = AUS }
-						}
-					}
+					owner = { c:AUS ?= this}
 				}
 				set_ig_trait = ig_trait:ig_trait_noble_privileges
 				set_ig_trait = ig_trait:ig_trait_family_ties
 				set_ig_trait = ig_trait:ig_trait_wiener_walzer
+			}
+			else_if = {
+				limit = {
+					owner = { c:USA ?= this}
+				}
+				set_ig_trait = ig_trait:ig_trait_noble_privileges
+				set_ig_trait = ig_trait:ig_trait_family_ties
+				set_ig_trait = ig_trait:ig_trait_patrician_philanthropy
+			}
+			else_if = {
+				limit = {
+					owner = {
+						country_has_primary_culture = cu:romanian
+					}
+				}
+				set_ig_trait = ig_trait:ig_trait_bad_boyars
+				set_ig_trait = ig_trait:ig_trait_family_ties
+				set_ig_trait = ig_trait:ig_trait_noblesse_oblige
 			}
 			else = {
 				set_ig_trait = ig_trait:ig_trait_noble_privileges
@@ -104,7 +106,7 @@
 		}
 		else_if = { # Junkers
 			limit = {
-				c:PRU ?= this
+				c:GER ?= this
 			}
 			ig:ig_landowners ?= {
 				set_interest_group_name = ig_junkers
@@ -118,6 +120,8 @@
 			}
 			ig:ig_landowners ?= {
 				set_interest_group_name = ig_gentry_assembly
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_russian_patriarchal
 			}
 		}
 		else_if = { # Roman Landowners
@@ -128,6 +132,15 @@
 				set_interest_group_name = ig_roman_landowners
 				remove_ideology = ideology_paternalistic
 				add_ideology = ideology_papal_paternalistic
+			}
+		}
+		else_if = { # Ali'i
+			limit = {
+				country_has_primary_culture = cu:hawaiian
+			}
+			ig:ig_landowners ?= {
+				set_interest_group_name = ig_alii
+				add_ideology = ideology_loyalist
 			}
 		}
 		else_if = { # Landed Gentry
@@ -157,6 +170,16 @@
 				set_interest_group_name = ig_yangban
 			}
 		}
+		else_if = { # Scholar Officials
+			limit = {
+				c:CHI ?= this
+			}
+			ig:ig_landowners ?= {
+				set_interest_group_name = ig_scholar_officials
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_scholar_paternalistic
+			}
+		}
 		else_if = { # Pious Spanish Landowners (and Magnatial Liberal Landowners)
 			limit = {
 				country_has_primary_culture = cu:spanish
@@ -184,12 +207,54 @@
 				}
 			}
 		}
-		else_if = { # South American Caudillos/republicans
+		else_if = { # Aristocracy of Officials
 			limit = {
 				country_has_primary_culture = cu:norwegian
 			}
 			ig:ig_landowners ?= {
 				set_interest_group_name = ig_aristocracy_of_officials
+			}
+		}
+		else_if = { # South American Caudillos/republicans
+			limit = {
+				OR = {
+					AND = {
+						c:USA ?= this
+						NOT = { exists = c:CSA }
+					}
+					country_has_primary_culture = cu:dixie
+				}
+			}
+			ig:ig_landowners ?= {
+				set_interest_group_name = ig_southern_planters
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_republican_paternalistic
+			}
+		}
+		else_if = { # South American Caudillos/republicans
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = language_hispanophone
+					has_discrimination_trait_group = heritage_group_european
+					NOT = { has_discrimination_trait = heritage_iberian }
+					NOT = { cu:caribeno = this }
+				}
+			}
+			ig:ig_landowners ?= {
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_republican_paternalistic
+			}
+		}
+		else_if = { # Boer republicanism, but only for states that are only Boer
+			limit = {
+				country_has_primary_culture = cu:boer
+				NOT = {
+					NOT = { any_primary_culture = { cu:boer = this } }
+				}
+			}
+			ig:ig_landowners ?= {
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_republican_paternalistic
 			}
 		}
 		else_if = { # India
@@ -213,6 +278,16 @@
 				}
 				set_ig_trait = ig_trait:ig_trait_famine_reserves
 				set_ig_trait = ig_trait:ig_trait_profitable_estates
+			}
+		}
+		else_if = { # Zanzibar
+			limit = {
+				c:ZAN ?= this
+				any_primary_culture = { cu:bedouin = this }
+				NOT = { any_primary_culture = { cu:swahili = this } }
+			}
+			ig:ig_landowners ?= {
+				set_interest_group_name = ig_wamanga
 			}
 		}
 		else_if = { # Magnates
@@ -269,10 +344,11 @@
 		rule = {
 			trigger = {
 				c:ZAN ?= this
-				any_primary_culture = { cu:arab = this }
+				any_primary_culture = { cu:bedouin = this }
+				NOT = { any_primary_culture = { cu:swahili = this } }
 			}
 			cultures = {
-				arab
+				bedouin
 			}
 		}
 		rule = {
@@ -280,10 +356,11 @@
 				c:PHI ?= this
 				NOT = { has_variable = je_philippines_main_reliance_happened }
 				NOT = { any_primary_culture = { cu:filipino = this } }
+				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
 				any_primary_culture = { cu:spanish = this }
 			}
 			cultures = {
-				spanish filipino
+				spanish filipino_mestizo
 			}
 		}
 		rule = {
@@ -292,12 +369,12 @@
 				any_primary_culture = {
 					AND = {
 						cu:spanish = this
-						cu:filipino = this
+						cu:filipino_hispanophone = this
 					}
 				}
 			}
 			cultures = {
-				spanish filipino
+				spanish filipino_hispanophone
 			}
 		}
 	}

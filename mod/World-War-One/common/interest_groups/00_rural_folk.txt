@@ -1,4 +1,5 @@
-﻿REPLACE_OR_CREATE:ig_rural_folk = {
+﻿
+ig_rural_folk = {
 	color = hsv{ 0.32 0.45 0.47 }
 	texture = "gfx/interface/icons/ig_icons/rural_folk.dds"
 	layer = "revolution_dynamic_rural_folk"
@@ -103,10 +104,31 @@
 		# FLAVOUR AND IDEOLOGIES GO HERE
 		if = { # Jeffersonian Ideology
 			limit = {
+				OR = {
+					country_has_primary_culture = cu:yankee
+					country_has_primary_culture = cu:dixie
+				}
+			}
+			ig:ig_rural_folk ?= {
+				remove_ideology = ideology_agrarian
+				add_ideology = ideology_agrarian_jeffersonian
+				set_interest_group_name = ig_yeoman_farmers
+			}
+		}
+		else_if = { # Heimin
+			limit = {
 				country_has_primary_culture = cu:japanese
 			}
 			ig:ig_rural_folk ?= {
 				set_interest_group_name = ig_peasants
+			}
+		}
+		else_if = { # Maka'āinana
+			limit = {
+				country_has_primary_culture = cu:hawaiian
+			}
+			ig:ig_rural_folk ?= {
+				set_interest_group_name = ig_maka_ainana
 			}
 		}
 		else_if = { # Sikh Empire
@@ -176,22 +198,25 @@
 			trigger = {
 				c:ZAN ?= this
 				any_primary_culture = {
-					cu:arab = this
+					cu:bedouin = this
 				}
 			}
 			cultures = {
-				eastern_bantu
+				swahili lacustrine_bantu oromo
 			}
 		}
 	}
 	on_character_ig_membership = {
 		if = {
 			limit = {
-				culture = cu:eastern_bantu
+				OR = {
+					culture = cu:oromo
+					culture = cu:lacustrine_bantu
+				}
 				owner = {
 					c:ZAN ?= this
 					any_primary_culture = {
-						cu:arab = this
+						cu:bedouin = this
 					}
 				}
 			}

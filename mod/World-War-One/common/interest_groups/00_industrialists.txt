@@ -1,4 +1,4 @@
-﻿REPLACE_OR_CREATE:ig_industrialists = {
+﻿ig_industrialists = {
 	color = hsv{ 0.06 0.60 0.89 }
 	texture = "gfx/interface/icons/ig_icons/industrialists.dds"
 	layer = "revolution_dynamic_industrialists"
@@ -157,11 +157,11 @@
 			trigger = {
 				c:ZAN ?= this
 				any_primary_culture = {
-					cu:arab = this
+					cu:bedouin = this
 				}
 			}
 			cultures = {
-				arab swahili north_german british gujarati
+				bedouin swahili north_german british gujarati
 			}
 		}
 		rule = {
@@ -178,6 +178,7 @@
 				c:PHI ?= this
 				NOT = { has_variable = je_philippines_main_reliance_happened }
 				NOT = { any_primary_culture = { cu:filipino = this } }
+				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
 				any_primary_culture = { cu:spanish = this }
 			}
 			cultures = {
@@ -190,12 +191,12 @@
 				any_primary_culture = {
 					AND = {
 						cu:spanish = this
-						cu:filipino = this
+						cu:filipino_hispanophone = this
 					}
 				}
 			}
 			cultures = {
-				spanish filipino
+				spanish filipino_hispanophone
 			}
 		}
 	}
@@ -205,12 +206,12 @@
 			limit = {
 				OR = {
 					culture = cu:british
-					culture = cu:german
+					culture = cu:north_german
 				}
 				owner = {
 					c:ZAN ?= this
 					any_primary_culture = {
-						cu:arab = this
+						cu:bedouin = this
 					}
 				}
 			}
@@ -218,11 +219,11 @@
 		}
 		if = {
 			limit = {
-				culture = cu:west_indian
+				culture = cu:gujarati
 				owner = {
 					c:ZAN ?= this
 					any_primary_culture = {
-						cu:arab = this
+						cu:bedouin = this
 					}
 				}
 			}

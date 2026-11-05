@@ -1,4 +1,4 @@
-﻿REPLACE_OR_CREATE:ig_intelligentsia = {
+﻿ig_intelligentsia = {
 	color = hsv{ 0.13 0.64 0.99 }
 	texture = "gfx/interface/icons/ig_icons/intelligensia.dds"
 	layer = "revolution_dynamic_intelligentsia"
@@ -7,7 +7,7 @@
 	ideologies = {
 		ideology_liberal
 		ideology_anti_clerical
-		ideology_republican
+		ideology_constitutionalist
 		ideology_anti_slavery
 	}
 
@@ -37,14 +37,6 @@
 		# ONLY HANDLE IG TRAITS IN THIS BLOCK
 		ig:ig_intelligentsia ?= {
 			### Specific IG traits
-			if = {
-				limit = {
-					owner = { c:CHI ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_social_criticism
-				set_ig_trait = ig_trait:ig_trait_avant_garde
-				set_ig_trait = ig_trait:ig_trait_restoration
-			}
 			else_if = {
 				limit = {
 					owner = {
@@ -93,6 +85,15 @@
 				remove_ideology = ideology_anti_clerical
 			}
 		}
+		# Hawaiian Democrats
+		else_if = {
+			limit = {
+				country_has_primary_culture = cu:hawaiian
+			}
+			ig:ig_intelligentsia ?= {
+				set_interest_group_name = ig_hawaiian_democrats
+			}
+		}
 		# Brazilian Intelligentsia
 		else_if = {
 			limit = {
@@ -103,9 +104,6 @@
 				set_ig_trait = ig_trait:ig_trait_brasilidade
 				set_ig_trait = ig_trait:ig_trait_bachareis
 				set_ig_trait = ig_trait:ig_trait_social_criticism
-
-				remove_ideology = ideology_republican
-				add_ideology = ideology_constitutionalist
 			}
 		}
 		# Philippines Intelligentsia
@@ -124,37 +122,6 @@
 			}
 			ig:ig_intelligentsia ?= {
 				set_interest_group_name = ig_civil_servants
-
-				remove_ideology = ideology_republican
-				add_ideology = ideology_constitutionalist
-			}
-		}
-		# Britain and other Constitutionalists
-		if = {
-			limit = {
-				OR = {
-					c:GBR ?= THIS
-					c:POR ?= THIS
-					c:SPA ?= THIS
-					c:AUS ?= THIS
-					any_primary_culture = { # Princely States and Nepal
-						has_discrimination_trait_group = heritage_group_south_asian
-					}
-				}
-			}
-			ig:ig_intelligentsia ?= {
-				remove_ideology = ideology_republican
-				add_ideology = ideology_constitutionalist
-			}
-		}
-		if = {
-			limit = {
-				country_has_primary_culture = cu:japanese
-			}
-			ig:ig_intelligentsia ?= {
-				set_interest_group_name = ig_rangakusha
-				remove_ideology = ideology_republican
-				add_ideology = ideology_rangaku
 			}
 		}
 		if = {
@@ -167,6 +134,13 @@
 				}
 				remove_ideology = ideology_liberal
 				add_ideology = ideology_liberal_modern
+			}
+			every_interest_group = {
+				limit = {
+					has_ideology = ideology:ideology_universalist
+				}
+				remove_ideology = ideology_universalist
+				add_ideology = ideology_universalist_modern
 			}
 		}
 	}
@@ -187,11 +161,11 @@
 			trigger = {
 				c:ZAN ?= this
 				any_primary_culture = {
-					cu:arab = this
+					cu:bedouin = this
 				}
 			}
 			cultures = {
-				swahili arab
+				swahili bedouin
 			}
 		}
 		rule = {
@@ -199,6 +173,7 @@
 				c:PHI ?= this
 				NOT = { has_variable = je_philippines_main_reliance_happened }
 				NOT = { any_primary_culture = { cu:filipino = this } }
+				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
 				any_primary_culture = { cu:spanish = this }
 			}
 			cultures = {
@@ -211,12 +186,12 @@
 				any_primary_culture = {
 					AND = {
 						cu:spanish = this
-						cu:filipino = this
+						cu:filipino_hispanophone = this
 					}
 				}
 			}
 			cultures = {
-				spanish filipino
+				spanish filipino_hispanophone
 			}
 		}
 	}
@@ -265,6 +240,19 @@
 					is_pop_type = clerks
 				}
 				value = 50
+			}
+		}
+
+		add = {
+			desc = "POP_BUREAUCRATS_MANAGERIAL"
+			if = {
+				limit = {
+					is_pop_type = bureaucrats
+					scope:interest_group = {
+						has_ideology = ideology:ideology_managerial
+					}
+				}
+				value = 200
 			}
 		}
 
@@ -360,20 +348,6 @@
 					desc = "POP_INDIA_CIVIL_SERVICE"
 					value = 1.5
 				}
-			}
-		}
-
-		add = {
-			desc = "POP_MILITARY_BUREAUCRACY"
-			if = {
-				limit = {
-					is_pop_type = bureaucrats
-					owner = {
-						c:ALK ?= this
-						has_government_type = gov_chartered_company
-					}
-				}
-				multiply = 0.25
 			}
 		}
 

@@ -1,4 +1,4 @@
-﻿REPLACE_OR_CREATE:ig_petty_bourgeoisie = {
+﻿ig_petty_bourgeoisie = {
 	color = hsv{ 0.65 0.54 0.52 }
 	texture = "gfx/interface/icons/ig_icons/petty_bourgeoisie.dds"
 	layer = "revolution_dynamic_petty_bourgeoisie"
@@ -177,7 +177,7 @@
 			trigger = {
 				c:ZAN ?= this
 				any_primary_culture = {
-					cu:arab = this
+					cu:bedouin = this
 				}
 			}
 			cultures = {
@@ -189,6 +189,7 @@
 				c:PHI ?= this
 				NOT = { has_variable = je_philippines_main_reliance_happened }
 				NOT = { any_primary_culture = { cu:filipino = this } }
+				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
 				any_primary_culture = { cu:spanish = this }
 			}
 			cultures = {
@@ -201,7 +202,7 @@
 				any_primary_culture = {
 					AND = {
 						cu:spanish = this
-						cu:filipino = this
+						cu:filipino_hispanophone = this
 					}
 				}
 			}
@@ -213,11 +214,11 @@
 	on_character_ig_membership = {
 		if = {
 			limit = {
-				culture = cu:west_indian
+				culture = cu:gujarati
 				owner = {
 					c:ZAN ?= this
 					any_primary_culture = {
-						cu:arab = this
+						cu:bedouin = this
 					}
 				}
 			}
@@ -241,7 +242,11 @@
 					AND = {
 						c:ZAN ?= prev.owner
 						c:ZAN ?= {
-							any_primary_culture = { cu:arab = this }
+							any_primary_culture = { cu:bedouin = this }
+						}
+						OR = {
+							cu:swahili = this
+							cu:gujarati = this
 						}
 					}
 				}
@@ -362,6 +367,19 @@
 					}
 					value = 50
 				}
+			}
+		}
+
+		if = {
+			limit = {
+				is_pop_type = bureaucrats
+				owner.ig:ig_intelligentsia ?= {
+					has_ideology = ideology:ideology_managerial
+				}
+			}
+			multiply = {
+				desc = "POP_BUREAUCRATS_MANAGERIAL_INTELLIGENTSIA"
+				value = 0.5
 			}
 		}
 
