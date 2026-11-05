@@ -30,9 +30,11 @@ RUS_nicholas_ii = { #Nicholas II, son of Alexander III
 		imperious 
 		pious
         bigoted
+		inept
 	}
 	on_created = {
 		set_variable = is_married
+		set_variable = { name = dynasty_var value = flag:house_romanov }
 	}
 	trait_generation = {
 		
@@ -42,6 +44,7 @@ RUS_nicholas_ii = { #Nicholas II, son of Alexander III
 RUS_alexei_ii = { #Alexei Romanov, son of Nicholas II
 	first_name = Alexei
 	last_name = Romanov
+	dna = dna_alexei_ii_of_russia
 	historical = yes
 	culture = cu:russian
 	heir = yes
@@ -49,9 +52,10 @@ RUS_alexei_ii = { #Alexei Romanov, son of Nicholas II
 	interest_group = ig_landowners
 	ideology = ideology_jingoist_leader
 	traits = {
-		sickly 
-		romantic
+		hemophilia
 		arrogant
+		romantic
+		inexperienced
 	}
 	trait_generation = {
 		
@@ -241,6 +245,7 @@ rus_nicholas_nikolaevich_template = {
 rus_alexander_kolchack_template = {
 	first_name = Alexander
 	last_name = Kolchak
+	dna = dna_alexander_kolchak
 	culture = cu:russian
 	interest_group = ig_armed_forces
 	ideology = ideology_ethno_nationalist
@@ -248,7 +253,9 @@ rus_alexander_kolchack_template = {
 	is_admiral = yes
 	historical = yes
 	traits = {
-	   ambitious experienced_naval_commander explorer 
+	   arrogant
+	   imperious
+	   basic_naval_commander 
 	}
 }
 
@@ -281,6 +288,67 @@ rus_vladimir_bogoraz_template = {
 	   erudite
 	   experienced_political_operator
 	}
+}
+
+RUS_yakov_mikhailovich_sverdlov = { #Lenin's right-hand man
+    first_name = Yakov
+    last_name = Sverdlov
+    female = no
+    dna = dna_yakov_sverdlov
+    historical = yes
+    birth_date = 1885.6.3 #Old calendar: 1885.5.22
+    culture = cu:ashkenazi
+    religion = rel:atheist
+	role = character_role_politician
+    interest_group = ig_trade_unions
+    ideology = ideology_vanguardist
+    home_region = STATE_NIZHNY_NOVGOROD
+    traits = {
+        meticulous
+        ruthless #execution(er?) of the Romanovs
+        master_bureaucrat
+    }
+}
+
+RUS_julius_martov = {
+    first_name = Julius
+    last_name = Martov
+    female = no
+    dna = dna_julius_martov
+    historical = yes
+    birth_date = 1873.11.24 # died, 1923, age 49. CoD: tuberculosis
+    culture = cu:ashkenazi
+    religion = rel:atheist
+    role = character_role_politician
+    interest_group = ig_intelligentsia
+    ideology = ideology_state_socialist
+    home_region = STATE_EASTERN_THRACE # born in Istanbul
+    traits = {
+        honorable.
+        cautious
+        literary
+        tuberculosis
+    }
+}
+
+RUS_maria_spiridonova = {
+    first_name = Maria
+    last_name = Spiridonova
+    female = yes
+    dna = dna_maria_spiridonova
+    historical = yes
+    birth_date = 1884.10.16 # died, 1941, age 56. CoD: execution (in the Medvedevsky Forest massacre)
+    culture = cu:ashkenazi
+    religion = rel:atheist
+    role = character_role_politician
+    interest_group = ig_rural_folk # Head of the Peasant Section of the All-Russian Central Executive Committee
+    ideology = ideology_nihilist # Narodnik, really
+    home_region = STATE_TAMBOV
+    traits = {
+        ambitious
+        brave
+        firebrand
+    }
 }
 
 #White Russia
@@ -369,11 +437,33 @@ sib_pyotr_krasnov_template = {
 	}
 }
 
+RUS_anton_denikin = {
+    first_name = Anton
+    last_name = Denikin
+    female = no
+    dna = dna_anton_denikin
+    historical = yes
+    is_general = yes
+    birth_date = 1872.12.16
+    culture = cu:russian.
+    religion = rel:orthodox
+    interest_group = ig_armed_forces
+    ideology = ideology_authoritarian
+    home_region = STATE_GREATER_POLAND
+    traits = {
+        brave
+		direct
+        persistent
+		basic_artillery_commander
+    }
+}
+
 #USSR
 
 sov_joseph_stalin_character_template = {
-    first_name = Joseph
-    last_name = Stalin
+    first_name = Iosif
+    last_name = Dzhugashvili
+	dna = dna_stalin
     historical = yes
     birth_date = 1878.12.18
     female = no
@@ -382,10 +472,11 @@ sov_joseph_stalin_character_template = {
     interest_group = ig_trade_unions
 	is_general = yes
     ideology = ideology_vanguardist
+	home_region = STATE_GREATER_CAUCASUS
     traits = {
-        cruel
-		imposing
-        direct
+        reckless
+        ruthless
+        social_bandit
         experienced_political_operator
 		special_character_great_helmsman
     }
@@ -394,6 +485,7 @@ sov_joseph_stalin_character_template = {
 sov_grigory_zinoviev_character_template = {
     first_name = Grigory
     last_name = Zinoviev
+	dna = dna_grigory_zinoviev
     historical = yes
     birth_date = 1883.9.23
     female = no
@@ -403,9 +495,10 @@ sov_grigory_zinoviev_character_template = {
     interest_group = ig_trade_unions
     ideology = ideology_vanguardist
     traits = {
-        demagogue
-        charismatic
+        charismatic 
         arrogant
+        cautious
+        literary
     }
 }
 
@@ -422,15 +515,17 @@ sov_lev_kamenev_character_template = {
     ideology = ideology_vanguardist
 	is_agitator = yes
     traits = {
-        erudite
         cautious
-        master_bureaucrat
+        literary
+        reckless
+        firebrand
     }
 }
 
 sov_nikolai_bukharin_character_template = {
     first_name = Nikolai
     last_name = Bukharin
+	dna = dna_nikolai_bukharin
     historical = yes
     birth_date = 1888.10.9
     female = no
@@ -440,9 +535,10 @@ sov_nikolai_bukharin_character_template = {
     interest_group = ig_trade_unions
     ideology = ideology_positivist
     traits = {
+        aesthete
+        meticulous
+        brave
         erudite
-        persistent
-        innovative
     }
 }
 
