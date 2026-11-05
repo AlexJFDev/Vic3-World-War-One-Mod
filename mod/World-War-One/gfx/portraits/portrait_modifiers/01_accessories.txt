@@ -17,6 +17,36 @@
     #    }
     #}
 
+    child_no_regalia = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }
+        }
+
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 200000
+                scope:character ?= {
+                    is_adult = no
+                }
+            }
+        }
+    }
+
 ### HISTORICAL CHARACTER ACCESSORIES ###
 
     historical_reza_pahlavi_stage_one = {

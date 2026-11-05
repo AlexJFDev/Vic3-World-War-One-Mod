@@ -4,18 +4,18 @@
     	fallback = no_beard
 
     no_beard = {
-         dna_modifiers = {
-             accessory = {
-                 mode = add
-                 gene = beards
-                 template = no_beard
-                 range = { 0 1 } # For the randomness to work correctly
-             }
-         }
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = beards
+                template = no_beard
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
 
-         weight = {
-             base = 0
-         }
+        weight = {
+            base = 0
+        }
     }
 
     asian_beards = {
@@ -252,4 +252,67 @@
             }
         }
     }
+
+    european_peasant_beards = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = mustaches
+                template = european_peasant_mustaches
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = beards
+                template = european_peasant_beards
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 80
+                has_dlc_feature = ip5_cosmetics
+                poor_clothes_pop_trigger = yes
+                scope:pop ?={
+                    culture = {
+                        OR = {
+                            has_discrimination_trait = heritage_east_slavic
+                            has_discrimination_trait = tradition_russosphere
+                            cu:ashkenazi = this
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    beardless_hero = {
+         dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = mustaches
+                template = no_mustache
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = beards
+                template = no_beard
+                range = { 0 1 } # For the randomness to work correctly
+            }
+         }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 9000
+                scope:character ?= {
+                    is_female = no
+                    has_variable = beardless_hero
+                }
+            }
+         }
+    }
+
 }
