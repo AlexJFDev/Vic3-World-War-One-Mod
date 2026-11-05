@@ -204,12 +204,10 @@ REPLACE_OR_CREATE:company_branobel = {
 
 	possible = {
 		has_technology_researched = pumpjacks
-		any_scope_state = {
-			state_region = s:STATE_AZERBAIJAN
-			any_scope_building = {
-				is_building_type = building_oil_rig
-				level >= 5
-			}
+		has_building_levels_in_state_region = {
+			region = STATE_AZERBAIJAN
+			building = building_oil_rig
+			levels >= 5
 		}
 	}
 
@@ -285,13 +283,11 @@ REPLACE_OR_CREATE:company_izhevsk_arms_plant = {
 
 	possible = {
 		has_technology_researched = rifling # corresponds roughly with the Izhevsk plant's incorporation as a private commercial enterprise, and not a state arsenal.
-		any_scope_state = {
-			state_region = s:STATE_PERM
+		has_building_levels_in_state_region = {
+			region = STATE_PERM
+			building = building_arms_industry
+			levels >= 5
 			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_arms_industry
-				level >= 5
-			}
 		}
 	}
 
@@ -363,13 +359,11 @@ REPLACE_OR_CREATE:company_savva_morozov = {
 
 	possible = {
 		has_technology_researched = joint_stock_companies
-		any_scope_state = {
-			state_region = s:STATE_MOSCOW
+		has_building_levels_in_state_region = {
+			region = STATE_MOSCOW
+			building = building_textile_mill
+			levels >= 5
 			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_textile_mill
-				level >= 5
-			}
 		}
 	}
 

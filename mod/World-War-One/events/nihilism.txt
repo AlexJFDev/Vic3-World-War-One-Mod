@@ -348,7 +348,7 @@ nihilism.3 = {
 					has_role_of_type = agitator
 					has_ideology = ideology:ideology_nihilist
 				}
-				set_ideology = ideology:ideology_communist
+				set_ideology = ideology:ideology_communist_leader
 			}
 			if = {
 				limit = {
@@ -361,7 +361,7 @@ nihilism.3 = {
 				create_character = {
 					ig_leader = yes
 					interest_group = ig_intelligentsia
-					ideology = ideology_communist
+					ideology = ideology_communist_leader
 				}
 			}
 			if = {
@@ -374,7 +374,7 @@ nihilism.3 = {
 				}
 				ig:ig_trade_unions ?= {
 					leader = {
-						set_ideology = ideology:ideology_communist
+						set_ideology = ideology:ideology_communist_leader
 					}
 				}
 			}
@@ -443,7 +443,7 @@ nihilism.3 = {
 				create_character = {
 					ig_leader = yes
 					interest_group = ig_intelligentsia
-					ideology = ideology_communist
+					ideology = ideology_communist_leader
 				}
 			}
 			if = {
@@ -456,7 +456,7 @@ nihilism.3 = {
 				}
 				ig:ig_trade_unions ?= {
 					leader = {
-						set_ideology = ideology:ideology_communist
+						set_ideology = ideology:ideology_communist_leader
 					}
 				}
 			}
@@ -465,7 +465,7 @@ nihilism.3 = {
 					has_role_of_type = agitator
 					has_ideology = ideology:ideology_nihilist
 				}
-				set_ideology = ideology:ideology_communist
+				set_ideology = ideology:ideology_communist_leader
 			}
 		}
 		else = {
@@ -1263,7 +1263,7 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 			has_role_of_type = agitator
 			OR = {
 				has_ideology = ideology:ideology_anarchist
-				has_ideology = ideology:ideology_communist
+				has_ideology = ideology:ideology_communist_leader
 				has_ideology = ideology:ideology_vanguardist
 			}
 		}
@@ -1280,7 +1280,7 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 					has_role_of_type = agitator
 					OR = {
 						has_ideology = ideology:ideology_anarchist
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_vanguardist
 					}
 				}
@@ -1292,7 +1292,7 @@ nihilism.11 = { #Agitator fight! Nihilist agitator argues with communists about 
 					has_role_of_type = agitator
 					OR = {
 						has_ideology = ideology:ideology_anarchist
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_vanguardist
 					}
 				}
@@ -1406,7 +1406,7 @@ nihilism.12 = { #Trade Unions adopt a positive view of state atheism/total separ
 				leader = {
 					OR = {
 						has_ideology = ideology:ideology_anarchist
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_vanguardist
 					}
 				}

@@ -127,7 +127,7 @@ communism.1 = {
 				leader = {
 					OR = {
 						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_anarchist
 					}
 				}
@@ -209,7 +209,7 @@ communism.2 = {
 					is_political_movement_type = movement_communist
 				}
 				set_core_ideology = ideology_vanguardist_movement
-				remove_character_ideology = ideology_communist
+				remove_character_ideology = ideology_communist_leader
 			}
 		}
 		custom_tooltip = chose_vanguardism.tt
@@ -233,7 +233,7 @@ communism.2 = {
 					leader = {
 						OR = {
 							has_ideology = ideology:ideology_vanguardist
-							has_ideology = ideology:ideology_communist
+							has_ideology = ideology:ideology_communist_leader
 							has_ideology = ideology:ideology_anarchist
 						}
 					}
@@ -247,7 +247,7 @@ communism.2 = {
 							leader = {
 								NOR = {
 									has_ideology = ideology:ideology_vanguardist
-									has_ideology = ideology:ideology_communist
+									has_ideology = ideology:ideology_communist_leader
 									has_ideology = ideology:ideology_anarchist
 								}
 							}
@@ -305,11 +305,11 @@ communism.2 = {
 		if = {
 			limit = {
 				scope:union_leader = {
-					NOT = { has_ideology = ideology:ideology_communist }
+					NOT = { has_ideology = ideology:ideology_communist_leader }
 				}
 			}
 			scope:union_leader = {
-				set_ideology = ideology:ideology_communist
+				set_ideology = ideology:ideology_communist_leader
 			}
 		}
 		add_modifier = {
@@ -367,11 +367,11 @@ communism.2 = {
 		if = {
 			limit = {
 				scope:union_leader = {
-					NOT = { has_ideology = ideology:ideology_communist }
+					NOT = { has_ideology = ideology:ideology_communist_leader }
 				}
 			}
 			scope:union_leader = {
-				set_ideology = ideology:ideology_communist
+				set_ideology = ideology:ideology_communist_leader
 			}
 		}
 		if = {
@@ -526,7 +526,7 @@ communism.3 = {
 			leader = {
 				NOR = {
 					has_ideology = ideology:ideology_vanguardist
-					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_communist_leader
 					has_ideology = ideology:ideology_anarchist
 				}
 			}
@@ -545,7 +545,7 @@ communism.3 = {
 				leader = {
 					NOR = {
 						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_anarchist
 					}
 				}
@@ -710,7 +710,7 @@ communism.7 = {
 				}
 				NOT = { has_modifier = popular_socialist_leader }
 				OR = {
-					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_communist_leader
 					has_ideology = ideology:ideology_anarchist
 					has_ideology = ideology:ideology_vanguardist
 				}
@@ -729,7 +729,7 @@ communism.7 = {
 					}
 					NOT = { has_modifier = popular_socialist_leader }
 					OR = {
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_anarchist
 						has_ideology = ideology:ideology_vanguardist
 					}
@@ -744,7 +744,7 @@ communism.7 = {
 					}
 					NOT = { has_modifier = popular_socialist_leader }
 					OR = {
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_anarchist
 						has_ideology = ideology:ideology_vanguardist
 					}
@@ -820,7 +820,7 @@ communism.8 = {
 		ig:ig_armed_forces = {
 			leader = {
 				OR = {
-					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_communist_leader
 					has_ideology = ideology:ideology_vanguardist
 				}
 			}

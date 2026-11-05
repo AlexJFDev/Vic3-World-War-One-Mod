@@ -1048,7 +1048,7 @@ revolution_pulse_events.7 = {
 
 					}
 				}
-				set_ideology = ideology:ideology_communist
+				set_ideology = ideology:ideology_communist_leader
 			}
 			else_if = {
 				limit = {
@@ -1195,7 +1195,7 @@ revolution_pulse_events.8 = {
 		}
 		random_law = {
 			limit = {
-				type = law_type:law_secret_police
+				type = law_type:law_surveillance_state
 			}
 			save_scope_as = secret_police_law
 		}
@@ -1235,7 +1235,7 @@ revolution_pulse_events.8 = {
 					institution = institution_home_affairs
 					value > 2
 				}
-				has_law_or_variant = law_type:law_secret_police
+				has_law_or_variant = law_type:law_surveillance_state
 			}
 		}
 	}

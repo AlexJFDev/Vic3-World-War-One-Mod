@@ -504,7 +504,7 @@ REPLACE_OR_CREATE:company_basic_fishing = {
 	}
 
 	prosperity_modifier = {
-		country_convoys_capacity_mult = 0.1
+		country_ship_group_supply_ships_construction_efficiency_add = 0.1
 		building_shipyard_throughput_add = 0.05
 	}
 
@@ -698,6 +698,7 @@ REPLACE_OR_CREATE:company_basic_metal_mining = {
 	building_types = {
 		building_iron_mine
 		building_lead_mine
+		building_copper_mine
 	}
 
 	extension_building_types = {
@@ -710,6 +711,7 @@ REPLACE_OR_CREATE:company_basic_metal_mining = {
 				OR = {
 					is_building_type = building_iron_mine
 					is_building_type = building_lead_mine
+					is_building_type = building_copper_mine
 				}
 				level >= 5
 			}
@@ -727,6 +729,7 @@ REPLACE_OR_CREATE:company_basic_metal_mining = {
 				OR = {
 					is_building_type = building_iron_mine
 					is_building_type = building_lead_mine
+					is_building_type = building_copper_mine
 				}
 				level >= 5
 			}
@@ -1211,7 +1214,7 @@ REPLACE_OR_CREATE:company_basic_shipyards = {
 	}
 
 	prosperity_modifier = {
-		unit_navy_offense_mult = 0.1
+		ship_hull_damage_mult = 0.05
 	}
 
 	ai_will_do = {
@@ -1312,11 +1315,12 @@ REPLACE_OR_CREATE:company_basic_motors = {
 	}
 
 	building_types = {
-		building_automotive_industry
 		building_motor_industry
+		building_automotive_industry
 	}
 
 	extension_building_types = {
+		building_steel_mill
 		building_rubber_plantation
 	}
 
@@ -1345,7 +1349,8 @@ REPLACE_OR_CREATE:company_basic_motors = {
 	}
 
 	prosperity_modifier = {
-		military_formation_movement_speed_mult = 0.1
+		military_formation_army_movement_speed_mult = 0.1
+		military_formation_fleet_movement_speed_mult = 0.1
 	}
 
 	ai_will_do = {
@@ -1453,6 +1458,7 @@ REPLACE_OR_CREATE:company_basic_electrics = {
 	}
 
 	extension_building_types = {
+		building_copper_mine
 		building_iron_mine
 		building_rubber_plantation
 	}

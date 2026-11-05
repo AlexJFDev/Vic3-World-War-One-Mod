@@ -1722,7 +1722,7 @@ REPLACE_OR_CREATE:exile_to_siberia = {
 			has_law_or_variant = law_type:law_autocracy
 			has_law_or_variant = law_type:law_oligarchy
 			has_law_or_variant = law_type:law_single_party_state
-			has_law_or_variant = law_type:law_secret_police
+			has_law_or_variant = law_type:law_surveillance_state
 			has_law_or_variant = law_type:law_outlawed_dissent
 			has_law_or_variant = law_type:law_censorship
 		}
@@ -1854,7 +1854,7 @@ REPLACE_OR_CREATE:exile_to_siberia = {
 			if = {
 				limit = {
 					scope:actor ?= {
-						has_law_or_variant = law_type:law_secret_police
+						has_law_or_variant = law_type:law_surveillance_state
 					}
 				}
 				multiply = 1.5
