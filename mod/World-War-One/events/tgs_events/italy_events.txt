@@ -197,6 +197,9 @@ italy_events.15 = { #Italian civil war
     trigger = {}
 
     immediate = {
+        power_bloc ?= {
+			save_scope_as = italian_power_bloc
+		}
         random_diplomatic_play = {
 			limit = { 
               is_diplomatic_play_type = dp_world_war 
@@ -209,6 +212,9 @@ italy_events.15 = { #Italian civil war
         name = italy_events.15.a
         default_option = yes
         set_global_variable = ww2_italian_civil_war
+        scope:italian_power_bloc = {
+			destroy_power_bloc = yes
+		}
         create_country = { #Italian Socialist Republic
 	       tag = FIT
 	       origin = this

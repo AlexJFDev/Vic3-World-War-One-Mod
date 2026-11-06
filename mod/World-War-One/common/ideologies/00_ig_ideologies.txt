@@ -342,14 +342,6 @@ ideology_agrarian = {
 ideology_particularist = {
 	icon = "gfx/interface/icons/ideology_icons/particularist.dds"
 
-	lawgroup_army_model = {
-		law_national_militia = strongly_approve
-		law_professional_army = neutral
-		law_mass_conscription = disapprove
-		law_peasant_levies = disapprove
-		law_revolutionary_guard = disapprove
-	}
-
 	lawgroup_policing = {
 		law_militarized_police = strongly_disapprove
 		law_local_police = disapprove
@@ -385,26 +377,11 @@ ideology_isolationist = {
 		law_multicultural = strongly_disapprove
 	}
 
-	lawgroup_navy_model = {
-		law_merchant_navy = approve
-		law_jeune_ecole = neutral
-		law_professional_navy = disapprove
-		law_diplomatic_navy = neutral
-	}
-
 	lawgroup_trade_policy = {
 		law_isolationism = approve
 		law_protectionism = approve
 		law_mercantilism = neutral
 		law_free_trade = disapprove
-	}
-
-	lawgroup_colonization = {
-		law_frontier_colonization = strongly_approve
-		law_internal_colonization = approve
-		law_no_colonial_affairs = neutral
-		law_colonial_resettlement = disapprove
-		law_colonial_exploitation = disapprove
 	}
 
 	lawgroup_migration = {
@@ -772,6 +749,48 @@ ideology_republican = {
 	}
 }
 
+ideology_pacifist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_pacifist.dds"
+
+	lawgroup_army_model = {
+		law_national_militia = approve
+		law_professional_army = disapprove
+		law_peasant_levies = disapprove
+		law_mass_conscription = disapprove
+		law_revolutionary_guard = strongly_disapprove
+	}
+
+	lawgroup_navy_model = {
+		law_merchant_navy = approve
+		law_jeune_ecole = neutral
+		law_professional_navy = disapprove
+		law_diplomatic_navy = approve
+	}
+
+	lawgroup_colonization = {
+		law_no_colonial_affairs = approve
+		law_internal_colonization = disapprove
+		law_colonial_resettlement = strongly_disapprove
+		law_colonial_exploitation = strongly_disapprove
+		law_frontier_colonization = strongly_disapprove
+	}
+
+	lawgroup_military_governance = {
+	   law_politicized_military = neutral 
+       law_subordinate_general_staff = strongly_approve
+       law_independant_general_staff = disapprove
+	   law_military_oversight = strongly_disapprove
+	}
+
+	lawgroup_foreign_policy = {
+       law_true_neutrality = strongly_approve
+	   law_armed_neutrality = approve
+	   law_limited_interventionism = neutral
+	   law_expansionism = disapprove
+	   law_imperialism = strongly_disapprove
+	}
+}
+
 ideology_communist_leader = {
 	icon = "gfx/interface/icons/ideology_icons/communist.dds"
 
@@ -885,14 +904,6 @@ ideology_populist = {
 		law_communal_administration = approve
 	}
 
-	lawgroup_army_model = {
-		law_national_militia = strongly_approve
-		law_mass_conscription = approve
-		law_peasant_levies = neutral
-		law_professional_army = disapprove
-		law_revolutionary_guard = strongly_approve
-	}
-
 	lawgroup_trade_policy = {
 		law_isolationism = strongly_disapprove
 		law_mercantilism = disapprove
@@ -970,20 +981,6 @@ ideology_internationalist = {
 		law_racial_segregation = disapprove
 		law_cultural_exclusion = neutral
 		law_multicultural = approve
-	}
-
-	lawgroup_colonization = {
-		law_colonial_exploitation = disapprove
-		law_internal_colonization = neutral
-		law_no_colonial_affairs = approve
-		law_colonial_resettlement = disapprove
-		law_frontier_colonization = disapprove
-	}
-
-	lawgroup_migration = {
-		law_migration_controls = neutral
-		law_closed_borders = disapprove
-		law_no_migration_controls = approve
 	}
 }
 

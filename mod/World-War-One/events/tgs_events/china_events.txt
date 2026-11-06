@@ -1372,8 +1372,6 @@ china_events.7 = { #Policy choice
         } 
         activate_law = law_type:law_council_republic
         activate_law = law_type:law_command_economy
-        activate_law = law_type:law_military_oversight
-        activate_law = law_type:law_isolationism
         scope:union_ig_leader_scope = {
             set_character_as_ruler = yes
         }
@@ -2126,6 +2124,9 @@ china_events.23 = { #Shanxi becomes Communist
         activate_law = law_type:law_compulsory_primary_school
         activate_law = law_type:law_factory_councils
         activate_law = law_type:law_graduated_taxation
+        activate_law = law_type:law_military_oversight
+        activate_law = law_type:law_military_bureaucrats
+        activate_law = law_type:law_extraordinary_commission
             add_modifier = {
 			  name = dictatorship_of_proletariat
               years = 30

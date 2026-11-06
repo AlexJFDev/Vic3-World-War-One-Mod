@@ -640,6 +640,9 @@ je_entente_peace_deal_round_4 = { #Round 4: does Italy takes iredentist states f
         c:AUS = {
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         } 
 	    c:ITA = {
 		    has_variable = entente_participant
@@ -833,6 +836,9 @@ je_entente_peace_deal_round_5 = { #Round 5: what is taken from Italy
 	    c:ITA = {
 		    has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
 	    }
 	}
     
@@ -1029,6 +1035,9 @@ je_entente_peace_deal_round_6 = { #Round 6: what Greece takes from Turkey
 		c:TUR = {
 		    has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
 		}	
 		NOT = {
 			c:RUS = { owns_entire_state_region = STATE_EASTERN_THRACE }
@@ -1200,9 +1209,6 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
 		}
 	    c:TUR = {
             has_variable = central_powers_participant
-			NOT = {
-				is_diplomatic_play_enemy_of = c:FRA
-			}
 		}
 	}
 
@@ -1222,6 +1228,9 @@ je_entente_peace_deal_round_7 = { #Round 7 : does an unified arab states forms o
 		c:TUR = {
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
 		}
 	}
     
@@ -1629,6 +1638,9 @@ je_entente_peace_deal_round_9 = { #Round 9: what Japan and USA gets from german 
 	    c:GER = {
 			has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         }  
 	    c:JAP = {
 			has_variable = entente_participant
@@ -1824,6 +1836,9 @@ je_entente_peace_deal_round_10 = { #Round 10: who gets which central power colon
 	    c:GER = {
             has_variable = central_powers_participant
 		    has_modifier = enforced_partition
+			NOT = {
+				is_diplomatic_play_enemy_of = c:FRA
+			}
         }  
 	    c:ITA = {
 			has_variable = entente_participant

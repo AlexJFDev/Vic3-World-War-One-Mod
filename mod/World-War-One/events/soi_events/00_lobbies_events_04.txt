@@ -2758,7 +2758,7 @@ lobby_events.11 = {
 				is_interest_group_type = ig_devout
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_pacifist
+						has_ideology = ideology:ideology_pacifist_leader
 						has_ideology = ideology:ideology_legitimist
 					}
 				}
@@ -2870,7 +2870,7 @@ lobby_events.11 = {
 					is_interest_group_type = ig_devout
 					leader = {
 						OR = {
-							has_ideology = ideology:ideology_pacifist
+							has_ideology = ideology:ideology_pacifist_leader
 							has_ideology = ideology:ideology_legitimist
 						}
 					}
@@ -4149,7 +4149,7 @@ lobby_events.18 = {
 			}
 			NOT = {
 				leader = {
-					has_ideology = ideology:ideology_pacifist
+					has_ideology = ideology:ideology_pacifist_leader
 				}
 			}
 			is_member_of_any_lobby = no
@@ -4238,7 +4238,7 @@ lobby_events.18 = {
 				}
 				NOT = {
 					leader = {
-						has_ideology = ideology:ideology_pacifist
+						has_ideology = ideology:ideology_pacifist_leader
 					}
 				}
 				is_member_of_any_lobby = no

@@ -196,7 +196,7 @@ election_liberal_events.3 = {
 		NOT = { has_variable = election_event_cooldown }
 		any_interest_group = {
 			leader = {
-				has_ideology = ideology:ideology_pacifist
+				has_ideology = ideology:ideology_pacifist_leader
 			}
 			has_party = yes
 			party = {
@@ -217,7 +217,7 @@ election_liberal_events.3 = {
 		}
 		random_scope_character = {
 			limit = {
-				has_ideology = ideology:ideology_pacifist
+				has_ideology = ideology:ideology_pacifist_leader
 				interest_group.party = {
 					is_party_type = liberal_party
 				}

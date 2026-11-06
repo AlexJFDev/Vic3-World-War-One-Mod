@@ -310,7 +310,7 @@ pm_events.4 = {
 	trigger = {
 		is_at_war = no
 		any_interest_group = {
-			leader = { has_ideology = ideology:ideology_pacifist }
+			leader = { has_ideology = ideology:ideology_pacifist_leader }
 		}
 		any_scope_state = {
 			has_building = building_arms_industry
@@ -329,7 +329,7 @@ pm_events.4 = {
 		random_scope_character = {
 			limit = {
 				has_role_of_type = politician
-				has_ideology = ideology:ideology_pacifist
+				has_ideology = ideology:ideology_pacifist_leader
 			}
 			save_scope_as = pacifist_leader
 		}
@@ -355,7 +355,7 @@ pm_events.4 = {
 		}
 		every_interest_group = {
 			limit = {
-				leader = { has_ideology = ideology:ideology_pacifist }
+				leader = { has_ideology = ideology:ideology_pacifist_leader }
 			}
 			add_modifier = {
 				name = permitted_limited_arms_manufacturing
@@ -368,7 +368,7 @@ pm_events.4 = {
 		name = pm_events.4.c
 		every_interest_group = {
 			limit = {
-				leader = { has_ideology = ideology:ideology_pacifist }
+				leader = { has_ideology = ideology:ideology_pacifist_leader }
 			}
 			add_modifier = {
 				name = permitted_unrestricted_arms_manufacturing

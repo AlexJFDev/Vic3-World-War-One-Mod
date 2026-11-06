@@ -117,11 +117,20 @@ entente_peace_deal.2 = { #Round 1 result
     
     trigger = {}
 
+	immediate = {
+		power_bloc ?= {
+			save_scope_as = german_power_bloc
+		}
+	}
+
     option = {
         name = entente_peace_deal.2.a
         trigger = {
          has_global_variable = entente_deal_round_1_germany_dislocation_prop_1_won
         }
+		scope:german_power_bloc = {
+			destroy_power_bloc = yes
+		}
         create_country = { #Rhineland
 	       tag = RHE
 	       origin = this
@@ -426,6 +435,9 @@ entente_peace_deal.2 = { #Round 1 result
         trigger = {
          has_global_variable = entente_deal_round_1_germany_dislocation_prop_2_won
         }
+		scope:german_power_bloc = {
+			destroy_power_bloc = yes
+		}
         create_country = { #Rhineland
 	       tag = RHE
 	       origin = this
@@ -756,7 +768,9 @@ entente_peace_deal.2 = { #Round 1 result
         trigger = {
          has_global_variable = entente_deal_round_1_germany_dislocation_prop_3_won
         }
-
+        scope:german_power_bloc = {
+			destroy_power_bloc = yes
+		}
         create_country = { #Rhineland
 	       tag = RHE
 	       origin = this
@@ -1946,6 +1960,12 @@ entente_peace_deal.8 = { #Round 7 result
 	flavor = entente_peace_deal.8.f
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	immediate = {
+		power_bloc ?= {
+			save_scope_as = turkish_power_bloc
+		}
+	}
     
     option = {
 		name = entente_peace_deal.8.a
@@ -1954,6 +1974,9 @@ entente_peace_deal.8 = { #Round 7 result
 		}
 		ai_chance = {
 			base = 100
+		}
+		scope:turkish_power_bloc = {
+			destroy_power_bloc = yes
 		}
 		If = {
            limit = { NOT = { exists = c:HDJ } }
@@ -2228,6 +2251,9 @@ entente_peace_deal.8 = { #Round 7 result
 		ai_chance = {
 			base = 100
 		}
+		scope:turkish_power_bloc = {
+			destroy_power_bloc = yes
+		}
 		create_country = {
 	       tag = SYR
 	       origin = this
@@ -2439,6 +2465,9 @@ entente_peace_deal.8 = { #Round 7 result
 		}
 		ai_chance = {
 			base = 100
+		}
+		scope:turkish_power_bloc = {
+			destroy_power_bloc = yes
 		}
         create_country = {
 	       tag = SYR
@@ -3967,6 +3996,9 @@ entente_peace_deal.15 = { #Pacifism movements
     option = {
         name = entente_peace_deal.15.a
 		default_option = yes
+		ig:ig_intelligentsia ?= {
+			add_ideology = ideology_pacifist_leader
+		}
 		random_political_movement = {
 			limit = {
 				is_political_movement_type = movement_pacifist

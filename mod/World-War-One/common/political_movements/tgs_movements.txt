@@ -3,7 +3,7 @@
 
 	ideology = ideology_pacifist
 	character_ideologies = {
-		ideology_pacifist
+		ideology_pacifist_leader
 	}
 
 	can_cause_obstinance = yes
@@ -36,7 +36,7 @@
 			is_primary_culture_of = root.owner
 		}
 		OR = {
-			has_ideology = ideology:ideology_pacifist
+			has_ideology = ideology:ideology_pacifist_leader
 			has_ideology = ideology:ideology_utopian
 			has_ideology = ideology:ideology_humanitarian
 			has_ideology = ideology:ideology_humanitarian_royalist
@@ -46,7 +46,7 @@
 		value = 100
 		if = {
 			limit = {
-				has_ideology = ideology:ideology_pacifist
+				has_ideology = ideology:ideology_pacifist_leader
 			}
 			multiply = {
 				value = 5

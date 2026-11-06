@@ -26,20 +26,6 @@
 
     immediate = {}
 
-    fail = {
-        OR = {
-           has_modifier = enforced_partition
-           has_modifier = declared_bankruptcy
-        }
-    }
-
-    on_fail = {
-        trigger_event = {
-            id = kuk_events.5
-            days = 5
-        }
-    }
-
     outcome = {
         header = je_standard_completion_header
         effect_header = je_standard_on_completion_header

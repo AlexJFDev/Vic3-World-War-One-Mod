@@ -10328,10 +10328,17 @@ dev_events.213 = {
         texture = "gfx/event_pictures/world_map.dds"
     }
 
+    immediate = {
+		power_bloc ?= {
+			save_scope_as = german_power_bloc
+		}
+	}
+
     option = {
         name = dev_events.17.a
         default_option = yes
-        trigger = { is_player = no }
-
+        scope:german_power_bloc = {
+			destroy_power_bloc = yes
+		}
     }
 }

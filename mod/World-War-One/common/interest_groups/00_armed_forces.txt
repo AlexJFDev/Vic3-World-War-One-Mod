@@ -30,7 +30,7 @@
 	on_enable = {
 		# ONLY HANDLE IG TRAITS IN THIS BLOCK
 		ig:ig_armed_forces ?= {
-			else_if = {
+			if = {
 				limit = {
 					owner = {
 						any_primary_culture = {
@@ -125,11 +125,11 @@
 			trigger = {
 				c:ZAN ?= this
 				any_primary_culture = {
-					cu:bedouin = this
+					cu:arab = this
 				}
 			}
 			cultures = {
-				bedouin swahili baluchi
+				arab eastern_bantu baluchi
 			}
 		}
 		rule = {
@@ -137,7 +137,6 @@
 				c:PHI ?= this
 				NOT = { has_variable = je_philippines_main_reliance_happened }
 				NOT = { any_primary_culture = { cu:filipino = this } }
-				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
 				any_primary_culture = { cu:spanish = this }
 			}
 			cultures = {
@@ -150,12 +149,12 @@
 				any_primary_culture = {
 					AND = {
 						cu:spanish = this
-						cu:filipino_hispanophone = this
+						cu:filipino = this
 					}
 				}
 			}
 			cultures = {
-				spanish filipino_hispanophone
+				spanish filipino
 			}
 		}
 	}

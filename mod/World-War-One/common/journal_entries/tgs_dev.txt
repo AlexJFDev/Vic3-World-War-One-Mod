@@ -10,12 +10,14 @@
        country_rank >= rank_value:major_power
        has_technology_researched = trench_works
        is_player = no
+       game_date > 1913.10.10
     }
     
     possible = {
         country_rank >= rank_value:major_power
         has_technology_researched = automatic_machine_guns
         is_player = no
+        game_date > 1913.10.10
     }
 
     outcome = {
@@ -25,6 +27,7 @@
         conclusion_desc = je_standard_completion_conclusion_desc
         trigger = {
 			has_technology_researched = military_aviation
+            is_player = no
 		}
         effect = {
 			trigger_event = { id = dev_events.32 }
@@ -50,12 +53,14 @@ je_mechanized_warfare = {
        country_rank >= rank_value:major_power
        has_technology_researched = trench_works
        is_player = no
+       game_date > 1913.10.10
     }
     
     possible = {
         country_rank >= rank_value:major_power
         has_technology_researched = automatic_machine_guns
         is_player = no
+        game_date > 1913.10.10
     }
 
     outcome = {
@@ -64,6 +69,7 @@ je_mechanized_warfare = {
         color = "gold_positive"
         conclusion_desc = je_standard_completion_conclusion_desc
         trigger = {
+            is_player = no
 			has_technology_researched = mobile_armor
 		}
         effect = {

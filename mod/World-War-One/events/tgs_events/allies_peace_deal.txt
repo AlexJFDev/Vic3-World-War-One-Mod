@@ -129,6 +129,10 @@ allies_peace_deal.3 = {
 			activate_law = law_type:law_free_trade
 			activate_law = law_type:law_subordinate_general_staff
 			activate_law = law_type:law_true_neutrality
+			trigger_event = {
+                id = dev_events.213
+                days = 5
+            }
 		    remove_diplomatic_pact = {
 			  country = c:FRA
 			  type = protectorate
@@ -164,6 +168,42 @@ allies_peace_deal.3 = {
 			remove_diplomatic_pact = {
 			  country = c:POL
 			  type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:FRA
+			  type = puppet
+		    }
+            remove_diplomatic_pact = {
+			  country = c:BEL
+			  type = puppet
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:LUX
+			  type = puppet
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:NET
+			  type = puppet
+		    }	
+            remove_diplomatic_pact = {
+			  country = c:GBR
+			  type = puppet
+		    }
+			remove_diplomatic_pact = {
+			  country = c:USA
+			  type = puppet
+		    }
+			remove_diplomatic_pact = {
+			  country = c:RUS
+			  type = puppet
+		    }
+			remove_diplomatic_pact = {
+			  country = c:CZH
+			  type = puppet
+		    }			
+			remove_diplomatic_pact = {
+			  country = c:POL
+			  type = puppet
 		    }	
             every_state = {
 			if = {
@@ -594,11 +634,19 @@ allies_peace_deal.4 = {
             }
 			remove_diplomatic_pact = {
 			  country = c:ICH
-			  type = puppet
+			  type = protectorate
 		    }
 			remove_diplomatic_pact = {
 			  country = c:DEI
 			  type = protectorate
+		    }
+			remove_diplomatic_pact = {
+			  country = c:ICH
+			  type = puppet
+		    }
+			remove_diplomatic_pact = {
+			  country = c:DEI
+			  type = puppet
 		    }
         }
 		c:FRA = {
@@ -669,6 +717,9 @@ allies_peace_deal.6 = {
 		ROOT.ruler = {
 			set_ideology = ideology:ideology_moderate
 		}
+		power_bloc ?= {
+			save_scope_as = japanese_power_bloc
+		}
 	}
 
     event_image = {
@@ -679,6 +730,9 @@ allies_peace_deal.6 = {
 
     option = {
         name = allies_peace_deal.6.a
+		scope:japanese_power_bloc = {
+			destroy_power_bloc = yes
+		}
 		every_character = {
 			limit = {
 				OR = {

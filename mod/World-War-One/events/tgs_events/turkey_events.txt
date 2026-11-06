@@ -742,9 +742,18 @@ turkey_events.15 = { #Sick man je failure
 
     trigger = {}
 
+    immediate = {
+		power_bloc ?= {
+			save_scope_as = turkish_power_bloc
+		}
+	}
+
     option = {
         name = turkey_events.15.a
         default_option = yes
+        scope:turkish_power_bloc = {
+			destroy_power_bloc = yes
+		}
         add_modifier = {
 			name = sick_man_2
             years = 10

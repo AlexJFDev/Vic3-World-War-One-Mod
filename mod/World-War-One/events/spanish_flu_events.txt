@@ -503,7 +503,7 @@ plague.7 = {
 			is_in_government = no
 			NOT = { has_modifier = plague_war }
 			leader = {
-				has_ideology = ideology:ideology_pacifist
+				has_ideology = ideology:ideology_pacifist_leader
 			}
 		}
 		NOT = { has_variable = plague_war_timer }
@@ -531,7 +531,7 @@ plague.7 = {
 				is_in_government = no
 				NOT = { has_modifier = plague_war }
 				leader = {
-					has_ideology = ideology:ideology_pacifist
+					has_ideology = ideology:ideology_pacifist_leader
 				}
 			}
 			save_scope_as = pacifist_ig

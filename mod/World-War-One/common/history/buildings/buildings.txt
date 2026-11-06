@@ -83779,7 +83779,7 @@
 					building = {
 						type = building_financial_district
 						country = c:GBR
-						levels = 10
+						levels = 6
 						region = STATE_HOME_COUNTIES
 					}
 				}
@@ -83794,7 +83794,7 @@
 					building = {
 						type = building_financial_district
 						country = c:SWI
-						levels = 16
+						levels = 10
 						region = STATE_WEST_SWITZERLAND
 					}
 				}
@@ -83834,6 +83834,98 @@
 				}
 			}
 			create_building = {
+				building = building_rye_farm
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:RUS
+						levels = 12
+						region = STATE_ORYOL
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_fertilization pm_no_secondary pm_steam_threshers 
+				}
+			}
+			create_building = {
+				building = building_livestock_ranch
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:RUS
+						levels = 2
+						region = STATE_ORYOL
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
+				}
+			}
+			create_building = {
+				building = building_barrack
+				add_ownership = {
+					country = {
+						country = c:RUS
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_training_streamlining 
+				}
+			}
+			create_building = {
+				building = building_trade_center
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:RUS
+						levels = 2
+						region = STATE_ORYOL
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_trade_center_trade_quantity_normal 
+				}
+			}
+		}
+	}
+	s:STATE_TULA = {
+		region_state:RUS = {
+			create_building = {
+				building = building_railway
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:GBR
+						levels = 4
+						region = STATE_HOME_COUNTIES
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steam_trains pm_wooden_passenger_carriages 
+				}
+			}
+			create_building = {
+				building = building_logging_camp
+				add_ownership = {
+					building = {
+						type = building_financial_district
+						country = c:RUS
+						levels = 6
+						region = STATE_MOSCOW
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_saw_mills pm_no_hardwood pm_road_carts pm_steam_donkey_building_logging_camp 
+				}
+			}
+			create_building = {
 				building = building_tooling_workshop
 				add_ownership = {
 					building = {
@@ -83869,28 +83961,13 @@
 					building = {
 						type = building_manor_house
 						country = c:RUS
-						levels = 18
-						region = STATE_ORYOL
+						levels = 5
+						region = STATE_TULA
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
 					pm_fertilization pm_no_secondary pm_steam_threshers 
-				}
-			}
-			create_building = {
-				building = building_livestock_ranch
-				add_ownership = {
-					building = {
-						type = building_manor_house
-						country = c:RUS
-						levels = 2
-						region = STATE_ORYOL
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_barbed_wire_fences pm_sheep_farms pm_slaughterhouses pm_unrefrigerated 
 				}
 			}
 			create_building = {
@@ -83965,26 +84042,13 @@
 				}
 			}
 			create_building = {
-				building = building_barrack
-				add_ownership = {
-					country = {
-						country = c:RUS
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_training_streamlining 
-				}
-			}
-			create_building = {
 				building = building_trade_center
 				add_ownership = {
 					building = {
 						type = building_financial_district
 						country = c:RUS
 						levels = 6
-						region = STATE_ORYOL
+						region = STATE_TULA
 					}
 				}
 				reserves = 1
@@ -84179,25 +84243,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_simple_sailor_recruitment 
-				}
-			}
-		}
-	}
-	s:STATE_KAMCHATKA = {
-		region_state:RUS = {
-			create_building = {
-				building = building_whaling_station
-				add_ownership = {
-					building = {
-						type = building_whaling_station
-						country = c:RUS
-						levels = 1
-						region = STATE_KAMCHATKA
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					pm_steam_whaling_ships pm_unrefrigerated 
 				}
 			}
 		}
@@ -85068,7 +85113,7 @@
 		region_state:RUS = {
 		}
 	}
-	s:STATE_KAMCHATKA = {
+	s:STATE_CHUKOTKA = {
 		region_state:RUS = {
 			create_building = {
 				building = building_whaling_station
@@ -85076,13 +85121,45 @@
 					building = {
 						type = building_financial_district
 						country = c:RUS
-						levels = 1
+						levels = 2
 						region = STATE_MOSCOW
 					}
 				}
 				reserves = 1
 				activate_production_methods = {
 					pm_steam_whaling_ships pm_unrefrigerated 
+				}
+			}
+		}
+	}
+	s:STATE_KOSTROMA = {
+		region_state:RUS = {
+			create_building = {
+				building = building_railway
+				add_ownership = {
+					country = {
+						country = c:RUS
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_steam_trains pm_wooden_passenger_carriages 
+				}
+			}
+			create_building = {
+				building = building_wheat_farm
+				add_ownership = {
+					building = {
+						type = building_manor_house
+						country = c:RUS
+						levels = 6
+						region = STATE_KOSTROMA
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					pm_fertilization pm_no_secondary pm_tools 
 				}
 			}
 		}

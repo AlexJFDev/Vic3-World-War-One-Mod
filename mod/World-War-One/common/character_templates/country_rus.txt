@@ -101,30 +101,6 @@ RUS_alexander_iii = { #Alexander III, second son of Alexander II
 	}
 }
 
-RUS_nicholas_ii = { #Nicholas II, son of Alexander III
-	first_name = Nikolai
-	last_name = Romanov
-	dna = dna_tsar_nicolas_02
-	historical = yes
-	birth_date = 1868.5.18
-	culture = cu:russian
-	religion = rel:orthodox
-	interest_group = ig_armed_forces
-	ideology = ideology_authoritarian
-	home_region = STATE_INGRIA
-	traits = {
-		imperious
-		pious
-		inept
-	}
-	trait_generation = {
-
-	}
-	on_created = {
-		set_variable = { name = dynasty_var value = flag:house_romanov }
-	}
-}
-
 RUS_george_i = { #Georgy Romanov
 	first_name = Georgy
 	last_name = Romanov
@@ -2527,7 +2503,7 @@ RUS_lev_tolstoy = { # One of the most influential writers of all time
     culture = cu:russian
     religion = rel:orthodox # was excommunicated in 1901
     interest_group = ig_intelligentsia
-    ideology = ideology_pacifist
+    ideology = ideology_pacifist_leader
     home_region = STATE_TULA
     traits = {
         aesthete

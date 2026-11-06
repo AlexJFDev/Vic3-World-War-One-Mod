@@ -461,7 +461,10 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 	    }
 		if = {
 			limit = {
-				c:TUR = { has_variable = central_powers_participant }
+				c:TUR = { 
+					has_variable = central_powers_participant
+					is_at_war = yes 
+				}
 			}
 			s:STATE_KARS = {
 	            random_scope_state = {
@@ -1196,7 +1199,10 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 	    }
 		if = {
 			limit = {
-				c:TUR = { has_variable = central_powers_participant }
+				c:TUR = { 
+					has_variable = central_powers_participant
+					is_at_war = yes 
+				}
 			}
 			s:STATE_KARS = {
 	            random_scope_state = {
@@ -1297,6 +1303,9 @@ russia_events.7 = { #Soviet uprising
     trigger = {}
 
     immediate = {
+        power_bloc ?= {
+			save_scope_as = russian_power_bloc
+		}
         create_country = {
 	       tag = SIB
 	       origin = this
@@ -1346,6 +1355,7 @@ russia_events.7 = { #Soviet uprising
                    state_region = s:STATE_NOVGOROD
                    state_region = s:STATE_TVER
                    state_region = s:STATE_MOSCOW
+                   state_region = s:STATE_TULA
                    state_region = s:STATE_RYAZAN
                    state_region = s:STATE_KURSK
                    state_region = s:STATE_YAROSLAVL
@@ -1722,6 +1732,9 @@ russia_events.7 = { #Soviet uprising
                activate_law = law_type:law_appointed_bureaucrats
                activate_law = law_type:law_graduated_taxation
                activate_law = law_type:law_corporatized_unions
+               activate_law = law_type:law_politicized_military
+               activate_law = law_type:law_military_bureaucrats
+               activate_law = law_type:law_extraordinary_commission
             }
         }
         s:STATE_KAMCHATKA = {
@@ -1816,6 +1829,9 @@ russia_events.7 = { #Soviet uprising
 
     option = {
         name = russia_events.7.a
+        scope:russian_power_bloc = {
+			destroy_power_bloc = yes
+		}
         set_capital = STATE_MOSCOW
         activate_law = law_type:law_council_republic
         activate_law = law_type:law_single_party_state
@@ -1830,6 +1846,8 @@ russia_events.7 = { #Soviet uprising
         activate_law = law_type:law_compulsory_primary_school
         activate_law = law_type:law_closed_borders
         activate_law = law_type:law_politicized_military
+        activate_law = law_type:law_military_bureaucrats
+        activate_law = law_type:law_extraordinary_commission
         activate_law = law_type:law_appointed_bureaucrats
         activate_law = law_type:law_graduated_taxation
         activate_law = law_type:law_corporatized_unions

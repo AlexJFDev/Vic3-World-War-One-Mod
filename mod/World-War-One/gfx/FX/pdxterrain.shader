@@ -14,10 +14,13 @@ Includes = {
 	"distance_fog.fxh"
 	"coloroverlay.fxh"
 	"coloroverlay_harvest_condition.fxh"
+	"coloroverlay_naval_mission.fxh"
 	"dynamic_masks.fxh"
 	"fog_of_war.fxh"
 	"ssao_struct.fxh"
 	"harvest_condition.fxh"
+	"seasons.fxh"
+	"material_debug.fxh"
 }
 
 
@@ -322,26 +325,37 @@ PixelShader =
 				float2 ProvinceCoords = Input.WorldSpacePos.xz / _ProvinceMapSize;
 
 				// Get terrain material
-				CalculateDetails( Input.WorldSpacePos.xz, DetailDiffuse, DetailNormal, DetailMaterial );
+				float4 DetailIndices;
+				float4 DetailMasks;
+				float4 DetailBlendFactors;
+				CalculateDetailsWeighted( Input.WorldSpacePos.xz, DetailDiffuse, DetailNormal, DetailMaterial, DetailIndices, DetailMasks, DetailBlendFactors );
+
+				MATERIAL_DEBUG_TEXTURES_BLENDED( DetailDiffuse, DetailMaterial );
 
 				// Harvest conditions
 				float WaterNormalLerp = 0.0;
-				ApplyHarvestConditionTerrain( DetailDiffuse, DetailNormal, DetailMaterial, Input.WorldSpacePos, WaterNormalLerp );
+				float HarvestSuppression = 1.0;
+				ApplyHarvestConditionTerrain( DetailDiffuse, DetailNormal, DetailMaterial, Input.WorldSpacePos, WaterNormalLerp, HarvestSuppression );
+
+				// Normals
+				float3 Normal = CalculateNormal( Input.WorldSpacePos.xz );
 
 				float IridescenceMask = 0.0f;
 				#ifndef UNDERWATER
 					// Dynamic mask alpha
 					ApplyPollutionMaterial( DetailDiffuse, DetailNormal, DetailMaterial, Input.WorldSpacePos.xz, IridescenceMask );
+					// Snow before devastation: the scorched ground and its fire front composite over whatever snow the devastation melt leaves.
+					ApplySeasonsTerrain( DetailDiffuse, DetailNormal, DetailMaterial, Input.WorldSpacePos, Normal, DetailIndices, DetailBlendFactors, HarvestSuppression );
 					ApplyDevastationMaterial( DetailDiffuse, DetailNormal, DetailMaterial, Input.WorldSpacePos.xz );
 				#endif
 
-				// Normals
-				float3 Normal = CalculateNormal( Input.WorldSpacePos.xz );
 				float3 ReorientedNormal = ReorientNormal( lerp( Normal, float3( 0.0, 1.0, 0.0 ), WaterNormalLerp ), DetailNormal );
 
 				// Colormap overlay
 				float3 ColorMap = PdxTex2D( ColorTexture, float2( MapCoords.x, 1.0 - MapCoords.y ) ).rgb;
 				float3 Diffuse = SoftLight( DetailDiffuse.rgb, ColorMap, ( 1 - DetailMaterial.r ) );
+
+				MATERIAL_DEBUG_TANGENT_NORMAL( DetailNormal, Normal );
 
 				// Border color overlay
 				float3 ColorOverlay;
@@ -357,6 +371,7 @@ PixelShader =
 				float ShadowTerm = CalculateShadow( Input.ShadowProj, ShadowMap );
 
 				DetailMaterial.a = ScaleRoughnessByDistance( DetailMaterial.a, Input.WorldSpacePos );
+				MATERIAL_DEBUG_SHADED( Diffuse, DetailMaterial.a, ReorientedNormal );
 				SMaterialProperties MaterialProps = GetMaterialProperties( Diffuse, ReorientedNormal, DetailMaterial.a, DetailMaterial.g, DetailMaterial.b );
 				SLightingProperties LightingProps = GetSunLightingProperties( Input.WorldSpacePos, ShadowTerm );
 
@@ -385,6 +400,11 @@ PixelShader =
 						FinalColor = lerp( FinalColor, Flatmap, _FlatmapLerp);
 					#endif
 
+					if ( _EnableMapNavalMission == true )
+					{
+						ApplyNavalMissionOverlay( FinalColor, ProvinceCoords, MapCoords, _FlatmapLerp );
+					}
+
 					// Highlight color overlay
 					FinalColor = ApplyHighlight( FinalColor, ProvinceCoords );
 				#endif //not UNDERWATER
@@ -400,6 +420,7 @@ PixelShader =
 					TerrainDebug( FinalColor, Input.WorldSpacePos );
 				#endif
 				DebugReturn( FinalColor, MaterialProps, LightingProps, EnvironmentMap );
+				MATERIAL_DEBUG_APPLY( FinalColor );
 
 				// Output
 				Out.Color = float4( FinalColor, Alpha );
@@ -408,6 +429,7 @@ PixelShader =
 					SSAOAlphaFixed = SSAOAlphaFixed + PostLightingBlend;
 				#endif
 				Out.SSAOColor = float4( saturate( SSAOAlphaFixed ), saturate( Alpha - GameCalculateDistanceFogFactor ( Input.WorldSpacePos ) ) );
+				MATERIAL_DEBUG_SUPPRESS_SSAO( Out.SSAOColor );
 
 				return Out;
 			}
@@ -463,6 +485,11 @@ PixelShader =
 						Diffuse = lerp( Diffuse, Flatmap, _FlatmapLerp );
 					#endif
 
+					if ( _EnableMapNavalMission == true )
+					{
+						ApplyNavalMissionOverlay( Diffuse, ProvinceCoords, MapCoords, _FlatmapLerp );
+					}
+
 					// Highlight color overlay
 					Diffuse = ApplyHighlight( Diffuse, ProvinceCoords );
 
@@ -470,7 +497,11 @@ PixelShader =
 
 				// Output
 				Out.Color = float4( Diffuse, 1.0f );
-				Out.SSAOColor = float4( vec4( 1.0f ) );
+				float3 SSAOAlphaFixed = vec3( 1.0f ) - _SSAOAlphaTerrain; // Reduces the applied SSAO on terrain
+				#ifndef UNDERWATER
+					SSAOAlphaFixed = SSAOAlphaFixed + PostLightingBlend;
+				#endif
+				Out.SSAOColor = float4( saturate( SSAOAlphaFixed ), 1.0f );
 
 				return Out;
 			}
@@ -516,6 +547,11 @@ PixelShader =
 
 				// Flatmap color
 				float3 FinalColor = Flatmap;
+
+				if ( _EnableMapNavalMission == true )
+				{
+					ApplyNavalMissionOverlay( FinalColor, ProvinceCoords, MapCoords, _FlatmapLerp );
+				}
 
 				// Highlight color overlay
 				FinalColor = ApplyHighlight( FinalColor, ProvinceCoords );

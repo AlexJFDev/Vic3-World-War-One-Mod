@@ -2716,7 +2716,7 @@ ideology_slaver = {
 	}
 }
 
-ideology_pacifist = {
+ideology_pacifist_leader = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_pacifist.dds"
 
 	character_ideology = yes
@@ -2760,7 +2760,7 @@ ideology_pacifist = {
 	}
 
 	interest_group_leader_trigger = {
-		ideology_pacifist_valid_trigger = yes
+		ideology_pacifist_leader_valid_trigger = yes
 	}
 
 	non_interest_group_leader_trigger = { # No pacifist agitators
@@ -3589,7 +3589,7 @@ ideology_social_democrat = {
 	}
 
 	interest_group_leader_trigger = {
-		ideology_social_democrat_valid_trigger = yes
+		ideology_state_socialist_valid_trigger = yes
 	}
 
 	non_interest_group_leader_trigger = {
@@ -3604,7 +3604,7 @@ ideology_social_democrat = {
 			}
 		}
 		interest_group ?= {
-			ideology_social_democrat_valid_trigger = yes
+			ideology_state_socialist_valid_trigger = yes
 		}
 	}
 
@@ -3617,10 +3617,10 @@ ideology_social_democrat = {
 		# More likely if issues are relevant
 		if = {
 			limit = {
-				owner.ideology_social_democrat_disfavoured_laws > 0
+				owner.ideology_state_socialist_disfavoured_laws > 0
 			}
 			add = {
-				value = owner.ideology_social_democrat_disfavoured_laws
+				value = owner.ideology_state_socialist_disfavoured_laws
 				multiply = 10 # Caste laws don't count by default
 				desc = "DISFAVORED_LAWS"
 			}
@@ -3769,10 +3769,10 @@ ideology_social_democrat = {
 		# More likely if issues are relevant
 		if = {
 			limit = {
-				owner.ideology_social_democrat_disfavoured_laws > 0
+				owner.ideology_state_socialist_disfavoured_laws > 0
 			}
 			add = {
-				value = owner.ideology_social_democrat_disfavoured_laws
+				value = owner.ideology_state_socialist_disfavoured_laws
 				multiply = 10 # Caste laws don't count by default
 			}
 		}
