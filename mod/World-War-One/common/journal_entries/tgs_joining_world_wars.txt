@@ -51,19 +51,9 @@
         color = "gold_positive"
         conclusion_desc = je_joining_entente_desc
         trigger = {
-            OR = {
-                scope:journal_entry = {
-			      "scripted_bar_progress(join_entente_progress_bar)" >= 199
-                } 
-                any_country = {
-                    limit = {
-                       is_at_war = yes
-                       has_variable = central_powers_participant
-                       is_diplomatic_play_enemy_of = c:FRA
-                    }
-                    is_diplomatic_play_enemy_of = root
-                }
-            }	
+            scope:journal_entry = {
+			    "scripted_bar_progress(join_entente_progress_bar)" >= 199
+            } 
         }
         effect = { trigger_event = { id = joining_world_war_events.2 popup = yes} }
         event_outcome_desc = {} # complex desc like a status_desc field
@@ -75,18 +65,8 @@
         color = "blue_negative"
         conclusion_desc = je_joining_central_powers_desc
         trigger = {
-            OR = {
-                scope:journal_entry = {
-			      "scripted_bar_progress(join_central_powers_progress_bar)" >= 199
-                } 
-                any_country = {
-                    limit = {
-                      is_at_war = yes
-                      has_variable = entente_participant
-                      is_diplomatic_play_enemy_of = c:GER
-                    }
-                    is_diplomatic_play_enemy_of = root
-                }
+            scope:journal_entry = {
+			    "scripted_bar_progress(join_central_powers_progress_bar)" >= 199
             } 
         }
         effect = { trigger_event = { id = joining_world_war_events.3 popup = yes} }
@@ -182,19 +162,9 @@ je_joining_world_war_two = {
         color = "gold_positive"
         conclusion_desc = je_joining_allies_desc
         trigger = {
-            OR = {
-                scope:journal_entry = {
-			      "scripted_bar_progress(join_allies_progress_bar)" >= 199
-                } 
-                any_country = {
-                    limit = {
-                      is_at_war = yes
-                      has_variable = axis_participant
-                      is_diplomatic_play_enemy_of = c:GBR
-                    }
-                    is_diplomatic_play_enemy_of = root
-                }
-            } 	
+            scope:journal_entry = {
+			    "scripted_bar_progress(join_allies_progress_bar)" >= 199
+            }
         }
         effect = { trigger_event = { id = joining_world_war_events.40 popup = yes} }
         event_outcome_desc = {} # complex desc like a status_desc field
@@ -206,19 +176,9 @@ je_joining_world_war_two = {
         color = "blue_negative"
         conclusion_desc = je_joining_axis_desc
         trigger = {
-            OR = {
-                scope:journal_entry = {
-			      "scripted_bar_progress(join_axis_progress_bar)" >= 199
-                } 
-                any_country = {
-                    limit = {
-                       is_at_war = yes
-                       has_variable = allies_participant
-                       is_diplomatic_play_enemy_of = c:GER
-                    }
-                    is_diplomatic_play_enemy_of = root
-                }
-            }
+            scope:journal_entry = {
+			    "scripted_bar_progress(join_axis_progress_bar)" >= 199
+            } 
         }
         effect = { trigger_event = { id = joining_world_war_events.41 popup = yes} }
     }

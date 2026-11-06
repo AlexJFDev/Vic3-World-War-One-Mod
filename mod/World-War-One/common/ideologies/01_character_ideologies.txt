@@ -955,8 +955,17 @@ ideology_republican_leader = { # Average Progressiveness - 75
 	   law_military_oversight = strongly_disapprove
 	}
 
+    country_trigger = {
+		NOT = {
+			this = c:JAP
+		}
+	}
+
 	interest_group_leader_trigger = {
 		ideology_republican_leader_valid_trigger = yes
+		NOT = {
+			this = c:JAP
+		}
 	}
 
 	non_interest_group_leader_trigger = {
@@ -3508,15 +3517,9 @@ ideology_social_democrat = {
 
 	character_ideology = yes
 
-	lawgroup_labor_rights = {
-		law_limited_work_hours = strongly_approve
-		law_worker_protections = approve
-		law_regulatory_bodies = neutral
-		law_no_workers_rights = strongly_disapprove
-	}
-
 	lawgroup_distribution_of_power = {
 		law_universal_suffrage = strongly_approve
+		law_labour_suffrage = approve
 		law_census_voting = neutral
 		law_wealth_voting = disapprove
 		law_landed_voting = disapprove
@@ -3525,7 +3528,6 @@ ideology_social_democrat = {
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove
 		law_single_party_state = strongly_disapprove
-		law_labour_suffrage = approve
 	}
 
 	lawgroup_economic_system = {
@@ -3554,13 +3556,20 @@ ideology_social_democrat = {
 		law_old_age_pension = strongly_approve
 	}
 
+	lawgroup_labor_rights = {
+		law_limited_work_hours = strongly_approve
+		law_worker_protections = approve
+		law_regulatory_bodies = neutral
+		law_no_workers_rights = strongly_disapprove
+	}
+
 	lawgroup_labour_associations = {
 		law_combination_acts = strongly_disapprove
 		law_guild_system = disapprove
 		law_anti_strike_laws = neutral
-		law_corporatized_unions = neutral
+		law_corporatized_unions = approve
 		law_right_to_associate = approve
-		law_factory_councils = strongly_disapprove
+		law_factory_councils = neutral
 	}
 
 	lawgroup_land_reform = {
@@ -3854,6 +3863,7 @@ ideology_state_socialist = { # Average Progressiveness - 65.62
 
 	lawgroup_distribution_of_power = {
 		law_universal_suffrage = strongly_approve
+		law_labour_suffrage = strongly_approve
 		law_census_voting = neutral
 		law_wealth_voting = disapprove
 		law_landed_voting = disapprove
@@ -3862,20 +3872,6 @@ ideology_state_socialist = { # Average Progressiveness - 65.62
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove
 		law_single_party_state = strongly_disapprove
-		law_labour_suffrage = approve
-	}
-
-	lawgroup_caste_hegemony = {
-		law_hindu_caste_enforced = strongly_disapprove
-		law_hindu_caste_codified = disapprove
-		law_hindu_caste_not_enforced = neutral
-		law_affirmative_action = approve
-	}
-
-	lawgroup_edo_social_system = {
-		law_strict_edo_system = strongly_disapprove
-		law_intermediate_edo_system = disapprove
-		law_lax_edo_system = approve
 	}
 
 	lawgroup_economic_system = {
@@ -3889,12 +3885,35 @@ ideology_state_socialist = { # Average Progressiveness - 65.62
 		law_extraction_economy = strongly_disapprove
 	}
 
+	lawgroup_centralization = {
+		law_confederated = strongly_disapprove
+		law_federated = disapprove
+        law_devolved = neutral
+        law_unitary = approve
+	}
+
+	lawgroup_bureaucracy = {
+		law_elected_bureaucrats = disapprove
+		law_military_bureaucrats = strongly_disapprove
+		law_appointed_bureaucrats = approve
+		law_meritocratic_bureaucracy = neutral
+		law_hereditary_bureaucrats = strongly_disapprove
+		law_communal_administration = approve
+	}
+
 	lawgroup_taxation = {
 		law_consumption_based_taxation = disapprove
 		law_land_based_taxation = disapprove
 		law_per_capita_based_taxation = neutral
 		law_proportional_taxation = approve
 		law_graduated_taxation = strongly_approve
+	}
+
+    lawgroup_welfare = {
+		law_poor_laws = disapprove
+		law_no_social_security = strongly_disapprove
+		law_wage_subsidies = approve
+		law_old_age_pension = strongly_approve
 	}
 
 	lawgroup_labor_rights = {
@@ -3904,27 +3923,26 @@ ideology_state_socialist = { # Average Progressiveness - 65.62
 		law_limited_work_hours = strongly_approve
 	}
 
-	lawgroup_welfare = {
-		law_poor_laws = disapprove
-		law_no_social_security = strongly_disapprove
-		law_wage_subsidies = approve
-		law_old_age_pension = strongly_approve
-	}
-
 	lawgroup_labour_associations = {
 		law_combination_acts = strongly_disapprove
 		law_guild_system = disapprove
 		law_anti_strike_laws = neutral
-		law_corporatized_unions = neutral
+		law_corporatized_unions = approve
 		law_right_to_associate = approve
-		law_factory_councils = strongly_disapprove
+		law_factory_councils = approve
 	}
 
-	lawgroup_centralization = {
-		law_confederated = strongly_disapprove
-		law_federated = disapprove
-        law_devolved = neutral
-        law_unitary = approve
+	lawgroup_caste_hegemony = {
+		law_hindu_caste_enforced = strongly_disapprove
+		law_hindu_caste_codified = disapprove
+		law_hindu_caste_not_enforced = neutral
+		law_affirmative_action = approve
+	}
+
+	lawgroup_edo_social_system = {
+		law_strict_edo_system = strongly_disapprove
+		law_intermediate_edo_system = disapprove
+		law_lax_edo_system = approve
 	}
 
 	country_trigger = {
@@ -4209,10 +4227,10 @@ ideology_communist_leader = { # Average Progressiveness - 104.16
 		law_monarchy = strongly_disapprove
 		law_presidential_republic = disapprove
 		law_parliamentary_republic = disapprove
-		law_corporate_state = strongly_disapprove
-		law_social_monarchy = strongly_disapprove
+		law_corporate_state = disapprove
+		law_social_monarchy = disapprove
 		law_theocracy = strongly_disapprove
-		law_council_republic = approve
+		law_council_republic = strongly_approve
 	}
 
 	lawgroup_distribution_of_power = {
@@ -4223,8 +4241,8 @@ ideology_communist_leader = { # Average Progressiveness - 104.16
 		law_census_voting = strongly_disapprove
 		law_wealth_voting = strongly_disapprove
 		law_landed_voting = strongly_disapprove
-		law_technocracy = disapprove
-		law_single_party_state = disapprove
+		law_technocracy = neutral
+		law_single_party_state = approve
 		law_labour_suffrage = strongly_approve
 	}
 
@@ -4238,25 +4256,17 @@ ideology_communist_leader = { # Average Progressiveness - 104.16
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = disapprove
 		law_military_bureaucrats = strongly_disapprove
-		law_appointed_bureaucrats = disapprove
+		law_appointed_bureaucrats = neutral
 		law_meritocratic_bureaucracy = approve
 		law_hereditary_bureaucrats = strongly_disapprove
-		law_communal_administration = approve
-	}
-
-	lawgroup_army_model = {
-		law_mass_conscription = neutral
-		law_professional_army = disapprove
-		law_national_militia = neutral
-		law_peasant_levies = strongly_disapprove
-		law_revolutionary_guard = approve
+		law_communal_administration = strongly_approve
 	}
 
 	lawgroup_labour_associations = {
 		law_combination_acts = strongly_disapprove
 		law_guild_system = strongly_disapprove
 		law_anti_strike_laws = disapprove
-		law_corporatized_unions = strongly_disapprove
+		law_corporatized_unions = disapprove
 		law_right_to_associate = neutral
 		law_factory_councils = approve
 	}
@@ -4864,23 +4874,7 @@ ideology_vanguardist = { # Average Progressiveness - 70.83
 		law_labour_suffrage = approve
 	}
 
-	lawgroup_church_and_state = {
-		law_state_religion = strongly_disapprove
-		law_freedom_of_conscience = disapprove
-		law_total_separation = neutral
-		law_state_atheism = approve
-	}
-
-	# Inherits Bureaucracy stances from IG
-
-	lawgroup_internal_security = {
-		law_national_guard = approve
-		law_guaranteed_liberties = disapprove
-		law_no_home_affairs = disapprove
-		law_extraordinary_commission = strongly_approve
-	}
-
-	lawgroup_economic_system = {
+    lawgroup_economic_system = {
 		law_command_economy = strongly_approve
 		law_cooperative_ownership = approve
 		law_interventionism = neutral
@@ -4889,6 +4883,35 @@ ideology_vanguardist = { # Average Progressiveness - 70.83
 		law_laissez_faire = strongly_disapprove
 		law_industry_banned = strongly_disapprove
 		law_extraction_economy = strongly_disapprove
+	}
+
+	lawgroup_centralization = {
+        law_confederated = strongly_disapprove
+        law_federated = disapprove
+        law_devolved = approve
+        law_unitary = strongly_approve
+	}
+
+	lawgroup_army_model = {
+		law_mass_conscription = neutral
+		law_professional_army = disapprove
+		law_national_militia = neutral
+		law_peasant_levies = strongly_disapprove
+		law_revolutionary_guard = approve
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_disapprove
+		law_freedom_of_conscience = disapprove
+		law_total_separation = neutral
+		law_state_atheism = approve
+	}
+
+	lawgroup_internal_security = {
+		law_national_guard = approve
+		law_guaranteed_liberties = disapprove
+		law_no_home_affairs = disapprove
+		law_extraordinary_commission = strongly_approve
 	}
 
 	lawgroup_trade_policy = {
@@ -4904,13 +4927,6 @@ ideology_vanguardist = { # Average Progressiveness - 70.83
 		law_tenant_farmers = disapprove
 		law_peasant_proprietorship = disapprove
 		law_collectivized_agriculture = strongly_approve
-	}
-
-	lawgroup_centralization = {
-        law_confederated = strongly_disapprove
-        law_federated = disapprove
-        law_devolved = approve
-        law_unitary = strongly_approve
 	}
 
 	lawgroup_military_governance = {

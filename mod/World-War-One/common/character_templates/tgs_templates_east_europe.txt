@@ -67,14 +67,15 @@ RUS_alexei_ii = {
 RUS_alexey_alekseevich_borovoy = {
 	first_name = Alexey
 	last_name = Borovoy
-	historical = yes
 	female = no
+	historical = yes
+	birth_date = 1875.11.11
 	is_agitator = yes
 	culture = cu:russian
-	religion = atheist
+	religion = rel:atheist
 	interest_group = ig_intelligentsia
 	ideology = ideology_nihilist
-	birth_date = 1875.11.11
+	home_region = STATE_MOSCOW
 	traits = {
 		erudite
 		brave
@@ -85,14 +86,15 @@ RUS_alexey_alekseevich_borovoy = {
 RUS_alexey_aleksandrovich_solonovich = {
 	first_name = Alexey
 	last_name = Solonovich
-	historical = yes
 	female = no
+	historical = yes
+	birth_date = 1887.10.23
 	is_agitator = yes
 	culture = cu:russian
-	religion = animist
+	religion = rel:animist
 	interest_group = ig_intelligentsia
 	ideology = ideology_anarchist
-	birth_date = 1887.10.23
+	home_region = STATE_MOSCOW
 	traits = {
 		literary
 		inspirational_orator
@@ -102,14 +104,16 @@ RUS_alexey_aleksandrovich_solonovich = {
 RUS_olha_illivna_taratuta = {
 	first_name = Olha
 	last_name = Taratuta
-	historical = yes
 	female = yes
+	dna = dna_olha_taratuta
+	historical = yes
+	birth_date = 1876.1.21
 	is_agitator = yes
 	culture = cu:ukrainian
-	religion = atheist
+	religion = rel:atheist
 	interest_group = ig_trade_unions
 	ideology = ideology_anarchist
-	birth_date = 1876.1.21
+	home_region = STATE_CHERSON
 	traits = {
 		brave
 		ambitious
@@ -119,33 +123,35 @@ RUS_olha_illivna_taratuta = {
 RUS_alexandra_mikhailovna_kollontai = {
 	first_name = Alexandra
 	last_name = Kollontai
-	historical = yes
 	female = yes
-	is_agitator = yes
     dna = dna_kollontai
+	historical = yes
+	birth_date = 1872.3.31
+	is_agitator = yes
 	culture = cu:russian
-	religion = atheist
+	religion = rel:atheist
 	interest_group = ig_trade_unions
 	ideology = ideology_humanitarian
-	birth_date = 1872.3.31
+	home_region = STATE_INGRIA
 	traits = {
-		reckless # I admire her, but there's really no other word for her handing Lenin an opposition pamphlet. # I admire her as well 
+		reckless # I admire her, but there's really no other word for her handing Lenin an opposition pamphlet. # I admire her as well
 		firebrand # Was known for her fiery speeches in party congresses.
 		basic_diplomat # Her historical diplomatic career, and her international anti-war advocacy.
 	}
 }
 
-agitator_aleksei_aladin = { # Aleksei Feodorovich Aladin
+agitator_aleksei_aladin = {
 	first_name = Aleksei
 	last_name = Aladin
-	historical = yes
-	culture = cu:russian
-	religion = orthodox
 	female = no
-	is_agitator = yes
-	interest_group = ig_rural_folk
-	ideology = ideology_social_democrat
+	historical = yes
 	birth_date = 1873.3.15
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_rural_folk
+	is_agitator = yes
+	ideology = ideology_state_socialist
+	home_region = STATE_SARATOV
 	traits = {
 		cautious
 		inspirational_orator
@@ -156,15 +162,16 @@ agitator_aleksei_aladin = { # Aleksei Feodorovich Aladin
 agitator_nestor_makhno = {
 	first_name = Nestor
 	last_name = Makhno
-	historical = yes
-	culture = cu:ukrainian
-	religion = atheist
 	female = no
-	is_agitator = yes
-	interest_group = ig_rural_folk
-	ideology = ideology_anarchist
-	birth_date = 1888.11.8 # October 27th in the Old Style calendar
 	dna = dna_mahno
+	historical = yes
+	birth_date = 1888.11.8 # October 27th in the Old Style calendar
+	culture = cu:ukrainian
+	religion = rel:atheist
+	interest_group = ig_rural_folk
+	is_agitator = yes
+	ideology = ideology_anarchist
+	home_region = STATE_CHERSON
 	traits = {
 		social_bandit
 		imposing

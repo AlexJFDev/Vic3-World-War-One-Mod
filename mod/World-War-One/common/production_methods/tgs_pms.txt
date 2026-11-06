@@ -237,6 +237,31 @@ pm_popular_art = {
 	}
 }
 
+REPLACE_OR_CREATE:pm_mobile_warfare_tactics = {
+	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
+
+	profession_ratio = {
+		soldiers = 75
+		officers = 25
+		engineers = 15
+	}
+	disallowing_laws = {
+		law_warrior_caste
+	}
+	unlocking_technologies = {
+		blitzkrieg_tech
+	}
+	building_modifiers = {
+		unscaled = {
+			building_training_rate_add = 50
+		}
+
+		level_scaled = {
+			building_training_rate_add = 24
+		}
+	}
+}
+
 REPLACE_OR_CREATE:pm_mobile_warfare_tactics_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
 

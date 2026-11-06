@@ -1,5 +1,5 @@
 ﻿je_tp_fav_rasputin = {
-	icon = "gfx/interface/icons/event_icons/event_imperial_eagle.dds"
+	icon = "gfx/interface/icons/goods_icons/pharmaceuticals.dds"
 
 	group = je_group_tsarpoints
 	dlc = dlc019
@@ -21,9 +21,17 @@
 			}
 			save_scope_as = alexei_scope
 		}
-		scope:je_tp_fav_rasputin_scope.interest_group ?= {
-			save_scope_as = je_tp_fav_rasputin_ig
-		}
+	}
+
+    is_shown_when_inactive = {
+        exists = c:RUS
+        THIS = c:RUS
+    }
+
+	possible = {
+		exists = c:RUS
+        THIS = c:RUS
+		game_date > 1913.07.23
 	}
 
 	on_yearly_pulse = {
@@ -42,22 +50,24 @@
 		color = "gold_positive"
 		conclusion_desc = je_standard_completion_conclusion_desc
 		trigger = {
-			scope:fav_character_scope ?= {
+			scope:je_tp_fav_rasputin_scope ?= {
 				custom_tooltip = {
 					text = je_tp_fav_rasputin_is_rasputin_tt
 					has_template = RUS_grigoriy_rasputin
 				}
 				current_career_length = {
 					role = character_role_favorite
-					years = 10
+					years = 5
 				}
 			}
-			scope:je_tp_fav_rasputin_ig ?= {
-				is_marginal = no
-			}
+			market ?= {
+			    mg:pharmaceuticals ?= {
+				    market_goods_sell_orders > 0
+			    }
+		    }
 		}
 		effect = {
-			scope:fav_character_scope ?= {
+			scope:je_tp_fav_rasputin_scope ?= {
 				custom_tooltip = {
 					text = je_tp_fav_rasputin_name_change_tt
 					set_last_name = Rasputin-Noviy
@@ -88,13 +98,18 @@
 		conclusion_desc = je_standard_failure_conclusion_desc
 		trigger = {
 			OR = {
-				custom_tooltip = {
-					text = je_tp_fav_rasputin_not_favorite_tt
-					je_tsarpoints_favourite_check = yes
+				scope:je_tp_fav_rasputin_scope ?= {
+				    NOT = { has_role = character_role_favorite }
+			    }
+				NOT = { 
+					scope:je_tp_fav_rasputin_scope ?= { 
+						is_character_alive = yes 
+					} 
 				}
-				custom_tooltip = {
-					text = je_tp_fav_rasputin_no_alexei_tt
-					NOT = { scope:alexei_scope ?= { is_character_alive = yes } }
+				NOT = { 
+					scope:alexei_scope ?= { 
+						is_character_alive = yes 
+					} 
 				}
 			}
 		}
@@ -106,4 +121,8 @@
 	}
 
 	weight = 1000
+	highlight = yes
+    transferable = no
+    can_revolution_inherit = no
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

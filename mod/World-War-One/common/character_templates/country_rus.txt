@@ -1535,16 +1535,6 @@ rus_general_chicherin = {
 	traits = {
 		plains_commander
 	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-		}
-		role = general
-		earliest_usage_date = 1836.1.1
-		latest_usage_date = 1848.1.1
-		#guaranteed to spawn if possible
-	}
 }
 
 rus_general_von_tottleben = {
@@ -1564,17 +1554,6 @@ rus_general_von_tottleben = {
 		expert_defensive_strategist
 		innovative
 		trench_rat
-	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-			c:RUS ?= { owns_entire_state_region = STATE_RIGA }
-		}
-		role = general
-		earliest_usage_date = 1850.1.1
-		latest_usage_date = 1884.1.1
-		#guaranteed to spawn if possible
 	}
 }
 
@@ -1596,17 +1575,6 @@ rus_general_von_rennenkampf = {
 		reckless
 		persistent
 	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-			c:RUS ?= { owns_entire_state_region = STATE_TALINN }
-		}
-		role = general
-		earliest_usage_date = 1884.1.1
-		latest_usage_date = 1920.1.1
-		#guaranteed to spawn if possible
-	}
 }
 
 rus_general_grand_duke_nicholas = {
@@ -1626,17 +1594,6 @@ rus_general_grand_duke_nicholas = {
 		popular_commander
 		pious
 		basic_offensive_planner
-	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-			c:RUS ?= { country_has_monarchy_law = yes }
-		}
-		role = general
-		earliest_usage_date = 1884.1.1
-		latest_usage_date = 1920.1.1
-		#guaranteed to spawn if possible
 	}
 	on_created = {
 		set_variable = { name = dynasty_var value = flag:house_romanov }
@@ -1661,17 +1618,6 @@ rus_general_brusilov = {
 		innovative
 		direct
 	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-			c:RUS ?= { owns_entire_state_region = STATE_GREATER_CAUCASUS }
-		}
-		role = general
-		earliest_usage_date = 1874.1.1
-		latest_usage_date = 1920.1.1
-		#guaranteed to spawn if possible
-	}
 }
 
 rus_general_wrangel = {
@@ -1692,16 +1638,6 @@ rus_general_wrangel = {
 		popular_commander
 		direct
 	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-		}
-		role = general
-		earliest_usage_date = 1914.1.1
-		latest_usage_date = 1936.1.1
-		#guaranteed to spawn if possible
-	}
 }
 
 rus_general_skobelev = {
@@ -1720,16 +1656,6 @@ rus_general_skobelev = {
 		expert_offensive_planner
 		popular_commander
 		bigoted
-	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-		}
-		role = general
-		earliest_usage_date = 1870.1.1
-		latest_usage_date = 1910.1.1
-		#guaranteed to spawn if possible
 	}
 }
 
@@ -1965,16 +1891,6 @@ rus_admiral_makarov = {
 		experienced_naval_commander
 		innovative
 	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-		}
-		role = admiral
-		earliest_usage_date = 1881.1.1
-		latest_usage_date = 1918.1.1
-		#guaranteed to spawn if possible
-	}
 }
 
 rus_admiral_nakhimov = {
@@ -1993,16 +1909,6 @@ rus_admiral_nakhimov = {
 		brave
 		experienced_naval_commander
 		meticulous
-	}
-	commander_usage = {
-		country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-		}
-		role = admiral
-		earliest_usage_date = 1836.1.1
-		latest_usage_date = 1870.1.1
-		#guaranteed to spawn if possible
 	}
 }
 
@@ -2044,22 +1950,6 @@ RUS_nikolai_vasilyevich_tchaikovsky = {
 		experienced_diplomat
 		ambitious
 	}
-    agitator_usage = {
-        country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-			OR = {
-				has_dlc_feature = ep1_content
-				has_dlc_feature = ip5_content
-			}
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_rural_folk
-        }
-        earliest_usage_date = 1872.1.1
-        latest_usage_date = 1917.1.1
-        #guaranteed to spawn if possible
-    }
 }
 
 RUS_sergei_gennadievich_nechaev = {
@@ -2080,234 +1970,6 @@ RUS_sergei_gennadievich_nechaev = {
         ruthless # The Nechaev Affair x2
 		demagogue
 	}
-    agitator_usage = {
-        country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-			OR = {
-				has_dlc_feature = ep1_content
-				has_dlc_feature = ip5_content
-			}
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1868.1.1
-        latest_usage_date = 1880.1.1
-        #guaranteed to spawn if possible
-    }
-}
-
-RUS_alexey_alekseevich_borovoy = {
-	first_name = Alexey
-	last_name = Borovoy
-	female = no
-	historical = yes
-	birth_date = 1875.11.11
-	is_agitator = yes
-	culture = cu:russian
-	religion = rel:atheist
-	interest_group = ig_intelligentsia
-	ideology = ideology_nihilist
-	home_region = STATE_MOSCOW
-	traits = {
-		erudite
-		brave
-		inspirational_orator
-	}
-    agitator_usage = {
-        country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-			OR = {
-				has_dlc_feature = ep1_content
-				has_dlc_feature = ip5_content
-			}
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1936.1.1
-        #guaranteed to spawn if possible
-    }
-}
-
-RUS_alexey_aleksandrovich_solonovich = {
-	first_name = Alexey
-	last_name = Solonovich
-	female = no
-	historical = yes
-	birth_date = 1887.10.23
-	is_agitator = yes
-	culture = cu:russian
-	religion = rel:animist
-	interest_group = ig_intelligentsia
-	ideology = ideology_anarchist
-	home_region = STATE_MOSCOW
-	traits = {
-		literary
-		inspirational_orator
-	}
-    agitator_usage = {
-        country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-            has_technology_researched = anarchism
-			OR = {
-				has_dlc_feature = ep1_content
-				has_dlc_feature = ip5_content
-			}
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1910.1.1
-        latest_usage_date = 1936.1.1
-        #guaranteed to spawn if possible
-    }
-}
-
-RUS_olha_illivna_taratuta = {
-	first_name = Olha
-	last_name = Taratuta
-	female = yes
-	dna = dna_olha_taratuta
-	historical = yes
-	birth_date = 1876.1.21
-	is_agitator = yes
-	culture = cu:ukrainian
-	religion = rel:atheist
-	interest_group = ig_trade_unions
-	ideology = ideology_anarchist
-	home_region = STATE_CHERSON
-	traits = {
-		brave
-		ambitious
-	}
-    agitator_usage = {
-        country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-            has_technology_researched = anarchism
-			OR = {
-				has_dlc_feature = ep1_content
-				has_dlc_feature = ip5_content
-			}
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_trade_unions
-        }
-        earliest_usage_date = 1898.1.1
-        latest_usage_date = 1930.1.1
-        #guaranteed to spawn if possible
-    }
-}
-
-RUS_alexandra_mikhailovna_kollontai = {
-	first_name = Alexandra
-	last_name = Kollontai
-	female = yes
-    dna = dna_kollontai
-	historical = yes
-	birth_date = 1872.3.31
-	is_agitator = yes
-	culture = cu:russian
-	religion = rel:atheist
-	interest_group = ig_trade_unions
-	ideology = ideology_humanitarian
-	home_region = STATE_INGRIA
-	traits = {
-		reckless # I admire her, but there's really no other word for her handing Lenin an opposition pamphlet. # I admire her as well
-		firebrand # Was known for her fiery speeches in party congresses.
-		basic_diplomat # Her historical diplomatic career, and her international anti-war advocacy.
-	}
-    agitator_usage = {
-        country_trigger = {
-			exists = c:RUS
-			c:RUS ?= THIS
-            has_technology_researched = feminism
-			OR = {
-				has_dlc_feature = ep1_content
-				has_dlc_feature = ip5_content
-			}
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_trade_unions
-        }
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1936.1.1
-        #guaranteed to spawn if possible
-    }
-}
-
-agitator_aleksei_aladin = { # Aleksei Feodorovich Aladin
-	first_name = Aleksei
-	last_name = Aladin
-	female = no
-	historical = yes
-	birth_date = 1873.3.15
-	culture = cu:russian
-	religion = rel:orthodox
-	interest_group = ig_rural_folk
-	ideology = ideology_state_socialist
-	home_region = STATE_SARATOV
-	traits = {
-		cautious
-		inspirational_orator
-		basic_diplomat
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			c:RUS ?= this
-		}
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-		    is_interest_group_type = ig_rural_folk
-        }
-		earliest_usage_date = 1892.1.1
-		latest_usage_date = 1927.7.30
-		chance = 50
-	}
-}
-
-agitator_nestor_makhno = {
-	first_name = Nestor
-	last_name = Makhno
-	female = no
-	dna = dna_mahno
-	historical = yes
-	birth_date = 1888.11.8 # October 27th in the Old Style calendar
-	culture = cu:ukrainian
-	religion = rel:atheist
-	interest_group = ig_rural_folk
-	ideology = ideology_anarchist
-	home_region = STATE_CHERSON
-	traits = {
-		social_bandit
-		imposing
-		celebrity_commander
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			OR = {
-				c:RUS ?= this
-				c:UKR ?= this
-			}
-		}
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_trade_unions
-                is_interest_group_type = ig_rural_folk
-            }
-        }
-		earliest_usage_date = 1910.1.1
-		latest_usage_date = 1935.12.31
-		#guaranteed to spawn if possible
-	}
 }
 
 agitator_dmitry_ivanovich_pisarev = {
@@ -2326,25 +1988,6 @@ agitator_dmitry_ivanovich_pisarev = {
 		psychological_affliction
 		literary
 		inspirational_orator
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			OR = {
-				c:RUS ?= this
-				c:UKR ?= this
-			}
-		}
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_trade_unions
-            }
-        }
-		earliest_usage_date = 1858.1.1
-		latest_usage_date = 1868.1.1
-		chance = 50
 	}
 }
 
@@ -2510,18 +2153,6 @@ RUS_lev_tolstoy = { # One of the most influential writers of all time
         pious
         literary
     }
-    agitator_usage = {
-        country_trigger = {
-            has_dlc_feature = ip5_content
-            c:RUS ?= this
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1852.1.1
-		latest_usage_date = 1909.1.1 # died 1910, age 82
-        chance = 50
-    }
 }
 
 RUS_nikolai_bukharin = { #
@@ -2541,32 +2172,6 @@ RUS_nikolai_bukharin = { #
         meticulous
         brave
         erudite # in Lenin's words a "most valuable and major theorist"
-    }
-    agitator_usage = {
-        country_trigger = {
-            has_dlc_feature = ip5_content
-            c:RUS ?= this
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1917.1.1 # After exile in New York, returned to Russia in 1917
-		latest_usage_date = 1936.1.1 #died 1938, at age 49
-        chance = 50
-    }
-    interest_group_leader_usage = {
-        country_trigger = {
-            has_dlc_feature = ip5_content
-            exists = c:RUS
-            c:RUS ?= THIS
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1917.1.1
-		latest_usage_date = 1936.1.1
-        chance = 50
     }
 }
 
@@ -2588,32 +2193,6 @@ RUS_grigory_zinoviev = { # Old Bolshevik (chairman of the Comintern 1919-1926)
         cautious
         literary
     }
-    agitator_usage = {
-        country_trigger = {
-            has_dlc_feature = ip5_content
-            c:RUS ?= this
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_trade_unions
-        }
-        earliest_usage_date = 1917.1.1
-		latest_usage_date = 1936.1.1 #died 1936, age 52, executed during the Great Purge
-        chance = 50
-    }
-    interest_group_leader_usage = {
-        country_trigger = {
-            has_dlc_feature = ip5_content
-            exists = c:RUS
-            c:RUS ?= THIS
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_trade_unions
-        }
-        earliest_usage_date = 1917.1.1
-		latest_usage_date = 1936.1.1
-        chance = 50
-    }
 }
 
 RUS_lev_kamenev = { # Lev Kamenev, Old Bolshevik, chairmain of the All-Russian Central Executive Committee
@@ -2632,32 +2211,6 @@ RUS_lev_kamenev = { # Lev Kamenev, Old Bolshevik, chairmain of the All-Russian C
         literary
         reckless
         firebrand
-    }
-    agitator_usage = {
-        country_trigger = {
-            has_dlc_feature = ip5_content
-            c:RUS ?= this
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_trade_unions
-        }
-        earliest_usage_date = 1917.1.1
-		latest_usage_date = 1936.1.1 #died 1936, age 52 (executed during the Great Purge)
-        chance = 50
-    }
-    interest_group_leader_usage = {
-        country_trigger = {
-            has_dlc_feature = ip5_content
-            exists = c:RUS
-            c:RUS ?= THIS
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_trade_unions
-        }
-        earliest_usage_date = 1917.1.1
-		latest_usage_date = 1936.1.1
-        chance = 50
     }
 }
 
@@ -2697,20 +2250,6 @@ RUS_jozef_pilsudski = { # Józef Piłsudski, Chief of State of Poland
         persistent
         charismatic
         convoy_raider_commander
-    }
-    agitator_usage = {
-        country_trigger = {
-            has_dlc_feature = ip5_content
-            exists = c:RUS
-            c:RUS ?= THIS
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_petty_bourgeoisie
-        }
-        earliest_usage_date = 1905.1.1  # influential leader of PPS at this point
-        latest_usage_date = 1935.1.1 # died of liver cancer, 1935, age 67
-        chance = 50
     }
 }
 

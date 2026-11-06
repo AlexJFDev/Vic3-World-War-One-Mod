@@ -161,15 +161,35 @@ russia_events.2 = { #Russian empire decides to continue the war or not
             id = dev_events.185
             days = 5
         }
-        create_country = { #United Baltic Provinces
-			origin = root
-			tag = UBD
-			state = s:STATE_TALINN.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_universal_suffrage
-                activate_law = law_type:law_mass_conscription
+        if = {
+			limit = {
+				c:RUS = { owns_entire_state_region = STATE_TALINN }
 			}
+			create_country = { #United Baltic Provinces
+			    origin = root
+			    tag = UBD
+			    state = s:STATE_TALINN.region_state:RUS
+			    on_created = {
+				  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_mass_conscription
+			    }
+		    }
+		}
+		if = {
+			limit = {
+				c:GER = { owns_entire_state_region = STATE_TALINN }
+			}
+			create_country = { #United Baltic Provinces
+			    origin = root
+			    tag = UBD
+			    state = s:STATE_TALINN.region_state:GER
+			    on_created = {
+				  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_mass_conscription
+			    }
+		    }
 		}
 		s:STATE_TARTU = {
 	       random_scope_state = {
@@ -227,16 +247,37 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      set_state_owner = c:UBD
             }
         }
-        create_country = { #Poland
-			origin = root
-			tag = POL
-			state = s:STATE_GREATER_POLAND.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_universal_suffrage
-                activate_law = law_type:law_mass_conscription	
-				activate_law = law_type:law_national_supremacy
+        if = {
+			limit = {
+				c:RUS = { owns_entire_state_region = STATE_GREATER_POLAND }
 			}
+			create_country = { #Poland
+			   origin = root
+			   tag = POL
+			   state = s:STATE_GREATER_POLAND.region_state:RUS
+			   on_created = {
+				   activate_law = law_type:law_presidential_republic
+                   activate_law = law_type:law_universal_suffrage
+                   activate_law = law_type:law_mass_conscription	
+				   activate_law = law_type:law_national_supremacy
+			    }
+		    }
+		}
+		if = {
+			limit = {
+				c:GER = { owns_entire_state_region = STATE_GREATER_POLAND }
+			}
+			create_country = { #Poland
+			   origin = root
+			   tag = POL
+			   state = s:STATE_GREATER_POLAND.region_state:GER
+			   on_created = {
+				   activate_law = law_type:law_presidential_republic
+                   activate_law = law_type:law_universal_suffrage
+                   activate_law = law_type:law_mass_conscription	
+				   activate_law = law_type:law_national_supremacy
+			    }
+		    }
 		}
         s:STATE_LESSER_POLAND = {
 	       random_scope_state = {
@@ -308,15 +349,35 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      set_state_owner = c:POL
             }
         }
-        create_country = { #Belarus
-			origin = root
-			tag = BYE
-			state = s:STATE_MINSK.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_universal_suffrage
-                activate_law = law_type:law_mass_conscription
+		if = {
+			limit = {
+				c:GER = { owns_entire_state_region = STATE_MINSK }
 			}
+			create_country = { #Belarus
+			    origin = root
+			    tag = BYE
+			    state = s:STATE_MINSK.region_state:GER
+			    on_created = {
+				  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_mass_conscription
+			    }
+		    }
+		}
+		if = {
+			limit = {
+				c:RUS = { owns_entire_state_region = STATE_MINSK }
+			}
+			create_country = { #Belarus
+			    origin = root
+			    tag = BYE
+			    state = s:STATE_MINSK.region_state:RUS
+			    on_created = {
+				  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_mass_conscription
+			    }
+		    }
 		}
         s:STATE_MOGILEV = {
            random_scope_state = {
@@ -346,14 +407,33 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 		      set_state_owner = c:BYE
             }
         }
-        create_country = { #Ukraine
-			origin = root
-			tag = UKR
-			state = s:STATE_KIEV.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_monarchy
-                activate_law = law_type:law_mass_conscription
+		if = {
+			limit = {
+				c:RUS = { owns_entire_state_region = STATE_KIEV }
 			}
+			create_country = { #Ukraine
+			    origin = root
+			    tag = UKR
+			    state = s:STATE_KIEV.region_state:RUS
+			    on_created = {
+				   activate_law = law_type:law_monarchy
+                   activate_law = law_type:law_mass_conscription
+			    }
+		    }
+		}
+		if = {
+			limit = {
+				c:AUS = { owns_entire_state_region = STATE_KIEV }
+			}
+			create_country = { #Ukraine
+			    origin = root
+			    tag = UKR
+			    state = s:STATE_KIEV.region_state:AUS
+			    on_created = {
+				   activate_law = law_type:law_monarchy
+                   activate_law = law_type:law_mass_conscription
+			    }
+		    }
 		}
         s:STATE_CHERNIHIV = {
 	       random_scope_state = {
@@ -362,6 +442,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			    owner = {
 				    OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -376,6 +457,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			    owner = {
 				    OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -390,6 +472,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			    owner = {
 				   OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -404,6 +487,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			    owner = {
 				    OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -418,6 +502,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			    owner = {
 				   OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -432,6 +517,7 @@ russia_events.2 = { #Russian empire decides to continue the war or not
 			    owner = {
 				    OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -899,15 +985,35 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
             id = dev_events.185
             days = 5
         }
-        create_country = { #United Baltic Provinces
-			origin = root
-			tag = UBD
-			state = s:STATE_TALINN.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_universal_suffrage
-                activate_law = law_type:law_mass_conscription
+        if = {
+			limit = {
+				c:RUS = { owns_entire_state_region = STATE_TALINN }
 			}
+			create_country = { #United Baltic Provinces
+			    origin = root
+			    tag = UBD
+			    state = s:STATE_TALINN.region_state:RUS
+			    on_created = {
+				  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_mass_conscription
+			    }
+		    }
+		}
+		if = {
+			limit = {
+				c:GER = { owns_entire_state_region = STATE_TALINN }
+			}
+			create_country = { #United Baltic Provinces
+			    origin = root
+			    tag = UBD
+			    state = s:STATE_TALINN.region_state:GER
+			    on_created = {
+				  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_mass_conscription
+			    }
+		    }
 		}
 		s:STATE_TARTU = {
 	       random_scope_state = {
@@ -965,16 +1071,37 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      set_state_owner = c:UBD
             }
         }
-        create_country = { #Poland
-			origin = root
-			tag = POL
-			state = s:STATE_GREATER_POLAND.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_universal_suffrage
-                activate_law = law_type:law_mass_conscription	
-				activate_law = law_type:law_national_supremacy
+        if = {
+			limit = {
+				c:RUS = { owns_entire_state_region = STATE_GREATER_POLAND }
 			}
+			create_country = { #Poland
+			   origin = root
+			   tag = POL
+			   state = s:STATE_GREATER_POLAND.region_state:RUS
+			   on_created = {
+				   activate_law = law_type:law_presidential_republic
+                   activate_law = law_type:law_universal_suffrage
+                   activate_law = law_type:law_mass_conscription	
+				   activate_law = law_type:law_national_supremacy
+			    }
+		    }
+		}
+		if = {
+			limit = {
+				c:GER = { owns_entire_state_region = STATE_GREATER_POLAND }
+			}
+			create_country = { #Poland
+			   origin = root
+			   tag = POL
+			   state = s:STATE_GREATER_POLAND.region_state:GER
+			   on_created = {
+				   activate_law = law_type:law_presidential_republic
+                   activate_law = law_type:law_universal_suffrage
+                   activate_law = law_type:law_mass_conscription	
+				   activate_law = law_type:law_national_supremacy
+			    }
+		    }
 		}
         s:STATE_LESSER_POLAND = {
 	       random_scope_state = {
@@ -1046,15 +1173,35 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      set_state_owner = c:POL
             }
         }
-        create_country = { #Belarus
-			origin = root
-			tag = BYE
-			state = s:STATE_MINSK.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_presidential_republic
-                activate_law = law_type:law_universal_suffrage
-                activate_law = law_type:law_mass_conscription
+		if = {
+			limit = {
+				c:GER = { owns_entire_state_region = STATE_MINSK }
 			}
+			create_country = { #Belarus
+			    origin = root
+			    tag = BYE
+			    state = s:STATE_MINSK.region_state:GER
+			    on_created = {
+				  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_mass_conscription
+			    }
+		    }
+		}
+		if = {
+			limit = {
+				c:RUS = { owns_entire_state_region = STATE_MINSK }
+			}
+			create_country = { #Belarus
+			    origin = root
+			    tag = BYE
+			    state = s:STATE_MINSK.region_state:RUS
+			    on_created = {
+				  activate_law = law_type:law_presidential_republic
+                  activate_law = law_type:law_universal_suffrage
+                  activate_law = law_type:law_mass_conscription
+			    }
+		    }
 		}
         s:STATE_MOGILEV = {
            random_scope_state = {
@@ -1084,14 +1231,33 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 		      set_state_owner = c:BYE
             }
         }
-        create_country = { #Ukraine
-			origin = root
-			tag = UKR
-			state = s:STATE_KIEV.region_state:RUS
-			on_created = {
-				activate_law = law_type:law_monarchy
-                activate_law = law_type:law_mass_conscription
+		if = {
+			limit = {
+				c:RUS = { owns_entire_state_region = STATE_KIEV }
 			}
+			create_country = { #Ukraine
+			    origin = root
+			    tag = UKR
+			    state = s:STATE_KIEV.region_state:RUS
+			    on_created = {
+				   activate_law = law_type:law_monarchy
+                   activate_law = law_type:law_mass_conscription
+			    }
+		    }
+		}
+		if = {
+			limit = {
+				c:AUS = { owns_entire_state_region = STATE_KIEV }
+			}
+			create_country = { #Ukraine
+			    origin = root
+			    tag = UKR
+			    state = s:STATE_KIEV.region_state:AUS
+			    on_created = {
+				   activate_law = law_type:law_monarchy
+                   activate_law = law_type:law_mass_conscription
+			    }
+		    }
 		}
         s:STATE_CHERNIHIV = {
 	       random_scope_state = {
@@ -1100,6 +1266,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 			    owner = {
 				    OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -1114,6 +1281,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 			    owner = {
 				    OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -1128,6 +1296,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 			    owner = {
 				   OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -1142,6 +1311,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 			    owner = {
 				    OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -1156,6 +1326,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 			    owner = {
 				   OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -1170,6 +1341,7 @@ russia_events.4 = { #Russian provisionnal governement decides if it continues th
 			    owner = {
 				    OR = {
                         c:GER = THIS
+						c:AUS = THIS
 					    c:RUS = THIS
 				    }
 			    }
@@ -2118,7 +2290,7 @@ russia_events.9 = { #Reforms success
     duration = 1
     
     event_image = {
-        texture = "gfx/event_pictures/russian_revolution.dds"
+        texture = "gfx/event_pictures/russian_celebration.dds"
     }
 
     trigger = {}
