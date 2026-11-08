@@ -998,8 +998,8 @@ japan_events.20 = {#Invasion of China response
               days = 5
             }
             trigger_event = {
-              id = dev_events.9
-              days = 5
+              id = dev_events.187
+              years = 1
             }
             trigger_event = {
               id = dev_events.187
@@ -1007,7 +1007,15 @@ japan_events.20 = {#Invasion of China response
             }
             trigger_event = {
               id = dev_events.187
+              years = 3
+            }
+            trigger_event = {
+              id = dev_events.187
               years = 4
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 5
             }
             trigger_event = {
               id = dev_events.187
@@ -1030,8 +1038,8 @@ japan_events.20 = {#Invasion of China response
             days = 5
         }
         trigger_event = {
-            id = dev_events.26
-            days = 5
+            id = dev_events.187
+            years = 1
         }
         trigger_event = {
             id = dev_events.187
@@ -1039,13 +1047,35 @@ japan_events.20 = {#Invasion of China response
         }
         trigger_event = {
             id = dev_events.187
+            years = 3
+        }
+        trigger_event = {
+            id = dev_events.187
             years = 4
+        }
+        trigger_event = {
+            id = dev_events.187
+            years = 5
         }
         trigger_event = {
             id = dev_events.187
             years = 6
         }
-        remove_modifier = declared_bankruptcy
+        trigger_event = {
+            id = dev_events.187
+            years = 7
+        }
+        if = {
+            limit = {
+                c:CHI = { is_player = no }
+            }
+            c:CHI = {
+                trigger_event = {
+                   id = dev_events.26
+                   days = 5
+                }
+            }
+        }
         ai_chance = {
 		  base = 10
 	    }
@@ -1359,14 +1389,10 @@ japan_events.22 = {#Japan attacks USA and western nations
             id = dev_events.151
             days = 5
         }
-        c:CHI = {
+        c:USA = {
             trigger_event = {
-              id = dev_events.187
+              id = dev_events.217
               days = 5
-            }
-            trigger_event = {
-              id = dev_events.187
-              days = 365
             }
         }
         if = {
@@ -1469,14 +1495,10 @@ japan_events.22 = {#Japan attacks USA and western nations
             id = dev_events.151
             days = 5
         }
-        c:CHI = {
+        c:USA = {
             trigger_event = {
-              id = dev_events.187
+              id = dev_events.217
               days = 5
-            }
-            trigger_event = {
-              id = dev_events.187
-              days = 365
             }
         }
         if = {

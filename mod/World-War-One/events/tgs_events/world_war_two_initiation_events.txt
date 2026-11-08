@@ -167,10 +167,6 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
             }
         }
         trigger_event = {
-            id = dev_events.72
-            days = 5
-        }
-        trigger_event = {
             id = world_war_two_initiation_events.4
             months = 7
         }
@@ -205,7 +201,7 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
             }
         }
         c:GBR = {
-          trigger_event = {
+            trigger_event = {
               id = world_war_two_initiation_events.2
               days = 5
             }
@@ -221,7 +217,7 @@ world_war_two_initiation_events.1 = { #Germany invades Poland
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -561,7 +557,7 @@ world_war_two_initiation_events.4 = { #WW2 initiation Germany invades Denmark an
     }
 }
 
-world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium and Netherlands
+world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium, Luxembourg and Netherlands
     type = country_event
 
     title = world_war_two_initiation_events.5.t
@@ -602,11 +598,6 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                 }
             } 
         }
-        add_modifier = {
-          name = nazi_germany_army_buff_1
-          years = 3
-          is_decaying = yes
-        }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:BEL
@@ -633,8 +624,9 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                 target_country = c:NET
             } 
 		}
-        c:BEL = { set_variable = allies_participant }
         c:NET = { set_variable = allies_participant }
+        c:BEL = { set_variable = allies_participant }
+        c:LUX = { set_variable = allies_participant }
         c:NET = {
             trigger_event = {
               id = dev_events.80
@@ -691,8 +683,69 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                 }
             }
         }
+        if = {
+            limit = {
+               c:LUX = { is_player = no }
+               c:FRA = { is_player = no }
+               c:GER = { is_player = no }
+            }
+            c:LUX = {
+                trigger_event = {
+                    id = dev_events.183
+                    days = 5
+                }
+            }
+        }
+        add_modifier = {
+          name = nazi_germany_army_buff_1
+          years = 3
+          is_decaying = yes
+        }
+        create_military_formation = {
+			type = fleet
+			hq_region = sr:region_central_europe
+            name = ger_navy_help
+	
+			ship = {
+				type = ship_type:ship_type_super_dreadnought
+				count = 3
+			}
+
+            ship = {
+				type = ship_type:ship_type_aircraft_carrier
+				count = 1
+			}
+
+            ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 10
+			}
+
+            ship = {
+				type = ship_type:ship_type_destroyer
+				count = 30
+			}
+
+            ship = {
+				type = ship_type:ship_type_submarine
+				count = 50
+			}
+		} 
+        random_scope_state = {
+			limit = {
+				is_coastal = yes
+			}
+			create_building = {
+				building = building_shipyard
+				level = 6
+            }	
+            create_building = {
+				building = building_naval_administration
+				level = 30
+            }	
+		}
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -736,16 +789,17 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                 target_country = c:NET
             } 
 		}
-        c:BEL = { set_variable = allies_participant }
         c:NET = { set_variable = allies_participant }
+        c:BEL = { set_variable = allies_participant }
+        c:LUX = { set_variable = allies_participant }
         c:NET = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
             }
         }
         c:BEL = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
             }
@@ -757,7 +811,7 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             }
         }
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -770,11 +824,6 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
                     has_variable = axis_participant
                 }
             }  
-        }
-        add_modifier = {
-          name = nazi_germany_army_buff_1
-          years = 3
-          is_decaying = yes
         }
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
@@ -795,8 +844,9 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             }
 		}
         c:BEL = { set_variable = allies_participant }
+        c:LUX = { set_variable = allies_participant }
         c:BEL = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
             }
@@ -834,17 +884,65 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
         }
         if = {
             limit = {
-               c:NET = { is_player = no }
+               c:LUX = { is_player = no }
                c:FRA = { is_player = no }
                c:GER = { is_player = no }
             }
-            c:NET = {
+            c:LUX = {
                 trigger_event = {
                     id = dev_events.183
                     days = 5
                 }
             }
         }
+        add_modifier = {
+          name = nazi_germany_army_buff_1
+          years = 3
+          is_decaying = yes
+        }
+        create_military_formation = {
+			type = fleet
+			hq_region = sr:region_central_europe
+            name = ger_navy_help
+	
+			ship = {
+				type = ship_type:ship_type_super_dreadnought
+				count = 3
+			}
+
+            ship = {
+				type = ship_type:ship_type_aircraft_carrier
+				count = 1
+			}
+
+            ship = {
+				type = ship_type:ship_type_light_cruiser
+				count = 10
+			}
+
+            ship = {
+				type = ship_type:ship_type_destroyer
+				count = 30
+			}
+
+            ship = {
+				type = ship_type:ship_type_submarine
+				count = 50
+			}
+		} 
+        random_scope_state = {
+			limit = {
+				is_coastal = yes
+			}
+			create_building = {
+				building = building_shipyard
+				level = 6
+            }	
+            create_building = {
+				building = building_naval_administration
+				level = 30
+            }	
+		}
         ai_chance = {
             base = 0
         }
@@ -879,14 +977,15 @@ world_war_two_initiation_events.5 = { #WW2 initiation Germany invades Belgium an
             }
 		}
         c:BEL = { set_variable = allies_participant }
+        c:LUX = { set_variable = allies_participant }
         c:BEL = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
             }
         }
         c:FRA = {
-          trigger_event = {
+            trigger_event = {
               id = dev_events.80
               days = 5
             }

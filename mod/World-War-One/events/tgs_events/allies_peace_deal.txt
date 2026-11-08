@@ -438,6 +438,32 @@ allies_peace_deal.4 = {
 		        set_state_owner = c:CHI
             }
         }
+		s:STATE_SOUTHERN_MANCHURIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				    OR = {
+					   c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:CHI
+            }
+        }
+		s:STATE_NORTHERN_MANCHURIA = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:JAP
+			    owner = {
+				    OR = {
+					   c:JAP = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:CHI
+            }
+        }
 		s:STATE_FORMOSA = {
             random_scope_state = {
 		      limit = {

@@ -1429,8 +1429,8 @@ germany_events.28 = { #Nazi takeover
                 years = 5
             }
         trigger_event = {
-                id = germany_events.39
-                years = 6
+                id = germany_events.38
+                years = 5
             }
         c:AUS = {
             trigger_event = {
@@ -1568,8 +1568,8 @@ germany_events.28 = { #Nazi takeover
                 years = 5
             }
         trigger_event = {
-                id = germany_events.39
-                years = 6
+                id = germany_events.38
+                years = 5
             }
         c:AUS = {
             trigger_event = {
@@ -2078,10 +2078,6 @@ germany_events.35 = { #Sudet Crisis CZH response
 		}
         c:GER = {
             trigger_event = {
-              id = germany_events.38
-              months = 8
-            }
-            trigger_event = {
               id = germany_events.36
               months = 9
             }
@@ -2226,7 +2222,7 @@ germany_events.38 = { #Molotov-Ribentrop pact
     trigger = {}
 
     option = {
-        name = germany_events.37.a
+        name = germany_events.38.a
         default_option = yes
 		c:RUS = {
             trigger_event = {
@@ -2240,7 +2236,7 @@ germany_events.38 = { #Molotov-Ribentrop pact
     }
 
     option = {
-        name = germany_events.37.b
+        name = germany_events.38.b
         ai_chance = {
             base = 0
         }
@@ -2274,7 +2270,7 @@ germany_events.39 = { #Molotov-Ribentrop pact
 		c:RUS = {
             create_bidirectional_truce = {
 			  country = c:GER
-			  months = 45
+			  months = 30
 		    }
             trigger_event = {
               id = ussr_events.9

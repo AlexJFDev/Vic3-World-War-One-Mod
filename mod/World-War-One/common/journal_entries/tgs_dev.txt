@@ -351,6 +351,17 @@ je_atomic_bomb = {
                    days = 5
                 }
             }
+            every_country = {
+                limit = { 
+                   is_player = no
+                   is_at_war = yes
+                   has_variable = axis_participant
+                }
+                trigger_event = {
+                   id = dev_events.183
+                   days = 5
+                }
+            }
         }
         event_outcome_desc = {} # complex desc like a status_desc field
     }

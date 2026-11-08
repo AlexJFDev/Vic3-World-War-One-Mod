@@ -82,6 +82,19 @@ axis_peace_deal.1 = {
 		        set_state_owner = c:GER
             }
         }
+        s:STATE_WEST_INDIES = {
+            random_scope_state = {
+		      limit = {
+			   exists = c:FRA
+			    owner = {
+				  OR = {
+					c:FRA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:FFR
+            }
+        }
         c:FRA = {
             activate_law = law_type:law_single_party_state
             activate_law = law_type:law_outlawed_dissent

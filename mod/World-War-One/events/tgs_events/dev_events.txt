@@ -342,6 +342,10 @@ dev_events.4 = {
                 id = dev_events.17
                 days = 5
             }
+            trigger_event = {
+                id = dev_events.218
+                days = 5
+            }
         }
         c:USA = {
             add_modifier = {
@@ -1999,7 +2003,13 @@ dev_events.37 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { is_player = yes }
+        trigger = { is_player = no }
+        activate_law = law_type:law_armed_neutrality
+        add_treasury = -400000000
+        add_modifier = {
+			name = construction_nerf_2
+            years = 12
+		}
         add_radicals = {
 			strata = upper
 			value = -0.25
@@ -2017,12 +2027,7 @@ dev_events.37 = {
     option = {
         name = dev_events.8.a
         default_option = yes
-        trigger = { is_player = no }
-        activate_law = law_type:law_armed_neutrality
-        add_modifier = {
-			name = construction_nerf_1
-            years = 12
-		}
+        trigger = { is_player = yes }
         add_radicals = {
 			strata = upper
 			value = -0.25
@@ -4153,6 +4158,7 @@ dev_events.81 = {
         name = dev_events.2.a
         default_option = yes
         trigger = { is_player = no }
+        add_treasury = 100000000
         add_modifier = {
 			name = taken_by_suprise_2
             years = 1
@@ -4329,12 +4335,6 @@ dev_events.86 = {
         name = dev_events.17.a
         default_option = yes
         trigger = { is_player = no }
-        add_treasury = 100000000
-        add_modifier = {
-            name = revolution_stabilization_buff_4
-            years = 10
-            is_decaying = yes
-        }
         if = {
             limit = { 
                 c:MCH = { is_subject_of = c:JAP }
@@ -4343,20 +4343,140 @@ dev_events.86 = {
 			   add_initiator_backers = { c:MCH }
 		    }
         }
+        change_infamy = -300
+        add_treasury = 200000000
+        add_modifier = {
+            name = money_buff_3
+            years = 8
+            is_decaying = yes
+        }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 10
+            is_decaying = yes
+        }
+        random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			create_building = {
+				building = building_automotive_industry
+				level = 10
+            }	
+            create_building = {
+				building = building_arms_industry
+				level = 15
+            }	
+            create_building = {
+				building = building_artillery_foundry
+				level = 10
+            }
+            create_building = {
+				building = building_munition_plant
+				level = 20
+            }
+            create_building = {
+				building = building_aircraft_factory
+				level = 10
+            }
+            create_building = {
+				building = building_electrics_industry
+				level = 10
+            }
+            create_building = {
+				building = building_shipyard
+				level = 20
+            }
+		}
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_northeast_asia
+            name = ai_japan_army_1
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_squad_infantry
+				state_region = s:STATE_CHUGOKU
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_CHUGOKU
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_KYUSHU
+				count = 50
+			}
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_CHUGOKU
+				count = 10
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_CHUGOKU
+				count = 20
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_KYUSHU
+				count = 30
+			}
+		}
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_northeast_asia
+            name = ai_japan_army_2
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_squad_infantry
+				state_region = s:STATE_KANTO
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_KANTO
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_KANSAI
+				count = 50
+			}
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_KANTO
+				count = 10
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_KANTO
+				count = 20
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_KANTO
+				count = 30
+			}
+		}
     }
 
     option = {
         name = dev_events.17.a
         default_option = yes
         trigger = { is_player = yes }
-        if = {
-            limit = { 
-                c:MCH = { is_subject_of = c:JAP }
-            }
-            scope:sino_japan_war_diplo_play = {
-			   add_initiator_backers = { c:MCH }
-		    }
-        }
+        change_infamy = -100
     }
 }
 
@@ -7389,6 +7509,10 @@ dev_events.146 = {
     option = {
         name = dev_events.10.a
         change_tag = HND
+        remove_primary_culture = cu:baluchi
+        remove_primary_culture = cu:pashtun
+        remove_primary_culture = cu:west_indian
+        remove_primary_culture = cu:east_indian
     }
 }
 
@@ -10265,7 +10389,7 @@ dev_events.212 = {
             }
             c:TUR = {
                 trigger_event = {
-                   id = dev_events.200
+                   id = dev_events.201
                    days = 5
                 }
             }
@@ -10339,6 +10463,348 @@ dev_events.213 = {
         default_option = yes
         scope:german_power_bloc = {
 			destroy_power_bloc = yes
+		}
+    }
+}
+
+dev_events.214 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = { # Franz goes to Sarajevo
+        name = great_war_initiation_events.25.a
+        default_option = yes
+        trigger_event = { 
+            id = great_war_initiation_events.1
+            days = 5
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = { # It's too dangerous ...
+        name = great_war_initiation_events.25.b
+        owner.ruler ?= {
+			set_character_immortal = no
+		}
+        set_global_variable = no_ww1
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+dev_events.215 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = japan_events.19.a
+        default_option = yes
+        c:CHI = {
+			trigger_event = {
+              id = japan_events.20
+              days = 5
+            }
+		}
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+	option = {
+        name = japan_events.19.b
+        ai_chance = {
+		  base = 0
+	    }
+    }
+}
+
+dev_events.216 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = world_war_two_initiation_events.12.a
+        default_option = yes
+        trigger = { exists = c:POL }
+        c:POL = {
+            trigger_event = {
+              id = world_war_two_initiation_events.13
+              days = 5
+            }
+        }
+        ai_chance = {
+            base = 10
+        }
+    }
+
+    option = {
+        name = world_war_two_initiation_events.12.b
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+dev_events.217 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = world_war_two_initiation_events.12.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+			name = revolution_stabilization_buff_4
+            years = 10
+            is_decaying = yes
+		}
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_atlantic_coast
+            name = usa_army_help_1
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_mechanized_infantry
+				state_region = s:STATE_NEW_YORK
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_squad_infantry
+				state_region = s:STATE_NEW_YORK
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_NEW_YORK
+				count = 25
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_NEW_YORK
+				count = 25
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighters
+				state_region = s:STATE_NEW_YORK
+				count = 50
+			}
+		}
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_atlantic_coast
+            name = usa_army_help_2
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_mechanized_infantry
+				state_region = s: STATE_PENNSYLVANIA
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_squad_infantry
+				state_region = s: STATE_PENNSYLVANIA
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s: STATE_PENNSYLVANIA
+				count = 25
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s: STATE_PENNSYLVANIA
+				count = 25
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighters
+				state_region = s: STATE_PENNSYLVANIA
+				count = 50
+			}
+		}
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_atlantic_coast
+            name = usa_army_help_3
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_mechanized_infantry
+				state_region = s: STATE_MICHIGAN
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_squad_infantry
+				state_region = s: STATE_MICHIGAN
+				count = 50
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s: STATE_MICHIGAN
+				count = 25
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s: STATE_MICHIGAN
+				count = 25
+			}
+            
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighters
+				state_region = s: STATE_MICHIGAN
+				count = 50
+			}
+		}
+    }
+}
+
+dev_events.218 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = world_war_two_initiation_events.12.a
+        default_option = yes
+        trigger = { is_player = no }
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_western_europe
+            name = ffr_army_help_1
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s:STATE_BRITTANY
+				count = 100
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s:STATE_BRITTANY
+				count = 10
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s:STATE_BRITTANY
+				count = 20
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s:STATE_BRITTANY
+				count = 50
+			}
+		}
+
+        create_military_formation = {
+			type = army
+			hq_region = sr:region_western_europe
+            name = ffr_army_help_2
+	
+			combat_unit = {
+				type = unit_type:combat_unit_type_trench_infantry
+				state_region = s: STATE_LANGUEDOC
+				count = 100
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_heavy_tank
+				state_region = s: STATE_LANGUEDOC
+				count = 10
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_light_tanks
+				state_region = s: STATE_LANGUEDOC
+				count = 20
+			}
+
+            combat_unit = {
+				type = unit_type:combat_unit_type_fighter
+				state_region = s: STATE_LANGUEDOC
+				count = 50
+			}
 		}
     }
 }
