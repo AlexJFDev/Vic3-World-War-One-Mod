@@ -1,4 +1,4 @@
-﻿battle_condition_allied_air_superiority = {
+﻿battle_condition_ally_air_superiority = {
 	icon = "gfx/interface/icons/battle_conditions/allied_air_superiority.dds"
 
 	modifier = {
@@ -11,7 +11,7 @@
 		scope:character = { 
 			has_role_of_type = general 
 		}
-		allied_air_dominance > ennemy_air_dominance
+		ally_air_dominance > ennemy_air_dominance
 	}
  
     instant_switch = {
@@ -46,12 +46,12 @@ battle_condition_enemy_air_superiority = {
 		scope:character = { 
 			has_role_of_type = general 
 		}
-		allied_air_dominance < enemy_air_dominance
+		ally_air_dominance < enemy_air_dominance
 	}
 
 	instant_switch = {
         opposite_battle_side = {
-				has_battle_condition = battle_condition_allied_air_superiority
+				has_battle_condition = battle_condition_ally_air_superiority
 			}
 		NOR = { 
 			has_battle_condition = battle_condition_panicked_retreat
