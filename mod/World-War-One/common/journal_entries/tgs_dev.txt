@@ -167,11 +167,13 @@ je_germany_ai_blockade = {
         }
         c:GBR = {
           is_at_war = yes
+          is_diplomatic_play_enemy_of = c:GER
           has_variable = entente_participant
           navy_size > 450
         }
         c:FRA = {
           is_at_war = yes
+          is_diplomatic_play_enemy_of = c:GER
           has_variable = entente_participant
         }
     }
@@ -190,6 +192,7 @@ je_germany_ai_blockade = {
                 c:GBR = {
                     OR = {
                         is_at_war = no
+                        NOT = { is_diplomatic_play_enemy_of = c:GER }
                         navy_size < 350
                     }  
                 }
