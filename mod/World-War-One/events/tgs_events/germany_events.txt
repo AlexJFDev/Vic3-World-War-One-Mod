@@ -322,7 +322,7 @@ germany_events.2 = { #November Revolution
             }
             trigger_event = {
               id = dev_events.187
-              days = 5
+              days = 1
             }
         }
         every_country = {
@@ -2288,6 +2288,10 @@ germany_events.39 = { #Molotov-Ribentrop pact
 		    }
             remove_diplomatic_pact = {
 			  country = c:LIT
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:FRA
 			  type = protectorate
 		    }
         }
