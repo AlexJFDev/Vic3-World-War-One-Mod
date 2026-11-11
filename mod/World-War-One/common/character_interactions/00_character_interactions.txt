@@ -117,8 +117,12 @@ REPLACE_OR_CREATE:grant_leadership_to_agitator = {
 	}
 
 	possible = {
+		owner ?= {
+			government_legitimacy > 50
+		}
 		interest_group ?= {
 			is_in_government = yes
+			ig_approval > 7
 		}
 		trigger_if = {
 			limit = {
@@ -151,18 +155,6 @@ REPLACE_OR_CREATE:grant_leadership_to_agitator = {
 			character_acceptance = {
 				target = scope:actor
 				value >= acceptance_status_4
-			}
-		}
-		OR = {
-			is_female = no
-			scope:actor ?= { has_law_or_variant = law_type:law_womens_suffrage }
-		}
-		custom_tooltip = {
-			text = grant_leadership_must_be_pressured_ig
-			political_movement ?= {
-				any_influenced_interest_group = {
-					this = root.interest_group
-				}
 			}
 		}
 	}

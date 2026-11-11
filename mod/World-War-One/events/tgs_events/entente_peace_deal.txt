@@ -1180,18 +1180,6 @@ entente_peace_deal.4 = { #Round 3 result
                 days = 5
             }
         }
-		s:STATE_POSEN = { 
-			add_claim = c:GER
-		}  
-		s:STATE_WEST_PRUSSIA = { 
-			add_claim = c:GER
-		} 
-		s:STATE_EAST_PRUSSIA = { 
-			add_claim = c:GER
-		}   
-		s:STATE_SILESIA = { 
-			add_claim = c:GER
-		}  
 	}
 
 	option = {
@@ -1242,29 +1230,25 @@ entente_peace_deal.4 = { #Round 3 result
             }
         }
 		s:STATE_WEST_PRUSSIA = {
-			set_owner_of_provinces = {
-				country = c:POL
-				provinces = { x0180A0 x80A0A0 x41A021 xD180A0 x3E3572 x945000 x178C99 xBAF66D x7CB839 x611F2F }
-			}
-		}
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+			  add_claim = c:GER
+            }
+        }
 		c:FRA = {
             trigger_event = {
                 id = entente_peace_deal.13
                 days = 5
             }
         } 
-		s:STATE_POSEN = { 
-			add_claim = c:GER
-		}  
-		s:STATE_WEST_PRUSSIA = { 
-			add_claim = c:GER
-		} 
-		s:STATE_EAST_PRUSSIA = { 
-			add_claim = c:GER
-		}   
-		s:STATE_SILESIA = { 
-			add_claim = c:GER
-		}    
 	}
 
 	option = {
@@ -1328,18 +1312,6 @@ entente_peace_deal.4 = { #Round 3 result
                 days = 5
             }
         } 
-		s:STATE_POSEN = { 
-			add_claim = c:GER
-		}  
-		s:STATE_WEST_PRUSSIA = { 
-			add_claim = c:GER
-		} 
-		s:STATE_EAST_PRUSSIA = { 
-			add_claim = c:GER
-		}   
-		s:STATE_SILESIA = { 
-			add_claim = c:GER
-		} 
 	}
 }
 
@@ -3898,11 +3870,18 @@ entente_peace_deal.13 = { #Poland's expansion fix
             }
         }
 		s:STATE_WEST_PRUSSIA = {
-			set_owner_of_provinces = {
-				country = c:POL
-				provinces = { xD180A0 x3E3572 x945000 x178C99 xBAF66D x7CB839 x611F2F }
-			}
-		}
+           random_scope_state = {
+		      limit = {
+			   exists = c:GER
+			    owner = {
+				  OR = {
+					c:GER = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:POL
+            }
+        }
 	}
 
     option = {
