@@ -6736,6 +6736,27 @@ dev_events.126 = {
                annex_with_incorporation = c:BYE
             }
         }
+        if = {
+            limit = {
+                c:RUS = { 
+                    has_law = law_type:law_council_republic
+                    is_player = no 
+                }
+                c:JAP = { is_player = no }
+            }
+            c:RUS = {
+                create_bidirectional_truce = {
+			        country = c:JAP
+			        months = 24
+		        }
+            }
+            c:RUS = {
+               set_relations = { country = c:JAP value = -20 }
+            }
+            c:JAP = {
+               set_relations = { country = c:RUS value = -20 }
+            }
+        }
     }
 
     option = {

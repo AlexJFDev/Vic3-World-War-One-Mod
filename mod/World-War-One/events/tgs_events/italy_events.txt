@@ -26,7 +26,7 @@ italy_events.1 = {
     }
 }
 
-italy_events.10 = { #Mussolini becomes leader of Petite Bourgeoisie
+italy_events.10 = { #Benito Mussolini appears
     type = country_event
 
     title = italy_events.10.t
@@ -36,7 +36,7 @@ italy_events.10 = { #Mussolini becomes leader of Petite Bourgeoisie
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
+    duration = 3
     
     immediate = {}
 
@@ -60,31 +60,24 @@ italy_events.10 = { #Mussolini becomes leader of Petite Bourgeoisie
 	        interest_group = ig_petty_bourgeoisie
 	        ideology = ideology_fascist
 	        traits = {
-             firebrand
-             imposing
-             demagogue
-             expert_political_operator
+               firebrand
+               imposing
+               demagogue
+               expert_political_operator
 	        }
 	        on_created = {
-               set_variable = {
+                set_variable = {
                   name = benito_mussolini
                 }                
             }
         }
+        set_variable = historical_fascism
         create_political_movement = { type = movement_fascist }
         add_technology_progress = { progress = 5000 technology = political_agitation }
-        c:ITA = {
-            trigger_event = {
-                id = italy_events.11
-                years = 3
-            }
-        }
-        set_variable = incoming_fascist_movement
-        set_variable = historical_fascism
     }
 }
 
-italy_events.11 = { #Fascist takeover
+italy_events.11 = { #March on Rome
     type = country_event
 
     title = italy_events.11.t
@@ -94,9 +87,7 @@ italy_events.11 = { #Fascist takeover
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 1
-    
-    immediate = {}
+    duration = 3
 
     event_image = {
         texture = "gfx/event_pictures/march_on_rome.dds"
@@ -104,36 +95,53 @@ italy_events.11 = { #Fascist takeover
 
     trigger = {}
 
+    immediate = {
+        random_political_movement = {
+			limit = { is_political_movement_type = movement_fascist }
+			save_scope_as = italian_fascist_movement_scope
+		}
+    }
+
     option = {
         name = italy_events.11.a
         trigger = { is_player = no }
         default_option = yes
-        random_scope_character =  {
-				limit = {
-					has_variable = benito_mussolini
-				}
+        random_scope_character = {
+			limit = {
+				has_variable = benito_mussolini
+			}
 			remove_character_role = agitator
 		    add_character_role = politician
             set_as_interest_group_leader = yes
 		}
-        random_scope_character =  {
-				limit = {
-					is_ruler_of_own_country = yes
-				}
+        ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+        random_scope_character = {
+			limit = {
+				is_ruler_of_own_country = yes
+			}
 			set_ideology = ideology:ideology_fascist
 		}
         random_scope_character =  {
-				limit = {
-					is_heir_of_own_country = yes
-				}
+			limit = {
+				is_heir_of_own_country = yes
+			}
 			set_ideology = ideology:ideology_fascist
+		}
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_7
+				years = 30
+                is_decaying = yes
+			} 
 		}
         activate_law = law_type:law_social_monarchy
         activate_law = law_type:law_single_party_state
         activate_law = law_type:law_outlawed_dissent
         activate_law = law_type:law_interventionism
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
@@ -142,36 +150,74 @@ italy_events.11 = { #Fascist takeover
         trigger = { is_player = yes }
         default_option = yes
         random_scope_character =  {
-				limit = {
-					has_variable = benito_mussolini
-				}
+			limit = {
+				has_variable = benito_mussolini
+			}
 			remove_character_role = agitator
 		    add_character_role = politician
             set_as_interest_group_leader = yes
 		}
+        ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
         random_scope_character =  {
-				limit = {
-					is_ruler_of_own_country = yes
-				}
+			limit = {
+				is_ruler_of_own_country = yes
+			}
 			set_ideology = ideology:ideology_fascist
 		}
         random_scope_character =  {
-				limit = {
-					is_heir_of_own_country = yes
-				}
+			limit = {
+				is_heir_of_own_country = yes
+			}
 			set_ideology = ideology:ideology_fascist
+		}
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_7
+				years = 30
+                is_decaying = yes
+			} 
 		}
         ai_chance = {
-            base = 10
+            base = 1
         }
     }
 
     option = {
         name = italy_events.11.b
-        add_modifier = {
-			name = political_movement_buff_1
-			years = 10
+        random_scope_character =  {
+			limit = {
+				has_variable = benito_mussolini
+			}
+			remove_character_role = agitator
+		    add_character_role = politician
+            set_as_interest_group_leader = yes
+		}
+        ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_8
+				years = 20
+                is_decaying = yes
+			} 
+		}
+        ai_chance = {
+            base = 0
         }
+    }
+
+    option = {
+        name = italy_events.11.c
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_5
+				years = 10
+                is_decaying = yes
+			} 
+		}
         ai_chance = {
             base = 0
         }

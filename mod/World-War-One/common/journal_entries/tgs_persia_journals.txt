@@ -79,6 +79,8 @@
     }
 
     outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
         flags = { timeout }
         conclusion_desc = je_fragile_dynasty_failure_desc
         effect = {

@@ -247,6 +247,17 @@
 	}
 
 	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				has_law_or_variant = law_type:law_council_republic
+				has_variable = historical_fascism
+			}
+		}
+	}
+
+	outcome = {
 		header = JOURNAL_ENTRY_TIMEOUT
 		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
 		flags = { timeout }

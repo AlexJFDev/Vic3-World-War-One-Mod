@@ -392,8 +392,6 @@ germany_events.2 = { #November Revolution
 			remove_character_role = heir
 		    add_character_role = agitator
 		}
-        add_technology_progress = { progress = 5000 technology = political_agitation }
-        set_variable = incoming_fascist_movement
     }
 }
 
@@ -1126,32 +1124,6 @@ germany_events.25 = { #Nazi threat je initiation
 
     trigger = {}
 
-    option = {
-        name = germany_events.25.a
-        trigger = { is_player = no }
-        add_technology_researched = political_agitation
-        set_variable historical_fascism
-    }
-
-    option = {
-        name = germany_events.25.a
-        trigger = { is_player = yes }
-        set_variable = historical_fascism
-    }
-}
-
-germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
-    type = country_event
-
-    title = germany_events.26.t
-    desc = germany_events.26.d
-    flavor = germany_events.26.f
-    
-    icon = "gfx/interface/icons/event_icons/nazism.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 3
-    
     immediate = {
         create_character = {
             first_name = Adolf
@@ -1171,7 +1143,7 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
              wrathful
 	        }
 	        on_created = {
-               set_variable = {
+                set_variable = {
                   name = adolf_hitler
                 }                
             }
@@ -1184,7 +1156,7 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
 	        culture = cu:german
 	        religion = rel:atheist
 	        female = no
-            role = character_role_politician
+            is_agitator = yes
 	        interest_group = ig_petty_bourgeoisie
 	        ideology = ideology_fascist
 	        traits = {
@@ -1221,48 +1193,43 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
             }
         }
         create_character = {
-            first_name = Heinz
-	        last_name = Guderian
-	        historical = yes
-            birth_date = 1888.06.17
-	        culture = cu:german
-	        religion = rel:atheist
-	        female = no
-            is_general = yes
-	        interest_group = ig_armed_forces
-	        ideology = ideology_fascist
-	        traits = {
-              expert_offensive_planner
-              innovative
-	        }
-	        on_created = {
-               set_variable = {
-                  name = heinz_guderian
-                }                
-            }
-        }
-        create_character = {
-            first_name = Erwin
-            last_name = Rommel
-            historical = yes
-            culture = cu:german
-            female = no
-	        is_general = yes
-            religion = atheist
-            ideology = ideology_fascist
-            interest_group = ig_armed_forces
-            birth_date = 1891.11.15
-            traits = {
-		      plains_commander
-              innovative
-            }   
+			template = agitator_ernst_rohm
             on_created = {
                set_variable = {
-                  name = erwin_rommel
-                }                
+                  name = ernst_rohm
+                } 
             }
         }
     }
+
+    option = {
+        name = germany_events.25.a
+        trigger = { is_player = no }
+        create_political_movement = { type = movement_fascist }
+        add_technology_researched = political_agitation
+        set_variable historical_fascism
+    }
+
+    option = {
+        name = germany_events.25.a
+        trigger = { is_player = yes }
+        create_political_movement = { type = movement_fascist }
+        add_technology_progress = { progress = 5000 technology = political_agitation }
+        set_variable = historical_fascism
+    }
+}
+
+germany_events.26 = { #Hitler becomes leader of Petite Bourgeoisie
+    type = country_event
+
+    title = germany_events.26.t
+    desc = germany_events.26.d
+    flavor = germany_events.26.f
+    
+    icon = "gfx/interface/icons/event_icons/nazism.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
 
     event_image = {
         texture = "gfx/event_pictures/fascist_milice.dds"
@@ -1270,12 +1237,19 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
 
     trigger = {}
 
+    immediate = {
+        random_political_movement = {
+			limit = { is_political_movement_type = movement_fascist }
+			save_scope_as = german_fascist_movement_scope
+		}
+    }
+
     option = {
         name = germany_events.26.a
 	    random_scope_character = {
-				limit = {
-					has_variable = adolf_hitler
-				}
+			limit = {
+				has_variable = adolf_hitler
+			}
 			remove_character_role = agitator
 		    add_character_role = politician
             set_as_interest_group_leader = yes
@@ -1294,11 +1268,15 @@ germany_events.26 = { #Hitler becomes leader of the Petite Bourgeoisie
     option = {
         name = germany_events.26.b
         trigger = {
-            NOT = {
-                has_law = law_type:law_right_of_assembly
-				has_law = law_type:law_protected_speech
-            }
+			NOT = { has_law = law_type:law_protected_speech }
         }
+        scope:german_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_5
+				years = 10
+                is_decaying = yes
+			} 
+		}
         ai_chance = {
             base = 0
         }
@@ -1316,14 +1294,19 @@ germany_events.27 = { #Invite fascists to government
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
-    
-    immediate = {}
 
     event_image = {
         texture = "gfx/event_pictures/fascist_milice.dds"
     }
 
     trigger = {}
+
+    immediate = {
+        random_political_movement = {
+			limit = { is_political_movement_type = movement_fascist }
+			save_scope_as = german_fascist_movement_scope
+		}
+    }
 
     option = {
         name = germany_events.27.a
@@ -1353,11 +1336,13 @@ germany_events.27 = { #Invite fascists to government
 
     option = {
         name = germany_events.27.b
-        add_modifier = {
-          name = angry_fascists_1_modifier
-          years = 5
-          is_decaying = yes
-        }
+        scope:german_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_5
+				years = 10
+                is_decaying = yes
+			} 
+		}
         ai_chance = {
             base = 0
         }
@@ -1527,6 +1512,48 @@ germany_events.28 = { #Nazi takeover
                 }                
             }
         }
+        create_character = {
+            first_name = Heinz
+	        last_name = Guderian
+	        historical = yes
+            birth_date = 1888.06.17
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_fascist
+	        traits = {
+              expert_offensive_planner
+              innovative
+	        }
+	        on_created = {
+               set_variable = {
+                  name = heinz_guderian
+                }                
+            }
+        }
+        create_character = {
+            first_name = Erwin
+            last_name = Rommel
+            historical = yes
+            culture = cu:german
+            female = no
+	        is_general = yes
+            religion = atheist
+            ideology = ideology_fascist
+            interest_group = ig_armed_forces
+            birth_date = 1891.11.15
+            traits = {
+		      plains_commander
+              innovative
+            }   
+            on_created = {
+               set_variable = {
+                  name = erwin_rommel
+                }                
+            }
+        }
     }
 
     option = {
@@ -1663,6 +1690,48 @@ germany_events.28 = { #Nazi takeover
 	        on_created = {
                set_variable = {
                   name = adolf_eichmann
+                }                
+            }
+        }
+        create_character = {
+            first_name = Heinz
+	        last_name = Guderian
+	        historical = yes
+            birth_date = 1888.06.17
+	        culture = cu:german
+	        religion = rel:atheist
+	        female = no
+            is_general = yes
+	        interest_group = ig_armed_forces
+	        ideology = ideology_fascist
+	        traits = {
+              expert_offensive_planner
+              innovative
+	        }
+	        on_created = {
+               set_variable = {
+                  name = heinz_guderian
+                }                
+            }
+        }
+        create_character = {
+            first_name = Erwin
+            last_name = Rommel
+            historical = yes
+            culture = cu:german
+            female = no
+	        is_general = yes
+            religion = atheist
+            ideology = ideology_fascist
+            interest_group = ig_armed_forces
+            birth_date = 1891.11.15
+            traits = {
+		      plains_commander
+              innovative
+            }   
+            on_created = {
+               set_variable = {
+                  name = erwin_rommel
                 }                
             }
         }
