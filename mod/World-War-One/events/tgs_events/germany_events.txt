@@ -1166,7 +1166,7 @@ germany_events.25 = { #Nazi threat je initiation
              experienced_diplomat
 	        }
 	        on_created = {
-               set_variable = {
+                set_variable = {
                   name = joseph_goebbels
                 }                
             }
@@ -1187,7 +1187,7 @@ germany_events.25 = { #Nazi threat je initiation
              master_bureaucrat
 	        }
 	        on_created = {
-               set_variable = {
+                set_variable = {
                   name = heinrich_himler
                 }                
             }
@@ -1195,7 +1195,7 @@ germany_events.25 = { #Nazi threat je initiation
         create_character = {
 			template = agitator_ernst_rohm
             on_created = {
-               set_variable = {
+                set_variable = {
                   name = ernst_rohm
                 } 
             }
@@ -1408,6 +1408,10 @@ germany_events.28 = { #Nazi takeover
         trigger_event = {
                 id = germany_events.29
                 days = 5
+            }
+        trigger_event = {
+                id = dev_events.219
+                days = 10
             }
         trigger_event = {
                 id = germany_events.32

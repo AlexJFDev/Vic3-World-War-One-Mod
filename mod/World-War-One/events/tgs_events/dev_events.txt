@@ -10829,3 +10829,34 @@ dev_events.218 = {
 		}
     }
 }
+
+dev_events.219 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = world_war_two_initiation_events.12.a
+        default_option = yes
+        trigger = { is_player = no }
+        random_scope_character =  {
+			limit = {
+				is_ruler_of_own_country = yes
+			}
+			set_ideology = ideology:ideology_fascist
+		}
+    }
+}
