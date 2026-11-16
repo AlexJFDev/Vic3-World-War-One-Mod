@@ -40,6 +40,14 @@ brazil_events.1 = { #Coronelist infighting
 				cooldown = 1
 			}
 		}
+		ig:ig_armed_forces ?= {
+			remove_ideology = ideology_loyalist
+			add_ideology = ideology_tenentist
+		}
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_republican_paternalistic
+			add_ideology = ideology_coronelist
+		}
         add_modifier = {
             name = coronelist_infighting
             years = 10
@@ -154,4 +162,75 @@ brazil_events.5 = { #Return of the royal family
 		  base = 0
 	    }
     }
+}
+
+brazil_events.8 = { #New Republic Je completion
+    type = country_event
+
+    type = country_event
+	placement = ROOT
+
+	title = brazil_events.8.t
+	desc = brazil_events.8.d
+	flavor = brazil_events.8.f
+
+	event_image = {
+        texture = "gfx/event_pictures/politics_europe.dds"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	duration = 3
+
+	dlc = dlc008
+
+	trigger = {
+		# Fired by JE
+	}
+
+	immediate = {
+		# vargas_scope is set in the JE
+	}
+
+	option = {
+		name = brazil_events.8.a
+		default_option = yes
+		ruler = {
+			add_modifier = {
+				name = modifier_estado_novo
+				years = 10
+                is_decaying = yes
+			}
+		}
+        add_modifier = {
+			name = modifier_estado_novo_national
+			years = 10
+            is_decaying = yes
+		}
+	}
+
+	option = {
+		name = brazil_events.8.b
+		ruler = {
+			set_ideology = ideology:ideology_integralist
+			add_modifier = {
+				name = modifier_estado_novo_integralist
+				years = 10
+                is_decaying = yes
+			}
+		}
+        add_modifier = {
+			name = modifier_estado_novo_national
+			years = 10
+            is_decaying = yes
+		}
+	}
+
+	after = {
+		je_new_republic_cleanup = yes
+	}
 }
