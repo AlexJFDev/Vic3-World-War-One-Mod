@@ -66,7 +66,13 @@
             OR = {
                 is_subject = yes
                 any_civil_war = {
-			     civil_war_progress >= 0.75
+                political_movement = {
+					NOR = { 
+                        is_political_movement_type = movement_cultural_minority
+                        is_political_movement_type = movement_religious_minority 
+                    }
+				}
+			        civil_war_progress >= 0.75
 		        }
             }
         }

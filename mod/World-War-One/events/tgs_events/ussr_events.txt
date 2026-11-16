@@ -50,30 +50,6 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
             days = 5
         }
 		if = {
-			limit = { 
-				c:SIB = { is_player = no }
-				c:RUS = { is_player = no }  
-			}
-			c:SIB = {
-				trigger_event = {
-			       id = dev_events.183
-			       years = 3
-		        }
-			}
-		}
-		if = {
-			limit = { 
-				c:UKR = { is_player = no }
-				c:RUS = { is_player = no }   
-			}
-			c:UKR = {
-				trigger_event = {
-			       id = dev_events.183
-			       years = 3
-		        }
-			}
-		}
-		if = {
 			limit = {
 				c:RUS = { owns_entire_state_region = STATE_TALINN }
 			}
@@ -643,30 +619,6 @@ ussr_events.1 = { #Soviets decides to continue war with central powers or not
     option = {
         name = ussr_events.1.b
         set_variable = ussr_continues_ww1
-		if = {
-			limit = { 
-				c:SIB = { is_player = no }
-				c:RUS = { is_player = no }  
-			}
-			c:SIB = {
-				trigger_event = {
-			       id = dev_events.183
-			       years = 3
-		        }
-			}
-		}
-		if = {
-			limit = { 
-				c:UKR = { is_player = no }
-				c:RUS = { is_player = no }   
-			}
-			c:UKR = {
-				trigger_event = {
-			       id = dev_events.183
-			       years = 4
-		        }
-			}
-		}
 		trigger_event = {
             id = ussr_events.2
             years = 2

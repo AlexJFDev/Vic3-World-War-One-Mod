@@ -25,70 +25,6 @@
 	   colossus_with_feet_of_clay_modifier
 	}
 
-    fail = {
-        any_civil_war = {
-			civil_war_progress >= 0.75
-		}
-    }
-
-    on_fail = {
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        random_civil_war = {
-			add_civil_war_progress = -100
-		}
-        trigger_event = {
-            id = russia_events.3
-            days = 5
-        }
-        trigger_event = {
-            id = dev_events.63
-            days = 5
-        }
-    }
-
-    invalid = {
-        AND = {
-          has_variable = entente_participant
-          OR = {
-           c:GER = {
-             has_variable = central_powers_participant
-		     has_modifier = country_humiliated
-            } 
-           c:AUS = {
-             has_variable = central_powers_participant
-		     has_modifier = country_humiliated
-            } 
-           }
-        }
-    }
-
-    on_invalid = {
-        trigger_event = {
-			id = russia_events.9
-            days = 5
-		}
-	}
-
     outcome = {
         header = je_standard_completion_header
         effect_header = je_standard_on_completion_header
@@ -123,7 +59,15 @@
         conclusion_desc = je_standard_failure_conclusion_desc
         trigger = {
             any_civil_war = {
-			  civil_war_progress >= 0.75
+                political_movement = {
+				    NOR = { 
+                       is_political_movement_type = movement_cultural_majority
+                       is_political_movement_type = movement_religious_majority
+                       is_political_movement_type = movement_cultural_minority
+                       is_political_movement_type = movement_religious_minority 
+                    }
+			    }
+			    civil_war_progress >= 0.75
 		    }
         }
         effect = {
