@@ -38,3 +38,21 @@ ideology_islamic_modernist_valid_trigger = {
 is_world_war = {
 	is_diplomatic_play_type = dp_world_war
 }
+
+state_is_homeland_of_indian_cultures_2 = {
+	state_region = {
+		OR = {
+			is_homeland = cu:north_indian
+			is_homeland = cu:west_indian
+			is_homeland = cu:central_indian
+			is_homeland = cu:east_indian
+			is_homeland = cu:south_indian
+		}
+	}
+}
+
+state_is_homeland_of_german_cultures_2 = {
+	state_region = {
+		is_homeland = cu:german
+	}
+}
