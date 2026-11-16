@@ -319,7 +319,7 @@ movement_tenentist = {
 
 	ideology = ideology_tenentist
 	character_ideologies = {
-		ideology_tenentist
+		ideology_tenentist_leader
 	}
 
 	can_cause_obstinance = yes
@@ -339,7 +339,7 @@ movement_tenentist = {
 			is_primary_culture_of = root.owner
 		}
 		OR = {
-			has_ideology = ideology:ideology_tenentist
+			has_ideology = ideology:ideology_tenentist_leader
 			has_ideology = ideology:ideology_land_reformer
 			has_ideology = ideology:ideology_modernizer_leader
 			has_ideology = ideology:ideology_fascist
@@ -350,7 +350,7 @@ movement_tenentist = {
 		value = 100
 		if = {
 			limit = {
-				has_ideology = ideology:ideology_tenentist
+				has_ideology = ideology:ideology_tenentist_leader
 			}
 			multiply = {
 				value = 5

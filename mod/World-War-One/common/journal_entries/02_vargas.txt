@@ -1,0 +1,105 @@
+﻿je_new_republic = {
+	icon = "gfx/interface/icons/invention_icons/central_planning.dds"
+
+	group = je_group_brazil
+	dlc = dlc008
+
+	is_shown_when_inactive = {
+        exists = c:BRZ
+        THIS = c:BRZ
+    }
+
+	possible = {
+		NOR = {
+			has_law_or_variant = law_type:law_social_monarchy
+			has_law_or_variant = law_type:law_monarchy
+		}
+		ruler = { 
+			OR = {
+				has_ideology = ideology:ideology_authoritarian
+				has_ideology = ideology:ideology_tenentist_leader
+				has_ideology = ideology:ideology_integralist
+				has_ideology = ideology:ideology_fascist 
+			}
+		}
+	}
+
+	immediate = {
+		ruler = {
+			save_scope_as = vargas_scope
+			interest_group ?= {
+				save_scope_as = pb_scope
+			}
+		}
+		root = {
+			save_scope_as = brazil_scope
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = all_socialists_marginalized_tt
+				NOT = {
+					any_interest_group = {
+						AND = {
+							is_powerful = yes
+							leader = {
+								has_socialist_ideology = yes
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_technocracy
+				has_law_or_variant = law_type:law_single_party_state
+			}
+			OR = {
+				has_law_or_variant = law_type:law_interventionism
+				has_law_or_variant = law_type:law_laissez_faire
+			}
+			has_law_or_variant = law_type:law_public_schools
+			has_law_or_variant = law_type:law_compulsory_primary_school
+			OR = {
+				has_law_or_variant = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
+			}
+			OR = {
+				has_law_or_variant = law_type:law_regulatory_bodies
+				has_law_or_variant = law_type:law_worker_protections
+			}
+			OR = {
+				has_law_or_variant = law_type:law_anti_strike_laws
+				has_law_or_variant = law_type:law_corporatized_unions
+			}
+		}
+		effect = {
+			trigger_event = { id = brazil_events.8 popup = yes }
+			set_variable = estado_novo_achievement
+		}
+	}
+
+	outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = { 
+            OR = {
+               is_subject = yes
+			   has_modifier = declared_bankruptcy
+               has_law_or_variant = law_type:law_council_republic
+            }
+        }
+        effect = {}
+    }
+
+	weight = 100
+
+		
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
