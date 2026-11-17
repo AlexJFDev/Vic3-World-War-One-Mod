@@ -2802,11 +2802,17 @@ dev_events.53 = {
             set_ig_trait = ig_trait:ig_trait_diplomatic_incidents
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
 			set_ig_trait = ig_trait:ig_trait_bushido
+            remove_ideology = ideology_jingoist
+            add_ideology = ideology_shintoist
         }
         ig:ig_landowners ?= {
             set_ig_trait = ig_trait:ig_trait_noble_privileges
 			set_ig_trait = ig_trait:ig_trait_family_ties
 			set_ig_trait = ig_trait:ig_trait_noblesse_oblige
+        }
+        ig:ig_devout ?= {
+            remove_ideology = ideology_moralist
+			add_ideology = ideology_shinto_moralist
         }
         active_law:lawgroup_economic_system ?= {
 			add_amendment = {
@@ -2868,11 +2874,17 @@ dev_events.53 = {
             set_ig_trait = ig_trait:ig_trait_diplomatic_incidents
 			set_ig_trait = ig_trait:ig_trait_veteran_consultation
 			set_ig_trait = ig_trait:ig_trait_bushido
+            remove_ideology = ideology_jingoist
+            add_ideology = ideology_shintoist
         }
         ig:ig_landowners ?= {
             set_ig_trait = ig_trait:ig_trait_noble_privileges
 			set_ig_trait = ig_trait:ig_trait_family_ties
 			set_ig_trait = ig_trait:ig_trait_noblesse_oblige
+        }
+        ig:ig_devout ?= {
+            remove_ideology = ideology_moralist
+			add_ideology = ideology_shinto_moralist
         }
         active_law:lawgroup_economic_system ?= {
 			add_amendment = {

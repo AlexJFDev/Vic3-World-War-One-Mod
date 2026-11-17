@@ -181,10 +181,7 @@ german_clothes_trigger = {
 			NOT = {
 				c:AUS ?= this
 			}
-			OR = {
-				country_has_primary_culture = cu:north_german
-				country_has_primary_culture = cu:south_german
-			}
+			country_has_primary_culture = cu:german
 		}
 	}
 }
@@ -197,10 +194,7 @@ german_clothes_pop_trigger = {
 			NOT = {
 				c:AUS ?= this
 			}
-			OR = {
-				country_has_primary_culture = cu:north_german
-				country_has_primary_culture = cu:south_german
-			}
+            country_has_primary_culture = cu:german
 		}
 	}
 }
@@ -1649,8 +1643,8 @@ european_clothes_trigger = {
 					has_ideology = ideology:ideology_traditionalist
 					is_ruler_of_own_country = yes
 				}
-				owner ?= {
-					has_variable = japan_restoration_complete
+				c:JAP = {
+				    has_technology_researched = combustion_engine
 				}
 			}
 			has_template = AST_william_light
@@ -2242,10 +2236,8 @@ japanese_clothes_pop_trigger = {
 	scope:pop = {
 		culture = cu:japanese
 	}
-	owner ?= {
-        NOT = {
-			has_variable = japan_restoration_complete
-		}
+	c:JAP = {
+		NOT = { has_technology_researched = combustion_engine }
 	}
 }
 
@@ -2253,10 +2245,8 @@ japanese_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = cu:japanese
-		owner ?= {
-            NOT = {
-			  has_variable = japan_restoration_complete
-		    }
+		c:JAP = {
+			NOT = { has_technology_researched = combustion_engine }
 		}
 	}
 }

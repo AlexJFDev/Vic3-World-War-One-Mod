@@ -472,7 +472,7 @@ ideology_wilsonian_progressivism = {
 
 ideology_tenentist = {
 
-	icon = "gfx/interface/icons/ideology_icons/loyalist.dds"
+	icon = "gfx/interface/icons/ideology_icons/caudillismo.dds"
 
     lawgroup_governance_principles = {
 		law_theocracy = strongly_disapprove
@@ -553,7 +553,7 @@ ideology_tenentist_leader = {
 
     character_ideology = yes
 
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/authoritarian.dds"
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_caudillismo.dds"
 
     lawgroup_governance_principles = {
 		law_theocracy = strongly_disapprove
@@ -915,7 +915,7 @@ ideology_tenentist_leader = {
 
 ideology_coronelist = {
 
-	icon = "gfx/interface/icons/ideology_icons/paternalistic.dds"
+	icon = "gfx/interface/icons/ideology_icons/corporatist.dds"
 
 	lawgroup_distribution_of_power = {
 		law_single_party_state = neutral
@@ -2052,5 +2052,275 @@ ideology_french_constitutionalism = {
 		law_censorship = disapprove
 		law_right_of_assembly = approve
 		law_protected_speech = strongly_approve
+	}
+}
+
+ideology_shintoist = {
+
+	icon = "gfx/interface/icons/ideology_icons/shinto_moralist.dds"
+
+    lawgroup_governance_principles = {
+		law_theocracy = neutral
+		law_monarchy = strongly_approve
+		law_social_monarchy = approve
+		law_presidential_republic = strongly_disapprove
+		law_parliamentary_republic = strongly_disapprove
+		law_corporate_state = strongly_disapprove
+		law_council_republic = strongly_disapprove
+	}
+	
+    lawgroup_centralization = {
+        law_confederated = strongly_disapprove
+        law_federated = disapprove
+        law_devolved = approve
+        law_unitary = strongly_approve
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_approve
+		law_subjecthood = approve
+		law_national_supremacy = approve
+		law_racial_segregation = disapprove
+		law_cultural_exclusion = strongly_disapprove
+		law_multicultural = strongly_disapprove
+	}
+
+	lawgroup_trade_policy = {
+		law_isolationism = strongly_disapprove
+		law_protectionism = approve
+		law_mercantilism = neutral
+		law_free_trade = disapprove
+	}
+
+	lawgroup_foreign_policy = {
+       law_true_neutrality = strongly_disapprove
+	   law_armed_neutrality = disapprove
+	   law_limited_interventionism = neutral
+	   law_expansionism = approve
+	   law_imperialism = strongly_approve
+	}
+
+	lawgroup_colonization = {
+		law_colonial_resettlement = approve
+		law_colonial_exploitation = approve
+		law_frontier_colonization = approve
+		law_internal_colonization = neutral
+		law_no_colonial_affairs = disapprove
+	}
+}
+
+ideology_shintoist_leader = {
+
+	icon = "gfx/interface/icons/ideology_icons/shintoist_leader.dds"
+
+    lawgroup_governance_principles = {
+		law_theocracy = neutral
+		law_monarchy = strongly_approve
+		law_social_monarchy = approve
+		law_presidential_republic = strongly_disapprove
+		law_parliamentary_republic = strongly_disapprove
+		law_corporate_state = strongly_disapprove
+		law_council_republic = strongly_disapprove
+	}
+	
+    lawgroup_centralization = {
+        law_confederated = strongly_disapprove
+        law_federated = disapprove
+        law_devolved = approve
+        law_unitary = strongly_approve
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_approve
+		law_subjecthood = approve
+		law_national_supremacy = approve
+		law_racial_segregation = disapprove
+		law_cultural_exclusion = strongly_disapprove
+		law_multicultural = strongly_disapprove
+	}
+
+	lawgroup_trade_policy = {
+		law_isolationism = strongly_disapprove
+		law_protectionism = approve
+		law_mercantilism = neutral
+		law_free_trade = disapprove
+	}
+
+	country_trigger = {
+		country_has_primary_culture = cu:japanese
+		OR = { 
+			has_law_or_variant = law_type:law_monarchy
+			has_law_or_variant = law_type:law_social_monarchy
+		}
+	}
+
+	interest_group_leader_trigger = {
+		ideology_royalist_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role_of_type = agitator
+			owner ?= {
+				country_has_monarchy_law = yes
+			}
+		}
+		interest_group ?= {
+			ideology_royalist_valid_trigger = yes
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = {
+			add = 100
+			desc = "base_value"
+		}
+		# less likely in a theocracy
+		if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_theocracy
+				}
+			}
+			add = {
+				value = -75
+				desc = "THEOCRACY_LAW"
+			}
+		}
+		# less likely if IG is happy in a republic
+		if = {
+			limit = {
+				owner ?= {
+					NOT = { country_has_monarchy_law = yes }
+				}
+				ig_approval > 0
+			}
+			add = {
+				value = -100
+				desc = "HAPPY_IN_REPUBLIC"
+			}
+		}
+		# more likely if IG is happy in a monarchy
+		if = {
+			limit = {
+				owner ?= {
+					country_has_monarchy_law = yes
+				}
+				ig_approval >= define:NPolitics|APPROVAL_THRESHOLD_HAPPY
+			}
+			add = {
+				value = 50
+				desc = "HAPPY_IN_MONARCHY"
+			}
+		}
+		# Pedro JE victory
+		if = {
+			limit = {
+				owner ?= {
+					has_variable = brz_enduring_empire
+				}
+			}
+			add = {
+				value = 50
+				desc = "BRZ_ENDURING_EMPIRE"
+			}
+		}
+		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
+		if = {
+			limit = {
+				has_variable = anti_dreyfusard_victory
+			}
+			add = {
+				value = 50
+				desc = "ANTI_DREYFUSARD_VICTORY"
+			}
+		}
+		# conservative and/or reactionary leaders have a higher spawn chance if you win the Two Spains as the conservatives.
+		if = {
+			limit = {
+				has_variable = spa_two_spains_conservative_victory
+			}
+			add = {
+				value = 50
+				desc = "SPA_CONSERVATIVE_VICTORY"
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = {
+				value = 0.1
+				desc = "CHOSE_A_DIFFERENT_PATH"
+			}
+		}
+		multiply = {
+			value = 1
+			add = modifier:interest_group_ideology_royalist_leader_chance_mult
+			desc = "EVENTS_AND_OTHER_EFFECTS"
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		# less likely in a theocracy
+		if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_theocracy
+				}
+			}
+			add = -75
+		}
+		# less likely if IG is happy in a republic
+		if = {
+			limit = {
+				owner ?= {
+					NOT = { country_has_monarchy_law = yes }
+				}
+				interest_group.ig_approval > 0
+			}
+			add = -100
+		}
+		# more likely if IG is happy in a monarchy
+		if = {
+			limit = {
+				owner ?= {
+					country_has_monarchy_law = yes
+				}
+				interest_group.ig_approval >= define:NPolitics|APPROVAL_THRESHOLD_HAPPY
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				interest_group ?= {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+		multiply = {
+			value = 1
+			add = interest_group.modifier:interest_group_ideology_royalist_leader_chance_mult
+			desc = "EVENTS_AND_OTHER_EFFECTS"
+		}
 	}
 }

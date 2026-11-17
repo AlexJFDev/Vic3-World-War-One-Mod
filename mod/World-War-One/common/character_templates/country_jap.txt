@@ -2280,24 +2280,14 @@ JAP_hamaguchi_osachi = { # Hamaguchi Osachi - Liberal PM who got assassinated
 	role = character_role_politician
 	culture = cu:japanese
 	religion = rel:mahayana
-	interest_group = ig_petty_bourgeoisie
+	interest_group = ig_intelligentsia
 	ideology = ideology_liberal_leader
+	role = character_role_politician
 	home_region = STATE_SHIKOKU
 	traits = {
 		persistent
 		charismatic
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
-			c:JAP ?= this
-			has_dlc_feature = ep2_content
-        }
-        interest_group_trigger = {
-			is_interest_group_type = ig_petty_bourgeoisie
-        }
-        earliest_usage_date = 1895.1.1
-        latest_usage_date = 1931.1.1
-    }
 }
 
 JAP_goto_shinpei = { # Gotō Shinpei - Taiwan Administrator/Modernizer
