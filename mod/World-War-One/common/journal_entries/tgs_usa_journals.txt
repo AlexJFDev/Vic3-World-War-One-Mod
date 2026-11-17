@@ -139,9 +139,11 @@ je_great_depression = {
     is_shown_when_inactive = {
         exists = c:USA
         THIS = c:USA
+        has_game_rule = great_depression_enabled
     }
     
     possible = {
+        has_game_rule = great_depression_enabled
         gdp > 500000000
         root.average_sol >= 15
         game_date > 1929.10.15
