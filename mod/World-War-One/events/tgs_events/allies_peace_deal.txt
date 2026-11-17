@@ -724,6 +724,13 @@ allies_peace_deal.5 = {
 			}
 			kill_character = yes
 		}
+		if = {
+			limit = { THIS = c:ITA }
+			trigger_event = {
+                id = dev_events.220
+                days = 5
+            }
+		}
     }
 }
 

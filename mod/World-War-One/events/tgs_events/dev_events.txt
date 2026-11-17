@@ -10872,3 +10872,55 @@ dev_events.219 = {
 		}
     }
 }
+
+dev_events.220 = {
+    type = country_event
+
+    title = dev_events.17.t
+    desc = dev_events.17.d
+    flavor = dev_events.17.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    immediate = {}
+
+    option = {
+        name = world_war_two_initiation_events.12.a
+        default_option = yes
+        remove_diplomatic_pact = {
+			country = c:YUG
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:ALB
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:GRE
+			type = protectorate
+		}
+        remove_diplomatic_pact = {
+			country = c:TRI
+			type = colony
+		}
+        remove_diplomatic_pact = {
+			country = c:CYR
+			type = colony
+		}
+        remove_diplomatic_pact = {
+			country = c:ERT
+			type = colony
+		}
+        remove_diplomatic_pact = {
+			country = c:SMA
+		    type = colony
+		}
+    }
+}

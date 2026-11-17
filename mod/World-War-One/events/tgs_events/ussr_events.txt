@@ -932,6 +932,167 @@ ussr_events.4 = { #Lenin death
 	}
 }
 
+ussr_events.6 = { #Takeover of Bessarabia and Bukovina
+    type = country_event
+
+    title = ussr_events.6.t
+    desc = ussr_events.6.d
+    flavor = ussr_events.6.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/red_army.dds"
+    }
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = ussr_events.6.a
+        default_option = yes
+		trigger = {
+			c:ROM = { 
+				owns_entire_state_region = STATE_BUKOVINA
+				owns_entire_state_region = STATE_BESSARABIA 
+			}
+		}
+		set_global_variable = ussr_demands_bessarabia_bukovina
+        c:ROM = {
+            trigger_event = {
+              id = ussr_events.7
+              days = 5
+            }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+        name = ussr_events.6.b
+		trigger = {
+			c:ROM = { owns_entire_state_region = STATE_BESSARABIA }
+		}
+		set_global_variable = ussr_demands_bessarabia_only
+        c:ROM = {
+            trigger_event = {
+              id = ussr_events.7
+              days = 5
+            }
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+        name = ussr_events.6.c
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+ussr_events.7 = { #Takeover of Bessarabia and Bukovina
+    type = country_event
+
+    title = ussr_events.7.t
+    desc = ussr_events.7.d
+    flavor = ussr_events.7.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+    
+    event_image = {
+        texture = "gfx/event_pictures/red_army.dds"
+    }
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = ussr_events.7.a
+        default_option = yes
+		trigger = { has_global_variable = ussr_demands_bessarabia_bukovina }
+        s:STATE_BUKOVINA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:ROM
+			    owner = {
+				  OR = {
+					c:ROM = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		s:STATE_BESSARABIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:ROM
+			    owner = {
+				  OR = {
+					c:ROM = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+        name = ussr_events.7.b
+		trigger = { has_global_variable = ussr_demands_bessarabia_only }
+        s:STATE_BESSARABIA = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:ROM
+			    owner = {
+				  OR = {
+					c:ROM = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:RUS
+            }
+        }
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+        name = ussr_events.7.c
+		c:RUS = {
+			create_diplomatic_play = {
+                name = romania_conquest
+
+                target_state = s:STATE_BESSARABIA.region_state:ROM
+
+                type = dp_conquer_state
+
+                escalation = 0
+            }
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
 ussr_events.9 = { #Baltic conquest
     type = country_event
 
