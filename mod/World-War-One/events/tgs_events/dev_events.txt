@@ -9448,6 +9448,15 @@ dev_events.188 = {
 			    type = protectorate
             }
         }
+        add_modifier = {
+            name = enforced_partition
+            years = 10
+            is_decaying = yes
+        }
+        trigger_event = {
+            id = dev_events.183
+            days = 5
+        }
     }
 }
 

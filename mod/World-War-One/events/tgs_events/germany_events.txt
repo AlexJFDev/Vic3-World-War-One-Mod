@@ -170,15 +170,10 @@ germany_events.2 = { #November Revolution
                 id = dev_events.200
                 days = 5
             }
-            add_modifier = {
-			  name = starting_sol_buff_2
-              years = 5
-              is_decaying = yes
-		    } 
         }
         trigger_event = {
             id = dev_events.183
-            days = 5
+            days = 1
         }
         create_treaty = {
 		  name = treaty_name_partition
@@ -344,7 +339,7 @@ germany_events.2 = { #November Revolution
             }
             trigger_event = {
               id = dev_events.183
-              days = 5
+              days = 1
             }
         }
         if = {
@@ -648,7 +643,7 @@ germany_events.6 = { #Austria-Hungary capitulates
 		}
         trigger_event = {
             id = dev_events.183
-            days = 5
+            days = 1
         }
         set_variable = small_austria
         ai_chance = {
@@ -704,7 +699,7 @@ germany_events.7 = {
 		}
         trigger_event = {
             id = dev_events.183
-            days = 5
+            days = 1
         }
         s:STATE_DOBRUDJA = {
             random_scope_state = {
@@ -720,6 +715,19 @@ germany_events.7 = {
             }
         }
         s:STATE_EASTERN_SERBIA = {
+            random_scope_state = {
+		        limit = {
+			    exists = c:BUL
+			        owner = {
+				        OR = {
+					      c:BUL = THIS
+				        }
+			        }
+		        }
+		        set_state_owner = c:SER
+            }
+        }
+        s:STATE_KOSOVO = {
             random_scope_state = {
 		        limit = {
 			    exists = c:BUL
@@ -846,7 +854,7 @@ germany_events.9 = { #Ottoman Empire capitulates
 		}
         trigger_event = {
             id = dev_events.183
-            days = 5
+            days = 1
         }
         create_treaty = {
 		  name = treaty_name_partition

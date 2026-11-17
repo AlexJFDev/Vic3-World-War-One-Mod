@@ -163,13 +163,13 @@ je_germany_ai_blockade = {
           is_player = no
           is_at_war = yes
           has_variable = central_powers_participant
-          navy_size < 225
+          navy_size < 325
         }
         c:GBR = {
           is_at_war = yes
           is_diplomatic_play_enemy_of = c:GER
           has_variable = entente_participant
-          navy_size > 400
+          navy_size > 500
         }
         c:FRA = {
           is_at_war = yes
@@ -183,16 +183,18 @@ je_germany_ai_blockade = {
 	}
 
     outcome = {
-        flags = { invalid_outcome }
-        conclusion_desc = je_standard_failure_conclusion_desc
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
         trigger = {
             OR = {
                 is_at_war = no
-                navy_size > 250
+                navy_size > 350
                 c:GBR = {
                     OR = {
                         NOT = { is_diplomatic_play_enemy_of = c:GER }
-                        navy_size < 400
+                        navy_size < 450
                     }  
                 }
                 c:FRA = { is_subject_of = c:GER }

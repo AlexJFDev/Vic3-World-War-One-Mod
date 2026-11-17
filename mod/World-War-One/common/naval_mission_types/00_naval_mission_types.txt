@@ -8,17 +8,7 @@
     ai_distance_penalty_multiplier = 0.25
     experience = 1
 
-    ai_weight = {
-		value = 10
-        if = {
-			limit = {
-				owner ?= {
-					is_at_war = yes
-				}
-			}
-			add = -60
-		}
-	}
+    ai_will_do = { is_at_war = no }
 }
 
 REPLACE_OR_CREATE:naval_mission_type_intercept = {
@@ -30,10 +20,6 @@ REPLACE_OR_CREATE:naval_mission_type_intercept = {
     intercept_targets = { hostile }
     ai_will_cancel_for_transportation = yes
     experience = 2
-
-    ai_weight = {
-		value = 10
-	}
 }
 
 REPLACE_OR_CREATE:naval_mission_type_protect_supply = {
@@ -44,18 +30,6 @@ REPLACE_OR_CREATE:naval_mission_type_protect_supply = {
     protect_supply = yes
     ai_will_cancel_for_transportation = yes
     experience = 2
-
-    ai_weight = {
-		value = 5
-        if = {
-			limit = {
-				owner ?= {
-                    c:GBR ?= this
-				}
-			}
-			add = -100
-		}
-	}
 }
 
 REPLACE_OR_CREATE:naval_mission_type_raid_supply = {
@@ -70,26 +44,6 @@ REPLACE_OR_CREATE:naval_mission_type_raid_supply = {
     raid_supply = yes
     ai_will_cancel_for_transportation = yes
     experience = 2
-
-    ai_weight = {
-		value = 10
-        if = {
-			limit = {
-				owner ?= {
-					navy_size >= 250
-				}
-			}
-			add = 20
-		}
-        if = {
-			limit = {
-				owner ?= {
-                    c:GER ?= this
-				}
-			}
-			add = 100
-		}
-	}
 }
 
 REPLACE_OR_CREATE:naval_mission_type_blockade = {
@@ -101,25 +55,9 @@ REPLACE_OR_CREATE:naval_mission_type_blockade = {
     ai_will_cancel_for_transportation = no
     experience = 2
 
-    ai_weight = {
-		value = 10
-        if = {
-			limit = {
-				owner ?= {
-					navy_size >= 250
-				}
-			}
-			add = 20
-		}
-        if = {
-			limit = {
-				owner ?= {
-                    c:GBR ?= this
-				}
-			}
-			add = 500
-		}
-	}
+    potential = { is_player = yes }
+    possible = { is_player = yes }
+    ai_will_do = { always = no }
 }
 
 REPLACE_OR_CREATE:naval_mission_type_port_bombardment = {
@@ -131,17 +69,9 @@ REPLACE_OR_CREATE:naval_mission_type_port_bombardment = {
     ai_will_cancel_for_transportation = yes
     experience = 2
 
-    ai_weight = {
-		value = 5
-        if = {
-			limit = {
-				owner ?= {
-					navy_size >= 250
-				}
-			}
-			add = 10
-		}
-	}
+    potential = { is_player = yes }
+    possible = { is_player = yes }
+    ai_will_do = { always = no }
 }
 
 REPLACE_OR_CREATE:naval_mission_type_hunt_pirates = {
@@ -157,10 +87,6 @@ REPLACE_OR_CREATE:naval_mission_type_hunt_pirates = {
     potential = {
         has_dlc_feature = ep2_content
     }
-
-    ai_weight = {
-		value = 10
-	}
 }
 
 REPLACE_OR_CREATE:naval_mission_type_piracy = {
@@ -201,10 +127,6 @@ REPLACE_OR_CREATE:naval_mission_type_piracy = {
             }
         }
     }
-
-    ai_weight = {
-		value = 10
-	}
 }
 
 REPLACE_OR_CREATE:naval_mission_type_privateer = {
@@ -229,8 +151,4 @@ REPLACE_OR_CREATE:naval_mission_type_privateer = {
             NOT = { is_country_type = unrecognized }
         }
     }
-
-    ai_weight = {
-		value = 10
-	}
 }

@@ -1,0 +1,28 @@
+﻿namespace = rhine_confederation
+
+rhine_confederation.1 = {
+	type = country_event
+	placement = root
+	title = rhine_confederation.1.t
+	desc = rhine_confederation.1.d
+	flavor = rhine_confederation.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	trigger = {}
+
+	immediate = {}
+
+	option = {
+		name = rhine_confederation.1.a
+		set_variable = not_on_my_watch
+	}
+}
