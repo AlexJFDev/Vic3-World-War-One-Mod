@@ -23,10 +23,29 @@ japan_events.10 = {#21 demands initiation
     option = {
         name = japan_events.10.a
         default_option = yes
+        trigger = { exists = c:CHI }
         c:CHI = { set_relations = { country = c:JAP value = -50 } }
         c:GBR = { set_relations = { country = c:JAP value = -50 } }
         c:USA = { set_relations = { country = c:JAP value = -50 } }
         c:CHI = {
+            trigger_event = {
+              id = japan_events.11
+              days = 5
+            }
+        }
+        ai_chance = {
+		  base = 1
+	    }
+    }
+
+    option = {
+        name = japan_events.10.a
+        default_option = yes
+        trigger = { exists = c:BEI }
+        c:CHI = { set_relations = { country = c:JAP value = -50 } }
+        c:GBR = { set_relations = { country = c:JAP value = -50 } }
+        c:USA = { set_relations = { country = c:JAP value = -50 } }
+        c:BEI = {
             trigger_event = {
               id = japan_events.11
               days = 5
@@ -55,7 +74,7 @@ japan_events.11 = {#21 demands China response
     icon = "gfx/interface/icons/event_icons/event_default.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
-    duration = 12
+    duration = 8
     
     event_image = {
         texture = "gfx/event_pictures/21_demands.dds"
@@ -94,6 +113,7 @@ japan_events.11 = {#21 demands China response
 
     option = {
         name = japan_events.11.c
+        trigger = { c:CHI ?= this }
         c:JAP = {
             create_diplomatic_pact = {
 			  country = c:CHI
@@ -105,15 +125,42 @@ japan_events.11 = {#21 demands China response
 		      limit = {
 			   exists = c:FRS
 			    owner = {
-				  OR = {
-					c:FRS = THIS
+				    OR = {
+					  c:FRS = THIS
 				    }
 			    }
 		        }
 		      set_state_owner = c:JAP
             }
 			add_claim = c:FRS
-            add_claim = c:CHI
+        }
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = japan_events.11.c
+        trigger = { c:BEI ?= this }
+        c:JAP = {
+            create_diplomatic_pact = {
+			  country = c:BEI
+			  type = protectorate
+		    }
+        }
+        s:STATE_FUJIAN = {
+	       random_scope_state = {
+		      limit = {
+			   exists = c:FRS
+			    owner = {
+				    OR = {
+					  c:FRS = THIS
+				    }
+			    }
+		        }
+		      set_state_owner = c:JAP
+            }
+			add_claim = c:FRS
         }
         ai_chance = {
 		  base = 0
@@ -144,9 +191,58 @@ japan_events.12 = {#21 demands Japan gets China response
     option = {
         name = japan_events.12.a
         default_option = yes
-        c:JAP.power_bloc ?= {
-		   add_leverage = { target = c:CHI value = 300 }
-	    }
+        if = {
+            limit = {
+                exists = c:CHI
+                c:CHI = {
+                    is_in_power_bloc = no
+                }
+            }
+            c:JAP.power_bloc ?= {
+		      add_leverage = { target = c:CHI value = 300 }
+	        }
+            create_treaty = {
+		       name = treaty_name_21_demands
+		       first_country = c:JAP
+		       second_country = c:CHI
+
+		       is_draft = no
+		       binding_period = { years = 5 }
+		       articles_to_create = {
+			        {
+				      article = host_power_bloc_embassy
+				      source_country = c:CHI
+				      target_country = c:JAP
+			        }
+                }
+		    }
+        }
+        if = {
+            limit = {
+                exists = c:BEI
+                c:BEI = {
+                    is_in_power_bloc = no
+                }
+            }
+            c:JAP.power_bloc ?= {
+		      add_leverage = { target = c:BEI value = 300 }
+	        }
+            create_treaty = {
+		       name = treaty_name_21_demands
+		       first_country = c:JAP
+		       second_country = c:BEI
+
+		       is_draft = no
+		       binding_period = { years = 5 }
+		       articles_to_create = {
+			        {
+				      article = host_power_bloc_embassy
+				      source_country = c:BEI
+				      target_country = c:JAP
+			        }
+                }
+		    }
+        }
         c:GBR = {
             trigger_event = {
               id = japan_events.13
@@ -178,16 +274,24 @@ japan_events.12 = {#21 demands Japan gets China response
 
     option = {
         name = japan_events.12.b
+        trigger = { exists = c:CHI }
         create_diplomatic_play = {
 		    target_country = c:CHI
-		    type = dp_take_treaty_port
+		    type = dp_make_protectorate
             escalation = 0
-            target_state = s:STATE_JIANGSU.region_state:CHI
-	        add_war_goal = {
-		        holder = c:CHI
-		        type = humiliation
-		        target_country = c:JAP
-            }
+	    }
+        ai_chance = {
+		  base = 0
+	    }
+    }
+
+    option = {
+        name = japan_events.12.b
+        trigger = { exists = c:BEI }
+        create_diplomatic_play = {
+		    target_country = c:BEI
+		    type = dp_make_protectorate
+            escalation = 0
 	    }
         ai_chance = {
 		  base = 0
@@ -246,14 +350,8 @@ japan_events.14 = {#21 demands Japan starts diplomatic play
         default_option = yes
         create_diplomatic_play = {
 		    target_country = c:CHI
-		    type = dp_take_treaty_port
+		    type = dp_make_protectorate
             escalation = 0
-            target_state = s:STATE_JIANGSU.region_state:CHI
-	        add_war_goal = {
-		        holder = c:CHI
-		        type = humiliation
-		        target_country = c:JAP
-            }
 	    }
         ai_chance = {
 		  base = 1
