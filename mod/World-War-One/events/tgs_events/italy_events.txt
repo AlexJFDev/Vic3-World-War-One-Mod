@@ -1,32 +1,6 @@
 ﻿namespace = italy_events
 
-italy_events.1 = {
-    type = country_event
-
-    title = italy_events.1.t
-    desc = italy_events.1.d
-    flavor = italy_events.1.f
-    
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-    
-    duration = 1
-    
-    immediate = {}
-
-    event_image = {
-        texture = "gfx/event_pictures/______.dds"
-    }
-
-    trigger = {}
-
-    option = {
-        name = italy_events.1.a
-        
-    }
-}
-
-italy_events.10 = { #Benito Mussolini appears
+italy_events.10 = { #Fascist threat JE initiation
     type = country_event
 
     title = italy_events.10.t
@@ -37,47 +11,70 @@ italy_events.10 = { #Benito Mussolini appears
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
-    
-    immediate = {}
 
     event_image = {
-        texture = "gfx/event_pictures/benito_mussolini.dds"
+        texture = "gfx/event_pictures/italian_fascism.dds"
     }
 
     trigger = {}
 
-    option = {
+    immediate = {
+        if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_fascist
+					}
+				}
+			}
+			create_political_movement = { type = movement_fascist }
+		}
+    }
+
+    option = { #Fund the movement
         name = italy_events.10.a
-        create_character = {
-            first_name = Benito
-	        last_name = Mussolini
-	        historical = yes
-            birth_date = 1883.07.29
-	        culture = cu:italian
-	        religion = rel:atheist
-	        female = no
-            is_agitator = yes
-	        interest_group = ig_petty_bourgeoisie
-	        ideology = ideology_fascist
-	        traits = {
-               firebrand
-               imposing
-               demagogue
-               expert_political_operator
-	        }
-	        on_created = {
-                set_variable = {
-                  name = benito_mussolini
-                }                
-            }
-        }
-        set_variable = historical_fascism
-        create_political_movement = { type = movement_fascist }
         add_technology_progress = { progress = 5000 technology = political_agitation }
+        set_variable = historical_fascism
+        random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_fascist
+			}
+			save_scope_as = italian_fascist_movement_scope
+		}
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_10
+				years = 20
+                is_decaying = yes
+			} 
+		}
+        add_modifier = {
+			name = special_funding_1
+			years = 10
+		} 
+    }
+
+    option = { #Do nothing
+        name = italy_events.10.b
+        add_technology_progress = { progress = 2500 technology = political_agitation }
+        set_variable = historical_fascism
+        random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_fascist
+			}
+			save_scope_as = italian_fascist_movement_scope
+		}
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_9
+				years = 10
+                is_decaying = yes
+			} 
+		}
     }
 }
 
-italy_events.11 = { #March on Rome
+italy_events.11 = { #Fiume occupation part 1
     type = country_event
 
     title = italy_events.11.t
@@ -90,95 +87,96 @@ italy_events.11 = { #March on Rome
     duration = 3
 
     event_image = {
-        texture = "gfx/event_pictures/march_on_rome.dds"
+        texture = "gfx/event_pictures/fiume.dds"
     }
 
     trigger = {}
 
     immediate = {
+        s:STATE_CROATIA = {
+            set_owner_of_provinces = {
+				country = c:ITA
+				provinces = { xF021C0 }
+			}
+        }
         random_political_movement = {
-			limit = { is_political_movement_type = movement_fascist }
+			limit = {
+				is_political_movement_type = movement_fascist
+			}
 			save_scope_as = italian_fascist_movement_scope
 		}
     }
 
     option = {
         name = italy_events.11.a
-        trigger = { is_player = no }
-        default_option = yes
-        random_scope_character = {
-			limit = {
-				has_variable = benito_mussolini
-			}
-			remove_character_role = agitator
-		    add_character_role = politician
-            set_as_interest_group_leader = yes
-		}
-        ig:ig_petty_bourgeoisie = {
-			add_ruling_interest_group = yes
-		}
-        random_scope_character = {
-			limit = {
-				is_ruler_of_own_country = yes
-			}
-			set_ideology = ideology:ideology_fascist
-		}
-        random_scope_character =  {
-			limit = {
-				is_heir_of_own_country = yes
-			}
-			set_ideology = ideology:ideology_fascist
-		}
-        scope:italian_fascist_movement_scope = {
-			add_modifier = {
-				name = political_movement_buff_7
-				years = 30
-                is_decaying = yes
-			} 
-		}
-        activate_law = law_type:law_social_monarchy
-        activate_law = law_type:law_single_party_state
-        activate_law = law_type:law_outlawed_dissent
-        activate_law = law_type:law_interventionism
-        ai_chance = {
-            base = 1
+        set_global_variable = italy_supports_fiume
+        create_country = {
+	        tag = FIU
+	        origin = this
+	        state = s:STATE_CROATIA.region_state:ITA
+            on_created = { 
+               activate_law = law_type:law_presidential_republic
+               activate_law = law_type:law_autocracy
+               activate_law = law_type:law_censorship
+            }
         }
-    }
-
-    option = {
-        name = italy_events.11.a
-        trigger = { is_player = yes }
-        default_option = yes
-        random_scope_character =  {
-			limit = {
-				has_variable = benito_mussolini
-			}
-			remove_character_role = agitator
-		    add_character_role = politician
-            set_as_interest_group_leader = yes
+        create_diplomatic_pact = {
+			country = c:FIU
+			type = protectorate
 		}
-        ig:ig_petty_bourgeoisie = {
-			add_ruling_interest_group = yes
-		}
-        random_scope_character =  {
-			limit = {
-				is_ruler_of_own_country = yes
-			}
-			set_ideology = ideology:ideology_fascist
-		}
-        random_scope_character =  {
-			limit = {
-				is_heir_of_own_country = yes
-			}
-			set_ideology = ideology:ideology_fascist
-		}
+        c:FIU = {
+            add_modifier = {
+				name = money_buff_5
+				years = 2
+                is_decaying = yes
+			} 
+        }
         scope:italian_fascist_movement_scope = {
 			add_modifier = {
-				name = political_movement_buff_7
-				years = 30
+				name = political_movement_buff_8
+				years = 10
                 is_decaying = yes
 			} 
 		}
+        if = {
+            limit = {
+                c:YUG = {
+                    has_state_in_state_region = STATE_CROATIA
+                }
+                c:YUG = {
+                    trigger_event = {
+                      id = italy_events.12
+                      days = 5
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:SER = {
+                    has_state_in_state_region = STATE_CROATIA
+                }
+                c:SER = {
+                    trigger_event = {
+                      id = italy_events.12
+                      days = 5
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:CRO = {
+                    has_state_in_state_region = STATE_CROATIA
+                }
+                c:CRO = {
+                    trigger_event = {
+                      id = italy_events.12
+                      days = 5
+                    }
+                }
+            }
+        }
         ai_chance = {
             base = 1
         }
@@ -186,23 +184,108 @@ italy_events.11 = { #March on Rome
 
     option = {
         name = italy_events.11.b
-        random_scope_character =  {
-			limit = {
-				has_variable = benito_mussolini
-			}
-			remove_character_role = agitator
-		    add_character_role = politician
-            set_as_interest_group_leader = yes
-		}
-        ig:ig_petty_bourgeoisie = {
-			add_ruling_interest_group = yes
-		}
-        scope:italian_fascist_movement_scope = {
-			add_modifier = {
-				name = political_movement_buff_8
-				years = 20
+        set_global_variable = fiume_illegal_occupation
+        default_option = yes
+        create_country = {
+	        tag = FIU
+	        origin = this
+	        state = s:STATE_CROATIA.region_state:ITA
+            on_created = { 
+               activate_law = law_type:law_presidential_republic
+               activate_law = law_type:law_autocracy
+               activate_law = law_type:law_censorship
+            }
+        }
+        c:FIU = {
+            add_modifier = {
+				name = money_buff_5
+				years = 4
                 is_decaying = yes
 			} 
+        }
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_9
+				years = 5
+                is_decaying = yes
+			} 
+		}
+        add_modifier = {
+			name = angry_military_2_modifier
+			years = 5
+            is_decaying = yes
+		}
+        if = {
+            limit = {
+                c:YUG = {
+                    has_state_in_state_region = STATE_CROATIA
+                }
+                c:YUG = {
+                    trigger_event = {
+                      id = italy_events.12
+                      days = 5
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:SER = {
+                    has_state_in_state_region = STATE_CROATIA
+                }
+                c:SER = {
+                    trigger_event = {
+                      id = italy_events.12
+                      days = 5
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                c:CRO = {
+                    has_state_in_state_region = STATE_CROATIA
+                }
+                c:CRO = {
+                    trigger_event = {
+                      id = italy_events.12
+                      days = 5
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = italy_events.11.c
+        trigger = { exists = c:YUG }
+        s:STATE_CROATIA = {
+           random_scope_state = {
+		        limit = {
+			       exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:YUG
+            }
+        }
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_9
+				years = 10
+                is_decaying = yes
+			} 
+		}
+        add_modifier = {
+			name = angry_military_2_modifier
+			years = 10
+            is_decaying = yes
 		}
         ai_chance = {
             base = 0
@@ -211,6 +294,278 @@ italy_events.11 = { #March on Rome
 
     option = {
         name = italy_events.11.c
+        trigger = { exists = c:SER }
+        s:STATE_CROATIA = {
+           random_scope_state = {
+		        limit = {
+			       exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:SER
+            }
+        }
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_9
+				years = 10
+                is_decaying = yes
+			} 
+		}
+        add_modifier = {
+			name = angry_military_2_modifier
+			years = 10
+            is_decaying = yes
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = italy_events.11.c
+        trigger = { exists = c:CRO }
+        s:STATE_CROATIA = {
+           random_scope_state = {
+		        limit = {
+			       exists = c:ITA
+			    owner = {
+				  OR = {
+					c:ITA = THIS
+				    }
+			    }
+		        }
+		        set_state_owner = c:CRO
+            }
+        }
+        scope:italian_fascist_movement_scope = {
+			add_modifier = {
+				name = political_movement_buff_9
+				years = 10
+                is_decaying = yes
+			} 
+		}
+        add_modifier = {
+			name = angry_military_2_modifier
+			years = 10
+            is_decaying = yes
+		} 
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+italy_events.12 = { #Fiume occupation part 2
+    type = country_event
+
+    title = italy_events.12.t
+    desc = italy_events.12.d
+    flavor = italy_events.12.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 12
+
+    event_image = {
+        texture = "gfx/event_pictures/fiume.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = italy_events.12.a
+        default_option = yes
+        add_modifier = {
+			name = angry_elites_4_modifier
+			years = 5
+            is_decaying = yes
+		} 
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = italy_events.12.b
+        create_diplomatic_play = {
+            name = italo_yugoslav_war
+
+            target_country = c:FIU
+
+            type = dp_annex_war
+
+            escalation = 0
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+italy_events.13 = { #Fascists demand power
+    type = country_event
+
+    title = italy_events.13.t
+    desc = italy_events.13.d
+    flavor = italy_events.13.f
+    
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 3
+
+    event_image = {
+        texture = "gfx/event_pictures/march_on_rome.dds"
+    }
+
+    trigger = {}
+
+    option = {
+        name = italy_events.13.a
+        trigger = { is_player = no }
+        default_option = yes
+        if = {
+            limit = {
+                ig:ig_petty_bourgeoisie = {
+			        leader = {
+						NOT = {
+                            has_ideology = fascist
+                        }
+					}
+		        }
+            }
+            random_scope_character = {
+			    limit = {
+                  is_agitator = yes
+                  has_ideology = ideology:ideology_fascist
+                  is_interest_group_type = ig_petty_bourgeoisie
+                  is_interest_group_leader = no
+			    }
+			    remove_character_role = agitator
+		        add_character_role = politician
+                set_as_interest_group_leader = yes
+		    }
+        }
+        ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+        random_scope_character = {
+			limit = {
+				is_ruler_of_own_country = yes
+			}
+			set_ideology = ideology:ideology_fascist
+		}
+        random_scope_character =  {
+			limit = {
+				is_heir_of_own_country = yes
+			}
+			set_ideology = ideology:ideology_fascist
+		}
+        if = {
+            limit = {
+                c:FIU = {
+                    OR = {
+                        is_subject = no
+                        is_subject_of = c:ITA
+                    }
+                }
+                annex = c:FIU
+            }
+        }
+        activate_law = law_type:law_social_monarchy
+        activate_law = law_type:law_single_party_state
+        activate_law = law_type:law_censorship
+        activate_law = law_type:law_interventionism
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = italy_events.13.a
+        trigger = { is_player = yes }
+        default_option = yes
+        if = {
+            limit = {
+                ig:ig_petty_bourgeoisie = {
+			        leader = {
+						NOT = {
+                            has_ideology = fascist
+                        }
+					}
+		        }
+            }
+            random_scope_character = {
+			    limit = {
+                  is_agitator = yes
+                  has_ideology = ideology:ideology_fascist
+                  is_interest_group_type = ig_petty_bourgeoisie
+                  is_interest_group_leader = no
+			    }
+			    remove_character_role = agitator
+		        add_character_role = politician
+                set_as_interest_group_leader = yes
+		    }
+        }
+        ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+        random_scope_character =  {
+			limit = {
+				is_ruler_of_own_country = yes
+			}
+			set_ideology = ideology:ideology_fascist
+		}
+        random_scope_character =  {
+			limit = {
+				is_heir_of_own_country = yes
+			}
+			set_ideology = ideology:ideology_fascist
+		}
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = italy_events.13.b
+        if = {
+            limit = {
+                ig:ig_petty_bourgeoisie = {
+			        leader = {
+						NOT = {
+                            has_ideology = fascist
+                        }
+					}
+		        }
+            }
+            random_scope_character = {
+			    limit = {
+                  is_agitator = yes
+                  has_ideology = ideology:ideology_fascist
+                  is_interest_group_type = ig_petty_bourgeoisie
+                  is_interest_group_leader = no
+			    }
+			    remove_character_role = agitator
+		        add_character_role = politician
+                set_as_interest_group_leader = yes
+		    }
+        }
+        ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    option = {
+        name = italy_events.13.c
         scope:italian_fascist_movement_scope = {
 			add_modifier = {
 				name = political_movement_buff_5

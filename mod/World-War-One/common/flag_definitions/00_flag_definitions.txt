@@ -2252,6 +2252,29 @@ REPLACE_OR_CREATE:CRO = { # Croatia
 	}	
 }
 
+FIU = { # Fiume
+	flag_definition = {
+		coa = FIU
+		subject_canton = FIU
+		allow_overlord_canton = no		
+		priority = 1
+	}
+	flag_definition = {
+		coa = FIU_ITA
+		subject_canton = FIU
+		allow_overlord_canton = no		
+		priority = 500
+		trigger = {
+			AND = {
+				exists = c:FIU
+				scope:actor ?= {
+					is_subject_of = c:ITA
+				}
+			}
+		}
+	}
+}
+
 REPLACE_OR_CREATE:CSA = { # Confederate States of America
 	flag_definition = {
 		coa = CSA

@@ -1259,14 +1259,59 @@ germany_events.26 = { #Hitler becomes leader of Petite Bourgeoisie
 
     option = {
         name = germany_events.26.a
-	    random_scope_character = {
-			limit = {
-				has_variable = adolf_hitler
-			}
-			remove_character_role = agitator
-		    add_character_role = politician
-            set_as_interest_group_leader = yes
-		}
+        if = {
+            limit = {
+                ig:ig_petty_bourgeoisie = {
+			        leader = {
+						NOT = {
+                            has_ideology = fascist
+                        }
+					}
+		        }
+                any_scope_character = {
+			        limit = {
+				        has_variable = adolf_hitler
+			        }
+                }
+            }
+            random_scope_character = {
+			    limit = {
+				   has_variable = adolf_hitler
+			    }
+			    remove_character_role = agitator
+		        add_character_role = politician
+                set_as_interest_group_leader = yes
+		    }
+        }
+        if = {
+            limit = {
+                ig:ig_petty_bourgeoisie = {
+			        leader = {
+						NOT = {
+                            has_ideology = fascist
+                        }
+					}
+		        }
+                NOT = {
+                    any_scope_character = {
+			            limit = {
+				          has_variable = adolf_hitler
+			            }
+                    }
+                }
+            }
+            random_scope_character = {
+			    limit = {
+                  is_agitator = yes
+                  has_ideology = ideology:ideology_fascist
+                  is_interest_group_type = ig_petty_bourgeoisie
+                  is_interest_group_leader = no
+			    }
+			    remove_character_role = agitator
+		        add_character_role = politician
+                set_as_interest_group_leader = yes
+		    }
+        }
         c:GER = {
             trigger_event = {
                 id = germany_events.27
@@ -1331,7 +1376,11 @@ germany_events.27 = { #Invite fascists to government
             }
         }
         random_scope_character = { 
-			limit = { has_variable = adolf_hitler }
+			limit = { 
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_leader = yes
+                has_ideology = fascist
+            }
             set_character_as_ruler = yes
 		}
         ig:ig_petty_bourgeoisie = {
