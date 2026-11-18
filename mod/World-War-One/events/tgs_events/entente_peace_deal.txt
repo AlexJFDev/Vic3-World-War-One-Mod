@@ -1449,12 +1449,7 @@ entente_peace_deal.5 = { #Round 4 result
         trigger = {
 			has_global_variable = entente_deal_round_4_italy_iredentist_prop_3_won
 		}
-		c:ITA = {
-            trigger_event = {
-                id = italy_events.10
-                days = 30
-            }
-        }
+		set_global_variable = italy_mutilated_victory
 	}
 }
 

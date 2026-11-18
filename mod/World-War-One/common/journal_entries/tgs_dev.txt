@@ -163,7 +163,7 @@ je_germany_ai_blockade = {
           is_player = no
           is_at_war = yes
           has_variable = central_powers_participant
-          navy_size < 325
+          navy_size < 300
         }
         c:GBR = {
           is_at_war = yes
@@ -190,7 +190,7 @@ je_germany_ai_blockade = {
         trigger = {
             OR = {
                 is_at_war = no
-                navy_size > 350
+                navy_size > 325
                 c:GBR = {
                     OR = {
                         NOT = { is_diplomatic_play_enemy_of = c:GER }

@@ -24,7 +24,10 @@ yeet_agitator_events.1 = {
 				has_role_of_type = agitator
 				can_agitate = root
 				popularity <= -60
-				NOT = { has_variable = temp_event_target_in_use }
+				NOR = { 
+					has_variable = temp_event_target_in_use
+					is_historical = yes 
+				}
 			}
 		}
 	}
@@ -135,6 +138,7 @@ yeet_agitator_events.2 = {
 	trigger = {
 		any_scope_character = {
 			has_role_of_type = agitator
+			NOT = { is_historical = yes }
 			NOT = { 
 				can_agitate = root 
 				has_variable = temp_event_target_in_use
@@ -236,6 +240,7 @@ yeet_agitator_events.3 = {
 	trigger = {
 		any_scope_character = {
 			has_role_of_type = agitator
+			NOT = { is_historical = yes }
 			NOT = { 
 				can_agitate = root 
 				has_variable = temp_event_target_in_use
