@@ -311,8 +311,6 @@ axis_peace_deal.6 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
-    
-    immediate = {}
 
     event_image = { 
 		texture = "gfx/event_pictures/japan_army_2.dds"
@@ -320,15 +318,18 @@ axis_peace_deal.6 = {
 
     trigger = {}
 
-    option = {
-        name = axis_peace_deal.6.a
-        default_option = yes
+    immediate = {
         c:FRA = {
 		    remove_diplomatic_pact = {
 			  country = c:ICH
 			  type = colony
 		    }	
         }
+    }
+
+    option = {
+        name = axis_peace_deal.6.a
+        default_option = yes
         c:JAP = {
 		    create_diplomatic_pact = {
 			  country = c:ICH

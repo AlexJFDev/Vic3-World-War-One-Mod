@@ -298,17 +298,15 @@ je_conquest_poland = {
     icon = "gfx/interface/icons/event_icons/attack_poland.dds"
     group = je_group_internal_affairs
 
-    activation_description = {
-		always = yes
-	}
-
     is_shown_when_inactive = {
         exists = c:GER
         THIS = c:GER
-        has_global_variable = world_war_1_over
+        exists = c:POL
+        game_date > 1925.1.1
     }
     
     possible = {
+        exists = c:POL
         game_date > 1925.1.1
         OR = {
             has_variable = hitler_rise_to_power_local

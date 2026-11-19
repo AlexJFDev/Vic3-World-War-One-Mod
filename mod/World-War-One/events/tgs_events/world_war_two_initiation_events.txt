@@ -400,7 +400,35 @@ world_war_two_initiation_events.3 = { #WW2 initiation Italy response
         if = {
             limit = {
                 c:GBR = { has_state_in_state_region = STATE_SINAI }
-                c:EGY = { is_subject = no } 
+                c:EGY = { 
+                    is_subject = no
+                    is_player = no 
+                } 
+            }
+            scope:world_war_two_diplo_play = {
+                add_target_backers = {
+                  c:EGY
+                }
+                add_war_goal = {
+                   holder = c:ITA
+                   type = make_protectorate
+                  target_country = c:EGY
+                }
+		    }
+            c:RUS = {
+                create_diplomatic_pact = {
+			      country = c:EGY
+			      type = protectorate
+		        }
+            }
+        }
+        if = {
+            limit = {
+                c:GBR = { has_state_in_state_region = STATE_SINAI }
+                c:EGY = { 
+                    is_subject = no
+                    is_player = yes 
+                } 
             }
             scope:world_war_two_diplo_play = {
                 add_target_backers = {
@@ -1036,9 +1064,6 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
         scope:world_war_two_diplo_play = {
 			add_target_backers = {
                 c:RUS
-            } 
-            add_initiator_backers = {
-                c:POL
             }
             add_war_goal = {
                 holder = c:GER
@@ -1095,6 +1120,19 @@ world_war_two_initiation_events.6 = { #WW2 initiation Germany invades USSR
             trigger_event = {
                 id = ussr_events.10
                 months = 18
+            }
+        }
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                OR = {
+                    has_variable = allies_participant
+                    is_diplomatic_play_enemy_of = c:GER
+                }
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 1
             }
         }
         if = {
@@ -1290,11 +1328,34 @@ world_war_two_initiation_events.8 = { #Germany declares war on USA
         every_country = {
             limit = { 
                 is_at_war = yes
-                has_variable = allies_participant
+                OR = {
+                    has_variable = allies_participant
+                    is_diplomatic_play_enemy_of = c:GER
+                }
             }
             trigger_event = {
               id = dev_events.187
               days = 1
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 182
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 282
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 1
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 2
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 3
             }
         }
         ai_chance = {

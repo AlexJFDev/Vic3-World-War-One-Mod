@@ -1135,43 +1135,112 @@ japan_events.20 = {#Invasion of China response
             id = dev_events.85
             days = 5
         }
-        trigger_event = {
-            id = dev_events.187
-            years = 1
-        }
-        trigger_event = {
-            id = dev_events.187
-            years = 2
-        }
-        trigger_event = {
-            id = dev_events.187
-            years = 3
-        }
-        trigger_event = {
-            id = dev_events.187
-            years = 4
-        }
-        trigger_event = {
-            id = dev_events.187
-            years = 5
-        }
-        trigger_event = {
-            id = dev_events.187
-            years = 6
-        }
-        trigger_event = {
-            id = dev_events.187
-            years = 7
-        }
-        if = {
+        every_country = {
             limit = {
-                c:CHI = { is_player = no }
-            }
-            c:CHI = {
-                trigger_event = {
-                   id = dev_events.26
-                   days = 5
+                is_diplomatic_play_enemy_of = c:JAP
+                OR = {
+                    country_has_primary_culture = cu:manchu
+                    country_has_primary_culture = cu:han
+                    country_has_primary_culture = cu:yue
+                    country_has_primary_culture = cu:mongol
+                    country_has_primary_culture = cu:steppe_turk
                 }
+            }
+            trigger_event = {
+                id = dev_events.26
+                days = 5
+            }
+            trigger_event = {
+                id = dev_events.26
+                years = 1
+            }
+            trigger_event = {
+                id = dev_events.26
+                years = 2
+            }
+            trigger_event = {
+                id = dev_events.26
+                years = 3
+            }
+            trigger_event = {
+                id = dev_events.26
+                years = 4
+            }
+            trigger_event = {
+                id = dev_events.26
+                years = 5
+            }
+            trigger_event = {
+                id = dev_events.26
+                years = 6
+            }
+            trigger_event = {
+                id = dev_events.26
+                years = 7
+            }
+            trigger_event = {
+                id = dev_events.26
+                years = 8
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 365
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 587
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 729
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 911
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 1093
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 1275
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 1457
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 1639
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 1821
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 2003
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 2185
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 2367
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 2549
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 2731
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 2913
             }
         }
         ai_chance = {
@@ -1492,6 +1561,10 @@ japan_events.22 = {#Japan attacks USA and western nations
               id = dev_events.217
               days = 5
             }
+            trigger_event = {
+              id = dev_events.26
+              days = 5
+            }
         }
         if = {
             limit = {
@@ -1596,6 +1669,10 @@ japan_events.22 = {#Japan attacks USA and western nations
         c:USA = {
             trigger_event = {
               id = dev_events.217
+              days = 5
+            }
+            trigger_event = {
+              id = dev_events.26
               days = 5
             }
         }

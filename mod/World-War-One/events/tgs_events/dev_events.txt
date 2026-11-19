@@ -4400,88 +4400,6 @@ dev_events.86 = {
 				level = 20
             }
 		}
-        create_military_formation = {
-			type = army
-			hq_region = sr:region_northeast_asia
-            name = ai_japan_army_1
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_squad_infantry
-				state_region = s:STATE_CHUGOKU
-				count = 50
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_CHUGOKU
-				count = 50
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_KYUSHU
-				count = 50
-			}
-	
-			combat_unit = {
-				type = unit_type:combat_unit_type_heavy_tank
-				state_region = s:STATE_CHUGOKU
-				count = 10
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_light_tanks
-				state_region = s:STATE_CHUGOKU
-				count = 20
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_fighter
-				state_region = s:STATE_KYUSHU
-				count = 30
-			}
-		}
-        create_military_formation = {
-			type = army
-			hq_region = sr:region_northeast_asia
-            name = ai_japan_army_2
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_squad_infantry
-				state_region = s:STATE_KANTO
-				count = 50
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_KANTO
-				count = 50
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_trench_infantry
-				state_region = s:STATE_KANSAI
-				count = 50
-			}
-	
-			combat_unit = {
-				type = unit_type:combat_unit_type_heavy_tank
-				state_region = s:STATE_KANTO
-				count = 10
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_light_tanks
-				state_region = s:STATE_KANTO
-				count = 20
-			}
-
-            combat_unit = {
-				type = unit_type:combat_unit_type_fighter
-				state_region = s:STATE_KANTO
-				count = 30
-			}
-		}
     }
 
     option = {
@@ -6326,7 +6244,8 @@ dev_events.120 = {
         trigger = { is_player = no }
         add_modifier = {
             name = revolution_stabilization_buff_4
-            years = 5
+            years = 10
+            is_decaying = yes
         }
     }
 
@@ -6336,7 +6255,7 @@ dev_events.120 = {
         trigger = { is_player = yes }
         add_modifier = {
             name = revolution_stabilization_buff_5
-            years = 1
+            years = 5
             is_decaying = yes
         }
     }
@@ -6430,7 +6349,7 @@ dev_events.123 = {
         trigger = { is_player = no }
         add_treasury = 10000000
         add_modifier = {
-			name = starting_minting_buff_2_modifier
+			name = money_buff_7
             years = 3
             is_decaying = yes
 		}
@@ -10931,5 +10850,88 @@ dev_events.220 = {
 			country = c:SMA
 		    type = colony
 		}
+    }
+}
+
+dev_events.221 = {
+    type = country_event
+
+    title = dev_events.15.t
+    desc = dev_events.15.d
+    flavor = dev_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.15.a
+        default_option = yes
+        trigger = { is_player = no }
+        add_modifier = {
+            name = revolution_stabilization_buff_4
+            years = 20
+            is_decaying = yes
+        }
+    }
+}
+
+dev_events.222 = {
+    type = country_event
+
+    title = dev_events.15.t
+    desc = dev_events.15.d
+    flavor = dev_events.15.f
+    
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    
+    duration = 1
+    
+    event_image = {
+        texture = "gfx/event_pictures/world_map.dds"
+    }
+
+    option = {
+        name = dev_events.15.a
+        default_option = yes
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                OR = {
+                    has_variable = allies_participant
+                    is_diplomatic_play_enemy_of = c:GER
+                }
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 1
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 182
+            }
+            trigger_event = {
+              id = dev_events.187
+              days = 282
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 1
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 2
+            }
+            trigger_event = {
+              id = dev_events.187
+              years = 3
+            }
+        }
     }
 }
