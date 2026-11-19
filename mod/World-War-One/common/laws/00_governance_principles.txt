@@ -844,6 +844,14 @@ REPLACE_OR_CREATE:law_council_republic = {
 
 	on_activate = {
 		transition_off_of_monarchy_effects = yes
+		if = {
+			limit = {
+				active_law:lawgroup_labour_associations ?= {
+					has_amendment = amendment_type:amendment_factory_councils
+				}
+			}
+			activate_law = law_type:law_factory_councils
+		}
 		custom_tooltip = {
 			text = enact_law_radical_leftist_government_warning_desc
 			every_country = {

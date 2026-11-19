@@ -2502,6 +2502,25 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 
 			if = {
 				limit = {
+					c:RUS ?= this
+					has_variable = ecumenical_question_var
+					scope:target_state.state_region = {
+						is_homeland = cu:greek
+					}
+					scope:target_country = {
+						NOT = {
+							country_has_state_religion = rel:orthodox
+						}
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_ECUMENICAL_QUESTION"
+				}
+			}
+
+			if = {
+				limit = {
 					has_journal_entry = je_eastern_question_austria
 					scope:target_state = { state_region = s:STATE_BOSNIA }
 				}
@@ -3408,13 +3427,13 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 						}
 					}
 
-					value = 50
-
-					add = {
-						value = scope:target_country.gdp
-						divide = 200000
-						max = 50
+					scope:target_country = {
+						every_scope_state = {
+							add = ai_state_value:root
+						}
 					}
+
+					multiply = ai_subject_value_state_value_fraction
 				}
 
 				if = {
@@ -6509,12 +6528,14 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 		bg_agriculture = 1.25
 	}
 
-	# Which buildings should the AI subsidize
+	# The maximum spending priority that the AI may assign to subsidies for a building type.
+	# The actual priority depends on how much the building's goods and infrastructure are needed. Profitable buildings will not be subsidized.
 	# Using a different value in a strategy will override this value
 	subsidies = {
 		building_power_plant = must_have
 		building_railway = must_have
 		building_port = must_have
+		building_shipyard = should_have
 	}
 
 	# Specifying values here will override subsidy priorities while at war
@@ -6554,6 +6575,18 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 			trigger = {
 				has_technology_researched = mobile_armor
 				country_rank >= rank_value:major_power
+			}
+		}
+		radios = {
+			stance = wants_high_supply
+			trigger = {
+				OR = {
+					has_technology_researched = nco_training
+					has_technology_researched = mobile_armor
+					has_technology_researched = defense_in_depth
+					has_technology_researched = battleship_tech
+					has_technology_researched = carrier_tech
+				}
 			}
 		}
 		clippers = {
@@ -6609,6 +6642,19 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 			stance = wants_high_supply
 			trigger = {
 				has_technology_researched = electrical_generation
+			}
+		}
+		telephones = {
+			stance = wants_high_supply
+			trigger = {
+				has_building = building_government_administration
+				has_technology_researched = telephone
+			}
+		}
+		oil = {
+			stance = wants_high_supply
+			trigger = {
+				has_technology_researched = combustion_engine
 			}
 		}
 		copper = {
@@ -6976,9 +7022,9 @@ REPLACE_OR_CREATE:ai_strategy_default = {
 				OR = {
 					c:GBR ?= this
 					c:RUS ?= this
-					country_rank = rank_value:great_power
-					scope:region = sr:region_greater_persia
 				}
+				country_rank = rank_value:great_power
+				scope:region = sr:region_greater_persia
 			}
 			add = 500
 		}
