@@ -3211,31 +3211,6 @@ REPLACE_OR_CREATE:FRM = { # Frankfurt
 	}	
 }
 
-REPLACE_OR_CREATE:FSA = { # Free States of America
-	flag_definition = {
-		coa = FSA
-		subject_canton = FSA
-		coa_with_overlord_canton = FSA_subject	
-		allow_overlord_canton = yes
-		priority = 1
-	}	
-	flag_definition = {
-		coa = FSA_dictatorship
-		subject_canton = FSA_dictatorship
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}	
-	flag_definition = {
-		coa = FSA_communist
-		priority = 1500
-		trigger = { 
-			coa_def_communist_flag_trigger = yes
-		}
-	}			
-}
-
 REPLACE_OR_CREATE:GAL = { # Galicia (Halych)	
 	flag_definition = {
 		coa = GAL	

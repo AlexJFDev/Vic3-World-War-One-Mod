@@ -11,8 +11,6 @@ axis_peace_deal.1 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 1
-    
-    immediate = {}
 
     event_image = { 
 		texture = "gfx/event_pictures/france_surrender.dds"
@@ -161,8 +159,8 @@ axis_peace_deal.1 = {
         }
         if = {
             limit = {
-                NOT = {
-                    c:JAP = { has_variable = allies_participant }
+                c:JAP = { 
+                    NOT = { is_diplomatic_play_enemy_of = c:GER }
                 }
             }
             trigger_event = {
@@ -333,8 +331,12 @@ axis_peace_deal.6 = {
         c:JAP = {
 		    create_diplomatic_pact = {
 			  country = c:ICH
-			  type = puppet
+			  type = protectorate
 		    }	
+        }
+        c:ICH = {
+            remove_primary_culture = c:french
+            add_primary_culture = cu:vietnamese
         }
         c:USA = {
 		    trigger_event = {

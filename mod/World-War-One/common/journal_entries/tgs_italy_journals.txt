@@ -108,18 +108,17 @@ je_war_fatigue_italy = {
     is_shown_when_inactive = {
         exists = c:ITA
         THIS = c:ITA
+        is_player = no
         has_variable = axis_participant
     }
     
     possible = {
         has_variable = axis_participant
-        game_date > 1943.1.1
-        any_scope_war = {
-		    has_war_support = {
-		        target = ROOT
-		        value < 40
-		    }   
-		}
+        game_date > 1943.9.1
+        is_player = no
+        is_at_war = yes
+        is_diplomatic_play_enemy_of = c:USA
+        c:GER = { is_player = no }
         NOR = {
             c:USA = { is_subject_of = c:GER }
             c:GBR = { is_subject_of = c:GER }
@@ -147,17 +146,9 @@ je_war_fatigue_italy = {
         conclusion_desc = je_standard_completion_conclusion_desc
         trigger = {
             OR = {
-                has_global_variable = ww2_italian_civil_war
                 c:USA = { is_subject_of = c:GER }
                 c:GBR = { is_subject_of = c:GER }
                 c:RUS = { is_subject_of = c:GER }
-                any_scope_war = {
-                    is_world_war = yes
-		            has_war_support = {
-		               target = ROOT
-		               value > 50
-		            }   
-		        }
             }
         }
         effect = {

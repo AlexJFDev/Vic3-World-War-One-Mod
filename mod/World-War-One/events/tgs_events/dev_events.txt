@@ -367,6 +367,35 @@ dev_events.4 = {
                 days = 5
             }
         }
+        every_country = {
+            limit = { 
+                is_at_war = yes
+                OR = {
+                    has_variable = allies_participant
+                    is_diplomatic_play_enemy_of = c:GER
+                }
+            }
+            trigger_event = {
+              id = dev_events.26
+              days = 1
+            }
+            trigger_event = {
+              id = dev_events.26
+              days = 182
+            }
+            trigger_event = {
+              id = dev_events.26
+              days = 282
+            }
+            trigger_event = {
+              id = dev_events.26
+              years = 1
+            }
+            trigger_event = {
+              id = dev_events.26
+              years = 2
+            }
+        }
     }
 }
 
@@ -665,7 +694,7 @@ dev_events.13 = {
     }
 }
 
-dev_events.14 = { 
+dev_events.14 = {
     type = country_event
 
     title = dev_events.14.t
@@ -3870,7 +3899,7 @@ dev_events.77 = {
         remove_modifier = declared_bankruptcy
         add_modifier = {
             name = starting_minting_buff_3_modifier
-            years = 20
+            years = 1
             is_decaying = yes
         }
     }

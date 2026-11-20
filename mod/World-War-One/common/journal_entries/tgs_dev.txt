@@ -253,7 +253,7 @@ je_ai_allies_landings = {
         }
     }
 
-    immediate = { }
+    immediate = {}
 
     outcome = {
         header = je_standard_completion_header
@@ -307,9 +307,7 @@ je_atomic_bomb = {
        exists = c:USA
        THIS = c:USA
        is_player = no
-       has_technology_researched = transistor
        has_variable = allies_participant
-       is_at_war = yes
     }
     
     possible = {
@@ -325,6 +323,7 @@ je_atomic_bomb = {
         color = "gold_positive"
         conclusion_desc = je_standard_completion_conclusion_desc
         trigger = {
+            game_date > 1945.08.01
             is_subject = no 
             is_at_war = yes
             has_technology_researched = nuclear_weapons
@@ -334,22 +333,14 @@ je_atomic_bomb = {
             }
         }
         effect = {
-            c:GER = {
-                trigger_event = {
-                   id = dev_events.183
-                   days = 5
-                }
-            }
-            c:JAP = {
-                trigger_event = {
-                   id = dev_events.183
-                   days = 5
-                }
-            }
             every_country = {
                 limit = { 
-                   is_at_war = yes
-                   has_variable = allies_participant
+                    is_at_war = yes
+                    OR = {
+                      has_variable = allies_participant
+                      is_diplomatic_play_enemy_of = c:GER
+                      is_diplomatic_play_enemy_of = c:JAP
+                    }
                 }
                 trigger_event = {
                    id = dev_events.187
@@ -358,9 +349,12 @@ je_atomic_bomb = {
             }
             every_country = {
                 limit = { 
-                   is_player = no
-                   is_at_war = yes
-                   has_variable = axis_participant
+                    is_player = no
+                    is_at_war = yes
+                    OR = {
+                       has_variable = axis_participant
+                       is_diplomatic_play_enemy_of = c:USA
+                    }
                 }
                 trigger_event = {
                    id = dev_events.183

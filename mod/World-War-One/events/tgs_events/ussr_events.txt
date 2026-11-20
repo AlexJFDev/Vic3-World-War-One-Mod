@@ -1169,7 +1169,7 @@ ussr_events.10 = { #Moscow will not fall
     desc = ussr_events.10.d
     flavor = ussr_events.10.f
     
-    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    icon = "gfx/interface/icons/event_icons/event_flag.dds"
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     
     duration = 3
@@ -1185,7 +1185,9 @@ ussr_events.10 = { #Moscow will not fall
         default_option = yes
 		trigger = { 
             is_at_war = yes
-            is_player = no 
+			is_diplomatic_play_enemy_of = c:GER
+            is_player = no
+			c:GER = { is_player = no } 
         }
 		add_modifier = {
 			name = moscow_will_not_fall_1
@@ -1207,6 +1209,7 @@ ussr_events.10 = { #Moscow will not fall
         default_option = yes
 		trigger = { 
             is_at_war = yes
+			is_diplomatic_play_enemy_of = c:GER
             is_player = yes 
         }
 		add_modifier = {
@@ -1263,6 +1266,14 @@ ussr_events.11 = { #Invasion of Manchuria
     option = {
         name = ussr_events.11.a
         default_option = yes
+		trigger = {
+			c:JAP = { 
+				OR = {
+					is_diplomatic_play_enemy_of = c:CHI 
+					is_diplomatic_play_enemy_of = c:USA
+				}
+			}
+		}
 		scope:sino_japan_war_diplo_play = {
 			add_target_backers = { c:RUS }
             add_war_goal = {

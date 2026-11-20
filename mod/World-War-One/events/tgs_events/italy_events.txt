@@ -636,6 +636,8 @@ italy_events.15 = { #Italian civil war
         name = italy_events.15.a
         default_option = yes
         set_global_variable = ww2_italian_civil_war
+        remove_variable = axis_participant
+        set_variable = allies_participant
         scope:italian_power_bloc = {
 			destroy_power_bloc = yes
 		}
@@ -649,6 +651,7 @@ italy_events.15 = { #Italian civil war
              activate_law = law_type:law_military_oversight
              activate_law = law_type:law_outlawed_dissent
              activate_law = law_type:law_interventionism
+             set_variable = axis_participant
             }
         }
         s:STATE_PIEDMONT = {
@@ -857,6 +860,14 @@ italy_events.15 = { #Italian civil war
             remove_diplomatic_pact = {
 			  country = c:CYR
 			  type = colony
+		    }
+            remove_diplomatic_pact = {
+			  country = c:SEN
+			  type = protectorate
+		    }
+            remove_diplomatic_pact = {
+			  country = c:SEN
+			  type = puppet
 		    }
             remove_diplomatic_pact = {
 			  country = c:ERT
